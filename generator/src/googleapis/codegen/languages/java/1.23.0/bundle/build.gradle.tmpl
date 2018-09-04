@@ -1,0 +1,29 @@
+{% if layout.name != "gradle" %} {% halt %} {% endif %}apply plugin: 'java'
+apply plugin: 'maven'
+
+
+group = '{{ api.maven.group_id }}'
+archivesBaseName = '{{ api.maven.artifact_id }}'
+version = '{{ api.maven.version }}'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+jar.manifest.attributes("Built-By": "Google")
+jar.manifest.attributes("Build-Jdk": "1.6.x")
+
+task sourceJar(type: Jar) {
+  classifier = 'sources'
+  from sourceSets.main.allJava
+}
+
+artifacts {
+    archives sourceJar
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile ([group: 'com.google.api-client', name: 'google-api-client', version: '{{ features.baseClientLibrary }}'])
+}

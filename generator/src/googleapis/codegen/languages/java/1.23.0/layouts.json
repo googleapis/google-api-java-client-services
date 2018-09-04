@@ -1,0 +1,17 @@
+{"layouts": {
+  "maven": {
+    "source_location": "src/main/java",
+    "unzip_source": true,
+    "bundle_dir": "{api[name]}",
+    "include_dependencies": false,
+    "include_descriptor": false
+   },
+  "gradle": {
+    "source_location": "src/main/java",
+    "unzip_source": true,
+    "bundle_dir": "{api[name]}",
+    "include_dependencies": false,
+    "include_descriptor": false
+   }
+ }
+}

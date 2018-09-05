@@ -24,9 +24,9 @@
   },
   "javadoc_links": [ 
     "http://docs.oracle.com/javase/7/docs/api",
-    "http://javadoc.google-http-java-client.googlecode.com/hg/${httpClientLibrary}",
-    "http://javadoc.google-oauth-java-client.googlecode.com/hg/${oauthClientLibrary}",
-    "http://javadoc.google-api-java-client.googlecode.com/hg/${baseClientLibrary}"
+    "https://google.github.io/google-http-java-client/releases/${httpClientLibrary}/javadoc/index.html",
+    "https://google.github.io/google-oauth-java-client/releases/${oauthClientLibrary}/javadoc/index.html",
+    "https://google.github.io/google-api-java-client/releases/${baseClientLibrary}/javadoc/index.html"
   ],
   "requires": [
     {

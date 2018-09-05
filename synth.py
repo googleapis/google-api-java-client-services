@@ -26,10 +26,7 @@ import re
 logging.basicConfig(level=logging.DEBUG)
 
 TEMPLATE_VERSIONS = [
-    "1.22.0",
-    "1.23.0",
-    "1.24.1",
-    "1.25.0",
+    "1.26.0",
 ]
 discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"
 

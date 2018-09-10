@@ -40,7 +40,7 @@ shell.run("rm -rf .cache".split(), cwd=repository)
 
 log.debug("Installing dependencies.")
 shell.run(
-    "python2 -m pip install -e generator/".split(),
+    "python2 -m pip install -e generator/ --user".split(),
     cwd=repository
 )
 

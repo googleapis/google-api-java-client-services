@@ -306,32 +306,6 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       /**
        * Optional.
        *
-       * The completion topic. The default is CompletionType.COMBINED.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String type;
-
-      /** Optional.
-
-     The completion topic. The default is CompletionType.COMBINED.
-       */
-      public java.lang.String getType() {
-        return type;
-      }
-
-      /**
-       * Optional.
-       *
-       * The completion topic. The default is CompletionType.COMBINED.
-       */
-      public Complete setType(java.lang.String type) {
-        this.type = type;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
        * The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
       @com.google.api.client.util.Key
@@ -512,6 +486,32 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        */
       public Complete setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The completion topic. The default is CompletionType.COMBINED.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String type;
+
+      /** Optional.
+
+     The completion topic. The default is CompletionType.COMBINED.
+       */
+      public java.lang.String getType() {
+        return type;
+      }
+
+      /**
+       * Optional.
+       *
+       * The completion topic. The default is CompletionType.COMBINED.
+       */
+      public Complete setType(java.lang.String type) {
+        this.type = type;
         return this;
       }
 
@@ -2261,6 +2261,32 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         /**
          * Optional.
          *
+         * The starting point of a query result.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional.
+
+       The starting point of a query result.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional.
+         *
+         * The starting point of a query result.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional.
+         *
          * The maximum number of jobs to be returned per page of results.
          *
          * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
@@ -2384,32 +2410,6 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          */
         public List setJobView(java.lang.String jobView) {
           this.jobView = jobView;
-          return this;
-        }
-
-        /**
-         * Optional.
-         *
-         * The starting point of a query result.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional.
-
-       The starting point of a query result.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional.
-         *
-         * The starting point of a query result.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
           return this;
         }
 

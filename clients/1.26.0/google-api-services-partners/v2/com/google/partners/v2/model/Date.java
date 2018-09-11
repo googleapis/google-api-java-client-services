@@ -17,11 +17,12 @@
 package com.google.partners.v2.model;
 
 /**
- * Represents a whole calendar date, e.g. date of birth. The time of day and time zone are either
- * specified elsewhere or are not significant. The date is relative to the Proleptic Gregorian
- * Calendar. The day may be 0 to represent a year and month where the day is not significant, e.g.
- * credit card expiration date. The year may be 0 to represent a month and day independent of year,
- * e.g. anniversary date. Related types are google.type.TimeOfDay and `google.protobuf.Timestamp`.
+ * Represents a whole calendar date, for example date of birth. The time of day and time zone are
+ * either specified elsewhere or are not significant. The date is relative to the Proleptic
+ * Gregorian Calendar. The day can be 0 to represent a year and month where the day is not
+ * significant, for example credit card expiration date. The year can be 0 to represent a month and
+ * day independent of year, for example anniversary date. Related types are google.type.TimeOfDay
+ * and `google.protobuf.Timestamp`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Partners API. For a detailed explanation see:

@@ -38,7 +38,7 @@ public final class DirectorySiteSettings extends com.google.api.client.json.Gene
   private java.lang.Boolean activeViewOptOut;
 
   /**
-   * Directory site DFP settings.
+   * Directory site Ad Manager settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class DirectorySiteSettings extends com.google.api.client.json.Gene
   }
 
   /**
-   * Directory site DFP settings.
+   * Directory site Ad Manager settings.
    * @return value or {@code null} for none
    */
   public DfpSettings getDfpSettings() {
@@ -106,7 +106,7 @@ public final class DirectorySiteSettings extends com.google.api.client.json.Gene
   }
 
   /**
-   * Directory site DFP settings.
+   * Directory site Ad Manager settings.
    * @param dfpSettings dfpSettings or {@code null} for none
    */
   public DirectorySiteSettings setDfpSettings(DfpSettings dfpSettings) {

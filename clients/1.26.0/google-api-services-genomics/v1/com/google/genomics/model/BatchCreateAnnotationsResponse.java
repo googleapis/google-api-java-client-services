@@ -36,6 +36,12 @@ public final class BatchCreateAnnotationsResponse extends com.google.api.client.
   @com.google.api.client.util.Key
   private java.util.List<GenomicsEntry> entries;
 
+  static {
+    // hack to force ProGuard to consider GenomicsEntry used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GenomicsEntry.class);
+  }
+
   /**
    * The resulting per-annotation entries, ordered consistently with the original request.
    * @return value or {@code null} for none

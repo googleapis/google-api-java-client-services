@@ -144,7 +144,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this particular request may come from a user under the age of 16 (may differ by
-   * country), under compliance with the EU?s General Data Protection Regulation (GDPR).
+   * country), under compliance with the European Union's General Data Protection Regulation (GDPR).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -425,7 +425,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this particular request may come from a user under the age of 16 (may differ by
-   * country), under compliance with the EU?s General Data Protection Regulation (GDPR).
+   * country), under compliance with the European Union's General Data Protection Regulation (GDPR).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTreatmentForUnderage() {
@@ -434,7 +434,7 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether this particular request may come from a user under the age of 16 (may differ by
-   * country), under compliance with the EU?s General Data Protection Regulation (GDPR).
+   * country), under compliance with the European Union's General Data Protection Regulation (GDPR).
    * @param treatmentForUnderage treatmentForUnderage or {@code null} for none
    */
   public Conversion setTreatmentForUnderage(java.lang.Boolean treatmentForUnderage) {

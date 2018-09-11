@@ -1145,34 +1145,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional. A page token to request the next page of results.
-
-       You get the token from the `next_page_token` field of the response from the previous call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional. The number of jobs to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
          * the `next_page_token` field.
@@ -1232,6 +1204,34 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. A page token to request the next page of results.
+         *
+         * You get the token from the `next_page_token` field of the response from the previous
+         * call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token to request the next page of results.
+
+       You get the token from the `next_page_token` field of the response from the previous call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token to request the next page of results.
+         *
+         * You get the token from the `next_page_token` field of the response from the previous
+         * call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

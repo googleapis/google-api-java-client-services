@@ -88,6 +88,14 @@ public final class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends com.g
   private java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> landmarkAnnotations;
 
   /**
+   * If present, localized object detection has completed successfully. This will be sorted
+   * descending by confidence score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation> localizedObjectAnnotations;
+
+  /**
    * If present, logo detection has completed successfully.
    * The value may be {@code null}.
    */
@@ -252,6 +260,25 @@ public final class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends com.g
    */
   public GoogleCloudVisionV1p1beta1AnnotateImageResponse setLandmarkAnnotations(java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> landmarkAnnotations) {
     this.landmarkAnnotations = landmarkAnnotations;
+    return this;
+  }
+
+  /**
+   * If present, localized object detection has completed successfully. This will be sorted
+   * descending by confidence score.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation> getLocalizedObjectAnnotations() {
+    return localizedObjectAnnotations;
+  }
+
+  /**
+   * If present, localized object detection has completed successfully. This will be sorted
+   * descending by confidence score.
+   * @param localizedObjectAnnotations localizedObjectAnnotations or {@code null} for none
+   */
+  public GoogleCloudVisionV1p1beta1AnnotateImageResponse setLocalizedObjectAnnotations(java.util.List<GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation> localizedObjectAnnotations) {
+    this.localizedObjectAnnotations = localizedObjectAnnotations;
     return this;
   }
 

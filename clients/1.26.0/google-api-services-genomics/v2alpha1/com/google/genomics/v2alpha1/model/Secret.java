@@ -31,7 +31,8 @@ package com.google.genomics.v2alpha1.model;
 public final class Secret extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value of the cipherText response from the `encrypt` method.
+   * The value of the cipherText response from the `encrypt` method. This field is intentionally
+   * unaudited.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private java.lang.String keyName;
 
   /**
-   * The value of the cipherText response from the `encrypt` method.
+   * The value of the cipherText response from the `encrypt` method. This field is intentionally
+   * unaudited.
    * @return value or {@code null} for none
    */
   public java.lang.String getCipherText() {
@@ -55,7 +57,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The value of the cipherText response from the `encrypt` method.
+   * The value of the cipherText response from the `encrypt` method. This field is intentionally
+   * unaudited.
    * @param cipherText cipherText or {@code null} for none
    */
   public Secret setCipherText(java.lang.String cipherText) {

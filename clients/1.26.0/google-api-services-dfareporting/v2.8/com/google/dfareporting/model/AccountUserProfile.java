@@ -17,8 +17,8 @@
 package com.google.dfareporting.model;
 
 /**
- * AccountUserProfiles contains properties of a DCM user profile. This resource is specifically for
- * managing user profiles, whereas UserProfiles is for accessing the API.
+ * AccountUserProfiles contains properties of a Campaign Manager user profile. This resource is
+ * specifically for managing user profiles, whereas UserProfiles is for accessing the API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed

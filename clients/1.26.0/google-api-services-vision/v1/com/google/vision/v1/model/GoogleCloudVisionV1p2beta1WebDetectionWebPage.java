@@ -36,6 +36,12 @@ public final class GoogleCloudVisionV1p2beta1WebDetectionWebPage extends com.goo
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1WebDetectionWebImage> fullMatchingImages;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1WebDetectionWebImage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1WebDetectionWebImage.class);
+  }
+
   /**
    * Title for the web page, may contain HTML markups.
    * The value may be {@code null}.
@@ -50,6 +56,12 @@ public final class GoogleCloudVisionV1p2beta1WebDetectionWebPage extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1WebDetectionWebImage> partialMatchingImages;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1WebDetectionWebImage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1WebDetectionWebImage.class);
+  }
 
   /**
    * (Deprecated) Overall relevancy score for the web page.

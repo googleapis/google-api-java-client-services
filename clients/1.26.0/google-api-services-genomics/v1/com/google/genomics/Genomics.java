@@ -3780,45 +3780,6 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
-       * is 2048.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The maximum number of results to return. If unspecified, defaults to 256. The maximum value is
-     2048.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
-       * is 2048.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
       /**
        * A string for filtering Operations. In v2alpha1, the following filter fields are supported
        *
@@ -3896,6 +3857,45 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
+       * is 2048.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of results to return. If unspecified, defaults to 256. The maximum value is
+     2048.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
+       * is 2048.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
       }
 
@@ -4859,31 +4859,6 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The end position of the range on the reference, 0-based exclusive. If specified,
-         * `referenceName` must also be specified. If unset or 0, defaults to the length of the
-         * reference.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Long end;
-
-        /** The end position of the range on the reference, 0-based exclusive. If specified, `referenceName`
-       must also be specified. If unset or 0, defaults to the length of the reference.
-         */
-        public java.lang.Long getEnd() {
-          return end;
-        }
-
-        /**
-         * The end position of the range on the reference, 0-based exclusive. If specified,
-         * `referenceName` must also be specified. If unset or 0, defaults to the length of the
-         * reference.
-         */
-        public List setEnd(java.lang.Long end) {
-          this.end = end;
-          return this;
-        }
-
-        /**
          * The continuation token, which is used to page through large result sets. To get the next
          * page of results, set this parameter to the value of `nextPageToken` from the previous
          * response.
@@ -5005,6 +4980,31 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
          */
         public List setReferenceName(java.lang.String referenceName) {
           this.referenceName = referenceName;
+          return this;
+        }
+
+        /**
+         * The end position of the range on the reference, 0-based exclusive. If specified,
+         * `referenceName` must also be specified. If unset or 0, defaults to the length of the
+         * reference.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long end;
+
+        /** The end position of the range on the reference, 0-based exclusive. If specified, `referenceName`
+       must also be specified. If unset or 0, defaults to the length of the reference.
+         */
+        public java.lang.Long getEnd() {
+          return end;
+        }
+
+        /**
+         * The end position of the range on the reference, 0-based exclusive. If specified,
+         * `referenceName` must also be specified. If unset or 0, defaults to the length of the
+         * reference.
+         */
+        public List setEnd(java.lang.Long end) {
+          this.end = end;
           return this;
         }
 
@@ -5575,6 +5575,28 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
+         * The end position (0-based, exclusive) of this query. Defaults to the length of this
+         * reference.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long end;
+
+        /** The end position (0-based, exclusive) of this query. Defaults to the length of this reference.
+         */
+        public java.lang.Long getEnd() {
+          return end;
+        }
+
+        /**
+         * The end position (0-based, exclusive) of this query. Defaults to the length of this
+         * reference.
+         */
+        public List setEnd(java.lang.Long end) {
+          this.end = end;
+          return this;
+        }
+
+        /**
          * The continuation token, which is used to page through large result sets. To get the next
          * page of results, set this parameter to the value of `nextPageToken` from the previous
          * response.
@@ -5635,28 +5657,6 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         /** The start position (0-based) of this query. Defaults to 0. */
         public List setStart(java.lang.Long start) {
           this.start = start;
-          return this;
-        }
-
-        /**
-         * The end position (0-based, exclusive) of this query. Defaults to the length of this
-         * reference.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Long end;
-
-        /** The end position (0-based, exclusive) of this query. Defaults to the length of this reference.
-         */
-        public java.lang.Long getEnd() {
-          return end;
-        }
-
-        /**
-         * The end position (0-based, exclusive) of this query. Defaults to the length of this
-         * reference.
-         */
-        public List setEnd(java.lang.Long end) {
-          this.end = end;
           return this;
         }
 

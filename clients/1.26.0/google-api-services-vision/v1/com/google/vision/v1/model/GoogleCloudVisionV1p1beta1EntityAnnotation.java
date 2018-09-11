@@ -69,12 +69,6 @@ public final class GoogleCloudVisionV1p1beta1EntityAnnotation extends com.google
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1LocationInfo> locations;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1LocationInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1LocationInfo.class);
-  }
-
   /**
    * Opaque entity ID. Some IDs may be available in [Google Knowledge Graph Search
    * API](https://developers.google.com/knowledge-graph/).
@@ -90,12 +84,6 @@ public final class GoogleCloudVisionV1p1beta1EntityAnnotation extends com.google
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1Property> properties;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1Property used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1Property.class);
-  }
 
   /**
    * Overall score of the result. Range [0, 1].

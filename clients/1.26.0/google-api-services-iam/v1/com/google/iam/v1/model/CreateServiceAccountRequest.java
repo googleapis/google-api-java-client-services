@@ -41,7 +41,7 @@ public final class CreateServiceAccountRequest extends com.google.api.client.jso
 
   /**
    * The ServiceAccount resource to create. Currently, only the following values are user
-   * assignable: `display_name`, and `description`.
+   * assignable: `display_name` .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class CreateServiceAccountRequest extends com.google.api.client.jso
 
   /**
    * The ServiceAccount resource to create. Currently, only the following values are user
-   * assignable: `display_name`, and `description`.
+   * assignable: `display_name` .
    * @return value or {@code null} for none
    */
   public ServiceAccount getServiceAccount() {
@@ -79,7 +79,7 @@ public final class CreateServiceAccountRequest extends com.google.api.client.jso
 
   /**
    * The ServiceAccount resource to create. Currently, only the following values are user
-   * assignable: `display_name`, and `description`.
+   * assignable: `display_name` .
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public CreateServiceAccountRequest setServiceAccount(ServiceAccount serviceAccount) {

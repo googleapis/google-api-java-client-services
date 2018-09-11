@@ -1799,6 +1799,29 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
             }
 
             /**
+             * The maximum number of CrawledUrls to return, can be limited by server. If not
+             * specified or not positive, the implementation will select a reasonable value.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of CrawledUrls to return, can be limited by server. If not specified or not
+           positive, the implementation will select a reasonable value.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of CrawledUrls to return, can be limited by server. If not
+             * specified or not positive, the implementation will select a reasonable value.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
              * A token identifying a page of results to be returned. This should be a
              * `next_page_token` value returned from a previous List request. If unspecified, the
              * first page of results is returned.
@@ -1820,29 +1843,6 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * The maximum number of CrawledUrls to return, can be limited by server. If not
-             * specified or not positive, the implementation will select a reasonable value.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** The maximum number of CrawledUrls to return, can be limited by server. If not specified or not
-           positive, the implementation will select a reasonable value.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * The maximum number of CrawledUrls to return, can be limited by server. If not
-             * specified or not positive, the implementation will select a reasonable value.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
               return this;
             }
 
@@ -2351,6 +2351,29 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
             }
 
             /**
+             * The filter expression. The expression must be in the format: . Supported field:
+             * 'finding_type'. Supported operator: '='.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The filter expression. The expression must be in the format: . Supported field: 'finding_type'.
+           Supported operator: '='.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * The filter expression. The expression must be in the format: . Supported field:
+             * 'finding_type'. Supported operator: '='.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
              * A token identifying a page of results to be returned. This should be a
              * `next_page_token` value returned from a previous List request. If unspecified, the
              * first page of results is returned.
@@ -2395,29 +2418,6 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
-             * The filter expression. The expression must be in the format: . Supported field:
-             * 'finding_type'. Supported operator: '='.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String filter;
-
-            /** The filter expression. The expression must be in the format: . Supported field: 'finding_type'.
-           Supported operator: '='.
-             */
-            public java.lang.String getFilter() {
-              return filter;
-            }
-
-            /**
-             * The filter expression. The expression must be in the format: . Supported field:
-             * 'finding_type'. Supported operator: '='.
-             */
-            public List setFilter(java.lang.String filter) {
-              this.filter = filter;
               return this;
             }
 

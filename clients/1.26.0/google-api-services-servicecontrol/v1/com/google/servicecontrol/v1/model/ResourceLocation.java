@@ -39,6 +39,15 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> currentLocations;
 
   /**
+   * The locations of a resource prior to the execution of the operation. For example:
+   *
+   *     "europe-west1-a"     "us-east1"     "nam3"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> originalLocations;
+
+  /**
    * The locations of a resource after the execution of the operation. For example:
    *
    *     "europe-west1-a"     "us-east1"     "nam3"
@@ -56,6 +65,27 @@ public final class ResourceLocation extends com.google.api.client.json.GenericJs
    */
   public ResourceLocation setCurrentLocations(java.util.List<java.lang.String> currentLocations) {
     this.currentLocations = currentLocations;
+    return this;
+  }
+
+  /**
+   * The locations of a resource prior to the execution of the operation. For example:
+   *
+   *     "europe-west1-a"     "us-east1"     "nam3"
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOriginalLocations() {
+    return originalLocations;
+  }
+
+  /**
+   * The locations of a resource prior to the execution of the operation. For example:
+   *
+   *     "europe-west1-a"     "us-east1"     "nam3"
+   * @param originalLocations originalLocations or {@code null} for none
+   */
+  public ResourceLocation setOriginalLocations(java.util.List<java.lang.String> originalLocations) {
+    this.originalLocations = originalLocations;
     return this;
   }
 

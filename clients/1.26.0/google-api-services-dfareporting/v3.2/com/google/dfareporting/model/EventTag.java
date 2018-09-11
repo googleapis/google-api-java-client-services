@@ -74,9 +74,9 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabledByDefault;
 
   /**
-   * Whether to remove this event tag from ads that are trafficked through DoubleClick Bid Manager
-   * to Ad Exchange. This may be useful if the event tag uses a pixel that is unapproved for Ad
-   * Exchange bids on one or more networks, such as the Google Display Network.
+   * Whether to remove this event tag from ads that are trafficked through Display & Video 360 to Ad
+   * Exchange. This may be useful if the event tag uses a pixel that is unapproved for Ad Exchange
+   * bids on one or more networks, such as the Google Display Network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,9 +271,9 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to remove this event tag from ads that are trafficked through DoubleClick Bid Manager
-   * to Ad Exchange. This may be useful if the event tag uses a pixel that is unapproved for Ad
-   * Exchange bids on one or more networks, such as the Google Display Network.
+   * Whether to remove this event tag from ads that are trafficked through Display & Video 360 to Ad
+   * Exchange. This may be useful if the event tag uses a pixel that is unapproved for Ad Exchange
+   * bids on one or more networks, such as the Google Display Network.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeFromAdxRequests() {
@@ -281,9 +281,9 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to remove this event tag from ads that are trafficked through DoubleClick Bid Manager
-   * to Ad Exchange. This may be useful if the event tag uses a pixel that is unapproved for Ad
-   * Exchange bids on one or more networks, such as the Google Display Network.
+   * Whether to remove this event tag from ads that are trafficked through Display & Video 360 to Ad
+   * Exchange. This may be useful if the event tag uses a pixel that is unapproved for Ad Exchange
+   * bids on one or more networks, such as the Google Display Network.
    * @param excludeFromAdxRequests excludeFromAdxRequests or {@code null} for none
    */
   public EventTag setExcludeFromAdxRequests(java.lang.Boolean excludeFromAdxRequests) {

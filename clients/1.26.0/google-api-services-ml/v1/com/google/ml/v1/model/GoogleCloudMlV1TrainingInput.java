@@ -75,11 +75,17 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * complex_model_m_gpu      A machine equivalent to complex_model_m that also includes   four
    * NVIDIA Tesla K80 GPUs.      complex_model_l_gpu      A machine equivalent to complex_model_l
    * that also includes   eight NVIDIA Tesla K80 GPUs.      standard_p100      A machine equivalent
-   * to standard that   also includes a single NVIDIA Tesla P100 GPU. The availability of these
-   * GPUs is in the Beta launch stage.      complex_model_m_p100      A machine equivalent to
-   * complex_model_m that also includes   four NVIDIA Tesla P100 GPUs. The availability of these
-   * GPUs is in   the Beta launch stage.      cloud_tpu      A TPU VM including one Cloud TPU. See
-   * more about   using TPUs to train   your model.
+   * to standard that   also includes a single NVIDIA Tesla P100 GPU.      complex_model_m_p100
+   * A machine equivalent to complex_model_m that also includes   four NVIDIA Tesla P100 GPUs.
+   * standard_v100      A machine equivalent to standard that   also includes a single NVIDIA Tesla
+   * V100 GPU. The availability of these   GPUs is in the Beta launch stage.      large_model_v100
+   * A machine equivalent to large_model that   also includes a single NVIDIA Tesla V100 GPU. The
+   * availability of these   GPUs is in the Beta launch stage.      complex_model_m_v100      A
+   * machine equivalent to complex_model_m that   also includes four NVIDIA Tesla V100 GPUs. The
+   * availability of these   GPUs is in the Beta launch stage.      complex_model_l_v100      A
+   * machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs. The
+   * availability of these   GPUs is in the Beta launch stage.      cloud_tpu      A TPU VM
+   * including one Cloud TPU. See more about   using TPUs to train   your model.
    *
    * You must set this value when `scaleTier` is set to `CUSTOM`.
    * The value may be {@code null}.
@@ -257,11 +263,17 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * complex_model_m_gpu      A machine equivalent to complex_model_m that also includes   four
    * NVIDIA Tesla K80 GPUs.      complex_model_l_gpu      A machine equivalent to complex_model_l
    * that also includes   eight NVIDIA Tesla K80 GPUs.      standard_p100      A machine equivalent
-   * to standard that   also includes a single NVIDIA Tesla P100 GPU. The availability of these
-   * GPUs is in the Beta launch stage.      complex_model_m_p100      A machine equivalent to
-   * complex_model_m that also includes   four NVIDIA Tesla P100 GPUs. The availability of these
-   * GPUs is in   the Beta launch stage.      cloud_tpu      A TPU VM including one Cloud TPU. See
-   * more about   using TPUs to train   your model.
+   * to standard that   also includes a single NVIDIA Tesla P100 GPU.      complex_model_m_p100
+   * A machine equivalent to complex_model_m that also includes   four NVIDIA Tesla P100 GPUs.
+   * standard_v100      A machine equivalent to standard that   also includes a single NVIDIA Tesla
+   * V100 GPU. The availability of these   GPUs is in the Beta launch stage.      large_model_v100
+   * A machine equivalent to large_model that   also includes a single NVIDIA Tesla V100 GPU. The
+   * availability of these   GPUs is in the Beta launch stage.      complex_model_m_v100      A
+   * machine equivalent to complex_model_m that   also includes four NVIDIA Tesla V100 GPUs. The
+   * availability of these   GPUs is in the Beta launch stage.      complex_model_l_v100      A
+   * machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs. The
+   * availability of these   GPUs is in the Beta launch stage.      cloud_tpu      A TPU VM
+   * including one Cloud TPU. See more about   using TPUs to train   your model.
    *
    * You must set this value when `scaleTier` is set to `CUSTOM`.
    * @return value or {@code null} for none
@@ -288,11 +300,17 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * complex_model_m_gpu      A machine equivalent to complex_model_m that also includes   four
    * NVIDIA Tesla K80 GPUs.      complex_model_l_gpu      A machine equivalent to complex_model_l
    * that also includes   eight NVIDIA Tesla K80 GPUs.      standard_p100      A machine equivalent
-   * to standard that   also includes a single NVIDIA Tesla P100 GPU. The availability of these
-   * GPUs is in the Beta launch stage.      complex_model_m_p100      A machine equivalent to
-   * complex_model_m that also includes   four NVIDIA Tesla P100 GPUs. The availability of these
-   * GPUs is in   the Beta launch stage.      cloud_tpu      A TPU VM including one Cloud TPU. See
-   * more about   using TPUs to train   your model.
+   * to standard that   also includes a single NVIDIA Tesla P100 GPU.      complex_model_m_p100
+   * A machine equivalent to complex_model_m that also includes   four NVIDIA Tesla P100 GPUs.
+   * standard_v100      A machine equivalent to standard that   also includes a single NVIDIA Tesla
+   * V100 GPU. The availability of these   GPUs is in the Beta launch stage.      large_model_v100
+   * A machine equivalent to large_model that   also includes a single NVIDIA Tesla V100 GPU. The
+   * availability of these   GPUs is in the Beta launch stage.      complex_model_m_v100      A
+   * machine equivalent to complex_model_m that   also includes four NVIDIA Tesla V100 GPUs. The
+   * availability of these   GPUs is in the Beta launch stage.      complex_model_l_v100      A
+   * machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs. The
+   * availability of these   GPUs is in the Beta launch stage.      cloud_tpu      A TPU VM
+   * including one Cloud TPU. See more about   using TPUs to train   your model.
    *
    * You must set this value when `scaleTier` is set to `CUSTOM`.
    * @param masterType masterType or {@code null} for none

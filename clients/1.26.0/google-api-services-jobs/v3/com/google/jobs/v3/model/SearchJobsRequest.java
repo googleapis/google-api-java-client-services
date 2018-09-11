@@ -116,21 +116,23 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * The criteria determining how search results are sorted. Default is "relevance desc".
    *
-   * Supported options are:   * "relevance desc": By relevance descending, as determined by the API
-   * algorithms. Relevance thresholding of query results is only available     with this ordering.
-   * * "posting_publish_time desc": By Job.posting_publish_time     descending.   *
-   * "posting_update_time desc": By Job.posting_update_time descending.   * "title": By Job.title
-   * ascending.   * "title desc": By Job.title descending.   * "annualized_base_compensation": By
-   * job's     CompensationInfo.annualized_base_compensation ascending. If job's     annualized base
-   * compensation is unspecified, they are put at the end of     search result.   *
-   * "annualized_base_compensation desc": By job's     CompensationInfo.annualized_base_compensation
-   * descending. If job's     annualized base compensation is unspecified, they are put at the end
-   * of     search result.   * "annualized_total_compensation": By job's
-   * CompensationInfo.annualized_total_compensation ascending. If job's     annualized total
-   * compensation is unspecified, they are put at the end     of search result.   *
-   * "annualized_total_compensation desc": By job's
-   * CompensationInfo.annualized_total_compensation descending. If job's     annualized total
-   * compensation is unspecified, they are put at the end     of search result.
+   * Supported options are:
+   *
+   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * "posting_publish_time
+   * desc": By Job.posting_publish_time descending. * "posting_update_time desc": By
+   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
+   * Job.title descending. * "annualized_base_compensation": By job's
+   * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized_base_compensation desc": By job's
+   * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized_total_compensation": By job's CompensationInfo.annualized_total_compensation_range
+   * ascending. Jobs whose annualized base compensation is unspecified are put at the end of search
+   * results. * "annualized_total_compensation desc": By job's
+   * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -376,21 +378,23 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * The criteria determining how search results are sorted. Default is "relevance desc".
    *
-   * Supported options are:   * "relevance desc": By relevance descending, as determined by the API
-   * algorithms. Relevance thresholding of query results is only available     with this ordering.
-   * * "posting_publish_time desc": By Job.posting_publish_time     descending.   *
-   * "posting_update_time desc": By Job.posting_update_time descending.   * "title": By Job.title
-   * ascending.   * "title desc": By Job.title descending.   * "annualized_base_compensation": By
-   * job's     CompensationInfo.annualized_base_compensation ascending. If job's     annualized base
-   * compensation is unspecified, they are put at the end of     search result.   *
-   * "annualized_base_compensation desc": By job's     CompensationInfo.annualized_base_compensation
-   * descending. If job's     annualized base compensation is unspecified, they are put at the end
-   * of     search result.   * "annualized_total_compensation": By job's
-   * CompensationInfo.annualized_total_compensation ascending. If job's     annualized total
-   * compensation is unspecified, they are put at the end     of search result.   *
-   * "annualized_total_compensation desc": By job's
-   * CompensationInfo.annualized_total_compensation descending. If job's     annualized total
-   * compensation is unspecified, they are put at the end     of search result.
+   * Supported options are:
+   *
+   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * "posting_publish_time
+   * desc": By Job.posting_publish_time descending. * "posting_update_time desc": By
+   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
+   * Job.title descending. * "annualized_base_compensation": By job's
+   * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized_base_compensation desc": By job's
+   * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized_total_compensation": By job's CompensationInfo.annualized_total_compensation_range
+   * ascending. Jobs whose annualized base compensation is unspecified are put at the end of search
+   * results. * "annualized_total_compensation desc": By job's
+   * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -402,21 +406,23 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * The criteria determining how search results are sorted. Default is "relevance desc".
    *
-   * Supported options are:   * "relevance desc": By relevance descending, as determined by the API
-   * algorithms. Relevance thresholding of query results is only available     with this ordering.
-   * * "posting_publish_time desc": By Job.posting_publish_time     descending.   *
-   * "posting_update_time desc": By Job.posting_update_time descending.   * "title": By Job.title
-   * ascending.   * "title desc": By Job.title descending.   * "annualized_base_compensation": By
-   * job's     CompensationInfo.annualized_base_compensation ascending. If job's     annualized base
-   * compensation is unspecified, they are put at the end of     search result.   *
-   * "annualized_base_compensation desc": By job's     CompensationInfo.annualized_base_compensation
-   * descending. If job's     annualized base compensation is unspecified, they are put at the end
-   * of     search result.   * "annualized_total_compensation": By job's
-   * CompensationInfo.annualized_total_compensation ascending. If job's     annualized total
-   * compensation is unspecified, they are put at the end     of search result.   *
-   * "annualized_total_compensation desc": By job's
-   * CompensationInfo.annualized_total_compensation descending. If job's     annualized total
-   * compensation is unspecified, they are put at the end     of search result.
+   * Supported options are:
+   *
+   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * "posting_publish_time
+   * desc": By Job.posting_publish_time descending. * "posting_update_time desc": By
+   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
+   * Job.title descending. * "annualized_base_compensation": By job's
+   * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized_base_compensation desc": By job's
+   * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized_total_compensation": By job's CompensationInfo.annualized_total_compensation_range
+   * ascending. Jobs whose annualized base compensation is unspecified are put at the end of search
+   * results. * "annualized_total_compensation desc": By job's
+   * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results.
    * @param orderBy orderBy or {@code null} for none
    */
   public SearchJobsRequest setOrderBy(java.lang.String orderBy) {

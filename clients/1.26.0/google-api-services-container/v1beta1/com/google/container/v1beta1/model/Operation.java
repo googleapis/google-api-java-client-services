@@ -32,6 +32,19 @@ package com.google.container.v1beta1.model;
 public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Which conditions caused the current cluster state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StatusCondition> clusterConditions;
+
+  static {
+    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StatusCondition.class);
+  }
+
+  /**
    * Detailed operation progress, if available.
    * The value may be {@code null}.
    */
@@ -61,6 +74,19 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Which conditions caused the current node pool state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StatusCondition> nodepoolConditions;
+
+  static {
+    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StatusCondition.class);
+  }
 
   /**
    * The operation type.
@@ -119,6 +145,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Which conditions caused the current cluster state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StatusCondition> getClusterConditions() {
+    return clusterConditions;
+  }
+
+  /**
+   * Which conditions caused the current cluster state.
+   * @param clusterConditions clusterConditions or {@code null} for none
+   */
+  public Operation setClusterConditions(java.util.List<StatusCondition> clusterConditions) {
+    this.clusterConditions = clusterConditions;
+    return this;
+  }
 
   /**
    * Detailed operation progress, if available.
@@ -191,6 +234,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Which conditions caused the current node pool state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StatusCondition> getNodepoolConditions() {
+    return nodepoolConditions;
+  }
+
+  /**
+   * Which conditions caused the current node pool state.
+   * @param nodepoolConditions nodepoolConditions or {@code null} for none
+   */
+  public Operation setNodepoolConditions(java.util.List<StatusCondition> nodepoolConditions) {
+    this.nodepoolConditions = nodepoolConditions;
     return this;
   }
 

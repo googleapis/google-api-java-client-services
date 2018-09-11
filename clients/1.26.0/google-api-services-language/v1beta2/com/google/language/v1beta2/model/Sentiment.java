@@ -17,7 +17,7 @@
 package com.google.language.v1beta2.model;
 
 /**
- * Represents the feeling associated with the entire text or entities in the text. Next ID: 5
+ * Represents the feeling associated with the entire text or entities in the text. Next ID: 6
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Natural Language API. For a detailed

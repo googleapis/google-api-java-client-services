@@ -55,7 +55,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   private java.lang.Integer estimatedTotalSize;
 
   /**
-   * The histogram results that match with specified SearchJobsRequest.histogram_facets.
+   * The histogram results that match specified SearchJobsRequest.histogram_facets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The histogram results that match with specified SearchJobsRequest.histogram_facets.
+   * The histogram results that match specified SearchJobsRequest.histogram_facets.
    * @return value or {@code null} for none
    */
   public HistogramResults getHistogramResults() {
@@ -165,7 +165,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The histogram results that match with specified SearchJobsRequest.histogram_facets.
+   * The histogram results that match specified SearchJobsRequest.histogram_facets.
    * @param histogramResults histogramResults or {@code null} for none
    */
   public SearchJobsResponse setHistogramResults(HistogramResults histogramResults) {

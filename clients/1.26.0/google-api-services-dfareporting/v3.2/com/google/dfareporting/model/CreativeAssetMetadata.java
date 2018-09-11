@@ -52,9 +52,9 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of feature dependencies for the creative asset that are detected by DCM. Feature
-   * dependencies are features that a browser must be able to support in order to render your HTML5
-   * creative correctly. This is a read-only, auto-generated field.
+   * List of feature dependencies for the creative asset that are detected by Campaign Manager.
+   * Feature dependencies are features that a browser must be able to support in order to render
+   * your HTML5 creative correctly. This is a read-only, auto-generated field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,9 +133,9 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of feature dependencies for the creative asset that are detected by DCM. Feature
-   * dependencies are features that a browser must be able to support in order to render your HTML5
-   * creative correctly. This is a read-only, auto-generated field.
+   * List of feature dependencies for the creative asset that are detected by Campaign Manager.
+   * Feature dependencies are features that a browser must be able to support in order to render
+   * your HTML5 creative correctly. This is a read-only, auto-generated field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDetectedFeatures() {
@@ -143,9 +143,9 @@ public final class CreativeAssetMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * List of feature dependencies for the creative asset that are detected by DCM. Feature
-   * dependencies are features that a browser must be able to support in order to render your HTML5
-   * creative correctly. This is a read-only, auto-generated field.
+   * List of feature dependencies for the creative asset that are detected by Campaign Manager.
+   * Feature dependencies are features that a browser must be able to support in order to render
+   * your HTML5 creative correctly. This is a read-only, auto-generated field.
    * @param detectedFeatures detectedFeatures or {@code null} for none
    */
   public CreativeAssetMetadata setDetectedFeatures(java.util.List<java.lang.String> detectedFeatures) {

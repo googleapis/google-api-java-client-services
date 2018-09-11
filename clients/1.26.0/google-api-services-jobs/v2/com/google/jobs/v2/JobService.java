@@ -648,6 +648,32 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional.
        *
+       * The starting indicator from which to return results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional.
+
+     The starting indicator from which to return results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional.
+       *
+       * The starting indicator from which to return results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
        * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
        * positive number is provided.
        */
@@ -712,32 +738,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
        */
       public List setMustHaveOpenJobs(java.lang.Boolean mustHaveOpenJobs) {
         this.mustHaveOpenJobs = mustHaveOpenJobs;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
-       * The starting indicator from which to return results.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Optional.
-
-     The starting indicator from which to return results.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * Optional.
-       *
-       * The starting indicator from which to return results.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
         return this;
       }
 
@@ -1126,47 +1126,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
-         * jobs page by page instead.
-         *
-         * Optional.
-         *
-         * Set to true if the total number of open jobs is to be returned.
-         *
-         * Defaults to false.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean includeJobsCount;
-
-        /** Deprecated. Please DO NOT use this field except for small companies. Suggest counting jobs page by
-       page instead.
-
-       Optional.
-
-       Set to true if the total number of open jobs is to be returned.
-
-       Defaults to false.
-         */
-        public java.lang.Boolean getIncludeJobsCount() {
-          return includeJobsCount;
-        }
-
-        /**
-         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
-         * jobs page by page instead.
-         *
-         * Optional.
-         *
-         * Set to true if the total number of open jobs is to be returned.
-         *
-         * Defaults to false.
-         */
-        public List setIncludeJobsCount(java.lang.Boolean includeJobsCount) {
-          this.includeJobsCount = includeJobsCount;
-          return this;
-        }
-
-        /**
          * Optional.
          *
          * The starting point of a query result.
@@ -1189,6 +1148,44 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional.
+         *
+         * If set to `true`, only job ID, job requisition ID and language code will be returned.
+         *
+         * A typical use is to synchronize job repositories.
+         *
+         * Defaults to false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean idsOnly;
+
+        /** Optional.
+
+       If set to `true`, only job ID, job requisition ID and language code will be returned.
+
+       A typical use is to synchronize job repositories.
+
+       Defaults to false.
+         */
+        public java.lang.Boolean getIdsOnly() {
+          return idsOnly;
+        }
+
+        /**
+         * Optional.
+         *
+         * If set to `true`, only job ID, job requisition ID and language code will be returned.
+         *
+         * A typical use is to synchronize job repositories.
+         *
+         * Defaults to false.
+         */
+        public List setIdsOnly(java.lang.Boolean idsOnly) {
+          this.idsOnly = idsOnly;
           return this;
         }
 
@@ -1236,44 +1233,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional.
          *
-         * If set to `true`, only job ID, job requisition ID and language code will be returned.
-         *
-         * A typical use is to synchronize job repositories.
-         *
-         * Defaults to false.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean idsOnly;
-
-        /** Optional.
-
-       If set to `true`, only job ID, job requisition ID and language code will be returned.
-
-       A typical use is to synchronize job repositories.
-
-       Defaults to false.
-         */
-        public java.lang.Boolean getIdsOnly() {
-          return idsOnly;
-        }
-
-        /**
-         * Optional.
-         *
-         * If set to `true`, only job ID, job requisition ID and language code will be returned.
-         *
-         * A typical use is to synchronize job repositories.
-         *
-         * Defaults to false.
-         */
-        public List setIdsOnly(java.lang.Boolean idsOnly) {
-          this.idsOnly = idsOnly;
-          return this;
-        }
-
-        /**
-         * Optional.
-         *
          * The requisition ID, also known as posting ID, assigned by the company to the job.
          *
          * The maximum number of allowable characters is 225.
@@ -1300,6 +1259,47 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
          */
         public List setJobRequisitionId(java.lang.String jobRequisitionId) {
           this.jobRequisitionId = jobRequisitionId;
+          return this;
+        }
+
+        /**
+         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
+         * jobs page by page instead.
+         *
+         * Optional.
+         *
+         * Set to true if the total number of open jobs is to be returned.
+         *
+         * Defaults to false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeJobsCount;
+
+        /** Deprecated. Please DO NOT use this field except for small companies. Suggest counting jobs page by
+       page instead.
+
+       Optional.
+
+       Set to true if the total number of open jobs is to be returned.
+
+       Defaults to false.
+         */
+        public java.lang.Boolean getIncludeJobsCount() {
+          return includeJobsCount;
+        }
+
+        /**
+         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
+         * jobs page by page instead.
+         *
+         * Optional.
+         *
+         * Set to true if the total number of open jobs is to be returned.
+         *
+         * Defaults to false.
+         */
+        public List setIncludeJobsCount(java.lang.Boolean includeJobsCount) {
+          this.includeJobsCount = includeJobsCount;
           return this;
         }
 
@@ -2188,62 +2188,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required.
-       *
-       * The filter string specifies the jobs to be enumerated.
-       *
-       * Supported operator: =, AND
-       *
-       * The fields eligible for filtering are:
-       *
-       * * `companyName` (Required) * `requisitionId` (Optional)
-       *
-       * Sample Query:
-       *
-       * * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** Required.
-
-     The filter string specifies the jobs to be enumerated.
-
-     Supported operator: =, AND
-
-     The fields eligible for filtering are:
-
-     * `companyName` (Required) * `requisitionId` (Optional)
-
-     Sample Query:
-
-     * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /**
-       * Required.
-       *
-       * The filter string specifies the jobs to be enumerated.
-       *
-       * Supported operator: =, AND
-       *
-       * The fields eligible for filtering are:
-       *
-       * * `companyName` (Required) * `requisitionId` (Optional)
-       *
-       * Sample Query:
-       *
-       * * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
-       */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
-        return this;
-      }
-
-      /**
        * Optional.
        *
        * The starting point of a query result.
@@ -2345,6 +2289,62 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
        */
       public List setIdsOnly(java.lang.Boolean idsOnly) {
         this.idsOnly = idsOnly;
+        return this;
+      }
+
+      /**
+       * Required.
+       *
+       * The filter string specifies the jobs to be enumerated.
+       *
+       * Supported operator: =, AND
+       *
+       * The fields eligible for filtering are:
+       *
+       * * `companyName` (Required) * `requisitionId` (Optional)
+       *
+       * Sample Query:
+       *
+       * * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Required.
+
+     The filter string specifies the jobs to be enumerated.
+
+     Supported operator: =, AND
+
+     The fields eligible for filtering are:
+
+     * `companyName` (Required) * `requisitionId` (Optional)
+
+     Sample Query:
+
+     * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Required.
+       *
+       * The filter string specifies the jobs to be enumerated.
+       *
+       * Supported operator: =, AND
+       *
+       * The fields eligible for filtering are:
+       *
+       * * `companyName` (Required) * `requisitionId` (Optional)
+       *
+       * Sample Query:
+       *
+       * * companyName = "companies/123" * companyName = "companies/123" AND requisitionId = "req-1"
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
         return this;
       }
 
@@ -2859,87 +2859,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required.
-       *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String languageCode;
-
-      /** Required.
-
-     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
-     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-
-     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-
-     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
-     returned.
-
-     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
-     jobs with same language_code are returned.
-       */
-      public java.lang.String getLanguageCode() {
-        return languageCode;
-      }
-
-      /**
-       * Required.
-       *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
-       */
-      public Complete setLanguageCode(java.lang.String languageCode) {
-        this.languageCode = languageCode;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
-       * The completion topic. The default is CompletionType.COMBINED.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String type;
-
-      /** Optional.
-
-     The completion topic. The default is CompletionType.COMBINED.
-       */
-      public java.lang.String getType() {
-        return type;
-      }
-
-      /**
-       * Optional.
-       *
-       * The completion topic. The default is CompletionType.COMBINED.
-       */
-      public Complete setType(java.lang.String type) {
-        this.type = type;
-        return this;
-      }
-
-      /**
        * Optional.
        *
        * If provided, restricts completion to the specified company.
@@ -3040,6 +2959,87 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
        */
       public Complete setQuery(java.lang.String query) {
         this.query = query;
+        return this;
+      }
+
+      /**
+       * Required.
+       *
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_code are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
+       * having open jobs with same language_code are returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Required.
+
+     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
+     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+
+     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+
+     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
+     returned.
+
+     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
+     jobs with same language_code are returned.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Required.
+       *
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_code are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
+       * having open jobs with same language_code are returned.
+       */
+      public Complete setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The completion topic. The default is CompletionType.COMBINED.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String type;
+
+      /** Optional.
+
+     The completion topic. The default is CompletionType.COMBINED.
+       */
+      public java.lang.String getType() {
+        return type;
+      }
+
+      /**
+       * Optional.
+       *
+       * The completion topic. The default is CompletionType.COMBINED.
+       */
+      public Complete setType(java.lang.String type) {
+        this.type = type;
         return this;
       }
 

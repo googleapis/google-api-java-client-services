@@ -43,12 +43,6 @@ public final class GoogleCloudVisionV1p3beta1ReferenceImage extends com.google.a
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1BoundingPoly> boundingPolys;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1BoundingPoly used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1BoundingPoly.class);
-  }
-
   /**
    * The resource name of the reference image.
    *

@@ -88,6 +88,14 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
   private java.util.List<EntityAnnotation> landmarkAnnotations;
 
   /**
+   * If present, localized object detection has completed successfully. This will be sorted
+   * descending by confidence score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LocalizedObjectAnnotation> localizedObjectAnnotations;
+
+  /**
    * If present, logo detection has completed successfully.
    * The value may be {@code null}.
    */
@@ -252,6 +260,25 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
    */
   public AnnotateImageResponse setLandmarkAnnotations(java.util.List<EntityAnnotation> landmarkAnnotations) {
     this.landmarkAnnotations = landmarkAnnotations;
+    return this;
+  }
+
+  /**
+   * If present, localized object detection has completed successfully. This will be sorted
+   * descending by confidence score.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LocalizedObjectAnnotation> getLocalizedObjectAnnotations() {
+    return localizedObjectAnnotations;
+  }
+
+  /**
+   * If present, localized object detection has completed successfully. This will be sorted
+   * descending by confidence score.
+   * @param localizedObjectAnnotations localizedObjectAnnotations or {@code null} for none
+   */
+  public AnnotateImageResponse setLocalizedObjectAnnotations(java.util.List<LocalizedObjectAnnotation> localizedObjectAnnotations) {
+    this.localizedObjectAnnotations = localizedObjectAnnotations;
     return this;
   }
 

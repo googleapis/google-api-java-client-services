@@ -36,6 +36,12 @@ public final class SearchAnnotationsResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<Annotation> annotations;
 
+  static {
+    // hack to force ProGuard to consider Annotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Annotation.class);
+  }
+
   /**
    * The continuation token, which is used to page through large result sets. Provide this value in
    * a subsequent request to return the next page of results. This field will be empty if there

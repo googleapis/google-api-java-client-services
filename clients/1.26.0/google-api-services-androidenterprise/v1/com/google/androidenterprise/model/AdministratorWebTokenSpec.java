@@ -56,6 +56,34 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private java.util.List<java.lang.String> permission;
 
   /**
+   * Options for displaying the Play Search page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdministratorWebTokenSpecPlaySearch playSearch;
+
+  /**
+   * Options for displaying the Private Apps page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdministratorWebTokenSpecPrivateApps privateApps;
+
+  /**
+   * Options for displaying the Store Builder page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdministratorWebTokenSpecStoreBuilder storeBuilder;
+
+  /**
+   * Options for displaying the Web Apps page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdministratorWebTokenSpecWebApps webApps;
+
+  /**
    * Identifies what kind of resource this is. Value: the fixed string
    * "androidenterprise#administratorWebTokenSpec".
    * @return value or {@code null} for none
@@ -111,6 +139,74 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
    */
   public AdministratorWebTokenSpec setPermission(java.util.List<java.lang.String> permission) {
     this.permission = permission;
+    return this;
+  }
+
+  /**
+   * Options for displaying the Play Search page.
+   * @return value or {@code null} for none
+   */
+  public AdministratorWebTokenSpecPlaySearch getPlaySearch() {
+    return playSearch;
+  }
+
+  /**
+   * Options for displaying the Play Search page.
+   * @param playSearch playSearch or {@code null} for none
+   */
+  public AdministratorWebTokenSpec setPlaySearch(AdministratorWebTokenSpecPlaySearch playSearch) {
+    this.playSearch = playSearch;
+    return this;
+  }
+
+  /**
+   * Options for displaying the Private Apps page.
+   * @return value or {@code null} for none
+   */
+  public AdministratorWebTokenSpecPrivateApps getPrivateApps() {
+    return privateApps;
+  }
+
+  /**
+   * Options for displaying the Private Apps page.
+   * @param privateApps privateApps or {@code null} for none
+   */
+  public AdministratorWebTokenSpec setPrivateApps(AdministratorWebTokenSpecPrivateApps privateApps) {
+    this.privateApps = privateApps;
+    return this;
+  }
+
+  /**
+   * Options for displaying the Store Builder page.
+   * @return value or {@code null} for none
+   */
+  public AdministratorWebTokenSpecStoreBuilder getStoreBuilder() {
+    return storeBuilder;
+  }
+
+  /**
+   * Options for displaying the Store Builder page.
+   * @param storeBuilder storeBuilder or {@code null} for none
+   */
+  public AdministratorWebTokenSpec setStoreBuilder(AdministratorWebTokenSpecStoreBuilder storeBuilder) {
+    this.storeBuilder = storeBuilder;
+    return this;
+  }
+
+  /**
+   * Options for displaying the Web Apps page.
+   * @return value or {@code null} for none
+   */
+  public AdministratorWebTokenSpecWebApps getWebApps() {
+    return webApps;
+  }
+
+  /**
+   * Options for displaying the Web Apps page.
+   * @param webApps webApps or {@code null} for none
+   */
+  public AdministratorWebTokenSpec setWebApps(AdministratorWebTokenSpecWebApps webApps) {
+    this.webApps = webApps;
     return this;
   }
 

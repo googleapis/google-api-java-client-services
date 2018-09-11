@@ -17,7 +17,7 @@
 package com.google.dfareporting.model;
 
 /**
- * Contains properties of a DCM campaign.
+ * Contains properties of a Campaign Manager campaign.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
@@ -94,7 +94,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Billing invoice code included in the DCM client billing invoices associated with the campaign.
+   * Billing invoice code included in the Campaign Manager client billing invoices associated with
+   * the campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -386,7 +387,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Billing invoice code included in the DCM client billing invoices associated with the campaign.
+   * Billing invoice code included in the Campaign Manager client billing invoices associated with
+   * the campaign.
    * @return value or {@code null} for none
    */
   public java.lang.String getBillingInvoiceCode() {
@@ -394,7 +396,8 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Billing invoice code included in the DCM client billing invoices associated with the campaign.
+   * Billing invoice code included in the Campaign Manager client billing invoices associated with
+   * the campaign.
    * @param billingInvoiceCode billingInvoiceCode or {@code null} for none
    */
   public Campaign setBillingInvoiceCode(java.lang.String billingInvoiceCode) {

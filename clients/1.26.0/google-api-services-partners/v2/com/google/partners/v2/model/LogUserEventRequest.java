@@ -50,6 +50,12 @@ public final class LogUserEventRequest extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<EventData> eventDatas;
 
+  static {
+    // hack to force ProGuard to consider EventData used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EventData.class);
+  }
+
   /**
    * The scope of the event.
    * The value may be {@code null}.

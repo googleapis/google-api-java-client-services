@@ -44,12 +44,6 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResults extends com.go
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsResult> results;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1ProductSearchResultsResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1ProductSearchResultsResult.class);
-  }
-
   /**
    * Timestamp of the index which provided these results. Changes made after this time are not
    * reflected in the current results.

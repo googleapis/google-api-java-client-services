@@ -13217,17 +13217,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Select only directory sites with this DFP network code. */
+      /** Select only directory sites with this Ad Manager network code. */
       @com.google.api.client.util.Key
       private java.lang.String dfpNetworkCode;
 
-      /** Select only directory sites with this DFP network code.
+      /** Select only directory sites with this Ad Manager network code.
        */
       public java.lang.String getDfpNetworkCode() {
         return dfpNetworkCode;
       }
 
-      /** Select only directory sites with this DFP network code. */
+      /** Select only directory sites with this Ad Manager network code. */
       public List setDfpNetworkCode(java.lang.String dfpNetworkCode) {
         this.dfpNetworkCode = dfpNetworkCode;
         return this;

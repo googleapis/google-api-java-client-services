@@ -2183,6 +2183,22 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
+        /** Optional view for the returned Role objects. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Optional view for the returned Role objects.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Optional view for the returned Role objects. */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
         /** Include Roles that have been deleted. */
         @com.google.api.client.util.Key
         private java.lang.Boolean showDeleted;
@@ -2228,22 +2244,6 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /** Optional limit on the number of roles to include in the response. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
-          return this;
-        }
-
-        /** Optional view for the returned Role objects. */
-        @com.google.api.client.util.Key
-        private java.lang.String view;
-
-        /** Optional view for the returned Role objects.
-         */
-        public java.lang.String getView() {
-          return view;
-        }
-
-        /** Optional view for the returned Role objects. */
-        public List setView(java.lang.String view) {
-          this.view = view;
           return this;
         }
 
@@ -3979,7 +3979,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * Updates a ServiceAccount.
        *
-       * Currently, only the following fields are updatable: `display_name`, `description`.
+       * Currently, only the following fields are updatable: `display_name` . The `etag` is mandatory.
        *
        * Create a request for the method "serviceAccounts.update".
        *
@@ -4015,7 +4015,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Updates a ServiceAccount.
          *
-         * Currently, only the following fields are updatable: `display_name`, `description`.
+         * Currently, only the following fields are updatable: `display_name` . The `etag` is mandatory.
          *
          * Create a request for the method "serviceAccounts.update".
          *
@@ -5142,6 +5142,45 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * The resource name of the parent resource in one of the following formats: `` (empty string)
+       * -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The resource name of the parent resource in one of the following formats: `` (empty string) -- this
+     refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The resource name of the parent resource in one of the following formats: `` (empty string)
+       * -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      /** Include Roles that have been deleted. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showDeleted;
+
+      /** Include Roles that have been deleted.
+       */
+      public java.lang.Boolean getShowDeleted() {
+        return showDeleted;
+      }
+
+      /** Include Roles that have been deleted. */
+      public List setShowDeleted(java.lang.Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+      }
+
       /** Optional pagination token returned in an earlier ListRolesResponse. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
@@ -5187,45 +5226,6 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       /** Optional view for the returned Role objects. */
       public List setView(java.lang.String view) {
         this.view = view;
-        return this;
-      }
-
-      /**
-       * The resource name of the parent resource in one of the following formats: `` (empty string)
-       * -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** The resource name of the parent resource in one of the following formats: `` (empty string) -- this
-     refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * The resource name of the parent resource in one of the following formats: `` (empty string)
-       * -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
-       */
-      public List setParent(java.lang.String parent) {
-        this.parent = parent;
-        return this;
-      }
-
-      /** Include Roles that have been deleted. */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean showDeleted;
-
-      /** Include Roles that have been deleted.
-       */
-      public java.lang.Boolean getShowDeleted() {
-        return showDeleted;
-      }
-
-      /** Include Roles that have been deleted. */
-      public List setShowDeleted(java.lang.Boolean showDeleted) {
-        this.showDeleted = showDeleted;
         return this;
       }
 

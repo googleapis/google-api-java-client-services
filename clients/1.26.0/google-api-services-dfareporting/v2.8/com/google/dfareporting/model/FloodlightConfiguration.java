@@ -118,7 +118,7 @@ public final class FloodlightConfiguration extends com.google.api.client.json.Ge
   private java.lang.String naturalSearchConversionAttributionOption;
 
   /**
-   * Settings for DCM Omniture integration.
+   * Settings for Campaign Manager Omniture integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -364,7 +364,7 @@ public final class FloodlightConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * Settings for DCM Omniture integration.
+   * Settings for Campaign Manager Omniture integration.
    * @return value or {@code null} for none
    */
   public OmnitureSettings getOmnitureSettings() {
@@ -372,7 +372,7 @@ public final class FloodlightConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * Settings for DCM Omniture integration.
+   * Settings for Campaign Manager Omniture integration.
    * @param omnitureSettings omnitureSettings or {@code null} for none
    */
   public FloodlightConfiguration setOmnitureSettings(OmnitureSettings omnitureSettings) {

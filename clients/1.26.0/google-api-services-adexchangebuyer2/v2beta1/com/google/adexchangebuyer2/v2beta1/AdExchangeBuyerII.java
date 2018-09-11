@@ -556,29 +556,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Requested page size. The server may return fewer clients than requested. If unspecified,
-         * the server will pick an appropriate default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. The server may return fewer clients than requested. If unspecified, the server
-       will pick an appropriate default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Requested page size. The server may return fewer clients than requested. If unspecified,
-         * the server will pick an appropriate default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListClientsResponse.nextPageToken returned from the previous call to the
          * accounts.clients.list method.
@@ -626,6 +603,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          */
         public List setPartnerClientId(java.lang.String partnerClientId) {
           this.partnerClientId = partnerClientId;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer clients than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer clients than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer clients than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -1286,29 +1286,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Requested page size. Server may return fewer clients than requested. If unspecified,
-           * server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. Server may return fewer clients than requested. If unspecified, server will
-         pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. Server may return fewer clients than requested. If unspecified,
-           * server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListClientUserInvitationsResponse.nextPageToken returned from the previous
            * call to the clients.invitations.list method.
@@ -1331,6 +1308,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Requested page size. Server may return fewer clients than requested. If unspecified,
+           * server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. Server may return fewer clients than requested. If unspecified, server will
+         pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. Server may return fewer clients than requested. If unspecified,
+           * server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
           }
 
@@ -1703,6 +1703,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
+           * Requested page size. The server may return fewer clients than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer clients than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer clients than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListClientUsersResponse.nextPageToken returned from the previous call to the
            * accounts.clients.users.list method.
@@ -1725,29 +1748,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size. The server may return fewer clients than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer clients than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer clients than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -2376,6 +2376,31 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of ListCreativesResponse.next_page_token returned from the previous call to
+         * 'ListCreatives' method.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results the server should return. Typically, this is the value of
+       ListCreativesResponse.next_page_token returned from the previous call to 'ListCreatives' method.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token identifying a page of results the server should return. Typically, this is the
+         * value of ListCreativesResponse.next_page_token returned from the previous call to
+         * 'ListCreatives' method.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
          * Requested page size. The server may return fewer creatives than requested (due to timeout
          * constraint) even if more are available via another call. If unspecified, server will pick
          * an appropriate default. Acceptable values are 1 to 1000, inclusive.
@@ -2445,31 +2470,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          */
         public List setQuery(java.lang.String query) {
           this.query = query;
-          return this;
-        }
-
-        /**
-         * A token identifying a page of results the server should return. Typically, this is the
-         * value of ListCreativesResponse.next_page_token returned from the previous call to
-         * 'ListCreatives' method.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token identifying a page of results the server should return. Typically, this is the value of
-       ListCreativesResponse.next_page_token returned from the previous call to 'ListCreatives' method.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * A token identifying a page of results the server should return. Typically, this is the
-         * value of ListCreativesResponse.next_page_token returned from the previous call to
-         * 'ListCreatives' method.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
           return this;
         }
 
@@ -3272,32 +3272,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * A token identifying a page of results the server should return. Typically, this is the
-           * value of ListDealAssociationsResponse.next_page_token returned from the previous call
-           * to 'ListDealAssociations' method.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** A token identifying a page of results the server should return. Typically, this is the value of
-         ListDealAssociationsResponse.next_page_token returned from the previous call to
-         'ListDealAssociations' method.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * A token identifying a page of results the server should return. Typically, this is the
-           * value of ListDealAssociationsResponse.next_page_token returned from the previous call
-           * to 'ListDealAssociations' method.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * Requested page size. Server may return fewer associations than requested. If
            * unspecified, server will pick an appropriate default.
            */
@@ -3358,6 +3332,32 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setQuery(java.lang.String query) {
             this.query = query;
+            return this;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListDealAssociationsResponse.next_page_token returned from the previous call
+           * to 'ListDealAssociations' method.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying a page of results the server should return. Typically, this is the value of
+         ListDealAssociationsResponse.next_page_token returned from the previous call to
+         'ListDealAssociations' method.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying a page of results the server should return. Typically, this is the
+           * value of ListDealAssociationsResponse.next_page_token returned from the previous call
+           * to 'ListDealAssociations' method.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -4319,6 +4319,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListFilterSetsResponse.nextPageToken returned from the previous call to the
            * accounts.filterSets.list method.
@@ -4341,29 +4364,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -4577,29 +4577,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListBidMetricsResponse.nextPageToken returned from the previous call to
              * the bidMetrics.list method.
@@ -4621,6 +4598,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
               return this;
             }
 
@@ -5098,29 +5098,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListBidResponsesWithoutBidsResponse.nextPageToken returned from the
              * previous call to the bidResponsesWithoutBids.list method.
@@ -5143,6 +5120,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
               return this;
             }
 
@@ -5359,29 +5359,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListFilteredBidRequestsResponse.nextPageToken returned from the previous
              * call to the filteredBidRequests.list method.
@@ -5404,6 +5381,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
               return this;
             }
 
@@ -5619,29 +5619,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListFilteredBidsResponse.nextPageToken returned from the previous call
              * to the filteredBids.list method.
@@ -5664,6 +5641,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
               return this;
             }
 
@@ -5917,29 +5917,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Requested page size. The server may return fewer results than requested. If
-               * unspecified, the server will pick an appropriate default.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-             will pick an appropriate default.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /**
-               * Requested page size. The server may return fewer results than requested. If
-               * unspecified, the server will pick an appropriate default.
-               */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /**
                * A token identifying a page of results the server should return. Typically, this is
                * the value of ListCreativeStatusBreakdownByCreativeResponse.nextPageToken returned
                * from the previous call to the filteredBids.creatives.list method.
@@ -5962,6 +5939,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Requested page size. The server may return fewer results than requested. If
+               * unspecified, the server will pick an appropriate default.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+             will pick an appropriate default.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Requested page size. The server may return fewer results than requested. If
+               * unspecified, the server will pick an appropriate default.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
                 return this;
               }
 
@@ -6740,29 +6740,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListLosingBidsResponse.nextPageToken returned from the previous call to
              * the losingBids.list method.
@@ -6784,6 +6761,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
               return this;
             }
 
@@ -7828,6 +7828,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListFilterSetsResponse.nextPageToken returned from the previous call to the
          * accounts.filterSets.list method.
@@ -7850,29 +7873,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Requested page size. The server may return fewer results than requested. If unspecified,
-         * the server will pick an appropriate default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-       will pick an appropriate default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Requested page size. The server may return fewer results than requested. If unspecified,
-         * the server will pick an appropriate default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -8346,6 +8346,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListBidResponseErrorsResponse.nextPageToken returned from the previous call to
            * the bidResponseErrors.list method.
@@ -8368,29 +8391,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -8607,6 +8607,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListBidResponsesWithoutBidsResponse.nextPageToken returned from the previous
            * call to the bidResponsesWithoutBids.list method.
@@ -8629,29 +8652,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -8868,29 +8868,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListFilteredBidRequestsResponse.nextPageToken returned from the previous call
            * to the filteredBidRequests.list method.
@@ -8913,6 +8890,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
           }
 
@@ -9424,6 +9424,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListCreativeStatusBreakdownByCreativeResponse.nextPageToken returned
              * from the previous call to the filteredBids.creatives.list method.
@@ -9446,29 +9469,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
               return this;
             }
 
@@ -9724,6 +9724,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             }
 
             /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. The server may return fewer results than requested. If
+             * unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
              * A token identifying a page of results the server should return. Typically, this is
              * the value of ListCreativeStatusBreakdownByDetailResponse.nextPageToken returned from
              * the previous call to the filteredBids.details.list method.
@@ -9746,29 +9769,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-           will pick an appropriate default.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Requested page size. The server may return fewer results than requested. If
-             * unspecified, the server will pick an appropriate default.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
               return this;
             }
 
@@ -10245,6 +10245,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListLosingBidsResponse.nextPageToken returned from the previous call to the
            * losingBids.list method.
@@ -10266,29 +10289,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -10505,6 +10505,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size. The server may return fewer results than requested. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results the server should return. Typically, this is the
            * value of ListNonBillableWinningBidsResponse.nextPageToken returned from the previous
            * call to the nonBillableWinningBids.list method.
@@ -10527,29 +10550,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-         will pick an appropriate default.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size. The server may return fewer results than requested. If
-           * unspecified, the server will pick an appropriate default.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 

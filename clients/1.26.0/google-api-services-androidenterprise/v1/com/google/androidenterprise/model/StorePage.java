@@ -46,12 +46,11 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Ordered list of pages a user should be able to reach from this page. The pages must exist, must
-   * not be this page, and once a link is created the page linked to cannot be deleted until all
-   * links to it are removed. It is recommended that the basic pages are created first, before
-   * adding the links between pages.
+   * Ordered list of pages a user should be able to reach from this page. The list can't include
+   * this page. It is recommended that the basic pages are created first, before adding the links
+   * between pages.
    *
-   * No attempt is made to verify that all pages are reachable from the homepage.
+   * The API doesn't verify that the pages exist or the pages are reachable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,12 +108,11 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ordered list of pages a user should be able to reach from this page. The pages must exist, must
-   * not be this page, and once a link is created the page linked to cannot be deleted until all
-   * links to it are removed. It is recommended that the basic pages are created first, before
-   * adding the links between pages.
+   * Ordered list of pages a user should be able to reach from this page. The list can't include
+   * this page. It is recommended that the basic pages are created first, before adding the links
+   * between pages.
    *
-   * No attempt is made to verify that all pages are reachable from the homepage.
+   * The API doesn't verify that the pages exist or the pages are reachable.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLink() {
@@ -122,12 +120,11 @@ public final class StorePage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ordered list of pages a user should be able to reach from this page. The pages must exist, must
-   * not be this page, and once a link is created the page linked to cannot be deleted until all
-   * links to it are removed. It is recommended that the basic pages are created first, before
-   * adding the links between pages.
+   * Ordered list of pages a user should be able to reach from this page. The list can't include
+   * this page. It is recommended that the basic pages are created first, before adding the links
+   * between pages.
    *
-   * No attempt is made to verify that all pages are reachable from the homepage.
+   * The API doesn't verify that the pages exist or the pages are reachable.
    * @param link link or {@code null} for none
    */
   public StorePage setLink(java.util.List<java.lang.String> link) {

@@ -59,8 +59,10 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   private java.util.List<CustomAttributeHistogramRequest> customAttributeHistogramFacets;
 
   /**
-   * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
-   * `EMPLOYMENT_TYPE` etc. This field is equivalent to GetHistogramRequest.
+   * Optional.
+   *
+   * Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`, `EMPLOYMENT_TYPE`
+   * etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +115,10 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
-   * `EMPLOYMENT_TYPE` etc. This field is equivalent to GetHistogramRequest.
+   * Optional.
+   *
+   * Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`, `EMPLOYMENT_TYPE`
+   * etc.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSimpleHistogramFacets() {
@@ -122,8 +126,10 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
-   * `EMPLOYMENT_TYPE` etc. This field is equivalent to GetHistogramRequest.
+   * Optional.
+   *
+   * Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`, `EMPLOYMENT_TYPE`
+   * etc.
    * @param simpleHistogramFacets simpleHistogramFacets or {@code null} for none
    */
   public HistogramFacets setSimpleHistogramFacets(java.util.List<java.lang.String> simpleHistogramFacets) {

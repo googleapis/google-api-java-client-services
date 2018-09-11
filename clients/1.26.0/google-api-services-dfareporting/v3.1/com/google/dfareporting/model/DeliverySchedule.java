@@ -49,8 +49,8 @@ public final class DeliverySchedule extends com.google.api.client.json.GenericJs
   /**
    * Impression ratio for this ad. This ratio determines how often each ad is served relative to the
    * others. For example, if ad A has an impression ratio of 1 and ad B has an impression ratio of
-   * 3, then DCM will serve ad B three times as often as ad A. Acceptable values are 1 to 10,
-   * inclusive.
+   * 3, then Campaign Manager will serve ad B three times as often as ad A. Acceptable values are 1
+   * to 10, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -105,8 +105,8 @@ public final class DeliverySchedule extends com.google.api.client.json.GenericJs
   /**
    * Impression ratio for this ad. This ratio determines how often each ad is served relative to the
    * others. For example, if ad A has an impression ratio of 1 and ad B has an impression ratio of
-   * 3, then DCM will serve ad B three times as often as ad A. Acceptable values are 1 to 10,
-   * inclusive.
+   * 3, then Campaign Manager will serve ad B three times as often as ad A. Acceptable values are 1
+   * to 10, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getImpressionRatio() {
@@ -116,8 +116,8 @@ public final class DeliverySchedule extends com.google.api.client.json.GenericJs
   /**
    * Impression ratio for this ad. This ratio determines how often each ad is served relative to the
    * others. For example, if ad A has an impression ratio of 1 and ad B has an impression ratio of
-   * 3, then DCM will serve ad B three times as often as ad A. Acceptable values are 1 to 10,
-   * inclusive.
+   * 3, then Campaign Manager will serve ad B three times as often as ad A. Acceptable values are 1
+   * to 10, inclusive.
    * @param impressionRatio impressionRatio or {@code null} for none
    */
   public DeliverySchedule setImpressionRatio(java.lang.Long impressionRatio) {

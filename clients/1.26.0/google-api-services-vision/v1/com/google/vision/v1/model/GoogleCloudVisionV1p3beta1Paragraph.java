@@ -62,6 +62,12 @@ public final class GoogleCloudVisionV1p3beta1Paragraph extends com.google.api.cl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1Word> words;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1Word used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1Word.class);
+  }
+
   /**
    * The bounding box for the paragraph. The vertices are in the order of top-left, top-right,
    * bottom-right, bottom-left. When a rotation of the bounding box is detected the rotation is

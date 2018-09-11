@@ -37,6 +37,12 @@ public final class ListLocationsResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Location> locations;
 
+  static {
+    // hack to force ProGuard to consider Location used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Location.class);
+  }
+
   /**
    * Only return ListLocationsResponse that occur after the page_token. This value should be
    * populated from the ListLocationsResponse.next_page_token if that response token was set (which

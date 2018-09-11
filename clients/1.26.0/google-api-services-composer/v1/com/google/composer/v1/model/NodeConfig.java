@@ -81,7 +81,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    *
    * [Shared VPC](/vpc/docs/shared-vpc) is not currently supported. The network must belong to the
    * environment's project. If unspecified, the "default" network ID in the environment's project is
-   * used.  If a [Custom Subnet Network]((/vpc/docs/vpc#vpc_networks_and_subnets) is provided,
+   * used.  If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided,
    * `nodeConfig.subnetwork` must also be provided.
    * The value may be {@code null}.
    */
@@ -230,7 +230,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    *
    * [Shared VPC](/vpc/docs/shared-vpc) is not currently supported. The network must belong to the
    * environment's project. If unspecified, the "default" network ID in the environment's project is
-   * used.  If a [Custom Subnet Network]((/vpc/docs/vpc#vpc_networks_and_subnets) is provided,
+   * used.  If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided,
    * `nodeConfig.subnetwork` must also be provided.
    * @return value or {@code null} for none
    */
@@ -245,7 +245,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    *
    * [Shared VPC](/vpc/docs/shared-vpc) is not currently supported. The network must belong to the
    * environment's project. If unspecified, the "default" network ID in the environment's project is
-   * used.  If a [Custom Subnet Network]((/vpc/docs/vpc#vpc_networks_and_subnets) is provided,
+   * used.  If a [Custom Subnet Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided,
    * `nodeConfig.subnetwork` must also be provided.
    * @param network network or {@code null} for none
    */

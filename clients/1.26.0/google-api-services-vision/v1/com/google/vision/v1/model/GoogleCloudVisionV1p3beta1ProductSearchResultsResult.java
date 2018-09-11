@@ -45,8 +45,6 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResultsResult extends 
 
   /**
    * A confidence level on the match, ranging from 0 (no confidence) to 1 (full confidence).
-   *
-   * This field is returned only if `view` is set to `FULL` in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +86,6 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResultsResult extends 
 
   /**
    * A confidence level on the match, ranging from 0 (no confidence) to 1 (full confidence).
-   *
-   * This field is returned only if `view` is set to `FULL` in the request.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -98,8 +94,6 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResultsResult extends 
 
   /**
    * A confidence level on the match, ranging from 0 (no confidence) to 1 (full confidence).
-   *
-   * This field is returned only if `view` is set to `FULL` in the request.
    * @param score score or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1ProductSearchResultsResult setScore(java.lang.Float score) {

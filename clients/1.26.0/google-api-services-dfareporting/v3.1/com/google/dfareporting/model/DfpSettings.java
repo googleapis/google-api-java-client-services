@@ -17,7 +17,7 @@
 package com.google.dfareporting.model;
 
 /**
- * DFP Settings
+ * Google Ad Manager Settings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
@@ -31,14 +31,14 @@ package com.google.dfareporting.model;
 public final class DfpSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * DFP network code for this directory site.
+   * Ad Manager network code for this directory site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dfpNetworkCode;
 
   /**
-   * DFP network name for this directory site.
+   * Ad Manager network name for this directory site.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +59,14 @@ public final class DfpSettings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean pubPaidPlacementAccepted;
 
   /**
-   * Whether this directory site is available only via DoubleClick Publisher Portal.
+   * Whether this directory site is available only via Publisher Portal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean publisherPortalOnly;
 
   /**
-   * DFP network code for this directory site.
+   * Ad Manager network code for this directory site.
    * @return value or {@code null} for none
    */
   public java.lang.String getDfpNetworkCode() {
@@ -74,7 +74,7 @@ public final class DfpSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DFP network code for this directory site.
+   * Ad Manager network code for this directory site.
    * @param dfpNetworkCode dfpNetworkCode or {@code null} for none
    */
   public DfpSettings setDfpNetworkCode(java.lang.String dfpNetworkCode) {
@@ -83,7 +83,7 @@ public final class DfpSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DFP network name for this directory site.
+   * Ad Manager network name for this directory site.
    * @return value or {@code null} for none
    */
   public java.lang.String getDfpNetworkName() {
@@ -91,7 +91,7 @@ public final class DfpSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DFP network name for this directory site.
+   * Ad Manager network name for this directory site.
    * @param dfpNetworkName dfpNetworkName or {@code null} for none
    */
   public DfpSettings setDfpNetworkName(java.lang.String dfpNetworkName) {
@@ -134,7 +134,7 @@ public final class DfpSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this directory site is available only via DoubleClick Publisher Portal.
+   * Whether this directory site is available only via Publisher Portal.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPublisherPortalOnly() {
@@ -142,7 +142,7 @@ public final class DfpSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this directory site is available only via DoubleClick Publisher Portal.
+   * Whether this directory site is available only via Publisher Portal.
    * @param publisherPortalOnly publisherPortalOnly or {@code null} for none
    */
   public DfpSettings setPublisherPortalOnly(java.lang.Boolean publisherPortalOnly) {

@@ -47,6 +47,12 @@ public final class FilteringStats extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<Reason> reasons;
 
+  static {
+    // hack to force ProGuard to consider Reason used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Reason.class);
+  }
+
   /**
    * The day during which the data was collected. The data is collected from 00:00:00 to 23:59:59
    * PT. During switches from PST to PDT and back, the day may contain 23 or 25 hours of data

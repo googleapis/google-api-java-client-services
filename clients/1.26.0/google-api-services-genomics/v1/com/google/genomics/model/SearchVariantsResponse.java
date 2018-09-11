@@ -45,12 +45,6 @@ public final class SearchVariantsResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<Variant> variants;
 
-  static {
-    // hack to force ProGuard to consider Variant used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Variant.class);
-  }
-
   /**
    * The continuation token, which is used to page through large result sets. Provide this value in
    * a subsequent request to return the next page of results. This field will be empty if there

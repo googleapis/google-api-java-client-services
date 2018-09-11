@@ -47,6 +47,12 @@ public final class ListUsableSubnetworksResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<UsableSubnetwork> subnetworks;
 
+  static {
+    // hack to force ProGuard to consider UsableSubnetwork used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(UsableSubnetwork.class);
+  }
+
   /**
    * This token allows you to get the next page of results for list requests. If the number of
    * results is larger than `page_size`, use the `next_page_token` as a value for the query

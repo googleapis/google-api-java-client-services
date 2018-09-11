@@ -31,7 +31,7 @@ package com.google.dfareporting.model;
 public final class CreativeCustomEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique ID of this event used by DDM Reporting and Data Transfer. This is a read-only field.
+   * Unique ID of this event used by Reporting and Data Transfer. This is a read-only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -52,8 +52,8 @@ public final class CreativeCustomEvent extends com.google.api.client.json.Generi
   private java.lang.String advertiserCustomEventType;
 
   /**
-   * Artwork label column, used to link events in DCM back to events in Studio. This is a required
-   * field and should not be modified after insertion.
+   * Artwork label column, used to link events in Campaign Manager back to events in Studio. This is
+   * a required field and should not be modified after insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class CreativeCustomEvent extends com.google.api.client.json.Generi
   private java.lang.String videoReportingId;
 
   /**
-   * Unique ID of this event used by DDM Reporting and Data Transfer. This is a read-only field.
+   * Unique ID of this event used by Reporting and Data Transfer. This is a read-only field.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserCustomEventId() {
@@ -111,7 +111,7 @@ public final class CreativeCustomEvent extends com.google.api.client.json.Generi
   }
 
   /**
-   * Unique ID of this event used by DDM Reporting and Data Transfer. This is a read-only field.
+   * Unique ID of this event used by Reporting and Data Transfer. This is a read-only field.
    * @param advertiserCustomEventId advertiserCustomEventId or {@code null} for none
    */
   public CreativeCustomEvent setAdvertiserCustomEventId(java.lang.Long advertiserCustomEventId) {
@@ -154,8 +154,8 @@ public final class CreativeCustomEvent extends com.google.api.client.json.Generi
   }
 
   /**
-   * Artwork label column, used to link events in DCM back to events in Studio. This is a required
-   * field and should not be modified after insertion.
+   * Artwork label column, used to link events in Campaign Manager back to events in Studio. This is
+   * a required field and should not be modified after insertion.
    * @return value or {@code null} for none
    */
   public java.lang.String getArtworkLabel() {
@@ -163,8 +163,8 @@ public final class CreativeCustomEvent extends com.google.api.client.json.Generi
   }
 
   /**
-   * Artwork label column, used to link events in DCM back to events in Studio. This is a required
-   * field and should not be modified after insertion.
+   * Artwork label column, used to link events in Campaign Manager back to events in Studio. This is
+   * a required field and should not be modified after insertion.
    * @param artworkLabel artworkLabel or {@code null} for none
    */
   public CreativeCustomEvent setArtworkLabel(java.lang.String artworkLabel) {

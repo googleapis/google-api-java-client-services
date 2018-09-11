@@ -35,6 +35,12 @@ public final class NetworkConfigurationCatalog extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<NetworkConfiguration> configurations;
 
+  static {
+    // hack to force ProGuard to consider NetworkConfiguration used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NetworkConfiguration.class);
+  }
+
   /**
    * @return value or {@code null} for none
    */

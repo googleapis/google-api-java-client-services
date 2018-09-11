@@ -245,38 +245,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** IP address to use instead of the user's geo-located IP address. */
-      @com.google.api.client.util.Key("requestMetadata.userOverrides.ipAddress")
-      private java.lang.String requestMetadataUserOverridesIpAddress;
-
-      /** IP address to use instead of the user's geo-located IP address.
-       */
-      public java.lang.String getRequestMetadataUserOverridesIpAddress() {
-        return requestMetadataUserOverridesIpAddress;
-      }
-
-      /** IP address to use instead of the user's geo-located IP address. */
-      public List setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
-        this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
-        return this;
-      }
-
-      /** Experiment IDs the current request belongs to. */
-      @com.google.api.client.util.Key("requestMetadata.experimentIds")
-      private java.util.List<java.lang.String> requestMetadataExperimentIds;
-
-      /** Experiment IDs the current request belongs to.
-       */
-      public java.util.List<java.lang.String> getRequestMetadataExperimentIds() {
-        return requestMetadataExperimentIds;
-      }
-
-      /** Experiment IDs the current request belongs to. */
-      public List setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
-        this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
       /**
        * Second level identifier to indicate where the traffic comes from. An identifier has
        * multiple letters created by a team which redirected the traffic to us.
@@ -430,6 +398,38 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Locale to use for the current request. */
       public List setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
         this.requestMetadataLocale = requestMetadataLocale;
+        return this;
+      }
+
+      /** IP address to use instead of the user's geo-located IP address. */
+      @com.google.api.client.util.Key("requestMetadata.userOverrides.ipAddress")
+      private java.lang.String requestMetadataUserOverridesIpAddress;
+
+      /** IP address to use instead of the user's geo-located IP address.
+       */
+      public java.lang.String getRequestMetadataUserOverridesIpAddress() {
+        return requestMetadataUserOverridesIpAddress;
+      }
+
+      /** IP address to use instead of the user's geo-located IP address. */
+      public List setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
+        this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
+        return this;
+      }
+
+      /** Experiment IDs the current request belongs to. */
+      @com.google.api.client.util.Key("requestMetadata.experimentIds")
+      private java.util.List<java.lang.String> requestMetadataExperimentIds;
+
+      /** Experiment IDs the current request belongs to.
+       */
+      public java.util.List<java.lang.String> getRequestMetadataExperimentIds() {
+        return requestMetadataExperimentIds;
+      }
+
+      /** Experiment IDs the current request belongs to. */
+      public List setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
+        this.requestMetadataExperimentIds = requestMetadataExperimentIds;
         return this;
       }
 
@@ -704,94 +704,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * If the company's budget is in a different currency code than this one, then the converted
-       * budget is converted to this currency code.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String currencyCode;
-
-      /** If the company's budget is in a different currency code than this one, then the converted budget is
-     converted to this currency code.
-       */
-      public java.lang.String getCurrencyCode() {
-        return currencyCode;
-      }
-
-      /**
-       * If the company's budget is in a different currency code than this one, then the converted
-       * budget is converted to this currency code.
-       */
-      public Get setCurrencyCode(java.lang.String currencyCode) {
-        this.currencyCode = currencyCode;
-        return this;
-      }
-
-      /** Experiment IDs the current request belongs to. */
-      @com.google.api.client.util.Key("requestMetadata.experimentIds")
-      private java.util.List<java.lang.String> requestMetadataExperimentIds;
-
-      /** Experiment IDs the current request belongs to.
-       */
-      public java.util.List<java.lang.String> getRequestMetadataExperimentIds() {
-        return requestMetadataExperimentIds;
-      }
-
-      /** Experiment IDs the current request belongs to. */
-      public Get setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
-        this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
-      /**
-       * How to order addresses within the returned company. Currently, only `address` and `address
-       * desc` is supported which will sorted by closest to farthest in distance from given address
-       * and farthest to closest distance from given address respectively.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String orderBy;
-
-      /** How to order addresses within the returned company. Currently, only `address` and `address desc` is
-     supported which will sorted by closest to farthest in distance from given address and farthest to
-     closest distance from given address respectively.
-       */
-      public java.lang.String getOrderBy() {
-        return orderBy;
-      }
-
-      /**
-       * How to order addresses within the returned company. Currently, only `address` and `address
-       * desc` is supported which will sorted by closest to farthest in distance from given address
-       * and farthest to closest distance from given address respectively.
-       */
-      public Get setOrderBy(java.lang.String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public Get setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
-        return this;
-      }
-
       /** Google Partners session ID. */
       @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
       private java.lang.String requestMetadataPartnersSessionId;
@@ -844,6 +756,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Locale to use for the current request. */
+      @com.google.api.client.util.Key("requestMetadata.locale")
+      private java.lang.String requestMetadataLocale;
+
+      /** Locale to use for the current request.
+       */
+      public java.lang.String getRequestMetadataLocale() {
+        return requestMetadataLocale;
+      }
+
+      /** Locale to use for the current request. */
+      public Get setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
+        this.requestMetadataLocale = requestMetadataLocale;
+        return this;
+      }
+
       /**
        * The address to use for sorting the company's addresses by proximity. If not given, the geo-
        * located address of the request is used. Used when order_by is set.
@@ -864,22 +792,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
        */
       public Get setAddress(java.lang.String address) {
         this.address = address;
-        return this;
-      }
-
-      /** Locale to use for the current request. */
-      @com.google.api.client.util.Key("requestMetadata.locale")
-      private java.lang.String requestMetadataLocale;
-
-      /** Locale to use for the current request.
-       */
-      public java.lang.String getRequestMetadataLocale() {
-        return requestMetadataLocale;
-      }
-
-      /** Locale to use for the current request. */
-      public Get setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
-        this.requestMetadataLocale = requestMetadataLocale;
         return this;
       }
 
@@ -919,6 +831,94 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** IP address to use instead of the user's geo-located IP address. */
       public Get setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
         this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
+        return this;
+      }
+
+      /**
+       * If the company's budget is in a different currency code than this one, then the converted
+       * budget is converted to this currency code.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String currencyCode;
+
+      /** If the company's budget is in a different currency code than this one, then the converted budget is
+     converted to this currency code.
+       */
+      public java.lang.String getCurrencyCode() {
+        return currencyCode;
+      }
+
+      /**
+       * If the company's budget is in a different currency code than this one, then the converted
+       * budget is converted to this currency code.
+       */
+      public Get setCurrencyCode(java.lang.String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+      }
+
+      /** Experiment IDs the current request belongs to. */
+      @com.google.api.client.util.Key("requestMetadata.experimentIds")
+      private java.util.List<java.lang.String> requestMetadataExperimentIds;
+
+      /** Experiment IDs the current request belongs to.
+       */
+      public java.util.List<java.lang.String> getRequestMetadataExperimentIds() {
+        return requestMetadataExperimentIds;
+      }
+
+      /** Experiment IDs the current request belongs to. */
+      public Get setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
+        this.requestMetadataExperimentIds = requestMetadataExperimentIds;
+        return this;
+      }
+
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
+
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
+      }
+
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      public Get setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
+      /**
+       * How to order addresses within the returned company. Currently, only `address` and `address
+       * desc` is supported which will sorted by closest to farthest in distance from given address
+       * and farthest to closest distance from given address respectively.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** How to order addresses within the returned company. Currently, only `address` and `address desc` is
+     supported which will sorted by closest to farthest in distance from given address and farthest to
+     closest distance from given address respectively.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * How to order addresses within the returned company. Currently, only `address` and `address
+       * desc` is supported which will sorted by closest to farthest in distance from given address
+       * and farthest to closest distance from given address respectively.
+       */
+      public Get setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
         return this;
       }
 
@@ -1026,117 +1026,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public List setUploadProtocol(java.lang.String uploadProtocol) {
         return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public List setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
-        return this;
-      }
-
-      /**
-       * Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and
-       * +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If
-       * `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative,
-       * `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and
-       * `nanos`=-750,000,000.
-       */
-      @com.google.api.client.util.Key("minMonthlyBudget.nanos")
-      private java.lang.Integer minMonthlyBudgetNanos;
-
-      /** Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999
-     inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos`
-     can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For
-     example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.
-       */
-      public java.lang.Integer getMinMonthlyBudgetNanos() {
-        return minMonthlyBudgetNanos;
-      }
-
-      /**
-       * Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and
-       * +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If
-       * `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative,
-       * `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and
-       * `nanos`=-750,000,000.
-       */
-      public List setMinMonthlyBudgetNanos(java.lang.Integer minMonthlyBudgetNanos) {
-        this.minMonthlyBudgetNanos = minMonthlyBudgetNanos;
-        return this;
-      }
-
-      /** Google Partners session ID. */
-      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
-      private java.lang.String requestMetadataPartnersSessionId;
-
-      /** Google Partners session ID.
-       */
-      public java.lang.String getRequestMetadataPartnersSessionId() {
-        return requestMetadataPartnersSessionId;
-      }
-
-      /** Google Partners session ID. */
-      public List setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
-        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
-        return this;
-      }
-
-      /** Company name to search for. */
-      @com.google.api.client.util.Key
-      private java.lang.String companyName;
-
-      /** Company name to search for.
-       */
-      public java.lang.String getCompanyName() {
-        return companyName;
-      }
-
-      /** Company name to search for. */
-      public List setCompanyName(java.lang.String companyName) {
-        this.companyName = companyName;
-        return this;
-      }
-
-      /**
-       * A token identifying a page of results that the server returns. Typically, this is the value
-       * of `ListCompaniesResponse.next_page_token` returned from the previous call to
-       * ListCompanies.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** A token identifying a page of results that the server returns. Typically, this is the value of
-     `ListCompaniesResponse.next_page_token` returned from the previous call to ListCompanies.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * A token identifying a page of results that the server returns. Typically, this is the value
-       * of `ListCompaniesResponse.next_page_token` returned from the previous call to
-       * ListCompanies.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
       }
 
       /** List of industries the company can help with. */
@@ -1337,22 +1226,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The 3-letter currency code defined in ISO 4217. */
-      @com.google.api.client.util.Key("minMonthlyBudget.currencyCode")
-      private java.lang.String minMonthlyBudgetCurrencyCode;
-
-      /** The 3-letter currency code defined in ISO 4217.
-       */
-      public java.lang.String getMinMonthlyBudgetCurrencyCode() {
-        return minMonthlyBudgetCurrencyCode;
-      }
-
-      /** The 3-letter currency code defined in ISO 4217. */
-      public List setMinMonthlyBudgetCurrencyCode(java.lang.String minMonthlyBudgetCurrencyCode) {
-        this.minMonthlyBudgetCurrencyCode = minMonthlyBudgetCurrencyCode;
-        return this;
-      }
-
       /** Logged-in user ID to impersonate instead of the user's ID. */
       @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
       private java.lang.String requestMetadataUserOverridesUserId;
@@ -1366,6 +1239,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Logged-in user ID to impersonate instead of the user's ID. */
       public List setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
         this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
+        return this;
+      }
+
+      /** The 3-letter currency code defined in ISO 4217. */
+      @com.google.api.client.util.Key("minMonthlyBudget.currencyCode")
+      private java.lang.String minMonthlyBudgetCurrencyCode;
+
+      /** The 3-letter currency code defined in ISO 4217.
+       */
+      public java.lang.String getMinMonthlyBudgetCurrencyCode() {
+        return minMonthlyBudgetCurrencyCode;
+      }
+
+      /** The 3-letter currency code defined in ISO 4217. */
+      public List setMinMonthlyBudgetCurrencyCode(java.lang.String minMonthlyBudgetCurrencyCode) {
+        this.minMonthlyBudgetCurrencyCode = minMonthlyBudgetCurrencyCode;
         return this;
       }
 
@@ -1391,6 +1280,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Locale to use for the current request. */
+      @com.google.api.client.util.Key("requestMetadata.locale")
+      private java.lang.String requestMetadataLocale;
+
+      /** Locale to use for the current request.
+       */
+      public java.lang.String getRequestMetadataLocale() {
+        return requestMetadataLocale;
+      }
+
+      /** Locale to use for the current request. */
+      public List setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
+        this.requestMetadataLocale = requestMetadataLocale;
+        return this;
+      }
+
       /**
        * The address to use when searching for companies. If not given, the geo-located address of
        * the request is used.
@@ -1411,22 +1316,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setAddress(java.lang.String address) {
         this.address = address;
-        return this;
-      }
-
-      /** Locale to use for the current request. */
-      @com.google.api.client.util.Key("requestMetadata.locale")
-      private java.lang.String requestMetadataLocale;
-
-      /** Locale to use for the current request.
-       */
-      public java.lang.String getRequestMetadataLocale() {
-        return requestMetadataLocale;
-      }
-
-      /** Locale to use for the current request. */
-      public List setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
-        this.requestMetadataLocale = requestMetadataLocale;
         return this;
       }
 
@@ -1511,6 +1400,29 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one
+       * US dollar.
+       */
+      @com.google.api.client.util.Key("maxMonthlyBudget.units")
+      private java.lang.Long maxMonthlyBudgetUnits;
+
+      /** The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US
+     dollar.
+       */
+      public java.lang.Long getMaxMonthlyBudgetUnits() {
+        return maxMonthlyBudgetUnits;
+      }
+
+      /**
+       * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one
+       * US dollar.
+       */
+      public List setMaxMonthlyBudgetUnits(java.lang.Long maxMonthlyBudgetUnits) {
+        this.maxMonthlyBudgetUnits = maxMonthlyBudgetUnits;
+        return this;
+      }
+
+      /**
        * Identifier to indicate where the traffic comes from. An identifier has multiple letters
        * created by a team which redirected the traffic to us.
        */
@@ -1534,25 +1446,113 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one
-       * US dollar.
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
        */
-      @com.google.api.client.util.Key("maxMonthlyBudget.units")
-      private java.lang.Long maxMonthlyBudgetUnits;
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
 
-      /** The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one US
-     dollar.
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
        */
-      public java.lang.Long getMaxMonthlyBudgetUnits() {
-        return maxMonthlyBudgetUnits;
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
       }
 
       /**
-       * The whole units of the amount. For example if `currencyCode` is `"USD"`, then 1 unit is one
-       * US dollar.
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
        */
-      public List setMaxMonthlyBudgetUnits(java.lang.Long maxMonthlyBudgetUnits) {
-        this.maxMonthlyBudgetUnits = maxMonthlyBudgetUnits;
+      public List setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
+      /**
+       * Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and
+       * +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If
+       * `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative,
+       * `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and
+       * `nanos`=-750,000,000.
+       */
+      @com.google.api.client.util.Key("minMonthlyBudget.nanos")
+      private java.lang.Integer minMonthlyBudgetNanos;
+
+      /** Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and +999,999,999
+     inclusive. If `units` is positive, `nanos` must be positive or zero. If `units` is zero, `nanos`
+     can be positive, zero, or negative. If `units` is negative, `nanos` must be negative or zero. For
+     example $-1.75 is represented as `units`=-1 and `nanos`=-750,000,000.
+       */
+      public java.lang.Integer getMinMonthlyBudgetNanos() {
+        return minMonthlyBudgetNanos;
+      }
+
+      /**
+       * Number of nano (10^-9) units of the amount. The value must be between -999,999,999 and
+       * +999,999,999 inclusive. If `units` is positive, `nanos` must be positive or zero. If
+       * `units` is zero, `nanos` can be positive, zero, or negative. If `units` is negative,
+       * `nanos` must be negative or zero. For example $-1.75 is represented as `units`=-1 and
+       * `nanos`=-750,000,000.
+       */
+      public List setMinMonthlyBudgetNanos(java.lang.Integer minMonthlyBudgetNanos) {
+        this.minMonthlyBudgetNanos = minMonthlyBudgetNanos;
+        return this;
+      }
+
+      /** Google Partners session ID. */
+      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
+      private java.lang.String requestMetadataPartnersSessionId;
+
+      /** Google Partners session ID.
+       */
+      public java.lang.String getRequestMetadataPartnersSessionId() {
+        return requestMetadataPartnersSessionId;
+      }
+
+      /** Google Partners session ID. */
+      public List setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
+        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
+        return this;
+      }
+
+      /** Company name to search for. */
+      @com.google.api.client.util.Key
+      private java.lang.String companyName;
+
+      /** Company name to search for.
+       */
+      public java.lang.String getCompanyName() {
+        return companyName;
+      }
+
+      /** Company name to search for. */
+      public List setCompanyName(java.lang.String companyName) {
+        this.companyName = companyName;
+        return this;
+      }
+
+      /**
+       * A token identifying a page of results that the server returns. Typically, this is the value
+       * of `ListCompaniesResponse.next_page_token` returned from the previous call to
+       * ListCompanies.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A token identifying a page of results that the server returns. Typically, this is the value of
+     `ListCompaniesResponse.next_page_token` returned from the previous call to ListCompanies.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A token identifying a page of results that the server returns. Typically, this is the value
+       * of `ListCompaniesResponse.next_page_token` returned from the previous call to
+       * ListCompanies.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1827,6 +1827,49 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
+
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
+      }
+
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      public List setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
+      /**
+       * How to order Leads. Currently, only `create_time` and `create_time desc` are supported
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** How to order Leads. Currently, only `create_time` and `create_time desc` are supported
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * How to order Leads. Currently, only `create_time` and `create_time desc` are supported
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
       /** Logged-in user ID to impersonate instead of the user's ID. */
       @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
       private java.lang.String requestMetadataUserOverridesUserId;
@@ -1973,49 +2016,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Experiment IDs the current request belongs to. */
       public List setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
         this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public List setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
-        return this;
-      }
-
-      /**
-       * How to order Leads. Currently, only `create_time` and `create_time desc` are supported
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String orderBy;
-
-      /** How to order Leads. Currently, only `create_time` and `create_time desc` are supported
-       */
-      public java.lang.String getOrderBy() {
-        return orderBy;
-      }
-
-      /**
-       * How to order Leads. Currently, only `create_time` and `create_time desc` are supported
-       */
-      public List setOrderBy(java.lang.String orderBy) {
-        this.orderBy = orderBy;
         return this;
       }
 
@@ -2401,19 +2401,19 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** IP address to use instead of the user's geo-located IP address. */
-        @com.google.api.client.util.Key("requestMetadata.userOverrides.ipAddress")
-        private java.lang.String requestMetadataUserOverridesIpAddress;
+        /** Experiment IDs the current request belongs to. */
+        @com.google.api.client.util.Key("requestMetadata.experimentIds")
+        private java.util.List<java.lang.String> requestMetadataExperimentIds;
 
-        /** IP address to use instead of the user's geo-located IP address.
+        /** Experiment IDs the current request belongs to.
          */
-        public java.lang.String getRequestMetadataUserOverridesIpAddress() {
-          return requestMetadataUserOverridesIpAddress;
+        public java.util.List<java.lang.String> getRequestMetadataExperimentIds() {
+          return requestMetadataExperimentIds;
         }
 
-        /** IP address to use instead of the user's geo-located IP address. */
-        public List setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
-          this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
+        /** Experiment IDs the current request belongs to. */
+        public List setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
+          this.requestMetadataExperimentIds = requestMetadataExperimentIds;
           return this;
         }
 
@@ -2430,22 +2430,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         /** if true, show history for the entire company.  Requires user to be admin. */
         public List setEntireCompany(java.lang.Boolean entireCompany) {
           this.entireCompany = entireCompany;
-          return this;
-        }
-
-        /** Experiment IDs the current request belongs to. */
-        @com.google.api.client.util.Key("requestMetadata.experimentIds")
-        private java.util.List<java.lang.String> requestMetadataExperimentIds;
-
-        /** Experiment IDs the current request belongs to.
-         */
-        public java.util.List<java.lang.String> getRequestMetadataExperimentIds() {
-          return requestMetadataExperimentIds;
-        }
-
-        /** Experiment IDs the current request belongs to. */
-        public List setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
-          this.requestMetadataExperimentIds = requestMetadataExperimentIds;
           return this;
         }
 
@@ -2498,22 +2482,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Google Partners session ID. */
-        @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
-        private java.lang.String requestMetadataPartnersSessionId;
-
-        /** Google Partners session ID.
-         */
-        public java.lang.String getRequestMetadataPartnersSessionId() {
-          return requestMetadataPartnersSessionId;
-        }
-
-        /** Google Partners session ID. */
-        public List setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
-          this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
-          return this;
-        }
-
         /** Logged-in user ID to impersonate instead of the user's ID. */
         @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
         private java.lang.String requestMetadataUserOverridesUserId;
@@ -2527,6 +2495,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         /** Logged-in user ID to impersonate instead of the user's ID. */
         public List setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
           this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
+          return this;
+        }
+
+        /** Google Partners session ID. */
+        @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
+        private java.lang.String requestMetadataPartnersSessionId;
+
+        /** Google Partners session ID.
+         */
+        public java.lang.String getRequestMetadataPartnersSessionId() {
+          return requestMetadataPartnersSessionId;
+        }
+
+        /** Google Partners session ID. */
+        public List setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
+          this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
           return this;
         }
 
@@ -2598,6 +2582,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         /** Locale to use for the current request. */
         public List setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
           this.requestMetadataLocale = requestMetadataLocale;
+          return this;
+        }
+
+        /** IP address to use instead of the user's geo-located IP address. */
+        @com.google.api.client.util.Key("requestMetadata.userOverrides.ipAddress")
+        private java.lang.String requestMetadataUserOverridesIpAddress;
+
+        /** IP address to use instead of the user's geo-located IP address.
+         */
+        public java.lang.String getRequestMetadataUserOverridesIpAddress() {
+          return requestMetadataUserOverridesIpAddress;
+        }
+
+        /** IP address to use instead of the user's geo-located IP address. */
+        public List setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
+          this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
           return this;
         }
 
@@ -2852,6 +2852,29 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
+
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
+      }
+
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      public List setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
       /** Logged-in user ID to impersonate instead of the user's ID. */
       @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
       private java.lang.String requestMetadataUserOverridesUserId;
@@ -2952,29 +2975,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Experiment IDs the current request belongs to. */
       public List setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
         this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public List setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
         return this;
       }
 
@@ -3126,22 +3126,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** IP address to use instead of the user's geo-located IP address. */
-      @com.google.api.client.util.Key("requestMetadata.userOverrides.ipAddress")
-      private java.lang.String requestMetadataUserOverridesIpAddress;
-
-      /** IP address to use instead of the user's geo-located IP address.
-       */
-      public java.lang.String getRequestMetadataUserOverridesIpAddress() {
-        return requestMetadataUserOverridesIpAddress;
-      }
-
-      /** IP address to use instead of the user's geo-located IP address. */
-      public CreateCompanyRelation setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
-        this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
-        return this;
-      }
-
       /** Experiment IDs the current request belongs to. */
       @com.google.api.client.util.Key("requestMetadata.experimentIds")
       private java.util.List<java.lang.String> requestMetadataExperimentIds;
@@ -3181,22 +3165,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
-      private java.lang.String requestMetadataUserOverridesUserId;
-
-      /** Logged-in user ID to impersonate instead of the user's ID.
-       */
-      public java.lang.String getRequestMetadataUserOverridesUserId() {
-        return requestMetadataUserOverridesUserId;
-      }
-
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      public CreateCompanyRelation setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
-        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
-        return this;
-      }
-
       /** Google Partners session ID. */
       @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
       private java.lang.String requestMetadataPartnersSessionId;
@@ -3210,6 +3178,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Google Partners session ID. */
       public CreateCompanyRelation setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
         this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
+        return this;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
+      private java.lang.String requestMetadataUserOverridesUserId;
+
+      /** Logged-in user ID to impersonate instead of the user's ID.
+       */
+      public java.lang.String getRequestMetadataUserOverridesUserId() {
+        return requestMetadataUserOverridesUserId;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      public CreateCompanyRelation setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
+        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
         return this;
       }
 
@@ -3249,6 +3233,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Locale to use for the current request. */
       public CreateCompanyRelation setRequestMetadataLocale(java.lang.String requestMetadataLocale) {
         this.requestMetadataLocale = requestMetadataLocale;
+        return this;
+      }
+
+      /** IP address to use instead of the user's geo-located IP address. */
+      @com.google.api.client.util.Key("requestMetadata.userOverrides.ipAddress")
+      private java.lang.String requestMetadataUserOverridesIpAddress;
+
+      /** IP address to use instead of the user's geo-located IP address.
+       */
+      public java.lang.String getRequestMetadataUserOverridesIpAddress() {
+        return requestMetadataUserOverridesIpAddress;
+      }
+
+      /** IP address to use instead of the user's geo-located IP address. */
+      public CreateCompanyRelation setRequestMetadataUserOverridesIpAddress(java.lang.String requestMetadataUserOverridesIpAddress) {
+        this.requestMetadataUserOverridesIpAddress = requestMetadataUserOverridesIpAddress;
         return this;
       }
 
@@ -3375,6 +3375,29 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
+
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
+      }
+
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      public DeleteCompanyRelation setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
       /** Logged-in user ID to impersonate instead of the user's ID. */
       @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
       private java.lang.String requestMetadataUserOverridesUserId;
@@ -3475,29 +3498,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Experiment IDs the current request belongs to. */
       public DeleteCompanyRelation setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
         this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public DeleteCompanyRelation setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
         return this;
       }
 
@@ -3875,22 +3875,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return (UpdateProfile) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Google Partners session ID. */
-      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
-      private java.lang.String requestMetadataPartnersSessionId;
-
-      /** Google Partners session ID.
-       */
-      public java.lang.String getRequestMetadataPartnersSessionId() {
-        return requestMetadataPartnersSessionId;
-      }
-
-      /** Google Partners session ID. */
-      public UpdateProfile setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
-        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
-        return this;
-      }
-
       /** Logged-in user ID to impersonate instead of the user's ID. */
       @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
       private java.lang.String requestMetadataUserOverridesUserId;
@@ -3904,6 +3888,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Logged-in user ID to impersonate instead of the user's ID. */
       public UpdateProfile setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
         this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
+        return this;
+      }
+
+      /** Google Partners session ID. */
+      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
+      private java.lang.String requestMetadataPartnersSessionId;
+
+      /** Google Partners session ID.
+       */
+      public java.lang.String getRequestMetadataPartnersSessionId() {
+        return requestMetadataPartnersSessionId;
+      }
+
+      /** Google Partners session ID. */
+      public UpdateProfile setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
+        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
         return this;
       }
 
@@ -4134,6 +4134,61 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
+
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
+      }
+
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      public GetPartnersstatus setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
+      private java.lang.String requestMetadataUserOverridesUserId;
+
+      /** Logged-in user ID to impersonate instead of the user's ID.
+       */
+      public java.lang.String getRequestMetadataUserOverridesUserId() {
+        return requestMetadataUserOverridesUserId;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      public GetPartnersstatus setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
+        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
+        return this;
+      }
+
+      /** Google Partners session ID. */
+      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
+      private java.lang.String requestMetadataPartnersSessionId;
+
+      /** Google Partners session ID.
+       */
+      public java.lang.String getRequestMetadataPartnersSessionId() {
+        return requestMetadataPartnersSessionId;
+      }
+
+      /** Google Partners session ID. */
+      public GetPartnersstatus setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
+        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
+        return this;
+      }
+
+      /**
        * Identifier to indicate where the traffic comes from. An identifier has multiple letters
        * created by a team which redirected the traffic to us.
        */
@@ -4201,61 +4256,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Experiment IDs the current request belongs to. */
       public GetPartnersstatus setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
         this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public GetPartnersstatus setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
-        return this;
-      }
-
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
-      private java.lang.String requestMetadataUserOverridesUserId;
-
-      /** Logged-in user ID to impersonate instead of the user's ID.
-       */
-      public java.lang.String getRequestMetadataUserOverridesUserId() {
-        return requestMetadataUserOverridesUserId;
-      }
-
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      public GetPartnersstatus setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
-        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
-        return this;
-      }
-
-      /** Google Partners session ID. */
-      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
-      private java.lang.String requestMetadataPartnersSessionId;
-
-      /** Google Partners session ID.
-       */
-      public java.lang.String getRequestMetadataPartnersSessionId() {
-        return requestMetadataPartnersSessionId;
-      }
-
-      /** Google Partners session ID. */
-      public GetPartnersstatus setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
-        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
         return this;
       }
 
@@ -4358,61 +4358,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return (UpdateCompanies) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Google Partners session ID. */
-      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
-      private java.lang.String requestMetadataPartnersSessionId;
-
-      /** Google Partners session ID.
-       */
-      public java.lang.String getRequestMetadataPartnersSessionId() {
-        return requestMetadataPartnersSessionId;
-      }
-
-      /** Google Partners session ID. */
-      public UpdateCompanies setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
-        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
-        return this;
-      }
-
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
-      private java.lang.String requestMetadataUserOverridesUserId;
-
-      /** Logged-in user ID to impersonate instead of the user's ID.
-       */
-      public java.lang.String getRequestMetadataUserOverridesUserId() {
-        return requestMetadataUserOverridesUserId;
-      }
-
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      public UpdateCompanies setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
-        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
-        return this;
-      }
-
-      /**
-       * Identifier to indicate where the traffic comes from. An identifier has multiple letters
-       * created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSourceId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSourceId;
-
-      /** Identifier to indicate where the traffic comes from. An identifier has multiple letters created by
-     a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSourceId() {
-        return requestMetadataTrafficSourceTrafficSourceId;
-      }
-
-      /**
-       * Identifier to indicate where the traffic comes from. An identifier has multiple letters
-       * created by a team which redirected the traffic to us.
-       */
-      public UpdateCompanies setRequestMetadataTrafficSourceTrafficSourceId(java.lang.String requestMetadataTrafficSourceTrafficSourceId) {
-        this.requestMetadataTrafficSourceTrafficSourceId = requestMetadataTrafficSourceTrafficSourceId;
-        return this;
-      }
-
       /** Locale to use for the current request. */
       @com.google.api.client.util.Key("requestMetadata.locale")
       private java.lang.String requestMetadataLocale;
@@ -4504,6 +4449,61 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
        */
       public UpdateCompanies setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
         this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
+        return this;
+      }
+
+      /** Google Partners session ID. */
+      @com.google.api.client.util.Key("requestMetadata.partnersSessionId")
+      private java.lang.String requestMetadataPartnersSessionId;
+
+      /** Google Partners session ID.
+       */
+      public java.lang.String getRequestMetadataPartnersSessionId() {
+        return requestMetadataPartnersSessionId;
+      }
+
+      /** Google Partners session ID. */
+      public UpdateCompanies setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
+        this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
+        return this;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
+      private java.lang.String requestMetadataUserOverridesUserId;
+
+      /** Logged-in user ID to impersonate instead of the user's ID.
+       */
+      public java.lang.String getRequestMetadataUserOverridesUserId() {
+        return requestMetadataUserOverridesUserId;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      public UpdateCompanies setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
+        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
+        return this;
+      }
+
+      /**
+       * Identifier to indicate where the traffic comes from. An identifier has multiple letters
+       * created by a team which redirected the traffic to us.
+       */
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSourceId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSourceId;
+
+      /** Identifier to indicate where the traffic comes from. An identifier has multiple letters created by
+     a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSourceId() {
+        return requestMetadataTrafficSourceTrafficSourceId;
+      }
+
+      /**
+       * Identifier to indicate where the traffic comes from. An identifier has multiple letters
+       * created by a team which redirected the traffic to us.
+       */
+      public UpdateCompanies setRequestMetadataTrafficSourceTrafficSourceId(java.lang.String requestMetadataTrafficSourceTrafficSourceId) {
+        this.requestMetadataTrafficSourceTrafficSourceId = requestMetadataTrafficSourceTrafficSourceId;
         return this;
       }
 
@@ -4606,19 +4606,26 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
         return (UpdateLeads) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
-      private java.lang.String requestMetadataUserOverridesUserId;
-
-      /** Logged-in user ID to impersonate instead of the user's ID.
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
        */
-      public java.lang.String getRequestMetadataUserOverridesUserId() {
-        return requestMetadataUserOverridesUserId;
+      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
+      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
+
+      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
+     letters created by a team which redirected the traffic to us.
+       */
+      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
+        return requestMetadataTrafficSourceTrafficSubId;
       }
 
-      /** Logged-in user ID to impersonate instead of the user's ID. */
-      public UpdateLeads setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
-        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
+      /**
+       * Second level identifier to indicate where the traffic comes from. An identifier has
+       * multiple letters created by a team which redirected the traffic to us.
+       */
+      public UpdateLeads setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
+        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
         return this;
       }
 
@@ -4635,6 +4642,22 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Google Partners session ID. */
       public UpdateLeads setRequestMetadataPartnersSessionId(java.lang.String requestMetadataPartnersSessionId) {
         this.requestMetadataPartnersSessionId = requestMetadataPartnersSessionId;
+        return this;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      @com.google.api.client.util.Key("requestMetadata.userOverrides.userId")
+      private java.lang.String requestMetadataUserOverridesUserId;
+
+      /** Logged-in user ID to impersonate instead of the user's ID.
+       */
+      public java.lang.String getRequestMetadataUserOverridesUserId() {
+        return requestMetadataUserOverridesUserId;
+      }
+
+      /** Logged-in user ID to impersonate instead of the user's ID. */
+      public UpdateLeads setRequestMetadataUserOverridesUserId(java.lang.String requestMetadataUserOverridesUserId) {
+        this.requestMetadataUserOverridesUserId = requestMetadataUserOverridesUserId;
         return this;
       }
 
@@ -4729,29 +4752,6 @@ public class Partners extends com.google.api.client.googleapis.services.json.Abs
       /** Experiment IDs the current request belongs to. */
       public UpdateLeads setRequestMetadataExperimentIds(java.util.List<java.lang.String> requestMetadataExperimentIds) {
         this.requestMetadataExperimentIds = requestMetadataExperimentIds;
-        return this;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      @com.google.api.client.util.Key("requestMetadata.trafficSource.trafficSubId")
-      private java.lang.String requestMetadataTrafficSourceTrafficSubId;
-
-      /** Second level identifier to indicate where the traffic comes from. An identifier has multiple
-     letters created by a team which redirected the traffic to us.
-       */
-      public java.lang.String getRequestMetadataTrafficSourceTrafficSubId() {
-        return requestMetadataTrafficSourceTrafficSubId;
-      }
-
-      /**
-       * Second level identifier to indicate where the traffic comes from. An identifier has
-       * multiple letters created by a team which redirected the traffic to us.
-       */
-      public UpdateLeads setRequestMetadataTrafficSourceTrafficSubId(java.lang.String requestMetadataTrafficSourceTrafficSubId) {
-        this.requestMetadataTrafficSourceTrafficSubId = requestMetadataTrafficSourceTrafficSubId;
         return this;
       }
 

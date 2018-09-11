@@ -17,7 +17,7 @@
 package com.google.dfareporting.model;
 
 /**
- * Describes properties of a DoubleClick Planning order.
+ * Describes properties of a Planning order.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed

@@ -37,6 +37,12 @@ public final class GoogleCloudMlV1Location extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1Capability> capabilities;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudMlV1Capability used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1Capability.class);
+  }
+
   /**
    * The value may be {@code null}.
    */

@@ -6036,8 +6036,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Moves a file to the trash. The currently authenticated user must own the file or be an organizer
-     * on the parent for Team Drive files.
+     * Moves a file to the trash. The currently authenticated user must own the file or be at least a
+     * fileOrganizer on the parent for Team Drive files.
      *
      * Create a request for the method "files.trash".
      *
@@ -6058,8 +6058,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/trash";
 
       /**
-       * Moves a file to the trash. The currently authenticated user must own the file or be an
-       * organizer on the parent for Team Drive files.
+       * Moves a file to the trash. The currently authenticated user must own the file or be at least a
+       * fileOrganizer on the parent for Team Drive files.
        *
        * Create a request for the method "files.trash".
        *

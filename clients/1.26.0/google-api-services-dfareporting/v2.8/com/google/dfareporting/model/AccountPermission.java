@@ -18,7 +18,7 @@ package com.google.dfareporting.model;
 
 /**
  * AccountPermissions contains information about a particular account permission. Some features of
- * DCM require an account permission to be present in the account.
+ * Campaign Manager require an account permission to be present in the account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed

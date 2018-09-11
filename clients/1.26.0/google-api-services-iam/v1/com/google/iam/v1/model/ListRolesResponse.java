@@ -44,12 +44,6 @@ public final class ListRolesResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Role> roles;
 
-  static {
-    // hack to force ProGuard to consider Role used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Role.class);
-  }
-
   /**
    * To retrieve the next page of results, set `ListRolesRequest.page_token` to this value.
    * @return value or {@code null} for none

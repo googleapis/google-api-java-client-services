@@ -40,6 +40,14 @@ public final class EntryPoint extends com.google.api.client.json.GenericJson {
   private java.lang.String accessCode;
 
   /**
+   * Features of the entry point, such as being toll or toll-free. One entry point can have multiple
+   * features. However, toll and toll-free cannot be both set on the same entry point.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> entryPointFeatures;
+
+  /**
    * The type of the conference entry point. Possible values are:   - "video" - joining a conference
    * over HTTP. A conference can have zero or one video entry point. - "phone" - joining a
    * conference by dialing a phone number. A conference can have zero or more phone entry points. -
@@ -102,6 +110,14 @@ public final class EntryPoint extends com.google.api.client.json.GenericJson {
   private java.lang.String pin;
 
   /**
+   * The CLDR/ISO 3166 region code for the country associated with this phone access. Example: "SE"
+   * for Sweden. Calendar backend will populate this field only for EntryPointType.PHONE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
    * The URI of the entry point. The maximum length is 1300 characters. Format:   - for video, http:
    * or https: schema is required. - for phone, tel: schema is required. The URI should include the
    * entire dial sequence (e.g., tel:+12345678900,,,123456789;1234). - for sip, sip: schema is
@@ -131,6 +147,25 @@ public final class EntryPoint extends com.google.api.client.json.GenericJson {
    */
   public EntryPoint setAccessCode(java.lang.String accessCode) {
     this.accessCode = accessCode;
+    return this;
+  }
+
+  /**
+   * Features of the entry point, such as being toll or toll-free. One entry point can have multiple
+   * features. However, toll and toll-free cannot be both set on the same entry point.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEntryPointFeatures() {
+    return entryPointFeatures;
+  }
+
+  /**
+   * Features of the entry point, such as being toll or toll-free. One entry point can have multiple
+   * features. However, toll and toll-free cannot be both set on the same entry point.
+   * @param entryPointFeatures entryPointFeatures or {@code null} for none
+   */
+  public EntryPoint setEntryPointFeatures(java.util.List<java.lang.String> entryPointFeatures) {
+    this.entryPointFeatures = entryPointFeatures;
     return this;
   }
 
@@ -273,6 +308,25 @@ public final class EntryPoint extends com.google.api.client.json.GenericJson {
    */
   public EntryPoint setPin(java.lang.String pin) {
     this.pin = pin;
+    return this;
+  }
+
+  /**
+   * The CLDR/ISO 3166 region code for the country associated with this phone access. Example: "SE"
+   * for Sweden. Calendar backend will populate this field only for EntryPointType.PHONE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * The CLDR/ISO 3166 region code for the country associated with this phone access. Example: "SE"
+   * for Sweden. Calendar backend will populate this field only for EntryPointType.PHONE.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public EntryPoint setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

@@ -118,12 +118,6 @@ public final class Action extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Mount> mounts;
 
-  static {
-    // hack to force ProGuard to consider Mount used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Mount.class);
-  }
-
   /**
    * An optional name for the container. The container hostname will be set to this name, making it
    * useful for inter-container communication. The name must contain only upper and lowercase

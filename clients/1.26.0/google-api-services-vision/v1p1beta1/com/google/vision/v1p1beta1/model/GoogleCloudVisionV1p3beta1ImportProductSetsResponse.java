@@ -39,12 +39,6 @@ public final class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends c
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1ReferenceImage> referenceImages;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1ReferenceImage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1ReferenceImage.class);
-  }
-
   /**
    * The rpc status for each ImportProductSet request, including both successes and errors.
    *
@@ -54,12 +48,6 @@ public final class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends c
    */
   @com.google.api.client.util.Key
   private java.util.List<Status> statuses;
-
-  static {
-    // hack to force ProGuard to consider Status used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Status.class);
-  }
 
   /**
    * The list of reference_images that are imported successfully.

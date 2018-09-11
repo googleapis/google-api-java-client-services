@@ -25,8 +25,10 @@ package com.google.iam.v1.model;
  * these keys periodically to ensure security of their service accounts.  Users retain the private
  * key of these key-pairs, and Google retains ONLY the public key.
  *
- * System-managed key-pairs are managed automatically by Google, and rotated daily without user
- * intervention.  The private key never leaves Google's servers to maximize security.
+ * System-managed keys are automatically rotated by Google, and are used for signing for a maximum
+ * of two weeks. The rotation process is probabilistic, and usage of the new key will gradually ramp
+ * up and down over the key's lifetime. We recommend caching the public key set for a service
+ * account for no more than 24 hours to ensure you have access to the latest keys.
  *
  * Public keys for all service accounts are also published at the OAuth2 Service Account API.
  *

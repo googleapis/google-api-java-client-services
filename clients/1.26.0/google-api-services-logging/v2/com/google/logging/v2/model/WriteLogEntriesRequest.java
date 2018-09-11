@@ -72,8 +72,10 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
    * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog" or
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-   * information about log names, see LogEntry.
+   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". The permission
+   * logging.logEntries.create is needed on each project, organization, billing account, or folder
+   * that is receiving new log entries, whether the resource is specified in logName or in an
+   * individual log entry. For more information about log names, see LogEntry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,8 +187,10 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
    * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog" or
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-   * information about log names, see LogEntry.
+   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". The permission
+   * logging.logEntries.create is needed on each project, organization, billing account, or folder
+   * that is receiving new log entries, whether the resource is specified in logName or in an
+   * individual log entry. For more information about log names, see LogEntry.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogName() {
@@ -199,8 +203,10 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]"
    * [LOG_ID] must be URL-encoded. For example, "projects/my-project-id/logs/syslog" or
-   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". For more
-   * information about log names, see LogEntry.
+   * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". The permission
+   * logging.logEntries.create is needed on each project, organization, billing account, or folder
+   * that is receiving new log entries, whether the resource is specified in logName or in an
+   * individual log entry. For more information about log names, see LogEntry.
    * @param logName logName or {@code null} for none
    */
   public WriteLogEntriesRequest setLogName(java.lang.String logName) {

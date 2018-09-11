@@ -124,11 +124,11 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   private java.lang.Integer customStartTimeValue;
 
   /**
-   * List of feature dependencies for the creative asset that are detected by DCM. Feature
-   * dependencies are features that a browser must be able to support in order to render your HTML5
-   * creative correctly. This is a read-only, auto-generated field. Applicable to the following
-   * creative types: HTML5_BANNER. Applicable to DISPLAY when the primary asset type is not
-   * HTML_IMAGE.
+   * List of feature dependencies for the creative asset that are detected by Campaign Manager.
+   * Feature dependencies are features that a browser must be able to support in order to render
+   * your HTML5 creative correctly. This is a read-only, auto-generated field. Applicable to the
+   * following creative types: HTML5_BANNER. Applicable to DISPLAY when the primary asset type is
+   * not HTML_IMAGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,8 +256,8 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   private java.lang.String orientation;
 
   /**
-   * Whether the backup asset is original or changed by the user in DCM. Applicable to the following
-   * creative types: all RICH_MEDIA.
+   * Whether the backup asset is original or changed by the user in Campaign Manager. Applicable to
+   * the following creative types: all RICH_MEDIA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,18 +320,19 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
    * multiple primary assets), and all VPAID creatives. BACKUP_IMAGE applies to FLASH_INPAGE,
    * HTML5_BANNER, all RICH_MEDIA, and all VPAID creatives. Applicable to DISPLAY when the primary
    * asset type is not HTML_IMAGE. ADDITIONAL_IMAGE and ADDITIONAL_FLASH apply to FLASH_INPAGE
-   * creatives. OTHER refers to assets from sources other than DCM, such as Studio uploaded assets,
-   * applicable to all RICH_MEDIA and all VPAID creatives. PARENT_VIDEO refers to videos uploaded by
-   * the user in DCM and is applicable to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives.
-   * TRANSCODED_VIDEO refers to videos transcoded by DCM from PARENT_VIDEO assets and is applicable
-   * to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives. ALTERNATE_VIDEO refers to the DCM
-   * representation of child asset videos from Studio, and is applicable to VPAID_LINEAR_VIDEO
-   * creatives. These cannot be added or removed within DCM. For VPAID_LINEAR_VIDEO creatives,
-   * PARENT_VIDEO, TRANSCODED_VIDEO and ALTERNATE_VIDEO assets that are marked active serve as
-   * backup in case the VPAID creative cannot be served. Only PARENT_VIDEO assets can be added or
-   * removed for an INSTREAM_VIDEO or VPAID_LINEAR_VIDEO creative. PARENT_AUDIO refers to audios
-   * uploaded by the user in DCM and is applicable to INSTREAM_AUDIO creatives. TRANSCODED_AUDIO
-   * refers to audios transcoded by DCM from PARENT_AUDIO assets and is applicable to INSTREAM_AUDIO
+   * creatives. OTHER refers to assets from sources other than Campaign Manager, such as Studio
+   * uploaded assets, applicable to all RICH_MEDIA and all VPAID creatives. PARENT_VIDEO refers to
+   * videos uploaded by the user in Campaign Manager and is applicable to INSTREAM_VIDEO and
+   * VPAID_LINEAR_VIDEO creatives. TRANSCODED_VIDEO refers to videos transcoded by Campaign Manager
+   * from PARENT_VIDEO assets and is applicable to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives.
+   * ALTERNATE_VIDEO refers to the Campaign Manager representation of child asset videos from
+   * Studio, and is applicable to VPAID_LINEAR_VIDEO creatives. These cannot be added or removed
+   * within Campaign Manager. For VPAID_LINEAR_VIDEO creatives, PARENT_VIDEO, TRANSCODED_VIDEO and
+   * ALTERNATE_VIDEO assets that are marked active serve as backup in case the VPAID creative cannot
+   * be served. Only PARENT_VIDEO assets can be added or removed for an INSTREAM_VIDEO or
+   * VPAID_LINEAR_VIDEO creative. PARENT_AUDIO refers to audios uploaded by the user in Campaign
+   * Manager and is applicable to INSTREAM_AUDIO creatives. TRANSCODED_AUDIO refers to audios
+   * transcoded by Campaign Manager from PARENT_AUDIO assets and is applicable to INSTREAM_AUDIO
    * creatives.
    * The value may be {@code null}.
    */
@@ -644,11 +645,11 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of feature dependencies for the creative asset that are detected by DCM. Feature
-   * dependencies are features that a browser must be able to support in order to render your HTML5
-   * creative correctly. This is a read-only, auto-generated field. Applicable to the following
-   * creative types: HTML5_BANNER. Applicable to DISPLAY when the primary asset type is not
-   * HTML_IMAGE.
+   * List of feature dependencies for the creative asset that are detected by Campaign Manager.
+   * Feature dependencies are features that a browser must be able to support in order to render
+   * your HTML5 creative correctly. This is a read-only, auto-generated field. Applicable to the
+   * following creative types: HTML5_BANNER. Applicable to DISPLAY when the primary asset type is
+   * not HTML_IMAGE.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDetectedFeatures() {
@@ -656,11 +657,11 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * List of feature dependencies for the creative asset that are detected by DCM. Feature
-   * dependencies are features that a browser must be able to support in order to render your HTML5
-   * creative correctly. This is a read-only, auto-generated field. Applicable to the following
-   * creative types: HTML5_BANNER. Applicable to DISPLAY when the primary asset type is not
-   * HTML_IMAGE.
+   * List of feature dependencies for the creative asset that are detected by Campaign Manager.
+   * Feature dependencies are features that a browser must be able to support in order to render
+   * your HTML5 creative correctly. This is a read-only, auto-generated field. Applicable to the
+   * following creative types: HTML5_BANNER. Applicable to DISPLAY when the primary asset type is
+   * not HTML_IMAGE.
    * @param detectedFeatures detectedFeatures or {@code null} for none
    */
   public CreativeAsset setDetectedFeatures(java.util.List<java.lang.String> detectedFeatures) {
@@ -956,8 +957,8 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the backup asset is original or changed by the user in DCM. Applicable to the following
-   * creative types: all RICH_MEDIA.
+   * Whether the backup asset is original or changed by the user in Campaign Manager. Applicable to
+   * the following creative types: all RICH_MEDIA.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOriginalBackup() {
@@ -965,8 +966,8 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the backup asset is original or changed by the user in DCM. Applicable to the following
-   * creative types: all RICH_MEDIA.
+   * Whether the backup asset is original or changed by the user in Campaign Manager. Applicable to
+   * the following creative types: all RICH_MEDIA.
    * @param originalBackup originalBackup or {@code null} for none
    */
   public CreativeAsset setOriginalBackup(java.lang.Boolean originalBackup) {
@@ -1099,18 +1100,19 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
    * multiple primary assets), and all VPAID creatives. BACKUP_IMAGE applies to FLASH_INPAGE,
    * HTML5_BANNER, all RICH_MEDIA, and all VPAID creatives. Applicable to DISPLAY when the primary
    * asset type is not HTML_IMAGE. ADDITIONAL_IMAGE and ADDITIONAL_FLASH apply to FLASH_INPAGE
-   * creatives. OTHER refers to assets from sources other than DCM, such as Studio uploaded assets,
-   * applicable to all RICH_MEDIA and all VPAID creatives. PARENT_VIDEO refers to videos uploaded by
-   * the user in DCM and is applicable to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives.
-   * TRANSCODED_VIDEO refers to videos transcoded by DCM from PARENT_VIDEO assets and is applicable
-   * to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives. ALTERNATE_VIDEO refers to the DCM
-   * representation of child asset videos from Studio, and is applicable to VPAID_LINEAR_VIDEO
-   * creatives. These cannot be added or removed within DCM. For VPAID_LINEAR_VIDEO creatives,
-   * PARENT_VIDEO, TRANSCODED_VIDEO and ALTERNATE_VIDEO assets that are marked active serve as
-   * backup in case the VPAID creative cannot be served. Only PARENT_VIDEO assets can be added or
-   * removed for an INSTREAM_VIDEO or VPAID_LINEAR_VIDEO creative. PARENT_AUDIO refers to audios
-   * uploaded by the user in DCM and is applicable to INSTREAM_AUDIO creatives. TRANSCODED_AUDIO
-   * refers to audios transcoded by DCM from PARENT_AUDIO assets and is applicable to INSTREAM_AUDIO
+   * creatives. OTHER refers to assets from sources other than Campaign Manager, such as Studio
+   * uploaded assets, applicable to all RICH_MEDIA and all VPAID creatives. PARENT_VIDEO refers to
+   * videos uploaded by the user in Campaign Manager and is applicable to INSTREAM_VIDEO and
+   * VPAID_LINEAR_VIDEO creatives. TRANSCODED_VIDEO refers to videos transcoded by Campaign Manager
+   * from PARENT_VIDEO assets and is applicable to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives.
+   * ALTERNATE_VIDEO refers to the Campaign Manager representation of child asset videos from
+   * Studio, and is applicable to VPAID_LINEAR_VIDEO creatives. These cannot be added or removed
+   * within Campaign Manager. For VPAID_LINEAR_VIDEO creatives, PARENT_VIDEO, TRANSCODED_VIDEO and
+   * ALTERNATE_VIDEO assets that are marked active serve as backup in case the VPAID creative cannot
+   * be served. Only PARENT_VIDEO assets can be added or removed for an INSTREAM_VIDEO or
+   * VPAID_LINEAR_VIDEO creative. PARENT_AUDIO refers to audios uploaded by the user in Campaign
+   * Manager and is applicable to INSTREAM_AUDIO creatives. TRANSCODED_AUDIO refers to audios
+   * transcoded by Campaign Manager from PARENT_AUDIO assets and is applicable to INSTREAM_AUDIO
    * creatives.
    * @return value or {@code null} for none
    */
@@ -1125,18 +1127,19 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
    * multiple primary assets), and all VPAID creatives. BACKUP_IMAGE applies to FLASH_INPAGE,
    * HTML5_BANNER, all RICH_MEDIA, and all VPAID creatives. Applicable to DISPLAY when the primary
    * asset type is not HTML_IMAGE. ADDITIONAL_IMAGE and ADDITIONAL_FLASH apply to FLASH_INPAGE
-   * creatives. OTHER refers to assets from sources other than DCM, such as Studio uploaded assets,
-   * applicable to all RICH_MEDIA and all VPAID creatives. PARENT_VIDEO refers to videos uploaded by
-   * the user in DCM and is applicable to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives.
-   * TRANSCODED_VIDEO refers to videos transcoded by DCM from PARENT_VIDEO assets and is applicable
-   * to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives. ALTERNATE_VIDEO refers to the DCM
-   * representation of child asset videos from Studio, and is applicable to VPAID_LINEAR_VIDEO
-   * creatives. These cannot be added or removed within DCM. For VPAID_LINEAR_VIDEO creatives,
-   * PARENT_VIDEO, TRANSCODED_VIDEO and ALTERNATE_VIDEO assets that are marked active serve as
-   * backup in case the VPAID creative cannot be served. Only PARENT_VIDEO assets can be added or
-   * removed for an INSTREAM_VIDEO or VPAID_LINEAR_VIDEO creative. PARENT_AUDIO refers to audios
-   * uploaded by the user in DCM and is applicable to INSTREAM_AUDIO creatives. TRANSCODED_AUDIO
-   * refers to audios transcoded by DCM from PARENT_AUDIO assets and is applicable to INSTREAM_AUDIO
+   * creatives. OTHER refers to assets from sources other than Campaign Manager, such as Studio
+   * uploaded assets, applicable to all RICH_MEDIA and all VPAID creatives. PARENT_VIDEO refers to
+   * videos uploaded by the user in Campaign Manager and is applicable to INSTREAM_VIDEO and
+   * VPAID_LINEAR_VIDEO creatives. TRANSCODED_VIDEO refers to videos transcoded by Campaign Manager
+   * from PARENT_VIDEO assets and is applicable to INSTREAM_VIDEO and VPAID_LINEAR_VIDEO creatives.
+   * ALTERNATE_VIDEO refers to the Campaign Manager representation of child asset videos from
+   * Studio, and is applicable to VPAID_LINEAR_VIDEO creatives. These cannot be added or removed
+   * within Campaign Manager. For VPAID_LINEAR_VIDEO creatives, PARENT_VIDEO, TRANSCODED_VIDEO and
+   * ALTERNATE_VIDEO assets that are marked active serve as backup in case the VPAID creative cannot
+   * be served. Only PARENT_VIDEO assets can be added or removed for an INSTREAM_VIDEO or
+   * VPAID_LINEAR_VIDEO creative. PARENT_AUDIO refers to audios uploaded by the user in Campaign
+   * Manager and is applicable to INSTREAM_AUDIO creatives. TRANSCODED_AUDIO refers to audios
+   * transcoded by Campaign Manager from PARENT_AUDIO assets and is applicable to INSTREAM_AUDIO
    * creatives.
    * @param role role or {@code null} for none
    */

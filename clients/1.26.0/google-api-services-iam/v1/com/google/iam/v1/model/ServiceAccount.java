@@ -44,8 +44,8 @@ package com.google.iam.v1.model;
 public final class ServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A user-specified name for the service account. Must be less than or equal to 100
-   * UTF-8 bytes.
+   * Optional. A user-specified description of the service account.  Must be fewer than 100 UTF-8
+   * bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String email;
 
   /**
-   * Optional. Not currently used.
+   * Used to perform a consistent read-modify-write.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,8 +103,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String uniqueId;
 
   /**
-   * Optional. A user-specified name for the service account. Must be less than or equal to 100
-   * UTF-8 bytes.
+   * Optional. A user-specified description of the service account.  Must be fewer than 100 UTF-8
+   * bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -112,8 +112,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A user-specified name for the service account. Must be less than or equal to 100
-   * UTF-8 bytes.
+   * Optional. A user-specified description of the service account.  Must be fewer than 100 UTF-8
+   * bytes.
    * @param displayName displayName or {@code null} for none
    */
   public ServiceAccount setDisplayName(java.lang.String displayName) {
@@ -139,7 +139,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Not currently used.
+   * Used to perform a consistent read-modify-write.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -148,7 +148,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Not currently used.
+   * Used to perform a consistent read-modify-write.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -159,7 +159,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Not currently used.
+   * Used to perform a consistent read-modify-write.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -169,7 +169,7 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Not currently used.
+   * Used to perform a consistent read-modify-write.
    * @see #setEtag()
    *
    * <p>

@@ -48,6 +48,13 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String logStreamingOption;
 
   /**
+   * Option to specify the logging mode, which determines where the logs are stored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logging;
+
+  /**
    * Compute Engine machine type on which to run the build.
    * The value may be {@code null}.
    */
@@ -114,6 +121,23 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   public BuildOptions setLogStreamingOption(java.lang.String logStreamingOption) {
     this.logStreamingOption = logStreamingOption;
+    return this;
+  }
+
+  /**
+   * Option to specify the logging mode, which determines where the logs are stored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogging() {
+    return logging;
+  }
+
+  /**
+   * Option to specify the logging mode, which determines where the logs are stored.
+   * @param logging logging or {@code null} for none
+   */
+  public BuildOptions setLogging(java.lang.String logging) {
+    this.logging = logging;
     return this;
   }
 

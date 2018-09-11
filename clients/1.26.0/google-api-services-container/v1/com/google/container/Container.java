@@ -308,29 +308,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         * to return operations for. This field has been deprecated and replaced by the name field.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String zone;
-
-        /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
-       operations for. This field has been deprecated and replaced by the name field.
-         */
-        public java.lang.String getZone() {
-          return zone;
-        }
-
-        /**
-         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         * to return operations for. This field has been deprecated and replaced by the name field.
-         */
-        public GetServerConfig setZone(java.lang.String zone) {
-          this.zone = zone;
-          return this;
-        }
-
-        /**
          * Deprecated. The Google Developers Console [project ID or project
          * number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          * and replaced by the name field.
@@ -353,6 +330,29 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          */
         public GetServerConfig setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
+          return this;
+        }
+
+        /**
+         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+         * to return operations for. This field has been deprecated and replaced by the name field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String zone;
+
+        /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+       operations for. This field has been deprecated and replaced by the name field.
+         */
+        public java.lang.String getZone() {
+          return zone;
+        }
+
+        /**
+         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+         * to return operations for. This field has been deprecated and replaced by the name field.
+         */
+        public GetServerConfig setZone(java.lang.String zone) {
+          this.zone = zone;
           return this;
         }
 
@@ -834,32 +834,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The Google Developers Console [project ID or project
-           * number](https://support.google.com/cloud/answer/6158840). This field has been
-           * deprecated and replaced by the name field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String projectId;
-
-          /** Deprecated. The Google Developers Console [project ID or project
-         number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
-         replaced by the name field.
-           */
-          public java.lang.String getProjectId() {
-            return projectId;
-          }
-
-          /**
-           * Deprecated. The Google Developers Console [project ID or project
-           * number](https://support.google.com/cloud/answer/6158840). This field has been
-           * deprecated and replaced by the name field.
-           */
-          public Delete setProjectId(java.lang.String projectId) {
-            this.projectId = projectId;
-            return this;
-          }
-
-          /**
            * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
            * in which the cluster resides. This field has been deprecated and replaced by the name
            * field.
@@ -904,6 +878,32 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            */
           public Delete setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;
+            return this;
+          }
+
+          /**
+           * Deprecated. The Google Developers Console [project ID or project
+           * number](https://support.google.com/cloud/answer/6158840). This field has been
+           * deprecated and replaced by the name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Deprecated. The Google Developers Console [project ID or project
+         number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
+         replaced by the name field.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /**
+           * Deprecated. The Google Developers Console [project ID or project
+           * number](https://support.google.com/cloud/answer/6158840). This field has been
+           * deprecated and replaced by the name field.
+           */
+          public Delete setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
             return this;
           }
 
@@ -3350,32 +3350,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Deprecated. The Google Developers Console [project ID or project
-             * number](https://developers.google.com/console/help/new/#projectnumber). This field
-             * has been deprecated and replaced by the name field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String projectId;
-
-            /** Deprecated. The Google Developers Console [project ID or project
-           number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-           deprecated and replaced by the name field.
-             */
-            public java.lang.String getProjectId() {
-              return projectId;
-            }
-
-            /**
-             * Deprecated. The Google Developers Console [project ID or project
-             * number](https://developers.google.com/console/help/new/#projectnumber). This field
-             * has been deprecated and replaced by the name field.
-             */
-            public Delete setProjectId(java.lang.String projectId) {
-              this.projectId = projectId;
-              return this;
-            }
-
-            /**
              * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
@@ -3442,6 +3416,32 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              */
             public Delete setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
+              return this;
+            }
+
+            /**
+             * Deprecated. The Google Developers Console [project ID or project
+             * number](https://developers.google.com/console/help/new/#projectnumber). This field
+             * has been deprecated and replaced by the name field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String projectId;
+
+            /** Deprecated. The Google Developers Console [project ID or project
+           number](https://developers.google.com/console/help/new/#projectnumber). This field has been
+           deprecated and replaced by the name field.
+             */
+            public java.lang.String getProjectId() {
+              return projectId;
+            }
+
+            /**
+             * Deprecated. The Google Developers Console [project ID or project
+             * number](https://developers.google.com/console/help/new/#projectnumber). This field
+             * has been deprecated and replaced by the name field.
+             */
+            public Delete setProjectId(java.lang.String projectId) {
+              this.projectId = projectId;
               return this;
             }
 
@@ -3595,32 +3595,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Deprecated. The Google Developers Console [project ID or project
-             * number](https://developers.google.com/console/help/new/#projectnumber). This field
-             * has been deprecated and replaced by the name field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String projectId;
-
-            /** Deprecated. The Google Developers Console [project ID or project
-           number](https://developers.google.com/console/help/new/#projectnumber). This field has been
-           deprecated and replaced by the name field.
-             */
-            public java.lang.String getProjectId() {
-              return projectId;
-            }
-
-            /**
-             * Deprecated. The Google Developers Console [project ID or project
-             * number](https://developers.google.com/console/help/new/#projectnumber). This field
-             * has been deprecated and replaced by the name field.
-             */
-            public Get setProjectId(java.lang.String projectId) {
-              this.projectId = projectId;
-              return this;
-            }
-
-            /**
              * Deprecated. The name of the Google Compute Engine
              * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
              * been deprecated and replaced by the name field.
@@ -3687,6 +3661,32 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              */
             public Get setNodePoolId(java.lang.String nodePoolId) {
               this.nodePoolId = nodePoolId;
+              return this;
+            }
+
+            /**
+             * Deprecated. The Google Developers Console [project ID or project
+             * number](https://developers.google.com/console/help/new/#projectnumber). This field
+             * has been deprecated and replaced by the name field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String projectId;
+
+            /** Deprecated. The Google Developers Console [project ID or project
+           number](https://developers.google.com/console/help/new/#projectnumber). This field has been
+           deprecated and replaced by the name field.
+             */
+            public java.lang.String getProjectId() {
+              return projectId;
+            }
+
+            /**
+             * Deprecated. The Google Developers Console [project ID or project
+             * number](https://developers.google.com/console/help/new/#projectnumber). This field
+             * has been deprecated and replaced by the name field.
+             */
+            public Get setProjectId(java.lang.String projectId) {
+              this.projectId = projectId;
               return this;
             }
 
@@ -4950,6 +4950,31 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String zone;
+
+          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+         the cluster resides. This field has been deprecated and replaced by the name field.
+           */
+          public java.lang.String getZone() {
+            return zone;
+          }
+
+          /**
+           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
+           * in which the cluster resides. This field has been deprecated and replaced by the name
+           * field.
+           */
+          public Get setZone(java.lang.String zone) {
+            this.zone = zone;
+            return this;
+          }
+
+          /**
            * Deprecated. The server-assigned `name` of the operation. This field has been deprecated
            * and replaced by the name field.
            */
@@ -4995,31 +5020,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            */
           public Get setProjectId(java.lang.String projectId) {
             this.projectId = projectId;
-            return this;
-          }
-
-          /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String zone;
-
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
-           */
-          public java.lang.String getZone() {
-            return zone;
-          }
-
-          /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
-           */
-          public Get setZone(java.lang.String zone) {
-            this.zone = zone;
             return this;
           }
 
@@ -5175,32 +5175,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The Google Developers Console [project ID or project
-           * number](https://support.google.com/cloud/answer/6158840). This field has been
-           * deprecated and replaced by the parent field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String projectId;
-
-          /** Deprecated. The Google Developers Console [project ID or project
-         number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
-         replaced by the parent field.
-           */
-          public java.lang.String getProjectId() {
-            return projectId;
-          }
-
-          /**
-           * Deprecated. The Google Developers Console [project ID or project
-           * number](https://support.google.com/cloud/answer/6158840). This field has been
-           * deprecated and replaced by the parent field.
-           */
-          public List setProjectId(java.lang.String projectId) {
-            this.projectId = projectId;
-            return this;
-          }
-
-          /**
            * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
            * to return operations for, or `-` for all zones. This field has been deprecated and
            * replaced by the parent field.
@@ -5223,6 +5197,32 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
+            return this;
+          }
+
+          /**
+           * Deprecated. The Google Developers Console [project ID or project
+           * number](https://support.google.com/cloud/answer/6158840). This field has been
+           * deprecated and replaced by the parent field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Deprecated. The Google Developers Console [project ID or project
+         number](https://support.google.com/cloud/answer/6158840). This field has been deprecated and
+         replaced by the parent field.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /**
+           * Deprecated. The Google Developers Console [project ID or project
+           * number](https://support.google.com/cloud/answer/6158840). This field has been
+           * deprecated and replaced by the parent field.
+           */
+          public List setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
             return this;
           }
 

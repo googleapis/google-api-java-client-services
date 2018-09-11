@@ -80,8 +80,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "projects/{projectId}/global/networks/{networkId}".
    *
    * If unspecified, the default network in the environment's project is used. If a [Custom Subnet
-   * Network]((/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must
-   * also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
+   * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
+   * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
    * `nodeConfig.subnetwork`.
    * The value may be {@code null}.
    */
@@ -233,8 +233,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "projects/{projectId}/global/networks/{networkId}".
    *
    * If unspecified, the default network in the environment's project is used. If a [Custom Subnet
-   * Network]((/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must
-   * also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
+   * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
+   * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
    * `nodeConfig.subnetwork`.
    * @return value or {@code null} for none
    */
@@ -248,8 +248,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "projects/{projectId}/global/networks/{networkId}".
    *
    * If unspecified, the default network in the environment's project is used. If a [Custom Subnet
-   * Network]((/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must
-   * also be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
+   * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
+   * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
    * `nodeConfig.subnetwork`.
    * @param network network or {@code null} for none
    */

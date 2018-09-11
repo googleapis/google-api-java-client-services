@@ -43,6 +43,19 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodePoolAutoscaling autoscaling;
 
   /**
+   * Which conditions caused the current node pool state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StatusCondition> conditions;
+
+  static {
+    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StatusCondition.class);
+  }
+
+  /**
    * The node configuration of the pool.
    * The value may be {@code null}.
    */
@@ -133,6 +146,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setAutoscaling(NodePoolAutoscaling autoscaling) {
     this.autoscaling = autoscaling;
+    return this;
+  }
+
+  /**
+   * Which conditions caused the current node pool state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StatusCondition> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Which conditions caused the current node pool state.
+   * @param conditions conditions or {@code null} for none
+   */
+  public NodePool setConditions(java.util.List<StatusCondition> conditions) {
+    this.conditions = conditions;
     return this;
   }
 

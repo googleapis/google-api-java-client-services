@@ -36,12 +36,6 @@ public final class ListOffersResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<AvailableOffer> availableOffers;
 
-  static {
-    // hack to force ProGuard to consider AvailableOffer used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AvailableOffer.class);
-  }
-
   /**
    * Reason why no Offers are available.
    * The value may be {@code null}.

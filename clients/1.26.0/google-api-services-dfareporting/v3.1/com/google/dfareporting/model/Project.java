@@ -17,7 +17,7 @@
 package com.google.dfareporting.model;
 
 /**
- * Contains properties of a DoubleClick Planning project.
+ * Contains properties of a Planning project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed

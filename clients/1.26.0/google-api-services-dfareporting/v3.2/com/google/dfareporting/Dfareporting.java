@@ -4249,6 +4249,22 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Select only landing pages that are associated with these campaigns. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.Long> campaignIds;
+
+      /** Select only landing pages that are associated with these campaigns.
+       */
+      public java.util.List<java.lang.Long> getCampaignIds() {
+        return campaignIds;
+      }
+
+      /** Select only landing pages that are associated with these campaigns. */
+      public List setCampaignIds(java.util.List<java.lang.Long> campaignIds) {
+        this.campaignIds = campaignIds;
+        return this;
+      }
+
       /** Select only landing pages with these IDs. */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.Long> ids;
@@ -13217,17 +13233,17 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** Select only directory sites with this DFP network code. */
+      /** Select only directory sites with this Ad Manager network code. */
       @com.google.api.client.util.Key
       private java.lang.String dfpNetworkCode;
 
-      /** Select only directory sites with this DFP network code.
+      /** Select only directory sites with this Ad Manager network code.
        */
       public java.lang.String getDfpNetworkCode() {
         return dfpNetworkCode;
       }
 
-      /** Select only directory sites with this DFP network code. */
+      /** Select only directory sites with this Ad Manager network code. */
       public List setDfpNetworkCode(java.lang.String dfpNetworkCode) {
         this.dfpNetworkCode = dfpNetworkCode;
         return this;

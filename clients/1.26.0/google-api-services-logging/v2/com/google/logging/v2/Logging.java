@@ -5783,32 +5783,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * Optional. If present, then retrieve the next batch of results from the preceding call to
-         * this method. pageToken must be the value of nextPageToken from the previous response. The
-         * values of other method parameters should be identical to those in the previous call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional. If present, then retrieve the next batch of results from the preceding call to this
-       method. pageToken must be the value of nextPageToken from the previous response. The values of
-       other method parameters should be identical to those in the previous call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional. If present, then retrieve the next batch of results from the preceding call to
-         * this method. pageToken must be the value of nextPageToken from the previous response. The
-         * values of other method parameters should be identical to those in the previous call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional. The maximum number of results to return from this request. Non-positive values
          * are ignored. The presence of nextPageToken in the response indicates that more results
          * might be available.
@@ -5831,6 +5805,32 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. If present, then retrieve the next batch of results from the preceding call to
+         * this method. pageToken must be the value of nextPageToken from the previous response. The
+         * values of other method parameters should be identical to those in the previous call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+       method. pageToken must be the value of nextPageToken from the previous response. The values of
+       other method parameters should be identical to those in the previous call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. If present, then retrieve the next batch of results from the preceding call to
+         * this method. pageToken must be the value of nextPageToken from the previous response. The
+         * values of other method parameters should be identical to those in the previous call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -6653,32 +6653,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Optional. If present, then retrieve the next batch of results from the preceding call to
-       * this method. pageToken must be the value of nextPageToken from the previous response. The
-       * values of other method parameters should be identical to those in the previous call.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Optional. If present, then retrieve the next batch of results from the preceding call to this
-     method. pageToken must be the value of nextPageToken from the previous response. The values of
-     other method parameters should be identical to those in the previous call.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * Optional. If present, then retrieve the next batch of results from the preceding call to
-       * this method. pageToken must be the value of nextPageToken from the previous response. The
-       * values of other method parameters should be identical to those in the previous call.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
        * Optional. The maximum number of results to return from this request. Non-positive values
        * are ignored. The presence of nextPageToken in the response indicates that more results
        * might be available.
@@ -6701,6 +6675,32 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. If present, then retrieve the next batch of results from the preceding call to
+       * this method. pageToken must be the value of nextPageToken from the previous response. The
+       * values of other method parameters should be identical to those in the previous call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+     method. pageToken must be the value of nextPageToken from the previous response. The values of
+     other method parameters should be identical to those in the previous call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. If present, then retrieve the next batch of results from the preceding call to
+       * this method. pageToken must be the value of nextPageToken from the previous response. The
+       * values of other method parameters should be identical to those in the previous call.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

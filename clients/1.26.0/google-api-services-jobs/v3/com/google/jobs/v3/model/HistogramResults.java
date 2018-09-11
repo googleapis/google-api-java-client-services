@@ -40,12 +40,6 @@ public final class HistogramResults extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<CompensationHistogramResult> compensationHistogramResults;
 
-  static {
-    // hack to force ProGuard to consider CompensationHistogramResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CompensationHistogramResult.class);
-  }
-
   /**
    * Specifies histogram results for custom attributes that match
    * HistogramFacets.custom_attribute_histogram_facets.
@@ -54,24 +48,12 @@ public final class HistogramResults extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<CustomAttributeHistogramResult> customAttributeHistogramResults;
 
-  static {
-    // hack to force ProGuard to consider CustomAttributeHistogramResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CustomAttributeHistogramResult.class);
-  }
-
   /**
    * Specifies histogram results that matches HistogramFacets.simple_histogram_facets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<HistogramResult> simpleHistogramResults;
-
-  static {
-    // hack to force ProGuard to consider HistogramResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(HistogramResult.class);
-  }
 
   /**
    * Specifies compensation field-based histogram results that match

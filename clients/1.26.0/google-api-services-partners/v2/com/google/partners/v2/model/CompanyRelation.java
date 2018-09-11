@@ -149,6 +149,12 @@ public final class CompanyRelation extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<SpecializationStatus> specializationStatus;
 
+  static {
+    // hack to force ProGuard to consider SpecializationStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SpecializationStatus.class);
+  }
+
   /**
    * The state of relationship, in terms of approvals.
    * The value may be {@code null}.

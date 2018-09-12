@@ -37,6 +37,13 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   private AndroidDeviceCatalog androidDeviceCatalog;
 
   /**
+   * Supported iOS devices
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IosDeviceCatalog iosDeviceCatalog;
+
+  /**
    * Supported network configurations
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
    */
   public TestEnvironmentCatalog setAndroidDeviceCatalog(AndroidDeviceCatalog androidDeviceCatalog) {
     this.androidDeviceCatalog = androidDeviceCatalog;
+    return this;
+  }
+
+  /**
+   * Supported iOS devices
+   * @return value or {@code null} for none
+   */
+  public IosDeviceCatalog getIosDeviceCatalog() {
+    return iosDeviceCatalog;
+  }
+
+  /**
+   * Supported iOS devices
+   * @param iosDeviceCatalog iosDeviceCatalog or {@code null} for none
+   */
+  public TestEnvironmentCatalog setIosDeviceCatalog(IosDeviceCatalog iosDeviceCatalog) {
+    this.iosDeviceCatalog = iosDeviceCatalog;
     return this;
   }
 

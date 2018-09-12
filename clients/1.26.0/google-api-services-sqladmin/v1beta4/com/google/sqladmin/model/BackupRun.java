@@ -17,7 +17,7 @@
 package com.google.sqladmin.model;
 
 /**
- * A database instance backup run resource.
+ * A BackupRun resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -61,8 +61,7 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private OperationError error;
 
   /**
-   * A unique identifier for this backup run. Note that this is unique only within the scope of a
-   * particular Cloud SQL instance.
+   * The identifier for this backup run. Unique only for a specific Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -194,8 +193,7 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for this backup run. Note that this is unique only within the scope of a
-   * particular Cloud SQL instance.
+   * The identifier for this backup run. Unique only for a specific Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -203,8 +201,7 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for this backup run. Note that this is unique only within the scope of a
-   * particular Cloud SQL instance.
+   * The identifier for this backup run. Unique only for a specific Cloud SQL instance.
    * @param id id or {@code null} for none
    */
   public BackupRun setId(java.lang.Long id) {

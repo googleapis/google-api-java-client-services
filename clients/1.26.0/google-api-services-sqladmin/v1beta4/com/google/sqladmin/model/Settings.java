@@ -43,8 +43,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String activationPolicy;
 
   /**
-   * The App Engine app IDs that can access this instance. This property is only applicable to First
-   * Generation instances.
+   * The App Engine app IDs that can access this instance. First Generation instances only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,16 +75,15 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean crashSafeReplicationEnabled;
 
   /**
-   * The size of data disk, in GB. The data disk size minimum is 10GB. Applies only to Second
-   * Generation instances.
+   * The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation
+   * instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long dataDiskSizeGb;
 
   /**
-   * The type of data disk. Only supported for Second Generation instances. The default type is
-   * PD_SSD. Applies only to Second Generation instances.
+   * The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +136,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private LocationPreference locationPreference;
 
   /**
-   * The maintenance window for this instance. This specifies when the instance may be restarted for
-   * maintenance purposes. Applies only to Second Generation instances.
+   * The maintenance window for this instance. This specifies when the instance can be restarted for
+   * maintenance purposes. Not used for First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,8 +169,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Long settingsVersion;
 
   /**
-   * Configuration to increase storage size automatically. The default value is true. Applies only
-   * to Second Generation instances.
+   * Configuration to increase storage size automatically. The default value is true. Not used for
+   * First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,14 +178,16 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size to which storage capacity can be automatically increased. The default value is
-   * 0, which specifies that there is no limit. Applies only to Second Generation instances.
+   * 0, which specifies that there is no limit. Not used for First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long storageAutoResizeLimit;
 
   /**
-   * The tier of service for this instance, for example D1, D2. For more information, see pricing.
+   * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
+   * db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether
+   * the instance is First or Second Generation. For more information, see Instance Settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,8 +230,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The App Engine app IDs that can access this instance. This property is only applicable to First
-   * Generation instances.
+   * The App Engine app IDs that can access this instance. First Generation instances only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAuthorizedGaeApplications() {
@@ -239,8 +238,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The App Engine app IDs that can access this instance. This property is only applicable to First
-   * Generation instances.
+   * The App Engine app IDs that can access this instance. First Generation instances only.
    * @param authorizedGaeApplications authorizedGaeApplications or {@code null} for none
    */
   public Settings setAuthorizedGaeApplications(java.util.List<java.lang.String> authorizedGaeApplications) {
@@ -308,8 +306,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of data disk, in GB. The data disk size minimum is 10GB. Applies only to Second
-   * Generation instances.
+   * The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation
+   * instances.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDataDiskSizeGb() {
@@ -317,8 +315,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of data disk, in GB. The data disk size minimum is 10GB. Applies only to Second
-   * Generation instances.
+   * The size of data disk, in GB. The data disk size minimum is 10GB. Not used for First Generation
+   * instances.
    * @param dataDiskSizeGb dataDiskSizeGb or {@code null} for none
    */
   public Settings setDataDiskSizeGb(java.lang.Long dataDiskSizeGb) {
@@ -327,8 +325,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of data disk. Only supported for Second Generation instances. The default type is
-   * PD_SSD. Applies only to Second Generation instances.
+   * The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataDiskType() {
@@ -336,8 +333,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of data disk. Only supported for Second Generation instances. The default type is
-   * PD_SSD. Applies only to Second Generation instances.
+   * The type of data disk: PD_SSD (default) or PD_HDD. Not used for First Generation instances.
    * @param dataDiskType dataDiskType or {@code null} for none
    */
   public Settings setDataDiskType(java.lang.String dataDiskType) {
@@ -441,8 +437,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maintenance window for this instance. This specifies when the instance may be restarted for
-   * maintenance purposes. Applies only to Second Generation instances.
+   * The maintenance window for this instance. This specifies when the instance can be restarted for
+   * maintenance purposes. Not used for First Generation instances.
    * @return value or {@code null} for none
    */
   public MaintenanceWindow getMaintenanceWindow() {
@@ -450,8 +446,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maintenance window for this instance. This specifies when the instance may be restarted for
-   * maintenance purposes. Applies only to Second Generation instances.
+   * The maintenance window for this instance. This specifies when the instance can be restarted for
+   * maintenance purposes. Not used for First Generation instances.
    * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
   public Settings setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
@@ -519,8 +515,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration to increase storage size automatically. The default value is true. Applies only
-   * to Second Generation instances.
+   * Configuration to increase storage size automatically. The default value is true. Not used for
+   * First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStorageAutoResize() {
@@ -528,8 +524,8 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration to increase storage size automatically. The default value is true. Applies only
-   * to Second Generation instances.
+   * Configuration to increase storage size automatically. The default value is true. Not used for
+   * First Generation instances.
    * @param storageAutoResize storageAutoResize or {@code null} for none
    */
   public Settings setStorageAutoResize(java.lang.Boolean storageAutoResize) {
@@ -539,7 +535,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size to which storage capacity can be automatically increased. The default value is
-   * 0, which specifies that there is no limit. Applies only to Second Generation instances.
+   * 0, which specifies that there is no limit. Not used for First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStorageAutoResizeLimit() {
@@ -548,7 +544,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum size to which storage capacity can be automatically increased. The default value is
-   * 0, which specifies that there is no limit. Applies only to Second Generation instances.
+   * 0, which specifies that there is no limit. Not used for First Generation instances.
    * @param storageAutoResizeLimit storageAutoResizeLimit or {@code null} for none
    */
   public Settings setStorageAutoResizeLimit(java.lang.Long storageAutoResizeLimit) {
@@ -557,7 +553,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier of service for this instance, for example D1, D2. For more information, see pricing.
+   * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
+   * db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether
+   * the instance is First or Second Generation. For more information, see Instance Settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -565,7 +563,9 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier of service for this instance, for example D1, D2. For more information, see pricing.
+   * The tier (or machine type) for this instance, for example db-n1-standard-1 (MySQL instances) or
+   * db-custom-1-3840 (PostgreSQL instances). For MySQL instances, this property determines whether
+   * the instance is First or Second Generation. For more information, see Instance Settings.
    * @param tier tier or {@code null} for none
    */
   public Settings setTier(java.lang.String tier) {

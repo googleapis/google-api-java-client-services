@@ -17,7 +17,7 @@
 package com.google.sqladmin.model;
 
 /**
- * A Google Cloud SQL service flag resource.
+ * A flag resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:

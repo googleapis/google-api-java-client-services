@@ -17,7 +17,7 @@
 package com.google.sqladmin.model;
 
 /**
- * A database resource inside a Cloud SQL instance.
+ * Represents a SQL database on the Cloud SQL instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -44,7 +44,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String collation;
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -130,7 +130,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API.
    * @param etag etag or {@code null} for none
    */
   public Database setEtag(java.lang.String etag) {

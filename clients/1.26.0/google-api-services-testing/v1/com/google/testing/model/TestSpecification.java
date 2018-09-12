@@ -76,6 +76,20 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disableVideoRecording;
 
   /**
+   * Optional. Test setup requirements for iOS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IosTestSetup iosTestSetup;
+
+  /**
+   * An iOS XCTest, via an .xctestrun file
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IosXcTest iosXcTest;
+
+  /**
    * Test setup requirements for Android e.g. files to install, bootstrap scripts. Optional
    * The value may be {@code null}.
    */
@@ -197,6 +211,40 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    */
   public TestSpecification setDisableVideoRecording(java.lang.Boolean disableVideoRecording) {
     this.disableVideoRecording = disableVideoRecording;
+    return this;
+  }
+
+  /**
+   * Optional. Test setup requirements for iOS.
+   * @return value or {@code null} for none
+   */
+  public IosTestSetup getIosTestSetup() {
+    return iosTestSetup;
+  }
+
+  /**
+   * Optional. Test setup requirements for iOS.
+   * @param iosTestSetup iosTestSetup or {@code null} for none
+   */
+  public TestSpecification setIosTestSetup(IosTestSetup iosTestSetup) {
+    this.iosTestSetup = iosTestSetup;
+    return this;
+  }
+
+  /**
+   * An iOS XCTest, via an .xctestrun file
+   * @return value or {@code null} for none
+   */
+  public IosXcTest getIosXcTest() {
+    return iosXcTest;
+  }
+
+  /**
+   * An iOS XCTest, via an .xctestrun file
+   * @param iosXcTest iosXcTest or {@code null} for none
+   */
+  public TestSpecification setIosXcTest(IosXcTest iosXcTest) {
+    this.iosXcTest = iosXcTest;
     return this;
   }
 

@@ -14,37 +14,43 @@
  * Modify at your own risk.
  */
 
-package com.google.serviceusage.v1beta1.model;
+package com.google.speech.v1beta1.model;
 
 /**
- * Response message for the `ListServices` method.
+ * The response message for Operations.ListOperations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Speech API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListServicesResponse extends com.google.api.client.json.GenericJson {
+public final class ListOperationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token that can be passed to `ListServices` to resume a paginated query.
+   * The standard List next-page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The available services for the requested project.
+   * A list of operations that matches the specified filter in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Service> services;
+  private java.util.List<Operation> operations;
+
+  static {
+    // hack to force ProGuard to consider Operation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Operation.class);
+  }
 
   /**
-   * Token that can be passed to `ListServices` to resume a paginated query.
+   * The standard List next-page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -52,39 +58,39 @@ public final class ListServicesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Token that can be passed to `ListServices` to resume a paginated query.
+   * The standard List next-page token.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListServicesResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListOperationsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * The available services for the requested project.
+   * A list of operations that matches the specified filter in the request.
    * @return value or {@code null} for none
    */
-  public java.util.List<Service> getServices() {
-    return services;
+  public java.util.List<Operation> getOperations() {
+    return operations;
   }
 
   /**
-   * The available services for the requested project.
-   * @param services services or {@code null} for none
+   * A list of operations that matches the specified filter in the request.
+   * @param operations operations or {@code null} for none
    */
-  public ListServicesResponse setServices(java.util.List<Service> services) {
-    this.services = services;
+  public ListOperationsResponse setOperations(java.util.List<Operation> operations) {
+    this.operations = operations;
     return this;
   }
 
   @Override
-  public ListServicesResponse set(String fieldName, Object value) {
-    return (ListServicesResponse) super.set(fieldName, value);
+  public ListOperationsResponse set(String fieldName, Object value) {
+    return (ListOperationsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListServicesResponse clone() {
-    return (ListServicesResponse) super.clone();
+  public ListOperationsResponse clone() {
+    return (ListOperationsResponse) super.clone();
   }
 
 }

@@ -673,6 +673,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
       /** The name of the operation's parent resource. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -718,22 +734,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /** The standard list page size. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
-        return this;
-      }
-
-      /** The standard list filter. */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** The standard list filter.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
         return this;
       }
 

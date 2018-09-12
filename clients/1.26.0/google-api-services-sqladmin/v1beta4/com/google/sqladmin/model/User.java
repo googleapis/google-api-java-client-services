@@ -30,7 +30,7 @@ package com.google.sqladmin.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the user in the Cloud SQL instance. Can be omitted for update since it is already
-   * specified on the URL.
+   * specified in the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String project;
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -92,7 +92,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API.
    * @param etag etag or {@code null} for none
    */
   public User setEtag(java.lang.String etag) {
@@ -159,7 +159,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the user in the Cloud SQL instance. Can be omitted for update since it is already
-   * specified on the URL.
+   * specified in the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -168,7 +168,7 @@ public final class User extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the user in the Cloud SQL instance. Can be omitted for update since it is already
-   * specified on the URL.
+   * specified in the URL.
    * @param name name or {@code null} for none
    */
   public User setName(java.lang.String name) {

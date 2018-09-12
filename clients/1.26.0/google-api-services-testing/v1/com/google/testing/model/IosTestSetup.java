@@ -17,7 +17,7 @@
 package com.google.testing.model;
 
 /**
- * A list of Android device configurations in which the test is to be executed.
+ * A description of how to set up an iOS device prior to a test.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -27,46 +27,46 @@ package com.google.testing.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AndroidDeviceList extends com.google.api.client.json.GenericJson {
+public final class IosTestSetup extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Android devices Required
+   * Optional. The network traffic profile used for running the test. Available network profiles can
+   * be queried by using the NETWORK_CONFIGURATION environment type when calling
+   * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<AndroidDevice> androidDevices;
-
-  static {
-    // hack to force ProGuard to consider AndroidDevice used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AndroidDevice.class);
-  }
+  private java.lang.String networkProfile;
 
   /**
-   * A list of Android devices Required
+   * Optional. The network traffic profile used for running the test. Available network profiles can
+   * be queried by using the NETWORK_CONFIGURATION environment type when calling
+   * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
    * @return value or {@code null} for none
    */
-  public java.util.List<AndroidDevice> getAndroidDevices() {
-    return androidDevices;
+  public java.lang.String getNetworkProfile() {
+    return networkProfile;
   }
 
   /**
-   * A list of Android devices Required
-   * @param androidDevices androidDevices or {@code null} for none
+   * Optional. The network traffic profile used for running the test. Available network profiles can
+   * be queried by using the NETWORK_CONFIGURATION environment type when calling
+   * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
+   * @param networkProfile networkProfile or {@code null} for none
    */
-  public AndroidDeviceList setAndroidDevices(java.util.List<AndroidDevice> androidDevices) {
-    this.androidDevices = androidDevices;
+  public IosTestSetup setNetworkProfile(java.lang.String networkProfile) {
+    this.networkProfile = networkProfile;
     return this;
   }
 
   @Override
-  public AndroidDeviceList set(String fieldName, Object value) {
-    return (AndroidDeviceList) super.set(fieldName, value);
+  public IosTestSetup set(String fieldName, Object value) {
+    return (IosTestSetup) super.set(fieldName, value);
   }
 
   @Override
-  public AndroidDeviceList clone() {
-    return (AndroidDeviceList) super.clone();
+  public IosTestSetup clone() {
+    return (IosTestSetup) super.clone();
   }
 
 }

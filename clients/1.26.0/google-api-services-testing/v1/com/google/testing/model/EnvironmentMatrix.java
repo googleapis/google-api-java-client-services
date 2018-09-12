@@ -44,6 +44,13 @@ public final class EnvironmentMatrix extends com.google.api.client.json.GenericJ
   private AndroidMatrix androidMatrix;
 
   /**
+   * A list of iOS devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IosDeviceList iosDeviceList;
+
+  /**
    * A list of Android devices; the test will be run only on the specified devices.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class EnvironmentMatrix extends com.google.api.client.json.GenericJ
    */
   public EnvironmentMatrix setAndroidMatrix(AndroidMatrix androidMatrix) {
     this.androidMatrix = androidMatrix;
+    return this;
+  }
+
+  /**
+   * A list of iOS devices.
+   * @return value or {@code null} for none
+   */
+  public IosDeviceList getIosDeviceList() {
+    return iosDeviceList;
+  }
+
+  /**
+   * A list of iOS devices.
+   * @param iosDeviceList iosDeviceList or {@code null} for none
+   */
+  public EnvironmentMatrix setIosDeviceList(IosDeviceList iosDeviceList) {
+    this.iosDeviceList = iosDeviceList;
     return this;
   }
 

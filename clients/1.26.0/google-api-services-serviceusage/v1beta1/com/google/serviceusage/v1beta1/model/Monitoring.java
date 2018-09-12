@@ -56,12 +56,6 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MonitoringDestination> consumerDestinations;
 
-  static {
-    // hack to force ProGuard to consider MonitoringDestination used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MonitoringDestination.class);
-  }
-
   /**
    * Monitoring configurations for sending metrics to the producer project. There can be multiple
    * producer destinations, each one must have a different monitored resource type. A metric can be
@@ -70,12 +64,6 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<MonitoringDestination> producerDestinations;
-
-  static {
-    // hack to force ProGuard to consider MonitoringDestination used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MonitoringDestination.class);
-  }
 
   /**
    * Monitoring configurations for sending metrics to the consumer project. There can be multiple

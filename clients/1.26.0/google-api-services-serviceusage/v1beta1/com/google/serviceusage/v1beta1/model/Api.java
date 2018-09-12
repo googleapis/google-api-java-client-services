@@ -43,12 +43,24 @@ public final class Api extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Method> methods;
 
+  static {
+    // hack to force ProGuard to consider Method used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Method.class);
+  }
+
   /**
    * Included interfaces. See Mixin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Mixin> mixins;
+
+  static {
+    // hack to force ProGuard to consider Mixin used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Mixin.class);
+  }
 
   /**
    * The fully qualified name of this interface, including package name followed by the interface's
@@ -64,6 +76,12 @@ public final class Api extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Option> options;
+
+  static {
+    // hack to force ProGuard to consider Option used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Option.class);
+  }
 
   /**
    * Source context for the protocol buffer service represented by this message.

@@ -14,53 +14,53 @@
  * Modify at your own risk.
  */
 
-package com.google.proximitybeacon.v1beta1.model;
+package com.google.testing.model;
 
 /**
- * Information about the requested beacons, optionally including attachment data.
+ * A list of iOS device configurations in which the test is to be executed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Proximity Beacon API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetInfoForObservedBeaconsResponse extends com.google.api.client.json.GenericJson {
+public final class IosDeviceList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Public information about beacons. May be empty if the request matched no beacons.
+   * Required. A list of iOS devices
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BeaconInfo> beacons;
+  private java.util.List<IosDevice> iosDevices;
 
   /**
-   * Public information about beacons. May be empty if the request matched no beacons.
+   * Required. A list of iOS devices
    * @return value or {@code null} for none
    */
-  public java.util.List<BeaconInfo> getBeacons() {
-    return beacons;
+  public java.util.List<IosDevice> getIosDevices() {
+    return iosDevices;
   }
 
   /**
-   * Public information about beacons. May be empty if the request matched no beacons.
-   * @param beacons beacons or {@code null} for none
+   * Required. A list of iOS devices
+   * @param iosDevices iosDevices or {@code null} for none
    */
-  public GetInfoForObservedBeaconsResponse setBeacons(java.util.List<BeaconInfo> beacons) {
-    this.beacons = beacons;
+  public IosDeviceList setIosDevices(java.util.List<IosDevice> iosDevices) {
+    this.iosDevices = iosDevices;
     return this;
   }
 
   @Override
-  public GetInfoForObservedBeaconsResponse set(String fieldName, Object value) {
-    return (GetInfoForObservedBeaconsResponse) super.set(fieldName, value);
+  public IosDeviceList set(String fieldName, Object value) {
+    return (IosDeviceList) super.set(fieldName, value);
   }
 
   @Override
-  public GetInfoForObservedBeaconsResponse clone() {
-    return (GetInfoForObservedBeaconsResponse) super.clone();
+  public IosDeviceList clone() {
+    return (IosDeviceList) super.clone();
   }
 
 }

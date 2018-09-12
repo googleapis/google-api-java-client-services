@@ -30,9 +30,10 @@ package com.google.sqladmin.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * FIRST_GEN: Basic Cloud SQL instance that runs in a Google-managed container. SECOND_GEN: A
-   * newer Cloud SQL backend that runs in a Compute Engine VM. EXTERNAL: A MySQL server that is not
-   * managed by Google.
+   * FIRST_GEN: First Generation instance. MySQL only. SECOND_GEN: Second Generation instance or
+   * PostgreSQL instance. EXTERNAL: A database server that is not managed by Google. This property
+   * is read-only; use the tier property in the settings object to determine the database type and
+   * Second or First Generation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +49,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The current disk usage of the instance in bytes. This property has been deprecated. Users
    * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see https://groups.google.com/d/msg/google-cloud-sql-
-   * announce/I_7-F9EBhT0/BtvFtdFeAgAJ for details.
+   * API instead. Please see this announcement for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -66,7 +66,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String databaseVersion;
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API. Use the
+   * settings.settingsVersion field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +168,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String region;
 
   /**
-   * Configuration specific to read-replicas replicating from on-premises masters.
+   * Configuration specific to failover replicas and read replicas.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,9 +229,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> suspensionReason;
 
   /**
-   * FIRST_GEN: Basic Cloud SQL instance that runs in a Google-managed container. SECOND_GEN: A
-   * newer Cloud SQL backend that runs in a Compute Engine VM. EXTERNAL: A MySQL server that is not
-   * managed by Google.
+   * FIRST_GEN: First Generation instance. MySQL only. SECOND_GEN: Second Generation instance or
+   * PostgreSQL instance. EXTERNAL: A database server that is not managed by Google. This property
+   * is read-only; use the tier property in the settings object to determine the database type and
+   * Second or First Generation.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendType() {
@@ -238,9 +240,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * FIRST_GEN: Basic Cloud SQL instance that runs in a Google-managed container. SECOND_GEN: A
-   * newer Cloud SQL backend that runs in a Compute Engine VM. EXTERNAL: A MySQL server that is not
-   * managed by Google.
+   * FIRST_GEN: First Generation instance. MySQL only. SECOND_GEN: Second Generation instance or
+   * PostgreSQL instance. EXTERNAL: A database server that is not managed by Google. This property
+   * is read-only; use the tier property in the settings object to determine the database type and
+   * Second or First Generation.
    * @param backendType backendType or {@code null} for none
    */
   public DatabaseInstance setBackendType(java.lang.String backendType) {
@@ -268,8 +271,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The current disk usage of the instance in bytes. This property has been deprecated. Users
    * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see https://groups.google.com/d/msg/google-cloud-sql-
-   * announce/I_7-F9EBhT0/BtvFtdFeAgAJ for details.
+   * API instead. Please see this announcement for details.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCurrentDiskSize() {
@@ -279,8 +281,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The current disk usage of the instance in bytes. This property has been deprecated. Users
    * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see https://groups.google.com/d/msg/google-cloud-sql-
-   * announce/I_7-F9EBhT0/BtvFtdFeAgAJ for details.
+   * API instead. Please see this announcement for details.
    * @param currentDiskSize currentDiskSize or {@code null} for none
    */
   public DatabaseInstance setCurrentDiskSize(java.lang.Long currentDiskSize) {
@@ -312,7 +313,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API. Use the
+   * settings.settingsVersion field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -320,7 +322,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * HTTP 1.1 Entity tag for the resource.
+   * This field is deprecated and will be removed from a future version of the API. Use the
+   * settings.settingsVersion field instead.
    * @param etag etag or {@code null} for none
    */
   public DatabaseInstance setEtag(java.lang.String etag) {
@@ -553,7 +556,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configuration specific to read-replicas replicating from on-premises masters.
+   * Configuration specific to failover replicas and read replicas.
    * @return value or {@code null} for none
    */
   public ReplicaConfiguration getReplicaConfiguration() {
@@ -561,7 +564,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configuration specific to read-replicas replicating from on-premises masters.
+   * Configuration specific to failover replicas and read replicas.
    * @param replicaConfiguration replicaConfiguration or {@code null} for none
    */
   public DatabaseInstance setReplicaConfiguration(ReplicaConfiguration replicaConfiguration) {

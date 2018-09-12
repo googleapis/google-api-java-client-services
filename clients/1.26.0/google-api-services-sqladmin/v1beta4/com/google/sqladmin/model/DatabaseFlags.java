@@ -17,7 +17,7 @@
 package com.google.sqladmin.model;
 
 /**
- * MySQL flags for Cloud SQL instances.
+ * Database flags for Cloud SQL instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,10 +30,9 @@ package com.google.sqladmin.model;
 public final class DatabaseFlags extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the flag. These flags are passed at instance startup, so include both MySQL server
-   * options and MySQL system variables. Flags should be specified with underscores, not hyphens.
-   * For more information, see Configuring MySQL Flags in the Google Cloud SQL documentation, as
-   * well as the official MySQL documentation for server options and system variables.
+   * The name of the flag. These flags are passed at instance startup, so include both server
+   * options and system variables for MySQL. Flags should be specified with underscores, not
+   * hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,10 +47,9 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
   private java.lang.String value;
 
   /**
-   * The name of the flag. These flags are passed at instance startup, so include both MySQL server
-   * options and MySQL system variables. Flags should be specified with underscores, not hyphens.
-   * For more information, see Configuring MySQL Flags in the Google Cloud SQL documentation, as
-   * well as the official MySQL documentation for server options and system variables.
+   * The name of the flag. These flags are passed at instance startup, so include both server
+   * options and system variables for MySQL. Flags should be specified with underscores, not
+   * hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,10 +57,9 @@ public final class DatabaseFlags extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the flag. These flags are passed at instance startup, so include both MySQL server
-   * options and MySQL system variables. Flags should be specified with underscores, not hyphens.
-   * For more information, see Configuring MySQL Flags in the Google Cloud SQL documentation, as
-   * well as the official MySQL documentation for server options and system variables.
+   * The name of the flag. These flags are passed at instance startup, so include both server
+   * options and system variables for MySQL. Flags should be specified with underscores, not
+   * hyphens. For more information, see Configuring Database Flags in the Cloud SQL documentation.
    * @param name name or {@code null} for none
    */
   public DatabaseFlags setName(java.lang.String name) {

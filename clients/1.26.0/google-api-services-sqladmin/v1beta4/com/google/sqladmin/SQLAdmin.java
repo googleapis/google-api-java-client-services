@@ -20,7 +20,7 @@ package com.google.sqladmin;
  * Service definition for SQLAdmin (v1beta4).
  *
  * <p>
- * Cloud SQL provides the Cloud SQL Admin API, a REST API for administering your instances programmatically.
+ * Creates and manages Cloud SQL instances, which provide fully managed MySQL or PostgreSQL databases.
  * </p>
  *
  * <p>
@@ -540,7 +540,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Lists all backup runs associated with a given instance and configuration in the reverse
-     * chronological order of the enqueued time.
+     * chronological order of the backup initiation time.
      *
      * Create a request for the method "backupRuns.list".
      *
@@ -563,7 +563,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Lists all backup runs associated with a given instance and configuration in the reverse
-       * chronological order of the enqueued time.
+       * chronological order of the backup initiation time.
        *
        * Create a request for the method "backupRuns.list".
        *
@@ -1619,17 +1619,24 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return (List) super.setUserIp(userIp);
       }
 
-      /** Database version for flag retrieval. Flags are specific to the database version. */
+      /**
+       * Database type and version you want to retrieve flags for. By default, this method returns
+       * flags for all database types and versions.
+       */
       @com.google.api.client.util.Key
       private java.lang.String databaseVersion;
 
-      /** Database version for flag retrieval. Flags are specific to the database version.
+      /** Database type and version you want to retrieve flags for. By default, this method returns flags for
+     all database types and versions.
        */
       public java.lang.String getDatabaseVersion() {
         return databaseVersion;
       }
 
-      /** Database version for flag retrieval. Flags are specific to the database version. */
+      /**
+       * Database type and version you want to retrieve flags for. By default, this method returns
+       * flags for all database types and versions.
+       */
       public List setDatabaseVersion(java.lang.String databaseVersion) {
         this.databaseVersion = databaseVersion;
         return this;

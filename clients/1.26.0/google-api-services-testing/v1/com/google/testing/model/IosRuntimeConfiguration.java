@@ -17,7 +17,7 @@
 package com.google.testing.model;
 
 /**
- * The environment in which the test is run.
+ * iOS configuration that can be selected at the time a test is run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -27,64 +27,70 @@ package com.google.testing.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Environment extends com.google.api.client.json.GenericJson {
+public final class IosRuntimeConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * An Android device which must be used with an Android test.
+   * Output only. The set of available locales.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AndroidDevice androidDevice;
+  private java.util.List<Locale> locales;
 
-  /**
-   * An iOS device which must be used with an iOS test.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private IosDevice iosDevice;
-
-  /**
-   * An Android device which must be used with an Android test.
-   * @return value or {@code null} for none
-   */
-  public AndroidDevice getAndroidDevice() {
-    return androidDevice;
+  static {
+    // hack to force ProGuard to consider Locale used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Locale.class);
   }
 
   /**
-   * An Android device which must be used with an Android test.
-   * @param androidDevice androidDevice or {@code null} for none
+   * Output only. The set of available orientations.
+   * The value may be {@code null}.
    */
-  public Environment setAndroidDevice(AndroidDevice androidDevice) {
-    this.androidDevice = androidDevice;
+  @com.google.api.client.util.Key
+  private java.util.List<Orientation> orientations;
+
+  /**
+   * Output only. The set of available locales.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Locale> getLocales() {
+    return locales;
+  }
+
+  /**
+   * Output only. The set of available locales.
+   * @param locales locales or {@code null} for none
+   */
+  public IosRuntimeConfiguration setLocales(java.util.List<Locale> locales) {
+    this.locales = locales;
     return this;
   }
 
   /**
-   * An iOS device which must be used with an iOS test.
+   * Output only. The set of available orientations.
    * @return value or {@code null} for none
    */
-  public IosDevice getIosDevice() {
-    return iosDevice;
+  public java.util.List<Orientation> getOrientations() {
+    return orientations;
   }
 
   /**
-   * An iOS device which must be used with an iOS test.
-   * @param iosDevice iosDevice or {@code null} for none
+   * Output only. The set of available orientations.
+   * @param orientations orientations or {@code null} for none
    */
-  public Environment setIosDevice(IosDevice iosDevice) {
-    this.iosDevice = iosDevice;
+  public IosRuntimeConfiguration setOrientations(java.util.List<Orientation> orientations) {
+    this.orientations = orientations;
     return this;
   }
 
   @Override
-  public Environment set(String fieldName, Object value) {
-    return (Environment) super.set(fieldName, value);
+  public IosRuntimeConfiguration set(String fieldName, Object value) {
+    return (IosRuntimeConfiguration) super.set(fieldName, value);
   }
 
   @Override
-  public Environment clone() {
-    return (Environment) super.clone();
+  public IosRuntimeConfiguration clone() {
+    return (IosRuntimeConfiguration) super.clone();
   }
 
 }

@@ -36,12 +36,6 @@ public final class ListNamespacesResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<Namespace> namespaces;
 
-  static {
-    // hack to force ProGuard to consider Namespace used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Namespace.class);
-  }
-
   /**
    * The attachments that corresponded to the request params.
    * @return value or {@code null} for none

@@ -282,6 +282,190 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
         return (Get) super.set(parameterName, value);
       }
     }
+    /**
+     * Lists operations that match the specified filter in the request. If the server doesn't support
+     * this method, it returns `UNIMPLEMENTED`.
+     *
+     * NOTE: the `name` binding allows API services to override the binding to use different resource
+     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
+     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+     * compatibility, the default name includes the operations collection id, however overriding users
+     * must ensure the name binding is the parent resource, without the operations collection id.
+     *
+     * Create a request for the method "operations.list".
+     *
+     * This request holds the parameters needed by the speech server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SpeechRequest<com.google.speech.v1beta1.model.ListOperationsResponse> {
+
+      private static final String REST_PATH = "v1beta1/operations";
+
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`.
+       *
+       * NOTE: the `name` binding allows API services to override the binding to use different resource
+       * name schemes, such as `users/operations`. To override the binding, API services can add a
+       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+       * compatibility, the default name includes the operations collection id, however overriding users
+       * must ensure the name binding is the parent resource, without the operations collection id.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the the speech server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Speech.this, "GET", REST_PATH, null, com.google.speech.v1beta1.model.ListOperationsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation's parent resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation's parent resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation's parent resource. */
+      public List setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** The standard list page size. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The standard list page size.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The standard list page size. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
 
   }
 

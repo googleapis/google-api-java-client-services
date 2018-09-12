@@ -1395,6 +1395,22 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** A pagination token obtained from a previous request to list beacons. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A pagination token obtained from a previous request to list beacons.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** A pagination token obtained from a previous request to list beacons. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
       /**
        * Filter query string that supports the following field filters:
        *
@@ -1581,22 +1597,6 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
        */
       public List setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
-        return this;
-      }
-
-      /** A pagination token obtained from a previous request to list beacons. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** A pagination token obtained from a previous request to list beacons.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** A pagination token obtained from a previous request to list beacons. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
         return this;
       }
 
@@ -2146,6 +2146,29 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Specifies the namespace and type of attachments to delete in `namespace/type` format.
+         * Accepts `*` to specify "all types in all namespaces". Optional.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String namespacedType;
+
+        /** Specifies the namespace and type of attachments to delete in `namespace/type` format. Accepts `*`
+       to specify "all types in all namespaces". Optional.
+         */
+        public java.lang.String getNamespacedType() {
+          return namespacedType;
+        }
+
+        /**
+         * Specifies the namespace and type of attachments to delete in `namespace/type` format.
+         * Accepts `*` to specify "all types in all namespaces". Optional.
+         */
+        public BatchDelete setNamespacedType(java.lang.String namespacedType) {
+          this.namespacedType = namespacedType;
+          return this;
+        }
+
+        /**
          * The project id to delete beacon attachments under. This field can be used when "*" is
          * specified to mean all attachment namespaces. Projects may have multiple attachments with
          * multiple namespaces. If "*" is specified and the projectId string is empty, then the
@@ -2171,29 +2194,6 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
          */
         public BatchDelete setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
-          return this;
-        }
-
-        /**
-         * Specifies the namespace and type of attachments to delete in `namespace/type` format.
-         * Accepts `*` to specify "all types in all namespaces". Optional.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String namespacedType;
-
-        /** Specifies the namespace and type of attachments to delete in `namespace/type` format. Accepts `*`
-       to specify "all types in all namespaces". Optional.
-         */
-        public java.lang.String getNamespacedType() {
-          return namespacedType;
-        }
-
-        /**
-         * Specifies the namespace and type of attachments to delete in `namespace/type` format.
-         * Accepts `*` to specify "all types in all namespaces". Optional.
-         */
-        public BatchDelete setNamespacedType(java.lang.String namespacedType) {
-          this.namespacedType = namespacedType;
           return this;
         }
 
@@ -2797,29 +2797,6 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Specifies the namespace and type of attachment to include in response in namespace/type
-         * format. Accepts `*` to specify "all types in all namespaces".
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String namespacedType;
-
-        /** Specifies the namespace and type of attachment to include in response in namespace/type format.
-       Accepts `*` to specify "all types in all namespaces".
-         */
-        public java.lang.String getNamespacedType() {
-          return namespacedType;
-        }
-
-        /**
-         * Specifies the namespace and type of attachment to include in response in namespace/type
-         * format. Accepts `*` to specify "all types in all namespaces".
-         */
-        public List setNamespacedType(java.lang.String namespacedType) {
-          this.namespacedType = namespacedType;
-          return this;
-        }
-
-        /**
          * The project id to list beacon attachments under. This field can be used when "*" is
          * specified to mean all attachment namespaces. Projects may have multiple attachments with
          * multiple namespaces. If "*" is specified and the projectId string is empty, then the
@@ -2845,6 +2822,29 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
          */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
+          return this;
+        }
+
+        /**
+         * Specifies the namespace and type of attachment to include in response in namespace/type
+         * format. Accepts `*` to specify "all types in all namespaces".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String namespacedType;
+
+        /** Specifies the namespace and type of attachment to include in response in namespace/type format.
+       Accepts `*` to specify "all types in all namespaces".
+         */
+        public java.lang.String getNamespacedType() {
+          return namespacedType;
+        }
+
+        /**
+         * Specifies the namespace and type of attachment to include in response in namespace/type
+         * format. Accepts `*` to specify "all types in all namespaces".
+         */
+        public List setNamespacedType(java.lang.String namespacedType) {
+          this.namespacedType = namespacedType;
           return this;
         }
 

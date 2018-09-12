@@ -17,7 +17,7 @@
 package com.google.testing.model;
 
 /**
- * The currently supported Android devices.
+ * The currently supported iOS devices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -27,88 +27,100 @@ package com.google.testing.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AndroidDeviceCatalog extends com.google.api.client.json.GenericJson {
+public final class IosDeviceCatalog extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of supported Android device models. @OutputOnly
+   * Output only. The set of supported iOS device models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<AndroidModel> models;
+  private java.util.List<IosModel> models;
+
+  static {
+    // hack to force ProGuard to consider IosModel used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IosModel.class);
+  }
 
   /**
-   * The set of supported runtime configurations. @OutputOnly
+   * Output only. The set of supported runtime configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AndroidRuntimeConfiguration runtimeConfiguration;
+  private IosRuntimeConfiguration runtimeConfiguration;
 
   /**
-   * The set of supported Android OS versions. @OutputOnly
+   * Output only. The set of supported iOS software versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<AndroidVersion> versions;
+  private java.util.List<IosVersion> versions;
+
+  static {
+    // hack to force ProGuard to consider IosVersion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IosVersion.class);
+  }
 
   /**
-   * The set of supported Android device models. @OutputOnly
+   * Output only. The set of supported iOS device models.
    * @return value or {@code null} for none
    */
-  public java.util.List<AndroidModel> getModels() {
+  public java.util.List<IosModel> getModels() {
     return models;
   }
 
   /**
-   * The set of supported Android device models. @OutputOnly
+   * Output only. The set of supported iOS device models.
    * @param models models or {@code null} for none
    */
-  public AndroidDeviceCatalog setModels(java.util.List<AndroidModel> models) {
+  public IosDeviceCatalog setModels(java.util.List<IosModel> models) {
     this.models = models;
     return this;
   }
 
   /**
-   * The set of supported runtime configurations. @OutputOnly
+   * Output only. The set of supported runtime configurations.
    * @return value or {@code null} for none
    */
-  public AndroidRuntimeConfiguration getRuntimeConfiguration() {
+  public IosRuntimeConfiguration getRuntimeConfiguration() {
     return runtimeConfiguration;
   }
 
   /**
-   * The set of supported runtime configurations. @OutputOnly
+   * Output only. The set of supported runtime configurations.
    * @param runtimeConfiguration runtimeConfiguration or {@code null} for none
    */
-  public AndroidDeviceCatalog setRuntimeConfiguration(AndroidRuntimeConfiguration runtimeConfiguration) {
+  public IosDeviceCatalog setRuntimeConfiguration(IosRuntimeConfiguration runtimeConfiguration) {
     this.runtimeConfiguration = runtimeConfiguration;
     return this;
   }
 
   /**
-   * The set of supported Android OS versions. @OutputOnly
+   * Output only. The set of supported iOS software versions.
    * @return value or {@code null} for none
    */
-  public java.util.List<AndroidVersion> getVersions() {
+  public java.util.List<IosVersion> getVersions() {
     return versions;
   }
 
   /**
-   * The set of supported Android OS versions. @OutputOnly
+   * Output only. The set of supported iOS software versions.
    * @param versions versions or {@code null} for none
    */
-  public AndroidDeviceCatalog setVersions(java.util.List<AndroidVersion> versions) {
+  public IosDeviceCatalog setVersions(java.util.List<IosVersion> versions) {
     this.versions = versions;
     return this;
   }
 
   @Override
-  public AndroidDeviceCatalog set(String fieldName, Object value) {
-    return (AndroidDeviceCatalog) super.set(fieldName, value);
+  public IosDeviceCatalog set(String fieldName, Object value) {
+    return (IosDeviceCatalog) super.set(fieldName, value);
   }
 
   @Override
-  public AndroidDeviceCatalog clone() {
-    return (AndroidDeviceCatalog) super.clone();
+  public IosDeviceCatalog clone() {
+    return (IosDeviceCatalog) super.clone();
   }
 
 }

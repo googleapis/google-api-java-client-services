@@ -37,6 +37,12 @@ public final class GooglePrivacyDlpV2ListDlpJobsResponse extends com.google.api.
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2DlpJob> jobs;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2DlpJob used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2DlpJob.class);
+  }
+
   /**
    * The standard List next-page token.
    * The value may be {@code null}.

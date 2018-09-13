@@ -45,12 +45,6 @@ public final class GooglePrivacyDlpV2RecordTransformations extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2RecordSuppression> recordSuppressions;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2RecordSuppression used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2RecordSuppression.class);
-  }
-
   /**
    * Transform the record by applying various field transformations.
    * @return value or {@code null} for none

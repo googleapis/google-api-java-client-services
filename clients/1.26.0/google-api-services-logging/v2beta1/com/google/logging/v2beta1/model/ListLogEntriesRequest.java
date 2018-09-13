@@ -83,8 +83,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
    * Required. Names of one or more parent resources from which to retrieve log entries:
    * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" Projects listed in the project_ids
-   * field are added to this list. Only one of the permissions, logging.logEntries.list or
-   * logging.privateLogEntries.list, is needed for each parent resource.
+   * field are added to this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,8 +206,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
    * Required. Names of one or more parent resources from which to retrieve log entries:
    * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" Projects listed in the project_ids
-   * field are added to this list. Only one of the permissions, logging.logEntries.list or
-   * logging.privateLogEntries.list, is needed for each parent resource.
+   * field are added to this list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceNames() {
@@ -219,8 +217,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
    * Required. Names of one or more parent resources from which to retrieve log entries:
    * "projects/[PROJECT_ID]" "organizations/[ORGANIZATION_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]" Projects listed in the project_ids
-   * field are added to this list. Only one of the permissions, logging.logEntries.list or
-   * logging.privateLogEntries.list, is needed for each parent resource.
+   * field are added to this list.
    * @param resourceNames resourceNames or {@code null} for none
    */
   public ListLogEntriesRequest setResourceNames(java.util.List<java.lang.String> resourceNames) {

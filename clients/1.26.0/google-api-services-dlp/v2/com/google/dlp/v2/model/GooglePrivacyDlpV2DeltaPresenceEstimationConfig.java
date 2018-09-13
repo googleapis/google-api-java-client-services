@@ -40,24 +40,12 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2StatisticalTable> auxiliaryTables;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2StatisticalTable used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2StatisticalTable.class);
-  }
-
   /**
    * Fields considered to be quasi-identifiers. No two fields can have the same tag. [required]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2QuasiId> quasiIds;
-
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2QuasiId used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2QuasiId.class);
-  }
 
   /**
    * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is

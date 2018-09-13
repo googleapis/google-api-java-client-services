@@ -733,6 +733,8 @@ class Method(template_objects.CodeObject):
     # pylint: disable=g-long-lambda
     req_parameters.sort(lambda x, y: cmp(order.index(x.values['wireName']),
                                          order.index(y.values['wireName'])))
+    # sort optional parameters by name to avoid code churn
+    opt_parameters.sort(lambda x, y: cmp(x.values['wireName'], y.values['wireName']))
     req_parameters.extend(opt_parameters)
     self.SetTemplateValue('parameters', req_parameters)
 

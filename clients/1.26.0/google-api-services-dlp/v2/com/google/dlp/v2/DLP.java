@@ -2636,28 +2636,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Optional size of the page, can be limited by server. If zero server returns a page of max
-         * size 100.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * Optional page token to continue retrieval. Comes from previous call to
          * `ListStoredInfoTypes`.
          */
@@ -2676,6 +2654,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional size of the page, can be limited by server. If zero server returns a page of max
+         * size 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional size of the page, can be limited by server. If zero server returns a page of max size 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional size of the page, can be limited by server. If zero server returns a page of max
+         * size 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 

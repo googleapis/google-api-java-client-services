@@ -1568,22 +1568,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Continuation token for fetching the next page of results. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Continuation token for fetching the next page of results.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** Continuation token for fetching the next page of results. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** Maximum results to return per page. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -1597,6 +1581,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         /** Maximum results to return per page. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Continuation token for fetching the next page of results. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Continuation token for fetching the next page of results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Continuation token for fetching the next page of results. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3108,22 +3108,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Maximum results to return per page. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Maximum results to return per page.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Maximum results to return per page. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /**
            * A valid IP Address. If set, only rules matching this address will be returned. The
            * first returned rule will be the rule that fires on requests from this IP.
@@ -3160,6 +3144,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           /** Continuation token for fetching the next page of results. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Maximum results to return per page. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum results to return per page.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum results to return per page. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
           }
 
@@ -3617,6 +3617,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /** The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
         /** The standard list page token. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
@@ -3646,22 +3662,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
-          return this;
-        }
-
-        /** The standard list filter. */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** The standard list filter.
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /** The standard list filter. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
           return this;
         }
 
@@ -3970,6 +3970,22 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -3999,22 +4015,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
-          return this;
-        }
-
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
           return this;
         }
 
@@ -4630,11 +4630,11 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * default, traffic is shifted immediately. For gradual traffic migration, the target
          * versions must be located within instances that are configured for both warmup requests
          * (https://cloud.google.com/appengine/docs/admin-
-         * api/reference/rest/v1beta/apps.services.versions#inboundservicetype) and automatic
+         * api/reference/rest/v1beta/apps.services.versions#InboundServiceType) and automatic
          * scaling (https://cloud.google.com/appengine/docs/admin-
-         * api/reference/rest/v1beta/apps.services.versions#automaticscaling). You must specify the
+         * api/reference/rest/v1beta/apps.services.versions#AutomaticScaling). You must specify the
          * shardBy (https://cloud.google.com/appengine/docs/admin-
-         * api/reference/rest/v1beta/apps.services#shardby) field in the Service resource. Gradual
+         * api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual
          * traffic migration is not supported in the App Engine flexible environment. For examples,
          * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api
          * /migrating-splitting-traffic).
@@ -4646,10 +4646,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        traffic is shifted immediately. For gradual traffic migration, the target versions must be located
        within instances that are configured for both warmup requests
        (https://cloud.google.com/appengine/docs/admin-
-       api/reference/rest/v1beta/apps.services.versions#inboundservicetype) and automatic scaling
+       api/reference/rest/v1beta/apps.services.versions#InboundServiceType) and automatic scaling
        (https://cloud.google.com/appengine/docs/admin-
-       api/reference/rest/v1beta/apps.services.versions#automaticscaling). You must specify the shardBy
-       (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services#shardby)
+       api/reference/rest/v1beta/apps.services.versions#AutomaticScaling). You must specify the shardBy
+       (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services#ShardBy)
        field in the Service resource. Gradual traffic migration is not supported in the App Engine
        flexible environment. For examples, see Migrating and Splitting Traffic
        (https://cloud.google.com/appengine/docs/admin-api/migrating-splitting-traffic).
@@ -4663,11 +4663,11 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * default, traffic is shifted immediately. For gradual traffic migration, the target
          * versions must be located within instances that are configured for both warmup requests
          * (https://cloud.google.com/appengine/docs/admin-
-         * api/reference/rest/v1beta/apps.services.versions#inboundservicetype) and automatic
+         * api/reference/rest/v1beta/apps.services.versions#InboundServiceType) and automatic
          * scaling (https://cloud.google.com/appengine/docs/admin-
-         * api/reference/rest/v1beta/apps.services.versions#automaticscaling). You must specify the
+         * api/reference/rest/v1beta/apps.services.versions#AutomaticScaling). You must specify the
          * shardBy (https://cloud.google.com/appengine/docs/admin-
-         * api/reference/rest/v1beta/apps.services#shardby) field in the Service resource. Gradual
+         * api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual
          * traffic migration is not supported in the App Engine flexible environment. For examples,
          * see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api
          * /migrating-splitting-traffic).

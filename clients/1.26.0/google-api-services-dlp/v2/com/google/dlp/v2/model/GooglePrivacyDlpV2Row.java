@@ -36,12 +36,6 @@ public final class GooglePrivacyDlpV2Row extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> values;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2Value used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Value.class);
-  }
-
   /**
    * @return value or {@code null} for none
    */

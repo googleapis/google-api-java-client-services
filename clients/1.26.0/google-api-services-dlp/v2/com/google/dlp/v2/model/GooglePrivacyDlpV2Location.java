@@ -55,6 +55,12 @@ public final class GooglePrivacyDlpV2Location extends com.google.api.client.json
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2ContentLocation> contentLocations;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2ContentLocation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2ContentLocation.class);
+  }
+
   /**
    * Zero-based byte offsets delimiting the finding. These are relative to the finding's containing
    * element. Note that when the content is not textual, this references the UTF-8 encoded textual

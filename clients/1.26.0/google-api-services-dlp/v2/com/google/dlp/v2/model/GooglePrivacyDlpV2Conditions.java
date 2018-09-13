@@ -36,6 +36,12 @@ public final class GooglePrivacyDlpV2Conditions extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Condition> conditions;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Condition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Condition.class);
+  }
+
   /**
    * @return value or {@code null} for none
    */

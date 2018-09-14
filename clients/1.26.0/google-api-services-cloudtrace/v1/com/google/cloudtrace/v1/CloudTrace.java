@@ -553,140 +553,25 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Start of the time interval (inclusive) during which the trace data was collected from the
+         * End of the time interval (inclusive) during which the trace data was collected from the
          * application.
          */
         @com.google.api.client.util.Key
-        private String startTime;
+        private String endTime;
 
-        /** Start of the time interval (inclusive) during which the trace data was collected from the
+        /** End of the time interval (inclusive) during which the trace data was collected from the
        application.
          */
-        public String getStartTime() {
-          return startTime;
+        public String getEndTime() {
+          return endTime;
         }
 
         /**
-         * Start of the time interval (inclusive) during which the trace data was collected from the
+         * End of the time interval (inclusive) during which the trace data was collected from the
          * application.
          */
-        public List setStartTime(String startTime) {
-          this.startTime = startTime;
-          return this;
-        }
-
-        /**
-         * Token identifying the page of results to return. If provided, use the value of the
-         * `next_page_token` field from a previous request. Optional.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Token identifying the page of results to return. If provided, use the value of the
-       `next_page_token` field from a previous request. Optional.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Token identifying the page of results to return. If provided, use the value of the
-         * `next_page_token` field from a previous request. Optional.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Maximum number of traces to return. If not specified or <= 0, the implementation selects
-         * a reasonable value.  The implementation may return fewer traces than the requested page
-         * size. Optional.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of traces to return. If not specified or <= 0, the implementation selects a
-       reasonable value.  The implementation may return fewer traces than the requested page size.
-       Optional.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Maximum number of traces to return. If not specified or <= 0, the implementation selects
-         * a reasonable value.  The implementation may return fewer traces than the requested page
-         * size. Optional.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
-         * Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String view;
-
-        /** Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
-         */
-        public java.lang.String getView() {
-          return view;
-        }
-
-        /**
-         * Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
-         */
-        public List setView(java.lang.String view) {
-          this.view = view;
-          return this;
-        }
-
-        /**
-         * Field used to sort the returned traces. Optional. Can be one of the following:
-         *
-         * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
-         * (difference between `end_time` and `start_time` fields of the root span) *   `start`
-         * (`start_time` field of the root span)
-         *
-         * Descending order can be specified by appending `desc` to the sort field (for example,
-         * `name desc`).
-         *
-         * Only one sort field is permitted.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String orderBy;
-
-        /** Field used to sort the returned traces. Optional. Can be one of the following:
-
-       *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration` (difference
-       between `end_time` and `start_time` fields of the root span) *   `start` (`start_time` field of the
-       root span)
-
-       Descending order can be specified by appending `desc` to the sort field (for example, `name desc`).
-
-       Only one sort field is permitted.
-         */
-        public java.lang.String getOrderBy() {
-          return orderBy;
-        }
-
-        /**
-         * Field used to sort the returned traces. Optional. Can be one of the following:
-         *
-         * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
-         * (difference between `end_time` and `start_time` fields of the root span) *   `start`
-         * (`start_time` field of the root span)
-         *
-         * Descending order can be specified by appending `desc` to the sort field (for example,
-         * `name desc`).
-         *
-         * Only one sort field is permitted.
-         */
-        public List setOrderBy(java.lang.String orderBy) {
-          this.orderBy = orderBy;
+        public List setEndTime(String endTime) {
+          this.endTime = endTime;
           return this;
         }
 
@@ -767,25 +652,140 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * End of the time interval (inclusive) during which the trace data was collected from the
-         * application.
+         * Field used to sort the returned traces. Optional. Can be one of the following:
+         *
+         * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
+         * (difference between `end_time` and `start_time` fields of the root span) *   `start`
+         * (`start_time` field of the root span)
+         *
+         * Descending order can be specified by appending `desc` to the sort field (for example,
+         * `name desc`).
+         *
+         * Only one sort field is permitted.
          */
         @com.google.api.client.util.Key
-        private String endTime;
+        private java.lang.String orderBy;
 
-        /** End of the time interval (inclusive) during which the trace data was collected from the
-       application.
+        /** Field used to sort the returned traces. Optional. Can be one of the following:
+
+       *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration` (difference
+       between `end_time` and `start_time` fields of the root span) *   `start` (`start_time` field of the
+       root span)
+
+       Descending order can be specified by appending `desc` to the sort field (for example, `name desc`).
+
+       Only one sort field is permitted.
          */
-        public String getEndTime() {
-          return endTime;
+        public java.lang.String getOrderBy() {
+          return orderBy;
         }
 
         /**
-         * End of the time interval (inclusive) during which the trace data was collected from the
+         * Field used to sort the returned traces. Optional. Can be one of the following:
+         *
+         * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
+         * (difference between `end_time` and `start_time` fields of the root span) *   `start`
+         * (`start_time` field of the root span)
+         *
+         * Descending order can be specified by appending `desc` to the sort field (for example,
+         * `name desc`).
+         *
+         * Only one sort field is permitted.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Maximum number of traces to return. If not specified or <= 0, the implementation selects
+         * a reasonable value.  The implementation may return fewer traces than the requested page
+         * size. Optional.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of traces to return. If not specified or <= 0, the implementation selects a
+       reasonable value.  The implementation may return fewer traces than the requested page size.
+       Optional.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of traces to return. If not specified or <= 0, the implementation selects
+         * a reasonable value.  The implementation may return fewer traces than the requested page
+         * size. Optional.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Token identifying the page of results to return. If provided, use the value of the
+         * `next_page_token` field from a previous request. Optional.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token identifying the page of results to return. If provided, use the value of the
+       `next_page_token` field from a previous request. Optional.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Token identifying the page of results to return. If provided, use the value of the
+         * `next_page_token` field from a previous request. Optional.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Start of the time interval (inclusive) during which the trace data was collected from the
          * application.
          */
-        public List setEndTime(String endTime) {
-          this.endTime = endTime;
+        @com.google.api.client.util.Key
+        private String startTime;
+
+        /** Start of the time interval (inclusive) during which the trace data was collected from the
+       application.
+         */
+        public String getStartTime() {
+          return startTime;
+        }
+
+        /**
+         * Start of the time interval (inclusive) during which the trace data was collected from the
+         * application.
+         */
+        public List setStartTime(String startTime) {
+          this.startTime = startTime;
+          return this;
+        }
+
+        /**
+         * Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * Type of data returned for traces in the list. Optional. Default is `MINIMAL`.
+         */
+        public List setView(java.lang.String view) {
+          this.view = view;
           return this;
         }
 

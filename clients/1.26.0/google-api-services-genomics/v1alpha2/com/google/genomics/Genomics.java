@@ -552,45 +552,6 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
-       * is 2048.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The maximum number of results to return. If unspecified, defaults to 256. The maximum value is
-     2048.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
-       * is 2048.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
       /**
        * A string for filtering Operations. In v2alpha1, the following filter fields are supported
        *
@@ -668,6 +629,45 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
+       * is 2048.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of results to return. If unspecified, defaults to 256. The maximum value is
+     2048.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of results to return. If unspecified, defaults to 256. The maximum value
+       * is 2048.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1313,25 +1313,25 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Token to use to indicate where to start getting results. If unspecified, returns the first
-       * page of results.
+       * Pipelines with names that match this prefix should be returned.  If unspecified, all
+       * pipelines in the project, up to `pageSize`, will be returned.
        */
       @com.google.api.client.util.Key
-      private java.lang.String pageToken;
+      private java.lang.String namePrefix;
 
-      /** Token to use to indicate where to start getting results. If unspecified, returns the first page of
-     results.
+      /** Pipelines with names that match this prefix should be returned.  If unspecified, all pipelines in
+     the project, up to `pageSize`, will be returned.
        */
-      public java.lang.String getPageToken() {
-        return pageToken;
+      public java.lang.String getNamePrefix() {
+        return namePrefix;
       }
 
       /**
-       * Token to use to indicate where to start getting results. If unspecified, returns the first
-       * page of results.
+       * Pipelines with names that match this prefix should be returned.  If unspecified, all
+       * pipelines in the project, up to `pageSize`, will be returned.
        */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
+      public List setNamePrefix(java.lang.String namePrefix) {
+        this.namePrefix = namePrefix;
         return this;
       }
 
@@ -1356,6 +1356,29 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Token to use to indicate where to start getting results. If unspecified, returns the first
+       * page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Token to use to indicate where to start getting results. If unspecified, returns the first page of
+     results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Token to use to indicate where to start getting results. If unspecified, returns the first
+       * page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
        * Required. The name of the project to search for pipelines. Caller must have READ access to
        * this project.
        */
@@ -1375,29 +1398,6 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
-        return this;
-      }
-
-      /**
-       * Pipelines with names that match this prefix should be returned.  If unspecified, all
-       * pipelines in the project, up to `pageSize`, will be returned.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String namePrefix;
-
-      /** Pipelines with names that match this prefix should be returned.  If unspecified, all pipelines in
-     the project, up to `pageSize`, will be returned.
-       */
-      public java.lang.String getNamePrefix() {
-        return namePrefix;
-      }
-
-      /**
-       * Pipelines with names that match this prefix should be returned.  If unspecified, all
-       * pipelines in the project, up to `pageSize`, will be returned.
-       */
-      public List setNamePrefix(java.lang.String namePrefix) {
-        this.namePrefix = namePrefix;
         return this;
       }
 

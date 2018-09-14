@@ -723,6 +723,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Maximum number of subscriptions to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** Maximum number of subscriptions to return.
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /** Maximum number of subscriptions to return. */
+      public List setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
       /**
        * The value obtained in the last ListSubscriptionsResponse for continuation.
        */
@@ -756,22 +772,6 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /** A valid label query expression. */
       public List setQuery(java.lang.String query) {
         this.query = query;
-        return this;
-      }
-
-      /** Maximum number of subscriptions to return. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** Maximum number of subscriptions to return.
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /** Maximum number of subscriptions to return. */
-      public List setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
         return this;
       }
 
@@ -1685,6 +1685,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Maximum number of topics to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** Maximum number of topics to return.
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /** Maximum number of topics to return. */
+      public List setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
       /**
        * The value obtained in the last ListTopicsResponse for continuation.
        */
@@ -1718,22 +1734,6 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /** A valid label query expression. */
       public List setQuery(java.lang.String query) {
         this.query = query;
-        return this;
-      }
-
-      /** Maximum number of topics to return. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** Maximum number of topics to return.
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /** Maximum number of topics to return. */
-      public List setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
         return this;
       }
 

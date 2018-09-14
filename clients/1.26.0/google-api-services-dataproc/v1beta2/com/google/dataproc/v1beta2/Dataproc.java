@@ -1312,6 +1312,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. The maximum number of results to return in each response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return in each response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results to return in each response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * Optional. The page token, returned by a previous call, to request the next page of
            * results.
@@ -1331,22 +1347,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Optional. The maximum number of results to return in each response. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The maximum number of results to return in each response.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Optional. The maximum number of results to return in each response. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -2155,6 +2155,29 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND)
+           * if cluster with specified UUID does not exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterUuid;
+
+          /** Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND) if cluster
+         with specified UUID does not exist.
+           */
+          public java.lang.String getClusterUuid() {
+            return clusterUuid;
+          }
+
+          /**
+           * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND)
+           * if cluster with specified UUID does not exist.
+           */
+          public Delete setClusterUuid(java.lang.String clusterUuid) {
+            this.clusterUuid = clusterUuid;
+            return this;
+          }
+
+          /**
            * Optional. A unique id used to identify the request. If the server receives two
            * DeleteClusterRequest requests with the same id, then the second request will be ignored
            * and the first google.longrunning.Operation created and stored in the backend is
@@ -2188,29 +2211,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
-            return this;
-          }
-
-          /**
-           * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND)
-           * if cluster with specified UUID does not exist.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String clusterUuid;
-
-          /** Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND) if cluster
-         with specified UUID does not exist.
-           */
-          public java.lang.String getClusterUuid() {
-            return clusterUuid;
-          }
-
-          /**
-           * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND)
-           * if cluster with specified UUID does not exist.
-           */
-          public Delete setClusterUuid(java.lang.String clusterUuid) {
-            this.clusterUuid = clusterUuid;
             return this;
           }
 
@@ -2829,22 +2829,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The standard List page size. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The standard List page size.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Optional. The standard List page size. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /**
            * Optional. A filter constraining the clusters to list. Filters are case-sensitive and
            * have the following syntax:field = value AND field = value ...where field is one of
@@ -2888,6 +2872,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /** Optional. The standard List page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The standard List page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The standard List page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
           }
 
@@ -3064,6 +3064,77 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows
+           * removing nodes from the cluster without interrupting jobs in progress. Timeout
+           * specifies how long to wait for jobs in progress to finish before forcefully removing
+           * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
+           * decommission), and the maximum allowed timeout is 1 day.Only supported on Dataproc
+           * image versions 1.2 and higher.
+           */
+          @com.google.api.client.util.Key
+          private String gracefulDecommissionTimeout;
+
+          /** Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows removing nodes
+         from the cluster without interrupting jobs in progress. Timeout specifies how long to wait for jobs
+         in progress to finish before forcefully removing nodes (and potentially interrupting jobs). Default
+         timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day.Only supported
+         on Dataproc image versions 1.2 and higher.
+           */
+          public String getGracefulDecommissionTimeout() {
+            return gracefulDecommissionTimeout;
+          }
+
+          /**
+           * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows
+           * removing nodes from the cluster without interrupting jobs in progress. Timeout
+           * specifies how long to wait for jobs in progress to finish before forcefully removing
+           * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
+           * decommission), and the maximum allowed timeout is 1 day.Only supported on Dataproc
+           * image versions 1.2 and higher.
+           */
+          public Patch setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
+            this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+            return this;
+          }
+
+          /**
+           * Optional. A unique id used to identify the request. If the server receives two
+           * UpdateClusterRequest requests with the same id, then the second request will be ignored
+           * and the first google.longrunning.Operation created and stored in the backend is
+           * returned.It is recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A unique id used to identify the request. If the server receives two UpdateClusterRequest
+         requests with the same id, then the second request will be ignored and the first
+         google.longrunning.Operation created and stored in the backend is returned.It is recommended to
+         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
+         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A unique id used to identify the request. If the server receives two
+           * UpdateClusterRequest requests with the same id, then the second request will be ignored
+           * and the first google.longrunning.Operation created and stored in the backend is
+           * returned.It is recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
            * Required. Specifies the path, relative to Cluster, of the field to update. For example,
            * to change the number of workers in a cluster to 5, the update_mask parameter would be
            * specified as config.worker_config.num_instances, and the PATCH request body would
@@ -3143,77 +3214,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
-            return this;
-          }
-
-          /**
-           * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows
-           * removing nodes from the cluster without interrupting jobs in progress. Timeout
-           * specifies how long to wait for jobs in progress to finish before forcefully removing
-           * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
-           * decommission), and the maximum allowed timeout is 1 day.Only supported on Dataproc
-           * image versions 1.2 and higher.
-           */
-          @com.google.api.client.util.Key
-          private String gracefulDecommissionTimeout;
-
-          /** Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows removing nodes
-         from the cluster without interrupting jobs in progress. Timeout specifies how long to wait for jobs
-         in progress to finish before forcefully removing nodes (and potentially interrupting jobs). Default
-         timeout is 0 (for forceful decommission), and the maximum allowed timeout is 1 day.Only supported
-         on Dataproc image versions 1.2 and higher.
-           */
-          public String getGracefulDecommissionTimeout() {
-            return gracefulDecommissionTimeout;
-          }
-
-          /**
-           * Optional. Timeout for graceful YARN decomissioning. Graceful decommissioning allows
-           * removing nodes from the cluster without interrupting jobs in progress. Timeout
-           * specifies how long to wait for jobs in progress to finish before forcefully removing
-           * nodes (and potentially interrupting jobs). Default timeout is 0 (for forceful
-           * decommission), and the maximum allowed timeout is 1 day.Only supported on Dataproc
-           * image versions 1.2 and higher.
-           */
-          public Patch setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
-            this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
-            return this;
-          }
-
-          /**
-           * Optional. A unique id used to identify the request. If the server receives two
-           * UpdateClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String requestId;
-
-          /** Optional. A unique id used to identify the request. If the server receives two UpdateClusterRequest
-         requests with the same id, then the second request will be ignored and the first
-         google.longrunning.Operation created and stored in the backend is returned.It is recommended to
-         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
-           */
-          public java.lang.String getRequestId() {
-            return requestId;
-          }
-
-          /**
-           * Optional. A unique id used to identify the request. If the server receives two
-           * UpdateClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
-           */
-          public Patch setRequestId(java.lang.String requestId) {
-            this.requestId = requestId;
             return this;
           }
 
@@ -4376,6 +4376,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. The number of results to return in each response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The number of results to return in each response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The number of results to return in each response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * Optional. The page token, returned by a previous call, to request the next page of
            * results.
@@ -4395,22 +4411,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Optional. The number of results to return in each response. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The number of results to return in each response.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Optional. The number of results to return in each response. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -5757,19 +5757,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The standard list page token. */
+          /** The standard list filter. */
           @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          private java.lang.String filter;
 
-          /** The standard list page token.
+          /** The standard list filter.
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public java.lang.String getFilter() {
+            return filter;
           }
 
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -5789,19 +5789,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The standard list filter. */
+          /** The standard list page token. */
           @com.google.api.client.util.Key
-          private java.lang.String filter;
+          private java.lang.String pageToken;
 
-          /** The standard list filter.
+          /** The standard list page token.
            */
-          public java.lang.String getFilter() {
-            return filter;
+          public java.lang.String getPageToken() {
+            return pageToken;
           }
 
-          /** The standard list filter. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -7248,6 +7248,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. The maximum number of results to return in each response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return in each response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results to return in each response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * Optional. The page token, returned by a previous call, to request the next page of
            * results.
@@ -7267,22 +7283,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Optional. The maximum number of results to return in each response. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The maximum number of results to return in each response.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Optional. The maximum number of results to return in each response. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 

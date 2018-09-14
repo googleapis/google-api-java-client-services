@@ -1526,22 +1526,6 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           return this;
         }
 
-        /** A token specifying which result page to return. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token specifying which result page to return.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** A token specifying which result page to return. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /**
          * The maximum number of devices to show in a page of results. Must be between 1 and 100
          * inclusive.
@@ -1561,6 +1545,22 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          */
         public List setPageSize(java.lang.Long pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token specifying which result page to return. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token specifying which result page to return.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token specifying which result page to return. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3853,22 +3853,6 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           return this;
         }
 
-        /** A token identifying a page of results returned by the server. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token identifying a page of results returned by the server.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** A token identifying a page of results returned by the server. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The maximum number of results to be returned. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -3882,6 +3866,22 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         /** The maximum number of results to be returned. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results returned by the server.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

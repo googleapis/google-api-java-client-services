@@ -17,8 +17,7 @@
 package com.google.adexperiencereport.v1.model;
 
 /**
- * Response message for GetSiteSummary. Do not confuse with same message in
- * google.chrome.abusiveexperiencereport.v1
+ * Response message for GetSiteSummary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Experience Report API. For a detailed explanation

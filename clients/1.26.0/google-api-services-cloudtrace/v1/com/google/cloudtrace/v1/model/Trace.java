@@ -45,15 +45,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<TraceSpan> spans;
 
-  static {
-    // hack to force ProGuard to consider TraceSpan used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TraceSpan.class);
-  }
-
   /**
    * Globally unique identifier for the trace. This identifier is a 128-bit numeric value formatted
-   * as a 32-byte hex string.
+   * as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +89,7 @@ public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
    * Globally unique identifier for the trace. This identifier is a 128-bit numeric value formatted
-   * as a 32-byte hex string.
+   * as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTraceId() {
@@ -104,7 +98,7 @@ public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
    * Globally unique identifier for the trace. This identifier is a 128-bit numeric value formatted
-   * as a 32-byte hex string.
+   * as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`.
    * @param traceId traceId or {@code null} for none
    */
   public Trace setTraceId(java.lang.String traceId) {

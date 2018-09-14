@@ -723,22 +723,6 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         return this;
       }
 
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
       /** The standard list page size. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
@@ -752,6 +736,22 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       /** The standard list page size. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -931,37 +931,6 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       }
 
       /**
-       * The continuation token, which is used to page through large result sets. To get the next
-       * page of results, set this parameter to the value of `nextPageToken` from the previous
-       * response.
-       *
-       * Optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The continuation token, which is used to page through large result sets. To get the next page of
-     results, set this parameter to the value of `nextPageToken` from the previous response.
-
-     Optional.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * The continuation token, which is used to page through large result sets. To get the next
-       * page of results, set this parameter to the value of `nextPageToken` from the previous
-       * response.
-       *
-       * Optional.
-       */
-      public Search setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
        * The maximum number of results returned by this request. Currently, the default maximum is
        * set to 1000. If page_size is not provided or the size provided is a number larger than
        * 1000, it will be automatically set to 1000.
@@ -990,6 +959,37 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * The continuation token, which is used to page through large result sets. To get the next
+       * page of results, set this parameter to the value of `nextPageToken` from the previous
+       * response.
+       *
+       * Optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The continuation token, which is used to page through large result sets. To get the next page of
+     results, set this parameter to the value of `nextPageToken` from the previous response.
+
+     Optional.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The continuation token, which is used to page through large result sets. To get the next
+       * page of results, set this parameter to the value of `nextPageToken` from the previous
+       * response.
+       *
+       * Optional.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1678,6 +1678,38 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return this;
         }
 
+        /** Filter expression over tenancy resources field. Optional. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Filter expression over tenancy resources field. Optional.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** Filter expression over tenancy resources field. Optional. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The maximum number of results returned by this request. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results returned by this request.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results returned by this request. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * The continuation token, which is used to page through large result sets. To get the next
          * page of results, set this parameter to the value of `nextPageToken` from the previous
@@ -1700,38 +1732,6 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** The maximum number of results returned by this request. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The maximum number of results returned by this request.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The maximum number of results returned by this request. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** Filter expression over tenancy resources field. Optional. */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** Filter expression over tenancy resources field. Optional.
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /** Filter expression over tenancy resources field. Optional. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
           return this;
         }
 

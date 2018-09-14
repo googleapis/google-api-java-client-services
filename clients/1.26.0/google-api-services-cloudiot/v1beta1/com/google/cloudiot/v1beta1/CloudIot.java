@@ -2143,27 +2143,48 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The value returned by the last `ListDevicesResponse`; indicates that this is a
-             * continuation of a prior `ListDevices` call, and that the system should return the
-             * next page of data.
+             * A list of device string identifiers. If empty, it will ignore this field. For
+             * example, `['device0', 'device12']`. This field cannot hold more than 10,000 entries.
              */
             @com.google.api.client.util.Key
-            private java.lang.String pageToken;
+            private java.util.List<java.lang.String> deviceIds;
 
-            /** The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a
-           prior `ListDevices` call, and that the system should return the next page of data.
+            /** A list of device string identifiers. If empty, it will ignore this field. For example, `['device0',
+           'device12']`. This field cannot hold more than 10,000 entries.
              */
-            public java.lang.String getPageToken() {
-              return pageToken;
+            public java.util.List<java.lang.String> getDeviceIds() {
+              return deviceIds;
             }
 
             /**
-             * The value returned by the last `ListDevicesResponse`; indicates that this is a
-             * continuation of a prior `ListDevices` call, and that the system should return the
-             * next page of data.
+             * A list of device string identifiers. If empty, it will ignore this field. For
+             * example, `['device0', 'device12']`. This field cannot hold more than 10,000 entries.
              */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
+            public List setDeviceIds(java.util.List<java.lang.String> deviceIds) {
+              this.deviceIds = deviceIds;
+              return this;
+            }
+
+            /**
+             * A list of device numerical ids. If empty, it will ignore this field. This field
+             * cannot hold more than 10,000 entries.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.math.BigInteger> deviceNumIds;
+
+            /** A list of device numerical ids. If empty, it will ignore this field. This field cannot hold more
+           than 10,000 entries.
+             */
+            public java.util.List<java.math.BigInteger> getDeviceNumIds() {
+              return deviceNumIds;
+            }
+
+            /**
+             * A list of device numerical ids. If empty, it will ignore this field. This field
+             * cannot hold more than 10,000 entries.
+             */
+            public List setDeviceNumIds(java.util.List<java.math.BigInteger> deviceNumIds) {
+              this.deviceNumIds = deviceNumIds;
               return this;
             }
 
@@ -2219,48 +2240,27 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * A list of device string identifiers. If empty, it will ignore this field. For
-             * example, `['device0', 'device12']`. This field cannot hold more than 10,000 entries.
+             * The value returned by the last `ListDevicesResponse`; indicates that this is a
+             * continuation of a prior `ListDevices` call, and that the system should return the
+             * next page of data.
              */
             @com.google.api.client.util.Key
-            private java.util.List<java.lang.String> deviceIds;
+            private java.lang.String pageToken;
 
-            /** A list of device string identifiers. If empty, it will ignore this field. For example, `['device0',
-           'device12']`. This field cannot hold more than 10,000 entries.
+            /** The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a
+           prior `ListDevices` call, and that the system should return the next page of data.
              */
-            public java.util.List<java.lang.String> getDeviceIds() {
-              return deviceIds;
+            public java.lang.String getPageToken() {
+              return pageToken;
             }
 
             /**
-             * A list of device string identifiers. If empty, it will ignore this field. For
-             * example, `['device0', 'device12']`. This field cannot hold more than 10,000 entries.
+             * The value returned by the last `ListDevicesResponse`; indicates that this is a
+             * continuation of a prior `ListDevices` call, and that the system should return the
+             * next page of data.
              */
-            public List setDeviceIds(java.util.List<java.lang.String> deviceIds) {
-              this.deviceIds = deviceIds;
-              return this;
-            }
-
-            /**
-             * A list of device numerical ids. If empty, it will ignore this field. This field
-             * cannot hold more than 10,000 entries.
-             */
-            @com.google.api.client.util.Key
-            private java.util.List<java.math.BigInteger> deviceNumIds;
-
-            /** A list of device numerical ids. If empty, it will ignore this field. This field cannot hold more
-           than 10,000 entries.
-             */
-            public java.util.List<java.math.BigInteger> getDeviceNumIds() {
-              return deviceNumIds;
-            }
-
-            /**
-             * A list of device numerical ids. If empty, it will ignore this field. This field
-             * cannot hold more than 10,000 entries.
-             */
-            public List setDeviceNumIds(java.util.List<java.math.BigInteger> deviceNumIds) {
-              this.deviceNumIds = deviceNumIds;
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 

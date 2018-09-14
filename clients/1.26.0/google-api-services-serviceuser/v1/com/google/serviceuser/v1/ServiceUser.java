@@ -629,6 +629,22 @@ public class ServiceUser extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        /** Requested size of the next page of data. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested size of the next page of data.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Requested size of the next page of data. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * Token identifying which result to start with; returned by a previous list call.
          */
@@ -646,22 +662,6 @@ public class ServiceUser extends com.google.api.client.googleapis.services.json.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** Requested size of the next page of data. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested size of the next page of data.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Requested size of the next page of data. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -802,6 +802,22 @@ public class ServiceUser extends com.google.api.client.googleapis.services.json.
         return (Search) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Requested size of the next page of data. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested size of the next page of data.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Requested size of the next page of data. */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
       /**
        * Token identifying which result to start with; returned by a previous list call.
        */
@@ -819,22 +835,6 @@ public class ServiceUser extends com.google.api.client.googleapis.services.json.
        */
       public Search setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /** Requested size of the next page of data. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Requested size of the next page of data.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** Requested size of the next page of data. */
-      public Search setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 

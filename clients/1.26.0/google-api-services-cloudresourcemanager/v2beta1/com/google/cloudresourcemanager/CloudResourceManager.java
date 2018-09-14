@@ -850,6 +850,26 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
+       * The maximum number of Folders to return in the response. This field is optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of Folders to return in the response. This field is optional.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of Folders to return in the response. This field is optional.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
        * A pagination token returned from a previous call to `ListFolders` that indicates where this
        * listing should continue from. This field is optional.
        */
@@ -869,26 +889,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * The maximum number of Folders to return in the response. This field is optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The maximum number of Folders to return in the response. This field is optional.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * The maximum number of Folders to return in the response. This field is optional.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 

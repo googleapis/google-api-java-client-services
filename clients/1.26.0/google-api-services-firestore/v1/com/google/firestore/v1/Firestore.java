@@ -746,19 +746,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The standard list page token. */
+          /** The standard list filter. */
           @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          private java.lang.String filter;
 
-          /** The standard list page token.
+          /** The standard list filter.
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public java.lang.String getFilter() {
+            return filter;
           }
 
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -778,19 +778,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The standard list filter. */
+          /** The standard list page token. */
           @com.google.api.client.util.Key
-          private java.lang.String filter;
+          private java.lang.String pageToken;
 
-          /** The standard list filter.
+          /** The standard list page token.
            */
-          public java.lang.String getFilter() {
-            return filter;
+          public java.lang.String getPageToken() {
+            return pageToken;
           }
 
-          /** The standard list filter. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -1109,22 +1109,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -1138,6 +1122,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

@@ -1429,22 +1429,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Reads the document in a transaction. */
-          @com.google.api.client.util.Key
-          private java.lang.String transaction;
-
-          /** Reads the document in a transaction.
-           */
-          public java.lang.String getTransaction() {
-            return transaction;
-          }
-
-          /** Reads the document in a transaction. */
-          public Get setTransaction(java.lang.String transaction) {
-            this.transaction = transaction;
-            return this;
-          }
-
           /**
            * The list of field paths in the mask. See Document.fields for a field path syntax
            * reference.
@@ -1486,6 +1470,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Get setReadTime(String readTime) {
             this.readTime = readTime;
+            return this;
+          }
+
+          /** Reads the document in a transaction. */
+          @com.google.api.client.util.Key
+          private java.lang.String transaction;
+
+          /** Reads the document in a transaction.
+           */
+          public java.lang.String getTransaction() {
+            return transaction;
+          }
+
+          /** Reads the document in a transaction. */
+          public Get setTransaction(java.lang.String transaction) {
+            this.transaction = transaction;
             return this;
           }
 
@@ -1684,6 +1684,96 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("mask.fieldPaths")
+          private java.util.List<java.lang.String> maskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getMaskFieldPaths() {
+            return maskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public List setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
+            this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          /** The order to sort results by. For example: `priority desc, name`. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** The order to sort results by. For example: `priority desc, name`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** The order to sort results by. For example: `priority desc, name`. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** The maximum number of documents to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of documents to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of documents to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The `next_page_token` value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The `next_page_token` value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The `next_page_token` value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Reads documents as they were at the given time. This may not be older than 60 seconds.
+           */
+          @com.google.api.client.util.Key
+          private String readTime;
+
+          /** Reads documents as they were at the given time. This may not be older than 60 seconds.
+           */
+          public String getReadTime() {
+            return readTime;
+          }
+
+          /**
+           * Reads documents as they were at the given time. This may not be older than 60 seconds.
+           */
+          public List setReadTime(String readTime) {
+            this.readTime = readTime;
+            return this;
+          }
+
+          /**
            * If the list should show missing documents. A missing document is a document that does
            * not exist but has sub-documents. These documents will be returned with a key but will
            * not have fields, Document.create_time, or Document.update_time set.
@@ -1715,60 +1805,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The `next_page_token` value returned from a previous List request, if any. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The `next_page_token` value returned from a previous List request, if any.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The `next_page_token` value returned from a previous List request, if any. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * The list of field paths in the mask. See Document.fields for a field path syntax
-           * reference.
-           */
-          @com.google.api.client.util.Key("mask.fieldPaths")
-          private java.util.List<java.lang.String> maskFieldPaths;
-
-          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
-           */
-          public java.util.List<java.lang.String> getMaskFieldPaths() {
-            return maskFieldPaths;
-          }
-
-          /**
-           * The list of field paths in the mask. See Document.fields for a field path syntax
-           * reference.
-           */
-          public List setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
-            this.maskFieldPaths = maskFieldPaths;
-            return this;
-          }
-
-          /** The maximum number of documents to return. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of documents to return.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The maximum number of documents to return. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /** Reads documents in a transaction. */
           @com.google.api.client.util.Key
           private java.lang.String transaction;
@@ -1782,42 +1818,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /** Reads documents in a transaction. */
           public List setTransaction(java.lang.String transaction) {
             this.transaction = transaction;
-            return this;
-          }
-
-          /** The order to sort results by. For example: `priority desc, name`. */
-          @com.google.api.client.util.Key
-          private java.lang.String orderBy;
-
-          /** The order to sort results by. For example: `priority desc, name`.
-           */
-          public java.lang.String getOrderBy() {
-            return orderBy;
-          }
-
-          /** The order to sort results by. For example: `priority desc, name`. */
-          public List setOrderBy(java.lang.String orderBy) {
-            this.orderBy = orderBy;
-            return this;
-          }
-
-          /**
-           * Reads documents as they were at the given time. This may not be older than 60 seconds.
-           */
-          @com.google.api.client.util.Key
-          private String readTime;
-
-          /** Reads documents as they were at the given time. This may not be older than 60 seconds.
-           */
-          public String getReadTime() {
-            return readTime;
-          }
-
-          /**
-           * Reads documents as they were at the given time. This may not be older than 60 seconds.
-           */
-          public List setReadTime(String readTime) {
-            this.readTime = readTime;
             return this;
           }
 
@@ -2269,24 +2269,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The list of field paths in the mask. See Document.fields for a field path syntax
-           * reference.
+           * When set, the target document must exist and have been last updated at that time.
            */
-          @com.google.api.client.util.Key("updateMask.fieldPaths")
-          private java.util.List<java.lang.String> updateMaskFieldPaths;
+          @com.google.api.client.util.Key("currentDocument.updateTime")
+          private String currentDocumentUpdateTime;
 
-          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+          /** When set, the target document must exist and have been last updated at that time.
            */
-          public java.util.List<java.lang.String> getUpdateMaskFieldPaths() {
-            return updateMaskFieldPaths;
+          public String getCurrentDocumentUpdateTime() {
+            return currentDocumentUpdateTime;
           }
 
           /**
-           * The list of field paths in the mask. See Document.fields for a field path syntax
-           * reference.
+           * When set, the target document must exist and have been last updated at that time.
            */
-          public Patch setUpdateMaskFieldPaths(java.util.List<java.lang.String> updateMaskFieldPaths) {
-            this.updateMaskFieldPaths = updateMaskFieldPaths;
+          public Patch setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
+            this.currentDocumentUpdateTime = currentDocumentUpdateTime;
             return this;
           }
 
@@ -2313,22 +2311,24 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * When set, the target document must exist and have been last updated at that time.
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
            */
-          @com.google.api.client.util.Key("currentDocument.updateTime")
-          private String currentDocumentUpdateTime;
+          @com.google.api.client.util.Key("updateMask.fieldPaths")
+          private java.util.List<java.lang.String> updateMaskFieldPaths;
 
-          /** When set, the target document must exist and have been last updated at that time.
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
            */
-          public String getCurrentDocumentUpdateTime() {
-            return currentDocumentUpdateTime;
+          public java.util.List<java.lang.String> getUpdateMaskFieldPaths() {
+            return updateMaskFieldPaths;
           }
 
           /**
-           * When set, the target document must exist and have been last updated at that time.
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
            */
-          public Patch setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
-            this.currentDocumentUpdateTime = currentDocumentUpdateTime;
+          public Patch setUpdateMaskFieldPaths(java.util.List<java.lang.String> updateMaskFieldPaths) {
+            this.updateMaskFieldPaths = updateMaskFieldPaths;
             return this;
           }
 
@@ -3379,19 +3379,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The standard List page token. */
           @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          private java.lang.String filter;
 
-          /** The standard List page token.
+          /**
+
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public java.lang.String getFilter() {
+            return filter;
           }
 
-          /** The standard List page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -3411,18 +3410,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /** The standard List page token. */
           @com.google.api.client.util.Key
-          private java.lang.String filter;
+          private java.lang.String pageToken;
 
-          /**
-
+          /** The standard List page token.
            */
-          public java.lang.String getFilter() {
-            return filter;
+          public java.lang.String getPageToken() {
+            return pageToken;
           }
 
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
+          /** The standard List page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

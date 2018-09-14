@@ -450,22 +450,6 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -479,6 +463,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2361,28 +2361,6 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional pagination token, returned earlier via
-             * ListCryptoKeysResponse.next_page_token.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** Optional pagination token, returned earlier via ListCryptoKeysResponse.next_page_token.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /**
-             * Optional pagination token, returned earlier via
-             * ListCryptoKeysResponse.next_page_token.
-             */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
              * Optional limit on the number of CryptoKeys to include in the response.  Further
              * CryptoKeys can subsequently be obtained by including the
              * ListCryptoKeysResponse.next_page_token in a subsequent request.  If unspecified, the
@@ -2407,6 +2385,28 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional pagination token, returned earlier via
+             * ListCryptoKeysResponse.next_page_token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional pagination token, returned earlier via ListCryptoKeysResponse.next_page_token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional pagination token, returned earlier via
+             * ListCryptoKeysResponse.next_page_token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -4021,28 +4021,6 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * Optional pagination token, returned earlier via
-               * ListCryptoKeyVersionsResponse.next_page_token.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String pageToken;
-
-              /** Optional pagination token, returned earlier via ListCryptoKeyVersionsResponse.next_page_token.
-               */
-              public java.lang.String getPageToken() {
-                return pageToken;
-              }
-
-              /**
-               * Optional pagination token, returned earlier via
-               * ListCryptoKeyVersionsResponse.next_page_token.
-               */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
-                return this;
-              }
-
-              /**
                * Optional limit on the number of CryptoKeyVersions to include in the response.
                * Further CryptoKeyVersions can subsequently be obtained by including the
                * ListCryptoKeyVersionsResponse.next_page_token in a subsequent request. If
@@ -4068,6 +4046,28 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional pagination token, returned earlier via
+               * ListCryptoKeyVersionsResponse.next_page_token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional pagination token, returned earlier via ListCryptoKeyVersionsResponse.next_page_token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional pagination token, returned earlier via
+               * ListCryptoKeyVersionsResponse.next_page_token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
                 return this;
               }
 

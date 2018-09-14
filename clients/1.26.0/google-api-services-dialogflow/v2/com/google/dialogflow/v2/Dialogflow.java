@@ -893,22 +893,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** Optional. The next_page_token value returned from a previous list request. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional. The next_page_token value returned from a previous list request.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** Optional. The next_page_token value returned from a previous list request. */
-        public Search setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /**
          * Optional. The maximum number of items to return in a single page. By default 100 and at
          * most 1000.
@@ -928,6 +912,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          */
         public Search setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public Search setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1998,44 +1998,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Optional. The next_page_token value returned from a previous list request. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Optional. The next_page_token value returned from a previous list request.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** Optional. The next_page_token value returned from a previous list request. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Optional. The maximum number of items to return in a single page. By default 100 and at
-           * most 1000.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Optional. The maximum number of items to return in a single page. By default 100 and at
-           * most 1000.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
            * default language is used. [More than a dozen
@@ -2061,6 +2023,44 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return in a single page. By default 100 and at
+           * most 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return in a single page. By default 100 and at
+           * most 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -3480,6 +3480,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /** Optional. The resource view to apply to the returned intent. */
+          @com.google.api.client.util.Key
+          private java.lang.String intentView;
+
+          /** Optional. The resource view to apply to the returned intent.
+           */
+          public java.lang.String getIntentView() {
+            return intentView;
+          }
+
+          /** Optional. The resource view to apply to the returned intent. */
+          public Get setIntentView(java.lang.String intentView) {
+            this.intentView = intentView;
+            return this;
+          }
+
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
            * If not specified, the agent's default language is used. [More than a dozen
@@ -3506,22 +3522,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
-            return this;
-          }
-
-          /** Optional. The resource view to apply to the returned intent. */
-          @com.google.api.client.util.Key
-          private java.lang.String intentView;
-
-          /** Optional. The resource view to apply to the returned intent.
-           */
-          public java.lang.String getIntentView() {
-            return intentView;
-          }
-
-          /** Optional. The resource view to apply to the returned intent. */
-          public Get setIntentView(java.lang.String intentView) {
-            this.intentView = intentView;
             return this;
           }
 
@@ -3714,22 +3714,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Optional. The next_page_token value returned from a previous list request. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Optional. The next_page_token value returned from a previous list request.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** Optional. The next_page_token value returned from a previous list request. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /**
            * Optional. The maximum number of items to return in a single page. By default 100 and at
            * most 1000.
@@ -3749,6 +3733,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -5643,22 +5643,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** Optional. The next_page_token value returned from a previous list request. */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** Optional. The next_page_token value returned from a previous list request.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /** Optional. The next_page_token value returned from a previous list request. */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
             /**
              * Optional. The maximum number of items to return in a single page. By default 100 and
              * at most 1000.
@@ -5678,6 +5662,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 

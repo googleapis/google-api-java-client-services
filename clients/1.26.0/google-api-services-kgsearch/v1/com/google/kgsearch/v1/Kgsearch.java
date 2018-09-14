@@ -257,6 +257,81 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         return (Search) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * The list of entity id to be used for search instead of query string. To specify multiple
+       * ids in the HTTP request, repeat the parameter in the URL as in ...?ids=A=B
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> ids;
+
+      /** The list of entity id to be used for search instead of query string. To specify multiple ids in the
+     HTTP request, repeat the parameter in the URL as in ...?ids=A=B
+       */
+      public java.util.List<java.lang.String> getIds() {
+        return ids;
+      }
+
+      /**
+       * The list of entity id to be used for search instead of query string. To specify multiple
+       * ids in the HTTP request, repeat the parameter in the URL as in ...?ids=A=B
+       */
+      public Search setIds(java.util.List<java.lang.String> ids) {
+        this.ids = ids;
+        return this;
+      }
+
+      /** Enables indenting of json results. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean indent;
+
+      /** Enables indenting of json results.
+       */
+      public java.lang.Boolean getIndent() {
+        return indent;
+      }
+
+      /** Enables indenting of json results. */
+      public Search setIndent(java.lang.Boolean indent) {
+        this.indent = indent;
+        return this;
+      }
+
+      /**
+       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> languages;
+
+      /** The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
+       */
+      public java.util.List<java.lang.String> getLanguages() {
+        return languages;
+      }
+
+      /**
+       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
+       */
+      public Search setLanguages(java.util.List<java.lang.String> languages) {
+        this.languages = languages;
+        return this;
+      }
+
+      /** Limits the number of entities to be returned. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer limit;
+
+      /** Limits the number of entities to be returned.
+       */
+      public java.lang.Integer getLimit() {
+        return limit;
+      }
+
+      /** Limits the number of entities to be returned. */
+      public Search setLimit(java.lang.Integer limit) {
+        this.limit = limit;
+        return this;
+      }
+
       /** Enables prefix match against names and aliases of entities */
       @com.google.api.client.util.Key
       private java.lang.Boolean prefix;
@@ -311,81 +386,6 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
        */
       public Search setTypes(java.util.List<java.lang.String> types) {
         this.types = types;
-        return this;
-      }
-
-      /** Enables indenting of json results. */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean indent;
-
-      /** Enables indenting of json results.
-       */
-      public java.lang.Boolean getIndent() {
-        return indent;
-      }
-
-      /** Enables indenting of json results. */
-      public Search setIndent(java.lang.Boolean indent) {
-        this.indent = indent;
-        return this;
-      }
-
-      /**
-       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> languages;
-
-      /** The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
-      public java.util.List<java.lang.String> getLanguages() {
-        return languages;
-      }
-
-      /**
-       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
-      public Search setLanguages(java.util.List<java.lang.String> languages) {
-        this.languages = languages;
-        return this;
-      }
-
-      /**
-       * The list of entity id to be used for search instead of query string. To specify multiple
-       * ids in the HTTP request, repeat the parameter in the URL as in ...?ids=A=B
-       */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> ids;
-
-      /** The list of entity id to be used for search instead of query string. To specify multiple ids in the
-     HTTP request, repeat the parameter in the URL as in ...?ids=A=B
-       */
-      public java.util.List<java.lang.String> getIds() {
-        return ids;
-      }
-
-      /**
-       * The list of entity id to be used for search instead of query string. To specify multiple
-       * ids in the HTTP request, repeat the parameter in the URL as in ...?ids=A=B
-       */
-      public Search setIds(java.util.List<java.lang.String> ids) {
-        this.ids = ids;
-        return this;
-      }
-
-      /** Limits the number of entities to be returned. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer limit;
-
-      /** Limits the number of entities to be returned.
-       */
-      public java.lang.Integer getLimit() {
-        return limit;
-      }
-
-      /** Limits the number of entities to be returned. */
-      public Search setLimit(java.lang.Integer limit) {
-        this.limit = limit;
         return this;
       }
 

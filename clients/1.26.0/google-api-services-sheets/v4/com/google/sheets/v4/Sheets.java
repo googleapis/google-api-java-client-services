@@ -533,22 +533,6 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         return this;
       }
 
-      /** The ranges to retrieve from the spreadsheet. */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> ranges;
-
-      /** The ranges to retrieve from the spreadsheet.
-       */
-      public java.util.List<java.lang.String> getRanges() {
-        return ranges;
-      }
-
-      /** The ranges to retrieve from the spreadsheet. */
-      public Get setRanges(java.util.List<java.lang.String> ranges) {
-        this.ranges = ranges;
-        return this;
-      }
-
       /**
        * True if grid data should be returned. This parameter is ignored if a field mask was set in
        * the request.
@@ -569,6 +553,22 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        */
       public Get setIncludeGridData(java.lang.Boolean includeGridData) {
         this.includeGridData = includeGridData;
+        return this;
+      }
+
+      /** The ranges to retrieve from the spreadsheet. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> ranges;
+
+      /** The ranges to retrieve from the spreadsheet.
+       */
+      public java.util.List<java.lang.String> getRanges() {
+        return ranges;
+      }
+
+      /** The ranges to retrieve from the spreadsheet. */
+      public Get setRanges(java.util.List<java.lang.String> ranges) {
+        this.ranges = ranges;
         return this;
       }
 
@@ -1356,25 +1356,25 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Determines how values in the response should be rendered. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * Determines if the update response should include the values of the cells that were
+         * appended. By default, responses do not include the updated values.
          */
         @com.google.api.client.util.Key
-        private java.lang.String responseValueRenderOption;
+        private java.lang.Boolean includeValuesInResponse;
 
-        /** Determines how values in the response should be rendered. The default render option is
-       ValueRenderOption.FORMATTED_VALUE.
+        /** Determines if the update response should include the values of the cells that were appended. By
+       default, responses do not include the updated values.
          */
-        public java.lang.String getResponseValueRenderOption() {
-          return responseValueRenderOption;
+        public java.lang.Boolean getIncludeValuesInResponse() {
+          return includeValuesInResponse;
         }
 
         /**
-         * Determines how values in the response should be rendered. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
+         * Determines if the update response should include the values of the cells that were
+         * appended. By default, responses do not include the updated values.
          */
-        public Append setResponseValueRenderOption(java.lang.String responseValueRenderOption) {
-          this.responseValueRenderOption = responseValueRenderOption;
+        public Append setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {
+          this.includeValuesInResponse = includeValuesInResponse;
           return this;
         }
 
@@ -1391,22 +1391,6 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /** How the input data should be inserted. */
         public Append setInsertDataOption(java.lang.String insertDataOption) {
           this.insertDataOption = insertDataOption;
-          return this;
-        }
-
-        /** How the input data should be interpreted. */
-        @com.google.api.client.util.Key
-        private java.lang.String valueInputOption;
-
-        /** How the input data should be interpreted.
-         */
-        public java.lang.String getValueInputOption() {
-          return valueInputOption;
-        }
-
-        /** How the input data should be interpreted. */
-        public Append setValueInputOption(java.lang.String valueInputOption) {
-          this.valueInputOption = valueInputOption;
           return this;
         }
 
@@ -1437,25 +1421,41 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Determines if the update response should include the values of the cells that were
-         * appended. By default, responses do not include the updated values.
+         * Determines how values in the response should be rendered. The default render option is
+         * ValueRenderOption.FORMATTED_VALUE.
          */
         @com.google.api.client.util.Key
-        private java.lang.Boolean includeValuesInResponse;
+        private java.lang.String responseValueRenderOption;
 
-        /** Determines if the update response should include the values of the cells that were appended. By
-       default, responses do not include the updated values.
+        /** Determines how values in the response should be rendered. The default render option is
+       ValueRenderOption.FORMATTED_VALUE.
          */
-        public java.lang.Boolean getIncludeValuesInResponse() {
-          return includeValuesInResponse;
+        public java.lang.String getResponseValueRenderOption() {
+          return responseValueRenderOption;
         }
 
         /**
-         * Determines if the update response should include the values of the cells that were
-         * appended. By default, responses do not include the updated values.
+         * Determines how values in the response should be rendered. The default render option is
+         * ValueRenderOption.FORMATTED_VALUE.
          */
-        public Append setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {
-          this.includeValuesInResponse = includeValuesInResponse;
+        public Append setResponseValueRenderOption(java.lang.String responseValueRenderOption) {
+          this.responseValueRenderOption = responseValueRenderOption;
+          return this;
+        }
+
+        /** How the input data should be interpreted. */
+        @com.google.api.client.util.Key
+        private java.lang.String valueInputOption;
+
+        /** How the input data should be interpreted.
+         */
+        public java.lang.String getValueInputOption() {
+          return valueInputOption;
+        }
+
+        /** How the input data should be interpreted. */
+        public Append setValueInputOption(java.lang.String valueInputOption) {
+          this.valueInputOption = valueInputOption;
           return this;
         }
 
@@ -1835,29 +1835,6 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * How values should be represented in the output. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String valueRenderOption;
-
-        /** How values should be represented in the output. The default render option is
-       ValueRenderOption.FORMATTED_VALUE.
-         */
-        public java.lang.String getValueRenderOption() {
-          return valueRenderOption;
-        }
-
-        /**
-         * How values should be represented in the output. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
-         */
-        public BatchGet setValueRenderOption(java.lang.String valueRenderOption) {
-          this.valueRenderOption = valueRenderOption;
-          return this;
-        }
-
-        /**
          * How dates, times, and durations should be represented in the output. This is ignored if
          * value_render_option is FORMATTED_VALUE. The default dateTime render option is
          * [DateTimeRenderOption.SERIAL_NUMBER].
@@ -1880,22 +1857,6 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          */
         public BatchGet setDateTimeRenderOption(java.lang.String dateTimeRenderOption) {
           this.dateTimeRenderOption = dateTimeRenderOption;
-          return this;
-        }
-
-        /** The A1 notation of the values to retrieve. */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> ranges;
-
-        /** The A1 notation of the values to retrieve.
-         */
-        public java.util.List<java.lang.String> getRanges() {
-          return ranges;
-        }
-
-        /** The A1 notation of the values to retrieve. */
-        public BatchGet setRanges(java.util.List<java.lang.String> ranges) {
-          this.ranges = ranges;
           return this;
         }
 
@@ -1928,6 +1889,45 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          */
         public BatchGet setMajorDimension(java.lang.String majorDimension) {
           this.majorDimension = majorDimension;
+          return this;
+        }
+
+        /** The A1 notation of the values to retrieve. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> ranges;
+
+        /** The A1 notation of the values to retrieve.
+         */
+        public java.util.List<java.lang.String> getRanges() {
+          return ranges;
+        }
+
+        /** The A1 notation of the values to retrieve. */
+        public BatchGet setRanges(java.util.List<java.lang.String> ranges) {
+          this.ranges = ranges;
+          return this;
+        }
+
+        /**
+         * How values should be represented in the output. The default render option is
+         * ValueRenderOption.FORMATTED_VALUE.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String valueRenderOption;
+
+        /** How values should be represented in the output. The default render option is
+       ValueRenderOption.FORMATTED_VALUE.
+         */
+        public java.lang.String getValueRenderOption() {
+          return valueRenderOption;
+        }
+
+        /**
+         * How values should be represented in the output. The default render option is
+         * ValueRenderOption.FORMATTED_VALUE.
+         */
+        public BatchGet setValueRenderOption(java.lang.String valueRenderOption) {
+          this.valueRenderOption = valueRenderOption;
           return this;
         }
 
@@ -2582,29 +2582,6 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * How values should be represented in the output. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String valueRenderOption;
-
-        /** How values should be represented in the output. The default render option is
-       ValueRenderOption.FORMATTED_VALUE.
-         */
-        public java.lang.String getValueRenderOption() {
-          return valueRenderOption;
-        }
-
-        /**
-         * How values should be represented in the output. The default render option is
-         * ValueRenderOption.FORMATTED_VALUE.
-         */
-        public Get setValueRenderOption(java.lang.String valueRenderOption) {
-          this.valueRenderOption = valueRenderOption;
-          return this;
-        }
-
-        /**
          * How dates, times, and durations should be represented in the output. This is ignored if
          * value_render_option is FORMATTED_VALUE. The default dateTime render option is
          * [DateTimeRenderOption.SERIAL_NUMBER].
@@ -2659,6 +2636,29 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          */
         public Get setMajorDimension(java.lang.String majorDimension) {
           this.majorDimension = majorDimension;
+          return this;
+        }
+
+        /**
+         * How values should be represented in the output. The default render option is
+         * ValueRenderOption.FORMATTED_VALUE.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String valueRenderOption;
+
+        /** How values should be represented in the output. The default render option is
+       ValueRenderOption.FORMATTED_VALUE.
+         */
+        public java.lang.String getValueRenderOption() {
+          return valueRenderOption;
+        }
+
+        /**
+         * How values should be represented in the output. The default render option is
+         * ValueRenderOption.FORMATTED_VALUE.
+         */
+        public Get setValueRenderOption(java.lang.String valueRenderOption) {
+          this.valueRenderOption = valueRenderOption;
           return this;
         }
 
@@ -2801,6 +2801,61 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
+         * Determines if the update response should include the values of the cells that were
+         * updated. By default, responses do not include the updated values. If the range to write
+         * was larger than than the range actually written, the response will include all values in
+         * the requested range (excluding trailing empty rows and columns).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeValuesInResponse;
+
+        /** Determines if the update response should include the values of the cells that were updated. By
+       default, responses do not include the updated values. If the range to write was larger than than
+       the range actually written, the response will include all values in the requested range (excluding
+       trailing empty rows and columns).
+         */
+        public java.lang.Boolean getIncludeValuesInResponse() {
+          return includeValuesInResponse;
+        }
+
+        /**
+         * Determines if the update response should include the values of the cells that were
+         * updated. By default, responses do not include the updated values. If the range to write
+         * was larger than than the range actually written, the response will include all values in
+         * the requested range (excluding trailing empty rows and columns).
+         */
+        public Update setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {
+          this.includeValuesInResponse = includeValuesInResponse;
+          return this;
+        }
+
+        /**
+         * Determines how dates, times, and durations in the response should be rendered. This is
+         * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
+         * option is DateTimeRenderOption.SERIAL_NUMBER.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String responseDateTimeRenderOption;
+
+        /** Determines how dates, times, and durations in the response should be rendered. This is ignored if
+       response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
+       DateTimeRenderOption.SERIAL_NUMBER.
+         */
+        public java.lang.String getResponseDateTimeRenderOption() {
+          return responseDateTimeRenderOption;
+        }
+
+        /**
+         * Determines how dates, times, and durations in the response should be rendered. This is
+         * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
+         * option is DateTimeRenderOption.SERIAL_NUMBER.
+         */
+        public Update setResponseDateTimeRenderOption(java.lang.String responseDateTimeRenderOption) {
+          this.responseDateTimeRenderOption = responseDateTimeRenderOption;
+          return this;
+        }
+
+        /**
          * Determines how values in the response should be rendered. The default render option is
          * ValueRenderOption.FORMATTED_VALUE.
          */
@@ -2836,61 +2891,6 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /** How the input data should be interpreted. */
         public Update setValueInputOption(java.lang.String valueInputOption) {
           this.valueInputOption = valueInputOption;
-          return this;
-        }
-
-        /**
-         * Determines how dates, times, and durations in the response should be rendered. This is
-         * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
-         * option is DateTimeRenderOption.SERIAL_NUMBER.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String responseDateTimeRenderOption;
-
-        /** Determines how dates, times, and durations in the response should be rendered. This is ignored if
-       response_value_render_option is FORMATTED_VALUE. The default dateTime render option is
-       DateTimeRenderOption.SERIAL_NUMBER.
-         */
-        public java.lang.String getResponseDateTimeRenderOption() {
-          return responseDateTimeRenderOption;
-        }
-
-        /**
-         * Determines how dates, times, and durations in the response should be rendered. This is
-         * ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render
-         * option is DateTimeRenderOption.SERIAL_NUMBER.
-         */
-        public Update setResponseDateTimeRenderOption(java.lang.String responseDateTimeRenderOption) {
-          this.responseDateTimeRenderOption = responseDateTimeRenderOption;
-          return this;
-        }
-
-        /**
-         * Determines if the update response should include the values of the cells that were
-         * updated. By default, responses do not include the updated values. If the range to write
-         * was larger than than the range actually written, the response will include all values in
-         * the requested range (excluding trailing empty rows and columns).
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean includeValuesInResponse;
-
-        /** Determines if the update response should include the values of the cells that were updated. By
-       default, responses do not include the updated values. If the range to write was larger than than
-       the range actually written, the response will include all values in the requested range (excluding
-       trailing empty rows and columns).
-         */
-        public java.lang.Boolean getIncludeValuesInResponse() {
-          return includeValuesInResponse;
-        }
-
-        /**
-         * Determines if the update response should include the values of the cells that were
-         * updated. By default, responses do not include the updated values. If the range to write
-         * was larger than than the range actually written, the response will include all values in
-         * the requested range (excluding trailing empty rows and columns).
-         */
-        public Update setIncludeValuesInResponse(java.lang.Boolean includeValuesInResponse) {
-          this.includeValuesInResponse = includeValuesInResponse;
           return this;
         }
 

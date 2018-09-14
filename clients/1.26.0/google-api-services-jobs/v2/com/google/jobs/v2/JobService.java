@@ -648,61 +648,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional.
        *
-       * The starting indicator from which to return results.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Optional.
-
-     The starting indicator from which to return results.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * Optional.
-       *
-       * The starting indicator from which to return results.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
-       * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
-       * positive number is provided.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Optional.
-
-     The maximum number of companies to be returned, at most 100. Default is 100 if a non-positive
-     number is provided.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * Optional.
-       *
-       * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
-       * positive number is provided.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
        * Set to true if the companies request must have open jobs.
        *
        * Defaults to false.
@@ -738,6 +683,61 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
        */
       public List setMustHaveOpenJobs(java.lang.Boolean mustHaveOpenJobs) {
         this.mustHaveOpenJobs = mustHaveOpenJobs;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
+       * positive number is provided.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional.
+
+     The maximum number of companies to be returned, at most 100. Default is 100 if a non-positive
+     number is provided.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional.
+       *
+       * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
+       * positive number is provided.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The starting indicator from which to return results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional.
+
+     The starting indicator from which to return results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional.
+       *
+       * The starting indicator from which to return results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1128,32 +1128,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional.
          *
-         * The starting point of a query result.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional.
-
-       The starting point of a query result.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional.
-         *
-         * The starting point of a query result.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Optional.
-         *
          * If set to `true`, only job ID, job requisition ID and language code will be returned.
          *
          * A typical use is to synchronize job repositories.
@@ -1186,6 +1160,79 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
          */
         public List setIdsOnly(java.lang.Boolean idsOnly) {
           this.idsOnly = idsOnly;
+          return this;
+        }
+
+        /**
+         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
+         * jobs page by page instead.
+         *
+         * Optional.
+         *
+         * Set to true if the total number of open jobs is to be returned.
+         *
+         * Defaults to false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeJobsCount;
+
+        /** Deprecated. Please DO NOT use this field except for small companies. Suggest counting jobs page by
+       page instead.
+
+       Optional.
+
+       Set to true if the total number of open jobs is to be returned.
+
+       Defaults to false.
+         */
+        public java.lang.Boolean getIncludeJobsCount() {
+          return includeJobsCount;
+        }
+
+        /**
+         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
+         * jobs page by page instead.
+         *
+         * Optional.
+         *
+         * Set to true if the total number of open jobs is to be returned.
+         *
+         * Defaults to false.
+         */
+        public List setIncludeJobsCount(java.lang.Boolean includeJobsCount) {
+          this.includeJobsCount = includeJobsCount;
+          return this;
+        }
+
+        /**
+         * Optional.
+         *
+         * The requisition ID, also known as posting ID, assigned by the company to the job.
+         *
+         * The maximum number of allowable characters is 225.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String jobRequisitionId;
+
+        /** Optional.
+
+       The requisition ID, also known as posting ID, assigned by the company to the job.
+
+       The maximum number of allowable characters is 225.
+         */
+        public java.lang.String getJobRequisitionId() {
+          return jobRequisitionId;
+        }
+
+        /**
+         * Optional.
+         *
+         * The requisition ID, also known as posting ID, assigned by the company to the job.
+         *
+         * The maximum number of allowable characters is 225.
+         */
+        public List setJobRequisitionId(java.lang.String jobRequisitionId) {
+          this.jobRequisitionId = jobRequisitionId;
           return this;
         }
 
@@ -1233,73 +1280,26 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional.
          *
-         * The requisition ID, also known as posting ID, assigned by the company to the job.
-         *
-         * The maximum number of allowable characters is 225.
+         * The starting point of a query result.
          */
         @com.google.api.client.util.Key
-        private java.lang.String jobRequisitionId;
+        private java.lang.String pageToken;
 
         /** Optional.
 
-       The requisition ID, also known as posting ID, assigned by the company to the job.
-
-       The maximum number of allowable characters is 225.
+       The starting point of a query result.
          */
-        public java.lang.String getJobRequisitionId() {
-          return jobRequisitionId;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
         /**
          * Optional.
          *
-         * The requisition ID, also known as posting ID, assigned by the company to the job.
-         *
-         * The maximum number of allowable characters is 225.
+         * The starting point of a query result.
          */
-        public List setJobRequisitionId(java.lang.String jobRequisitionId) {
-          this.jobRequisitionId = jobRequisitionId;
-          return this;
-        }
-
-        /**
-         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
-         * jobs page by page instead.
-         *
-         * Optional.
-         *
-         * Set to true if the total number of open jobs is to be returned.
-         *
-         * Defaults to false.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean includeJobsCount;
-
-        /** Deprecated. Please DO NOT use this field except for small companies. Suggest counting jobs page by
-       page instead.
-
-       Optional.
-
-       Set to true if the total number of open jobs is to be returned.
-
-       Defaults to false.
-         */
-        public java.lang.Boolean getIncludeJobsCount() {
-          return includeJobsCount;
-        }
-
-        /**
-         * Deprecated. Please DO NOT use this field except for small companies. Suggest counting
-         * jobs page by page instead.
-         *
-         * Optional.
-         *
-         * Set to true if the total number of open jobs is to be returned.
-         *
-         * Defaults to false.
-         */
-        public List setIncludeJobsCount(java.lang.Boolean includeJobsCount) {
-          this.includeJobsCount = includeJobsCount;
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2188,111 +2188,6 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional.
-       *
-       * The starting point of a query result.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Optional.
-
-     The starting point of a query result.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * Optional.
-       *
-       * The starting point of a query result.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
-       * The maximum number of jobs to be returned per page of results.
-       *
-       * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
-       * allowed page size is 100.
-       *
-       * Default is 100 if empty or a number < 1 is specified.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Optional.
-
-     The maximum number of jobs to be returned per page of results.
-
-     If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed
-     page size is 100.
-
-     Default is 100 if empty or a number < 1 is specified.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * Optional.
-       *
-       * The maximum number of jobs to be returned per page of results.
-       *
-       * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
-       * allowed page size is 100.
-       *
-       * Default is 100 if empty or a number < 1 is specified.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
-       * If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
-       *
-       * A typical use case is to synchronize job repositories.
-       *
-       * Defaults to false.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean idsOnly;
-
-      /** Optional.
-
-     If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
-
-     A typical use case is to synchronize job repositories.
-
-     Defaults to false.
-       */
-      public java.lang.Boolean getIdsOnly() {
-        return idsOnly;
-      }
-
-      /**
-       * Optional.
-       *
-       * If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
-       *
-       * A typical use case is to synchronize job repositories.
-       *
-       * Defaults to false.
-       */
-      public List setIdsOnly(java.lang.Boolean idsOnly) {
-        this.idsOnly = idsOnly;
-        return this;
-      }
-
-      /**
        * Required.
        *
        * The filter string specifies the jobs to be enumerated.
@@ -2345,6 +2240,111 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
+       *
+       * A typical use case is to synchronize job repositories.
+       *
+       * Defaults to false.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean idsOnly;
+
+      /** Optional.
+
+     If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
+
+     A typical use case is to synchronize job repositories.
+
+     Defaults to false.
+       */
+      public java.lang.Boolean getIdsOnly() {
+        return idsOnly;
+      }
+
+      /**
+       * Optional.
+       *
+       * If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
+       *
+       * A typical use case is to synchronize job repositories.
+       *
+       * Defaults to false.
+       */
+      public List setIdsOnly(java.lang.Boolean idsOnly) {
+        this.idsOnly = idsOnly;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The maximum number of jobs to be returned per page of results.
+       *
+       * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
+       * allowed page size is 100.
+       *
+       * Default is 100 if empty or a number < 1 is specified.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional.
+
+     The maximum number of jobs to be returned per page of results.
+
+     If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed
+     page size is 100.
+
+     Default is 100 if empty or a number < 1 is specified.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional.
+       *
+       * The maximum number of jobs to be returned per page of results.
+       *
+       * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
+       * allowed page size is 100.
+       *
+       * Default is 100 if empty or a number < 1 is specified.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The starting point of a query result.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional.
+
+     The starting point of a query result.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional.
+       *
+       * The starting point of a query result.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -2885,28 +2885,57 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional.
+       * Required.
        *
-       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_code are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
+       * having open jobs with same language_code are returned.
        */
       @com.google.api.client.util.Key
-      private java.lang.String scope;
+      private java.lang.String languageCode;
 
-      /** Optional.
+      /** Required.
 
-     The scope of the completion. The defaults is CompletionScope.PUBLIC.
+     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
+     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+
+     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+
+     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
+     returned.
+
+     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
+     jobs with same language_code are returned.
        */
-      public java.lang.String getScope() {
-        return scope;
+      public java.lang.String getLanguageCode() {
+        return languageCode;
       }
 
       /**
-       * Optional.
+       * Required.
        *
-       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_code are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
+       * having open jobs with same language_code are returned.
        */
-      public Complete setScope(java.lang.String scope) {
-        this.scope = scope;
+      public Complete setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
         return this;
       }
 
@@ -2963,57 +2992,28 @@ public class JobService extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Required.
+       * Optional.
        *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
+       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
       @com.google.api.client.util.Key
-      private java.lang.String languageCode;
+      private java.lang.String scope;
 
-      /** Required.
+      /** Optional.
 
-     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
-     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-
-     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-
-     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
-     returned.
-
-     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
-     jobs with same language_code are returned.
+     The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
-      public java.lang.String getLanguageCode() {
-        return languageCode;
+      public java.lang.String getScope() {
+        return scope;
       }
 
       /**
-       * Required.
+       * Optional.
        *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
+       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
-      public Complete setLanguageCode(java.lang.String languageCode) {
-        this.languageCode = languageCode;
+      public Complete setScope(java.lang.String scope) {
+        this.scope = scope;
         return this;
       }
 

@@ -252,22 +252,6 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The name of the SignupUrl used to sign up for the enterprise. */
-      @com.google.api.client.util.Key
-      private java.lang.String signupUrlName;
-
-      /** The name of the SignupUrl used to sign up for the enterprise.
-       */
-      public java.lang.String getSignupUrlName() {
-        return signupUrlName;
-      }
-
-      /** The name of the SignupUrl used to sign up for the enterprise. */
-      public Create setSignupUrlName(java.lang.String signupUrlName) {
-        this.signupUrlName = signupUrlName;
-        return this;
-      }
-
       /** The ID of the Google Cloud Platform project which will own the enterprise. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
@@ -281,6 +265,22 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       /** The ID of the Google Cloud Platform project which will own the enterprise. */
       public Create setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
+        return this;
+      }
+
+      /** The name of the SignupUrl used to sign up for the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String signupUrlName;
+
+      /** The name of the SignupUrl used to sign up for the enterprise.
+       */
+      public java.lang.String getSignupUrlName() {
+        return signupUrlName;
+      }
+
+      /** The name of the SignupUrl used to sign up for the enterprise. */
+      public Create setSignupUrlName(java.lang.String signupUrlName) {
+        this.signupUrlName = signupUrlName;
         return this;
       }
 
@@ -1344,22 +1344,6 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** A token identifying a page of results returned by the server. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token identifying a page of results returned by the server.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** A token identifying a page of results returned by the server. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The requested page size. The actual page size may be fixed to a min or max value. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -1373,6 +1357,22 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         /** The requested page size. The actual page size may be fixed to a min or max value. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results returned by the server.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2116,22 +2116,6 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** The standard list page size. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The standard list page size.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The standard list page size. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /** The standard list filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2145,6 +2129,22 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           /** The standard list filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
           }
 
@@ -2887,22 +2887,6 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** A token identifying a page of results returned by the server. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** A token identifying a page of results returned by the server.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** A token identifying a page of results returned by the server. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The requested page size. The actual page size may be fixed to a min or max value. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -2916,6 +2900,22 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         /** The requested page size. The actual page size may be fixed to a min or max value. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results returned by the server.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3346,22 +3346,6 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID of the Google Cloud Platform project which will own the enterprise. */
-      @com.google.api.client.util.Key
-      private java.lang.String projectId;
-
-      /** The ID of the Google Cloud Platform project which will own the enterprise.
-       */
-      public java.lang.String getProjectId() {
-        return projectId;
-      }
-
-      /** The ID of the Google Cloud Platform project which will own the enterprise. */
-      public Create setProjectId(java.lang.String projectId) {
-        this.projectId = projectId;
-        return this;
-      }
-
       /**
        * The callback URL that the admin will be redirected to after successfully creating an
        * enterprise. Before redirecting there the system will add a query parameter to this URL
@@ -3391,6 +3375,22 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
        */
       public Create setCallbackUrl(java.lang.String callbackUrl) {
         this.callbackUrl = callbackUrl;
+        return this;
+      }
+
+      /** The ID of the Google Cloud Platform project which will own the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** The ID of the Google Cloud Platform project which will own the enterprise.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** The ID of the Google Cloud Platform project which will own the enterprise. */
+      public Create setProjectId(java.lang.String projectId) {
+        this.projectId = projectId;
         return this;
       }
 

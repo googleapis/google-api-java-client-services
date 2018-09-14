@@ -1031,19 +1031,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Include Roles that have been deleted. */
+        /** Optional limit on the number of roles to include in the response. */
         @com.google.api.client.util.Key
-        private java.lang.Boolean showDeleted;
+        private java.lang.Integer pageSize;
 
-        /** Include Roles that have been deleted.
+        /** Optional limit on the number of roles to include in the response.
          */
-        public java.lang.Boolean getShowDeleted() {
-          return showDeleted;
+        public java.lang.Integer getPageSize() {
+          return pageSize;
         }
 
-        /** Include Roles that have been deleted. */
-        public List setShowDeleted(java.lang.Boolean showDeleted) {
-          this.showDeleted = showDeleted;
+        /** Optional limit on the number of roles to include in the response. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -1063,19 +1063,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
+        /** Include Roles that have been deleted. */
         @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
+        private java.lang.Boolean showDeleted;
 
-        /** Optional limit on the number of roles to include in the response.
+        /** Include Roles that have been deleted.
          */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
+        /** Include Roles that have been deleted. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
           return this;
         }
 
@@ -2183,35 +2183,19 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Optional view for the returned Role objects. */
+        /** Optional limit on the number of roles to include in the response. */
         @com.google.api.client.util.Key
-        private java.lang.String view;
+        private java.lang.Integer pageSize;
 
-        /** Optional view for the returned Role objects.
+        /** Optional limit on the number of roles to include in the response.
          */
-        public java.lang.String getView() {
-          return view;
+        public java.lang.Integer getPageSize() {
+          return pageSize;
         }
 
-        /** Optional view for the returned Role objects. */
-        public List setView(java.lang.String view) {
-          this.view = view;
-          return this;
-        }
-
-        /** Include Roles that have been deleted. */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean showDeleted;
-
-        /** Include Roles that have been deleted.
-         */
-        public java.lang.Boolean getShowDeleted() {
-          return showDeleted;
-        }
-
-        /** Include Roles that have been deleted. */
-        public List setShowDeleted(java.lang.Boolean showDeleted) {
-          this.showDeleted = showDeleted;
+        /** Optional limit on the number of roles to include in the response. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -2231,19 +2215,35 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
+        /** Include Roles that have been deleted. */
         @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
+        private java.lang.Boolean showDeleted;
 
-        /** Optional limit on the number of roles to include in the response.
+        /** Include Roles that have been deleted.
          */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
         }
 
-        /** Optional limit on the number of roles to include in the response. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
+        /** Include Roles that have been deleted. */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
+        /** Optional view for the returned Role objects. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Optional view for the returned Role objects.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Optional view for the returned Role objects. */
+        public List setView(java.lang.String view) {
+          this.view = view;
           return this;
         }
 
@@ -3321,28 +3321,6 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional pagination token returned in an earlier
-         * ListServiceAccountsResponse.next_page_token.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional pagination token returned in an earlier ListServiceAccountsResponse.next_page_token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional pagination token returned in an earlier
-         * ListServiceAccountsResponse.next_page_token.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional limit on the number of service accounts to include in the response. Further
          * accounts can subsequently be obtained by including the
          * ListServiceAccountsResponse.next_page_token in a subsequent request.
@@ -3365,6 +3343,28 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional pagination token returned in an earlier
+         * ListServiceAccountsResponse.next_page_token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional pagination token returned in an earlier ListServiceAccountsResponse.next_page_token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional pagination token returned in an earlier
+         * ListServiceAccountsResponse.next_page_token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -5142,6 +5142,38 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Optional limit on the number of roles to include in the response. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional limit on the number of roles to include in the response.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Optional limit on the number of roles to include in the response. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Optional pagination token returned in an earlier ListRolesResponse. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional pagination token returned in an earlier ListRolesResponse.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Optional pagination token returned in an earlier ListRolesResponse. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
       /**
        * The resource name of the parent resource in one of the following formats: `` (empty string)
        * -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`
@@ -5178,38 +5210,6 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       /** Include Roles that have been deleted. */
       public List setShowDeleted(java.lang.Boolean showDeleted) {
         this.showDeleted = showDeleted;
-        return this;
-      }
-
-      /** Optional pagination token returned in an earlier ListRolesResponse. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Optional pagination token returned in an earlier ListRolesResponse.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** Optional pagination token returned in an earlier ListRolesResponse. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /** Optional limit on the number of roles to include in the response. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Optional limit on the number of roles to include in the response.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** Optional limit on the number of roles to include in the response. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 

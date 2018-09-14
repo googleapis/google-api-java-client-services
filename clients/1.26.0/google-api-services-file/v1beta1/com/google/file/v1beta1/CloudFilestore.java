@@ -433,22 +433,6 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           return this;
         }
 
-        /** The standard list page size. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The standard list page size.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The standard list page size. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
         /** The standard list filter. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -462,6 +446,22 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -1134,28 +1134,6 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             return this;
           }
 
-          /**
-           * The next_page_token value to use if there are additional results to retrieve for this
-           * list request.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The next_page_token value to use if there are additional results to retrieve for this list request.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * The next_page_token value to use if there are additional results to retrieve for this
-           * list request.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /** Sort results. Supported values are "name", "name desc" or "" (unsorted). */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
@@ -1185,6 +1163,28 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /** The maximum number of items to return. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The next_page_token value to use if there are additional results to retrieve for this
+           * list request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value to use if there are additional results to retrieve for this list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The next_page_token value to use if there are additional results to retrieve for this
+           * list request.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -1956,22 +1956,6 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             return this;
           }
 
-          /** The standard list page token. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The standard list page token.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /** The standard list page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -1985,6 +1969,22 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
           /** The standard list page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

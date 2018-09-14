@@ -1227,22 +1227,6 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Next page token for the next batch of `Release` instances. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Next page token for the next batch of `Release` instances.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** Next page token for the next batch of `Release` instances. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /**
          * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
          * the service may choose to load fewer than `page_size` results due to the size of the
@@ -1268,6 +1252,22 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Next page token for the next batch of `Release` instances. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Next page token for the next batch of `Release` instances.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Next page token for the next batch of `Release` instances. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2042,48 +2042,6 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Next page token for loading the next batch of `Ruleset` instances. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Next page token for loading the next batch of `Ruleset` instances.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** Next page token for loading the next batch of `Ruleset` instances. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
-         * the service may choose to load less than `page_size` due to the size of the output. To
-         * traverse all of the releases, caller should iterate until the `page_token` is empty.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and the service
-       may choose to load less than `page_size` due to the size of the output. To traverse all of the
-       releases, caller should iterate until the `page_token` is empty.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
-         * the service may choose to load less than `page_size` due to the size of the output. To
-         * traverse all of the releases, caller should iterate until the `page_token` is empty.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
         /**
          * `Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`.
          *
@@ -2118,6 +2076,48 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
+         * the service may choose to load less than `page_size` due to the size of the output. To
+         * traverse all of the releases, caller should iterate until the `page_token` is empty.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and the service
+       may choose to load less than `page_size` due to the size of the output. To traverse all of the
+       releases, caller should iterate until the `page_token` is empty.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Page size to load. Maximum of 100. Defaults to 10. Note: `page_size` is just a hint and
+         * the service may choose to load less than `page_size` due to the size of the output. To
+         * traverse all of the releases, caller should iterate until the `page_token` is empty.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Next page token for loading the next batch of `Ruleset` instances. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Next page token for loading the next batch of `Ruleset` instances.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Next page token for loading the next batch of `Ruleset` instances. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

@@ -1031,6 +1031,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
+        /** Maximum number of subscriptions to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of subscriptions to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Maximum number of subscriptions to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * The value returned by the last `ListSubscriptionsResponse`; indicates that this is a
          * continuation of a prior `ListSubscriptions` call, and that the system should return the
@@ -1053,22 +1069,6 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** Maximum number of subscriptions to return. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of subscriptions to return.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Maximum number of subscriptions to return. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -2521,6 +2521,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
+        /** Maximum number of topics to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of topics to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Maximum number of topics to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * The value returned by the last `ListTopicsResponse`; indicates that this is a
          * continuation of a prior `ListTopics` call, and that the system should return the next
@@ -2543,22 +2559,6 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** Maximum number of topics to return. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of topics to return.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Maximum number of topics to return. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -3148,6 +3148,22 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
+          /** Maximum number of subscription names to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of subscription names to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of subscription names to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * The value returned by the last `ListTopicSubscriptionsResponse`; indicates that this is
            * a continuation of a prior `ListTopicSubscriptions` call, and that the system should
@@ -3171,22 +3187,6 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Maximum number of subscription names to return. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Maximum number of subscription names to return.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Maximum number of subscription names to return. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 

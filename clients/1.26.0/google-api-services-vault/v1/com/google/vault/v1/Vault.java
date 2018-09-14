@@ -835,24 +835,22 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * If set, list only matters with that specific state. The default is listing matters of all
-       * states.
+       * The number of matters to return in the response. Default and maximum are 100.
        */
       @com.google.api.client.util.Key
-      private java.lang.String state;
+      private java.lang.Integer pageSize;
 
-      /** If set, list only matters with that specific state. The default is listing matters of all states.
+      /** The number of matters to return in the response. Default and maximum are 100.
        */
-      public java.lang.String getState() {
-        return state;
+      public java.lang.Integer getPageSize() {
+        return pageSize;
       }
 
       /**
-       * If set, list only matters with that specific state. The default is listing matters of all
-       * states.
+       * The number of matters to return in the response. Default and maximum are 100.
        */
-      public List setState(java.lang.String state) {
-        this.state = state;
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
       }
 
@@ -873,22 +871,24 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The number of matters to return in the response. Default and maximum are 100.
+       * If set, list only matters with that specific state. The default is listing matters of all
+       * states.
        */
       @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
+      private java.lang.String state;
 
-      /** The number of matters to return in the response. Default and maximum are 100.
+      /** If set, list only matters with that specific state. The default is listing matters of all states.
        */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
+      public java.lang.String getState() {
+        return state;
       }
 
       /**
-       * The number of matters to return in the response. Default and maximum are 100.
+       * If set, list only matters with that specific state. The default is listing matters of all
+       * states.
        */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
+      public List setState(java.lang.String state) {
+        this.state = state;
         return this;
       }
 
@@ -1923,22 +1923,6 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** The pagination token as returned in the response. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The pagination token as returned in the response.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The pagination token as returned in the response. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The number of exports to return in the response. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -1952,6 +1936,22 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         /** The number of exports to return in the response. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The pagination token as returned in the response. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The pagination token as returned in the response.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The pagination token as returned in the response. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2655,28 +2655,6 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * The pagination token as returned in the response. An empty token means start from the
-         * beginning.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The pagination token as returned in the response. An empty token means start from the beginning.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * The pagination token as returned in the response. An empty token means start from the
-         * beginning.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * The number of holds to return in the response, between 0 and 100 inclusive. Leaving this
          * empty, or as 0, is the same as page_size = 100.
          */
@@ -2696,6 +2674,28 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The pagination token as returned in the response. An empty token means start from the
+         * beginning.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The pagination token as returned in the response. An empty token means start from the beginning.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The pagination token as returned in the response. An empty token means start from the
+         * beginning.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

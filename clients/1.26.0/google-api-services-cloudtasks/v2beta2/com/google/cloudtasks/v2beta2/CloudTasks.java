@@ -433,19 +433,19 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The standard list page token. */
+        /** The standard list filter. */
         @com.google.api.client.util.Key
-        private java.lang.String pageToken;
+        private java.lang.String filter;
 
-        /** The standard list page token.
+        /** The standard list filter.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        public java.lang.String getFilter() {
+          return filter;
         }
 
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 
@@ -465,19 +465,19 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The standard list filter. */
+        /** The standard list page token. */
         @com.google.api.client.util.Key
-        private java.lang.String filter;
+        private java.lang.String pageToken;
 
-        /** The standard list filter.
+        /** The standard list page token.
          */
-        public java.lang.String getFilter() {
-          return filter;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
-        /** The standard list filter. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1310,72 +1310,6 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * A token identifying the page of results to return.
-           *
-           * To request the first page results, page_token must be empty. To request the next page
-           * of results, page_token must be the value of next_page_token returned from the previous
-           * call to ListQueues method. It is an error to switch the value of the filter while
-           * iterating through pages.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** A token identifying the page of results to return.
-
-         To request the first page results, page_token must be empty. To request the next page of results,
-         page_token must be the value of next_page_token returned from the previous call to ListQueues
-         method. It is an error to switch the value of the filter while iterating through pages.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * A token identifying the page of results to return.
-           *
-           * To request the first page results, page_token must be empty. To request the next page
-           * of results, page_token must be the value of next_page_token returned from the previous
-           * call to ListQueues method. It is an error to switch the value of the filter while
-           * iterating through pages.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * Requested page size.
-           *
-           * The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer
-           * queues than requested might be returned, even if more queues exist; use the
-           * next_page_token in the response to determine if more queues exist.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Requested page size.
-
-         The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer queues than
-         requested might be returned, even if more queues exist; use the next_page_token in the response to
-         determine if more queues exist.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Requested page size.
-           *
-           * The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer
-           * queues than requested might be returned, even if more queues exist; use the
-           * next_page_token in the response to determine if more queues exist.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
            * `filter` can be used to specify a subset of queues. Any Queue field can be used as a
            * filter and several operators as supported. For example: `<=, <, >=, >, !=, =, :`. The
            * filter syntax is the same as described in [Stackdriver's Advanced Logs
@@ -1417,6 +1351,72 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Requested page size.
+           *
+           * The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer
+           * queues than requested might be returned, even if more queues exist; use the
+           * next_page_token in the response to determine if more queues exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Requested page size.
+
+         The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer queues than
+         requested might be returned, even if more queues exist; use the next_page_token in the response to
+         determine if more queues exist.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Requested page size.
+           *
+           * The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer
+           * queues than requested might be returned, even if more queues exist; use the
+           * next_page_token in the response to determine if more queues exist.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A token identifying the page of results to return.
+           *
+           * To request the first page results, page_token must be empty. To request the next page
+           * of results, page_token must be the value of next_page_token returned from the previous
+           * call to ListQueues method. It is an error to switch the value of the filter while
+           * iterating through pages.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A token identifying the page of results to return.
+
+         To request the first page results, page_token must be empty. To request the next page of results,
+         page_token must be the value of next_page_token returned from the previous call to ListQueues
+         method. It is an error to switch the value of the filter while iterating through pages.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A token identifying the page of results to return.
+           *
+           * To request the first page results, page_token must be empty. To request the next page
+           * of results, page_token must be the value of next_page_token returned from the previous
+           * call to ListQueues method. It is an error to switch the value of the filter while
+           * iterating through pages.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -3670,6 +3670,44 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
+             * A token identifying the page of results to return.
+             *
+             * To request the first page results, page_token must be empty. To request the next page
+             * of results, page_token must be the value of next_page_token returned from the
+             * previous call to ListTasks method.
+             *
+             * The page token is valid for only 2 hours.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying the page of results to return.
+
+           To request the first page results, page_token must be empty. To request the next page of results,
+           page_token must be the value of next_page_token returned from the previous call to ListTasks
+           method.
+
+           The page token is valid for only 2 hours.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying the page of results to return.
+             *
+             * To request the first page results, page_token must be empty. To request the next page
+             * of results, page_token must be the value of next_page_token returned from the
+             * previous call to ListTasks method.
+             *
+             * The page token is valid for only 2 hours.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
              * The response_view specifies which subset of the Task will be returned.
              *
              * By default response_view is BASIC; not all information is retrieved by default
@@ -3707,44 +3745,6 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              */
             public List setResponseView(java.lang.String responseView) {
               this.responseView = responseView;
-              return this;
-            }
-
-            /**
-             * A token identifying the page of results to return.
-             *
-             * To request the first page results, page_token must be empty. To request the next page
-             * of results, page_token must be the value of next_page_token returned from the
-             * previous call to ListTasks method.
-             *
-             * The page token is valid for only 2 hours.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** A token identifying the page of results to return.
-
-           To request the first page results, page_token must be empty. To request the next page of results,
-           page_token must be the value of next_page_token returned from the previous call to ListTasks
-           method.
-
-           The page token is valid for only 2 hours.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /**
-             * A token identifying the page of results to return.
-             *
-             * To request the first page results, page_token must be empty. To request the next page
-             * of results, page_token must be the value of next_page_token returned from the
-             * previous call to ListTasks method.
-             *
-             * The page token is valid for only 2 hours.
-             */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
               return this;
             }
 

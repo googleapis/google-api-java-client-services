@@ -402,68 +402,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * Set this to the 'next_page_token' field of a previous response to request additional
-         * results in a long list.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Set this to the 'next_page_token' field of a previous response to request additional results in a
-       long list.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Set this to the 'next_page_token' field of a previous response to request additional
-         * results in a long list.
-         */
-        public Aggregated setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * If there are many jobs, limit response to at most this many. The actual number of jobs
-         * returned will be the lesser of max_responses and an unspecified server-defined limit.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** If there are many jobs, limit response to at most this many. The actual number of jobs returned
-       will be the lesser of max_responses and an unspecified server-defined limit.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * If there are many jobs, limit response to at most this many. The actual number of jobs
-         * returned will be the lesser of max_responses and an unspecified server-defined limit.
-         */
-        public Aggregated setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
-        @com.google.api.client.util.Key
-        private java.lang.String view;
-
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`.
-         */
-        public java.lang.String getView() {
-          return view;
-        }
-
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
-        public Aggregated setView(java.lang.String view) {
-          this.view = view;
-          return this;
-        }
-
         /** The kind of filter to use. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -493,6 +431,68 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** The location that contains this job. */
         public Aggregated setLocation(java.lang.String location) {
           this.location = location;
+          return this;
+        }
+
+        /**
+         * If there are many jobs, limit response to at most this many. The actual number of jobs
+         * returned will be the lesser of max_responses and an unspecified server-defined limit.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** If there are many jobs, limit response to at most this many. The actual number of jobs returned
+       will be the lesser of max_responses and an unspecified server-defined limit.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * If there are many jobs, limit response to at most this many. The actual number of jobs
+         * returned will be the lesser of max_responses and an unspecified server-defined limit.
+         */
+        public Aggregated setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Set this to the 'next_page_token' field of a previous response to request additional
+         * results in a long list.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Set this to the 'next_page_token' field of a previous response to request additional results in a
+       long list.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Set this to the 'next_page_token' field of a previous response to request additional
+         * results in a long list.
+         */
+        public Aggregated setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+        public Aggregated setView(java.lang.String view) {
+          this.view = view;
           return this;
         }
 
@@ -614,6 +614,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /** The location that contains this job. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** The location that contains this job.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** The location that contains this job. */
+        public Create setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
         /** Deprecated. This field is now in the Job message. */
         @com.google.api.client.util.Key
         private java.lang.String replaceJobId;
@@ -643,22 +659,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** The level of information requested in response. */
         public Create setView(java.lang.String view) {
           this.view = view;
-          return this;
-        }
-
-        /** The location that contains this job. */
-        @com.google.api.client.util.Key
-        private java.lang.String location;
-
-        /** The location that contains this job.
-         */
-        public java.lang.String getLocation() {
-          return location;
-        }
-
-        /** The location that contains this job. */
-        public Create setLocation(java.lang.String location) {
-          this.location = location;
           return this;
         }
 
@@ -1180,29 +1180,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Set this to the 'next_page_token' field of a previous response to request additional
-         * results in a long list.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Set this to the 'next_page_token' field of a previous response to request additional results in a
-       long list.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Set this to the 'next_page_token' field of a previous response to request additional
-         * results in a long list.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * If there are many jobs, limit response to at most this many. The actual number of jobs
          * returned will be the lesser of max_responses and an unspecified server-defined limit.
          */
@@ -1222,6 +1199,29 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Set this to the 'next_page_token' field of a previous response to request additional
+         * results in a long list.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Set this to the 'next_page_token' field of a previous response to request additional results in a
+       long list.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Set this to the 'next_page_token' field of a previous response to request additional
+         * results in a long list.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1856,6 +1856,61 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Return only messages with timestamps < end_time. The default is now (i.e. return up to
+           * the latest messages available).
+           */
+          @com.google.api.client.util.Key
+          private String endTime;
+
+          /** Return only messages with timestamps < end_time. The default is now (i.e. return up to the latest
+         messages available).
+           */
+          public String getEndTime() {
+            return endTime;
+          }
+
+          /**
+           * Return only messages with timestamps < end_time. The default is now (i.e. return up to
+           * the latest messages available).
+           */
+          public List setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+          }
+
+          /** The location which contains the job specified by job_id. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The location which contains the job specified by job_id.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** The location which contains the job specified by job_id. */
+          public List setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          /** Filter to only get messages with importance >= level */
+          @com.google.api.client.util.Key
+          private java.lang.String minimumImportance;
+
+          /** Filter to only get messages with importance >= level
+           */
+          public java.lang.String getMinimumImportance() {
+            return minimumImportance;
+          }
+
+          /** Filter to only get messages with importance >= level */
+          public List setMinimumImportance(java.lang.String minimumImportance) {
+            this.minimumImportance = minimumImportance;
+            return this;
+          }
+
+          /**
            * If specified, determines the maximum number of messages to return.  If unspecified, the
            * service may choose an appropriate default, or may return an arbitrarily large number of
            * results.
@@ -1877,61 +1932,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
-            return this;
-          }
-
-          /** Filter to only get messages with importance >= level */
-          @com.google.api.client.util.Key
-          private java.lang.String minimumImportance;
-
-          /** Filter to only get messages with importance >= level
-           */
-          public java.lang.String getMinimumImportance() {
-            return minimumImportance;
-          }
-
-          /** Filter to only get messages with importance >= level */
-          public List setMinimumImportance(java.lang.String minimumImportance) {
-            this.minimumImportance = minimumImportance;
-            return this;
-          }
-
-          /** The location which contains the job specified by job_id. */
-          @com.google.api.client.util.Key
-          private java.lang.String location;
-
-          /** The location which contains the job specified by job_id.
-           */
-          public java.lang.String getLocation() {
-            return location;
-          }
-
-          /** The location which contains the job specified by job_id. */
-          public List setLocation(java.lang.String location) {
-            this.location = location;
-            return this;
-          }
-
-          /**
-           * Return only messages with timestamps < end_time. The default is now (i.e. return up to
-           * the latest messages available).
-           */
-          @com.google.api.client.util.Key
-          private String endTime;
-
-          /** Return only messages with timestamps < end_time. The default is now (i.e. return up to the latest
-         messages available).
-           */
-          public String getEndTime() {
-            return endTime;
-          }
-
-          /**
-           * Return only messages with timestamps < end_time. The default is now (i.e. return up to
-           * the latest messages available).
-           */
-          public List setEndTime(String endTime) {
-            this.endTime = endTime;
             return this;
           }
 
@@ -3137,26 +3137,19 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Set this to the 'next_page_token' field of a previous response to request additional
-           * results in a long list.
-           */
+          /** The kind of filter to use. */
           @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          private java.lang.String filter;
 
-          /** Set this to the 'next_page_token' field of a previous response to request additional results in a
-         long list.
+          /** The kind of filter to use.
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public java.lang.String getFilter() {
+            return filter;
           }
 
-          /**
-           * Set this to the 'next_page_token' field of a previous response to request additional
-           * results in a long list.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          /** The kind of filter to use. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -3183,6 +3176,29 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * Set this to the 'next_page_token' field of a previous response to request additional
+           * results in a long list.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Set this to the 'next_page_token' field of a previous response to request additional results in a
+         long list.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Set this to the 'next_page_token' field of a previous response to request additional
+           * results in a long list.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
           /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
           @com.google.api.client.util.Key
           private java.lang.String view;
@@ -3196,22 +3212,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
           public List setView(java.lang.String view) {
             this.view = view;
-            return this;
-          }
-
-          /** The kind of filter to use. */
-          @com.google.api.client.util.Key
-          private java.lang.String filter;
-
-          /** The kind of filter to use.
-           */
-          public java.lang.String getFilter() {
-            return filter;
-          }
-
-          /** The kind of filter to use. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
             return this;
           }
 
@@ -3890,6 +3890,45 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
+             * Return only messages with timestamps < end_time. The default is now (i.e. return up
+             * to the latest messages available).
+             */
+            @com.google.api.client.util.Key
+            private String endTime;
+
+            /** Return only messages with timestamps < end_time. The default is now (i.e. return up to the latest
+           messages available).
+             */
+            public String getEndTime() {
+              return endTime;
+            }
+
+            /**
+             * Return only messages with timestamps < end_time. The default is now (i.e. return up
+             * to the latest messages available).
+             */
+            public List setEndTime(String endTime) {
+              this.endTime = endTime;
+              return this;
+            }
+
+            /** Filter to only get messages with importance >= level */
+            @com.google.api.client.util.Key
+            private java.lang.String minimumImportance;
+
+            /** Filter to only get messages with importance >= level
+             */
+            public java.lang.String getMinimumImportance() {
+              return minimumImportance;
+            }
+
+            /** Filter to only get messages with importance >= level */
+            public List setMinimumImportance(java.lang.String minimumImportance) {
+              this.minimumImportance = minimumImportance;
+              return this;
+            }
+
+            /**
              * If specified, determines the maximum number of messages to return.  If unspecified,
              * the service may choose an appropriate default, or may return an arbitrarily large
              * number of results.
@@ -3911,45 +3950,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
-              return this;
-            }
-
-            /** Filter to only get messages with importance >= level */
-            @com.google.api.client.util.Key
-            private java.lang.String minimumImportance;
-
-            /** Filter to only get messages with importance >= level
-             */
-            public java.lang.String getMinimumImportance() {
-              return minimumImportance;
-            }
-
-            /** Filter to only get messages with importance >= level */
-            public List setMinimumImportance(java.lang.String minimumImportance) {
-              this.minimumImportance = minimumImportance;
-              return this;
-            }
-
-            /**
-             * Return only messages with timestamps < end_time. The default is now (i.e. return up
-             * to the latest messages available).
-             */
-            @com.google.api.client.util.Key
-            private String endTime;
-
-            /** Return only messages with timestamps < end_time. The default is now (i.e. return up to the latest
-           messages available).
-             */
-            public String getEndTime() {
-              return endTime;
-            }
-
-            /**
-             * Return only messages with timestamps < end_time. The default is now (i.e. return up
-             * to the latest messages available).
-             */
-            public List setEndTime(String endTime) {
-              this.endTime = endTime;
               return this;
             }
 
@@ -4637,22 +4637,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The view to retrieve. Defaults to METADATA_ONLY. */
-          @com.google.api.client.util.Key
-          private java.lang.String view;
-
-          /** The view to retrieve. Defaults to METADATA_ONLY.
-           */
-          public java.lang.String getView() {
-            return view;
-          }
-
-          /** The view to retrieve. Defaults to METADATA_ONLY. */
-          public Get setView(java.lang.String view) {
-            this.view = view;
-            return this;
-          }
-
           /**
            * Required. A Cloud Storage path to the template from which to create the job. Must be a
            * valid Cloud Storage URL, beginning with `gs://`.
@@ -4673,6 +4657,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            */
           public Get setGcsPath(java.lang.String gcsPath) {
             this.gcsPath = gcsPath;
+            return this;
+          }
+
+          /** The view to retrieve. Defaults to METADATA_ONLY. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** The view to retrieve. Defaults to METADATA_ONLY.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** The view to retrieve. Defaults to METADATA_ONLY. */
+          public Get setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 
@@ -4814,26 +4814,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * If true, the request is validated but not actually executed. Defaults to false.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean validateOnly;
-
-          /** If true, the request is validated but not actually executed. Defaults to false.
-           */
-          public java.lang.Boolean getValidateOnly() {
-            return validateOnly;
-          }
-
-          /**
-           * If true, the request is validated but not actually executed. Defaults to false.
-           */
-          public Launch setValidateOnly(java.lang.Boolean validateOnly) {
-            this.validateOnly = validateOnly;
-            return this;
-          }
-
-          /**
            * Required. A Cloud Storage path to the template from which to create the job. Must be
            * valid Cloud Storage URL, beginning with 'gs://'.
            */
@@ -4853,6 +4833,26 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            */
           public Launch setGcsPath(java.lang.String gcsPath) {
             this.gcsPath = gcsPath;
+            return this;
+          }
+
+          /**
+           * If true, the request is validated but not actually executed. Defaults to false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** If true, the request is validated but not actually executed. Defaults to false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * If true, the request is validated but not actually executed. Defaults to false.
+           */
+          public Launch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -5122,22 +5122,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The view to retrieve. Defaults to METADATA_ONLY. */
-        @com.google.api.client.util.Key
-        private java.lang.String view;
-
-        /** The view to retrieve. Defaults to METADATA_ONLY.
-         */
-        public java.lang.String getView() {
-          return view;
-        }
-
-        /** The view to retrieve. Defaults to METADATA_ONLY. */
-        public Get setView(java.lang.String view) {
-          this.view = view;
-          return this;
-        }
-
         /**
          * Required. A Cloud Storage path to the template from which to create the job. Must be a
          * valid Cloud Storage URL, beginning with `gs://`.
@@ -5174,6 +5158,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** The location to which to direct the request. */
         public Get setLocation(java.lang.String location) {
           this.location = location;
+          return this;
+        }
+
+        /** The view to retrieve. Defaults to METADATA_ONLY. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** The view to retrieve. Defaults to METADATA_ONLY.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** The view to retrieve. Defaults to METADATA_ONLY. */
+        public Get setView(java.lang.String view) {
+          this.view = view;
           return this;
         }
 
@@ -5295,6 +5295,29 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Required. A Cloud Storage path to the template from which to create the job. Must be
+         * valid Cloud Storage URL, beginning with 'gs://'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String gcsPath;
+
+        /** Required. A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+       Storage URL, beginning with 'gs://'.
+         */
+        public java.lang.String getGcsPath() {
+          return gcsPath;
+        }
+
+        /**
+         * Required. A Cloud Storage path to the template from which to create the job. Must be
+         * valid Cloud Storage URL, beginning with 'gs://'.
+         */
+        public Launch setGcsPath(java.lang.String gcsPath) {
+          this.gcsPath = gcsPath;
+          return this;
+        }
+
         /** The location to which to direct the request. */
         @com.google.api.client.util.Key
         private java.lang.String location;
@@ -5328,29 +5351,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          */
         public Launch setValidateOnly(java.lang.Boolean validateOnly) {
           this.validateOnly = validateOnly;
-          return this;
-        }
-
-        /**
-         * Required. A Cloud Storage path to the template from which to create the job. Must be
-         * valid Cloud Storage URL, beginning with 'gs://'.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String gcsPath;
-
-        /** Required. A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-       Storage URL, beginning with 'gs://'.
-         */
-        public java.lang.String getGcsPath() {
-          return gcsPath;
-        }
-
-        /**
-         * Required. A Cloud Storage path to the template from which to create the job. Must be
-         * valid Cloud Storage URL, beginning with 'gs://'.
-         */
-        public Launch setGcsPath(java.lang.String gcsPath) {
-          this.gcsPath = gcsPath;
           return this;
         }
 

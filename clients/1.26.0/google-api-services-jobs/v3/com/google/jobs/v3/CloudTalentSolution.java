@@ -306,32 +306,6 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       /**
        * Optional.
        *
-       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String scope;
-
-      /** Optional.
-
-     The scope of the completion. The defaults is CompletionScope.PUBLIC.
-       */
-      public java.lang.String getScope() {
-        return scope;
-      }
-
-      /**
-       * Optional.
-       *
-       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
-       */
-      public Complete setScope(java.lang.String scope) {
-        this.scope = scope;
-        return this;
-      }
-
-      /**
-       * Optional.
-       *
        * If provided, restricts completion to specified company.
        *
        * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
@@ -361,6 +335,67 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        */
       public Complete setCompanyName(java.lang.String companyName) {
         this.companyName = companyName;
+        return this;
+      }
+
+      /**
+       * Required.
+       *
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_code are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
+       * having open jobs with same language_code are returned.
+       *
+       * The maximum number of allowed characters is 255.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Required.
+
+     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
+     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+
+     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+
+     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
+     returned.
+
+     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
+     jobs with same language_code are returned.
+
+     The maximum number of allowed characters is 255.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Required.
+       *
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_code are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
+       * having open jobs with same language_code are returned.
+       *
+       * The maximum number of allowed characters is 255.
+       */
+      public Complete setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
         return this;
       }
 
@@ -429,63 +464,28 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required.
+       * Optional.
        *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
-       *
-       * The maximum number of allowed characters is 255.
+       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
       @com.google.api.client.util.Key
-      private java.lang.String languageCode;
+      private java.lang.String scope;
 
-      /** Required.
+      /** Optional.
 
-     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
-     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-
-     For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-
-     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_code are
-     returned.
-
-     For CompletionType.COMBINED type, only open jobs with same language_code or companies having open
-     jobs with same language_code are returned.
-
-     The maximum number of allowed characters is 255.
+     The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
-      public java.lang.String getLanguageCode() {
-        return languageCode;
+      public java.lang.String getScope() {
+        return scope;
       }
 
       /**
-       * Required.
+       * Optional.
        *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with same language_code or companies
-       * having open jobs with same language_code are returned.
-       *
-       * The maximum number of allowed characters is 255.
+       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
-      public Complete setLanguageCode(java.lang.String languageCode) {
-        this.languageCode = languageCode;
+      public Complete setScope(java.lang.String scope) {
+        this.scope = scope;
         return this;
       }
 
@@ -1179,32 +1179,6 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         /**
          * Optional.
          *
-         * The starting indicator from which to return results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional.
-
-       The starting indicator from which to return results.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional.
-         *
-         * The starting indicator from which to return results.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Optional.
-         *
          * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
          * positive number is provided.
          */
@@ -1228,6 +1202,32 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional.
+         *
+         * The starting indicator from which to return results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional.
+
+       The starting indicator from which to return results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional.
+         *
+         * The starting indicator from which to return results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2259,73 +2259,6 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional.
-         *
-         * The starting point of a query result.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional.
-
-       The starting point of a query result.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional.
-         *
-         * The starting point of a query result.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Optional.
-         *
-         * The maximum number of jobs to be returned per page of results.
-         *
-         * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
-         * Otherwise, the maximum allowed page size is 100.
-         *
-         * Default is 100 if empty or a number < 1 is specified.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Optional.
-
-       The maximum number of jobs to be returned per page of results.
-
-       If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000. Otherwise,
-       the maximum allowed page size is 100.
-
-       Default is 100 if empty or a number < 1 is specified.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Optional.
-         *
-         * The maximum number of jobs to be returned per page of results.
-         *
-         * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
-         * Otherwise, the maximum allowed page size is 100.
-         *
-         * Default is 100 if empty or a number < 1 is specified.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * Required.
          *
          * The filter string specifies the jobs to be enumerated.
@@ -2410,6 +2343,73 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          */
         public List setJobView(java.lang.String jobView) {
           this.jobView = jobView;
+          return this;
+        }
+
+        /**
+         * Optional.
+         *
+         * The maximum number of jobs to be returned per page of results.
+         *
+         * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
+         * Otherwise, the maximum allowed page size is 100.
+         *
+         * Default is 100 if empty or a number < 1 is specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional.
+
+       The maximum number of jobs to be returned per page of results.
+
+       If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000. Otherwise,
+       the maximum allowed page size is 100.
+
+       Default is 100 if empty or a number < 1 is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional.
+         *
+         * The maximum number of jobs to be returned per page of results.
+         *
+         * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
+         * Otherwise, the maximum allowed page size is 100.
+         *
+         * Default is 100 if empty or a number < 1 is specified.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional.
+         *
+         * The starting point of a query result.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional.
+
+       The starting point of a query result.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional.
+         *
+         * The starting point of a query result.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

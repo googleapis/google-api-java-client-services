@@ -740,22 +740,6 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
-          /** The next_page_token value returned from a previous List request, if any. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The next_page_token value returned from a previous List request, if any.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The next_page_token value returned from a previous List request, if any. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /** The maximum number of environments to return. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -769,6 +753,22 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           /** The maximum number of environments to return. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -1620,22 +1620,6 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
-          /** The standard list page token. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The standard list page token.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /** The standard list page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -1649,6 +1633,22 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           /** The standard list page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

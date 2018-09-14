@@ -1689,22 +1689,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The standard List page token. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Optional. The standard List page token.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** Optional. The standard List page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /** Optional. The standard List page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -1718,6 +1702,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. The standard List page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The standard List page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The standard List page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The standard List page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -3069,6 +3069,29 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
+           * Optional. If set, the returned jobs list includes only jobs that were submitted to the
+           * named cluster.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterName;
+
+          /** Optional. If set, the returned jobs list includes only jobs that were submitted to the named
+         cluster.
+           */
+          public java.lang.String getClusterName() {
+            return clusterName;
+          }
+
+          /**
+           * Optional. If set, the returned jobs list includes only jobs that were submitted to the
+           * named cluster.
+           */
+          public List setClusterName(java.lang.String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+          }
+
+          /**
            * Optional. A filter constraining the jobs to list. Filters are case-sensitive and have
            * the following syntax:field = value AND field = value ...where field is status.state or
            * labels.[KEY], and [KEY] is a label key. value can be * to match all values.
@@ -3125,6 +3148,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /** Optional. The number of results to return in each response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The number of results to return in each response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The number of results to return in each response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * Optional. The page token, returned by a previous call, to request the next page of
            * results.
@@ -3144,45 +3183,6 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Optional. The number of results to return in each response. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Optional. The number of results to return in each response.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Optional. The number of results to return in each response. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * Optional. If set, the returned jobs list includes only jobs that were submitted to the
-           * named cluster.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String clusterName;
-
-          /** Optional. If set, the returned jobs list includes only jobs that were submitted to the named
-         cluster.
-           */
-          public java.lang.String getClusterName() {
-            return clusterName;
-          }
-
-          /**
-           * Optional. If set, the returned jobs list includes only jobs that were submitted to the
-           * named cluster.
-           */
-          public List setClusterName(java.lang.String clusterName) {
-            this.clusterName = clusterName;
             return this;
           }
 
@@ -4521,19 +4521,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The standard list page token. */
+          /** The standard list filter. */
           @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          private java.lang.String filter;
 
-          /** The standard list page token.
+          /** The standard list filter.
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public java.lang.String getFilter() {
+            return filter;
           }
 
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -4553,19 +4553,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The standard list filter. */
+          /** The standard list page token. */
           @com.google.api.client.util.Key
-          private java.lang.String filter;
+          private java.lang.String pageToken;
 
-          /** The standard list filter.
+          /** The standard list page token.
            */
-          public java.lang.String getFilter() {
-            return filter;
+          public java.lang.String getPageToken() {
+            return pageToken;
           }
 
-          /** The standard list filter. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

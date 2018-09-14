@@ -488,29 +488,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-             * previous list request to get the next page of results.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
-           request to get the next page of results.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /**
-             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-             * previous list request to get the next page of results.
-             */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
              * Specifies the number of results to return per page. If there are fewer elements than
              * the specified number, returns all elements. Optional. If unset or 0, all the results
              * will be returned.
@@ -532,6 +509,29 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+             * previous list request to get the next page of results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
+           request to get the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+             * previous list request to get the next page of results.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -699,29 +699,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-           * previous list request to get the next page of results.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
-         request to get the next page of results.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-           * previous list request to get the next page of results.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * Specifies the number of results to return per page. If there are fewer elements than
            * the specified number, returns all elements. Optional. If unset or 0, all the results
            * will be returned.
@@ -743,6 +720,29 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+           * previous list request to get the next page of results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
+         request to get the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+           * previous list request to get the next page of results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -931,29 +931,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-             * previous list request to get the next page of results.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
-           request to get the next page of results.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /**
-             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-             * previous list request to get the next page of results.
-             */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
              * Specifies the number of results to return per page. If there are fewer elements than
              * the specified number, returns all elements. Optional. If unset or 0, all the results
              * will be returned.
@@ -975,6 +952,29 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+             * previous list request to get the next page of results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
+           request to get the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+             * previous list request to get the next page of results.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -1386,22 +1386,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
-            /** The service id of the service instance. */
-            @com.google.api.client.util.Key
-            private java.lang.String serviceId;
-
-            /** The service id of the service instance.
-             */
-            public java.lang.String getServiceId() {
-              return serviceId;
-            }
-
-            /** The service id of the service instance. */
-            public Delete setServiceId(java.lang.String serviceId) {
-              this.serviceId = serviceId;
-              return this;
-            }
-
             /** See CreateServiceInstanceRequest for details. */
             @com.google.api.client.util.Key
             private java.lang.Boolean acceptsIncomplete;
@@ -1431,6 +1415,22 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
             /** The plan id of the service instance. */
             public Delete setPlanId(java.lang.String planId) {
               this.planId = planId;
+              return this;
+            }
+
+            /** The service id of the service instance. */
+            @com.google.api.client.util.Key
+            private java.lang.String serviceId;
+
+            /** The service id of the service instance.
+             */
+            public java.lang.String getServiceId() {
+              return serviceId;
+            }
+
+            /** The service id of the service instance. */
+            public Delete setServiceId(java.lang.String serviceId) {
+              this.serviceId = serviceId;
               return this;
             }
 
@@ -2416,26 +2416,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
                 return this;
               }
 
-              /**
-               * Additional query parameter hints. The service id of the service instance.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String serviceId;
-
-              /** Additional query parameter hints. The service id of the service instance.
-               */
-              public java.lang.String getServiceId() {
-                return serviceId;
-              }
-
-              /**
-               * Additional query parameter hints. The service id of the service instance.
-               */
-              public Delete setServiceId(java.lang.String serviceId) {
-                this.serviceId = serviceId;
-                return this;
-              }
-
               /** See CreateServiceInstanceRequest for details. */
               @com.google.api.client.util.Key
               private java.lang.Boolean acceptsIncomplete;
@@ -2465,6 +2445,26 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
               /** The plan id of the service instance. */
               public Delete setPlanId(java.lang.String planId) {
                 this.planId = planId;
+                return this;
+              }
+
+              /**
+               * Additional query parameter hints. The service id of the service instance.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String serviceId;
+
+              /** Additional query parameter hints. The service id of the service instance.
+               */
+              public java.lang.String getServiceId() {
+                return serviceId;
+              }
+
+              /**
+               * Additional query parameter hints. The service id of the service instance.
+               */
+              public Delete setServiceId(java.lang.String serviceId) {
+                this.serviceId = serviceId;
                 return this;
               }
 
@@ -2670,22 +2670,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
                 return this;
               }
 
-              /** Service id. */
-              @com.google.api.client.util.Key
-              private java.lang.String serviceId;
-
-              /** Service id.
-               */
-              public java.lang.String getServiceId() {
-                return serviceId;
-              }
-
-              /** Service id. */
-              public Get setServiceId(java.lang.String serviceId) {
-                this.serviceId = serviceId;
-                return this;
-              }
-
               /** Plan id. */
               @com.google.api.client.util.Key
               private java.lang.String planId;
@@ -2699,6 +2683,22 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
               /** Plan id. */
               public Get setPlanId(java.lang.String planId) {
                 this.planId = planId;
+                return this;
+              }
+
+              /** Service id. */
+              @com.google.api.client.util.Key
+              private java.lang.String serviceId;
+
+              /** Service id.
+               */
+              public java.lang.String getServiceId() {
+                return serviceId;
+              }
+
+              /** Service id. */
+              public Get setServiceId(java.lang.String serviceId) {
+                this.serviceId = serviceId;
                 return this;
               }
 
@@ -2907,22 +2907,6 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
                 return this;
               }
 
-              /** Service id. */
-              @com.google.api.client.util.Key
-              private java.lang.String serviceId;
-
-              /** Service id.
-               */
-              public java.lang.String getServiceId() {
-                return serviceId;
-              }
-
-              /** Service id. */
-              public GetLastOperation setServiceId(java.lang.String serviceId) {
-                this.serviceId = serviceId;
-                return this;
-              }
-
               /**
                * If `operation` was returned during mutation operation, this field must be populated
                * with the provided value.
@@ -2959,6 +2943,22 @@ public class ServiceBroker extends com.google.api.client.googleapis.services.jso
               /** Plan id. */
               public GetLastOperation setPlanId(java.lang.String planId) {
                 this.planId = planId;
+                return this;
+              }
+
+              /** Service id. */
+              @com.google.api.client.util.Key
+              private java.lang.String serviceId;
+
+              /** Service id.
+               */
+              public java.lang.String getServiceId() {
+                return serviceId;
+              }
+
+              /** Service id. */
+              public GetLastOperation setServiceId(java.lang.String serviceId) {
+                this.serviceId = serviceId;
                 return this;
               }
 

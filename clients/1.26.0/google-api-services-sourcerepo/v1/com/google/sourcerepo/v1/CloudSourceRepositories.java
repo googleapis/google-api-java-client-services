@@ -1159,6 +1159,29 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         }
 
         /**
+         * Maximum number of repositories to return; between 1 and 500. If not set or zero, defaults
+         * to 100 at the server.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of repositories to return; between 1 and 500. If not set or zero, defaults to 100 at
+       the server.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of repositories to return; between 1 and 500. If not set or zero, defaults
+         * to 100 at the server.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * Resume listing repositories where a prior ListReposResponse left off. This is an opaque
          * token that must be obtained from a recent, prior ListReposResponse's next_page_token
          * field.
@@ -1180,29 +1203,6 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Maximum number of repositories to return; between 1 and 500. If not set or zero, defaults
-         * to 100 at the server.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of repositories to return; between 1 and 500. If not set or zero, defaults to 100 at
-       the server.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Maximum number of repositories to return; between 1 and 500. If not set or zero, defaults
-         * to 100 at the server.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 

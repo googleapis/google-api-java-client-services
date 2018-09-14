@@ -530,6 +530,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               return this;
             }
 
+            /** The number of results to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The number of results to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The number of results to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
             /**
              * A page token, returned from a previous call to FirestoreAdmin.ListFields, that may be
              * used to get the next page of results.
@@ -550,22 +566,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
-              return this;
-            }
-
-            /** The number of results to return. */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** The number of results to return.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /** The number of results to return. */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
               return this;
             }
 

@@ -89,7 +89,8 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger parentSpanId;
 
   /**
-   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace.
+   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace. For
+   * example, `2205310701640571284`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -228,7 +229,8 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace.
+   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace. For
+   * example, `2205310701640571284`.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getSpanId() {
@@ -236,7 +238,8 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace.
+   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace. For
+   * example, `2205310701640571284`.
    * @param spanId spanId or {@code null} for none
    */
   public TraceSpan setSpanId(java.math.BigInteger spanId) {

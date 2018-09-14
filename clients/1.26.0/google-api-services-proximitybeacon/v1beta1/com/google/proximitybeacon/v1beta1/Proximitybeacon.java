@@ -1395,6 +1395,28 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * The maximum number of records to return for this request, up to a server-defined upper
+       * limit.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of records to return for this request, up to a server-defined upper limit.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of records to return for this request, up to a server-defined upper
+       * limit.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
       /** A pagination token obtained from a previous request to list beacons. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
@@ -1408,6 +1430,29 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
       /** A pagination token obtained from a previous request to list beacons. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * The project id to list beacons under. If not present then the project credential that made
+       * the request is used as the project. Optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** The project id to list beacons under. If not present then the project credential that made the
+     request is used as the project. Optional.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /**
+       * The project id to list beacons under. If not present then the project credential that made
+       * the request is used as the project. Optional.
+       */
+      public List setProjectId(java.lang.String projectId) {
+        this.projectId = projectId;
         return this;
       }
 
@@ -1552,51 +1597,6 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
        */
       public List setQ(java.lang.String q) {
         this.q = q;
-        return this;
-      }
-
-      /**
-       * The maximum number of records to return for this request, up to a server-defined upper
-       * limit.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The maximum number of records to return for this request, up to a server-defined upper limit.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * The maximum number of records to return for this request, up to a server-defined upper
-       * limit.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /**
-       * The project id to list beacons under. If not present then the project credential that made
-       * the request is used as the project. Optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String projectId;
-
-      /** The project id to list beacons under. If not present then the project credential that made the
-     request is used as the project. Optional.
-       */
-      public java.lang.String getProjectId() {
-        return projectId;
-      }
-
-      /**
-       * The project id to list beacons under. If not present then the project credential that made
-       * the request is used as the project. Optional.
-       */
-      public List setProjectId(java.lang.String projectId) {
-        this.projectId = projectId;
         return this;
       }
 
@@ -2797,6 +2797,29 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Specifies the namespace and type of attachment to include in response in namespace/type
+         * format. Accepts `*` to specify "all types in all namespaces".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String namespacedType;
+
+        /** Specifies the namespace and type of attachment to include in response in namespace/type format.
+       Accepts `*` to specify "all types in all namespaces".
+         */
+        public java.lang.String getNamespacedType() {
+          return namespacedType;
+        }
+
+        /**
+         * Specifies the namespace and type of attachment to include in response in namespace/type
+         * format. Accepts `*` to specify "all types in all namespaces".
+         */
+        public List setNamespacedType(java.lang.String namespacedType) {
+          this.namespacedType = namespacedType;
+          return this;
+        }
+
+        /**
          * The project id to list beacon attachments under. This field can be used when "*" is
          * specified to mean all attachment namespaces. Projects may have multiple attachments with
          * multiple namespaces. If "*" is specified and the projectId string is empty, then the
@@ -2822,29 +2845,6 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
          */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
-          return this;
-        }
-
-        /**
-         * Specifies the namespace and type of attachment to include in response in namespace/type
-         * format. Accepts `*` to specify "all types in all namespaces".
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String namespacedType;
-
-        /** Specifies the namespace and type of attachment to include in response in namespace/type format.
-       Accepts `*` to specify "all types in all namespaces".
-         */
-        public java.lang.String getNamespacedType() {
-          return namespacedType;
-        }
-
-        /**
-         * Specifies the namespace and type of attachment to include in response in namespace/type
-         * format. Accepts `*` to specify "all types in all namespaces".
-         */
-        public List setNamespacedType(java.lang.String namespacedType) {
-          this.namespacedType = namespacedType;
           return this;
         }
 
@@ -3019,25 +3019,25 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Requests results that occur after the `page_token`, obtained from the response to a
-         * previous request. Optional.
+         * Requests only beacons that have the given alert. For example, to find beacons that have
+         * low batteries use `alert_filter=LOW_BATTERY`.
          */
         @com.google.api.client.util.Key
-        private java.lang.String pageToken;
+        private java.lang.String alertFilter;
 
-        /** Requests results that occur after the `page_token`, obtained from the response to a previous
-       request. Optional.
+        /** Requests only beacons that have the given alert. For example, to find beacons that have low
+       batteries use `alert_filter=LOW_BATTERY`.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        public java.lang.String getAlertFilter() {
+          return alertFilter;
         }
 
         /**
-         * Requests results that occur after the `page_token`, obtained from the response to a
-         * previous request. Optional.
+         * Requests only beacons that have the given alert. For example, to find beacons that have
+         * low batteries use `alert_filter=LOW_BATTERY`.
          */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        public List setAlertFilter(java.lang.String alertFilter) {
+          this.alertFilter = alertFilter;
           return this;
         }
 
@@ -3064,25 +3064,25 @@ public class Proximitybeacon extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Requests only beacons that have the given alert. For example, to find beacons that have
-         * low batteries use `alert_filter=LOW_BATTERY`.
+         * Requests results that occur after the `page_token`, obtained from the response to a
+         * previous request. Optional.
          */
         @com.google.api.client.util.Key
-        private java.lang.String alertFilter;
+        private java.lang.String pageToken;
 
-        /** Requests only beacons that have the given alert. For example, to find beacons that have low
-       batteries use `alert_filter=LOW_BATTERY`.
+        /** Requests results that occur after the `page_token`, obtained from the response to a previous
+       request. Optional.
          */
-        public java.lang.String getAlertFilter() {
-          return alertFilter;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
         /**
-         * Requests only beacons that have the given alert. For example, to find beacons that have
-         * low batteries use `alert_filter=LOW_BATTERY`.
+         * Requests results that occur after the `page_token`, obtained from the response to a
+         * previous request. Optional.
          */
-        public List setAlertFilter(java.lang.String alertFilter) {
-          this.alertFilter = alertFilter;
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

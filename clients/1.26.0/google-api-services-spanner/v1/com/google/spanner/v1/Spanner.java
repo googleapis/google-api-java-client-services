@@ -458,29 +458,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * If non-empty, `page_token` should contain a next_page_token from a previous
-         * ListInstanceConfigsResponse.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If non-empty, `page_token` should contain a next_page_token from a previous
-       ListInstanceConfigsResponse.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If non-empty, `page_token` should contain a next_page_token from a previous
-         * ListInstanceConfigsResponse.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Number of instance configurations to be returned in the response. If 0 or less, defaults
          * to the server's maximum allowed page size.
          */
@@ -500,6 +477,29 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If non-empty, `page_token` should contain a next_page_token from a previous
+         * ListInstanceConfigsResponse.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If non-empty, `page_token` should contain a next_page_token from a previous
+       ListInstanceConfigsResponse.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If non-empty, `page_token` should contain a next_page_token from a previous
+         * ListInstanceConfigsResponse.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1367,28 +1367,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * If non-empty, `page_token` should contain a next_page_token from a previous
-         * ListInstancesResponse.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If non-empty, `page_token` should contain a next_page_token from a previous ListInstancesResponse.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If non-empty, `page_token` should contain a next_page_token from a previous
-         * ListInstancesResponse.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Number of instances to be returned in the response. If 0 or less, defaults to the
          * server's maximum allowed page size.
          */
@@ -1408,6 +1386,28 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If non-empty, `page_token` should contain a next_page_token from a previous
+         * ListInstancesResponse.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If non-empty, `page_token` should contain a next_page_token from a previous ListInstancesResponse.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If non-empty, `page_token` should contain a next_page_token from a previous
+         * ListInstancesResponse.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2802,28 +2802,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * If non-empty, `page_token` should contain a next_page_token from a previous
-           * ListDatabasesResponse.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** If non-empty, `page_token` should contain a next_page_token from a previous ListDatabasesResponse.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * If non-empty, `page_token` should contain a next_page_token from a previous
-           * ListDatabasesResponse.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * Number of databases to be returned in the response. If 0 or less, defaults to the
            * server's maximum allowed page size.
            */
@@ -2843,6 +2821,28 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListDatabasesResponse.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If non-empty, `page_token` should contain a next_page_token from a previous ListDatabasesResponse.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If non-empty, `page_token` should contain a next_page_token from a previous
+           * ListDatabasesResponse.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -3870,19 +3870,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** The standard list page token. */
+            /** The standard list filter. */
             @com.google.api.client.util.Key
-            private java.lang.String pageToken;
+            private java.lang.String filter;
 
-            /** The standard list page token.
+            /** The standard list filter.
              */
-            public java.lang.String getPageToken() {
-              return pageToken;
+            public java.lang.String getFilter() {
+              return filter;
             }
 
-            /** The standard list page token. */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
+            /** The standard list filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
               return this;
             }
 
@@ -3902,19 +3902,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** The standard list filter. */
+            /** The standard list page token. */
             @com.google.api.client.util.Key
-            private java.lang.String filter;
+            private java.lang.String pageToken;
 
-            /** The standard list filter.
+            /** The standard list page token.
              */
-            public java.lang.String getFilter() {
-              return filter;
+            public java.lang.String getPageToken() {
+              return pageToken;
             }
 
-            /** The standard list filter. */
-            public List setFilter(java.lang.String filter) {
-              this.filter = filter;
+            /** The standard list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -5058,51 +5058,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * If non-empty, `page_token` should contain a next_page_token from a previous
-             * ListSessionsResponse.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** If non-empty, `page_token` should contain a next_page_token from a previous ListSessionsResponse.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /**
-             * If non-empty, `page_token` should contain a next_page_token from a previous
-             * ListSessionsResponse.
-             */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * Number of sessions to be returned in the response. If 0 or less, defaults to the
-             * server's maximum allowed page size.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Number of sessions to be returned in the response. If 0 or less, defaults to the server's maximum
-           allowed page size.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * Number of sessions to be returned in the response. If 0 or less, defaults to the
-             * server's maximum allowed page size.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
              * An expression for filtering the results of the request. Filter rules are case
              * insensitive. The fields eligible for filtering are:
              *
@@ -5143,6 +5098,51 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Number of sessions to be returned in the response. If 0 or less, defaults to the
+             * server's maximum allowed page size.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Number of sessions to be returned in the response. If 0 or less, defaults to the server's maximum
+           allowed page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Number of sessions to be returned in the response. If 0 or less, defaults to the
+             * server's maximum allowed page size.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * If non-empty, `page_token` should contain a next_page_token from a previous
+             * ListSessionsResponse.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** If non-empty, `page_token` should contain a next_page_token from a previous ListSessionsResponse.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * If non-empty, `page_token` should contain a next_page_token from a previous
+             * ListSessionsResponse.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -6451,19 +6451,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /** The standard list page token. */
+          /** The standard list filter. */
           @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          private java.lang.String filter;
 
-          /** The standard list page token.
+          /** The standard list filter.
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public java.lang.String getFilter() {
+            return filter;
           }
 
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          /** The standard list filter. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -6483,19 +6483,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /** The standard list filter. */
+          /** The standard list page token. */
           @com.google.api.client.util.Key
-          private java.lang.String filter;
+          private java.lang.String pageToken;
 
-          /** The standard list filter.
+          /** The standard list page token.
            */
-          public java.lang.String getFilter() {
-            return filter;
+          public java.lang.String getPageToken() {
+            return pageToken;
           }
 
-          /** The standard list filter. */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

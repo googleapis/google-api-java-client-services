@@ -397,6 +397,22 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
       /** The name of the operation's parent resource. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -410,22 +426,6 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
       /** The name of the operation's parent resource. */
       public List setName(java.lang.String name) {
         this.name = name;
-        return this;
-      }
-
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
         return this;
       }
 
@@ -445,19 +445,19 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         return this;
       }
 
-      /** The standard list filter. */
+      /** The standard list page token. */
       @com.google.api.client.util.Key
-      private java.lang.String filter;
+      private java.lang.String pageToken;
 
-      /** The standard list filter.
+      /** The standard list page token.
        */
-      public java.lang.String getFilter() {
-        return filter;
+      public java.lang.String getPageToken() {
+        return pageToken;
       }
 
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -642,19 +642,19 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           return this;
         }
 
-        /** The standard list page token. */
+        /** The standard list filter. */
         @com.google.api.client.util.Key
-        private java.lang.String pageToken;
+        private java.lang.String filter;
 
-        /** The standard list page token.
+        /** The standard list filter.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        public java.lang.String getFilter() {
+          return filter;
         }
 
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 
@@ -674,19 +674,19 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           return this;
         }
 
-        /** The standard list filter. */
+        /** The standard list page token. */
         @com.google.api.client.util.Key
-        private java.lang.String filter;
+        private java.lang.String pageToken;
 
-        /** The standard list filter.
+        /** The standard list page token.
          */
-        public java.lang.String getFilter() {
-          return filter;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
-        /** The standard list filter. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1719,6 +1719,22 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /** Maximum number of functions to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of functions to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of functions to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * The value returned by the last `ListFunctionsResponse`; indicates that this is a
            * continuation of a prior `ListFunctions` call, and that the system should return the
@@ -1741,22 +1757,6 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Maximum number of functions to return per call. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Maximum number of functions to return per call.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Maximum number of functions to return per call. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 

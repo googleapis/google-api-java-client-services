@@ -235,6 +235,28 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * The `id` parameter specifies the YouTube group item ID of the group item that is being
+       * deleted.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String id;
+
+      /** The `id` parameter specifies the YouTube group item ID of the group item that is being deleted.
+       */
+      public java.lang.String getId() {
+        return id;
+      }
+
+      /**
+       * The `id` parameter specifies the YouTube group item ID of the group item that is being
+       * deleted.
+       */
+      public Delete setId(java.lang.String id) {
+        this.id = id;
+        return this;
+      }
+
+      /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
        * YouTube channels.
@@ -277,28 +299,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        */
       public Delete setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
-        return this;
-      }
-
-      /**
-       * The `id` parameter specifies the YouTube group item ID of the group item that is being
-       * deleted.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String id;
-
-      /** The `id` parameter specifies the YouTube group item ID of the group item that is being deleted.
-       */
-      public java.lang.String getId() {
-        return id;
-      }
-
-      /**
-       * The `id` parameter specifies the YouTube group item ID of the group item that is being
-       * deleted.
-       */
-      public Delete setId(java.lang.String id) {
-        this.id = id;
         return this;
       }
 
@@ -554,6 +554,29 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * The `groupId` parameter specifies the unique ID of the group for which you want to retrieve
+       * group items.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String groupId;
+
+      /** The `groupId` parameter specifies the unique ID of the group for which you want to retrieve group
+     items.
+       */
+      public java.lang.String getGroupId() {
+        return groupId;
+      }
+
+      /**
+       * The `groupId` parameter specifies the unique ID of the group for which you want to retrieve
+       * group items.
+       */
+      public List setGroupId(java.lang.String groupId) {
+        this.groupId = groupId;
+        return this;
+      }
+
+      /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
        * YouTube channels.
@@ -596,29 +619,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        */
       public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
-        return this;
-      }
-
-      /**
-       * The `groupId` parameter specifies the unique ID of the group for which you want to retrieve
-       * group items.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String groupId;
-
-      /** The `groupId` parameter specifies the unique ID of the group for which you want to retrieve group
-     items.
-       */
-      public java.lang.String getGroupId() {
-        return groupId;
-      }
-
-      /**
-       * The `groupId` parameter specifies the unique ID of the group for which you want to retrieve
-       * group items.
-       */
-      public List setGroupId(java.lang.String groupId) {
-        this.groupId = groupId;
         return this;
       }
 
@@ -743,6 +743,26 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * The `id` parameter specifies the YouTube group ID of the group that is being deleted.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String id;
+
+      /** The `id` parameter specifies the YouTube group ID of the group that is being deleted.
+       */
+      public java.lang.String getId() {
+        return id;
+      }
+
+      /**
+       * The `id` parameter specifies the YouTube group ID of the group that is being deleted.
+       */
+      public Delete setId(java.lang.String id) {
+        this.id = id;
+        return this;
+      }
+
+      /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
        * YouTube channels.
@@ -785,26 +805,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        */
       public Delete setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
-        return this;
-      }
-
-      /**
-       * The `id` parameter specifies the YouTube group ID of the group that is being deleted.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String id;
-
-      /** The `id` parameter specifies the YouTube group ID of the group that is being deleted.
-       */
-      public java.lang.String getId() {
-        return id;
-      }
-
-      /**
-       * The `id` parameter specifies the YouTube group ID of the group that is being deleted.
-       */
-      public Delete setId(java.lang.String id) {
-        this.id = id;
         return this;
       }
 
@@ -1064,77 +1064,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * The `pageToken` parameter identifies a specific page in the result set that should be
-       * returned. In an API response, the `nextPageToken` property identifies the next page that
-       * can be retrieved.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The `pageToken` parameter identifies a specific page in the result set that should be returned. In
-     an API response, the `nextPageToken` property identifies the next page that can be retrieved.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * The `pageToken` parameter identifies a specific page in the result set that should be
-       * returned. In an API response, the `nextPageToken` property identifies the next page that
-       * can be retrieved.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * This parameter can only be used in a properly authorized request. **Note:** This parameter
-       * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String onBehalfOfContentOwner;
-
-      /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
-     intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
-       */
-      public java.lang.String getOnBehalfOfContentOwner() {
-        return onBehalfOfContentOwner;
-      }
-
-      /**
-       * This parameter can only be used in a properly authorized request. **Note:** This parameter
-       * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
-       */
-      public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
-        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
-        return this;
-      }
-
-      /**
        * The `id` parameter specifies a comma-separated list of the YouTube group ID(s) for the
        * resource(s) that are being retrieved. Each group must be owned by the authenticated user.
        * In a `group` resource, the `id` property specifies the group's YouTube group ID.
@@ -1189,6 +1118,77 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        */
       public List setMine(java.lang.Boolean mine) {
         this.mine = mine;
+        return this;
+      }
+
+      /**
+       * This parameter can only be used in a properly authorized request. **Note:** This parameter
+       * is intended exclusively for YouTube content partners that own and manage many different
+       * YouTube channels.
+       *
+       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+       * credentials identify a YouTube user who is acting on behalf of the content owner specified
+       * in the parameter value. It allows content owners to authenticate once and get access to all
+       * their video and channel data, without having to provide authentication credentials for each
+       * individual channel. The account that the user authenticates with must be linked to the
+       * specified YouTube content owner.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwner;
+
+      /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
+     intended exclusively for YouTube content partners that own and manage many different YouTube
+     channels.
+
+     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
+     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
+     value. It allows content owners to authenticate once and get access to all their video and channel
+     data, without having to provide authentication credentials for each individual channel. The account
+     that the user authenticates with must be linked to the specified YouTube content owner.
+       */
+      public java.lang.String getOnBehalfOfContentOwner() {
+        return onBehalfOfContentOwner;
+      }
+
+      /**
+       * This parameter can only be used in a properly authorized request. **Note:** This parameter
+       * is intended exclusively for YouTube content partners that own and manage many different
+       * YouTube channels.
+       *
+       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+       * credentials identify a YouTube user who is acting on behalf of the content owner specified
+       * in the parameter value. It allows content owners to authenticate once and get access to all
+       * their video and channel data, without having to provide authentication credentials for each
+       * individual channel. The account that the user authenticates with must be linked to the
+       * specified YouTube content owner.
+       */
+      public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+      }
+
+      /**
+       * The `pageToken` parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the `nextPageToken` property identifies the next page that
+       * can be retrieved.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The `pageToken` parameter identifies a specific page in the result set that should be returned. In
+     an API response, the `nextPageToken` property identifies the next page that can be retrieved.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The `pageToken` parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the `nextPageToken` property identifies the next page that
+       * can be retrieved.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1468,69 +1468,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * If set to true historical data (i.e. channel data from before the linking of the channel to
-       * the content owner) will be retrieved.",
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean includeHistoricalChannelData;
-
-      /** If set to true historical data (i.e. channel data from before the linking of the channel to the
-     content owner) will be retrieved.",
-       */
-      public java.lang.Boolean getIncludeHistoricalChannelData() {
-        return includeHistoricalChannelData;
-      }
-
-      /**
-       * If set to true historical data (i.e. channel data from before the linking of the channel to
-       * the content owner) will be retrieved.",
-       */
-      public Query setIncludeHistoricalChannelData(java.lang.Boolean includeHistoricalChannelData) {
-        this.includeHistoricalChannelData = includeHistoricalChannelData;
-        return this;
-      }
-
-      /**
-       * Identifies the YouTube channel or content owner for which you are retrieving YouTube
-       * Analytics data.
-       *
-       * - To request data for a YouTube user, set the `ids` parameter value to
-       * `channel==CHANNEL_ID`, where `CHANNEL_ID` specifies the unique YouTube channel ID. - To
-       * request data for a YouTube CMS content owner, set the `ids` parameter value to
-       * `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS name of the content owner.
-       * required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String ids;
-
-      /** Identifies the YouTube channel or content owner for which you are retrieving YouTube Analytics
-     data.
-
-     - To request data for a YouTube user, set the `ids` parameter value to `channel==CHANNEL_ID`, where
-     `CHANNEL_ID` specifies the unique YouTube channel ID. - To request data for a YouTube CMS content
-     owner, set the `ids` parameter value to `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS
-     name of the content owner. required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
-       */
-      public java.lang.String getIds() {
-        return ids;
-      }
-
-      /**
-       * Identifies the YouTube channel or content owner for which you are retrieving YouTube
-       * Analytics data.
-       *
-       * - To request data for a YouTube user, set the `ids` parameter value to
-       * `channel==CHANNEL_ID`, where `CHANNEL_ID` specifies the unique YouTube channel ID. - To
-       * request data for a YouTube CMS content owner, set the `ids` parameter value to
-       * `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS name of the content owner.
-       * required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
-       */
-      public Query setIds(java.lang.String ids) {
-        this.ids = ids;
-        return this;
-      }
-
-      /**
        * The currency to which financial metrics should be converted. The default is US Dollar
        * (USD). If the result contains no financial metrics, this flag will be ignored. Responds
        * with an error if the specified currency is not recognized.", pattern: [A-Z]{3}
@@ -1553,29 +1490,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        */
       public Query setCurrency(java.lang.String currency) {
         this.currency = currency;
-        return this;
-      }
-
-      /**
-       * An index of the first entity to retrieve. Use this parameter as a pagination mechanism
-       * along with the max-results parameter (one-based, inclusive).", minValue: 1
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer startIndex;
-
-      /** An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with
-     the max-results parameter (one-based, inclusive).", minValue: 1
-       */
-      public java.lang.Integer getStartIndex() {
-        return startIndex;
-      }
-
-      /**
-       * An index of the first entity to retrieve. Use this parameter as a pagination mechanism
-       * along with the max-results parameter (one-based, inclusive).", minValue: 1
-       */
-      public Query setStartIndex(java.lang.Integer startIndex) {
-        this.startIndex = startIndex;
         return this;
       }
 
@@ -1635,26 +1549,6 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * The maximum number of rows to include in the response.", minValue: 1
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer maxResults;
-
-      /** The maximum number of rows to include in the response.", minValue: 1
-       */
-      public java.lang.Integer getMaxResults() {
-        return maxResults;
-      }
-
-      /**
-       * The maximum number of rows to include in the response.", minValue: 1
-       */
-      public Query setMaxResults(java.lang.Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-      }
-
-      /**
        * A list of filters that should be applied when retrieving YouTube Analytics data. The
        * [Available Reports](/youtube/analytics/v2/available_reports) document identifies the
        * dimensions that can be used to filter each report, and the
@@ -1691,6 +1585,121 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        */
       public Query setFilters(java.lang.String filters) {
         this.filters = filters;
+        return this;
+      }
+
+      /**
+       * Identifies the YouTube channel or content owner for which you are retrieving YouTube
+       * Analytics data.
+       *
+       * - To request data for a YouTube user, set the `ids` parameter value to
+       * `channel==CHANNEL_ID`, where `CHANNEL_ID` specifies the unique YouTube channel ID. - To
+       * request data for a YouTube CMS content owner, set the `ids` parameter value to
+       * `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS name of the content owner.
+       * required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String ids;
+
+      /** Identifies the YouTube channel or content owner for which you are retrieving YouTube Analytics
+     data.
+
+     - To request data for a YouTube user, set the `ids` parameter value to `channel==CHANNEL_ID`, where
+     `CHANNEL_ID` specifies the unique YouTube channel ID. - To request data for a YouTube CMS content
+     owner, set the `ids` parameter value to `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS
+     name of the content owner. required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
+       */
+      public java.lang.String getIds() {
+        return ids;
+      }
+
+      /**
+       * Identifies the YouTube channel or content owner for which you are retrieving YouTube
+       * Analytics data.
+       *
+       * - To request data for a YouTube user, set the `ids` parameter value to
+       * `channel==CHANNEL_ID`, where `CHANNEL_ID` specifies the unique YouTube channel ID. - To
+       * request data for a YouTube CMS content owner, set the `ids` parameter value to
+       * `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS name of the content owner.
+       * required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
+       */
+      public Query setIds(java.lang.String ids) {
+        this.ids = ids;
+        return this;
+      }
+
+      /**
+       * If set to true historical data (i.e. channel data from before the linking of the channel to
+       * the content owner) will be retrieved.",
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeHistoricalChannelData;
+
+      /** If set to true historical data (i.e. channel data from before the linking of the channel to the
+     content owner) will be retrieved.",
+       */
+      public java.lang.Boolean getIncludeHistoricalChannelData() {
+        return includeHistoricalChannelData;
+      }
+
+      /**
+       * If set to true historical data (i.e. channel data from before the linking of the channel to
+       * the content owner) will be retrieved.",
+       */
+      public Query setIncludeHistoricalChannelData(java.lang.Boolean includeHistoricalChannelData) {
+        this.includeHistoricalChannelData = includeHistoricalChannelData;
+        return this;
+      }
+
+      /**
+       * The maximum number of rows to include in the response.", minValue: 1
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer maxResults;
+
+      /** The maximum number of rows to include in the response.", minValue: 1
+       */
+      public java.lang.Integer getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of rows to include in the response.", minValue: 1
+       */
+      public Query setMaxResults(java.lang.Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`.
+       * See the [Available Reports](/youtube/analytics/v2/available_reports)  document for a list
+       * of the reports that you can retrieve and the metrics available in each report, and see the
+       * [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics.
+       * required: true, pattern: [0-9a-zA-Z,]+
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String metrics;
+
+      /** A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`. See the
+     [Available Reports](/youtube/analytics/v2/available_reports)  document for a list of the reports
+     that you can retrieve and the metrics available in each report, and see the
+     [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics. required:
+     true, pattern: [0-9a-zA-Z,]+
+       */
+      public java.lang.String getMetrics() {
+        return metrics;
+      }
+
+      /**
+       * A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`.
+       * See the [Available Reports](/youtube/analytics/v2/available_reports)  document for a list
+       * of the reports that you can retrieve and the metrics available in each report, and see the
+       * [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics.
+       * required: true, pattern: [0-9a-zA-Z,]+
+       */
+      public Query setMetrics(java.lang.String metrics) {
+        this.metrics = metrics;
         return this;
       }
 
@@ -1744,34 +1753,25 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`.
-       * See the [Available Reports](/youtube/analytics/v2/available_reports)  document for a list
-       * of the reports that you can retrieve and the metrics available in each report, and see the
-       * [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics.
-       * required: true, pattern: [0-9a-zA-Z,]+
+       * An index of the first entity to retrieve. Use this parameter as a pagination mechanism
+       * along with the max-results parameter (one-based, inclusive).", minValue: 1
        */
       @com.google.api.client.util.Key
-      private java.lang.String metrics;
+      private java.lang.Integer startIndex;
 
-      /** A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`. See the
-     [Available Reports](/youtube/analytics/v2/available_reports)  document for a list of the reports
-     that you can retrieve and the metrics available in each report, and see the
-     [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics. required:
-     true, pattern: [0-9a-zA-Z,]+
+      /** An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with
+     the max-results parameter (one-based, inclusive).", minValue: 1
        */
-      public java.lang.String getMetrics() {
-        return metrics;
+      public java.lang.Integer getStartIndex() {
+        return startIndex;
       }
 
       /**
-       * A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`.
-       * See the [Available Reports](/youtube/analytics/v2/available_reports)  document for a list
-       * of the reports that you can retrieve and the metrics available in each report, and see the
-       * [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics.
-       * required: true, pattern: [0-9a-zA-Z,]+
+       * An index of the first entity to retrieve. Use this parameter as a pagination mechanism
+       * along with the max-results parameter (one-based, inclusive).", minValue: 1
        */
-      public Query setMetrics(java.lang.String metrics) {
-        this.metrics = metrics;
+      public Query setStartIndex(java.lang.Integer startIndex) {
+        this.startIndex = startIndex;
         return this;
       }
 

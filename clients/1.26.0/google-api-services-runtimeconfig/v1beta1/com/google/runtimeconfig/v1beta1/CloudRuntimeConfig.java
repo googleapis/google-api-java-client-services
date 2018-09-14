@@ -936,29 +936,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-         * previous list request to get the next page of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
-       request to get the next page of results.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
-         * previous list request to get the next page of results.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Specifies the number of results to return per page. If there are fewer elements than the
          * specified number, returns all elements.
          */
@@ -978,6 +955,29 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+         * previous list request to get the next page of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a previous list
+       request to get the next page of results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
+         * previous list request to get the next page of results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2432,6 +2432,55 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           }
 
           /**
+           * Filters variables by matching the specified filter. For example:
+           *
+           * `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filters variables by matching the specified filter. For example:
+
+         `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Filters variables by matching the specified filter. For example:
+           *
+           * `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Specifies the number of results to return per page. If there are fewer elements than
+           * the specified number, returns all elements.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Specifies the number of results to return per page. If there are fewer elements than the specified
+         number, returns all elements.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Specifies the number of results to return per page. If there are fewer elements than
+           * the specified number, returns all elements.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * Specifies a page token to use. Set `pageToken` to a `nextPageToken` returned by a
            * previous list request to get the next page of results.
            */
@@ -2476,55 +2525,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            */
           public List setReturnValues(java.lang.Boolean returnValues) {
             this.returnValues = returnValues;
-            return this;
-          }
-
-          /**
-           * Specifies the number of results to return per page. If there are fewer elements than
-           * the specified number, returns all elements.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Specifies the number of results to return per page. If there are fewer elements than the specified
-         number, returns all elements.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * Specifies the number of results to return per page. If there are fewer elements than
-           * the specified number, returns all elements.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /**
-           * Filters variables by matching the specified filter. For example:
-           *
-           * `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String filter;
-
-          /** Filters variables by matching the specified filter. For example:
-
-         `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
-           */
-          public java.lang.String getFilter() {
-            return filter;
-          }
-
-          /**
-           * Filters variables by matching the specified filter. For example:
-           *
-           * `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
-           */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
             return this;
           }
 

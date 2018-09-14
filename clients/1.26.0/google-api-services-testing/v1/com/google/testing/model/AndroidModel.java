@@ -51,7 +51,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.lang.String form;
 
   /**
-   * Whther this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whther this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getFormFactor() {
@@ -195,7 +195,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whther this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
    * @param formFactor formFactor or {@code null} for none
    */
   public AndroidModel setFormFactor(java.lang.String formFactor) {

@@ -690,6 +690,26 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Requested page size. The maximum page size is 100; this is also the default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. The maximum page size is 100; this is also the default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Requested page size. The maximum page size is 100; this is also the default.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
        * A token identifying a page of results to return. This should be a `next_page_token` value
        * returned from a previous `ListBillingAccounts` call. If unspecified, the first page of
        * results is returned.
@@ -711,26 +731,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Requested page size. The maximum page size is 100; this is also the default.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Requested page size. The maximum page size is 100; this is also the default.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * Requested page size. The maximum page size is 100; this is also the default.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 
@@ -1360,6 +1360,26 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Requested page size. The maximum page size is 100; this is also the default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The maximum page size is 100; this is also the default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The maximum page size is 100; this is also the default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * A token identifying a page of results to be returned. This should be a `next_page_token`
          * value returned from a previous `ListProjectBillingInfo` call. If unspecified, the first
          * page of results is returned.
@@ -1382,26 +1402,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Requested page size. The maximum page size is 100; this is also the default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. The maximum page size is 100; this is also the default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Requested page size. The maximum page size is 100; this is also the default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -1900,6 +1900,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Requested page size. Defaults to 5000. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. Defaults to 5000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Requested page size. Defaults to 5000. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
       /**
        * A token identifying a page of results to return. This should be a `next_page_token` value
        * returned from a previous `ListServices` call. If unspecified, the first page of results is
@@ -1922,22 +1938,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /** Requested page size. Defaults to 5000. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Requested page size. Defaults to 5000.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** Requested page size. Defaults to 5000. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 
@@ -2158,6 +2158,22 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /** Requested page size. Defaults to 5000. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. Defaults to 5000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Requested page size. Defaults to 5000. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * A token identifying a page of results to return. This should be a `next_page_token` value
          * returned from a previous `ListSkus` call. If unspecified, the first page of results is
@@ -2209,22 +2225,6 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
          */
         public List setStartTime(String startTime) {
           this.startTime = startTime;
-          return this;
-        }
-
-        /** Requested page size. Defaults to 5000. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. Defaults to 5000.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Requested page size. Defaults to 5000. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 

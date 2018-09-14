@@ -397,6 +397,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
       /** The name of the operation's parent resource. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -410,22 +426,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /** The name of the operation's parent resource. */
       public List setName(java.lang.String name) {
         this.name = name;
-        return this;
-      }
-
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
         return this;
       }
 
@@ -445,19 +445,19 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The standard list filter. */
+      /** The standard list page token. */
       @com.google.api.client.util.Key
-      private java.lang.String filter;
+      private java.lang.String pageToken;
 
-      /** The standard list filter.
+      /** The standard list page token.
        */
-      public java.lang.String getFilter() {
-        return filter;
+      public java.lang.String getPageToken() {
+        return pageToken;
       }
 
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1357,26 +1357,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Token identifying which result to start with, which is returned by a previous list call.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Token identifying which result to start with, which is returned by a previous list call.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * Token identifying which result to start with, which is returned by a previous list call.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
        * Requested size of the next page of data. Requested page size cannot exceed 200. If not set,
        * the default page size is 50.
        */
@@ -1396,6 +1376,26 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Token identifying which result to start with, which is returned by a previous list call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Token identifying which result to start with, which is returned by a previous list call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Token identifying which result to start with, which is returned by a previous list call.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

@@ -433,19 +433,19 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The standard list page token. */
+        /** The standard list filter. */
         @com.google.api.client.util.Key
-        private java.lang.String pageToken;
+        private java.lang.String filter;
 
-        /** The standard list page token.
+        /** The standard list filter.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        public java.lang.String getFilter() {
+          return filter;
         }
 
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 
@@ -465,19 +465,19 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The standard list filter. */
+        /** The standard list page token. */
         @com.google.api.client.util.Key
-        private java.lang.String filter;
+        private java.lang.String pageToken;
 
-        /** The standard list filter.
+        /** The standard list page token.
          */
-        public java.lang.String getFilter() {
-          return filter;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
-        /** The standard list filter. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1163,26 +1163,6 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The next_page_token value returned from a previous List request, if any.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The next_page_token value returned from a previous List request, if any.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * The next_page_token value returned from a previous List request, if any.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * The maximum number of items to return.
            *
            * If not specified, a default value of 1000 will be used by the service. Regardless of
@@ -1213,6 +1193,26 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The next_page_token value returned from a previous List request, if any.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The next_page_token value returned from a previous List request, if any.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -2027,22 +2027,6 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** The standard list page token. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The standard list page token.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The standard list page token. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
           /** The standard list page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -2056,6 +2040,22 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /** The standard list page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The standard list page token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The standard list page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 

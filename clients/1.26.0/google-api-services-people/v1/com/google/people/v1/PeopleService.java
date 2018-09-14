@@ -803,29 +803,6 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
-       * since the sync token was created will be returned.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String syncToken;
-
-      /** A sync token, returned by a previous call to `contactgroups.list`. Only resources changed since the
-     sync token was created will be returned.
-       */
-      public java.lang.String getSyncToken() {
-        return syncToken;
-      }
-
-      /**
-       * A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
-       * since the sync token was created will be returned.
-       */
-      public List setSyncToken(java.lang.String syncToken) {
-        this.syncToken = syncToken;
-        return this;
-      }
-
-      /**
        * The next_page_token value returned from a previous call to
        * [ListContactGroups](/people/api/rest/v1/contactgroups/list). Requests the next page of
        * resources.
@@ -847,6 +824,29 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
+       * since the sync token was created will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String syncToken;
+
+      /** A sync token, returned by a previous call to `contactgroups.list`. Only resources changed since the
+     sync token was created will be returned.
+       */
+      public java.lang.String getSyncToken() {
+        return syncToken;
+      }
+
+      /**
+       * A sync token, returned by a previous call to `contactgroups.list`. Only resources changed
+       * since the sync token was created will be returned.
+       */
+      public List setSyncToken(java.lang.String syncToken) {
+        this.syncToken = syncToken;
         return this;
       }
 
@@ -1772,6 +1772,48 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
+       * **Required.** A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are:
+       *
+       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
+       * emailAddresses * events * genders * imClients * interests * locales * memberships *
+       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
+       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
+       * skills * taglines * urls * userDefined
+       */
+      @com.google.api.client.util.Key
+      private String personFields;
+
+      /**** Required.** A field mask to restrict which fields on each person are returned. Multiple fields
+    ** can be specified by separating them with commas. Valid values are:
+    **
+    ** * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses
+    ** * events * genders * imClients * interests * locales * memberships * metadata * names * nicknames
+    ** * occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
+    ** relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
+    **
+
+       */
+      public String getPersonFields() {
+        return personFields;
+      }
+
+      /**
+       * **Required.** A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are:
+       *
+       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
+       * emailAddresses * events * genders * imClients * interests * locales * memberships *
+       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
+       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
+       * skills * taglines * urls * userDefined
+       */
+      public GetBatchGet setPersonFields(String personFields) {
+        this.personFields = personFields;
+        return this;
+      }
+
+      /**
        * **Required.** Comma-separated list of person fields to be included in the response. Each
        * path should start with `person.`: for example, `person.names` or `person.photos`.
        */
@@ -1834,48 +1876,6 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        */
       public GetBatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;
-        return this;
-      }
-
-      /**
-       * **Required.** A field mask to restrict which fields on each person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
-       */
-      @com.google.api.client.util.Key
-      private String personFields;
-
-      /**** Required.** A field mask to restrict which fields on each person are returned. Multiple fields
-    ** can be specified by separating them with commas. Valid values are:
-    **
-    ** * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses
-    ** * events * genders * imClients * interests * locales * memberships * metadata * names * nicknames
-    ** * occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-    ** relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
-    **
-
-       */
-      public String getPersonFields() {
-        return personFields;
-      }
-
-      /**
-       * **Required.** A field mask to restrict which fields on each person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
-       */
-      public GetBatchGet setPersonFields(String personFields) {
-        this.personFields = personFields;
         return this;
       }
 
@@ -2245,73 +2245,6 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Whether the response should include a sync token, which can be used to get all changes
-         * since the last request. For subsequent sync requests use the `sync_token` param instead.
-         * Initial sync requests that specify `request_sync_token` have an additional rate limit.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean requestSyncToken;
-
-        /** Whether the response should include a sync token, which can be used to get all changes since the
-       last request. For subsequent sync requests use the `sync_token` param instead. Initial sync
-       requests that specify `request_sync_token` have an additional rate limit.
-         */
-        public java.lang.Boolean getRequestSyncToken() {
-          return requestSyncToken;
-        }
-
-        /**
-         * Whether the response should include a sync token, which can be used to get all changes
-         * since the last request. For subsequent sync requests use the `sync_token` param instead.
-         * Initial sync requests that specify `request_sync_token` have an additional rate limit.
-         */
-        public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
-          this.requestSyncToken = requestSyncToken;
-          return this;
-        }
-
-        /** The token of the page to be returned. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The token of the page to be returned.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The token of the page to be returned. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * **Required.** Comma-separated list of person fields to be included in the response. Each
-         * path should start with `person.`: for example, `person.names` or `person.photos`.
-         */
-        @com.google.api.client.util.Key("requestMask.includeField")
-        private String requestMaskIncludeField;
-
-        /**** Required.** Comma-separated list of person fields to be included in the response. Each path
-      ** should start with `person.`: for example, `person.names` or `person.photos`.
-      **
-
-         */
-        public String getRequestMaskIncludeField() {
-          return requestMaskIncludeField;
-        }
-
-        /**
-         * **Required.** Comma-separated list of person fields to be included in the response. Each
-         * path should start with `person.`: for example, `person.names` or `person.photos`.
-         */
-        public List setRequestMaskIncludeField(String requestMaskIncludeField) {
-          this.requestMaskIncludeField = requestMaskIncludeField;
-          return this;
-        }
-
-        /**
          * The number of connections to include in the response. Valid values are between 1 and
          * 2000, inclusive. Defaults to 100.
          */
@@ -2334,29 +2267,19 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /**
-         * A sync token returned by a previous call to `people.connections.list`. Only resources
-         * changed since the sync token was created will be returned. Sync requests that specify
-         * `sync_token` have an additional rate limit.
-         */
+        /** The token of the page to be returned. */
         @com.google.api.client.util.Key
-        private java.lang.String syncToken;
+        private java.lang.String pageToken;
 
-        /** A sync token returned by a previous call to `people.connections.list`. Only resources changed since
-       the sync token was created will be returned. Sync requests that specify `sync_token` have an
-       additional rate limit.
+        /** The token of the page to be returned.
          */
-        public java.lang.String getSyncToken() {
-          return syncToken;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
-        /**
-         * A sync token returned by a previous call to `people.connections.list`. Only resources
-         * changed since the sync token was created will be returned. Sync requests that specify
-         * `sync_token` have an additional rate limit.
-         */
-        public List setSyncToken(java.lang.String syncToken) {
-          this.syncToken = syncToken;
+        /** The token of the page to be returned. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2403,6 +2326,57 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * **Required.** Comma-separated list of person fields to be included in the response. Each
+         * path should start with `person.`: for example, `person.names` or `person.photos`.
+         */
+        @com.google.api.client.util.Key("requestMask.includeField")
+        private String requestMaskIncludeField;
+
+        /**** Required.** Comma-separated list of person fields to be included in the response. Each path
+      ** should start with `person.`: for example, `person.names` or `person.photos`.
+      **
+
+         */
+        public String getRequestMaskIncludeField() {
+          return requestMaskIncludeField;
+        }
+
+        /**
+         * **Required.** Comma-separated list of person fields to be included in the response. Each
+         * path should start with `person.`: for example, `person.names` or `person.photos`.
+         */
+        public List setRequestMaskIncludeField(String requestMaskIncludeField) {
+          this.requestMaskIncludeField = requestMaskIncludeField;
+          return this;
+        }
+
+        /**
+         * Whether the response should include a sync token, which can be used to get all changes
+         * since the last request. For subsequent sync requests use the `sync_token` param instead.
+         * Initial sync requests that specify `request_sync_token` have an additional rate limit.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean requestSyncToken;
+
+        /** Whether the response should include a sync token, which can be used to get all changes since the
+       last request. For subsequent sync requests use the `sync_token` param instead. Initial sync
+       requests that specify `request_sync_token` have an additional rate limit.
+         */
+        public java.lang.Boolean getRequestSyncToken() {
+          return requestSyncToken;
+        }
+
+        /**
+         * Whether the response should include a sync token, which can be used to get all changes
+         * since the last request. For subsequent sync requests use the `sync_token` param instead.
+         * Initial sync requests that specify `request_sync_token` have an additional rate limit.
+         */
+        public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
+          this.requestSyncToken = requestSyncToken;
+          return this;
+        }
+
+        /**
          * The order in which the connections should be sorted. Defaults to
          * `LAST_MODIFIED_ASCENDING`.
          */
@@ -2421,6 +2395,32 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
          */
         public List setSortOrder(java.lang.String sortOrder) {
           this.sortOrder = sortOrder;
+          return this;
+        }
+
+        /**
+         * A sync token returned by a previous call to `people.connections.list`. Only resources
+         * changed since the sync token was created will be returned. Sync requests that specify
+         * `sync_token` have an additional rate limit.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String syncToken;
+
+        /** A sync token returned by a previous call to `people.connections.list`. Only resources changed since
+       the sync token was created will be returned. Sync requests that specify `sync_token` have an
+       additional rate limit.
+         */
+        public java.lang.String getSyncToken() {
+          return syncToken;
+        }
+
+        /**
+         * A sync token returned by a previous call to `people.connections.list`. Only resources
+         * changed since the sync token was created will be returned. Sync requests that specify
+         * `sync_token` have an additional rate limit.
+         */
+        public List setSyncToken(java.lang.String syncToken) {
+          this.syncToken = syncToken;
           return this;
         }
 

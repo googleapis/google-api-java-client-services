@@ -387,6 +387,70 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
       }
 
       /**
+       * Filter assets based on the specified category. Supported values are: `animals`,
+       * `architecture`, `art`, `food`, `nature`, `objects`, `people`, `scenes`, `technology`, and
+       * `transport`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String category;
+
+      /** Filter assets based on the specified category. Supported values are: `animals`, `architecture`,
+     `art`, `food`, `nature`, `objects`, `people`, `scenes`, `technology`, and `transport`.
+       */
+      public java.lang.String getCategory() {
+        return category;
+      }
+
+      /**
+       * Filter assets based on the specified category. Supported values are: `animals`,
+       * `architecture`, `art`, `food`, `nature`, `objects`, `people`, `scenes`, `technology`, and
+       * `transport`.
+       */
+      public List setCategory(java.lang.String category) {
+        this.category = category;
+        return this;
+      }
+
+      /** Return only assets that have been curated by the Poly team. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean curated;
+
+      /** Return only assets that have been curated by the Poly team.
+       */
+      public java.lang.Boolean getCurated() {
+        return curated;
+      }
+
+      /** Return only assets that have been curated by the Poly team. */
+      public List setCurated(java.lang.Boolean curated) {
+        this.curated = curated;
+        return this;
+      }
+
+      /**
+       * Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`,
+       * `GLTF`, `GLTF2`, `OBJ`, `TILT`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String format;
+
+      /** Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`, `GLTF`,
+     `GLTF2`, `OBJ`, `TILT`.
+       */
+      public java.lang.String getFormat() {
+        return format;
+      }
+
+      /**
+       * Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`,
+       * `GLTF`, `GLTF2`, `OBJ`, `TILT`.
+       */
+      public List setFormat(java.lang.String format) {
+        this.format = format;
+        return this;
+      }
+
+      /**
        * One or more search terms to be matched against all text that Poly has indexed for assets,
        * which includes display_name, description, and tags. Multiple keywords should be separated
        * by spaces.
@@ -408,6 +472,29 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
        */
       public List setKeywords(java.lang.String keywords) {
         this.keywords = keywords;
+        return this;
+      }
+
+      /**
+       * Returns assets that are of the specified complexity or less. Defaults to COMPLEX. For
+       * example, a request for MEDIUM assets also includes SIMPLE assets.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String maxComplexity;
+
+      /** Returns assets that are of the specified complexity or less. Defaults to COMPLEX. For example, a
+     request for MEDIUM assets also includes SIMPLE assets.
+       */
+      public java.lang.String getMaxComplexity() {
+        return maxComplexity;
+      }
+
+      /**
+       * Returns assets that are of the specified complexity or less. Defaults to COMPLEX. For
+       * example, a request for MEDIUM assets also includes SIMPLE assets.
+       */
+      public List setMaxComplexity(java.lang.String maxComplexity) {
+        this.maxComplexity = maxComplexity;
         return this;
       }
 
@@ -437,66 +524,25 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`,
-       * `GLTF`, `GLTF2`, `OBJ`, `TILT`.
+       * The maximum number of assets to be returned. This value must be between `1` and `100`.
+       * Defaults to `20`.
        */
       @com.google.api.client.util.Key
-      private java.lang.String format;
+      private java.lang.Integer pageSize;
 
-      /** Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`, `GLTF`,
-     `GLTF2`, `OBJ`, `TILT`.
+      /** The maximum number of assets to be returned. This value must be between `1` and `100`. Defaults to
+     `20`.
        */
-      public java.lang.String getFormat() {
-        return format;
+      public java.lang.Integer getPageSize() {
+        return pageSize;
       }
 
       /**
-       * Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`,
-       * `GLTF`, `GLTF2`, `OBJ`, `TILT`.
+       * The maximum number of assets to be returned. This value must be between `1` and `100`.
+       * Defaults to `20`.
        */
-      public List setFormat(java.lang.String format) {
-        this.format = format;
-        return this;
-      }
-
-      /** Return only assets that have been curated by the Poly team. */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean curated;
-
-      /** Return only assets that have been curated by the Poly team.
-       */
-      public java.lang.Boolean getCurated() {
-        return curated;
-      }
-
-      /** Return only assets that have been curated by the Poly team. */
-      public List setCurated(java.lang.Boolean curated) {
-        this.curated = curated;
-        return this;
-      }
-
-      /**
-       * Filter assets based on the specified category. Supported values are: `animals`,
-       * `architecture`, `art`, `food`, `nature`, `objects`, `people`, `scenes`, `technology`, and
-       * `transport`.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String category;
-
-      /** Filter assets based on the specified category. Supported values are: `animals`, `architecture`,
-     `art`, `food`, `nature`, `objects`, `people`, `scenes`, `technology`, and `transport`.
-       */
-      public java.lang.String getCategory() {
-        return category;
-      }
-
-      /**
-       * Filter assets based on the specified category. Supported values are: `animals`,
-       * `architecture`, `art`, `food`, `nature`, `objects`, `people`, `scenes`, `technology`, and
-       * `transport`.
-       */
-      public List setCategory(java.lang.String category) {
-        this.category = category;
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
       }
 
@@ -522,52 +568,6 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Returns assets that are of the specified complexity or less. Defaults to COMPLEX. For
-       * example, a request for MEDIUM assets also includes SIMPLE assets.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String maxComplexity;
-
-      /** Returns assets that are of the specified complexity or less. Defaults to COMPLEX. For example, a
-     request for MEDIUM assets also includes SIMPLE assets.
-       */
-      public java.lang.String getMaxComplexity() {
-        return maxComplexity;
-      }
-
-      /**
-       * Returns assets that are of the specified complexity or less. Defaults to COMPLEX. For
-       * example, a request for MEDIUM assets also includes SIMPLE assets.
-       */
-      public List setMaxComplexity(java.lang.String maxComplexity) {
-        this.maxComplexity = maxComplexity;
-        return this;
-      }
-
-      /**
-       * The maximum number of assets to be returned. This value must be between `1` and `100`.
-       * Defaults to `20`.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The maximum number of assets to be returned. This value must be between `1` and `100`. Defaults to
-     `20`.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * The maximum number of assets to be returned. This value must be between `1` and `100`.
-       * Defaults to `20`.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 
@@ -795,27 +795,27 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Specifies a continuation token from a previous search whose results were split into
-         * multiple pages. To get the next page, submit the same request specifying the value from
-         * next_page_token.
+         * Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`.
+         * Defaults to `BEST`, which ranks assets based on a combination of popularity and other
+         * features.
          */
         @com.google.api.client.util.Key
-        private java.lang.String pageToken;
+        private java.lang.String orderBy;
 
-        /** Specifies a continuation token from a previous search whose results were split into multiple pages.
-       To get the next page, submit the same request specifying the value from next_page_token.
+        /** Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`. Defaults to
+       `BEST`, which ranks assets based on a combination of popularity and other features.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        public java.lang.String getOrderBy() {
+          return orderBy;
         }
 
         /**
-         * Specifies a continuation token from a previous search whose results were split into
-         * multiple pages. To get the next page, submit the same request specifying the value from
-         * next_page_token.
+         * Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`.
+         * Defaults to `BEST`, which ranks assets based on a combination of popularity and other
+         * features.
          */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
           return this;
         }
 
@@ -843,6 +843,31 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
         }
 
         /**
+         * Specifies a continuation token from a previous search whose results were split into
+         * multiple pages. To get the next page, submit the same request specifying the value from
+         * next_page_token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Specifies a continuation token from a previous search whose results were split into multiple pages.
+       To get the next page, submit the same request specifying the value from next_page_token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Specifies a continuation token from a previous search whose results were split into
+         * multiple pages. To get the next page, submit the same request specifying the value from
+         * next_page_token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
          * The visibility of the assets to be returned. Defaults to VISIBILITY_UNSPECIFIED which
          * returns all assets.
          */
@@ -862,31 +887,6 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
          */
         public List setVisibility(java.lang.String visibility) {
           this.visibility = visibility;
-          return this;
-        }
-
-        /**
-         * Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`.
-         * Defaults to `BEST`, which ranks assets based on a combination of popularity and other
-         * features.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String orderBy;
-
-        /** Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`. Defaults to
-       `BEST`, which ranks assets based on a combination of popularity and other features.
-         */
-        public java.lang.String getOrderBy() {
-          return orderBy;
-        }
-
-        /**
-         * Specifies an ordering for assets. Acceptable values are: `BEST`, `NEWEST`, `OLDEST`.
-         * Defaults to `BEST`, which ranks assets based on a combination of popularity and other
-         * features.
-         */
-        public List setOrderBy(java.lang.String orderBy) {
-          this.orderBy = orderBy;
           return this;
         }
 
@@ -1068,29 +1068,6 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * The maximum number of assets to be returned. This value must be between `1` and `100`.
-         * Defaults to `20`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The maximum number of assets to be returned. This value must be between `1` and `100`. Defaults to
-       `20`.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * The maximum number of assets to be returned. This value must be between `1` and `100`.
-         * Defaults to `20`.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * Return only assets with the matching format. Acceptable values are: `BLOCKS`, `FBX`,
          * `GLTF`, `GLTF2`, `OBJ`, `TILT`.
          */
@@ -1135,6 +1112,29 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * The maximum number of assets to be returned. This value must be between `1` and `100`.
+         * Defaults to `20`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of assets to be returned. This value must be between `1` and `100`. Defaults to
+       `20`.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of assets to be returned. This value must be between `1` and `100`.
+         * Defaults to `20`.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 

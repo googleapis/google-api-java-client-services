@@ -1145,37 +1145,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. The number of jobs to retrieve per "page" of results. If there are more
-         * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Optional. The number of jobs to retrieve per "page" of results. If there are more remaining results
-       than this number, the response message will contain a valid value in the `next_page_token` field.
-
-       The default value is 20, and the maximum page size is 100.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Optional. The number of jobs to retrieve per "page" of results. If there are more
-         * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * Optional. Specifies the subset of jobs to retrieve. You can filter on the value of one or
          * more attributes of the job object. For example, retrieve jobs with a job identifier that
          * starts with 'census': gcloud ml-engine jobs list --filter='jobId:census*' List all failed
@@ -1204,6 +1173,37 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The number of jobs to retrieve per "page" of results. If there are more
+         * remaining results than this number, the response message will contain a valid value in
+         * the `next_page_token` field.
+         *
+         * The default value is 20, and the maximum page size is 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The number of jobs to retrieve per "page" of results. If there are more remaining results
+       than this number, the response message will contain a valid value in the `next_page_token` field.
+
+       The default value is 20, and the maximum page size is 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The number of jobs to retrieve per "page" of results. If there are more
+         * remaining results than this number, the response message will contain a valid value in
+         * the `next_page_token` field.
+         *
+         * The default value is 20, and the maximum page size is 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -2024,34 +2024,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional. A page token to request the next page of results.
-
-       You get the token from the `next_page_token` field of the response from the previous call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional. The number of locations to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
          * the `next_page_token` field.
@@ -2080,6 +2052,34 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token to request the next page of results.
+         *
+         * You get the token from the `next_page_token` field of the response from the previous
+         * call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token to request the next page of results.
+
+       You get the token from the `next_page_token` field of the response from the previous call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token to request the next page of results.
+         *
+         * You get the token from the `next_page_token` field of the response from the previous
+         * call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2818,31 +2818,19 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           return this;
         }
 
-        /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
-         */
+        /** Optional. Specifies the subset of models to retrieve. */
         @com.google.api.client.util.Key
-        private java.lang.String pageToken;
+        private java.lang.String filter;
 
-        /** Optional. A page token to request the next page of results.
-
-       You get the token from the `next_page_token` field of the response from the previous call.
+        /** Optional. Specifies the subset of models to retrieve.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        public java.lang.String getFilter() {
+          return filter;
         }
 
-        /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        /** Optional. Specifies the subset of models to retrieve. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
           return this;
         }
 
@@ -2878,19 +2866,31 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           return this;
         }
 
-        /** Optional. Specifies the subset of models to retrieve. */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** Optional. Specifies the subset of models to retrieve.
+        /**
+         * Optional. A page token to request the next page of results.
+         *
+         * You get the token from the `next_page_token` field of the response from the previous
+         * call.
          */
-        public java.lang.String getFilter() {
-          return filter;
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token to request the next page of results.
+
+       You get the token from the `next_page_token` field of the response from the previous call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
-        /** Optional. Specifies the subset of models to retrieve. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
+        /**
+         * Optional. A page token to request the next page of results.
+         *
+         * You get the token from the `next_page_token` field of the response from the previous
+         * call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3992,34 +3992,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
 
           /**
-           * Optional. A page token to request the next page of results.
-           *
-           * You get the token from the `next_page_token` field of the response from the previous
-           * call.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Optional. A page token to request the next page of results.
-
-         You get the token from the `next_page_token` field of the response from the previous call.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * Optional. A page token to request the next page of results.
-           *
-           * You get the token from the `next_page_token` field of the response from the previous
-           * call.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * Optional. The number of versions to retrieve per "page" of results. If there are more
            * remaining results than this number, the response message will contain a valid value in
            * the `next_page_token` field.
@@ -4048,6 +4020,34 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token to request the next page of results.
+           *
+           * You get the token from the `next_page_token` field of the response from the previous
+           * call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token to request the next page of results.
+
+         You get the token from the `next_page_token` field of the response from the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token to request the next page of results.
+           *
+           * You get the token from the `next_page_token` field of the response from the previous
+           * call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -4992,22 +4992,6 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           return this;
         }
 
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -5021,6 +5005,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

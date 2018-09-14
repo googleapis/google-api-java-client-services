@@ -653,25 +653,25 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * Requested page size. Server may return fewer jobs than requested. If unspecified, server
-       * will pick an appropriate default.
+       * If set to true, also system-managed jobs will be returned; otherwise only user-created jobs
+       * will be returned. System-managed jobs can neither be modified nor deleted.
        */
       @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
+      private java.lang.Boolean includeSystemManaged;
 
-      /** Requested page size. Server may return fewer jobs than requested. If unspecified, server will pick
-     an appropriate default.
+      /** If set to true, also system-managed jobs will be returned; otherwise only user-created jobs will be
+     returned. System-managed jobs can neither be modified nor deleted.
        */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
+      public java.lang.Boolean getIncludeSystemManaged() {
+        return includeSystemManaged;
       }
 
       /**
-       * Requested page size. Server may return fewer jobs than requested. If unspecified, server
-       * will pick an appropriate default.
+       * If set to true, also system-managed jobs will be returned; otherwise only user-created jobs
+       * will be returned. System-managed jobs can neither be modified nor deleted.
        */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
+      public List setIncludeSystemManaged(java.lang.Boolean includeSystemManaged) {
+        this.includeSystemManaged = includeSystemManaged;
         return this;
       }
 
@@ -699,6 +699,29 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * Requested page size. Server may return fewer jobs than requested. If unspecified, server
+       * will pick an appropriate default.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested page size. Server may return fewer jobs than requested. If unspecified, server will pick
+     an appropriate default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Requested page size. Server may return fewer jobs than requested. If unspecified, server
+       * will pick an appropriate default.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
        * A token identifying a page of results the server should return. Typically, this is the
        * value of ListReportTypesResponse.next_page_token returned in response to the previous call
        * to the `ListJobs` method.
@@ -721,29 +744,6 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * If set to true, also system-managed jobs will be returned; otherwise only user-created jobs
-       * will be returned. System-managed jobs can neither be modified nor deleted.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean includeSystemManaged;
-
-      /** If set to true, also system-managed jobs will be returned; otherwise only user-created jobs will be
-     returned. System-managed jobs can neither be modified nor deleted.
-       */
-      public java.lang.Boolean getIncludeSystemManaged() {
-        return includeSystemManaged;
-      }
-
-      /**
-       * If set to true, also system-managed jobs will be returned; otherwise only user-created jobs
-       * will be returned. System-managed jobs can neither be modified nor deleted.
-       */
-      public List setIncludeSystemManaged(java.lang.Boolean includeSystemManaged) {
-        this.includeSystemManaged = includeSystemManaged;
         return this;
       }
 
@@ -1060,6 +1060,22 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
           return this;
         }
 
+        /** If set, only reports created after the specified date/time are returned. */
+        @com.google.api.client.util.Key
+        private String createdAfter;
+
+        /** If set, only reports created after the specified date/time are returned.
+         */
+        public String getCreatedAfter() {
+          return createdAfter;
+        }
+
+        /** If set, only reports created after the specified date/time are returned. */
+        public List setCreatedAfter(String createdAfter) {
+          this.createdAfter = createdAfter;
+          return this;
+        }
+
         /**
          * The content owner's external ID on which behalf the user is acting on. If not set, the
          * user is acting for himself (his own channel).
@@ -1084,63 +1100,25 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * If set, only reports whose start time is smaller than the specified date/time are
-         * returned.
+         * Requested page size. Server may return fewer report types than requested. If unspecified,
+         * server will pick an appropriate default.
          */
         @com.google.api.client.util.Key
-        private String startTimeBefore;
+        private java.lang.Integer pageSize;
 
-        /** If set, only reports whose start time is smaller than the specified date/time are returned.
+        /** Requested page size. Server may return fewer report types than requested. If unspecified, server
+       will pick an appropriate default.
          */
-        public String getStartTimeBefore() {
-          return startTimeBefore;
+        public java.lang.Integer getPageSize() {
+          return pageSize;
         }
 
         /**
-         * If set, only reports whose start time is smaller than the specified date/time are
-         * returned.
+         * Requested page size. Server may return fewer report types than requested. If unspecified,
+         * server will pick an appropriate default.
          */
-        public List setStartTimeBefore(String startTimeBefore) {
-          this.startTimeBefore = startTimeBefore;
-          return this;
-        }
-
-        /** If set, only reports created after the specified date/time are returned. */
-        @com.google.api.client.util.Key
-        private String createdAfter;
-
-        /** If set, only reports created after the specified date/time are returned.
-         */
-        public String getCreatedAfter() {
-          return createdAfter;
-        }
-
-        /** If set, only reports created after the specified date/time are returned. */
-        public List setCreatedAfter(String createdAfter) {
-          this.createdAfter = createdAfter;
-          return this;
-        }
-
-        /**
-         * If set, only reports whose start time is greater than or equal the specified date/time
-         * are returned.
-         */
-        @com.google.api.client.util.Key
-        private String startTimeAtOrAfter;
-
-        /** If set, only reports whose start time is greater than or equal the specified date/time are
-       returned.
-         */
-        public String getStartTimeAtOrAfter() {
-          return startTimeAtOrAfter;
-        }
-
-        /**
-         * If set, only reports whose start time is greater than or equal the specified date/time
-         * are returned.
-         */
-        public List setStartTimeAtOrAfter(String startTimeAtOrAfter) {
-          this.startTimeAtOrAfter = startTimeAtOrAfter;
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -1171,25 +1149,47 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Requested page size. Server may return fewer report types than requested. If unspecified,
-         * server will pick an appropriate default.
+         * If set, only reports whose start time is greater than or equal the specified date/time
+         * are returned.
          */
         @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
+        private String startTimeAtOrAfter;
 
-        /** Requested page size. Server may return fewer report types than requested. If unspecified, server
-       will pick an appropriate default.
+        /** If set, only reports whose start time is greater than or equal the specified date/time are
+       returned.
          */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
+        public String getStartTimeAtOrAfter() {
+          return startTimeAtOrAfter;
         }
 
         /**
-         * Requested page size. Server may return fewer report types than requested. If unspecified,
-         * server will pick an appropriate default.
+         * If set, only reports whose start time is greater than or equal the specified date/time
+         * are returned.
          */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
+        public List setStartTimeAtOrAfter(String startTimeAtOrAfter) {
+          this.startTimeAtOrAfter = startTimeAtOrAfter;
+          return this;
+        }
+
+        /**
+         * If set, only reports whose start time is smaller than the specified date/time are
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private String startTimeBefore;
+
+        /** If set, only reports whose start time is smaller than the specified date/time are returned.
+         */
+        public String getStartTimeBefore() {
+          return startTimeBefore;
+        }
+
+        /**
+         * If set, only reports whose start time is smaller than the specified date/time are
+         * returned.
+         */
+        public List setStartTimeBefore(String startTimeBefore) {
+          this.startTimeBefore = startTimeBefore;
           return this;
         }
 
@@ -1502,32 +1502,6 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * A token identifying a page of results the server should return. Typically, this is the
-       * value of ListReportTypesResponse.next_page_token returned in response to the previous call
-       * to the `ListReportTypes` method.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** A token identifying a page of results the server should return. Typically, this is the value of
-     ListReportTypesResponse.next_page_token returned in response to the previous call to the
-     `ListReportTypes` method.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * A token identifying a page of results the server should return. Typically, this is the
-       * value of ListReportTypesResponse.next_page_token returned in response to the previous call
-       * to the `ListReportTypes` method.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
        * If set to true, also system-managed report types will be returned; otherwise only the
        * report types that can be used to create new reporting jobs will be returned.
        */
@@ -1547,6 +1521,29 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
        */
       public List setIncludeSystemManaged(java.lang.Boolean includeSystemManaged) {
         this.includeSystemManaged = includeSystemManaged;
+        return this;
+      }
+
+      /**
+       * The content owner's external ID on which behalf the user is acting on. If not set, the user
+       * is acting for himself (his own channel).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwner;
+
+      /** The content owner's external ID on which behalf the user is acting on. If not set, the user is
+     acting for himself (his own channel).
+       */
+      public java.lang.String getOnBehalfOfContentOwner() {
+        return onBehalfOfContentOwner;
+      }
+
+      /**
+       * The content owner's external ID on which behalf the user is acting on. If not set, the user
+       * is acting for himself (his own channel).
+       */
+      public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
       }
 
@@ -1574,25 +1571,28 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * The content owner's external ID on which behalf the user is acting on. If not set, the user
-       * is acting for himself (his own channel).
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of ListReportTypesResponse.next_page_token returned in response to the previous call
+       * to the `ListReportTypes` method.
        */
       @com.google.api.client.util.Key
-      private java.lang.String onBehalfOfContentOwner;
+      private java.lang.String pageToken;
 
-      /** The content owner's external ID on which behalf the user is acting on. If not set, the user is
-     acting for himself (his own channel).
+      /** A token identifying a page of results the server should return. Typically, this is the value of
+     ListReportTypesResponse.next_page_token returned in response to the previous call to the
+     `ListReportTypes` method.
        */
-      public java.lang.String getOnBehalfOfContentOwner() {
-        return onBehalfOfContentOwner;
+      public java.lang.String getPageToken() {
+        return pageToken;
       }
 
       /**
-       * The content owner's external ID on which behalf the user is acting on. If not set, the user
-       * is acting for himself (his own channel).
+       * A token identifying a page of results the server should return. Typically, this is the
+       * value of ListReportTypesResponse.next_page_token returned in response to the previous call
+       * to the `ListReportTypes` method.
        */
-      public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
-        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

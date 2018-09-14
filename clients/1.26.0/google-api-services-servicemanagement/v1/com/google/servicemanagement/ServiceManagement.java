@@ -463,22 +463,6 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
       /**
        * The maximum number of operations to return. If unspecified, defaults to 50. The maximum
        * value is 100.
@@ -499,6 +483,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1752,6 +1752,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         return this;
       }
 
+      /** Requested size of the next page of data. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Requested size of the next page of data.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Requested size of the next page of data. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
       /**
        * Token identifying which result to start with; returned by a previous list call.
        */
@@ -1769,22 +1785,6 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /** Requested size of the next page of data. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Requested size of the next page of data.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** Requested size of the next page of data. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
       }
 
@@ -2724,22 +2724,6 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The token of the page to retrieve. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The token of the page to retrieve.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The token of the page to retrieve. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The max number of items to include in the response list. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -2753,6 +2737,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         /** The max number of items to include in the response list. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The token of the page to retrieve. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The token of the page to retrieve.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The token of the page to retrieve. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3829,22 +3829,6 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The max number of items to include in the response list. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The max number of items to include in the response list.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The max number of items to include in the response list. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
         /**
          * Use `filter` to return subset of rollouts. The following filters are supported: -- To
          * limit the results to only those in
@@ -3876,6 +3860,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /** The max number of items to include in the response list. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The max number of items to include in the response list.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The max number of items to include in the response list. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 

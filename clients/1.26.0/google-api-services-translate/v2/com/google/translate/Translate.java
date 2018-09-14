@@ -532,6 +532,22 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The model type for which supported languages should be returned. */
+      @com.google.api.client.util.Key
+      private java.lang.String model;
+
+      /** The model type for which supported languages should be returned.
+       */
+      public java.lang.String getModel() {
+        return model;
+      }
+
+      /** The model type for which supported languages should be returned. */
+      public List setModel(java.lang.String model) {
+        this.model = model;
+        return this;
+      }
+
       /**
        * The language to use to return localized, human readable names of supported languages.
        */
@@ -549,22 +565,6 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        */
       public List setTarget(java.lang.String target) {
         this.target = target;
-        return this;
-      }
-
-      /** The model type for which supported languages should be returned. */
-      @com.google.api.client.util.Key
-      private java.lang.String model;
-
-      /** The model type for which supported languages should be returned.
-       */
-      public java.lang.String getModel() {
-        return model;
-      }
-
-      /** The model type for which supported languages should be returned. */
-      public List setModel(java.lang.String model) {
-        this.model = model;
         return this;
       }
 
@@ -767,6 +767,45 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
+      /** The customization id for translate */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> cid;
+
+      /** The customization id for translate
+       */
+      public java.util.List<java.lang.String> getCid() {
+        return cid;
+      }
+
+      /** The customization id for translate */
+      public List setCid(java.util.List<java.lang.String> cid) {
+        this.cid = cid;
+        return this;
+      }
+
+      /**
+       * The format of the source text, in either HTML (default) or plain-text. A value of "html"
+       * indicates HTML and a value of "text" indicates plain-text.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String format;
+
+      /** The format of the source text, in either HTML (default) or plain-text. A value of "html" indicates
+     HTML and a value of "text" indicates plain-text.
+       */
+      public java.lang.String getFormat() {
+        return format;
+      }
+
+      /**
+       * The format of the source text, in either HTML (default) or plain-text. A value of "html"
+       * indicates HTML and a value of "text" indicates plain-text.
+       */
+      public List setFormat(java.lang.String format) {
+        this.format = format;
+        return this;
+      }
+
       /**
        * The `model` type requested for this translation. Valid values are listed in public
        * documentation.
@@ -812,45 +851,6 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
        */
       public List setSource(java.lang.String source) {
         this.source = source;
-        return this;
-      }
-
-      /** The customization id for translate */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> cid;
-
-      /** The customization id for translate
-       */
-      public java.util.List<java.lang.String> getCid() {
-        return cid;
-      }
-
-      /** The customization id for translate */
-      public List setCid(java.util.List<java.lang.String> cid) {
-        this.cid = cid;
-        return this;
-      }
-
-      /**
-       * The format of the source text, in either HTML (default) or plain-text. A value of "html"
-       * indicates HTML and a value of "text" indicates plain-text.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String format;
-
-      /** The format of the source text, in either HTML (default) or plain-text. A value of "html" indicates
-     HTML and a value of "text" indicates plain-text.
-       */
-      public java.lang.String getFormat() {
-        return format;
-      }
-
-      /**
-       * The format of the source text, in either HTML (default) or plain-text. A value of "html"
-       * indicates HTML and a value of "text" indicates plain-text.
-       */
-      public List setFormat(java.lang.String format) {
-        this.format = format;
         return this;
       }
 

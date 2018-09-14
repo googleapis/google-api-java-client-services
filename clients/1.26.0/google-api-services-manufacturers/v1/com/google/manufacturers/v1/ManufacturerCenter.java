@@ -794,19 +794,25 @@ public class ManufacturerCenter extends com.google.api.client.googleapis.service
           return this;
         }
 
-        /** The token returned by the previous request. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The token returned by the previous request.
+        /**
+         * The information to be included in the response. Only sections listed here will be
+         * returned.
          */
-        public java.lang.String getPageToken() {
-          return pageToken;
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> include;
+
+        /** The information to be included in the response. Only sections listed here will be returned.
+         */
+        public java.util.List<java.lang.String> getInclude() {
+          return include;
         }
 
-        /** The token returned by the previous request. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
+        /**
+         * The information to be included in the response. Only sections listed here will be
+         * returned.
+         */
+        public List setInclude(java.util.List<java.lang.String> include) {
+          this.include = include;
           return this;
         }
 
@@ -830,25 +836,19 @@ public class ManufacturerCenter extends com.google.api.client.googleapis.service
           return this;
         }
 
-        /**
-         * The information to be included in the response. Only sections listed here will be
-         * returned.
-         */
+        /** The token returned by the previous request. */
         @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> include;
+        private java.lang.String pageToken;
 
-        /** The information to be included in the response. Only sections listed here will be returned.
+        /** The token returned by the previous request.
          */
-        public java.util.List<java.lang.String> getInclude() {
-          return include;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
-        /**
-         * The information to be included in the response. Only sections listed here will be
-         * returned.
-         */
-        public List setInclude(java.util.List<java.lang.String> include) {
-          this.include = include;
+        /** The token returned by the previous request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

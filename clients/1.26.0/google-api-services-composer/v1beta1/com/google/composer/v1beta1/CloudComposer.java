@@ -1606,22 +1606,6 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
-          /** The standard list page size. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The standard list page size.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The standard list page size. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /** The standard list filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1635,6 +1619,22 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           /** The standard list filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
+            return this;
+          }
+
+          /** The standard list page size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The standard list page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The standard list page size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
           }
 

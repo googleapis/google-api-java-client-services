@@ -900,32 +900,6 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a
-           * continuation of a prior `ListDeviceRegistries` call and the system should return the
-           * next page of data.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a
-         continuation of a prior `ListDeviceRegistries` call and the system should return the next page of
-         data.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a
-           * continuation of a prior `ListDeviceRegistries` call and the system should return the
-           * next page of data.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * The maximum number of registries to return in the response. If this value is zero, the
            * service will select a default size. A call may return fewer objects than requested. A
            * non-empty `next_page_token` in the response indicates that more data is available.
@@ -948,6 +922,32 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a
+           * continuation of a prior `ListDeviceRegistries` call and the system should return the
+           * next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a
+         continuation of a prior `ListDeviceRegistries` call and the system should return the next page of
+         data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListDeviceRegistriesResponse`; indicates that this is a
+           * continuation of a prior `ListDeviceRegistries` call and the system should return the
+           * next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -2048,27 +2048,45 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * The value returned by the last `ListDevicesResponse`; indicates that this is a
-             * continuation of a prior `ListDevices` call and the system should return the next page
-             * of data.
+             * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
+             * field is ignored. Maximum IDs: 10,000
              */
             @com.google.api.client.util.Key
-            private java.lang.String pageToken;
+            private java.util.List<java.lang.String> deviceIds;
 
-            /** The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a
-           prior `ListDevices` call and the system should return the next page of data.
+            /** A list of device string IDs. For example, `['device0', 'device12']`. If empty, this field is
+           ignored. Maximum IDs: 10,000
              */
-            public java.lang.String getPageToken() {
-              return pageToken;
+            public java.util.List<java.lang.String> getDeviceIds() {
+              return deviceIds;
             }
 
             /**
-             * The value returned by the last `ListDevicesResponse`; indicates that this is a
-             * continuation of a prior `ListDevices` call and the system should return the next page
-             * of data.
+             * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
+             * field is ignored. Maximum IDs: 10,000
              */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
+            public List setDeviceIds(java.util.List<java.lang.String> deviceIds) {
+              this.deviceIds = deviceIds;
+              return this;
+            }
+
+            /**
+             * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.math.BigInteger> deviceNumIds;
+
+            /** A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+             */
+            public java.util.List<java.math.BigInteger> getDeviceNumIds() {
+              return deviceNumIds;
+            }
+
+            /**
+             * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+             */
+            public List setDeviceNumIds(java.util.List<java.math.BigInteger> deviceNumIds) {
+              this.deviceNumIds = deviceNumIds;
               return this;
             }
 
@@ -2122,45 +2140,27 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
-             * field is ignored. Maximum IDs: 10,000
+             * The value returned by the last `ListDevicesResponse`; indicates that this is a
+             * continuation of a prior `ListDevices` call and the system should return the next page
+             * of data.
              */
             @com.google.api.client.util.Key
-            private java.util.List<java.lang.String> deviceIds;
+            private java.lang.String pageToken;
 
-            /** A list of device string IDs. For example, `['device0', 'device12']`. If empty, this field is
-           ignored. Maximum IDs: 10,000
+            /** The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a
+           prior `ListDevices` call and the system should return the next page of data.
              */
-            public java.util.List<java.lang.String> getDeviceIds() {
-              return deviceIds;
+            public java.lang.String getPageToken() {
+              return pageToken;
             }
 
             /**
-             * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
-             * field is ignored. Maximum IDs: 10,000
+             * The value returned by the last `ListDevicesResponse`; indicates that this is a
+             * continuation of a prior `ListDevices` call and the system should return the next page
+             * of data.
              */
-            public List setDeviceIds(java.util.List<java.lang.String> deviceIds) {
-              this.deviceIds = deviceIds;
-              return this;
-            }
-
-            /**
-             * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-             */
-            @com.google.api.client.util.Key
-            private java.util.List<java.math.BigInteger> deviceNumIds;
-
-            /** A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-             */
-            public java.util.List<java.math.BigInteger> getDeviceNumIds() {
-              return deviceNumIds;
-            }
-
-            /**
-             * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-             */
-            public List setDeviceNumIds(java.util.List<java.math.BigInteger> deviceNumIds) {
-              this.deviceNumIds = deviceNumIds;
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -3710,27 +3710,45 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * The value returned by the last `ListDevicesResponse`; indicates that this is a
-               * continuation of a prior `ListDevices` call and the system should return the next
-               * page of data.
+               * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
+               * field is ignored. Maximum IDs: 10,000
                */
               @com.google.api.client.util.Key
-              private java.lang.String pageToken;
+              private java.util.List<java.lang.String> deviceIds;
 
-              /** The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a
-             prior `ListDevices` call and the system should return the next page of data.
+              /** A list of device string IDs. For example, `['device0', 'device12']`. If empty, this field is
+             ignored. Maximum IDs: 10,000
                */
-              public java.lang.String getPageToken() {
-                return pageToken;
+              public java.util.List<java.lang.String> getDeviceIds() {
+                return deviceIds;
               }
 
               /**
-               * The value returned by the last `ListDevicesResponse`; indicates that this is a
-               * continuation of a prior `ListDevices` call and the system should return the next
-               * page of data.
+               * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
+               * field is ignored. Maximum IDs: 10,000
                */
-              public List setPageToken(java.lang.String pageToken) {
-                this.pageToken = pageToken;
+              public List setDeviceIds(java.util.List<java.lang.String> deviceIds) {
+                this.deviceIds = deviceIds;
+                return this;
+              }
+
+              /**
+               * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.math.BigInteger> deviceNumIds;
+
+              /** A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+               */
+              public java.util.List<java.math.BigInteger> getDeviceNumIds() {
+                return deviceNumIds;
+              }
+
+              /**
+               * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+               */
+              public List setDeviceNumIds(java.util.List<java.math.BigInteger> deviceNumIds) {
+                this.deviceNumIds = deviceNumIds;
                 return this;
               }
 
@@ -3786,45 +3804,27 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
-               * field is ignored. Maximum IDs: 10,000
+               * The value returned by the last `ListDevicesResponse`; indicates that this is a
+               * continuation of a prior `ListDevices` call and the system should return the next
+               * page of data.
                */
               @com.google.api.client.util.Key
-              private java.util.List<java.lang.String> deviceIds;
+              private java.lang.String pageToken;
 
-              /** A list of device string IDs. For example, `['device0', 'device12']`. If empty, this field is
-             ignored. Maximum IDs: 10,000
+              /** The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a
+             prior `ListDevices` call and the system should return the next page of data.
                */
-              public java.util.List<java.lang.String> getDeviceIds() {
-                return deviceIds;
+              public java.lang.String getPageToken() {
+                return pageToken;
               }
 
               /**
-               * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this
-               * field is ignored. Maximum IDs: 10,000
+               * The value returned by the last `ListDevicesResponse`; indicates that this is a
+               * continuation of a prior `ListDevices` call and the system should return the next
+               * page of data.
                */
-              public List setDeviceIds(java.util.List<java.lang.String> deviceIds) {
-                this.deviceIds = deviceIds;
-                return this;
-              }
-
-              /**
-               * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-               */
-              @com.google.api.client.util.Key
-              private java.util.List<java.math.BigInteger> deviceNumIds;
-
-              /** A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-               */
-              public java.util.List<java.math.BigInteger> getDeviceNumIds() {
-                return deviceNumIds;
-              }
-
-              /**
-               * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
-               */
-              public List setDeviceNumIds(java.util.List<java.math.BigInteger> deviceNumIds) {
-                this.deviceNumIds = deviceNumIds;
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
                 return this;
               }
 

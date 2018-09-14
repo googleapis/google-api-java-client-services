@@ -1329,32 +1329,19 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
-          /**
-           * A wait token that, if specified, blocks the call until the breakpoints list has
-           * changed, or a server selected timeout has expired.  The value should be set from the
-           * last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait
-           * timeout, which should be called again with the same `wait_token`.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String waitToken;
+          /** Only breakpoints with the specified action will pass the filter. */
+          @com.google.api.client.util.Key("action.value")
+          private java.lang.String actionValue;
 
-          /** A wait token that, if specified, blocks the call until the breakpoints list has changed, or a
-         server selected timeout has expired.  The value should be set from the last response. The error
-         code `google.rpc.Code.ABORTED` (RPC) is returned on wait timeout, which should be called again with
-         the same `wait_token`.
+          /** Only breakpoints with the specified action will pass the filter.
            */
-          public java.lang.String getWaitToken() {
-            return waitToken;
+          public java.lang.String getActionValue() {
+            return actionValue;
           }
 
-          /**
-           * A wait token that, if specified, blocks the call until the breakpoints list has
-           * changed, or a server selected timeout has expired.  The value should be set from the
-           * last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait
-           * timeout, which should be called again with the same `wait_token`.
-           */
-          public List setWaitToken(java.lang.String waitToken) {
-            this.waitToken = waitToken;
+          /** Only breakpoints with the specified action will pass the filter. */
+          public List setActionValue(java.lang.String actionValue) {
+            this.actionValue = actionValue;
             return this;
           }
 
@@ -1377,45 +1364,6 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            */
           public List setClientVersion(java.lang.String clientVersion) {
             this.clientVersion = clientVersion;
-            return this;
-          }
-
-          /** Only breakpoints with the specified action will pass the filter. */
-          @com.google.api.client.util.Key("action.value")
-          private java.lang.String actionValue;
-
-          /** Only breakpoints with the specified action will pass the filter.
-           */
-          public java.lang.String getActionValue() {
-            return actionValue;
-          }
-
-          /** Only breakpoints with the specified action will pass the filter. */
-          public List setActionValue(java.lang.String actionValue) {
-            this.actionValue = actionValue;
-            return this;
-          }
-
-          /**
-           * When set to `true`, the response includes active and inactive breakpoints. Otherwise,
-           * it includes only active breakpoints.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean includeInactive;
-
-          /** When set to `true`, the response includes active and inactive breakpoints. Otherwise, it includes
-         only active breakpoints.
-           */
-          public java.lang.Boolean getIncludeInactive() {
-            return includeInactive;
-          }
-
-          /**
-           * When set to `true`, the response includes active and inactive breakpoints. Otherwise,
-           * it includes only active breakpoints.
-           */
-          public List setIncludeInactive(java.lang.Boolean includeInactive) {
-            this.includeInactive = includeInactive;
             return this;
           }
 
@@ -1443,6 +1391,29 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           }
 
           /**
+           * When set to `true`, the response includes active and inactive breakpoints. Otherwise,
+           * it includes only active breakpoints.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeInactive;
+
+          /** When set to `true`, the response includes active and inactive breakpoints. Otherwise, it includes
+         only active breakpoints.
+           */
+          public java.lang.Boolean getIncludeInactive() {
+            return includeInactive;
+          }
+
+          /**
+           * When set to `true`, the response includes active and inactive breakpoints. Otherwise,
+           * it includes only active breakpoints.
+           */
+          public List setIncludeInactive(java.lang.Boolean includeInactive) {
+            this.includeInactive = includeInactive;
+            return this;
+          }
+
+          /**
            * This field is deprecated. The following fields are always stripped out of the result:
            * `stack_frames`, `evaluated_expressions` and `variable_table`.
            */
@@ -1462,6 +1433,35 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
            */
           public List setStripResults(java.lang.Boolean stripResults) {
             this.stripResults = stripResults;
+            return this;
+          }
+
+          /**
+           * A wait token that, if specified, blocks the call until the breakpoints list has
+           * changed, or a server selected timeout has expired.  The value should be set from the
+           * last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait
+           * timeout, which should be called again with the same `wait_token`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String waitToken;
+
+          /** A wait token that, if specified, blocks the call until the breakpoints list has changed, or a
+         server selected timeout has expired.  The value should be set from the last response. The error
+         code `google.rpc.Code.ABORTED` (RPC) is returned on wait timeout, which should be called again with
+         the same `wait_token`.
+           */
+          public java.lang.String getWaitToken() {
+            return waitToken;
+          }
+
+          /**
+           * A wait token that, if specified, blocks the call until the breakpoints list has
+           * changed, or a server selected timeout has expired.  The value should be set from the
+           * last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait
+           * timeout, which should be called again with the same `wait_token`.
+           */
+          public List setWaitToken(java.lang.String waitToken) {
+            this.waitToken = waitToken;
             return this;
           }
 

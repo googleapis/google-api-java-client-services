@@ -664,31 +664,25 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * nextPageToken value returned from a previous list call, indicating that the subsequent page
-       * of results should be returned.
-       *
-       * The list request must be otherwise identical to the one that resulted in this token.
+       * Restricts returned courses to those in one of the specified states The default value is
+       * ACTIVE, ARCHIVED, PROVISIONED, DECLINED.
        */
       @com.google.api.client.util.Key
-      private java.lang.String pageToken;
+      private java.util.List<java.lang.String> courseStates;
 
-      /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-     results should be returned.
-
-     The list request must be otherwise identical to the one that resulted in this token.
+      /** Restricts returned courses to those in one of the specified states The default value is ACTIVE,
+     ARCHIVED, PROVISIONED, DECLINED.
        */
-      public java.lang.String getPageToken() {
-        return pageToken;
+      public java.util.List<java.lang.String> getCourseStates() {
+        return courseStates;
       }
 
       /**
-       * nextPageToken value returned from a previous list call, indicating that the subsequent page
-       * of results should be returned.
-       *
-       * The list request must be otherwise identical to the one that resulted in this token.
+       * Restricts returned courses to those in one of the specified states The default value is
+       * ACTIVE, ARCHIVED, PROVISIONED, DECLINED.
        */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
+      public List setCourseStates(java.util.List<java.lang.String> courseStates) {
+        this.courseStates = courseStates;
         return this;
       }
 
@@ -722,57 +716,31 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Restricts returned courses to those having a teacher with the specified identifier. The
-       * identifier can be one of the following:
+       * nextPageToken value returned from a previous list call, indicating that the subsequent page
+       * of results should be returned.
        *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * The list request must be otherwise identical to the one that resulted in this token.
        */
       @com.google.api.client.util.Key
-      private java.lang.String teacherId;
+      private java.lang.String pageToken;
 
-      /** Restricts returned courses to those having a teacher with the specified identifier. The identifier
-     can be one of the following:
+      /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+     results should be returned.
 
-     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-     indicating the requesting user
+     The list request must be otherwise identical to the one that resulted in this token.
        */
-      public java.lang.String getTeacherId() {
-        return teacherId;
+      public java.lang.String getPageToken() {
+        return pageToken;
       }
 
       /**
-       * Restricts returned courses to those having a teacher with the specified identifier. The
-       * identifier can be one of the following:
+       * nextPageToken value returned from a previous list call, indicating that the subsequent page
+       * of results should be returned.
        *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * The list request must be otherwise identical to the one that resulted in this token.
        */
-      public List setTeacherId(java.lang.String teacherId) {
-        this.teacherId = teacherId;
-        return this;
-      }
-
-      /**
-       * Restricts returned courses to those in one of the specified states The default value is
-       * ACTIVE, ARCHIVED, PROVISIONED, DECLINED.
-       */
-      @com.google.api.client.util.Key
-      private java.util.List<java.lang.String> courseStates;
-
-      /** Restricts returned courses to those in one of the specified states The default value is ACTIVE,
-     ARCHIVED, PROVISIONED, DECLINED.
-       */
-      public java.util.List<java.lang.String> getCourseStates() {
-        return courseStates;
-      }
-
-      /**
-       * Restricts returned courses to those in one of the specified states The default value is
-       * ACTIVE, ARCHIVED, PROVISIONED, DECLINED.
-       */
-      public List setCourseStates(java.util.List<java.lang.String> courseStates) {
-        this.courseStates = courseStates;
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -805,6 +773,38 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        */
       public List setStudentId(java.lang.String studentId) {
         this.studentId = studentId;
+        return this;
+      }
+
+      /**
+       * Restricts returned courses to those having a teacher with the specified identifier. The
+       * identifier can be one of the following:
+       *
+       * * the numeric identifier for the user * the email address of the user * the string literal
+       * `"me"`, indicating the requesting user
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String teacherId;
+
+      /** Restricts returned courses to those having a teacher with the specified identifier. The identifier
+     can be one of the following:
+
+     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
+     indicating the requesting user
+       */
+      public java.lang.String getTeacherId() {
+        return teacherId;
+      }
+
+      /**
+       * Restricts returned courses to those having a teacher with the specified identifier. The
+       * identifier can be one of the following:
+       *
+       * * the numeric identifier for the user * the email address of the user * the string literal
+       * `"me"`, indicating the requesting user
+       */
+      public List setTeacherId(java.lang.String teacherId) {
+        this.teacherId = teacherId;
         return this;
       }
 
@@ -1633,35 +1633,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
          * assign a maximum.
          *
@@ -1687,6 +1658,35 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+       results should be returned.
+
+       The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2353,35 +2353,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * Restriction on the `state` of announcements returned. If this argument is left
          * unspecified, the default value is `PUBLISHED`.
          */
@@ -2430,6 +2401,35 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
+       maximum.
+
+       The server may return fewer than the specified number of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -3509,35 +3509,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * Restriction on the work status to return. Only courseWork that matches is returned. If
          * unspecified, items with a work status of `PUBLISHED` is returned.
          */
@@ -3586,6 +3557,35 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
+       maximum.
+
+       The server may return fewer than the specified number of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -4403,38 +4403,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Optional argument to restrict returned student work to those owned by the student with
-           * the specified identifier. The identifier can be one of the following:
-           *
-           * * the numeric identifier for the user * the email address of the user * the string
-           * literal `"me"`, indicating the requesting user
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String userId;
-
-          /** Optional argument to restrict returned student work to those owned by the student with the
-         specified identifier. The identifier can be one of the following:
-
-         * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-         indicating the requesting user
-           */
-          public java.lang.String getUserId() {
-            return userId;
-          }
-
-          /**
-           * Optional argument to restrict returned student work to those owned by the student with
-           * the specified identifier. The identifier can be one of the following:
-           *
-           * * the numeric identifier for the user * the email address of the user * the string
-           * literal `"me"`, indicating the requesting user
-           */
-          public List setUserId(java.lang.String userId) {
-            this.userId = userId;
-            return this;
-          }
-
-          /**
            * Requested lateness value. If specified, returned student submissions are restricted by
            * the requested value. If unspecified, submissions are returned regardless of `late`
            * value.
@@ -4456,35 +4424,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            */
           public List setLate(java.lang.String late) {
             this.late = late;
-            return this;
-          }
-
-          /**
-           * nextPageToken value returned from a previous list call, indicating that the subsequent
-           * page of results should be returned.
-           *
-           * The list request must be otherwise identical to the one that resulted in this token.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-         results should be returned.
-
-         The list request must be otherwise identical to the one that resulted in this token.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * nextPageToken value returned from a previous list call, indicating that the subsequent
-           * page of results should be returned.
-           *
-           * The list request must be otherwise identical to the one that resulted in this token.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
             return this;
           }
 
@@ -4518,6 +4457,35 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * nextPageToken value returned from a previous list call, indicating that the subsequent
+           * page of results should be returned.
+           *
+           * The list request must be otherwise identical to the one that resulted in this token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+         results should be returned.
+
+         The list request must be otherwise identical to the one that resulted in this token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * nextPageToken value returned from a previous list call, indicating that the subsequent
+           * page of results should be returned.
+           *
+           * The list request must be otherwise identical to the one that resulted in this token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
            * Requested submission states. If specified, returned student submissions match one of
            * the specified submission states.
            */
@@ -4537,6 +4505,38 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            */
           public List setStates(java.util.List<java.lang.String> states) {
             this.states = states;
+            return this;
+          }
+
+          /**
+           * Optional argument to restrict returned student work to those owned by the student with
+           * the specified identifier. The identifier can be one of the following:
+           *
+           * * the numeric identifier for the user * the email address of the user * the string
+           * literal `"me"`, indicating the requesting user
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String userId;
+
+          /** Optional argument to restrict returned student work to those owned by the student with the
+         specified identifier. The identifier can be one of the following:
+
+         * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
+         indicating the requesting user
+           */
+          public java.lang.String getUserId() {
+            return userId;
+          }
+
+          /**
+           * Optional argument to restrict returned student work to those owned by the student with
+           * the specified identifier. The identifier can be one of the following:
+           *
+           * * the numeric identifier for the user * the email address of the user * the string
+           * literal `"me"`, indicating the requesting user
+           */
+          public List setUserId(java.lang.String userId) {
+            this.userId = userId;
             return this;
           }
 
@@ -6287,6 +6287,32 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
+         * Maximum number of items to return. Zero means no maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero means no maximum.
+
+       The server may return fewer than the specified number of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero means no maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
          * page of results should be returned.
          *
@@ -6312,32 +6338,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of items to return. Zero means no maximum.
-
-       The server may return fewer than the specified number of results.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -7032,6 +7032,32 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
+         * Maximum number of items to return. Zero means no maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero means no maximum.
+
+       The server may return fewer than the specified number of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero means no maximum.
+         *
+         * The server may return fewer than the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
          * page of results should be returned.
          *
@@ -7057,32 +7083,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Maximum number of items to return. Zero means no maximum.
-
-       The server may return fewer than the specified number of results.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -7761,34 +7761,28 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Restricts returned invitations to those for a specific user. The identifier can be one of
-       * the following:
+       * Maximum number of items to return. Zero means no maximum.
        *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * The server may return fewer than the specified number of results.
        */
       @com.google.api.client.util.Key
-      private java.lang.String userId;
+      private java.lang.Integer pageSize;
 
-      /** Restricts returned invitations to those for a specific user. The identifier can be one of the
-     following:
+      /** Maximum number of items to return. Zero means no maximum.
 
-     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-     indicating the requesting user
+     The server may return fewer than the specified number of results.
        */
-      public java.lang.String getUserId() {
-        return userId;
+      public java.lang.Integer getPageSize() {
+        return pageSize;
       }
 
       /**
-       * Restricts returned invitations to those for a specific user. The identifier can be one of
-       * the following:
+       * Maximum number of items to return. Zero means no maximum.
        *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * The server may return fewer than the specified number of results.
        */
-      public List setUserId(java.lang.String userId) {
-        this.userId = userId;
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
       }
 
@@ -7822,28 +7816,34 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Maximum number of items to return. Zero means no maximum.
+       * Restricts returned invitations to those for a specific user. The identifier can be one of
+       * the following:
        *
-       * The server may return fewer than the specified number of results.
+       * * the numeric identifier for the user * the email address of the user * the string literal
+       * `"me"`, indicating the requesting user
        */
       @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
+      private java.lang.String userId;
 
-      /** Maximum number of items to return. Zero means no maximum.
+      /** Restricts returned invitations to those for a specific user. The identifier can be one of the
+     following:
 
-     The server may return fewer than the specified number of results.
+     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
+     indicating the requesting user
        */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
+      public java.lang.String getUserId() {
+        return userId;
       }
 
       /**
-       * Maximum number of items to return. Zero means no maximum.
+       * Restricts returned invitations to those for a specific user. The identifier can be one of
+       * the following:
        *
-       * The server may return fewer than the specified number of results.
+       * * the numeric identifier for the user * the email address of the user * the string literal
+       * `"me"`, indicating the requesting user
        */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
+      public List setUserId(java.lang.String userId) {
+        this.userId = userId;
         return this;
       }
 
@@ -8856,35 +8856,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * If specified, only results with the specified `invited_email_address` will be returned.
          */
         @com.google.api.client.util.Key
@@ -8901,29 +8872,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setInvitedEmailAddress(java.lang.String invitedEmailAddress) {
           this.invitedEmailAddress = invitedEmailAddress;
-          return this;
-        }
-
-        /**
-         * If specified, only results with the specified `state` values will be returned. Otherwise,
-         * results with a `state` of `PENDING` will be returned.
-         */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> states;
-
-        /** If specified, only results with the specified `state` values will be returned. Otherwise, results
-       with a `state` of `PENDING` will be returned.
-         */
-        public java.util.List<java.lang.String> getStates() {
-          return states;
-        }
-
-        /**
-         * If specified, only results with the specified `state` values will be returned. Otherwise,
-         * results with a `state` of `PENDING` will be returned.
-         */
-        public List setStates(java.util.List<java.lang.String> states) {
-          this.states = states;
           return this;
         }
 
@@ -8953,6 +8901,58 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+       results should be returned.
+
+       The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * If specified, only results with the specified `state` values will be returned. Otherwise,
+         * results with a `state` of `PENDING` will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> states;
+
+        /** If specified, only results with the specified `state` values will be returned. Otherwise, results
+       with a `state` of `PENDING` will be returned.
+         */
+        public java.util.List<java.lang.String> getStates() {
+          return states;
+        }
+
+        /**
+         * If specified, only results with the specified `state` values will be returned. Otherwise,
+         * results with a `state` of `PENDING` will be returned.
+         */
+        public List setStates(java.util.List<java.lang.String> states) {
+          this.states = states;
           return this;
         }
 
@@ -9759,35 +9759,6 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Filter results by the email address that the original invitation was sent to, resulting
          * in this guardian link. This filter can only be used by domain administrators.
          */
@@ -9836,6 +9807,35 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+       results should be returned.
+
+       The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned.
+         *
+         * The list request must be otherwise identical to the one that resulted in this token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

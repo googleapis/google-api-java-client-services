@@ -711,22 +711,6 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
       /** The list page size. The max allowed value is 256. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
@@ -740,6 +724,22 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       /** The list page size. The max allowed value is 256. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -1457,38 +1457,6 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /** The list page size. The max allowed value is 256. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The list page size. The max allowed value is 256.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** The list page size. The max allowed value is 256. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
       /**
        * A list of query parameters specified as JSON text in the form of {\"project_id\" :
        * \"my_project_id\", \"job_names\" : [\"jobid1\", \"jobid2\",...], \"operation_names\" :
@@ -1520,6 +1488,38 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /** The list page size. The max allowed value is 256. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The list page size. The max allowed value is 256.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The list page size. The max allowed value is 256. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

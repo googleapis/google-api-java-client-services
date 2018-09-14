@@ -348,29 +348,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Specifies a page token to use. Set this to the nextPageToken returned by previous list
-           * requests to get the next page of results.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** Specifies a page token to use. Set this to the nextPageToken returned by previous list requests to
-         get the next page of results.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /**
-           * Specifies a page token to use. Set this to the nextPageToken returned by previous list
-           * requests to get the next page of results.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
            * The max number of results per page that should be returned. If the number of available
            * results is larger than `page_size`, a `next_page_token` is returned which can be used
            * to get the next page of results in subsequent requests. Acceptable values are 0 to 500,
@@ -395,6 +372,29 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Specifies a page token to use. Set this to the nextPageToken returned by previous list
+           * requests to get the next page of results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Specifies a page token to use. Set this to the nextPageToken returned by previous list requests to
+         get the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Specifies a page token to use. Set this to the nextPageToken returned by previous list
+           * requests to get the next page of results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -1238,6 +1238,29 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Deprecated. The name of the cluster to delete. This field has been deprecated and
+           * replaced by the name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterId;
+
+          /** Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the
+         name field.
+           */
+          public java.lang.String getClusterId() {
+            return clusterId;
+          }
+
+          /**
+           * Deprecated. The name of the cluster to delete. This field has been deprecated and
+           * replaced by the name field.
+           */
+          public Delete setClusterId(java.lang.String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+          }
+
+          /**
            * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
@@ -1285,29 +1308,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
-            return this;
-          }
-
-          /**
-           * Deprecated. The name of the cluster to delete. This field has been deprecated and
-           * replaced by the name field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String clusterId;
-
-          /** Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the
-         name field.
-           */
-          public java.lang.String getClusterId() {
-            return clusterId;
-          }
-
-          /**
-           * Deprecated. The name of the cluster to delete. This field has been deprecated and
-           * replaced by the name field.
-           */
-          public Delete setClusterId(java.lang.String clusterId) {
-            this.clusterId = clusterId;
             return this;
           }
 
@@ -1461,6 +1461,29 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
+           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
+           * replaced by the name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clusterId;
+
+          /** Deprecated. The name of the cluster to retrieve. This field has been deprecated and replaced by the
+         name field.
+           */
+          public java.lang.String getClusterId() {
+            return clusterId;
+          }
+
+          /**
+           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
+           * replaced by the name field.
+           */
+          public Get setClusterId(java.lang.String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+          }
+
+          /**
            * Deprecated. The Google Developers Console [project ID or project
            * number](https://support.google.com/cloud/answer/6158840). This field has been
            * deprecated and replaced by the name field.
@@ -1508,29 +1531,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
-            return this;
-          }
-
-          /**
-           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
-           * replaced by the name field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String clusterId;
-
-          /** Deprecated. The name of the cluster to retrieve. This field has been deprecated and replaced by the
-         name field.
-           */
-          public java.lang.String getClusterId() {
-            return clusterId;
-          }
-
-          /**
-           * Deprecated. The name of the cluster to retrieve. This field has been deprecated and
-           * replaced by the name field.
-           */
-          public Get setClusterId(java.lang.String clusterId) {
-            this.clusterId = clusterId;
             return this;
           }
 
@@ -3756,6 +3756,51 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String clusterId;
+
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
+             */
+            public java.lang.String getClusterId() {
+              return clusterId;
+            }
+
+            /**
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
+             */
+            public Delete setClusterId(java.lang.String clusterId) {
+              this.clusterId = clusterId;
+              return this;
+            }
+
+            /**
+             * Deprecated. The name of the node pool to delete. This field has been deprecated and
+             * replaced by the name field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String nodePoolId;
+
+            /** Deprecated. The name of the node pool to delete. This field has been deprecated and replaced by the
+           name field.
+             */
+            public java.lang.String getNodePoolId() {
+              return nodePoolId;
+            }
+
+            /**
+             * Deprecated. The name of the node pool to delete. This field has been deprecated and
+             * replaced by the name field.
+             */
+            public Delete setNodePoolId(java.lang.String nodePoolId) {
+              this.nodePoolId = nodePoolId;
+              return this;
+            }
+
+            /**
              * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the name field.
@@ -3803,51 +3848,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              */
             public Delete setZone(java.lang.String zone) {
               this.zone = zone;
-              return this;
-            }
-
-            /**
-             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
-             * the name field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String clusterId;
-
-            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
-             */
-            public java.lang.String getClusterId() {
-              return clusterId;
-            }
-
-            /**
-             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
-             * the name field.
-             */
-            public Delete setClusterId(java.lang.String clusterId) {
-              this.clusterId = clusterId;
-              return this;
-            }
-
-            /**
-             * Deprecated. The name of the node pool to delete. This field has been deprecated and
-             * replaced by the name field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String nodePoolId;
-
-            /** Deprecated. The name of the node pool to delete. This field has been deprecated and replaced by the
-           name field.
-             */
-            public java.lang.String getNodePoolId() {
-              return nodePoolId;
-            }
-
-            /**
-             * Deprecated. The name of the node pool to delete. This field has been deprecated and
-             * replaced by the name field.
-             */
-            public Delete setNodePoolId(java.lang.String nodePoolId) {
-              this.nodePoolId = nodePoolId;
               return this;
             }
 
@@ -4001,6 +4001,28 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String clusterId;
+
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
+             */
+            public java.lang.String getClusterId() {
+              return clusterId;
+            }
+
+            /**
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the name field.
+             */
+            public Get setClusterId(java.lang.String clusterId) {
+              this.clusterId = clusterId;
+              return this;
+            }
+
+            /**
              * Deprecated. The name of the node pool. This field has been deprecated and replaced by
              * the name field.
              */
@@ -4071,28 +4093,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              */
             public Get setZone(java.lang.String zone) {
               this.zone = zone;
-              return this;
-            }
-
-            /**
-             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
-             * the name field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String clusterId;
-
-            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
-             */
-            public java.lang.String getClusterId() {
-              return clusterId;
-            }
-
-            /**
-             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
-             * the name field.
-             */
-            public Get setClusterId(java.lang.String clusterId) {
-              this.clusterId = clusterId;
               return this;
             }
 
@@ -4246,6 +4246,29 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String clusterId;
+
+            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
+           field.
+             */
+            public java.lang.String getClusterId() {
+              return clusterId;
+            }
+
+            /**
+             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
+             * the parent field.
+             */
+            public List setClusterId(java.lang.String clusterId) {
+              this.clusterId = clusterId;
+              return this;
+            }
+
+            /**
              * Deprecated. The Google Developers Console [project ID or project
              * number](https://developers.google.com/console/help/new/#projectnumber). This field
              * has been deprecated and replaced by the parent field.
@@ -4293,29 +4316,6 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              */
             public List setZone(java.lang.String zone) {
               this.zone = zone;
-              return this;
-            }
-
-            /**
-             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
-             * the parent field.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String clusterId;
-
-            /** Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
-           field.
-             */
-            public java.lang.String getClusterId() {
-              return clusterId;
-            }
-
-            /**
-             * Deprecated. The name of the cluster. This field has been deprecated and replaced by
-             * the parent field.
-             */
-            public List setClusterId(java.lang.String clusterId) {
-              this.clusterId = clusterId;
               return this;
             }
 

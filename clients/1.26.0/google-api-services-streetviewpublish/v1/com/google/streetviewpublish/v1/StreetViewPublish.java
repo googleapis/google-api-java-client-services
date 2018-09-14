@@ -1127,26 +1127,6 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String view;
-
-      /** Specifies if a download URL for the photo bytes should be returned in the Photo response.
-       */
-      public java.lang.String getView() {
-        return view;
-      }
-
-      /**
-       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
-       */
-      public BatchGet setView(java.lang.String view) {
-        this.view = view;
-        return this;
-      }
-
-      /**
        * Required. IDs of the Photos. For HTTP GET requests, the URL query parameter should be
        * `photoIds==&...`.
        */
@@ -1166,6 +1146,26 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        */
       public BatchGet setPhotoIds(java.util.List<java.lang.String> photoIds) {
         this.photoIds = photoIds;
+        return this;
+      }
+
+      /**
+       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Specifies if a download URL for the photo bytes should be returned in the Photo response.
+       */
+      public BatchGet setView(java.lang.String view) {
+        this.view = view;
         return this;
       }
 
@@ -1407,22 +1407,28 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * The nextPageToken value returned from a previous ListPhotos request, if any.
+       * The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+       *
+       * The only filter supported at the moment is `placeId`.
        */
       @com.google.api.client.util.Key
-      private java.lang.String pageToken;
+      private java.lang.String filter;
 
-      /** The nextPageToken value returned from a previous ListPhotos request, if any.
+      /** The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+
+     The only filter supported at the moment is `placeId`.
        */
-      public java.lang.String getPageToken() {
-        return pageToken;
+      public java.lang.String getFilter() {
+        return filter;
       }
 
       /**
-       * The nextPageToken value returned from a previous ListPhotos request, if any.
+       * The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+       *
+       * The only filter supported at the moment is `placeId`.
        */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
         return this;
       }
 
@@ -1456,6 +1462,26 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
+       * The nextPageToken value returned from a previous ListPhotos request, if any.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The nextPageToken value returned from a previous ListPhotos request, if any.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * The nextPageToken value returned from a previous ListPhotos request, if any.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
        * Specifies if a download URL for the photos bytes should be returned in the Photos response.
        */
       @com.google.api.client.util.Key
@@ -1472,32 +1498,6 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        */
       public List setView(java.lang.String view) {
         this.view = view;
-        return this;
-      }
-
-      /**
-       * The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
-       *
-       * The only filter supported at the moment is `placeId`.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
-
-     The only filter supported at the moment is `placeId`.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /**
-       * The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
-       *
-       * The only filter supported at the moment is `placeId`.
-       */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
         return this;
       }
 

@@ -429,22 +429,6 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         return this;
       }
 
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
       /** The standard list page size. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
@@ -458,6 +442,22 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
       /** The standard list page size. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -642,22 +642,6 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           return this;
         }
 
-        /** The standard list page size. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The standard list page size.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The standard list page size. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
         /** The standard list filter. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -671,6 +655,22 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -1719,6 +1719,22 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /** Maximum number of functions to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of functions to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of functions to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * The value returned by the last `ListFunctionsResponse`; indicates that this is a
            * continuation of a prior `ListFunctions` call, and that the system should return the
@@ -1741,22 +1757,6 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Maximum number of functions to return per call. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Maximum number of functions to return per call.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Maximum number of functions to return per call. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 

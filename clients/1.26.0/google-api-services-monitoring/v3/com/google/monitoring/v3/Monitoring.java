@@ -764,6 +764,29 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * If provided, this field specifies the criteria that must be met by alert policies to be
+         * included in the response.For more details, see sorting and filtering.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** If provided, this field specifies the criteria that must be met by alert policies to be included in
+       the response.For more details, see sorting and filtering.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * If provided, this field specifies the criteria that must be met by alert policies to be
+         * included in the response.For more details, see sorting and filtering.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * A comma-separated list of fields by which to sort the result. Supports the same set of
          * field references as the filter field. Entries can be prefixed with a minus sign to sort
          * by the field in descending order.For more details, see sorting and filtering.
@@ -786,6 +809,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
+          return this;
+        }
+
+        /** The maximum number of results to return in a single response. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to return in a single response.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of results to return in a single response. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -812,45 +851,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** The maximum number of results to return in a single response. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The maximum number of results to return in a single response.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The maximum number of results to return in a single response. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
-         * If provided, this field specifies the criteria that must be met by alert policies to be
-         * included in the response.For more details, see sorting and filtering.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** If provided, this field specifies the criteria that must be met by alert policies to be included in
-       the response.For more details, see sorting and filtering.
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /**
-         * If provided, this field specifies the criteria that must be met by alert policies to be
-         * included in the response.For more details, see sorting and filtering.
-         */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
           return this;
         }
 
@@ -1825,48 +1825,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return additional results from the previous
-       method call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /** A positive number that is the maximum number of results to return. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** A positive number that is the maximum number of results to return.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** A positive number that is the maximum number of results to return. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * A group name: "projects/{project_id_or_number}/groups/{group_id}". Returns groups that
          * are ancestors of the specified group. The groups are returned in order, starting with the
          * immediate parent and ending with the most distant ancestor. If the specified group has no
@@ -1943,6 +1901,48 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setDescendantsOfGroup(java.lang.String descendantsOfGroup) {
           this.descendantsOfGroup = descendantsOfGroup;
+          return this;
+        }
+
+        /** A positive number that is the maximum number of results to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A positive number that is the maximum number of results to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** A positive number that is the maximum number of results to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return additional results from the previous
+       method call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2308,29 +2308,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * If this field is not empty then it must contain the nextPageToken value returned by a
-           * previous call to this method. Using this field causes the method to return additional
-           * results from the previous method call.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
+          /** Required. The end of the time interval. */
+          @com.google.api.client.util.Key("interval.endTime")
+          private String intervalEndTime;
 
-          /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-         to this method. Using this field causes the method to return additional results from the previous
-         method call.
+          /** Required. The end of the time interval.
            */
-          public java.lang.String getPageToken() {
-            return pageToken;
+          public String getIntervalEndTime() {
+            return intervalEndTime;
           }
 
-          /**
-           * If this field is not empty then it must contain the nextPageToken value returned by a
-           * previous call to this method. Using this field causes the method to return additional
-           * results from the previous method call.
-           */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
+          /** Required. The end of the time interval. */
+          public List setIntervalEndTime(String intervalEndTime) {
+            this.intervalEndTime = intervalEndTime;
             return this;
           }
 
@@ -2373,19 +2363,29 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Required. The end of the time interval. */
-          @com.google.api.client.util.Key("interval.endTime")
-          private String intervalEndTime;
-
-          /** Required. The end of the time interval.
+          /**
+           * If this field is not empty then it must contain the nextPageToken value returned by a
+           * previous call to this method. Using this field causes the method to return additional
+           * results from the previous method call.
            */
-          public String getIntervalEndTime() {
-            return intervalEndTime;
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+         to this method. Using this field causes the method to return additional results from the previous
+         method call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
           }
 
-          /** Required. The end of the time interval. */
-          public List setIntervalEndTime(String intervalEndTime) {
-            this.intervalEndTime = intervalEndTime;
+          /**
+           * If this field is not empty then it must contain the nextPageToken value returned by a
+           * previous call to this method. Using this field causes the method to return additional
+           * results from the previous method call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
             return this;
           }
 
@@ -3017,6 +3017,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /** A positive number that is the maximum number of results to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A positive number that is the maximum number of results to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** A positive number that is the maximum number of results to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * If this field is not empty then it must contain the nextPageToken value returned by a
          * previous call to this method. Using this field causes the method to return additional
@@ -3040,22 +3056,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** A positive number that is the maximum number of results to return. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** A positive number that is the maximum number of results to return.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** A positive number that is the maximum number of results to return. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -3381,48 +3381,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return additional results from the previous
-       method call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /** A positive number that is the maximum number of results to return. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** A positive number that is the maximum number of results to return.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** A positive number that is the maximum number of results to return. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * An optional filter describing the descriptors to be returned. The filter can reference
          * the descriptor's type and labels. For example, the following filter returns only Google
          * Compute Engine descriptors that have an id label: resource.type = starts_with("gce_") AND
@@ -3447,6 +3405,48 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /** A positive number that is the maximum number of results to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A positive number that is the maximum number of results to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** A positive number that is the maximum number of results to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return additional results from the previous
+       method call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3785,29 +3785,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If non-empty, page_token must contain a value returned as the next_page_token in a
-         * previous response to request the next set of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If non-empty, page_token must contain a value returned as the next_page_token in a previous
-       response to request the next set of results.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If non-empty, page_token must contain a value returned as the next_page_token in a
-         * previous response to request the next set of results.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * The maximum number of results to return in a single response. If not set to a positive
          * number, a reasonable value will be chosen by the service.
          */
@@ -3827,6 +3804,29 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If non-empty, page_token must contain a value returned as the next_page_token in a
+         * previous response to request the next set of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If non-empty, page_token must contain a value returned as the next_page_token in a previous
+       response to request the next set of results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If non-empty, page_token must contain a value returned as the next_page_token in a
+         * previous response to request the next set of results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -4657,6 +4657,29 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * If provided, this field specifies the criteria that must be met by notification channels
+         * to be included in the response.For more details, see sorting and filtering.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** If provided, this field specifies the criteria that must be met by notification channels to be
+       included in the response.For more details, see sorting and filtering.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * If provided, this field specifies the criteria that must be met by notification channels
+         * to be included in the response.For more details, see sorting and filtering.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * A comma-separated list of fields by which to sort the result. Supports the same set of
          * fields as in filter. Entries can be prefixed with a minus sign to sort in descending
          * rather than ascending order.For more details, see sorting and filtering.
@@ -4679,29 +4702,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
-          return this;
-        }
-
-        /**
-         * If non-empty, page_token must contain a value returned as the next_page_token in a
-         * previous response to request the next set of results.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If non-empty, page_token must contain a value returned as the next_page_token in a previous
-       response to request the next set of results.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If non-empty, page_token must contain a value returned as the next_page_token in a
-         * previous response to request the next set of results.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
           return this;
         }
 
@@ -4729,25 +4729,25 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If provided, this field specifies the criteria that must be met by notification channels
-         * to be included in the response.For more details, see sorting and filtering.
+         * If non-empty, page_token must contain a value returned as the next_page_token in a
+         * previous response to request the next set of results.
          */
         @com.google.api.client.util.Key
-        private java.lang.String filter;
+        private java.lang.String pageToken;
 
-        /** If provided, this field specifies the criteria that must be met by notification channels to be
-       included in the response.For more details, see sorting and filtering.
+        /** If non-empty, page_token must contain a value returned as the next_page_token in a previous
+       response to request the next set of results.
          */
-        public java.lang.String getFilter() {
-          return filter;
+        public java.lang.String getPageToken() {
+          return pageToken;
         }
 
         /**
-         * If provided, this field specifies the criteria that must be met by notification channels
-         * to be included in the response.For more details, see sorting and filtering.
+         * If non-empty, page_token must contain a value returned as the next_page_token in a
+         * previous response to request the next set of results.
          */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -5489,53 +5489,34 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * A positive number that is the maximum number of results to return. If page_size is empty
-         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
-         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
-         * is the maximum number of TimeSeries returned.
+         * The alignment period for per-time series alignment. If present, alignmentPeriod must be
+         * at least 60 seconds. After per-time series alignment, each time series will contain data
+         * points only on the period boundaries. If perSeriesAligner is not specified or equals
+         * ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not
+         * equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.
          */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
+        @com.google.api.client.util.Key("aggregation.alignmentPeriod")
+        private String aggregationAlignmentPeriod;
 
-        /** A positive number that is the maximum number of results to return. If page_size is empty or more
-       than 100,000 results, the effective page_size is 100,000 results. If view is set to FULL, this is
-       the maximum number of Points returned. If view is set to HEADERS, this is the maximum number of
-       TimeSeries returned.
+        /** The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60
+       seconds. After per-time series alignment, each time series will contain data points only on the
+       period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is
+       ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be
+       defined; otherwise an error is returned.
          */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
+        public String getAggregationAlignmentPeriod() {
+          return aggregationAlignmentPeriod;
         }
 
         /**
-         * A positive number that is the maximum number of results to return. If page_size is empty
-         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
-         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
-         * is the maximum number of TimeSeries returned.
+         * The alignment period for per-time series alignment. If present, alignmentPeriod must be
+         * at least 60 seconds. After per-time series alignment, each time series will contain data
+         * points only on the period boundaries. If perSeriesAligner is not specified or equals
+         * ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not
+         * equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.
          */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
-         * Unsupported: must be left blank. The points in each time series are returned in reverse
-         * time order.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String orderBy;
-
-        /** Unsupported: must be left blank. The points in each time series are returned in reverse time order.
-         */
-        public java.lang.String getOrderBy() {
-          return orderBy;
-        }
-
-        /**
-         * Unsupported: must be left blank. The points in each time series are returned in reverse
-         * time order.
-         */
-        public List setOrderBy(java.lang.String orderBy) {
-          this.orderBy = orderBy;
+        public List setAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
+          this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
           return this;
         }
 
@@ -5571,135 +5552,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setAggregationCrossSeriesReducer(java.lang.String aggregationCrossSeriesReducer) {
           this.aggregationCrossSeriesReducer = aggregationCrossSeriesReducer;
-          return this;
-        }
-
-        /**
-         * A monitoring filter that specifies which time series should be returned. The filter must
-         * specify a single metric type, and can additionally specify metric labels and other
-         * information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time"
-         * AND metric.label.instance_name = "my-instance-name"
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** A monitoring filter that specifies which time series should be returned. The filter must specify a
-       single metric type, and can additionally specify metric labels and other information. For example:
-       metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND metric.label.instance_name =
-       "my-instance-name"
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /**
-         * A monitoring filter that specifies which time series should be returned. The filter must
-         * specify a single metric type, and can additionally specify metric labels and other
-         * information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time"
-         * AND metric.label.instance_name = "my-instance-name"
-         */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
-          return this;
-        }
-
-        /**
-         * The approach to be used to align individual time series. Not all alignment functions may
-         * be applied to all time series, depending on the metric type and value type of the
-         * original time series. Alignment may change the metric type or the value type of the time
-         * series.Time series data must be aligned in order to perform cross-time series reduction.
-         * If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal
-         * ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned.
-         */
-        @com.google.api.client.util.Key("aggregation.perSeriesAligner")
-        private java.lang.String aggregationPerSeriesAligner;
-
-        /** The approach to be used to align individual time series. Not all alignment functions may be applied
-       to all time series, depending on the metric type and value type of the original time series.
-       Alignment may change the metric type or the value type of the time series.Time series data must be
-       aligned in order to perform cross-time series reduction. If crossSeriesReducer is specified, then
-       perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified;
-       otherwise, an error is returned.
-         */
-        public java.lang.String getAggregationPerSeriesAligner() {
-          return aggregationPerSeriesAligner;
-        }
-
-        /**
-         * The approach to be used to align individual time series. Not all alignment functions may
-         * be applied to all time series, depending on the metric type and value type of the
-         * original time series. Alignment may change the metric type or the value type of the time
-         * series.Time series data must be aligned in order to perform cross-time series reduction.
-         * If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal
-         * ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned.
-         */
-        public List setAggregationPerSeriesAligner(java.lang.String aggregationPerSeriesAligner) {
-          this.aggregationPerSeriesAligner = aggregationPerSeriesAligner;
-          return this;
-        }
-
-        /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return additional results from the previous
-       method call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return additional
-         * results from the previous method call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Optional. The beginning of the time interval. The default value for the start time is the
-         * end time. The start time must not be later than the end time.
-         */
-        @com.google.api.client.util.Key("interval.startTime")
-        private String intervalStartTime;
-
-        /** Optional. The beginning of the time interval. The default value for the start time is the end time.
-       The start time must not be later than the end time.
-         */
-        public String getIntervalStartTime() {
-          return intervalStartTime;
-        }
-
-        /**
-         * Optional. The beginning of the time interval. The default value for the start time is the
-         * end time. The start time must not be later than the end time.
-         */
-        public List setIntervalStartTime(String intervalStartTime) {
-          this.intervalStartTime = intervalStartTime;
-          return this;
-        }
-
-        /** Specifies which information is returned about the time series. */
-        @com.google.api.client.util.Key
-        private java.lang.String view;
-
-        /** Specifies which information is returned about the time series.
-         */
-        public java.lang.String getView() {
-          return view;
-        }
-
-        /** Specifies which information is returned about the time series. */
-        public List setView(java.lang.String view) {
-          this.view = view;
           return this;
         }
 
@@ -5749,6 +5601,70 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /**
+         * The approach to be used to align individual time series. Not all alignment functions may
+         * be applied to all time series, depending on the metric type and value type of the
+         * original time series. Alignment may change the metric type or the value type of the time
+         * series.Time series data must be aligned in order to perform cross-time series reduction.
+         * If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal
+         * ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("aggregation.perSeriesAligner")
+        private java.lang.String aggregationPerSeriesAligner;
+
+        /** The approach to be used to align individual time series. Not all alignment functions may be applied
+       to all time series, depending on the metric type and value type of the original time series.
+       Alignment may change the metric type or the value type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If crossSeriesReducer is specified, then
+       perSeriesAligner must be specified and not equal ALIGN_NONE and alignmentPeriod must be specified;
+       otherwise, an error is returned.
+         */
+        public java.lang.String getAggregationPerSeriesAligner() {
+          return aggregationPerSeriesAligner;
+        }
+
+        /**
+         * The approach to be used to align individual time series. Not all alignment functions may
+         * be applied to all time series, depending on the metric type and value type of the
+         * original time series. Alignment may change the metric type or the value type of the time
+         * series.Time series data must be aligned in order to perform cross-time series reduction.
+         * If crossSeriesReducer is specified, then perSeriesAligner must be specified and not equal
+         * ALIGN_NONE and alignmentPeriod must be specified; otherwise, an error is returned.
+         */
+        public List setAggregationPerSeriesAligner(java.lang.String aggregationPerSeriesAligner) {
+          this.aggregationPerSeriesAligner = aggregationPerSeriesAligner;
+          return this;
+        }
+
+        /**
+         * A monitoring filter that specifies which time series should be returned. The filter must
+         * specify a single metric type, and can additionally specify metric labels and other
+         * information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time"
+         * AND metric.label.instance_name = "my-instance-name"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A monitoring filter that specifies which time series should be returned. The filter must specify a
+       single metric type, and can additionally specify metric labels and other information. For example:
+       metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND metric.label.instance_name =
+       "my-instance-name"
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A monitoring filter that specifies which time series should be returned. The filter must
+         * specify a single metric type, and can additionally specify metric labels and other
+         * information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time"
+         * AND metric.label.instance_name = "my-instance-name"
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
         /** Required. The end of the time interval. */
         @com.google.api.client.util.Key("interval.endTime")
         private String intervalEndTime;
@@ -5766,34 +5682,118 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The alignment period for per-time series alignment. If present, alignmentPeriod must be
-         * at least 60 seconds. After per-time series alignment, each time series will contain data
-         * points only on the period boundaries. If perSeriesAligner is not specified or equals
-         * ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not
-         * equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.
+         * Optional. The beginning of the time interval. The default value for the start time is the
+         * end time. The start time must not be later than the end time.
          */
-        @com.google.api.client.util.Key("aggregation.alignmentPeriod")
-        private String aggregationAlignmentPeriod;
+        @com.google.api.client.util.Key("interval.startTime")
+        private String intervalStartTime;
 
-        /** The alignment period for per-time series alignment. If present, alignmentPeriod must be at least 60
-       seconds. After per-time series alignment, each time series will contain data points only on the
-       period boundaries. If perSeriesAligner is not specified or equals ALIGN_NONE, then this field is
-       ignored. If perSeriesAligner is specified and does not equal ALIGN_NONE, then this field must be
-       defined; otherwise an error is returned.
+        /** Optional. The beginning of the time interval. The default value for the start time is the end time.
+       The start time must not be later than the end time.
          */
-        public String getAggregationAlignmentPeriod() {
-          return aggregationAlignmentPeriod;
+        public String getIntervalStartTime() {
+          return intervalStartTime;
         }
 
         /**
-         * The alignment period for per-time series alignment. If present, alignmentPeriod must be
-         * at least 60 seconds. After per-time series alignment, each time series will contain data
-         * points only on the period boundaries. If perSeriesAligner is not specified or equals
-         * ALIGN_NONE, then this field is ignored. If perSeriesAligner is specified and does not
-         * equal ALIGN_NONE, then this field must be defined; otherwise an error is returned.
+         * Optional. The beginning of the time interval. The default value for the start time is the
+         * end time. The start time must not be later than the end time.
          */
-        public List setAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
-          this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
+        public List setIntervalStartTime(String intervalStartTime) {
+          this.intervalStartTime = intervalStartTime;
+          return this;
+        }
+
+        /**
+         * Unsupported: must be left blank. The points in each time series are returned in reverse
+         * time order.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Unsupported: must be left blank. The points in each time series are returned in reverse time order.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Unsupported: must be left blank. The points in each time series are returned in reverse
+         * time order.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * A positive number that is the maximum number of results to return. If page_size is empty
+         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
+         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
+         * is the maximum number of TimeSeries returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A positive number that is the maximum number of results to return. If page_size is empty or more
+       than 100,000 results, the effective page_size is 100,000 results. If view is set to FULL, this is
+       the maximum number of Points returned. If view is set to HEADERS, this is the maximum number of
+       TimeSeries returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * A positive number that is the maximum number of results to return. If page_size is empty
+         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
+         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
+         * is the maximum number of TimeSeries returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return additional results from the previous
+       method call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Specifies which information is returned about the time series. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Specifies which information is returned about the time series.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Specifies which information is returned about the time series. */
+        public List setView(java.lang.String view) {
+          this.view = view;
           return this;
         }
 
@@ -6390,32 +6390,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return more results
-         * from the previous method call.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-       to this method. Using this field causes the method to return more results from the previous method
-       call.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * If this field is not empty then it must contain the nextPageToken value returned by a
-         * previous call to this method. Using this field causes the method to return more results
-         * from the previous method call.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * The maximum number of results to return in a single response. The server may further
          * constrain the maximum number of results returned in a single page. If the page_size is
          * <=0, the server will decide the number of results to be returned.
@@ -6438,6 +6412,32 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return more results
+         * from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return more results from the previous method
+       call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return more results
+         * from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -6752,32 +6752,6 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * If this field is not empty then it must contain the nextPageToken value returned by a
-       * previous call to this method. Using this field causes the method to return more results
-       * from the previous method call. NOTE: this field is not yet implemented
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
-     to this method. Using this field causes the method to return more results from the previous method
-     call. NOTE: this field is not yet implemented
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * If this field is not empty then it must contain the nextPageToken value returned by a
-       * previous call to this method. Using this field causes the method to return more results
-       * from the previous method call. NOTE: this field is not yet implemented
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
        * The maximum number of results to return in a single response. The server may further
        * constrain the maximum number of results returned in a single page. If the page_size is <=0,
        * the server will decide the number of results to be returned. NOTE: this field is not yet
@@ -6802,6 +6776,32 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * If this field is not empty then it must contain the nextPageToken value returned by a
+       * previous call to this method. Using this field causes the method to return more results
+       * from the previous method call. NOTE: this field is not yet implemented
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+     to this method. Using this field causes the method to return more results from the previous method
+     call. NOTE: this field is not yet implemented
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * If this field is not empty then it must contain the nextPageToken value returned by a
+       * previous call to this method. Using this field causes the method to return more results
+       * from the previous method call. NOTE: this field is not yet implemented
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

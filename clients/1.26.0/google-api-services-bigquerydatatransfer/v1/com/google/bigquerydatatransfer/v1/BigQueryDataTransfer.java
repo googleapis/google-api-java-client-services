@@ -599,6 +599,22 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return this;
         }
 
+        /** Page size. The default page size is the maximum value of 1000 results. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Page size. The default page size is the maximum value of 1000 results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Page size. The default page size is the maximum value of 1000 results. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * Pagination token, which can be used to request a specific page of
          * `ListDataSourcesRequest` list results. For multiple-page results,
@@ -624,22 +640,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** Page size. The default page size is the maximum value of 1000 results. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Page size. The default page size is the maximum value of 1000 results.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Page size. The default page size is the maximum value of 1000 results. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -943,22 +943,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** The standard list page size. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The standard list page size.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The standard list page size. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
         /** The standard list filter. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -972,6 +956,22 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -2156,6 +2156,38 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             return this;
           }
 
+          /** When specified, only configurations of requested data sources are returned. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> dataSourceIds;
+
+          /** When specified, only configurations of requested data sources are returned.
+           */
+          public java.util.List<java.lang.String> getDataSourceIds() {
+            return dataSourceIds;
+          }
+
+          /** When specified, only configurations of requested data sources are returned. */
+          public List setDataSourceIds(java.util.List<java.lang.String> dataSourceIds) {
+            this.dataSourceIds = dataSourceIds;
+            return this;
+          }
+
+          /** Page size. The default page size is the maximum value of 1000 results. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Page size. The default page size is the maximum value of 1000 results.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Page size. The default page size is the maximum value of 1000 results. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * Pagination token, which can be used to request a specific page of
            * `ListTransfersRequest` list results. For multiple-page results, `ListTransfersResponse`
@@ -2181,38 +2213,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /** Page size. The default page size is the maximum value of 1000 results. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Page size. The default page size is the maximum value of 1000 results.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Page size. The default page size is the maximum value of 1000 results. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /** When specified, only configurations of requested data sources are returned. */
-          @com.google.api.client.util.Key
-          private java.util.List<java.lang.String> dataSourceIds;
-
-          /** When specified, only configurations of requested data sources are returned.
-           */
-          public java.util.List<java.lang.String> getDataSourceIds() {
-            return dataSourceIds;
-          }
-
-          /** When specified, only configurations of requested data sources are returned. */
-          public List setDataSourceIds(java.util.List<java.lang.String> dataSourceIds) {
-            this.dataSourceIds = dataSourceIds;
             return this;
           }
 
@@ -3045,22 +3045,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               return this;
             }
 
-            /** When specified, only transfer runs with requested states are returned. */
-            @com.google.api.client.util.Key
-            private java.util.List<java.lang.String> states;
-
-            /** When specified, only transfer runs with requested states are returned.
-             */
-            public java.util.List<java.lang.String> getStates() {
-              return states;
-            }
-
-            /** When specified, only transfer runs with requested states are returned. */
-            public List setStates(java.util.List<java.lang.String> states) {
-              this.states = states;
-              return this;
-            }
-
             /** Page size. The default page size is the maximum value of 1000 results. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
@@ -3074,22 +3058,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             /** Page size. The default page size is the maximum value of 1000 results. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
-              return this;
-            }
-
-            /** Indicates how run attempts are to be pulled. */
-            @com.google.api.client.util.Key
-            private java.lang.String runAttempt;
-
-            /** Indicates how run attempts are to be pulled.
-             */
-            public java.lang.String getRunAttempt() {
-              return runAttempt;
-            }
-
-            /** Indicates how run attempts are to be pulled. */
-            public List setRunAttempt(java.lang.String runAttempt) {
-              this.runAttempt = runAttempt;
               return this;
             }
 
@@ -3118,6 +3086,38 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Indicates how run attempts are to be pulled. */
+            @com.google.api.client.util.Key
+            private java.lang.String runAttempt;
+
+            /** Indicates how run attempts are to be pulled.
+             */
+            public java.lang.String getRunAttempt() {
+              return runAttempt;
+            }
+
+            /** Indicates how run attempts are to be pulled. */
+            public List setRunAttempt(java.lang.String runAttempt) {
+              this.runAttempt = runAttempt;
+              return this;
+            }
+
+            /** When specified, only transfer runs with requested states are returned. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> states;
+
+            /** When specified, only transfer runs with requested states are returned.
+             */
+            public java.util.List<java.lang.String> getStates() {
+              return states;
+            }
+
+            /** When specified, only transfer runs with requested states are returned. */
+            public List setStates(java.util.List<java.lang.String> states) {
+              this.states = states;
               return this;
             }
 
@@ -3290,6 +3290,44 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
               }
 
               /**
+               * Message types to return. If not populated - INFO, WARNING and ERROR messages are
+               * returned.
+               */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> messageTypes;
+
+              /** Message types to return. If not populated - INFO, WARNING and ERROR messages are returned.
+               */
+              public java.util.List<java.lang.String> getMessageTypes() {
+                return messageTypes;
+              }
+
+              /**
+               * Message types to return. If not populated - INFO, WARNING and ERROR messages are
+               * returned.
+               */
+              public List setMessageTypes(java.util.List<java.lang.String> messageTypes) {
+                this.messageTypes = messageTypes;
+                return this;
+              }
+
+              /** Page size. The default page size is the maximum value of 1000 results. */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Page size. The default page size is the maximum value of 1000 results.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /** Page size. The default page size is the maximum value of 1000 results. */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
                * Pagination token, which can be used to request a specific page of
                * `ListTransferLogsRequest` list results. For multiple-page results,
                * `ListTransferLogsResponse` outputs a `next_page` token, which can be used as the
@@ -3314,44 +3352,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
-                return this;
-              }
-
-              /** Page size. The default page size is the maximum value of 1000 results. */
-              @com.google.api.client.util.Key
-              private java.lang.Integer pageSize;
-
-              /** Page size. The default page size is the maximum value of 1000 results.
-               */
-              public java.lang.Integer getPageSize() {
-                return pageSize;
-              }
-
-              /** Page size. The default page size is the maximum value of 1000 results. */
-              public List setPageSize(java.lang.Integer pageSize) {
-                this.pageSize = pageSize;
-                return this;
-              }
-
-              /**
-               * Message types to return. If not populated - INFO, WARNING and ERROR messages are
-               * returned.
-               */
-              @com.google.api.client.util.Key
-              private java.util.List<java.lang.String> messageTypes;
-
-              /** Message types to return. If not populated - INFO, WARNING and ERROR messages are returned.
-               */
-              public java.util.List<java.lang.String> getMessageTypes() {
-                return messageTypes;
-              }
-
-              /**
-               * Message types to return. If not populated - INFO, WARNING and ERROR messages are
-               * returned.
-               */
-              public List setMessageTypes(java.util.List<java.lang.String> messageTypes) {
-                this.messageTypes = messageTypes;
                 return this;
               }
 
@@ -4016,6 +4016,38 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return this;
         }
 
+        /** When specified, only configurations of requested data sources are returned. */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> dataSourceIds;
+
+        /** When specified, only configurations of requested data sources are returned.
+         */
+        public java.util.List<java.lang.String> getDataSourceIds() {
+          return dataSourceIds;
+        }
+
+        /** When specified, only configurations of requested data sources are returned. */
+        public List setDataSourceIds(java.util.List<java.lang.String> dataSourceIds) {
+          this.dataSourceIds = dataSourceIds;
+          return this;
+        }
+
+        /** Page size. The default page size is the maximum value of 1000 results. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Page size. The default page size is the maximum value of 1000 results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Page size. The default page size is the maximum value of 1000 results. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
         /**
          * Pagination token, which can be used to request a specific page of `ListTransfersRequest`
          * list results. For multiple-page results, `ListTransfersResponse` outputs a `next_page`
@@ -4041,38 +4073,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /** Page size. The default page size is the maximum value of 1000 results. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Page size. The default page size is the maximum value of 1000 results.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** Page size. The default page size is the maximum value of 1000 results. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** When specified, only configurations of requested data sources are returned. */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> dataSourceIds;
-
-        /** When specified, only configurations of requested data sources are returned.
-         */
-        public java.util.List<java.lang.String> getDataSourceIds() {
-          return dataSourceIds;
-        }
-
-        /** When specified, only configurations of requested data sources are returned. */
-        public List setDataSourceIds(java.util.List<java.lang.String> dataSourceIds) {
-          this.dataSourceIds = dataSourceIds;
           return this;
         }
 
@@ -4905,6 +4905,22 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             return this;
           }
 
+          /** Page size. The default page size is the maximum value of 1000 results. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Page size. The default page size is the maximum value of 1000 results.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Page size. The default page size is the maximum value of 1000 results. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
           /**
            * Pagination token, which can be used to request a specific page of
            * `ListTransferRunsRequest` list results. For multiple-page results,
@@ -4933,38 +4949,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             return this;
           }
 
-          /** When specified, only transfer runs with requested states are returned. */
-          @com.google.api.client.util.Key
-          private java.util.List<java.lang.String> states;
-
-          /** When specified, only transfer runs with requested states are returned.
-           */
-          public java.util.List<java.lang.String> getStates() {
-            return states;
-          }
-
-          /** When specified, only transfer runs with requested states are returned. */
-          public List setStates(java.util.List<java.lang.String> states) {
-            this.states = states;
-            return this;
-          }
-
-          /** Page size. The default page size is the maximum value of 1000 results. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** Page size. The default page size is the maximum value of 1000 results.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** Page size. The default page size is the maximum value of 1000 results. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
           /** Indicates how run attempts are to be pulled. */
           @com.google.api.client.util.Key
           private java.lang.String runAttempt;
@@ -4978,6 +4962,22 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /** Indicates how run attempts are to be pulled. */
           public List setRunAttempt(java.lang.String runAttempt) {
             this.runAttempt = runAttempt;
+            return this;
+          }
+
+          /** When specified, only transfer runs with requested states are returned. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> states;
+
+          /** When specified, only transfer runs with requested states are returned.
+           */
+          public java.util.List<java.lang.String> getStates() {
+            return states;
+          }
+
+          /** When specified, only transfer runs with requested states are returned. */
+          public List setStates(java.util.List<java.lang.String> states) {
+            this.states = states;
             return this;
           }
 
@@ -5150,6 +5150,44 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             }
 
             /**
+             * Message types to return. If not populated - INFO, WARNING and ERROR messages are
+             * returned.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> messageTypes;
+
+            /** Message types to return. If not populated - INFO, WARNING and ERROR messages are returned.
+             */
+            public java.util.List<java.lang.String> getMessageTypes() {
+              return messageTypes;
+            }
+
+            /**
+             * Message types to return. If not populated - INFO, WARNING and ERROR messages are
+             * returned.
+             */
+            public List setMessageTypes(java.util.List<java.lang.String> messageTypes) {
+              this.messageTypes = messageTypes;
+              return this;
+            }
+
+            /** Page size. The default page size is the maximum value of 1000 results. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Page size. The default page size is the maximum value of 1000 results.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Page size. The default page size is the maximum value of 1000 results. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
              * Pagination token, which can be used to request a specific page of
              * `ListTransferLogsRequest` list results. For multiple-page results,
              * `ListTransferLogsResponse` outputs a `next_page` token, which can be used as the
@@ -5174,44 +5212,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
-              return this;
-            }
-
-            /** Page size. The default page size is the maximum value of 1000 results. */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** Page size. The default page size is the maximum value of 1000 results.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /** Page size. The default page size is the maximum value of 1000 results. */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /**
-             * Message types to return. If not populated - INFO, WARNING and ERROR messages are
-             * returned.
-             */
-            @com.google.api.client.util.Key
-            private java.util.List<java.lang.String> messageTypes;
-
-            /** Message types to return. If not populated - INFO, WARNING and ERROR messages are returned.
-             */
-            public java.util.List<java.lang.String> getMessageTypes() {
-              return messageTypes;
-            }
-
-            /**
-             * Message types to return. If not populated - INFO, WARNING and ERROR messages are
-             * returned.
-             */
-            public List setMessageTypes(java.util.List<java.lang.String> messageTypes) {
-              this.messageTypes = messageTypes;
               return this;
             }
 

@@ -246,29 +246,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
-       * localized strings are not available, en-US strings will be returned.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String languageCode;
-
-      /** Optional BCP-47 language code for localized infoType friendly names. If omitted, or if localized
-     strings are not available, en-US strings will be returned.
-       */
-      public java.lang.String getLanguageCode() {
-        return languageCode;
-      }
-
-      /**
-       * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
-       * localized strings are not available, en-US strings will be returned.
-       */
-      public List setLanguageCode(java.lang.String languageCode) {
-        this.languageCode = languageCode;
-        return this;
-      }
-
-      /**
        * Optional filter to only return infoTypes supported by certain parts of the API. Defaults to
        * supported_by=INSPECT.
        */
@@ -288,6 +265,29 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
+       * localized strings are not available, en-US strings will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** Optional BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+     strings are not available, en-US strings will be returned.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * Optional BCP-47 language code for localized infoType friendly names. If omitted, or if
+       * localized strings are not available, en-US strings will be returned.
+       */
+      public List setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
         return this;
       }
 
@@ -927,28 +927,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
          * This list is case-insensitive, default sorting order is ascending, redundant space
          * characters are insignificant.
@@ -1017,6 +995,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListDeidentifyTemplates`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListDeidentifyTemplates`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -1780,28 +1780,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
          * This list is case-insensitive, default sorting order is ascending, redundant space
          * characters are insignificant.
@@ -1870,6 +1848,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListInspectTemplates`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListInspectTemplates`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -2636,28 +2636,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional size of the page, can be limited by server. If zero server returns a page of max
          * size 100.
          */
@@ -2676,6 +2654,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListStoredInfoTypes`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListStoredInfoTypes`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -3914,28 +3914,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListDeidentifyTemplates`.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
          * This list is case-insensitive, default sorting order is ascending, redundant space
          * characters are insignificant.
@@ -4004,6 +3982,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListDeidentifyTemplates`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to `ListDeidentifyTemplates`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListDeidentifyTemplates`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -4942,22 +4942,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
         /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
@@ -4971,6 +4955,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -5764,28 +5764,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListInspectTemplates`.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
          * This list is case-insensitive, default sorting order is ascending, redundant space
          * characters are insignificant.
@@ -5854,6 +5832,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListInspectTemplates`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to `ListInspectTemplates`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListInspectTemplates`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -6589,29 +6589,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
-         * `order_by` field must not change for subsequent calls.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by`
-       field must not change for subsequent calls.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
-         * `order_by` field must not change for subsequent calls.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional comma separated list of triggeredJob fields to order by, followed by `asc` or
          * `desc` postfix. This list is case-insensitive, default sorting order is ascending,
          * redundant space characters are insignificant.
@@ -6676,6 +6653,29 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /** Optional size of the page, can be limited by a server. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
+         * `order_by` field must not change for subsequent calls.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to ListJobTriggers. `order_by`
+       field must not change for subsequent calls.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to ListJobTriggers.
+         * `order_by` field must not change for subsequent calls.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -7434,28 +7434,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * Optional page token to continue retrieval. Comes from previous call to
-         * `ListStoredInfoTypes`.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
          * Optional size of the page, can be limited by server. If zero server returns a page of max
          * size 100.
          */
@@ -7474,6 +7452,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListStoredInfoTypes`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional page token to continue retrieval. Comes from previous call to
+         * `ListStoredInfoTypes`.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 

@@ -558,49 +558,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * A pagination token returned from a previous call to `ListOrganizations` that indicates from
-       * where listing should continue. This field is optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** A pagination token returned from a previous call to `ListOrganizations` that indicates from where
-     listing should continue. This field is optional.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * A pagination token returned from a previous call to `ListOrganizations` that indicates from
-       * where listing should continue. This field is optional.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * The maximum number of Organizations to return in the response. This field is optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The maximum number of Organizations to return in the response. This field is optional.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /**
-       * The maximum number of Organizations to return in the response. This field is optional.
-       */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /**
        * An optional query string used to filter the Organizations to return in the response. Filter
        * rules are case-insensitive.
        *
@@ -649,6 +606,49 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of Organizations to return in the response. This field is optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of Organizations to return in the response. This field is optional.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of Organizations to return in the response. This field is optional.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A pagination token returned from a previous call to `ListOrganizations` that indicates from
+       * where listing should continue. This field is optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A pagination token returned from a previous call to `ListOrganizations` that indicates from where
+     listing should continue. This field is optional.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A pagination token returned from a previous call to `ListOrganizations` that indicates from
+       * where listing should continue. This field is optional.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 
@@ -2021,35 +2021,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * A pagination token returned from a previous call to ListProjects that indicates from where
-       * listing should continue.
-       *
-       * Optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** A pagination token returned from a previous call to ListProjects that indicates from where listing
-     should continue.
-
-     Optional.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * A pagination token returned from a previous call to ListProjects that indicates from where
-       * listing should continue.
-       *
-       * Optional.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
        * The maximum number of Projects to return in the response. The server can return fewer
        * Projects than requested. If unspecified, server picks an appropriate default.
        *
@@ -2075,6 +2046,35 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A pagination token returned from a previous call to ListProjects that indicates from where
+       * listing should continue.
+       *
+       * Optional.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A pagination token returned from a previous call to ListProjects that indicates from where listing
+     should continue.
+
+     Optional.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A pagination token returned from a previous call to ListProjects that indicates from where
+       * listing should continue.
+       *
+       * Optional.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

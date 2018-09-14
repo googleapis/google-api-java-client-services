@@ -468,6 +468,60 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
+        /** [Required] The group for which events shall be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String groupId;
+
+        /**[ Required] The group for which events shall be returned.
+      [
+
+         */
+        public java.lang.String getGroupId() {
+          return groupId;
+        }
+
+        /** [Required] The group for which events shall be returned. */
+        public List setGroupId(java.lang.String groupId) {
+          this.groupId = groupId;
+          return this;
+        }
+
+        /** [Optional] The maximum number of results to return per response. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /**[ Optional] The maximum number of results to return per response.
+      [
+
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** [Optional] The maximum number of results to return per response. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** [Optional] A `next_page_token` provided by a previous response. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /**[ Optional] A `next_page_token` provided by a previous response.
+      [
+
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** [Optional] A `next_page_token` provided by a previous response. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
         /**
          * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
@@ -490,58 +544,6 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          */
         public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
           this.serviceFilterResourceType = serviceFilterResourceType;
-          return this;
-        }
-
-        /** Restricts the query to the specified time range. */
-        @com.google.api.client.util.Key("timeRange.period")
-        private java.lang.String timeRangePeriod;
-
-        /** Restricts the query to the specified time range.
-         */
-        public java.lang.String getTimeRangePeriod() {
-          return timeRangePeriod;
-        }
-
-        /** Restricts the query to the specified time range. */
-        public List setTimeRangePeriod(java.lang.String timeRangePeriod) {
-          this.timeRangePeriod = timeRangePeriod;
-          return this;
-        }
-
-        /** [Required] The group for which events shall be returned. */
-        @com.google.api.client.util.Key
-        private java.lang.String groupId;
-
-        /**[ Required] The group for which events shall be returned.
-      [
-
-         */
-        public java.lang.String getGroupId() {
-          return groupId;
-        }
-
-        /** [Required] The group for which events shall be returned. */
-        public List setGroupId(java.lang.String groupId) {
-          this.groupId = groupId;
-          return this;
-        }
-
-        /** [Optional] A `next_page_token` provided by a previous response. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /**[ Optional] A `next_page_token` provided by a previous response.
-      [
-
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** [Optional] A `next_page_token` provided by a previous response. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
           return this;
         }
 
@@ -570,24 +572,6 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /** [Optional] The maximum number of results to return per response. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /**[ Optional] The maximum number of results to return per response.
-      [
-
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** [Optional] The maximum number of results to return per response. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
         /**
          * [Optional] The exact value to match against [`ServiceContext.version`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
@@ -610,6 +594,22 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          */
         public List setServiceFilterVersion(java.lang.String serviceFilterVersion) {
           this.serviceFilterVersion = serviceFilterVersion;
+          return this;
+        }
+
+        /** Restricts the query to the specified time range. */
+        @com.google.api.client.util.Key("timeRange.period")
+        private java.lang.String timeRangePeriod;
+
+        /** Restricts the query to the specified time range.
+         */
+        public java.lang.String getTimeRangePeriod() {
+          return timeRangePeriod;
+        }
+
+        /** Restricts the query to the specified time range. */
+        public List setTimeRangePeriod(java.lang.String timeRangePeriod) {
+          this.timeRangePeriod = timeRangePeriod;
           return this;
         }
 
@@ -961,27 +961,26 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
-         * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+         * [Optional] The alignment of the timed counts to be returned. Default is
+         * `ALIGNMENT_EQUAL_AT_END`.
          */
-        @com.google.api.client.util.Key("serviceFilter.resourceType")
-        private java.lang.String serviceFilterResourceType;
+        @com.google.api.client.util.Key
+        private java.lang.String alignment;
 
-        /**[ Optional] The exact value to match against `ServiceContext.resource_type`](/error-
-      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+        /**[ Optional] The alignment of the timed counts to be returned. Default is `ALIGNMENT_EQUAL_AT_END`.
       [
 
          */
-        public java.lang.String getServiceFilterResourceType() {
-          return serviceFilterResourceType;
+        public java.lang.String getAlignment() {
+          return alignment;
         }
 
         /**
-         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
-         * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+         * [Optional] The alignment of the timed counts to be returned. Default is
+         * `ALIGNMENT_EQUAL_AT_END`.
          */
-        public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
-          this.serviceFilterResourceType = serviceFilterResourceType;
+        public List setAlignment(java.lang.String alignment) {
+          this.alignment = alignment;
           return this;
         }
 
@@ -1010,28 +1009,65 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /**
-         * [Optional] The preferred duration for a single returned `TimedCount`. If not set, no
-         * timed counts are returned.
-         */
+        /** [Optional] List all ErrorGroupStats with these IDs. */
         @com.google.api.client.util.Key
-        private String timedCountDuration;
+        private java.util.List<java.lang.String> groupId;
 
-        /**[ Optional] The preferred duration for a single returned `TimedCount`. If not set, no timed counts
-      [ are returned.
+        /**[ Optional] List all ErrorGroupStats with these IDs.
       [
 
          */
-        public String getTimedCountDuration() {
-          return timedCountDuration;
+        public java.util.List<java.lang.String> getGroupId() {
+          return groupId;
+        }
+
+        /** [Optional] List all ErrorGroupStats with these IDs. */
+        public List setGroupId(java.util.List<java.lang.String> groupId) {
+          this.groupId = groupId;
+          return this;
         }
 
         /**
-         * [Optional] The preferred duration for a single returned `TimedCount`. If not set, no
-         * timed counts are returned.
+         * [Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
          */
-        public List setTimedCountDuration(String timedCountDuration) {
-          this.timedCountDuration = timedCountDuration;
+        @com.google.api.client.util.Key
+        private java.lang.String order;
+
+        /**[ Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
+      [
+
+         */
+        public java.lang.String getOrder() {
+          return order;
+        }
+
+        /**
+         * [Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
+         */
+        public List setOrder(java.lang.String order) {
+          this.order = order;
+          return this;
+        }
+
+        /**
+         * [Optional] The maximum number of results to return per response. Default is 20.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /**[ Optional] The maximum number of results to return per response. Default is 20.
+      [
+
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * [Optional] The maximum number of results to return per response. Default is 20.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
           return this;
         }
 
@@ -1060,61 +1096,28 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /** Restricts the query to the specified time range. */
-        @com.google.api.client.util.Key("timeRange.period")
-        private java.lang.String timeRangePeriod;
-
-        /** Restricts the query to the specified time range.
-         */
-        public java.lang.String getTimeRangePeriod() {
-          return timeRangePeriod;
-        }
-
-        /** Restricts the query to the specified time range. */
-        public List setTimeRangePeriod(java.lang.String timeRangePeriod) {
-          this.timeRangePeriod = timeRangePeriod;
-          return this;
-        }
-
         /**
-         * [Optional] The alignment of the timed counts to be returned. Default is
-         * `ALIGNMENT_EQUAL_AT_END`.
+         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
+         * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
-        @com.google.api.client.util.Key
-        private java.lang.String alignment;
+        @com.google.api.client.util.Key("serviceFilter.resourceType")
+        private java.lang.String serviceFilterResourceType;
 
-        /**[ Optional] The alignment of the timed counts to be returned. Default is `ALIGNMENT_EQUAL_AT_END`.
+        /**[ Optional] The exact value to match against `ServiceContext.resource_type`](/error-
+      [ reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
       [
 
          */
-        public java.lang.String getAlignment() {
-          return alignment;
+        public java.lang.String getServiceFilterResourceType() {
+          return serviceFilterResourceType;
         }
 
         /**
-         * [Optional] The alignment of the timed counts to be returned. Default is
-         * `ALIGNMENT_EQUAL_AT_END`.
+         * [Optional] The exact value to match against [`ServiceContext.resource_type`](/error-
+         * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
          */
-        public List setAlignment(java.lang.String alignment) {
-          this.alignment = alignment;
-          return this;
-        }
-
-        /** [Optional] List all ErrorGroupStats with these IDs. */
-        @com.google.api.client.util.Key
-        private java.util.List<java.lang.String> groupId;
-
-        /**[ Optional] List all ErrorGroupStats with these IDs.
-      [
-
-         */
-        public java.util.List<java.lang.String> getGroupId() {
-          return groupId;
-        }
-
-        /** [Optional] List all ErrorGroupStats with these IDs. */
-        public List setGroupId(java.util.List<java.lang.String> groupId) {
-          this.groupId = groupId;
+        public List setServiceFilterResourceType(java.lang.String serviceFilterResourceType) {
+          this.serviceFilterResourceType = serviceFilterResourceType;
           return this;
         }
 
@@ -1144,28 +1147,6 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * [Optional] The maximum number of results to return per response. Default is 20.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /**[ Optional] The maximum number of results to return per response. Default is 20.
-      [
-
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * [Optional] The maximum number of results to return per response. Default is 20.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
          * [Optional] The exact value to match against [`ServiceContext.version`](/error-
          * reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
          */
@@ -1190,25 +1171,44 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /**
-         * [Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String order;
+        /** Restricts the query to the specified time range. */
+        @com.google.api.client.util.Key("timeRange.period")
+        private java.lang.String timeRangePeriod;
 
-        /**[ Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
-      [
-
+        /** Restricts the query to the specified time range.
          */
-        public java.lang.String getOrder() {
-          return order;
+        public java.lang.String getTimeRangePeriod() {
+          return timeRangePeriod;
+        }
+
+        /** Restricts the query to the specified time range. */
+        public List setTimeRangePeriod(java.lang.String timeRangePeriod) {
+          this.timeRangePeriod = timeRangePeriod;
+          return this;
         }
 
         /**
-         * [Optional] The sort order in which the results are returned. Default is `COUNT_DESC`.
+         * [Optional] The preferred duration for a single returned `TimedCount`. If not set, no
+         * timed counts are returned.
          */
-        public List setOrder(java.lang.String order) {
-          this.order = order;
+        @com.google.api.client.util.Key
+        private String timedCountDuration;
+
+        /**[ Optional] The preferred duration for a single returned `TimedCount`. If not set, no timed counts
+      [ are returned.
+      [
+
+         */
+        public String getTimedCountDuration() {
+          return timedCountDuration;
+        }
+
+        /**
+         * [Optional] The preferred duration for a single returned `TimedCount`. If not set, no
+         * timed counts are returned.
+         */
+        public List setTimedCountDuration(String timedCountDuration) {
+          this.timedCountDuration = timedCountDuration;
           return this;
         }
 

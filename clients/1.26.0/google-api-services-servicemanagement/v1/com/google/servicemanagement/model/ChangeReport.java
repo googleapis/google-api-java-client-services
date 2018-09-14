@@ -41,12 +41,6 @@ public final class ChangeReport extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ConfigChange> configChanges;
 
-  static {
-    // hack to force ProGuard to consider ConfigChange used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ConfigChange.class);
-  }
-
   /**
    * List of changes between two service configurations. The changes will be alphabetically sorted
    * based on the identifier of each change. A ConfigChange identifier is a dot separated path to

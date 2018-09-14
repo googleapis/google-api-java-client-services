@@ -1185,6 +1185,29 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
         }
 
         /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * A token identifying a page of results the server should return. Typically, this is the
          * value of ListAttestorsResponse.next_page_token returned from the previous call to the
          * `ListAttestors` method.
@@ -1207,29 +1230,6 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Requested page size. The server may return fewer results than requested. If unspecified,
-         * the server will pick an appropriate default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
-       will pick an appropriate default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Requested page size. The server may return fewer results than requested. If unspecified,
-         * the server will pick an appropriate default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 

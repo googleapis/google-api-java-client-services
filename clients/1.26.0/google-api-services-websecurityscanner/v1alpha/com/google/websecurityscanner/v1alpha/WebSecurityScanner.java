@@ -748,6 +748,29 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
         }
 
         /**
+         * The maximum number of ScanConfigs to return, can be limited by server. If not specified
+         * or not positive, the implementation will select a reasonable value.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of ScanConfigs to return, can be limited by server. If not specified or not
+       positive, the implementation will select a reasonable value.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of ScanConfigs to return, can be limited by server. If not specified
+         * or not positive, the implementation will select a reasonable value.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
          * A token identifying a page of results to be returned. This should be a `next_page_token`
          * value returned from a previous List request. If unspecified, the first page of results is
          * returned.
@@ -769,29 +792,6 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * The maximum number of ScanConfigs to return, can be limited by server. If not specified
-         * or not positive, the implementation will select a reasonable value.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The maximum number of ScanConfigs to return, can be limited by server. If not specified or not
-       positive, the implementation will select a reasonable value.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * The maximum number of ScanConfigs to return, can be limited by server. If not specified
-         * or not positive, the implementation will select a reasonable value.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
           return this;
         }
 
@@ -1434,6 +1434,29 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
           }
 
           /**
+           * The maximum number of ScanRuns to return, can be limited by server. If not specified or
+           * not positive, the implementation will select a reasonable value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of ScanRuns to return, can be limited by server. If not specified or not
+         positive, the implementation will select a reasonable value.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of ScanRuns to return, can be limited by server. If not specified or
+           * not positive, the implementation will select a reasonable value.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
            * A token identifying a page of results to be returned. This should be a
            * `next_page_token` value returned from a previous List request. If unspecified, the
            * first page of results is returned.
@@ -1455,29 +1478,6 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
-            return this;
-          }
-
-          /**
-           * The maximum number of ScanRuns to return, can be limited by server. If not specified or
-           * not positive, the implementation will select a reasonable value.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of ScanRuns to return, can be limited by server. If not specified or not
-         positive, the implementation will select a reasonable value.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /**
-           * The maximum number of ScanRuns to return, can be limited by server. If not specified or
-           * not positive, the implementation will select a reasonable value.
-           */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
             return this;
           }
 
@@ -2374,6 +2374,29 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
             }
 
             /**
+             * The maximum number of Findings to return, can be limited by server. If not specified
+             * or not positive, the implementation will select a reasonable value.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of Findings to return, can be limited by server. If not specified or not
+           positive, the implementation will select a reasonable value.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of Findings to return, can be limited by server. If not specified
+             * or not positive, the implementation will select a reasonable value.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
              * A token identifying a page of results to be returned. This should be a
              * `next_page_token` value returned from a previous List request. If unspecified, the
              * first page of results is returned.
@@ -2395,29 +2418,6 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * The maximum number of Findings to return, can be limited by server. If not specified
-             * or not positive, the implementation will select a reasonable value.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** The maximum number of Findings to return, can be limited by server. If not specified or not
-           positive, the implementation will select a reasonable value.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /**
-             * The maximum number of Findings to return, can be limited by server. If not specified
-             * or not positive, the implementation will select a reasonable value.
-             */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
               return this;
             }
 

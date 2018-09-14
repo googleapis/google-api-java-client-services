@@ -36,12 +36,6 @@ public final class IosDeviceCatalog extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<IosModel> models;
 
-  static {
-    // hack to force ProGuard to consider IosModel used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(IosModel.class);
-  }
-
   /**
    * Output only. The set of supported runtime configurations.
    * The value may be {@code null}.

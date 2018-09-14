@@ -675,6 +675,22 @@ public class CloudVideoIntelligence extends com.google.api.client.googleapis.ser
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
       /** The name of the operation's parent resource. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -688,22 +704,6 @@ public class CloudVideoIntelligence extends com.google.api.client.googleapis.ser
       /** The name of the operation's parent resource. */
       public List setName(java.lang.String name) {
         this.name = name;
-        return this;
-      }
-
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
         return this;
       }
 
@@ -723,19 +723,19 @@ public class CloudVideoIntelligence extends com.google.api.client.googleapis.ser
         return this;
       }
 
-      /** The standard list filter. */
+      /** The standard list page token. */
       @com.google.api.client.util.Key
-      private java.lang.String filter;
+      private java.lang.String pageToken;
 
-      /** The standard list filter.
+      /** The standard list page token.
        */
-      public java.lang.String getFilter() {
-        return filter;
+      public java.lang.String getPageToken() {
+        return pageToken;
       }
 
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
         return this;
       }
 

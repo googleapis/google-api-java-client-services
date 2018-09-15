@@ -3506,6 +3506,2452 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
       }
     }
+    /**
+     * An accessor for creating requests from the FinalizedProposals collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+     *   {@code AdExchangeBuyerII.FinalizedProposals.List request = adexchangebuyer2.finalizedProposals().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public FinalizedProposals finalizedProposals() {
+      return new FinalizedProposals();
+    }
+
+    /**
+     * The "finalizedProposals" collection of methods.
+     */
+    public class FinalizedProposals {
+
+      /**
+       * List finalized proposals, regardless if a proposal is being renegotiated. A filter expression
+       * (PQL query) may be specified to filter the results. The notes will not be returned.
+       *
+       * Create a request for the method "finalizedProposals.list".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @return the request
+       */
+      public List list(java.lang.String accountId) throws java.io.IOException {
+        List result = new List(accountId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.ListProposalsResponse> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/finalizedProposals";
+
+        /**
+         * List finalized proposals, regardless if a proposal is being renegotiated. A filter expression
+         * (PQL query) may be specified to filter the results. The notes will not be returned.
+         *
+         * Create a request for the method "finalizedProposals.list".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @since 1.13
+         */
+        protected List(java.lang.String accountId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.ListProposalsResponse.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public List setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /**
+         * An optional PQL filter query used to query for proposals.
+         *
+         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** An optional PQL filter query used to query for proposals.
+
+       Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * An optional PQL filter query used to query for proposals.
+         *
+         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Syntax the filter is written in. Current implementation defaults to PQL but in the future
+         * it will be LIST_FILTER.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filterSyntax;
+
+        /** Syntax the filter is written in. Current implementation defaults to PQL but in the future it will
+       be LIST_FILTER.
+         */
+        public java.lang.String getFilterSyntax() {
+          return filterSyntax;
+        }
+
+        /**
+         * Syntax the filter is written in. Current implementation defaults to PQL but in the future
+         * it will be LIST_FILTER.
+         */
+        public List setFilterSyntax(java.lang.String filterSyntax) {
+          this.filterSyntax = filterSyntax;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The page token as returned from ListProposalsResponse. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token as returned from ListProposalsResponse.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The page token as returned from ListProposalsResponse. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Products collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+     *   {@code AdExchangeBuyerII.Products.List request = adexchangebuyer2.products().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Products products() {
+      return new Products();
+    }
+
+    /**
+     * The "products" collection of methods.
+     */
+    public class Products {
+
+      /**
+       * Gets the requested product by ID.
+       *
+       * Create a request for the method "products.get".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param productId The ID for the product to get the head revision for.
+       * @return the request
+       */
+      public Get get(java.lang.String accountId, java.lang.String productId) throws java.io.IOException {
+        Get result = new Get(accountId, productId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Product> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/products/{productId}";
+
+        /**
+         * Gets the requested product by ID.
+         *
+         * Create a request for the method "products.get".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param productId The ID for the product to get the head revision for.
+         * @since 1.13
+         */
+        protected Get(java.lang.String accountId, java.lang.String productId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.Product.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Get setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID for the product to get the head revision for. */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** The ID for the product to get the head revision for.
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** The ID for the product to get the head revision for. */
+        public Get setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List all products visible to the buyer (optionally filtered by the specified PQL query).
+       *
+       * Create a request for the method "products.list".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @return the request
+       */
+      public List list(java.lang.String accountId) throws java.io.IOException {
+        List result = new List(accountId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.ListProductsResponse> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/products";
+
+        /**
+         * List all products visible to the buyer (optionally filtered by the specified PQL query).
+         *
+         * Create a request for the method "products.list".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @since 1.13
+         */
+        protected List(java.lang.String accountId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.ListProductsResponse.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public List setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /**
+         * An optional PQL query used to query for products. See https://developers.google.com
+         * /doubleclick-publishers/docs/pqlreference for documentation about PQL and examples.
+         *
+         * Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be
+         * filtered.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** An optional PQL query used to query for products. See https://developers.google.com/doubleclick-
+       publishers/docs/pqlreference for documentation about PQL and examples.
+
+       Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be filtered.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * An optional PQL query used to query for products. See https://developers.google.com
+         * /doubleclick-publishers/docs/pqlreference for documentation about PQL and examples.
+         *
+         * Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be
+         * filtered.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The page token as returned from ListProductsResponse. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token as returned from ListProductsResponse.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The page token as returned from ListProductsResponse. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Proposals collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+     *   {@code AdExchangeBuyerII.Proposals.List request = adexchangebuyer2.proposals().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Proposals proposals() {
+      return new Proposals();
+    }
+
+    /**
+     * The "proposals" collection of methods.
+     */
+    public class Proposals {
+
+      /**
+       * Mark the proposal as accepted at the given revision number. If the number does not match the
+       * server's revision number an `ABORTED` error message will be returned. This call updates the
+       * proposal_state from `PROPOSED` to `BUYER_ACCEPTED`, or from `SELLER_ACCEPTED` to `FINALIZED`.
+       *
+       * Create a request for the method "proposals.accept".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Accept#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The ID of the proposal to accept.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.AcceptProposalRequest}
+       * @return the request
+       */
+      public Accept accept(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.AcceptProposalRequest content) throws java.io.IOException {
+        Accept result = new Accept(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Accept extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}:accept";
+
+        /**
+         * Mark the proposal as accepted at the given revision number. If the number does not match the
+         * server's revision number an `ABORTED` error message will be returned. This call updates the
+         * proposal_state from `PROPOSED` to `BUYER_ACCEPTED`, or from `SELLER_ACCEPTED` to `FINALIZED`.
+         *
+         * Create a request for the method "proposals.accept".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Accept#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Accept#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The ID of the proposal to accept.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.AcceptProposalRequest}
+         * @since 1.13
+         */
+        protected Accept(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.AcceptProposalRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Accept set$Xgafv(java.lang.String $Xgafv) {
+          return (Accept) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Accept setAccessToken(java.lang.String accessToken) {
+          return (Accept) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Accept setAlt(java.lang.String alt) {
+          return (Accept) super.setAlt(alt);
+        }
+
+        @Override
+        public Accept setCallback(java.lang.String callback) {
+          return (Accept) super.setCallback(callback);
+        }
+
+        @Override
+        public Accept setFields(java.lang.String fields) {
+          return (Accept) super.setFields(fields);
+        }
+
+        @Override
+        public Accept setKey(java.lang.String key) {
+          return (Accept) super.setKey(key);
+        }
+
+        @Override
+        public Accept setOauthToken(java.lang.String oauthToken) {
+          return (Accept) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Accept setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Accept) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Accept setQuotaUser(java.lang.String quotaUser) {
+          return (Accept) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Accept setUploadType(java.lang.String uploadType) {
+          return (Accept) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Accept setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Accept) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Accept setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID of the proposal to accept. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The ID of the proposal to accept.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The ID of the proposal to accept. */
+        public Accept setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Accept set(String parameterName, Object value) {
+          return (Accept) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Create a new note and attach it to the proposal. The note is assigned a unique ID by the server.
+       * The proposal revision number will not increase when associated with a new note.
+       *
+       * Create a request for the method "proposals.addNote".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link AddNote#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The ID of the proposal to attach the note to.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.AddNoteRequest}
+       * @return the request
+       */
+      public AddNote addNote(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.AddNoteRequest content) throws java.io.IOException {
+        AddNote result = new AddNote(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddNote extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Note> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}:addNote";
+
+        /**
+         * Create a new note and attach it to the proposal. The note is assigned a unique ID by the
+         * server. The proposal revision number will not increase when associated with a new note.
+         *
+         * Create a request for the method "proposals.addNote".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link AddNote#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * AddNote#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The ID of the proposal to attach the note to.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.AddNoteRequest}
+         * @since 1.13
+         */
+        protected AddNote(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.AddNoteRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Note.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public AddNote set$Xgafv(java.lang.String $Xgafv) {
+          return (AddNote) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddNote setAccessToken(java.lang.String accessToken) {
+          return (AddNote) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddNote setAlt(java.lang.String alt) {
+          return (AddNote) super.setAlt(alt);
+        }
+
+        @Override
+        public AddNote setCallback(java.lang.String callback) {
+          return (AddNote) super.setCallback(callback);
+        }
+
+        @Override
+        public AddNote setFields(java.lang.String fields) {
+          return (AddNote) super.setFields(fields);
+        }
+
+        @Override
+        public AddNote setKey(java.lang.String key) {
+          return (AddNote) super.setKey(key);
+        }
+
+        @Override
+        public AddNote setOauthToken(java.lang.String oauthToken) {
+          return (AddNote) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddNote setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddNote) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddNote setQuotaUser(java.lang.String quotaUser) {
+          return (AddNote) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddNote setUploadType(java.lang.String uploadType) {
+          return (AddNote) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddNote setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddNote) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public AddNote setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID of the proposal to attach the note to. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The ID of the proposal to attach the note to.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The ID of the proposal to attach the note to. */
+        public AddNote setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public AddNote set(String parameterName, Object value) {
+          return (AddNote) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Cancel an ongoing negotiation on a proposal. This does not cancel or end serving for the deals if
+       * the proposal has been finalized, but only cancels a negotiation unilaterally.
+       *
+       * Create a request for the method "proposals.cancelNegotiation".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link CancelNegotiation#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The ID of the proposal to cancel negotiation for.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.CancelNegotiationRequest}
+       * @return the request
+       */
+      public CancelNegotiation cancelNegotiation(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.CancelNegotiationRequest content) throws java.io.IOException {
+        CancelNegotiation result = new CancelNegotiation(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CancelNegotiation extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}:cancelNegotiation";
+
+        /**
+         * Cancel an ongoing negotiation on a proposal. This does not cancel or end serving for the deals
+         * if the proposal has been finalized, but only cancels a negotiation unilaterally.
+         *
+         * Create a request for the method "proposals.cancelNegotiation".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link CancelNegotiation#execute()} method to invoke the remote
+         * operation. <p> {@link CancelNegotiation#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The ID of the proposal to cancel negotiation for.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.CancelNegotiationRequest}
+         * @since 1.13
+         */
+        protected CancelNegotiation(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.CancelNegotiationRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public CancelNegotiation set$Xgafv(java.lang.String $Xgafv) {
+          return (CancelNegotiation) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CancelNegotiation setAccessToken(java.lang.String accessToken) {
+          return (CancelNegotiation) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CancelNegotiation setAlt(java.lang.String alt) {
+          return (CancelNegotiation) super.setAlt(alt);
+        }
+
+        @Override
+        public CancelNegotiation setCallback(java.lang.String callback) {
+          return (CancelNegotiation) super.setCallback(callback);
+        }
+
+        @Override
+        public CancelNegotiation setFields(java.lang.String fields) {
+          return (CancelNegotiation) super.setFields(fields);
+        }
+
+        @Override
+        public CancelNegotiation setKey(java.lang.String key) {
+          return (CancelNegotiation) super.setKey(key);
+        }
+
+        @Override
+        public CancelNegotiation setOauthToken(java.lang.String oauthToken) {
+          return (CancelNegotiation) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CancelNegotiation setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CancelNegotiation) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CancelNegotiation setQuotaUser(java.lang.String quotaUser) {
+          return (CancelNegotiation) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CancelNegotiation setUploadType(java.lang.String uploadType) {
+          return (CancelNegotiation) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CancelNegotiation setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CancelNegotiation) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public CancelNegotiation setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID of the proposal to cancel negotiation for. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The ID of the proposal to cancel negotiation for.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The ID of the proposal to cancel negotiation for. */
+        public CancelNegotiation setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public CancelNegotiation set(String parameterName, Object value) {
+          return (CancelNegotiation) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the given proposal to indicate that setup has been completed. This method is called by the
+       * buyer when the line items have been created on their end for a finalized proposal and all the
+       * required creatives have been uploaded using the creatives API. This call updates the
+       * `is_setup_completed` bit on the proposal and also notifies the seller. The server will advance
+       * the revision number of the most recent proposal.
+       *
+       * Create a request for the method "proposals.completeSetup".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link CompleteSetup#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The ID of the proposal to mark as setup completed.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.CompleteSetupRequest}
+       * @return the request
+       */
+      public CompleteSetup completeSetup(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.CompleteSetupRequest content) throws java.io.IOException {
+        CompleteSetup result = new CompleteSetup(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CompleteSetup extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}:completeSetup";
+
+        /**
+         * Update the given proposal to indicate that setup has been completed. This method is called by
+         * the buyer when the line items have been created on their end for a finalized proposal and all
+         * the required creatives have been uploaded using the creatives API. This call updates the
+         * `is_setup_completed` bit on the proposal and also notifies the seller. The server will advance
+         * the revision number of the most recent proposal.
+         *
+         * Create a request for the method "proposals.completeSetup".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link CompleteSetup#execute()} method to invoke the remote
+         * operation. <p> {@link CompleteSetup#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The ID of the proposal to mark as setup completed.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.CompleteSetupRequest}
+         * @since 1.13
+         */
+        protected CompleteSetup(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.CompleteSetupRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public CompleteSetup set$Xgafv(java.lang.String $Xgafv) {
+          return (CompleteSetup) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CompleteSetup setAccessToken(java.lang.String accessToken) {
+          return (CompleteSetup) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CompleteSetup setAlt(java.lang.String alt) {
+          return (CompleteSetup) super.setAlt(alt);
+        }
+
+        @Override
+        public CompleteSetup setCallback(java.lang.String callback) {
+          return (CompleteSetup) super.setCallback(callback);
+        }
+
+        @Override
+        public CompleteSetup setFields(java.lang.String fields) {
+          return (CompleteSetup) super.setFields(fields);
+        }
+
+        @Override
+        public CompleteSetup setKey(java.lang.String key) {
+          return (CompleteSetup) super.setKey(key);
+        }
+
+        @Override
+        public CompleteSetup setOauthToken(java.lang.String oauthToken) {
+          return (CompleteSetup) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CompleteSetup setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CompleteSetup) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CompleteSetup setQuotaUser(java.lang.String quotaUser) {
+          return (CompleteSetup) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CompleteSetup setUploadType(java.lang.String uploadType) {
+          return (CompleteSetup) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CompleteSetup setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CompleteSetup) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public CompleteSetup setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID of the proposal to mark as setup completed. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The ID of the proposal to mark as setup completed.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The ID of the proposal to mark as setup completed. */
+        public CompleteSetup setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public CompleteSetup set(String parameterName, Object value) {
+          return (CompleteSetup) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Create the given proposal. Each created proposal and any deals it contains are assigned a unique
+       * ID by the server.
+       *
+       * Create a request for the method "proposals.create".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.Proposal}
+       * @return the request
+       */
+      public Create create(java.lang.String accountId, com.google.adexchangebuyer2.v2beta1.model.Proposal content) throws java.io.IOException {
+        Create result = new Create(accountId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals";
+
+        /**
+         * Create the given proposal. Each created proposal and any deals it contains are assigned a
+         * unique ID by the server.
+         *
+         * Create a request for the method "proposals.create".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.Proposal}
+         * @since 1.13
+         */
+        protected Create(java.lang.String accountId, com.google.adexchangebuyer2.v2beta1.model.Proposal content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Create setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a proposal given its ID. The proposal is returned at its head revision.
+       *
+       * Create a request for the method "proposals.get".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The unique ID of the proposal
+       * @return the request
+       */
+      public Get get(java.lang.String accountId, java.lang.String proposalId) throws java.io.IOException {
+        Get result = new Get(accountId, proposalId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}";
+
+        /**
+         * Gets a proposal given its ID. The proposal is returned at its head revision.
+         *
+         * Create a request for the method "proposals.get".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The unique ID of the proposal
+         * @since 1.13
+         */
+        protected Get(java.lang.String accountId, java.lang.String proposalId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Get setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The unique ID of the proposal */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The unique ID of the proposal
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The unique ID of the proposal */
+        public Get setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List proposals. A filter expression (PQL query) may be specified to filter the results. To
+       * retrieve all finalized proposals, regardless if a proposal is being renegotiated, see the
+       * FinalizedProposals resource. Note that Bidder/ChildSeat relationships differ from the usual
+       * behavior. A Bidder account can only see its child seats' proposals by specifying the ChildSeat's
+       * accountId in the request path.
+       *
+       * Create a request for the method "proposals.list".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @return the request
+       */
+      public List list(java.lang.String accountId) throws java.io.IOException {
+        List result = new List(accountId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.ListProposalsResponse> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals";
+
+        /**
+         * List proposals. A filter expression (PQL query) may be specified to filter the results. To
+         * retrieve all finalized proposals, regardless if a proposal is being renegotiated, see the
+         * FinalizedProposals resource. Note that Bidder/ChildSeat relationships differ from the usual
+         * behavior. A Bidder account can only see its child seats' proposals by specifying the
+         * ChildSeat's accountId in the request path.
+         *
+         * Create a request for the method "proposals.list".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @since 1.13
+         */
+        protected List(java.lang.String accountId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.ListProposalsResponse.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public List setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /**
+         * An optional PQL filter query used to query for proposals.
+         *
+         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** An optional PQL filter query used to query for proposals.
+
+       Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * An optional PQL filter query used to query for proposals.
+         *
+         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Syntax the filter is written in. Current implementation defaults to PQL but in the future
+         * it will be LIST_FILTER.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filterSyntax;
+
+        /** Syntax the filter is written in. Current implementation defaults to PQL but in the future it will
+       be LIST_FILTER.
+         */
+        public java.lang.String getFilterSyntax() {
+          return filterSyntax;
+        }
+
+        /**
+         * Syntax the filter is written in. Current implementation defaults to PQL but in the future
+         * it will be LIST_FILTER.
+         */
+        public List setFilterSyntax(java.lang.String filterSyntax) {
+          this.filterSyntax = filterSyntax;
+          return this;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The server may return fewer results than requested. If unspecified, the server
+       will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The server may return fewer results than requested. If unspecified,
+         * the server will pick an appropriate default.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The page token as returned from ListProposalsResponse. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token as returned from ListProposalsResponse.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The page token as returned from ListProposalsResponse. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the given proposal to pause serving. This method will set the
+       * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the proposal.
+       *
+       * It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a
+       * proposal that is not finalized or renegotiating.
+       *
+       * Create a request for the method "proposals.pause".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The ID of the proposal to pause.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.PauseProposalRequest}
+       * @return the request
+       */
+      public Pause pause(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.PauseProposalRequest content) throws java.io.IOException {
+        Pause result = new Pause(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Pause extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}:pause";
+
+        /**
+         * Update the given proposal to pause serving. This method will set the
+         * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the
+         * proposal.
+         *
+         * It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a
+         * proposal that is not finalized or renegotiating.
+         *
+         * Create a request for the method "proposals.pause".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The ID of the proposal to pause.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.PauseProposalRequest}
+         * @since 1.13
+         */
+        protected Pause(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.PauseProposalRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Pause set$Xgafv(java.lang.String $Xgafv) {
+          return (Pause) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Pause setAccessToken(java.lang.String accessToken) {
+          return (Pause) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Pause setAlt(java.lang.String alt) {
+          return (Pause) super.setAlt(alt);
+        }
+
+        @Override
+        public Pause setCallback(java.lang.String callback) {
+          return (Pause) super.setCallback(callback);
+        }
+
+        @Override
+        public Pause setFields(java.lang.String fields) {
+          return (Pause) super.setFields(fields);
+        }
+
+        @Override
+        public Pause setKey(java.lang.String key) {
+          return (Pause) super.setKey(key);
+        }
+
+        @Override
+        public Pause setOauthToken(java.lang.String oauthToken) {
+          return (Pause) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Pause) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Pause setQuotaUser(java.lang.String quotaUser) {
+          return (Pause) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Pause setUploadType(java.lang.String uploadType) {
+          return (Pause) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Pause) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Pause setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID of the proposal to pause. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The ID of the proposal to pause.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The ID of the proposal to pause. */
+        public Pause setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Pause set(String parameterName, Object value) {
+          return (Pause) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the given proposal to resume serving. This method will set the
+       * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the
+       * proposal.
+       *
+       * Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller
+       * also resumes.
+       *
+       * It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for a
+       * proposal that is not finalized or renegotiating.
+       *
+       * Create a request for the method "proposals.resume".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The ID of the proposal to resume.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.ResumeProposalRequest}
+       * @return the request
+       */
+      public Resume resume(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.ResumeProposalRequest content) throws java.io.IOException {
+        Resume result = new Resume(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Resume extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}:resume";
+
+        /**
+         * Update the given proposal to resume serving. This method will set the
+         * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the
+         * proposal.
+         *
+         * Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller
+         * also resumes.
+         *
+         * It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for
+         * a proposal that is not finalized or renegotiating.
+         *
+         * Create a request for the method "proposals.resume".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The ID of the proposal to resume.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.ResumeProposalRequest}
+         * @since 1.13
+         */
+        protected Resume(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.ResumeProposalRequest content) {
+          super(AdExchangeBuyerII.this, "POST", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Resume set$Xgafv(java.lang.String $Xgafv) {
+          return (Resume) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Resume setAccessToken(java.lang.String accessToken) {
+          return (Resume) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Resume setAlt(java.lang.String alt) {
+          return (Resume) super.setAlt(alt);
+        }
+
+        @Override
+        public Resume setCallback(java.lang.String callback) {
+          return (Resume) super.setCallback(callback);
+        }
+
+        @Override
+        public Resume setFields(java.lang.String fields) {
+          return (Resume) super.setFields(fields);
+        }
+
+        @Override
+        public Resume setKey(java.lang.String key) {
+          return (Resume) super.setKey(key);
+        }
+
+        @Override
+        public Resume setOauthToken(java.lang.String oauthToken) {
+          return (Resume) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Resume) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Resume setQuotaUser(java.lang.String quotaUser) {
+          return (Resume) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Resume setUploadType(java.lang.String uploadType) {
+          return (Resume) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Resume) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Resume setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The ID of the proposal to resume. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The ID of the proposal to resume.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The ID of the proposal to resume. */
+        public Resume setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Resume set(String parameterName, Object value) {
+          return (Resume) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update the given proposal at the client known revision number. If the server revision has
+       * advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be
+       * returned. Only the buyer-modifiable fields of the proposal will be updated.
+       *
+       * Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in
+       * deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If
+       * passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing
+       * deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal
+       * with a `deal_id` not present at head.
+       *
+       * Create a request for the method "proposals.update".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param proposalId The unique ID of the proposal.
+       * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.Proposal}
+       * @return the request
+       */
+      public Update update(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.Proposal content) throws java.io.IOException {
+        Update result = new Update(accountId, proposalId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Update extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Proposal> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/proposals/{proposalId}";
+
+        /**
+         * Update the given proposal at the client known revision number. If the server revision has
+         * advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be
+         * returned. Only the buyer-modifiable fields of the proposal will be updated.
+         *
+         * Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in
+         * deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If
+         * passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing
+         * deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal
+         * with a `deal_id` not present at head.
+         *
+         * Create a request for the method "proposals.update".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param proposalId The unique ID of the proposal.
+         * @param content the {@link com.google.adexchangebuyer2.v2beta1.model.Proposal}
+         * @since 1.13
+         */
+        protected Update(java.lang.String accountId, java.lang.String proposalId, com.google.adexchangebuyer2.v2beta1.model.Proposal content) {
+          super(AdExchangeBuyerII.this, "PUT", REST_PATH, content, com.google.adexchangebuyer2.v2beta1.model.Proposal.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.proposalId = com.google.api.client.util.Preconditions.checkNotNull(proposalId, "Required parameter proposalId must be specified.");
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
+        }
+
+        @Override
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
+        }
+
+        @Override
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
+        }
+
+        @Override
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Update setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The unique ID of the proposal. */
+        @com.google.api.client.util.Key
+        private java.lang.String proposalId;
+
+        /** The unique ID of the proposal.
+         */
+        public java.lang.String getProposalId() {
+          return proposalId;
+        }
+
+        /** The unique ID of the proposal. */
+        public Update setProposalId(java.lang.String proposalId) {
+          this.proposalId = proposalId;
+          return this;
+        }
+
+        @Override
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the PublisherProfiles collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+     *   {@code AdExchangeBuyerII.PublisherProfiles.List request = adexchangebuyer2.publisherProfiles().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PublisherProfiles publisherProfiles() {
+      return new PublisherProfiles();
+    }
+
+    /**
+     * The "publisherProfiles" collection of methods.
+     */
+    public class PublisherProfiles {
+
+      /**
+       * Gets the requested publisher profile by id.
+       *
+       * Create a request for the method "publisherProfiles.get".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @param publisherProfileId The id for the publisher profile to get.
+       * @return the request
+       */
+      public Get get(java.lang.String accountId, java.lang.String publisherProfileId) throws java.io.IOException {
+        Get result = new Get(accountId, publisherProfileId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.PublisherProfile> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/publisherProfiles/{publisherProfileId}";
+
+        /**
+         * Gets the requested publisher profile by id.
+         *
+         * Create a request for the method "publisherProfiles.get".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @param publisherProfileId The id for the publisher profile to get.
+         * @since 1.13
+         */
+        protected Get(java.lang.String accountId, java.lang.String publisherProfileId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.PublisherProfile.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.publisherProfileId = com.google.api.client.util.Preconditions.checkNotNull(publisherProfileId, "Required parameter publisherProfileId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public Get setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** The id for the publisher profile to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String publisherProfileId;
+
+        /** The id for the publisher profile to get.
+         */
+        public java.lang.String getPublisherProfileId() {
+          return publisherProfileId;
+        }
+
+        /** The id for the publisher profile to get. */
+        public Get setPublisherProfileId(java.lang.String publisherProfileId) {
+          this.publisherProfileId = publisherProfileId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List all publisher profiles visible to the buyer
+       *
+       * Create a request for the method "publisherProfiles.list".
+       *
+       * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Account ID of the buyer.
+       * @return the request
+       */
+      public List list(java.lang.String accountId) throws java.io.IOException {
+        List result = new List(accountId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.ListPublisherProfilesResponse> {
+
+        private static final String REST_PATH = "v2beta1/accounts/{accountId}/publisherProfiles";
+
+        /**
+         * List all publisher profiles visible to the buyer
+         *
+         * Create a request for the method "publisherProfiles.list".
+         *
+         * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Account ID of the buyer.
+         * @since 1.13
+         */
+        protected List(java.lang.String accountId) {
+          super(AdExchangeBuyerII.this, "GET", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.ListPublisherProfilesResponse.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Account ID of the buyer. */
+        @com.google.api.client.util.Key
+        private java.lang.String accountId;
+
+        /** Account ID of the buyer.
+         */
+        public java.lang.String getAccountId() {
+          return accountId;
+        }
+
+        /** Account ID of the buyer. */
+        public List setAccountId(java.lang.String accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** Specify the number of results to include per page. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Specify the number of results to include per page.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Specify the number of results to include per page. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The page token as return from ListPublisherProfilesResponse. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token as return from ListPublisherProfilesResponse.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The page token as return from ListPublisherProfilesResponse. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

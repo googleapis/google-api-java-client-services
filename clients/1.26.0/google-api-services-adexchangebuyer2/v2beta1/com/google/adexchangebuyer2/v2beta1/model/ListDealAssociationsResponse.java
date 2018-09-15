@@ -37,6 +37,12 @@ public final class ListDealAssociationsResponse extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<CreativeDealAssociation> associations;
 
+  static {
+    // hack to force ProGuard to consider CreativeDealAssociation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CreativeDealAssociation.class);
+  }
+
   /**
    * A token to retrieve the next page of results. Pass this value in the
    * ListDealAssociationsRequest.page_token field in the subsequent call to 'ListDealAssociation'

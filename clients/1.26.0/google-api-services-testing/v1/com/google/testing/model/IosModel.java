@@ -39,13 +39,6 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> deviceCapabilities;
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String formFactor;
-
-  /**
    * Output only. The unique opaque id for this model. Use this for invoking the
    * TestExecutionService.
    * The value may be {@code null}.
@@ -93,23 +86,6 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
    */
   public IosModel setDeviceCapabilities(java.util.List<java.lang.String> deviceCapabilities) {
     this.deviceCapabilities = deviceCapabilities;
-    return this;
-  }
-
-  /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFormFactor() {
-    return formFactor;
-  }
-
-  /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
-   * @param formFactor formFactor or {@code null} for none
-   */
-  public IosModel setFormFactor(java.lang.String formFactor) {
-    this.formFactor = formFactor;
     return this;
   }
 

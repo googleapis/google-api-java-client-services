@@ -39,6 +39,12 @@ public final class ServingRestriction extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<ServingContext> contexts;
 
+  static {
+    // hack to force ProGuard to consider ServingContext used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ServingContext.class);
+  }
+
   /**
    * Disapproval bound to this restriction. Only present if status=DISAPPROVED. Can be used to
    * filter the response of the creatives.list method.

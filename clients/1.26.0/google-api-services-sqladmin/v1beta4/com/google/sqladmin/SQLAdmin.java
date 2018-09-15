@@ -5714,13 +5714,12 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Database instance ID. This does not include the project ID.
-     * @param host Host of the user in the instance.
      * @param name Name of the user in the instance.
      * @param content the {@link com.google.sqladmin.model.User}
      * @return the request
      */
-    public Update update(java.lang.String project, java.lang.String instance, java.lang.String host, java.lang.String name, com.google.sqladmin.model.User content) throws java.io.IOException {
-      Update result = new Update(project, instance, host, name, content);
+    public Update update(java.lang.String project, java.lang.String instance, java.lang.String name, com.google.sqladmin.model.User content) throws java.io.IOException {
+      Update result = new Update(project, instance, name, content);
       initialize(result);
       return result;
     }
@@ -5742,16 +5741,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Database instance ID. This does not include the project ID.
-       * @param host Host of the user in the instance.
        * @param name Name of the user in the instance.
        * @param content the {@link com.google.sqladmin.model.User}
        * @since 1.13
        */
-      protected Update(java.lang.String project, java.lang.String instance, java.lang.String host, java.lang.String name, com.google.sqladmin.model.User content) {
+      protected Update(java.lang.String project, java.lang.String instance, java.lang.String name, com.google.sqladmin.model.User content) {
         super(SQLAdmin.this, "PUT", REST_PATH, content, com.google.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
-        this.host = com.google.api.client.util.Preconditions.checkNotNull(host, "Required parameter host must be specified.");
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
       }
 
@@ -5822,22 +5819,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Host of the user in the instance. */
-      @com.google.api.client.util.Key
-      private java.lang.String host;
-
-      /** Host of the user in the instance.
-       */
-      public java.lang.String getHost() {
-        return host;
-      }
-
-      /** Host of the user in the instance. */
-      public Update setHost(java.lang.String host) {
-        this.host = host;
-        return this;
-      }
-
       /** Name of the user in the instance. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -5851,6 +5832,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the user in the instance. */
       public Update setName(java.lang.String name) {
         this.name = name;
+        return this;
+      }
+
+      /** Host of the user in the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String host;
+
+      /** Host of the user in the instance.
+       */
+      public java.lang.String getHost() {
+        return host;
+      }
+
+      /** Host of the user in the instance. */
+      public Update setHost(java.lang.String host) {
+        this.host = host;
         return this;
       }
 

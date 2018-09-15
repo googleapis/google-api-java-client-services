@@ -183,6 +183,494 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class WorkflowTemplates {
 
         /**
+         * Creates new workflow template.
+         *
+         * Create a request for the method "workflowTemplates.create".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+         * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataprocRequest<com.google.dataproc.model.WorkflowTemplate> {
+
+          private static final String REST_PATH = "v1/{+parent}/workflowTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates new workflow template.
+           *
+           * Create a request for the method "workflowTemplates.create".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+           * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.dataproc.model.WorkflowTemplate.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The "resource name" of the region, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a workflow template. It does not cancel in-progress workflows.
+         *
+         * Create a request for the method "workflowTemplates.delete".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataprocRequest<com.google.dataproc.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Deletes a workflow template. It does not cancel in-progress workflows.
+           *
+           * Create a request for the method "workflowTemplates.delete".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataproc.this, "DELETE", REST_PATH, null, com.google.dataproc.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The "resource name" of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The version of workflow template to delete. If specified, will only delete
+           * the template if the current server version matches specified version.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer version;
+
+          /** Optional. The version of workflow template to delete. If specified, will only delete the template
+         if the current server version matches specified version.
+           */
+          public java.lang.Integer getVersion() {
+            return version;
+          }
+
+          /**
+           * Optional. The version of workflow template to delete. If specified, will only delete
+           * the template if the current server version matches specified version.
+           */
+          public Delete setVersion(java.lang.Integer version) {
+            this.version = version;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves the latest workflow template.Can retrieve previously instantiated template by
+         * specifying optional version parameter.
+         *
+         * Create a request for the method "workflowTemplates.get".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataprocRequest<com.google.dataproc.model.WorkflowTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Retrieves the latest workflow template.Can retrieve previously instantiated template by
+           * specifying optional version parameter.
+           *
+           * Create a request for the method "workflowTemplates.get".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.dataproc.model.WorkflowTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The "resource name" of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * versions can be retrieved.If unspecified, retrieves the current version.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer version;
+
+          /** Optional. The version of workflow template to retrieve. Only previously instatiated versions can be
+         retrieved.If unspecified, retrieves the current version.
+           */
+          public java.lang.Integer getVersion() {
+            return version;
+          }
+
+          /**
+           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * versions can be retrieved.If unspecified, retrieves the current version.
+           */
+          public Get setVersion(java.lang.Integer version) {
+            this.version = version;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -322,6 +810,541 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Instantiates a template and begins execution.The returned Operation can be used to track
+         * execution of workflow by polling operations.get. The Operation will complete when entire workflow
+         * is finished.The running workflow can be aborted via operations.cancel. This will cause any
+         * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
+         * will be WorkflowMetadata.On successful completion, Operation.response will be Empty.
+         *
+         * Create a request for the method "workflowTemplates.instantiate".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Instantiate#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param content the {@link com.google.dataproc.model.InstantiateWorkflowTemplateRequest}
+         * @return the request
+         */
+        public Instantiate instantiate(java.lang.String name, com.google.dataproc.model.InstantiateWorkflowTemplateRequest content) throws java.io.IOException {
+          Instantiate result = new Instantiate(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Instantiate extends DataprocRequest<com.google.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:instantiate";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Instantiates a template and begins execution.The returned Operation can be used to track
+           * execution of workflow by polling operations.get. The Operation will complete when entire
+           * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
+           * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
+           * Operation.metadata will be WorkflowMetadata.On successful completion, Operation.response will
+           * be Empty.
+           *
+           * Create a request for the method "workflowTemplates.instantiate".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Instantiate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Instantiate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param content the {@link com.google.dataproc.model.InstantiateWorkflowTemplateRequest}
+           * @since 1.13
+           */
+          protected Instantiate(java.lang.String name, com.google.dataproc.model.InstantiateWorkflowTemplateRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.dataproc.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Instantiate set$Xgafv(java.lang.String $Xgafv) {
+            return (Instantiate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Instantiate setAccessToken(java.lang.String accessToken) {
+            return (Instantiate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Instantiate setAlt(java.lang.String alt) {
+            return (Instantiate) super.setAlt(alt);
+          }
+
+          @Override
+          public Instantiate setCallback(java.lang.String callback) {
+            return (Instantiate) super.setCallback(callback);
+          }
+
+          @Override
+          public Instantiate setFields(java.lang.String fields) {
+            return (Instantiate) super.setFields(fields);
+          }
+
+          @Override
+          public Instantiate setKey(java.lang.String key) {
+            return (Instantiate) super.setKey(key);
+          }
+
+          @Override
+          public Instantiate setOauthToken(java.lang.String oauthToken) {
+            return (Instantiate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Instantiate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Instantiate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Instantiate setQuotaUser(java.lang.String quotaUser) {
+            return (Instantiate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Instantiate setUploadType(java.lang.String uploadType) {
+            return (Instantiate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Instantiate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Instantiate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The "resource name" of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Instantiate setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Instantiate set(String parameterName, Object value) {
+            return (Instantiate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Instantiates a template and begins execution.This method is equivalent to executing the sequence
+         * CreateWorkflowTemplate, InstantiateWorkflowTemplate, DeleteWorkflowTemplate.The returned
+         * Operation can be used to track execution of workflow by polling operations.get. The Operation
+         * will complete when entire workflow is finished.The running workflow can be aborted via
+         * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
+         * to be deleted.The Operation.metadata will be WorkflowMetadata.On successful completion,
+         * Operation.response will be Empty.
+         *
+         * Create a request for the method "workflowTemplates.instantiateInline".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link InstantiateInline#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The "resource name" of the workflow template region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+         * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+         * @return the request
+         */
+        public InstantiateInline instantiateInline(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) throws java.io.IOException {
+          InstantiateInline result = new InstantiateInline(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class InstantiateInline extends DataprocRequest<com.google.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/workflowTemplates:instantiateInline";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Instantiates a template and begins execution.This method is equivalent to executing the
+           * sequence CreateWorkflowTemplate, InstantiateWorkflowTemplate, DeleteWorkflowTemplate.The
+           * returned Operation can be used to track execution of workflow by polling operations.get. The
+           * Operation will complete when entire workflow is finished.The running workflow can be aborted
+           * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata.On successful
+           * completion, Operation.response will be Empty.
+           *
+           * Create a request for the method "workflowTemplates.instantiateInline".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link InstantiateInline#execute()} method to invoke the remote
+           * operation. <p> {@link InstantiateInline#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The "resource name" of the workflow template region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+           * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+           * @since 1.13
+           */
+          protected InstantiateInline(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.dataproc.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public InstantiateInline set$Xgafv(java.lang.String $Xgafv) {
+            return (InstantiateInline) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public InstantiateInline setAccessToken(java.lang.String accessToken) {
+            return (InstantiateInline) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public InstantiateInline setAlt(java.lang.String alt) {
+            return (InstantiateInline) super.setAlt(alt);
+          }
+
+          @Override
+          public InstantiateInline setCallback(java.lang.String callback) {
+            return (InstantiateInline) super.setCallback(callback);
+          }
+
+          @Override
+          public InstantiateInline setFields(java.lang.String fields) {
+            return (InstantiateInline) super.setFields(fields);
+          }
+
+          @Override
+          public InstantiateInline setKey(java.lang.String key) {
+            return (InstantiateInline) super.setKey(key);
+          }
+
+          @Override
+          public InstantiateInline setOauthToken(java.lang.String oauthToken) {
+            return (InstantiateInline) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public InstantiateInline setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (InstantiateInline) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public InstantiateInline setQuotaUser(java.lang.String quotaUser) {
+            return (InstantiateInline) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public InstantiateInline setUploadType(java.lang.String uploadType) {
+            return (InstantiateInline) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public InstantiateInline setUploadProtocol(java.lang.String uploadProtocol) {
+            return (InstantiateInline) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The "resource name" of the workflow template region, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          public InstantiateInline setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
+           * from running. This mitigates risk of concurrent instances started due to retries.It is
+           * recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A tag that prevents multiple concurrent workflow instances with the same tag from
+         running. This mitigates risk of concurrent instances started due to retries.It is recommended to
+         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
+         tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
+           * from running. This mitigates risk of concurrent instances started due to retries.It is
+           * recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          public InstantiateInline setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public InstantiateInline set(String parameterName, Object value) {
+            return (InstantiateInline) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists workflows that match the specified filter in the request.
+         *
+         * Create a request for the method "workflowTemplates.list".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataprocRequest<com.google.dataproc.model.ListWorkflowTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/workflowTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists workflows that match the specified filter in the request.
+           *
+           * Create a request for the method "workflowTemplates.list".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.dataproc.model.ListWorkflowTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The "resource name" of the region, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of results to return in each response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return in each response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results to return in each response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token, returned by a previous call, to request the next page of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token, returned by a previous call, to request the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token, returned by a previous call, to request the next page of
+           * results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**
@@ -608,6 +1631,153 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates (replaces) workflow template. The updated template must contain version that matches the
+         * current server version.
+         *
+         * Create a request for the method "workflowTemplates.update".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The "resource name" of the template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.dataproc.model.WorkflowTemplate content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends DataprocRequest<com.google.dataproc.model.WorkflowTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Updates (replaces) workflow template. The updated template must contain version that matches
+           * the current server version.
+           *
+           * Create a request for the method "workflowTemplates.update".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The "resource name" of the template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.dataproc.model.WorkflowTemplate content) {
+            super(Dataproc.this, "PUT", REST_PATH, content, com.google.dataproc.model.WorkflowTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The "resource name" of the template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The "resource name" of the template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The "resource name" of the template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
           }
         }
 
@@ -4883,6 +6053,494 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
       public class WorkflowTemplates {
 
         /**
+         * Creates new workflow template.
+         *
+         * Create a request for the method "workflowTemplates.create".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+         * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataprocRequest<com.google.dataproc.model.WorkflowTemplate> {
+
+          private static final String REST_PATH = "v1/{+parent}/workflowTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+$");
+
+          /**
+           * Creates new workflow template.
+           *
+           * Create a request for the method "workflowTemplates.create".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+           * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.dataproc.model.WorkflowTemplate.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The "resource name" of the region, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a workflow template. It does not cancel in-progress workflows.
+         *
+         * Create a request for the method "workflowTemplates.delete".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataprocRequest<com.google.dataproc.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Deletes a workflow template. It does not cancel in-progress workflows.
+           *
+           * Create a request for the method "workflowTemplates.delete".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataproc.this, "DELETE", REST_PATH, null, com.google.dataproc.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The "resource name" of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The version of workflow template to delete. If specified, will only delete
+           * the template if the current server version matches specified version.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer version;
+
+          /** Optional. The version of workflow template to delete. If specified, will only delete the template
+         if the current server version matches specified version.
+           */
+          public java.lang.Integer getVersion() {
+            return version;
+          }
+
+          /**
+           * Optional. The version of workflow template to delete. If specified, will only delete
+           * the template if the current server version matches specified version.
+           */
+          public Delete setVersion(java.lang.Integer version) {
+            this.version = version;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves the latest workflow template.Can retrieve previously instantiated template by
+         * specifying optional version parameter.
+         *
+         * Create a request for the method "workflowTemplates.get".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataprocRequest<com.google.dataproc.model.WorkflowTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Retrieves the latest workflow template.Can retrieve previously instantiated template by
+           * specifying optional version parameter.
+           *
+           * Create a request for the method "workflowTemplates.get".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.dataproc.model.WorkflowTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The "resource name" of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * versions can be retrieved.If unspecified, retrieves the current version.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer version;
+
+          /** Optional. The version of workflow template to retrieve. Only previously instatiated versions can be
+         retrieved.If unspecified, retrieves the current version.
+           */
+          public java.lang.Integer getVersion() {
+            return version;
+          }
+
+          /**
+           * Optional. The version of workflow template to retrieve. Only previously instatiated
+           * versions can be retrieved.If unspecified, retrieves the current version.
+           */
+          public Get setVersion(java.lang.Integer version) {
+            this.version = version;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -5022,6 +6680,541 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Instantiates a template and begins execution.The returned Operation can be used to track
+         * execution of workflow by polling operations.get. The Operation will complete when entire workflow
+         * is finished.The running workflow can be aborted via operations.cancel. This will cause any
+         * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
+         * will be WorkflowMetadata.On successful completion, Operation.response will be Empty.
+         *
+         * Create a request for the method "workflowTemplates.instantiate".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Instantiate#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param content the {@link com.google.dataproc.model.InstantiateWorkflowTemplateRequest}
+         * @return the request
+         */
+        public Instantiate instantiate(java.lang.String name, com.google.dataproc.model.InstantiateWorkflowTemplateRequest content) throws java.io.IOException {
+          Instantiate result = new Instantiate(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Instantiate extends DataprocRequest<com.google.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:instantiate";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Instantiates a template and begins execution.The returned Operation can be used to track
+           * execution of workflow by polling operations.get. The Operation will complete when entire
+           * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
+           * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
+           * Operation.metadata will be WorkflowMetadata.On successful completion, Operation.response will
+           * be Empty.
+           *
+           * Create a request for the method "workflowTemplates.instantiate".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Instantiate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Instantiate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The "resource name" of the workflow template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param content the {@link com.google.dataproc.model.InstantiateWorkflowTemplateRequest}
+           * @since 1.13
+           */
+          protected Instantiate(java.lang.String name, com.google.dataproc.model.InstantiateWorkflowTemplateRequest content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.dataproc.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Instantiate set$Xgafv(java.lang.String $Xgafv) {
+            return (Instantiate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Instantiate setAccessToken(java.lang.String accessToken) {
+            return (Instantiate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Instantiate setAlt(java.lang.String alt) {
+            return (Instantiate) super.setAlt(alt);
+          }
+
+          @Override
+          public Instantiate setCallback(java.lang.String callback) {
+            return (Instantiate) super.setCallback(callback);
+          }
+
+          @Override
+          public Instantiate setFields(java.lang.String fields) {
+            return (Instantiate) super.setFields(fields);
+          }
+
+          @Override
+          public Instantiate setKey(java.lang.String key) {
+            return (Instantiate) super.setKey(key);
+          }
+
+          @Override
+          public Instantiate setOauthToken(java.lang.String oauthToken) {
+            return (Instantiate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Instantiate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Instantiate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Instantiate setQuotaUser(java.lang.String quotaUser) {
+            return (Instantiate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Instantiate setUploadType(java.lang.String uploadType) {
+            return (Instantiate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Instantiate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Instantiate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The "resource name" of the workflow template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Instantiate setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Instantiate set(String parameterName, Object value) {
+            return (Instantiate) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Instantiates a template and begins execution.This method is equivalent to executing the sequence
+         * CreateWorkflowTemplate, InstantiateWorkflowTemplate, DeleteWorkflowTemplate.The returned
+         * Operation can be used to track execution of workflow by polling operations.get. The Operation
+         * will complete when entire workflow is finished.The running workflow can be aborted via
+         * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
+         * to be deleted.The Operation.metadata will be WorkflowMetadata.On successful completion,
+         * Operation.response will be Empty.
+         *
+         * Create a request for the method "workflowTemplates.instantiateInline".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link InstantiateInline#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The "resource name" of the workflow template region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+         * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+         * @return the request
+         */
+        public InstantiateInline instantiateInline(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) throws java.io.IOException {
+          InstantiateInline result = new InstantiateInline(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class InstantiateInline extends DataprocRequest<com.google.dataproc.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/workflowTemplates:instantiateInline";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+$");
+
+          /**
+           * Instantiates a template and begins execution.This method is equivalent to executing the
+           * sequence CreateWorkflowTemplate, InstantiateWorkflowTemplate, DeleteWorkflowTemplate.The
+           * returned Operation can be used to track execution of workflow by polling operations.get. The
+           * Operation will complete when entire workflow is finished.The running workflow can be aborted
+           * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata.On successful
+           * completion, Operation.response will be Empty.
+           *
+           * Create a request for the method "workflowTemplates.instantiateInline".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link InstantiateInline#execute()} method to invoke the remote
+           * operation. <p> {@link InstantiateInline#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The "resource name" of the workflow template region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+           * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+           * @since 1.13
+           */
+          protected InstantiateInline(java.lang.String parent, com.google.dataproc.model.WorkflowTemplate content) {
+            super(Dataproc.this, "POST", REST_PATH, content, com.google.dataproc.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+$");
+            }
+          }
+
+          @Override
+          public InstantiateInline set$Xgafv(java.lang.String $Xgafv) {
+            return (InstantiateInline) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public InstantiateInline setAccessToken(java.lang.String accessToken) {
+            return (InstantiateInline) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public InstantiateInline setAlt(java.lang.String alt) {
+            return (InstantiateInline) super.setAlt(alt);
+          }
+
+          @Override
+          public InstantiateInline setCallback(java.lang.String callback) {
+            return (InstantiateInline) super.setCallback(callback);
+          }
+
+          @Override
+          public InstantiateInline setFields(java.lang.String fields) {
+            return (InstantiateInline) super.setFields(fields);
+          }
+
+          @Override
+          public InstantiateInline setKey(java.lang.String key) {
+            return (InstantiateInline) super.setKey(key);
+          }
+
+          @Override
+          public InstantiateInline setOauthToken(java.lang.String oauthToken) {
+            return (InstantiateInline) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public InstantiateInline setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (InstantiateInline) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public InstantiateInline setQuotaUser(java.lang.String quotaUser) {
+            return (InstantiateInline) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public InstantiateInline setUploadType(java.lang.String uploadType) {
+            return (InstantiateInline) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public InstantiateInline setUploadProtocol(java.lang.String uploadProtocol) {
+            return (InstantiateInline) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The "resource name" of the workflow template region, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The "resource name" of the workflow template region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          public InstantiateInline setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
+           * from running. This mitigates risk of concurrent instances started due to retries.It is
+           * recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A tag that prevents multiple concurrent workflow instances with the same tag from
+         running. This mitigates risk of concurrent instances started due to retries.It is recommended to
+         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
+         tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
+           * from running. This mitigates risk of concurrent instances started due to retries.It is
+           * recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          public InstantiateInline setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public InstantiateInline set(String parameterName, Object value) {
+            return (InstantiateInline) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists workflows that match the specified filter in the request.
+         *
+         * Create a request for the method "workflowTemplates.list".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataprocRequest<com.google.dataproc.model.ListWorkflowTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/workflowTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+$");
+
+          /**
+           * Lists workflows that match the specified filter in the request.
+           *
+           * Create a request for the method "workflowTemplates.list".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The "resource name" of the region, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.dataproc.model.ListWorkflowTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The "resource name" of the region, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The "resource name" of the region, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of results to return in each response. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return in each response.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of results to return in each response. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The page token, returned by a previous call, to request the next page of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token, returned by a previous call, to request the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The page token, returned by a previous call, to request the next page of
+           * results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**
@@ -5308,6 +7501,153 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates (replaces) workflow template. The updated template must contain version that matches the
+         * current server version.
+         *
+         * Create a request for the method "workflowTemplates.update".
+         *
+         * This request holds the parameters needed by the dataproc server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The "resource name" of the template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.dataproc.model.WorkflowTemplate content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends DataprocRequest<com.google.dataproc.model.WorkflowTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+
+          /**
+           * Updates (replaces) workflow template. The updated template must contain version that matches
+           * the current server version.
+           *
+           * Create a request for the method "workflowTemplates.update".
+           *
+           * This request holds the parameters needed by the the dataproc server.  After setting any
+           * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The "resource name" of the template, as described in
+         *        https://cloud.google.com/apis/design/resource_names of the form
+         *        projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           * @param content the {@link com.google.dataproc.model.WorkflowTemplate}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.dataproc.model.WorkflowTemplate content) {
+            super(Dataproc.this, "PUT", REST_PATH, content, com.google.dataproc.model.WorkflowTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. The "resource name" of the template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The "resource name" of the template, as described in
+         https://cloud.google.com/apis/design/resource_names of the form
+         projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. The "resource name" of the template, as described in
+           * https://cloud.google.com/apis/design/resource_names of the form
+           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/regions/[^/]+/workflowTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
           }
         }
 

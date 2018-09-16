@@ -5276,7 +5276,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the storage server.  After setting any optional
      * parameters, call the {@link Compose#execute()} method to invoke the remote operation.
      *
-     * @param destinationBucket Name of the bucket in which to store the new object.
+     * @param destinationBucket Name of the bucket containing the source objects. The destination object is stored in this bucket.
      * @param destinationObject Name of the new object. For information about how to URL encode object names to be path safe, see
      *        Encoding URI Path Parts.
      * @param content the {@link com.google.storage.model.ComposeRequest}
@@ -5303,7 +5303,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        * Compose#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param destinationBucket Name of the bucket in which to store the new object.
+       * @param destinationBucket Name of the bucket containing the source objects. The destination object is stored in this bucket.
        * @param destinationObject Name of the new object. For information about how to URL encode object names to be path safe, see
      *        Encoding URI Path Parts.
        * @param content the {@link com.google.storage.model.ComposeRequest}
@@ -5350,17 +5350,23 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Compose) super.setUserIp(userIp);
       }
 
-      /** Name of the bucket in which to store the new object. */
+      /**
+       * Name of the bucket containing the source objects. The destination object is stored in this
+       * bucket.
+       */
       @com.google.api.client.util.Key
       private java.lang.String destinationBucket;
 
-      /** Name of the bucket in which to store the new object.
+      /** Name of the bucket containing the source objects. The destination object is stored in this bucket.
        */
       public java.lang.String getDestinationBucket() {
         return destinationBucket;
       }
 
-      /** Name of the bucket in which to store the new object. */
+      /**
+       * Name of the bucket containing the source objects. The destination object is stored in this
+       * bucket.
+       */
       public Compose setDestinationBucket(java.lang.String destinationBucket) {
         this.destinationBucket = destinationBucket;
         return this;

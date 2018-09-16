@@ -1103,10 +1103,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private java.lang.Boolean isLive;
 
         /**
-         * A regular expression that satisfies the RE2 syntax language. This condition is satisfied when
-         * the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early
-         * Access" launch stage and is only available to a whitelisted set of users; that means that this
-         * feature may changed in backward-incompatible ways and that it is not guaranteed to be released.
+         * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name
+         * of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access"
+         * launch stage and is only available to a whitelisted set of users; that means that this feature
+         * may be changed in backward-incompatible ways and that it is not guaranteed to be released.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
@@ -1187,10 +1187,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * A regular expression that satisfies the RE2 syntax language. This condition is satisfied when
-         * the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early
-         * Access" launch stage and is only available to a whitelisted set of users; that means that this
-         * feature may changed in backward-incompatible ways and that it is not guaranteed to be released.
+         * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name
+         * of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access"
+         * launch stage and is only available to a whitelisted set of users; that means that this feature
+         * may be changed in backward-incompatible ways and that it is not guaranteed to be released.
          * @return value or {@code null} for none
          */
         public java.lang.String getMatchesPattern() {
@@ -1198,10 +1198,10 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         }
 
         /**
-         * A regular expression that satisfies the RE2 syntax language. This condition is satisfied when
-         * the name of the object matches the RE2 pattern. Note: This feature is currently in the "Early
-         * Access" launch stage and is only available to a whitelisted set of users; that means that this
-         * feature may changed in backward-incompatible ways and that it is not guaranteed to be released.
+         * A regular expression that satisfies the RE2 syntax. This condition is satisfied when the name
+         * of the object matches the RE2 pattern. Note: This feature is currently in the "Early Access"
+         * launch stage and is only available to a whitelisted set of users; that means that this feature
+         * may be changed in backward-incompatible ways and that it is not guaranteed to be released.
          * @param matchesPattern matchesPattern or {@code null} for none
          */
         public Condition setMatchesPattern(java.lang.String matchesPattern) {

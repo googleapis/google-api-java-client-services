@@ -131,7 +131,7 @@ public final class ComposeRequest extends com.google.api.client.json.GenericJson
     private java.lang.Long generation;
 
     /**
-     * The source object's name. The source object's bucket is implicitly the destination bucket.
+     * The source object's name. All source objects must reside in the same bucket.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class ComposeRequest extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * The source object's name. The source object's bucket is implicitly the destination bucket.
+     * The source object's name. All source objects must reside in the same bucket.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -170,7 +170,7 @@ public final class ComposeRequest extends com.google.api.client.json.GenericJson
     }
 
     /**
-     * The source object's name. The source object's bucket is implicitly the destination bucket.
+     * The source object's name. All source objects must reside in the same bucket.
      * @param name name or {@code null} for none
      */
     public SourceObjects setName(java.lang.String name) {

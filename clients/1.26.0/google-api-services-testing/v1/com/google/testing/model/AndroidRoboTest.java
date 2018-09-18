@@ -98,12 +98,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<RoboStartingIntent> startingIntents;
 
-  static {
-    // hack to force ProGuard to consider RoboStartingIntent used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RoboStartingIntent.class);
-  }
-
   /**
    * The APK for the application under test.
    * @return value or {@code null} for none

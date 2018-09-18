@@ -59,12 +59,6 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<OperationEvent> events;
 
-  static {
-    // hack to force ProGuard to consider OperationEvent used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(OperationEvent.class);
-  }
-
   /**
    * Optionally provided by the caller when submitting the request that creates the operation.
    * The value may be {@code null}.

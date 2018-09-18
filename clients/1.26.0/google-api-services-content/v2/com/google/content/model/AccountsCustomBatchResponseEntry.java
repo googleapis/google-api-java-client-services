@@ -61,7 +61,7 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
   private java.lang.String kind;
 
   /**
-   * The status of the updated link. Only defined if the method is link.
+   * Deprecated. This field is never set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
   }
 
   /**
-   * The status of the updated link. Only defined if the method is link.
+   * Deprecated. This field is never set.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkStatus() {
@@ -148,7 +148,7 @@ public final class AccountsCustomBatchResponseEntry extends com.google.api.clien
   }
 
   /**
-   * The status of the updated link. Only defined if the method is link.
+   * Deprecated. This field is never set.
    * @param linkStatus linkStatus or {@code null} for none
    */
   public AccountsCustomBatchResponseEntry setLinkStatus(java.lang.String linkStatus) {

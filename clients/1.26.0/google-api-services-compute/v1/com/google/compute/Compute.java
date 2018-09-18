@@ -28338,9 +28338,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * This field is optional. It can be a full or partial URL. For example, the following are all
        * valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/projec
-       * t/global/global/instanceTemplates/instanceTemplate -
-       * projects/project/global/global/instanceTemplates/instanceTemplate -
-       * global/instancesTemplates/instanceTemplate
+       * t/global/instanceTemplates/instanceTemplate -
+       * projects/project/global/instanceTemplates/instanceTemplate -
+       * global/instanceTemplates/instanceTemplate
        */
       @com.google.api.client.util.Key
       private java.lang.String sourceInstanceTemplate;
@@ -28348,10 +28348,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       /** Specifies instance template to create the instance.
 
      This field is optional. It can be a full or partial URL. For example, the following are all valid
-     URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/globa
-     l/instanceTemplates/instanceTemplate -
-     projects/project/global/global/instanceTemplates/instanceTemplate -
-     global/instancesTemplates/instanceTemplate
+     URLs to an instance template: -
+     https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/instanceTemplate -
+     projects/project/global/instanceTemplates/instanceTemplate -
+     global/instanceTemplates/instanceTemplate
        */
       public java.lang.String getSourceInstanceTemplate() {
         return sourceInstanceTemplate;
@@ -28362,9 +28362,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * This field is optional. It can be a full or partial URL. For example, the following are all
        * valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/projec
-       * t/global/global/instanceTemplates/instanceTemplate -
-       * projects/project/global/global/instanceTemplates/instanceTemplate -
-       * global/instancesTemplates/instanceTemplate
+       * t/global/instanceTemplates/instanceTemplate -
+       * projects/project/global/instanceTemplates/instanceTemplate -
+       * global/instanceTemplates/instanceTemplate
        */
       public Insert setSourceInstanceTemplate(java.lang.String sourceInstanceTemplate) {
         this.sourceInstanceTemplate = sourceInstanceTemplate;

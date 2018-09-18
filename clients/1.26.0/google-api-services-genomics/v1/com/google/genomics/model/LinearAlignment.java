@@ -38,6 +38,12 @@ public final class LinearAlignment extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<CigarUnit> cigar;
 
+  static {
+    // hack to force ProGuard to consider CigarUnit used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CigarUnit.class);
+  }
+
   /**
    * The mapping quality of this alignment. Represents how likely the read maps to this position as
    * opposed to other locations.

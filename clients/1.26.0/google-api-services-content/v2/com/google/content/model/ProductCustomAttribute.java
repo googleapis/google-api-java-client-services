@@ -45,7 +45,7 @@ public final class ProductCustomAttribute extends com.google.api.client.json.Gen
   private java.lang.String type;
 
   /**
-   * Free-form unit of the attribute. Unit can only be used for values of type INT or FLOAT.
+   * Free-form unit of the attribute. Unit can only be used for values of type int, float, or price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class ProductCustomAttribute extends com.google.api.client.json.Gen
   }
 
   /**
-   * Free-form unit of the attribute. Unit can only be used for values of type INT or FLOAT.
+   * Free-form unit of the attribute. Unit can only be used for values of type int, float, or price.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -101,7 +101,7 @@ public final class ProductCustomAttribute extends com.google.api.client.json.Gen
   }
 
   /**
-   * Free-form unit of the attribute. Unit can only be used for values of type INT or FLOAT.
+   * Free-form unit of the attribute. Unit can only be used for values of type int, float, or price.
    * @param unit unit or {@code null} for none
    */
   public ProductCustomAttribute setUnit(java.lang.String unit) {

@@ -416,7 +416,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String offerId;
 
   /**
-   * Whether an item is available for purchase only online.
+   * Deprecated. Whether an item is available for purchase only online.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -578,7 +578,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private ProductUnitPricingMeasure unitPricingMeasure;
 
   /**
-   * The read-only list of intended destinations which passed validation.
+   * Deprecated. The read-only list of intended destinations which passed validation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1527,7 +1527,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether an item is available for purchase only online.
+   * Deprecated. Whether an item is available for purchase only online.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOnlineOnly() {
@@ -1535,7 +1535,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether an item is available for purchase only online.
+   * Deprecated. Whether an item is available for purchase only online.
    * @param onlineOnly onlineOnly or {@code null} for none
    */
   public Product setOnlineOnly(java.lang.Boolean onlineOnly) {
@@ -1920,7 +1920,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only list of intended destinations which passed validation.
+   * Deprecated. The read-only list of intended destinations which passed validation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValidatedDestinations() {
@@ -1928,7 +1928,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The read-only list of intended destinations which passed validation.
+   * Deprecated. The read-only list of intended destinations which passed validation.
    * @param validatedDestinations validatedDestinations or {@code null} for none
    */
   public Product setValidatedDestinations(java.util.List<java.lang.String> validatedDestinations) {

@@ -36,6 +36,12 @@ public final class ClientInfo extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ClientInfoDetail> clientInfoDetails;
 
+  static {
+    // hack to force ProGuard to consider ClientInfoDetail used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClientInfoDetail.class);
+  }
+
   /**
    * Client name, such as gcloud. Required
    * The value may be {@code null}.

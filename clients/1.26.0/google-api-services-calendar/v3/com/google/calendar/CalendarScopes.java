@@ -26,8 +26,17 @@ public class CalendarScopes {
   /** Manage your calendars. */
   public static final String CALENDAR = "https://www.googleapis.com/auth/calendar";
 
+  /** View and edit events on all your calendars. */
+  public static final String CALENDAR_EVENTS = "https://www.googleapis.com/auth/calendar.events";
+
+  /** View events on all your calendars. */
+  public static final String CALENDAR_EVENTS_READONLY = "https://www.googleapis.com/auth/calendar.events.readonly";
+
   /** View your calendars. */
   public static final String CALENDAR_READONLY = "https://www.googleapis.com/auth/calendar.readonly";
+
+  /** View your Calendar settings. */
+  public static final String CALENDAR_SETTINGS_READONLY = "https://www.googleapis.com/auth/calendar.settings.readonly";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -37,7 +46,10 @@ public class CalendarScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CALENDAR);
+    set.add(CALENDAR_EVENTS);
+    set.add(CALENDAR_EVENTS_READONLY);
     set.add(CALENDAR_READONLY);
+    set.add(CALENDAR_SETTINGS_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

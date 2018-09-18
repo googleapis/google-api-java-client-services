@@ -14,53 +14,54 @@
  * Modify at your own risk.
  */
 
-package com.google.testing.model;
+package com.google.content.model;
 
 /**
- * A list of iOS device configurations in which the test is to be executed.
+ * Model definition for OrdersCreateTestReturnRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class IosDeviceList extends com.google.api.client.json.GenericJson {
+public final class OrdersCreateTestReturnRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A list of iOS devices
+   * Returned items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<IosDevice> iosDevices;
+  private java.util.List<OrdersCustomBatchRequestEntryCreateTestReturnReturnItem> items;
 
   /**
-   * Required. A list of iOS devices
+   * Returned items.
    * @return value or {@code null} for none
    */
-  public java.util.List<IosDevice> getIosDevices() {
-    return iosDevices;
+  public java.util.List<OrdersCustomBatchRequestEntryCreateTestReturnReturnItem> getItems() {
+    return items;
   }
 
   /**
-   * Required. A list of iOS devices
-   * @param iosDevices iosDevices or {@code null} for none
+   * Returned items.
+   * @param items items or {@code null} for none
    */
-  public IosDeviceList setIosDevices(java.util.List<IosDevice> iosDevices) {
-    this.iosDevices = iosDevices;
+  public OrdersCreateTestReturnRequest setItems(java.util.List<OrdersCustomBatchRequestEntryCreateTestReturnReturnItem> items) {
+    this.items = items;
     return this;
   }
 
   @Override
-  public IosDeviceList set(String fieldName, Object value) {
-    return (IosDeviceList) super.set(fieldName, value);
+  public OrdersCreateTestReturnRequest set(String fieldName, Object value) {
+    return (OrdersCreateTestReturnRequest) super.set(fieldName, value);
   }
 
   @Override
-  public IosDeviceList clone() {
-    return (IosDeviceList) super.clone();
+  public OrdersCreateTestReturnRequest clone() {
+    return (OrdersCreateTestReturnRequest) super.clone();
   }
 
 }

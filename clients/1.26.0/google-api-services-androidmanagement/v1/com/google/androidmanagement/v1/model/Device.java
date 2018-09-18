@@ -140,12 +140,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<HardwareStatus> hardwareStatusSamples;
 
-  static {
-    // hack to force ProGuard to consider HardwareStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(HardwareStatus.class);
-  }
-
   /**
    * Deprecated.
    * The value may be {@code null}.
@@ -244,12 +238,6 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PowerManagementEvent> powerManagementEvents;
-
-  static {
-    // hack to force ProGuard to consider PowerManagementEvent used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PowerManagementEvent.class);
-  }
 
   /**
    * If the same physical device has been enrolled multiple times, this field contains its previous

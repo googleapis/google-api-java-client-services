@@ -149,7 +149,10 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
      * project. This is done automatically when the Cloud Genomics API is first enabled, but if you
      * delete this permission, or if you enabled the Cloud Genomics API before the v2alpha1 API launch,
      * you must disable and re-enable the API to grant the Genomics Service Agent the required
-     * permissions.
+     * permissions. Authorization requires the following [Google IAM](https://cloud.google.com/iam/)
+     * permission:
+     *
+     * * `genomics.operations.create`
      *
      * [1]: /genomics/gsa
      *
@@ -178,7 +181,10 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        * project. This is done automatically when the Cloud Genomics API is first enabled, but if you
        * delete this permission, or if you enabled the Cloud Genomics API before the v2alpha1 API
        * launch, you must disable and re-enable the API to grant the Genomics Service Agent the required
-       * permissions.
+       * permissions. Authorization requires the following [Google IAM](https://cloud.google.com/iam/)
+       * permission:
+       *
+       * * `genomics.operations.create`
        *
        * [1]: /genomics/gsa
        *
@@ -303,7 +309,10 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
        * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
        * cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or
        * Operations.ListOperations to check whether the cancellation succeeded or the operation completed
-       * despite cancellation.
+       * despite cancellation. Authorization requires the following [Google
+       * IAM](https://cloud.google.com/iam) permission
+       *
+       * * `genomics.operations.cancel`
        *
        * Create a request for the method "operations.cancel".
        *
@@ -331,7 +340,10 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
          * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
          * cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or
          * Operations.ListOperations to check whether the cancellation succeeded or the operation
-         * completed despite cancellation.
+         * completed despite cancellation. Authorization requires the following [Google
+         * IAM](https://cloud.google.com/iam) permission
+         *
+         * * `genomics.operations.cancel`
          *
          * Create a request for the method "operations.cancel".
          *
@@ -437,8 +449,11 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service. Authorization requires the
+       * following [Google IAM](https://cloud.google.com/iam) permission
+       *
+       * * `genomics.operations.get`
        *
        * Create a request for the method "operations.get".
        *
@@ -462,8 +477,11 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
-         * operation result at intervals as recommended by the API service.
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service. Authorization requires the
+         * following [Google IAM](https://cloud.google.com/iam) permission
+         *
+         * * `genomics.operations.get`
          *
          * Create a request for the method "operations.get".
          *
@@ -577,7 +595,10 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Lists operations that match the specified filter in the request.
+       * Lists operations that match the specified filter in the request. Authorization requires the
+       * following [Google IAM](https://cloud.google.com/iam) permission
+       *
+       * * `genomics.operations.list`
        *
        * Create a request for the method "operations.list".
        *
@@ -601,7 +622,10 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+/operations$");
 
         /**
-         * Lists operations that match the specified filter in the request.
+         * Lists operations that match the specified filter in the request. Authorization requires the
+         * following [Google IAM](https://cloud.google.com/iam) permission
+         *
+         * * `genomics.operations.list`
          *
          * Create a request for the method "operations.list".
          *

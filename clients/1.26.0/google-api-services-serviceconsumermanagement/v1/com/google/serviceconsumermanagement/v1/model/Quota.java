@@ -25,7 +25,7 @@ package com.google.serviceconsumermanagement.v1.model;
  *
  * An example quota configuration in yaml format:
  *
- *    quota:
+ *    quota:      limits:
  *
  *      - name: apiWriteQpsPerProject        metric: library.googleapis.com/write_calls        unit:
  * "1/min/{project}"  # rate limit for consumer projects        values:          STANDARD: 10000
@@ -65,6 +65,12 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<QuotaLimit> limits;
+
+  static {
+    // hack to force ProGuard to consider QuotaLimit used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(QuotaLimit.class);
+  }
 
   /**
    * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.

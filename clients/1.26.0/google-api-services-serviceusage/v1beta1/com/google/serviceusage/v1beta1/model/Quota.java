@@ -25,7 +25,7 @@ package com.google.serviceusage.v1beta1.model;
  *
  * An example quota configuration in yaml format:
  *
- *    quota:
+ *    quota:      limits:
  *
  *      - name: apiWriteQpsPerProject        metric: library.googleapis.com/write_calls        unit:
  * "1/min/{project}"  # rate limit for consumer projects        values:          STANDARD: 10000

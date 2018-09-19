@@ -75,7 +75,7 @@ package com.google.toolresults.model;
  *
  * In JavaScript, one can convert a Date object to this format using the standard
  * [toISOString()](https://developer.mozilla.org/en-
- * US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString] method. In Python, a standard
+ * US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) method. In Python, a standard
  * `datetime.datetime` object can be converted to this format using
  * [`strftime`](https://docs.python.org/2/library/time.html#time.strftime) with the time format spec
  * '%Y-%m-%dT%H:%M:%S.%fZ'. Likewise, in Java, one can use the Joda Time's

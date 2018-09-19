@@ -38,12 +38,6 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<SpeechRecognitionAlternative> alternatives;
 
-  static {
-    // hack to force ProGuard to consider SpeechRecognitionAlternative used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SpeechRecognitionAlternative.class);
-  }
-
   /**
    * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)

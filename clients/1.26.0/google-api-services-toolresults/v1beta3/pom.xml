@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-toolresults</artifactId>
-  <version>v1beta3-rev20180903-1.26.0-SNAPSHOT</version>
-  <name>Cloud Tool Results API v1beta3-rev20180903-1.26.0-SNAPSHOT</name>
+  <version>v1beta3-rev20180918-1.26.0-SNAPSHOT</version>
+  <name>Cloud Tool Results API v1beta3-rev20180918-1.26.0-SNAPSHOT</name>
   <packaging>pom</packaging>
 
   <inceptionYear>2011</inceptionYear>

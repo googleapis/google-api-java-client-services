@@ -223,12 +223,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<AuthorizationRule> authorizations;
 
-  static {
-    // hack to force ProGuard to consider AuthorizationRule used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AuthorizationRule.class);
-  }
-
   /**
    * The name of the request field whose value is mapped to the HTTP request body, or `*` for
    * mapping all request fields not captured by the path pattern to the HTTP body, or omitted for

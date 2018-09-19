@@ -130,12 +130,6 @@ public final class Product extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<TargetingCriteria> targetingCriterion;
 
-  static {
-    // hack to force ProGuard to consider TargetingCriteria used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TargetingCriteria.class);
-  }
-
   /**
    * The negotiable terms of the deal.
    * The value may be {@code null}.

@@ -14,60 +14,54 @@
  * Modify at your own risk.
  */
 
-package com.google.serviceconsumermanagement.v1.model;
+package com.google.content.model;
 
 /**
- * `Backend` defines the backend configuration for a service.
+ * Model definition for OrdersCreateTestReturnRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Backend extends com.google.api.client.json.GenericJson {
+public final class OrdersCreateTestReturnRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of API backend rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * Returned items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BackendRule> rules;
+  private java.util.List<OrdersCustomBatchRequestEntryCreateTestReturnReturnItem> items;
 
   /**
-   * A list of API backend rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
+   * Returned items.
    * @return value or {@code null} for none
    */
-  public java.util.List<BackendRule> getRules() {
-    return rules;
+  public java.util.List<OrdersCustomBatchRequestEntryCreateTestReturnReturnItem> getItems() {
+    return items;
   }
 
   /**
-   * A list of API backend rules that apply to individual API methods.
-   *
-   * **NOTE:** All service configuration rules follow "last one wins" order.
-   * @param rules rules or {@code null} for none
+   * Returned items.
+   * @param items items or {@code null} for none
    */
-  public Backend setRules(java.util.List<BackendRule> rules) {
-    this.rules = rules;
+  public OrdersCreateTestReturnRequest setItems(java.util.List<OrdersCustomBatchRequestEntryCreateTestReturnReturnItem> items) {
+    this.items = items;
     return this;
   }
 
   @Override
-  public Backend set(String fieldName, Object value) {
-    return (Backend) super.set(fieldName, value);
+  public OrdersCreateTestReturnRequest set(String fieldName, Object value) {
+    return (OrdersCreateTestReturnRequest) super.set(fieldName, value);
   }
 
   @Override
-  public Backend clone() {
-    return (Backend) super.clone();
+  public OrdersCreateTestReturnRequest clone() {
+    return (OrdersCreateTestReturnRequest) super.clone();
   }
 
 }

@@ -5995,6 +5995,209 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
     public class Accounts {
 
       /**
+       * An accessor for creating requests from the Creatives collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AdExchangeBuyerII adexchangebuyer2 = new AdExchangeBuyerII(...);}
+       *   {@code AdExchangeBuyerII.Creatives.List request = adexchangebuyer2.creatives().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Creatives creatives() {
+        return new Creatives();
+      }
+
+      /**
+       * The "creatives" collection of methods.
+       */
+      public class Creatives {
+
+        /**
+         * Deletes a single creative.
+         *
+         * A creative is deactivated upon deletion and does not count against active snippet quota. A
+         * deleted creative should not be used in bidding (all bids with that creative will be rejected).
+         *
+         * Create a request for the method "creatives.delete".
+         *
+         * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param ownerName Name of the buyer account that owns the creative.
+        Supports two cases:
+        - For the buyer account
+         *        representing bidder 123:
+        `bidders/123/accounts/123/`
+        - For the child seat buyer account
+         *        456 whose bidder is 123:
+        `bidders/123/accounts/456/`
+         * @param creativeId The ID of the creative to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String ownerName, java.lang.String creativeId) throws java.io.IOException {
+          Delete result = new Delete(ownerName, creativeId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AdExchangeBuyerIIRequest<com.google.adexchangebuyer2.v2beta1.model.Empty> {
+
+          private static final String REST_PATH = "v2beta1/{+ownerName}/creatives/{creativeId}";
+
+          private final java.util.regex.Pattern OWNER_NAME_PATTERN =
+              java.util.regex.Pattern.compile("^bidders/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Deletes a single creative.
+           *
+           * A creative is deactivated upon deletion and does not count against active snippet quota. A
+           * deleted creative should not be used in bidding (all bids with that creative will be rejected).
+           *
+           * Create a request for the method "creatives.delete".
+           *
+           * This request holds the parameters needed by the the adexchangebuyer2 server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param ownerName Name of the buyer account that owns the creative.
+        Supports two cases:
+        - For the buyer account
+         *        representing bidder 123:
+        `bidders/123/accounts/123/`
+        - For the child seat buyer account
+         *        456 whose bidder is 123:
+        `bidders/123/accounts/456/`
+           * @param creativeId The ID of the creative to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String ownerName, java.lang.String creativeId) {
+            super(AdExchangeBuyerII.this, "DELETE", REST_PATH, null, com.google.adexchangebuyer2.v2beta1.model.Empty.class);
+            this.ownerName = com.google.api.client.util.Preconditions.checkNotNull(ownerName, "Required parameter ownerName must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(OWNER_NAME_PATTERN.matcher(ownerName).matches(),
+                  "Parameter ownerName must conform to the pattern " +
+                  "^bidders/[^/]+/accounts/[^/]+$");
+            }
+            this.creativeId = com.google.api.client.util.Preconditions.checkNotNull(creativeId, "Required parameter creativeId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Name of the buyer account that owns the creative. Supports two cases: - For the buyer
+           * account representing bidder 123: `bidders/123/accounts/123/`
+           *
+           * - For the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String ownerName;
+
+          /** Name of the buyer account that owns the creative. Supports two cases: - For the buyer account
+         representing bidder 123: `bidders/123/accounts/123/`
+
+         - For the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/`
+           */
+          public java.lang.String getOwnerName() {
+            return ownerName;
+          }
+
+          /**
+           * Name of the buyer account that owns the creative. Supports two cases: - For the buyer
+           * account representing bidder 123: `bidders/123/accounts/123/`
+           *
+           * - For the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/`
+           */
+          public Delete setOwnerName(java.lang.String ownerName) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(OWNER_NAME_PATTERN.matcher(ownerName).matches(),
+                  "Parameter ownerName must conform to the pattern " +
+                  "^bidders/[^/]+/accounts/[^/]+$");
+            }
+            this.ownerName = ownerName;
+            return this;
+          }
+
+          /** The ID of the creative to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String creativeId;
+
+          /** The ID of the creative to delete.
+           */
+          public java.lang.String getCreativeId() {
+            return creativeId;
+          }
+
+          /** The ID of the creative to delete. */
+          public Delete setCreativeId(java.lang.String creativeId) {
+            this.creativeId = creativeId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the FilterSets collection.
        *
        * <p>The typical use is:</p>

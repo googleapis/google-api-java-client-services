@@ -94,9 +94,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The machine learning framework Cloud ML Engine uses to train this version of the
-   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, and `XGBOOST`. If you do not specify a
-   * framework, Cloud ML Engine uses TensorFlow. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must
-   * also set the runtime version of the model to 1.4 or greater.
+   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a
+   * framework, Cloud ML Engine will analyze files in the deployment_uri to determine a framework.
+   * If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model
+   * to 1.4 or greater.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -355,9 +356,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The machine learning framework Cloud ML Engine uses to train this version of the
-   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, and `XGBOOST`. If you do not specify a
-   * framework, Cloud ML Engine uses TensorFlow. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must
-   * also set the runtime version of the model to 1.4 or greater.
+   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a
+   * framework, Cloud ML Engine will analyze files in the deployment_uri to determine a framework.
+   * If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model
+   * to 1.4 or greater.
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -366,9 +368,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The machine learning framework Cloud ML Engine uses to train this version of the
-   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, and `XGBOOST`. If you do not specify a
-   * framework, Cloud ML Engine uses TensorFlow. If you choose `SCIKIT_LEARN` or `XGBOOST`, you must
-   * also set the runtime version of the model to 1.4 or greater.
+   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a
+   * framework, Cloud ML Engine will analyze files in the deployment_uri to determine a framework.
+   * If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model
+   * to 1.4 or greater.
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1Version setFramework(java.lang.String framework) {

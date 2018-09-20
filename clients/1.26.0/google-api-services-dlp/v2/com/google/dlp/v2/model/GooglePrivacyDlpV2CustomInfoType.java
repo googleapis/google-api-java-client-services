@@ -53,8 +53,17 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   private GooglePrivacyDlpV2Dictionary dictionary;
 
   /**
-   * All CustomInfoTypes must have a name that does not conflict with built-in InfoTypes or other
-   * CustomInfoTypes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exclusionType;
+
+  /**
+   * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the
+   * name matches one of existing infoTypes and that infoType is specified in
+   * `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by
+   * the system. If built-in info type is not specified in `InspectContent.info_types` list then the
+   * name is treated as a custom info type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +137,26 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   }
 
   /**
-   * All CustomInfoTypes must have a name that does not conflict with built-in InfoTypes or other
-   * CustomInfoTypes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExclusionType() {
+    return exclusionType;
+  }
+
+  /**
+   * @param exclusionType exclusionType or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CustomInfoType setExclusionType(java.lang.String exclusionType) {
+    this.exclusionType = exclusionType;
+    return this;
+  }
+
+  /**
+   * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the
+   * name matches one of existing infoTypes and that infoType is specified in
+   * `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by
+   * the system. If built-in info type is not specified in `InspectContent.info_types` list then the
+   * name is treated as a custom info type.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoType getInfoType() {
@@ -137,8 +164,11 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   }
 
   /**
-   * All CustomInfoTypes must have a name that does not conflict with built-in InfoTypes or other
-   * CustomInfoTypes.
+   * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the
+   * name matches one of existing infoTypes and that infoType is specified in
+   * `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by
+   * the system. If built-in info type is not specified in `InspectContent.info_types` list then the
+   * name is treated as a custom info type.
    * @param infoType infoType or {@code null} for none
    */
   public GooglePrivacyDlpV2CustomInfoType setInfoType(GooglePrivacyDlpV2InfoType infoType) {

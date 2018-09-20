@@ -83,12 +83,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<BraggingRights> braggingRights;
 
-  static {
-    // hack to force ProGuard to consider BraggingRights used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(BraggingRights.class);
-  }
-
   /**
    * The person's read-only cover photos.
    * The value may be {@code null}.
@@ -132,12 +126,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ImClient> imClients;
 
-  static {
-    // hack to force ProGuard to consider ImClient used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ImClient.class);
-  }
-
   /**
    * The person's interests.
    * The value may be {@code null}.
@@ -158,12 +146,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Membership> memberships;
-
-  static {
-    // hack to force ProGuard to consider Membership used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Membership.class);
-  }
 
   /**
    * Read-only metadata about the person.
@@ -206,12 +188,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Organization> organizations;
 
-  static {
-    // hack to force ProGuard to consider Organization used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Organization.class);
-  }
-
   /**
    * The person's phone numbers.
    * The value may be {@code null}.
@@ -253,12 +229,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<RelationshipStatus> relationshipStatuses;
 
-  static {
-    // hack to force ProGuard to consider RelationshipStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RelationshipStatus.class);
-  }
-
   /**
    * The person's residences.
    * The value may be {@code null}.
@@ -281,12 +251,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<SipAddress> sipAddresses;
 
-  static {
-    // hack to force ProGuard to consider SipAddress used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SipAddress.class);
-  }
-
   /**
    * The person's skills.
    * The value may be {@code null}.
@@ -307,12 +271,6 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Url> urls;
-
-  static {
-    // hack to force ProGuard to consider Url used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Url.class);
-  }
 
   /**
    * The person's user defined data.

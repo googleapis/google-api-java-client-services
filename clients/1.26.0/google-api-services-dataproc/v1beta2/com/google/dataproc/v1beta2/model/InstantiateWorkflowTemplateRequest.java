@@ -37,7 +37,8 @@ public final class InstantiateWorkflowTemplateRequest extends com.google.api.cli
   private java.lang.String instanceId;
 
   /**
-   * Optional. Map from parameter names to values that should be used for those parameters.
+   * Optional. Map from parameter names to values that should be used for those parameters. Values
+   * may not exceed 100 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +83,8 @@ public final class InstantiateWorkflowTemplateRequest extends com.google.api.cli
   }
 
   /**
-   * Optional. Map from parameter names to values that should be used for those parameters.
+   * Optional. Map from parameter names to values that should be used for those parameters. Values
+   * may not exceed 100 characters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameters() {
@@ -90,7 +92,8 @@ public final class InstantiateWorkflowTemplateRequest extends com.google.api.cli
   }
 
   /**
-   * Optional. Map from parameter names to values that should be used for those parameters.
+   * Optional. Map from parameter names to values that should be used for those parameters. Values
+   * may not exceed 100 characters.
    * @param parameters parameters or {@code null} for none
    */
   public InstantiateWorkflowTemplateRequest setParameters(java.util.Map<String, java.lang.String> parameters) {

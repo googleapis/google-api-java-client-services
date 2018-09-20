@@ -37,12 +37,6 @@ public final class GoogleCloudMlV1ListJobsResponse extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1Job> jobs;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudMlV1Job used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1Job.class);
-  }
-
   /**
    * Optional. Pass this token as the `page_token` field of the request for a subsequent call.
    * The value may be {@code null}.

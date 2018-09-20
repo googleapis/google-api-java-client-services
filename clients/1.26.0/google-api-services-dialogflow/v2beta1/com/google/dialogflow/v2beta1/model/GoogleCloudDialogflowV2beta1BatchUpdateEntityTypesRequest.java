@@ -30,7 +30,7 @@ package com.google.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The collection of entity type to update or create.
+   * The collection of entity types to update or create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest ext
   private String updateMask;
 
   /**
-   * The collection of entity type to update or create.
+   * The collection of entity types to update or create.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityTypeBatch getEntityTypeBatchInline() {
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest ext
   }
 
   /**
-   * The collection of entity type to update or create.
+   * The collection of entity types to update or create.
    * @param entityTypeBatchInline entityTypeBatchInline or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1BatchUpdateEntityTypesRequest setEntityTypeBatchInline(GoogleCloudDialogflowV2beta1EntityTypeBatch entityTypeBatchInline) {

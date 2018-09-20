@@ -17,7 +17,7 @@
 package com.google.dialogflow.v2.model;
 
 /**
- * The response message for EntityTypes.BatchCreateEntities.
+ * The request message for EntityTypes.BatchUpdateEntities.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The collection of new entities to replace the existing entities.
+   * Required. The entities to update or create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   private String updateMask;
 
   /**
-   * Required. The collection of new entities to replace the existing entities.
+   * Required. The entities to update or create.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> getEntities() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   }
 
   /**
-   * Required. The collection of new entities to replace the existing entities.
+   * Required. The entities to update or create.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateEntitiesRequest setEntities(java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> entities) {

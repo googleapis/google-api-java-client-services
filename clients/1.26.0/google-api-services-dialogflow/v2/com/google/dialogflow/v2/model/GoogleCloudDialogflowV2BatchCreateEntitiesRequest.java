@@ -30,7 +30,7 @@ package com.google.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2BatchCreateEntitiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The collection of entities to create.
+   * Required. The entities to create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowV2BatchCreateEntitiesRequest extends com
   private java.lang.String languageCode;
 
   /**
-   * Required. The collection of entities to create.
+   * Required. The entities to create.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> getEntities() {
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2BatchCreateEntitiesRequest extends com
   }
 
   /**
-   * Required. The collection of entities to create.
+   * Required. The entities to create.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchCreateEntitiesRequest setEntities(java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> entities) {

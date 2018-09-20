@@ -14,13 +14,13 @@
  * Modify at your own risk.
  */
 
-package com.google.ml.v1.model;
+package com.google.dlp.v2.model;
 
 /**
- * Model definition for GoogleCloudMlV1Location.
+ * A single inspection rule to be applied to infoTypes, specified in `InspectionRuleSet`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
+ * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -28,61 +28,64 @@ package com.google.ml.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudMlV1Location extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2InspectionRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Capabilities available in the location.
+   * Exclusion rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudMlV1Capability> capabilities;
+  private GooglePrivacyDlpV2ExclusionRule exclusionRule;
 
   /**
+   * Hotword-based detection rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private GooglePrivacyDlpV2HotwordRule hotwordRule;
 
   /**
-   * Capabilities available in the location.
+   * Exclusion rule.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudMlV1Capability> getCapabilities() {
-    return capabilities;
+  public GooglePrivacyDlpV2ExclusionRule getExclusionRule() {
+    return exclusionRule;
   }
 
   /**
-   * Capabilities available in the location.
-   * @param capabilities capabilities or {@code null} for none
+   * Exclusion rule.
+   * @param exclusionRule exclusionRule or {@code null} for none
    */
-  public GoogleCloudMlV1Location setCapabilities(java.util.List<GoogleCloudMlV1Capability> capabilities) {
-    this.capabilities = capabilities;
+  public GooglePrivacyDlpV2InspectionRule setExclusionRule(GooglePrivacyDlpV2ExclusionRule exclusionRule) {
+    this.exclusionRule = exclusionRule;
     return this;
   }
 
   /**
+   * Hotword-based detection rule.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public GooglePrivacyDlpV2HotwordRule getHotwordRule() {
+    return hotwordRule;
   }
 
   /**
-   * @param name name or {@code null} for none
+   * Hotword-based detection rule.
+   * @param hotwordRule hotwordRule or {@code null} for none
    */
-  public GoogleCloudMlV1Location setName(java.lang.String name) {
-    this.name = name;
+  public GooglePrivacyDlpV2InspectionRule setHotwordRule(GooglePrivacyDlpV2HotwordRule hotwordRule) {
+    this.hotwordRule = hotwordRule;
     return this;
   }
 
   @Override
-  public GoogleCloudMlV1Location set(String fieldName, Object value) {
-    return (GoogleCloudMlV1Location) super.set(fieldName, value);
+  public GooglePrivacyDlpV2InspectionRule set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2InspectionRule) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudMlV1Location clone() {
-    return (GoogleCloudMlV1Location) super.clone();
+  public GooglePrivacyDlpV2InspectionRule clone() {
+    return (GooglePrivacyDlpV2InspectionRule) super.clone();
   }
 
 }

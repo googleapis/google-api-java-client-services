@@ -95,23 +95,6 @@ public abstract class KgsearchRequest<T> extends com.google.api.client.googleapi
     return this;
   }
 
-  /** OAuth bearer token. */
-  @com.google.api.client.util.Key("bearer_token")
-  private java.lang.String bearerToken;
-
-  /**
-   * OAuth bearer token.
-   */
-  public java.lang.String getBearerToken() {
-    return bearerToken;
-  }
-
-  /** OAuth bearer token. */
-  public KgsearchRequest<T> setBearerToken(java.lang.String bearerToken) {
-    this.bearerToken = bearerToken;
-    return this;
-  }
-
   /** JSONP */
   @com.google.api.client.util.Key
   private java.lang.String callback;
@@ -184,23 +167,6 @@ public abstract class KgsearchRequest<T> extends com.google.api.client.googleapi
   /** OAuth 2.0 token for the current user. */
   public KgsearchRequest<T> setOauthToken(java.lang.String oauthToken) {
     this.oauthToken = oauthToken;
-    return this;
-  }
-
-  /** Pretty-print response. */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean pp;
-
-  /**
-   * Pretty-print response. [default: true]
-   */
-  public java.lang.Boolean getPp() {
-    return pp;
-  }
-
-  /** Pretty-print response. */
-  public KgsearchRequest<T> setPp(java.lang.Boolean pp) {
-    this.pp = pp;
     return this;
   }
 

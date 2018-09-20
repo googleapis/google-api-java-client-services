@@ -105,6 +105,21 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   private java.lang.String minLikelihood;
 
   /**
+   * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
+   * set are executed in the end, other rules are executed in the order they are specified for each
+   * info type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2InspectionRuleSet> ruleSet;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2InspectionRuleSet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InspectionRuleSet.class);
+  }
+
+  /**
    * List of options defining data content to scan. If empty, text, images, and other content will
    * be included.
    * @return value or {@code null} for none
@@ -244,6 +259,27 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    */
   public GooglePrivacyDlpV2InspectConfig setMinLikelihood(java.lang.String minLikelihood) {
     this.minLikelihood = minLikelihood;
+    return this;
+  }
+
+  /**
+   * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
+   * set are executed in the end, other rules are executed in the order they are specified for each
+   * info type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2InspectionRuleSet> getRuleSet() {
+    return ruleSet;
+  }
+
+  /**
+   * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
+   * set are executed in the end, other rules are executed in the order they are specified for each
+   * info type.
+   * @param ruleSet ruleSet or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InspectConfig setRuleSet(java.util.List<GooglePrivacyDlpV2InspectionRuleSet> ruleSet) {
+    this.ruleSet = ruleSet;
     return this;
   }
 

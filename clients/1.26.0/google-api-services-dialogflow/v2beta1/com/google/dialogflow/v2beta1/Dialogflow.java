@@ -2282,8 +2282,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Entities {
 
           /**
-           * Creates multiple new entities in the specified entity type (extends the existing collection of
-           * entries).
+           * Creates multiple new entities in the specified entity type.
            *
            * Operation
            *
@@ -2311,8 +2310,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/agent/entityTypes/[^/]+$");
 
             /**
-             * Creates multiple new entities in the specified entity type (extends the existing collection of
-             * entries).
+             * Creates multiple new entities in the specified entity type.
              *
              * Operation
              *
@@ -2572,7 +2570,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates entities in the specified entity type (replaces the existing collection of entries).
+           * Updates or creates multiple entities in the specified entity type. This method does not affect
+           * entities in the entity type that aren't explicitly specified in the request.
            *
            * Operation
            *
@@ -2581,7 +2580,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link BatchUpdate#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the entity type to update the entities in. Format:
+           * @param parent Required. The name of the entity type to update or create entities in.
+          Format:
            *        `projects//agent/entityTypes/`.
            * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest}
            * @return the request
@@ -2600,7 +2600,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/agent/entityTypes/[^/]+$");
 
             /**
-             * Updates entities in the specified entity type (replaces the existing collection of entries).
+             * Updates or creates multiple entities in the specified entity type. This method does not affect
+             * entities in the entity type that aren't explicitly specified in the request.
              *
              * Operation
              *
@@ -2612,7 +2613,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the entity type to update the entities in. Format:
+             * @param parent Required. The name of the entity type to update or create entities in.
+          Format:
            *        `projects//agent/entityTypes/`.
              * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1BatchUpdateEntitiesRequest}
              * @since 1.13
@@ -2683,13 +2685,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. The name of the entity type to update the entities in. Format:
+             * Required. The name of the entity type to update or create entities in. Format:
              * `projects//agent/entityTypes/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The name of the entity type to update the entities in. Format:
+            /** Required. The name of the entity type to update or create entities in. Format:
            `projects//agent/entityTypes/`.
              */
             public java.lang.String getParent() {
@@ -2697,7 +2699,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. The name of the entity type to update the entities in. Format:
+             * Required. The name of the entity type to update or create entities in. Format:
              * `projects//agent/entityTypes/`.
              */
             public BatchUpdate setParent(java.lang.String parent) {

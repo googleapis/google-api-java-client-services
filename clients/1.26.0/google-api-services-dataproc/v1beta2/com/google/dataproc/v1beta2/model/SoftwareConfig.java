@@ -39,6 +39,13 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.lang.String imageVersion;
 
   /**
+   * The set of optional components to activate on the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> optionalComponents;
+
+  /**
    * Optional. The properties to set on daemon config files.Property keys are specified in
    * prefix:property format, such as core:fs.defaultFS. The following are supported prefixes and
    * their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-
@@ -67,6 +74,23 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setImageVersion(java.lang.String imageVersion) {
     this.imageVersion = imageVersion;
+    return this;
+  }
+
+  /**
+   * The set of optional components to activate on the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOptionalComponents() {
+    return optionalComponents;
+  }
+
+  /**
+   * The set of optional components to activate on the cluster.
+   * @param optionalComponents optionalComponents or {@code null} for none
+   */
+  public SoftwareConfig setOptionalComponents(java.util.List<java.lang.String> optionalComponents) {
+    this.optionalComponents = optionalComponents;
     return this;
   }
 

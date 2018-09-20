@@ -208,11 +208,6 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Search setBearerToken(java.lang.String bearerToken) {
-        return (Search) super.setBearerToken(bearerToken);
-      }
-
-      @Override
       public Search setCallback(java.lang.String callback) {
         return (Search) super.setCallback(callback);
       }
@@ -230,11 +225,6 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public Search setOauthToken(java.lang.String oauthToken) {
         return (Search) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Search setPp(java.lang.Boolean pp) {
-        return (Search) super.setPp(pp);
       }
 
       @Override

@@ -79,6 +79,13 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   private java.lang.String modelName;
 
   /**
+   * Optional. Format of the output data files, defaults to JSON.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outputDataFormat;
+
+  /**
    * Required. The output Google Cloud Storage location.
    * The value may be {@code null}.
    */
@@ -243,6 +250,23 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
    */
   public GoogleCloudMlV1PredictionInput setModelName(java.lang.String modelName) {
     this.modelName = modelName;
+    return this;
+  }
+
+  /**
+   * Optional. Format of the output data files, defaults to JSON.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutputDataFormat() {
+    return outputDataFormat;
+  }
+
+  /**
+   * Optional. Format of the output data files, defaults to JSON.
+   * @param outputDataFormat outputDataFormat or {@code null} for none
+   */
+  public GoogleCloudMlV1PredictionInput setOutputDataFormat(java.lang.String outputDataFormat) {
+    this.outputDataFormat = outputDataFormat;
     return this;
   }
 

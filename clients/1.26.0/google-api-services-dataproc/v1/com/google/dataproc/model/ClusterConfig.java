@@ -66,12 +66,6 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<NodeInitializationAction> initializationActions;
 
-  static {
-    // hack to force ProGuard to consider NodeInitializationAction used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(NodeInitializationAction.class);
-  }
-
   /**
    * Optional. The Compute Engine config settings for the master instance in a cluster.
    * The value may be {@code null}.

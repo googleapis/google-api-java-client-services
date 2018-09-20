@@ -34,15 +34,15 @@ package com.google.people.v1.model;
 public final class Date extends com.google.api.client.json.GenericJson {
 
   /**
-   * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-   * year/month where the day is not significant.
+   * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year
+   * by itself or a year and month where the day is not significant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer day;
 
   /**
-   * Month of year. Must be from 1 to 12, or 0 if specifying a date without a month.
+   * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class Date extends com.google.api.client.json.GenericJson {
   private java.lang.Integer year;
 
   /**
-   * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-   * year/month where the day is not significant.
+   * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year
+   * by itself or a year and month where the day is not significant.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDay() {
@@ -65,8 +65,8 @@ public final class Date extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
-   * year/month where the day is not significant.
+   * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a year
+   * by itself or a year and month where the day is not significant.
    * @param day day or {@code null} for none
    */
   public Date setDay(java.lang.Integer day) {
@@ -75,7 +75,7 @@ public final class Date extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Month of year. Must be from 1 to 12, or 0 if specifying a date without a month.
+   * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMonth() {
@@ -83,7 +83,7 @@ public final class Date extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Month of year. Must be from 1 to 12, or 0 if specifying a date without a month.
+   * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
    * @param month month or {@code null} for none
    */
   public Date setMonth(java.lang.Integer month) {

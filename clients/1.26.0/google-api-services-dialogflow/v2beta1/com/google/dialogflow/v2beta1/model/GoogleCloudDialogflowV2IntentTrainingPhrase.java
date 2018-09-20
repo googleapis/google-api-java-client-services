@@ -45,6 +45,12 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentTrainingPhrasePart> parts;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentTrainingPhrasePart used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentTrainingPhrasePart.class);
+  }
+
   /**
    * Optional. Indicates how many times this example or template was added to the intent. Each time
    * a developer adds an existing sample by editing an intent or training, this counter is

@@ -1126,25 +1126,20 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
-           * from running. This mitigates risk of concurrent instances started due to retries.It is
-           * recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
-           */
+          /** Deprecated. Please use request_id field instead. */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
-          /** Optional. A tag that prevents multiple concurrent workflow instances with the same tag from
-         running. This mitigates risk of concurrent instances started due to retries.It is recommended to
-         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** Deprecated. Please use request_id field instead.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
+          }
+
+          /** Deprecated. Please use request_id field instead. */
+          public InstantiateInline setInstanceId(java.lang.String instanceId) {
+            this.instanceId = instanceId;
+            return this;
           }
 
           /**
@@ -1155,8 +1150,29 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
-          public InstantiateInline setInstanceId(java.lang.String instanceId) {
-            this.instanceId = instanceId;
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A tag that prevents multiple concurrent workflow instances with the same tag from
+         running. This mitigates risk of concurrent instances started due to retries.It is recommended to
+         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
+         tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
+           * from running. This mitigates risk of concurrent instances started due to retries.It is
+           * recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          public InstantiateInline setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -7062,25 +7078,20 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
-           * from running. This mitigates risk of concurrent instances started due to retries.It is
-           * recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
-           */
+          /** Deprecated. Please use request_id field instead. */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
-          /** Optional. A tag that prevents multiple concurrent workflow instances with the same tag from
-         running. This mitigates risk of concurrent instances started due to retries.It is recommended to
-         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+          /** Deprecated. Please use request_id field instead.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
+          }
+
+          /** Deprecated. Please use request_id field instead. */
+          public InstantiateInline setInstanceId(java.lang.String instanceId) {
+            this.instanceId = instanceId;
+            return this;
           }
 
           /**
@@ -7091,8 +7102,29 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
            * is 40 characters.
            */
-          public InstantiateInline setInstanceId(java.lang.String instanceId) {
-            this.instanceId = instanceId;
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A tag that prevents multiple concurrent workflow instances with the same tag from
+         running. This mitigates risk of concurrent instances started due to retries.It is recommended to
+         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
+         tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A tag that prevents multiple concurrent workflow instances with the same tag
+           * from running. This mitigates risk of concurrent instances started due to retries.It is
+           * recommended to always set this value to a UUID
+           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only
+           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
+           * is 40 characters.
+           */
+          public InstantiateInline setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 

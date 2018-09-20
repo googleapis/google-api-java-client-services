@@ -40,6 +40,12 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1HyperparameterOutputHyperparameterMetric> allMetrics;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudMlV1HyperparameterOutputHyperparameterMetric used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1HyperparameterOutputHyperparameterMetric.class);
+  }
+
   /**
    * The final objective metric seen for this trial.
    * The value may be {@code null}.

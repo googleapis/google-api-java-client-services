@@ -36,6 +36,12 @@ public final class WorkerStatus extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, DiskStatus> attachedDisks;
 
+  static {
+    // hack to force ProGuard to consider DiskStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DiskStatus.class);
+  }
+
   /**
    * Status of the boot disk.
    * The value may be {@code null}.

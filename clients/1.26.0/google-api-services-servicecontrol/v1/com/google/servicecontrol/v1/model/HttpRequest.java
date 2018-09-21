@@ -107,7 +107,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Long requestSize;
 
   /**
-   * The scheme (http, https), the host name, the path and the query portion of the URL that was
+   * The scheme (http, https), the host name, the path, and the query portion of the URL that was
    * requested. Example: `"http://example.com/some/info?color=red"`.
    * The value may be {@code null}.
    */
@@ -130,7 +130,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String serverIp;
 
   /**
-   * The response code indicating the status of response. Examples: 200, 404.
+   * The response code indicating the status of the response. Examples: 200, 404.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +327,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scheme (http, https), the host name, the path and the query portion of the URL that was
+   * The scheme (http, https), the host name, the path, and the query portion of the URL that was
    * requested. Example: `"http://example.com/some/info?color=red"`.
    * @return value or {@code null} for none
    */
@@ -336,7 +336,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scheme (http, https), the host name, the path and the query portion of the URL that was
+   * The scheme (http, https), the host name, the path, and the query portion of the URL that was
    * requested. Example: `"http://example.com/some/info?color=red"`.
    * @param requestUrl requestUrl or {@code null} for none
    */
@@ -382,7 +382,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The response code indicating the status of response. Examples: 200, 404.
+   * The response code indicating the status of the response. Examples: 200, 404.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStatus() {
@@ -390,7 +390,7 @@ public final class HttpRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The response code indicating the status of response. Examples: 200, 404.
+   * The response code indicating the status of the response. Examples: 200, 404.
    * @param status status or {@code null} for none
    */
   public HttpRequest setStatus(java.lang.Integer status) {

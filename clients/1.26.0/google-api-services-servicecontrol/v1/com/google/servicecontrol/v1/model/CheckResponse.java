@@ -39,6 +39,12 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<CheckError> checkErrors;
 
+  static {
+    // hack to force ProGuard to consider CheckError used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CheckError.class);
+  }
+
   /**
    * Feedback data returned from the server during processing a Check request.
    * The value may be {@code null}.

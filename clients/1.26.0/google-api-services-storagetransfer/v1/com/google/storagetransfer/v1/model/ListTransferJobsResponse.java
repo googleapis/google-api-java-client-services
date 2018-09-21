@@ -43,12 +43,6 @@ public final class ListTransferJobsResponse extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<TransferJob> transferJobs;
 
-  static {
-    // hack to force ProGuard to consider TransferJob used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TransferJob.class);
-  }
-
   /**
    * The list next page token.
    * @return value or {@code null} for none

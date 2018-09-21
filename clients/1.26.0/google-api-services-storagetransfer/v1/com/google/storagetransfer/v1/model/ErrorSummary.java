@@ -50,12 +50,6 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ErrorLogEntry> errorLogEntries;
 
-  static {
-    // hack to force ProGuard to consider ErrorLogEntry used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ErrorLogEntry.class);
-  }
-
   /**
    * Required.
    * @return value or {@code null} for none

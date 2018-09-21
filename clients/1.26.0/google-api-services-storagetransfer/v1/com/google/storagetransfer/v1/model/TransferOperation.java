@@ -50,6 +50,12 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<ErrorSummary> errorBreakdowns;
 
+  static {
+    // hack to force ProGuard to consider ErrorSummary used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ErrorSummary.class);
+  }
+
   /**
    * A globally unique ID assigned by the system.
    * The value may be {@code null}.

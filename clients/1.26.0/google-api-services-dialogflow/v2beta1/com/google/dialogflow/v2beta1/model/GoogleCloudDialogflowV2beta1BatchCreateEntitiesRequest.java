@@ -36,12 +36,6 @@ public final class GoogleCloudDialogflowV2beta1BatchCreateEntitiesRequest extend
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1EntityTypeEntity> entities;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1EntityTypeEntity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1EntityTypeEntity.class);
-  }
-
   /**
    * Optional. The language of entity synonyms defined in `entities`. If not specified, the agent's
    * default language is used. [More than a dozen

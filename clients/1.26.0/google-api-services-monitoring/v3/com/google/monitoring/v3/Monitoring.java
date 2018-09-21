@@ -3859,7 +3859,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Creates a new notification channel, representing a single notification endpoint such as an email
-       * address, SMS number, or pagerduty service.
+       * address, SMS number, or PagerDuty service.
        *
        * Create a request for the method "notificationChannels.create".
        *
@@ -3890,7 +3890,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Creates a new notification channel, representing a single notification endpoint such as an
-         * email address, SMS number, or pagerduty service.
+         * email address, SMS number, or PagerDuty service.
          *
          * Create a request for the method "notificationChannels.create".
          *

@@ -3506,7 +3506,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * following mask for backwards compatibility purposes:  destination,filter,includeChildren
          * At some point in the future, behavior will be removed and specifying an empty updateMask
          * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#FieldMaskExample: updateMask=filter.
+         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+         * updateMask=filter.
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -3517,7 +3518,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        compatibility purposes:  destination,filter,includeChildren At some point in the future, behavior
        will be removed and specifying an empty updateMask will be an error.For a detailed FieldMask
        definition, see https://developers.google.com/protocol-
-       buffers/docs/reference/google.protobuf#FieldMaskExample: updateMask=filter.
+       buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample: updateMask=filter.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -3530,7 +3531,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * following mask for backwards compatibility purposes:  destination,filter,includeChildren
          * At some point in the future, behavior will be removed and specifying an empty updateMask
          * will be an error.For a detailed FieldMask definition, see https://developers.google.com
-         * /protocol-buffers/docs/reference/google.protobuf#FieldMaskExample: updateMask=filter.
+         * /protocol-buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskExample:
+         * updateMask=filter.
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

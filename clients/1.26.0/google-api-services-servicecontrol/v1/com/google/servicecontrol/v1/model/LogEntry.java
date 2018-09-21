@@ -104,9 +104,10 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private String timestamp;
 
   /**
-   * Optional. Resource name of the trace associated with the log entry, if any. If it contains a
-   * relative resource name, the name is assumed to be relative to `//tracing.googleapis.com`.
-   * Example: `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+   * Optional. Resource name of the trace associated with the log entry, if any. If this field
+   * contains a relative resource name, you can assume the name is relative to
+   * `//tracing.googleapis.com`. Example: `projects/my-
+   * projectid/traces/06796866738c859f2f19b7cfb3214824`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,9 +292,10 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource name of the trace associated with the log entry, if any. If it contains a
-   * relative resource name, the name is assumed to be relative to `//tracing.googleapis.com`.
-   * Example: `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+   * Optional. Resource name of the trace associated with the log entry, if any. If this field
+   * contains a relative resource name, you can assume the name is relative to
+   * `//tracing.googleapis.com`. Example: `projects/my-
+   * projectid/traces/06796866738c859f2f19b7cfb3214824`
    * @return value or {@code null} for none
    */
   public java.lang.String getTrace() {
@@ -301,9 +303,10 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource name of the trace associated with the log entry, if any. If it contains a
-   * relative resource name, the name is assumed to be relative to `//tracing.googleapis.com`.
-   * Example: `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+   * Optional. Resource name of the trace associated with the log entry, if any. If this field
+   * contains a relative resource name, you can assume the name is relative to
+   * `//tracing.googleapis.com`. Example: `projects/my-
+   * projectid/traces/06796866738c859f2f19b7cfb3214824`
    * @param trace trace or {@code null} for none
    */
   public LogEntry setTrace(java.lang.String trace) {

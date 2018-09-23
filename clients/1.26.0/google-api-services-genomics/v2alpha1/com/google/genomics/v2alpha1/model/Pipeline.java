@@ -36,12 +36,6 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Action> actions;
 
-  static {
-    // hack to force ProGuard to consider Action used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Action.class);
-  }
-
   /**
    * The environment to pass into every action. Each action can also specify additional environment
    * variables but cannot delete an entry from this map (though they can overwrite it with a

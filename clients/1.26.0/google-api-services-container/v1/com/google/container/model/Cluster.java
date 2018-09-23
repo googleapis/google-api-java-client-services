@@ -292,11 +292,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<NodePool> nodePools;
 
-  static {
-    // hack to force ProGuard to consider NodePool used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(NodePool.class);
-  }
+  /**
+   * Configuration for private cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateClusterConfig privateClusterConfig;
 
   /**
    * The resource labels for the cluster to use to annotate any related Google Compute Engine
@@ -963,6 +964,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodePools(java.util.List<NodePool> nodePools) {
     this.nodePools = nodePools;
+    return this;
+  }
+
+  /**
+   * Configuration for private cluster.
+   * @return value or {@code null} for none
+   */
+  public PrivateClusterConfig getPrivateClusterConfig() {
+    return privateClusterConfig;
+  }
+
+  /**
+   * Configuration for private cluster.
+   * @param privateClusterConfig privateClusterConfig or {@code null} for none
+   */
+  public Cluster setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {
+    this.privateClusterConfig = privateClusterConfig;
     return this;
   }
 

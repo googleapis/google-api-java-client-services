@@ -36,12 +36,6 @@ public final class ListInstanceConfigsResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<InstanceConfig> instanceConfigs;
 
-  static {
-    // hack to force ProGuard to consider InstanceConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(InstanceConfig.class);
-  }
-
   /**
    * `next_page_token` can be sent in a subsequent ListInstanceConfigs call to fetch more of the
    * matching instance configurations.

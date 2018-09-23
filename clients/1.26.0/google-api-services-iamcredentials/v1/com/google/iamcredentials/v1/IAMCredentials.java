@@ -481,9 +481,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
       are requested, in the following
        *        format:
       `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`.
-      Using `-` as a wildcard
-       *        for the project will infer the project from
-      the account.
+      Use hyphen as
+       *        placeholder for project id since there is no project context
+      for this API.
        * @param content the {@link com.google.iamcredentials.v1.model.GenerateIdentityBindingAccessTokenRequest}
        * @return the request
        */
@@ -513,9 +513,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
       are requested, in the following
        *        format:
       `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`.
-      Using `-` as a wildcard
-       *        for the project will infer the project from
-      the account.
+      Use hyphen as
+       *        placeholder for project id since there is no project context
+      for this API.
          * @param content the {@link com.google.iamcredentials.v1.model.GenerateIdentityBindingAccessTokenRequest}
          * @since 1.13
          */
@@ -586,15 +586,15 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
 
         /**
          * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. Using `-` as
-         * a wildcard for the project will infer the project from the account.
+         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. Use hyphen as
+         * placeholder for project id since there is no project context for this API.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the service account for which the credentials are requested, in the following
-       format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. Using `-` as a wildcard for the
-       project will infer the project from the account.
+       format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. Use hyphen as placeholder for
+       project id since there is no project context for this API.
          */
         public java.lang.String getName() {
           return name;
@@ -602,8 +602,8 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
 
         /**
          * The resource name of the service account for which the credentials are requested, in the
-         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. Using `-` as
-         * a wildcard for the project will infer the project from the account.
+         * following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. Use hyphen as
+         * placeholder for project id since there is no project context for this API.
          */
         public GenerateIdentityBindingAccessToken setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

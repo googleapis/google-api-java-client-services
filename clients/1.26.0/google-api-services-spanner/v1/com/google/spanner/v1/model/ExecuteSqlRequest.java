@@ -41,6 +41,12 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.Map<String, Type> paramTypes;
 
+  static {
+    // hack to force ProGuard to consider Type used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Type.class);
+  }
+
   /**
    * The SQL string can contain parameter placeholders. A parameter placeholder consists of `'@'`
    * followed by the parameter name. Parameter names consist of any combination of letters, numbers,

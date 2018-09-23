@@ -3209,14 +3209,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes the specified intent.
+         * Deletes the specified intent and its direct or indirect followup intents.
          *
          * Create a request for the method "intents.delete".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the intent to delete.
+         * @param name Required. The name of the intent to delete. If this intent has direct or
+        indirect followup intents,
+         *        we also delete them.
         Format: `projects//agent/intents/`.
          * @return the request
          */
@@ -3234,7 +3236,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/agent/intents/[^/]+$");
 
           /**
-           * Deletes the specified intent.
+           * Deletes the specified intent and its direct or indirect followup intents.
            *
            * Create a request for the method "intents.delete".
            *
@@ -3244,7 +3246,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the intent to delete.
+           * @param name Required. The name of the intent to delete. If this intent has direct or
+        indirect followup intents,
+         *        we also delete them.
         Format: `projects//agent/intents/`.
            * @since 1.13
            */
@@ -3314,19 +3318,28 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The name of the intent to delete. Format: `projects//agent/intents/`.
+           * Required. The name of the intent to delete. If this intent has direct or indirect
+           * followup intents, we also delete them.
+           *
+           * Format: `projects//agent/intents/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the intent to delete. Format: `projects//agent/intents/`.
+          /** Required. The name of the intent to delete. If this intent has direct or indirect followup intents,
+         we also delete them.
+
+         Format: `projects//agent/intents/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the intent to delete. Format: `projects//agent/intents/`.
+           * Required. The name of the intent to delete. If this intent has direct or indirect
+           * followup intents, we also delete them.
+           *
+           * Format: `projects//agent/intents/`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

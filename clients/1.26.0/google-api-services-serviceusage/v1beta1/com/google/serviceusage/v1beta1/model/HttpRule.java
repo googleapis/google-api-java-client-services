@@ -215,15 +215,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   private java.util.List<HttpRule> additionalBindings;
 
   /**
-   * Specifies the permission(s) required for an API element for the overall API request to succeed.
-   * It is typically used to mark request message fields that contain the name of the resource and
-   * indicates the permissions that will be checked on that resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<AuthorizationRule> authorizations;
-
-  /**
    * The name of the request field whose value is mapped to the HTTP request body, or `*` for
    * mapping all request fields not captured by the path pattern to the HTTP body, or omitted for
    * not having any HTTP request body.
@@ -258,23 +249,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   private java.lang.String get;
 
   /**
-   * Use this only for Scotty Requests. Do not use this for bytestream methods. For media support,
-   * add instead [][google.bytestream.RestByteStream] as an API to your configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaDownload mediaDownload;
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for media support using Bytestream, add
-   * instead [][google.bytestream.RestByteStream] as an API to your configuration for Bytestream
-   * methods.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaUpload mediaUpload;
-
-  /**
    * Maps to HTTP PATCH. Used for updating a resource.
    * The value may be {@code null}.
    */
@@ -306,42 +280,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   private java.lang.String responseBody;
 
   /**
-   * DO NOT USE. This is an experimental field.
-   *
-   * Optional. The REST collection name is by default derived from the URL pattern. If specified,
-   * this field overrides the default collection name. Example:
-   *
-   *     rpc AddressesAggregatedList(AddressesAggregatedListRequest)         returns
-   * (AddressesAggregatedListResponse) {       option (google.api.http) = {         get:
-   * "/v1/projects/{project_id}/aggregated/addresses"         rest_collection: "projects.addresses"
-   * };     }
-   *
-   * This method has the automatically derived collection name "projects.aggregated". Because,
-   * semantically, this rpc is actually an operation on the "projects.addresses" collection, the
-   * `rest_collection` field is configured to override the derived collection name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String restCollection;
-
-  /**
-   * DO NOT USE. This is an experimental field.
-   *
-   * Optional. The rest method name is by default derived from the URL pattern. If specified, this
-   * field overrides the default method name. Example:
-   *
-   *     rpc CreateResource(CreateResourceRequest)         returns (CreateResourceResponse) {
-   * option (google.api.http) = {         post: "/v1/resources",         body: "resource",
-   * rest_method_name: "insert"       };     }
-   *
-   * This method has the automatically derived rest method name "create", but for backwards
-   * compatibility with apiary, it is specified as insert.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String restMethodName;
-
-  /**
    * Selects a method to which this rule applies.
    *
    * Refer to selector for syntax details.
@@ -366,27 +304,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
    */
   public HttpRule setAdditionalBindings(java.util.List<HttpRule> additionalBindings) {
     this.additionalBindings = additionalBindings;
-    return this;
-  }
-
-  /**
-   * Specifies the permission(s) required for an API element for the overall API request to succeed.
-   * It is typically used to mark request message fields that contain the name of the resource and
-   * indicates the permissions that will be checked on that resource.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<AuthorizationRule> getAuthorizations() {
-    return authorizations;
-  }
-
-  /**
-   * Specifies the permission(s) required for an API element for the overall API request to succeed.
-   * It is typically used to mark request message fields that contain the name of the resource and
-   * indicates the permissions that will be checked on that resource.
-   * @param authorizations authorizations or {@code null} for none
-   */
-  public HttpRule setAuthorizations(java.util.List<AuthorizationRule> authorizations) {
-    this.authorizations = authorizations;
     return this;
   }
 
@@ -471,46 +388,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Use this only for Scotty Requests. Do not use this for bytestream methods. For media support,
-   * add instead [][google.bytestream.RestByteStream] as an API to your configuration.
-   * @return value or {@code null} for none
-   */
-  public MediaDownload getMediaDownload() {
-    return mediaDownload;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for bytestream methods. For media support,
-   * add instead [][google.bytestream.RestByteStream] as an API to your configuration.
-   * @param mediaDownload mediaDownload or {@code null} for none
-   */
-  public HttpRule setMediaDownload(MediaDownload mediaDownload) {
-    this.mediaDownload = mediaDownload;
-    return this;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for media support using Bytestream, add
-   * instead [][google.bytestream.RestByteStream] as an API to your configuration for Bytestream
-   * methods.
-   * @return value or {@code null} for none
-   */
-  public MediaUpload getMediaUpload() {
-    return mediaUpload;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for media support using Bytestream, add
-   * instead [][google.bytestream.RestByteStream] as an API to your configuration for Bytestream
-   * methods.
-   * @param mediaUpload mediaUpload or {@code null} for none
-   */
-  public HttpRule setMediaUpload(MediaUpload mediaUpload) {
-    this.mediaUpload = mediaUpload;
-    return this;
-  }
-
-  /**
    * Maps to HTTP PATCH. Used for updating a resource.
    * @return value or {@code null} for none
    */
@@ -581,84 +458,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
    */
   public HttpRule setResponseBody(java.lang.String responseBody) {
     this.responseBody = responseBody;
-    return this;
-  }
-
-  /**
-   * DO NOT USE. This is an experimental field.
-   *
-   * Optional. The REST collection name is by default derived from the URL pattern. If specified,
-   * this field overrides the default collection name. Example:
-   *
-   *     rpc AddressesAggregatedList(AddressesAggregatedListRequest)         returns
-   * (AddressesAggregatedListResponse) {       option (google.api.http) = {         get:
-   * "/v1/projects/{project_id}/aggregated/addresses"         rest_collection: "projects.addresses"
-   * };     }
-   *
-   * This method has the automatically derived collection name "projects.aggregated". Because,
-   * semantically, this rpc is actually an operation on the "projects.addresses" collection, the
-   * `rest_collection` field is configured to override the derived collection name.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRestCollection() {
-    return restCollection;
-  }
-
-  /**
-   * DO NOT USE. This is an experimental field.
-   *
-   * Optional. The REST collection name is by default derived from the URL pattern. If specified,
-   * this field overrides the default collection name. Example:
-   *
-   *     rpc AddressesAggregatedList(AddressesAggregatedListRequest)         returns
-   * (AddressesAggregatedListResponse) {       option (google.api.http) = {         get:
-   * "/v1/projects/{project_id}/aggregated/addresses"         rest_collection: "projects.addresses"
-   * };     }
-   *
-   * This method has the automatically derived collection name "projects.aggregated". Because,
-   * semantically, this rpc is actually an operation on the "projects.addresses" collection, the
-   * `rest_collection` field is configured to override the derived collection name.
-   * @param restCollection restCollection or {@code null} for none
-   */
-  public HttpRule setRestCollection(java.lang.String restCollection) {
-    this.restCollection = restCollection;
-    return this;
-  }
-
-  /**
-   * DO NOT USE. This is an experimental field.
-   *
-   * Optional. The rest method name is by default derived from the URL pattern. If specified, this
-   * field overrides the default method name. Example:
-   *
-   *     rpc CreateResource(CreateResourceRequest)         returns (CreateResourceResponse) {
-   * option (google.api.http) = {         post: "/v1/resources",         body: "resource",
-   * rest_method_name: "insert"       };     }
-   *
-   * This method has the automatically derived rest method name "create", but for backwards
-   * compatibility with apiary, it is specified as insert.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRestMethodName() {
-    return restMethodName;
-  }
-
-  /**
-   * DO NOT USE. This is an experimental field.
-   *
-   * Optional. The rest method name is by default derived from the URL pattern. If specified, this
-   * field overrides the default method name. Example:
-   *
-   *     rpc CreateResource(CreateResourceRequest)         returns (CreateResourceResponse) {
-   * option (google.api.http) = {         post: "/v1/resources",         body: "resource",
-   * rest_method_name: "insert"       };     }
-   *
-   * This method has the automatically derived rest method name "create", but for backwards
-   * compatibility with apiary, it is specified as insert.
-   * @param restMethodName restMethodName or {@code null} for none
-   */
-  public HttpRule setRestMethodName(java.lang.String restMethodName) {
-    this.restMethodName = restMethodName;
     return this;
   }
 

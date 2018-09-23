@@ -41,12 +41,6 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> entities;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2EntityTypeEntity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2EntityTypeEntity.class);
-  }
-
   /**
    * Required. Indicates whether the additional data should override or supplement the developer
    * entity type definition.

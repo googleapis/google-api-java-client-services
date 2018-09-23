@@ -49,12 +49,6 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<StatusCondition> conditions;
 
-  static {
-    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(StatusCondition.class);
-  }
-
   /**
    * The node configuration of the pool.
    * The value may be {@code null}.

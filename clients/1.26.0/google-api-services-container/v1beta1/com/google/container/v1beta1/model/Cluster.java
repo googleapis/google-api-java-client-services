@@ -68,12 +68,6 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<StatusCondition> conditions;
 
-  static {
-    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(StatusCondition.class);
-  }
-
   /**
    * [Output only] The time the cluster was created, in
    * [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
@@ -354,7 +348,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * If this is a private cluster setup. Private clusters are clusters that, by default have no
    * external IP addresses on the nodes and where nodes and the master communicate over private IP
-   * addresses. This field is deprecated, use private_cluster_config.enabled instead.
+   * addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1174,7 +1168,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * If this is a private cluster setup. Private clusters are clusters that, by default have no
    * external IP addresses on the nodes and where nodes and the master communicate over private IP
-   * addresses. This field is deprecated, use private_cluster_config.enabled instead.
+   * addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrivateCluster() {
@@ -1184,7 +1178,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * If this is a private cluster setup. Private clusters are clusters that, by default have no
    * external IP addresses on the nodes and where nodes and the master communicate over private IP
-   * addresses. This field is deprecated, use private_cluster_config.enabled instead.
+   * addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead.
    * @param privateCluster privateCluster or {@code null} for none
    */
   public Cluster setPrivateCluster(java.lang.Boolean privateCluster) {

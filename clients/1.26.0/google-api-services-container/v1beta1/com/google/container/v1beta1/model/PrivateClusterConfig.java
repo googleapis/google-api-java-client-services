@@ -38,16 +38,17 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean enablePrivateEndpoint;
 
   /**
-   * Whether nodes have only private IP addresses, and communicate with the master via private
-   * networking.
+   * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918
+   * private addresses and communicate with the master via private networking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePrivateNodes;
 
   /**
-   * The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used
-   * for assigning private IP addresses to the master or set of masters, as well as the ILB VIP.
+   * The IP range in CIDR notation to use for the hosted master network. This range will be used for
+   * assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This
+   * range must not overlap with any other ranges in use within the cluster's network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +86,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether nodes have only private IP addresses, and communicate with the master via private
-   * networking.
+   * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918
+   * private addresses and communicate with the master via private networking.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateNodes() {
@@ -94,8 +95,8 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether nodes have only private IP addresses, and communicate with the master via private
-   * networking.
+   * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918
+   * private addresses and communicate with the master via private networking.
    * @param enablePrivateNodes enablePrivateNodes or {@code null} for none
    */
   public PrivateClusterConfig setEnablePrivateNodes(java.lang.Boolean enablePrivateNodes) {
@@ -104,8 +105,9 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used
-   * for assigning private IP addresses to the master or set of masters, as well as the ILB VIP.
+   * The IP range in CIDR notation to use for the hosted master network. This range will be used for
+   * assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This
+   * range must not overlap with any other ranges in use within the cluster's network.
    * @return value or {@code null} for none
    */
   public java.lang.String getMasterIpv4CidrBlock() {
@@ -113,8 +115,9 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used
-   * for assigning private IP addresses to the master or set of masters, as well as the ILB VIP.
+   * The IP range in CIDR notation to use for the hosted master network. This range will be used for
+   * assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This
+   * range must not overlap with any other ranges in use within the cluster's network.
    * @param masterIpv4CidrBlock masterIpv4CidrBlock or {@code null} for none
    */
   public PrivateClusterConfig setMasterIpv4CidrBlock(java.lang.String masterIpv4CidrBlock) {

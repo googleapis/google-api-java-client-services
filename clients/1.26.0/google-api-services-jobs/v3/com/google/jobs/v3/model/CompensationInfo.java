@@ -62,12 +62,6 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<CompensationEntry> entries;
 
-  static {
-    // hack to force ProGuard to consider CompensationEntry used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CompensationEntry.class);
-  }
-
   /**
    * Output only. Annualized base compensation range. Computed as base compensation entry's
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.

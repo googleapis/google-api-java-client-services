@@ -38,12 +38,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<StatusCondition> clusterConditions;
 
-  static {
-    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(StatusCondition.class);
-  }
-
   /**
    * Detailed operation progress, if available.
    * The value may be {@code null}.
@@ -81,12 +75,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<StatusCondition> nodepoolConditions;
-
-  static {
-    // hack to force ProGuard to consider StatusCondition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(StatusCondition.class);
-  }
 
   /**
    * The operation type.

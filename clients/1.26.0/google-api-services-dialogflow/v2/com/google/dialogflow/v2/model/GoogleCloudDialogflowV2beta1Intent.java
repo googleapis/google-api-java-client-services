@@ -72,18 +72,12 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.util.List<java.lang.String> events;
 
   /**
-   * Optional. Collection of information about all followup intents that have name of this intent as
-   * a root_name.
+   * Read-only. Information about all followup intents that have this intent as a direct or indirect
+   * parent. We populate this field only in the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> followupIntentInfo;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo.class);
-  }
 
   /**
    * Optional. The list of context names required for this intent to be triggered. Format:
@@ -156,8 +150,11 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.util.List<GoogleCloudDialogflowV2beta1IntentParameter> parameters;
 
   /**
-   * The unique identifier of the parent intent in the chain of followup intents. It identifies the
-   * parent followup intent. Format: `projects//agent/intents/`.
+   * Read-only after creation. The unique identifier of the parent intent in the chain of followup
+   * intents. You can set this field when creating an intent, for example with CreateIntent or
+   * BatchUpdateIntents, in order to make this intent a followup intent.
+   *
+   * It identifies the parent followup intent. Format: `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,8 +177,11 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.lang.Boolean resetContexts;
 
   /**
-   * The unique identifier of the root intent in the chain of followup intents. It identifies the
-   * correct followup intents chain for this intent. Format: `projects//agent/intents/`.
+   * Read-only. The unique identifier of the root intent in the chain of followup intents. It
+   * identifies the correct followup intents chain for this intent. We populate this field only in
+   * the output.
+   *
+   * Format: `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,12 +193,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> trainingPhrases;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentTrainingPhrase used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentTrainingPhrase.class);
-  }
 
   /**
    * Optional. Indicates whether webhooks are enabled for the intent.
@@ -305,8 +299,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Collection of information about all followup intents that have name of this intent as
-   * a root_name.
+   * Read-only. Information about all followup intents that have this intent as a direct or indirect
+   * parent. We populate this field only in the output.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> getFollowupIntentInfo() {
@@ -314,8 +308,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Collection of information about all followup intents that have name of this intent as
-   * a root_name.
+   * Read-only. Information about all followup intents that have this intent as a direct or indirect
+   * parent. We populate this field only in the output.
    * @param followupIntentInfo followupIntentInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setFollowupIntentInfo(java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> followupIntentInfo) {
@@ -488,8 +482,11 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * The unique identifier of the parent intent in the chain of followup intents. It identifies the
-   * parent followup intent. Format: `projects//agent/intents/`.
+   * Read-only after creation. The unique identifier of the parent intent in the chain of followup
+   * intents. You can set this field when creating an intent, for example with CreateIntent or
+   * BatchUpdateIntents, in order to make this intent a followup intent.
+   *
+   * It identifies the parent followup intent. Format: `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentFollowupIntentName() {
@@ -497,8 +494,11 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * The unique identifier of the parent intent in the chain of followup intents. It identifies the
-   * parent followup intent. Format: `projects//agent/intents/`.
+   * Read-only after creation. The unique identifier of the parent intent in the chain of followup
+   * intents. You can set this field when creating an intent, for example with CreateIntent or
+   * BatchUpdateIntents, in order to make this intent a followup intent.
+   *
+   * It identifies the parent followup intent. Format: `projects//agent/intents/`.
    * @param parentFollowupIntentName parentFollowupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setParentFollowupIntentName(java.lang.String parentFollowupIntentName) {
@@ -545,8 +545,11 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * The unique identifier of the root intent in the chain of followup intents. It identifies the
-   * correct followup intents chain for this intent. Format: `projects//agent/intents/`.
+   * Read-only. The unique identifier of the root intent in the chain of followup intents. It
+   * identifies the correct followup intents chain for this intent. We populate this field only in
+   * the output.
+   *
+   * Format: `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootFollowupIntentName() {
@@ -554,8 +557,11 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * The unique identifier of the root intent in the chain of followup intents. It identifies the
-   * correct followup intents chain for this intent. Format: `projects//agent/intents/`.
+   * Read-only. The unique identifier of the root intent in the chain of followup intents. It
+   * identifies the correct followup intents chain for this intent. We populate this field only in
+   * the output.
+   *
+   * Format: `projects//agent/intents/`.
    * @param rootFollowupIntentName rootFollowupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setRootFollowupIntentName(java.lang.String rootFollowupIntentName) {

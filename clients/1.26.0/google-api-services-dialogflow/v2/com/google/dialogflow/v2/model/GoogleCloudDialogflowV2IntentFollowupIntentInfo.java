@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.g
   private java.lang.String followupIntentName;
 
   /**
-   * The unique identifier of the followup intent parent. Format: `projects//agent/intents/`.
+   * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.g
   }
 
   /**
-   * The unique identifier of the followup intent parent. Format: `projects//agent/intents/`.
+   * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentFollowupIntentName() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.g
   }
 
   /**
-   * The unique identifier of the followup intent parent. Format: `projects//agent/intents/`.
+   * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
    * @param parentFollowupIntentName parentFollowupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentFollowupIntentInfo setParentFollowupIntentName(java.lang.String parentFollowupIntentName) {

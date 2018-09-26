@@ -66,14 +66,6 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String reservedIpRange;
 
   /**
-   * Output only. The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to
-   * which the instance is connected.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String subnetwork;
-
-  /**
    * Output only. IPv4 addresses in the format {octet 1}.{octet 2}.{octet 3}.{octet 4} or IPv6
    * addresses in the format {block 1}:{block 2}:{block 3}:{block 4}:{block 5}:{block 6}:{block
    * 7}:{block 8}.
@@ -154,25 +146,6 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setReservedIpRange(java.lang.String reservedIpRange) {
     this.reservedIpRange = reservedIpRange;
-    return this;
-  }
-
-  /**
-   * Output only. The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to
-   * which the instance is connected.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSubnetwork() {
-    return subnetwork;
-  }
-
-  /**
-   * Output only. The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to
-   * which the instance is connected.
-   * @param subnetwork subnetwork or {@code null} for none
-   */
-  public NetworkConfig setSubnetwork(java.lang.String subnetwork) {
-    this.subnetwork = subnetwork;
     return this;
   }
 

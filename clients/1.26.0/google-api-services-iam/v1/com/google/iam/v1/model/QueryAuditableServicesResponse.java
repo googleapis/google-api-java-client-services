@@ -37,12 +37,6 @@ public final class QueryAuditableServicesResponse extends com.google.api.client.
   @com.google.api.client.util.Key
   private java.util.List<AuditableService> services;
 
-  static {
-    // hack to force ProGuard to consider AuditableService used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AuditableService.class);
-  }
-
   /**
    * The auditable services for a resource.
    * @return value or {@code null} for none

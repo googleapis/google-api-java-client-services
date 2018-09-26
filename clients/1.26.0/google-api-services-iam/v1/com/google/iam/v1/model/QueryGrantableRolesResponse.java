@@ -45,6 +45,12 @@ public final class QueryGrantableRolesResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<Role> roles;
 
+  static {
+    // hack to force ProGuard to consider Role used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Role.class);
+  }
+
   /**
    * To retrieve the next page of results, set `QueryGrantableRolesRequest.page_token` to this
    * value.

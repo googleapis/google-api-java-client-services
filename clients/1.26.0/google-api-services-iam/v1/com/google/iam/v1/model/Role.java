@@ -73,7 +73,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The current launch stage of the role.
+   * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role,
+   * the `stage` field will not be included in the returned definition for the role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +215,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current launch stage of the role.
+   * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role,
+   * the `stage` field will not be included in the returned definition for the role.
    * @return value or {@code null} for none
    */
   public java.lang.String getStage() {
@@ -222,7 +224,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current launch stage of the role.
+   * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role,
+   * the `stage` field will not be included in the returned definition for the role.
    * @param stage stage or {@code null} for none
    */
   public Role setStage(java.lang.String stage) {

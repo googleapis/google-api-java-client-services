@@ -31,6 +31,15 @@ package com.google.streetviewpublish.v1.model;
 public final class Pose extends com.google.api.client.json.GenericJson {
 
   /**
+   * The estimated horizontal accuracy of this pose in meters with 68% (one standard deviation)
+   * confidence. For more information, see:
+   * https://developer.android.com/reference/android/location/Location#getAccuracy()
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float accuracyMeters;
+
+  /**
    * Altitude of the pose in meters above WGS84 ellipsoid. NaN indicates an unmeasured quantity.
    * The value may be {@code null}.
    */
@@ -79,6 +88,27 @@ public final class Pose extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Double roll;
+
+  /**
+   * The estimated horizontal accuracy of this pose in meters with 68% (one standard deviation)
+   * confidence. For more information, see:
+   * https://developer.android.com/reference/android/location/Location#getAccuracy()
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getAccuracyMeters() {
+    return accuracyMeters;
+  }
+
+  /**
+   * The estimated horizontal accuracy of this pose in meters with 68% (one standard deviation)
+   * confidence. For more information, see:
+   * https://developer.android.com/reference/android/location/Location#getAccuracy()
+   * @param accuracyMeters accuracyMeters or {@code null} for none
+   */
+  public Pose setAccuracyMeters(java.lang.Float accuracyMeters) {
+    this.accuracyMeters = accuracyMeters;
+    return this;
+  }
 
   /**
    * Altitude of the pose in meters above WGS84 ellipsoid. NaN indicates an unmeasured quantity.

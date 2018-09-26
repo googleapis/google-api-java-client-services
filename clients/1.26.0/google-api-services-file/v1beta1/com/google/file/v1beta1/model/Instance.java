@@ -58,33 +58,18 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<FileShareConfig> fileShares;
 
+  static {
+    // hack to force ProGuard to consider FileShareConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FileShareConfig.class);
+  }
+
   /**
    * Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
-
-  /**
-   * The logging service the instance should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be
-   * exported from the instance. * if left as an empty string,`logging.googleapis.com` will be used.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String loggingService;
-
-  /**
-   * The monitoring service the instance should use to write metrics. Currently available options:
-   *
-   * * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will
-   * be exported from the instance. * if left as an empty string, `monitoring.googleapis.com` will
-   * be used.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String monitoringService;
 
   /**
    * Output only. The resource name of the instance, in the format
@@ -213,54 +198,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
-    return this;
-  }
-
-  /**
-   * The logging service the instance should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be
-   * exported from the instance. * if left as an empty string,`logging.googleapis.com` will be used.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLoggingService() {
-    return loggingService;
-  }
-
-  /**
-   * The logging service the instance should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be
-   * exported from the instance. * if left as an empty string,`logging.googleapis.com` will be used.
-   * @param loggingService loggingService or {@code null} for none
-   */
-  public Instance setLoggingService(java.lang.String loggingService) {
-    this.loggingService = loggingService;
-    return this;
-  }
-
-  /**
-   * The monitoring service the instance should use to write metrics. Currently available options:
-   *
-   * * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will
-   * be exported from the instance. * if left as an empty string, `monitoring.googleapis.com` will
-   * be used.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMonitoringService() {
-    return monitoringService;
-  }
-
-  /**
-   * The monitoring service the instance should use to write metrics. Currently available options:
-   *
-   * * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will
-   * be exported from the instance. * if left as an empty string, `monitoring.googleapis.com` will
-   * be used.
-   * @param monitoringService monitoringService or {@code null} for none
-   */
-  public Instance setMonitoringService(java.lang.String monitoringService) {
-    this.monitoringService = monitoringService;
     return this;
   }
 

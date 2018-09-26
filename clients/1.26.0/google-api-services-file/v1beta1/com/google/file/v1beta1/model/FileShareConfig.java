@@ -37,48 +37,11 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.lang.Long capacityGb;
 
   /**
-   * Delete requested. The file share will be deleted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean deleted;
-
-  /**
-   * Service enabled.
-   *
-   * When enabled, the instance exposes the exports to the user for mounting.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
-
-  /**
-   * Exports. If protocols and exports are both zero-length, a default protocol of NFSV3 and a
-   * default export of "*" are provided, and enabled is set to true.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Export> exports;
-
-  static {
-    // hack to force ProGuard to consider Export used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Export.class);
-  }
-
-  /**
    * The name of the file share (must be 16 characters or less).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Protocols supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> protocols;
 
   /**
    * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
@@ -98,63 +61,6 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Delete requested. The file share will be deleted.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDeleted() {
-    return deleted;
-  }
-
-  /**
-   * Delete requested. The file share will be deleted.
-   * @param deleted deleted or {@code null} for none
-   */
-  public FileShareConfig setDeleted(java.lang.Boolean deleted) {
-    this.deleted = deleted;
-    return this;
-  }
-
-  /**
-   * Service enabled.
-   *
-   * When enabled, the instance exposes the exports to the user for mounting.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
-  }
-
-  /**
-   * Service enabled.
-   *
-   * When enabled, the instance exposes the exports to the user for mounting.
-   * @param enabled enabled or {@code null} for none
-   */
-  public FileShareConfig setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
-    return this;
-  }
-
-  /**
-   * Exports. If protocols and exports are both zero-length, a default protocol of NFSV3 and a
-   * default export of "*" are provided, and enabled is set to true.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Export> getExports() {
-    return exports;
-  }
-
-  /**
-   * Exports. If protocols and exports are both zero-length, a default protocol of NFSV3 and a
-   * default export of "*" are provided, and enabled is set to true.
-   * @param exports exports or {@code null} for none
-   */
-  public FileShareConfig setExports(java.util.List<Export> exports) {
-    this.exports = exports;
-    return this;
-  }
-
-  /**
    * The name of the file share (must be 16 characters or less).
    * @return value or {@code null} for none
    */
@@ -168,23 +74,6 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
    */
   public FileShareConfig setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Protocols supported.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getProtocols() {
-    return protocols;
-  }
-
-  /**
-   * Protocols supported.
-   * @param protocols protocols or {@code null} for none
-   */
-  public FileShareConfig setProtocols(java.util.List<java.lang.String> protocols) {
-    this.protocols = protocols;
     return this;
   }
 

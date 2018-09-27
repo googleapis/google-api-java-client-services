@@ -84,7 +84,7 @@
           <doctitle>Hangouts Chat API ${project.version}</doctitle>
           <windowtitle>Hangouts Chat API ${project.version}</windowtitle>
           <links>
-            <link>http://docs.oracle.com/javase/7/docs/api</link>
+            <link>http://docs.oracle.com/javase/6/docs/api</link>
             <link>https://google.github.io/google-http-java-client/releases/1.26.0-SNAPSHOT/javadoc/index.html</link>
             <link>https://google.github.io/google-oauth-java-client/releases/1.26.0-SNAPSHOT/javadoc/index.html</link>
             <link>https://google.github.io/google-api-java-client/releases/1.26.0-SNAPSHOT/javadoc/index.html</link>

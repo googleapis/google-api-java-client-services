@@ -175,6 +175,17 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String trace;
 
   /**
+   * Optional. The sampling decision of the trace associated with the log entry. True means that the
+   * trace resource name in the trace field was sampled for storage in a trace backend. False means
+   * that the trace was not sampled for storage when this log entry was written, or the sampling
+   * decision was unknown at the time. A non-sampled trace value is still useful as a request
+   * correlation identifier. The default is False.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean traceSampled;
+
+  /**
    * Optional. Information about the HTTP request associated with this log entry, if applicable.
    * @return value or {@code null} for none
    */
@@ -507,6 +518,31 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   public LogEntry setTrace(java.lang.String trace) {
     this.trace = trace;
+    return this;
+  }
+
+  /**
+   * Optional. The sampling decision of the trace associated with the log entry. True means that the
+   * trace resource name in the trace field was sampled for storage in a trace backend. False means
+   * that the trace was not sampled for storage when this log entry was written, or the sampling
+   * decision was unknown at the time. A non-sampled trace value is still useful as a request
+   * correlation identifier. The default is False.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTraceSampled() {
+    return traceSampled;
+  }
+
+  /**
+   * Optional. The sampling decision of the trace associated with the log entry. True means that the
+   * trace resource name in the trace field was sampled for storage in a trace backend. False means
+   * that the trace was not sampled for storage when this log entry was written, or the sampling
+   * decision was unknown at the time. A non-sampled trace value is still useful as a request
+   * correlation identifier. The default is False.
+   * @param traceSampled traceSampled or {@code null} for none
+   */
+  public LogEntry setTraceSampled(java.lang.Boolean traceSampled) {
+    this.traceSampled = traceSampled;
     return this;
   }
 

@@ -25,10 +25,6 @@
     </license>
   </licenses>
 
-  <modules>
-    <module>google-api-java-client-services</module>
-  </modules>
-
   <build>
     <plugins>
       <plugin>

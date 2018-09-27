@@ -14,13 +14,13 @@
  * Modify at your own risk.
  */
 
-package com.google.adexchangebuyer2.v2beta1.model;
+package com.google.content.model;
 
 /**
- * Response message for listing products visible to the buyer.
+ * Model definition for CustomerReturnReason.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
+ * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
  * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -28,64 +28,58 @@ package com.google.adexchangebuyer2.v2beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListProductsResponse extends com.google.api.client.json.GenericJson {
+public final class CustomerReturnReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * List pagination support.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.lang.String description;
 
   /**
-   * The list of matching products at their head revision number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Product> products;
+  private java.lang.String reasonCode;
 
   /**
-   * List pagination support.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * List pagination support.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * @param description description or {@code null} for none
    */
-  public ListProductsResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public CustomerReturnReason setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * The list of matching products at their head revision number.
    * @return value or {@code null} for none
    */
-  public java.util.List<Product> getProducts() {
-    return products;
+  public java.lang.String getReasonCode() {
+    return reasonCode;
   }
 
   /**
-   * The list of matching products at their head revision number.
-   * @param products products or {@code null} for none
+   * @param reasonCode reasonCode or {@code null} for none
    */
-  public ListProductsResponse setProducts(java.util.List<Product> products) {
-    this.products = products;
+  public CustomerReturnReason setReasonCode(java.lang.String reasonCode) {
+    this.reasonCode = reasonCode;
     return this;
   }
 
   @Override
-  public ListProductsResponse set(String fieldName, Object value) {
-    return (ListProductsResponse) super.set(fieldName, value);
+  public CustomerReturnReason set(String fieldName, Object value) {
+    return (CustomerReturnReason) super.set(fieldName, value);
   }
 
   @Override
-  public ListProductsResponse clone() {
-    return (ListProductsResponse) super.clone();
+  public CustomerReturnReason clone() {
+    return (CustomerReturnReason) super.clone();
   }
 
 }

@@ -53,6 +53,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   private GooglePrivacyDlpV2Dictionary dictionary;
 
   /**
+   * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It
+   * still can be used for rules matching.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,6 +139,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   }
 
   /**
+   * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It
+   * still can be used for rules matching.
    * @return value or {@code null} for none
    */
   public java.lang.String getExclusionType() {
@@ -144,6 +148,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   }
 
   /**
+   * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It
+   * still can be used for rules matching.
    * @param exclusionType exclusionType or {@code null} for none
    */
   public GooglePrivacyDlpV2CustomInfoType setExclusionType(java.lang.String exclusionType) {

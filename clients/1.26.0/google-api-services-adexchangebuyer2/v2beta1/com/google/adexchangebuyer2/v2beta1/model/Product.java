@@ -94,7 +94,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String productId;
 
   /**
-   * The revision number of the product. (auto-assigned by marketplace)
+   * The revision number of the product (auto-assigned by Marketplace).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -280,7 +280,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision number of the product. (auto-assigned by marketplace)
+   * The revision number of the product (auto-assigned by Marketplace).
    * @return value or {@code null} for none
    */
   public java.lang.Long getProductRevision() {
@@ -288,7 +288,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision number of the product. (auto-assigned by marketplace)
+   * The revision number of the product (auto-assigned by Marketplace).
    * @param productRevision productRevision or {@code null} for none
    */
   public Product setProductRevision(java.lang.Long productRevision) {

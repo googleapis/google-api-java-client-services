@@ -31,8 +31,7 @@ package com.google.content.model;
 public final class OrderCustomer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Email address that should be used for order related communications. In certain cases this might
-   * not be a real users email, but a proxy email.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   private OrderCustomerMarketingRightsInfo marketingRightsInfo;
 
   /**
-   * Email address that should be used for order related communications. In certain cases this might
-   * not be a real users email, but a proxy email.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -69,8 +67,7 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Email address that should be used for order related communications. In certain cases this might
-   * not be a real users email, but a proxy email.
+   * Deprecated.
    * @param email email or {@code null} for none
    */
   public OrderCustomer setEmail(java.lang.String email) {

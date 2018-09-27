@@ -17,7 +17,8 @@
 package com.google.adexchangebuyer2.v2beta1.model;
 
 /**
- * Represents a buyer of inventory. Each buyer is identified by a unique Ad Exchange account ID.
+ * Represents a buyer of inventory. Each buyer is identified by a unique Authorized Buyers account
+ * ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
@@ -31,14 +32,14 @@ package com.google.adexchangebuyer2.v2beta1.model;
 public final class Buyer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Ad Exchange account ID of the buyer.
+   * Authorized Buyers account ID of the buyer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountId;
 
   /**
-   * Ad Exchange account ID of the buyer.
+   * Authorized Buyers account ID of the buyer.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -46,7 +47,7 @@ public final class Buyer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Ad Exchange account ID of the buyer.
+   * Authorized Buyers account ID of the buyer.
    * @param accountId accountId or {@code null} for none
    */
   public Buyer setAccountId(java.lang.String accountId) {

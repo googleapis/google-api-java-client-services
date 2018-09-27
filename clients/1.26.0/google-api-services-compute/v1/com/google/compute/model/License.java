@@ -73,7 +73,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger licenseCode;
 
   /**
-   * [Output Only] Name of the resource. The name is 1-63 characters long and complies with RFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Name of the resource. The name is 1-63 characters long and complies with RFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -213,7 +213,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Name of the resource. The name is 1-63 characters long and complies with RFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
    * @param name name or {@code null} for none
    */
   public License setName(java.lang.String name) {

@@ -69,6 +69,14 @@ public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJs
   private java.lang.String requestPath;
 
   /**
+   * The string to match anywhere in the first 1024 bytes of the response body. If left empty (the
+   * default value), the status code determines health. The response data can only be ASCII.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String response;
+
+  /**
    * The value of the host header in the HTTPS health check request. If left empty (default value),
    * the IP on behalf of which this health check is performed will be used.
    * @return value or {@code null} for none
@@ -158,6 +166,25 @@ public final class HTTPSHealthCheck extends com.google.api.client.json.GenericJs
    */
   public HTTPSHealthCheck setRequestPath(java.lang.String requestPath) {
     this.requestPath = requestPath;
+    return this;
+  }
+
+  /**
+   * The string to match anywhere in the first 1024 bytes of the response body. If left empty (the
+   * default value), the status code determines health. The response data can only be ASCII.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponse() {
+    return response;
+  }
+
+  /**
+   * The string to match anywhere in the first 1024 bytes of the response body. If left empty (the
+   * default value), the status code determines health. The response data can only be ASCII.
+   * @param response response or {@code null} for none
+   */
+  public HTTPSHealthCheck setResponse(java.lang.String response) {
+    this.response = response;
     return this;
   }
 

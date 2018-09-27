@@ -19,8 +19,8 @@ package com.google.adexchangebuyer2.v2beta1.model;
 /**
  * A set of filters that is applied to a request for data. Within a filter set, an AND operation is
  * performed across the filters represented by each field. An OR operation is performed across the
- * filters represented by the multiple values of a repeated field. E.g. "format=VIDEO AND deal_id=12
- * AND (seller_network_id=34 OR seller_network_id=56)"
+ * filters represented by the multiple values of a repeated field, e.g., "format=VIDEO AND
+ * deal_id=12 AND (seller_network_id=34 OR seller_network_id=56)".
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
@@ -43,7 +43,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
-   * set that accesses account-level troubleshooting data, i.e. one whose name matches the
+   * set that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * The value may be {@code null}.
    */
@@ -52,7 +52,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the deal on which to filter; optional. This field may be set only for a filter set
-   * that accesses account-level troubleshooting data, i.e. one whose name matches the
+   * that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of formats on which to filter; may be empty. The filters represented by multiple
-   * formats are ORed together (i.e. if non-empty, results must match any one of the formats).
+   * formats are ORed together (i.e., if non-empty, results must match any one of the formats).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,14 +89,14 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of platforms on which to filter; may be empty. The filters represented by multiple
-   * platforms are ORed together (i.e. if non-empty, results must match any one of the platforms).
+   * platforms are ORed together (i.e., if non-empty, results must match any one of the platforms).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> platforms;
 
   /**
-   * For Exchange Bidding buyers only. The list of publisher identifiers on which to filter; may be
+   * For Open Bidding partners only. The list of publisher identifiers on which to filter; may be
    * empty. The filters represented by multiple publisher identifiers are ORed together.
    * The value may be {@code null}.
    */
@@ -119,11 +119,11 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   private RelativeDateRange relativeDateRange;
 
   /**
-   * For Ad Exchange buyers only. The list of IDs of the seller (publisher) networks on which to
+   * For Authorized Buyers only. The list of IDs of the seller (publisher) networks on which to
    * filter; may be empty. The filters represented by multiple seller network IDs are ORed together
-   * (i.e. if non-empty, results must match any one of the publisher networks). See [seller-network-
-   * ids](https://developers.google.com/ad-exchange/rtb/downloads/seller-network-ids) file for the
-   * set of existing seller network IDs.
+   * (i.e., if non-empty, results must match any one of the publisher networks). See [seller-
+   * network-ids](https://developers.google.com/authorized-buyers/rtb/downloads/seller-network-ids)
+   * file for the set of existing seller network IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
-   * set that accesses account-level troubleshooting data, i.e. one whose name matches the
+   * set that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @return value or {@code null} for none
    */
@@ -167,7 +167,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
-   * set that accesses account-level troubleshooting data, i.e. one whose name matches the
+   * set that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @param creativeId creativeId or {@code null} for none
    */
@@ -178,7 +178,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the deal on which to filter; optional. This field may be set only for a filter set
-   * that accesses account-level troubleshooting data, i.e. one whose name matches the
+   * that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @return value or {@code null} for none
    */
@@ -188,7 +188,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the deal on which to filter; optional. This field may be set only for a filter set
-   * that accesses account-level troubleshooting data, i.e. one whose name matches the
+   * that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
    * @param dealId dealId or {@code null} for none
    */
@@ -216,7 +216,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of formats on which to filter; may be empty. The filters represented by multiple
-   * formats are ORed together (i.e. if non-empty, results must match any one of the formats).
+   * formats are ORed together (i.e., if non-empty, results must match any one of the formats).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFormats() {
@@ -225,7 +225,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of formats on which to filter; may be empty. The filters represented by multiple
-   * formats are ORed together (i.e. if non-empty, results must match any one of the formats).
+   * formats are ORed together (i.e., if non-empty, results must match any one of the formats).
    * @param formats formats or {@code null} for none
    */
   public FilterSet setFormats(java.util.List<java.lang.String> formats) {
@@ -264,7 +264,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of platforms on which to filter; may be empty. The filters represented by multiple
-   * platforms are ORed together (i.e. if non-empty, results must match any one of the platforms).
+   * platforms are ORed together (i.e., if non-empty, results must match any one of the platforms).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPlatforms() {
@@ -273,7 +273,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of platforms on which to filter; may be empty. The filters represented by multiple
-   * platforms are ORed together (i.e. if non-empty, results must match any one of the platforms).
+   * platforms are ORed together (i.e., if non-empty, results must match any one of the platforms).
    * @param platforms platforms or {@code null} for none
    */
   public FilterSet setPlatforms(java.util.List<java.lang.String> platforms) {
@@ -282,7 +282,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Exchange Bidding buyers only. The list of publisher identifiers on which to filter; may be
+   * For Open Bidding partners only. The list of publisher identifiers on which to filter; may be
    * empty. The filters represented by multiple publisher identifiers are ORed together.
    * @return value or {@code null} for none
    */
@@ -291,7 +291,7 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Exchange Bidding buyers only. The list of publisher identifiers on which to filter; may be
+   * For Open Bidding partners only. The list of publisher identifiers on which to filter; may be
    * empty. The filters represented by multiple publisher identifiers are ORed together.
    * @param publisherIdentifiers publisherIdentifiers or {@code null} for none
    */
@@ -337,11 +337,11 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Ad Exchange buyers only. The list of IDs of the seller (publisher) networks on which to
+   * For Authorized Buyers only. The list of IDs of the seller (publisher) networks on which to
    * filter; may be empty. The filters represented by multiple seller network IDs are ORed together
-   * (i.e. if non-empty, results must match any one of the publisher networks). See [seller-network-
-   * ids](https://developers.google.com/ad-exchange/rtb/downloads/seller-network-ids) file for the
-   * set of existing seller network IDs.
+   * (i.e., if non-empty, results must match any one of the publisher networks). See [seller-
+   * network-ids](https://developers.google.com/authorized-buyers/rtb/downloads/seller-network-ids)
+   * file for the set of existing seller network IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getSellerNetworkIds() {
@@ -349,11 +349,11 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Ad Exchange buyers only. The list of IDs of the seller (publisher) networks on which to
+   * For Authorized Buyers only. The list of IDs of the seller (publisher) networks on which to
    * filter; may be empty. The filters represented by multiple seller network IDs are ORed together
-   * (i.e. if non-empty, results must match any one of the publisher networks). See [seller-network-
-   * ids](https://developers.google.com/ad-exchange/rtb/downloads/seller-network-ids) file for the
-   * set of existing seller network IDs.
+   * (i.e., if non-empty, results must match any one of the publisher networks). See [seller-
+   * network-ids](https://developers.google.com/authorized-buyers/rtb/downloads/seller-network-ids)
+   * file for the set of existing seller network IDs.
    * @param sellerNetworkIds sellerNetworkIds or {@code null} for none
    */
   public FilterSet setSellerNetworkIds(java.util.List<java.lang.Integer> sellerNetworkIds) {

@@ -93,8 +93,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.String creativePreApprovalPolicy;
 
   /**
-   * Restricitions about the creatives associated with the deal (i.e. size) This is available for
-   * Programmatic Guaranteed/Preferred Deals in DFP. @OutputOnly
+   * Restricitions about the creatives associated with the deal (i.e., size) This is available for
+   * Programmatic Guaranteed/Preferred Deals in Ad Manager. @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,12 +187,6 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ContactInformation> sellerContacts;
 
-  static {
-    // hack to force ProGuard to consider ContactInformation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContactInformation.class);
-  }
-
   /**
    * The syndication product associated with the deal.
    *
@@ -217,12 +211,6 @@ public final class Deal extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<TargetingCriteria> targetingCriterion;
-
-  static {
-    // hack to force ProGuard to consider TargetingCriteria used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TargetingCriteria.class);
-  }
 
   /**
    * The time when the deal was last updated. @OutputOnly
@@ -382,8 +370,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricitions about the creatives associated with the deal (i.e. size) This is available for
-   * Programmatic Guaranteed/Preferred Deals in DFP. @OutputOnly
+   * Restricitions about the creatives associated with the deal (i.e., size) This is available for
+   * Programmatic Guaranteed/Preferred Deals in Ad Manager. @OutputOnly
    * @return value or {@code null} for none
    */
   public CreativeRestrictions getCreativeRestrictions() {
@@ -391,8 +379,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricitions about the creatives associated with the deal (i.e. size) This is available for
-   * Programmatic Guaranteed/Preferred Deals in DFP. @OutputOnly
+   * Restricitions about the creatives associated with the deal (i.e., size) This is available for
+   * Programmatic Guaranteed/Preferred Deals in Ad Manager. @OutputOnly
    * @param creativeRestrictions creativeRestrictions or {@code null} for none
    */
   public Deal setCreativeRestrictions(CreativeRestrictions creativeRestrictions) {

@@ -37,12 +37,6 @@ public final class ListClientsResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<Client> clients;
 
-  static {
-    // hack to force ProGuard to consider Client used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Client.class);
-  }
-
   /**
    * A token to retrieve the next page of results. Pass this value in the
    * ListClientsRequest.pageToken field in the subsequent call to the accounts.clients.list method

@@ -46,7 +46,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * forwarding rule supports either IPv4 or IPv6.
    *
    * When the load balancing scheme is INTERNAL_SELF_MANAGED, this must be a URL reference to an
-   * existing Address resource ( internal regional static IP address).
+   * existing Address resource ( internal regional static IP address), with a purpose of
+   * GCE_END_POINT and address_type of INTERNAL.
    *
    * When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address belonging
    * to the network/subnet configured for the forwarding rule. By default, if this field is empty,
@@ -250,7 +251,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * forwarding rule supports either IPv4 or IPv6.
    *
    * When the load balancing scheme is INTERNAL_SELF_MANAGED, this must be a URL reference to an
-   * existing Address resource ( internal regional static IP address).
+   * existing Address resource ( internal regional static IP address), with a purpose of
+   * GCE_END_POINT and address_type of INTERNAL.
    *
    * When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address belonging
    * to the network/subnet configured for the forwarding rule. By default, if this field is empty,
@@ -281,7 +283,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * forwarding rule supports either IPv4 or IPv6.
    *
    * When the load balancing scheme is INTERNAL_SELF_MANAGED, this must be a URL reference to an
-   * existing Address resource ( internal regional static IP address).
+   * existing Address resource ( internal regional static IP address), with a purpose of
+   * GCE_END_POINT and address_type of INTERNAL.
    *
    * When the load balancing scheme is INTERNAL, this can only be an RFC 1918 IP address belonging
    * to the network/subnet configured for the forwarding rule. By default, if this field is empty,

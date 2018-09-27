@@ -19,7 +19,7 @@ package com.google.adexchangebuyer2.v2beta1.model;
 /**
  * Represents the size of an ad unit that can be targeted on an ad request. It only applies to
  * Private Auction, AdX Preferred Deals and Auction Packages. This targeting does not apply to
- * Programmatic Guaranteed and Preferred Deals in DFP.
+ * Programmatic Guaranteed and Preferred Deals in Ad Manager.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

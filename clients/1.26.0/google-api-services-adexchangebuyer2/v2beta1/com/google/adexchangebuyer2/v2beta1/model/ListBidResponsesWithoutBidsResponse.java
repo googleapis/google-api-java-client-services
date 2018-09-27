@@ -38,12 +38,6 @@ public final class ListBidResponsesWithoutBidsResponse extends com.google.api.cl
   @com.google.api.client.util.Key
   private java.util.List<BidResponseWithoutBidsStatusRow> bidResponseWithoutBidsStatusRows;
 
-  static {
-    // hack to force ProGuard to consider BidResponseWithoutBidsStatusRow used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(BidResponseWithoutBidsStatusRow.class);
-  }
-
   /**
    * A token to retrieve the next page of results. Pass this value in the
    * ListBidResponsesWithoutBidsRequest.pageToken field in the subsequent call to the

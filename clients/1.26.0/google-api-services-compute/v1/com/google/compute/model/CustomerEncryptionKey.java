@@ -30,6 +30,13 @@ package com.google.compute.model;
 public final class CustomerEncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the encryption key that is stored in Google Cloud KMS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
    * encrypt or decrypt this resource.
    * The value may be {@code null}.
@@ -44,6 +51,23 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String sha256;
+
+  /**
+   * The name of the encryption key that is stored in Google Cloud KMS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * The name of the encryption key that is stored in Google Cloud KMS.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public CustomerEncryptionKey setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
+    return this;
+  }
 
   /**
    * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either

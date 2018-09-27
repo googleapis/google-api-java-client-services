@@ -17,9 +17,9 @@
 package com.google.adexchangebuyer2.v2beta1.model;
 
 /**
- * A client user is created under a client buyer and has restricted access to the Ad Exchange
- * Marketplace and certain other sections of the Ad Exchange Buyer UI based on the role granted to
- * the associated client buyer.
+ * A client user is created under a client buyer and has restricted access to the Marketplace and
+ * certain other sections of the Authorized Buyers UI based on the role granted to the associated
+ * client buyer.
  *
  * The only way a new client user can be created is via accepting an email invitation (see the
  * accounts.clients.invitations.create method).

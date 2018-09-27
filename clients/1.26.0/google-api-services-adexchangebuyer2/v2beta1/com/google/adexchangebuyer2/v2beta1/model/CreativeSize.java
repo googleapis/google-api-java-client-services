@@ -32,8 +32,8 @@ public final class CreativeSize extends com.google.api.client.json.GenericJson {
 
   /**
    * What formats are allowed by the publisher. If this repeated field is empty then all formats are
-   * allowed. E.g., if this field contains AllowedFormatType.AUDIO then the publisher only allows an
-   * audio ad (without any video).
+   * allowed. For example, if this field contains AllowedFormatType.AUDIO then the publisher only
+   * allows an audio ad (without any video).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,8 @@ public final class CreativeSize extends com.google.api.client.json.GenericJson {
 
   /**
    * What formats are allowed by the publisher. If this repeated field is empty then all formats are
-   * allowed. E.g., if this field contains AllowedFormatType.AUDIO then the publisher only allows an
-   * audio ad (without any video).
+   * allowed. For example, if this field contains AllowedFormatType.AUDIO then the publisher only
+   * allows an audio ad (without any video).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedFormats() {
@@ -95,8 +95,8 @@ public final class CreativeSize extends com.google.api.client.json.GenericJson {
 
   /**
    * What formats are allowed by the publisher. If this repeated field is empty then all formats are
-   * allowed. E.g., if this field contains AllowedFormatType.AUDIO then the publisher only allows an
-   * audio ad (without any video).
+   * allowed. For example, if this field contains AllowedFormatType.AUDIO then the publisher only
+   * allows an audio ad (without any video).
    * @param allowedFormats allowedFormats or {@code null} for none
    */
   public CreativeSize setAllowedFormats(java.util.List<java.lang.String> allowedFormats) {

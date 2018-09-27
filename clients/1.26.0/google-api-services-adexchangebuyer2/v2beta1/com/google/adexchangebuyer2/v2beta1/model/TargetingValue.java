@@ -39,7 +39,7 @@ public final class TargetingValue extends com.google.api.client.json.GenericJson
 
   /**
    * The daypart targeting to include / exclude. Filled in when the key is GOOG_DAYPART_TARGETING.
-   * The definition of this targeting is derived from the structure used by DFP.
+   * The definition of this targeting is derived from the structure used by Ad Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class TargetingValue extends com.google.api.client.json.GenericJson
 
   /**
    * The daypart targeting to include / exclude. Filled in when the key is GOOG_DAYPART_TARGETING.
-   * The definition of this targeting is derived from the structure used by DFP.
+   * The definition of this targeting is derived from the structure used by Ad Manager.
    * @return value or {@code null} for none
    */
   public DayPartTargeting getDayPartTargetingValue() {
@@ -87,7 +87,7 @@ public final class TargetingValue extends com.google.api.client.json.GenericJson
 
   /**
    * The daypart targeting to include / exclude. Filled in when the key is GOOG_DAYPART_TARGETING.
-   * The definition of this targeting is derived from the structure used by DFP.
+   * The definition of this targeting is derived from the structure used by Ad Manager.
    * @param dayPartTargetingValue dayPartTargetingValue or {@code null} for none
    */
   public TargetingValue setDayPartTargetingValue(DayPartTargeting dayPartTargetingValue) {

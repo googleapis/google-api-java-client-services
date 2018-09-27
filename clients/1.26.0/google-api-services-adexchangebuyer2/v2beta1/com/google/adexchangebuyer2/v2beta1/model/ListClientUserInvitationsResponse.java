@@ -37,12 +37,6 @@ public final class ListClientUserInvitationsResponse extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<ClientUserInvitation> invitations;
 
-  static {
-    // hack to force ProGuard to consider ClientUserInvitation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ClientUserInvitation.class);
-  }
-
   /**
    * A token to retrieve the next page of results. Pass this value in the
    * ListClientUserInvitationsRequest.pageToken field in the subsequent call to the

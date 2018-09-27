@@ -2636,6 +2636,56 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
+         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
+         * This list is case-insensitive, default sorting order is ascending, redundant space
+         * characters are insignificant.
+         *
+         * Example: `name asc, display_name, create_time desc`
+         *
+         * Supported fields are:
+         *
+         * - `create_time`: corresponds to time the most recent version of the resource was created.
+         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
+         * name. - `display_name`: corresponds to info type's display name.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
+       is case-insensitive, default sorting order is ascending, redundant space characters are
+       insignificant.
+
+       Example: `name asc, display_name, create_time desc`
+
+       Supported fields are:
+
+       - `create_time`: corresponds to time the most recent version of the resource was created. -
+       `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
+       `display_name`: corresponds to info type's display name.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
+         * This list is case-insensitive, default sorting order is ascending, redundant space
+         * characters are insignificant.
+         *
+         * Example: `name asc, display_name, create_time desc`
+         *
+         * Supported fields are:
+         *
+         * - `create_time`: corresponds to time the most recent version of the resource was created.
+         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
+         * name. - `display_name`: corresponds to info type's display name.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
          * Optional size of the page, can be limited by server. If zero server returns a page of max
          * size 100.
          */
@@ -4939,6 +4989,55 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
+         * This list is case-insensitive, default sorting order is ascending, redundant space
+         * characters are insignificant.
+         *
+         * Example: `name asc, end_time asc, create_time desc`
+         *
+         * Supported fields are:
+         *
+         * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
+         * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
+         * `state`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
+       is case-insensitive, default sorting order is ascending, redundant space characters are
+       insignificant.
+
+       Example: `name asc, end_time asc, create_time desc`
+
+       Supported fields are:
+
+       - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to time the job
+       ended. - `name`: corresponds to job's name. - `state`: corresponds to `state`
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
+         * This list is case-insensitive, default sorting order is ascending, redundant space
+         * characters are insignificant.
+         *
+         * Example: `name asc, end_time asc, create_time desc`
+         *
+         * Supported fields are:
+         *
+         * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
+         * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
+         * `state`
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
           return this;
         }
 
@@ -7430,6 +7529,56 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
                 "^projects/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
+         * This list is case-insensitive, default sorting order is ascending, redundant space
+         * characters are insignificant.
+         *
+         * Example: `name asc, display_name, create_time desc`
+         *
+         * Supported fields are:
+         *
+         * - `create_time`: corresponds to time the most recent version of the resource was created.
+         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
+         * name. - `display_name`: corresponds to info type's display name.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list
+       is case-insensitive, default sorting order is ascending, redundant space characters are
+       insignificant.
+
+       Example: `name asc, display_name, create_time desc`
+
+       Supported fields are:
+
+       - `create_time`: corresponds to time the most recent version of the resource was created. -
+       `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
+       `display_name`: corresponds to info type's display name.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional comma separated list of fields to order by, followed by `asc` or `desc` postfix.
+         * This list is case-insensitive, default sorting order is ascending, redundant space
+         * characters are insignificant.
+         *
+         * Example: `name asc, display_name, create_time desc`
+         *
+         * Supported fields are:
+         *
+         * - `create_time`: corresponds to time the most recent version of the resource was created.
+         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
+         * name. - `display_name`: corresponds to info type's display name.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
           return this;
         }
 

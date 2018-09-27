@@ -17,7 +17,7 @@
 package com.google.adexchangebuyer2.v2beta1.model;
 
 /**
- * Represents targeting about where the ads can appear, e.g. certain sites or mobile applications.
+ * Represents targeting about where the ads can appear, e.g., certain sites or mobile applications.
  * Different placement targeting types will be logically OR'ed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

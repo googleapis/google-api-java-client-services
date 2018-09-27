@@ -17,7 +17,7 @@
 package com.google.adexchangebuyer2.v2beta1.model;
 
 /**
- * Represents a seller of inventory. Each seller is identified by a unique Ad Exchange account ID.
+ * Represents a seller of inventory. Each seller is identified by a unique Ad Manager account ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

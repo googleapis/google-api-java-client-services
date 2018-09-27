@@ -47,14 +47,14 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   private InventorySizeTargeting inventorySizeTargeting;
 
   /**
-   * Placement targeting information, e.g. URL, mobile applications.
+   * Placement targeting information, e.g., URL, mobile applications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PlacementTargeting placementTargeting;
 
   /**
-   * Technology targeting information, e.g. operating system, device category.
+   * Technology targeting information, e.g., operating system, device category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Placement targeting information, e.g. URL, mobile applications.
+   * Placement targeting information, e.g., URL, mobile applications.
    * @return value or {@code null} for none
    */
   public PlacementTargeting getPlacementTargeting() {
@@ -110,7 +110,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Placement targeting information, e.g. URL, mobile applications.
+   * Placement targeting information, e.g., URL, mobile applications.
    * @param placementTargeting placementTargeting or {@code null} for none
    */
   public MarketplaceTargeting setPlacementTargeting(PlacementTargeting placementTargeting) {
@@ -119,7 +119,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Technology targeting information, e.g. operating system, device category.
+   * Technology targeting information, e.g., operating system, device category.
    * @return value or {@code null} for none
    */
   public TechnologyTargeting getTechnologyTargeting() {
@@ -127,7 +127,7 @@ public final class MarketplaceTargeting extends com.google.api.client.json.Gener
   }
 
   /**
-   * Technology targeting information, e.g. operating system, device category.
+   * Technology targeting information, e.g., operating system, device category.
    * @param technologyTargeting technologyTargeting or {@code null} for none
    */
   public MarketplaceTargeting setTechnologyTargeting(TechnologyTargeting technologyTargeting) {

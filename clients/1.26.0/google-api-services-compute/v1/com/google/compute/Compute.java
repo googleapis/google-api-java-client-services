@@ -27766,7 +27766,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern INSTANCE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified Instance resource. Gets a list of available instances by making a list()
@@ -27802,7 +27802,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
               "Parameter instance must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -27908,7 +27908,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
               "Parameter instance must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.instance = instance;
         return this;

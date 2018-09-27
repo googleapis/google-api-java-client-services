@@ -17,7 +17,7 @@
 package com.google.adexchangebuyer2.v2beta1.model;
 
 /**
- * An invitation for a new client user to get access to the Ad Exchange Buyer UI. All fields are
+ * An invitation for a new client user to get access to the Authorized Buyers UI. All fields are
  * required unless otherwise specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

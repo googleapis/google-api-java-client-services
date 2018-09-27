@@ -20,7 +20,7 @@ package com.google.adexchangebuyer2.v2beta1.model;
  * Note: this resource requires whitelisting for access. Please contact your account manager for
  * access to Marketplace resources.
  *
- * Represents a proposal in the marketplace. A proposal is the unit of negotiation between a seller
+ * Represents a proposal in the Marketplace. A proposal is the unit of negotiation between a seller
  * and a buyer and contains deals which are served.
  *
  * Note: you can not update, create, or otherwise modify Private Auction or Preferred Deals deals
@@ -62,12 +62,6 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ContactInformation> buyerContacts;
-
-  static {
-    // hack to force ProGuard to consider ContactInformation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContactInformation.class);
-  }
 
   /**
    * Private data for buyer. (hidden from seller).
@@ -118,12 +112,6 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Note> notes;
-
-  static {
-    // hack to force ProGuard to consider Note used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Note.class);
-  }
 
   /**
    * Indicates whether the buyer/seller created the proposal. @OutputOnly
@@ -180,12 +168,6 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ContactInformation> sellerContacts;
-
-  static {
-    // hack to force ProGuard to consider ContactInformation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContactInformation.class);
-  }
 
   /**
    * The time when the proposal was last revised. @OutputOnly

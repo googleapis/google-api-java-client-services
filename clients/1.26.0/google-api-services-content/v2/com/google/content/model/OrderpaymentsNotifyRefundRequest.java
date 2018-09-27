@@ -31,11 +31,18 @@ package com.google.content.model;
 public final class OrderpaymentsNotifyRefundRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Invoice ID from orderInvoice service that corresponds to the charge.
+   * Deprecated. Please use invoiceIds instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String invoiceId;
+
+  /**
+   * Invoice IDs from the orderinvoices service that correspond to the refund.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> invoiceIds;
 
   /**
    * Whether refund was successful.
@@ -45,7 +52,7 @@ public final class OrderpaymentsNotifyRefundRequest extends com.google.api.clien
   private java.lang.String refundState;
 
   /**
-   * Invoice ID from orderInvoice service that corresponds to the charge.
+   * Deprecated. Please use invoiceIds instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getInvoiceId() {
@@ -53,11 +60,28 @@ public final class OrderpaymentsNotifyRefundRequest extends com.google.api.clien
   }
 
   /**
-   * Invoice ID from orderInvoice service that corresponds to the charge.
+   * Deprecated. Please use invoiceIds instead.
    * @param invoiceId invoiceId or {@code null} for none
    */
   public OrderpaymentsNotifyRefundRequest setInvoiceId(java.lang.String invoiceId) {
     this.invoiceId = invoiceId;
+    return this;
+  }
+
+  /**
+   * Invoice IDs from the orderinvoices service that correspond to the refund.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInvoiceIds() {
+    return invoiceIds;
+  }
+
+  /**
+   * Invoice IDs from the orderinvoices service that correspond to the refund.
+   * @param invoiceIds invoiceIds or {@code null} for none
+   */
+  public OrderpaymentsNotifyRefundRequest setInvoiceIds(java.util.List<java.lang.String> invoiceIds) {
+    this.invoiceIds = invoiceIds;
     return this;
   }
 

@@ -20,12 +20,12 @@ package com.google.adexchangebuyer2.v2beta1;
  * Service definition for AdExchangeBuyerII (v2beta1).
  *
  * <p>
- * Accesses the latest features for managing Ad Exchange accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
+ * Accesses the latest features for managing Authorized Buyers accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/ad-exchange/buyer-rest/reference/rest/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/authorized-buyers/apis/reference/rest/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -4028,8 +4028,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * An optional PQL query used to query for products. See https://developers.google.com
-         * /doubleclick-publishers/docs/pqlreference for documentation about PQL and examples.
+         * An optional PQL query used to query for products. See https://developers.google.com/ad-
+         * manager/docs/pqlreference for documentation about PQL and examples.
          *
          * Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be
          * filtered.
@@ -4037,8 +4037,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** An optional PQL query used to query for products. See https://developers.google.com/doubleclick-
-       publishers/docs/pqlreference for documentation about PQL and examples.
+        /** An optional PQL query used to query for products. See https://developers.google.com/ad-
+       manager/docs/pqlreference for documentation about PQL and examples.
 
        Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be filtered.
          */
@@ -4047,8 +4047,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * An optional PQL query used to query for products. See https://developers.google.com
-         * /doubleclick-publishers/docs/pqlreference for documentation about PQL and examples.
+         * An optional PQL query used to query for products. See https://developers.google.com/ad-
+         * manager/docs/pqlreference for documentation about PQL and examples.
          *
          * Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be
          * filtered.
@@ -8378,7 +8378,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             creative.
             See
             [creative-status-
-             *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
+             *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+             *        codes).
              * @return the request
              */
             public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
@@ -8421,7 +8422,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             creative.
             See
             [creative-status-
-             *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
+             *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+             *        codes).
                * @since 1.13
                */
               protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
@@ -8553,14 +8555,14 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * The ID of the creative status for which to retrieve a breakdown by creative. See
-               * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
-               * /creative-status-codes).
+               * [creative-status-codes](https://developers.google.com/authorized-
+               * buyers/rtb/downloads/creative-status-codes).
                */
               @com.google.api.client.util.Key
               private java.lang.Integer creativeStatusId;
 
               /** The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
-             codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
+             codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
                */
               public java.lang.Integer getCreativeStatusId() {
                 return creativeStatusId;
@@ -8568,8 +8570,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * The ID of the creative status for which to retrieve a breakdown by creative. See
-               * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
-               * /creative-status-codes).
+               * [creative-status-codes](https://developers.google.com/authorized-
+               * buyers/rtb/downloads/creative-status-codes).
                */
               public List setCreativeStatusId(java.lang.Integer creativeStatusId) {
                 this.creativeStatusId = creativeStatusId;
@@ -8676,8 +8678,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
             See
             [creative-status-
-             *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
-             *        Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+             *        codes).
+            Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
              * @return the request
              */
             public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
@@ -8719,8 +8722,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
                * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
             See
             [creative-status-
-             *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
-             *        Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+             *        codes).
+            Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
                * @since 1.13
                */
               protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
@@ -8852,16 +8856,16 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * The ID of the creative status for which to retrieve a breakdown by detail. See
-               * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
-               * /creative-status-codes). Details are only available for statuses 10, 14, 15, 17,
-               * 18, 19, 86, and 87.
+               * [creative-status-codes](https://developers.google.com/authorized-
+               * buyers/rtb/downloads/creative-status-codes). Details are only available for
+               * statuses 10, 14, 15, 17, 18, 19, 86, and 87.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer creativeStatusId;
 
               /** The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
-             codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes). Details are
-             only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
+             Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
                */
               public java.lang.Integer getCreativeStatusId() {
                 return creativeStatusId;
@@ -8869,9 +8873,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * The ID of the creative status for which to retrieve a breakdown by detail. See
-               * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
-               * /creative-status-codes). Details are only available for statuses 10, 14, 15, 17,
-               * 18, 19, 86, and 87.
+               * [creative-status-codes](https://developers.google.com/authorized-
+               * buyers/rtb/downloads/creative-status-codes). Details are only available for
+               * statuses 10, 14, 15, 17, 18, 19, 86, and 87.
                */
               public List setCreativeStatusId(java.lang.Integer creativeStatusId) {
                 this.creativeStatusId = creativeStatusId;
@@ -11887,7 +11891,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           creative.
           See
           [creative-status-
-           *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes).
            * @return the request
            */
           public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
@@ -11930,7 +11935,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           creative.
           See
           [creative-status-
-           *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes).
              * @since 1.13
              */
             protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
@@ -12060,14 +12066,14 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * The ID of the creative status for which to retrieve a breakdown by creative. See
-             * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
              * /creative-status-codes).
              */
             @com.google.api.client.util.Key
             private java.lang.Integer creativeStatusId;
 
             /** The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
-           codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
+           codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
              */
             public java.lang.Integer getCreativeStatusId() {
               return creativeStatusId;
@@ -12075,7 +12081,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * The ID of the creative status for which to retrieve a breakdown by creative. See
-             * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
              * /creative-status-codes).
              */
             public List setCreativeStatusId(java.lang.Integer creativeStatusId) {
@@ -12183,8 +12189,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
           See
           [creative-status-
-           *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
-           *        Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes).
+          Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
            * @return the request
            */
           public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
@@ -12226,8 +12233,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
           See
           [creative-status-
-           *        codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes).
-           *        Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+           *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
+           *        codes).
+          Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
              * @since 1.13
              */
             protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
@@ -12357,7 +12365,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * The ID of the creative status for which to retrieve a breakdown by detail. See
-             * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
              * /creative-status-codes). Details are only available for statuses 10, 14, 15, 17, 18,
              * 19, 86, and 87.
              */
@@ -12365,8 +12373,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
             private java.lang.Integer creativeStatusId;
 
             /** The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
-           codes](https://developers.google.com/ad-exchange/rtb/downloads/creative-status-codes). Details are
-           only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+           codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-codes).
+           Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
              */
             public java.lang.Integer getCreativeStatusId() {
               return creativeStatusId;
@@ -12374,7 +12382,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * The ID of the creative status for which to retrieve a breakdown by detail. See
-             * [creative-status-codes](https://developers.google.com/ad-exchange/rtb/downloads
+             * [creative-status-codes](https://developers.google.com/authorized-buyers/rtb/downloads
              * /creative-status-codes). Details are only available for statuses 10, 14, 15, 17, 18,
              * 19, 86, and 87.
              */

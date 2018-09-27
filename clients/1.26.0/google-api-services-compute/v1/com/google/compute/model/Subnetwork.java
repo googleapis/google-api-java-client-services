@@ -45,7 +45,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Whether to enable flow logging for this subnetwork.
+   * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
+   * will not appear in get listings. If not set the default behavior is to disable flow logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +185,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to enable flow logging for this subnetwork.
+   * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
+   * will not appear in get listings. If not set the default behavior is to disable flow logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFlowLogs() {
@@ -192,7 +194,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to enable flow logging for this subnetwork.
+   * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
+   * will not appear in get listings. If not set the default behavior is to disable flow logging.
    * @param enableFlowLogs enableFlowLogs or {@code null} for none
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {

@@ -18,9 +18,9 @@ package com.google.adexchangebuyer2.v2beta1.model;
 
 /**
  * A client resource represents a client buyeran agency, a brand, or an advertiser customer of the
- * sponsor buyer. Users associated with the client buyer have restricted access to the Ad Exchange
- * Marketplace and certain other sections of the Ad Exchange Buyer UI based on the role granted to
- * the client buyer. All fields are required unless otherwise specified.
+ * sponsor buyer. Users associated with the client buyer have restricted access to the Marketplace
+ * and certain other sections of the Authorized Buyers UI based on the role granted to the client
+ * buyer. All fields are required unless otherwise specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

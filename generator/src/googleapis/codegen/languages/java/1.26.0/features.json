@@ -23,7 +23,7 @@
     } ]
   },
   "javadoc_links": [ 
-    "http://docs.oracle.com/javase/7/docs/api",
+    "http://docs.oracle.com/javase/6/docs/api",
     "https://google.github.io/google-http-java-client/releases/${httpClientLibrary}/javadoc/index.html",
     "https://google.github.io/google-oauth-java-client/releases/${oauthClientLibrary}/javadoc/index.html",
     "https://google.github.io/google-api-java-client/releases/${baseClientLibrary}/javadoc/index.html"

@@ -44,12 +44,6 @@ public final class ListServiceConfigsResponse extends com.google.api.client.json
   @com.google.api.client.util.Key
   private java.util.List<Service> serviceConfigs;
 
-  static {
-    // hack to force ProGuard to consider Service used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Service.class);
-  }
-
   /**
    * The token of the next page of results.
    * @return value or {@code null} for none

@@ -135,21 +135,15 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   /**
    * List of volumes to mount into the build step.
    *
-   * Each volume will be created as an empty volume prior to execution of the build step. Upon
-   * completion of the build, volumes and their contents will be discarded.
+   * Each volume is created as an empty volume prior to execution of the build step. Upon completion
+   * of the build, volumes and their contents are discarded.
    *
-   * Using a named volume in only one step is not valid as it is indicative of a mis-configured
-   * build request.
+   * Using a named volume in only one step is not valid as it is indicative of a build request with
+   * an incorrect configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Volume> volumes;
-
-  static {
-    // hack to force ProGuard to consider Volume used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Volume.class);
-  }
 
   /**
    * The ID(s) of the step(s) that this build step depends on. This build step will not start until
@@ -400,11 +394,11 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   /**
    * List of volumes to mount into the build step.
    *
-   * Each volume will be created as an empty volume prior to execution of the build step. Upon
-   * completion of the build, volumes and their contents will be discarded.
+   * Each volume is created as an empty volume prior to execution of the build step. Upon completion
+   * of the build, volumes and their contents are discarded.
    *
-   * Using a named volume in only one step is not valid as it is indicative of a mis-configured
-   * build request.
+   * Using a named volume in only one step is not valid as it is indicative of a build request with
+   * an incorrect configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<Volume> getVolumes() {
@@ -414,11 +408,11 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   /**
    * List of volumes to mount into the build step.
    *
-   * Each volume will be created as an empty volume prior to execution of the build step. Upon
-   * completion of the build, volumes and their contents will be discarded.
+   * Each volume is created as an empty volume prior to execution of the build step. Upon completion
+   * of the build, volumes and their contents are discarded.
    *
-   * Using a named volume in only one step is not valid as it is indicative of a mis-configured
-   * build request.
+   * Using a named volume in only one step is not valid as it is indicative of a build request with
+   * an incorrect configuration.
    * @param volumes volumes or {@code null} for none
    */
   public BuildStep setVolumes(java.util.List<Volume> volumes) {

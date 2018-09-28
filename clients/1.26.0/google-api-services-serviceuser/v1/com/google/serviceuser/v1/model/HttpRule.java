@@ -249,23 +249,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
   private java.lang.String get;
 
   /**
-   * Use this only for Scotty Requests. Do not use this for bytestream methods. For media support,
-   * add instead [][google.bytestream.RestByteStream] as an API to your configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaDownload mediaDownload;
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for media support using Bytestream, add
-   * instead [][google.bytestream.RestByteStream] as an API to your configuration for Bytestream
-   * methods.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MediaUpload mediaUpload;
-
-  /**
    * Maps to HTTP PATCH. Used for updating a resource.
    * The value may be {@code null}.
    */
@@ -401,46 +384,6 @@ public final class HttpRule extends com.google.api.client.json.GenericJson {
    */
   public HttpRule setGet(java.lang.String get) {
     this.get = get;
-    return this;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for bytestream methods. For media support,
-   * add instead [][google.bytestream.RestByteStream] as an API to your configuration.
-   * @return value or {@code null} for none
-   */
-  public MediaDownload getMediaDownload() {
-    return mediaDownload;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for bytestream methods. For media support,
-   * add instead [][google.bytestream.RestByteStream] as an API to your configuration.
-   * @param mediaDownload mediaDownload or {@code null} for none
-   */
-  public HttpRule setMediaDownload(MediaDownload mediaDownload) {
-    this.mediaDownload = mediaDownload;
-    return this;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for media support using Bytestream, add
-   * instead [][google.bytestream.RestByteStream] as an API to your configuration for Bytestream
-   * methods.
-   * @return value or {@code null} for none
-   */
-  public MediaUpload getMediaUpload() {
-    return mediaUpload;
-  }
-
-  /**
-   * Use this only for Scotty Requests. Do not use this for media support using Bytestream, add
-   * instead [][google.bytestream.RestByteStream] as an API to your configuration for Bytestream
-   * methods.
-   * @param mediaUpload mediaUpload or {@code null} for none
-   */
-  public HttpRule setMediaUpload(MediaUpload mediaUpload) {
-    this.mediaUpload = mediaUpload;
     return this;
   }
 

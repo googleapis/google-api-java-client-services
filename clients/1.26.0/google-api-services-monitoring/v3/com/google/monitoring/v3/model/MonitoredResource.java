@@ -49,7 +49,7 @@ public final class MonitoredResource extends com.google.api.client.json.GenericJ
   /**
    * Required. The monitored resource type. This field must match the type field of a
    * MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is
-   * gce_instance.
+   * gce_instance. For a list of types, see Monitoring resource types and Logging resource types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class MonitoredResource extends com.google.api.client.json.GenericJ
   /**
    * Required. The monitored resource type. This field must match the type field of a
    * MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is
-   * gce_instance.
+   * gce_instance. For a list of types, see Monitoring resource types and Logging resource types.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -89,7 +89,7 @@ public final class MonitoredResource extends com.google.api.client.json.GenericJ
   /**
    * Required. The monitored resource type. This field must match the type field of a
    * MonitoredResourceDescriptor object. For example, the type of a Compute Engine VM instance is
-   * gce_instance.
+   * gce_instance. For a list of types, see Monitoring resource types and Logging resource types.
    * @param type type or {@code null} for none
    */
   public MonitoredResource setType(java.lang.String type) {

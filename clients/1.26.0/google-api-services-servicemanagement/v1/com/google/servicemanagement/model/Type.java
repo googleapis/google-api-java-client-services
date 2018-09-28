@@ -37,12 +37,6 @@ public final class Type extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Field> fields;
 
-  static {
-    // hack to force ProGuard to consider Field used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Field.class);
-  }
-
   /**
    * The fully qualified message name.
    * The value may be {@code null}.
@@ -63,12 +57,6 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Option> options;
-
-  static {
-    // hack to force ProGuard to consider Option used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Option.class);
-  }
 
   /**
    * The source context.

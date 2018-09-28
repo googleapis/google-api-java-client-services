@@ -37,24 +37,12 @@ public final class GenerateConfigReportResponse extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<ChangeReport> changeReports;
 
-  static {
-    // hack to force ProGuard to consider ChangeReport used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ChangeReport.class);
-  }
-
   /**
    * Errors / Linter warnings associated with the service definition this report belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Diagnostic> diagnostics;
-
-  static {
-    // hack to force ProGuard to consider Diagnostic used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Diagnostic.class);
-  }
 
   /**
    * ID of the service configuration this report belongs to.

@@ -31,9 +31,10 @@ package com.google.streetviewpublish.v1.model;
 public final class Pose extends com.google.api.client.json.GenericJson {
 
   /**
-   * The estimated horizontal accuracy of this pose in meters with 68% (one standard deviation)
-   * confidence. For more information, see:
-   * https://developer.android.com/reference/android/location/Location#getAccuracy()
+   * The estimated horizontal accuracy of this pose in meters with 68% confidence (one standard
+   * deviation). For example, on Android, this value is available from this method:
+   * https://developer.android.com/reference/android/location/Location#getAccuracy(). Other
+   * platforms have different methods of obtaining similar accuracy estimations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +91,10 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   private java.lang.Double roll;
 
   /**
-   * The estimated horizontal accuracy of this pose in meters with 68% (one standard deviation)
-   * confidence. For more information, see:
-   * https://developer.android.com/reference/android/location/Location#getAccuracy()
+   * The estimated horizontal accuracy of this pose in meters with 68% confidence (one standard
+   * deviation). For example, on Android, this value is available from this method:
+   * https://developer.android.com/reference/android/location/Location#getAccuracy(). Other
+   * platforms have different methods of obtaining similar accuracy estimations.
    * @return value or {@code null} for none
    */
   public java.lang.Float getAccuracyMeters() {
@@ -100,9 +102,10 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The estimated horizontal accuracy of this pose in meters with 68% (one standard deviation)
-   * confidence. For more information, see:
-   * https://developer.android.com/reference/android/location/Location#getAccuracy()
+   * The estimated horizontal accuracy of this pose in meters with 68% confidence (one standard
+   * deviation). For example, on Android, this value is available from this method:
+   * https://developer.android.com/reference/android/location/Location#getAccuracy(). Other
+   * platforms have different methods of obtaining similar accuracy estimations.
    * @param accuracyMeters accuracyMeters or {@code null} for none
    */
   public Pose setAccuracyMeters(java.lang.Float accuracyMeters) {

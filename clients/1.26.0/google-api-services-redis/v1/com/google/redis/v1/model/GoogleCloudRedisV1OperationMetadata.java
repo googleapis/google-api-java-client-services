@@ -38,7 +38,7 @@ public final class GoogleCloudRedisV1OperationMetadata extends com.google.api.cl
   private java.lang.String apiVersion;
 
   /**
-   * Specifies if cancellation was requested for the operaiton.
+   * Specifies if cancellation was requested for the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class GoogleCloudRedisV1OperationMetadata extends com.google.api.cl
   }
 
   /**
-   * Specifies if cancellation was requested for the operaiton.
+   * Specifies if cancellation was requested for the operation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelRequested() {
@@ -105,7 +105,7 @@ public final class GoogleCloudRedisV1OperationMetadata extends com.google.api.cl
   }
 
   /**
-   * Specifies if cancellation was requested for the operaiton.
+   * Specifies if cancellation was requested for the operation.
    * @param cancelRequested cancelRequested or {@code null} for none
    */
   public GoogleCloudRedisV1OperationMetadata setCancelRequested(java.lang.Boolean cancelRequested) {

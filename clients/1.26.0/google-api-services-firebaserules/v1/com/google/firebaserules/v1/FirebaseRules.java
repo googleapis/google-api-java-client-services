@@ -974,19 +974,19 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1
+         * The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
          */
         @com.google.api.client.util.Key
         private java.lang.String executableVersion;
 
-        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1
+        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
          */
         public java.lang.String getExecutableVersion() {
           return executableVersion;
         }
 
         /**
-         * The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1
+         * The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
          */
         public GetExecutable setExecutableVersion(java.lang.String executableVersion) {
           this.executableVersion = executableVersion;

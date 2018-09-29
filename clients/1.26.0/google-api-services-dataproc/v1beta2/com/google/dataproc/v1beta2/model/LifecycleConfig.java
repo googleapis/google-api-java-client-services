@@ -17,7 +17,7 @@
 package com.google.dataproc.v1beta2.model;
 
 /**
- * Specifies the cluster auto delete related schedule configuration.
+ * Specifies the cluster auto-delete schedule configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -37,16 +37,17 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   private String autoDeleteTime;
 
   /**
-   * Optional. The life duration of cluster, the cluster will be auto-deleted at the end of this
-   * duration.
+   * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this
+   * period. Valid range: 10m, 14d.Example: "1d", to delete the cluster 1 day after its creation..
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String autoDeleteTtl;
 
   /**
-   * Optional. The longest duration that cluster would keep alive while staying  idle; passing this
-   * threshold will cause cluster to be auto-deleted.
+   * Optional. The duration to keep the cluster alive while idling. Passing this threshold will
+   * cause the cluster to be deleted. Valid range: 10m, 14d.Example: "10m", the minimum value, to
+   * delete the cluster when it has had no jobs running for 10 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +71,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The life duration of cluster, the cluster will be auto-deleted at the end of this
-   * duration.
+   * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this
+   * period. Valid range: 10m, 14d.Example: "1d", to delete the cluster 1 day after its creation..
    * @return value or {@code null} for none
    */
   public String getAutoDeleteTtl() {
@@ -79,8 +80,8 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The life duration of cluster, the cluster will be auto-deleted at the end of this
-   * duration.
+   * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this
+   * period. Valid range: 10m, 14d.Example: "1d", to delete the cluster 1 day after its creation..
    * @param autoDeleteTtl autoDeleteTtl or {@code null} for none
    */
   public LifecycleConfig setAutoDeleteTtl(String autoDeleteTtl) {
@@ -89,8 +90,9 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The longest duration that cluster would keep alive while staying  idle; passing this
-   * threshold will cause cluster to be auto-deleted.
+   * Optional. The duration to keep the cluster alive while idling. Passing this threshold will
+   * cause the cluster to be deleted. Valid range: 10m, 14d.Example: "10m", the minimum value, to
+   * delete the cluster when it has had no jobs running for 10 minutes.
    * @return value or {@code null} for none
    */
   public String getIdleDeleteTtl() {
@@ -98,8 +100,9 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The longest duration that cluster would keep alive while staying  idle; passing this
-   * threshold will cause cluster to be auto-deleted.
+   * Optional. The duration to keep the cluster alive while idling. Passing this threshold will
+   * cause the cluster to be deleted. Valid range: 10m, 14d.Example: "10m", the minimum value, to
+   * delete the cluster when it has had no jobs running for 10 minutes.
    * @param idleDeleteTtl idleDeleteTtl or {@code null} for none
    */
   public LifecycleConfig setIdleDeleteTtl(String idleDeleteTtl) {

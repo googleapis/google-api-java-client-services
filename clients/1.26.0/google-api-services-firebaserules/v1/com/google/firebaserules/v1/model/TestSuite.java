@@ -38,6 +38,12 @@ public final class TestSuite extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<TestCase> testCases;
 
+  static {
+    // hack to force ProGuard to consider TestCase used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TestCase.class);
+  }
+
   /**
    * Collection of test cases associated with the `TestSuite`.
    * @return value or {@code null} for none

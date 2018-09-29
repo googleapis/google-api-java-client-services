@@ -58,6 +58,14 @@ public final class GetReleaseExecutableResponse extends com.google.api.client.js
   private java.lang.String rulesetName;
 
   /**
+   * Optional, indicates the freshness of the result. The response is guaranteed to be the latest
+   * within an interval up to the sync_time (inclusive).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String syncTime;
+
+  /**
    * Timestamp for the most recent `Release.update_time`.
    * The value may be {@code null}.
    */
@@ -157,6 +165,25 @@ public final class GetReleaseExecutableResponse extends com.google.api.client.js
    */
   public GetReleaseExecutableResponse setRulesetName(java.lang.String rulesetName) {
     this.rulesetName = rulesetName;
+    return this;
+  }
+
+  /**
+   * Optional, indicates the freshness of the result. The response is guaranteed to be the latest
+   * within an interval up to the sync_time (inclusive).
+   * @return value or {@code null} for none
+   */
+  public String getSyncTime() {
+    return syncTime;
+  }
+
+  /**
+   * Optional, indicates the freshness of the result. The response is guaranteed to be the latest
+   * within an interval up to the sync_time (inclusive).
+   * @param syncTime syncTime or {@code null} for none
+   */
+  public GetReleaseExecutableResponse setSyncTime(String syncTime) {
+    this.syncTime = syncTime;
     return this;
   }
 

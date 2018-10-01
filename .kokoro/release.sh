@@ -16,11 +16,11 @@
 set -eo pipefail
 
 source $(dirname "$0")/common.sh
-#MAVEN_SETTINGS_FILE=$(realpath $(dirname "$0")/../)/settings.xml
-#pushd $(dirname "$0")/../
-#
-#setup_environment_secrets
-#create_settings_xml_file "settings.xml"
+MAVEN_SETTINGS_FILE=$(realpath $(dirname "$0")/../)/settings.xml
+pushd $(dirname "$0")/../
+
+setup_environment_secrets
+create_settings_xml_file "settings.xml"
 
 deploy_library() {
   pushd $1

@@ -1305,6 +1305,22 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
         return (Played) super.setUserIp(userIp);
       }
 
+      /** Override used only by built-in games in Play Games application. */
+      @com.google.api.client.util.Key
+      private java.lang.String builtinGameId;
+
+      /** Override used only by built-in games in Play Games application.
+       */
+      public java.lang.String getBuiltinGameId() {
+        return builtinGameId;
+      }
+
+      /** Override used only by built-in games in Play Games application. */
+      public Played setBuiltinGameId(java.lang.String builtinGameId) {
+        this.builtinGameId = builtinGameId;
+        return this;
+      }
+
       @Override
       public Played set(String parameterName, Object value) {
         return (Played) super.set(parameterName, value);

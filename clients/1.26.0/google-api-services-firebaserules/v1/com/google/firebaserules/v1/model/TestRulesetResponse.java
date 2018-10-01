@@ -37,6 +37,12 @@ public final class TestRulesetResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<Issue> issues;
 
+  static {
+    // hack to force ProGuard to consider Issue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Issue.class);
+  }
+
   /**
    * The set of test results given the test cases in the `TestSuite`. The results will appear in the
    * same order as the test cases appear in the `TestSuite`.

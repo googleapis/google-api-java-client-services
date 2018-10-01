@@ -65,6 +65,12 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<EnvironmentVariable> environmentVariables;
 
+  static {
+    // hack to force ProGuard to consider EnvironmentVariable used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EnvironmentVariable.class);
+  }
+
   /**
    * List of files to push to the device before starting the test.
    *
@@ -73,6 +79,12 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<DeviceFile> filesToPush;
+
+  static {
+    // hack to force ProGuard to consider DeviceFile used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeviceFile.class);
+  }
 
   /**
    * Optional. The network traffic profile used for running the test. Available network profiles can

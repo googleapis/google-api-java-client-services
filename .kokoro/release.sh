@@ -16,15 +16,19 @@
 set -eo pipefail
 
 source $(dirname "$0")/common.sh
-MAVEN_SETTINGS_FILE=$(realpath $(dirname "$0")/../)/settings.xml
-pushd $(dirname "$0")/../
+#MAVEN_SETTINGS_FILE=$(realpath $(dirname "$0")/../)/settings.xml
+#pushd $(dirname "$0")/../
+#
+#setup_environment_secrets
+#create_settings_xml_file "settings.xml"
 
-setup_environment_secrets
-create_settings_xml_file "settings.xml"
-
-for directory in `find clients -mindepth 3 -maxdepth 3 -type d`
-do
-  pushd $directory
+deploy_library() {
+  pushd $1
+  SERVICE=$2
+  API_VERSION=$3
+  REVISION=$4
+  LIBRARY_VERSION=$5
+  echo "Releasing artifact for ${SERVICE}, ${API_VERSION}, ${REVISION}, ${LIBRARY_VERSION}."
 
   mvn clean install deploy \
     --settings ${MAVEN_SETTINGS_FILE} \
@@ -32,6 +36,29 @@ do
     -Dgpg.executable=gpg \
     -Dgpg.passphrase=${GPG_PASSPHRASE} \
     -Dgpg.homedir=${GPG_HOMEDIR}
+
   popd
+}
+
+promote_library() {
+  pushd $1
+
+  popd
+}
+
+for directory in `find clients -mindepth 3 -maxdepth 3 -type d`
+do
+
+  library_version=$(echo ${directory} | cut -f2 -d'/')
+  service=$(echo ${directory} | cut -f3 -d'/' | cut -f4 -d'-')
+  api_version=$(echo ${directory} | cut -f4 -d'/')
+  revision=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" ${directory}/pom.xml | cut -f2 -d'-')
+
+  if [[ $(artifact_exists $service $api_version $revision $library_version) == "true" ]]
+  then
+    echo "Artifact already exists for $service, $api_version, $revision, $library_version."
+  else
+    deploy_library $directory $service $api_version $revision $library_version
+  fi
   exit 0
 done

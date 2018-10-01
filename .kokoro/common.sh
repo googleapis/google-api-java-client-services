@@ -48,3 +48,17 @@ create_settings_xml_file() {
   </servers>
 </settings>" > $1
 }
+
+artifact_exists() {
+  SERVICE=$1
+  API_VERSION=$2
+  REVISION=$3
+  LIBRARY_VERSION=$4
+  RESPONSE=$(curl --silent -I http://repo1.maven.org/maven2/com/google/apis/google-api-services-${SERVICE}/${API_VERSION}-${REVISION}-${LIBRARY_VERSION}/google-api-services-${SERVICE}-${API_VERSION}-${REVISION}-${LIBRARY_VERSION}.pom | head -n 1|cut -d$' ' -f2)
+  if [ $RESPONSE == "200" ]
+  then
+    echo "true"
+  else
+    echo "false"
+  fi
+}

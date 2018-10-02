@@ -99,12 +99,6 @@ public final class GoogleCloudVisionV1p1beta1FaceAnnotation extends com.google.a
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1FaceAnnotationLandmark> landmarks;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1FaceAnnotationLandmark used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1FaceAnnotationLandmark.class);
-  }
-
   /**
    * Yaw angle, which indicates the leftward/rightward angle that the face is pointing relative to
    * the vertical plane perpendicular to the image. Range [-180,180].

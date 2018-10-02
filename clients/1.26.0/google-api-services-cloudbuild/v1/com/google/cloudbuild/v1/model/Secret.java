@@ -41,8 +41,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * Map of environment variable name to its encrypted value.
    *
    * Secret environment variables must be unique across all of a build's secrets, and must be used
-   * by at least one build step. Values can be at most 2 KB in size. There can be at most ten secret
-   * values across all of a build's secrets.
+   * by at least one build step. Values can be at most 64 KB in size. There can be at most 100
+   * secret values across all of a build's secrets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * Map of environment variable name to its encrypted value.
    *
    * Secret environment variables must be unique across all of a build's secrets, and must be used
-   * by at least one build step. Values can be at most 2 KB in size. There can be at most ten secret
-   * values across all of a build's secrets.
+   * by at least one build step. Values can be at most 64 KB in size. There can be at most 100
+   * secret values across all of a build's secrets.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSecretEnv() {
@@ -81,8 +81,8 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * Map of environment variable name to its encrypted value.
    *
    * Secret environment variables must be unique across all of a build's secrets, and must be used
-   * by at least one build step. Values can be at most 2 KB in size. There can be at most ten secret
-   * values across all of a build's secrets.
+   * by at least one build step. Values can be at most 64 KB in size. There can be at most 100
+   * secret values across all of a build's secrets.
    * @param secretEnv secretEnv or {@code null} for none
    */
   public Secret setSecretEnv(java.util.Map<String, java.lang.String> secretEnv) {

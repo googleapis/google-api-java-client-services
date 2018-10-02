@@ -63,12 +63,6 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<EventNotificationConfig> eventNotificationConfigs;
 
-  static {
-    // hack to force ProGuard to consider EventNotificationConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EventNotificationConfig.class);
-  }
-
   /**
    * The DeviceService (HTTP) configuration for this device registry.
    * The value may be {@code null}.
@@ -82,6 +76,16 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * **Beta Feature**
+   *
+   * The default logging verbosity for activity from devices in this registry. The verbosity level
+   * can be overridden by Device.log_level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logLevel;
 
   /**
    * The MQTT configuration for this device registry.
@@ -201,6 +205,29 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
    */
   public DeviceRegistry setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * **Beta Feature**
+   *
+   * The default logging verbosity for activity from devices in this registry. The verbosity level
+   * can be overridden by Device.log_level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogLevel() {
+    return logLevel;
+  }
+
+  /**
+   * **Beta Feature**
+   *
+   * The default logging verbosity for activity from devices in this registry. The verbosity level
+   * can be overridden by Device.log_level.
+   * @param logLevel logLevel or {@code null} for none
+   */
+  public DeviceRegistry setLogLevel(java.lang.String logLevel) {
+    this.logLevel = logLevel;
     return this;
   }
 

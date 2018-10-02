@@ -132,6 +132,16 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private String lastStateTime;
 
   /**
+   * **Beta Feature**
+   *
+   * The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String logLevel;
+
+  /**
    * The metadata key-value pairs assigned to the device. This metadata is not interpreted or
    * indexed by Cloud IoT Core. It can be used to add contextual information for the device.
    *
@@ -394,6 +404,29 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setLastStateTime(String lastStateTime) {
     this.lastStateTime = lastStateTime;
+    return this;
+  }
+
+  /**
+   * **Beta Feature**
+   *
+   * The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be
+   * used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLogLevel() {
+    return logLevel;
+  }
+
+  /**
+   * **Beta Feature**
+   *
+   * The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be
+   * used.
+   * @param logLevel logLevel or {@code null} for none
+   */
+  public Device setLogLevel(java.lang.String logLevel) {
+    this.logLevel = logLevel;
     return this;
   }
 

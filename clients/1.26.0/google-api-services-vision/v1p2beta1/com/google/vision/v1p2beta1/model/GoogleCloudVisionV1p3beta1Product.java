@@ -57,7 +57,7 @@ public final class GoogleCloudVisionV1p3beta1Product extends com.google.api.clie
 
   /**
    * The category for the product identified by the reference image. This should be either
-   * "homegoods" or "apparel".
+   * "homegoods", "apparel", or "toys".
    *
    * This field is immutable.
    * The value may be {@code null}.
@@ -147,7 +147,7 @@ public final class GoogleCloudVisionV1p3beta1Product extends com.google.api.clie
 
   /**
    * The category for the product identified by the reference image. This should be either
-   * "homegoods" or "apparel".
+   * "homegoods", "apparel", or "toys".
    *
    * This field is immutable.
    * @return value or {@code null} for none
@@ -158,7 +158,7 @@ public final class GoogleCloudVisionV1p3beta1Product extends com.google.api.clie
 
   /**
    * The category for the product identified by the reference image. This should be either
-   * "homegoods" or "apparel".
+   * "homegoods", "apparel", or "toys".
    *
    * This field is immutable.
    * @param productCategory productCategory or {@code null} for none

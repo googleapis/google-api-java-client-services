@@ -37,6 +37,12 @@ public final class FileHashes extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Hash> fileHash;
 
+  static {
+    // hack to force ProGuard to consider Hash used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Hash.class);
+  }
+
   /**
    * Collection of file hashes.
    * @return value or {@code null} for none

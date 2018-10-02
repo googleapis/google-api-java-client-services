@@ -41,6 +41,18 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
+   * A list of global environment variable definitions that will exist for all build steps in this
+   * build. If a variable is defined in both globally and in a build step, the variable will use the
+   * build step value.
+   *
+   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
+   * value "VALUE".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> env;
+
+  /**
    * Option to define build log streaming behavior to Google Cloud Storage.
    * The value may be {@code null}.
    */
@@ -69,6 +81,15 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String requestedVerifyOption;
 
   /**
+   * A list of global environment variables, which are encrypted using a Cloud Key Management
+   * Service crypto key. These values must be specified in the build's `Secret`. These variables
+   * will be available to all build steps in this build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secretEnv;
+
+  /**
    * Requested hash for SourceProvenance.
    * The value may be {@code null}.
    */
@@ -81,6 +102,26 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String substitutionOption;
+
+  /**
+   * Global list of volumes to mount for ALL build steps
+   *
+   * Each volume is created as an empty volume prior to starting the build process. Upon completion
+   * of the build, volumes and their contents are discarded. Global volume names and paths cannot
+   * conflict with the volumes defined a build step.
+   *
+   * Using a global volume in a build with only one step is not valid as it is indicative of a build
+   * request with an incorrect configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Volume> volumes;
+
+  static {
+    // hack to force ProGuard to consider Volume used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Volume.class);
+  }
 
   /**
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some
@@ -104,6 +145,33 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   public BuildOptions setDiskSizeGb(java.lang.Long diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * A list of global environment variable definitions that will exist for all build steps in this
+   * build. If a variable is defined in both globally and in a build step, the variable will use the
+   * build step value.
+   *
+   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
+   * value "VALUE".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEnv() {
+    return env;
+  }
+
+  /**
+   * A list of global environment variable definitions that will exist for all build steps in this
+   * build. If a variable is defined in both globally and in a build step, the variable will use the
+   * build step value.
+   *
+   * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the
+   * value "VALUE".
+   * @param env env or {@code null} for none
+   */
+  public BuildOptions setEnv(java.util.List<java.lang.String> env) {
+    this.env = env;
     return this;
   }
 
@@ -176,6 +244,27 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of global environment variables, which are encrypted using a Cloud Key Management
+   * Service crypto key. These values must be specified in the build's `Secret`. These variables
+   * will be available to all build steps in this build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecretEnv() {
+    return secretEnv;
+  }
+
+  /**
+   * A list of global environment variables, which are encrypted using a Cloud Key Management
+   * Service crypto key. These values must be specified in the build's `Secret`. These variables
+   * will be available to all build steps in this build.
+   * @param secretEnv secretEnv or {@code null} for none
+   */
+  public BuildOptions setSecretEnv(java.util.List<java.lang.String> secretEnv) {
+    this.secretEnv = secretEnv;
+    return this;
+  }
+
+  /**
    * Requested hash for SourceProvenance.
    * @return value or {@code null} for none
    */
@@ -206,6 +295,37 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   public BuildOptions setSubstitutionOption(java.lang.String substitutionOption) {
     this.substitutionOption = substitutionOption;
+    return this;
+  }
+
+  /**
+   * Global list of volumes to mount for ALL build steps
+   *
+   * Each volume is created as an empty volume prior to starting the build process. Upon completion
+   * of the build, volumes and their contents are discarded. Global volume names and paths cannot
+   * conflict with the volumes defined a build step.
+   *
+   * Using a global volume in a build with only one step is not valid as it is indicative of a build
+   * request with an incorrect configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Volume> getVolumes() {
+    return volumes;
+  }
+
+  /**
+   * Global list of volumes to mount for ALL build steps
+   *
+   * Each volume is created as an empty volume prior to starting the build process. Upon completion
+   * of the build, volumes and their contents are discarded. Global volume names and paths cannot
+   * conflict with the volumes defined a build step.
+   *
+   * Using a global volume in a build with only one step is not valid as it is indicative of a build
+   * request with an incorrect configuration.
+   * @param volumes volumes or {@code null} for none
+   */
+  public BuildOptions setVolumes(java.util.List<Volume> volumes) {
+    this.volumes = volumes;
     return this;
   }
 

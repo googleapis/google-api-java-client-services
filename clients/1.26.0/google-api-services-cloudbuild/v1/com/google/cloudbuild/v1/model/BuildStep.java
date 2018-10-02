@@ -102,6 +102,13 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Stores timing information for pulling this build step's builder image only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeSpan pullTiming;
+
+  /**
    * A list of environment variables which are encrypted using a Cloud Key Management Service crypto
    * key. These values must be specified in the build's `Secret`.
    * The value may be {@code null}.
@@ -144,6 +151,12 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Volume> volumes;
+
+  static {
+    // hack to force ProGuard to consider Volume used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Volume.class);
+  }
 
   /**
    * The ID(s) of the step(s) that this build step depends on. This build step will not start until
@@ -314,6 +327,23 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
    */
   public BuildStep setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Stores timing information for pulling this build step's builder image only.
+   * @return value or {@code null} for none
+   */
+  public TimeSpan getPullTiming() {
+    return pullTiming;
+  }
+
+  /**
+   * Output only. Stores timing information for pulling this build step's builder image only.
+   * @param pullTiming pullTiming or {@code null} for none
+   */
+  public BuildStep setPullTiming(TimeSpan pullTiming) {
+    this.pullTiming = pullTiming;
     return this;
   }
 

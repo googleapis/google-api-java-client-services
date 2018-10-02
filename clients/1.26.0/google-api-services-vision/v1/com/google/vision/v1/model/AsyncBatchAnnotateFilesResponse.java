@@ -36,12 +36,6 @@ public final class AsyncBatchAnnotateFilesResponse extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<AsyncAnnotateFileResponse> responses;
 
-  static {
-    // hack to force ProGuard to consider AsyncAnnotateFileResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AsyncAnnotateFileResponse.class);
-  }
-
   /**
    * The list of file annotation responses, one for each request in AsyncBatchAnnotateFilesRequest.
    * @return value or {@code null} for none

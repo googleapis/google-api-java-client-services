@@ -70,6 +70,12 @@ public final class GoogleCloudVisionV1p1beta1Block extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1Paragraph> paragraphs;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1Paragraph used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1Paragraph.class);
+  }
+
   /**
    * Additional information detected for the block.
    * The value may be {@code null}.

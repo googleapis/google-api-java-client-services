@@ -2505,6 +2505,173 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               return (Patch) super.set(parameterName, value);
             }
           }
+          /**
+           * Sends a command to the specified device. In order for a device to be able to receive commands, it
+           * must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the
+           * group of MQTT topics specified by    /devices/{device-id}/commands/#. This subscription will
+           * receive commands    at the top-level topic /devices/{device-id}/commands as well as commands
+           * for subfolders, like /devices/{device-id}/commands/subfolder.    Note that subscribing to
+           * specific subfolders is not supported. If the command could not be delivered to the device, this
+           * method will return an error; in particular, if the device is not subscribed, this method will
+           * return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS 1,
+           * at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected from the
+           * device.
+           *
+           * Create a request for the method "devices.sendCommandToDevice".
+           *
+           * This request holds the parameters needed by the cloudiot server.  After setting any optional
+           * parameters, call the {@link SendCommandToDevice#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the device. For example,
+          `projects/p0/locations/us-
+           *        central1/registries/registry0/devices/device0` or
+          `projects/p0/locations/us-
+           *        central1/registries/registry0/devices/{num_id}`.
+           * @param content the {@link com.google.cloudiot.v1.model.SendCommandToDeviceRequest}
+           * @return the request
+           */
+          public SendCommandToDevice sendCommandToDevice(java.lang.String name, com.google.cloudiot.v1.model.SendCommandToDeviceRequest content) throws java.io.IOException {
+            SendCommandToDevice result = new SendCommandToDevice(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SendCommandToDevice extends CloudIotRequest<com.google.cloudiot.v1.model.SendCommandToDeviceResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:sendCommandToDevice";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registries/[^/]+/devices/[^/]+$");
+
+            /**
+             * Sends a command to the specified device. In order for a device to be able to receive commands,
+             * it must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the
+             * group of MQTT topics specified by    /devices/{device-id}/commands/#. This subscription will
+             * receive commands    at the top-level topic /devices/{device-id}/commands as well as commands
+             * for subfolders, like /devices/{device-id}/commands/subfolder.    Note that subscribing to
+             * specific subfolders is not supported. If the command could not be delivered to the device, this
+             * method will return an error; in particular, if the device is not subscribed, this method will
+             * return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS
+             * 1, at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected
+             * from the device.
+             *
+             * Create a request for the method "devices.sendCommandToDevice".
+             *
+             * This request holds the parameters needed by the the cloudiot server.  After setting any
+             * optional parameters, call the {@link SendCommandToDevice#execute()} method to invoke the remote
+             * operation. <p> {@link SendCommandToDevice#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name The name of the device. For example,
+          `projects/p0/locations/us-
+           *        central1/registries/registry0/devices/device0` or
+          `projects/p0/locations/us-
+           *        central1/registries/registry0/devices/{num_id}`.
+             * @param content the {@link com.google.cloudiot.v1.model.SendCommandToDeviceRequest}
+             * @since 1.13
+             */
+            protected SendCommandToDevice(java.lang.String name, com.google.cloudiot.v1.model.SendCommandToDeviceRequest content) {
+              super(CloudIot.this, "POST", REST_PATH, content, com.google.cloudiot.v1.model.SendCommandToDeviceResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/registries/[^/]+/devices/[^/]+$");
+              }
+            }
+
+            @Override
+            public SendCommandToDevice set$Xgafv(java.lang.String $Xgafv) {
+              return (SendCommandToDevice) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SendCommandToDevice setAccessToken(java.lang.String accessToken) {
+              return (SendCommandToDevice) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SendCommandToDevice setAlt(java.lang.String alt) {
+              return (SendCommandToDevice) super.setAlt(alt);
+            }
+
+            @Override
+            public SendCommandToDevice setCallback(java.lang.String callback) {
+              return (SendCommandToDevice) super.setCallback(callback);
+            }
+
+            @Override
+            public SendCommandToDevice setFields(java.lang.String fields) {
+              return (SendCommandToDevice) super.setFields(fields);
+            }
+
+            @Override
+            public SendCommandToDevice setKey(java.lang.String key) {
+              return (SendCommandToDevice) super.setKey(key);
+            }
+
+            @Override
+            public SendCommandToDevice setOauthToken(java.lang.String oauthToken) {
+              return (SendCommandToDevice) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SendCommandToDevice setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SendCommandToDevice) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SendCommandToDevice setQuotaUser(java.lang.String quotaUser) {
+              return (SendCommandToDevice) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SendCommandToDevice setUploadType(java.lang.String uploadType) {
+              return (SendCommandToDevice) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SendCommandToDevice setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SendCommandToDevice) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the device. For example, `projects/p0/locations/us-
+             * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
+             * central1/registries/registry0/devices/{num_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the device. For example, `projects/p0/locations/us-
+           central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
+           central1/registries/registry0/devices/{num_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the device. For example, `projects/p0/locations/us-
+             * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
+             * central1/registries/registry0/devices/{num_id}`.
+             */
+            public SendCommandToDevice setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/registries/[^/]+/devices/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public SendCommandToDevice set(String parameterName, Object value) {
+              return (SendCommandToDevice) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the ConfigVersions collection.
@@ -4167,6 +4334,173 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Sends a command to the specified device. In order for a device to be able to receive commands, it
+             * must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the
+             * group of MQTT topics specified by    /devices/{device-id}/commands/#. This subscription will
+             * receive commands    at the top-level topic /devices/{device-id}/commands as well as commands
+             * for subfolders, like /devices/{device-id}/commands/subfolder.    Note that subscribing to
+             * specific subfolders is not supported. If the command could not be delivered to the device, this
+             * method will return an error; in particular, if the device is not subscribed, this method will
+             * return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS 1,
+             * at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected from the
+             * device.
+             *
+             * Create a request for the method "devices.sendCommandToDevice".
+             *
+             * This request holds the parameters needed by the cloudiot server.  After setting any optional
+             * parameters, call the {@link SendCommandToDevice#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the device. For example,
+            `projects/p0/locations/us-
+             *        central1/registries/registry0/devices/device0` or
+            `projects/p0/locations/us-
+             *        central1/registries/registry0/devices/{num_id}`.
+             * @param content the {@link com.google.cloudiot.v1.model.SendCommandToDeviceRequest}
+             * @return the request
+             */
+            public SendCommandToDevice sendCommandToDevice(java.lang.String name, com.google.cloudiot.v1.model.SendCommandToDeviceRequest content) throws java.io.IOException {
+              SendCommandToDevice result = new SendCommandToDevice(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SendCommandToDevice extends CloudIotRequest<com.google.cloudiot.v1.model.SendCommandToDeviceResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:sendCommandToDevice";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+/devices/[^/]+$");
+
+              /**
+               * Sends a command to the specified device. In order for a device to be able to receive commands,
+               * it must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the
+               * group of MQTT topics specified by    /devices/{device-id}/commands/#. This subscription will
+               * receive commands    at the top-level topic /devices/{device-id}/commands as well as commands
+               * for subfolders, like /devices/{device-id}/commands/subfolder.    Note that subscribing to
+               * specific subfolders is not supported. If the command could not be delivered to the device, this
+               * method will return an error; in particular, if the device is not subscribed, this method will
+               * return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS
+               * 1, at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected
+               * from the device.
+               *
+               * Create a request for the method "devices.sendCommandToDevice".
+               *
+               * This request holds the parameters needed by the the cloudiot server.  After setting any
+               * optional parameters, call the {@link SendCommandToDevice#execute()} method to invoke the remote
+               * operation. <p> {@link SendCommandToDevice#initialize(com.google.api.client.googleapis.services.
+               * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param name The name of the device. For example,
+            `projects/p0/locations/us-
+             *        central1/registries/registry0/devices/device0` or
+            `projects/p0/locations/us-
+             *        central1/registries/registry0/devices/{num_id}`.
+               * @param content the {@link com.google.cloudiot.v1.model.SendCommandToDeviceRequest}
+               * @since 1.13
+               */
+              protected SendCommandToDevice(java.lang.String name, com.google.cloudiot.v1.model.SendCommandToDeviceRequest content) {
+                super(CloudIot.this, "POST", REST_PATH, content, com.google.cloudiot.v1.model.SendCommandToDeviceResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+/devices/[^/]+$");
+                }
+              }
+
+              @Override
+              public SendCommandToDevice set$Xgafv(java.lang.String $Xgafv) {
+                return (SendCommandToDevice) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SendCommandToDevice setAccessToken(java.lang.String accessToken) {
+                return (SendCommandToDevice) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SendCommandToDevice setAlt(java.lang.String alt) {
+                return (SendCommandToDevice) super.setAlt(alt);
+              }
+
+              @Override
+              public SendCommandToDevice setCallback(java.lang.String callback) {
+                return (SendCommandToDevice) super.setCallback(callback);
+              }
+
+              @Override
+              public SendCommandToDevice setFields(java.lang.String fields) {
+                return (SendCommandToDevice) super.setFields(fields);
+              }
+
+              @Override
+              public SendCommandToDevice setKey(java.lang.String key) {
+                return (SendCommandToDevice) super.setKey(key);
+              }
+
+              @Override
+              public SendCommandToDevice setOauthToken(java.lang.String oauthToken) {
+                return (SendCommandToDevice) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SendCommandToDevice setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SendCommandToDevice) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SendCommandToDevice setQuotaUser(java.lang.String quotaUser) {
+                return (SendCommandToDevice) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SendCommandToDevice setUploadType(java.lang.String uploadType) {
+                return (SendCommandToDevice) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SendCommandToDevice setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SendCommandToDevice) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The name of the device. For example, `projects/p0/locations/us-
+               * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
+               * central1/registries/registry0/devices/{num_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the device. For example, `projects/p0/locations/us-
+             central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
+             central1/registries/registry0/devices/{num_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * The name of the device. For example, `projects/p0/locations/us-
+               * central1/registries/registry0/devices/device0` or `projects/p0/locations/us-
+               * central1/registries/registry0/devices/{num_id}`.
+               */
+              public SendCommandToDevice setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+/devices/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public SendCommandToDevice set(String parameterName, Object value) {
+                return (SendCommandToDevice) super.set(parameterName, value);
               }
             }
 

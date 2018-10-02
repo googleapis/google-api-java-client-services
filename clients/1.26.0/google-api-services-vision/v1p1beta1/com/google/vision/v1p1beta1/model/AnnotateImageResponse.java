@@ -58,6 +58,12 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<FaceAnnotation> faceAnnotations;
 
+  static {
+    // hack to force ProGuard to consider FaceAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FaceAnnotation.class);
+  }
+
   /**
    * If present, text (OCR) detection or document (OCR) text detection has completed successfully.
    * This annotation provides the structural hierarchy for the OCR detected text.
@@ -80,12 +86,24 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<EntityAnnotation> labelAnnotations;
 
+  static {
+    // hack to force ProGuard to consider EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityAnnotation.class);
+  }
+
   /**
    * If present, landmark detection has completed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EntityAnnotation> landmarkAnnotations;
+
+  static {
+    // hack to force ProGuard to consider EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityAnnotation.class);
+  }
 
   /**
    * If present, localized object detection has completed successfully. This will be sorted
@@ -102,6 +120,12 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<EntityAnnotation> logoAnnotations;
 
+  static {
+    // hack to force ProGuard to consider EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityAnnotation.class);
+  }
+
   /**
    * If present, safe-search annotation has completed successfully.
    * The value may be {@code null}.
@@ -115,6 +139,12 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.util.List<EntityAnnotation> textAnnotations;
+
+  static {
+    // hack to force ProGuard to consider EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityAnnotation.class);
+  }
 
   /**
    * If present, web detection has completed successfully.

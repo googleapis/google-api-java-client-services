@@ -30,22 +30,16 @@ package com.google.datastore.v1.model;
 public final class ArrayValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Values in the array. The order of this array may not be preserved if it contains a mix of
-   * indexed and unindexed values.
+   * Values in the array. The order of values in an array is preserved as long as all values have
+   * identical settings for 'exclude_from_indexes'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Value> values;
 
-  static {
-    // hack to force ProGuard to consider Value used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Value.class);
-  }
-
   /**
-   * Values in the array. The order of this array may not be preserved if it contains a mix of
-   * indexed and unindexed values.
+   * Values in the array. The order of values in an array is preserved as long as all values have
+   * identical settings for 'exclude_from_indexes'.
    * @return value or {@code null} for none
    */
   public java.util.List<Value> getValues() {
@@ -53,8 +47,8 @@ public final class ArrayValue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Values in the array. The order of this array may not be preserved if it contains a mix of
-   * indexed and unindexed values.
+   * Values in the array. The order of values in an array is preserved as long as all values have
+   * identical settings for 'exclude_from_indexes'.
    * @param values values or {@code null} for none
    */
   public ArrayValue setValues(java.util.List<Value> values) {

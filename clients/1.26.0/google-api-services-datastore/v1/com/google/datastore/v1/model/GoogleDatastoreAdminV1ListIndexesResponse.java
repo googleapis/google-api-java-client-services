@@ -36,6 +36,12 @@ public final class GoogleDatastoreAdminV1ListIndexesResponse extends com.google.
   @com.google.api.client.util.Key
   private java.util.List<GoogleDatastoreAdminV1Index> indexes;
 
+  static {
+    // hack to force ProGuard to consider GoogleDatastoreAdminV1Index used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleDatastoreAdminV1Index.class);
+  }
+
   /**
    * The standard List next-page token.
    * The value may be {@code null}.

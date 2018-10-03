@@ -65,6 +65,12 @@ public final class GoogleFirestoreAdminV1beta2FieldOperationMetadata extends com
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirestoreAdminV1beta2IndexConfigDelta> indexConfigDeltas;
 
+  static {
+    // hack to force ProGuard to consider GoogleFirestoreAdminV1beta2IndexConfigDelta used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleFirestoreAdminV1beta2IndexConfigDelta.class);
+  }
+
   /**
    * The time this operation started.
    * The value may be {@code null}.

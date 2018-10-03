@@ -61,6 +61,12 @@ public final class Query extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<KindExpression> kind;
 
+  static {
+    // hack to force ProGuard to consider KindExpression used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(KindExpression.class);
+  }
+
   /**
    * The maximum number of results to return. Applies after all other constraints. Optional.
    * Unspecified is interpreted as no limit. Must be >= 0 if specified.

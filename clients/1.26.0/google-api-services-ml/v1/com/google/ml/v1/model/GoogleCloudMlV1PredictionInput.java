@@ -17,7 +17,7 @@
 package com.google.ml.v1.model;
 
 /**
- * Represents input parameters for a prediction job.
+ * Represents input parameters for a prediction job. Next field: 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed

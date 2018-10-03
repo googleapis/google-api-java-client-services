@@ -52,12 +52,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1LabelAnnotation> frameLabelAnnotations;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1LabelAnnotation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1LabelAnnotation.class);
-  }
-
   /**
    * Video file location in [Google Cloud Storage](https://cloud.google.com/storage/).
    * The value may be {@code null}.
@@ -72,12 +66,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults e
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1LabelAnnotation> segmentLabelAnnotations;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1LabelAnnotation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1LabelAnnotation.class);
-  }
 
   /**
    * Shot annotations. Each shot is represented as a video segment.
@@ -99,24 +87,12 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1LabelAnnotation> shotLabelAnnotations;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1LabelAnnotation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1LabelAnnotation.class);
-  }
-
   /**
    * Speech transcription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1SpeechTranscription> speechTranscriptions;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1SpeechTranscription used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1SpeechTranscription.class);
-  }
 
   /**
    * If set, indicates an error. Note that for a single `AnnotateVideoRequest` some videos may

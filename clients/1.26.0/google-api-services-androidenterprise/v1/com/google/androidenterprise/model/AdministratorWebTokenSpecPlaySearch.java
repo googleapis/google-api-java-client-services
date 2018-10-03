@@ -30,11 +30,35 @@ package com.google.androidenterprise.model;
 public final class AdministratorWebTokenSpecPlaySearch extends com.google.api.client.json.GenericJson {
 
   /**
+   * Allow access to the iframe in approve mode. Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean approveApps;
+
+  /**
    * Whether the Play Search page is displayed. Default is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
+
+  /**
+   * Allow access to the iframe in approve mode. Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getApproveApps() {
+    return approveApps;
+  }
+
+  /**
+   * Allow access to the iframe in approve mode. Default is false.
+   * @param approveApps approveApps or {@code null} for none
+   */
+  public AdministratorWebTokenSpecPlaySearch setApproveApps(java.lang.Boolean approveApps) {
+    this.approveApps = approveApps;
+    return this;
+  }
 
   /**
    * Whether the Play Search page is displayed. Default is true.

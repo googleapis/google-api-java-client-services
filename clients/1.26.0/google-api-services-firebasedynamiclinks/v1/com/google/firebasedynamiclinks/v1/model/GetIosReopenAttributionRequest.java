@@ -48,6 +48,13 @@ public final class GetIosReopenAttributionRequest extends com.google.api.client.
   private java.lang.String requestedLink;
 
   /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sdkVersion;
+
+  /**
    * APP bundle ID.
    * @return value or {@code null} for none
    */
@@ -82,6 +89,23 @@ public final class GetIosReopenAttributionRequest extends com.google.api.client.
    */
   public GetIosReopenAttributionRequest setRequestedLink(java.lang.String requestedLink) {
     this.requestedLink = requestedLink;
+    return this;
+  }
+
+  /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSdkVersion() {
+    return sdkVersion;
+  }
+
+  /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   * @param sdkVersion sdkVersion or {@code null} for none
+   */
+  public GetIosReopenAttributionRequest setSdkVersion(java.lang.String sdkVersion) {
+    this.sdkVersion = sdkVersion;
     return this;
   }
 

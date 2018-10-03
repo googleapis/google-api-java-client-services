@@ -45,12 +45,6 @@ public final class LookupResponse extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<EntityResult> found;
 
-  static {
-    // hack to force ProGuard to consider EntityResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EntityResult.class);
-  }
-
   /**
    * Entities not found as `ResultType.KEY_ONLY` entities. The order of results in this field is
    * undefined and has no relation to the order of the keys in the input.
@@ -58,12 +52,6 @@ public final class LookupResponse extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<EntityResult> missing;
-
-  static {
-    // hack to force ProGuard to consider EntityResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EntityResult.class);
-  }
 
   /**
    * A list of keys that were not looked up due to resource constraints. The order of results in

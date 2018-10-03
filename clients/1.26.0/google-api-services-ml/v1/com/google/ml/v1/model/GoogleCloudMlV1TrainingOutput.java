@@ -59,6 +59,12 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1HyperparameterOutput> trials;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudMlV1HyperparameterOutput used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1HyperparameterOutput.class);
+  }
+
   /**
    * The number of hyperparameter tuning trials that completed successfully. Only set for
    * hyperparameter tuning jobs.

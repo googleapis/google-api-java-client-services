@@ -36,6 +36,12 @@ public final class GoogleFirestoreAdminV1beta2ListFieldsResponse extends com.goo
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirestoreAdminV1beta2Field> fields;
 
+  static {
+    // hack to force ProGuard to consider GoogleFirestoreAdminV1beta2Field used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleFirestoreAdminV1beta2Field.class);
+  }
+
   /**
    * A page token that may be used to request another page of results. If blank, this is the last
    * page.

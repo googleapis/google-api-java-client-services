@@ -48,6 +48,13 @@ public final class CreateShortDynamicLinkRequest extends com.google.api.client.j
   private java.lang.String longDynamicLink;
 
   /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sdkVersion;
+
+  /**
    * Short Dynamic Link suffix. Optional.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class CreateShortDynamicLinkRequest extends com.google.api.client.j
    */
   public CreateShortDynamicLinkRequest setLongDynamicLink(java.lang.String longDynamicLink) {
     this.longDynamicLink = longDynamicLink;
+    return this;
+  }
+
+  /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSdkVersion() {
+    return sdkVersion;
+  }
+
+  /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   * @param sdkVersion sdkVersion or {@code null} for none
+   */
+  public CreateShortDynamicLinkRequest setSdkVersion(java.lang.String sdkVersion) {
+    this.sdkVersion = sdkVersion;
     return this;
   }
 

@@ -47,9 +47,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private java.lang.String parent;
 
   /**
-   * The list of permissions the admin is granted within the iframe. The admin will only be allowed
-   * to view an iframe if they have all of the permissions associated with it. The only valid value
-   * is "approveApps" that will allow the admin to access the iframe in "approve" mode.
+   * Deprecated. Use PlaySearch.approveApps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,9 +120,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * The list of permissions the admin is granted within the iframe. The admin will only be allowed
-   * to view an iframe if they have all of the permissions associated with it. The only valid value
-   * is "approveApps" that will allow the admin to access the iframe in "approve" mode.
+   * Deprecated. Use PlaySearch.approveApps.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermission() {
@@ -132,9 +128,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * The list of permissions the admin is granted within the iframe. The admin will only be allowed
-   * to view an iframe if they have all of the permissions associated with it. The only valid value
-   * is "approveApps" that will allow the admin to access the iframe in "approve" mode.
+   * Deprecated. Use PlaySearch.approveApps.
    * @param permission permission or {@code null} for none
    */
   public AdministratorWebTokenSpec setPermission(java.util.List<java.lang.String> permission) {

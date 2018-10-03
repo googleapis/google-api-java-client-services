@@ -39,6 +39,14 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfi
   private java.util.List<java.lang.Integer> audioTracks;
 
   /**
+   * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
+   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer diarizationSpeakerCount;
+
+  /**
    * *Optional* If 'true', adds punctuation to recognition result hypotheses. This feature is only
    * available in select languages. Setting this for requests in other languages has no effect at
    * all. The default 'false' value does not add punctuation to result hypotheses. NOTE: "This is
@@ -48,6 +56,25 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfi
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAutomaticPunctuation;
+
+  /**
+   * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
+   * of the recognition result using a speaker_tag provided in the WordInfo. Note: When this is
+   * true, we send all the words from the beginning of the audio for the top alternative in every
+   * consecutive responses. This is done in order to improve our speaker tags as our models learn to
+   * identify the speakers in the conversation over time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSpeakerDiarization;
+
+  /**
+   * *Optional* If `true`, the top result includes a list of words and the confidence for those
+   * words. If `false`, no word-level confidence information is returned. The default is `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWordConfidence;
 
   /**
    * *Optional* If set to `true`, the server will attempt to filter out profanities, replacing all
@@ -85,6 +112,12 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfi
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1SpeechContext> speechContexts;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1SpeechContext used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1SpeechContext.class);
+  }
+
   /**
    * *Optional* For file formats, such as MXF or MKV, supporting multiple audio tracks, specify up
    * to two tracks. Default: track 0.
@@ -101,6 +134,25 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfi
    */
   public GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig setAudioTracks(java.util.List<java.lang.Integer> audioTracks) {
     this.audioTracks = audioTracks;
+    return this;
+  }
+
+  /**
+   * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
+   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDiarizationSpeakerCount() {
+    return diarizationSpeakerCount;
+  }
+
+  /**
+   * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
+   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true.
+   * @param diarizationSpeakerCount diarizationSpeakerCount or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig setDiarizationSpeakerCount(java.lang.Integer diarizationSpeakerCount) {
+    this.diarizationSpeakerCount = diarizationSpeakerCount;
     return this;
   }
 
@@ -126,6 +178,50 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfi
    */
   public GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
     this.enableAutomaticPunctuation = enableAutomaticPunctuation;
+    return this;
+  }
+
+  /**
+   * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
+   * of the recognition result using a speaker_tag provided in the WordInfo. Note: When this is
+   * true, we send all the words from the beginning of the audio for the top alternative in every
+   * consecutive responses. This is done in order to improve our speaker tags as our models learn to
+   * identify the speakers in the conversation over time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSpeakerDiarization() {
+    return enableSpeakerDiarization;
+  }
+
+  /**
+   * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
+   * of the recognition result using a speaker_tag provided in the WordInfo. Note: When this is
+   * true, we send all the words from the beginning of the audio for the top alternative in every
+   * consecutive responses. This is done in order to improve our speaker tags as our models learn to
+   * identify the speakers in the conversation over time.
+   * @param enableSpeakerDiarization enableSpeakerDiarization or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig setEnableSpeakerDiarization(java.lang.Boolean enableSpeakerDiarization) {
+    this.enableSpeakerDiarization = enableSpeakerDiarization;
+    return this;
+  }
+
+  /**
+   * *Optional* If `true`, the top result includes a list of words and the confidence for those
+   * words. If `false`, no word-level confidence information is returned. The default is `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWordConfidence() {
+    return enableWordConfidence;
+  }
+
+  /**
+   * *Optional* If `true`, the top result includes a list of words and the confidence for those
+   * words. If `false`, no word-level confidence information is returned. The default is `false`.
+   * @param enableWordConfidence enableWordConfidence or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig setEnableWordConfidence(java.lang.Boolean enableWordConfidence) {
+    this.enableWordConfidence = enableWordConfidence;
     return this;
   }
 

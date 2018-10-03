@@ -43,6 +43,12 @@ public final class ReserveIdsRequest extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Key> keys;
 
+  static {
+    // hack to force ProGuard to consider Key used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Key.class);
+  }
+
   /**
    * If not empty, the ID of the database against which to make the request.
    * @return value or {@code null} for none

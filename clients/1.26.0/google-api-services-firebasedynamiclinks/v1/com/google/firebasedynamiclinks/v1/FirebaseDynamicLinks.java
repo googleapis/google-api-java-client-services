@@ -556,6 +556,22 @@ public class FirebaseDynamicLinks extends com.google.api.client.googleapis.servi
         return this;
       }
 
+      /** Google SDK version. Version takes the form "$major.$minor.$patch" */
+      @com.google.api.client.util.Key
+      private java.lang.String sdkVersion;
+
+      /** Google SDK version. Version takes the form "$major.$minor.$patch"
+       */
+      public java.lang.String getSdkVersion() {
+        return sdkVersion;
+      }
+
+      /** Google SDK version. Version takes the form "$major.$minor.$patch" */
+      public GetLinkStats setSdkVersion(java.lang.String sdkVersion) {
+        this.sdkVersion = sdkVersion;
+        return this;
+      }
+
       @Override
       public GetLinkStats set(String parameterName, Object value) {
         return (GetLinkStats) super.set(parameterName, value);

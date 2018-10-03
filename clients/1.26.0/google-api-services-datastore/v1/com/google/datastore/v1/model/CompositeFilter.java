@@ -36,6 +36,12 @@ public final class CompositeFilter extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<Filter> filters;
 
+  static {
+    // hack to force ProGuard to consider Filter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Filter.class);
+  }
+
   /**
    * The operator for combining multiple filters.
    * The value may be {@code null}.

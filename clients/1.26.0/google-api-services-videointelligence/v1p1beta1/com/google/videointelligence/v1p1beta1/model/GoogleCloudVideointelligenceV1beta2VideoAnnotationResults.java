@@ -52,6 +52,12 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2LabelAnnotation> frameLabelAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2LabelAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2LabelAnnotation.class);
+  }
+
   /**
    * Video file location in [Google Cloud Storage](https://cloud.google.com/storage/).
    * The value may be {@code null}.
@@ -67,6 +73,12 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2LabelAnnotation> segmentLabelAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2LabelAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2LabelAnnotation.class);
+  }
+
   /**
    * Shot annotations. Each shot is represented as a video segment.
    * The value may be {@code null}.
@@ -74,12 +86,24 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2VideoSegment> shotAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2VideoSegment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2VideoSegment.class);
+  }
+
   /**
    * Label annotations on shot level. There is exactly one element for each unique label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2LabelAnnotation> shotLabelAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2LabelAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2LabelAnnotation.class);
+  }
 
   /**
    * If set, indicates an error. Note that for a single `AnnotateVideoRequest` some videos may

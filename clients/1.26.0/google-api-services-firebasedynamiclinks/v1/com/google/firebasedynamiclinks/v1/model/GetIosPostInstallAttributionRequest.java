@@ -69,7 +69,7 @@ public final class GetIosPostInstallAttributionRequest extends com.google.api.cl
   private java.lang.String retrievalMethod;
 
   /**
-   * Google SDK version.
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class GetIosPostInstallAttributionRequest extends com.google.api.cl
   }
 
   /**
-   * Google SDK version.
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
    * @return value or {@code null} for none
    */
   public java.lang.String getSdkVersion() {
@@ -190,7 +190,7 @@ public final class GetIosPostInstallAttributionRequest extends com.google.api.cl
   }
 
   /**
-   * Google SDK version.
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
    * @param sdkVersion sdkVersion or {@code null} for none
    */
   public GetIosPostInstallAttributionRequest setSdkVersion(java.lang.String sdkVersion) {

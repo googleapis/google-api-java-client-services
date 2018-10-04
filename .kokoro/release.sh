@@ -40,12 +40,6 @@ deploy_library() {
   popd
 }
 
-promote_library() {
-  pushd $1
-
-  popd
-}
-
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d`
 do
 

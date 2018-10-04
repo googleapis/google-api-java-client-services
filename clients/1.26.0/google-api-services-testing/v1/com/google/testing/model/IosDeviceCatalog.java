@@ -36,12 +36,6 @@ public final class IosDeviceCatalog extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<IosModel> models;
 
-  static {
-    // hack to force ProGuard to consider IosModel used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(IosModel.class);
-  }
-
   /**
    * Output only. The set of supported runtime configurations.
    * The value may be {@code null}.
@@ -60,6 +54,19 @@ public final class IosDeviceCatalog extends com.google.api.client.json.GenericJs
     // hack to force ProGuard to consider IosVersion used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(IosVersion.class);
+  }
+
+  /**
+   * Output only. The set of supported Xcode versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<XcodeVersion> xcodeVersions;
+
+  static {
+    // hack to force ProGuard to consider XcodeVersion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(XcodeVersion.class);
   }
 
   /**
@@ -110,6 +117,23 @@ public final class IosDeviceCatalog extends com.google.api.client.json.GenericJs
    */
   public IosDeviceCatalog setVersions(java.util.List<IosVersion> versions) {
     this.versions = versions;
+    return this;
+  }
+
+  /**
+   * Output only. The set of supported Xcode versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<XcodeVersion> getXcodeVersions() {
+    return xcodeVersions;
+  }
+
+  /**
+   * Output only. The set of supported Xcode versions.
+   * @param xcodeVersions xcodeVersions or {@code null} for none
+   */
+  public IosDeviceCatalog setXcodeVersions(java.util.List<XcodeVersion> xcodeVersions) {
+    this.xcodeVersions = xcodeVersions;
     return this;
   }
 

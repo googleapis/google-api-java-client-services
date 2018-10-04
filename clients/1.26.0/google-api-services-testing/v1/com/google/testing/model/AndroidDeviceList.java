@@ -36,12 +36,6 @@ public final class AndroidDeviceList extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<AndroidDevice> androidDevices;
 
-  static {
-    // hack to force ProGuard to consider AndroidDevice used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AndroidDevice.class);
-  }
-
   /**
    * A list of Android devices Required
    * @return value or {@code null} for none

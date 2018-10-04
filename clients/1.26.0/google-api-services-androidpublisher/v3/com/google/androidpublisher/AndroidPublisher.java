@@ -1497,6 +1497,29 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
+        /**
+         * Must be set to true if the bundle installation may trigger a warning on user devices
+         * (i.e. if installation size may be over a threshold, typically 100 MB).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean ackBundleInstallationWarning;
+
+        /** Must be set to true if the bundle installation may trigger a warning on user devices (i.e. if
+       installation size may be over a threshold, typically 100 MB).
+         */
+        public java.lang.Boolean getAckBundleInstallationWarning() {
+          return ackBundleInstallationWarning;
+        }
+
+        /**
+         * Must be set to true if the bundle installation may trigger a warning on user devices
+         * (i.e. if installation size may be over a threshold, typically 100 MB).
+         */
+        public Upload setAckBundleInstallationWarning(java.lang.Boolean ackBundleInstallationWarning) {
+          this.ackBundleInstallationWarning = ackBundleInstallationWarning;
+          return this;
+        }
+
         @Override
         public Upload set(String parameterName, Object value) {
           return (Upload) super.set(parameterName, value);

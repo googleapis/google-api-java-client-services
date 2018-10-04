@@ -6715,10 +6715,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Listdisbursements#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param disbursementStartDate The first date which disbursements occurred. In ISO 8601 format.
      * @return the request
      */
-    public Listdisbursements listdisbursements(java.math.BigInteger merchantId) throws java.io.IOException {
-      Listdisbursements result = new Listdisbursements(merchantId);
+    public Listdisbursements listdisbursements(java.math.BigInteger merchantId, java.lang.String disbursementStartDate) throws java.io.IOException {
+      Listdisbursements result = new Listdisbursements(merchantId, disbursementStartDate);
       initialize(result);
       return result;
     }
@@ -6739,11 +6740,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * constructor. </p>
        *
        * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param disbursementStartDate The first date which disbursements occurred. In ISO 8601 format.
        * @since 1.13
        */
-      protected Listdisbursements(java.math.BigInteger merchantId) {
+      protected Listdisbursements(java.math.BigInteger merchantId, java.lang.String disbursementStartDate) {
         super(ShoppingContent.this, "GET", REST_PATH, null, com.google.content.model.OrderreportsListDisbursementsResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.disbursementStartDate = com.google.api.client.util.Preconditions.checkNotNull(disbursementStartDate, "Required parameter disbursementStartDate must be specified.");
       }
 
       @Override
@@ -6807,22 +6810,6 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The last date which disbursements occurred. In ISO 8601 format. Default: current date. */
-      @com.google.api.client.util.Key
-      private java.lang.String disbursementEndDate;
-
-      /** The last date which disbursements occurred. In ISO 8601 format. Default: current date.
-       */
-      public java.lang.String getDisbursementEndDate() {
-        return disbursementEndDate;
-      }
-
-      /** The last date which disbursements occurred. In ISO 8601 format. Default: current date. */
-      public Listdisbursements setDisbursementEndDate(java.lang.String disbursementEndDate) {
-        this.disbursementEndDate = disbursementEndDate;
-        return this;
-      }
-
       /** The first date which disbursements occurred. In ISO 8601 format. */
       @com.google.api.client.util.Key
       private java.lang.String disbursementStartDate;
@@ -6836,6 +6823,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /** The first date which disbursements occurred. In ISO 8601 format. */
       public Listdisbursements setDisbursementStartDate(java.lang.String disbursementStartDate) {
         this.disbursementStartDate = disbursementStartDate;
+        return this;
+      }
+
+      /** The last date which disbursements occurred. In ISO 8601 format. Default: current date. */
+      @com.google.api.client.util.Key
+      private java.lang.String disbursementEndDate;
+
+      /** The last date which disbursements occurred. In ISO 8601 format. Default: current date.
+       */
+      public java.lang.String getDisbursementEndDate() {
+        return disbursementEndDate;
+      }
+
+      /** The last date which disbursements occurred. In ISO 8601 format. Default: current date. */
+      public Listdisbursements setDisbursementEndDate(java.lang.String disbursementEndDate) {
+        this.disbursementEndDate = disbursementEndDate;
         return this;
       }
 
@@ -6886,10 +6889,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *
      * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
      * @param disbursementId The Google-provided ID of the disbursement (found in Wallet).
+     * @param transactionStartDate The first date in which transaction occurred. In ISO 8601 format.
      * @return the request
      */
-    public Listtransactions listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId) throws java.io.IOException {
-      Listtransactions result = new Listtransactions(merchantId, disbursementId);
+    public Listtransactions listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId, java.lang.String transactionStartDate) throws java.io.IOException {
+      Listtransactions result = new Listtransactions(merchantId, disbursementId, transactionStartDate);
       initialize(result);
       return result;
     }
@@ -6911,12 +6915,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        *
        * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
        * @param disbursementId The Google-provided ID of the disbursement (found in Wallet).
+       * @param transactionStartDate The first date in which transaction occurred. In ISO 8601 format.
        * @since 1.13
        */
-      protected Listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId) {
+      protected Listtransactions(java.math.BigInteger merchantId, java.lang.String disbursementId, java.lang.String transactionStartDate) {
         super(ShoppingContent.this, "GET", REST_PATH, null, com.google.content.model.OrderreportsListTransactionsResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.disbursementId = com.google.api.client.util.Preconditions.checkNotNull(disbursementId, "Required parameter disbursementId must be specified.");
+        this.transactionStartDate = com.google.api.client.util.Preconditions.checkNotNull(transactionStartDate, "Required parameter transactionStartDate must be specified.");
       }
 
       @Override
@@ -6996,6 +7002,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /** The first date in which transaction occurred. In ISO 8601 format. */
+      @com.google.api.client.util.Key
+      private java.lang.String transactionStartDate;
+
+      /** The first date in which transaction occurred. In ISO 8601 format.
+       */
+      public java.lang.String getTransactionStartDate() {
+        return transactionStartDate;
+      }
+
+      /** The first date in which transaction occurred. In ISO 8601 format. */
+      public Listtransactions setTransactionStartDate(java.lang.String transactionStartDate) {
+        this.transactionStartDate = transactionStartDate;
+        return this;
+      }
+
       /** The maximum number of disbursements to return in the response, used for paging. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
@@ -7045,22 +7067,6 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        */
       public Listtransactions setTransactionEndDate(java.lang.String transactionEndDate) {
         this.transactionEndDate = transactionEndDate;
-        return this;
-      }
-
-      /** The first date in which transaction occurred. In ISO 8601 format. */
-      @com.google.api.client.util.Key
-      private java.lang.String transactionStartDate;
-
-      /** The first date in which transaction occurred. In ISO 8601 format.
-       */
-      public java.lang.String getTransactionStartDate() {
-        return transactionStartDate;
-      }
-
-      /** The first date in which transaction occurred. In ISO 8601 format. */
-      public Listtransactions setTransactionStartDate(java.lang.String transactionStartDate) {
-        this.transactionStartDate = transactionStartDate;
         return this;
       }
 

@@ -72,6 +72,12 @@ public final class GoogleCloudVideointelligenceV1p1beta1LabelAnnotation extends 
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1LabelSegment> segments;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1LabelSegment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1LabelSegment.class);
+  }
+
   /**
    * Common categories for the detected entity. E.g. when the label is `Terrier` the category is
    * likely `dog`. And in some cases there might be more than one categories e.g. `Terrier` could

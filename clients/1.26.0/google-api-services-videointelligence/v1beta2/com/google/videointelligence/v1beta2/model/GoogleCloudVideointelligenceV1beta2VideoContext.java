@@ -52,12 +52,6 @@ public final class GoogleCloudVideointelligenceV1beta2VideoContext extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2VideoSegment> segments;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2VideoSegment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2VideoSegment.class);
-  }
-
   /**
    * Config for SHOT_CHANGE_DETECTION.
    * The value may be {@code null}.

@@ -46,6 +46,12 @@ public final class AnalyzeSyntaxResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Sentence> sentences;
 
+  static {
+    // hack to force ProGuard to consider Sentence used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Sentence.class);
+  }
+
   /**
    * Tokens, along with their syntactic information, in the input document.
    * The value may be {@code null}.

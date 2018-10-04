@@ -122,12 +122,12 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String placedDate;
 
   /**
-   * The details of the merchant provided promotions applied to the order. More details about the
-   * program are here.
+   * Deprecated. The details of the merchant provided promotions applied to the order. More details
+   * about the program are here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<OrderPromotion> promotions;
+  private java.util.List<OrderLegacyPromotion> promotions;
 
   /**
    * Refunds for the order.
@@ -393,20 +393,20 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details of the merchant provided promotions applied to the order. More details about the
-   * program are here.
+   * Deprecated. The details of the merchant provided promotions applied to the order. More details
+   * about the program are here.
    * @return value or {@code null} for none
    */
-  public java.util.List<OrderPromotion> getPromotions() {
+  public java.util.List<OrderLegacyPromotion> getPromotions() {
     return promotions;
   }
 
   /**
-   * The details of the merchant provided promotions applied to the order. More details about the
-   * program are here.
+   * Deprecated. The details of the merchant provided promotions applied to the order. More details
+   * about the program are here.
    * @param promotions promotions or {@code null} for none
    */
-  public Order setPromotions(java.util.List<OrderPromotion> promotions) {
+  public Order setPromotions(java.util.List<OrderLegacyPromotion> promotions) {
     this.promotions = promotions;
     return this;
   }

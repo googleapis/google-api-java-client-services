@@ -31,16 +31,40 @@ package com.google.dlp.v2.model;
 public final class GooglePrivacyDlpV2FileSet extends com.google.api.client.json.GenericJson {
 
   /**
+   * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2CloudStorageRegexFileSet regexFileSet;
+
+  /**
    * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing wildcard in the
-   * path is allowed.
+   * path is allowed. Exactly one of `url` or `regex_file_set` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
+   * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CloudStorageRegexFileSet getRegexFileSet() {
+    return regexFileSet;
+  }
+
+  /**
+   * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
+   * @param regexFileSet regexFileSet or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileSet setRegexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSet regexFileSet) {
+    this.regexFileSet = regexFileSet;
+    return this;
+  }
+
+  /**
    * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing wildcard in the
-   * path is allowed.
+   * path is allowed. Exactly one of `url` or `regex_file_set` must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -49,7 +73,7 @@ public final class GooglePrivacyDlpV2FileSet extends com.google.api.client.json.
 
   /**
    * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing wildcard in the
-   * path is allowed.
+   * path is allowed. Exactly one of `url` or `regex_file_set` must be set.
    * @param url url or {@code null} for none
    */
   public GooglePrivacyDlpV2FileSet setUrl(java.lang.String url) {

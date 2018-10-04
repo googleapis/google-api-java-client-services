@@ -32,8 +32,12 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
 
   /**
    * Name of the container where the finding is located. The top level name is the source file name
-   * or table name. Nested names could be absent if the embedded object has no string identifier
-   * (for an example an image contained within a document).
+   * or table name. Names of some common storage containers are formatted as follows:
+   *
+   * * BigQuery tables:  `:.` * Cloud Storage files: `gs:` * Datastore namespace:
+   *
+   * Nested names could be absent if the embedded object has no string identifier (for an example an
+   * image contained within a document).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +82,12 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
 
   /**
    * Name of the container where the finding is located. The top level name is the source file name
-   * or table name. Nested names could be absent if the embedded object has no string identifier
-   * (for an example an image contained within a document).
+   * or table name. Names of some common storage containers are formatted as follows:
+   *
+   * * BigQuery tables:  `:.` * Cloud Storage files: `gs:` * Datastore namespace:
+   *
+   * Nested names could be absent if the embedded object has no string identifier (for an example an
+   * image contained within a document).
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerName() {
@@ -88,8 +96,12 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
 
   /**
    * Name of the container where the finding is located. The top level name is the source file name
-   * or table name. Nested names could be absent if the embedded object has no string identifier
-   * (for an example an image contained within a document).
+   * or table name. Names of some common storage containers are formatted as follows:
+   *
+   * * BigQuery tables:  `:.` * Cloud Storage files: `gs:` * Datastore namespace:
+   *
+   * Nested names could be absent if the embedded object has no string identifier (for an example an
+   * image contained within a document).
    * @param containerName containerName or {@code null} for none
    */
   public GooglePrivacyDlpV2ContentLocation setContainerName(java.lang.String containerName) {

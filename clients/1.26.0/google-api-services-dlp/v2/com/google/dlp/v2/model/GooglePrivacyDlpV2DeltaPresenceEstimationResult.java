@@ -43,12 +43,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResult extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket> deltaPresenceEstimationHistogram;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket.class);
-  }
-
   /**
    * The intervals [min_probability, max_probability) do not overlap. If a value doesn't correspond
    * to any such interval, the associated frequency is zero. For example, the following records:

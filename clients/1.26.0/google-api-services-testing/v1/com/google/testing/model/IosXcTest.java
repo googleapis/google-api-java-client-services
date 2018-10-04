@@ -43,6 +43,15 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
   private FileReference testsZip;
 
   /**
+   * Optional. The Xcode version that should be used for the test. Use the
+   * EnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version
+   * Firebase Test Lab supports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String xcodeVersion;
+
+  /**
    * Optional. An .xctestrun file that will override the .xctestrun file in the tests zip. Because
    * the .xctestrun file contains environment variables along with test methods to run and/or
    * ignore, this can be useful for sharding tests. Default is taken from the tests zip.
@@ -69,6 +78,27 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
    */
   public IosXcTest setTestsZip(FileReference testsZip) {
     this.testsZip = testsZip;
+    return this;
+  }
+
+  /**
+   * Optional. The Xcode version that should be used for the test. Use the
+   * EnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version
+   * Firebase Test Lab supports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getXcodeVersion() {
+    return xcodeVersion;
+  }
+
+  /**
+   * Optional. The Xcode version that should be used for the test. Use the
+   * EnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version
+   * Firebase Test Lab supports.
+   * @param xcodeVersion xcodeVersion or {@code null} for none
+   */
+  public IosXcTest setXcodeVersion(java.lang.String xcodeVersion) {
+    this.xcodeVersion = xcodeVersion;
     return this;
   }
 

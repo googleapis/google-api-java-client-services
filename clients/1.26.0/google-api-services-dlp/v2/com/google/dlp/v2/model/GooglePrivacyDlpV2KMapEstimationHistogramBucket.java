@@ -56,12 +56,6 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucket extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2KMapEstimationQuasiIdValues> bucketValues;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2KMapEstimationQuasiIdValues used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2KMapEstimationQuasiIdValues.class);
-  }
-
   /**
    * Always greater than or equal to min_anonymity.
    * The value may be {@code null}.

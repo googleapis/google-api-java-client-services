@@ -51,6 +51,13 @@ public final class IosVersion extends com.google.api.client.json.GenericJson {
   private java.lang.Integer minorVersion;
 
   /**
+   * Output only. The available Xcode versions for this version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedXcodeVersionIds;
+
+  /**
    * Output only. Tags for this dimension. Examples: "default", "preview", "deprecated"
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class IosVersion extends com.google.api.client.json.GenericJson {
    */
   public IosVersion setMinorVersion(java.lang.Integer minorVersion) {
     this.minorVersion = minorVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The available Xcode versions for this version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedXcodeVersionIds() {
+    return supportedXcodeVersionIds;
+  }
+
+  /**
+   * Output only. The available Xcode versions for this version.
+   * @param supportedXcodeVersionIds supportedXcodeVersionIds or {@code null} for none
+   */
+  public IosVersion setSupportedXcodeVersionIds(java.util.List<java.lang.String> supportedXcodeVersionIds) {
+    this.supportedXcodeVersionIds = supportedXcodeVersionIds;
     return this;
   }
 

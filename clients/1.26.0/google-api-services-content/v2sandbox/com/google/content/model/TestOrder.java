@@ -80,17 +80,17 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   private java.lang.String predefinedDeliveryAddress;
 
   /**
-   * The details of the merchant provided promotions applied to the order. More details about the
-   * program are here.
+   * Deprecated. The details of the merchant provided promotions applied to the order. More details
+   * about the program are here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<OrderPromotion> promotions;
+  private java.util.List<OrderLegacyPromotion> promotions;
 
   static {
-    // hack to force ProGuard to consider OrderPromotion used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider OrderLegacyPromotion used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(OrderPromotion.class);
+    com.google.api.client.util.Data.nullOf(OrderLegacyPromotion.class);
   }
 
   /**
@@ -234,20 +234,20 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details of the merchant provided promotions applied to the order. More details about the
-   * program are here.
+   * Deprecated. The details of the merchant provided promotions applied to the order. More details
+   * about the program are here.
    * @return value or {@code null} for none
    */
-  public java.util.List<OrderPromotion> getPromotions() {
+  public java.util.List<OrderLegacyPromotion> getPromotions() {
     return promotions;
   }
 
   /**
-   * The details of the merchant provided promotions applied to the order. More details about the
-   * program are here.
+   * Deprecated. The details of the merchant provided promotions applied to the order. More details
+   * about the program are here.
    * @param promotions promotions or {@code null} for none
    */
-  public TestOrder setPromotions(java.util.List<OrderPromotion> promotions) {
+  public TestOrder setPromotions(java.util.List<OrderLegacyPromotion> promotions) {
     this.promotions = promotions;
     return this;
   }

@@ -47,6 +47,13 @@ public final class EndpointsApiService extends com.google.api.client.json.Generi
   private java.lang.String configId;
 
   /**
+   * Enable or disable trace sampling. By default, this is set to false for enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableTraceSampling;
+
+  /**
    * Endpoints service name which is the name of the "service" resource in the Service Management
    * API. For example "myapi.endpoints.myproject.cloud.goog"
    * The value may be {@code null}.
@@ -88,6 +95,23 @@ public final class EndpointsApiService extends com.google.api.client.json.Generi
    */
   public EndpointsApiService setConfigId(java.lang.String configId) {
     this.configId = configId;
+    return this;
+  }
+
+  /**
+   * Enable or disable trace sampling. By default, this is set to false for enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableTraceSampling() {
+    return disableTraceSampling;
+  }
+
+  /**
+   * Enable or disable trace sampling. By default, this is set to false for enabled.
+   * @param disableTraceSampling disableTraceSampling or {@code null} for none
+   */
+  public EndpointsApiService setDisableTraceSampling(java.lang.Boolean disableTraceSampling) {
+    this.disableTraceSampling = disableTraceSampling;
     return this;
   }
 

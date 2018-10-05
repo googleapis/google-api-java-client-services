@@ -17,7 +17,8 @@
 package com.google.monitoring.v3.model;
 
 /**
- * Nimbus InternalCheckers.
+ * Nimbus InternalCheckers. The API currently only allows reading of internal checkers, creation of
+ * internal checkers is a manual process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -31,14 +32,8 @@ package com.google.monitoring.v3.model;
 public final class InternalChecker extends com.google.api.client.json.GenericJson {
 
   /**
-   * The checker ID.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String checkerId;
-
-  /**
-   * The checker's human-readable name.
+   * The checker's human-readable name. The display name should be unique within a Stackdriver
+   * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,38 +48,25 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String gcpZone;
 
   /**
-   * The internal network to perform this uptime check on.
+   * A unique resource name for this InternalChecker. The format
+   * is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is the GCP project ID where
+   * the internal resource lives. Not necessarily the same as the project_id for the config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives
+   * (ex: "default").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * The GCP project ID. Not necessarily the same as the project_id for the config.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String projectId;
-
-  /**
-   * The checker ID.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCheckerId() {
-    return checkerId;
-  }
-
-  /**
-   * The checker ID.
-   * @param checkerId checkerId or {@code null} for none
-   */
-  public InternalChecker setCheckerId(java.lang.String checkerId) {
-    this.checkerId = checkerId;
-    return this;
-  }
-
-  /**
-   * The checker's human-readable name.
+   * The checker's human-readable name. The display name should be unique within a Stackdriver
+   * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -92,7 +74,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The checker's human-readable name.
+   * The checker's human-readable name. The display name should be unique within a Stackdriver
+   * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
    * @param displayName displayName or {@code null} for none
    */
   public InternalChecker setDisplayName(java.lang.String displayName) {
@@ -120,7 +103,29 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The internal network to perform this uptime check on.
+   * A unique resource name for this InternalChecker. The format
+   * is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is the GCP project ID where
+   * the internal resource lives. Not necessarily the same as the project_id for the config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * A unique resource name for this InternalChecker. The format
+   * is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is the GCP project ID where
+   * the internal resource lives. Not necessarily the same as the project_id for the config.
+   * @param name name or {@code null} for none
+   */
+  public InternalChecker setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives
+   * (ex: "default").
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -128,28 +133,12 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The internal network to perform this uptime check on.
+   * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives
+   * (ex: "default").
    * @param network network or {@code null} for none
    */
   public InternalChecker setNetwork(java.lang.String network) {
     this.network = network;
-    return this;
-  }
-
-  /**
-   * The GCP project ID. Not necessarily the same as the project_id for the config.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProjectId() {
-    return projectId;
-  }
-
-  /**
-   * The GCP project ID. Not necessarily the same as the project_id for the config.
-   * @param projectId projectId or {@code null} for none
-   */
-  public InternalChecker setProjectId(java.lang.String projectId) {
-    this.projectId = projectId;
     return this;
   }
 

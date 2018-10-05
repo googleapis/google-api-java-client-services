@@ -96,20 +96,21 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * This filter specifies a structured syntax to match against the Job.custom_attributes marked as
    * `filterable`.
    *
-   * The syntax for this expression is a subset of Google SQL syntax.
+   * The syntax for this expression is a subset of SQL syntax.
    *
-   * Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom field
-   * key and the right of the operator is a number or string (surrounded by quotes) value.
+   * Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where the left of the operator is
+   * a custom field key and the right of the operator is a number or a quoted string. You must
+   * escape backslash (\\) and quote (\") characters.
    *
-   * Supported functions are LOWER() to perform case insensitive match and EMPTY() to filter on the
-   * existence of a key.
+   * Supported functions are `LOWER([field_name])` to perform a case insensitive match and
+   * `EMPTY([field_name])` to filter on the existence of a key.
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND
-   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons/functions are allowed in the
-   * expression. The expression must be < 2000 characters in length.
+   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons or functions are allowed in the
+   * expression. The expression must be < 3000 characters in length.
    *
-   * Sample Query: (LOWER(driving_license)="class a" OR EMPTY(driving_license)) AND driving_years >
-   * 10
+   * Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
+   * driving_years > 10`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -352,20 +353,21 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * This filter specifies a structured syntax to match against the Job.custom_attributes marked as
    * `filterable`.
    *
-   * The syntax for this expression is a subset of Google SQL syntax.
+   * The syntax for this expression is a subset of SQL syntax.
    *
-   * Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom field
-   * key and the right of the operator is a number or string (surrounded by quotes) value.
+   * Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where the left of the operator is
+   * a custom field key and the right of the operator is a number or a quoted string. You must
+   * escape backslash (\\) and quote (\") characters.
    *
-   * Supported functions are LOWER() to perform case insensitive match and EMPTY() to filter on the
-   * existence of a key.
+   * Supported functions are `LOWER([field_name])` to perform a case insensitive match and
+   * `EMPTY([field_name])` to filter on the existence of a key.
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND
-   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons/functions are allowed in the
-   * expression. The expression must be < 2000 characters in length.
+   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons or functions are allowed in the
+   * expression. The expression must be < 3000 characters in length.
    *
-   * Sample Query: (LOWER(driving_license)="class a" OR EMPTY(driving_license)) AND driving_years >
-   * 10
+   * Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
+   * driving_years > 10`
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomAttributeFilter() {
@@ -378,20 +380,21 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * This filter specifies a structured syntax to match against the Job.custom_attributes marked as
    * `filterable`.
    *
-   * The syntax for this expression is a subset of Google SQL syntax.
+   * The syntax for this expression is a subset of SQL syntax.
    *
-   * Supported operators are: =, !=, <, <=, >, >= where the left of the operator is a custom field
-   * key and the right of the operator is a number or string (surrounded by quotes) value.
+   * Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where the left of the operator is
+   * a custom field key and the right of the operator is a number or a quoted string. You must
+   * escape backslash (\\) and quote (\") characters.
    *
-   * Supported functions are LOWER() to perform case insensitive match and EMPTY() to filter on the
-   * existence of a key.
+   * Supported functions are `LOWER([field_name])` to perform a case insensitive match and
+   * `EMPTY([field_name])` to filter on the existence of a key.
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND
-   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons/functions are allowed in the
-   * expression. The expression must be < 2000 characters in length.
+   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons or functions are allowed in the
+   * expression. The expression must be < 3000 characters in length.
    *
-   * Sample Query: (LOWER(driving_license)="class a" OR EMPTY(driving_license)) AND driving_years >
-   * 10
+   * Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
+   * driving_years > 10`
    * @param customAttributeFilter customAttributeFilter or {@code null} for none
    */
   public JobQuery setCustomAttributeFilter(java.lang.String customAttributeFilter) {

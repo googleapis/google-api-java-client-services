@@ -87,6 +87,12 @@ public final class Field extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Option> options;
 
+  static {
+    // hack to force ProGuard to consider Option used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Option.class);
+  }
+
   /**
    * Whether to use alternative packed wire representation.
    * The value may be {@code null}.

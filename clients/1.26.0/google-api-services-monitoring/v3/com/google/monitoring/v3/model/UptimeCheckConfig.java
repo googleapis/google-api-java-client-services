@@ -42,8 +42,8 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * A human-friendly name for the uptime check configuration. The display name should be unique
-   * within a Stackdriver Account in order to make it easier to identify; however, uniqueness is not
-   * enforced. Required.
+   * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
+   * not enforced. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,8 +156,8 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * A human-friendly name for the uptime check configuration. The display name should be unique
-   * within a Stackdriver Account in order to make it easier to identify; however, uniqueness is not
-   * enforced. Required.
+   * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
+   * not enforced. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -166,8 +166,8 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * A human-friendly name for the uptime check configuration. The display name should be unique
-   * within a Stackdriver Account in order to make it easier to identify; however, uniqueness is not
-   * enforced. Required.
+   * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
+   * not enforced. Required.
    * @param displayName displayName or {@code null} for none
    */
   public UptimeCheckConfig setDisplayName(java.lang.String displayName) {

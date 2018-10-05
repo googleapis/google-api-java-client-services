@@ -120,7 +120,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (For example, "((A AND
    * B AND C) OR NOT D) AND E"), and there can be a maximum of 50 comparisons/functions in the
-   * expression. The expression must be < 2000 characters in length.
+   * expression. The expression must be < 3000 characters in length.
    *
    * Sample Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
    * The value may be {@code null}.
@@ -422,7 +422,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (For example, "((A AND
    * B AND C) OR NOT D) AND E"), and there can be a maximum of 50 comparisons/functions in the
-   * expression. The expression must be < 2000 characters in length.
+   * expression. The expression must be < 3000 characters in length.
    *
    * Sample Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
    * @return value or {@code null} for none
@@ -447,7 +447,7 @@ public final class JobFilters extends com.google.api.client.json.GenericJson {
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (For example, "((A AND
    * B AND C) OR NOT D) AND E"), and there can be a maximum of 50 comparisons/functions in the
-   * expression. The expression must be < 2000 characters in length.
+   * expression. The expression must be < 3000 characters in length.
    *
    * Sample Query: (key1 = "TEST" OR LOWER(key1)="test" OR NOT EMPTY(key1)) AND key2 > 100
    * @param customAttributeFilter customAttributeFilter or {@code null} for none

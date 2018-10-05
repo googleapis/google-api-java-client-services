@@ -33,9 +33,9 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
 
   /**
    * The network-wide routing mode to use. If set to REGIONAL, this network's cloud routers will
-   * only advertise routes with subnetworks of this network in the same region as the router. If set
-   * to GLOBAL, this network's cloud routers will advertise routes with all subnetworks of this
-   * network, across regions.
+   * only advertise routes with subnets of this network in the same region as the router. If set to
+   * GLOBAL, this network's cloud routers will advertise routes with all subnets of this network,
+   * across regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,9 +43,9 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
 
   /**
    * The network-wide routing mode to use. If set to REGIONAL, this network's cloud routers will
-   * only advertise routes with subnetworks of this network in the same region as the router. If set
-   * to GLOBAL, this network's cloud routers will advertise routes with all subnetworks of this
-   * network, across regions.
+   * only advertise routes with subnets of this network in the same region as the router. If set to
+   * GLOBAL, this network's cloud routers will advertise routes with all subnets of this network,
+   * across regions.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoutingMode() {
@@ -54,9 +54,9 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
 
   /**
    * The network-wide routing mode to use. If set to REGIONAL, this network's cloud routers will
-   * only advertise routes with subnetworks of this network in the same region as the router. If set
-   * to GLOBAL, this network's cloud routers will advertise routes with all subnetworks of this
-   * network, across regions.
+   * only advertise routes with subnets of this network in the same region as the router. If set to
+   * GLOBAL, this network's cloud routers will advertise routes with all subnets of this network,
+   * across regions.
    * @param routingMode routingMode or {@code null} for none
    */
   public NetworkRoutingConfig setRoutingMode(java.lang.String routingMode) {

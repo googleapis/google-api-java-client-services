@@ -35,14 +35,13 @@ deploy_library() {
     -DperformRelease=true \
     -Dgpg.executable=gpg \
     -Dgpg.passphrase=${GPG_PASSPHRASE} \
-    -Dgpg.homedir=${GPG_HOMEDIR}
+    -Dgpg.homedir=${GPG_HOMEDIR} \
     -DautoReleaseAfterClose=true
   popd
 }
 
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d`
 do
-
   library_version=$(echo ${directory} | cut -f2 -d'/')
   service=$(echo ${directory} | cut -f3 -d'/' | cut -f4 -d'-')
   api_version=$(echo ${directory} | cut -f4 -d'/')

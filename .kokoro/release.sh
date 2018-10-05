@@ -53,5 +53,4 @@ do
   else
     deploy_library $directory $service $api_version $revision $library_version
   fi
-  exit 0
 done

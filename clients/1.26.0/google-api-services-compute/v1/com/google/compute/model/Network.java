@@ -17,8 +17,8 @@
 package com.google.compute.model;
 
 /**
- * Represents a Network resource. Read Networks and Firewalls for more information. (== resource_for
- * v1.networks ==) (== resource_for beta.networks ==)
+ * Represents a Network resource. Read Virtual Private Cloud (VPC) Network Overview for more
+ * information. (== resource_for v1.networks ==) (== resource_for beta.networks ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -39,11 +39,11 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
-   * When set to true, the network is created in "auto subnet mode". When set to false, the network
-   * is in "custom subnet mode".
+   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
+   * is created in "custom" mode.
    *
-   * In "auto subnet mode", a newly created network is assigned the default CIDR of 10.128.0.0/9 and
-   * it automatically creates one subnetwork per region.
+   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
+   * range as described in Auto mode VPC network IP ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +64,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * A gateway address for default routing to other networks. This value is read only and is
-   * selected by the Google Compute Engine, typically as the first usable address in the IPv4Range.
+   * [Output Only] The gateway address for default routing out of the network. This value is read
+   * only and is selected by GCP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this network.
+   * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,11 +145,11 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, the network is created in "auto subnet mode". When set to false, the network
-   * is in "custom subnet mode".
+   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
+   * is created in "custom" mode.
    *
-   * In "auto subnet mode", a newly created network is assigned the default CIDR of 10.128.0.0/9 and
-   * it automatically creates one subnetwork per region.
+   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
+   * range as described in Auto mode VPC network IP ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateSubnetworks() {
@@ -157,11 +157,11 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, the network is created in "auto subnet mode". When set to false, the network
-   * is in "custom subnet mode".
+   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
+   * is created in "custom" mode.
    *
-   * In "auto subnet mode", a newly created network is assigned the default CIDR of 10.128.0.0/9 and
-   * it automatically creates one subnetwork per region.
+   * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
+   * range as described in Auto mode VPC network IP ranges.
    * @param autoCreateSubnetworks autoCreateSubnetworks or {@code null} for none
    */
   public Network setAutoCreateSubnetworks(java.lang.Boolean autoCreateSubnetworks) {
@@ -204,8 +204,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A gateway address for default routing to other networks. This value is read only and is
-   * selected by the Google Compute Engine, typically as the first usable address in the IPv4Range.
+   * [Output Only] The gateway address for default routing out of the network. This value is read
+   * only and is selected by GCP.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayIPv4() {
@@ -213,8 +213,8 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A gateway address for default routing to other networks. This value is read only and is
-   * selected by the Google Compute Engine, typically as the first usable address in the IPv4Range.
+   * [Output Only] The gateway address for default routing out of the network. This value is read
+   * only and is selected by GCP.
    * @param gatewayIPv4 gatewayIPv4 or {@code null} for none
    */
   public Network setGatewayIPv4(java.lang.String gatewayIPv4) {
@@ -335,7 +335,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this network.
+   * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this VPC network.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworks() {
@@ -343,7 +343,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this network.
+   * [Output Only] Server-defined fully-qualified URLs for all subnetworks in this VPC network.
    * @param subnetworks subnetworks or {@code null} for none
    */
   public Network setSubnetworks(java.util.List<java.lang.String> subnetworks) {

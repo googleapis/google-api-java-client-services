@@ -69,8 +69,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * HTTP path dispatch rules for requests to the application that do not explicitly target a
-   * service or version. Rules are order-dependent. Up to 20 dispatch rules can be
-   * supported.@OutputOnly
+   * service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,8 +227,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * HTTP path dispatch rules for requests to the application that do not explicitly target a
-   * service or version. Rules are order-dependent. Up to 20 dispatch rules can be
-   * supported.@OutputOnly
+   * service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
    * @return value or {@code null} for none
    */
   public java.util.List<UrlDispatchRule> getDispatchRules() {
@@ -238,8 +236,7 @@ public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
    * HTTP path dispatch rules for requests to the application that do not explicitly target a
-   * service or version. Rules are order-dependent. Up to 20 dispatch rules can be
-   * supported.@OutputOnly
+   * service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
    * @param dispatchRules dispatchRules or {@code null} for none
    */
   public Application setDispatchRules(java.util.List<UrlDispatchRule> dispatchRules) {

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dataflow</artifactId>
-  <version>v1b3-rev20180828-1.26.0-SNAPSHOT</version>
-  <name>Dataflow API v1b3-rev20180828-1.26.0-SNAPSHOT</name>
+  <version>v1b3-rev20180926-1.26.0-SNAPSHOT</version>
+  <name>Dataflow API v1b3-rev20180926-1.26.0-SNAPSHOT</name>
   <packaging>pom</packaging>
 
   <inceptionYear>2011</inceptionYear>

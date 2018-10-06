@@ -25,7 +25,7 @@ package com.google.spanner.v1.model;
  *
  * # Transaction Modes
  *
- * Cloud Spanner supports two transaction modes:
+ * Cloud Spanner supports three transaction modes:
  *
  *   1. Locking read-write. This type of transaction is the only way      to write data into Cloud
  * Spanner. These transactions rely on      pessimistic locking and, if necessary, two-phase commit.
@@ -35,6 +35,11 @@ package com.google.spanner.v1.model;
  * several reads, but does not allow      writes. Snapshot read-only transactions can be configured
  * to      read at timestamps in the past. Snapshot read-only      transactions do not need to be
  * committed.
+ *
+ *   3. Partitioned DML. This type of transaction is used to execute      a single Partitioned DML
+ * statement. Partitioned DML partitions      the key space and runs the DML statement over each
+ * partition      in parallel using separate, internal transactions that commit      independently.
+ * Partitioned DML transactions do not need to be      committed.
  *
  * For transactions that only read, snapshot read-only transactions provide simpler semantics and
  * are almost always faster. In particular, read-only transactions do not take locks, so they do not
@@ -55,10 +60,9 @@ package com.google.spanner.v1.model;
  * not been terminated by Commit or Rollback.  Long periods of inactivity at the client may cause
  * Cloud Spanner to release a transaction's locks and abort it.
  *
- * Reads performed within a transaction acquire locks on the data being read. Writes can only be
- * done at commit time, after all reads have been completed. Conceptually, a read-write transaction
- * consists of zero or more reads or SQL queries followed by Commit. At any time before Commit, the
- * client can send a Rollback request to abort the transaction.
+ * Conceptually, a read-write transaction consists of zero or more reads or SQL statements followed
+ * by Commit. At any time before Commit, the client can send a Rollback request to abort the
+ * transaction.
  *
  * ### Semantics
  *
@@ -186,7 +190,53 @@ package com.google.spanner.v1.model;
  * and/or SQL queries whose timestamp become too old while executing. Reads and SQL queries with
  * too-old read timestamps fail with the error `FAILED_PRECONDITION`.
  *
- * ##
+ * ## Partitioned DML Transactions
+ *
+ * Partitioned DML transactions are used to execute DML statements with a different execution
+ * strategy that provides different, and often better, scalability properties for large, table-wide
+ * operations than DML in a ReadWrite transaction. Smaller scoped statements, such as an OLTP
+ * workload, should prefer using ReadWrite transactions.
+ *
+ * Partitioned DML partitions the keyspace and runs the DML statement on each partition in separate,
+ * internal transactions. These transactions commit automatically when complete, and run
+ * independently from one another.
+ *
+ * To reduce lock contention, this execution strategy only acquires read locks on rows that match
+ * the WHERE clause of the statement. Additionally, the smaller per-partition transactions hold
+ * locks for less time.
+ *
+ * That said, Partitioned DML is not a drop-in replacement for standard DML used in ReadWrite
+ * transactions.
+ *
+ *  - The DML statement must be fully-partitionable. Specifically, the statement    must be
+ * expressible as the union of many statements which each access only    a single row of the table.
+ *
+ *  - The statement is not applied atomically to all rows of the table. Rather,    the statement is
+ * applied atomically to partitions of the table, in    independent transactions. Secondary index
+ * rows are updated atomically    with the base table rows.
+ *
+ *  - Partitioned DML does not guarantee exactly-once execution semantics    against a partition.
+ * The statement will be applied at least once to each    partition. It is strongly recommended that
+ * the DML statement should be    idempotent to avoid unexpected results. For instance, it is
+ * potentially    dangerous to run a statement such as    `UPDATE table SET column = column + 1` as
+ * it could be run multiple times    against some rows.
+ *
+ *  - The partitions are committed automatically - there is no support for    Commit or Rollback. If
+ * the call returns an error, or if the client issuing    the ExecuteSql call dies, it is possible
+ * that some rows had the statement    executed on them successfully. It is also possible that
+ * statement was    never executed against other rows.
+ *
+ *  - Partitioned DML transactions may only contain the execution of a single    DML statement via
+ * ExecuteSql or ExecuteStreamingSql.
+ *
+ *  - If any error is encountered during the execution of the partitioned DML    operation (for
+ * instance, a UNIQUE INDEX violation, division by zero, or a    value that cannot be stored due to
+ * schema constraints), then the    operation is stopped at that point and an error is returned. It
+ * is    possible that at this point, some partitions have been committed (or even    committed
+ * multiple times), and other partitions have not been run at all.
+ *
+ * Given the above, Partitioned DML is good fit for large, database-wide, operations that are
+ * idempotent, such as deleting old rows from a very large table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -197,6 +247,16 @@ package com.google.spanner.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class TransactionOptions extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Partitioned DML transaction.
+   *
+   * Authorization to begin a Partitioned DML transaction requires
+   * `spanner.databases.beginPartitionedDmlTransaction` permission on the `session` resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartitionedDml partitionedDml;
 
   /**
    * Transaction will not write.
@@ -217,6 +277,29 @@ public final class TransactionOptions extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private ReadWrite readWrite;
+
+  /**
+   * Partitioned DML transaction.
+   *
+   * Authorization to begin a Partitioned DML transaction requires
+   * `spanner.databases.beginPartitionedDmlTransaction` permission on the `session` resource.
+   * @return value or {@code null} for none
+   */
+  public PartitionedDml getPartitionedDml() {
+    return partitionedDml;
+  }
+
+  /**
+   * Partitioned DML transaction.
+   *
+   * Authorization to begin a Partitioned DML transaction requires
+   * `spanner.databases.beginPartitionedDmlTransaction` permission on the `session` resource.
+   * @param partitionedDml partitionedDml or {@code null} for none
+   */
+  public TransactionOptions setPartitionedDml(PartitionedDml partitionedDml) {
+    this.partitionedDml = partitionedDml;
+    return this;
+  }
 
   /**
    * Transaction will not write.

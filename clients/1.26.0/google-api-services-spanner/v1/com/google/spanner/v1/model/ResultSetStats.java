@@ -48,6 +48,21 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.Object> queryStats;
 
   /**
+   * Standard DML returns an exact count of rows that were modified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long rowCountExact;
+
+  /**
+   * Partitioned DML does not offer exactly-once semantics, so it returns a lower bound of the rows
+   * modified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long rowCountLowerBound;
+
+  /**
    * QueryPlan for the query associated with this result.
    * @return value or {@code null} for none
    */
@@ -86,6 +101,42 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
    */
   public ResultSetStats setQueryStats(java.util.Map<String, java.lang.Object> queryStats) {
     this.queryStats = queryStats;
+    return this;
+  }
+
+  /**
+   * Standard DML returns an exact count of rows that were modified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRowCountExact() {
+    return rowCountExact;
+  }
+
+  /**
+   * Standard DML returns an exact count of rows that were modified.
+   * @param rowCountExact rowCountExact or {@code null} for none
+   */
+  public ResultSetStats setRowCountExact(java.lang.Long rowCountExact) {
+    this.rowCountExact = rowCountExact;
+    return this;
+  }
+
+  /**
+   * Partitioned DML does not offer exactly-once semantics, so it returns a lower bound of the rows
+   * modified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRowCountLowerBound() {
+    return rowCountLowerBound;
+  }
+
+  /**
+   * Partitioned DML does not offer exactly-once semantics, so it returns a lower bound of the rows
+   * modified.
+   * @param rowCountLowerBound rowCountLowerBound or {@code null} for none
+   */
+  public ResultSetStats setRowCountLowerBound(java.lang.Long rowCountLowerBound) {
+    this.rowCountLowerBound = rowCountLowerBound;
     return this;
   }
 

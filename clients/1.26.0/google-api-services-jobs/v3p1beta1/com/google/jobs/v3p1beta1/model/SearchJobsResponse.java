@@ -119,7 +119,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
 
   /**
    * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true` or if the response is the last page of results. Otherwise, the value will be `-1`.
+   * to `true` or if the response is the last page of results. Otherwise, the value is `-1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +300,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
 
   /**
    * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true` or if the response is the last page of results. Otherwise, the value will be `-1`.
+   * to `true` or if the response is the last page of results. Otherwise, the value is `-1`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -309,7 +309,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
 
   /**
    * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true` or if the response is the last page of results. Otherwise, the value will be `-1`.
+   * to `true` or if the response is the last page of results. Otherwise, the value is `-1`.
    * @param totalSize totalSize or {@code null} for none
    */
   public SearchJobsResponse setTotalSize(java.lang.Integer totalSize) {

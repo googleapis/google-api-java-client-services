@@ -65,6 +65,12 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<StageSource> inputSource;
 
+  static {
+    // hack to force ProGuard to consider StageSource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StageSource.class);
+  }
+
   /**
    * Type of tranform this stage is executing.
    * The value may be {@code null}.
@@ -85,6 +91,12 @@ public final class ExecutionStageSummary extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.util.List<StageSource> outputSource;
+
+  static {
+    // hack to force ProGuard to consider StageSource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StageSource.class);
+  }
 
   /**
    * Collections produced and consumed by component transforms of this stage.

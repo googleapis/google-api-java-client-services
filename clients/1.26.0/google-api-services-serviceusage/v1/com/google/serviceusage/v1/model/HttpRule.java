@@ -39,7 +39,7 @@ package com.google.serviceusage.v1.model;
  * Example:
  *
  *     service Messaging {       rpc GetMessage(GetMessageRequest) returns (Message) {
- * option (google.api.http) = {             get: "/v1/{name=messages"}"         };       }     }
+ * option (google.api.http) = {             get: "/v1/{name=messages}"         };       }     }
  * message GetMessageRequest {       string name = 1; // Mapped to URL path.     }     message
  * Message {       string text = 1; // The resource content.     }
  *

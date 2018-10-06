@@ -41,12 +41,6 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.Map<String, Type> paramTypes;
 
-  static {
-    // hack to force ProGuard to consider Type used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Type.class);
-  }
-
   /**
    * The SQL query string can contain parameter placeholders. A parameter placeholder consists of
    * `'@'` followed by the parameter name. Parameter names consist of any combination of letters,
@@ -76,6 +70,9 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
    * partitionable. The query plan of a root partitionable query has a single distributed union
    * operator. A distributed union operator conceptually divides one or more tables into multiple
    * splits, remotely evaluates a subquery independently on each split, and then unions all results.
+   *
+   * This must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use ExecuteStreamingSql
+   * with a PartitionedDml transaction for large, partition-friendly DML operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,6 +171,9 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
    * partitionable. The query plan of a root partitionable query has a single distributed union
    * operator. A distributed union operator conceptually divides one or more tables into multiple
    * splits, remotely evaluates a subquery independently on each split, and then unions all results.
+   *
+   * This must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use ExecuteStreamingSql
+   * with a PartitionedDml transaction for large, partition-friendly DML operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getSql() {
@@ -185,6 +185,9 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
    * partitionable. The query plan of a root partitionable query has a single distributed union
    * operator. A distributed union operator conceptually divides one or more tables into multiple
    * splits, remotely evaluates a subquery independently on each split, and then unions all results.
+   *
+   * This must not contain DML commands, such as INSERT, UPDATE, or DELETE. Use ExecuteStreamingSql
+   * with a PartitionedDml transaction for large, partition-friendly DML operations.
    * @param sql sql or {@code null} for none
    */
   public PartitionQueryRequest setSql(java.lang.String sql) {

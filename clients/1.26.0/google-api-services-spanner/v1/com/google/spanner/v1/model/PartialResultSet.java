@@ -59,7 +59,8 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   /**
    * Query plan and execution statistics for the statement that produced this streaming result set.
    * These can be requested by setting ExecuteSqlRequest.query_mode and are sent only once with the
-   * last response in the stream.
+   * last response in the stream. This field will also be present in the last response for DML
+   * statements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +217,8 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   /**
    * Query plan and execution statistics for the statement that produced this streaming result set.
    * These can be requested by setting ExecuteSqlRequest.query_mode and are sent only once with the
-   * last response in the stream.
+   * last response in the stream. This field will also be present in the last response for DML
+   * statements.
    * @return value or {@code null} for none
    */
   public ResultSetStats getStats() {
@@ -226,7 +228,8 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   /**
    * Query plan and execution statistics for the statement that produced this streaming result set.
    * These can be requested by setting ExecuteSqlRequest.query_mode and are sent only once with the
-   * last response in the stream.
+   * last response in the stream. This field will also be present in the last response for DML
+   * statements.
    * @param stats stats or {@code null} for none
    */
   public PartialResultSet setStats(ResultSetStats stats) {

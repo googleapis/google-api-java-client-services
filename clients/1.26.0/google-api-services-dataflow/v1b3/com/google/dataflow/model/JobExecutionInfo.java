@@ -37,12 +37,6 @@ public final class JobExecutionInfo extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.Map<String, JobExecutionStageInfo> stages;
 
-  static {
-    // hack to force ProGuard to consider JobExecutionStageInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(JobExecutionStageInfo.class);
-  }
-
   /**
    * A mapping from each stage to the information about that stage.
    * @return value or {@code null} for none

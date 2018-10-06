@@ -38,7 +38,7 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
    * Controls over how important the score of CustomRankingInfo.ranking_expression gets applied to
    * job's final ranking position.
    *
-   * An error will be thrown if not specified.
+   * An error is thrown if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
    * Controls over how important the score of CustomRankingInfo.ranking_expression gets applied to
    * job's final ranking position.
    *
-   * An error will be thrown if not specified.
+   * An error is thrown if not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getImportanceLevel() {
@@ -85,7 +85,7 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
    * Controls over how important the score of CustomRankingInfo.ranking_expression gets applied to
    * job's final ranking position.
    *
-   * An error will be thrown if not specified.
+   * An error is thrown if not specified.
    * @param importanceLevel importanceLevel or {@code null} for none
    */
   public CustomRankingInfo setImportanceLevel(java.lang.String importanceLevel) {

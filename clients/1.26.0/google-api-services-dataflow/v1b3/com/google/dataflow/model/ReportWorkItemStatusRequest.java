@@ -51,12 +51,6 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<WorkItemStatus> workItemStatuses;
 
-  static {
-    // hack to force ProGuard to consider WorkItemStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WorkItemStatus.class);
-  }
-
   /**
    * The ID of the worker reporting the WorkItem status.  If this does not match the ID of the
    * worker which the Dataflow service believes currently has the lease on the WorkItem, the report

@@ -47,6 +47,12 @@ public final class JobMetrics extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MetricUpdate> metrics;
 
+  static {
+    // hack to force ProGuard to consider MetricUpdate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricUpdate.class);
+  }
+
   /**
    * Timestamp as of which metric values are current.
    * @return value or {@code null} for none

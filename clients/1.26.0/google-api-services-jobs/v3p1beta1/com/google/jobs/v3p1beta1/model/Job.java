@@ -224,7 +224,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external"
    * target="_blank" }.
    *
-   * The default value is `en-US`.
+   * If this field is unspecified and Job.description is present, detected language code based on
+   * Job.description is assigned, otherwise defaults to 'en_US'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -817,7 +818,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external"
    * target="_blank" }.
    *
-   * The default value is `en-US`.
+   * If this field is unspecified and Job.description is present, detected language code based on
+   * Job.description is assigned, otherwise defaults to 'en_US'.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -834,7 +836,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external"
    * target="_blank" }.
    *
-   * The default value is `en-US`.
+   * If this field is unspecified and Job.description is present, detected language code based on
+   * Job.description is assigned, otherwise defaults to 'en_US'.
    * @param languageCode languageCode or {@code null} for none
    */
   public Job setLanguageCode(java.lang.String languageCode) {

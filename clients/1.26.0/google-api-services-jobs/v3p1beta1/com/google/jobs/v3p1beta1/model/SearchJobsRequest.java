@@ -69,6 +69,21 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   /**
    * Optional.
    *
+   * Controls whether highly similar jobs are returned next to each other in the search results.
+   * Jobs are determined to be highly similar based on their titles, job categories, and locations.
+   * Highly similar results will be clustered so that only one representative job of the cluster
+   * will be displayed to the job seeker higher up in the results, with the other jobs being
+   * displayed lower down in the results.
+   *
+   * Defaults to DiversificationLevel.SIMPLE if no value is specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diversificationLevel;
+
+  /**
+   * Optional.
+   *
    * Controls whether to broaden the search when it produces sparse results. Broadened queries
    * append results to the end of the matching results list.
    *
@@ -138,20 +153,21 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Supported options are:
    *
    * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting_publish_time
-   * desc": By Job.posting_publish_time descending. * "posting_update_time desc": By
+   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
+   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
    * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized_base_compensation": By job's
+   * Job.title descending. * "annualized`_`base`_`compensation": By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized_base_compensation desc": By job's
+   * "annualized`_`base`_`compensation desc": By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized_total_compensation": By job's CompensationInfo.annualized_total_compensation_range
-   * ascending. Jobs whose annualized base compensation is unspecified are put at the end of search
-   * results. * "annualized_total_compensation desc": By job's
+   * "annualized`_`total`_`compensation": By job's
+   * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized`_`total`_`compensation desc": By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
-   * compensation is unspecified are put at the end of search results. * "custom_ranking desc": By
+   * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
    * descending order.
@@ -290,6 +306,39 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    */
   public SearchJobsRequest setDisableKeywordMatch(java.lang.Boolean disableKeywordMatch) {
     this.disableKeywordMatch = disableKeywordMatch;
+    return this;
+  }
+
+  /**
+   * Optional.
+   *
+   * Controls whether highly similar jobs are returned next to each other in the search results.
+   * Jobs are determined to be highly similar based on their titles, job categories, and locations.
+   * Highly similar results will be clustered so that only one representative job of the cluster
+   * will be displayed to the job seeker higher up in the results, with the other jobs being
+   * displayed lower down in the results.
+   *
+   * Defaults to DiversificationLevel.SIMPLE if no value is specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiversificationLevel() {
+    return diversificationLevel;
+  }
+
+  /**
+   * Optional.
+   *
+   * Controls whether highly similar jobs are returned next to each other in the search results.
+   * Jobs are determined to be highly similar based on their titles, job categories, and locations.
+   * Highly similar results will be clustered so that only one representative job of the cluster
+   * will be displayed to the job seeker higher up in the results, with the other jobs being
+   * displayed lower down in the results.
+   *
+   * Defaults to DiversificationLevel.SIMPLE if no value is specified.
+   * @param diversificationLevel diversificationLevel or {@code null} for none
+   */
+  public SearchJobsRequest setDiversificationLevel(java.lang.String diversificationLevel) {
+    this.diversificationLevel = diversificationLevel;
     return this;
   }
 
@@ -447,20 +496,21 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Supported options are:
    *
    * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting_publish_time
-   * desc": By Job.posting_publish_time descending. * "posting_update_time desc": By
+   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
+   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
    * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized_base_compensation": By job's
+   * Job.title descending. * "annualized`_`base`_`compensation": By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized_base_compensation desc": By job's
+   * "annualized`_`base`_`compensation desc": By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized_total_compensation": By job's CompensationInfo.annualized_total_compensation_range
-   * ascending. Jobs whose annualized base compensation is unspecified are put at the end of search
-   * results. * "annualized_total_compensation desc": By job's
+   * "annualized`_`total`_`compensation": By job's
+   * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized`_`total`_`compensation desc": By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
-   * compensation is unspecified are put at the end of search results. * "custom_ranking desc": By
+   * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
    * descending order.
@@ -478,20 +528,21 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Supported options are:
    *
    * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting_publish_time
-   * desc": By Job.posting_publish_time descending. * "posting_update_time desc": By
+   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
+   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
    * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized_base_compensation": By job's
+   * Job.title descending. * "annualized`_`base`_`compensation": By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized_base_compensation desc": By job's
+   * "annualized`_`base`_`compensation desc": By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized_total_compensation": By job's CompensationInfo.annualized_total_compensation_range
-   * ascending. Jobs whose annualized base compensation is unspecified are put at the end of search
-   * results. * "annualized_total_compensation desc": By job's
+   * "annualized`_`total`_`compensation": By job's
+   * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
+   * compensation is unspecified are put at the end of search results. *
+   * "annualized`_`total`_`compensation desc": By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
-   * compensation is unspecified are put at the end of search results. * "custom_ranking desc": By
+   * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
    * descending order.

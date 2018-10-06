@@ -47,7 +47,10 @@ public final class ResultSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Query plan and execution statistics for the SQL statement that produced this result set. These
-   * can be requested by setting ExecuteSqlRequest.query_mode.
+   * can be requested by setting ExecuteSqlRequest.query_mode. DML statements always produce stats
+   * containing the number of rows modified, unless executed using the
+   * ExecuteSqlRequest.QueryMode.PLAN ExecuteSqlRequest.query_mode. Other fields may or may not be
+   * populated, based on the ExecuteSqlRequest.query_mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +96,10 @@ public final class ResultSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Query plan and execution statistics for the SQL statement that produced this result set. These
-   * can be requested by setting ExecuteSqlRequest.query_mode.
+   * can be requested by setting ExecuteSqlRequest.query_mode. DML statements always produce stats
+   * containing the number of rows modified, unless executed using the
+   * ExecuteSqlRequest.QueryMode.PLAN ExecuteSqlRequest.query_mode. Other fields may or may not be
+   * populated, based on the ExecuteSqlRequest.query_mode.
    * @return value or {@code null} for none
    */
   public ResultSetStats getStats() {
@@ -102,7 +108,10 @@ public final class ResultSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Query plan and execution statistics for the SQL statement that produced this result set. These
-   * can be requested by setting ExecuteSqlRequest.query_mode.
+   * can be requested by setting ExecuteSqlRequest.query_mode. DML statements always produce stats
+   * containing the number of rows modified, unless executed using the
+   * ExecuteSqlRequest.QueryMode.PLAN ExecuteSqlRequest.query_mode. Other fields may or may not be
+   * populated, based on the ExecuteSqlRequest.query_mode.
    * @param stats stats or {@code null} for none
    */
   public ResultSet setStats(ResultSetStats stats) {

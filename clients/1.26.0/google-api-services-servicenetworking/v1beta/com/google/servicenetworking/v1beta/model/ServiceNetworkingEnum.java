@@ -37,6 +37,12 @@ public final class ServiceNetworkingEnum extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<EnumValue> enumvalue;
 
+  static {
+    // hack to force ProGuard to consider EnumValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EnumValue.class);
+  }
+
   /**
    * Enum type name.
    * The value may be {@code null}.
@@ -50,6 +56,12 @@ public final class ServiceNetworkingEnum extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.util.List<Option> options;
+
+  static {
+    // hack to force ProGuard to consider Option used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Option.class);
+  }
 
   /**
    * The source context.

@@ -188,12 +188,24 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ExecutionStageState> stageStates;
 
+  static {
+    // hack to force ProGuard to consider ExecutionStageState used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExecutionStageState.class);
+  }
+
   /**
    * The top-level steps that constitute the entire job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Step> steps;
+
+  static {
+    // hack to force ProGuard to consider Step used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Step.class);
+  }
 
   /**
    * A set of files the system should be aware of that are used for temporary storage. These

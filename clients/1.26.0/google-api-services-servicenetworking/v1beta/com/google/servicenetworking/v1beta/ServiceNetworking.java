@@ -20,12 +20,12 @@ package com.google.servicenetworking.v1beta;
  * Service definition for ServiceNetworking (v1beta).
  *
  * <p>
- * The Service Networking API provides automatic management of network configurations necessary for certain services.
+ * Provides automatic management of network configurations necessary for certain services.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/service-infrastructure/docs/service-networking/reference/rest/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

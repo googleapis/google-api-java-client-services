@@ -57,6 +57,12 @@ public final class KeySet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<KeyRange> ranges;
 
+  static {
+    // hack to force ProGuard to consider KeyRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(KeyRange.class);
+  }
+
   /**
    * For convenience `all` can be set to `true` to indicate that this `KeySet` matches all keys in
    * the table or index. Note that any keys specified in `keys` or `ranges` are only yielded once.

@@ -51,12 +51,6 @@ public final class PipelineDescription extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<ExecutionStageSummary> executionPipelineStage;
 
-  static {
-    // hack to force ProGuard to consider ExecutionStageSummary used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ExecutionStageSummary.class);
-  }
-
   /**
    * Description of each transform in the pipeline and collections between them.
    * The value may be {@code null}.

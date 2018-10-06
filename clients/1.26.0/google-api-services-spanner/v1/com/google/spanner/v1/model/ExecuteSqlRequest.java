@@ -41,12 +41,6 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.Map<String, Type> paramTypes;
 
-  static {
-    // hack to force ProGuard to consider Type used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Type.class);
-  }
-
   /**
    * The SQL string can contain parameter placeholders. A parameter placeholder consists of `'@'`
    * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
@@ -92,6 +86,21 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.lang.String resumeToken;
 
   /**
+   * A per-transaction sequence number used to identify this request. This makes each request
+   * idempotent such that if the request is received multiple times, at most one will succeed.
+   *
+   * The sequence number must be monotonically increasing within the transaction. If a request
+   * arrives for the first time with an out-of-order sequence number, the transaction may be
+   * aborted. Replays of previously handled requests will yield the same response as the first
+   * execution.
+   *
+   * Required for DML statements. Ignored for queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long seqno;
+
+  /**
    * Required. The SQL string.
    * The value may be {@code null}.
    */
@@ -101,6 +110,17 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   /**
    * The transaction to use. If none is provided, the default is a temporary read-only transaction
    * with strong concurrency.
+   *
+   * The transaction to use.
+   *
+   * For queries, if none is provided, the default is a temporary read-only transaction with strong
+   * concurrency.
+   *
+   * Standard DML statements require a ReadWrite transaction. Single-use transactions are not
+   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
+   * a new transaction.
+   *
+   * Partitioned DML requires an existing PartitionedDml transaction ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,6 +320,39 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * A per-transaction sequence number used to identify this request. This makes each request
+   * idempotent such that if the request is received multiple times, at most one will succeed.
+   *
+   * The sequence number must be monotonically increasing within the transaction. If a request
+   * arrives for the first time with an out-of-order sequence number, the transaction may be
+   * aborted. Replays of previously handled requests will yield the same response as the first
+   * execution.
+   *
+   * Required for DML statements. Ignored for queries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSeqno() {
+    return seqno;
+  }
+
+  /**
+   * A per-transaction sequence number used to identify this request. This makes each request
+   * idempotent such that if the request is received multiple times, at most one will succeed.
+   *
+   * The sequence number must be monotonically increasing within the transaction. If a request
+   * arrives for the first time with an out-of-order sequence number, the transaction may be
+   * aborted. Replays of previously handled requests will yield the same response as the first
+   * execution.
+   *
+   * Required for DML statements. Ignored for queries.
+   * @param seqno seqno or {@code null} for none
+   */
+  public ExecuteSqlRequest setSeqno(java.lang.Long seqno) {
+    this.seqno = seqno;
+    return this;
+  }
+
+  /**
    * Required. The SQL string.
    * @return value or {@code null} for none
    */
@@ -319,6 +372,17 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   /**
    * The transaction to use. If none is provided, the default is a temporary read-only transaction
    * with strong concurrency.
+   *
+   * The transaction to use.
+   *
+   * For queries, if none is provided, the default is a temporary read-only transaction with strong
+   * concurrency.
+   *
+   * Standard DML statements require a ReadWrite transaction. Single-use transactions are not
+   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
+   * a new transaction.
+   *
+   * Partitioned DML requires an existing PartitionedDml transaction ID.
    * @return value or {@code null} for none
    */
   public TransactionSelector getTransaction() {
@@ -328,6 +392,17 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   /**
    * The transaction to use. If none is provided, the default is a temporary read-only transaction
    * with strong concurrency.
+   *
+   * The transaction to use.
+   *
+   * For queries, if none is provided, the default is a temporary read-only transaction with strong
+   * concurrency.
+   *
+   * Standard DML statements require a ReadWrite transaction. Single-use transactions are not
+   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
+   * a new transaction.
+   *
+   * Partitioned DML requires an existing PartitionedDml transaction ID.
    * @param transaction transaction or {@code null} for none
    */
   public ExecuteSqlRequest setTransaction(TransactionSelector transaction) {

@@ -43,6 +43,12 @@ public final class StreamingComputationRanges extends com.google.api.client.json
   @com.google.api.client.util.Key
   private java.util.List<KeyRangeDataDiskAssignment> rangeAssignments;
 
+  static {
+    // hack to force ProGuard to consider KeyRangeDataDiskAssignment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(KeyRangeDataDiskAssignment.class);
+  }
+
   /**
    * The ID of the computation.
    * @return value or {@code null} for none

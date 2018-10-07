@@ -78,6 +78,12 @@ public final class ClusterOperationMetadata extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<ClusterOperationStatus> statusHistory;
 
+  static {
+    // hack to force ProGuard to consider ClusterOperationStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClusterOperationStatus.class);
+  }
+
   /**
    * Output only. Errors encountered during operation execution.
    * The value may be {@code null}.

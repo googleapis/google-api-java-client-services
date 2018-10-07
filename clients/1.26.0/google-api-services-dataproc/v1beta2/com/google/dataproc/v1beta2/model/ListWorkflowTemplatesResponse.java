@@ -45,12 +45,6 @@ public final class ListWorkflowTemplatesResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<WorkflowTemplate> templates;
 
-  static {
-    // hack to force ProGuard to consider WorkflowTemplate used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WorkflowTemplate.class);
-  }
-
   /**
    * Output only. This token is included in the response if there are more results to fetch. To
    * fetch additional results, provide this value as the page_token in a subsequent

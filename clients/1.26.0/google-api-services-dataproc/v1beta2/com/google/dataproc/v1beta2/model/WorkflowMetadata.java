@@ -51,6 +51,13 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   private ClusterOperation deleteCluster;
 
   /**
+   * Output only. Workflow end time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * Output only. The workflow graph.
    * The value may be {@code null}.
    */
@@ -63,6 +70,13 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> parameters;
+
+  /**
+   * Output only. Workflow start time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
 
   /**
    * Output only. The workflow state.
@@ -137,6 +151,23 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. Workflow end time.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. Workflow end time.
+   * @param endTime endTime or {@code null} for none
+   */
+  public WorkflowMetadata setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
    * Output only. The workflow graph.
    * @return value or {@code null} for none
    */
@@ -167,6 +198,23 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
    */
   public WorkflowMetadata setParameters(java.util.Map<String, java.lang.String> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Output only. Workflow start time.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. Workflow start time.
+   * @param startTime startTime or {@code null} for none
+   */
+  public WorkflowMetadata setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

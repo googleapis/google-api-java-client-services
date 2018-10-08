@@ -30,8 +30,8 @@ package com.google.composer.v1beta1.model;
 public final class EnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web
-   * interface](/composer/docs/how-to/accessing/airflow-web-interface)).
+   * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow
+   * web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private SoftwareConfig softwareConfig;
 
   /**
-   * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web
-   * interface](/composer/docs/how-to/accessing/airflow-web-interface)).
+   * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow
+   * web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
    * @return value or {@code null} for none
    */
   public java.lang.String getAirflowUri() {
@@ -85,8 +85,8 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web
-   * interface](/composer/docs/how-to/accessing/airflow-web-interface)).
+   * Output only. The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow
+   * web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
    * @param airflowUri airflowUri or {@code null} for none
    */
   public EnvironmentConfig setAirflowUri(java.lang.String airflowUri) {

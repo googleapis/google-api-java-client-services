@@ -65,13 +65,26 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> envVariables;
 
   /**
-   * Output only. The version of the software running in the environment. This encapsulates both the
+   * Immutable. The version of the software running in the environment. This encapsulates both the
    * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
-   * regular expression `composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`.
+   * regular expression
+   * `composer-([0-9]+\.[0-9]+(\.[0-9]+)?|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
+   * input, the server will also check if the provided version is supported and deny the creation
+   * request for an unsupported version.
    *
-   * The Cloud Composer portion of the version is a [semantic version](https://semver.org). The
-   * portion of the image version following airflow- is an official Apache Airflow repository
+   * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
+   * `latest`. The patch version can be omitted and the current Cloud Composer patch version will be
+   * selected. When `latest` is provided instead of an explicit version number, the server will
+   * replace `latest` with the current Cloud Composer version and store that version number in the
+   * same field.
+   *
+   * The portion of the image version that follows airflow- is an official Apache Airflow repository
    * [release name](https://github.com/apache/incubator-airflow/releases).
+   *
+   * Supported values for input are: * `composer-latest-airflow-latest` * `composer-latest-
+   * airflow-1.10.0` * `composer-latest-airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-
+   * latest-airflow-1.9` * `composer-1.1.1-airflow-latest` * `composer-1.1.1-airflow-1.10.0` *
+   * `composer-1.1.1-airflow-1.9.0` * `composer-1.1.1-airflow-1.10` * `composer-1.1.1-airflow-1.9`
    *
    * See also [Release Notes](/composer/docs/release-notes).
    * The value may be {@code null}.
@@ -89,6 +102,16 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> pypiPackages;
+
+  /**
+   * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
+   * webserver processes.
+   *
+   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pythonVersion;
 
   /**
    * Optional. Apache Airflow configuration properties to override.
@@ -167,13 +190,26 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The version of the software running in the environment. This encapsulates both the
+   * Immutable. The version of the software running in the environment. This encapsulates both the
    * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
-   * regular expression `composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`.
+   * regular expression
+   * `composer-([0-9]+\.[0-9]+(\.[0-9]+)?|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
+   * input, the server will also check if the provided version is supported and deny the creation
+   * request for an unsupported version.
    *
-   * The Cloud Composer portion of the version is a [semantic version](https://semver.org). The
-   * portion of the image version following airflow- is an official Apache Airflow repository
+   * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
+   * `latest`. The patch version can be omitted and the current Cloud Composer patch version will be
+   * selected. When `latest` is provided instead of an explicit version number, the server will
+   * replace `latest` with the current Cloud Composer version and store that version number in the
+   * same field.
+   *
+   * The portion of the image version that follows airflow- is an official Apache Airflow repository
    * [release name](https://github.com/apache/incubator-airflow/releases).
+   *
+   * Supported values for input are: * `composer-latest-airflow-latest` * `composer-latest-
+   * airflow-1.10.0` * `composer-latest-airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-
+   * latest-airflow-1.9` * `composer-1.1.1-airflow-latest` * `composer-1.1.1-airflow-1.10.0` *
+   * `composer-1.1.1-airflow-1.9.0` * `composer-1.1.1-airflow-1.10` * `composer-1.1.1-airflow-1.9`
    *
    * See also [Release Notes](/composer/docs/release-notes).
    * @return value or {@code null} for none
@@ -183,13 +219,26 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The version of the software running in the environment. This encapsulates both the
+   * Immutable. The version of the software running in the environment. This encapsulates both the
    * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
-   * regular expression `composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`.
+   * regular expression
+   * `composer-([0-9]+\.[0-9]+(\.[0-9]+)?|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
+   * input, the server will also check if the provided version is supported and deny the creation
+   * request for an unsupported version.
    *
-   * The Cloud Composer portion of the version is a [semantic version](https://semver.org). The
-   * portion of the image version following airflow- is an official Apache Airflow repository
+   * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
+   * `latest`. The patch version can be omitted and the current Cloud Composer patch version will be
+   * selected. When `latest` is provided instead of an explicit version number, the server will
+   * replace `latest` with the current Cloud Composer version and store that version number in the
+   * same field.
+   *
+   * The portion of the image version that follows airflow- is an official Apache Airflow repository
    * [release name](https://github.com/apache/incubator-airflow/releases).
+   *
+   * Supported values for input are: * `composer-latest-airflow-latest` * `composer-latest-
+   * airflow-1.10.0` * `composer-latest-airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-
+   * latest-airflow-1.9` * `composer-1.1.1-airflow-latest` * `composer-1.1.1-airflow-1.10.0` *
+   * `composer-1.1.1-airflow-1.9.0` * `composer-1.1.1-airflow-1.10` * `composer-1.1.1-airflow-1.9`
    *
    * See also [Release Notes](/composer/docs/release-notes).
    * @param imageVersion imageVersion or {@code null} for none
@@ -221,6 +270,29 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setPypiPackages(java.util.Map<String, java.lang.String> pypiPackages) {
     this.pypiPackages = pypiPackages;
+    return this;
+  }
+
+  /**
+   * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
+   * webserver processes.
+   *
+   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPythonVersion() {
+    return pythonVersion;
+  }
+
+  /**
+   * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
+   * webserver processes.
+   *
+   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * @param pythonVersion pythonVersion or {@code null} for none
+   */
+  public SoftwareConfig setPythonVersion(java.lang.String pythonVersion) {
+    this.pythonVersion = pythonVersion;
     return this;
   }
 

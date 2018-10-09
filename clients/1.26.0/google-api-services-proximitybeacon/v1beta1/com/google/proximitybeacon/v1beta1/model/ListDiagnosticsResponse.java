@@ -36,6 +36,12 @@ public final class ListDiagnosticsResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<Diagnostics> diagnostics;
 
+  static {
+    // hack to force ProGuard to consider Diagnostics used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Diagnostics.class);
+  }
+
   /**
    * Token that can be used for pagination. Returned only if the request matches more beacons than
    * can be returned in this response.

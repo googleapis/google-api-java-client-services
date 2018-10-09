@@ -38,6 +38,20 @@ public final class ListCustomersResponse extends com.google.api.client.json.Gene
   private java.util.List<Company> customers;
 
   /**
+   * A token to retrieve the next page of results. Omitted if no further results are available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * List of customers related to this reseller partner.
    * @return value or {@code null} for none
    */
@@ -51,6 +65,40 @@ public final class ListCustomersResponse extends com.google.api.client.json.Gene
    */
   public ListCustomersResponse setCustomers(java.util.List<Company> customers) {
     this.customers = customers;
+    return this;
+  }
+
+  /**
+   * A token to retrieve the next page of results. Omitted if no further results are available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * A token to retrieve the next page of results. Omitted if no further results are available.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public ListCustomersResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public ListCustomersResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

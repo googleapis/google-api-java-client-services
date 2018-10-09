@@ -38,12 +38,25 @@ public final class ListVendorsResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
+   * The total count of items in the list irrespective of pagination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * List of vendors of the reseller partner. Fields `name`, `companyId` and `companyName` are
    * populated to the Company object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Company> vendors;
+
+  static {
+    // hack to force ProGuard to consider Company used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Company.class);
+  }
 
   /**
    * A token to retrieve the next page of results. Omitted if no further results are available.
@@ -59,6 +72,23 @@ public final class ListVendorsResponse extends com.google.api.client.json.Generi
    */
   public ListVendorsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public ListVendorsResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

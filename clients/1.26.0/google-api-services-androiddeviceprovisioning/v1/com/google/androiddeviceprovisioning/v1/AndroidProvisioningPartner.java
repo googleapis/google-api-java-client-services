@@ -2508,6 +2508,44 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           return this;
         }
 
+        /**
+         * The maximum number of results to be returned. If not specified or 0, all the records are
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of results to be returned. If not specified or 0, all the records are returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of results to be returned. If not specified or 0, all the records are
+         * returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results returned by the server.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

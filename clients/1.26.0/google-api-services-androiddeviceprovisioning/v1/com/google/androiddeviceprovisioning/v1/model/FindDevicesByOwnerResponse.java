@@ -51,6 +51,13 @@ public final class FindDevicesByOwnerResponse extends com.google.api.client.json
   private java.lang.String nextPageToken;
 
   /**
+   * The total count of items in the list irrespective of pagination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * The customer's devices.
    * @return value or {@code null} for none
    */
@@ -81,6 +88,23 @@ public final class FindDevicesByOwnerResponse extends com.google.api.client.json
    */
   public FindDevicesByOwnerResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total count of items in the list irrespective of pagination.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public FindDevicesByOwnerResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

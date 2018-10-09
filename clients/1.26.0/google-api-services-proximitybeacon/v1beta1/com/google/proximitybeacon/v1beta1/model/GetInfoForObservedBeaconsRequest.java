@@ -47,12 +47,6 @@ public final class GetInfoForObservedBeaconsRequest extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<Observation> observations;
 
-  static {
-    // hack to force ProGuard to consider Observation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Observation.class);
-  }
-
   /**
    * Specifies what kind of attachments to include in the response. When given, the response will
    * include only attachments of the given types. When empty, no attachments will be returned. Must

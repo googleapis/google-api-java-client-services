@@ -3373,7 +3373,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the deletion of the event. Note that some emails might
-       * still be sent even if you set the value to false. The default is False.
+       * still be sent even if you set the value to false. The default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotifications;
@@ -3381,7 +3381,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /** Deprecated. Please use sendUpdates instead.
 
      Whether to send notifications about the deletion of the event. Note that some emails might still be
-     sent even if you set the value to false. The default is False.
+     sent even if you set the value to false. The default is false.
        */
       public java.lang.Boolean getSendNotifications() {
         return sendNotifications;
@@ -3391,7 +3391,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the deletion of the event. Note that some emails might
-       * still be sent even if you set the value to false. The default is False.
+       * still be sent even if you set the value to false. The default is false.
        */
       public Delete setSendNotifications(java.lang.Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
@@ -3960,7 +3960,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the creation of the new event. Note that some emails
-       * might still be sent even if you set the value to false. The default is False.
+       * might still be sent even if you set the value to false. The default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotifications;
@@ -3968,7 +3968,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /** Deprecated. Please use sendUpdates instead.
 
      Whether to send notifications about the creation of the new event. Note that some emails might
-     still be sent even if you set the value to false. The default is False.
+     still be sent even if you set the value to false. The default is false.
        */
       public java.lang.Boolean getSendNotifications() {
         return sendNotifications;
@@ -3978,7 +3978,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the creation of the new event. Note that some emails
-       * might still be sent even if you set the value to false. The default is False.
+       * might still be sent even if you set the value to false. The default is false.
        */
       public Insert setSendNotifications(java.lang.Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
@@ -3987,13 +3987,13 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Whether to send notifications about the creation of the new event. Note that some emails
-       * might still be sent. The default is False.
+       * might still be sent. The default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.String sendUpdates;
 
       /** Whether to send notifications about the creation of the new event. Note that some emails might
-     still be sent. The default is False.
+     still be sent. The default is false.
        */
       public java.lang.String getSendUpdates() {
         return sendUpdates;
@@ -4001,7 +4001,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Whether to send notifications about the creation of the new event. Note that some emails
-       * might still be sent. The default is False.
+       * might still be sent. The default is false.
        */
       public Insert setSendUpdates(java.lang.String sendUpdates) {
         this.sendUpdates = sendUpdates;
@@ -5070,7 +5070,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the change of the event's organizer. Note that some
-       * emails might still be sent even if you set the value to false. The default is False.
+       * emails might still be sent even if you set the value to false. The default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotifications;
@@ -5078,7 +5078,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /** Deprecated. Please use sendUpdates instead.
 
      Whether to send notifications about the change of the event's organizer. Note that some emails
-     might still be sent even if you set the value to false. The default is False.
+     might still be sent even if you set the value to false. The default is false.
        */
       public java.lang.Boolean getSendNotifications() {
         return sendNotifications;
@@ -5088,7 +5088,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the change of the event's organizer. Note that some
-       * emails might still be sent even if you set the value to false. The default is False.
+       * emails might still be sent even if you set the value to false. The default is false.
        */
       public Move setSendNotifications(java.lang.Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
@@ -5329,17 +5329,17 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Deprecated. Please use sendUpdates instead.
        *
-       * Whether to send notifications about the event update (e.g. description changes, etc.). Note
-       * that some emails might still be sent even if you set the value to false. The default is
-       * False.
+       * Whether to send notifications about the event update (for example, description changes,
+       * etc.). Note that some emails might still be sent even if you set the value to false. The
+       * default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotifications;
 
       /** Deprecated. Please use sendUpdates instead.
 
-     Whether to send notifications about the event update (e.g. description changes, etc.). Note that
-     some emails might still be sent even if you set the value to false. The default is False.
+     Whether to send notifications about the event update (for example, description changes, etc.). Note
+     that some emails might still be sent even if you set the value to false. The default is false.
        */
       public java.lang.Boolean getSendNotifications() {
         return sendNotifications;
@@ -5348,9 +5348,9 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Deprecated. Please use sendUpdates instead.
        *
-       * Whether to send notifications about the event update (e.g. description changes, etc.). Note
-       * that some emails might still be sent even if you set the value to false. The default is
-       * False.
+       * Whether to send notifications about the event update (for example, description changes,
+       * etc.). Note that some emails might still be sent even if you set the value to false. The
+       * default is false.
        */
       public Patch setSendNotifications(java.lang.Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
@@ -5358,22 +5358,21 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Guests who should receive notifications about the event update (e.g., attendee responses,
-       * title changes, etc.).
+       * Guests who should receive notifications about the event update (for example, title changes,
+       * etc.).
        */
       @com.google.api.client.util.Key
       private java.lang.String sendUpdates;
 
-      /** Guests who should receive notifications about the event update (e.g., attendee responses, title
-     changes, etc.).
+      /** Guests who should receive notifications about the event update (for example, title changes, etc.).
        */
       public java.lang.String getSendUpdates() {
         return sendUpdates;
       }
 
       /**
-       * Guests who should receive notifications about the event update (e.g., attendee responses,
-       * title changes, etc.).
+       * Guests who should receive notifications about the event update (for example, title changes,
+       * etc.).
        */
       public Patch setSendUpdates(java.lang.String sendUpdates) {
         this.sendUpdates = sendUpdates;
@@ -5532,7 +5531,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the creation of the event. Note that some emails might
-       * still be sent even if you set the value to false. The default is False.
+       * still be sent even if you set the value to false. The default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotifications;
@@ -5540,7 +5539,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /** Deprecated. Please use sendUpdates instead.
 
      Whether to send notifications about the creation of the event. Note that some emails might still be
-     sent even if you set the value to false. The default is False.
+     sent even if you set the value to false. The default is false.
        */
       public java.lang.Boolean getSendNotifications() {
         return sendNotifications;
@@ -5550,7 +5549,7 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * Deprecated. Please use sendUpdates instead.
        *
        * Whether to send notifications about the creation of the event. Note that some emails might
-       * still be sent even if you set the value to false. The default is False.
+       * still be sent even if you set the value to false. The default is false.
        */
       public QuickAdd setSendNotifications(java.lang.Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
@@ -5791,17 +5790,17 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Deprecated. Please use sendUpdates instead.
        *
-       * Whether to send notifications about the event update (e.g. description changes, etc.). Note
-       * that some emails might still be sent even if you set the value to false. The default is
-       * False.
+       * Whether to send notifications about the event update (for example, description changes,
+       * etc.). Note that some emails might still be sent even if you set the value to false. The
+       * default is false.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean sendNotifications;
 
       /** Deprecated. Please use sendUpdates instead.
 
-     Whether to send notifications about the event update (e.g. description changes, etc.). Note that
-     some emails might still be sent even if you set the value to false. The default is False.
+     Whether to send notifications about the event update (for example, description changes, etc.). Note
+     that some emails might still be sent even if you set the value to false. The default is false.
        */
       public java.lang.Boolean getSendNotifications() {
         return sendNotifications;
@@ -5810,9 +5809,9 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Deprecated. Please use sendUpdates instead.
        *
-       * Whether to send notifications about the event update (e.g. description changes, etc.). Note
-       * that some emails might still be sent even if you set the value to false. The default is
-       * False.
+       * Whether to send notifications about the event update (for example, description changes,
+       * etc.). Note that some emails might still be sent even if you set the value to false. The
+       * default is false.
        */
       public Update setSendNotifications(java.lang.Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
@@ -5820,22 +5819,21 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Guests who should receive notifications about the event update (e.g., attendee responses,
-       * title changes, etc.).
+       * Guests who should receive notifications about the event update (for example, title changes,
+       * etc.).
        */
       @com.google.api.client.util.Key
       private java.lang.String sendUpdates;
 
-      /** Guests who should receive notifications about the event update (e.g., attendee responses, title
-     changes, etc.).
+      /** Guests who should receive notifications about the event update (for example, title changes, etc.).
        */
       public java.lang.String getSendUpdates() {
         return sendUpdates;
       }
 
       /**
-       * Guests who should receive notifications about the event update (e.g., attendee responses,
-       * title changes, etc.).
+       * Guests who should receive notifications about the event update (for example, title changes,
+       * etc.).
        */
       public Update setSendUpdates(java.lang.String sendUpdates) {
         this.sendUpdates = sendUpdates;

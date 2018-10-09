@@ -152,12 +152,6 @@ public final class BuildStep extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Volume> volumes;
 
-  static {
-    // hack to force ProGuard to consider Volume used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Volume.class);
-  }
-
   /**
    * The ID(s) of the step(s) that this build step depends on. This build step will not start until
    * all the build steps in `wait_for` have completed successfully. If `wait_for` is empty, this

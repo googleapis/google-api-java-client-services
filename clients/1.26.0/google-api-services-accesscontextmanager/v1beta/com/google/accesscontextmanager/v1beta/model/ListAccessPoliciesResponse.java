@@ -14,55 +14,57 @@
  * Modify at your own risk.
  */
 
-package com.google.cloudkms.v1.model;
+package com.google.accesscontextmanager.v1beta.model;
 
 /**
- * The response message for Locations.ListLocations.
+ * A response to `ListAccessPoliciesRequest`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a
- * detailed explanation see:
+ * transmitted over HTTP when working with the Access Context Manager API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListLocationsResponse extends com.google.api.client.json.GenericJson {
+public final class ListAccessPoliciesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of locations that matches the specified filter in the request.
+   * List of the AccessPolicy instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Location> locations;
+  private java.util.List<AccessPolicy> accessPolicies;
 
   /**
-   * The standard List next-page token.
+   * The pagination token to retrieve the next page of results. If the value is empty, no further
+   * results remain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of locations that matches the specified filter in the request.
+   * List of the AccessPolicy instances.
    * @return value or {@code null} for none
    */
-  public java.util.List<Location> getLocations() {
-    return locations;
+  public java.util.List<AccessPolicy> getAccessPolicies() {
+    return accessPolicies;
   }
 
   /**
-   * A list of locations that matches the specified filter in the request.
-   * @param locations locations or {@code null} for none
+   * List of the AccessPolicy instances.
+   * @param accessPolicies accessPolicies or {@code null} for none
    */
-  public ListLocationsResponse setLocations(java.util.List<Location> locations) {
-    this.locations = locations;
+  public ListAccessPoliciesResponse setAccessPolicies(java.util.List<AccessPolicy> accessPolicies) {
+    this.accessPolicies = accessPolicies;
     return this;
   }
 
   /**
-   * The standard List next-page token.
+   * The pagination token to retrieve the next page of results. If the value is empty, no further
+   * results remain.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -70,22 +72,23 @@ public final class ListLocationsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The standard List next-page token.
+   * The pagination token to retrieve the next page of results. If the value is empty, no further
+   * results remain.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListLocationsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListAccessPoliciesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public ListLocationsResponse set(String fieldName, Object value) {
-    return (ListLocationsResponse) super.set(fieldName, value);
+  public ListAccessPoliciesResponse set(String fieldName, Object value) {
+    return (ListAccessPoliciesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListLocationsResponse clone() {
-    return (ListLocationsResponse) super.clone();
+  public ListAccessPoliciesResponse clone() {
+    return (ListAccessPoliciesResponse) super.clone();
   }
 
 }

@@ -36,12 +36,6 @@ public final class Source extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<File> files;
 
-  static {
-    // hack to force ProGuard to consider File used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(File.class);
-  }
-
   /**
    * `File` set constituting the `Source` bundle.
    * @return value or {@code null} for none

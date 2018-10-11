@@ -20,7 +20,7 @@ package com.google.androidpublisher;
  * Service definition for AndroidPublisher (v3).
  *
  * <p>
- * Lets Android application developers access their Google Play accounts.
+ * Accesses Android application developers' Google Play accounts.
  * </p>
  *
  * <p>
@@ -1498,22 +1498,22 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Must be set to true if the bundle installation may trigger a warning on user devices
-         * (i.e. if installation size may be over a threshold, typically 100 MB).
+         * Must be set to true if the bundle installation may trigger a warning on user devices (for
+         * example, if installation size may be over a threshold, typically 100 MB).
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean ackBundleInstallationWarning;
 
-        /** Must be set to true if the bundle installation may trigger a warning on user devices (i.e. if
-       installation size may be over a threshold, typically 100 MB).
+        /** Must be set to true if the bundle installation may trigger a warning on user devices (for example,
+       if installation size may be over a threshold, typically 100 MB).
          */
         public java.lang.Boolean getAckBundleInstallationWarning() {
           return ackBundleInstallationWarning;
         }
 
         /**
-         * Must be set to true if the bundle installation may trigger a warning on user devices
-         * (i.e. if installation size may be over a threshold, typically 100 MB).
+         * Must be set to true if the bundle installation may trigger a warning on user devices (for
+         * example, if installation size may be over a threshold, typically 100 MB).
          */
         public Upload setAckBundleInstallationWarning(java.lang.Boolean ackBundleInstallationWarning) {
           this.ackBundleInstallationWarning = ackBundleInstallationWarning;

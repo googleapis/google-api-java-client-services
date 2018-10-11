@@ -20,7 +20,7 @@ package com.google.androidpublisher;
  * Service definition for AndroidPublisher (v1).
  *
  * <p>
- * Lets Android application developers access their Google Play accounts.
+ * Accesses Android application developers' Google Play accounts.
  * </p>
  *
  * <p>

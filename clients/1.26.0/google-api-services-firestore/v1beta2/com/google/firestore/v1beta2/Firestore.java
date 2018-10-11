@@ -164,6 +164,301 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
     public class Databases {
 
       /**
+       * Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage
+       * system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the
+       * export. The export occurs in the background and its progress can be monitored and managed via the
+       * Operation resource that is created. The output of an export may only be used once the associated
+       * operation is done. If an export operation is cancelled before completion it may leave partial
+       * data behind in Google Cloud Storage.
+       *
+       * Create a request for the method "databases.exportDocuments".
+       *
+       * This request holds the parameters needed by the firestore server.  After setting any optional
+       * parameters, call the {@link ExportDocuments#execute()} method to invoke the remote operation.
+       *
+       * @param name Database to export. Should be of the form:
+      `projects/{project_id}/databases/{database_id}`.
+       * @param content the {@link com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ExportDocumentsRequest}
+       * @return the request
+       */
+      public ExportDocuments exportDocuments(java.lang.String name, com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ExportDocumentsRequest content) throws java.io.IOException {
+        ExportDocuments result = new ExportDocuments(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ExportDocuments extends FirestoreRequest<com.google.firestore.v1beta2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:exportDocuments";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+        /**
+         * Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage
+         * system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the
+         * export. The export occurs in the background and its progress can be monitored and managed via
+         * the Operation resource that is created. The output of an export may only be used once the
+         * associated operation is done. If an export operation is cancelled before completion it may
+         * leave partial data behind in Google Cloud Storage.
+         *
+         * Create a request for the method "databases.exportDocuments".
+         *
+         * This request holds the parameters needed by the the firestore server.  After setting any
+         * optional parameters, call the {@link ExportDocuments#execute()} method to invoke the remote
+         * operation. <p> {@link ExportDocuments#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Database to export. Should be of the form:
+      `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ExportDocumentsRequest}
+         * @since 1.13
+         */
+        protected ExportDocuments(java.lang.String name, com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ExportDocumentsRequest content) {
+          super(Firestore.this, "POST", REST_PATH, content, com.google.firestore.v1beta2.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/databases/[^/]+$");
+          }
+        }
+
+        @Override
+        public ExportDocuments set$Xgafv(java.lang.String $Xgafv) {
+          return (ExportDocuments) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ExportDocuments setAccessToken(java.lang.String accessToken) {
+          return (ExportDocuments) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ExportDocuments setAlt(java.lang.String alt) {
+          return (ExportDocuments) super.setAlt(alt);
+        }
+
+        @Override
+        public ExportDocuments setCallback(java.lang.String callback) {
+          return (ExportDocuments) super.setCallback(callback);
+        }
+
+        @Override
+        public ExportDocuments setFields(java.lang.String fields) {
+          return (ExportDocuments) super.setFields(fields);
+        }
+
+        @Override
+        public ExportDocuments setKey(java.lang.String key) {
+          return (ExportDocuments) super.setKey(key);
+        }
+
+        @Override
+        public ExportDocuments setOauthToken(java.lang.String oauthToken) {
+          return (ExportDocuments) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ExportDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ExportDocuments) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ExportDocuments setQuotaUser(java.lang.String quotaUser) {
+          return (ExportDocuments) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ExportDocuments setUploadType(java.lang.String uploadType) {
+          return (ExportDocuments) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ExportDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ExportDocuments) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Database to export. Should be of the form:
+         * `projects/{project_id}/databases/{database_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Database to export. Should be of the form: `projects/{project_id}/databases/{database_id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Database to export. Should be of the form:
+         * `projects/{project_id}/databases/{database_id}`.
+         */
+        public ExportDocuments setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/databases/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ExportDocuments set(String parameterName, Object value) {
+          return (ExportDocuments) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Imports documents into Google Cloud Firestore. Existing documents with the same name are
+       * overwritten. The import occurs in the background and its progress can be monitored and managed
+       * via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is
+       * possible that a subset of the data has already been imported to Cloud Firestore.
+       *
+       * Create a request for the method "databases.importDocuments".
+       *
+       * This request holds the parameters needed by the firestore server.  After setting any optional
+       * parameters, call the {@link ImportDocuments#execute()} method to invoke the remote operation.
+       *
+       * @param name Database to import into. Should be of the form:
+      `projects/{project_id}/databases/{database_id}`.
+       * @param content the {@link com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ImportDocumentsRequest}
+       * @return the request
+       */
+      public ImportDocuments importDocuments(java.lang.String name, com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ImportDocumentsRequest content) throws java.io.IOException {
+        ImportDocuments result = new ImportDocuments(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportDocuments extends FirestoreRequest<com.google.firestore.v1beta2.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:importDocuments";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+        /**
+         * Imports documents into Google Cloud Firestore. Existing documents with the same name are
+         * overwritten. The import occurs in the background and its progress can be monitored and managed
+         * via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is
+         * possible that a subset of the data has already been imported to Cloud Firestore.
+         *
+         * Create a request for the method "databases.importDocuments".
+         *
+         * This request holds the parameters needed by the the firestore server.  After setting any
+         * optional parameters, call the {@link ImportDocuments#execute()} method to invoke the remote
+         * operation. <p> {@link ImportDocuments#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Database to import into. Should be of the form:
+      `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ImportDocumentsRequest}
+         * @since 1.13
+         */
+        protected ImportDocuments(java.lang.String name, com.google.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ImportDocumentsRequest content) {
+          super(Firestore.this, "POST", REST_PATH, content, com.google.firestore.v1beta2.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/databases/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportDocuments set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportDocuments) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportDocuments setAccessToken(java.lang.String accessToken) {
+          return (ImportDocuments) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportDocuments setAlt(java.lang.String alt) {
+          return (ImportDocuments) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportDocuments setCallback(java.lang.String callback) {
+          return (ImportDocuments) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportDocuments setFields(java.lang.String fields) {
+          return (ImportDocuments) super.setFields(fields);
+        }
+
+        @Override
+        public ImportDocuments setKey(java.lang.String key) {
+          return (ImportDocuments) super.setKey(key);
+        }
+
+        @Override
+        public ImportDocuments setOauthToken(java.lang.String oauthToken) {
+          return (ImportDocuments) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportDocuments setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportDocuments) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportDocuments setQuotaUser(java.lang.String quotaUser) {
+          return (ImportDocuments) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportDocuments setUploadType(java.lang.String uploadType) {
+          return (ImportDocuments) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportDocuments setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportDocuments) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Database to import into. Should be of the form:
+         * `projects/{project_id}/databases/{database_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Database to import into. Should be of the form: `projects/{project_id}/databases/{database_id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Database to import into. Should be of the form:
+         * `projects/{project_id}/databases/{database_id}`.
+         */
+        public ImportDocuments setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/databases/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ImportDocuments set(String parameterName, Object value) {
+          return (ImportDocuments) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the CollectionGroups collection.
        *
        * <p>The typical use is:</p>

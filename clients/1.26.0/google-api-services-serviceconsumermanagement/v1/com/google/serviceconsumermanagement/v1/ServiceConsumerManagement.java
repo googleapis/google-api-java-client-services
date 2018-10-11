@@ -20,7 +20,7 @@ package com.google.serviceconsumermanagement.v1;
  * Service definition for ServiceConsumerManagement (v1).
  *
  * <p>
- * Provides management methods for configuring service producer resources on Google Cloud.
+ * Manages the service consumers of a Service Infrastructure service.
  * </p>
  *
  * <p>

@@ -57,6 +57,12 @@ public final class LogDescriptor extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<LabelDescriptor> labels;
 
+  static {
+    // hack to force ProGuard to consider LabelDescriptor used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LabelDescriptor.class);
+  }
+
   /**
    * The name of the log. It must be less than 512 characters long and can include the following
    * characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation

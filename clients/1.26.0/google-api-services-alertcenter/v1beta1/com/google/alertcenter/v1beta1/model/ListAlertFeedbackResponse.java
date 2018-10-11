@@ -37,6 +37,12 @@ public final class ListAlertFeedbackResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<AlertFeedback> feedback;
 
+  static {
+    // hack to force ProGuard to consider AlertFeedback used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AlertFeedback.class);
+  }
+
   /**
    * The list of alert feedback. Result is ordered descending by creation time.
    * @return value or {@code null} for none

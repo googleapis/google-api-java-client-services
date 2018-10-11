@@ -49,12 +49,6 @@ public final class Http extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<HttpRule> rules;
 
-  static {
-    // hack to force ProGuard to consider HttpRule used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(HttpRule.class);
-  }
-
   /**
    * When set to true, URL path parmeters will be fully URI-decoded except in cases of single
    * segment matches in reserved expansion, where "%2F" will be left encoded.

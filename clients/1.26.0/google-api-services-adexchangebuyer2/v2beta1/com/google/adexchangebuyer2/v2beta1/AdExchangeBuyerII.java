@@ -6029,11 +6029,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         For example:
         - For an account-
          *        level creative for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/`
-        - For an account-level creative for the child seat buyer
-         *        account 456
-          whose bidder is 123: `bidders/123/accounts/456/`
+          123: `bidders/123/accounts/123`
+         *        - For an account-level creative for the child seat buyer account 456
+          whose bidder is
+         *        123: `bidders/123/accounts/456`
          * @param creativeId The ID of the creative to delete.
          * @return the request
          */
@@ -6068,11 +6067,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         For example:
         - For an account-
          *        level creative for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/`
-        - For an account-level creative for the child seat buyer
-         *        account 456
-          whose bidder is 123: `bidders/123/accounts/456/`
+          123: `bidders/123/accounts/123`
+         *        - For an account-level creative for the child seat buyer account 456
+          whose bidder is
+         *        123: `bidders/123/accounts/456`
            * @param creativeId The ID of the creative to delete.
            * @since 1.13
            */
@@ -6146,10 +6144,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * Name of the owner (bidder or account) of the creative to be deleted. For example:
            *
            * - For an account-level creative for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/`
+           * `bidders/123/accounts/123`
            *
            * - For an account-level creative for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/`
+           * 123: `bidders/123/accounts/456`
            */
           @com.google.api.client.util.Key
           private java.lang.String ownerName;
@@ -6157,10 +6155,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           /** Name of the owner (bidder or account) of the creative to be deleted. For example:
 
          - For an account-level creative for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/`
+         `bidders/123/accounts/123`
 
          - For an account-level creative for the child seat buyer account 456 whose bidder is 123:
-         `bidders/123/accounts/456/`
+         `bidders/123/accounts/456`
            */
           public java.lang.String getOwnerName() {
             return ownerName;
@@ -6170,10 +6168,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * Name of the owner (bidder or account) of the creative to be deleted. For example:
            *
            * - For an account-level creative for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/`
+           * `bidders/123/accounts/123`
            *
            * - For an account-level creative for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/`
+           * 123: `bidders/123/accounts/456`
            */
           public Delete setOwnerName(java.lang.String ownerName) {
             if (!getSuppressPatternChecks()) {

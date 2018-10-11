@@ -43,12 +43,6 @@ public final class ListEnabledServicesResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<PublishedService> services;
 
-  static {
-    // hack to force ProGuard to consider PublishedService used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PublishedService.class);
-  }
-
   /**
    * Token that can be passed to `ListEnabledServices` to resume a paginated query.
    * @return value or {@code null} for none

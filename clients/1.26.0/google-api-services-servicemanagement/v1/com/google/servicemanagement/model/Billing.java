@@ -48,6 +48,12 @@ public final class Billing extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<BillingDestination> consumerDestinations;
 
+  static {
+    // hack to force ProGuard to consider BillingDestination used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BillingDestination.class);
+  }
+
   /**
    * Billing configurations for sending metrics to the consumer project. There can be multiple
    * consumer destinations per service, each one must have a different monitored resource type. A

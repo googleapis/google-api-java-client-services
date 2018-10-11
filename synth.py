@@ -22,6 +22,7 @@ from os import path
 from pathlib import Path
 import glob
 import re
+import sys
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -86,5 +87,7 @@ def all_discoveries():
 
     return discos
 
-for disco in all_discoveries():
-    generate_service(disco)
+print(sys.argv)
+
+# for disco in all_discoveries():
+#     generate_service(disco)

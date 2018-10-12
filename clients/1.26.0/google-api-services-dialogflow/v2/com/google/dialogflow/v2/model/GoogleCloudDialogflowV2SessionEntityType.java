@@ -52,6 +52,9 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   /**
    * Required. The unique identifier of this session entity type. Format:
    * `projects//agent/sessions//entityTypes/`.
+   *
+   * `` must be the display name of an existing entity type in the same agent that will be
+   * overridden or supplemented.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,6 +99,9 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   /**
    * Required. The unique identifier of this session entity type. Format:
    * `projects//agent/sessions//entityTypes/`.
+   *
+   * `` must be the display name of an existing entity type in the same agent that will be
+   * overridden or supplemented.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,6 +111,9 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   /**
    * Required. The unique identifier of this session entity type. Format:
    * `projects//agent/sessions//entityTypes/`.
+   *
+   * `` must be the display name of an existing entity type in the same agent that will be
+   * overridden or supplemented.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2SessionEntityType setName(java.lang.String name) {

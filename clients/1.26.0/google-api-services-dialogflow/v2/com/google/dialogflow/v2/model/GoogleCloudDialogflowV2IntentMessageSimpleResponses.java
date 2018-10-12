@@ -37,12 +37,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponses extends c
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageSimpleResponse> simpleResponses;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentMessageSimpleResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentMessageSimpleResponse.class);
-  }
-
   /**
    * Required. The list of simple responses.
    * @return value or {@code null} for none

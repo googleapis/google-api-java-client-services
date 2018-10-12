@@ -3133,6 +3133,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Creates a context.
                *
+               * If the specified context already exists, overrides the context.
+               *
                * Create a request for the method "contexts.create".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -3163,6 +3165,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
                 /**
                  * Creates a context.
+                 *
+                 * If the specified context already exists, overrides the context.
                  *
                  * Create a request for the method "contexts.create".
                  *
@@ -4011,6 +4015,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Creates a session entity type.
                *
+               * If the specified session entity type already exists, overrides the session entity type.
+               *
                * Create a request for the method "entityTypes.create".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -4042,6 +4048,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
                 /**
                  * Creates a session entity type.
+                 *
+                 * If the specified session entity type already exists, overrides the session entity type.
                  *
                  * Create a request for the method "entityTypes.create".
                  *
@@ -4699,6 +4707,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                *        specified, we assume default 'draft'
               environment. If `User ID` is not specified, we assume
                *        default '-' user.
+              `` must be the display name of an existing entity
+              type in the same agent
+               *        that will be overridden or supplemented.
                * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SessionEntityType}
                * @return the request
                */
@@ -4733,6 +4744,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                *        specified, we assume default 'draft'
               environment. If `User ID` is not specified, we assume
                *        default '-' user.
+              `` must be the display name of an existing entity
+              type in the same agent
+               *        that will be overridden or supplemented.
                  * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SessionEntityType}
                  * @since 1.13
                  */
@@ -4807,6 +4821,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment
                  * ID` is not specified, we assume default 'draft' environment. If `User ID` is not
                  * specified, we assume default '-' user.
+                 *
+                 * `` must be the display name of an existing entity type in the same agent that
+                 * will be overridden or supplemented.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
@@ -4816,6 +4833,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
                specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default
                '-' user.
+
+               `` must be the display name of an existing entity type in the same agent that will be overridden or
+               supplemented.
                  */
                 public java.lang.String getName() {
                   return name;
@@ -4827,6 +4847,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment
                  * ID` is not specified, we assume default 'draft' environment. If `User ID` is not
                  * specified, we assume default '-' user.
+                 *
+                 * `` must be the display name of an existing entity type in the same agent that
+                 * will be overridden or supplemented.
                  */
                 public Patch setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -7779,6 +7802,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Creates a context.
            *
+           * If the specified context already exists, overrides the context.
+           *
            * Create a request for the method "contexts.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -7809,6 +7834,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Creates a context.
+             *
+             * If the specified context already exists, overrides the context.
              *
              * Create a request for the method "contexts.create".
              *
@@ -8657,6 +8684,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Creates a session entity type.
            *
+           * If the specified session entity type already exists, overrides the session entity type.
+           *
            * Create a request for the method "entityTypes.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -8688,6 +8717,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Creates a session entity type.
+             *
+             * If the specified session entity type already exists, overrides the session entity type.
              *
              * Create a request for the method "entityTypes.create".
              *
@@ -9345,6 +9376,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            *        specified, we assume default 'draft'
           environment. If `User ID` is not specified, we assume
            *        default '-' user.
+          `` must be the display name of an existing entity
+          type in the same agent
+           *        that will be overridden or supplemented.
            * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SessionEntityType}
            * @return the request
            */
@@ -9379,6 +9413,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            *        specified, we assume default 'draft'
           environment. If `User ID` is not specified, we assume
            *        default '-' user.
+          `` must be the display name of an existing entity
+          type in the same agent
+           *        that will be overridden or supplemented.
              * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1SessionEntityType}
              * @since 1.13
              */
@@ -9453,6 +9490,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is
              * not specified, we assume default 'draft' environment. If `User ID` is not specified,
              * we assume default '-' user.
+             *
+             * `` must be the display name of an existing entity type in the same agent that will be
+             * overridden or supplemented.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
@@ -9462,6 +9502,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
            specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default
            '-' user.
+
+           `` must be the display name of an existing entity type in the same agent that will be overridden or
+           supplemented.
              */
             public java.lang.String getName() {
               return name;
@@ -9473,6 +9516,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is
              * not specified, we assume default 'draft' environment. If `User ID` is not specified,
              * we assume default '-' user.
+             *
+             * `` must be the display name of an existing entity type in the same agent that will be
+             * overridden or supplemented.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -9510,6 +9556,795 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
+     * An accessor for creating requests from the ConversationProfiles collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.ConversationProfiles.List request = dialogflow.conversationProfiles().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ConversationProfiles conversationProfiles() {
+      return new ConversationProfiles();
+    }
+
+    /**
+     * The "conversationProfiles" collection of methods.
+     */
+    public class ConversationProfiles {
+
+      /**
+       * Creates a conversation profile in the specified project.
+       *
+       * Create a request for the method "conversationProfiles.create".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to create a conversation profile for.
+      Format: `projects/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/conversationProfiles";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a conversation profile in the specified project.
+         *
+         * Create a request for the method "conversationProfiles.create".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to create a conversation profile for.
+      Format: `projects/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to create a conversation profile for. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to create a conversation profile for. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to create a conversation profile for. Format: `projects/`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the specified conversation profile.
+       *
+       * Create a request for the method "conversationProfiles.delete".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the conversation profile to delete.
+      Format: `projects//conversationProfiles/`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Deletes the specified conversation profile.
+         *
+         * Create a request for the method "conversationProfiles.delete".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the conversation profile to delete.
+      Format: `projects//conversationProfiles/`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the conversation profile to delete. Format:
+         * `projects//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the conversation profile to delete. Format:
+       `projects//conversationProfiles/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the conversation profile to delete. Format:
+         * `projects//conversationProfiles/`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the specified conversation profile.
+       *
+       * Create a request for the method "conversationProfiles.get".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the conversation profile.
+      Format: `projects//conversationProfiles/`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Retrieves the specified conversation profile.
+         *
+         * Create a request for the method "conversationProfiles.get".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the conversation profile.
+      Format: `projects//conversationProfiles/`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the conversation profile. Format:
+         * `projects//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the conversation profile. Format: `projects//conversationProfiles/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the conversation profile. Format:
+         * `projects//conversationProfiles/`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of all conversation profiles in the specified project.
+       *
+       * Create a request for the method "conversationProfiles.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list all conversation profiles from.
+      Format: `projects/`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListConversationProfilesResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/conversationProfiles";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns the list of all conversation profiles in the specified project.
+         *
+         * Create a request for the method "conversationProfiles.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list all conversation profiles from.
+      Format: `projects/`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListConversationProfilesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to list all conversation profiles from. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list all conversation profiles from. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to list all conversation profiles from. Format: `projects/`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. By default 100 and at
+         * most 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. By default 100 and at
+         * most 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the specified conversation profile.
+       *
+       * Create a request for the method "conversationProfiles.patch".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required for all methods except `create` (`create` populates the name
+      automatically).
+      The unique
+       *        identifier of this conversation profile.
+      Format: `projects//conversationProfiles/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
+
+        /**
+         * Updates the specified conversation profile.
+         *
+         * Create a request for the method "conversationProfiles.patch".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required for all methods except `create` (`create` populates the name
+      automatically).
+      The unique
+       *        identifier of this conversation profile.
+      Format: `projects//conversationProfiles/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile content) {
+          super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationProfile.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required for all methods except `create` (`create` populates the name automatically). The
+         * unique identifier of this conversation profile. Format:
+         * `projects//conversationProfiles/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required for all methods except `create` (`create` populates the name automatically). The unique
+       identifier of this conversation profile. Format: `projects//conversationProfiles/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required for all methods except `create` (`create` populates the name automatically). The
+         * unique identifier of this conversation profile. Format:
+         * `projects//conversationProfiles/`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversationProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Conversations collection.
      *
      * <p>The typical use is:</p>
@@ -9530,668 +10365,834 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
     public class Conversations {
 
       /**
-       * Deletes all active contexts in the specified session.
+       * Sets a phone number for this converstion to connect to.
        *
-       * Create a request for the method "conversations.deleteContexts".
+       * Create a request for the method "conversations.addConversationPhoneNumber".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
-       * parameters, call the {@link DeleteContexts#execute()} method to invoke the remote operation.
+       * parameters, call the {@link AddConversationPhoneNumber#execute()} method to invoke the remote
+       * operation.
        *
-       * @param parent Required. The name of the session to delete all contexts from. Format:
-      `projects//agent/sessions/`
-       *        or `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified
-       *        we assume default 'draft'
-      environment. If `User ID` is not specified, we assume default
-       *        '-' user.
+       * @param name The name of this conversation.
+      Format: `projects//conversations/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AddConversationPhoneNumberRequest}
        * @return the request
        */
-      public DeleteContexts deleteContexts(java.lang.String parent) throws java.io.IOException {
-        DeleteContexts result = new DeleteContexts(parent);
+      public AddConversationPhoneNumber addConversationPhoneNumber(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AddConversationPhoneNumberRequest content) throws java.io.IOException {
+        AddConversationPhoneNumber result = new AddConversationPhoneNumber(name, content);
         initialize(result);
         return result;
       }
 
-      public class DeleteContexts extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+      public class AddConversationPhoneNumber extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationPhoneNumber> {
 
-        private static final String REST_PATH = "v2beta1/{+parent}/contexts";
+        private static final String REST_PATH = "v2beta1/{+name}:addConversationPhoneNumber";
 
-        private final java.util.regex.Pattern PARENT_PATTERN =
+        private final java.util.regex.Pattern NAME_PATTERN =
             java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
 
         /**
-         * Deletes all active contexts in the specified session.
+         * Sets a phone number for this converstion to connect to.
          *
-         * Create a request for the method "conversations.deleteContexts".
+         * Create a request for the method "conversations.addConversationPhoneNumber".
          *
          * This request holds the parameters needed by the the dialogflow server.  After setting any
-         * optional parameters, call the {@link DeleteContexts#execute()} method to invoke the remote
-         * operation. <p> {@link DeleteContexts#initialize(com.google.api.client.googleapis.services.Abstr
-         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-         * the constructor. </p>
+         * optional parameters, call the {@link AddConversationPhoneNumber#execute()} method to invoke the
+         * remote operation. <p> {@link AddConversationPhoneNumber#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the session to delete all contexts from. Format:
-      `projects//agent/sessions/`
-       *        or `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified
-       *        we assume default 'draft'
-      environment. If `User ID` is not specified, we assume default
-       *        '-' user.
+         * @param name The name of this conversation.
+      Format: `projects//conversations/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AddConversationPhoneNumberRequest}
          * @since 1.13
          */
-        protected DeleteContexts(java.lang.String parent) {
-          super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
-          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        protected AddConversationPhoneNumber(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AddConversationPhoneNumberRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ConversationPhoneNumber.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                "Parameter parent must conform to the pattern " +
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
                 "^projects/[^/]+/conversations/[^/]+$");
           }
         }
 
         @Override
-        public DeleteContexts set$Xgafv(java.lang.String $Xgafv) {
-          return (DeleteContexts) super.set$Xgafv($Xgafv);
+        public AddConversationPhoneNumber set$Xgafv(java.lang.String $Xgafv) {
+          return (AddConversationPhoneNumber) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public DeleteContexts setAccessToken(java.lang.String accessToken) {
-          return (DeleteContexts) super.setAccessToken(accessToken);
+        public AddConversationPhoneNumber setAccessToken(java.lang.String accessToken) {
+          return (AddConversationPhoneNumber) super.setAccessToken(accessToken);
         }
 
         @Override
-        public DeleteContexts setAlt(java.lang.String alt) {
-          return (DeleteContexts) super.setAlt(alt);
+        public AddConversationPhoneNumber setAlt(java.lang.String alt) {
+          return (AddConversationPhoneNumber) super.setAlt(alt);
         }
 
         @Override
-        public DeleteContexts setCallback(java.lang.String callback) {
-          return (DeleteContexts) super.setCallback(callback);
+        public AddConversationPhoneNumber setCallback(java.lang.String callback) {
+          return (AddConversationPhoneNumber) super.setCallback(callback);
         }
 
         @Override
-        public DeleteContexts setFields(java.lang.String fields) {
-          return (DeleteContexts) super.setFields(fields);
+        public AddConversationPhoneNumber setFields(java.lang.String fields) {
+          return (AddConversationPhoneNumber) super.setFields(fields);
         }
 
         @Override
-        public DeleteContexts setKey(java.lang.String key) {
-          return (DeleteContexts) super.setKey(key);
+        public AddConversationPhoneNumber setKey(java.lang.String key) {
+          return (AddConversationPhoneNumber) super.setKey(key);
         }
 
         @Override
-        public DeleteContexts setOauthToken(java.lang.String oauthToken) {
-          return (DeleteContexts) super.setOauthToken(oauthToken);
+        public AddConversationPhoneNumber setOauthToken(java.lang.String oauthToken) {
+          return (AddConversationPhoneNumber) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public DeleteContexts setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (DeleteContexts) super.setPrettyPrint(prettyPrint);
+        public AddConversationPhoneNumber setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddConversationPhoneNumber) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public DeleteContexts setQuotaUser(java.lang.String quotaUser) {
-          return (DeleteContexts) super.setQuotaUser(quotaUser);
+        public AddConversationPhoneNumber setQuotaUser(java.lang.String quotaUser) {
+          return (AddConversationPhoneNumber) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public DeleteContexts setUploadType(java.lang.String uploadType) {
-          return (DeleteContexts) super.setUploadType(uploadType);
+        public AddConversationPhoneNumber setUploadType(java.lang.String uploadType) {
+          return (AddConversationPhoneNumber) super.setUploadType(uploadType);
         }
 
         @Override
-        public DeleteContexts setUploadProtocol(java.lang.String uploadProtocol) {
-          return (DeleteContexts) super.setUploadProtocol(uploadProtocol);
+        public AddConversationPhoneNumber setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddConversationPhoneNumber) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
-         * Required. The name of the session to delete all contexts from. Format:
-         * `projects//agent/sessions/` or `projects//agent/environments//users//sessions/`. If
-         * `Environment ID` is not specified we assume default 'draft' environment. If `User ID` is
-         * not specified, we assume default '-' user.
+         * The name of this conversation. Format: `projects//conversations/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of this conversation. Format: `projects//conversations/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of this conversation. Format: `projects//conversations/`.
+         */
+        public AddConversationPhoneNumber setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public AddConversationPhoneNumber set(String parameterName, Object value) {
+          return (AddConversationPhoneNumber) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Completes the specified conversation. Finished conversations are purged from the database after
+       * 30 days.
+       *
+       * Create a request for the method "conversations.complete".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Complete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource identifier of the conversation to close.
+      Format: `projects//conversations/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompleteConversationRequest}
+       * @return the request
+       */
+      public Complete complete(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompleteConversationRequest content) throws java.io.IOException {
+        Complete result = new Complete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Complete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation> {
+
+        private static final String REST_PATH = "v2beta1/{+name}:complete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+        /**
+         * Completes the specified conversation. Finished conversations are purged from the database after
+         * 30 days.
+         *
+         * Create a request for the method "conversations.complete".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Complete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Complete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource identifier of the conversation to close.
+      Format: `projects//conversations/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompleteConversationRequest}
+         * @since 1.13
+         */
+        protected Complete(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompleteConversationRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Complete set$Xgafv(java.lang.String $Xgafv) {
+          return (Complete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Complete setAccessToken(java.lang.String accessToken) {
+          return (Complete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Complete setAlt(java.lang.String alt) {
+          return (Complete) super.setAlt(alt);
+        }
+
+        @Override
+        public Complete setCallback(java.lang.String callback) {
+          return (Complete) super.setCallback(callback);
+        }
+
+        @Override
+        public Complete setFields(java.lang.String fields) {
+          return (Complete) super.setFields(fields);
+        }
+
+        @Override
+        public Complete setKey(java.lang.String key) {
+          return (Complete) super.setKey(key);
+        }
+
+        @Override
+        public Complete setOauthToken(java.lang.String oauthToken) {
+          return (Complete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Complete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Complete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Complete setQuotaUser(java.lang.String quotaUser) {
+          return (Complete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Complete setUploadType(java.lang.String uploadType) {
+          return (Complete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Complete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Complete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource identifier of the conversation to close. Format:
+         * `projects//conversations/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource identifier of the conversation to close. Format: `projects//conversations/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource identifier of the conversation to close. Format:
+         * `projects//conversations/`.
+         */
+        public Complete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Complete set(String parameterName, Object value) {
+          return (Complete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new conversation. Conversation are auto-completed after 24 hours.
+       *
+       * Create a request for the method "conversations.create".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource identifier of the project creating the conversation.
+      Format: `projects/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/conversations";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a new conversation. Conversation are auto-completed after 24 hours.
+         *
+         * Create a request for the method "conversations.create".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource identifier of the project creating the conversation.
+      Format: `projects/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource identifier of the project creating the conversation. Format:
+         * `projects/`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the session to delete all contexts from. Format: `projects//agent/sessions/`
-       or `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified we assume
-       default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+        /** Required. Resource identifier of the project creating the conversation. Format: `projects/`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the session to delete all contexts from. Format:
-         * `projects//agent/sessions/` or `projects//agent/environments//users//sessions/`. If
-         * `Environment ID` is not specified we assume default 'draft' environment. If `User ID` is
-         * not specified, we assume default '-' user.
+         * Required. Resource identifier of the project creating the conversation. Format:
+         * `projects/`.
          */
-        public DeleteContexts setParent(java.lang.String parent) {
+        public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
-                "^projects/[^/]+/conversations/[^/]+$");
+                "^projects/[^/]+$");
           }
           this.parent = parent;
           return this;
         }
 
         @Override
-        public DeleteContexts set(String parameterName, Object value) {
-          return (DeleteContexts) super.set(parameterName, value);
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the specific conversation.
+       *
+       * Create a request for the method "conversations.get".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the conversation. Format:
+      `projects//conversations/`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+        /**
+         * Retrieves the specific conversation.
+         *
+         * Create a request for the method "conversations.get".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the conversation. Format:
+      `projects//conversations/`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Conversation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the conversation. Format: `projects//conversations/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the conversation. Format: `projects//conversations/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the conversation. Format: `projects//conversations/`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/conversations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of all conversations in the specified project.
+       *
+       * Create a request for the method "conversations.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project from which to list all conversation.
+      Format: `projects/`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListConversationsResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/conversations";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns the list of all conversations in the specified project.
+         *
+         * Create a request for the method "conversations.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project from which to list all conversation.
+      Format: `projects/`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListConversationsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project from which to list all conversation. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project from which to list all conversation. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project from which to list all conversation. Format: `projects/`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * A filter expression that filters conversations listed in the response. In general, the
+         * expression must specify the field name, a comparison operator, and the value to use for
+         * filtering:
+         *
+         * The value must be a string, a number, or a boolean. The comparison operator must be
+         * either `=`,`!=`, `>`, or `<`. To filter on multiple expressions, separate the expressions
+         * with `AND` or `OR` (omitting both implies `AND`). For clarity, expressions can be
+         * enclosed in parentheses.
+         *
+         * Only `lifecycle_state` can be filtered on in this way. For example, the following
+         * expression only returns `FINISHED` conversations:
+         *
+         * `lifecycle_state = "FINISHED"`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** A filter expression that filters conversations listed in the response. In general, the expression
+       must specify the field name, a comparison operator, and the value to use for filtering:
+
+       The value must be a string, a number, or a boolean. The comparison operator must be either
+       `=`,`!=`, `>`, or `<`. To filter on multiple expressions, separate the expressions with `AND` or
+       `OR` (omitting both implies `AND`). For clarity, expressions can be enclosed in parentheses.
+
+       Only `lifecycle_state` can be filtered on in this way. For example, the following expression only
+       returns `FINISHED` conversations:
+
+       `lifecycle_state = "FINISHED"`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * A filter expression that filters conversations listed in the response. In general, the
+         * expression must specify the field name, a comparison operator, and the value to use for
+         * filtering:
+         *
+         * The value must be a string, a number, or a boolean. The comparison operator must be
+         * either `=`,`!=`, `>`, or `<`. To filter on multiple expressions, separate the expressions
+         * with `AND` or `OR` (omitting both implies `AND`). For clarity, expressions can be
+         * enclosed in parentheses.
+         *
+         * Only `lifecycle_state` can be filtered on in this way. For example, the following
+         * expression only returns `FINISHED` conversations:
+         *
+         * `lifecycle_state = "FINISHED"`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. By default 100 and at
+         * most 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. By default 100 and at
+         * most 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 
       /**
-       * An accessor for creating requests from the Contexts collection.
+       * An accessor for creating requests from the Messages collection.
        *
        * <p>The typical use is:</p>
        * <pre>
        *   {@code Dialogflow dialogflow = new Dialogflow(...);}
-       *   {@code Dialogflow.Contexts.List request = dialogflow.contexts().list(parameters ...)}
+       *   {@code Dialogflow.Messages.List request = dialogflow.messages().list(parameters ...)}
        * </pre>
        *
        * @return the resource collection
        */
-      public Contexts contexts() {
-        return new Contexts();
+      public Messages messages() {
+        return new Messages();
       }
 
       /**
-       * The "contexts" collection of methods.
+       * The "messages" collection of methods.
        */
-      public class Contexts {
+      public class Messages {
 
         /**
-         * Creates a context.
+         * Lists messages that belong to a given conversation.
          *
-         * Create a request for the method "contexts.create".
-         *
-         * This request holds the parameters needed by the dialogflow server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The session to create a context for.
-        Format: `projects//agent/sessions/` or
-         *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
-         *        assume
-        default 'draft' environment. If `User ID` is not specified, we assume
-        default '-'
-         *        user.
-         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context> {
-
-          private static final String REST_PATH = "v2beta1/{+parent}/contexts";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
-
-          /**
-           * Creates a context.
-           *
-           * Create a request for the method "contexts.create".
-           *
-           * This request holds the parameters needed by the the dialogflow server.  After setting any
-           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The session to create a context for.
-        Format: `projects//agent/sessions/` or
-         *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
-         *        assume
-        default 'draft' environment. If `User ID` is not specified, we assume
-        default '-'
-         *        user.
-           * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) {
-            super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The session to create a context for. Format: `projects//agent/sessions/` or
-           * `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified,
-           * we assume default 'draft' environment. If `User ID` is not specified, we assume default
-           * '-' user.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The session to create a context for. Format: `projects//agent/sessions/` or
-         `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we assume
-         default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The session to create a context for. Format: `projects//agent/sessions/` or
-           * `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified,
-           * we assume default 'draft' environment. If `User ID` is not specified, we assume default
-           * '-' user.
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Deletes the specified context.
-         *
-         * Create a request for the method "contexts.delete".
-         *
-         * This request holds the parameters needed by the dialogflow server.  After setting any optional
-         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the context to delete. Format:
-        `projects//agent/sessions//contexts/`
-        or
-         *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
-        not
-         *        specified, we assume default 'draft' environment. If `User ID` is not
-        specified, we assume
-         *        default '-' user.
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
-
-          private static final String REST_PATH = "v2beta1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
-
-          /**
-           * Deletes the specified context.
-           *
-           * Create a request for the method "contexts.delete".
-           *
-           * This request holds the parameters needed by the the dialogflow server.  After setting any
-           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the context to delete. Format:
-        `projects//agent/sessions//contexts/`
-        or
-         *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
-        not
-         *        specified, we assume default 'draft' environment. If `User ID` is not
-        specified, we assume
-         *        default '-' user.
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the context to delete. Format:
-           * `projects//agent/sessions//contexts/` or
-           * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not
-           * specified, we assume default 'draft' environment. If `User ID` is not specified, we
-           * assume default '-' user.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the context to delete. Format: `projects//agent/sessions//contexts/` or
-         `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not specified,
-         we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the context to delete. Format:
-           * `projects//agent/sessions//contexts/` or
-           * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not
-           * specified, we assume default 'draft' environment. If `User ID` is not specified, we
-           * assume default '-' user.
-           */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Retrieves the specified context.
-         *
-         * Create a request for the method "contexts.get".
-         *
-         * This request holds the parameters needed by the dialogflow server.  After setting any optional
-         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the context. Format:
-        `projects//agent/sessions//contexts/`
-        or
-         *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
-        not
-         *        specified, we assume default 'draft' environment. If `User ID` is not
-        specified, we assume
-         *        default '-' user.
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context> {
-
-          private static final String REST_PATH = "v2beta1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
-
-          /**
-           * Retrieves the specified context.
-           *
-           * Create a request for the method "contexts.get".
-           *
-           * This request holds the parameters needed by the the dialogflow server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the context. Format:
-        `projects//agent/sessions//contexts/`
-        or
-         *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
-        not
-         *        specified, we assume default 'draft' environment. If `User ID` is not
-        specified, we assume
-         *        default '-' user.
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the context. Format: `projects//agent/sessions//contexts/` or
-           * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not
-           * specified, we assume default 'draft' environment. If `User ID` is not specified, we
-           * assume default '-' user.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the context. Format: `projects//agent/sessions//contexts/` or
-         `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not specified,
-         we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the context. Format: `projects//agent/sessions//contexts/` or
-           * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not
-           * specified, we assume default 'draft' environment. If `User ID` is not specified, we
-           * assume default '-' user.
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Returns the list of all contexts in the specified session.
-         *
-         * Create a request for the method "contexts.list".
+         * Create a request for the method "messages.list".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The session to list all contexts from.
-        Format: `projects//agent/sessions/` or
-         *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
-         *        assume
-        default 'draft' environment. If `User ID` is not specified, we assume
-        default '-'
-         *        user.
+         * @param parent Required. The name of the conversation to list messages for.
+        Format: `projects//conversations/`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -10200,34 +11201,29 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListContextsResponse> {
+        public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListMessagesResponse> {
 
-          private static final String REST_PATH = "v2beta1/{+parent}/contexts";
+          private static final String REST_PATH = "v2beta1/{+parent}/messages";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
 
           /**
-           * Returns the list of all contexts in the specified session.
+           * Lists messages that belong to a given conversation.
            *
-           * Create a request for the method "contexts.list".
+           * Create a request for the method "messages.list".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The session to list all contexts from.
-        Format: `projects//agent/sessions/` or
-         *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
-         *        assume
-        default 'draft' environment. If `User ID` is not specified, we assume
-        default '-'
-         *        user.
+           * @param parent Required. The name of the conversation to list messages for.
+        Format: `projects//conversations/`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
-            super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListContextsResponse.class);
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListMessagesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10302,27 +11298,659 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The session to list all contexts from. Format: `projects//agent/sessions/` or
-           * `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified,
-           * we assume default 'draft' environment. If `User ID` is not specified, we assume default
-           * '-' user.
+           * Required. The name of the conversation to list messages for. Format:
+           * `projects//conversations/`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The session to list all contexts from. Format: `projects//agent/sessions/` or
-         `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we assume
-         default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+          /** Required. The name of the conversation to list messages for. Format: `projects//conversations/`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The session to list all contexts from. Format: `projects//agent/sessions/` or
-           * `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified,
-           * we assume default 'draft' environment. If `User ID` is not specified, we assume default
-           * '-' user.
+           * Required. The name of the conversation to list messages for. Format:
+           * `projects//conversations/`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return in a single page. By default 100 and at
+           * most 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return in a single page. By default 100 and at
+           * most 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous list request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Participants collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.Participants.List request = dialogflow.participants().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Participants participants() {
+        return new Participants();
+      }
+
+      /**
+       * The "participants" collection of methods.
+       */
+      public class Participants {
+
+        /**
+         * Adds a text (chat, for example), or audio (phone recording, for example) message from a
+         * participan  into the conversation.
+         *
+         * Create a request for the method "participants.analyzeContent".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link AnalyzeContent#execute()} method to invoke the remote operation.
+         *
+         * @param participant Required. The name of the participant this text comes from.
+        Format:
+         *        `projects//conversations//participants/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AnalyzeContentRequest}
+         * @return the request
+         */
+        public AnalyzeContent analyzeContent(java.lang.String participant, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AnalyzeContentRequest content) throws java.io.IOException {
+          AnalyzeContent result = new AnalyzeContent(participant, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AnalyzeContent extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AnalyzeContentResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+participant}:analyzeContent";
+
+          private final java.util.regex.Pattern PARTICIPANT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+          /**
+           * Adds a text (chat, for example), or audio (phone recording, for example) message from a
+           * participan  into the conversation.
+           *
+           * Create a request for the method "participants.analyzeContent".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link AnalyzeContent#execute()} method to invoke the remote
+           * operation. <p> {@link AnalyzeContent#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param participant Required. The name of the participant this text comes from.
+        Format:
+         *        `projects//conversations//participants/`.
+           * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AnalyzeContentRequest}
+           * @since 1.13
+           */
+          protected AnalyzeContent(java.lang.String participant, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AnalyzeContentRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1AnalyzeContentResponse.class);
+            this.participant = com.google.api.client.util.Preconditions.checkNotNull(participant, "Required parameter participant must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARTICIPANT_PATTERN.matcher(participant).matches(),
+                  "Parameter participant must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+            }
+          }
+
+          @Override
+          public AnalyzeContent set$Xgafv(java.lang.String $Xgafv) {
+            return (AnalyzeContent) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AnalyzeContent setAccessToken(java.lang.String accessToken) {
+            return (AnalyzeContent) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AnalyzeContent setAlt(java.lang.String alt) {
+            return (AnalyzeContent) super.setAlt(alt);
+          }
+
+          @Override
+          public AnalyzeContent setCallback(java.lang.String callback) {
+            return (AnalyzeContent) super.setCallback(callback);
+          }
+
+          @Override
+          public AnalyzeContent setFields(java.lang.String fields) {
+            return (AnalyzeContent) super.setFields(fields);
+          }
+
+          @Override
+          public AnalyzeContent setKey(java.lang.String key) {
+            return (AnalyzeContent) super.setKey(key);
+          }
+
+          @Override
+          public AnalyzeContent setOauthToken(java.lang.String oauthToken) {
+            return (AnalyzeContent) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AnalyzeContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AnalyzeContent) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AnalyzeContent setQuotaUser(java.lang.String quotaUser) {
+            return (AnalyzeContent) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AnalyzeContent setUploadType(java.lang.String uploadType) {
+            return (AnalyzeContent) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AnalyzeContent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AnalyzeContent) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the participant this text comes from. Format:
+           * `projects//conversations//participants/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String participant;
+
+          /** Required. The name of the participant this text comes from. Format:
+         `projects//conversations//participants/`.
+           */
+          public java.lang.String getParticipant() {
+            return participant;
+          }
+
+          /**
+           * Required. The name of the participant this text comes from. Format:
+           * `projects//conversations//participants/`.
+           */
+          public AnalyzeContent setParticipant(java.lang.String participant) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARTICIPANT_PATTERN.matcher(participant).matches(),
+                  "Parameter participant must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+            }
+            this.participant = participant;
+            return this;
+          }
+
+          @Override
+          public AnalyzeContent set(String parameterName, Object value) {
+            return (AnalyzeContent) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new participant in a conversation.
+         *
+         * Create a request for the method "participants.create".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource identifier of the conversation adding the participant.
+        Format:
+         *        `projects//conversations/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant> {
+
+          private static final String REST_PATH = "v2beta1/{+parent}/participants";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Creates a new participant in a conversation.
+           *
+           * Create a request for the method "participants.create".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource identifier of the conversation adding the participant.
+        Format:
+         *        `projects//conversations/`.
+           * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource identifier of the conversation adding the participant. Format:
+           * `projects//conversations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource identifier of the conversation adding the participant. Format:
+         `projects//conversations/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource identifier of the conversation adding the participant. Format:
+           * `projects//conversations/`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a conversation participant.
+         *
+         * Create a request for the method "participants.get".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the participant. Format:
+        `projects//conversations//participants/`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant> {
+
+          private static final String REST_PATH = "v2beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+          /**
+           * Retrieves a conversation participant.
+           *
+           * Create a request for the method "participants.get".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the participant. Format:
+        `projects//conversations//participants/`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Participant.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the participant. Format:
+           * `projects//conversations//participants/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the participant. Format: `projects//conversations//participants/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the participant. Format:
+           * `projects//conversations//participants/`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the list of all participants in the specified conversation.
+         *
+         * Create a request for the method "participants.list".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The conversation to list all contexts from.
+        Format: `projects//conversations/`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListParticipantsResponse> {
+
+          private static final String REST_PATH = "v2beta1/{+parent}/participants";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Returns the list of all participants in the specified conversation.
+           *
+           * Create a request for the method "participants.list".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The conversation to list all contexts from.
+        Format: `projects//conversations/`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListParticipantsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation to list all contexts from. Format:
+           * `projects//conversations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The conversation to list all contexts from. Format: `projects//conversations/`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The conversation to list all contexts from. Format:
+           * `projects//conversations/`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -10378,185 +12006,2413 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the specified context.
+         * Adds a text (chat, for example), or audio (phone recording, for example) message from a
+         * participan  into the conversation. Note: This method is only available through the gRPC API (not
+         * REST).
          *
-         * Create a request for the method "contexts.patch".
+         * The top-level message sent to the client by the server is `StreamingAnalyzeContentResponse`.
+         * Multiple response messages can be returned in order. The first one or more messages contain the
+         * `recognition_result` field. Each result represents a more complete transcript of what the user
+         * said. The next message contains the `reply_text` field and potentially the `reply_audio` field.
+         * The message can also contain the `automated_agent_reply` field.
+         *
+         * Create a request for the method "participants.streamingAnalyzeContent".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
-         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * parameters, call the {@link StreamingAnalyzeContent#execute()} method to invoke the remote
+         * operation.
          *
-         * @param name Required. The unique identifier of the context. Format:
-        `projects//agent/sessions//contexts/`,
-        or
-         *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-        always
-         *        converted to lowercase. If `Environment ID` is not specified, we
-        assume default 'draft'
-         *        environment. If `User ID` is not specified, we
-        assume default '-' user.
-         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
+         * @param participant Required. The name of the participant this text comes from.
+        Format:
+         *        `projects//conversations//participants/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1StreamingAnalyzeContentRequest}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) throws java.io.IOException {
-          Patch result = new Patch(name, content);
+        public StreamingAnalyzeContent streamingAnalyzeContent(java.lang.String participant, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1StreamingAnalyzeContentRequest content) throws java.io.IOException {
+          StreamingAnalyzeContent result = new StreamingAnalyzeContent(participant, content);
           initialize(result);
           return result;
         }
 
-        public class Patch extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context> {
+        public class StreamingAnalyzeContent extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1StreamingAnalyzeContentResponse> {
 
-          private static final String REST_PATH = "v2beta1/{+name}";
+          private static final String REST_PATH = "v2beta1/{+participant}:streamingAnalyzeContent";
 
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+          private final java.util.regex.Pattern PARTICIPANT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
 
           /**
-           * Updates the specified context.
+           * Adds a text (chat, for example), or audio (phone recording, for example) message from a
+           * participan  into the conversation. Note: This method is only available through the gRPC API
+           * (not REST).
            *
-           * Create a request for the method "contexts.patch".
+           * The top-level message sent to the client by the server is `StreamingAnalyzeContentResponse`.
+           * Multiple response messages can be returned in order. The first one or more messages contain the
+           * `recognition_result` field. Each result represents a more complete transcript of what the user
+           * said. The next message contains the `reply_text` field and potentially the `reply_audio` field.
+           * The message can also contain the `automated_agent_reply` field.
+           *
+           * Create a request for the method "participants.streamingAnalyzeContent".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
-           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
+           * optional parameters, call the {@link StreamingAnalyzeContent#execute()} method to invoke the
+           * remote operation. <p> {@link StreamingAnalyzeContent#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
            *
-           * @param name Required. The unique identifier of the context. Format:
-        `projects//agent/sessions//contexts/`,
-        or
-         *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-        always
-         *        converted to lowercase. If `Environment ID` is not specified, we
-        assume default 'draft'
-         *        environment. If `User ID` is not specified, we
-        assume default '-' user.
-           * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
+           * @param participant Required. The name of the participant this text comes from.
+        Format:
+         *        `projects//conversations//participants/`.
+           * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1StreamingAnalyzeContentRequest}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) {
-            super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          protected StreamingAnalyzeContent(java.lang.String participant, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1StreamingAnalyzeContentRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1StreamingAnalyzeContentResponse.class);
+            this.participant = com.google.api.client.util.Preconditions.checkNotNull(participant, "Required parameter participant must be specified.");
             if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+              com.google.api.client.util.Preconditions.checkArgument(PARTICIPANT_PATTERN.matcher(participant).matches(),
+                  "Parameter participant must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
             }
           }
 
           @Override
-          public Patch set$Xgafv(java.lang.String $Xgafv) {
-            return (Patch) super.set$Xgafv($Xgafv);
+          public StreamingAnalyzeContent set$Xgafv(java.lang.String $Xgafv) {
+            return (StreamingAnalyzeContent) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
+          public StreamingAnalyzeContent setAccessToken(java.lang.String accessToken) {
+            return (StreamingAnalyzeContent) super.setAccessToken(accessToken);
           }
 
           @Override
-          public Patch setAlt(java.lang.String alt) {
-            return (Patch) super.setAlt(alt);
+          public StreamingAnalyzeContent setAlt(java.lang.String alt) {
+            return (StreamingAnalyzeContent) super.setAlt(alt);
           }
 
           @Override
-          public Patch setCallback(java.lang.String callback) {
-            return (Patch) super.setCallback(callback);
+          public StreamingAnalyzeContent setCallback(java.lang.String callback) {
+            return (StreamingAnalyzeContent) super.setCallback(callback);
           }
 
           @Override
-          public Patch setFields(java.lang.String fields) {
-            return (Patch) super.setFields(fields);
+          public StreamingAnalyzeContent setFields(java.lang.String fields) {
+            return (StreamingAnalyzeContent) super.setFields(fields);
           }
 
           @Override
-          public Patch setKey(java.lang.String key) {
-            return (Patch) super.setKey(key);
+          public StreamingAnalyzeContent setKey(java.lang.String key) {
+            return (StreamingAnalyzeContent) super.setKey(key);
           }
 
           @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
+          public StreamingAnalyzeContent setOauthToken(java.lang.String oauthToken) {
+            return (StreamingAnalyzeContent) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Patch) super.setPrettyPrint(prettyPrint);
+          public StreamingAnalyzeContent setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StreamingAnalyzeContent) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public Patch setQuotaUser(java.lang.String quotaUser) {
-            return (Patch) super.setQuotaUser(quotaUser);
+          public StreamingAnalyzeContent setQuotaUser(java.lang.String quotaUser) {
+            return (StreamingAnalyzeContent) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public Patch setUploadType(java.lang.String uploadType) {
-            return (Patch) super.setUploadType(uploadType);
+          public StreamingAnalyzeContent setUploadType(java.lang.String uploadType) {
+            return (StreamingAnalyzeContent) super.setUploadType(uploadType);
           }
 
           @Override
-          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Patch) super.setUploadProtocol(uploadProtocol);
+          public StreamingAnalyzeContent setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StreamingAnalyzeContent) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
-           * Required. The unique identifier of the context. Format:
-           * `projects//agent/sessions//contexts/`, or
-           * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always
-           * converted to lowercase. If `Environment ID` is not specified, we assume default 'draft'
-           * environment. If `User ID` is not specified, we assume default '-' user.
+           * Required. The name of the participant this text comes from. Format:
+           * `projects//conversations//participants/`.
            */
           @com.google.api.client.util.Key
-          private java.lang.String name;
+          private java.lang.String participant;
 
-          /** Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`, or
-         `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always converted to
-         lowercase. If `Environment ID` is not specified, we assume default 'draft' environment. If `User
-         ID` is not specified, we assume default '-' user.
+          /** Required. The name of the participant this text comes from. Format:
+         `projects//conversations//participants/`.
            */
-          public java.lang.String getName() {
-            return name;
+          public java.lang.String getParticipant() {
+            return participant;
           }
 
           /**
-           * Required. The unique identifier of the context. Format:
-           * `projects//agent/sessions//contexts/`, or
-           * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always
-           * converted to lowercase. If `Environment ID` is not specified, we assume default 'draft'
-           * environment. If `User ID` is not specified, we assume default '-' user.
+           * Required. The name of the participant this text comes from. Format:
+           * `projects//conversations//participants/`.
            */
-          public Patch setName(java.lang.String name) {
+          public StreamingAnalyzeContent setParticipant(java.lang.String participant) {
             if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+              com.google.api.client.util.Preconditions.checkArgument(PARTICIPANT_PATTERN.matcher(participant).matches(),
+                  "Parameter participant must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
             }
-            this.name = name;
-            return this;
-          }
-
-          /** Optional. The mask to control which fields get updated. */
-          @com.google.api.client.util.Key
-          private String updateMask;
-
-          /** Optional. The mask to control which fields get updated.
-           */
-          public String getUpdateMask() {
-            return updateMask;
-          }
-
-          /** Optional. The mask to control which fields get updated. */
-          public Patch setUpdateMask(String updateMask) {
-            this.updateMask = updateMask;
+            this.participant = participant;
             return this;
           }
 
           @Override
-          public Patch set(String parameterName, Object value) {
-            return (Patch) super.set(parameterName, value);
+          public StreamingAnalyzeContent set(String parameterName, Object value) {
+            return (StreamingAnalyzeContent) super.set(parameterName, value);
           }
         }
 
+        /**
+         * An accessor for creating requests from the Suggestions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Suggestions.List request = dialogflow.suggestions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Suggestions suggestions() {
+          return new Suggestions();
+        }
+
+        /**
+         * The "suggestions" collection of methods.
+         */
+        public class Suggestions {
+
+          /**
+           * Retrieves suggestions for live agents.
+           *
+           * This method should be used by human agent client software to fetch suggestions in real-time,
+           * while the conversation with an end user is in progress. The functionality is implemented in terms
+           * of the [list pagination](/apis/design/design_patterns#list_pagination) design pattern. The client
+           * app should use the `next_page_token` field to fetch the next batch of suggestions.
+           *
+           * Create a request for the method "suggestions.list".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the conversation participant for whom to fetch
+          suggestions.
+          Format:
+           *        `projects//conversations//participants/`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListSuggestionsResponse> {
+
+            private static final String REST_PATH = "v2beta1/{+parent}/suggestions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+
+            /**
+             * Retrieves suggestions for live agents.
+             *
+             * This method should be used by human agent client software to fetch suggestions in real-time,
+             * while the conversation with an end user is in progress. The functionality is implemented in
+             * terms of the [list pagination](/apis/design/design_patterns#list_pagination) design pattern.
+             * The client app should use the `next_page_token` field to fetch the next batch of suggestions.
+             *
+             * Create a request for the method "suggestions.list".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the conversation participant for whom to fetch
+          suggestions.
+          Format:
+           *        `projects//conversations//participants/`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListSuggestionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the conversation participant for whom to fetch suggestions.
+             * Format: `projects//conversations//participants/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the conversation participant for whom to fetch suggestions. Format:
+           `projects//conversations//participants/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the conversation participant for whom to fetch suggestions.
+             * Format: `projects//conversations//participants/`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/conversations/[^/]+/participants/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return in a single page. The default value
+             * is 100; the maximum value is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return in a single page. The default value is 100; the
+           maximum value is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return in a single page. The default value
+             * is 100; the maximum value is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
+    }
+    /**
+     * An accessor for creating requests from the Environments collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.Environments.List request = dialogflow.environments().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Environments environments() {
+      return new Environments();
+    }
+
+    /**
+     * The "environments" collection of methods.
+     */
+    public class Environments {
+
+      /**
+       * An accessor for creating requests from the Users collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.Users.List request = dialogflow.users().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Users users() {
+        return new Users();
+      }
+
+      /**
+       * The "users" collection of methods.
+       */
+      public class Users {
+
+        /**
+         * An accessor for creating requests from the Conversations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Conversations.List request = dialogflow.conversations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Conversations conversations() {
+          return new Conversations();
+        }
+
+        /**
+         * The "conversations" collection of methods.
+         */
+        public class Conversations {
+
+          /**
+           * Deletes all active contexts in the specified session.
+           *
+           * Create a request for the method "conversations.deleteContexts".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link DeleteContexts#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the session to delete all contexts from. Format:
+          `projects//agent/sessions/`
+           *        or `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified
+           *        we assume default 'draft'
+          environment. If `User ID` is not specified, we assume default
+           *        '-' user.
+           * @return the request
+           */
+          public DeleteContexts deleteContexts(java.lang.String parent) throws java.io.IOException {
+            DeleteContexts result = new DeleteContexts(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class DeleteContexts extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v2beta1/{+parent}/contexts";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+
+            /**
+             * Deletes all active contexts in the specified session.
+             *
+             * Create a request for the method "conversations.deleteContexts".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link DeleteContexts#execute()} method to invoke the remote
+             * operation. <p> {@link DeleteContexts#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param parent Required. The name of the session to delete all contexts from. Format:
+          `projects//agent/sessions/`
+           *        or `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified
+           *        we assume default 'draft'
+          environment. If `User ID` is not specified, we assume default
+           *        '-' user.
+             * @since 1.13
+             */
+            protected DeleteContexts(java.lang.String parent) {
+              super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+              }
+            }
+
+            @Override
+            public DeleteContexts set$Xgafv(java.lang.String $Xgafv) {
+              return (DeleteContexts) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DeleteContexts setAccessToken(java.lang.String accessToken) {
+              return (DeleteContexts) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DeleteContexts setAlt(java.lang.String alt) {
+              return (DeleteContexts) super.setAlt(alt);
+            }
+
+            @Override
+            public DeleteContexts setCallback(java.lang.String callback) {
+              return (DeleteContexts) super.setCallback(callback);
+            }
+
+            @Override
+            public DeleteContexts setFields(java.lang.String fields) {
+              return (DeleteContexts) super.setFields(fields);
+            }
+
+            @Override
+            public DeleteContexts setKey(java.lang.String key) {
+              return (DeleteContexts) super.setKey(key);
+            }
+
+            @Override
+            public DeleteContexts setOauthToken(java.lang.String oauthToken) {
+              return (DeleteContexts) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DeleteContexts setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DeleteContexts) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DeleteContexts setQuotaUser(java.lang.String quotaUser) {
+              return (DeleteContexts) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DeleteContexts setUploadType(java.lang.String uploadType) {
+              return (DeleteContexts) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DeleteContexts setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DeleteContexts) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the session to delete all contexts from. Format:
+             * `projects//agent/sessions/` or `projects//agent/environments//users//sessions/`. If
+             * `Environment ID` is not specified we assume default 'draft' environment. If `User ID`
+             * is not specified, we assume default '-' user.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the session to delete all contexts from. Format: `projects//agent/sessions/`
+           or `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified we assume
+           default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the session to delete all contexts from. Format:
+             * `projects//agent/sessions/` or `projects//agent/environments//users//sessions/`. If
+             * `Environment ID` is not specified we assume default 'draft' environment. If `User ID`
+             * is not specified, we assume default '-' user.
+             */
+            public DeleteContexts setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DeleteContexts set(String parameterName, Object value) {
+              return (DeleteContexts) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Contexts collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+           *   {@code Dialogflow.Contexts.List request = dialogflow.contexts().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Contexts contexts() {
+            return new Contexts();
+          }
+
+          /**
+           * The "contexts" collection of methods.
+           */
+          public class Contexts {
+
+            /**
+             * Creates a context.
+             *
+             * If the specified context already exists, overrides the context.
+             *
+             * Create a request for the method "contexts.create".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The session to create a context for.
+            Format: `projects//agent/sessions/` or
+             *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
+             *        assume
+            default 'draft' environment. If `User ID` is not specified, we assume
+            default '-'
+             *        user.
+             * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context> {
+
+              private static final String REST_PATH = "v2beta1/{+parent}/contexts";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+
+              /**
+               * Creates a context.
+               *
+               * If the specified context already exists, overrides the context.
+               *
+               * Create a request for the method "contexts.create".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The session to create a context for.
+            Format: `projects//agent/sessions/` or
+             *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
+             *        assume
+            default 'draft' environment. If `User ID` is not specified, we assume
+            default '-'
+             *        user.
+               * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The session to create a context for. Format: `projects//agent/sessions/`
+               * or `projects//agent/environments//users//sessions/`. If `Environment ID` is not
+               * specified, we assume default 'draft' environment. If `User ID` is not specified, we
+               * assume default '-' user.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The session to create a context for. Format: `projects//agent/sessions/` or
+             `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we assume
+             default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The session to create a context for. Format: `projects//agent/sessions/`
+               * or `projects//agent/environments//users//sessions/`. If `Environment ID` is not
+               * specified, we assume default 'draft' environment. If `User ID` is not specified, we
+               * assume default '-' user.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified context.
+             *
+             * Create a request for the method "contexts.delete".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the context to delete. Format:
+            `projects//agent/sessions//contexts/`
+            or
+             *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+            not
+             *        specified, we assume default 'draft' environment. If `User ID` is not
+            specified, we assume
+             *        default '-' user.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v2beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+
+              /**
+               * Deletes the specified context.
+               *
+               * Create a request for the method "contexts.delete".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the context to delete. Format:
+            `projects//agent/sessions//contexts/`
+            or
+             *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+            not
+             *        specified, we assume default 'draft' environment. If `User ID` is not
+            specified, we assume
+             *        default '-' user.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the context to delete. Format:
+               * `projects//agent/sessions//contexts/` or
+               * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+               * not specified, we assume default 'draft' environment. If `User ID` is not
+               * specified, we assume default '-' user.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the context to delete. Format: `projects//agent/sessions//contexts/` or
+             `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not specified,
+             we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the context to delete. Format:
+               * `projects//agent/sessions//contexts/` or
+               * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+               * not specified, we assume default 'draft' environment. If `User ID` is not
+               * specified, we assume default '-' user.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves the specified context.
+             *
+             * Create a request for the method "contexts.get".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the context. Format:
+            `projects//agent/sessions//contexts/`
+            or
+             *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+            not
+             *        specified, we assume default 'draft' environment. If `User ID` is not
+            specified, we assume
+             *        default '-' user.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context> {
+
+              private static final String REST_PATH = "v2beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+
+              /**
+               * Retrieves the specified context.
+               *
+               * Create a request for the method "contexts.get".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the context. Format:
+            `projects//agent/sessions//contexts/`
+            or
+             *        `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+            not
+             *        specified, we assume default 'draft' environment. If `User ID` is not
+            specified, we assume
+             *        default '-' user.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the context. Format: `projects//agent/sessions//contexts/` or
+               * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+               * not specified, we assume default 'draft' environment. If `User ID` is not
+               * specified, we assume default '-' user.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the context. Format: `projects//agent/sessions//contexts/` or
+             `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is not specified,
+             we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the context. Format: `projects//agent/sessions//contexts/` or
+               * `projects//agent/environments//users//sessions//contexts/`. If `Environment ID` is
+               * not specified, we assume default 'draft' environment. If `User ID` is not
+               * specified, we assume default '-' user.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Returns the list of all contexts in the specified session.
+             *
+             * Create a request for the method "contexts.list".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The session to list all contexts from.
+            Format: `projects//agent/sessions/` or
+             *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
+             *        assume
+            default 'draft' environment. If `User ID` is not specified, we assume
+            default '-'
+             *        user.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListContextsResponse> {
+
+              private static final String REST_PATH = "v2beta1/{+parent}/contexts";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+
+              /**
+               * Returns the list of all contexts in the specified session.
+               *
+               * Create a request for the method "contexts.list".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The session to list all contexts from.
+            Format: `projects//agent/sessions/` or
+             *        `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we
+             *        assume
+            default 'draft' environment. If `User ID` is not specified, we assume
+            default '-'
+             *        user.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListContextsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The session to list all contexts from. Format:
+               * `projects//agent/sessions/` or `projects//agent/environments//users//sessions/`. If
+               * `Environment ID` is not specified, we assume default 'draft' environment. If `User
+               * ID` is not specified, we assume default '-' user.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The session to list all contexts from. Format: `projects//agent/sessions/` or
+             `projects//agent/environments//users//sessions/`. If `Environment ID` is not specified, we assume
+             default 'draft' environment. If `User ID` is not specified, we assume default '-' user.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The session to list all contexts from. Format:
+               * `projects//agent/sessions/` or `projects//agent/environments//users//sessions/`. If
+               * `Environment ID` is not specified, we assume default 'draft' environment. If `User
+               * ID` is not specified, we assume default '-' user.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous list request.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the specified context.
+             *
+             * Create a request for the method "contexts.patch".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The unique identifier of the context. Format:
+            `projects//agent/sessions//contexts/`,
+            or
+             *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
+            always
+             *        converted to lowercase. If `Environment ID` is not specified, we
+            assume default 'draft'
+             *        environment. If `User ID` is not specified, we
+            assume default '-' user.
+             * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context> {
+
+              private static final String REST_PATH = "v2beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+
+              /**
+               * Updates the specified context.
+               *
+               * Create a request for the method "contexts.patch".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The unique identifier of the context. Format:
+            `projects//agent/sessions//contexts/`,
+            or
+             *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
+            always
+             *        converted to lowercase. If `Environment ID` is not specified, we
+            assume default 'draft'
+             *        environment. If `User ID` is not specified, we
+            assume default '-' user.
+               * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context content) {
+                super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The unique identifier of the context. Format:
+               * `projects//agent/sessions//contexts/`, or
+               * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
+               * always converted to lowercase. If `Environment ID` is not specified, we assume
+               * default 'draft' environment. If `User ID` is not specified, we assume default '-'
+               * user.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`, or
+             `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always converted to
+             lowercase. If `Environment ID` is not specified, we assume default 'draft' environment. If `User
+             ID` is not specified, we assume default '-' user.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The unique identifier of the context. Format:
+               * `projects//agent/sessions//contexts/`, or
+               * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
+               * always converted to lowercase. If `Environment ID` is not specified, we assume
+               * default 'draft' environment. If `User ID` is not specified, we assume default '-'
+               * user.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/environments/[^/]+/users/[^/]+/conversations/[^/]+/contexts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** Optional. The mask to control which fields get updated. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Optional. The mask to control which fields get updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** Optional. The mask to control which fields get updated. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+      }
+    }
+    /**
+     * An accessor for creating requests from the HumanAgentAssistants collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.HumanAgentAssistants.List request = dialogflow.humanAgentAssistants().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public HumanAgentAssistants humanAgentAssistants() {
+      return new HumanAgentAssistants();
+    }
+
+    /**
+     * The "humanAgentAssistants" collection of methods.
+     */
+    public class HumanAgentAssistants {
+
+      /**
+       * Uses the specified human agent assistant to come up with suggestions (relevant articles and FAQs)
+       * on how to respond to a given conversation.
+       *
+       * Create a request for the method "humanAgentAssistants.compileSuggestions".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link CompileSuggestions#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompileSuggestionsRequest}
+       * @return the request
+       */
+      public CompileSuggestions compileSuggestions(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompileSuggestionsRequest content) throws java.io.IOException {
+        CompileSuggestions result = new CompileSuggestions(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CompileSuggestions extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompileSuggestionsResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+name}:compileSuggestions";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/humanAgentAssistants/[^/]+$");
+
+        /**
+         * Uses the specified human agent assistant to come up with suggestions (relevant articles and
+         * FAQs) on how to respond to a given conversation.
+         *
+         * Create a request for the method "humanAgentAssistants.compileSuggestions".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link CompileSuggestions#execute()} method to invoke the remote
+         * operation. <p> {@link CompileSuggestions#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompileSuggestionsRequest}
+         * @since 1.13
+         */
+        protected CompileSuggestions(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompileSuggestionsRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CompileSuggestionsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+        }
+
+        @Override
+        public CompileSuggestions set$Xgafv(java.lang.String $Xgafv) {
+          return (CompileSuggestions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CompileSuggestions setAccessToken(java.lang.String accessToken) {
+          return (CompileSuggestions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CompileSuggestions setAlt(java.lang.String alt) {
+          return (CompileSuggestions) super.setAlt(alt);
+        }
+
+        @Override
+        public CompileSuggestions setCallback(java.lang.String callback) {
+          return (CompileSuggestions) super.setCallback(callback);
+        }
+
+        @Override
+        public CompileSuggestions setFields(java.lang.String fields) {
+          return (CompileSuggestions) super.setFields(fields);
+        }
+
+        @Override
+        public CompileSuggestions setKey(java.lang.String key) {
+          return (CompileSuggestions) super.setKey(key);
+        }
+
+        @Override
+        public CompileSuggestions setOauthToken(java.lang.String oauthToken) {
+          return (CompileSuggestions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CompileSuggestions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CompileSuggestions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CompileSuggestions setQuotaUser(java.lang.String quotaUser) {
+          return (CompileSuggestions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CompileSuggestions setUploadType(java.lang.String uploadType) {
+          return (CompileSuggestions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CompileSuggestions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CompileSuggestions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the agent assistant. Format:
+         * `projects//humanAgentAssistants/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the agent assistant. Format: `projects//humanAgentAssistants/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the agent assistant. Format:
+         * `projects//humanAgentAssistants/`.
+         */
+        public CompileSuggestions setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public CompileSuggestions set(String parameterName, Object value) {
+          return (CompileSuggestions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a human agent assistant.
+       *
+       * Create a request for the method "humanAgentAssistants.create".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to create a agent assistant for.
+      Format: `projects/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/humanAgentAssistants";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a human agent assistant.
+         *
+         * Create a request for the method "humanAgentAssistants.create".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to create a agent assistant for.
+      Format: `projects/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to create a agent assistant for. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to create a agent assistant for. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to create a agent assistant for. Format: `projects/`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the specified human agent assistant.
+       *
+       * Create a request for the method "humanAgentAssistants.delete".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/humanAgentAssistants/[^/]+$");
+
+        /**
+         * Deletes the specified human agent assistant.
+         *
+         * Create a request for the method "humanAgentAssistants.delete".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the agent assistant. Format:
+         * `projects//humanAgentAssistants/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the agent assistant. Format: `projects//humanAgentAssistants/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the agent assistant. Format:
+         * `projects//humanAgentAssistants/`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a human agent assistant.
+       *
+       * Create a request for the method "humanAgentAssistants.get".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/humanAgentAssistants/[^/]+$");
+
+        /**
+         * Retrieves a human agent assistant.
+         *
+         * Create a request for the method "humanAgentAssistants.get".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the agent assistant. Format:
+         * `projects//humanAgentAssistants/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the agent assistant. Format: `projects//humanAgentAssistants/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the agent assistant. Format:
+         * `projects//humanAgentAssistants/`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of all human agent assistants.
+       *
+       * Create a request for the method "humanAgentAssistants.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list all agent assistants from.
+      Format: `projects/`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListHumanAgentAssistantsResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/humanAgentAssistants";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns the list of all human agent assistants.
+         *
+         * Create a request for the method "humanAgentAssistants.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list all agent assistants from.
+      Format: `projects/`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListHumanAgentAssistantsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to list all agent assistants from. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list all agent assistants from. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to list all agent assistants from. Format: `projects/`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. The default value is
+         * 100; the maximum value is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of items to return in a single page. The default value is 100; the
+       maximum value is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. The default value is
+         * 100; the maximum value is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the specified human agent assistant.
+       *
+       * Create a request for the method "humanAgentAssistants.patch".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required for all methods except `create` (`create` populates the name
+      automatically).
+      The unique
+       *        identifier of human agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/humanAgentAssistants/[^/]+$");
+
+        /**
+         * Updates the specified human agent assistant.
+         *
+         * Create a request for the method "humanAgentAssistants.patch".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required for all methods except `create` (`create` populates the name
+      automatically).
+      The unique
+       *        identifier of human agent assistant.
+      Format: `projects//humanAgentAssistants/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant content) {
+          super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1HumanAgentAssistant.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required for all methods except `create` (`create` populates the name automatically). The
+         * unique identifier of human agent assistant. Format: `projects//humanAgentAssistants/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required for all methods except `create` (`create` populates the name automatically). The unique
+       identifier of human agent assistant. Format: `projects//humanAgentAssistants/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required for all methods except `create` (`create` populates the name automatically). The
+         * unique identifier of human agent assistant. Format: `projects//humanAgentAssistants/`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/humanAgentAssistants/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The mask to specify which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The mask to specify which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The mask to specify which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the KnowledgeBases collection.
@@ -11993,6 +15849,1455 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the PhoneNumberOrders collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.PhoneNumberOrders.List request = dialogflow.phoneNumberOrders().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PhoneNumberOrders phoneNumberOrders() {
+      return new PhoneNumberOrders();
+    }
+
+    /**
+     * The "phoneNumberOrders" collection of methods.
+     */
+    public class PhoneNumberOrders {
+
+      /**
+       * Cancels an `PhoneNumberOrder`. Returns an error if the order is in state IN_PROGRESS or
+       * COMPLETED.
+       *
+       * Create a request for the method "phoneNumberOrders.cancel".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The unique identifier of the order to delete.
+      Format: `projects//phoneNumberOrders/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CancelPhoneNumberOrderRequest}
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CancelPhoneNumberOrderRequest content) throws java.io.IOException {
+        Cancel result = new Cancel(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v2beta1/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/phoneNumberOrders/[^/]+$");
+
+        /**
+         * Cancels an `PhoneNumberOrder`. Returns an error if the order is in state IN_PROGRESS or
+         * COMPLETED.
+         *
+         * Create a request for the method "phoneNumberOrders.cancel".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The unique identifier of the order to delete.
+      Format: `projects//phoneNumberOrders/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CancelPhoneNumberOrderRequest}
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1CancelPhoneNumberOrderRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumberOrders/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The unique identifier of the order to delete. Format:
+         * `projects//phoneNumberOrders/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique identifier of the order to delete. Format: `projects//phoneNumberOrders/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The unique identifier of the order to delete. Format:
+         * `projects//phoneNumberOrders/`.
+         */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumberOrders/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates an order to request phone numbers be added to a project. The initial `LifecycleState` of
+       * a newly created order is PENDING.
+       *
+       * Create a request for the method "phoneNumberOrders.create".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Resource identifier of the project requesting the orders.
+      Format: `projects/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/phoneNumberOrders";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates an order to request phone numbers be added to a project. The initial `LifecycleState`
+         * of a newly created order is PENDING.
+         *
+         * Create a request for the method "phoneNumberOrders.create".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Resource identifier of the project requesting the orders.
+      Format: `projects/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource identifier of the project requesting the orders. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Resource identifier of the project requesting the orders. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Resource identifier of the project requesting the orders. Format: `projects/`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a specific `PhoneNumberOrder`.
+       *
+       * Create a request for the method "phoneNumberOrders.get".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The unique identifier of the order to retrieve.
+      Format: `projects//phoneNumberOrders/`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/phoneNumberOrders/[^/]+$");
+
+        /**
+         * Returns a specific `PhoneNumberOrder`.
+         *
+         * Create a request for the method "phoneNumberOrders.get".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The unique identifier of the order to retrieve.
+      Format: `projects//phoneNumberOrders/`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumberOrders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The unique identifier of the order to retrieve. Format:
+         * `projects//phoneNumberOrders/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique identifier of the order to retrieve. Format: `projects//phoneNumberOrders/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The unique identifier of the order to retrieve. Format:
+         * `projects//phoneNumberOrders/`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumberOrders/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists of all `PhoneNumberOrder` resources in the specified project.
+       *
+       * Create a request for the method "phoneNumberOrders.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list all orders from.
+      Format: `projects/`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListPhoneNumberOrdersResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/phoneNumberOrders";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists of all `PhoneNumberOrder` resources in the specified project.
+         *
+         * Create a request for the method "phoneNumberOrders.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list all orders from.
+      Format: `projects/`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListPhoneNumberOrdersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to list all orders from. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list all orders from. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to list all orders from. Format: `projects/`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. The default value is
+         * 100. The maximum value is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of items to return in a single page. The default value is 100. The
+       maximum value is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. The default value is
+         * 100. The maximum value is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the specified `PhoneNumberOrder` resource. Returns an error if the order is in state
+       * IN_PROGRESS or COMPLETED.
+       *
+       * Create a request for the method "phoneNumberOrders.patch".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The unique identifier of this order.
+      Format: `projects//phoneNumberOrders/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/phoneNumberOrders/[^/]+$");
+
+        /**
+         * Updates the specified `PhoneNumberOrder` resource. Returns an error if the order is in state
+         * IN_PROGRESS or COMPLETED.
+         *
+         * Create a request for the method "phoneNumberOrders.patch".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The unique identifier of this order.
+      Format: `projects//phoneNumberOrders/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder content) {
+          super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumberOrder.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumberOrders/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The unique identifier of this order. Format: `projects//phoneNumberOrders/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique identifier of this order. Format: `projects//phoneNumberOrders/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The unique identifier of this order. Format: `projects//phoneNumberOrders/`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumberOrders/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The mask to control which fields get updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The mask to control which fields get updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The mask to control which fields get updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the PhoneNumbers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+     *   {@code Dialogflow.PhoneNumbers.List request = dialogflow.phoneNumbers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PhoneNumbers phoneNumbers() {
+      return new PhoneNumbers();
+    }
+
+    /**
+     * The "phoneNumbers" collection of methods.
+     */
+    public class PhoneNumbers {
+
+      /**
+       * Requests deletion of a `PhoneNumber`. The `PhoneNumber` is moved into the DELETE_REQUESTED state
+       * immediately, and is deleted approximately 30 days later. This method may only be called on a
+       * `PhoneNumber` in the ACTIVE state.
+       *
+       * Create a request for the method "phoneNumbers.delete".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The unique identifier of the `PhoneNumber` to delete.
+      Format: `projects//phoneNumbers/`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/phoneNumbers/[^/]+$");
+
+        /**
+         * Requests deletion of a `PhoneNumber`. The `PhoneNumber` is moved into the DELETE_REQUESTED
+         * state immediately, and is deleted approximately 30 days later. This method may only be called
+         * on a `PhoneNumber` in the ACTIVE state.
+         *
+         * Create a request for the method "phoneNumbers.delete".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The unique identifier of the `PhoneNumber` to delete.
+      Format: `projects//phoneNumbers/`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumbers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The unique identifier of the `PhoneNumber` to delete. Format:
+         * `projects//phoneNumbers/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique identifier of the `PhoneNumber` to delete. Format: `projects//phoneNumbers/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The unique identifier of the `PhoneNumber` to delete. Format:
+         * `projects//phoneNumbers/`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumbers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the list of all phone numbers in the specified project.
+       *
+       * Create a request for the method "phoneNumbers.list".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to list all `PhoneNumber` resources from.
+      Format: `projects/`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListPhoneNumbersResponse> {
+
+        private static final String REST_PATH = "v2beta1/{+parent}/phoneNumbers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns the list of all phone numbers in the specified project.
+         *
+         * Create a request for the method "phoneNumbers.list".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to list all `PhoneNumber` resources from.
+      Format: `projects/`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ListPhoneNumbersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to list all `PhoneNumber` resources from. Format: `projects/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to list all `PhoneNumber` resources from. Format: `projects/`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The project to list all `PhoneNumber` resources from. Format: `projects/`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. The default value is
+         * 100. The maximum value is 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of items to return in a single page. The default value is 100. The
+       maximum value is 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of items to return in a single page. The default value is
+         * 100. The maximum value is 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous list request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous list request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. Controls whether `PhoneNumber` resources in the DELETE_REQUESTED state should
+         * be returned. Defaults to false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** Optional. Controls whether `PhoneNumber` resources in the DELETE_REQUESTED state should be
+       returned. Defaults to false.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /**
+         * Optional. Controls whether `PhoneNumber` resources in the DELETE_REQUESTED state should
+         * be returned. Defaults to false.
+         */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the specified `PhoneNumber`.
+       *
+       * Create a request for the method "phoneNumbers.patch".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The unique identifier of this phone number.
+      Format: `projects//phoneNumbers/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/phoneNumbers/[^/]+$");
+
+        /**
+         * Updates the specified `PhoneNumber`.
+         *
+         * Create a request for the method "phoneNumbers.patch".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The unique identifier of this phone number.
+      Format: `projects//phoneNumbers/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber content) {
+          super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumbers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The unique identifier of this phone number. Format: `projects//phoneNumbers/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique identifier of this phone number. Format: `projects//phoneNumbers/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The unique identifier of this phone number. Format: `projects//phoneNumbers/`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumbers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The mask to control which fields get updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The mask to control which fields get updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The mask to control which fields get updated. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Cancels the deletion request for a `PhoneNumber`. This method may only be called on a
+       * `PhoneNumber` in the DELETE_REQUESTED state.
+       *
+       * Create a request for the method "phoneNumbers.undelete".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The unique identifier of the `PhoneNumber` to delete.
+      Format: `projects//phoneNumbers/`.
+       * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1UndeletePhoneNumberRequest}
+       * @return the request
+       */
+      public Undelete undelete(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1UndeletePhoneNumberRequest content) throws java.io.IOException {
+        Undelete result = new Undelete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undelete extends DialogflowRequest<com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber> {
+
+        private static final String REST_PATH = "v2beta1/{+name}:undelete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/phoneNumbers/[^/]+$");
+
+        /**
+         * Cancels the deletion request for a `PhoneNumber`. This method may only be called on a
+         * `PhoneNumber` in the DELETE_REQUESTED state.
+         *
+         * Create a request for the method "phoneNumbers.undelete".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The unique identifier of the `PhoneNumber` to delete.
+      Format: `projects//phoneNumbers/`.
+         * @param content the {@link com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1UndeletePhoneNumberRequest}
+         * @since 1.13
+         */
+        protected Undelete(java.lang.String name, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1UndeletePhoneNumberRequest content) {
+          super(Dialogflow.this, "POST", REST_PATH, content, com.google.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1PhoneNumber.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumbers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undelete set$Xgafv(java.lang.String $Xgafv) {
+          return (Undelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undelete setAccessToken(java.lang.String accessToken) {
+          return (Undelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undelete setAlt(java.lang.String alt) {
+          return (Undelete) super.setAlt(alt);
+        }
+
+        @Override
+        public Undelete setCallback(java.lang.String callback) {
+          return (Undelete) super.setCallback(callback);
+        }
+
+        @Override
+        public Undelete setFields(java.lang.String fields) {
+          return (Undelete) super.setFields(fields);
+        }
+
+        @Override
+        public Undelete setKey(java.lang.String key) {
+          return (Undelete) super.setKey(key);
+        }
+
+        @Override
+        public Undelete setOauthToken(java.lang.String oauthToken) {
+          return (Undelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undelete setQuotaUser(java.lang.String quotaUser) {
+          return (Undelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undelete setUploadType(java.lang.String uploadType) {
+          return (Undelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The unique identifier of the `PhoneNumber` to delete. Format:
+         * `projects//phoneNumbers/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The unique identifier of the `PhoneNumber` to delete. Format: `projects//phoneNumbers/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The unique identifier of the `PhoneNumber` to delete. Format:
+         * `projects//phoneNumbers/`.
+         */
+        public Undelete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/phoneNumbers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undelete set(String parameterName, Object value) {
+          return (Undelete) super.set(parameterName, value);
         }
       }
 

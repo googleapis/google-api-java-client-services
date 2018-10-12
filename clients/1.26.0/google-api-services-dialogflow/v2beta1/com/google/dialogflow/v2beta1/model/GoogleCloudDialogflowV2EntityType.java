@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2EntityType extends com.google.api.clie
   private java.lang.String autoExpansionMode;
 
   /**
-   * Required. The name of the entity.
+   * Required. The name of the entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowV2EntityType extends com.google.api.clie
   }
 
   /**
-   * Required. The name of the entity.
+   * Required. The name of the entity type.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -98,7 +98,7 @@ public final class GoogleCloudDialogflowV2EntityType extends com.google.api.clie
   }
 
   /**
-   * Required. The name of the entity.
+   * Required. The name of the entity type.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2EntityType setDisplayName(java.lang.String displayName) {

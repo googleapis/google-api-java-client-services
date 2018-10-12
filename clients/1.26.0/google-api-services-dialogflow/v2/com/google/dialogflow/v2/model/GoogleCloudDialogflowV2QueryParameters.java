@@ -66,8 +66,8 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   private java.lang.Boolean resetContexts;
 
   /**
-   * Optional. The collection of session entity types to replace or extend developer entities with
-   * for this query only. The entity synonyms apply to all languages.
+   * Optional. Additional session entity types to replace or extend developer entity types with. The
+   * entity synonyms apply to all languages and persist for the session of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +161,8 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   }
 
   /**
-   * Optional. The collection of session entity types to replace or extend developer entities with
-   * for this query only. The entity synonyms apply to all languages.
+   * Optional. Additional session entity types to replace or extend developer entity types with. The
+   * entity synonyms apply to all languages and persist for the session of this query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SessionEntityType> getSessionEntityTypes() {
@@ -170,8 +170,8 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   }
 
   /**
-   * Optional. The collection of session entity types to replace or extend developer entities with
-   * for this query only. The entity synonyms apply to all languages.
+   * Optional. Additional session entity types to replace or extend developer entity types with. The
+   * entity synonyms apply to all languages and persist for the session of this query.
    * @param sessionEntityTypes sessionEntityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryParameters setSessionEntityTypes(java.util.List<GoogleCloudDialogflowV2SessionEntityType> sessionEntityTypes) {

@@ -17,8 +17,8 @@
 package com.google.monitoring.v3.model;
 
 /**
- * Used to perform string matching. Currently, this matches on the exact content. In the future, it
- * can be expanded to allow for regular expressions and more complex matching.
+ * Used to perform string matching. It allows substring and regular expressions, together with their
+ * negations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed
@@ -32,14 +32,14 @@ package com.google.monitoring.v3.model;
 public final class ContentMatcher extends com.google.api.client.json.GenericJson {
 
   /**
-   * String content to match (max 1024 bytes)
+   * String or regex content to match (max 1024 bytes)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * String content to match (max 1024 bytes)
+   * String or regex content to match (max 1024 bytes)
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -47,7 +47,7 @@ public final class ContentMatcher extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * String content to match (max 1024 bytes)
+   * String or regex content to match (max 1024 bytes)
    * @param content content or {@code null} for none
    */
   public ContentMatcher setContent(java.lang.String content) {

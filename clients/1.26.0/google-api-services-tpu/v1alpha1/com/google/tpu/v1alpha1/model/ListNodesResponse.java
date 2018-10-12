@@ -50,6 +50,13 @@ public final class ListNodesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The next page token or empty if none.
    * @return value or {@code null} for none
    */
@@ -80,6 +87,23 @@ public final class ListNodesResponse extends com.google.api.client.json.GenericJ
    */
   public ListNodesResponse setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListNodesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

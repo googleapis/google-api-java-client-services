@@ -36,12 +36,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCard extends co
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton> buttons;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton.class);
-  }
-
   /**
    * Required, unless image is present. The body text of the card.
    * The value may be {@code null}.

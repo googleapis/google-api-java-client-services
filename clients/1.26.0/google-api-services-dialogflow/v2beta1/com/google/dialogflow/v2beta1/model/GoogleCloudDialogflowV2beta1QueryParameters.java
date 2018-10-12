@@ -77,8 +77,8 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   private GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig;
 
   /**
-   * Optional. The collection of session entity types to replace or extend developer entities with
-   * for this query only. The entity synonyms apply to all languages.
+   * Optional. Additional session entity types to replace or extend developer entity types with. The
+   * entity synonyms apply to all languages and persist for the session of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,8 +206,8 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Optional. The collection of session entity types to replace or extend developer entities with
-   * for this query only. The entity synonyms apply to all languages.
+   * Optional. Additional session entity types to replace or extend developer entity types with. The
+   * entity synonyms apply to all languages and persist for the session of this query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> getSessionEntityTypes() {
@@ -215,8 +215,8 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Optional. The collection of session entity types to replace or extend developer entities with
-   * for this query only. The entity synonyms apply to all languages.
+   * Optional. Additional session entity types to replace or extend developer entity types with. The
+   * entity synonyms apply to all languages and persist for the session of this query.
    * @param sessionEntityTypes sessionEntityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setSessionEntityTypes(java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> sessionEntityTypes) {

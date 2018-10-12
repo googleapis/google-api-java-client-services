@@ -36,12 +36,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelect extends co
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItem> items;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentMessageCarouselSelectItem used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentMessageCarouselSelectItem.class);
-  }
-
   /**
    * Required. Carousel items.
    * @return value or {@code null} for none

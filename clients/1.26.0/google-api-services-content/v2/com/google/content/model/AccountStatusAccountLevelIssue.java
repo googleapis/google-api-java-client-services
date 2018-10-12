@@ -52,6 +52,13 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   private java.lang.String detail;
 
   /**
+   * The URL of a web page to help resolving this issue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentation;
+
+  /**
    * Issue identifier.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
    */
   public AccountStatusAccountLevelIssue setDetail(java.lang.String detail) {
     this.detail = detail;
+    return this;
+  }
+
+  /**
+   * The URL of a web page to help resolving this issue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentation() {
+    return documentation;
+  }
+
+  /**
+   * The URL of a web page to help resolving this issue.
+   * @param documentation documentation or {@code null} for none
+   */
+  public AccountStatusAccountLevelIssue setDocumentation(java.lang.String documentation) {
+    this.documentation = documentation;
     return this;
   }
 

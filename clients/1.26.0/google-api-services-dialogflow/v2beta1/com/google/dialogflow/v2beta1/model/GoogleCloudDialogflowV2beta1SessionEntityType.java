@@ -55,6 +55,9 @@ public final class GoogleCloudDialogflowV2beta1SessionEntityType extends com.goo
    * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
    * specified, we assume default 'draft' environment. If `User ID` is not specified, we assume
    * default '-' user.
+   *
+   * `` must be the display name of an existing entity type in the same agent that will be
+   * overridden or supplemented.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,6 +105,9 @@ public final class GoogleCloudDialogflowV2beta1SessionEntityType extends com.goo
    * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
    * specified, we assume default 'draft' environment. If `User ID` is not specified, we assume
    * default '-' user.
+   *
+   * `` must be the display name of an existing entity type in the same agent that will be
+   * overridden or supplemented.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -114,6 +120,9 @@ public final class GoogleCloudDialogflowV2beta1SessionEntityType extends com.goo
    * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
    * specified, we assume default 'draft' environment. If `User ID` is not specified, we assume
    * default '-' user.
+   *
+   * `` must be the display name of an existing entity type in the same agent that will be
+   * overridden or supplemented.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SessionEntityType setName(java.lang.String name) {

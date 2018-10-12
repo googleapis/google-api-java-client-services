@@ -116,6 +116,12 @@ public final class Node extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<NetworkEndpoint> networkEndpoints;
 
+  static {
+    // hack to force ProGuard to consider NetworkEndpoint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NetworkEndpoint.class);
+  }
+
   /**
    * Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as
    * visible to Compute Engine instances.

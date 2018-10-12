@@ -4321,6 +4321,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Creates a context.
            *
+           * If the specified context already exists, overrides the context.
+           *
            * Create a request for the method "contexts.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -4346,6 +4348,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Creates a context.
+             *
+             * If the specified context already exists, overrides the context.
              *
              * Create a request for the method "contexts.create".
              *
@@ -5098,6 +5102,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Creates a session entity type.
            *
+           * If the specified session entity type already exists, overrides the session entity type.
+           *
            * Create a request for the method "entityTypes.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -5123,6 +5129,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Creates a session entity type.
+             *
+             * If the specified session entity type already exists, overrides the session entity type.
              *
              * Create a request for the method "entityTypes.create".
              *
@@ -5711,6 +5719,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The unique identifier of this session entity type. Format:
            *        `projects//agent/sessions//entityTypes/`.
+          `` must be the display name of an existing
+           *        entity
+          type in the same agent that will be overridden or supplemented.
            * @param content the {@link com.google.dialogflow.v2.model.GoogleCloudDialogflowV2SessionEntityType}
            * @return the request
            */
@@ -5740,6 +5751,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The unique identifier of this session entity type. Format:
            *        `projects//agent/sessions//entityTypes/`.
+          `` must be the display name of an existing
+           *        entity
+          type in the same agent that will be overridden or supplemented.
              * @param content the {@link com.google.dialogflow.v2.model.GoogleCloudDialogflowV2SessionEntityType}
              * @since 1.13
              */
@@ -5811,12 +5825,18 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The unique identifier of this session entity type. Format:
              * `projects//agent/sessions//entityTypes/`.
+             *
+             * `` must be the display name of an existing entity type in the same agent that will be
+             * overridden or supplemented.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The unique identifier of this session entity type. Format:
            `projects//agent/sessions//entityTypes/`.
+
+           `` must be the display name of an existing entity type in the same agent that will be overridden or
+           supplemented.
              */
             public java.lang.String getName() {
               return name;
@@ -5825,6 +5845,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The unique identifier of this session entity type. Format:
              * `projects//agent/sessions//entityTypes/`.
+             *
+             * `` must be the display name of an existing entity type in the same agent that will be
+             * overridden or supplemented.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

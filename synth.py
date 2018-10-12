@@ -22,6 +22,7 @@ from os import path
 from pathlib import Path
 import glob
 import re
+import sys
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -79,12 +80,15 @@ def generate_service(disco: str):
 
 def all_discoveries():
     discos = []
-    for file in glob.glob(str(discovery / "discoveries/*.v*.json")):
+    for file in glob.glob(str(discovery / 'discoveries/*.v*.json')):
         discos.append(path.basename(file))
-
-    discos.sort()
 
     return discos
 
-for disco in all_discoveries():
+discoveries = all_discoveries()
+
+if len(sys.argv) == 2:
+    discoveries = [discovery for discovery in discoveries if discovery.startswith(sys.argv[1])]
+
+for disco in discoveries:
     generate_service(disco)

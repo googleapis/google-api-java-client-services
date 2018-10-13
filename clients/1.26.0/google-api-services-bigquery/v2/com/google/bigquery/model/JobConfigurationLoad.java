@@ -246,6 +246,15 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private TimePartitioning timePartitioning;
 
   /**
+   * If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into
+   * their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
+   * The default value will be true once this feature launches, but can be set now in preparation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useAvroLogicalTypes;
+
+  /**
    * [Optional] Specifies the action that occurs if the destination table already exists. The
    * following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery
    * overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data
@@ -756,6 +765,27 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setTimePartitioning(TimePartitioning timePartitioning) {
     this.timePartitioning = timePartitioning;
+    return this;
+  }
+
+  /**
+   * If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into
+   * their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
+   * The default value will be true once this feature launches, but can be set now in preparation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseAvroLogicalTypes() {
+    return useAvroLogicalTypes;
+  }
+
+  /**
+   * If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into
+   * their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
+   * The default value will be true once this feature launches, but can be set now in preparation.
+   * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
+   */
+  public JobConfigurationLoad setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {
+    this.useAvroLogicalTypes = useAvroLogicalTypes;
     return this;
   }
 

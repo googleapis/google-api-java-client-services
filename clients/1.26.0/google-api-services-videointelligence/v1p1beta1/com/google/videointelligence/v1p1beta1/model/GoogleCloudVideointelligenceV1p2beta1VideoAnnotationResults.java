@@ -96,6 +96,12 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1TextAnnotation> textAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1TextAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1TextAnnotation.class);
+  }
+
   /**
    * If set, indicates an error. Note that for a single `AnnotateVideoRequest` some videos may
    * succeed and some may fail.

@@ -32,38 +32,11 @@ package com.google.videointelligence.v1p1beta1.model;
 public final class GoogleCloudVideointelligenceV1p2beta1TextAnnotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence for the track of detected text. It is calculated as the highest over all frames
-   * where OCR detected text appears.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Float confidence;
-
-  /**
-   * Information related to the frames where OCR detected text appears.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudVideointelligenceV1p2beta1TextFrame> frames;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1TextFrame used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1TextFrame.class);
-  }
-
-  /**
    * All video segments where OCR detected text appears.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1TextSegment> segments;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1TextSegment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1TextSegment.class);
-  }
 
   /**
    * The detected text.
@@ -71,42 +44,6 @@ public final class GoogleCloudVideointelligenceV1p2beta1TextAnnotation extends c
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
-
-  /**
-   * Confidence for the track of detected text. It is calculated as the highest over all frames
-   * where OCR detected text appears.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getConfidence() {
-    return confidence;
-  }
-
-  /**
-   * Confidence for the track of detected text. It is calculated as the highest over all frames
-   * where OCR detected text appears.
-   * @param confidence confidence or {@code null} for none
-   */
-  public GoogleCloudVideointelligenceV1p2beta1TextAnnotation setConfidence(java.lang.Float confidence) {
-    this.confidence = confidence;
-    return this;
-  }
-
-  /**
-   * Information related to the frames where OCR detected text appears.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudVideointelligenceV1p2beta1TextFrame> getFrames() {
-    return frames;
-  }
-
-  /**
-   * Information related to the frames where OCR detected text appears.
-   * @param frames frames or {@code null} for none
-   */
-  public GoogleCloudVideointelligenceV1p2beta1TextAnnotation setFrames(java.util.List<GoogleCloudVideointelligenceV1p2beta1TextFrame> frames) {
-    this.frames = frames;
-    return this;
-  }
 
   /**
    * All video segments where OCR detected text appears.

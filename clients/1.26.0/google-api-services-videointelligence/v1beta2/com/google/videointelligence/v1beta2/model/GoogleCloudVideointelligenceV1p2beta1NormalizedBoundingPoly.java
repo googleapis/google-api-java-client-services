@@ -46,6 +46,12 @@ public final class GoogleCloudVideointelligenceV1p2beta1NormalizedBoundingPoly e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1NormalizedVertex> vertices;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1NormalizedVertex used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1NormalizedVertex.class);
+  }
+
   /**
    * Normalized vertices of the bounding polygon.
    * @return value or {@code null} for none

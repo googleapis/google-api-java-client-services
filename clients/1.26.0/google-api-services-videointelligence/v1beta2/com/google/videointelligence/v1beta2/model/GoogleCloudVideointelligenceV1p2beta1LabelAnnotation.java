@@ -59,6 +59,12 @@ public final class GoogleCloudVideointelligenceV1p2beta1LabelAnnotation extends 
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelFrame> frames;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1LabelFrame used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1LabelFrame.class);
+  }
+
   /**
    * All video segments where a label was detected.
    * The value may be {@code null}.

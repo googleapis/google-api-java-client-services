@@ -46,7 +46,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.26.0-SNAPSHOT of the Google Cloud Deployment Manager API V2Beta Methods library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.26.0 of the Google Cloud Deployment Manager API V2Beta Methods library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

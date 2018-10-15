@@ -46,7 +46,7 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.26.0-SNAPSHOT of the Knowledge Graph Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.26.0 of the Knowledge Graph Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

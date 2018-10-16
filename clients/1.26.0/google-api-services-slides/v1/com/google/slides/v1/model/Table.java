@@ -61,6 +61,12 @@ public final class Table extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<TableColumnProperties> tableColumns;
 
+  static {
+    // hack to force ProGuard to consider TableColumnProperties used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TableColumnProperties.class);
+  }
+
   /**
    * Properties and contents of each row.
    *
@@ -70,6 +76,12 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<TableRow> tableRows;
+
+  static {
+    // hack to force ProGuard to consider TableRow used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TableRow.class);
+  }
 
   /**
    * Properties of vertical cell borders.

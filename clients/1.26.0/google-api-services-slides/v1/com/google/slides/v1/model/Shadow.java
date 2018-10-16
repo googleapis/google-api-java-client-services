@@ -35,7 +35,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
 
   /**
    * The alignment point of the shadow, that sets the origin for translate, scale and skew of the
-   * shadow.
+   * shadow. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   private java.lang.String propertyState;
 
   /**
-   * Whether the shadow should rotate with the shape.
+   * Whether the shadow should rotate with the shape. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   private AffineTransform transform;
 
   /**
-   * The type of the shadow.
+   * The type of the shadow. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
 
   /**
    * The alignment point of the shadow, that sets the origin for translate, scale and skew of the
-   * shadow.
+   * shadow. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlignment() {
@@ -107,7 +107,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
 
   /**
    * The alignment point of the shadow, that sets the origin for translate, scale and skew of the
-   * shadow.
+   * shadow. This property is read-only.
    * @param alignment alignment or {@code null} for none
    */
   public Shadow setAlignment(java.lang.String alignment) {
@@ -194,7 +194,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the shadow should rotate with the shape.
+   * Whether the shadow should rotate with the shape. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRotateWithShape() {
@@ -202,7 +202,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the shadow should rotate with the shape.
+   * Whether the shadow should rotate with the shape. This property is read-only.
    * @param rotateWithShape rotateWithShape or {@code null} for none
    */
   public Shadow setRotateWithShape(java.lang.Boolean rotateWithShape) {
@@ -230,7 +230,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the shadow.
+   * The type of the shadow. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -238,7 +238,7 @@ public final class Shadow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the shadow.
+   * The type of the shadow. This property is read-only.
    * @param type type or {@code null} for none
    */
   public Shadow setType(java.lang.String type) {

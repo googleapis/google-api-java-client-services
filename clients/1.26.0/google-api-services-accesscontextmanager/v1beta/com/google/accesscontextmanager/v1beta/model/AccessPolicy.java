@@ -56,7 +56,7 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String parent;
 
   /**
-   * Human readable title. Does not affect behavior.
+   * Required. Human readable title. Does not affect behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable title. Does not affect behavior.
+   * Required. Human readable title. Does not affect behavior.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -131,7 +131,7 @@ public final class AccessPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable title. Does not affect behavior.
+   * Required. Human readable title. Does not affect behavior.
    * @param title title or {@code null} for none
    */
   public AccessPolicy setTitle(java.lang.String title) {

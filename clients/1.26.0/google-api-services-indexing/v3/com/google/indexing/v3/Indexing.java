@@ -20,7 +20,7 @@ package com.google.indexing.v3;
  * Service definition for Indexing (v3).
  *
  * <p>
- * The Indexing API allows developers to share the life cycle of a Web Document with Google.
+ * Notifies Google when your web pages change.
  * </p>
  *
  * <p>

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-indexing</artifactId>
-  <version>v3-rev20180911-1.26.0</version>
-  <name>Indexing API v3-rev20180911-1.26.0</name>
+  <version>v3-rev20181012-1.26.0</version>
+  <name>Indexing API v3-rev20181012-1.26.0</name>
   <packaging>pom</packaging>
 
   <inceptionYear>2011</inceptionYear>

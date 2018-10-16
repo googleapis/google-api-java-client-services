@@ -20,7 +20,7 @@ package com.google.script;
  * Service definition for Script (v1).
  *
  * <p>
- * An API for managing and executing Google Apps Script projects.
+ * Manages and executes Google Apps Script projects.
 
  * </p>
  *

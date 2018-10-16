@@ -36,6 +36,12 @@ public final class ListDeploymentsResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<Deployment> deployments;
 
+  static {
+    // hack to force ProGuard to consider Deployment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Deployment.class);
+  }
+
   /**
    * The token that can be used in the next call to get the next page of results.
    * The value may be {@code null}.

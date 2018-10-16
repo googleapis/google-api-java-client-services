@@ -79,6 +79,16 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.Object> managedConfiguration;
 
   /**
+   * The formulated managed configuration with the managed configuration template applied to the
+   * app. To generate a web token that identifies the enterprise use
+   * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens This
+   * field is ignored if managed_configuration is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedConfigurationTemplate managedConfigurationTemplate;
+
+  /**
    * The minimum version of the app that runs on the device. If set, the device attempts to update
    * the app to at least this version code. If the app is not up-to-date, the device will contain a
    * NonComplianceDetail with non_compliance_reason set to APP_NOT_UPDATED. The app must already be
@@ -221,6 +231,29 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setManagedConfiguration(java.util.Map<String, java.lang.Object> managedConfiguration) {
     this.managedConfiguration = managedConfiguration;
+    return this;
+  }
+
+  /**
+   * The formulated managed configuration with the managed configuration template applied to the
+   * app. To generate a web token that identifies the enterprise use
+   * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens This
+   * field is ignored if managed_configuration is set.
+   * @return value or {@code null} for none
+   */
+  public ManagedConfigurationTemplate getManagedConfigurationTemplate() {
+    return managedConfigurationTemplate;
+  }
+
+  /**
+   * The formulated managed configuration with the managed configuration template applied to the
+   * app. To generate a web token that identifies the enterprise use
+   * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens This
+   * field is ignored if managed_configuration is set.
+   * @param managedConfigurationTemplate managedConfigurationTemplate or {@code null} for none
+   */
+  public ApplicationPolicy setManagedConfigurationTemplate(ManagedConfigurationTemplate managedConfigurationTemplate) {
+    this.managedConfigurationTemplate = managedConfigurationTemplate;
     return this;
   }
 

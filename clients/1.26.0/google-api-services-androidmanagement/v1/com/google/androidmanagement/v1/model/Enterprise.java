@@ -87,6 +87,13 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   private java.lang.String pubsubTopic;
 
   /**
+   * Sign-in details of the enterprise. Maximum of 1 SigninDetail is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SigninDetail> signinDetails;
+
+  /**
    * Terms and conditions that must be accepted when provisioning a device for this enterprise. A
    * page of terms is generated for each value in this list.
    * The value may be {@code null}.
@@ -230,6 +237,23 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   public Enterprise setPubsubTopic(java.lang.String pubsubTopic) {
     this.pubsubTopic = pubsubTopic;
+    return this;
+  }
+
+  /**
+   * Sign-in details of the enterprise. Maximum of 1 SigninDetail is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SigninDetail> getSigninDetails() {
+    return signinDetails;
+  }
+
+  /**
+   * Sign-in details of the enterprise. Maximum of 1 SigninDetail is supported.
+   * @param signinDetails signinDetails or {@code null} for none
+   */
+  public Enterprise setSigninDetails(java.util.List<SigninDetail> signinDetails) {
+    this.signinDetails = signinDetails;
     return this;
   }
 

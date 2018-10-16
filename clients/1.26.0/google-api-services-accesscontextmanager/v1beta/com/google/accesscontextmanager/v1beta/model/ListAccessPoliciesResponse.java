@@ -37,6 +37,12 @@ public final class ListAccessPoliciesResponse extends com.google.api.client.json
   @com.google.api.client.util.Key
   private java.util.List<AccessPolicy> accessPolicies;
 
+  static {
+    // hack to force ProGuard to consider AccessPolicy used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AccessPolicy.class);
+  }
+
   /**
    * The pagination token to retrieve the next page of results. If the value is empty, no further
    * results remain.

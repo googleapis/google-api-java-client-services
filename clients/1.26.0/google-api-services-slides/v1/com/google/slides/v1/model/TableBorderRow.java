@@ -37,6 +37,12 @@ public final class TableBorderRow extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<TableBorderCell> tableBorderCells;
 
+  static {
+    // hack to force ProGuard to consider TableBorderCell used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TableBorderCell.class);
+  }
+
   /**
    * Properties of each border cell. When a border's adjacent table cells are merged, it is not
    * included in the response.

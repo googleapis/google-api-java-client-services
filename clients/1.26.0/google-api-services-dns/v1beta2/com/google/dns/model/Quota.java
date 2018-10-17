@@ -51,6 +51,20 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer managedZones;
 
   /**
+   * Maximum allowed number of managed zones which can be attached to a network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer managedZonesPerNetwork;
+
+  /**
+   * Maximum allowed number of networks to which a privately scoped zone can be attached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer networksPerManagedZone;
+
+  /**
    * Maximum allowed number of ResourceRecords per ResourceRecordSet.
    * The value may be {@code null}.
    */
@@ -146,6 +160,40 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setManagedZones(java.lang.Integer managedZones) {
     this.managedZones = managedZones;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of managed zones which can be attached to a network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getManagedZonesPerNetwork() {
+    return managedZonesPerNetwork;
+  }
+
+  /**
+   * Maximum allowed number of managed zones which can be attached to a network.
+   * @param managedZonesPerNetwork managedZonesPerNetwork or {@code null} for none
+   */
+  public Quota setManagedZonesPerNetwork(java.lang.Integer managedZonesPerNetwork) {
+    this.managedZonesPerNetwork = managedZonesPerNetwork;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of networks to which a privately scoped zone can be attached.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNetworksPerManagedZone() {
+    return networksPerManagedZone;
+  }
+
+  /**
+   * Maximum allowed number of networks to which a privately scoped zone can be attached.
+   * @param networksPerManagedZone networksPerManagedZone or {@code null} for none
+   */
+  public Quota setNetworksPerManagedZone(java.lang.Integer networksPerManagedZone) {
+    this.networksPerManagedZone = networksPerManagedZone;
     return this;
   }
 

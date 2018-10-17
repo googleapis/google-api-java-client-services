@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dns</artifactId>
-  <version>v1beta2-rev20180813-1.26.0</version>
-  <name>Google Cloud DNS API v1beta2-rev20180813-1.26.0</name>
+  <version>v1beta2-rev20181015-1.26.0</version>
+  <name>Google Cloud DNS API v1beta2-rev20181015-1.26.0</name>
   <packaging>pom</packaging>
 
   <inceptionYear>2011</inceptionYear>

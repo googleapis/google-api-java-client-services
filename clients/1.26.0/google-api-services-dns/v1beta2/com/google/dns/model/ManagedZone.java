@@ -106,6 +106,21 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> nameServers;
 
   /**
+   * For privately visible zones, the set of GCP resources that the zone is visible from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZonePrivateVisibilityConfig privateVisibilityConfig;
+
+  /**
+   * The zone's visibility: public zones are exposed to the Internet, while private zones are
+   * visible only to GCP resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
+
+  /**
    * The time that this resource was created on the server. This is in RFC3339 text format. Output
    * only.
    * @return value or {@code null} for none
@@ -282,6 +297,42 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setNameServers(java.util.List<java.lang.String> nameServers) {
     this.nameServers = nameServers;
+    return this;
+  }
+
+  /**
+   * For privately visible zones, the set of GCP resources that the zone is visible from.
+   * @return value or {@code null} for none
+   */
+  public ManagedZonePrivateVisibilityConfig getPrivateVisibilityConfig() {
+    return privateVisibilityConfig;
+  }
+
+  /**
+   * For privately visible zones, the set of GCP resources that the zone is visible from.
+   * @param privateVisibilityConfig privateVisibilityConfig or {@code null} for none
+   */
+  public ManagedZone setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfig privateVisibilityConfig) {
+    this.privateVisibilityConfig = privateVisibilityConfig;
+    return this;
+  }
+
+  /**
+   * The zone's visibility: public zones are exposed to the Internet, while private zones are
+   * visible only to GCP resources.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * The zone's visibility: public zones are exposed to the Internet, while private zones are
+   * visible only to GCP resources.
+   * @param visibility visibility or {@code null} for none
+   */
+  public ManagedZone setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

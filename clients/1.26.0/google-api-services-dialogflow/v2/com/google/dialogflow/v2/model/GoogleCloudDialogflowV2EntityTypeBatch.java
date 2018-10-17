@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2EntityTypeBatch extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2EntityType> entityTypes;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2EntityType used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2EntityType.class);
+  }
+
   /**
    * A collection of entity types.
    * @return value or {@code null} for none

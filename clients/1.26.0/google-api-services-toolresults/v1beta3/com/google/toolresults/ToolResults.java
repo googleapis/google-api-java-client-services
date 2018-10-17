@@ -1359,7 +1359,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
-         * Lists Histories for a given Project.
+         * Lists Executions for a given History.
          *
          * The executions are sorted by creation_time in descending order. The execution_id key will be used
          * to order the executions with the same creation_time.
@@ -1391,7 +1391,7 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
           private static final String REST_PATH = "{projectId}/histories/{historyId}/executions";
 
           /**
-           * Lists Histories for a given Project.
+           * Lists Executions for a given History.
            *
            * The executions are sorted by creation_time in descending order. The execution_id key will be
            * used to order the executions with the same creation_time.

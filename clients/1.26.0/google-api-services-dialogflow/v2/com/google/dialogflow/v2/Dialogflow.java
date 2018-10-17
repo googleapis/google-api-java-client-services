@@ -20,7 +20,7 @@ package com.google.dialogflow.v2;
  * Service definition for Dialogflow (v2).
  *
  * <p>
- * An end-to-end development suite for conversational interfaces (e.g., chatbots, voice-powered apps and devices).
+ * Builds conversational interfaces (for example, chatbots, and voice-powered apps and devices).
  * </p>
  *
  * <p>

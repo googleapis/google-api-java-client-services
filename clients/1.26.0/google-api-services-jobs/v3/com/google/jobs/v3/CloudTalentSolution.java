@@ -339,7 +339,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required.
+       * Deprecated. Use language_codes instead.
+       *
+       * Optional.
        *
        * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
        * For more information, see [Tags for Identifying
@@ -358,7 +360,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** Required.
+      /** Deprecated. Use language_codes instead.
+
+     Optional.
 
      The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
      information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
@@ -378,7 +382,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required.
+       * Deprecated. Use language_codes instead.
+       *
+       * Optional.
        *
        * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
        * For more information, see [Tags for Identifying
@@ -396,6 +402,67 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        */
       public Complete setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
+       * Optional.
+       *
+       * The list of languages of the query. This is the BCP-47 language code, such as "en-US" or
+       * "sr-Latn". For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_codes are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_codes are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_codes or companies
+       * having open jobs with same language_codes are returned.
+       *
+       * The maximum number of allowed characters is 255.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> languageCodes;
+
+      /** Optional.
+
+     The list of languages of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+     For more information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+
+     For CompletionType.JOB_TITLE type, only open jobs with same language_codes are returned.
+
+     For CompletionType.COMPANY_NAME type, only companies having open jobs with same language_codes are
+     returned.
+
+     For CompletionType.COMBINED type, only open jobs with same language_codes or companies having open
+     jobs with same language_codes are returned.
+
+     The maximum number of allowed characters is 255.
+       */
+      public java.util.List<java.lang.String> getLanguageCodes() {
+        return languageCodes;
+      }
+
+      /**
+       * Optional.
+       *
+       * The list of languages of the query. This is the BCP-47 language code, such as "en-US" or
+       * "sr-Latn". For more information, see [Tags for Identifying
+       * Languages](https://tools.ietf.org/html/bcp47).
+       *
+       * For CompletionType.JOB_TITLE type, only open jobs with same language_codes are returned.
+       *
+       * For CompletionType.COMPANY_NAME type, only companies having open jobs with same
+       * language_codes are returned.
+       *
+       * For CompletionType.COMBINED type, only open jobs with same language_codes or companies
+       * having open jobs with same language_codes are returned.
+       *
+       * The maximum number of allowed characters is 255.
+       */
+      public Complete setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
+        this.languageCodes = languageCodes;
         return this;
       }
 
@@ -696,7 +763,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Deletes specified company.
+       * Deletes specified company. Prerequisite: The company has no jobs associated with it.
        *
        * Create a request for the method "companies.delete".
        *
@@ -725,7 +792,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/companies/[^/]+$");
 
         /**
-         * Deletes specified company.
+         * Deletes specified company. Prerequisite: The company has no jobs associated with it.
          *
          * Create a request for the method "companies.delete".
          *

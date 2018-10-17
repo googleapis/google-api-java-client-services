@@ -106,8 +106,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * `EMPTY([field_name])` to filter on the existence of a key.
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND
-   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons or functions are allowed in the
-   * expression. The expression must be < 3000 characters in length.
+   * B AND C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the
+   * expression. The expression must be < 3000 bytes in length.
    *
    * Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
    * driving_years > 10`
@@ -192,12 +192,6 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<LocationFilter> locationFilters;
-
-  static {
-    // hack to force ProGuard to consider LocationFilter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LocationFilter.class);
-  }
 
   /**
    * Optional.
@@ -363,8 +357,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * `EMPTY([field_name])` to filter on the existence of a key.
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND
-   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons or functions are allowed in the
-   * expression. The expression must be < 3000 characters in length.
+   * B AND C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the
+   * expression. The expression must be < 3000 bytes in length.
    *
    * Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
    * driving_years > 10`
@@ -390,8 +384,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * `EMPTY([field_name])` to filter on the existence of a key.
    *
    * Boolean expressions (AND/OR/NOT) are supported up to 3 levels of nesting (for example, "((A AND
-   * B AND C) OR NOT D) AND E"), a maximum of 50 comparisons or functions are allowed in the
-   * expression. The expression must be < 3000 characters in length.
+   * B AND C) OR NOT D) AND E"), a maximum of 100 comparisons or functions are allowed in the
+   * expression. The expression must be < 3000 bytes in length.
    *
    * Sample Query: `(LOWER(driving_license)="class \"a\"" OR EMPTY(driving_license)) AND
    * driving_years > 10`

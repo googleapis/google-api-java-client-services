@@ -44,6 +44,12 @@ public final class ListVersionsResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Version> versions;
 
+  static {
+    // hack to force ProGuard to consider Version used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Version.class);
+  }
+
   /**
    * The token use to fetch the next page of records. if not exist in the response, that means no
    * more versions to list.

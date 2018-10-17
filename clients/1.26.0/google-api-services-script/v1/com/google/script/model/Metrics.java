@@ -37,6 +37,12 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MetricsValue> activeUsers;
 
+  static {
+    // hack to force ProGuard to consider MetricsValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricsValue.class);
+  }
+
   /**
    * Number of failed executions.
    * The value may be {@code null}.
@@ -44,12 +50,24 @@ public final class Metrics extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MetricsValue> failedExecutions;
 
+  static {
+    // hack to force ProGuard to consider MetricsValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricsValue.class);
+  }
+
   /**
    * Number of total executions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MetricsValue> totalExecutions;
+
+  static {
+    // hack to force ProGuard to consider MetricsValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricsValue.class);
+  }
 
   /**
    * Number of active users.

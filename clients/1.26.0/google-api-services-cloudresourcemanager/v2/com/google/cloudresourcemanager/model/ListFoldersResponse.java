@@ -38,6 +38,12 @@ public final class ListFoldersResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<Folder> folders;
 
+  static {
+    // hack to force ProGuard to consider Folder used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Folder.class);
+  }
+
   /**
    * A pagination token returned from a previous call to `ListFolders` that indicates from where
    * listing should continue. This field is optional.

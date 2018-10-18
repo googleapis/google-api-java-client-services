@@ -47,7 +47,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
    * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
    *
    * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. A label value can be empty.
    *
    * No more than 256 labels can be associated with a given resource.
    *
@@ -140,7 +140,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
    * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
    *
    * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. A label value can be empty.
    *
    * No more than 256 labels can be associated with a given resource.
    *
@@ -161,7 +161,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
    * expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
    *
    * Label values must be between 0 and 63 characters long and must conform to the regular
-   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+   * expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. A label value can be empty.
    *
    * No more than 256 labels can be associated with a given resource.
    *

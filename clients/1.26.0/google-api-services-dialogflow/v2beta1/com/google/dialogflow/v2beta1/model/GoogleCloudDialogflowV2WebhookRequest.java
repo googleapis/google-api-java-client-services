@@ -55,7 +55,8 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
 
   /**
    * The unique identifier of detectIntent request session. Can be used to identify end-user inside
-   * webhook implementation. Format: `projects//agent/sessions/`.
+   * webhook implementation. Format: `projects//agent/sessions/`, or
+   * `projects//agent/environments//users//sessions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,8 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
 
   /**
    * The unique identifier of detectIntent request session. Can be used to identify end-user inside
-   * webhook implementation. Format: `projects//agent/sessions/`.
+   * webhook implementation. Format: `projects//agent/sessions/`, or
+   * `projects//agent/environments//users//sessions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSession() {
@@ -129,7 +131,8 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
 
   /**
    * The unique identifier of detectIntent request session. Can be used to identify end-user inside
-   * webhook implementation. Format: `projects//agent/sessions/`.
+   * webhook implementation. Format: `projects//agent/sessions/`, or
+   * `projects//agent/environments//users//sessions/`.
    * @param session session or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookRequest setSession(java.lang.String session) {

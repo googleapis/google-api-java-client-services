@@ -44,7 +44,8 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   private BucketOptions bucketOptions;
 
   /**
-   * Optional. A description of this metric, which is used in documentation.
+   * Optional. A description of this metric, which is used in documentation. The maximum length of
+   * the description is 8000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,8 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of this metric, which is used in documentation.
+   * Optional. A description of this metric, which is used in documentation. The maximum length of
+   * the description is 8000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -160,7 +162,8 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of this metric, which is used in documentation.
+   * Optional. A description of this metric, which is used in documentation. The maximum length of
+   * the description is 8000 characters.
    * @param description description or {@code null} for none
    */
   public LogMetric setDescription(java.lang.String description) {

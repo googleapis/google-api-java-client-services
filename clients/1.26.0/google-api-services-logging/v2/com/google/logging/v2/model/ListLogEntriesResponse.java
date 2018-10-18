@@ -38,12 +38,6 @@ public final class ListLogEntriesResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<LogEntry> entries;
 
-  static {
-    // hack to force ProGuard to consider LogEntry used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LogEntry.class);
-  }
-
   /**
    * If there might be more results than those appearing in this response, then nextPageToken is
    * included. To get the next set of results, call this method again using the value of

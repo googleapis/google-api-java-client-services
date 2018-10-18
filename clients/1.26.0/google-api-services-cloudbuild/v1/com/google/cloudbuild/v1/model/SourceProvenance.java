@@ -45,12 +45,6 @@ public final class SourceProvenance extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.Map<String, FileHashes> fileHashes;
 
-  static {
-    // hack to force ProGuard to consider FileHashes used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FileHashes.class);
-  }
-
   /**
    * A copy of the build's `source.repo_source`, if exists, with any revisions resolved.
    * The value may be {@code null}.

@@ -124,6 +124,14 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Option to specify a `WorkerPool` for the build. User specifies the pool with the format
+   * "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]". This is an experimental field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerPool;
+
+  /**
    * Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some
    * of the space will be used by the operating system and build utilities. Also note that this is
    * the minimum disk size that will be allocated for the build -- the build may run with a larger
@@ -326,6 +334,25 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   public BuildOptions setVolumes(java.util.List<Volume> volumes) {
     this.volumes = volumes;
+    return this;
+  }
+
+  /**
+   * Option to specify a `WorkerPool` for the build. User specifies the pool with the format
+   * "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]". This is an experimental field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerPool() {
+    return workerPool;
+  }
+
+  /**
+   * Option to specify a `WorkerPool` for the build. User specifies the pool with the format
+   * "[WORKERPOOL_PROJECT_ID]/[WORKERPOOL_NAME]". This is an experimental field.
+   * @param workerPool workerPool or {@code null} for none
+   */
+  public BuildOptions setWorkerPool(java.lang.String workerPool) {
+    this.workerPool = workerPool;
     return this;
   }
 

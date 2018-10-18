@@ -61,6 +61,12 @@ public final class Results extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<BuiltImage> images;
 
+  static {
+    // hack to force ProGuard to consider BuiltImage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BuiltImage.class);
+  }
+
   /**
    * Number of artifacts uploaded. Only populated when artifacts are uploaded.
    * The value may be {@code null}.

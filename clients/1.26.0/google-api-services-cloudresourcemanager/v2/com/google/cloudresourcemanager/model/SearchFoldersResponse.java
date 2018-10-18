@@ -37,6 +37,12 @@ public final class SearchFoldersResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Folder> folders;
 
+  static {
+    // hack to force ProGuard to consider Folder used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Folder.class);
+  }
+
   /**
    * A pagination token returned from a previous call to `SearchFolders` that indicates from where
    * searching should continue. This field is optional.

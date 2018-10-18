@@ -6880,7 +6880,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Retrieves a list of transactions for an disbursement from your Merchant Center account.
+     * Retrieves a list of transactions for a disbursement from your Merchant Center account.
      *
      * Create a request for the method "orderreports.listtransactions".
      *
@@ -6903,7 +6903,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/orderreports/disbursements/{disbursementId}/transactions";
 
       /**
-       * Retrieves a list of transactions for an disbursement from your Merchant Center account.
+       * Retrieves a list of transactions for a disbursement from your Merchant Center account.
        *
        * Create a request for the method "orderreports.listtransactions".
        *

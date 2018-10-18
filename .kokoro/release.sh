@@ -40,7 +40,7 @@ deploy_library() {
   popd
 }
 
-for directory in `find clients -mindepth 3 -maxdepth 3 -type d`
+for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
 do
   library_version=$(echo ${directory} | cut -f2 -d'/')
   service=$(echo ${directory} | cut -f3 -d'/' | cut -f4 -d'-')
@@ -53,4 +53,5 @@ do
   else
     deploy_library $directory $service $api_version $revision $library_version
   fi
+  exit 0
 done

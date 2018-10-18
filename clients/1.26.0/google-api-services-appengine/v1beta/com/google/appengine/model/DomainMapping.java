@@ -53,6 +53,12 @@ public final class DomainMapping extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<ResourceRecord> resourceRecords;
 
+  static {
+    // hack to force ProGuard to consider ResourceRecord used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ResourceRecord.class);
+  }
+
   /**
    * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
    * The value may be {@code null}.

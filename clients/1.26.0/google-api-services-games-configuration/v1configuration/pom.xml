@@ -10,7 +10,7 @@
   <artifactId>google-api-services-gamesConfiguration</artifactId>
   <version>v1configuration-rev20180816-1.26.0</version>
   <name>Google Play Game Services Publishing API v1configuration-rev20180816-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

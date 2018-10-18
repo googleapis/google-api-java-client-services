@@ -10,7 +10,7 @@
   <artifactId>google-api-services-ml</artifactId>
   <version>v1-rev20180928-1.26.0</version>
   <name>Cloud Machine Learning Engine v1-rev20180928-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

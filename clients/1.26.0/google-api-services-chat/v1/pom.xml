@@ -10,7 +10,7 @@
   <artifactId>google-api-services-chat</artifactId>
   <version>v1-rev20180806-1.26.0</version>
   <name>Hangouts Chat API v1-rev20180806-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

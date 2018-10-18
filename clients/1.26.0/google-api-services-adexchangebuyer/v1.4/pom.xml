@@ -10,7 +10,7 @@
   <artifactId>google-api-services-adexchangebuyer</artifactId>
   <version>v1.4-rev20180823-1.26.0</version>
   <name>Ad Exchange Buyer API v1.4-rev20180823-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

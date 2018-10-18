@@ -10,7 +10,7 @@
   <artifactId>google-api-services-analytics</artifactId>
   <version>v2.4-rev20180622-1.26.0</version>
   <name>Google Analytics API v2.4-rev20180622-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

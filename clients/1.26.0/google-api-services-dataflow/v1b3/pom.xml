@@ -10,7 +10,7 @@
   <artifactId>google-api-services-dataflow</artifactId>
   <version>v1b3-rev20180926-1.26.0</version>
   <name>Dataflow API v1b3-rev20180926-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

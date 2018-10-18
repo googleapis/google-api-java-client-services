@@ -10,7 +10,7 @@
   <artifactId>google-api-services-cloudprofiler</artifactId>
   <version>v2-rev20180730-1.26.0</version>
   <name>Stackdriver Profiler API v2-rev20180730-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

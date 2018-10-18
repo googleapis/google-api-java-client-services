@@ -10,7 +10,7 @@
   <artifactId>google-api-services-composer</artifactId>
   <version>v1-rev20181001-1.26.0</version>
   <name>Cloud Composer API v1-rev20181001-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

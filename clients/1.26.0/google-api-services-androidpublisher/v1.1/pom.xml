@@ -10,7 +10,7 @@
   <artifactId>google-api-services-androidpublisher</artifactId>
   <version>v1.1-rev20181009-1.26.0</version>
   <name>Google Play Developer API v1.1-rev20181009-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

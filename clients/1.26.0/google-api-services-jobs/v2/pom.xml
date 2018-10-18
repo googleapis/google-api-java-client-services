@@ -8,9 +8,9 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-jobs</artifactId>
-  <version>v2-rev20180927-1.26.0</version>
-  <name>Cloud Talent Solution API v2-rev20180927-1.26.0</name>
-  <packaging>pom</packaging>
+  <version>v2-rev20181011-1.26.0</version>
+  <name>Cloud Talent Solution API v2-rev20181011-1.26.0</name>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

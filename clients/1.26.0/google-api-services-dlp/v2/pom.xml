@@ -10,7 +10,7 @@
   <artifactId>google-api-services-dlp</artifactId>
   <version>v2-rev20181002-1.26.0</version>
   <name>Cloud Data Loss Prevention (DLP) API v2-rev20181002-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

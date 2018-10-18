@@ -10,7 +10,7 @@
   <artifactId>google-api-services-adsensehost</artifactId>
   <version>v4.1-rev20180807-1.26.0</version>
   <name>AdSense Host API v4.1-rev20180807-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -10,7 +10,7 @@
   <artifactId>google-api-services-surveys</artifactId>
   <version>v2-rev20180508-1.26.0</version>
   <name>Surveys API v2-rev20180508-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

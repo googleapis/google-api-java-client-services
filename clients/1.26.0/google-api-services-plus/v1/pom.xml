@@ -10,7 +10,7 @@
   <artifactId>google-api-services-plus</artifactId>
   <version>v1-rev20180805-1.26.0</version>
   <name>Google+ API v1-rev20180805-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -10,7 +10,7 @@
   <artifactId>google-api-services-adsense</artifactId>
   <version>v1.4-rev20180807-1.26.0</version>
   <name>AdSense Management API v1.4-rev20180807-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

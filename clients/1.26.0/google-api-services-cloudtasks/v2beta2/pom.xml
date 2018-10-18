@@ -10,7 +10,7 @@
   <artifactId>google-api-services-cloudtasks</artifactId>
   <version>v2beta2-rev20180731-1.26.0</version>
   <name>Cloud Tasks API v2beta2-rev20180731-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

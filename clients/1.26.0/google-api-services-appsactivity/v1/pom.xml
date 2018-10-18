@@ -10,7 +10,7 @@
   <artifactId>google-api-services-appsactivity</artifactId>
   <version>v1-rev20180819-1.26.0</version>
   <name>Drive Activity API v1-rev20180819-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

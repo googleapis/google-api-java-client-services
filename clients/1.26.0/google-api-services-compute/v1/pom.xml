@@ -10,7 +10,7 @@
   <artifactId>google-api-services-compute</artifactId>
   <version>v1-rev20180916-1.26.0</version>
   <name>Compute Engine API v1-rev20180916-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

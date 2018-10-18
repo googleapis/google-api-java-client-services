@@ -38,6 +38,46 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   private java.lang.String availability;
 
   /**
+   * Custom label 0 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customLabel0;
+
+  /**
+   * Custom label 1 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customLabel1;
+
+  /**
+   * Custom label 2 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customLabel2;
+
+  /**
+   * Custom label 3 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customLabel3;
+
+  /**
+   * Custom label 3 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customLabel4;
+
+  /**
    * Number and amount of installments to pay for an item. Brazil only.
    * The value may be {@code null}.
    */
@@ -112,6 +152,101 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
    */
   public InventorySetRequest setAvailability(java.lang.String availability) {
     this.availability = availability;
+    return this;
+  }
+
+  /**
+   * Custom label 0 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomLabel0() {
+    return customLabel0;
+  }
+
+  /**
+   * Custom label 0 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @param customLabel0 customLabel0 or {@code null} for none
+   */
+  public InventorySetRequest setCustomLabel0(java.lang.String customLabel0) {
+    this.customLabel0 = customLabel0;
+    return this;
+  }
+
+  /**
+   * Custom label 1 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomLabel1() {
+    return customLabel1;
+  }
+
+  /**
+   * Custom label 1 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @param customLabel1 customLabel1 or {@code null} for none
+   */
+  public InventorySetRequest setCustomLabel1(java.lang.String customLabel1) {
+    this.customLabel1 = customLabel1;
+    return this;
+  }
+
+  /**
+   * Custom label 2 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomLabel2() {
+    return customLabel2;
+  }
+
+  /**
+   * Custom label 2 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @param customLabel2 customLabel2 or {@code null} for none
+   */
+  public InventorySetRequest setCustomLabel2(java.lang.String customLabel2) {
+    this.customLabel2 = customLabel2;
+    return this;
+  }
+
+  /**
+   * Custom label 3 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomLabel3() {
+    return customLabel3;
+  }
+
+  /**
+   * Custom label 3 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @param customLabel3 customLabel3 or {@code null} for none
+   */
+  public InventorySetRequest setCustomLabel3(java.lang.String customLabel3) {
+    this.customLabel3 = customLabel3;
+    return this;
+  }
+
+  /**
+   * Custom label 3 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomLabel4() {
+    return customLabel4;
+  }
+
+  /**
+   * Custom label 3 for custom grouping of items in a Shopping campaign. Only supported for online
+   * products.
+   * @param customLabel4 customLabel4 or {@code null} for none
+   */
+  public InventorySetRequest setCustomLabel4(java.lang.String customLabel4) {
+    this.customLabel4 = customLabel4;
     return this;
   }
 

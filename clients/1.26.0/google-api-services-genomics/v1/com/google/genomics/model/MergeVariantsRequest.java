@@ -50,12 +50,6 @@ public final class MergeVariantsRequest extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Variant> variants;
 
-  static {
-    // hack to force ProGuard to consider Variant used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Variant.class);
-  }
-
   /**
    * A mapping between info field keys and the InfoMergeOperations to be performed on them.
    * @return value or {@code null} for none

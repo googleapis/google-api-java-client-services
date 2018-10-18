@@ -54,12 +54,6 @@ public final class VariantAnnotation extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<ClinicalCondition> conditions;
 
-  static {
-    // hack to force ProGuard to consider ClinicalCondition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ClinicalCondition.class);
-  }
-
   /**
    * Effect of the variant on the coding sequence.
    * The value may be {@code null}.

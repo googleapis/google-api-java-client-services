@@ -20,7 +20,7 @@ package com.google.genomics;
  * Service definition for Genomics (v1).
  *
  * <p>
- * Upload, process, query, and search Genomics data in the cloud.
+ * Uploads, processes, queries, and searches Genomics data in the cloud.
  * </p>
  *
  * <p>

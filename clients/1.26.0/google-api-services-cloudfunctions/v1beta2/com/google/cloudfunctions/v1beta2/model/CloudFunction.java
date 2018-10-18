@@ -109,6 +109,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    * or `{network}`, where {project} is a project id where the network is defined, and {network} is
    * the short name of the network.
    *
+   * This field is mutually exclusive with `vpc_connector` and will be replaced by it.
+   *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
    *
@@ -200,6 +202,22 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long versionId;
+
+  /**
+   * The VPC Network Connector that this cloud function can connect to. It can be either the fully-
+   * qualified URI, or the short name of the network connector resource. The format of this field is
+   * `projects/locations/connectors`
+   *
+   * This field is mutually exclusive with `network` field and will eventually replace it.
+   *
+   * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
+   * connecting Cloud projects.
+   *
+   * This feature is currently in alpha, available only for whitelisted users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vpcConnector;
 
   /**
    * The amount of memory in MB available for a function. Defaults to 256MB.
@@ -378,6 +396,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    * or `{network}`, where {project} is a project id where the network is defined, and {network} is
    * the short name of the network.
    *
+   * This field is mutually exclusive with `vpc_connector` and will be replaced by it.
+   *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
    *
@@ -395,6 +415,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    * organization. The format of this field is either `projects/{project}/global/networks/{network}`
    * or `{network}`, where {project} is a project id where the network is defined, and {network} is
    * the short name of the network.
+   *
+   * This field is mutually exclusive with `vpc_connector` and will be replaced by it.
    *
    * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
    * connecting Cloud projects.
@@ -600,6 +622,41 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setVersionId(java.lang.Long versionId) {
     this.versionId = versionId;
+    return this;
+  }
+
+  /**
+   * The VPC Network Connector that this cloud function can connect to. It can be either the fully-
+   * qualified URI, or the short name of the network connector resource. The format of this field is
+   * `projects/locations/connectors`
+   *
+   * This field is mutually exclusive with `network` field and will eventually replace it.
+   *
+   * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
+   * connecting Cloud projects.
+   *
+   * This feature is currently in alpha, available only for whitelisted users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVpcConnector() {
+    return vpcConnector;
+  }
+
+  /**
+   * The VPC Network Connector that this cloud function can connect to. It can be either the fully-
+   * qualified URI, or the short name of the network connector resource. The format of this field is
+   * `projects/locations/connectors`
+   *
+   * This field is mutually exclusive with `network` field and will eventually replace it.
+   *
+   * See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on
+   * connecting Cloud projects.
+   *
+   * This feature is currently in alpha, available only for whitelisted users.
+   * @param vpcConnector vpcConnector or {@code null} for none
+   */
+  public CloudFunction setVpcConnector(java.lang.String vpcConnector) {
+    this.vpcConnector = vpcConnector;
     return this;
   }
 

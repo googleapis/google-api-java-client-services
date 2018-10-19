@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-cloudresourcemanager</artifactId>
+  <artifactId>google-api-services-api-services-cloudresourcemanager</artifactId>
   <version>v2beta1-rev20181015-1.26.0</version>
   <name>Cloud Resource Manager API v2beta1-rev20181015-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-youtubereporting</artifactId>
+  <artifactId>google-api-services-api-services-youtubereporting</artifactId>
   <version>v1-rev20180601-1.26.0</version>
   <name>YouTube Reporting API v1-rev20180601-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

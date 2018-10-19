@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-cloudtrace</artifactId>
+  <artifactId>google-api-services-api-services-cloudtrace</artifactId>
   <version>v2-rev20180820-1.26.0</version>
   <name>Stackdriver Trace API v2-rev20180820-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

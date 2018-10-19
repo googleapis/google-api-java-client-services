@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-androiddeviceprovisioning</artifactId>
+  <artifactId>google-api-services-api-services-androidprovisioningpartner</artifactId>
   <version>v1-rev20181007-1.26.0</version>
   <name>Android Device Provisioning Partner API v1-rev20181007-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-gamesManagement</artifactId>
+  <artifactId>google-api-services-api-services-gamesmanagement</artifactId>
   <version>v1management-rev20180802-1.26.0</version>
   <name>Google Play Game Services Management API v1management-rev20180802-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-replicapool</artifactId>
+  <artifactId>google-api-services-api-services-replicapool</artifactId>
   <version>v1beta1-rev20160512-1.26.0</version>
   <name>Replica Pool API v1beta1-rev20160512-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-sqladmin</artifactId>
+  <artifactId>google-api-services-api-services-sqladmin</artifactId>
   <version>v1beta4-rev20180917-1.26.0</version>
   <name>Cloud SQL Admin API v1beta4-rev20180917-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-language</artifactId>
+  <artifactId>google-api-services-api-services-cloudnaturallanguage</artifactId>
   <version>v1beta1-rev20180930-1.26.0</version>
   <name>Cloud Natural Language API v1beta1-rev20180930-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

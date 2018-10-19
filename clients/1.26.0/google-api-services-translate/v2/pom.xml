@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-translate</artifactId>
+  <artifactId>google-api-services-api-services-translate</artifactId>
   <version>v2-rev20170525-1.26.0</version>
   <name>Google Cloud Translation API v2-rev20170525-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

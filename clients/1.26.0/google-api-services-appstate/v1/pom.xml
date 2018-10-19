@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-appstate</artifactId>
+  <artifactId>google-api-services-api-services-appstate</artifactId>
   <version>v1-rev20180816-1.26.0</version>
   <name>Google App State API v1-rev20180816-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

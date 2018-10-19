@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-redis</artifactId>
+  <artifactId>google-api-services-api-services-cloudredis</artifactId>
   <version>v1-rev20180927-1.26.0</version>
   <name>Google Cloud Memorystore for Redis API v1-rev20180927-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

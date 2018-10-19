@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-doubleclicksearch</artifactId>
+  <artifactId>google-api-services-api-services-doubleclicksearch</artifactId>
   <version>v2-rev20180802-1.26.0</version>
   <name>DoubleClick Search API v2-rev20180802-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

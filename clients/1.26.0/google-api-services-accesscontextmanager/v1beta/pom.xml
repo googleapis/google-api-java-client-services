@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-accesscontextmanager</artifactId>
+  <artifactId>google-api-services-api-services-accesscontextmanager</artifactId>
   <version>v1beta-rev20181013-1.26.0</version>
   <name>Access Context Manager API v1beta-rev20181013-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

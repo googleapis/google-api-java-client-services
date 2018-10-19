@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-servicebroker</artifactId>
+  <artifactId>google-api-services-api-services-servicebroker</artifactId>
   <version>v1alpha1-rev20180713-1.26.0</version>
   <name>Service Broker API v1alpha1-rev20180713-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

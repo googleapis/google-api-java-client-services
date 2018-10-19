@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-blogger</artifactId>
+  <artifactId>google-api-services-api-services-blogger</artifactId>
   <version>v2-rev20150422-1.26.0</version>
   <name>Blogger API v2-rev20150422-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-texttospeech</artifactId>
+  <artifactId>google-api-services-api-services-texttospeech</artifactId>
   <version>v1beta1-rev20180803-1.26.0</version>
   <name>Cloud Text-to-Speech API v1beta1-rev20180803-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

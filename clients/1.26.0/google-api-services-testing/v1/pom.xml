@@ -7,10 +7,10 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-testing</artifactId>
+  <artifactId>google-api-services-api-services-testing</artifactId>
   <version>v1-rev20181003-1.26.0</version>
   <name>Cloud Testing API v1-rev20181003-1.26.0</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
 

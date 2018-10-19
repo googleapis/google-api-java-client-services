@@ -62,12 +62,6 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<LabelDescriptor> labels;
 
-  static {
-    // hack to force ProGuard to consider LabelDescriptor used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LabelDescriptor.class);
-  }
-
   /**
    * Optional. The resource name of the monitored resource descriptor:
    * `"projects/{project_id}/monitoredResourceDescriptors/{type}"` where {type} is the value of the

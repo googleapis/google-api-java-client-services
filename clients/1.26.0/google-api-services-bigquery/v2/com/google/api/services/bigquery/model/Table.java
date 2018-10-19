@@ -156,6 +156,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numLongTermBytes;
 
   /**
+   * [Output-only] [Experimental] The physical size of this table in bytes, excluding any data in
+   * the streaming buffer. This includes compression and storage used for time travel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numPhysicalBytes;
+
+  /**
    * [Output-only] The number of rows of data in this table, excluding any data in the streaming
    * buffer.
    * The value may be {@code null}.
@@ -514,6 +522,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setNumLongTermBytes(java.lang.Long numLongTermBytes) {
     this.numLongTermBytes = numLongTermBytes;
+    return this;
+  }
+
+  /**
+   * [Output-only] [Experimental] The physical size of this table in bytes, excluding any data in
+   * the streaming buffer. This includes compression and storage used for time travel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumPhysicalBytes() {
+    return numPhysicalBytes;
+  }
+
+  /**
+   * [Output-only] [Experimental] The physical size of this table in bytes, excluding any data in
+   * the streaming buffer. This includes compression and storage used for time travel.
+   * @param numPhysicalBytes numPhysicalBytes or {@code null} for none
+   */
+  public Table setNumPhysicalBytes(java.lang.Long numPhysicalBytes) {
+    this.numPhysicalBytes = numPhysicalBytes;
     return this;
   }
 

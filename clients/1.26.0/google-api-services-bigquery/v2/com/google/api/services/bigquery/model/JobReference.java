@@ -38,8 +38,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   private java.lang.String jobId;
 
   /**
-   * The geographic location of the job. Required except for US and EU. See details at
-   * https://cloud.google.com/bigquery/docs/dataset-locations#specifying_your_location.
+   * The geographic location of the job. See details at
+   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location of the job. Required except for US and EU. See details at
-   * https://cloud.google.com/bigquery/docs/dataset-locations#specifying_your_location.
+   * The geographic location of the job. See details at
+   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -81,8 +81,8 @@ public final class JobReference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The geographic location of the job. Required except for US and EU. See details at
-   * https://cloud.google.com/bigquery/docs/dataset-locations#specifying_your_location.
+   * The geographic location of the job. See details at
+   * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * @param location location or {@code null} for none
    */
   public JobReference setLocation(java.lang.String location) {

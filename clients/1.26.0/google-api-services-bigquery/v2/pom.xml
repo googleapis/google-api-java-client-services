@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-api-services-bigquery</artifactId>
-  <version>v2-rev20181005-1.26.0</version>
-  <name>BigQuery API v2-rev20181005-1.26.0</name>
+  <version>v2-rev20181012-1.26.0</version>
+  <name>BigQuery API v2-rev20181012-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -59,14 +59,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <version>2.2.1</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

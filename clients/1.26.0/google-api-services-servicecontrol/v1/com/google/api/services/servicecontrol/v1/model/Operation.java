@@ -79,12 +79,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<LogEntry> logEntries;
 
-  static {
-    // hack to force ProGuard to consider LogEntry used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LogEntry.class);
-  }
-
   /**
    * Represents information about this operation. Each MetricValueSet corresponds to a metric
    * defined in the service configuration. The data type used in the MetricValueSet must agree with
@@ -151,12 +145,6 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceInfo> resources;
-
-  static {
-    // hack to force ProGuard to consider ResourceInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ResourceInfo.class);
-  }
 
   /**
    * Required. Start time of the operation.

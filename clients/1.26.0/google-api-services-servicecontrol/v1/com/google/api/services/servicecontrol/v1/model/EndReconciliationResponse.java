@@ -59,12 +59,24 @@ public final class EndReconciliationResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<MetricValueSet> quotaMetrics;
 
+  static {
+    // hack to force ProGuard to consider MetricValueSet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricValueSet.class);
+  }
+
   /**
    * Indicates the decision of the reconciliation end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<QuotaError> reconciliationErrors;
+
+  static {
+    // hack to force ProGuard to consider QuotaError used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(QuotaError.class);
+  }
 
   /**
    * ID of the actual config used to process the request.

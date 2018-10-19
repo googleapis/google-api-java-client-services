@@ -20,7 +20,7 @@ package com.google.api.services.servicecontrol.v1;
  * Service definition for ServiceControl (v1).
  *
  * <p>
- * Google Service Control provides control plane functionality to managed services, such as logging, monitoring, and status checks.
+ * Provides control plane functionality to managed services, such as logging, monitoring, and status checks.
  * </p>
  *
  * <p>

@@ -74,6 +74,16 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String region;
 
   /**
+   * Optional. The starting address of a range. The address must be a valid IPv4 address in the
+   * x.x.x.x format. This value combined with the IP prefix range is the CIDR range for the subnet.
+   * The range must be within the allocated range that is assigned to the private connection. If the
+   * CIDR range isn't available, the call fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestedAddress;
+
+  /**
    * Required. Name for the new subnetwork. Must be a legal
    * [subnetwork](compute/docs/reference/rest/v1/subnetworks) name.
    * The value may be {@code null}.
@@ -187,6 +197,29 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * Optional. The starting address of a range. The address must be a valid IPv4 address in the
+   * x.x.x.x format. This value combined with the IP prefix range is the CIDR range for the subnet.
+   * The range must be within the allocated range that is assigned to the private connection. If the
+   * CIDR range isn't available, the call fails.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestedAddress() {
+    return requestedAddress;
+  }
+
+  /**
+   * Optional. The starting address of a range. The address must be a valid IPv4 address in the
+   * x.x.x.x format. This value combined with the IP prefix range is the CIDR range for the subnet.
+   * The range must be within the allocated range that is assigned to the private connection. If the
+   * CIDR range isn't available, the call fails.
+   * @param requestedAddress requestedAddress or {@code null} for none
+   */
+  public AddSubnetworkRequest setRequestedAddress(java.lang.String requestedAddress) {
+    this.requestedAddress = requestedAddress;
     return this;
   }
 

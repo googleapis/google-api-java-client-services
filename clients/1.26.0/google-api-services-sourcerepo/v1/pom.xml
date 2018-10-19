@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-sourcerepo</artifactId>
+  <artifactId>google-api-services-api-services-cloudsourcerepositories</artifactId>
   <version>v1-rev20180718-1.26.0</version>
   <name>Cloud Source Repositories API v1-rev20180718-1.26.0</name>
   <packaging>jar</packaging>

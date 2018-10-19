@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-cloudshell</artifactId>
+  <artifactId>google-api-services-api-services-cloudshell</artifactId>
   <version>v1alpha1-rev20180809-1.26.0</version>
   <name>Cloud Shell API v1alpha1-rev20180809-1.26.0</name>
   <packaging>jar</packaging>

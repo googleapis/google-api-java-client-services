@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-language</artifactId>
+  <artifactId>google-api-services-api-services-cloudnaturallanguage</artifactId>
   <version>v1beta2-rev20180930-1.26.0</version>
   <name>Cloud Natural Language API v1beta2-rev20180930-1.26.0</name>
   <packaging>jar</packaging>

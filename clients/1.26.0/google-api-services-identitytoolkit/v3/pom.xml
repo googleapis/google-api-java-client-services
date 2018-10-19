@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-identitytoolkit</artifactId>
+  <artifactId>google-api-services-api-services-identitytoolkit</artifactId>
   <version>v3-rev20180723-1.26.0</version>
   <name>Google Identity Toolkit API v3-rev20180723-1.26.0</name>
   <packaging>jar</packaging>

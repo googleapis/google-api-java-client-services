@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-firebasehosting</artifactId>
+  <artifactId>google-api-services-api-services-firebasehosting</artifactId>
   <version>v1beta1-rev20181004-1.26.0</version>
   <name>Firebase Hosting API v1beta1-rev20181004-1.26.0</name>
   <packaging>jar</packaging>

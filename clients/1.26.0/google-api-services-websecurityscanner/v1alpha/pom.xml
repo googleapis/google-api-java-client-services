@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-websecurityscanner</artifactId>
+  <artifactId>google-api-services-api-services-websecurityscanner</artifactId>
   <version>v1alpha-rev20180905-1.26.0</version>
   <name>Web Security Scanner API v1alpha-rev20180905-1.26.0</name>
   <packaging>jar</packaging>

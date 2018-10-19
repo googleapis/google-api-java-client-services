@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-dfareporting</artifactId>
+  <artifactId>google-api-services-api-services-dfareporting</artifactId>
   <version>v3.0-rev20180830-1.26.0</version>
   <name>DCM/DFA Reporting And Trafficking API v3.0-rev20180830-1.26.0</name>
   <packaging>jar</packaging>

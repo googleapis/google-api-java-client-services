@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-blogger</artifactId>
+  <artifactId>google-api-services-api-services-blogger</artifactId>
   <version>v3-rev20150422-1.26.0</version>
   <name>Blogger API v3-rev20150422-1.26.0</name>
   <packaging>jar</packaging>

@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-servicenetworking</artifactId>
+  <artifactId>google-api-services-api-services-servicenetworking</artifactId>
   <version>v1beta-rev20181004-1.26.0</version>
   <name>Service Networking API v1beta-rev20181004-1.26.0</name>
   <packaging>jar</packaging>

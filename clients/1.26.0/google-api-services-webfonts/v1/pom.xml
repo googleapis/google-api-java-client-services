@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-webfonts</artifactId>
+  <artifactId>google-api-services-api-services-webfonts</artifactId>
   <version>v1-rev20160302-1.26.0</version>
   <name>Google Fonts Developer API v1-rev20160302-1.26.0</name>
   <packaging>jar</packaging>

@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-pubsub</artifactId>
+  <artifactId>google-api-services-api-services-pubsub</artifactId>
   <version>v1beta1a-rev20180604-1.26.0</version>
   <name>Cloud Pub/Sub API v1beta1a-rev20180604-1.26.0</name>
   <packaging>jar</packaging>

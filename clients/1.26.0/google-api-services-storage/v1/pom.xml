@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-storage</artifactId>
+  <artifactId>google-api-services-api-services-storage</artifactId>
   <version>v1-rev20180905-1.26.0</version>
   <name>Cloud Storage JSON API v1-rev20180905-1.26.0</name>
   <packaging>jar</packaging>

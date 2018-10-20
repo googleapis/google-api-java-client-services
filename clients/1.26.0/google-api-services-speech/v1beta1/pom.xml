@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-speech</artifactId>
+  <artifactId>google-api-services-speech</artifactId>
   <version>v1beta1-rev20180911-1.26.0</version>
   <name>Cloud Speech API v1beta1-rev20180911-1.26.0</name>
   <packaging>jar</packaging>

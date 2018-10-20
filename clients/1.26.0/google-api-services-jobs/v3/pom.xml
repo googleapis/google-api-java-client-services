@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-cloudtalentsolution</artifactId>
+  <artifactId>google-api-services-jobs</artifactId>
   <version>v3-rev20181011-1.26.0</version>
   <name>Cloud Talent Solution API v3-rev20181011-1.26.0</name>
   <packaging>jar</packaging>

@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-iamcredentials</artifactId>
+  <artifactId>google-api-services-iamcredentials</artifactId>
   <version>v1-rev20181013-1.26.0</version>
   <name>IAM Service Account Credentials API v1-rev20181013-1.26.0</name>
   <packaging>jar</packaging>

@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-monitoring</artifactId>
+  <artifactId>google-api-services-monitoring</artifactId>
   <version>v3-rev20181015-1.26.0</version>
   <name>Stackdriver Monitoring API v3-rev20181015-1.26.0</name>
   <packaging>jar</packaging>

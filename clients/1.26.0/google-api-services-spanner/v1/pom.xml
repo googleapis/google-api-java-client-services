@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-spanner</artifactId>
+  <artifactId>google-api-services-spanner</artifactId>
   <version>v1-rev20180920-1.26.0</version>
   <name>Cloud Spanner API v1-rev20180920-1.26.0</name>
   <packaging>jar</packaging>

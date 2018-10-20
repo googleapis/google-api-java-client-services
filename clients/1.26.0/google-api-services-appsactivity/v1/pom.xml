@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-appsactivity</artifactId>
+  <artifactId>google-api-services-appsactivity</artifactId>
   <version>v1-rev20180819-1.26.0</version>
   <name>Drive Activity API v1-rev20180819-1.26.0</name>
   <packaging>jar</packaging>

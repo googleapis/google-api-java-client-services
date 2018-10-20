@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-serviceusage</artifactId>
+  <artifactId>google-api-services-serviceusage</artifactId>
   <version>v1-rev20181004-1.26.0</version>
   <name>Service Usage API v1-rev20181004-1.26.0</name>
   <packaging>jar</packaging>

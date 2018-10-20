@@ -179,7 +179,7 @@ class Api(template_objects.CodeObject):
   def _SetupModules(self):
     """Compute and set the module(s) which this API belongs under."""
     # The containing module is based on the owner information.
-    self.values.setdefault('packagePath', 'api/services')
+    self.values.setdefault('modulePath', 'api/services')
     path = self.values.get('modulePath') or self.values.get('packagePath')
     self._containing_module = template_objects.Module(
         package_path=path,

@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-deploymentmanagerv2beta</artifactId>
+  <artifactId>google-api-services-deploymentmanager</artifactId>
   <version>v2beta-rev20180609-1.26.0</version>
   <name>Google Cloud Deployment Manager API V2Beta Methods v2beta-rev20180609-1.26.0</name>
   <packaging>jar</packaging>

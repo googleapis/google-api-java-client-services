@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-dlp</artifactId>
+  <artifactId>google-api-services-dlp</artifactId>
   <version>v2-rev20181002-1.26.0</version>
   <name>Cloud Data Loss Prevention (DLP) API v2-rev20181002-1.26.0</name>
   <packaging>jar</packaging>

@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-youtubeanalytics</artifactId>
+  <artifactId>google-api-services-youtubeAnalytics</artifactId>
   <version>v1-rev20180805-1.26.0</version>
   <name>YouTube Analytics API v1-rev20180805-1.26.0</name>
   <packaging>jar</packaging>

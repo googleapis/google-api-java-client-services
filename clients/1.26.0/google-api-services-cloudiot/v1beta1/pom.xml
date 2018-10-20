@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-cloudiot</artifactId>
+  <artifactId>google-api-services-cloudiot</artifactId>
   <version>v1beta1-rev20171227-1.26.0</version>
   <name>Google Cloud IoT API v1beta1-rev20171227-1.26.0</name>
   <packaging>jar</packaging>

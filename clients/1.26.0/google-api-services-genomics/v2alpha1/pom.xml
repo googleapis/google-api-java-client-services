@@ -7,7 +7,7 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-api-services-genomics</artifactId>
+  <artifactId>google-api-services-genomics</artifactId>
   <version>v2alpha1-rev20181017-1.26.0</version>
   <name>Genomics API v2alpha1-rev20181017-1.26.0</name>
   <packaging>jar</packaging>

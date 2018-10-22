@@ -47,7 +47,7 @@ do
   service=$(echo ${directory} | cut -f3 -d'/' | cut -f4 -d'-')
   api_version=$(echo ${directory} | cut -f4 -d'/')
   revision=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" ${directory}/pom.xml | cut -f2 -d'-')
-  artifact_id=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" ${directory}/pom.xml)
+  artifact_id=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='artifactId']/text()" ${directory}/pom.xml)
 
   if [[ $(artifact_exists $artifact_id $api_version $revision $library_version) == "true" ]]
   then

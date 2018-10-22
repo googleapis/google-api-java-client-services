@@ -37,7 +37,8 @@ deploy_library() {
     -Dgpg.executable=gpg \
     -Dgpg.passphrase=${GPG_PASSPHRASE} \
     -Dgpg.homedir=${GPG_HOMEDIR} \
-    -DautoReleaseAfterClose=true
+    -DautoReleaseAfterClose=true \
+    -B
   popd
 }
 

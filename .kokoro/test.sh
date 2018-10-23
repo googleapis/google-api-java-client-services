@@ -15,6 +15,8 @@
 
 EXIT_STATUS=0
 
+pushd $(dirname "$0")/../
+
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
 do
   pushd $directory
@@ -31,5 +33,7 @@ do
   fi
   popd
 done
+
+popd
 
 exit $EXIT_STATUS

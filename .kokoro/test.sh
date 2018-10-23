@@ -13,11 +13,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-set -eo pipefail
+EXIT_STATUS=0
 
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
 do
   pushd $directory
-  mvn clean verify package -B
+  diff=$(git diff master .)
+  if [ -z "$diff" ]; then
+    # skipping tests
+    echo "No difference from master, skipping tests."
+  else
+    mvn clean verify package -B
+    es=$?
+    if [ $es -ne 0 ]; then
+        EXIT_STATUS=$es
+    fi
+  fi
   popd
 done
+
+exit $EXIT_STATUS

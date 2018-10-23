@@ -37,7 +37,8 @@ deploy_library() {
     -Dgpg.executable=gpg \
     -Dgpg.passphrase=${GPG_PASSPHRASE} \
     -Dgpg.homedir=${GPG_HOMEDIR} \
-    -DautoReleaseAfterClose=true
+    -DautoReleaseAfterClose=true \
+    -B
   popd
 }
 
@@ -47,8 +48,9 @@ do
   service=$(echo ${directory} | cut -f3 -d'/' | cut -f4 -d'-')
   api_version=$(echo ${directory} | cut -f4 -d'/')
   revision=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" ${directory}/pom.xml | cut -f2 -d'-')
+  artifact_id=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='artifactId']/text()" ${directory}/pom.xml)
 
-  if [[ $(artifact_exists $service $api_version $revision $library_version) == "true" ]]
+  if [[ $(artifact_exists $artifact_id $api_version $revision $library_version) == "true" ]]
   then
     echo "Artifact already exists for $service, $api_version, $revision, $library_version."
   else

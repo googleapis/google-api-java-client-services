@@ -36,6 +36,13 @@ package com.google.api.services.androidenterprise.model;
 public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
+   * The tracks that are visible to the enterprise with their user-friendly name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TrackInfo> appTracks;
+
+  /**
    * App versions currently available for this product.
    * The value may be {@code null}.
    */
@@ -63,7 +70,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> availableCountries;
 
   /**
-   * The tracks that are visible to the enterprise.
+   * The tracks that are visible to the enterprise. Deprecated, use app_tracks instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,6 +219,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String workDetailsUrl;
 
   /**
+   * The tracks that are visible to the enterprise with their user-friendly name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TrackInfo> getAppTracks() {
+    return appTracks;
+  }
+
+  /**
+   * The tracks that are visible to the enterprise with their user-friendly name.
+   * @param appTracks appTracks or {@code null} for none
+   */
+  public Product setAppTracks(java.util.List<TrackInfo> appTracks) {
+    this.appTracks = appTracks;
+    return this;
+  }
+
+  /**
    * App versions currently available for this product.
    * @return value or {@code null} for none
    */
@@ -263,7 +287,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tracks that are visible to the enterprise.
+   * The tracks that are visible to the enterprise. Deprecated, use app_tracks instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableTracks() {
@@ -271,7 +295,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tracks that are visible to the enterprise.
+   * The tracks that are visible to the enterprise. Deprecated, use app_tracks instead.
    * @param availableTracks availableTracks or {@code null} for none
    */
   public Product setAvailableTracks(java.util.List<java.lang.String> availableTracks) {

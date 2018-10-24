@@ -20,7 +20,7 @@ package com.google.api.services.appengine;
  * Service definition for Appengine (v1beta).
  *
  * <p>
- * The App Engine Admin API enables developers to provision and manage their App Engine applications.
+ * Provisions and manages developers' App Engine applications.
  * </p>
  *
  * <p>

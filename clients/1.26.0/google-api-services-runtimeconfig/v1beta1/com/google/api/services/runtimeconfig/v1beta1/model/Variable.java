@@ -71,7 +71,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * Output only. The time of the last variable update.
+   * Output only. The time of the last variable update. Timestamp will be UTC timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time of the last variable update.
+   * Output only. The time of the last variable update. Timestamp will be UTC timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -178,7 +178,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time of the last variable update.
+   * Output only. The time of the last variable update. Timestamp will be UTC timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public Variable setUpdateTime(String updateTime) {

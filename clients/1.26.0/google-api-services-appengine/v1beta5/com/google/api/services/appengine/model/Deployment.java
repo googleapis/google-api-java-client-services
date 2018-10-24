@@ -59,12 +59,6 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<SourceReference> sourceReferences;
 
-  static {
-    // hack to force ProGuard to consider SourceReference used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SourceReference.class);
-  }
-
   /**
    * The Docker image for the container that runs the version. Only applicable for instances running
    * in the App Engine flexible environment.

@@ -37,6 +37,14 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   private java.lang.String productId;
 
   /**
+   * Grants visibility to the specified track(s) of the product to the device. The existing track
+   * ids can be obtained by calling Products.Get.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> trackIds;
+
+  /**
    * Grants visibility to the specified track(s) of the product to the device. The track available
    * to the device is based on the following order of preference: alpha, beta, production. For
    * example, if an app has a prod version, a beta version and an alpha version and the enterprise
@@ -49,6 +57,8 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    * The allowed sets are: {} (considered equivalent to {"production"}) {"production"} {"beta",
    * "production"} {"alpha", "beta", "production"} The order of elements is not relevant. Any other
    * set of tracks will be rejected with an error.
+   *
+   * This is deprecated. Use track_ids instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +82,25 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Grants visibility to the specified track(s) of the product to the device. The existing track
+   * ids can be obtained by calling Products.Get.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTrackIds() {
+    return trackIds;
+  }
+
+  /**
+   * Grants visibility to the specified track(s) of the product to the device. The existing track
+   * ids can be obtained by calling Products.Get.
+   * @param trackIds trackIds or {@code null} for none
+   */
+  public ProductPolicy setTrackIds(java.util.List<java.lang.String> trackIds) {
+    this.trackIds = trackIds;
+    return this;
+  }
+
+  /**
    * Grants visibility to the specified track(s) of the product to the device. The track available
    * to the device is based on the following order of preference: alpha, beta, production. For
    * example, if an app has a prod version, a beta version and an alpha version and the enterprise
@@ -84,6 +113,8 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    * The allowed sets are: {} (considered equivalent to {"production"}) {"production"} {"beta",
    * "production"} {"alpha", "beta", "production"} The order of elements is not relevant. Any other
    * set of tracks will be rejected with an error.
+   *
+   * This is deprecated. Use track_ids instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTracks() {
@@ -103,6 +134,8 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    * The allowed sets are: {} (considered equivalent to {"production"}) {"production"} {"beta",
    * "production"} {"alpha", "beta", "production"} The order of elements is not relevant. Any other
    * set of tracks will be rejected with an error.
+   *
+   * This is deprecated. Use track_ids instead.
    * @param tracks tracks or {@code null} for none
    */
   public ProductPolicy setTracks(java.util.List<java.lang.String> tracks) {

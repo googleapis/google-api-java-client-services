@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfig extends com.google.api.cli
 
   /**
    * Optional message indicating that multiple rows might be associated to a single individual. If
-   * the same entity_id is associated to multiple quasi-identifier tuples over distict rows, we
+   * the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we
    * consider the entire collection of tuples as the composite quasi-identifier. This collection is
    * a multiset: the order in which the different tuples appear in the dataset is ignored, but their
    * frequency is taken into account.
@@ -54,9 +54,15 @@ public final class GooglePrivacyDlpV2KAnonymityConfig extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FieldId> quasiIds;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldId.class);
+  }
+
   /**
    * Optional message indicating that multiple rows might be associated to a single individual. If
-   * the same entity_id is associated to multiple quasi-identifier tuples over distict rows, we
+   * the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we
    * consider the entire collection of tuples as the composite quasi-identifier. This collection is
    * a multiset: the order in which the different tuples appear in the dataset is ignored, but their
    * frequency is taken into account.
@@ -71,7 +77,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfig extends com.google.api.cli
 
   /**
    * Optional message indicating that multiple rows might be associated to a single individual. If
-   * the same entity_id is associated to multiple quasi-identifier tuples over distict rows, we
+   * the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we
    * consider the entire collection of tuples as the composite quasi-identifier. This collection is
    * a multiset: the order in which the different tuples appear in the dataset is ignored, but their
    * frequency is taken into account.

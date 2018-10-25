@@ -37,12 +37,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsResult extends com.google.a
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2CategoricalStatsHistogramBucket> valueFrequencyHistogramBuckets;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2CategoricalStatsHistogramBucket used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2CategoricalStatsHistogramBucket.class);
-  }
-
   /**
    * Histogram of value frequencies in the column.
    * @return value or {@code null} for none

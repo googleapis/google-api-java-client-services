@@ -44,12 +44,6 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValues extends com.goo
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> quasiIdsValues;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2Value used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Value.class);
-  }
-
   /**
    * The estimated anonymity for these quasi-identifier values.
    * @return value or {@code null} for none

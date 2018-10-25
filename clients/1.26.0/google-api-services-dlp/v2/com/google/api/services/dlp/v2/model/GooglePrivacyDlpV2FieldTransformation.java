@@ -52,6 +52,12 @@ public final class GooglePrivacyDlpV2FieldTransformation extends com.google.api.
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FieldId> fields;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldId.class);
+  }
+
   /**
    * Treat the contents of the field as free text, and selectively transform content that matches an
    * `InfoType`.

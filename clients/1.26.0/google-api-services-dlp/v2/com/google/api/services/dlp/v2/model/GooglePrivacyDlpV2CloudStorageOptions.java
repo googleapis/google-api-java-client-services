@@ -58,7 +58,8 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
 
   /**
    * List of file type groups to include in the scan. If empty, all files are scanned and available
-   * data format processors are applied.
+   * data format processors are applied. In addition, the binary content of the selected files is
+   * always scanned as well.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +143,8 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
 
   /**
    * List of file type groups to include in the scan. If empty, all files are scanned and available
-   * data format processors are applied.
+   * data format processors are applied. In addition, the binary content of the selected files is
+   * always scanned as well.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypes() {
@@ -151,7 +153,8 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
 
   /**
    * List of file type groups to include in the scan. If empty, all files are scanned and available
-   * data format processors are applied.
+   * data format processors are applied. In addition, the binary content of the selected files is
+   * always scanned as well.
    * @param fileTypes fileTypes or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions setFileTypes(java.util.List<java.lang.String> fileTypes) {

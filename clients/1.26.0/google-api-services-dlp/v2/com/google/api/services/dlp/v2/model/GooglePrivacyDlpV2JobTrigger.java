@@ -54,18 +54,12 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
 
   /**
    * A stream of errors encountered when the trigger was activated. Repeated errors may result in
-   * the JobTrigger automaticaly being paused. Will return the last 100 errors. Whenever the
+   * the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the
    * JobTrigger is modified this list will be cleared. Output only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Error> errors;
-
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2Error used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Error.class);
-  }
 
   /**
    * The value may be {@code null}.
@@ -170,7 +164,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
 
   /**
    * A stream of errors encountered when the trigger was activated. Repeated errors may result in
-   * the JobTrigger automaticaly being paused. Will return the last 100 errors. Whenever the
+   * the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the
    * JobTrigger is modified this list will be cleared. Output only field.
    * @return value or {@code null} for none
    */
@@ -180,7 +174,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
 
   /**
    * A stream of errors encountered when the trigger was activated. Repeated errors may result in
-   * the JobTrigger automaticaly being paused. Will return the last 100 errors. Whenever the
+   * the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the
    * JobTrigger is modified this list will be cleared. Output only field.
    * @param errors errors or {@code null} for none
    */

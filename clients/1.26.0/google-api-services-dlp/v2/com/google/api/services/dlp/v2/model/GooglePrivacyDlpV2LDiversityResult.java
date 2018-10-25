@@ -37,6 +37,12 @@ public final class GooglePrivacyDlpV2LDiversityResult extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2LDiversityHistogramBucket> sensitiveValueFrequencyHistogramBuckets;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2LDiversityHistogramBucket used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2LDiversityHistogramBucket.class);
+  }
+
   /**
    * Histogram of l-diversity equivalence class sensitive value frequencies.
    * @return value or {@code null} for none

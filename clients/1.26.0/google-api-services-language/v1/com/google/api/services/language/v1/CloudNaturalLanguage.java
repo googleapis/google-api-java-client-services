@@ -20,7 +20,7 @@ package com.google.api.services.language.v1;
  * Service definition for CloudNaturalLanguage (v1).
  *
  * <p>
- * Provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, entity sentiment analysis, and text annotations.
+ * Provides natural language understanding technologies, such as sentiment analysis, entity recognition, entity sentiment analysis, and other text annotations, to developers.
  * </p>
  *
  * <p>

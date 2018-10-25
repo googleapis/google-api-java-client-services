@@ -45,13 +45,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.String destination;
 
   /**
-   * Deprecated. This field is ignored when creating or updating sinks.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String endTime;
-
-  /**
    * Optional. An advanced logs filter. The only exported log entries are those that are in the
    * resource owning the sink and that match the filter. For example:
    * logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
@@ -94,13 +87,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.String outputVersionFormat;
 
   /**
-   * Deprecated. This field is ignored when creating or updating sinks.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String startTime;
-
-  /**
    * Output only. An IAM identitya service account or groupunder which Logging writes the exported
    * log entries to the sink's destination. This field is set by sinks.create and sinks.update,
    * based on the setting of unique_writer_identity in those methods.Until you grant this identity
@@ -134,23 +120,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   public LogSink setDestination(java.lang.String destination) {
     this.destination = destination;
-    return this;
-  }
-
-  /**
-   * Deprecated. This field is ignored when creating or updating sinks.
-   * @return value or {@code null} for none
-   */
-  public String getEndTime() {
-    return endTime;
-  }
-
-  /**
-   * Deprecated. This field is ignored when creating or updating sinks.
-   * @param endTime endTime or {@code null} for none
-   */
-  public LogSink setEndTime(String endTime) {
-    this.endTime = endTime;
     return this;
   }
 
@@ -247,23 +216,6 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    */
   public LogSink setOutputVersionFormat(java.lang.String outputVersionFormat) {
     this.outputVersionFormat = outputVersionFormat;
-    return this;
-  }
-
-  /**
-   * Deprecated. This field is ignored when creating or updating sinks.
-   * @return value or {@code null} for none
-   */
-  public String getStartTime() {
-    return startTime;
-  }
-
-  /**
-   * Deprecated. This field is ignored when creating or updating sinks.
-   * @param startTime startTime or {@code null} for none
-   */
-  public LogSink setStartTime(String startTime) {
-    this.startTime = startTime;
     return this;
   }
 

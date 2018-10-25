@@ -46,8 +46,7 @@ public final class GoogleCloudDialogflowV2DetectIntentResponse extends com.googl
   private java.lang.String responseId;
 
   /**
-   * Specifies the status of the webhook request. `webhook_status` is never populated in webhook
-   * requests.
+   * Specifies the status of the webhook request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +91,7 @@ public final class GoogleCloudDialogflowV2DetectIntentResponse extends com.googl
   }
 
   /**
-   * Specifies the status of the webhook request. `webhook_status` is never populated in webhook
-   * requests.
+   * Specifies the status of the webhook request.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getWebhookStatus() {
@@ -101,8 +99,7 @@ public final class GoogleCloudDialogflowV2DetectIntentResponse extends com.googl
   }
 
   /**
-   * Specifies the status of the webhook request. `webhook_status` is never populated in webhook
-   * requests.
+   * Specifies the status of the webhook request.
    * @param webhookStatus webhookStatus or {@code null} for none
    */
   public GoogleCloudDialogflowV2DetectIntentResponse setWebhookStatus(GoogleRpcStatus webhookStatus) {

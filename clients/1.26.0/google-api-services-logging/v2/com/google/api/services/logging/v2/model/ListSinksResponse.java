@@ -46,12 +46,6 @@ public final class ListSinksResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<LogSink> sinks;
 
-  static {
-    // hack to force ProGuard to consider LogSink used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LogSink.class);
-  }
-
   /**
    * If there might be more results than appear in this response, then nextPageToken is included. To
    * get the next set of results, call the same method again using the value of nextPageToken as

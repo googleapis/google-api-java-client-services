@@ -36,8 +36,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    * to an existing table, any columns from the predefined schema that are missing will be added. No
    * columns in the existing table will be deleted.
    *
-   * If unspecified, then all available columns will be used for a new table, and no changes will be
-   * made to an existing table.
+   * If unspecified, then all available columns will be used for a new table or an (existing) table
+   * with no schema, and no changes will be made to an existing table that has a schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    * to an existing table, any columns from the predefined schema that are missing will be added. No
    * columns in the existing table will be deleted.
    *
-   * If unspecified, then all available columns will be used for a new table, and no changes will be
-   * made to an existing table.
+   * If unspecified, then all available columns will be used for a new table or an (existing) table
+   * with no schema, and no changes will be made to an existing table that has a schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputSchema() {
@@ -81,8 +81,8 @@ public final class GooglePrivacyDlpV2OutputStorageConfig extends com.google.api.
    * to an existing table, any columns from the predefined schema that are missing will be added. No
    * columns in the existing table will be deleted.
    *
-   * If unspecified, then all available columns will be used for a new table, and no changes will be
-   * made to an existing table.
+   * If unspecified, then all available columns will be used for a new table or an (existing) table
+   * with no schema, and no changes will be made to an existing table that has a schema.
    * @param outputSchema outputSchema or {@code null} for none
    */
   public GooglePrivacyDlpV2OutputStorageConfig setOutputSchema(java.lang.String outputSchema) {

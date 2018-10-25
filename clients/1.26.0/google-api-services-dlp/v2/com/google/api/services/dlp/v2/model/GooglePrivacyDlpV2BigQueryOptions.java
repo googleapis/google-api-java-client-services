@@ -31,12 +31,32 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * References to fields excluded from scanning. This allows you to skip inspection of entire
+   * columns which you know have no findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2FieldId> excludedFields;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldId.class);
+  }
+
+  /**
    * References to fields uniquely identifying rows within the table. Nested fields in the format,
    * like `person.birthdate.year`, are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FieldId> identifyingFields;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldId.class);
+  }
 
   /**
    * Max number of rows to scan. If the table has more rows than this value, the rest of the rows
@@ -69,6 +89,25 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2BigQueryTable tableReference;
+
+  /**
+   * References to fields excluded from scanning. This allows you to skip inspection of entire
+   * columns which you know have no findings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2FieldId> getExcludedFields() {
+    return excludedFields;
+  }
+
+  /**
+   * References to fields excluded from scanning. This allows you to skip inspection of entire
+   * columns which you know have no findings.
+   * @param excludedFields excludedFields or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BigQueryOptions setExcludedFields(java.util.List<GooglePrivacyDlpV2FieldId> excludedFields) {
+    this.excludedFields = excludedFields;
+    return this;
+  }
 
   /**
    * References to fields uniquely identifying rows within the table. Nested fields in the format,

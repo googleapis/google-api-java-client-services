@@ -39,12 +39,6 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2DetectionRule> detectionRules;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2DetectionRule used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2DetectionRule.class);
-  }
-
   /**
    * A list of phrases to detect as a CustomInfoType.
    * The value may be {@code null}.

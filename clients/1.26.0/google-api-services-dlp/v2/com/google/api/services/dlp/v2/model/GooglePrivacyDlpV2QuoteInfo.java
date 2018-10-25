@@ -31,12 +31,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2QuoteInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The date time indicated by the quote.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DateTime dateTime;
 
   /**
+   * The date time indicated by the quote.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DateTime getDateTime() {
@@ -44,6 +46,7 @@ public final class GooglePrivacyDlpV2QuoteInfo extends com.google.api.client.jso
   }
 
   /**
+   * The date time indicated by the quote.
    * @param dateTime dateTime or {@code null} for none
    */
   public GooglePrivacyDlpV2QuoteInfo setDateTime(GooglePrivacyDlpV2DateTime dateTime) {

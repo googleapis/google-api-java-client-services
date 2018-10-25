@@ -17,7 +17,7 @@
 package com.google.api.services.servicecontrol.v1.model;
 
 /**
- * `ConsumerInfo` provides information about the consumer project.
+ * `ConsumerInfo` provides information about the consumer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Control API. For a detailed explanation see:
@@ -30,16 +30,55 @@ package com.google.api.services.servicecontrol.v1.model;
 public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The consumer identity number, can be Google cloud project number, folder number or organization
+   * number e.g. 1234567890. A value of 0 indicates no consumer number is found.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long consumerNumber;
+
+  /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates no project number is
    * found.
+   *
+   * NOTE: This field is deprecated after Chemist support flexible consumer id. New code should not
+   * depend on this field anymore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long projectNumber;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * The consumer identity number, can be Google cloud project number, folder number or organization
+   * number e.g. 1234567890. A value of 0 indicates no consumer number is found.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getConsumerNumber() {
+    return consumerNumber;
+  }
+
+  /**
+   * The consumer identity number, can be Google cloud project number, folder number or organization
+   * number e.g. 1234567890. A value of 0 indicates no consumer number is found.
+   * @param consumerNumber consumerNumber or {@code null} for none
+   */
+  public ConsumerInfo setConsumerNumber(java.lang.Long consumerNumber) {
+    this.consumerNumber = consumerNumber;
+    return this;
+  }
+
+  /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates no project number is
    * found.
+   *
+   * NOTE: This field is deprecated after Chemist support flexible consumer id. New code should not
+   * depend on this field anymore.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -49,10 +88,28 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
   /**
    * The Google cloud project number, e.g. 1234567890. A value of 0 indicates no project number is
    * found.
+   *
+   * NOTE: This field is deprecated after Chemist support flexible consumer id. New code should not
+   * depend on this field anymore.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public ConsumerInfo setProjectNumber(java.lang.Long projectNumber) {
     this.projectNumber = projectNumber;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * @param type type or {@code null} for none
+   */
+  public ConsumerInfo setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

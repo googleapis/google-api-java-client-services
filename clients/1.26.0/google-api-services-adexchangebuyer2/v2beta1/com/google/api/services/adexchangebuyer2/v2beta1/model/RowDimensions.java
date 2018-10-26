@@ -32,11 +32,38 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class RowDimensions extends com.google.api.client.json.GenericJson {
 
   /**
+   * The publisher identifier for this row, if a breakdown by
+   * BreakdownDimension.PUBLISHER_IDENTIFIER was requested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publisherIdentifier;
+
+  /**
    * The time interval that this row represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeInterval timeInterval;
+
+  /**
+   * The publisher identifier for this row, if a breakdown by
+   * BreakdownDimension.PUBLISHER_IDENTIFIER was requested.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublisherIdentifier() {
+    return publisherIdentifier;
+  }
+
+  /**
+   * The publisher identifier for this row, if a breakdown by
+   * BreakdownDimension.PUBLISHER_IDENTIFIER was requested.
+   * @param publisherIdentifier publisherIdentifier or {@code null} for none
+   */
+  public RowDimensions setPublisherIdentifier(java.lang.String publisherIdentifier) {
+    this.publisherIdentifier = publisherIdentifier;
+    return this;
+  }
 
   /**
    * The time interval that this row represents.

@@ -43,6 +43,12 @@ public final class LoginProfile extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<PosixAccount> posixAccounts;
 
+  static {
+    // hack to force ProGuard to consider PosixAccount used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PosixAccount.class);
+  }
+
   /**
    * A map from SSH public key fingerprint to the associated key object.
    * The value may be {@code null}.

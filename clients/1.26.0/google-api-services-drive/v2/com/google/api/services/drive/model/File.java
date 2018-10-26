@@ -103,6 +103,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Short lived download URL for the file. This field is only populated for files with content
+   * stored in Drive; it is not populated for Google Docs or shortcut files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -711,6 +713,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Short lived download URL for the file. This field is only populated for files with content
+   * stored in Drive; it is not populated for Google Docs or shortcut files.
    * @return value or {@code null} for none
    */
   public java.lang.String getDownloadUrl() {
@@ -718,6 +722,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Short lived download URL for the file. This field is only populated for files with content
+   * stored in Drive; it is not populated for Google Docs or shortcut files.
    * @param downloadUrl downloadUrl or {@code null} for none
    */
   public File setDownloadUrl(java.lang.String downloadUrl) {

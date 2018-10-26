@@ -20,7 +20,7 @@ package com.google.api.services.websecurityscanner.v1alpha;
  * Service definition for WebSecurityScanner (v1alpha).
  *
  * <p>
- * Web Security Scanner API (under development).
+ * Scans your Compute and App Engine apps for common web vulnerabilities.
  * </p>
  *
  * <p>

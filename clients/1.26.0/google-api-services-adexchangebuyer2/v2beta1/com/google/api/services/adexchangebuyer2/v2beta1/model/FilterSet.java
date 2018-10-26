@@ -42,6 +42,15 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
   private AbsoluteDateRange absoluteDateRange;
 
   /**
+   * The set of dimensions along which to break down the response; may be empty. If multiple
+   * dimensions are requested, the breakdown is along the Cartesian product of the requested
+   * dimensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> breakdownDimensions;
+
+  /**
    * The ID of the creative on which to filter; optional. This field may be set only for a filter
    * set that accesses account-level troubleshooting data, i.e., one whose name matches the
    * `bidders/accounts/filterSets` pattern.
@@ -152,6 +161,27 @@ public final class FilterSet extends com.google.api.client.json.GenericJson {
    */
   public FilterSet setAbsoluteDateRange(AbsoluteDateRange absoluteDateRange) {
     this.absoluteDateRange = absoluteDateRange;
+    return this;
+  }
+
+  /**
+   * The set of dimensions along which to break down the response; may be empty. If multiple
+   * dimensions are requested, the breakdown is along the Cartesian product of the requested
+   * dimensions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getBreakdownDimensions() {
+    return breakdownDimensions;
+  }
+
+  /**
+   * The set of dimensions along which to break down the response; may be empty. If multiple
+   * dimensions are requested, the breakdown is along the Cartesian product of the requested
+   * dimensions.
+   * @param breakdownDimensions breakdownDimensions or {@code null} for none
+   */
+  public FilterSet setBreakdownDimensions(java.util.List<java.lang.String> breakdownDimensions) {
+    this.breakdownDimensions = breakdownDimensions;
     return this;
   }
 

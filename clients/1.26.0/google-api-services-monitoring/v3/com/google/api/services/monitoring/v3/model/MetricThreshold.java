@@ -42,12 +42,6 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<Aggregation> aggregations;
 
-  static {
-    // hack to force ProGuard to consider Aggregation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Aggregation.class);
-  }
-
   /**
    * The comparison to apply between the time series (indicated by filter and aggregation) and the
    * threshold (indicated by threshold_value). The comparison is applied on each time series, with
@@ -71,12 +65,6 @@ public final class MetricThreshold extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<Aggregation> denominatorAggregations;
-
-  static {
-    // hack to force ProGuard to consider Aggregation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Aggregation.class);
-  }
 
   /**
    * A filter that identifies a time series that should be used as the denominator of a ratio that

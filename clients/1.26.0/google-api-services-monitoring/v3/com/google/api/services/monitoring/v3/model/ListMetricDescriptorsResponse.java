@@ -38,12 +38,6 @@ public final class ListMetricDescriptorsResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<MetricDescriptor> metricDescriptors;
 
-  static {
-    // hack to force ProGuard to consider MetricDescriptor used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MetricDescriptor.class);
-  }
-
   /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
    * To see the additional results, use that value as pageToken in the next call to this method.

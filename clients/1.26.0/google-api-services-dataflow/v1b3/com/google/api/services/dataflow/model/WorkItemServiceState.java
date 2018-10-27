@@ -53,12 +53,6 @@ public final class WorkItemServiceState extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<MetricShortId> metricShortId;
 
-  static {
-    // hack to force ProGuard to consider MetricShortId used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MetricShortId.class);
-  }
-
   /**
    * The index value to use for the next report sent by the worker. Note: If the report call fails
    * for whatever reason, the worker should reuse this index for subsequent report attempts.

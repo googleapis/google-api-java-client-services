@@ -33,7 +33,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   /**
    * App Engine HTTP queue.
    *
-   * An App Engine queue is a queue that has an AppEngineHttpQeueue type.
+   * An App Engine queue is a queue that has an AppEngineHttpQueue type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   /**
    * App Engine HTTP queue.
    *
-   * An App Engine queue is a queue that has an AppEngineHttpQeueue type.
+   * An App Engine queue is a queue that has an AppEngineHttpQueue type.
    * @return value or {@code null} for none
    */
   public AppEngineHttpQueue getAppEngineHttpQueue() {
@@ -129,7 +129,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   /**
    * App Engine HTTP queue.
    *
-   * An App Engine queue is a queue that has an AppEngineHttpQeueue type.
+   * An App Engine queue is a queue that has an AppEngineHttpQueue type.
    * @param appEngineHttpQueue appEngineHttpQueue or {@code null} for none
    */
   public Queue setAppEngineHttpQueue(AppEngineHttpQueue appEngineHttpQueue) {

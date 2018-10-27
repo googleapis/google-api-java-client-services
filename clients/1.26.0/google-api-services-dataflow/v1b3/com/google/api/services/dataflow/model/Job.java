@@ -195,6 +195,16 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource
+   * scheduling jobs are started with some delay after job creation, so start_time is unset before
+   * start and is updated when the job is started by the Cloud Dataflow service. For other jobs,
+   * start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
    * The top-level steps that constitute the entire job.
    * The value may be {@code null}.
    */
@@ -603,6 +613,29 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setStageStates(java.util.List<ExecutionStageState> stageStates) {
     this.stageStates = stageStates;
+    return this;
+  }
+
+  /**
+   * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource
+   * scheduling jobs are started with some delay after job creation, so start_time is unset before
+   * start and is updated when the job is started by the Cloud Dataflow service. For other jobs,
+   * start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource
+   * scheduling jobs are started with some delay after job creation, so start_time is unset before
+   * start and is updated when the job is started by the Cloud Dataflow service. For other jobs,
+   * start_time always equals to create_time and is immutable and set by the Cloud Dataflow service.
+   * @param startTime startTime or {@code null} for none
+   */
+  public Job setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

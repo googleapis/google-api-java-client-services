@@ -45,6 +45,13 @@ public final class StreamingSetupTask extends com.google.api.client.json.Generic
   private java.lang.Integer receiveWorkPort;
 
   /**
+   * Configures streaming appliance snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StreamingApplianceSnapshotConfig snapshotConfig;
+
+  /**
    * The global topology of the streaming Dataflow job.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class StreamingSetupTask extends com.google.api.client.json.Generic
    */
   public StreamingSetupTask setReceiveWorkPort(java.lang.Integer receiveWorkPort) {
     this.receiveWorkPort = receiveWorkPort;
+    return this;
+  }
+
+  /**
+   * Configures streaming appliance snapshot.
+   * @return value or {@code null} for none
+   */
+  public StreamingApplianceSnapshotConfig getSnapshotConfig() {
+    return snapshotConfig;
+  }
+
+  /**
+   * Configures streaming appliance snapshot.
+   * @param snapshotConfig snapshotConfig or {@code null} for none
+   */
+  public StreamingSetupTask setSnapshotConfig(StreamingApplianceSnapshotConfig snapshotConfig) {
+    this.snapshotConfig = snapshotConfig;
     return this;
   }
 

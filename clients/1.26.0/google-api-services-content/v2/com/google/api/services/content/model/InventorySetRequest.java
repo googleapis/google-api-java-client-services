@@ -85,6 +85,13 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
   private Installment installment;
 
   /**
+   * The instore product location. Supported only for local products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instoreProductLocation;
+
+  /**
    * Loyalty points that users receive after purchasing the item. Japan only.
    * The value may be {@code null}.
    */
@@ -264,6 +271,23 @@ public final class InventorySetRequest extends com.google.api.client.json.Generi
    */
   public InventorySetRequest setInstallment(Installment installment) {
     this.installment = installment;
+    return this;
+  }
+
+  /**
+   * The instore product location. Supported only for local products.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstoreProductLocation() {
+    return instoreProductLocation;
+  }
+
+  /**
+   * The instore product location. Supported only for local products.
+   * @param instoreProductLocation instoreProductLocation or {@code null} for none
+   */
+  public InventorySetRequest setInstoreProductLocation(java.lang.String instoreProductLocation) {
+    this.instoreProductLocation = instoreProductLocation;
     return this;
   }
 

@@ -151,14 +151,26 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductCustomAttribute> customAttributes;
+  private java.util.List<CustomAttribute> customAttributes;
+
+  static {
+    // hack to force ProGuard to consider CustomAttribute used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomAttribute.class);
+  }
 
   /**
    * A list of custom (merchant-provided) custom attribute groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ProductCustomGroup> customGroups;
+  private java.util.List<CustomGroup> customGroups;
+
+  static {
+    // hack to force ProGuard to consider CustomGroup used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomGroup.class);
+  }
 
   /**
    * Custom label 0 for custom grouping of items in a Shopping campaign.
@@ -878,7 +890,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * by the API.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductCustomAttribute> getCustomAttributes() {
+  public java.util.List<CustomAttribute> getCustomAttributes() {
     return customAttributes;
   }
 
@@ -889,7 +901,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * by the API.
    * @param customAttributes customAttributes or {@code null} for none
    */
-  public Product setCustomAttributes(java.util.List<ProductCustomAttribute> customAttributes) {
+  public Product setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {
     this.customAttributes = customAttributes;
     return this;
   }
@@ -898,7 +910,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * A list of custom (merchant-provided) custom attribute groups.
    * @return value or {@code null} for none
    */
-  public java.util.List<ProductCustomGroup> getCustomGroups() {
+  public java.util.List<CustomGroup> getCustomGroups() {
     return customGroups;
   }
 
@@ -906,7 +918,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * A list of custom (merchant-provided) custom attribute groups.
    * @param customGroups customGroups or {@code null} for none
    */
-  public Product setCustomGroups(java.util.List<ProductCustomGroup> customGroups) {
+  public Product setCustomGroups(java.util.List<CustomGroup> customGroups) {
     this.customGroups = customGroups;
     return this;
   }

@@ -44,6 +44,12 @@ public final class ListProductsResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Product> products;
 
+  static {
+    // hack to force ProGuard to consider Product used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Product.class);
+  }
+
   /**
    * List pagination support.
    * @return value or {@code null} for none

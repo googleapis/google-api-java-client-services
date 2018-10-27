@@ -68,7 +68,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * Immutable. The version of the software running in the environment. This encapsulates both the
    * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
    * regular expression
-   * `composer-([0-9]+\.[0-9]+(\.[0-9]+)?|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
+   * `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
    * input, the server will also check if the provided version is supported and deny the creation
    * request for an unsupported version.
    *
@@ -81,10 +81,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * The portion of the image version that follows airflow- is an official Apache Airflow repository
    * [release name](https://github.com/apache/incubator-airflow/releases).
    *
-   * Supported values for input are: * `composer-latest-airflow-latest` * `composer-latest-
-   * airflow-1.10.0` * `composer-latest-airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-
-   * latest-airflow-1.9` * `composer-1.1.1-airflow-latest` * `composer-1.1.1-airflow-1.10.0` *
-   * `composer-1.1.1-airflow-1.9.0` * `composer-1.1.1-airflow-1.10` * `composer-1.1.1-airflow-1.9`
+   * Supported values for input are: * `composer-latest-airflow-1.10.0` * `composer-latest-
+   * airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-latest-airflow-1.9` *
+   * `composer-1.3.0-airflow-1.10.0` * `composer-1.3.0-airflow-1.9.0` *
+   * `composer-1.3.0-airflow-1.10` * `composer-1.3.0-airflow-1.9`
    *
    * See also [Release Notes](/composer/docs/release-notes).
    * The value may be {@code null}.
@@ -193,7 +193,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * Immutable. The version of the software running in the environment. This encapsulates both the
    * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
    * regular expression
-   * `composer-([0-9]+\.[0-9]+(\.[0-9]+)?|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
+   * `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
    * input, the server will also check if the provided version is supported and deny the creation
    * request for an unsupported version.
    *
@@ -206,10 +206,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * The portion of the image version that follows airflow- is an official Apache Airflow repository
    * [release name](https://github.com/apache/incubator-airflow/releases).
    *
-   * Supported values for input are: * `composer-latest-airflow-latest` * `composer-latest-
-   * airflow-1.10.0` * `composer-latest-airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-
-   * latest-airflow-1.9` * `composer-1.1.1-airflow-latest` * `composer-1.1.1-airflow-1.10.0` *
-   * `composer-1.1.1-airflow-1.9.0` * `composer-1.1.1-airflow-1.10` * `composer-1.1.1-airflow-1.9`
+   * Supported values for input are: * `composer-latest-airflow-1.10.0` * `composer-latest-
+   * airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-latest-airflow-1.9` *
+   * `composer-1.3.0-airflow-1.10.0` * `composer-1.3.0-airflow-1.9.0` *
+   * `composer-1.3.0-airflow-1.10` * `composer-1.3.0-airflow-1.9`
    *
    * See also [Release Notes](/composer/docs/release-notes).
    * @return value or {@code null} for none
@@ -222,7 +222,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * Immutable. The version of the software running in the environment. This encapsulates both the
    * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
    * regular expression
-   * `composer-([0-9]+\.[0-9]+(\.[0-9]+)?|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
+   * `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
    * input, the server will also check if the provided version is supported and deny the creation
    * request for an unsupported version.
    *
@@ -235,10 +235,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    * The portion of the image version that follows airflow- is an official Apache Airflow repository
    * [release name](https://github.com/apache/incubator-airflow/releases).
    *
-   * Supported values for input are: * `composer-latest-airflow-latest` * `composer-latest-
-   * airflow-1.10.0` * `composer-latest-airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-
-   * latest-airflow-1.9` * `composer-1.1.1-airflow-latest` * `composer-1.1.1-airflow-1.10.0` *
-   * `composer-1.1.1-airflow-1.9.0` * `composer-1.1.1-airflow-1.10` * `composer-1.1.1-airflow-1.9`
+   * Supported values for input are: * `composer-latest-airflow-1.10.0` * `composer-latest-
+   * airflow-1.9.0` * `composer-latest-airflow-1.10` * `composer-latest-airflow-1.9` *
+   * `composer-1.3.0-airflow-1.10.0` * `composer-1.3.0-airflow-1.9.0` *
+   * `composer-1.3.0-airflow-1.10` * `composer-1.3.0-airflow-1.9`
    *
    * See also [Release Notes](/composer/docs/release-notes).
    * @param imageVersion imageVersion or {@code null} for none

@@ -278,6 +278,38 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** The project ID of the Google Cloud Platform project. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** The project ID of the Google Cloud Platform project.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** The project ID of the Google Cloud Platform project. */
+      public GetLoginProfile setProjectId(java.lang.String projectId) {
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** A system ID for filtering the results of the request. */
+      @com.google.api.client.util.Key
+      private java.lang.String systemId;
+
+      /** A system ID for filtering the results of the request.
+       */
+      public java.lang.String getSystemId() {
+        return systemId;
+      }
+
+      /** A system ID for filtering the results of the request. */
+      public GetLoginProfile setSystemId(java.lang.String systemId) {
+        this.systemId = systemId;
+        return this;
+      }
+
       @Override
       public GetLoginProfile set(String parameterName, Object value) {
         return (GetLoginProfile) super.set(parameterName, value);

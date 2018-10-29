@@ -54,7 +54,7 @@ do
   then
     echo "Artifact already exists for $service, $api_version, $revision, $library_version."
   else
-    output_file = "${service}-${api_version}-${revision}-${library_version}-sponge_log.log"
+    output_file="${service}-${api_version}-${revision}-${library_version}-sponge_log.log"
     deploy_library $directory $service $api_version $revision $library_version | tee $output_file
   fi
 done

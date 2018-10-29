@@ -36,12 +36,6 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<AndroidModel> models;
 
-  static {
-    // hack to force ProGuard to consider AndroidModel used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AndroidModel.class);
-  }
-
   /**
    * The set of supported runtime configurations. @OutputOnly
    * The value may be {@code null}.

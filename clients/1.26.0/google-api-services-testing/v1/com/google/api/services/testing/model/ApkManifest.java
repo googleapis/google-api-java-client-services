@@ -43,12 +43,6 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<IntentFilter> intentFilters;
 
-  static {
-    // hack to force ProGuard to consider IntentFilter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(IntentFilter.class);
-  }
-
   /**
    * Maximum API level on which the application is designed to run.
    * The value may be {@code null}.

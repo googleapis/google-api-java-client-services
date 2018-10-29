@@ -66,6 +66,14 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * True if and only if tests with this model are recorded by stitching together screenshots. See
+   * use_low_spec_video_recording in device config. @OutputOnly
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean lowFpsVideoRecording;
+
+  /**
    * The manufacturer of this device. @OutputOnly
    * The value may be {@code null}.
    */
@@ -219,6 +227,25 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    */
   public AndroidModel setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * True if and only if tests with this model are recorded by stitching together screenshots. See
+   * use_low_spec_video_recording in device config. @OutputOnly
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLowFpsVideoRecording() {
+    return lowFpsVideoRecording;
+  }
+
+  /**
+   * True if and only if tests with this model are recorded by stitching together screenshots. See
+   * use_low_spec_video_recording in device config. @OutputOnly
+   * @param lowFpsVideoRecording lowFpsVideoRecording or {@code null} for none
+   */
+  public AndroidModel setLowFpsVideoRecording(java.lang.Boolean lowFpsVideoRecording) {
+    this.lowFpsVideoRecording = lowFpsVideoRecording;
     return this;
   }
 

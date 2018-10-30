@@ -1925,8 +1925,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Updates a bucket. Changes to the bucket will be readable immediately after writing, but
-     * configuration changes may take time to propagate. This method supports patch semantics.
+     * Patches a bucket. Changes to the bucket will be readable immediately after writing, but
+     * configuration changes may take time to propagate.
      *
      * Create a request for the method "buckets.patch".
      *
@@ -1948,8 +1948,8 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "b/{bucket}";
 
       /**
-       * Updates a bucket. Changes to the bucket will be readable immediately after writing, but
-       * configuration changes may take time to propagate. This method supports patch semantics.
+       * Patches a bucket. Changes to the bucket will be readable immediately after writing, but
+       * configuration changes may take time to propagate.
        *
        * Create a request for the method "buckets.patch".
        *

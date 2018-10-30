@@ -82,6 +82,19 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
   private java.util.List<GoogleCloudVideointelligenceV1beta2LabelAnnotation> shotLabelAnnotations;
 
   /**
+   * Speech transcription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1beta2SpeechTranscription> speechTranscriptions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2SpeechTranscription used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2SpeechTranscription.class);
+  }
+
+  /**
    * If set, indicates an error. Note that for a single `AnnotateVideoRequest` some videos may
    * succeed and some may fail.
    * @return value or {@code null} for none
@@ -201,6 +214,23 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
    */
   public GoogleCloudVideointelligenceV1beta2VideoAnnotationResults setShotLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1beta2LabelAnnotation> shotLabelAnnotations) {
     this.shotLabelAnnotations = shotLabelAnnotations;
+    return this;
+  }
+
+  /**
+   * Speech transcription.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1beta2SpeechTranscription> getSpeechTranscriptions() {
+    return speechTranscriptions;
+  }
+
+  /**
+   * Speech transcription.
+   * @param speechTranscriptions speechTranscriptions or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2VideoAnnotationResults setSpeechTranscriptions(java.util.List<GoogleCloudVideointelligenceV1beta2SpeechTranscription> speechTranscriptions) {
+    this.speechTranscriptions = speechTranscriptions;
     return this;
   }
 

@@ -31,20 +31,6 @@ package com.google.api.services.videointelligence.v1p1beta1.model;
 public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * *Optional* A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-   * language tags, listing possible alternative languages of the supplied video. See [Language
-   * Support](/speech-to-text/docs/languages) for a list of the currently supported language codes.
-   * If alternative languages are listed, transcription result will contain transcription in the
-   * most likely language detected, including the main language_code. The transcription result will
-   * include the language tag of the language detected in the video. Note: This feature is only
-   * supported for Voice Command and Voice Search use cases and performance may vary for other use
-   * cases (e.g., phone call transcription).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> alternativeLanguageCodes;
-
-  /**
    * *Optional* For file formats, such as MXF or MKV, supporting multiple audio tracks, specify up
    * to two tracks. Default: track 0.
    * The value may be {@code null}.
@@ -125,43 +111,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfi
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1SpeechContext> speechContexts;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1SpeechContext used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1SpeechContext.class);
-  }
-
-  /**
-   * *Optional* A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-   * language tags, listing possible alternative languages of the supplied video. See [Language
-   * Support](/speech-to-text/docs/languages) for a list of the currently supported language codes.
-   * If alternative languages are listed, transcription result will contain transcription in the
-   * most likely language detected, including the main language_code. The transcription result will
-   * include the language tag of the language detected in the video. Note: This feature is only
-   * supported for Voice Command and Voice Search use cases and performance may vary for other use
-   * cases (e.g., phone call transcription).
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAlternativeLanguageCodes() {
-    return alternativeLanguageCodes;
-  }
-
-  /**
-   * *Optional* A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-   * language tags, listing possible alternative languages of the supplied video. See [Language
-   * Support](/speech-to-text/docs/languages) for a list of the currently supported language codes.
-   * If alternative languages are listed, transcription result will contain transcription in the
-   * most likely language detected, including the main language_code. The transcription result will
-   * include the language tag of the language detected in the video. Note: This feature is only
-   * supported for Voice Command and Voice Search use cases and performance may vary for other use
-   * cases (e.g., phone call transcription).
-   * @param alternativeLanguageCodes alternativeLanguageCodes or {@code null} for none
-   */
-  public GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig setAlternativeLanguageCodes(java.util.List<java.lang.String> alternativeLanguageCodes) {
-    this.alternativeLanguageCodes = alternativeLanguageCodes;
-    return this;
-  }
 
   /**
    * *Optional* For file formats, such as MXF or MKV, supporting multiple audio tracks, specify up

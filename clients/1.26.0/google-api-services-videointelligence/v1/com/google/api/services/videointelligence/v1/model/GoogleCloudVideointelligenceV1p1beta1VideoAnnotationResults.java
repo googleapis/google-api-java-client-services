@@ -74,12 +74,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1VideoSegment> shotAnnotations;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1VideoSegment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1VideoSegment.class);
-  }
-
   /**
    * Label annotations on shot level. There is exactly one element for each unique label.
    * The value may be {@code null}.

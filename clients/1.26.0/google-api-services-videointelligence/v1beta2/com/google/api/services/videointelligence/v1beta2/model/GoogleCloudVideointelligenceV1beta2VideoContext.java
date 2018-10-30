@@ -60,6 +60,13 @@ public final class GoogleCloudVideointelligenceV1beta2VideoContext extends com.g
   private GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig shotChangeDetectionConfig;
 
   /**
+   * Config for SPEECH_TRANSCRIPTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig speechTranscriptionConfig;
+
+  /**
    * Config for EXPLICIT_CONTENT_DETECTION.
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class GoogleCloudVideointelligenceV1beta2VideoContext extends com.g
    */
   public GoogleCloudVideointelligenceV1beta2VideoContext setShotChangeDetectionConfig(GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig shotChangeDetectionConfig) {
     this.shotChangeDetectionConfig = shotChangeDetectionConfig;
+    return this;
+  }
+
+  /**
+   * Config for SPEECH_TRANSCRIPTION.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig getSpeechTranscriptionConfig() {
+    return speechTranscriptionConfig;
+  }
+
+  /**
+   * Config for SPEECH_TRANSCRIPTION.
+   * @param speechTranscriptionConfig speechTranscriptionConfig or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2VideoContext setSpeechTranscriptionConfig(GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig speechTranscriptionConfig) {
+    this.speechTranscriptionConfig = speechTranscriptionConfig;
     return this;
   }
 

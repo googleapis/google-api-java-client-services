@@ -39,12 +39,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1SpeechTranscription exte
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative> alternatives;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1SpeechRecognitionAlternative.class);
-  }
-
   /**
    * Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of the
    * language in this result. This language code was detected to have the most likelihood of being

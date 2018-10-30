@@ -26,7 +26,7 @@ public class YouTubeScopes {
   /** Manage your YouTube account. */
   public static final String YOUTUBE = "https://www.googleapis.com/auth/youtube";
 
-  /** See, edit, and permanently delete your YouTube videos, ratings, comments and captions. */
+  /** Manage your YouTube account. */
   public static final String YOUTUBE_FORCE_SSL = "https://www.googleapis.com/auth/youtube.force-ssl";
 
   /** View your YouTube account. */

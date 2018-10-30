@@ -82,6 +82,13 @@ public final class GoogleCloudVideointelligenceV1VideoAnnotationResults extends 
   private java.util.List<GoogleCloudVideointelligenceV1LabelAnnotation> shotLabelAnnotations;
 
   /**
+   * Speech transcription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1SpeechTranscription> speechTranscriptions;
+
+  /**
    * If set, indicates an error. Note that for a single `AnnotateVideoRequest` some videos may
    * succeed and some may fail.
    * @return value or {@code null} for none
@@ -201,6 +208,23 @@ public final class GoogleCloudVideointelligenceV1VideoAnnotationResults extends 
    */
   public GoogleCloudVideointelligenceV1VideoAnnotationResults setShotLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1LabelAnnotation> shotLabelAnnotations) {
     this.shotLabelAnnotations = shotLabelAnnotations;
+    return this;
+  }
+
+  /**
+   * Speech transcription.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1SpeechTranscription> getSpeechTranscriptions() {
+    return speechTranscriptions;
+  }
+
+  /**
+   * Speech transcription.
+   * @param speechTranscriptions speechTranscriptions or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1VideoAnnotationResults setSpeechTranscriptions(java.util.List<GoogleCloudVideointelligenceV1SpeechTranscription> speechTranscriptions) {
+    this.speechTranscriptions = speechTranscriptions;
     return this;
   }
 

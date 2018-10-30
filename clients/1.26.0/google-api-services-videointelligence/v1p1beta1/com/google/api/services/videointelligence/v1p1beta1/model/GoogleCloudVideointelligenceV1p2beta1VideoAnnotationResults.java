@@ -66,6 +66,12 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation> objectAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation.class);
+  }
+
   /**
    * Label annotations on video level or user specified segment level. There is exactly one element
    * for each unique label.
@@ -81,12 +87,25 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1VideoSegment> shotAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1VideoSegment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1VideoSegment.class);
+  }
+
   /**
    * Label annotations on shot level. There is exactly one element for each unique label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelAnnotation> shotLabelAnnotations;
+
+  /**
+   * Speech transcription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1p2beta1SpeechTranscription> speechTranscriptions;
 
   /**
    * OCR text detection and tracking. Annotations for list of detected text snippets. Each will have
@@ -239,6 +258,23 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
    */
   public GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults setShotLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelAnnotation> shotLabelAnnotations) {
     this.shotLabelAnnotations = shotLabelAnnotations;
+    return this;
+  }
+
+  /**
+   * Speech transcription.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1p2beta1SpeechTranscription> getSpeechTranscriptions() {
+    return speechTranscriptions;
+  }
+
+  /**
+   * Speech transcription.
+   * @param speechTranscriptions speechTranscriptions or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults setSpeechTranscriptions(java.util.List<GoogleCloudVideointelligenceV1p2beta1SpeechTranscription> speechTranscriptions) {
+    this.speechTranscriptions = speechTranscriptions;
     return this;
   }
 

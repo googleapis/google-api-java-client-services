@@ -45,6 +45,12 @@ public final class ListTransferRunsResponse extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<TransferRun> transferRuns;
 
+  static {
+    // hack to force ProGuard to consider TransferRun used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TransferRun.class);
+  }
+
   /**
    * Output only. The next-pagination token. For multiple-page list results, this token can be used
    * as the `ListTransferRunsRequest.page_token` to request the next page of list results.

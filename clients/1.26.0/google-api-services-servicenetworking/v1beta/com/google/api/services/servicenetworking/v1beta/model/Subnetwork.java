@@ -45,6 +45,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Shared VPC host project network peered with consumer network. For example:
+   * projects/1234321/global/networks/host-network
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Subnetwork CIDR range in "10.x.x.x/y" format.
    * @return value or {@code null} for none
    */
@@ -75,6 +83,25 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Shared VPC host project network peered with consumer network. For example:
+   * projects/1234321/global/networks/host-network
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Shared VPC host project network peered with consumer network. For example:
+   * projects/1234321/global/networks/host-network
+   * @param network network or {@code null} for none
+   */
+  public Subnetwork setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

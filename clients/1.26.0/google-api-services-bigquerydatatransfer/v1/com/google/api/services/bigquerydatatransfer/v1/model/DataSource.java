@@ -126,12 +126,6 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<DataSourceParameter> parameters;
 
-  static {
-    // hack to force ProGuard to consider DataSourceParameter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(DataSourceParameter.class);
-  }
-
   /**
    * Api auth scopes for which refresh token needs to be obtained. These are scopes needed by a data
    * source to prepare data and ingest them into BigQuery, e.g.,

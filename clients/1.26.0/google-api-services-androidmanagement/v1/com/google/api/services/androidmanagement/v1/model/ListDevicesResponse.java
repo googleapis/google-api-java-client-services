@@ -37,12 +37,6 @@ public final class ListDevicesResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<Device> devices;
 
-  static {
-    // hack to force ProGuard to consider Device used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Device.class);
-  }
-
   /**
    * If there are more results, a token to retrieve next page of results.
    * The value may be {@code null}.

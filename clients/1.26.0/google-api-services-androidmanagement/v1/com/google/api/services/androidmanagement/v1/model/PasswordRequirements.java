@@ -118,6 +118,13 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.String passwordQuality;
 
   /**
+   * The scope that the password requirement applies to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String passwordScope;
+
+  /**
    * Number of incorrect device-unlock passwords that can be entered before a device is wiped. A
    * value of 0 means there is no restriction.
    * @return value or {@code null} for none
@@ -321,6 +328,23 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
    */
   public PasswordRequirements setPasswordQuality(java.lang.String passwordQuality) {
     this.passwordQuality = passwordQuality;
+    return this;
+  }
+
+  /**
+   * The scope that the password requirement applies to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPasswordScope() {
+    return passwordScope;
+  }
+
+  /**
+   * The scope that the password requirement applies to.
+   * @param passwordScope passwordScope or {@code null} for none
+   */
+  public PasswordRequirements setPasswordScope(java.lang.String passwordScope) {
+    this.passwordScope = passwordScope;
     return this;
   }
 

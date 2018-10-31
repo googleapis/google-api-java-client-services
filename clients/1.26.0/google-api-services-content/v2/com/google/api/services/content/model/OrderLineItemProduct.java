@@ -59,6 +59,13 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   private java.lang.String contentLanguage;
 
   /**
+   * Associated fees at order creation time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OrderLineItemProductFee> fees;
+
+  /**
    * Global Trade Item Number (GTIN) of the item.
    * The value may be {@code null}.
    */
@@ -201,6 +208,23 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
    */
   public OrderLineItemProduct setContentLanguage(java.lang.String contentLanguage) {
     this.contentLanguage = contentLanguage;
+    return this;
+  }
+
+  /**
+   * Associated fees at order creation time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OrderLineItemProductFee> getFees() {
+    return fees;
+  }
+
+  /**
+   * Associated fees at order creation time.
+   * @param fees fees or {@code null} for none
+   */
+  public OrderLineItemProduct setFees(java.util.List<OrderLineItemProductFee> fees) {
+    this.fees = fees;
     return this;
   }
 

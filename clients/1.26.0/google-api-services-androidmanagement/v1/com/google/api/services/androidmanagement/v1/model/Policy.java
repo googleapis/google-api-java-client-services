@@ -150,12 +150,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ChoosePrivateKeyRule> choosePrivateKeyRules;
 
-  static {
-    // hack to force ProGuard to consider ChoosePrivateKeyRule used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ChoosePrivateKeyRule.class);
-  }
-
   /**
    * Rules declaring which mitigating actions to take when a device is not compliant with its
    * policy. When the conditions for multiple rules are satisfied, all of the mitigating actions for
@@ -164,12 +158,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ComplianceRule> complianceRules;
-
-  static {
-    // hack to force ProGuard to consider ComplianceRule used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ComplianceRule.class);
-  }
 
   /**
    * Whether creating windows besides app windows is disabled.
@@ -401,7 +389,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirements.
+   * Password requirements. DEPRECATED - Use password_policies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -435,12 +423,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PersistentPreferredActivity> persistentPreferredActivities;
-
-  static {
-    // hack to force ProGuard to consider PersistentPreferredActivity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PersistentPreferredActivity.class);
-  }
 
   /**
    * This mode controls which apps are available to the user in the Play Store and the behavior on
@@ -1457,7 +1439,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirements.
+   * Password requirements. DEPRECATED - Use password_policies
    * @return value or {@code null} for none
    */
   public PasswordRequirements getPasswordRequirements() {
@@ -1465,7 +1447,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirements.
+   * Password requirements. DEPRECATED - Use password_policies
    * @param passwordRequirements passwordRequirements or {@code null} for none
    */
   public Policy setPasswordRequirements(PasswordRequirements passwordRequirements) {

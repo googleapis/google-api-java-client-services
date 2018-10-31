@@ -30,14 +30,14 @@ package com.google.api.services.androidenterprise.model;
 public final class AdministratorWebTokenSpecStoreBuilder extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the Store Builder page is displayed. Default is true.
+   * Whether the Organize apps page is displayed. Default is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Whether the Store Builder page is displayed. Default is true.
+   * Whether the Organize apps page is displayed. Default is true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -45,7 +45,7 @@ public final class AdministratorWebTokenSpecStoreBuilder extends com.google.api.
   }
 
   /**
-   * Whether the Store Builder page is displayed. Default is true.
+   * Whether the Organize apps page is displayed. Default is true.
    * @param enabled enabled or {@code null} for none
    */
   public AdministratorWebTokenSpecStoreBuilder setEnabled(java.lang.Boolean enabled) {

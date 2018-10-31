@@ -37,7 +37,7 @@ public final class AdministratorWebTokenSpecPlaySearch extends com.google.api.cl
   private java.lang.Boolean approveApps;
 
   /**
-   * Whether the Play Search page is displayed. Default is true.
+   * Whether the managed Play Search apps page is displayed. Default is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class AdministratorWebTokenSpecPlaySearch extends com.google.api.cl
   }
 
   /**
-   * Whether the Play Search page is displayed. Default is true.
+   * Whether the managed Play Search apps page is displayed. Default is true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -69,7 +69,7 @@ public final class AdministratorWebTokenSpecPlaySearch extends com.google.api.cl
   }
 
   /**
-   * Whether the Play Search page is displayed. Default is true.
+   * Whether the managed Play Search apps page is displayed. Default is true.
    * @param enabled enabled or {@code null} for none
    */
   public AdministratorWebTokenSpecPlaySearch setEnabled(java.lang.Boolean enabled) {

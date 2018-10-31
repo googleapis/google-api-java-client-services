@@ -54,7 +54,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private java.util.List<java.lang.String> permission;
 
   /**
-   * Options for displaying the Play Search page.
+   * Options for displaying the managed Play Search apps page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private AdministratorWebTokenSpecPrivateApps privateApps;
 
   /**
-   * Options for displaying the Store Builder page.
+   * Options for displaying the Organize apps page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * Options for displaying the Play Search page.
+   * Options for displaying the managed Play Search apps page.
    * @return value or {@code null} for none
    */
   public AdministratorWebTokenSpecPlaySearch getPlaySearch() {
@@ -145,7 +145,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * Options for displaying the Play Search page.
+   * Options for displaying the managed Play Search apps page.
    * @param playSearch playSearch or {@code null} for none
    */
   public AdministratorWebTokenSpec setPlaySearch(AdministratorWebTokenSpecPlaySearch playSearch) {
@@ -171,7 +171,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * Options for displaying the Store Builder page.
+   * Options for displaying the Organize apps page.
    * @return value or {@code null} for none
    */
   public AdministratorWebTokenSpecStoreBuilder getStoreBuilder() {
@@ -179,7 +179,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   }
 
   /**
-   * Options for displaying the Store Builder page.
+   * Options for displaying the Organize apps page.
    * @param storeBuilder storeBuilder or {@code null} for none
    */
   public AdministratorWebTokenSpec setStoreBuilder(AdministratorWebTokenSpecStoreBuilder storeBuilder) {

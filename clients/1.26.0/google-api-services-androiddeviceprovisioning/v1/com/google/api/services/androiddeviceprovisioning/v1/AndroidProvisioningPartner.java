@@ -2239,7 +2239,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
       /**
        * Creates a customer for zero-touch enrollment. After the method returns successfully, admin and
        * owner roles can manage devices and EMM configs by calling API methods or using their zero-touch
-       * enrollment portal. The API doesn't notify the customer that they have access.
+       * enrollment portal. The customer receives an email that welcomes them to zero-touch enrollment and
+       * explains how to sign into the portal.
        *
        * Create a request for the method "customers.create".
        *
@@ -2267,7 +2268,8 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         /**
          * Creates a customer for zero-touch enrollment. After the method returns successfully, admin and
          * owner roles can manage devices and EMM configs by calling API methods or using their zero-touch
-         * enrollment portal. The API doesn't notify the customer that they have access.
+         * enrollment portal. The customer receives an email that welcomes them to zero-touch enrollment
+         * and explains how to sign into the portal.
          *
          * Create a request for the method "customers.create".
          *

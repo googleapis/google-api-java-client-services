@@ -39,6 +39,12 @@ public final class DevicesLongRunningOperationResponse extends com.google.api.cl
   @com.google.api.client.util.Key
   private java.util.List<OperationPerDevice> perDeviceStatus;
 
+  static {
+    // hack to force ProGuard to consider OperationPerDevice used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OperationPerDevice.class);
+  }
+
   /**
    * A summary of how many items in the operation the server processed successfully. Updated as the
    * operation progresses.

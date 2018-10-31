@@ -37,12 +37,6 @@ public final class UpdateDeviceMetadataInBatchRequest extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<UpdateMetadataArguments> updates;
 
-  static {
-    // hack to force ProGuard to consider UpdateMetadataArguments used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(UpdateMetadataArguments.class);
-  }
-
   /**
    * Required. The list of metadata updates.
    * @return value or {@code null} for none

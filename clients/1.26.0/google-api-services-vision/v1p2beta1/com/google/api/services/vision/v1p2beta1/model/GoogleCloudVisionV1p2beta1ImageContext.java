@@ -56,6 +56,13 @@ public final class GoogleCloudVisionV1p2beta1ImageContext extends com.google.api
   private GoogleCloudVisionV1p2beta1LatLongRect latLongRect;
 
   /**
+   * Parameters for product search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVisionV1p2beta1ProductSearchParams productSearchParams;
+
+  /**
    * Parameters for web detection.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class GoogleCloudVisionV1p2beta1ImageContext extends com.google.api
    */
   public GoogleCloudVisionV1p2beta1ImageContext setLatLongRect(GoogleCloudVisionV1p2beta1LatLongRect latLongRect) {
     this.latLongRect = latLongRect;
+    return this;
+  }
+
+  /**
+   * Parameters for product search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1ProductSearchParams getProductSearchParams() {
+    return productSearchParams;
+  }
+
+  /**
+   * Parameters for product search.
+   * @param productSearchParams productSearchParams or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1ImageContext setProductSearchParams(GoogleCloudVisionV1p2beta1ProductSearchParams productSearchParams) {
+    this.productSearchParams = productSearchParams;
     return this;
   }
 

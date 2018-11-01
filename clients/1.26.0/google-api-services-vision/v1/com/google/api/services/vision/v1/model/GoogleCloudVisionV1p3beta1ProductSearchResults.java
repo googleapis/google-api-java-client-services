@@ -38,11 +38,32 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResults extends com.go
   private String indexTime;
 
   /**
+   * List of results grouped by products detected in the query image. Each entry corresponds to one
+   * bounding polygon in the query image, and contains the matching products specific to that
+   * region. There may be duplicate product matches in the union of all the per-product results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult> productGroupedResults;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult.class);
+  }
+
+  /**
    * List of results, one for each product match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsResult> results;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1ProductSearchResultsResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1ProductSearchResultsResult.class);
+  }
 
   /**
    * Timestamp of the index which provided these results. Changes made after this time are not
@@ -60,6 +81,27 @@ public final class GoogleCloudVisionV1p3beta1ProductSearchResults extends com.go
    */
   public GoogleCloudVisionV1p3beta1ProductSearchResults setIndexTime(String indexTime) {
     this.indexTime = indexTime;
+    return this;
+  }
+
+  /**
+   * List of results grouped by products detected in the query image. Each entry corresponds to one
+   * bounding polygon in the query image, and contains the matching products specific to that
+   * region. There may be duplicate product matches in the union of all the per-product results.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult> getProductGroupedResults() {
+    return productGroupedResults;
+  }
+
+  /**
+   * List of results grouped by products detected in the query image. Each entry corresponds to one
+   * bounding polygon in the query image, and contains the matching products specific to that
+   * region. There may be duplicate product matches in the union of all the per-product results.
+   * @param productGroupedResults productGroupedResults or {@code null} for none
+   */
+  public GoogleCloudVisionV1p3beta1ProductSearchResults setProductGroupedResults(java.util.List<GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult> productGroupedResults) {
+    this.productGroupedResults = productGroupedResults;
     return this;
   }
 

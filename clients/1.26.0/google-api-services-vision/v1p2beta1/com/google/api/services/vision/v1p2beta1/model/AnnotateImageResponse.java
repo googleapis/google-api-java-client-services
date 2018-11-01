@@ -103,6 +103,13 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
   private java.util.List<EntityAnnotation> logoAnnotations;
 
   /**
+   * If present, product search has completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductSearchResults productSearchResults;
+
+  /**
    * If present, safe-search annotation has completed successfully.
    * The value may be {@code null}.
    */
@@ -296,6 +303,23 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
    */
   public AnnotateImageResponse setLogoAnnotations(java.util.List<EntityAnnotation> logoAnnotations) {
     this.logoAnnotations = logoAnnotations;
+    return this;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @return value or {@code null} for none
+   */
+  public ProductSearchResults getProductSearchResults() {
+    return productSearchResults;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @param productSearchResults productSearchResults or {@code null} for none
+   */
+  public AnnotateImageResponse setProductSearchResults(ProductSearchResults productSearchResults) {
+    this.productSearchResults = productSearchResults;
     return this;
   }
 

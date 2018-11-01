@@ -49,6 +49,12 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues extend
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> quasiIdsValues;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Value used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Value.class);
+  }
+
   /**
    * The estimated probability that a given individual sharing these quasi-identifier values is in
    * the dataset. This value, typically called δ, is the ratio between the number of records in the

@@ -37,12 +37,6 @@ public final class GooglePrivacyDlpV2FindingLimits extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2InfoTypeLimit> maxFindingsPerInfoType;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2InfoTypeLimit used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InfoTypeLimit.class);
-  }
-
   /**
    * Max number of findings that will be returned for each item scanned. When set within
    * `InspectDataSourceRequest`, the maximum returned is 1000 regardless if this is set higher. When

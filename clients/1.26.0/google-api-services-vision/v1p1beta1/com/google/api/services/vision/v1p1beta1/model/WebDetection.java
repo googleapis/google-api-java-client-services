@@ -37,12 +37,6 @@ public final class WebDetection extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<WebLabel> bestGuessLabels;
 
-  static {
-    // hack to force ProGuard to consider WebLabel used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WebLabel.class);
-  }
-
   /**
    * Fully matching images from the Internet. Can include resized copies of the query image.
    * The value may be {@code null}.
@@ -62,12 +56,6 @@ public final class WebDetection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<WebPage> pagesWithMatchingImages;
-
-  static {
-    // hack to force ProGuard to consider WebPage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WebPage.class);
-  }
 
   /**
    * Partial matching images from the Internet. Those images are similar enough to share some key-
@@ -102,12 +90,6 @@ public final class WebDetection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<WebEntity> webEntities;
-
-  static {
-    // hack to force ProGuard to consider WebEntity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WebEntity.class);
-  }
 
   /**
    * The service's best guess as to the topic of the request image. Inferred from similar images on

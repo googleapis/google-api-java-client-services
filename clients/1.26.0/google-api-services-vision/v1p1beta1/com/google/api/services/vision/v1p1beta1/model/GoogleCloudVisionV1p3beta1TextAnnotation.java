@@ -40,6 +40,12 @@ public final class GoogleCloudVisionV1p3beta1TextAnnotation extends com.google.a
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1Page> pages;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1Page used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1Page.class);
+  }
+
   /**
    * UTF-8 text detected on the pages.
    * The value may be {@code null}.

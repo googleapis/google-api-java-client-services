@@ -44,12 +44,6 @@ public final class GoogleCloudVisionV1p2beta1AnnotateFileResponse extends com.go
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1AnnotateImageResponse> responses;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1AnnotateImageResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1AnnotateImageResponse.class);
-  }
-
   /**
    * Information about the file for which this response is generated.
    * @return value or {@code null} for none

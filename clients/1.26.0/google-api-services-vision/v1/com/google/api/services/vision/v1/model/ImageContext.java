@@ -56,6 +56,13 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
   private LatLongRect latLongRect;
 
   /**
+   * Parameters for product search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductSearchParams productSearchParams;
+
+  /**
    * Parameters for web detection.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
    */
   public ImageContext setLatLongRect(LatLongRect latLongRect) {
     this.latLongRect = latLongRect;
+    return this;
+  }
+
+  /**
+   * Parameters for product search.
+   * @return value or {@code null} for none
+   */
+  public ProductSearchParams getProductSearchParams() {
+    return productSearchParams;
+  }
+
+  /**
+   * Parameters for product search.
+   * @param productSearchParams productSearchParams or {@code null} for none
+   */
+  public ImageContext setProductSearchParams(ProductSearchParams productSearchParams) {
+    this.productSearchParams = productSearchParams;
     return this;
   }
 

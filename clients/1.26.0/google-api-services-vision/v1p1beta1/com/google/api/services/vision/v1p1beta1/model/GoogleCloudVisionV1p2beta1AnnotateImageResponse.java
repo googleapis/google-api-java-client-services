@@ -133,6 +133,13 @@ public final class GoogleCloudVisionV1p2beta1AnnotateImageResponse extends com.g
   }
 
   /**
+   * If present, product search has completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVisionV1p2beta1ProductSearchResults productSearchResults;
+
+  /**
    * If present, safe-search annotation has completed successfully.
    * The value may be {@code null}.
    */
@@ -332,6 +339,23 @@ public final class GoogleCloudVisionV1p2beta1AnnotateImageResponse extends com.g
    */
   public GoogleCloudVisionV1p2beta1AnnotateImageResponse setLogoAnnotations(java.util.List<GoogleCloudVisionV1p2beta1EntityAnnotation> logoAnnotations) {
     this.logoAnnotations = logoAnnotations;
+    return this;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1ProductSearchResults getProductSearchResults() {
+    return productSearchResults;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @param productSearchResults productSearchResults or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1AnnotateImageResponse setProductSearchResults(GoogleCloudVisionV1p2beta1ProductSearchResults productSearchResults) {
+    this.productSearchResults = productSearchResults;
     return this;
   }
 

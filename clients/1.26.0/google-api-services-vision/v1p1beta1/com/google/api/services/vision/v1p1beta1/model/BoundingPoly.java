@@ -36,12 +36,6 @@ public final class BoundingPoly extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<NormalizedVertex> normalizedVertices;
 
-  static {
-    // hack to force ProGuard to consider NormalizedVertex used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(NormalizedVertex.class);
-  }
-
   /**
    * The bounding polygon vertices.
    * The value may be {@code null}.

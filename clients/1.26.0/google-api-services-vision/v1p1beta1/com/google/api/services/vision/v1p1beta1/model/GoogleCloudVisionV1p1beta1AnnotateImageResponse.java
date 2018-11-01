@@ -86,12 +86,24 @@ public final class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> labelAnnotations;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1EntityAnnotation.class);
+  }
+
   /**
    * If present, landmark detection has completed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> landmarkAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1EntityAnnotation.class);
+  }
 
   /**
    * If present, localized object detection has completed successfully. This will be sorted
@@ -101,18 +113,25 @@ public final class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation> localizedObjectAnnotations;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation.class);
-  }
-
   /**
    * If present, logo detection has completed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> logoAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1EntityAnnotation.class);
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVisionV1p1beta1ProductSearchResults productSearchResults;
 
   /**
    * If present, safe-search annotation has completed successfully.
@@ -127,6 +146,12 @@ public final class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends com.g
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> textAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1EntityAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1EntityAnnotation.class);
+  }
 
   /**
    * If present, web detection has completed successfully.
@@ -308,6 +333,23 @@ public final class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends com.g
    */
   public GoogleCloudVisionV1p1beta1AnnotateImageResponse setLogoAnnotations(java.util.List<GoogleCloudVisionV1p1beta1EntityAnnotation> logoAnnotations) {
     this.logoAnnotations = logoAnnotations;
+    return this;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVisionV1p1beta1ProductSearchResults getProductSearchResults() {
+    return productSearchResults;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @param productSearchResults productSearchResults or {@code null} for none
+   */
+  public GoogleCloudVisionV1p1beta1AnnotateImageResponse setProductSearchResults(GoogleCloudVisionV1p1beta1ProductSearchResults productSearchResults) {
+    this.productSearchResults = productSearchResults;
     return this;
   }
 

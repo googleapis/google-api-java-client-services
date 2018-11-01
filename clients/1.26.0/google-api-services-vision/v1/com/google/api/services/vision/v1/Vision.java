@@ -1196,6 +1196,3315 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Vision vision = new Vision(...);}
+   *   {@code Vision.Projects.List request = vision.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Vision vision = new Vision(...);}
+     *   {@code Vision.Locations.List request = vision.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ProductSets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Vision vision = new Vision(...);}
+       *   {@code Vision.ProductSets.List request = vision.productSets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ProductSets productSets() {
+        return new ProductSets();
+      }
+
+      /**
+       * The "productSets" collection of methods.
+       */
+      public class ProductSets {
+
+        /**
+         * Adds a Product to the specified ProductSet. If the Product is already present, no change is made.
+         *
+         * One Product can be added to at most 100 ProductSets.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+         *
+         * Create a request for the method "productSets.addProduct".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link AddProduct#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name for the ProductSet to modify.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+         * @param content the {@link com.google.api.services.vision.v1.model.AddProductToProductSetRequest}
+         * @return the request
+         */
+        public AddProduct addProduct(java.lang.String name, com.google.api.services.vision.v1.model.AddProductToProductSetRequest content) throws java.io.IOException {
+          AddProduct result = new AddProduct(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddProduct extends VisionRequest<com.google.api.services.vision.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:addProduct";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+
+          /**
+           * Adds a Product to the specified ProductSet. If the Product is already present, no change is
+           * made.
+           *
+           * One Product can be added to at most 100 ProductSets.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+           *
+           * Create a request for the method "productSets.addProduct".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link AddProduct#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * AddProduct#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name for the ProductSet to modify.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * @param content the {@link com.google.api.services.vision.v1.model.AddProductToProductSetRequest}
+           * @since 1.13
+           */
+          protected AddProduct(java.lang.String name, com.google.api.services.vision.v1.model.AddProductToProductSetRequest content) {
+            super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddProduct set$Xgafv(java.lang.String $Xgafv) {
+            return (AddProduct) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddProduct setAccessToken(java.lang.String accessToken) {
+            return (AddProduct) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddProduct setAlt(java.lang.String alt) {
+            return (AddProduct) super.setAlt(alt);
+          }
+
+          @Override
+          public AddProduct setCallback(java.lang.String callback) {
+            return (AddProduct) super.setCallback(callback);
+          }
+
+          @Override
+          public AddProduct setFields(java.lang.String fields) {
+            return (AddProduct) super.setFields(fields);
+          }
+
+          @Override
+          public AddProduct setKey(java.lang.String key) {
+            return (AddProduct) super.setKey(key);
+          }
+
+          @Override
+          public AddProduct setOauthToken(java.lang.String oauthToken) {
+            return (AddProduct) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddProduct setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddProduct) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddProduct setQuotaUser(java.lang.String quotaUser) {
+            return (AddProduct) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddProduct setUploadType(java.lang.String uploadType) {
+            return (AddProduct) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddProduct setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddProduct) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name for the ProductSet to modify.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name for the ProductSet to modify.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name for the ProductSet to modify.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          public AddProduct setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public AddProduct set(String parameterName, Object value) {
+            return (AddProduct) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates and returns a new ProductSet resource.
+         *
+         * Possible errors:
+         *
+         * * Returns INVALID_ARGUMENT if display_name is missing, or is longer than   4096 characters.
+         *
+         * Create a request for the method "productSets.create".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project in which the ProductSet should be created.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+         * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.vision.v1.model.ProductSet content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends VisionRequest<com.google.api.services.vision.v1.model.ProductSet> {
+
+          private static final String REST_PATH = "v1/{+parent}/productSets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates and returns a new ProductSet resource.
+           *
+           * Possible errors:
+           *
+           * * Returns INVALID_ARGUMENT if display_name is missing, or is longer than   4096 characters.
+           *
+           * Create a request for the method "productSets.create".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project in which the ProductSet should be created.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+           * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.vision.v1.model.ProductSet content) {
+            super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.ProductSet.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project in which the ProductSet should be created.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project in which the ProductSet should be created.
+
+         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project in which the ProductSet should be created.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A user-supplied resource id for this ProductSet. If set, the server will attempt to use
+           * this value as the resource id. If it is already in use, an error is returned with code
+           * ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character
+           * `/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productSetId;
+
+          /** A user-supplied resource id for this ProductSet. If set, the server will attempt to use this value
+         as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be
+         at most 128 characters long. It cannot contain the character `/`.
+           */
+          public java.lang.String getProductSetId() {
+            return productSetId;
+          }
+
+          /**
+           * A user-supplied resource id for this ProductSet. If set, the server will attempt to use
+           * this value as the resource id. If it is already in use, an error is returned with code
+           * ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character
+           * `/`.
+           */
+          public Create setProductSetId(java.lang.String productSetId) {
+            this.productSetId = productSetId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Permanently deletes a ProductSet. All Products and ReferenceImages in the ProductSet will be
+         * deleted.
+         *
+         * The actual image files are not deleted from Google Cloud Storage.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the ProductSet does not exist.
+         *
+         * Create a request for the method "productSets.delete".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Resource name of the ProductSet to delete.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends VisionRequest<com.google.api.services.vision.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+
+          /**
+           * Permanently deletes a ProductSet. All Products and ReferenceImages in the ProductSet will be
+           * deleted.
+           *
+           * The actual image files are not deleted from Google Cloud Storage.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the ProductSet does not exist.
+           *
+           * Create a request for the method "productSets.delete".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Resource name of the ProductSet to delete.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Vision.this, "DELETE", REST_PATH, null, com.google.api.services.vision.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Resource name of the ProductSet to delete.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Resource name of the ProductSet to delete.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Resource name of the ProductSet to delete.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information associated with a ProductSet.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the ProductSet does not exist.
+         *
+         * Create a request for the method "productSets.get".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Resource name of the ProductSet to get.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends VisionRequest<com.google.api.services.vision.v1.model.ProductSet> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+
+          /**
+           * Gets information associated with a ProductSet.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the ProductSet does not exist.
+           *
+           * Create a request for the method "productSets.get".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Resource name of the ProductSet to get.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.ProductSet.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Resource name of the ProductSet to get.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Resource name of the ProductSet to get.
+
+         Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Resource name of the ProductSet to get.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Asynchronous API that imports a list of reference images to specified product sets based on a
+         * list of image information.
+         *
+         * The google.longrunning.Operation API can be used to keep track of the progress and results of the
+         * request. `Operation.metadata` contains `BatchOperationMetadata`. (progress) `Operation.response`
+         * contains `ImportProductSetsResponse`. (results)
+         *
+         * The input source of this method is a csv file on Google Cloud Storage. For the format of the csv
+         * file please see ImportProductSetsGcsSource.csv_file_uri.
+         *
+         * Create a request for the method "productSets.import".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link VisionImport#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project in which the ProductSets should be imported.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+         * @param content the {@link com.google.api.services.vision.v1.model.ImportProductSetsRequest}
+         * @return the request
+         */
+        public VisionImport visionImport(java.lang.String parent, com.google.api.services.vision.v1.model.ImportProductSetsRequest content) throws java.io.IOException {
+          VisionImport result = new VisionImport(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class VisionImport extends VisionRequest<com.google.api.services.vision.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/productSets:import";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Asynchronous API that imports a list of reference images to specified product sets based on a
+           * list of image information.
+           *
+           * The google.longrunning.Operation API can be used to keep track of the progress and results of
+           * the request. `Operation.metadata` contains `BatchOperationMetadata`. (progress)
+           * `Operation.response` contains `ImportProductSetsResponse`. (results)
+           *
+           * The input source of this method is a csv file on Google Cloud Storage. For the format of the
+           * csv file please see ImportProductSetsGcsSource.csv_file_uri.
+           *
+           * Create a request for the method "productSets.import".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link VisionImport#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * VisionImport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project in which the ProductSets should be imported.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+           * @param content the {@link com.google.api.services.vision.v1.model.ImportProductSetsRequest}
+           * @since 1.13
+           */
+          protected VisionImport(java.lang.String parent, com.google.api.services.vision.v1.model.ImportProductSetsRequest content) {
+            super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public VisionImport set$Xgafv(java.lang.String $Xgafv) {
+            return (VisionImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public VisionImport setAccessToken(java.lang.String accessToken) {
+            return (VisionImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public VisionImport setAlt(java.lang.String alt) {
+            return (VisionImport) super.setAlt(alt);
+          }
+
+          @Override
+          public VisionImport setCallback(java.lang.String callback) {
+            return (VisionImport) super.setCallback(callback);
+          }
+
+          @Override
+          public VisionImport setFields(java.lang.String fields) {
+            return (VisionImport) super.setFields(fields);
+          }
+
+          @Override
+          public VisionImport setKey(java.lang.String key) {
+            return (VisionImport) super.setKey(key);
+          }
+
+          @Override
+          public VisionImport setOauthToken(java.lang.String oauthToken) {
+            return (VisionImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public VisionImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (VisionImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public VisionImport setQuotaUser(java.lang.String quotaUser) {
+            return (VisionImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public VisionImport setUploadType(java.lang.String uploadType) {
+            return (VisionImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public VisionImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (VisionImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project in which the ProductSets should be imported.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project in which the ProductSets should be imported.
+
+         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project in which the ProductSets should be imported.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public VisionImport setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public VisionImport set(String parameterName, Object value) {
+            return (VisionImport) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists ProductSets in an unspecified order.
+         *
+         * Possible errors:
+         *
+         * * Returns INVALID_ARGUMENT if page_size is greater than 100, or less   than 1.
+         *
+         * Create a request for the method "productSets.list".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project from which ProductSets should be listed.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends VisionRequest<com.google.api.services.vision.v1.model.ListProductSetsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/productSets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists ProductSets in an unspecified order.
+           *
+           * Possible errors:
+           *
+           * * Returns INVALID_ARGUMENT if page_size is greater than 100, or less   than 1.
+           *
+           * Create a request for the method "productSets.list".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project from which ProductSets should be listed.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.ListProductSetsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project from which ProductSets should be listed.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project from which ProductSets should be listed.
+
+         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project from which ProductSets should be listed.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The maximum number of items to return. Default 10, maximum 100. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return. Default 10, maximum 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of items to return. Default 10, maximum 100. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Makes changes to a ProductSet resource. Only display_name can be updated currently.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the ProductSet does not exist. * Returns INVALID_ARGUMENT if display_name
+         * is present in update_mask but   missing from the request or longer than 4096 characters.
+         *
+         * Create a request for the method "productSets.patch".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the ProductSet.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
+        This field is ignored
+         *        when creating a ProductSet.
+         * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.vision.v1.model.ProductSet content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends VisionRequest<com.google.api.services.vision.v1.model.ProductSet> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+
+          /**
+           * Makes changes to a ProductSet resource. Only display_name can be updated currently.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the ProductSet does not exist. * Returns INVALID_ARGUMENT if
+           * display_name is present in update_mask but   missing from the request or longer than 4096
+           * characters.
+           *
+           * Create a request for the method "productSets.patch".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the ProductSet.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
+        This field is ignored
+         *        when creating a ProductSet.
+           * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.vision.v1.model.ProductSet content) {
+            super(Vision.this, "PATCH", REST_PATH, content, com.google.api.services.vision.v1.model.ProductSet.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the ProductSet.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
+           *
+           * This field is ignored when creating a ProductSet.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the ProductSet.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
+
+         This field is ignored when creating a ProductSet.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the ProductSet.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
+           *
+           * This field is ignored when creating a ProductSet.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The FieldMask that specifies which fields to update. If update_mask isn't specified,
+           * all mutable fields are to be updated. Valid mask path is `display_name`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The FieldMask that specifies which fields to update. If update_mask isn't specified, all mutable
+         fields are to be updated. Valid mask path is `display_name`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The FieldMask that specifies which fields to update. If update_mask isn't specified,
+           * all mutable fields are to be updated. Valid mask path is `display_name`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Removes a Product from the specified ProductSet.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND If the Product is not found under the ProductSet.
+         *
+         * Create a request for the method "productSets.removeProduct".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link RemoveProduct#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name for the ProductSet to modify.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+         * @param content the {@link com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest}
+         * @return the request
+         */
+        public RemoveProduct removeProduct(java.lang.String name, com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest content) throws java.io.IOException {
+          RemoveProduct result = new RemoveProduct(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemoveProduct extends VisionRequest<com.google.api.services.vision.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:removeProduct";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+
+          /**
+           * Removes a Product from the specified ProductSet.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND If the Product is not found under the ProductSet.
+           *
+           * Create a request for the method "productSets.removeProduct".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link RemoveProduct#execute()} method to invoke the remote operation. <p>
+           * {@link RemoveProduct#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name The resource name for the ProductSet to modify.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * @param content the {@link com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest}
+           * @since 1.13
+           */
+          protected RemoveProduct(java.lang.String name, com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest content) {
+            super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemoveProduct set$Xgafv(java.lang.String $Xgafv) {
+            return (RemoveProduct) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemoveProduct setAccessToken(java.lang.String accessToken) {
+            return (RemoveProduct) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemoveProduct setAlt(java.lang.String alt) {
+            return (RemoveProduct) super.setAlt(alt);
+          }
+
+          @Override
+          public RemoveProduct setCallback(java.lang.String callback) {
+            return (RemoveProduct) super.setCallback(callback);
+          }
+
+          @Override
+          public RemoveProduct setFields(java.lang.String fields) {
+            return (RemoveProduct) super.setFields(fields);
+          }
+
+          @Override
+          public RemoveProduct setKey(java.lang.String key) {
+            return (RemoveProduct) super.setKey(key);
+          }
+
+          @Override
+          public RemoveProduct setOauthToken(java.lang.String oauthToken) {
+            return (RemoveProduct) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemoveProduct setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemoveProduct) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemoveProduct setQuotaUser(java.lang.String quotaUser) {
+            return (RemoveProduct) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemoveProduct setUploadType(java.lang.String uploadType) {
+            return (RemoveProduct) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemoveProduct setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemoveProduct) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name for the ProductSet to modify.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name for the ProductSet to modify.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name for the ProductSet to modify.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           */
+          public RemoveProduct setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RemoveProduct set(String parameterName, Object value) {
+            return (RemoveProduct) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Products collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Vision vision = new Vision(...);}
+         *   {@code Vision.Products.List request = vision.products().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Products products() {
+          return new Products();
+        }
+
+        /**
+         * The "products" collection of methods.
+         */
+        public class Products {
+
+          /**
+           * Lists the Products in a ProductSet, in an unspecified order. If the ProductSet does not exist,
+           * the products field of the response will be empty.
+           *
+           * Possible errors:
+           *
+           * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+           *
+           * Create a request for the method "products.list".
+           *
+           * This request holds the parameters needed by the vision server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param name The ProductSet resource for which to retrieve Products.
+          Format is:
+           *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * @return the request
+           */
+          public List list(java.lang.String name) throws java.io.IOException {
+            List result = new List(name);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends VisionRequest<com.google.api.services.vision.v1.model.ListProductsInProductSetResponse> {
+
+            private static final String REST_PATH = "v1/{+name}/products";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+
+            /**
+             * Lists the Products in a ProductSet, in an unspecified order. If the ProductSet does not exist,
+             * the products field of the response will be empty.
+             *
+             * Possible errors:
+             *
+             * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+             *
+             * Create a request for the method "products.list".
+             *
+             * This request holds the parameters needed by the the vision server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The ProductSet resource for which to retrieve Products.
+          Format is:
+           *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+             * @since 1.13
+             */
+            protected List(java.lang.String name) {
+              super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.ListProductsInProductSetResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The ProductSet resource for which to retrieve Products.
+             *
+             * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The ProductSet resource for which to retrieve Products.
+
+           Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The ProductSet resource for which to retrieve Products.
+             *
+             * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+             */
+            public List setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** The maximum number of items to return. Default 10, maximum 100. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return. Default 10, maximum 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of items to return. Default 10, maximum 100. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token returned from a previous List request, if any. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token returned from a previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token returned from a previous List request, if any. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the Products collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Vision vision = new Vision(...);}
+       *   {@code Vision.Products.List request = vision.products().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Products products() {
+        return new Products();
+      }
+
+      /**
+       * The "products" collection of methods.
+       */
+      public class Products {
+
+        /**
+         * Creates and returns a new product resource.
+         *
+         * Possible errors:
+         *
+         * * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096   characters. * Returns
+         * INVALID_ARGUMENT if description is longer than 4096 characters. * Returns INVALID_ARGUMENT if
+         * product_category is missing or invalid.
+         *
+         * Create a request for the method "products.create".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project in which the Product should be created.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+         * @param content the {@link com.google.api.services.vision.v1.model.Product}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.vision.v1.model.Product content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends VisionRequest<com.google.api.services.vision.v1.model.Product> {
+
+          private static final String REST_PATH = "v1/{+parent}/products";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates and returns a new product resource.
+           *
+           * Possible errors:
+           *
+           * * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096   characters. *
+           * Returns INVALID_ARGUMENT if description is longer than 4096 characters. * Returns
+           * INVALID_ARGUMENT if product_category is missing or invalid.
+           *
+           * Create a request for the method "products.create".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project in which the Product should be created.
+        Format is
+         *        `projects/PROJECT_ID/locations/LOC_ID`.
+           * @param content the {@link com.google.api.services.vision.v1.model.Product}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.vision.v1.model.Product content) {
+            super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.Product.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project in which the Product should be created.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project in which the Product should be created.
+
+         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project in which the Product should be created.
+           *
+           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A user-supplied resource id for this Product. If set, the server will attempt to use
+           * this value as the resource id. If it is already in use, an error is returned with code
+           * ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character
+           * `/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String productId;
+
+          /** A user-supplied resource id for this Product. If set, the server will attempt to use this value as
+         the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at
+         most 128 characters long. It cannot contain the character `/`.
+           */
+          public java.lang.String getProductId() {
+            return productId;
+          }
+
+          /**
+           * A user-supplied resource id for this Product. If set, the server will attempt to use
+           * this value as the resource id. If it is already in use, an error is returned with code
+           * ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character
+           * `/`.
+           */
+          public Create setProductId(java.lang.String productId) {
+            this.productId = productId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Permanently deletes a product and its reference images.
+         *
+         * Metadata of the product and all its images will be deleted right away, but search queries against
+         * ProductSets containing the product may still work until all related caches are refreshed.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the product does not exist.
+         *
+         * Create a request for the method "products.delete".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Resource name of product to delete.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends VisionRequest<com.google.api.services.vision.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+
+          /**
+           * Permanently deletes a product and its reference images.
+           *
+           * Metadata of the product and all its images will be deleted right away, but search queries
+           * against ProductSets containing the product may still work until all related caches are
+           * refreshed.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the product does not exist.
+           *
+           * Create a request for the method "products.delete".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Resource name of product to delete.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Vision.this, "DELETE", REST_PATH, null, com.google.api.services.vision.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Resource name of product to delete.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Resource name of product to delete.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Resource name of product to delete.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information associated with a Product.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the Product does not exist.
+         *
+         * Create a request for the method "products.get".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Resource name of the Product to get.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends VisionRequest<com.google.api.services.vision.v1.model.Product> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+
+          /**
+           * Gets information associated with a Product.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the Product does not exist.
+           *
+           * Create a request for the method "products.get".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Resource name of the Product to get.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.Product.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Resource name of the Product to get.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Resource name of the Product to get.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Resource name of the Product to get.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists products in an unspecified order.
+         *
+         * Possible errors:
+         *
+         * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+         *
+         * Create a request for the method "products.list".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project OR ProductSet from which Products should be listed.
+        Format:
+         *        `projects/PROJECT_ID/locations/LOC_ID`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends VisionRequest<com.google.api.services.vision.v1.model.ListProductsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/products";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists products in an unspecified order.
+           *
+           * Possible errors:
+           *
+           * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+           *
+           * Create a request for the method "products.list".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project OR ProductSet from which Products should be listed.
+        Format:
+         *        `projects/PROJECT_ID/locations/LOC_ID`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.ListProductsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project OR ProductSet from which Products should be listed.
+           *
+           * Format: `projects/PROJECT_ID/locations/LOC_ID`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project OR ProductSet from which Products should be listed.
+
+         Format: `projects/PROJECT_ID/locations/LOC_ID`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project OR ProductSet from which Products should be listed.
+           *
+           * Format: `projects/PROJECT_ID/locations/LOC_ID`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The maximum number of items to return. Default 10, maximum 100. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return. Default 10, maximum 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of items to return. Default 10, maximum 100. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Makes changes to a Product resource. Only the `display_name`, `description`, and `labels` fields
+         * can be updated right now.
+         *
+         * If labels are updated, the change will not be reflected in queries until the next index time.
+         *
+         * Possible errors:
+         *
+         * * Returns NOT_FOUND if the Product does not exist. * Returns INVALID_ARGUMENT if display_name is
+         * present in update_mask but is   missing from the request or longer than 4096 characters. *
+         * Returns INVALID_ARGUMENT if description is present in update_mask but is   longer than 4096
+         * characters. * Returns INVALID_ARGUMENT if product_category is present in update_mask.
+         *
+         * Create a request for the method "products.patch".
+         *
+         * This request holds the parameters needed by the vision server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the product.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        This field is ignored when
+         *        creating a product.
+         * @param content the {@link com.google.api.services.vision.v1.model.Product}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.vision.v1.model.Product content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends VisionRequest<com.google.api.services.vision.v1.model.Product> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+
+          /**
+           * Makes changes to a Product resource. Only the `display_name`, `description`, and `labels`
+           * fields can be updated right now.
+           *
+           * If labels are updated, the change will not be reflected in queries until the next index time.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the Product does not exist. * Returns INVALID_ARGUMENT if display_name
+           * is present in update_mask but is   missing from the request or longer than 4096 characters. *
+           * Returns INVALID_ARGUMENT if description is present in update_mask but is   longer than 4096
+           * characters. * Returns INVALID_ARGUMENT if product_category is present in update_mask.
+           *
+           * Create a request for the method "products.patch".
+           *
+           * This request holds the parameters needed by the the vision server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the product.
+        Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+        This field is ignored when
+         *        creating a product.
+           * @param content the {@link com.google.api.services.vision.v1.model.Product}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.vision.v1.model.Product content) {
+            super(Vision.this, "PATCH", REST_PATH, content, com.google.api.services.vision.v1.model.Product.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the product.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+           *
+           * This field is ignored when creating a product.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the product.
+
+         Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+
+         This field is ignored when creating a product.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the product.
+           *
+           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+           *
+           * This field is ignored when creating a product.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The FieldMask that specifies which fields to update. If update_mask isn't specified,
+           * all mutable fields are to be updated. Valid mask paths include `product_labels`,
+           * `display_name`, and `description`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** The FieldMask that specifies which fields to update. If update_mask isn't specified, all mutable
+         fields are to be updated. Valid mask paths include `product_labels`, `display_name`, and
+         `description`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * The FieldMask that specifies which fields to update. If update_mask isn't specified,
+           * all mutable fields are to be updated. Valid mask paths include `product_labels`,
+           * `display_name`, and `description`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the ReferenceImages collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Vision vision = new Vision(...);}
+         *   {@code Vision.ReferenceImages.List request = vision.referenceImages().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ReferenceImages referenceImages() {
+          return new ReferenceImages();
+        }
+
+        /**
+         * The "referenceImages" collection of methods.
+         */
+        public class ReferenceImages {
+
+          /**
+           * Creates and returns a new ReferenceImage resource.
+           *
+           * The `bounding_poly` field is optional. If `bounding_poly` is not specified, the system will try
+           * to detect regions of interest in the image that are compatible with the product_category on the
+           * parent product. If it is specified, detection is ALWAYS skipped. The system converts polygons
+           * into non-rotated rectangles.
+           *
+           * Note that the pipeline will resize the image if the image resolution is too large to process
+           * (above 50MP).
+           *
+           * Possible errors:
+           *
+           * * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096   characters. *
+           * Returns INVALID_ARGUMENT if the product does not exist. * Returns INVALID_ARGUMENT if
+           * bounding_poly is not provided, and nothing   compatible with the parent product's
+           * product_category is detected. * Returns INVALID_ARGUMENT if bounding_poly contains more than 10
+           * polygons.
+           *
+           * Create a request for the method "referenceImages.create".
+           *
+           * This request holds the parameters needed by the vision server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Resource name of the product in which to create the reference image.
+          Format is
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+           * @param content the {@link com.google.api.services.vision.v1.model.ReferenceImage}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.vision.v1.model.ReferenceImage content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends VisionRequest<com.google.api.services.vision.v1.model.ReferenceImage> {
+
+            private static final String REST_PATH = "v1/{+parent}/referenceImages";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+
+            /**
+             * Creates and returns a new ReferenceImage resource.
+             *
+             * The `bounding_poly` field is optional. If `bounding_poly` is not specified, the system will try
+             * to detect regions of interest in the image that are compatible with the product_category on the
+             * parent product. If it is specified, detection is ALWAYS skipped. The system converts polygons
+             * into non-rotated rectangles.
+             *
+             * Note that the pipeline will resize the image if the image resolution is too large to process
+             * (above 50MP).
+             *
+             * Possible errors:
+             *
+             * * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096   characters. *
+             * Returns INVALID_ARGUMENT if the product does not exist. * Returns INVALID_ARGUMENT if
+             * bounding_poly is not provided, and nothing   compatible with the parent product's
+             * product_category is detected. * Returns INVALID_ARGUMENT if bounding_poly contains more than 10
+             * polygons.
+             *
+             * Create a request for the method "referenceImages.create".
+             *
+             * This request holds the parameters needed by the the vision server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Resource name of the product in which to create the reference image.
+          Format is
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             * @param content the {@link com.google.api.services.vision.v1.model.ReferenceImage}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.vision.v1.model.ReferenceImage content) {
+              super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.ReferenceImage.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Resource name of the product in which to create the reference image.
+             *
+             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Resource name of the product in which to create the reference image.
+
+           Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Resource name of the product in which to create the reference image.
+             *
+             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * A user-supplied resource id for the ReferenceImage to be added. If set, the server
+             * will attempt to use this value as the resource id. If it is already in use, an error
+             * is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot
+             * contain the character `/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String referenceImageId;
+
+            /** A user-supplied resource id for the ReferenceImage to be added. If set, the server will attempt to
+           use this value as the resource id. If it is already in use, an error is returned with code
+           ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+             */
+            public java.lang.String getReferenceImageId() {
+              return referenceImageId;
+            }
+
+            /**
+             * A user-supplied resource id for the ReferenceImage to be added. If set, the server
+             * will attempt to use this value as the resource id. If it is already in use, an error
+             * is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot
+             * contain the character `/`.
+             */
+            public Create setReferenceImageId(java.lang.String referenceImageId) {
+              this.referenceImageId = referenceImageId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Permanently deletes a reference image.
+           *
+           * The image metadata will be deleted right away, but search queries against ProductSets containing
+           * the image may still work until all related caches are refreshed.
+           *
+           * The actual image files are not deleted from Google Cloud Storage.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the reference image does not exist.
+           *
+           * Create a request for the method "referenceImages.delete".
+           *
+           * This request holds the parameters needed by the vision server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the reference image to delete.
+          Format is:
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends VisionRequest<com.google.api.services.vision.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
+
+            /**
+             * Permanently deletes a reference image.
+             *
+             * The image metadata will be deleted right away, but search queries against ProductSets
+             * containing the image may still work until all related caches are refreshed.
+             *
+             * The actual image files are not deleted from Google Cloud Storage.
+             *
+             * Possible errors:
+             *
+             * * Returns NOT_FOUND if the reference image does not exist.
+             *
+             * Create a request for the method "referenceImages.delete".
+             *
+             * This request holds the parameters needed by the the vision server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the reference image to delete.
+          Format is:
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Vision.this, "DELETE", REST_PATH, null, com.google.api.services.vision.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the reference image to delete.
+             *
+             * Format is:
+             *
+             * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the reference image to delete.
+
+           Format is:
+
+           `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the reference image to delete.
+             *
+             * Format is:
+             *
+             * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets information associated with a ReferenceImage.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the specified image does not exist.
+           *
+           * Create a request for the method "referenceImages.get".
+           *
+           * This request holds the parameters needed by the vision server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the ReferenceImage to get.
+          Format is:
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends VisionRequest<com.google.api.services.vision.v1.model.ReferenceImage> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
+
+            /**
+             * Gets information associated with a ReferenceImage.
+             *
+             * Possible errors:
+             *
+             * * Returns NOT_FOUND if the specified image does not exist.
+             *
+             * Create a request for the method "referenceImages.get".
+             *
+             * This request holds the parameters needed by the the vision server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the ReferenceImage to get.
+          Format is:
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.ReferenceImage.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the ReferenceImage to get.
+             *
+             * Format is:
+             *
+             * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the ReferenceImage to get.
+
+           Format is:
+
+           `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The resource name of the ReferenceImage to get.
+             *
+             * Format is:
+             *
+             * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists reference images.
+           *
+           * Possible errors:
+           *
+           * * Returns NOT_FOUND if the parent product does not exist. * Returns INVALID_ARGUMENT if the
+           * page_size is greater than 100, or less   than 1.
+           *
+           * Create a request for the method "referenceImages.list".
+           *
+           * This request holds the parameters needed by the vision server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Resource name of the product containing the reference images.
+          Format is
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends VisionRequest<com.google.api.services.vision.v1.model.ListReferenceImagesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/referenceImages";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+
+            /**
+             * Lists reference images.
+             *
+             * Possible errors:
+             *
+             * * Returns NOT_FOUND if the parent product does not exist. * Returns INVALID_ARGUMENT if the
+             * page_size is greater than 100, or less   than 1.
+             *
+             * Create a request for the method "referenceImages.list".
+             *
+             * This request holds the parameters needed by the the vision server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Resource name of the product containing the reference images.
+          Format is
+           *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Vision.this, "GET", REST_PATH, null, com.google.api.services.vision.v1.model.ListReferenceImagesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Resource name of the product containing the reference images.
+             *
+             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Resource name of the product containing the reference images.
+
+           Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Resource name of the product containing the reference images.
+             *
+             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/products/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The maximum number of items to return. Default 10, maximum 100. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return. Default 10, maximum 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The maximum number of items to return. Default 10, maximum 100. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results to be returned. This is the value of
+             * `nextPageToken` returned in a previous reference image list request.
+             *
+             * Defaults to the first page if not specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results to be returned. This is the value of `nextPageToken` returned
+           in a previous reference image list request.
+
+           Defaults to the first page if not specified.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results to be returned. This is the value of
+             * `nextPageToken` returned in a previous reference image list request.
+             *
+             * Defaults to the first page if not specified.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * Builder for {@link Vision}.
    *
    * <p>

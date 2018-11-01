@@ -113,6 +113,12 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<LocalizedObjectAnnotation> localizedObjectAnnotations;
 
+  static {
+    // hack to force ProGuard to consider LocalizedObjectAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LocalizedObjectAnnotation.class);
+  }
+
   /**
    * If present, logo detection has completed successfully.
    * The value may be {@code null}.
@@ -125,6 +131,13 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(EntityAnnotation.class);
   }
+
+  /**
+   * If present, product search has completed successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductSearchResults productSearchResults;
 
   /**
    * If present, safe-search annotation has completed successfully.
@@ -326,6 +339,23 @@ public final class AnnotateImageResponse extends com.google.api.client.json.Gene
    */
   public AnnotateImageResponse setLogoAnnotations(java.util.List<EntityAnnotation> logoAnnotations) {
     this.logoAnnotations = logoAnnotations;
+    return this;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @return value or {@code null} for none
+   */
+  public ProductSearchResults getProductSearchResults() {
+    return productSearchResults;
+  }
+
+  /**
+   * If present, product search has completed successfully.
+   * @param productSearchResults productSearchResults or {@code null} for none
+   */
+  public AnnotateImageResponse setProductSearchResults(ProductSearchResults productSearchResults) {
+    this.productSearchResults = productSearchResults;
     return this;
   }
 

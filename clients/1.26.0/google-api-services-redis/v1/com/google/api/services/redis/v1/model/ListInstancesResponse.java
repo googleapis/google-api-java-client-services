@@ -44,12 +44,25 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Instance> instances;
 
+  static {
+    // hack to force ProGuard to consider Instance used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Instance.class);
+  }
+
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
+
+  /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
 
   /**
    * A list of Redis instances in the project in the specified location, or across all locations.
@@ -96,6 +109,23 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
    */
   public ListInstancesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListInstancesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

@@ -51,6 +51,12 @@ public final class GooglePrivacyDlpV2NumericalStatsResult extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> quantileValues;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Value used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Value.class);
+  }
+
   /**
    * Maximum value appearing in the column.
    * @return value or {@code null} for none

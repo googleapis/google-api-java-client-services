@@ -52,12 +52,24 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClass extends com.goog
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> quasiIdsValues;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Value used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Value.class);
+  }
+
   /**
    * Estimated frequencies of top sensitive values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2ValueFrequency> topSensitiveValues;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2ValueFrequency used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2ValueFrequency.class);
+  }
 
   /**
    * Size of the k-anonymity equivalence class.

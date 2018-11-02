@@ -54,6 +54,14 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.Double minDeadline;
 
   /**
+   * The number of seconds to wait for the completion of a long running operation. The default is no
+   * deadline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double operationDeadline;
+
+  /**
    * Selects the methods to which this rule applies.
    *
    * Refer to selector for syntax details.
@@ -114,6 +122,25 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   public BackendRule setMinDeadline(java.lang.Double minDeadline) {
     this.minDeadline = minDeadline;
+    return this;
+  }
+
+  /**
+   * The number of seconds to wait for the completion of a long running operation. The default is no
+   * deadline.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getOperationDeadline() {
+    return operationDeadline;
+  }
+
+  /**
+   * The number of seconds to wait for the completion of a long running operation. The default is no
+   * deadline.
+   * @param operationDeadline operationDeadline or {@code null} for none
+   */
+  public BackendRule setOperationDeadline(java.lang.Double operationDeadline) {
+    this.operationDeadline = operationDeadline;
     return this;
   }
 

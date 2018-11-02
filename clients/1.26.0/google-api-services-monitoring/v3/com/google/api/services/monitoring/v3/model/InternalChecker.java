@@ -48,8 +48,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
 
   /**
    * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is the GCP project ID where
-   * the internal resource lives. Not necessarily the same as the project_id for the config.
+   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].PROJECT_ID is the stackdriver
+   * workspace project for the uptime check config associated with the internal checker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +62,14 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * The GCP project_id where the internal checker lives. Not necessary the same as the workspace
+   * project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerProjectId;
 
   /**
    * The checker's human-readable name. The display name should be unique within a Stackdriver
@@ -103,8 +111,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
 
   /**
    * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is the GCP project ID where
-   * the internal resource lives. Not necessarily the same as the project_id for the config.
+   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].PROJECT_ID is the stackdriver
+   * workspace project for the uptime check config associated with the internal checker.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -113,8 +121,8 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
 
   /**
    * A unique resource name for this InternalChecker. The format
-   * is:projects/[PROJECT_ID]/internalCheckers/[CHECKER_ID].PROJECT_ID is the GCP project ID where
-   * the internal resource lives. Not necessarily the same as the project_id for the config.
+   * is:projects/[PROJECT_ID]/internalCheckers/[INTERNAL_CHECKER_ID].PROJECT_ID is the stackdriver
+   * workspace project for the uptime check config associated with the internal checker.
    * @param name name or {@code null} for none
    */
   public InternalChecker setName(java.lang.String name) {
@@ -138,6 +146,25 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
    */
   public InternalChecker setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * The GCP project_id where the internal checker lives. Not necessary the same as the workspace
+   * project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerProjectId() {
+    return peerProjectId;
+  }
+
+  /**
+   * The GCP project_id where the internal checker lives. Not necessary the same as the workspace
+   * project.
+   * @param peerProjectId peerProjectId or {@code null} for none
+   */
+  public InternalChecker setPeerProjectId(java.lang.String peerProjectId) {
+    this.peerProjectId = peerProjectId;
     return this;
   }
 

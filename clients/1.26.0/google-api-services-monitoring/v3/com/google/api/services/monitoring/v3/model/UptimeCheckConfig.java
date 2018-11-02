@@ -58,7 +58,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The internal checkers that this check will egress from. If is_internal is true and this list is
-   * empty, the check will egress from all InternalCheckers configured for the project that owns
+   * empty, the check will egress from all the InternalCheckers configured for the project that owns
    * this CheckConfig.
    * The value may be {@code null}.
    */
@@ -66,7 +66,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private java.util.List<InternalChecker> internalCheckers;
 
   /**
-   * Denotes whether this is a check that egresses from InternalCheckers.
+   * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then
+   * checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions'
+   * when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,9 +110,10 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   private ResourceGroup resourceGroup;
 
   /**
-   * The list of regions from which the check will be run. If this field is specified, enough
-   * regions to include a minimum of 3 locations must be provided, or an error message is returned.
-   * Not specifying this field will result in uptime checks running from all regions.
+   * The list of regions from which the check will be run. Some regions contain one location, and
+   * others contain more than one. If this field is specified, enough regions to include a minimum
+   * of 3 locations must be provided, or an error message is returned. Not specifying this field
+   * will result in uptime checks running from all regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +197,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The internal checkers that this check will egress from. If is_internal is true and this list is
-   * empty, the check will egress from all InternalCheckers configured for the project that owns
+   * empty, the check will egress from all the InternalCheckers configured for the project that owns
    * this CheckConfig.
    * @return value or {@code null} for none
    */
@@ -204,7 +207,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
 
   /**
    * The internal checkers that this check will egress from. If is_internal is true and this list is
-   * empty, the check will egress from all InternalCheckers configured for the project that owns
+   * empty, the check will egress from all the InternalCheckers configured for the project that owns
    * this CheckConfig.
    * @param internalCheckers internalCheckers or {@code null} for none
    */
@@ -214,7 +217,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Denotes whether this is a check that egresses from InternalCheckers.
+   * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then
+   * checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions'
+   * when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsInternal() {
@@ -222,7 +227,9 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Denotes whether this is a check that egresses from InternalCheckers.
+   * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then
+   * checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions'
+   * when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
    * @param isInternal isInternal or {@code null} for none
    */
   public UptimeCheckConfig setIsInternal(java.lang.Boolean isInternal) {
@@ -313,9 +320,10 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The list of regions from which the check will be run. If this field is specified, enough
-   * regions to include a minimum of 3 locations must be provided, or an error message is returned.
-   * Not specifying this field will result in uptime checks running from all regions.
+   * The list of regions from which the check will be run. Some regions contain one location, and
+   * others contain more than one. If this field is specified, enough regions to include a minimum
+   * of 3 locations must be provided, or an error message is returned. Not specifying this field
+   * will result in uptime checks running from all regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSelectedRegions() {
@@ -323,9 +331,10 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The list of regions from which the check will be run. If this field is specified, enough
-   * regions to include a minimum of 3 locations must be provided, or an error message is returned.
-   * Not specifying this field will result in uptime checks running from all regions.
+   * The list of regions from which the check will be run. Some regions contain one location, and
+   * others contain more than one. If this field is specified, enough regions to include a minimum
+   * of 3 locations must be provided, or an error message is returned. Not specifying this field
+   * will result in uptime checks running from all regions.
    * @param selectedRegions selectedRegions or {@code null} for none
    */
   public UptimeCheckConfig setSelectedRegions(java.util.List<java.lang.String> selectedRegions) {

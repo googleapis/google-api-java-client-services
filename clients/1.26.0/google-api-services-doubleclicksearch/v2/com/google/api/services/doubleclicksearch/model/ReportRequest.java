@@ -123,7 +123,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   private java.lang.String reportType;
 
   /**
-   * Synchronous report only. The maxinum number of rows to return; additional rows are dropped.
+   * Synchronous report only. The maximum number of rows to return; additional rows are dropped.
    * Acceptable values are 0 to 10000, inclusive. Defaults to 10000.
    * The value may be {@code null}.
    */
@@ -395,7 +395,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Synchronous report only. The maxinum number of rows to return; additional rows are dropped.
+   * Synchronous report only. The maximum number of rows to return; additional rows are dropped.
    * Acceptable values are 0 to 10000, inclusive. Defaults to 10000.
    * @return value or {@code null} for none
    */
@@ -404,7 +404,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Synchronous report only. The maxinum number of rows to return; additional rows are dropped.
+   * Synchronous report only. The maximum number of rows to return; additional rows are dropped.
    * Acceptable values are 0 to 10000, inclusive. Defaults to 10000.
    * @param rowCount rowCount or {@code null} for none
    */

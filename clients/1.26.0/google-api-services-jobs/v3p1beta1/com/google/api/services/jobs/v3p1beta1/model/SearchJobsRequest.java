@@ -111,12 +111,6 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<HistogramQuery> histogramQueries;
 
-  static {
-    // hack to force ProGuard to consider HistogramQuery used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(HistogramQuery.class);
-  }
-
   /**
    * Optional.
    *

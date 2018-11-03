@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Beta] Clustering specification for the table. Must be specified with time-based partitioning,
+   * [Experimental] Clustering specification for the table. Must be specified with partitioning,
    * data in the table will be first partitioned and subsequently clustered.
    * The value may be {@code null}.
    */
@@ -172,6 +172,22 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger numRows;
 
   /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RangePartitioning rangePartitioning;
+
+  /**
+   * [Experimental] [Optional] If set to true, queries over this table require a partition filter
+   * that can be used for partition elimination to be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requirePartitionFilter;
+
+  /**
    * [Optional] Describes the schema of this table.
    * The value may be {@code null}.
    */
@@ -202,7 +218,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private TableReference tableReference;
 
   /**
-   * Time-based partitioning specification for this table.
+   * Time-based partitioning specification for this table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +243,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private ViewDefinition view;
 
   /**
-   * [Beta] Clustering specification for the table. Must be specified with time-based partitioning,
+   * [Experimental] Clustering specification for the table. Must be specified with partitioning,
    * data in the table will be first partitioned and subsequently clustered.
    * @return value or {@code null} for none
    */
@@ -235,7 +252,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Beta] Clustering specification for the table. Must be specified with time-based partitioning,
+   * [Experimental] Clustering specification for the table. Must be specified with partitioning,
    * data in the table will be first partitioned and subsequently clustered.
    * @param clustering clustering or {@code null} for none
    */
@@ -564,6 +581,72 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * @return value or {@code null} for none
+   */
+  public RangePartitioning getRangePartitioning() {
+    return rangePartitioning;
+  }
+
+  /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * @param rangePartitioning rangePartitioning or {@code null} for none
+   */
+  public Table setRangePartitioning(RangePartitioning rangePartitioning) {
+    this.rangePartitioning = rangePartitioning;
+    return this;
+  }
+
+  /**
+   * [Experimental] [Optional] If set to true, queries over this table require a partition filter
+   * that can be used for partition elimination to be specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequirePartitionFilter() {
+    return requirePartitionFilter;
+  }
+
+  /**
+   * [Experimental] [Optional] If set to true, queries over this table require a partition filter
+   * that can be used for partition elimination to be specified.
+   * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
+   */
+  public Table setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
+    this.requirePartitionFilter = requirePartitionFilter;
+    return this;
+  }
+
+  /**
+   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+   *
+   * <p>
+   * Boolean properties can have four possible values:
+   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+   * or {@link Boolean#FALSE}.
+   * </p>
+   *
+   * <p>
+   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+   * </p>
+   *
+   * <p>
+   *[ Experimental] [Optional] If set to true, queries over this table require a partition filter that
+[ can be used for partition elimination to be specified.
+   * </p>
+   */
+  public boolean isRequirePartitionFilter() {
+    if (requirePartitionFilter == null || requirePartitionFilter == com.google.api.client.util.Data.NULL_BOOLEAN) {
+      return false;
+    }
+    return requirePartitionFilter;
+  }
+
+  /**
    * [Optional] Describes the schema of this table.
    * @return value or {@code null} for none
    */
@@ -636,7 +719,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time-based partitioning specification for this table.
+   * Time-based partitioning specification for this table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
   public TimePartitioning getTimePartitioning() {
@@ -644,7 +728,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time-based partitioning specification for this table.
+   * Time-based partitioning specification for this table. Only one of timePartitioning and
+   * rangePartitioning should be specified.
    * @param timePartitioning timePartitioning or {@code null} for none
    */
   public Table setTimePartitioning(TimePartitioning timePartitioning) {

@@ -58,7 +58,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private PostalAddress postalAddress;
 
   /**
-   * Radius in meters of the job location. This value is derived from the location bounding box in
+   * Radius in miles of the job location. This value is derived from the location bounding box in
    * which a circle with the specified radius centered from LatLng coves the area associated with
    * the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
    * The value may be {@code null}.
@@ -126,7 +126,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Radius in meters of the job location. This value is derived from the location bounding box in
+   * Radius in miles of the job location. This value is derived from the location bounding box in
    * which a circle with the specified radius centered from LatLng coves the area associated with
    * the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
    * @return value or {@code null} for none
@@ -136,7 +136,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Radius in meters of the job location. This value is derived from the location bounding box in
+   * Radius in miles of the job location. This value is derived from the location bounding box in
    * which a circle with the specified radius centered from LatLng coves the area associated with
    * the job location. For example, currently, "Mountain View, CA, USA" has a radius of 6.17 miles.
    * @param radiusInMiles radiusInMiles or {@code null} for none

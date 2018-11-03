@@ -39,6 +39,12 @@ public final class CompleteQueryResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<CompletionResult> completionResults;
 
+  static {
+    // hack to force ProGuard to consider CompletionResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CompletionResult.class);
+  }
+
   /**
    * Additional information for the API invocation, such as the request tracking id.
    * The value may be {@code null}.

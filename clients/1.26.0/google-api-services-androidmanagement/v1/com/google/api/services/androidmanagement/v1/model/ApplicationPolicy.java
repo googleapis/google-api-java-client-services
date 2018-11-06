@@ -79,10 +79,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.Object> managedConfiguration;
 
   /**
-   * The formulated managed configuration with the managed configuration template applied to the
-   * app. To generate a web token that identifies the enterprise use
-   * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens This
-   * field is ignored if managed_configuration is set.
+   * The managed configurations template for the app, saved from the managed configurations iframe.
+   * This field is ignored if managed_configuration is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,10 +233,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The formulated managed configuration with the managed configuration template applied to the
-   * app. To generate a web token that identifies the enterprise use
-   * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens This
-   * field is ignored if managed_configuration is set.
+   * The managed configurations template for the app, saved from the managed configurations iframe.
+   * This field is ignored if managed_configuration is set.
    * @return value or {@code null} for none
    */
   public ManagedConfigurationTemplate getManagedConfigurationTemplate() {
@@ -246,10 +242,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The formulated managed configuration with the managed configuration template applied to the
-   * app. To generate a web token that identifies the enterprise use
-   * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens This
-   * field is ignored if managed_configuration is set.
+   * The managed configurations template for the app, saved from the managed configurations iframe.
+   * This field is ignored if managed_configuration is set.
    * @param managedConfigurationTemplate managedConfigurationTemplate or {@code null} for none
    */
   public ApplicationPolicy setManagedConfigurationTemplate(ManagedConfigurationTemplate managedConfigurationTemplate) {

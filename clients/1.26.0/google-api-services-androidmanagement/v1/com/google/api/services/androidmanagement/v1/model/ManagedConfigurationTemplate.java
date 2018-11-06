@@ -17,9 +17,7 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * The formulated managed configuration with the managed configuration template applied to the app.
- * To generate a web token that identifies the enterprise use
- * https://developers.google.com/android/management/reference/rest/v1/enterprises.webTokens
+ * The managed configurations template for the app, saved from the managed configurations iframe.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

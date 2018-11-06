@@ -36,6 +36,12 @@ public final class ColorScheme extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ThemeColorPair> colors;
 
+  static {
+    // hack to force ProGuard to consider ThemeColorPair used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ThemeColorPair.class);
+  }
+
   /**
    * The ThemeColorType and corresponding concrete color pairs.
    * @return value or {@code null} for none

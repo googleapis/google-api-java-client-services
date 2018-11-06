@@ -20,7 +20,7 @@ package com.google.api.services.digitalassetlinks.v1;
  * Service definition for Digitalassetlinks (v1).
  *
  * <p>
- * API for discovering relationships between online assets such as web sites or mobile apps.
+ * Discovers relationships between online assets such as websites or mobile apps.
  * </p>
  *
  * <p>

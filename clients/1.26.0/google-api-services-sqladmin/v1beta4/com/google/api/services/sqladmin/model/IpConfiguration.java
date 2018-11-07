@@ -51,7 +51,9 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private java.lang.Boolean ipv4Enabled;
 
   /**
-   * Reserved for future use.
+   * The resource link for the VPC network from which the Cloud SQL instance is accessible for
+   * private IP. For example, /projects/myProject/global/networks/default. This setting can be
+   * updated, but it cannot be removed after it is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +103,9 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reserved for future use.
+   * The resource link for the VPC network from which the Cloud SQL instance is accessible for
+   * private IP. For example, /projects/myProject/global/networks/default. This setting can be
+   * updated, but it cannot be removed after it is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateNetwork() {
@@ -109,7 +113,9 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reserved for future use.
+   * The resource link for the VPC network from which the Cloud SQL instance is accessible for
+   * private IP. For example, /projects/myProject/global/networks/default. This setting can be
+   * updated, but it cannot be removed after it is set.
    * @param privateNetwork privateNetwork or {@code null} for none
    */
   public IpConfiguration setPrivateNetwork(java.lang.String privateNetwork) {

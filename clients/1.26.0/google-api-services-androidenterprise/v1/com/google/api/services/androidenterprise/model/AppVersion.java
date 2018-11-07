@@ -30,23 +30,22 @@ package com.google.api.services.androidenterprise.model;
 public final class AppVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if this version is a production Apk.
+   * True if this version is a production APK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isProduction;
 
   /**
-   * The track that this app was published in. For example if track is "alpha", this is an alpha
-   * version of the app. Deprecated, use track_id instead.
+   * Deprecated, use trackId instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String track;
 
   /**
-   * The track ids that this version was published in. This field supersedes track, but doesn't
-   * include the production track.
+   * Track ids that the app version is published in. Replaces the track field (deprecated), but
+   * doesn't include the production track (see isProduction instead).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +67,7 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   private java.lang.String versionString;
 
   /**
-   * True if this version is a production Apk.
+   * True if this version is a production APK.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsProduction() {
@@ -76,7 +75,7 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if this version is a production Apk.
+   * True if this version is a production APK.
    * @param isProduction isProduction or {@code null} for none
    */
   public AppVersion setIsProduction(java.lang.Boolean isProduction) {
@@ -85,8 +84,7 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The track that this app was published in. For example if track is "alpha", this is an alpha
-   * version of the app. Deprecated, use track_id instead.
+   * Deprecated, use trackId instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrack() {
@@ -94,8 +92,7 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The track that this app was published in. For example if track is "alpha", this is an alpha
-   * version of the app. Deprecated, use track_id instead.
+   * Deprecated, use trackId instead.
    * @param track track or {@code null} for none
    */
   public AppVersion setTrack(java.lang.String track) {
@@ -104,8 +101,8 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The track ids that this version was published in. This field supersedes track, but doesn't
-   * include the production track.
+   * Track ids that the app version is published in. Replaces the track field (deprecated), but
+   * doesn't include the production track (see isProduction instead).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTrackId() {
@@ -113,8 +110,8 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The track ids that this version was published in. This field supersedes track, but doesn't
-   * include the production track.
+   * Track ids that the app version is published in. Replaces the track field (deprecated), but
+   * doesn't include the production track (see isProduction instead).
    * @param trackId trackId or {@code null} for none
    */
   public AppVersion setTrackId(java.util.List<java.lang.String> trackId) {

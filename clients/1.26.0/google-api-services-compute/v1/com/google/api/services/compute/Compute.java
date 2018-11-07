@@ -9178,7 +9178,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern DISK_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns a specified persistent disk. Gets a list of available persistent disks by making a
@@ -9214,7 +9214,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
               "Parameter disk must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -9320,7 +9320,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
               "Parameter disk must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.disk = disk;
         return this;
@@ -19649,7 +19649,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern IMAGE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified image. Gets a list of available images by making a list() request.
@@ -19677,7 +19677,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(IMAGE_PATTERN.matcher(image).matches(),
               "Parameter image must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -19762,7 +19762,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(IMAGE_PATTERN.matcher(image).matches(),
               "Parameter image must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.image = image;
         return this;
@@ -20559,13 +20559,12 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   public class InstanceGroupManagers {
 
     /**
-     * Schedules a group action to remove the specified instances from the managed instance group.
-     * Abandoning an instance does not delete the instance, but it does remove the instance from any
-     * target pools that are applied by the managed instance group. This method reduces the targetSize
-     * of the managed instance group by the number of instances that you abandon. This operation is
-     * marked as DONE when the action is scheduled even if the instances have not yet been removed from
-     * the group. You must separately verify the status of the abandoning action with the
-     * listmanagedinstances method.
+     * Flags the specified instances to be removed from the managed instance group. Abandoning an
+     * instance does not delete the instance, but it does remove the instance from any target pools that
+     * are applied by the managed instance group. This method reduces the targetSize of the managed
+     * instance group by the number of instances that you abandon. This operation is marked as DONE when
+     * the action is scheduled even if the instances have not yet been removed from the group. You must
+     * separately verify the status of the abandoning action with the listmanagedinstances method.
      *
      * If the group is part of a backend service that has enabled connection draining, it can take up to
      * 60 seconds after the connection draining duration has elapsed before the VM instance is removed
@@ -20598,12 +20597,12 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Schedules a group action to remove the specified instances from the managed instance group.
-       * Abandoning an instance does not delete the instance, but it does remove the instance from any
-       * target pools that are applied by the managed instance group. This method reduces the targetSize
-       * of the managed instance group by the number of instances that you abandon. This operation is
-       * marked as DONE when the action is scheduled even if the instances have not yet been removed
-       * from the group. You must separately verify the status of the abandoning action with the
+       * Flags the specified instances to be removed from the managed instance group. Abandoning an
+       * instance does not delete the instance, but it does remove the instance from any target pools
+       * that are applied by the managed instance group. This method reduces the targetSize of the
+       * managed instance group by the number of instances that you abandon. This operation is marked as
+       * DONE when the action is scheduled even if the instances have not yet been removed from the
+       * group. You must separately verify the status of the abandoning action with the
        * listmanagedinstances method.
        *
        * If the group is part of a backend service that has enabled connection draining, it can take up
@@ -21264,9 +21263,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Schedules a group action to delete the specified instances in the managed instance group. The
-     * instances are also removed from any target pools of which they were a member. This method reduces
-     * the targetSize of the managed instance group by the number of instances that you delete. This
+     * Flags the specified instances in the managed instance group for immediate deletion. The instances
+     * are also removed from any target pools of which they were a member. This method reduces the
+     * targetSize of the managed instance group by the number of instances that you delete. This
      * operation is marked as DONE when the action is scheduled even if the instances are still being
      * deleted. You must separately verify the status of the deleting action with the
      * listmanagedinstances method.
@@ -21302,7 +21301,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Schedules a group action to delete the specified instances in the managed instance group. The
+       * Flags the specified instances in the managed instance group for immediate deletion. The
        * instances are also removed from any target pools of which they were a member. This method
        * reduces the targetSize of the managed instance group by the number of instances that you
        * delete. This operation is marked as DONE when the action is scheduled even if the instances are
@@ -21643,10 +21642,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Creates a managed instance group using the information that you specify in the request. After the
-     * group is created, it schedules an action to create instances in the group using the specified
-     * instance template. This operation is marked as DONE when the group is created even if the
-     * instances in the group have not yet been created. You must separately verify the status of the
-     * individual instances with the listmanagedinstances method.
+     * group is created, instances in the group are created using the specified instance template. This
+     * operation is marked as DONE when the group is created even if the instances in the group have not
+     * yet been created. You must separately verify the status of the individual instances with the
+     * listmanagedinstances method.
      *
      * A managed instance group can have up to 1000 VM instances per group. Please contact Cloud Support
      * if you need an increase in this limit.
@@ -21676,10 +21675,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Creates a managed instance group using the information that you specify in the request. After
-       * the group is created, it schedules an action to create instances in the group using the
-       * specified instance template. This operation is marked as DONE when the group is created even if
-       * the instances in the group have not yet been created. You must separately verify the status of
-       * the individual instances with the listmanagedinstances method.
+       * the group is created, instances in the group are created using the specified instance template.
+       * This operation is marked as DONE when the group is created even if the instances in the group
+       * have not yet been created. You must separately verify the status of the individual instances
+       * with the listmanagedinstances method.
        *
        * A managed instance group can have up to 1000 VM instances per group. Please contact Cloud
        * Support if you need an increase in this limit.
@@ -22457,10 +22456,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Schedules a group action to recreate the specified instances in the managed instance group. The
+     * Flags the specified instances in the managed instance group to be immediately recreated. The
      * instances are deleted and recreated using the current instance template for the managed instance
-     * group. This operation is marked as DONE when the action is scheduled even if the instances have
-     * not yet been recreated. You must separately verify the status of the recreating action with the
+     * group. This operation is marked as DONE when the flag is set even if the instances have not yet
+     * been recreated. You must separately verify the status of the recreating action with the
      * listmanagedinstances method.
      *
      * If the group is part of a backend service that has enabled connection draining, it can take up to
@@ -22494,11 +22493,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Schedules a group action to recreate the specified instances in the managed instance group. The
+       * Flags the specified instances in the managed instance group to be immediately recreated. The
        * instances are deleted and recreated using the current instance template for the managed
-       * instance group. This operation is marked as DONE when the action is scheduled even if the
-       * instances have not yet been recreated. You must separately verify the status of the recreating
-       * action with the listmanagedinstances method.
+       * instance group. This operation is marked as DONE when the flag is set even if the instances
+       * have not yet been recreated. You must separately verify the status of the recreating action
+       * with the listmanagedinstances method.
        *
        * If the group is part of a backend service that has enabled connection draining, it can take up
        * to 60 seconds after the connection draining duration has elapsed before the VM instance is
@@ -22681,6 +22680,14 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * yet added or deleted any instances. You must separately verify the status of the creating or
      * deleting actions with the listmanagedinstances method.
      *
+     * When resizing down, the instance group arbitrarily chooses the order in which VMs are deleted.
+     * The group takes into account some VM attributes when making the selection including:
+     *
+     * + The status of the VM instance. + The health of the VM instance. + The instance template version
+     * the VM is based on. + For regional managed instance groups, the location of the VM instance.
+     *
+     * This list is subject to change.
+     *
      * If the group is part of a backend service that has enabled connection draining, it can take up to
      * 60 seconds after the connection draining duration has elapsed before the VM instance is removed
      * or deleted.
@@ -22717,6 +22724,15 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * resize operation is marked DONE when the resize actions are scheduled even if the group has not
        * yet added or deleted any instances. You must separately verify the status of the creating or
        * deleting actions with the listmanagedinstances method.
+       *
+       * When resizing down, the instance group arbitrarily chooses the order in which VMs are deleted.
+       * The group takes into account some VM attributes when making the selection including:
+       *
+       * + The status of the VM instance. + The health of the VM instance. + The instance template
+       * version the VM is based on. + For regional managed instance groups, the location of the VM
+       * instance.
+       *
+       * This list is subject to change.
        *
        * If the group is part of a backend service that has enabled connection draining, it can take up
        * to 60 seconds after the connection draining duration has elapsed before the VM instance is
@@ -27042,7 +27058,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern INSTANCE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified Instance resource. For more information, see Stopping or Deleting an
@@ -27078,7 +27094,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
               "Parameter instance must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -27174,7 +27190,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
               "Parameter instance must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.instance = instance;
         return this;
@@ -28692,7 +28708,8 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Retrieves the list of referrers to instances contained within the specified zone.
+     * Retrieves the list of referrers to instances contained within the specified zone. For more
+     * information, read Viewing Referrers to VM Instances.
      *
      * Create a request for the method "instances.listReferrers".
      *
@@ -28725,7 +28742,8 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("-|[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Retrieves the list of referrers to instances contained within the specified zone.
+       * Retrieves the list of referrers to instances contained within the specified zone. For more
+       * information, read Viewing Referrers to VM Instances.
        *
        * Create a request for the method "instances.listReferrers".
        *
@@ -31385,7 +31403,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Sets tags for the specified instance to the data included in the request.
+     * Sets network tags for the specified instance to the data included in the request.
      *
      * Create a request for the method "instances.setTags".
      *
@@ -31418,7 +31436,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Sets tags for the specified instance to the data included in the request.
+       * Sets network tags for the specified instance to the data included in the request.
        *
        * Create a request for the method "instances.setTags".
        *
@@ -35216,6 +35234,157 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Returns the interconnectDiagnostics for the specified interconnect.
+     *
+     * Create a request for the method "interconnects.getDiagnostics".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetDiagnostics#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param interconnect Name of the interconnect resource to query.
+     * @return the request
+     */
+    public GetDiagnostics getDiagnostics(java.lang.String project, java.lang.String interconnect) throws java.io.IOException {
+      GetDiagnostics result = new GetDiagnostics(project, interconnect);
+      initialize(result);
+      return result;
+    }
+
+    public class GetDiagnostics extends ComputeRequest<com.google.api.services.compute.model.InterconnectsGetDiagnosticsResponse> {
+
+      private static final String REST_PATH = "{project}/global/interconnects/{interconnect}/getDiagnostics";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern INTERCONNECT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Returns the interconnectDiagnostics for the specified interconnect.
+       *
+       * Create a request for the method "interconnects.getDiagnostics".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetDiagnostics#execute()} method to invoke the remote operation.
+       * <p> {@link GetDiagnostics#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param interconnect Name of the interconnect resource to query.
+       * @since 1.13
+       */
+      protected GetDiagnostics(java.lang.String project, java.lang.String interconnect) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.InterconnectsGetDiagnosticsResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.interconnect = com.google.api.client.util.Preconditions.checkNotNull(interconnect, "Required parameter interconnect must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTERCONNECT_PATTERN.matcher(interconnect).matches(),
+              "Parameter interconnect must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetDiagnostics setAlt(java.lang.String alt) {
+        return (GetDiagnostics) super.setAlt(alt);
+      }
+
+      @Override
+      public GetDiagnostics setFields(java.lang.String fields) {
+        return (GetDiagnostics) super.setFields(fields);
+      }
+
+      @Override
+      public GetDiagnostics setKey(java.lang.String key) {
+        return (GetDiagnostics) super.setKey(key);
+      }
+
+      @Override
+      public GetDiagnostics setOauthToken(java.lang.String oauthToken) {
+        return (GetDiagnostics) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetDiagnostics setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetDiagnostics) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetDiagnostics setQuotaUser(java.lang.String quotaUser) {
+        return (GetDiagnostics) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetDiagnostics setUserIp(java.lang.String userIp) {
+        return (GetDiagnostics) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetDiagnostics setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the interconnect resource to query. */
+      @com.google.api.client.util.Key
+      private java.lang.String interconnect;
+
+      /** Name of the interconnect resource to query.
+       */
+      public java.lang.String getInterconnect() {
+        return interconnect;
+      }
+
+      /** Name of the interconnect resource to query. */
+      public GetDiagnostics setInterconnect(java.lang.String interconnect) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTERCONNECT_PATTERN.matcher(interconnect).matches(),
+              "Parameter interconnect must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.interconnect = interconnect;
+        return this;
+      }
+
+      @Override
+      public GetDiagnostics set(String parameterName, Object value) {
+        return (GetDiagnostics) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a Interconnect in the specified project using the data included in the request.
      *
      * Create a request for the method "interconnects.insert".
@@ -36034,7 +36203,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
      *
      * @param project Project ID for this request.
-     * @param resource Name of the resource for this request.
+     * @param resource Name or id of the resource for this request.
      * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
      * @return the request
      */
@@ -36052,7 +36221,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns permissions that a caller has on the specified resource.
@@ -36066,7 +36235,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * invoking the constructor. </p>
        *
        * @param project Project ID for this request.
-       * @param resource Name of the resource for this request.
+       * @param resource Name or id of the resource for this request.
        * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
        * @since 1.13
        */
@@ -36082,7 +36251,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -36142,22 +36311,22 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Name of the resource for this request.
+      /** Name or id of the resource for this request.
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       public TestIamPermissions setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.resource = resource;
         return this;
@@ -36988,7 +37157,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
      *
      * @param project Project ID for this request.
-     * @param resource Name of the resource for this request.
+     * @param resource Name or id of the resource for this request.
      * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
      * @return the request
      */
@@ -37006,7 +37175,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns permissions that a caller has on the specified resource.
@@ -37020,7 +37189,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * invoking the constructor. </p>
        *
        * @param project Project ID for this request.
-       * @param resource Name of the resource for this request.
+       * @param resource Name or id of the resource for this request.
        * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
        * @since 1.13
        */
@@ -37036,7 +37205,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -37096,22 +37265,22 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Name of the resource for this request.
+      /** Name or id of the resource for this request.
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       public TestIamPermissions setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.resource = resource;
         return this;
@@ -52114,7 +52283,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param project Project ID for this request.
      * @param region The name of the region for this request.
-     * @param resource Name of the resource for this request.
+     * @param resource Name or id of the resource for this request.
      * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
      * @return the request
      */
@@ -52135,7 +52304,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns permissions that a caller has on the specified resource.
@@ -52150,7 +52319,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param project Project ID for this request.
        * @param region The name of the region for this request.
-       * @param resource Name of the resource for this request.
+       * @param resource Name or id of the resource for this request.
        * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
        * @since 1.13
        */
@@ -52172,7 +52341,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -52253,22 +52422,22 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Name of the resource for this request.
+      /** Name or id of the resource for this request.
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       public TestIamPermissions setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.resource = resource;
         return this;
@@ -52303,7 +52472,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   public class RegionInstanceGroupManagers {
 
     /**
-     * Schedules a group action to remove the specified instances from the managed instance group.
+     * Flags the specified instances to be immediately removed from the managed instance group.
      * Abandoning an instance does not delete the instance, but it does remove the instance from any
      * target pools that are applied by the managed instance group. This method reduces the targetSize
      * of the managed instance group by the number of instances that you abandon. This operation is
@@ -52342,7 +52511,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Schedules a group action to remove the specified instances from the managed instance group.
+       * Flags the specified instances to be immediately removed from the managed instance group.
        * Abandoning an instance does not delete the instance, but it does remove the instance from any
        * target pools that are applied by the managed instance group. This method reduces the targetSize
        * of the managed instance group by the number of instances that you abandon. This operation is
@@ -52720,12 +52889,12 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Schedules a group action to delete the specified instances in the managed instance group. The
+     * Flags the specified instances in the managed instance group to be immediately deleted. The
      * instances are also removed from any target pools of which they were a member. This method reduces
-     * the targetSize of the managed instance group by the number of instances that you delete. This
-     * operation is marked as DONE when the action is scheduled even if the instances are still being
-     * deleted. You must separately verify the status of the deleting action with the
-     * listmanagedinstances method.
+     * the targetSize of the managed instance group by the number of instances that you delete. The
+     * deleteInstances operation is marked DONE if the deleteInstances request is successful. The
+     * underlying actions take additional time. You must separately verify the status of the deleting
+     * action with the listmanagedinstances method.
      *
      * If the group is part of a backend service that has enabled connection draining, it can take up to
      * 60 seconds after the connection draining duration has elapsed before the VM instance is removed
@@ -52758,12 +52927,12 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Schedules a group action to delete the specified instances in the managed instance group. The
+       * Flags the specified instances in the managed instance group to be immediately deleted. The
        * instances are also removed from any target pools of which they were a member. This method
        * reduces the targetSize of the managed instance group by the number of instances that you
-       * delete. This operation is marked as DONE when the action is scheduled even if the instances are
-       * still being deleted. You must separately verify the status of the deleting action with the
-       * listmanagedinstances method.
+       * delete. The deleteInstances operation is marked DONE if the deleteInstances request is
+       * successful. The underlying actions take additional time. You must separately verify the status
+       * of the deleting action with the listmanagedinstances method.
        *
        * If the group is part of a backend service that has enabled connection draining, it can take up
        * to 60 seconds after the connection draining duration has elapsed before the VM instance is
@@ -53097,10 +53266,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Creates a managed instance group using the information that you specify in the request. After the
-     * group is created, it schedules an action to create instances in the group using the specified
-     * instance template. This operation is marked as DONE when the group is created even if the
-     * instances in the group have not yet been created. You must separately verify the status of the
-     * individual instances with the listmanagedinstances method.
+     * group is created, instances in the group are created using the specified instance template. This
+     * operation is marked as DONE when the group is created even if the instances in the group have not
+     * yet been created. You must separately verify the status of the individual instances with the
+     * listmanagedinstances method.
      *
      * A regional managed instance group can contain up to 2000 instances.
      *
@@ -53129,10 +53298,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Creates a managed instance group using the information that you specify in the request. After
-       * the group is created, it schedules an action to create instances in the group using the
-       * specified instance template. This operation is marked as DONE when the group is created even if
-       * the instances in the group have not yet been created. You must separately verify the status of
-       * the individual instances with the listmanagedinstances method.
+       * the group is created, instances in the group are created using the specified instance template.
+       * This operation is marked as DONE when the group is created even if the instances in the group
+       * have not yet been created. You must separately verify the status of the individual instances
+       * with the listmanagedinstances method.
        *
        * A regional managed instance group can contain up to 2000 instances.
        *
@@ -53903,10 +54072,10 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Schedules a group action to recreate the specified instances in the managed instance group. The
+     * Flags the specified instances in the managed instance group to be immediately recreated. The
      * instances are deleted and recreated using the current instance template for the managed instance
-     * group. This operation is marked as DONE when the action is scheduled even if the instances have
-     * not yet been recreated. You must separately verify the status of the recreating action with the
+     * group. This operation is marked as DONE when the flag is set even if the instances have not yet
+     * been recreated. You must separately verify the status of the recreating action with the
      * listmanagedinstances method.
      *
      * If the group is part of a backend service that has enabled connection draining, it can take up to
@@ -53940,11 +54109,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Schedules a group action to recreate the specified instances in the managed instance group. The
+       * Flags the specified instances in the managed instance group to be immediately recreated. The
        * instances are deleted and recreated using the current instance template for the managed
-       * instance group. This operation is marked as DONE when the action is scheduled even if the
-       * instances have not yet been recreated. You must separately verify the status of the recreating
-       * action with the listmanagedinstances method.
+       * instance group. This operation is marked as DONE when the flag is set even if the instances
+       * have not yet been recreated. You must separately verify the status of the recreating action
+       * with the listmanagedinstances method.
        *
        * If the group is part of a backend service that has enabled connection draining, it can take up
        * to 60 seconds after the connection draining duration has elapsed before the VM instance is
@@ -54121,12 +54290,13 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Changes the intended size for the managed instance group. If you increase the size, the group
-     * schedules actions to create new instances using the current instance template. If you decrease
-     * the size, the group schedules delete actions on one or more instances. The resize operation is
-     * marked DONE when the resize actions are scheduled even if the group has not yet added or deleted
-     * any instances. You must separately verify the status of the creating or deleting actions with the
-     * listmanagedinstances method.
+     * Changes the intended size of the managed instance group. If you increase the size, the group
+     * creates new instances using the current instance template. If you decrease the size, the group
+     * deletes one or more instances.
+     *
+     * The resize operation is marked DONE if the resize request is successful. The underlying actions
+     * take additional time. You must separately verify the status of the creating or deleting actions
+     * with the listmanagedinstances method.
      *
      * If the group is part of a backend service that has enabled connection draining, it can take up to
      * 60 seconds after the connection draining duration has elapsed before the VM instance is removed
@@ -54158,12 +54328,13 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Changes the intended size for the managed instance group. If you increase the size, the group
-       * schedules actions to create new instances using the current instance template. If you decrease
-       * the size, the group schedules delete actions on one or more instances. The resize operation is
-       * marked DONE when the resize actions are scheduled even if the group has not yet added or
-       * deleted any instances. You must separately verify the status of the creating or deleting
-       * actions with the listmanagedinstances method.
+       * Changes the intended size of the managed instance group. If you increase the size, the group
+       * creates new instances using the current instance template. If you decrease the size, the group
+       * deletes one or more instances.
+       *
+       * The resize operation is marked DONE if the resize request is successful. The underlying actions
+       * take additional time. You must separately verify the status of the creating or deleting actions
+       * with the listmanagedinstances method.
        *
        * If the group is part of a backend service that has enabled connection draining, it can take up
        * to 60 seconds after the connection draining duration has elapsed before the VM instance is
@@ -57613,6 +57784,354 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves runtime Nat mapping information of VM endpoints.
+     *
+     * Create a request for the method "routers.getNatMappingInfo".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetNatMappingInfo#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param router Name of the Router resource to query for Nat Mapping information of VM endpoints.
+     * @return the request
+     */
+    public GetNatMappingInfo getNatMappingInfo(java.lang.String project, java.lang.String region, java.lang.String router) throws java.io.IOException {
+      GetNatMappingInfo result = new GetNatMappingInfo(project, region, router);
+      initialize(result);
+      return result;
+    }
+
+    public class GetNatMappingInfo extends ComputeRequest<com.google.api.services.compute.model.VmEndpointNatMappingsList> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/routers/{router}/getNatMappingInfo";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern ROUTER_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Retrieves runtime Nat mapping information of VM endpoints.
+       *
+       * Create a request for the method "routers.getNatMappingInfo".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetNatMappingInfo#execute()} method to invoke the remote operation.
+       * <p> {@link GetNatMappingInfo#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param router Name of the Router resource to query for Nat Mapping information of VM endpoints.
+       * @since 1.13
+       */
+      protected GetNatMappingInfo(java.lang.String project, java.lang.String region, java.lang.String router) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.VmEndpointNatMappingsList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.router = com.google.api.client.util.Preconditions.checkNotNull(router, "Required parameter router must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTER_PATTERN.matcher(router).matches(),
+              "Parameter router must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetNatMappingInfo setAlt(java.lang.String alt) {
+        return (GetNatMappingInfo) super.setAlt(alt);
+      }
+
+      @Override
+      public GetNatMappingInfo setFields(java.lang.String fields) {
+        return (GetNatMappingInfo) super.setFields(fields);
+      }
+
+      @Override
+      public GetNatMappingInfo setKey(java.lang.String key) {
+        return (GetNatMappingInfo) super.setKey(key);
+      }
+
+      @Override
+      public GetNatMappingInfo setOauthToken(java.lang.String oauthToken) {
+        return (GetNatMappingInfo) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetNatMappingInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetNatMappingInfo) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetNatMappingInfo setQuotaUser(java.lang.String quotaUser) {
+        return (GetNatMappingInfo) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetNatMappingInfo setUserIp(java.lang.String userIp) {
+        return (GetNatMappingInfo) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetNatMappingInfo setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public GetNatMappingInfo setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name of the Router resource to query for Nat Mapping information of VM endpoints. */
+      @com.google.api.client.util.Key
+      private java.lang.String router;
+
+      /** Name of the Router resource to query for Nat Mapping information of VM endpoints.
+       */
+      public java.lang.String getRouter() {
+        return router;
+      }
+
+      /** Name of the Router resource to query for Nat Mapping information of VM endpoints. */
+      public GetNatMappingInfo setRouter(java.lang.String router) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTER_PATTERN.matcher(router).matches(),
+              "Parameter router must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.router = router;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. The expression must specify the
+     field name, a comparison operator, and the value that you want to use for filtering. The value must
+     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     example-instance by specifying name != example-instance.
+
+     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
+     false to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based on resource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
+     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
+     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+     (scheduling.automaticRestart = true).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      public GetNatMappingInfo setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
+     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+     500) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      public GetNatMappingInfo setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public GetNatMappingInfo setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      public GetNatMappingInfo setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public GetNatMappingInfo set(String parameterName, Object value) {
+        return (GetNatMappingInfo) super.set(parameterName, value);
       }
     }
     /**
@@ -61606,7 +62125,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern SNAPSHOT_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified Snapshot resource. Gets a list of available snapshots by making a list()
@@ -61635,7 +62154,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(SNAPSHOT_PATTERN.matcher(snapshot).matches(),
               "Parameter snapshot must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -61720,7 +62239,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(SNAPSHOT_PATTERN.matcher(snapshot).matches(),
               "Parameter snapshot must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.snapshot = snapshot;
         return this;

@@ -62,6 +62,12 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
   private java.util.List<RouterStatusBgpPeerStatus> bgpPeerStatus;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterStatusNatStatus> natStatus;
+
+  /**
    * URI of the network to which this router belongs.
    * The value may be {@code null}.
    */
@@ -114,6 +120,21 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
    */
   public RouterStatus setBgpPeerStatus(java.util.List<RouterStatusBgpPeerStatus> bgpPeerStatus) {
     this.bgpPeerStatus = bgpPeerStatus;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterStatusNatStatus> getNatStatus() {
+    return natStatus;
+  }
+
+  /**
+   * @param natStatus natStatus or {@code null} for none
+   */
+  public RouterStatus setNatStatus(java.util.List<RouterStatusNatStatus> natStatus) {
+    this.natStatus = natStatus;
     return this;
   }
 

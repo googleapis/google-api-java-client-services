@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for ResourceGroupReference.
+ * Model definition for InterconnectDiagnosticsLinkOpticalPower.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,43 +27,61 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResourceGroupReference extends com.google.api.client.json.GenericJson {
+public final class InterconnectDiagnosticsLinkOpticalPower extends com.google.api.client.json.GenericJson {
 
   /**
-   * A URI referencing one of the instance groups or network endpoint groups listed in the backend
-   * service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String group;
+  private java.lang.String state;
 
   /**
-   * A URI referencing one of the instance groups or network endpoint groups listed in the backend
-   * service.
+   * Value of the current optical power, read in dBm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float value;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getGroup() {
-    return group;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * A URI referencing one of the instance groups or network endpoint groups listed in the backend
-   * service.
-   * @param group group or {@code null} for none
+   * @param state state or {@code null} for none
    */
-  public ResourceGroupReference setGroup(java.lang.String group) {
-    this.group = group;
+  public InterconnectDiagnosticsLinkOpticalPower setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Value of the current optical power, read in dBm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getValue() {
+    return value;
+  }
+
+  /**
+   * Value of the current optical power, read in dBm.
+   * @param value value or {@code null} for none
+   */
+  public InterconnectDiagnosticsLinkOpticalPower setValue(java.lang.Float value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public ResourceGroupReference set(String fieldName, Object value) {
-    return (ResourceGroupReference) super.set(fieldName, value);
+  public InterconnectDiagnosticsLinkOpticalPower set(String fieldName, Object value) {
+    return (InterconnectDiagnosticsLinkOpticalPower) super.set(fieldName, value);
   }
 
   @Override
-  public ResourceGroupReference clone() {
-    return (ResourceGroupReference) super.clone();
+  public InterconnectDiagnosticsLinkOpticalPower clone() {
+    return (InterconnectDiagnosticsLinkOpticalPower) super.clone();
   }
 
 }

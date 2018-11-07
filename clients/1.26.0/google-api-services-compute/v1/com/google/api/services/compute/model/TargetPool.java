@@ -138,7 +138,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Sesssion affinity option, must be one of the following values: NONE: Connections from the same
+   * Session affinity option, must be one of the following values: NONE: Connections from the same
    * client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP
    * will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO:
    * Connections from the same client IP with the same IP protocol will go to the same instance in
@@ -394,7 +394,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sesssion affinity option, must be one of the following values: NONE: Connections from the same
+   * Session affinity option, must be one of the following values: NONE: Connections from the same
    * client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP
    * will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO:
    * Connections from the same client IP with the same IP protocol will go to the same instance in
@@ -406,7 +406,7 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Sesssion affinity option, must be one of the following values: NONE: Connections from the same
+   * Session affinity option, must be one of the following values: NONE: Connections from the same
    * client IP may go to any instance in the pool. CLIENT_IP: Connections from the same client IP
    * will go to the same instance in the pool while that instance remains healthy. CLIENT_IP_PROTO:
    * Connections from the same client IP with the same IP protocol will go to the same instance in

@@ -38,7 +38,10 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * The URL of the BackendService resource if none of the hostRules match.
+   * The URL of the backendService resource if none of the hostRules match. Use defaultService
+   * instead of defaultRouteAction when simple routing to a backendService is desired and other
+   * advanced capabilities like traffic splitting and rewrites are not required. Only one of
+   * defaultService, defaultRouteAction or defaultUrlRedirect should must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +149,10 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the BackendService resource if none of the hostRules match.
+   * The URL of the backendService resource if none of the hostRules match. Use defaultService
+   * instead of defaultRouteAction when simple routing to a backendService is desired and other
+   * advanced capabilities like traffic splitting and rewrites are not required. Only one of
+   * defaultService, defaultRouteAction or defaultUrlRedirect should must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -154,7 +160,10 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the BackendService resource if none of the hostRules match.
+   * The URL of the backendService resource if none of the hostRules match. Use defaultService
+   * instead of defaultRouteAction when simple routing to a backendService is desired and other
+   * advanced capabilities like traffic splitting and rewrites are not required. Only one of
+   * defaultService, defaultRouteAction or defaultUrlRedirect should must be set.
    * @param defaultService defaultService or {@code null} for none
    */
   public UrlMap setDefaultService(java.lang.String defaultService) {

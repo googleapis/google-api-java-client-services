@@ -40,7 +40,10 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> paths;
 
   /**
-   * The URL of the BackendService resource if this rule is matched.
+   * The URL of the backend service resource if this rule is matched. Use service instead of
+   * routeAction when simple routing to a backend service is desired and other advanced capabilities
+   * like traffic splitting and rewrites are not required. Only one of service, routeAction or
+   * urlRedirect should must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +71,10 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the BackendService resource if this rule is matched.
+   * The URL of the backend service resource if this rule is matched. Use service instead of
+   * routeAction when simple routing to a backend service is desired and other advanced capabilities
+   * like traffic splitting and rewrites are not required. Only one of service, routeAction or
+   * urlRedirect should must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -76,7 +82,10 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the BackendService resource if this rule is matched.
+   * The URL of the backend service resource if this rule is matched. Use service instead of
+   * routeAction when simple routing to a backend service is desired and other advanced capabilities
+   * like traffic splitting and rewrites are not required. Only one of service, routeAction or
+   * urlRedirect should must be set.
    * @param service service or {@code null} for none
    */
   public PathRule setService(java.lang.String service) {

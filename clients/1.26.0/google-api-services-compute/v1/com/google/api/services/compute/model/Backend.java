@@ -60,16 +60,22 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The fully-qualified URL of a Instance Group resource. This instance group defines the list of
-   * instances that serve traffic. Member virtual machine instances from each instance group must
-   * live in the same zone as the instance group itself. No two backends in a backend service are
-   * allowed to use same Instance Group resource.
+   * The fully-qualified URL of an Instance Group or Network Endpoint Group resource. In case of
+   * instance group this defines the list of instances that serve traffic. Member virtual machine
+   * instances from each instance group must live in the same zone as the instance group itself. No
+   * two backends in a backend service are allowed to use same Instance Group resource.
    *
-   * Note that you must specify an Instance Group resource using the fully-qualified URL, rather
-   * than a partial URL.
+   * For Network Endpoint Groups this defines list of endpoints. All endpoints of Network Endpoint
+   * Group must be hosted on instances located in the same zone as the Network Endpoint Group.
+   *
+   * Backend service can not contain mix of Instance Group and Network Endpoint Group backends.
+   *
+   * Note that you must specify an Instance Group or Network Endpoint Group resource using the
+   * fully-qualified URL, rather than a partial URL.
    *
    * When the BackendService has load balancing scheme INTERNAL, the instance group must be within
-   * the same region as the BackendService.
+   * the same region as the BackendService. Network Endpoint Groups are not supported for INTERNAL
+   * load balancing scheme.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,16 +206,22 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified URL of a Instance Group resource. This instance group defines the list of
-   * instances that serve traffic. Member virtual machine instances from each instance group must
-   * live in the same zone as the instance group itself. No two backends in a backend service are
-   * allowed to use same Instance Group resource.
+   * The fully-qualified URL of an Instance Group or Network Endpoint Group resource. In case of
+   * instance group this defines the list of instances that serve traffic. Member virtual machine
+   * instances from each instance group must live in the same zone as the instance group itself. No
+   * two backends in a backend service are allowed to use same Instance Group resource.
    *
-   * Note that you must specify an Instance Group resource using the fully-qualified URL, rather
-   * than a partial URL.
+   * For Network Endpoint Groups this defines list of endpoints. All endpoints of Network Endpoint
+   * Group must be hosted on instances located in the same zone as the Network Endpoint Group.
+   *
+   * Backend service can not contain mix of Instance Group and Network Endpoint Group backends.
+   *
+   * Note that you must specify an Instance Group or Network Endpoint Group resource using the
+   * fully-qualified URL, rather than a partial URL.
    *
    * When the BackendService has load balancing scheme INTERNAL, the instance group must be within
-   * the same region as the BackendService.
+   * the same region as the BackendService. Network Endpoint Groups are not supported for INTERNAL
+   * load balancing scheme.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -217,16 +229,22 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified URL of a Instance Group resource. This instance group defines the list of
-   * instances that serve traffic. Member virtual machine instances from each instance group must
-   * live in the same zone as the instance group itself. No two backends in a backend service are
-   * allowed to use same Instance Group resource.
+   * The fully-qualified URL of an Instance Group or Network Endpoint Group resource. In case of
+   * instance group this defines the list of instances that serve traffic. Member virtual machine
+   * instances from each instance group must live in the same zone as the instance group itself. No
+   * two backends in a backend service are allowed to use same Instance Group resource.
    *
-   * Note that you must specify an Instance Group resource using the fully-qualified URL, rather
-   * than a partial URL.
+   * For Network Endpoint Groups this defines list of endpoints. All endpoints of Network Endpoint
+   * Group must be hosted on instances located in the same zone as the Network Endpoint Group.
+   *
+   * Backend service can not contain mix of Instance Group and Network Endpoint Group backends.
+   *
+   * Note that you must specify an Instance Group or Network Endpoint Group resource using the
+   * fully-qualified URL, rather than a partial URL.
    *
    * When the BackendService has load balancing scheme INTERNAL, the instance group must be within
-   * the same region as the BackendService.
+   * the same region as the BackendService. Network Endpoint Groups are not supported for INTERNAL
+   * load balancing scheme.
    * @param group group or {@code null} for none
    */
   public Backend setGroup(java.lang.String group) {

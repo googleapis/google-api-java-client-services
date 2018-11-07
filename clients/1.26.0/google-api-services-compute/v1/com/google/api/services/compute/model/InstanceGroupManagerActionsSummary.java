@@ -103,6 +103,15 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   private java.lang.Integer restarting;
 
   /**
+   * [Output Only] The number of instances in the managed instance group that are being verified.
+   * See the managedInstances[].currentAction property in the listManagedInstances method
+   * documentation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer verifying;
+
+  /**
    * [Output Only] The total number of instances in the managed instance group that are scheduled to
    * be abandoned. Abandoning an instance removes it from the managed instance group without
    * deleting it.
@@ -269,6 +278,27 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
    */
   public InstanceGroupManagerActionsSummary setRestarting(java.lang.Integer restarting) {
     this.restarting = restarting;
+    return this;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are being verified.
+   * See the managedInstances[].currentAction property in the listManagedInstances method
+   * documentation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVerifying() {
+    return verifying;
+  }
+
+  /**
+   * [Output Only] The number of instances in the managed instance group that are being verified.
+   * See the managedInstances[].currentAction property in the listManagedInstances method
+   * documentation.
+   * @param verifying verifying or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setVerifying(java.lang.Integer verifying) {
+    this.verifying = verifying;
     return this;
   }
 

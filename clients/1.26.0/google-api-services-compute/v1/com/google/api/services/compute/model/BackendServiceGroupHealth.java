@@ -30,6 +30,8 @@ package com.google.api.services.compute.model;
 public final class BackendServiceGroupHealth extends com.google.api.client.json.GenericJson {
 
   /**
+   * Health state of the backend instances or endpoints in requested instance or network endpoint
+   * group, determined based on configured health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +46,8 @@ public final class BackendServiceGroupHealth extends com.google.api.client.json.
   private java.lang.String kind;
 
   /**
+   * Health state of the backend instances or endpoints in requested instance or network endpoint
+   * group, determined based on configured health checks.
    * @return value or {@code null} for none
    */
   public java.util.List<HealthStatus> getHealthStatus() {
@@ -51,6 +55,8 @@ public final class BackendServiceGroupHealth extends com.google.api.client.json.
   }
 
   /**
+   * Health state of the backend instances or endpoints in requested instance or network endpoint
+   * group, determined based on configured health checks.
    * @param healthStatus healthStatus or {@code null} for none
    */
   public BackendServiceGroupHealth setHealthStatus(java.util.List<HealthStatus> healthStatus) {

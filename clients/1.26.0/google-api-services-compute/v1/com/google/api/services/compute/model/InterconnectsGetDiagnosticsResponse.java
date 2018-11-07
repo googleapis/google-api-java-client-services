@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for ResourceGroupReference.
+ * Response for the InterconnectsGetDiagnosticsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,43 +27,37 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResourceGroupReference extends com.google.api.client.json.GenericJson {
+public final class InterconnectsGetDiagnosticsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A URI referencing one of the instance groups or network endpoint groups listed in the backend
-   * service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String group;
+  private InterconnectDiagnostics result;
 
   /**
-   * A URI referencing one of the instance groups or network endpoint groups listed in the backend
-   * service.
    * @return value or {@code null} for none
    */
-  public java.lang.String getGroup() {
-    return group;
+  public InterconnectDiagnostics getResult() {
+    return result;
   }
 
   /**
-   * A URI referencing one of the instance groups or network endpoint groups listed in the backend
-   * service.
-   * @param group group or {@code null} for none
+   * @param result result or {@code null} for none
    */
-  public ResourceGroupReference setGroup(java.lang.String group) {
-    this.group = group;
+  public InterconnectsGetDiagnosticsResponse setResult(InterconnectDiagnostics result) {
+    this.result = result;
     return this;
   }
 
   @Override
-  public ResourceGroupReference set(String fieldName, Object value) {
-    return (ResourceGroupReference) super.set(fieldName, value);
+  public InterconnectsGetDiagnosticsResponse set(String fieldName, Object value) {
+    return (InterconnectsGetDiagnosticsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ResourceGroupReference clone() {
-    return (ResourceGroupReference) super.clone();
+  public InterconnectsGetDiagnosticsResponse clone() {
+    return (InterconnectsGetDiagnosticsResponse) super.clone();
   }
 
 }

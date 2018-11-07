@@ -32,11 +32,16 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
    * The full or partial URL to the BackendService resource. This will be used if none of the
-   * pathRules defined by this PathMatcher is matched by the URL's path portion. For example, the
-   * following are all valid URLs to a BackendService resource: -
+   * pathRules or routeRules defined by this PathMatcher are matched. For example, the following are
+   * all valid URLs to a BackendService resource: -
    * https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService  -
    * compute/v1/projects/project/global/backendServices/backendService  -
-   * global/backendServices/backendService
+   * global/backendServices/backendService   Use defaultService instead of defaultRouteAction when
+   * simple routing to a backend service is desired and other advanced capabilities like traffic
+   * splitting and URL rewrites are not required. Only one of defaultService, defaultRouteAction or
+   * defaultUrlRedirect must be set. Authorization requires one or more of the following Google IAM
+   * permissions on the specified resource default_service:   - compute.backendBuckets.use  -
+   * compute.backendServices.use
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +62,11 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The list of path rules.
+   * The list of path rules. Use this list instead of routeRules when routing based on simple path
+   * matching is all that's required. The order by which path rules are specified does not matter.
+   * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
+   * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
+   * list. Only one of pathRules or routeRules must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,11 +74,16 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
    * The full or partial URL to the BackendService resource. This will be used if none of the
-   * pathRules defined by this PathMatcher is matched by the URL's path portion. For example, the
-   * following are all valid URLs to a BackendService resource: -
+   * pathRules or routeRules defined by this PathMatcher are matched. For example, the following are
+   * all valid URLs to a BackendService resource: -
    * https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService  -
    * compute/v1/projects/project/global/backendServices/backendService  -
-   * global/backendServices/backendService
+   * global/backendServices/backendService   Use defaultService instead of defaultRouteAction when
+   * simple routing to a backend service is desired and other advanced capabilities like traffic
+   * splitting and URL rewrites are not required. Only one of defaultService, defaultRouteAction or
+   * defaultUrlRedirect must be set. Authorization requires one or more of the following Google IAM
+   * permissions on the specified resource default_service:   - compute.backendBuckets.use  -
+   * compute.backendServices.use
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -78,11 +92,16 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
 
   /**
    * The full or partial URL to the BackendService resource. This will be used if none of the
-   * pathRules defined by this PathMatcher is matched by the URL's path portion. For example, the
-   * following are all valid URLs to a BackendService resource: -
+   * pathRules or routeRules defined by this PathMatcher are matched. For example, the following are
+   * all valid URLs to a BackendService resource: -
    * https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService  -
    * compute/v1/projects/project/global/backendServices/backendService  -
-   * global/backendServices/backendService
+   * global/backendServices/backendService   Use defaultService instead of defaultRouteAction when
+   * simple routing to a backend service is desired and other advanced capabilities like traffic
+   * splitting and URL rewrites are not required. Only one of defaultService, defaultRouteAction or
+   * defaultUrlRedirect must be set. Authorization requires one or more of the following Google IAM
+   * permissions on the specified resource default_service:   - compute.backendBuckets.use  -
+   * compute.backendServices.use
    * @param defaultService defaultService or {@code null} for none
    */
   public PathMatcher setDefaultService(java.lang.String defaultService) {
@@ -125,7 +144,11 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of path rules.
+   * The list of path rules. Use this list instead of routeRules when routing based on simple path
+   * matching is all that's required. The order by which path rules are specified does not matter.
+   * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
+   * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
+   * list. Only one of pathRules or routeRules must be set.
    * @return value or {@code null} for none
    */
   public java.util.List<PathRule> getPathRules() {
@@ -133,7 +156,11 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of path rules.
+   * The list of path rules. Use this list instead of routeRules when routing based on simple path
+   * matching is all that's required. The order by which path rules are specified does not matter.
+   * Matches are always done on the longest-path-first basis. For example: a pathRule with a path
+   * /a/b/c will match before /a/b irrespective of the order in which those paths appear in this
+   * list. Only one of pathRules or routeRules must be set.
    * @param pathRules pathRules or {@code null} for none
    */
   public PathMatcher setPathRules(java.util.List<PathRule> pathRules) {

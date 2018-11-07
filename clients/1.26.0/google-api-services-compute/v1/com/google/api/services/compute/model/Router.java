@@ -93,6 +93,13 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * A list of Nat services created in this router.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterNat> nats;
+
+  /**
    * URI of the network to which this router belongs.
    * The value may be {@code null}.
    */
@@ -261,6 +268,23 @@ public final class Router extends com.google.api.client.json.GenericJson {
    */
   public Router setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * A list of Nat services created in this router.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterNat> getNats() {
+    return nats;
+  }
+
+  /**
+   * A list of Nat services created in this router.
+   * @param nats nats or {@code null} for none
+   */
+  public Router setNats(java.util.List<RouterNat> nats) {
+    this.nats = nats;
     return this;
   }
 

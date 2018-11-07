@@ -31,14 +31,14 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class Attachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * CSV file attachment.
+   * A CSV file attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Csv csv;
 
   /**
-   * CSV file attachment.
+   * A CSV file attachment.
    * @return value or {@code null} for none
    */
   public Csv getCsv() {
@@ -46,7 +46,7 @@ public final class Attachment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * CSV file attachment.
+   * A CSV file attachment.
    * @param csv csv or {@code null} for none
    */
   public Attachment setCsv(Csv csv) {

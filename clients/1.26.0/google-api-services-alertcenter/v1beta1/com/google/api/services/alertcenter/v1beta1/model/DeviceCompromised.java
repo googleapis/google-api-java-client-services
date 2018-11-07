@@ -38,7 +38,7 @@ public final class DeviceCompromised extends com.google.api.client.json.GenericJ
   private java.lang.String email;
 
   /**
-   * Required. List of security events.
+   * Required. The list of security events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class DeviceCompromised extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. List of security events.
+   * Required. The list of security events.
    * @return value or {@code null} for none
    */
   public java.util.List<DeviceCompromisedSecurityDetail> getEvents() {
@@ -76,7 +76,7 @@ public final class DeviceCompromised extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. List of security events.
+   * Required. The list of security events.
    * @param events events or {@code null} for none
    */
   public DeviceCompromised setEvents(java.util.List<DeviceCompromisedSecurityDetail> events) {

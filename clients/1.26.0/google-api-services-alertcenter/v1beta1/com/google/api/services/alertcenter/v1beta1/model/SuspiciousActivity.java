@@ -38,17 +38,11 @@ public final class SuspiciousActivity extends com.google.api.client.json.Generic
   private java.lang.String email;
 
   /**
-   * Required. List of security events.
+   * Required. The list of security events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SuspiciousActivitySecurityDetail> events;
-
-  static {
-    // hack to force ProGuard to consider SuspiciousActivitySecurityDetail used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SuspiciousActivitySecurityDetail.class);
-  }
 
   /**
    * The email of the user this alert was created for.
@@ -68,7 +62,7 @@ public final class SuspiciousActivity extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. List of security events.
+   * Required. The list of security events.
    * @return value or {@code null} for none
    */
   public java.util.List<SuspiciousActivitySecurityDetail> getEvents() {
@@ -76,7 +70,7 @@ public final class SuspiciousActivity extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. List of security events.
+   * Required. The list of security events.
    * @param events events or {@code null} for none
    */
   public SuspiciousActivity setEvents(java.util.List<SuspiciousActivitySecurityDetail> events) {

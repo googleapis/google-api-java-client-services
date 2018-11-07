@@ -38,7 +38,7 @@ public final class AlertFeedback extends com.google.api.client.json.GenericJson 
   private java.lang.String alertId;
 
   /**
-   * Output only. The time this feedback was created. Assigned by the server.
+   * Output only. The time this feedback was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,7 @@ public final class AlertFeedback extends com.google.api.client.json.GenericJson 
   private java.lang.String email;
 
   /**
-   * Output only. A unique identifier for the feedback. When creating a new feedback the system will
-   * assign one.
+   * Output only. The unique identifier for the feedback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +90,7 @@ public final class AlertFeedback extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time this feedback was created. Assigned by the server.
+   * Output only. The time this feedback was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -99,7 +98,7 @@ public final class AlertFeedback extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time this feedback was created. Assigned by the server.
+   * Output only. The time this feedback was created.
    * @param createTime createTime or {@code null} for none
    */
   public AlertFeedback setCreateTime(String createTime) {
@@ -142,8 +141,7 @@ public final class AlertFeedback extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. A unique identifier for the feedback. When creating a new feedback the system will
-   * assign one.
+   * Output only. The unique identifier for the feedback.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedbackId() {
@@ -151,8 +149,7 @@ public final class AlertFeedback extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. A unique identifier for the feedback. When creating a new feedback the system will
-   * assign one.
+   * Output only. The unique identifier for the feedback.
    * @param feedbackId feedbackId or {@code null} for none
    */
   public AlertFeedback setFeedbackId(java.lang.String feedbackId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Representation of a single data row in a CSV file.
+ * A representation of a single data row in a CSV file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -31,14 +31,16 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class CsvRow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Data entries in a CSV file row, as a string array rather than a single comma-separated string.
+   * The data entries in a CSV file row, as a string array rather than a single comma-separated
+   * string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entries;
 
   /**
-   * Data entries in a CSV file row, as a string array rather than a single comma-separated string.
+   * The data entries in a CSV file row, as a string array rather than a single comma-separated
+   * string.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntries() {
@@ -46,7 +48,8 @@ public final class CsvRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data entries in a CSV file row, as a string array rather than a single comma-separated string.
+   * The data entries in a CSV file row, as a string array rather than a single comma-separated
+   * string.
    * @param entries entries or {@code null} for none
    */
   public CsvRow setEntries(java.util.List<java.lang.String> entries) {

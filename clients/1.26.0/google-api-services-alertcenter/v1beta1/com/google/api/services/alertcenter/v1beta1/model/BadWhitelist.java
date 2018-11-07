@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Alert for setting the domain or ip that malicious email comes from as whitelisted domain or ip in
+ * Alert for setting the domain or IP that malicious email comes from as whitelisted domain or IP in
  * Gmail advanced settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,35 +32,41 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class BadWhitelist extends com.google.api.client.json.GenericJson {
 
   /**
-   * Domain id.
+   * The domain ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DomainId domainId;
 
   /**
-   * Entity whose actions triggered a Gmail phishing alert.
+   * The entity whose actions triggered a Gmail phishing alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MaliciousEntity maliciousEntity;
 
   /**
-   * Every alert could contain multiple messages.
+   * The list of messages contained by this alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GmailMessageInfo> messages;
 
+  static {
+    // hack to force ProGuard to consider GmailMessageInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GmailMessageInfo.class);
+  }
+
   /**
-   * The source ip address of the malicious email. e.g. "127.0.0.1".
+   * The source IP address of the malicious email, for example, `127.0.0.1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceIp;
 
   /**
-   * Domain id.
+   * The domain ID.
    * @return value or {@code null} for none
    */
   public DomainId getDomainId() {
@@ -68,7 +74,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain id.
+   * The domain ID.
    * @param domainId domainId or {@code null} for none
    */
   public BadWhitelist setDomainId(DomainId domainId) {
@@ -77,7 +83,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Entity whose actions triggered a Gmail phishing alert.
+   * The entity whose actions triggered a Gmail phishing alert.
    * @return value or {@code null} for none
    */
   public MaliciousEntity getMaliciousEntity() {
@@ -85,7 +91,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Entity whose actions triggered a Gmail phishing alert.
+   * The entity whose actions triggered a Gmail phishing alert.
    * @param maliciousEntity maliciousEntity or {@code null} for none
    */
   public BadWhitelist setMaliciousEntity(MaliciousEntity maliciousEntity) {
@@ -94,7 +100,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Every alert could contain multiple messages.
+   * The list of messages contained by this alert.
    * @return value or {@code null} for none
    */
   public java.util.List<GmailMessageInfo> getMessages() {
@@ -102,7 +108,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Every alert could contain multiple messages.
+   * The list of messages contained by this alert.
    * @param messages messages or {@code null} for none
    */
   public BadWhitelist setMessages(java.util.List<GmailMessageInfo> messages) {
@@ -111,7 +117,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source ip address of the malicious email. e.g. "127.0.0.1".
+   * The source IP address of the malicious email, for example, `127.0.0.1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceIp() {
@@ -119,7 +125,7 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source ip address of the malicious email. e.g. "127.0.0.1".
+   * The source IP address of the malicious email, for example, `127.0.0.1`.
    * @param sourceIp sourceIp or {@code null} for none
    */
   public BadWhitelist setSourceIp(java.lang.String sourceIp) {

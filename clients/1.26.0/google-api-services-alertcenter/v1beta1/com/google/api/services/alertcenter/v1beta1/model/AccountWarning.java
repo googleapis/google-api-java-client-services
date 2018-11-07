@@ -31,7 +31,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class AccountWarning extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Email of the user that this event belongs to.
+   * Required. The email of the user that this event belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,14 +39,16 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Details of the login action associated with the warning event. This is only available
-   * for: Suspicious login Suspicious login (less secure app) User suspended (suspicious activity)
+   * for:
+   *
+   * * Suspicious login * Suspicious login (less secure app) * User suspended (suspicious activity)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LoginDetails loginDetails;
 
   /**
-   * Required. Email of the user that this event belongs to.
+   * Required. The email of the user that this event belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -54,7 +56,7 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Email of the user that this event belongs to.
+   * Required. The email of the user that this event belongs to.
    * @param email email or {@code null} for none
    */
   public AccountWarning setEmail(java.lang.String email) {
@@ -64,7 +66,9 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Details of the login action associated with the warning event. This is only available
-   * for: Suspicious login Suspicious login (less secure app) User suspended (suspicious activity)
+   * for:
+   *
+   * * Suspicious login * Suspicious login (less secure app) * User suspended (suspicious activity)
    * @return value or {@code null} for none
    */
   public LoginDetails getLoginDetails() {
@@ -73,7 +77,9 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Details of the login action associated with the warning event. This is only available
-   * for: Suspicious login Suspicious login (less secure app) User suspended (suspicious activity)
+   * for:
+   *
+   * * Suspicious login * Suspicious login (less secure app) * User suspended (suspicious activity)
    * @param loginDetails loginDetails or {@code null} for none
    */
   public AccountWarning setLoginDetails(LoginDetails loginDetails) {

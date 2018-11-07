@@ -31,14 +31,14 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class DeviceCompromisedSecurityDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Device compromised state includes: "Compromised" and "Not Compromised".
+   * The device compromised state. Possible values are "`Compromised`" or "`Not Compromised`".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceCompromisedState;
 
   /**
-   * Required. Device Info.
+   * Required. The device ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +59,14 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   private java.lang.String deviceType;
 
   /**
-   * Required for IOS, empty for others.
+   * Required for iOS, empty for others.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iosVendorId;
 
   /**
-   * The device resource id.
+   * The device resource ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   private java.lang.String serialNumber;
 
   /**
-   * Device compromised state includes: "Compromised" and "Not Compromised".
+   * The device compromised state. Possible values are "`Compromised`" or "`Not Compromised`".
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceCompromisedState() {
@@ -88,7 +88,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * Device compromised state includes: "Compromised" and "Not Compromised".
+   * The device compromised state. Possible values are "`Compromised`" or "`Not Compromised`".
    * @param deviceCompromisedState deviceCompromisedState or {@code null} for none
    */
   public DeviceCompromisedSecurityDetail setDeviceCompromisedState(java.lang.String deviceCompromisedState) {
@@ -97,7 +97,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * Required. Device Info.
+   * Required. The device ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceId() {
@@ -105,7 +105,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * Required. Device Info.
+   * Required. The device ID.
    * @param deviceId deviceId or {@code null} for none
    */
   public DeviceCompromisedSecurityDetail setDeviceId(java.lang.String deviceId) {
@@ -148,7 +148,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * Required for IOS, empty for others.
+   * Required for iOS, empty for others.
    * @return value or {@code null} for none
    */
   public java.lang.String getIosVendorId() {
@@ -156,7 +156,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * Required for IOS, empty for others.
+   * Required for iOS, empty for others.
    * @param iosVendorId iosVendorId or {@code null} for none
    */
   public DeviceCompromisedSecurityDetail setIosVendorId(java.lang.String iosVendorId) {
@@ -165,7 +165,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * The device resource id.
+   * The device resource ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceId() {
@@ -173,7 +173,7 @@ public final class DeviceCompromisedSecurityDetail extends com.google.api.client
   }
 
   /**
-   * The device resource id.
+   * The device resource ID.
    * @param resourceId resourceId or {@code null} for none
    */
   public DeviceCompromisedSecurityDetail setResourceId(java.lang.String resourceId) {

@@ -31,20 +31,16 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class ListAlertFeedbackResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of alert feedback. Result is ordered descending by creation time.
+   * The list of alert feedback. Feedback entries for each alert are ordered by creation time
+   * descending.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AlertFeedback> feedback;
 
-  static {
-    // hack to force ProGuard to consider AlertFeedback used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AlertFeedback.class);
-  }
-
   /**
-   * The list of alert feedback. Result is ordered descending by creation time.
+   * The list of alert feedback. Feedback entries for each alert are ordered by creation time
+   * descending.
    * @return value or {@code null} for none
    */
   public java.util.List<AlertFeedback> getFeedback() {
@@ -52,7 +48,8 @@ public final class ListAlertFeedbackResponse extends com.google.api.client.json.
   }
 
   /**
-   * The list of alert feedback. Result is ordered descending by creation time.
+   * The list of alert feedback. Feedback entries for each alert are ordered by creation time
+   * descending.
    * @param feedback feedback or {@code null} for none
    */
   public ListAlertFeedbackResponse setFeedback(java.util.List<AlertFeedback> feedback) {

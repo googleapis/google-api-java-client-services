@@ -20,7 +20,7 @@ package com.google.api.services.alertcenter.v1beta1;
  * Service definition for AlertCenter (v1beta1).
  *
  * <p>
- * G Suite Alert Center API to view and manage alerts on issues affecting your domain.
+ * Manages alerts on issues affecting your domain.
  * </p>
  *
  * <p>
@@ -143,11 +143,10 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
   public class Alerts {
 
     /**
-     * Marks the specified alert for deletion. An alert that has been marked for deletion will be
-     * excluded from the results of a List operation by default, and will be removed from the Alert
-     * Center after 30 days. Marking an alert for deletion will have no effect on an alert which has
-     * already been marked for deletion. Attempting to mark a nonexistent alert for deletion will return
-     * NOT_FOUND.
+     * Marks the specified alert for deletion. An alert that has been marked for deletion is removed
+     * from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which
+     * has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results
+     * in a `NOT_FOUND` error.
      *
      * Create a request for the method "alerts.delete".
      *
@@ -168,11 +167,10 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1beta1/alerts/{alertId}";
 
       /**
-       * Marks the specified alert for deletion. An alert that has been marked for deletion will be
-       * excluded from the results of a List operation by default, and will be removed from the Alert
-       * Center after 30 days. Marking an alert for deletion will have no effect on an alert which has
-       * already been marked for deletion. Attempting to mark a nonexistent alert for deletion will
-       * return NOT_FOUND.
+       * Marks the specified alert for deletion. An alert that has been marked for deletion is removed
+       * from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which
+       * has already been marked for deletion. Attempting to mark a nonexistent alert for deletion
+       * results in a `NOT_FOUND` error.
        *
        * Create a request for the method "alerts.delete".
        *
@@ -262,25 +260,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google account of the customer the alert is
-       * associated with. This is obfuscated and not the plain customer ID as stored internally.
-       * Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert is associated with. Inferred from the caller identity if not provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google account of the customer the alert is associated with.
-     This is obfuscated and not the plain customer ID as stored internally. Inferred from the caller
-     identity if not provided.
+      /** Optional. The unique identifier of the G Suite organization account of the customer the alert is
+     associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google account of the customer the alert is
-       * associated with. This is obfuscated and not the plain customer ID as stored internally.
-       * Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert is associated with. Inferred from the caller identity if not provided.
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -301,6 +296,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param alertId Required. The identifier of the alert to retrieve.
+    Returns a NOT_FOUND error if no such alert.
      * @return the request
      */
     public Get get(java.lang.String alertId) throws java.io.IOException {
@@ -324,6 +320,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param alertId Required. The identifier of the alert to retrieve.
+    Returns a NOT_FOUND error if no such alert.
        * @since 1.13
        */
       protected Get(java.lang.String alertId) {
@@ -396,42 +393,45 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The identifier of the alert to retrieve. */
+      /**
+       * Required. The identifier of the alert to retrieve. Returns a NOT_FOUND error if no such
+       * alert.
+       */
       @com.google.api.client.util.Key
       private java.lang.String alertId;
 
-      /** Required. The identifier of the alert to retrieve.
+      /** Required. The identifier of the alert to retrieve. Returns a NOT_FOUND error if no such alert.
        */
       public java.lang.String getAlertId() {
         return alertId;
       }
 
-      /** Required. The identifier of the alert to retrieve. */
+      /**
+       * Required. The identifier of the alert to retrieve. Returns a NOT_FOUND error if no such
+       * alert.
+       */
       public Get setAlertId(java.lang.String alertId) {
         this.alertId = alertId;
         return this;
       }
 
       /**
-       * Optional. The unique identifier of the Google account of the customer the alert is
-       * associated with. This is obfuscated and not the plain customer ID as stored internally.
-       * Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert is associated with. Inferred from the caller identity if not provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google account of the customer the alert is associated with.
-     This is obfuscated and not the plain customer ID as stored internally. Inferred from the caller
-     identity if not provided.
+      /** Optional. The unique identifier of the G Suite organization account of the customer the alert is
+     associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google account of the customer the alert is
-       * associated with. This is obfuscated and not the plain customer ID as stored internally.
-       * Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert is associated with. Inferred from the caller identity if not provided.
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -444,7 +444,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Lists all the alerts for the current user and application.
+     * Lists the alerts.
      *
      * Create a request for the method "alerts.list".
      *
@@ -464,7 +464,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1beta1/alerts";
 
       /**
-       * Lists all the alerts for the current user and application.
+       * Lists the alerts.
        *
        * Create a request for the method "alerts.list".
        *
@@ -545,25 +545,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. The unique identifier of the Google account of the customer the alerts are
-       * associated with. This is obfuscated and not the plain customer ID as stored internally.
-       * Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alerts are associated with. Inferred from the caller identity if not provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Optional. The unique identifier of the Google account of the customer the alerts are associated
-     with. This is obfuscated and not the plain customer ID as stored internally. Inferred from the
-     caller identity if not provided.
+      /** Optional. The unique identifier of the G Suite organization account of the customer the alerts are
+     associated with. Inferred from the caller identity if not provided.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * Optional. The unique identifier of the Google account of the customer the alerts are
-       * associated with. This is obfuscated and not the plain customer ID as stored internally.
-       * Inferred from the caller identity if not provided.
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alerts are associated with. Inferred from the caller identity if not provided.
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -571,196 +568,25 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. Query string for filtering alert results. This string must be specified as an
-       * expression or list of expressions, using the following grammar:
-       *
-       * ### Expressions
-       *
-       * An expression has the general form `  `.
-       *
-       * A field or value which contains a space or a colon must be enclosed by double quotes.
-       *
-       * #### Operators
-       *
-       * Operators follow the BNF specification:
-       *
-       * ` ::= "=" | ":"`
-       *
-       * ` ::= "<" | ">" | "<=" | ">="`
-       *
-       * Relational operators are defined only for timestamp fields. Equality operators are defined
-       * only for string fields.
-       *
-       * #### Timestamp fields
-       *
-       * The value supplied for a timestamp field must be an [RFC
-       * 3339](https://tools.ietf.org/html/rfc3339) date-time string.
-       *
-       * Supported timestamp fields are `create_time`, `start_time`, and `end_time`.
-       *
-       * #### String fields
-       *
-       * The value supplied for a string field may be an arbitrary string.
-       *
-       * #### Examples
-       *
-       * To query for all alerts created on or after April 5, 2018:
-       *
-       * `create_time >= "2018-04-05T00:00:00Z"`
-       *
-       * To query for all alerts from the source "Gmail phishing":
-       *
-       * `source:"Gmail phishing"`
-       *
-       * ### Joining expressions
-       *
-       * Expressions may be joined to form a more complex query. The BNF specification is:
-       *
-       * ` ::=  | |  ` ` ::= "AND" | "OR" | ""` ` ::= "NOT"`
-       *
-       * Using the empty string as a conjunction acts as an implicit AND.
-       *
-       * The precedence of joining operations, from highest to lowest, is NOT, AND, OR.
-       *
-       * #### Examples
-       *
-       * To query for all alerts which started in 2017:
-       *
-       * `start_time >= "2017-01-01T00:00:00Z" AND start_time < "2018-01-01T00:00:00Z"`
-       *
-       * To query for all user reported phishing alerts from the source "Gmail phishing":
-       *
-       * `type:"User reported phishing" source:"Gmail phishing"`
+       * Optional. A query string for filtering alert results. For more details, see [Query filters
+       * ](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
+       * sdk/alertcenter/reference/filter-fields).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Optional. Query string for filtering alert results. This string must be specified as an expression
-     or list of expressions, using the following grammar:
-
-     ### Expressions
-
-     An expression has the general form `  `.
-
-     A field or value which contains a space or a colon must be enclosed by double quotes.
-
-     #### Operators
-
-     Operators follow the BNF specification:
-
-     ` ::= "=" | ":"`
-
-     ` ::= "<" | ">" | "<=" | ">="`
-
-     Relational operators are defined only for timestamp fields. Equality operators are defined only for
-     string fields.
-
-     #### Timestamp fields
-
-     The value supplied for a timestamp field must be an [RFC 3339](https://tools.ietf.org/html/rfc3339)
-     date-time string.
-
-     Supported timestamp fields are `create_time`, `start_time`, and `end_time`.
-
-     #### String fields
-
-     The value supplied for a string field may be an arbitrary string.
-
-     #### Examples
-
-     To query for all alerts created on or after April 5, 2018:
-
-     `create_time >= "2018-04-05T00:00:00Z"`
-
-     To query for all alerts from the source "Gmail phishing":
-
-     `source:"Gmail phishing"`
-
-     ### Joining expressions
-
-     Expressions may be joined to form a more complex query. The BNF specification is:
-
-     ` ::=  | |  ` ` ::= "AND" | "OR" | ""` ` ::= "NOT"`
-
-     Using the empty string as a conjunction acts as an implicit AND.
-
-     The precedence of joining operations, from highest to lowest, is NOT, AND, OR.
-
-     #### Examples
-
-     To query for all alerts which started in 2017:
-
-     `start_time >= "2017-01-01T00:00:00Z" AND start_time < "2018-01-01T00:00:00Z"`
-
-     To query for all user reported phishing alerts from the source "Gmail phishing":
-
-     `type:"User reported phishing" source:"Gmail phishing"`
+      /** Optional. A query string for filtering alert results. For more details, see [Query filters](/admin-
+     sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
+     sdk/alertcenter/reference/filter-fields).
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Optional. Query string for filtering alert results. This string must be specified as an
-       * expression or list of expressions, using the following grammar:
-       *
-       * ### Expressions
-       *
-       * An expression has the general form `  `.
-       *
-       * A field or value which contains a space or a colon must be enclosed by double quotes.
-       *
-       * #### Operators
-       *
-       * Operators follow the BNF specification:
-       *
-       * ` ::= "=" | ":"`
-       *
-       * ` ::= "<" | ">" | "<=" | ">="`
-       *
-       * Relational operators are defined only for timestamp fields. Equality operators are defined
-       * only for string fields.
-       *
-       * #### Timestamp fields
-       *
-       * The value supplied for a timestamp field must be an [RFC
-       * 3339](https://tools.ietf.org/html/rfc3339) date-time string.
-       *
-       * Supported timestamp fields are `create_time`, `start_time`, and `end_time`.
-       *
-       * #### String fields
-       *
-       * The value supplied for a string field may be an arbitrary string.
-       *
-       * #### Examples
-       *
-       * To query for all alerts created on or after April 5, 2018:
-       *
-       * `create_time >= "2018-04-05T00:00:00Z"`
-       *
-       * To query for all alerts from the source "Gmail phishing":
-       *
-       * `source:"Gmail phishing"`
-       *
-       * ### Joining expressions
-       *
-       * Expressions may be joined to form a more complex query. The BNF specification is:
-       *
-       * ` ::=  | |  ` ` ::= "AND" | "OR" | ""` ` ::= "NOT"`
-       *
-       * Using the empty string as a conjunction acts as an implicit AND.
-       *
-       * The precedence of joining operations, from highest to lowest, is NOT, AND, OR.
-       *
-       * #### Examples
-       *
-       * To query for all alerts which started in 2017:
-       *
-       * `start_time >= "2017-01-01T00:00:00Z" AND start_time < "2018-01-01T00:00:00Z"`
-       *
-       * To query for all user reported phishing alerts from the source "Gmail phishing":
-       *
-       * `type:"User reported phishing" source:"Gmail phishing"`
+       * Optional. A query string for filtering alert results. For more details, see [Query filters
+       * ](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
+       * sdk/alertcenter/reference/filter-fields).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -768,27 +594,27 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. Sort the list results by a certain order. If not specified results may be
-       * returned in arbitrary order. You can sort the results in a descending order based on the
-       * creation timestamp using order_by="create_time desc". Currently, only sorting by
-       * create_time desc is supported.
+       * Optional. The sort order of the list results. If not specified results may be returned in
+       * arbitrary order. You can sort the results in descending order based on the creation
+       * timestamp using `order_by="create_time desc"`. Currently, only sorting by `create_time
+       * desc` is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Optional. Sort the list results by a certain order. If not specified results may be returned in
-     arbitrary order. You can sort the results in a descending order based on the creation timestamp
-     using order_by="create_time desc". Currently, only sorting by create_time desc is supported.
+      /** Optional. The sort order of the list results. If not specified results may be returned in arbitrary
+     order. You can sort the results in descending order based on the creation timestamp using
+     `order_by="create_time desc"`. Currently, only sorting by `create_time desc` is supported.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Optional. Sort the list results by a certain order. If not specified results may be
-       * returned in arbitrary order. You can sort the results in a descending order based on the
-       * creation timestamp using order_by="create_time desc". Currently, only sorting by
-       * create_time desc is supported.
+       * Optional. The sort order of the list results. If not specified results may be returned in
+       * arbitrary order. You can sort the results in descending order based on the creation
+       * timestamp using `order_by="create_time desc"`. Currently, only sorting by `create_time
+       * desc` is supported.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -796,22 +622,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Optional. Requested page size. Server may return fewer items than requested. If
-       * unspecified, server will pick an appropriate default.
+       * Optional. The requested page size. Server may return fewer items than requested. If
+       * unspecified, server picks an appropriate default.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-     will pick an appropriate default.
+      /** Optional. The requested page size. Server may return fewer items than requested. If unspecified,
+     server picks an appropriate default.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. Requested page size. Server may return fewer items than requested. If
-       * unspecified, server will pick an appropriate default.
+       * Optional. The requested page size. Server may return fewer items than requested. If
+       * unspecified, server picks an appropriate default.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -871,7 +697,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
     public class Feedback {
 
       /**
-       * Creates a new alert feedback.
+       * Creates new feedback for an alert.
        *
        * Create a request for the method "feedback.create".
        *
@@ -879,8 +705,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param alertId Required. The identifier of the alert this feedback belongs to.
-      Returns a NOT_FOUND error if no such
-       *        alert.
+      Returns a `NOT_FOUND` error if no
+       *        such alert.
        * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.AlertFeedback}
        * @return the request
        */
@@ -895,7 +721,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1beta1/alerts/{alertId}/feedback";
 
         /**
-         * Creates a new alert feedback.
+         * Creates new feedback for an alert.
          *
          * Create a request for the method "feedback.create".
          *
@@ -906,8 +732,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param alertId Required. The identifier of the alert this feedback belongs to.
-      Returns a NOT_FOUND error if no such
-       *        alert.
+      Returns a `NOT_FOUND` error if no
+       *        such alert.
          * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.AlertFeedback}
          * @since 1.13
          */
@@ -972,13 +798,13 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The identifier of the alert this feedback belongs to. Returns a NOT_FOUND error
-         * if no such alert.
+         * Required. The identifier of the alert this feedback belongs to. Returns a `NOT_FOUND`
+         * error if no such alert.
          */
         @com.google.api.client.util.Key
         private java.lang.String alertId;
 
-        /** Required. The identifier of the alert this feedback belongs to. Returns a NOT_FOUND error if no
+        /** Required. The identifier of the alert this feedback belongs to. Returns a `NOT_FOUND` error if no
        such alert.
          */
         public java.lang.String getAlertId() {
@@ -986,8 +812,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The identifier of the alert this feedback belongs to. Returns a NOT_FOUND error
-         * if no such alert.
+         * Required. The identifier of the alert this feedback belongs to. Returns a `NOT_FOUND`
+         * error if no such alert.
          */
         public Create setAlertId(java.lang.String alertId) {
           this.alertId = alertId;
@@ -995,25 +821,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Optional. The unique identifier of the Google account of the customer the alert's
-         * feedback is associated with. This is obfuscated and not the plain customer ID as stored
-         * internally. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the G Suite organization account of the customer the
+         * alert is associated with. Inferred from the caller identity if not provided.
          */
         @com.google.api.client.util.Key
         private java.lang.String customerId;
 
-        /** Optional. The unique identifier of the Google account of the customer the alert's feedback is
-       associated with. This is obfuscated and not the plain customer ID as stored internally. Inferred
-       from the caller identity if not provided.
+        /** Optional. The unique identifier of the G Suite organization account of the customer the alert is
+       associated with. Inferred from the caller identity if not provided.
          */
         public java.lang.String getCustomerId() {
           return customerId;
         }
 
         /**
-         * Optional. The unique identifier of the Google account of the customer the alert's
-         * feedback is associated with. This is obfuscated and not the plain customer ID as stored
-         * internally. Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the G Suite organization account of the customer the
+         * alert is associated with. Inferred from the caller identity if not provided.
          */
         public Create setCustomerId(java.lang.String customerId) {
           this.customerId = customerId;
@@ -1034,7 +857,9 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param alertId Required. The alert identifier.
-      If the alert does not exist returns a NOT_FOUND error.
+      The "-" wildcard could be used to represent all alerts.
+      If alert
+       *        does not exist returns a `NOT_FOUND` error.
        * @return the request
        */
       public List list(java.lang.String alertId) throws java.io.IOException {
@@ -1058,7 +883,9 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param alertId Required. The alert identifier.
-      If the alert does not exist returns a NOT_FOUND error.
+      The "-" wildcard could be used to represent all alerts.
+      If alert
+       *        does not exist returns a `NOT_FOUND` error.
          * @since 1.13
          */
         protected List(java.lang.String alertId) {
@@ -1132,19 +959,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Required. The alert identifier. If the alert does not exist returns a NOT_FOUND error.
+         * Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
+         * If alert does not exist returns a `NOT_FOUND` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String alertId;
 
-        /** Required. The alert identifier. If the alert does not exist returns a NOT_FOUND error.
+        /** Required. The alert identifier. The "-" wildcard could be used to represent all alerts. If alert
+       does not exist returns a `NOT_FOUND` error.
          */
         public java.lang.String getAlertId() {
           return alertId;
         }
 
         /**
-         * Required. The alert identifier. If the alert does not exist returns a NOT_FOUND error.
+         * Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
+         * If alert does not exist returns a `NOT_FOUND` error.
          */
         public List setAlertId(java.lang.String alertId) {
           this.alertId = alertId;
@@ -1152,25 +982,22 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Optional. The unique identifier of the Google account of the customer the alert is
-         * associated with. This is obfuscated and not the plain customer ID as stored internally.
-         * Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the G Suite organization account of the customer the
+         * alert feedback are associated with. Inferred from the caller identity if not provided.
          */
         @com.google.api.client.util.Key
         private java.lang.String customerId;
 
-        /** Optional. The unique identifier of the Google account of the customer the alert is associated with.
-       This is obfuscated and not the plain customer ID as stored internally. Inferred from the caller
-       identity if not provided.
+        /** Optional. The unique identifier of the G Suite organization account of the customer the alert
+       feedback are associated with. Inferred from the caller identity if not provided.
          */
         public java.lang.String getCustomerId() {
           return customerId;
         }
 
         /**
-         * Optional. The unique identifier of the Google account of the customer the alert is
-         * associated with. This is obfuscated and not the plain customer ID as stored internally.
-         * Inferred from the caller identity if not provided.
+         * Optional. The unique identifier of the G Suite organization account of the customer the
+         * alert feedback are associated with. Inferred from the caller identity if not provided.
          */
         public List setCustomerId(java.lang.String customerId) {
           this.customerId = customerId;

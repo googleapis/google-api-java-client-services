@@ -36,7 +36,7 @@ package com.google.api.services.androidenterprise.model;
 public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
-   * The tracks that are visible to the enterprise with their user-friendly name.
+   * The tracks visible to the enterprise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> availableCountries;
 
   /**
-   * The tracks that are visible to the enterprise. Deprecated, use app_tracks instead.
+   * Deprecated, use appTracks instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +219,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String workDetailsUrl;
 
   /**
-   * The tracks that are visible to the enterprise with their user-friendly name.
+   * The tracks visible to the enterprise.
    * @return value or {@code null} for none
    */
   public java.util.List<TrackInfo> getAppTracks() {
@@ -227,7 +227,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tracks that are visible to the enterprise with their user-friendly name.
+   * The tracks visible to the enterprise.
    * @param appTracks appTracks or {@code null} for none
    */
   public Product setAppTracks(java.util.List<TrackInfo> appTracks) {
@@ -287,7 +287,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tracks that are visible to the enterprise. Deprecated, use app_tracks instead.
+   * Deprecated, use appTracks instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableTracks() {
@@ -295,7 +295,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tracks that are visible to the enterprise. Deprecated, use app_tracks instead.
+   * Deprecated, use appTracks instead.
    * @param availableTracks availableTracks or {@code null} for none
    */
   public Product setAvailableTracks(java.util.List<java.lang.String> availableTracks) {

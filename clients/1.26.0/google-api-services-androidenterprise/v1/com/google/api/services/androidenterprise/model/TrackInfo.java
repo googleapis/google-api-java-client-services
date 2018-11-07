@@ -30,21 +30,22 @@ package com.google.api.services.androidenterprise.model;
 public final class TrackInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A changeable, user-friendly name for a track.
+   * A modifiable name for a track. This is the visible name in the play developer console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackAlias;
 
   /**
-   * A unique an unchangeable identifier of a test track.
+   * Unmodifiable, unique track identifier. This identifier is the releaseTrackId in the url of the
+   * play developer console page that displays the track information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackId;
 
   /**
-   * A changeable, user-friendly name for a track.
+   * A modifiable name for a track. This is the visible name in the play developer console.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackAlias() {
@@ -52,7 +53,7 @@ public final class TrackInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A changeable, user-friendly name for a track.
+   * A modifiable name for a track. This is the visible name in the play developer console.
    * @param trackAlias trackAlias or {@code null} for none
    */
   public TrackInfo setTrackAlias(java.lang.String trackAlias) {
@@ -61,7 +62,8 @@ public final class TrackInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique an unchangeable identifier of a test track.
+   * Unmodifiable, unique track identifier. This identifier is the releaseTrackId in the url of the
+   * play developer console page that displays the track information.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackId() {
@@ -69,7 +71,8 @@ public final class TrackInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique an unchangeable identifier of a test track.
+   * Unmodifiable, unique track identifier. This identifier is the releaseTrackId in the url of the
+   * play developer console page that displays the track information.
    * @param trackId trackId or {@code null} for none
    */
   public TrackInfo setTrackId(java.lang.String trackId) {

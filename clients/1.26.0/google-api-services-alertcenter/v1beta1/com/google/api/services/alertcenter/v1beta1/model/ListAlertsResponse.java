@@ -38,8 +38,9 @@ public final class ListAlertsResponse extends com.google.api.client.json.Generic
   private java.util.List<Alert> alerts;
 
   /**
-   * If not empty, indicates that there may be more alerts that match the request; this value can be
-   * passed in a new ListAlertsRequest to get the next page of values.
+   * The token for the next page. If not empty, indicates that there may be more alerts that match
+   * the listing request; this value can be used in a subsequent ListAlertsRequest to get alerts
+   * continuing from last result of the current list call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +64,9 @@ public final class ListAlertsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * If not empty, indicates that there may be more alerts that match the request; this value can be
-   * passed in a new ListAlertsRequest to get the next page of values.
+   * The token for the next page. If not empty, indicates that there may be more alerts that match
+   * the listing request; this value can be used in a subsequent ListAlertsRequest to get alerts
+   * continuing from last result of the current list call.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -72,8 +74,9 @@ public final class ListAlertsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * If not empty, indicates that there may be more alerts that match the request; this value can be
-   * passed in a new ListAlertsRequest to get the next page of values.
+   * The token for the next page. If not empty, indicates that there may be more alerts that match
+   * the listing request; this value can be used in a subsequent ListAlertsRequest to get alerts
+   * continuing from last result of the current list call.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListAlertsResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -31,7 +31,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class GmailMessageInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * SHA256 Hash of email's attachment and all MIME parts.
+   * The `SHA256` hash of email's attachment and all MIME parts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,49 +45,49 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   private String date;
 
   /**
-   * Hash of message body text.
+   * The hash of the message body text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String md5HashMessageBody;
 
   /**
-   * MD5 Hash of email's subject. (Only available for reported emails).
+   * The MD5 Hash of email's subject (only available for reported emails).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String md5HashSubject;
 
   /**
-   * Snippet of the message body text. (Only available for reported emails)
+   * The snippet of the message body text (only available for reported emails).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageBodySnippet;
 
   /**
-   * Message id.
+   * The message ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageId;
 
   /**
-   * Recipient of this email.
+   * The recipient of this email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recipient;
 
   /**
-   * Email subject text. (Only available for reported emails).
+   * The email subject text (only available for reported emails).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subjectText;
 
   /**
-   * SHA256 Hash of email's attachment and all MIME parts.
+   * The `SHA256` hash of email's attachment and all MIME parts.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAttachmentsSha256Hash() {
@@ -95,7 +95,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * SHA256 Hash of email's attachment and all MIME parts.
+   * The `SHA256` hash of email's attachment and all MIME parts.
    * @param attachmentsSha256Hash attachmentsSha256Hash or {@code null} for none
    */
   public GmailMessageInfo setAttachmentsSha256Hash(java.util.List<java.lang.String> attachmentsSha256Hash) {
@@ -121,7 +121,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Hash of message body text.
+   * The hash of the message body text.
    * @return value or {@code null} for none
    */
   public java.lang.String getMd5HashMessageBody() {
@@ -129,7 +129,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Hash of message body text.
+   * The hash of the message body text.
    * @param md5HashMessageBody md5HashMessageBody or {@code null} for none
    */
   public GmailMessageInfo setMd5HashMessageBody(java.lang.String md5HashMessageBody) {
@@ -138,7 +138,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * MD5 Hash of email's subject. (Only available for reported emails).
+   * The MD5 Hash of email's subject (only available for reported emails).
    * @return value or {@code null} for none
    */
   public java.lang.String getMd5HashSubject() {
@@ -146,7 +146,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * MD5 Hash of email's subject. (Only available for reported emails).
+   * The MD5 Hash of email's subject (only available for reported emails).
    * @param md5HashSubject md5HashSubject or {@code null} for none
    */
   public GmailMessageInfo setMd5HashSubject(java.lang.String md5HashSubject) {
@@ -155,7 +155,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Snippet of the message body text. (Only available for reported emails)
+   * The snippet of the message body text (only available for reported emails).
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageBodySnippet() {
@@ -163,7 +163,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Snippet of the message body text. (Only available for reported emails)
+   * The snippet of the message body text (only available for reported emails).
    * @param messageBodySnippet messageBodySnippet or {@code null} for none
    */
   public GmailMessageInfo setMessageBodySnippet(java.lang.String messageBodySnippet) {
@@ -172,7 +172,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Message id.
+   * The message ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageId() {
@@ -180,7 +180,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Message id.
+   * The message ID.
    * @param messageId messageId or {@code null} for none
    */
   public GmailMessageInfo setMessageId(java.lang.String messageId) {
@@ -189,7 +189,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Recipient of this email.
+   * The recipient of this email.
    * @return value or {@code null} for none
    */
   public java.lang.String getRecipient() {
@@ -197,7 +197,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Recipient of this email.
+   * The recipient of this email.
    * @param recipient recipient or {@code null} for none
    */
   public GmailMessageInfo setRecipient(java.lang.String recipient) {
@@ -206,7 +206,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Email subject text. (Only available for reported emails).
+   * The email subject text (only available for reported emails).
    * @return value or {@code null} for none
    */
   public java.lang.String getSubjectText() {
@@ -214,7 +214,7 @@ public final class GmailMessageInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Email subject text. (Only available for reported emails).
+   * The email subject text (only available for reported emails).
    * @param subjectText subjectText or {@code null} for none
    */
   public GmailMessageInfo setSubjectText(java.lang.String subjectText) {

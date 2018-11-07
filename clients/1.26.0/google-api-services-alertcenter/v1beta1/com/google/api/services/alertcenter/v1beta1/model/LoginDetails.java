@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Details of the login action
+ * The details of the login action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -31,23 +31,24 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class LoginDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Human readable IP address (e.g., 11.22.33.44) that is associated with the warning
-   * event.
+   * Optional. The human-readable IP address (for example, `11.22.33.44`) that is associated with
+   * the warning event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * Optional. Login time that is associated with the warning event.
+   * Optional. The successful login time that is associated with the warning event. This will not be
+   * present for blocked login attempts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String loginTime;
 
   /**
-   * Optional. Human readable IP address (e.g., 11.22.33.44) that is associated with the warning
-   * event.
+   * Optional. The human-readable IP address (for example, `11.22.33.44`) that is associated with
+   * the warning event.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -55,8 +56,8 @@ public final class LoginDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Human readable IP address (e.g., 11.22.33.44) that is associated with the warning
-   * event.
+   * Optional. The human-readable IP address (for example, `11.22.33.44`) that is associated with
+   * the warning event.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public LoginDetails setIpAddress(java.lang.String ipAddress) {
@@ -65,7 +66,8 @@ public final class LoginDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Login time that is associated with the warning event.
+   * Optional. The successful login time that is associated with the warning event. This will not be
+   * present for blocked login attempts.
    * @return value or {@code null} for none
    */
   public String getLoginTime() {
@@ -73,7 +75,8 @@ public final class LoginDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Login time that is associated with the warning event.
+   * Optional. The successful login time that is associated with the warning event. This will not be
+   * present for blocked login attempts.
    * @param loginTime loginTime or {@code null} for none
    */
   public LoginDetails setLoginTime(String loginTime) {

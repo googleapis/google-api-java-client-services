@@ -38,7 +38,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String alertId;
 
   /**
-   * Output only. The time this alert was created. Assigned by the server.
+   * Output only. The time this alert was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String customerId;
 
   /**
-   * Optional. Specific data associated with this alert. e.g.
+   * Optional. The data associated with this alert, for example
    * google.apps.alertcenter.type.DeviceCompromised.
    * The value may be {@code null}.
    */
@@ -60,22 +60,24 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> data;
 
   /**
-   * Output only. Whether this alert has been marked for deletion.
+   * Output only. `True` if this alert is marked for deletion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deleted;
 
   /**
-   * Optional. The time this alert was no longer active. If provided, the end time must not be
-   * earlier than the start time. If not provided, the end time will default to the start time.
+   * Optional. The time the event that caused this alert ceased being active. If provided, the end
+   * time must not be earlier than the start time. If not provided, the end time defaults to the
+   * start time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Output only. An optional Security Investigation Tool query for this alert.
+   * Output only. An optional [Security Investigation
+   * Tool](https://support.google.com/a/answer/7575955) query for this alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,32 +86,25 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the system that is reported the alert.
    *
-   * Supported sources are any of the following:  * "Google Operations"  * "Mobile device
-   * management"  * "Gmail phishing"  * "Domain wide takeout"  * "Government attack warning"  *
-   * "Google identity"
+   * Supported sources are any of the following:
+   *
+   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout *
+   * Government attack warning * Google identity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Required. The time this alert became active.
+   * Required. The time the event that caused this alert was started or detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Required. The type of the alert.
-   *
-   * Supported types are any of the following:  * "Google Operations"  * "Device compromised"  *
-   * "Suspicious activity"  * "User reported phishing"  * "Misconfigured whitelist"  * "Customer
-   * takeout initiated"  * "Government attack warning"  * "User reported spam spike"  * "Suspicious
-   * message reported"  * "Phishing reclassification"  * "Malware reclassification" LINT.IfChange  *
-   * "Suspicious login"  * "Suspicious login (less secure app)"  * "User suspended"  * "Leaked
-   * password"  * "User suspended (suspicious activity)"  * "User suspended (spam)"  * "User
-   * suspended (spam through relay)"
-   * LINT.ThenChange(//depot/google3/apps/albert/data/albert_enums.proto)
+   * Required. The type of the alert. For a list of available alert types see [G Suite Alert types
+   * ](/admin-sdk/alertcenter/reference/alert-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +128,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time this alert was created. Assigned by the server.
+   * Output only. The time this alert was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -141,7 +136,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time this alert was created. Assigned by the server.
+   * Output only. The time this alert was created.
    * @param createTime createTime or {@code null} for none
    */
   public Alert setCreateTime(String createTime) {
@@ -167,7 +162,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specific data associated with this alert. e.g.
+   * Optional. The data associated with this alert, for example
    * google.apps.alertcenter.type.DeviceCompromised.
    * @return value or {@code null} for none
    */
@@ -176,7 +171,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specific data associated with this alert. e.g.
+   * Optional. The data associated with this alert, for example
    * google.apps.alertcenter.type.DeviceCompromised.
    * @param data data or {@code null} for none
    */
@@ -186,7 +181,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this alert has been marked for deletion.
+   * Output only. `True` if this alert is marked for deletion.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -194,7 +189,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this alert has been marked for deletion.
+   * Output only. `True` if this alert is marked for deletion.
    * @param deleted deleted or {@code null} for none
    */
   public Alert setDeleted(java.lang.Boolean deleted) {
@@ -203,8 +198,9 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The time this alert was no longer active. If provided, the end time must not be
-   * earlier than the start time. If not provided, the end time will default to the start time.
+   * Optional. The time the event that caused this alert ceased being active. If provided, the end
+   * time must not be earlier than the start time. If not provided, the end time defaults to the
+   * start time.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -212,8 +208,9 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The time this alert was no longer active. If provided, the end time must not be
-   * earlier than the start time. If not provided, the end time will default to the start time.
+   * Optional. The time the event that caused this alert ceased being active. If provided, the end
+   * time must not be earlier than the start time. If not provided, the end time defaults to the
+   * start time.
    * @param endTime endTime or {@code null} for none
    */
   public Alert setEndTime(String endTime) {
@@ -222,7 +219,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An optional Security Investigation Tool query for this alert.
+   * Output only. An optional [Security Investigation
+   * Tool](https://support.google.com/a/answer/7575955) query for this alert.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityInvestigationToolLink() {
@@ -230,7 +228,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An optional Security Investigation Tool query for this alert.
+   * Output only. An optional [Security Investigation
+   * Tool](https://support.google.com/a/answer/7575955) query for this alert.
    * @param securityInvestigationToolLink securityInvestigationToolLink or {@code null} for none
    */
   public Alert setSecurityInvestigationToolLink(java.lang.String securityInvestigationToolLink) {
@@ -241,9 +240,10 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the system that is reported the alert.
    *
-   * Supported sources are any of the following:  * "Google Operations"  * "Mobile device
-   * management"  * "Gmail phishing"  * "Domain wide takeout"  * "Government attack warning"  *
-   * "Google identity"
+   * Supported sources are any of the following:
+   *
+   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout *
+   * Government attack warning * Google identity
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -253,9 +253,10 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the system that is reported the alert.
    *
-   * Supported sources are any of the following:  * "Google Operations"  * "Mobile device
-   * management"  * "Gmail phishing"  * "Domain wide takeout"  * "Government attack warning"  *
-   * "Google identity"
+   * Supported sources are any of the following:
+   *
+   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout *
+   * Government attack warning * Google identity
    * @param source source or {@code null} for none
    */
   public Alert setSource(java.lang.String source) {
@@ -264,7 +265,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time this alert became active.
+   * Required. The time the event that caused this alert was started or detected.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -272,7 +273,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time this alert became active.
+   * Required. The time the event that caused this alert was started or detected.
    * @param startTime startTime or {@code null} for none
    */
   public Alert setStartTime(String startTime) {
@@ -281,16 +282,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the alert.
-   *
-   * Supported types are any of the following:  * "Google Operations"  * "Device compromised"  *
-   * "Suspicious activity"  * "User reported phishing"  * "Misconfigured whitelist"  * "Customer
-   * takeout initiated"  * "Government attack warning"  * "User reported spam spike"  * "Suspicious
-   * message reported"  * "Phishing reclassification"  * "Malware reclassification" LINT.IfChange  *
-   * "Suspicious login"  * "Suspicious login (less secure app)"  * "User suspended"  * "Leaked
-   * password"  * "User suspended (suspicious activity)"  * "User suspended (spam)"  * "User
-   * suspended (spam through relay)"
-   * LINT.ThenChange(//depot/google3/apps/albert/data/albert_enums.proto)
+   * Required. The type of the alert. For a list of available alert types see [G Suite Alert types
+   * ](/admin-sdk/alertcenter/reference/alert-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -298,16 +291,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the alert.
-   *
-   * Supported types are any of the following:  * "Google Operations"  * "Device compromised"  *
-   * "Suspicious activity"  * "User reported phishing"  * "Misconfigured whitelist"  * "Customer
-   * takeout initiated"  * "Government attack warning"  * "User reported spam spike"  * "Suspicious
-   * message reported"  * "Phishing reclassification"  * "Malware reclassification" LINT.IfChange  *
-   * "Suspicious login"  * "Suspicious login (less secure app)"  * "User suspended"  * "Leaked
-   * password"  * "User suspended (suspicious activity)"  * "User suspended (spam)"  * "User
-   * suspended (spam through relay)"
-   * LINT.ThenChange(//depot/google3/apps/albert/data/albert_enums.proto)
+   * Required. The type of the alert. For a list of available alert types see [G Suite Alert types
+   * ](/admin-sdk/alertcenter/reference/alert-types).
    * @param type type or {@code null} for none
    */
   public Alert setType(java.lang.String type) {

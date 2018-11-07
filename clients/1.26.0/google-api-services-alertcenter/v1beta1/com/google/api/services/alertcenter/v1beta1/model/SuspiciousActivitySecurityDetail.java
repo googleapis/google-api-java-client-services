@@ -31,7 +31,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class SuspiciousActivitySecurityDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Device Info.
+   * Required. The device ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   private java.lang.String deviceModel;
 
   /**
-   * Device property which is changed.
+   * The device property which was changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,28 +59,28 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   private java.lang.String deviceType;
 
   /**
-   * Required for IOS, empty for others.
+   * Required for iOS, empty for others.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iosVendorId;
 
   /**
-   * New value of the device property after change.
+   * The new value of the device property after the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String newValue;
 
   /**
-   * Old value of the device property before change.
+   * The old value of the device property before the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String oldValue;
 
   /**
-   * The device resource id.
+   * The device resource ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   private java.lang.String serialNumber;
 
   /**
-   * Required. Device Info.
+   * Required. The device ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceId() {
@@ -102,7 +102,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Required. Device Info.
+   * Required. The device ID.
    * @param deviceId deviceId or {@code null} for none
    */
   public SuspiciousActivitySecurityDetail setDeviceId(java.lang.String deviceId) {
@@ -128,7 +128,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Device property which is changed.
+   * The device property which was changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceProperty() {
@@ -136,7 +136,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Device property which is changed.
+   * The device property which was changed.
    * @param deviceProperty deviceProperty or {@code null} for none
    */
   public SuspiciousActivitySecurityDetail setDeviceProperty(java.lang.String deviceProperty) {
@@ -162,7 +162,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Required for IOS, empty for others.
+   * Required for iOS, empty for others.
    * @return value or {@code null} for none
    */
   public java.lang.String getIosVendorId() {
@@ -170,7 +170,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Required for IOS, empty for others.
+   * Required for iOS, empty for others.
    * @param iosVendorId iosVendorId or {@code null} for none
    */
   public SuspiciousActivitySecurityDetail setIosVendorId(java.lang.String iosVendorId) {
@@ -179,7 +179,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * New value of the device property after change.
+   * The new value of the device property after the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getNewValue() {
@@ -187,7 +187,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * New value of the device property after change.
+   * The new value of the device property after the change.
    * @param newValue newValue or {@code null} for none
    */
   public SuspiciousActivitySecurityDetail setNewValue(java.lang.String newValue) {
@@ -196,7 +196,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Old value of the device property before change.
+   * The old value of the device property before the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getOldValue() {
@@ -204,7 +204,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * Old value of the device property before change.
+   * The old value of the device property before the change.
    * @param oldValue oldValue or {@code null} for none
    */
   public SuspiciousActivitySecurityDetail setOldValue(java.lang.String oldValue) {
@@ -213,7 +213,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * The device resource id.
+   * The device resource ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceId() {
@@ -221,7 +221,7 @@ public final class SuspiciousActivitySecurityDetail extends com.google.api.clien
   }
 
   /**
-   * The device resource id.
+   * The device resource ID.
    * @param resourceId resourceId or {@code null} for none
    */
   public SuspiciousActivitySecurityDetail setResourceId(java.lang.String resourceId) {

@@ -31,21 +31,21 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class DomainWideTakeoutInitiated extends com.google.api.client.json.GenericJson {
 
   /**
-   * Email of the admin who initiated the takeout.
+   * The email of the admin who initiated the takeout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * takeout request id.
+   * The takeout request ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String takeoutRequestId;
 
   /**
-   * Email of the admin who initiated the takeout.
+   * The email of the admin who initiated the takeout.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -53,7 +53,7 @@ public final class DomainWideTakeoutInitiated extends com.google.api.client.json
   }
 
   /**
-   * Email of the admin who initiated the takeout.
+   * The email of the admin who initiated the takeout.
    * @param email email or {@code null} for none
    */
   public DomainWideTakeoutInitiated setEmail(java.lang.String email) {
@@ -62,7 +62,7 @@ public final class DomainWideTakeoutInitiated extends com.google.api.client.json
   }
 
   /**
-   * takeout request id.
+   * The takeout request ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getTakeoutRequestId() {
@@ -70,7 +70,7 @@ public final class DomainWideTakeoutInitiated extends com.google.api.client.json
   }
 
   /**
-   * takeout request id.
+   * The takeout request ID.
    * @param takeoutRequestId takeoutRequestId or {@code null} for none
    */
   public DomainWideTakeoutInitiated setTakeoutRequestId(java.lang.String takeoutRequestId) {

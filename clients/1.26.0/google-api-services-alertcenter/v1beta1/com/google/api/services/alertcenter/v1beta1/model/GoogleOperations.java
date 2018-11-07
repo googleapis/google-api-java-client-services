@@ -31,36 +31,36 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class GoogleOperations extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of emails which correspond to the users directly affected by the incident.
+   * The list of emails which correspond to the users directly affected by the incident.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> affectedUserEmails;
 
   /**
-   * Optional application-specific data for an incident, provided when the G Suite application which
-   * reported the incident cannot be completely restored to a valid state.
+   * Optional. Application-specific data for an incident, provided when the G Suite application
+   * which reported the incident cannot be completely restored to a valid state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Attachment attachmentData;
 
   /**
-   * Detailed, freeform incident description.
+   * A detailed, freeform incident description.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * One-line incident description.
+   * A one-line incident description.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * List of emails which correspond to the users directly affected by the incident.
+   * The list of emails which correspond to the users directly affected by the incident.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAffectedUserEmails() {
@@ -68,7 +68,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * List of emails which correspond to the users directly affected by the incident.
+   * The list of emails which correspond to the users directly affected by the incident.
    * @param affectedUserEmails affectedUserEmails or {@code null} for none
    */
   public GoogleOperations setAffectedUserEmails(java.util.List<java.lang.String> affectedUserEmails) {
@@ -77,8 +77,8 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional application-specific data for an incident, provided when the G Suite application which
-   * reported the incident cannot be completely restored to a valid state.
+   * Optional. Application-specific data for an incident, provided when the G Suite application
+   * which reported the incident cannot be completely restored to a valid state.
    * @return value or {@code null} for none
    */
   public Attachment getAttachmentData() {
@@ -86,8 +86,8 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional application-specific data for an incident, provided when the G Suite application which
-   * reported the incident cannot be completely restored to a valid state.
+   * Optional. Application-specific data for an incident, provided when the G Suite application
+   * which reported the incident cannot be completely restored to a valid state.
    * @param attachmentData attachmentData or {@code null} for none
    */
   public GoogleOperations setAttachmentData(Attachment attachmentData) {
@@ -96,7 +96,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Detailed, freeform incident description.
+   * A detailed, freeform incident description.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -104,7 +104,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Detailed, freeform incident description.
+   * A detailed, freeform incident description.
    * @param description description or {@code null} for none
    */
   public GoogleOperations setDescription(java.lang.String description) {
@@ -113,7 +113,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * One-line incident description.
+   * A one-line incident description.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -121,7 +121,7 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * One-line incident description.
+   * A one-line incident description.
    * @param title title or {@code null} for none
    */
   public GoogleOperations setTitle(java.lang.String title) {

@@ -17,9 +17,10 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Proto for all phishing alerts with common payload. Supported types are any of the following: User
- * reported phishing User reported spam spike Suspicious message reported Phishing reclassification
- * Malware reclassification
+ * Proto for all phishing alerts with common payload. Supported types are any of the following:
+ *
+ * * User reported phishing * User reported spam spike * Suspicious message reported * Phishing
+ * reclassification * Malware reclassification
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -33,28 +34,28 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class MailPhishing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Domain id.
+   * The domain ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DomainId domainId;
 
   /**
-   * If true, the email is originated from within the organization.
+   * If `true`, the email originated from within the organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isInternal;
 
   /**
-   * Entity whose actions triggered a Gmail phishing alert.
+   * The entity whose actions triggered a Gmail phishing alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MaliciousEntity maliciousEntity;
 
   /**
-   * Every alert could contain multiple messages.
+   * The list of messages contained by this alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain id.
+   * The domain ID.
    * @return value or {@code null} for none
    */
   public DomainId getDomainId() {
@@ -75,7 +76,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain id.
+   * The domain ID.
    * @param domainId domainId or {@code null} for none
    */
   public MailPhishing setDomainId(DomainId domainId) {
@@ -84,7 +85,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the email is originated from within the organization.
+   * If `true`, the email originated from within the organization.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsInternal() {
@@ -92,7 +93,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the email is originated from within the organization.
+   * If `true`, the email originated from within the organization.
    * @param isInternal isInternal or {@code null} for none
    */
   public MailPhishing setIsInternal(java.lang.Boolean isInternal) {
@@ -101,7 +102,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Entity whose actions triggered a Gmail phishing alert.
+   * The entity whose actions triggered a Gmail phishing alert.
    * @return value or {@code null} for none
    */
   public MaliciousEntity getMaliciousEntity() {
@@ -109,7 +110,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Entity whose actions triggered a Gmail phishing alert.
+   * The entity whose actions triggered a Gmail phishing alert.
    * @param maliciousEntity maliciousEntity or {@code null} for none
    */
   public MailPhishing setMaliciousEntity(MaliciousEntity maliciousEntity) {
@@ -118,7 +119,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Every alert could contain multiple messages.
+   * The list of messages contained by this alert.
    * @return value or {@code null} for none
    */
   public java.util.List<GmailMessageInfo> getMessages() {
@@ -126,7 +127,7 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Every alert could contain multiple messages.
+   * The list of messages contained by this alert.
    * @param messages messages or {@code null} for none
    */
   public MailPhishing setMessages(java.util.List<GmailMessageInfo> messages) {

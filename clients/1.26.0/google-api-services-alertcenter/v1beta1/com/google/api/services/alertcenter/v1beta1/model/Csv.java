@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Representation of a CSV file attachment, as a list of column headers and a list of data rows.
+ * A representation of a CSV file attachment, as a list of column headers and a list of data rows.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class Csv extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of data rows in a CSV file, as string arrays rather than as a single comma-separated
+   * The list of data rows in a CSV file, as string arrays rather than as a single comma-separated
    * string.
    * The value may be {@code null}.
    */
@@ -45,14 +45,14 @@ public final class Csv extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of headers for data columns in a CSV file.
+   * The list of headers for data columns in a CSV file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> headers;
 
   /**
-   * List of data rows in a CSV file, as string arrays rather than as a single comma-separated
+   * The list of data rows in a CSV file, as string arrays rather than as a single comma-separated
    * string.
    * @return value or {@code null} for none
    */
@@ -61,7 +61,7 @@ public final class Csv extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of data rows in a CSV file, as string arrays rather than as a single comma-separated
+   * The list of data rows in a CSV file, as string arrays rather than as a single comma-separated
    * string.
    * @param dataRows dataRows or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class Csv extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of headers for data columns in a CSV file.
+   * The list of headers for data columns in a CSV file.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHeaders() {
@@ -79,7 +79,7 @@ public final class Csv extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of headers for data columns in a CSV file.
+   * The list of headers for data columns in a CSV file.
    * @param headers headers or {@code null} for none
    */
   public Csv setHeaders(java.util.List<java.lang.String> headers) {

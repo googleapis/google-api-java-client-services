@@ -58,6 +58,19 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
+   * List of warnings that ocurred while handling the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ApiWarning> warnings;
+
+  static {
+    // hack to force ProGuard to consider ApiWarning used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ApiWarning.class);
+  }
+
+  /**
    * List of database instance resources.
    * @return value or {@code null} for none
    */
@@ -107,6 +120,23 @@ public final class InstancesListResponse extends com.google.api.client.json.Gene
    */
   public InstancesListResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * List of warnings that ocurred while handling the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ApiWarning> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * List of warnings that ocurred while handling the request.
+   * @param warnings warnings or {@code null} for none
+   */
+  public InstancesListResponse setWarnings(java.util.List<ApiWarning> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

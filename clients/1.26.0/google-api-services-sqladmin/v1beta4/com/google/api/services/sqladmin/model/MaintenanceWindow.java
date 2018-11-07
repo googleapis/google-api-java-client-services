@@ -18,7 +18,7 @@ package com.google.api.services.sqladmin.model;
 
 /**
  * Maintenance window. This specifies when a v2 Cloud SQL instance should preferably be restarted
- * for system maintenance puruposes.
+ * for system maintenance purposes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:

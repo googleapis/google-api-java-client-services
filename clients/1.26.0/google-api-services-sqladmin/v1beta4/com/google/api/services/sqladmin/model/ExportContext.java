@@ -261,6 +261,13 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   public static final class SqlExportOptions extends com.google.api.client.json.GenericJson {
 
     /**
+     * Options for exporting from MySQL.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private MysqlExportOptions mysqlExportOptions;
+
+    /**
      * Export only schemas.
      * The value may be {@code null}.
      */
@@ -274,6 +281,23 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
      */
     @com.google.api.client.util.Key
     private java.util.List<java.lang.String> tables;
+
+    /**
+     * Options for exporting from MySQL.
+     * @return value or {@code null} for none
+     */
+    public MysqlExportOptions getMysqlExportOptions() {
+      return mysqlExportOptions;
+    }
+
+    /**
+     * Options for exporting from MySQL.
+     * @param mysqlExportOptions mysqlExportOptions or {@code null} for none
+     */
+    public SqlExportOptions setMysqlExportOptions(MysqlExportOptions mysqlExportOptions) {
+      this.mysqlExportOptions = mysqlExportOptions;
+      return this;
+    }
 
     /**
      * Export only schemas.
@@ -321,6 +345,55 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
       return (SqlExportOptions) super.clone();
     }
 
+    /**
+     * Options for exporting from MySQL.
+     */
+    public static final class MysqlExportOptions extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Option to include SQL statement required to set up replication. If set to 1, the dump file
+       * includes a CHANGE MASTER TO statement with the binary log coordinates. If set to 2, the CHANGE
+       * MASTER TO statement is written as a SQL comment, and has no effect. All other values are
+       * ignored.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer masterData;
+
+      /**
+       * Option to include SQL statement required to set up replication. If set to 1, the dump file
+       * includes a CHANGE MASTER TO statement with the binary log coordinates. If set to 2, the CHANGE
+       * MASTER TO statement is written as a SQL comment, and has no effect. All other values are
+       * ignored.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Integer getMasterData() {
+        return masterData;
+      }
+
+      /**
+       * Option to include SQL statement required to set up replication. If set to 1, the dump file
+       * includes a CHANGE MASTER TO statement with the binary log coordinates. If set to 2, the CHANGE
+       * MASTER TO statement is written as a SQL comment, and has no effect. All other values are
+       * ignored.
+       * @param masterData masterData or {@code null} for none
+       */
+      public MysqlExportOptions setMasterData(java.lang.Integer masterData) {
+        this.masterData = masterData;
+        return this;
+      }
+
+      @Override
+      public MysqlExportOptions set(String fieldName, Object value) {
+        return (MysqlExportOptions) super.set(fieldName, value);
+      }
+
+      @Override
+      public MysqlExportOptions clone() {
+        return (MysqlExportOptions) super.clone();
+      }
+
+    }
   }
 
 }

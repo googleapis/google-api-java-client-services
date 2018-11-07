@@ -20,7 +20,7 @@ package com.google.api.services.slides.v1;
  * Service definition for Slides (v1).
  *
  * <p>
- * An API for creating and editing Google Slides presentations.
+ * Reads and writes Google Slides presentations.
  * </p>
  *
  * <p>

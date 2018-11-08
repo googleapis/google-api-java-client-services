@@ -45,6 +45,12 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Connection> connections;
 
+  static {
+    // hack to force ProGuard to consider Connection used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Connection.class);
+  }
+
   /**
    * Output only. The download URL for the photo bytes. This field is set only when
    * GetPhotoRequest.view is set to PhotoView.INCLUDE_DOWNLOAD_URL.
@@ -67,6 +73,12 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Place> places;
+
+  static {
+    // hack to force ProGuard to consider Place used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Place.class);
+  }
 
   /**
    * Pose of the photo.

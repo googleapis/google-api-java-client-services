@@ -23,7 +23,7 @@ package com.google.api.services.calendar;
  */
 public class CalendarScopes {
 
-  /** Manage your calendars. */
+  /** See, edit, share, and permanently delete all the calendars you can access using Google Calendar. */
   public static final String CALENDAR = "https://www.googleapis.com/auth/calendar";
 
   /** View and edit events on all your calendars. */

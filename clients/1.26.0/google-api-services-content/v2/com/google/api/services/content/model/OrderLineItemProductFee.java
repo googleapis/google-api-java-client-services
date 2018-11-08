@@ -38,13 +38,6 @@ public final class OrderLineItemProductFee extends com.google.api.client.json.Ge
   private Price amount;
 
   /**
-   * Case-insensitive fee ID.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String id;
-
-  /**
    * Name of the fee.
    * The value may be {@code null}.
    */
@@ -65,23 +58,6 @@ public final class OrderLineItemProductFee extends com.google.api.client.json.Ge
    */
   public OrderLineItemProductFee setAmount(Price amount) {
     this.amount = amount;
-    return this;
-  }
-
-  /**
-   * Case-insensitive fee ID.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getId() {
-    return id;
-  }
-
-  /**
-   * Case-insensitive fee ID.
-   * @param id id or {@code null} for none
-   */
-  public OrderLineItemProductFee setId(java.lang.String id) {
-    this.id = id;
     return this;
   }
 

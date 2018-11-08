@@ -23,7 +23,7 @@ package com.google.api.services.tasks;
  */
 public class TasksScopes {
 
-  /** Manage your tasks. */
+  /** Create, edit, organize, and delete all your tasks. */
   public static final String TASKS = "https://www.googleapis.com/auth/tasks";
 
   /** View your tasks. */

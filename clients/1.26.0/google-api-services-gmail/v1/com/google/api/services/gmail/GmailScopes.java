@@ -23,7 +23,7 @@ package com.google.api.services.gmail;
  */
 public class GmailScopes {
 
-  /** Read, send, delete, and manage your email. */
+  /** Read, compose, send, and permanently delete all your email from Gmail. */
   public static final String MAIL_GOOGLE_COM = "https://mail.google.com/";
 
   /** Manage drafts and send emails. */

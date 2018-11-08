@@ -23,7 +23,7 @@ package com.google.api.services.drive;
  */
 public class DriveScopes {
 
-  /** View and manage the files in your Google Drive. */
+  /** See, edit, create, and delete all of your Google Drive files. */
   public static final String DRIVE = "https://www.googleapis.com/auth/drive";
 
   /** View and manage its own configuration data in your Google Drive. */
@@ -41,7 +41,7 @@ public class DriveScopes {
   /** View the photos, videos and albums in your Google Photos. */
   public static final String DRIVE_PHOTOS_READONLY = "https://www.googleapis.com/auth/drive.photos.readonly";
 
-  /** View the files in your Google Drive. */
+  /** See and download all your Google Drive files. */
   public static final String DRIVE_READONLY = "https://www.googleapis.com/auth/drive.readonly";
 
   /** Modify your Google Apps Script scripts' behavior. */

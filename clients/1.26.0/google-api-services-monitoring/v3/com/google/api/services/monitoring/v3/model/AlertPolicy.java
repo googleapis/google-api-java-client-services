@@ -48,12 +48,6 @@ public final class AlertPolicy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Condition> conditions;
 
-  static {
-    // hack to force ProGuard to consider Condition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Condition.class);
-  }
-
   /**
    * A read-only record of the creation of the alerting policy. If provided in a call to create or
    * update, this field will be ignored.

@@ -55,6 +55,12 @@ public final class ListUptimeCheckConfigsResponse extends com.google.api.client.
   @com.google.api.client.util.Key
   private java.util.List<UptimeCheckConfig> uptimeCheckConfigs;
 
+  static {
+    // hack to force ProGuard to consider UptimeCheckConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(UptimeCheckConfig.class);
+  }
+
   /**
    * This field represents the pagination token to retrieve the next page of results. If the value
    * is empty, it means no further results for the request. To retrieve the next page of results,

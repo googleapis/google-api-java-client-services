@@ -1004,6 +1004,21 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /**
+
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

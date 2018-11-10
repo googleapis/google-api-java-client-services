@@ -171,6 +171,14 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String quote;
 
   /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RangePartitioning rangePartitioning;
+
+  /**
    * [Optional] The schema for the destination table. The schema can be omitted if the destination
    * table already exists, or if you're loading data from Google Cloud Datastore.
    * The value may be {@code null}.
@@ -239,16 +247,17 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> sourceUris;
 
   /**
-   * Time-based partitioning specification for the destination table.
+   * Time-based partitioning specification for the destination table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimePartitioning timePartitioning;
 
   /**
-   * If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into
-   * their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
-   * The default value will be true once this feature launches, but can be set now in preparation.
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical
+   * types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
+   * (ie. INTEGER).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -595,6 +604,25 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * @return value or {@code null} for none
+   */
+  public RangePartitioning getRangePartitioning() {
+    return rangePartitioning;
+  }
+
+  /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * @param rangePartitioning rangePartitioning or {@code null} for none
+   */
+  public JobConfigurationLoad setRangePartitioning(RangePartitioning rangePartitioning) {
+    this.rangePartitioning = rangePartitioning;
+    return this;
+  }
+
+  /**
    * [Optional] The schema for the destination table. The schema can be omitted if the destination
    * table already exists, or if you're loading data from Google Cloud Datastore.
    * @return value or {@code null} for none
@@ -752,7 +780,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Time-based partitioning specification for the destination table.
+   * Time-based partitioning specification for the destination table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
   public TimePartitioning getTimePartitioning() {
@@ -760,7 +789,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Time-based partitioning specification for the destination table.
+   * Time-based partitioning specification for the destination table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
    * @param timePartitioning timePartitioning or {@code null} for none
    */
   public JobConfigurationLoad setTimePartitioning(TimePartitioning timePartitioning) {
@@ -769,9 +799,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into
-   * their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
-   * The default value will be true once this feature launches, but can be set now in preparation.
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical
+   * types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
+   * (ie. INTEGER).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAvroLogicalTypes() {
@@ -779,9 +809,9 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical types into
-   * their corresponding types (ie. TIMESTAMP), instead of only using their raw types (ie. INTEGER).
-   * The default value will be true once this feature launches, but can be set now in preparation.
+   * [Optional] If sourceFormat is set to "AVRO", indicates whether to enable interpreting logical
+   * types into their corresponding types (ie. TIMESTAMP), instead of only using their raw types
+   * (ie. INTEGER).
    * @param useAvroLogicalTypes useAvroLogicalTypes or {@code null} for none
    */
   public JobConfigurationLoad setUseAvroLogicalTypes(java.lang.Boolean useAvroLogicalTypes) {

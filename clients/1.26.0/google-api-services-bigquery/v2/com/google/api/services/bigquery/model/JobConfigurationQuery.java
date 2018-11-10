@@ -148,6 +148,14 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.util.List<QueryParameter> queryParameters;
 
   /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RangePartitioning rangePartitioning;
+
+  /**
    * Allows the schema of the destination table to be updated as a side effect of the query job.
    * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
    * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
@@ -176,7 +184,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time-based partitioning specification for the destination table.
+   * Time-based partitioning specification for the destination table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -561,6 +570,25 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * @return value or {@code null} for none
+   */
+  public RangePartitioning getRangePartitioning() {
+    return rangePartitioning;
+  }
+
+  /**
+   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
+   * @param rangePartitioning rangePartitioning or {@code null} for none
+   */
+  public JobConfigurationQuery setRangePartitioning(RangePartitioning rangePartitioning) {
+    this.rangePartitioning = rangePartitioning;
+    return this;
+  }
+
+  /**
    * Allows the schema of the destination table to be updated as a side effect of the query job.
    * Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when
    * writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table,
@@ -611,7 +639,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time-based partitioning specification for the destination table.
+   * Time-based partitioning specification for the destination table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
   public TimePartitioning getTimePartitioning() {
@@ -619,7 +648,8 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   }
 
   /**
-   * Time-based partitioning specification for the destination table.
+   * Time-based partitioning specification for the destination table. Only one of timePartitioning
+   * and rangePartitioning should be specified.
    * @param timePartitioning timePartitioning or {@code null} for none
    */
   public JobConfigurationQuery setTimePartitioning(TimePartitioning timePartitioning) {

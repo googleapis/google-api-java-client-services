@@ -38,12 +38,6 @@ public final class CreateCollectdTimeSeriesResponse extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<CollectdPayloadError> payloadErrors;
 
-  static {
-    // hack to force ProGuard to consider CollectdPayloadError used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CollectdPayloadError.class);
-  }
-
   /**
    * Records the error status for points that were not written due to an error.Failed requests for
    * which nothing is written will return an error response instead.

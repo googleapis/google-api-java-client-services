@@ -74,6 +74,13 @@ public final class IosInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String iosIpadFallbackLink;
 
   /**
+   * iOS minimum version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iosMinimumVersion;
+
+  /**
    * iOS App Store ID.
    * @return value or {@code null} for none
    */
@@ -174,6 +181,23 @@ public final class IosInfo extends com.google.api.client.json.GenericJson {
    */
   public IosInfo setIosIpadFallbackLink(java.lang.String iosIpadFallbackLink) {
     this.iosIpadFallbackLink = iosIpadFallbackLink;
+    return this;
+  }
+
+  /**
+   * iOS minimum version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIosMinimumVersion() {
+    return iosMinimumVersion;
+  }
+
+  /**
+   * iOS minimum version.
+   * @param iosMinimumVersion iosMinimumVersion or {@code null} for none
+   */
+  public IosInfo setIosMinimumVersion(java.lang.String iosMinimumVersion) {
+    this.iosMinimumVersion = iosMinimumVersion;
     return this;
   }
 

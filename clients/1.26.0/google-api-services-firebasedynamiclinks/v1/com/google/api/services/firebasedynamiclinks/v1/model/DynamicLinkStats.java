@@ -37,6 +37,12 @@ public final class DynamicLinkStats extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<DynamicLinkEventStat> linkEventStats;
 
+  static {
+    // hack to force ProGuard to consider DynamicLinkEventStat used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DynamicLinkEventStat.class);
+  }
+
   /**
    * Dynamic Link event stats.
    * @return value or {@code null} for none

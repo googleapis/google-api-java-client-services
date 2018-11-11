@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-gmail</artifactId>
-  <version>v1-rev20180821-1.26.0</version>
-  <name>Gmail API v1-rev20180821-1.26.0</name>
+  <version>v1-rev20180904-1.26.0</version>
+  <name>Gmail API v1-rev20180904-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

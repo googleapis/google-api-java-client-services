@@ -315,6 +315,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Optional user-provided name for this snapshot. If the name is not provided in the
          * request, the server will assign a random name for this snapshot on the same project as
          * the subscription. Note that for REST API requests, you must specify a name.  See the
+         *
          * resource name rules. Format is `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
@@ -322,8 +323,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /** Optional user-provided name for this snapshot. If the name is not provided in the request, the
        server will assign a random name for this snapshot on the same project as the subscription. Note
-       that for REST API requests, you must specify a name.  See the resource name rules. Format is
-       `projects/{project}/snapshots/{snap}`.
+       that for REST API requests, you must specify a name.  See the
+
+       resource name rules. Format is `projects/{project}/snapshots/{snap}`.
          */
         public java.lang.String getName() {
           return name;
@@ -333,6 +335,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Optional user-provided name for this snapshot. If the name is not provided in the
          * request, the server will assign a random name for this snapshot on the same project as
          * the subscription. Note that for REST API requests, you must specify a name.  See the
+         *
          * resource name rules. Format is `projects/{project}/snapshots/{snap}`.
          */
         public Create setName(java.lang.String name) {
@@ -1600,9 +1603,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Creates a subscription to a given topic. See the  resource name rules. If the subscription
-       * already exists, returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns
-       * `NOT_FOUND`.
+       * Creates a subscription to a given topic. See the
+       *
+       * resource name rules. If the subscription already exists, returns `ALREADY_EXISTS`. If the
+       * corresponding topic doesn't exist, returns `NOT_FOUND`.
        *
        * If the name is not provided in the request, the server will assign a random name for this
        * subscription on the same project as the topic, conforming to the [resource name
@@ -1641,9 +1645,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/subscriptions/[^/]+$");
 
         /**
-         * Creates a subscription to a given topic. See the  resource name rules. If the subscription
-         * already exists, returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns
-         * `NOT_FOUND`.
+         * Creates a subscription to a given topic. See the
+         *
+         * resource name rules. If the subscription already exists, returns `ALREADY_EXISTS`. If the
+         * corresponding topic doesn't exist, returns `NOT_FOUND`.
          *
          * If the name is not provided in the request, the server will assign a random name for this
          * subscription on the same project as the topic, conforming to the [resource name
@@ -3454,7 +3459,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
     public class Topics {
 
       /**
-       * Creates the given topic with the given name. See the  resource name rules.
+       * Creates the given topic with the given name. See the
+       *
+       * resource name rules.
        *
        * Create a request for the method "topics.create".
        *
@@ -3487,7 +3494,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/topics/[^/]+$");
 
         /**
-         * Creates the given topic with the given name. See the  resource name rules.
+         * Creates the given topic with the given name. See the
+         *
+         * resource name rules.
          *
          * Create a request for the method "topics.create".
          *

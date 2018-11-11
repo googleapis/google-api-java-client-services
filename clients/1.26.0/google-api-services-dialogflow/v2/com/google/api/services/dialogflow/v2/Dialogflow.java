@@ -4932,6 +4932,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The unique identifier of the context. Format:
           `projects//agent/sessions//contexts/`.
+          The
+           *        `Context ID` is always converted to lowercase, may only contain
+          characters in
+           *        [a-zA-Z0-9_-%] and may be at most 250 bytes long.
            * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Context}
            * @return the request
            */
@@ -4961,6 +4965,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The unique identifier of the context. Format:
           `projects//agent/sessions//contexts/`.
+          The
+           *        `Context ID` is always converted to lowercase, may only contain
+          characters in
+           *        [a-zA-Z0-9_-%] and may be at most 250 bytes long.
              * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2Context}
              * @since 1.13
              */
@@ -5032,11 +5040,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The unique identifier of the context. Format:
              * `projects//agent/sessions//contexts/`.
+             *
+             * The `Context ID` is always converted to lowercase, may only contain characters in
+             * [a-zA-Z0-9_-%] and may be at most 250 bytes long.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`.
+
+           The `Context ID` is always converted to lowercase, may only contain characters in [a-zA-Z0-9_-%]
+           and may be at most 250 bytes long.
              */
             public java.lang.String getName() {
               return name;
@@ -5045,6 +5059,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The unique identifier of the context. Format:
              * `projects//agent/sessions//contexts/`.
+             *
+             * The `Context ID` is always converted to lowercase, may only contain characters in
+             * [a-zA-Z0-9_-%] and may be at most 250 bytes long.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

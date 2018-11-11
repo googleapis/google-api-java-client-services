@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestions extends 
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentMessageSuggestion> suggestions;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentMessageSuggestion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentMessageSuggestion.class);
+  }
+
   /**
    * Required. The list of suggested replies.
    * @return value or {@code null} for none

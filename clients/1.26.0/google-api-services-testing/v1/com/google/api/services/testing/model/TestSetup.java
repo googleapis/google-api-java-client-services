@@ -43,12 +43,6 @@ public final class TestSetup extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Apk> additionalApks;
 
-  static {
-    // hack to force ProGuard to consider Apk used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Apk.class);
-  }
-
   /**
    * List of directories on the device to upload to GCS at the end of the test; they must be
    * absolute paths under /sdcard or /data/local/tmp. Path names are restricted to characters a-z

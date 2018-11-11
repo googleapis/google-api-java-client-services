@@ -50,12 +50,6 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<AndroidVersion> versions;
 
-  static {
-    // hack to force ProGuard to consider AndroidVersion used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AndroidVersion.class);
-  }
-
   /**
    * The set of supported Android device models. @OutputOnly
    * @return value or {@code null} for none

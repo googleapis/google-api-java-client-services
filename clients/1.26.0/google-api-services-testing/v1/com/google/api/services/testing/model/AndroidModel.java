@@ -136,14 +136,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * True if and only if tests with this model DO NOT have video output. See also
-   * TestSpecification.disable_video_recording @OutputOnly
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean videoRecordingNotSupported;
-
-  /**
    * The company that this device is branded with. Example: "Google", "Samsung" @OutputOnly
    * @return value or {@code null} for none
    */
@@ -394,25 +386,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    */
   public AndroidModel setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
-    return this;
-  }
-
-  /**
-   * True if and only if tests with this model DO NOT have video output. See also
-   * TestSpecification.disable_video_recording @OutputOnly
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getVideoRecordingNotSupported() {
-    return videoRecordingNotSupported;
-  }
-
-  /**
-   * True if and only if tests with this model DO NOT have video output. See also
-   * TestSpecification.disable_video_recording @OutputOnly
-   * @param videoRecordingNotSupported videoRecordingNotSupported or {@code null} for none
-   */
-  public AndroidModel setVideoRecordingNotSupported(java.lang.Boolean videoRecordingNotSupported) {
-    this.videoRecordingNotSupported = videoRecordingNotSupported;
     return this;
   }
 

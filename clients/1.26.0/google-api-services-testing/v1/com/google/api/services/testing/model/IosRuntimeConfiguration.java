@@ -49,12 +49,6 @@ public final class IosRuntimeConfiguration extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<Orientation> orientations;
 
-  static {
-    // hack to force ProGuard to consider Orientation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Orientation.class);
-  }
-
   /**
    * Output only. The set of available locales.
    * @return value or {@code null} for none

@@ -53,6 +53,19 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ackDeadlineSeconds;
 
   /**
+   * A policy that specifies the conditions for this subscription's expiration. A subscription is
+   * considered active as long as any connected subscriber is successfully consuming messages from
+   * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
+   * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
+   * `expiration_policy.ttl` is 1 day. BETA: This feature is part of a beta release. This API might
+   * be changed in backward-incompatible ways and is not recommended for production use. It is not
+   * subject to any SLA or deprecation policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExpirationPolicy expirationPolicy;
+
+  /**
    * See  Creating and managing labels.
    * The value may be {@code null}.
    */
@@ -93,8 +106,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from
    * the subscription's backlog, even if they are acknowledged, until they fall out of the
-   * `message_retention_duration` window. This must be true if you would like to Seek to a
-   * timestamp.
+   * `message_retention_duration` window. This must be true if you would like to
+   *
+   * Seek to a timestamp.
    *
    * BETA: This feature is part of a beta release. This API might be changed in backward-
    * incompatible ways and is not recommended for production use. It is not subject to any SLA or
@@ -159,6 +173,35 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {
     this.ackDeadlineSeconds = ackDeadlineSeconds;
+    return this;
+  }
+
+  /**
+   * A policy that specifies the conditions for this subscription's expiration. A subscription is
+   * considered active as long as any connected subscriber is successfully consuming messages from
+   * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
+   * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
+   * `expiration_policy.ttl` is 1 day. BETA: This feature is part of a beta release. This API might
+   * be changed in backward-incompatible ways and is not recommended for production use. It is not
+   * subject to any SLA or deprecation policy.
+   * @return value or {@code null} for none
+   */
+  public ExpirationPolicy getExpirationPolicy() {
+    return expirationPolicy;
+  }
+
+  /**
+   * A policy that specifies the conditions for this subscription's expiration. A subscription is
+   * considered active as long as any connected subscriber is successfully consuming messages from
+   * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
+   * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
+   * `expiration_policy.ttl` is 1 day. BETA: This feature is part of a beta release. This API might
+   * be changed in backward-incompatible ways and is not recommended for production use. It is not
+   * subject to any SLA or deprecation policy.
+   * @param expirationPolicy expirationPolicy or {@code null} for none
+   */
+  public Subscription setExpirationPolicy(ExpirationPolicy expirationPolicy) {
+    this.expirationPolicy = expirationPolicy;
     return this;
   }
 
@@ -253,8 +296,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from
    * the subscription's backlog, even if they are acknowledged, until they fall out of the
-   * `message_retention_duration` window. This must be true if you would like to Seek to a
-   * timestamp.
+   * `message_retention_duration` window. This must be true if you would like to
+   *
+   * Seek to a timestamp.
    *
    * BETA: This feature is part of a beta release. This API might be changed in backward-
    * incompatible ways and is not recommended for production use. It is not subject to any SLA or
@@ -268,8 +312,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from
    * the subscription's backlog, even if they are acknowledged, until they fall out of the
-   * `message_retention_duration` window. This must be true if you would like to Seek to a
-   * timestamp.
+   * `message_retention_duration` window. This must be true if you would like to
+   *
+   * Seek to a timestamp.
    *
    * BETA: This feature is part of a beta release. This API might be changed in backward-
    * incompatible ways and is not recommended for production use. It is not subject to any SLA or

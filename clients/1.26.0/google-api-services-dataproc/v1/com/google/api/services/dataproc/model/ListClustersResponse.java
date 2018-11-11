@@ -36,6 +36,12 @@ public final class ListClustersResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Cluster> clusters;
 
+  static {
+    // hack to force ProGuard to consider Cluster used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Cluster.class);
+  }
+
   /**
    * Output only. This token is included in the response if there are more results to fetch. To
    * fetch additional results, provide this value as the page_token in a subsequent

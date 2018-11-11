@@ -60,6 +60,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private HiveJob hiveJob;
 
   /**
+   * Output only. A UUID that uniquely identifies a job within the project over time. This is in
+   * contrast to a user-settable reference.job_id that may be reused over time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jobUuid;
+
+  /**
    * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters,
    * and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty,
    * but, if present, must contain 1 to 63 characters, and must conform to RFC 1035
@@ -135,6 +143,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<JobStatus> statusHistory;
 
+  static {
+    // hack to force ProGuard to consider JobStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(JobStatus.class);
+  }
+
   /**
    * Output only. The collection of YARN applications spun up by this job.Beta Feature: This report
    * is available for testing purposes only. It may be changed before final release.
@@ -142,6 +156,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<YarnApplication> yarnApplications;
+
+  static {
+    // hack to force ProGuard to consider YarnApplication used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(YarnApplication.class);
+  }
 
   /**
    * Output only. If present, the location of miscellaneous control files which may be used as part
@@ -212,6 +232,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setHiveJob(HiveJob hiveJob) {
     this.hiveJob = hiveJob;
+    return this;
+  }
+
+  /**
+   * Output only. A UUID that uniquely identifies a job within the project over time. This is in
+   * contrast to a user-settable reference.job_id that may be reused over time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJobUuid() {
+    return jobUuid;
+  }
+
+  /**
+   * Output only. A UUID that uniquely identifies a job within the project over time. This is in
+   * contrast to a user-settable reference.job_id that may be reused over time.
+   * @param jobUuid jobUuid or {@code null} for none
+   */
+  public Job setJobUuid(java.lang.String jobUuid) {
+    this.jobUuid = jobUuid;
     return this;
   }
 

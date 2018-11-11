@@ -31,11 +31,62 @@ package com.google.api.services.streetviewpublish.v1.model;
 public final class Place extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output-only. The language_code that the name is localized with. This should be the
+   * language_code specified in the request, but may be a fallback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
+   * Output-only. The name of the place, localized to the language_code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Place identifier, as described in https://developers.google.com/places/place-id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String placeId;
+
+  /**
+   * Output-only. The language_code that the name is localized with. This should be the
+   * language_code specified in the request, but may be a fallback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Output-only. The language_code that the name is localized with. This should be the
+   * language_code specified in the request, but may be a fallback.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public Place setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Output-only. The name of the place, localized to the language_code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output-only. The name of the place, localized to the language_code.
+   * @param name name or {@code null} for none
+   */
+  public Place setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
 
   /**
    * Place identifier, as described in https://developers.google.com/places/place-id.

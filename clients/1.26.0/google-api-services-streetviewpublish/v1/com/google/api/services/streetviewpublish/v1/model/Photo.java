@@ -45,6 +45,12 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Connection> connections;
 
+  static {
+    // hack to force ProGuard to consider Connection used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Connection.class);
+  }
+
   /**
    * Output only. The download URL for the photo bytes. This field is set only when
    * GetPhotoRequest.view is set to PhotoView.INCLUDE_DOWNLOAD_URL.
@@ -52,6 +58,14 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String downloadUrl;
+
+  /**
+   * Output only. Status in Google Maps, whether this photo was published, or rejected for a
+   * possibly specified reason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mapsPublishStatus;
 
   /**
    * Required when updating a photo. Output only when creating a photo. Identifier for the photo,
@@ -67,6 +81,12 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Place> places;
+
+  static {
+    // hack to force ProGuard to consider Place used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Place.class);
+  }
 
   /**
    * Pose of the photo.
@@ -88,6 +108,13 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUrl;
+
+  /**
+   * Output only. Status of rights transfer on this photo.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transferStatus;
 
   /**
    * Required when creating a photo. Input only. The resource URL where the photo bytes are uploaded
@@ -156,6 +183,25 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   public Photo setDownloadUrl(java.lang.String downloadUrl) {
     this.downloadUrl = downloadUrl;
+    return this;
+  }
+
+  /**
+   * Output only. Status in Google Maps, whether this photo was published, or rejected for a
+   * possibly specified reason.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMapsPublishStatus() {
+    return mapsPublishStatus;
+  }
+
+  /**
+   * Output only. Status in Google Maps, whether this photo was published, or rejected for a
+   * possibly specified reason.
+   * @param mapsPublishStatus mapsPublishStatus or {@code null} for none
+   */
+  public Photo setMapsPublishStatus(java.lang.String mapsPublishStatus) {
+    this.mapsPublishStatus = mapsPublishStatus;
     return this;
   }
 
@@ -243,6 +289,23 @@ public final class Photo extends com.google.api.client.json.GenericJson {
    */
   public Photo setThumbnailUrl(java.lang.String thumbnailUrl) {
     this.thumbnailUrl = thumbnailUrl;
+    return this;
+  }
+
+  /**
+   * Output only. Status of rights transfer on this photo.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransferStatus() {
+    return transferStatus;
+  }
+
+  /**
+   * Output only. Status of rights transfer on this photo.
+   * @param transferStatus transferStatus or {@code null} for none
+   */
+  public Photo setTransferStatus(java.lang.String transferStatus) {
+    this.transferStatus = transferStatus;
     return this;
   }
 

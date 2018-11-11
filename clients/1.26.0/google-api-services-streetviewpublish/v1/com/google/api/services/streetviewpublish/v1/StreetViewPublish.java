@@ -526,6 +526,32 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
+       * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
+       * unspecified, the user's language preference for Google services will be used.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+     http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is unspecified,
+     the user's language preference for Google services will be used.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
+       * unspecified, the user's language preference for Google services will be used.
+       */
+      public Get setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
        * Specifies if a download URL for the photo bytes should be returned in the Photo response.
        */
       @com.google.api.client.util.Key
@@ -1127,6 +1153,32 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
+       * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
+       * unspecified, the user's language preference for Google services will be used.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+     http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is unspecified,
+     the user's language preference for Google services will be used.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
+       * unspecified, the user's language preference for Google services will be used.
+       */
+      public BatchGet setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+      }
+
+      /**
        * Required. IDs of the Photos. For HTTP GET requests, the URL query parameter should be
        * `photoIds==&...`.
        */
@@ -1429,6 +1481,32 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
+       * unspecified, the user's language preference for Google services will be used.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String languageCode;
+
+      /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+     http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is unspecified,
+     the user's language preference for Google services will be used.
+       */
+      public java.lang.String getLanguageCode() {
+        return languageCode;
+      }
+
+      /**
+       * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
+       * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
+       * unspecified, the user's language preference for Google services will be used.
+       */
+      public List setLanguageCode(java.lang.String languageCode) {
+        this.languageCode = languageCode;
         return this;
       }
 

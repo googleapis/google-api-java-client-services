@@ -5133,10 +5133,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and accountId must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which GMB access is requested.
+     * @param gmbEmail The email of the Google My Business account.
      * @return the request
      */
-    public Requestgmbaccess requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
-      Requestgmbaccess result = new Requestgmbaccess(merchantId, accountId);
+    public Requestgmbaccess requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String gmbEmail) throws java.io.IOException {
+      Requestgmbaccess result = new Requestgmbaccess(merchantId, accountId, gmbEmail);
       initialize(result);
       return result;
     }
@@ -5160,12 +5161,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and accountId must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which GMB access is requested.
+       * @param gmbEmail The email of the Google My Business account.
        * @since 1.13
        */
-      protected Requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
+      protected Requestgmbaccess(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String gmbEmail) {
         super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiasettingsRequestGmbAccessResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        this.gmbEmail = com.google.api.client.util.Preconditions.checkNotNull(gmbEmail, "Required parameter gmbEmail must be specified.");
       }
 
       @Override
@@ -5426,10 +5429,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and accountId must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
+     * @param contactEmail The email of the inventory verification contact.
+     * @param contactName The name of the inventory verification contact.
+     * @param country The country for which inventory verification is requested.
+     * @param language The language for which inventory verification is requested.
      * @return the request
      */
-    public Setinventoryverificationcontact setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
-      Setinventoryverificationcontact result = new Setinventoryverificationcontact(merchantId, accountId);
+    public Setinventoryverificationcontact setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String contactEmail, java.lang.String contactName, java.lang.String country, java.lang.String language) throws java.io.IOException {
+      Setinventoryverificationcontact result = new Setinventoryverificationcontact(merchantId, accountId, contactEmail, contactName, country, language);
       initialize(result);
       return result;
     }
@@ -5453,12 +5460,20 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and accountId must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account that manages the order. This cannot be a multi-client account.
+       * @param contactEmail The email of the inventory verification contact.
+       * @param contactName The name of the inventory verification contact.
+       * @param country The country for which inventory verification is requested.
+       * @param language The language for which inventory verification is requested.
        * @since 1.13
        */
-      protected Setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
+      protected Setinventoryverificationcontact(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String contactEmail, java.lang.String contactName, java.lang.String country, java.lang.String language) {
         super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiasettingsSetInventoryVerificationContactResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        this.contactEmail = com.google.api.client.util.Preconditions.checkNotNull(contactEmail, "Required parameter contactEmail must be specified.");
+        this.contactName = com.google.api.client.util.Preconditions.checkNotNull(contactName, "Required parameter contactName must be specified.");
+        this.country = com.google.api.client.util.Preconditions.checkNotNull(country, "Required parameter country must be specified.");
+        this.language = com.google.api.client.util.Preconditions.checkNotNull(language, "Required parameter language must be specified.");
       }
 
       @Override
@@ -5618,10 +5633,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and accountId must be the ID of a sub-account of this
      *        account.
      * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
+     * @param country The country for which the POS data provider is selected.
      * @return the request
      */
-    public Setposdataprovider setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId) throws java.io.IOException {
-      Setposdataprovider result = new Setposdataprovider(merchantId, accountId);
+    public Setposdataprovider setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String country) throws java.io.IOException {
+      Setposdataprovider result = new Setposdataprovider(merchantId, accountId, country);
       initialize(result);
       return result;
     }
@@ -5645,12 +5661,14 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      *        must be a multi-client account and accountId must be the ID of a sub-account of this
      *        account.
        * @param accountId The ID of the account for which to retrieve accessible Google My Business accounts.
+       * @param country The country for which the POS data provider is selected.
        * @since 1.13
        */
-      protected Setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId) {
+      protected Setposdataprovider(java.math.BigInteger merchantId, java.math.BigInteger accountId, java.lang.String country) {
         super(ShoppingContent.this, "POST", REST_PATH, null, com.google.api.services.content.model.LiasettingsSetPosDataProviderResponse.class);
         this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
         this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        this.country = com.google.api.client.util.Preconditions.checkNotNull(country, "Required parameter country must be specified.");
       }
 
       @Override

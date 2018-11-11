@@ -66,7 +66,9 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   private Price price;
 
   /**
-   * Product data from the time of the order placement.
+   * Product data as seen by customer from the time of the order placement. Note that certain
+   * attributes values (e.g. title or gtin) might be reformatted and no longer match values
+   * submitted via product feed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +216,9 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Product data from the time of the order placement.
+   * Product data as seen by customer from the time of the order placement. Note that certain
+   * attributes values (e.g. title or gtin) might be reformatted and no longer match values
+   * submitted via product feed.
    * @return value or {@code null} for none
    */
   public OrderLineItemProduct getProduct() {
@@ -222,7 +226,9 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Product data from the time of the order placement.
+   * Product data as seen by customer from the time of the order placement. Note that certain
+   * attributes values (e.g. title or gtin) might be reformatted and no longer match values
+   * submitted via product feed.
    * @param product product or {@code null} for none
    */
   public OrderLineItem setProduct(OrderLineItemProduct product) {

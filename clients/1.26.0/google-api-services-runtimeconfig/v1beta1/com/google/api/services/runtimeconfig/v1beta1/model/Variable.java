@@ -39,7 +39,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
    *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]
    *
    * The `[PROJECT_ID]` must be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig
-   * reource and `[VARIABLE_NAME]` follows Unix file system file path naming.
+   * resource and `[VARIABLE_NAME]` follows Unix file system file path naming.
    *
    * The `[VARIABLE_NAME]` can contain ASCII letters, numbers, slashes and dashes. Slashes are used
    * as path element separators and are not part of the `[VARIABLE_NAME]` itself, so
@@ -55,7 +55,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Ouput only] The current state of the variable. The variable state indicates the outcome of the
+   * Output only. The current state of the variable. The variable state indicates the outcome of the
    * `variables().watch` call and is visible through the `get` and `list` calls.
    * The value may be {@code null}.
    */
@@ -92,7 +92,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
    *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]
    *
    * The `[PROJECT_ID]` must be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig
-   * reource and `[VARIABLE_NAME]` follows Unix file system file path naming.
+   * resource and `[VARIABLE_NAME]` follows Unix file system file path naming.
    *
    * The `[VARIABLE_NAME]` can contain ASCII letters, numbers, slashes and dashes. Slashes are used
    * as path element separators and are not part of the `[VARIABLE_NAME]` itself, so
@@ -114,7 +114,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
    *     projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]
    *
    * The `[PROJECT_ID]` must be a valid project ID, `[CONFIG_NAME]` must be a valid RuntimeConfig
-   * reource and `[VARIABLE_NAME]` follows Unix file system file path naming.
+   * resource and `[VARIABLE_NAME]` follows Unix file system file path naming.
    *
    * The `[VARIABLE_NAME]` can contain ASCII letters, numbers, slashes and dashes. Slashes are used
    * as path element separators and are not part of the `[VARIABLE_NAME]` itself, so
@@ -132,7 +132,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Ouput only] The current state of the variable. The variable state indicates the outcome of the
+   * Output only. The current state of the variable. The variable state indicates the outcome of the
    * `variables().watch` call and is visible through the `get` and `list` calls.
    * @return value or {@code null} for none
    */
@@ -141,7 +141,7 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Ouput only] The current state of the variable. The variable state indicates the outcome of the
+   * Output only. The current state of the variable. The variable state indicates the outcome of the
    * `variables().watch` call and is visible through the `get` and `list` calls.
    * @param state state or {@code null} for none
    */

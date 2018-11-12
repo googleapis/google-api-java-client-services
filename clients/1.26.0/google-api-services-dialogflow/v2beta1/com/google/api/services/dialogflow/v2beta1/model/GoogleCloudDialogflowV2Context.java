@@ -40,6 +40,9 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
 
   /**
    * Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`.
+   *
+   * The `Context ID` is always converted to lowercase, may only contain characters in
+   * [a-zA-Z0-9_-%] and may be at most 250 bytes long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,6 +79,9 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
 
   /**
    * Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`.
+   *
+   * The `Context ID` is always converted to lowercase, may only contain characters in
+   * [a-zA-Z0-9_-%] and may be at most 250 bytes long.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,6 +90,9 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
 
   /**
    * Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`.
+   *
+   * The `Context ID` is always converted to lowercase, may only contain characters in
+   * [a-zA-Z0-9_-%] and may be at most 250 bytes long.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Context setName(java.lang.String name) {

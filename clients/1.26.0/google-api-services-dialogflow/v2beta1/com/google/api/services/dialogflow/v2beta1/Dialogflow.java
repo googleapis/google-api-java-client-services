@@ -3821,12 +3821,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * @param name Required. The unique identifier of the context. Format:
               `projects//agent/sessions//contexts/`,
               or
-               *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-              always
-               *        converted to lowercase. If `Environment ID` is not specified, we
-              assume default 'draft'
-               *        environment. If `User ID` is not specified, we
-              assume default '-' user.
+               *        `projects//agent/environments//users//sessions//contexts/`.
+              The `Context ID` is always
+               *        converted to lowercase, may only contain
+              characters in a-zA-Z0-9_-% and may be at most 250
+               *        bytes long.
+              If `Environment ID` is not specified, we assume default 'draft'
+              environment.
+               *        If `User ID` is not specified, we assume default '-' user.
                * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
                * @return the request
                */
@@ -3857,12 +3859,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * @param name Required. The unique identifier of the context. Format:
               `projects//agent/sessions//contexts/`,
               or
-               *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-              always
-               *        converted to lowercase. If `Environment ID` is not specified, we
-              assume default 'draft'
-               *        environment. If `User ID` is not specified, we
-              assume default '-' user.
+               *        `projects//agent/environments//users//sessions//contexts/`.
+              The `Context ID` is always
+               *        converted to lowercase, may only contain
+              characters in a-zA-Z0-9_-% and may be at most 250
+               *        bytes long.
+              If `Environment ID` is not specified, we assume default 'draft'
+              environment.
+               *        If `User ID` is not specified, we assume default '-' user.
                  * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
                  * @since 1.13
                  */
@@ -3934,18 +3938,25 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 /**
                  * Required. The unique identifier of the context. Format:
                  * `projects//agent/sessions//contexts/`, or
-                 * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-                 * always converted to lowercase. If `Environment ID` is not specified, we assume
-                 * default 'draft' environment. If `User ID` is not specified, we assume default '-'
-                 * user.
+                 * `projects//agent/environments//users//sessions//contexts/`.
+                 *
+                 * The `Context ID` is always converted to lowercase, may only contain characters in
+                 * a-zA-Z0-9_-% and may be at most 250 bytes long.
+                 *
+                 * If `Environment ID` is not specified, we assume default 'draft' environment. If
+                 * `User ID` is not specified, we assume default '-' user.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
                 /** Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`, or
-               `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always converted to
-               lowercase. If `Environment ID` is not specified, we assume default 'draft' environment. If `User
-               ID` is not specified, we assume default '-' user.
+               `projects//agent/environments//users//sessions//contexts/`.
+
+               The `Context ID` is always converted to lowercase, may only contain characters in a-zA-Z0-9_-% and
+               may be at most 250 bytes long.
+
+               If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not
+               specified, we assume default '-' user.
                  */
                 public java.lang.String getName() {
                   return name;
@@ -3954,10 +3965,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 /**
                  * Required. The unique identifier of the context. Format:
                  * `projects//agent/sessions//contexts/`, or
-                 * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-                 * always converted to lowercase. If `Environment ID` is not specified, we assume
-                 * default 'draft' environment. If `User ID` is not specified, we assume default '-'
-                 * user.
+                 * `projects//agent/environments//users//sessions//contexts/`.
+                 *
+                 * The `Context ID` is always converted to lowercase, may only contain characters in
+                 * a-zA-Z0-9_-% and may be at most 250 bytes long.
+                 *
+                 * If `Environment ID` is not specified, we assume default 'draft' environment. If
+                 * `User ID` is not specified, we assume default '-' user.
                  */
                 public Patch setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
@@ -8490,12 +8504,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * @param name Required. The unique identifier of the context. Format:
           `projects//agent/sessions//contexts/`,
           or
-           *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-          always
-           *        converted to lowercase. If `Environment ID` is not specified, we
-          assume default 'draft'
-           *        environment. If `User ID` is not specified, we
-          assume default '-' user.
+           *        `projects//agent/environments//users//sessions//contexts/`.
+          The `Context ID` is always
+           *        converted to lowercase, may only contain
+          characters in a-zA-Z0-9_-% and may be at most 250
+           *        bytes long.
+          If `Environment ID` is not specified, we assume default 'draft'
+          environment.
+           *        If `User ID` is not specified, we assume default '-' user.
            * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
            * @return the request
            */
@@ -8526,12 +8542,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * @param name Required. The unique identifier of the context. Format:
           `projects//agent/sessions//contexts/`,
           or
-           *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-          always
-           *        converted to lowercase. If `Environment ID` is not specified, we
-          assume default 'draft'
-           *        environment. If `User ID` is not specified, we
-          assume default '-' user.
+           *        `projects//agent/environments//users//sessions//contexts/`.
+          The `Context ID` is always
+           *        converted to lowercase, may only contain
+          characters in a-zA-Z0-9_-% and may be at most 250
+           *        bytes long.
+          If `Environment ID` is not specified, we assume default 'draft'
+          environment.
+           *        If `User ID` is not specified, we assume default '-' user.
              * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
              * @since 1.13
              */
@@ -8603,18 +8621,25 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The unique identifier of the context. Format:
              * `projects//agent/sessions//contexts/`, or
-             * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-             * always converted to lowercase. If `Environment ID` is not specified, we assume
-             * default 'draft' environment. If `User ID` is not specified, we assume default '-'
-             * user.
+             * `projects//agent/environments//users//sessions//contexts/`.
+             *
+             * The `Context ID` is always converted to lowercase, may only contain characters in
+             * a-zA-Z0-9_-% and may be at most 250 bytes long.
+             *
+             * If `Environment ID` is not specified, we assume default 'draft' environment. If `User
+             * ID` is not specified, we assume default '-' user.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`, or
-           `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always converted to
-           lowercase. If `Environment ID` is not specified, we assume default 'draft' environment. If `User
-           ID` is not specified, we assume default '-' user.
+           `projects//agent/environments//users//sessions//contexts/`.
+
+           The `Context ID` is always converted to lowercase, may only contain characters in a-zA-Z0-9_-% and
+           may be at most 250 bytes long.
+
+           If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not
+           specified, we assume default '-' user.
              */
             public java.lang.String getName() {
               return name;
@@ -8623,10 +8648,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The unique identifier of the context. Format:
              * `projects//agent/sessions//contexts/`, or
-             * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-             * always converted to lowercase. If `Environment ID` is not specified, we assume
-             * default 'draft' environment. If `User ID` is not specified, we assume default '-'
-             * user.
+             * `projects//agent/environments//users//sessions//contexts/`.
+             *
+             * The `Context ID` is always converted to lowercase, may only contain characters in
+             * a-zA-Z0-9_-% and may be at most 250 bytes long.
+             *
+             * If `Environment ID` is not specified, we assume default 'draft' environment. If `User
+             * ID` is not specified, we assume default '-' user.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -10478,12 +10506,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * @param name Required. The unique identifier of the context. Format:
             `projects//agent/sessions//contexts/`,
             or
-             *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-            always
-             *        converted to lowercase. If `Environment ID` is not specified, we
-            assume default 'draft'
-             *        environment. If `User ID` is not specified, we
-            assume default '-' user.
+             *        `projects//agent/environments//users//sessions//contexts/`.
+            The `Context ID` is always
+             *        converted to lowercase, may only contain
+            characters in a-zA-Z0-9_-% and may be at most 250
+             *        bytes long.
+            If `Environment ID` is not specified, we assume default 'draft'
+            environment.
+             *        If `User ID` is not specified, we assume default '-' user.
              * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
              * @return the request
              */
@@ -10514,12 +10544,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * @param name Required. The unique identifier of the context. Format:
             `projects//agent/sessions//contexts/`,
             or
-             *        `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-            always
-             *        converted to lowercase. If `Environment ID` is not specified, we
-            assume default 'draft'
-             *        environment. If `User ID` is not specified, we
-            assume default '-' user.
+             *        `projects//agent/environments//users//sessions//contexts/`.
+            The `Context ID` is always
+             *        converted to lowercase, may only contain
+            characters in a-zA-Z0-9_-% and may be at most 250
+             *        bytes long.
+            If `Environment ID` is not specified, we assume default 'draft'
+            environment.
+             *        If `User ID` is not specified, we assume default '-' user.
                * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Context}
                * @since 1.13
                */
@@ -10591,18 +10623,25 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The unique identifier of the context. Format:
                * `projects//agent/sessions//contexts/`, or
-               * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-               * always converted to lowercase. If `Environment ID` is not specified, we assume
-               * default 'draft' environment. If `User ID` is not specified, we assume default '-'
-               * user.
+               * `projects//agent/environments//users//sessions//contexts/`.
+               *
+               * The `Context ID` is always converted to lowercase, may only contain characters in
+               * a-zA-Z0-9_-% and may be at most 250 bytes long.
+               *
+               * If `Environment ID` is not specified, we assume default 'draft' environment. If
+               * `User ID` is not specified, we assume default '-' user.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The unique identifier of the context. Format: `projects//agent/sessions//contexts/`, or
-             `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is always converted to
-             lowercase. If `Environment ID` is not specified, we assume default 'draft' environment. If `User
-             ID` is not specified, we assume default '-' user.
+             `projects//agent/environments//users//sessions//contexts/`.
+
+             The `Context ID` is always converted to lowercase, may only contain characters in a-zA-Z0-9_-% and
+             may be at most 250 bytes long.
+
+             If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not
+             specified, we assume default '-' user.
                */
               public java.lang.String getName() {
                 return name;
@@ -10611,10 +10650,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The unique identifier of the context. Format:
                * `projects//agent/sessions//contexts/`, or
-               * `projects//agent/environments//users//sessions//contexts/`. The `Context ID` is
-               * always converted to lowercase. If `Environment ID` is not specified, we assume
-               * default 'draft' environment. If `User ID` is not specified, we assume default '-'
-               * user.
+               * `projects//agent/environments//users//sessions//contexts/`.
+               *
+               * The `Context ID` is always converted to lowercase, may only contain characters in
+               * a-zA-Z0-9_-% and may be at most 250 bytes long.
+               *
+               * If `Environment ID` is not specified, we assume default 'draft' environment. If
+               * `User ID` is not specified, we assume default '-' user.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

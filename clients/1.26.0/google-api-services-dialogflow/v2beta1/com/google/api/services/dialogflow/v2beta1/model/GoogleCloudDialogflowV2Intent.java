@@ -70,6 +70,12 @@ public final class GoogleCloudDialogflowV2Intent extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentFollowupIntentInfo> followupIntentInfo;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentFollowupIntentInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentFollowupIntentInfo.class);
+  }
+
   /**
    * Optional. The list of context names required for this intent to be triggered. Format:
    * `projects//agent/sessions/-/contexts/`.

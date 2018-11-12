@@ -70,6 +70,12 @@ public final class GoogleCloudDialogflowV2beta1WebhookResponse extends com.googl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Context> outputContexts;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1Context used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1Context.class);
+  }
+
   /**
    * Optional. This value is passed directly to `QueryResult.webhook_payload`. See the related
    * `fulfillment_messages[i].payload field`, which may be used as an alternative to this field.

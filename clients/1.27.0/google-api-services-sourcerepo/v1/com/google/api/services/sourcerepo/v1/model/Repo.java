@@ -53,12 +53,6 @@ public final class Repo extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, PubsubConfig> pubsubConfigs;
 
-  static {
-    // hack to force ProGuard to consider PubsubConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PubsubConfig.class);
-  }
-
   /**
    * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
    * The value may be {@code null}.

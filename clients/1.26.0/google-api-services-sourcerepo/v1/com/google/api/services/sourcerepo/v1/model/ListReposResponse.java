@@ -45,6 +45,12 @@ public final class ListReposResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Repo> repos;
 
+  static {
+    // hack to force ProGuard to consider Repo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Repo.class);
+  }
+
   /**
    * If non-empty, additional repositories exist within the project. These can be retrieved by
    * including this value in the next ListReposRequest's page_token field.

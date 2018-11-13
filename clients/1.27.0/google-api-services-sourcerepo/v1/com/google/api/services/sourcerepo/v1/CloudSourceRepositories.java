@@ -20,7 +20,7 @@ package com.google.api.services.sourcerepo.v1;
  * Service definition for CloudSourceRepositories (v1).
  *
  * <p>
- * Access source code repositories hosted by Google.
+ * Accesses source code repositories hosted by Google.
  * </p>
  *
  * <p>

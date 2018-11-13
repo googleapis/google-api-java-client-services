@@ -10980,6 +10980,707 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   }
 
   /**
+   * An accessor for creating requests from the Webapps collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidEnterprise androidenterprise = new AndroidEnterprise(...);}
+   *   {@code AndroidEnterprise.Webapps.List request = androidenterprise.webapps().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Webapps webapps() {
+    return new Webapps();
+  }
+
+  /**
+   * The "webapps" collection of methods.
+   */
+  public class Webapps {
+
+    /**
+     * Deletes an existing web app.
+     *
+     * Create a request for the method "webapps.delete".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @param webAppId The ID of the web app.
+     * @return the request
+     */
+    public Delete delete(java.lang.String enterpriseId, java.lang.String webAppId) throws java.io.IOException {
+      Delete result = new Delete(enterpriseId, webAppId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends AndroidEnterpriseRequest<Void> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+
+      /**
+       * Deletes an existing web app.
+       *
+       * Create a request for the method "webapps.delete".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @param webAppId The ID of the web app.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String enterpriseId, java.lang.String webAppId) {
+        super(AndroidEnterprise.this, "DELETE", REST_PATH, null, Void.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+        this.webAppId = com.google.api.client.util.Preconditions.checkNotNull(webAppId, "Required parameter webAppId must be specified.");
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public Delete setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /** The ID of the web app. */
+      @com.google.api.client.util.Key
+      private java.lang.String webAppId;
+
+      /** The ID of the web app.
+       */
+      public java.lang.String getWebAppId() {
+        return webAppId;
+      }
+
+      /** The ID of the web app. */
+      public Delete setWebAppId(java.lang.String webAppId) {
+        this.webAppId = webAppId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets an existing web app.
+     *
+     * Create a request for the method "webapps.get".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @param webAppId The ID of the web app.
+     * @return the request
+     */
+    public Get get(java.lang.String enterpriseId, java.lang.String webAppId) throws java.io.IOException {
+      Get result = new Get(enterpriseId, webAppId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+
+      /**
+       * Gets an existing web app.
+       *
+       * Create a request for the method "webapps.get".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @param webAppId The ID of the web app.
+       * @since 1.13
+       */
+      protected Get(java.lang.String enterpriseId, java.lang.String webAppId) {
+        super(AndroidEnterprise.this, "GET", REST_PATH, null, com.google.api.services.androidenterprise.model.WebApp.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+        this.webAppId = com.google.api.client.util.Preconditions.checkNotNull(webAppId, "Required parameter webAppId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public Get setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /** The ID of the web app. */
+      @com.google.api.client.util.Key
+      private java.lang.String webAppId;
+
+      /** The ID of the web app.
+       */
+      public java.lang.String getWebAppId() {
+        return webAppId;
+      }
+
+      /** The ID of the web app. */
+      public Get setWebAppId(java.lang.String webAppId) {
+        this.webAppId = webAppId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new web app for the enterprise.
+     *
+     * Create a request for the method "webapps.insert".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @param content the {@link com.google.api.services.androidenterprise.model.WebApp}
+     * @return the request
+     */
+    public Insert insert(java.lang.String enterpriseId, com.google.api.services.androidenterprise.model.WebApp content) throws java.io.IOException {
+      Insert result = new Insert(enterpriseId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps";
+
+      /**
+       * Creates a new web app for the enterprise.
+       *
+       * Create a request for the method "webapps.insert".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link Insert#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @param content the {@link com.google.api.services.androidenterprise.model.WebApp}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String enterpriseId, com.google.api.services.androidenterprise.model.WebApp content) {
+        super(AndroidEnterprise.this, "POST", REST_PATH, content, com.google.api.services.androidenterprise.model.WebApp.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public Insert setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the details of all web apps for a given enterprise.
+     *
+     * Create a request for the method "webapps.list".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @return the request
+     */
+    public List list(java.lang.String enterpriseId) throws java.io.IOException {
+      List result = new List(enterpriseId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebAppsListResponse> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps";
+
+      /**
+       * Retrieves the details of all web apps for a given enterprise.
+       *
+       * Create a request for the method "webapps.list".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @since 1.13
+       */
+      protected List(java.lang.String enterpriseId) {
+        super(AndroidEnterprise.this, "GET", REST_PATH, null, com.google.api.services.androidenterprise.model.WebAppsListResponse.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public List setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing web app. This method supports patch semantics.
+     *
+     * Create a request for the method "webapps.patch".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @param webAppId The ID of the web app.
+     * @param content the {@link com.google.api.services.androidenterprise.model.WebApp}
+     * @return the request
+     */
+    public Patch patch(java.lang.String enterpriseId, java.lang.String webAppId, com.google.api.services.androidenterprise.model.WebApp content) throws java.io.IOException {
+      Patch result = new Patch(enterpriseId, webAppId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+
+      /**
+       * Updates an existing web app. This method supports patch semantics.
+       *
+       * Create a request for the method "webapps.patch".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @param webAppId The ID of the web app.
+       * @param content the {@link com.google.api.services.androidenterprise.model.WebApp}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String enterpriseId, java.lang.String webAppId, com.google.api.services.androidenterprise.model.WebApp content) {
+        super(AndroidEnterprise.this, "PATCH", REST_PATH, content, com.google.api.services.androidenterprise.model.WebApp.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+        this.webAppId = com.google.api.client.util.Preconditions.checkNotNull(webAppId, "Required parameter webAppId must be specified.");
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUserIp(java.lang.String userIp) {
+        return (Patch) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public Patch setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /** The ID of the web app. */
+      @com.google.api.client.util.Key
+      private java.lang.String webAppId;
+
+      /** The ID of the web app.
+       */
+      public java.lang.String getWebAppId() {
+        return webAppId;
+      }
+
+      /** The ID of the web app. */
+      public Patch setWebAppId(java.lang.String webAppId) {
+        this.webAppId = webAppId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing web app.
+     *
+     * Create a request for the method "webapps.update".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @param webAppId The ID of the web app.
+     * @param content the {@link com.google.api.services.androidenterprise.model.WebApp}
+     * @return the request
+     */
+    public Update update(java.lang.String enterpriseId, java.lang.String webAppId, com.google.api.services.androidenterprise.model.WebApp content) throws java.io.IOException {
+      Update result = new Update(enterpriseId, webAppId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.WebApp> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/webApps/{webAppId}";
+
+      /**
+       * Updates an existing web app.
+       *
+       * Create a request for the method "webapps.update".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link Update#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @param webAppId The ID of the web app.
+       * @param content the {@link com.google.api.services.androidenterprise.model.WebApp}
+       * @since 1.13
+       */
+      protected Update(java.lang.String enterpriseId, java.lang.String webAppId, com.google.api.services.androidenterprise.model.WebApp content) {
+        super(AndroidEnterprise.this, "PUT", REST_PATH, content, com.google.api.services.androidenterprise.model.WebApp.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+        this.webAppId = com.google.api.client.util.Preconditions.checkNotNull(webAppId, "Required parameter webAppId must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public Update setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /** The ID of the web app. */
+      @com.google.api.client.util.Key
+      private java.lang.String webAppId;
+
+      /** The ID of the web app.
+       */
+      public java.lang.String getWebAppId() {
+        return webAppId;
+      }
+
+      /** The ID of the web app. */
+      public Update setWebAppId(java.lang.String webAppId) {
+        this.webAppId = webAppId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link AndroidEnterprise}.
    *
    * <p>

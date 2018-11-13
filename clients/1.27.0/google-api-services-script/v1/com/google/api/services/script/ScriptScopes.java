@@ -23,13 +23,13 @@ package com.google.api.services.script;
  */
 public class ScriptScopes {
 
-  /** Read, send, delete, and manage your email. */
+  /** Read, compose, send, and permanently delete all your email from Gmail. */
   public static final String MAIL_GOOGLE_COM = "https://mail.google.com/";
 
-  /** Manage your calendars. */
+  /** See, edit, share, and permanently delete all the calendars you can access using Google Calendar. */
   public static final String WWW_GOOGLE_COM_CALENDAR_FEEDS = "https://www.google.com/calendar/feeds";
 
-  /** Manage your contacts. */
+  /** See, edit, download, and permanently delete your contacts. */
   public static final String WWW_GOOGLE_COM_M8_FEEDS = "https://www.google.com/m8/feeds";
 
   /** View and manage the provisioning of groups on your domain. */
@@ -41,7 +41,7 @@ public class ScriptScopes {
   /** View and manage your Google Docs documents. */
   public static final String DOCUMENTS = "https://www.googleapis.com/auth/documents";
 
-  /** View and manage the files in your Google Drive. */
+  /** See, edit, create, and delete all of your Google Drive files. */
   public static final String DRIVE = "https://www.googleapis.com/auth/drive";
 
   /** View and manage your forms in Google Drive. */
@@ -53,7 +53,25 @@ public class ScriptScopes {
   /** View and manage your Google Groups. */
   public static final String GROUPS = "https://www.googleapis.com/auth/groups";
 
-  /** View and manage your spreadsheets in Google Drive. */
+  /** Create and update Google Apps Script deployments. */
+  public static final String SCRIPT_DEPLOYMENTS = "https://www.googleapis.com/auth/script.deployments";
+
+  /** View Google Apps Script deployments. */
+  public static final String SCRIPT_DEPLOYMENTS_READONLY = "https://www.googleapis.com/auth/script.deployments.readonly";
+
+  /** View Google Apps Script project's metrics. */
+  public static final String SCRIPT_METRICS = "https://www.googleapis.com/auth/script.metrics";
+
+  /** View Google Apps Script processes. */
+  public static final String SCRIPT_PROCESSES = "https://www.googleapis.com/auth/script.processes";
+
+  /** Create and update Google Apps Script projects. */
+  public static final String SCRIPT_PROJECTS = "https://www.googleapis.com/auth/script.projects";
+
+  /** View Google Apps Script projects. */
+  public static final String SCRIPT_PROJECTS_READONLY = "https://www.googleapis.com/auth/script.projects.readonly";
+
+  /** See, edit, create, and delete your spreadsheets in Google Drive. */
   public static final String SPREADSHEETS = "https://www.googleapis.com/auth/spreadsheets";
 
   /** View your email address. */
@@ -76,6 +94,12 @@ public class ScriptScopes {
     set.add(FORMS);
     set.add(FORMS_CURRENTONLY);
     set.add(GROUPS);
+    set.add(SCRIPT_DEPLOYMENTS);
+    set.add(SCRIPT_DEPLOYMENTS_READONLY);
+    set.add(SCRIPT_METRICS);
+    set.add(SCRIPT_PROCESSES);
+    set.add(SCRIPT_PROJECTS);
+    set.add(SCRIPT_PROJECTS_READONLY);
     set.add(SPREADSHEETS);
     set.add(USERINFO_EMAIL);
     return java.util.Collections.unmodifiableSet(set);

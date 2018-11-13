@@ -23,10 +23,10 @@ package com.google.api.services.people.v1;
  */
 public class PeopleServiceScopes {
 
-  /** Manage your contacts. */
+  /** See, edit, download, and permanently delete your contacts. */
   public static final String CONTACTS = "https://www.googleapis.com/auth/contacts";
 
-  /** View your contacts. */
+  /** See and download your contacts. */
   public static final String CONTACTS_READONLY = "https://www.googleapis.com/auth/contacts.readonly";
 
   /** Know the list of people in your circles, your age range, and language. */

@@ -43,12 +43,6 @@ public final class ListScriptProcessesResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<GoogleAppsScriptTypeProcess> processes;
 
-  static {
-    // hack to force ProGuard to consider GoogleAppsScriptTypeProcess used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAppsScriptTypeProcess.class);
-  }
-
   /**
    * Token for the next page of results. If empty, there are no more pages remaining.
    * @return value or {@code null} for none

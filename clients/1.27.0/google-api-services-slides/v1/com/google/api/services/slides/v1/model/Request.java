@@ -240,6 +240,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdatePageElementTransformRequest updatePageElementTransform;
 
   /**
+   * Updates the Z-order of page elements.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdatePageElementsZOrderRequest updatePageElementsZOrder;
+
+  /**
    * Updates the properties of a Page.
    * The value may be {@code null}.
    */
@@ -816,6 +823,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdatePageElementTransform(UpdatePageElementTransformRequest updatePageElementTransform) {
     this.updatePageElementTransform = updatePageElementTransform;
+    return this;
+  }
+
+  /**
+   * Updates the Z-order of page elements.
+   * @return value or {@code null} for none
+   */
+  public UpdatePageElementsZOrderRequest getUpdatePageElementsZOrder() {
+    return updatePageElementsZOrder;
+  }
+
+  /**
+   * Updates the Z-order of page elements.
+   * @param updatePageElementsZOrder updatePageElementsZOrder or {@code null} for none
+   */
+  public Request setUpdatePageElementsZOrder(UpdatePageElementsZOrderRequest updatePageElementsZOrder) {
+    this.updatePageElementsZOrder = updatePageElementsZOrder;
     return this;
   }
 

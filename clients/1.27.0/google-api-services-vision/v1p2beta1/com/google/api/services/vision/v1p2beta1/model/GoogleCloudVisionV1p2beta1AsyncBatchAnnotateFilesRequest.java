@@ -36,12 +36,6 @@ public final class GoogleCloudVisionV1p2beta1AsyncBatchAnnotateFilesRequest exte
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest> requests;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1AsyncAnnotateFileRequest.class);
-  }
-
   /**
    * Individual async file annotation requests for this batch.
    * @return value or {@code null} for none

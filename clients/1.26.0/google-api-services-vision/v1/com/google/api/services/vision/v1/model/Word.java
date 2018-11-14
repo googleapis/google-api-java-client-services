@@ -35,7 +35,7 @@ public final class Word extends com.google.api.client.json.GenericJson {
    * as around the top-left corner as defined when the text is read in the 'natural' orientation.
    * For example:   * when the text is horizontal it might look like:      0----1      |    |      3
    * ----2   * when it's rotated 180 degrees around the top-left corner it becomes:      2----3
-   * |    |      1----0   and the vertice order will still be (0, 1, 2, 3).
+   * |    |      1----0   and the vertex order will still be (0, 1, 2, 3).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,19 +62,13 @@ public final class Word extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Symbol> symbols;
 
-  static {
-    // hack to force ProGuard to consider Symbol used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Symbol.class);
-  }
-
   /**
    * The bounding box for the word. The vertices are in the order of top-left, top-right, bottom-
    * right, bottom-left. When a rotation of the bounding box is detected the rotation is represented
    * as around the top-left corner as defined when the text is read in the 'natural' orientation.
    * For example:   * when the text is horizontal it might look like:      0----1      |    |      3
    * ----2   * when it's rotated 180 degrees around the top-left corner it becomes:      2----3
-   * |    |      1----0   and the vertice order will still be (0, 1, 2, 3).
+   * |    |      1----0   and the vertex order will still be (0, 1, 2, 3).
    * @return value or {@code null} for none
    */
   public BoundingPoly getBoundingBox() {
@@ -87,7 +81,7 @@ public final class Word extends com.google.api.client.json.GenericJson {
    * as around the top-left corner as defined when the text is read in the 'natural' orientation.
    * For example:   * when the text is horizontal it might look like:      0----1      |    |      3
    * ----2   * when it's rotated 180 degrees around the top-left corner it becomes:      2----3
-   * |    |      1----0   and the vertice order will still be (0, 1, 2, 3).
+   * |    |      1----0   and the vertex order will still be (0, 1, 2, 3).
    * @param boundingBox boundingBox or {@code null} for none
    */
   public Word setBoundingBox(BoundingPoly boundingBox) {

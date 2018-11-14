@@ -103,12 +103,6 @@ public final class GoogleCloudVisionV1p3beta1WebDetection extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1WebDetectionWebEntity> webEntities;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1WebDetectionWebEntity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1WebDetectionWebEntity.class);
-  }
-
   /**
    * The service's best guess as to the topic of the request image. Inferred from similar images on
    * the open web.

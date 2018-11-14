@@ -43,6 +43,12 @@ public final class ListProductSetsResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<ProductSet> productSets;
 
+  static {
+    // hack to force ProGuard to consider ProductSet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ProductSet.class);
+  }
+
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none

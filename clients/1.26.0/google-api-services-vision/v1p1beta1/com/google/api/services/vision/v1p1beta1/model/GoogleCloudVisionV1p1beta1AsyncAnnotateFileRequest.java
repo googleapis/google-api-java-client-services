@@ -36,6 +36,12 @@ public final class GoogleCloudVisionV1p1beta1AsyncAnnotateFileRequest extends co
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1Feature> features;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1Feature used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1Feature.class);
+  }
+
   /**
    * Additional context that may accompany the image(s) in the file.
    * The value may be {@code null}.

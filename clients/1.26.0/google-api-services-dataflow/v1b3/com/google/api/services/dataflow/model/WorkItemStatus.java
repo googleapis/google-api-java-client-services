@@ -64,12 +64,6 @@ public final class WorkItemStatus extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<Status> errors;
 
-  static {
-    // hack to force ProGuard to consider Status used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Status.class);
-  }
-
   /**
    * DEPRECATED in favor of counter_updates.
    * The value may be {@code null}.

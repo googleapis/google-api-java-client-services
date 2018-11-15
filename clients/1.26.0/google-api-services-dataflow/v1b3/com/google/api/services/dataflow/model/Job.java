@@ -49,6 +49,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * If this is specified, the job's initial state is populated from the given snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String createdFromSnapshotId;
+
+  /**
    * The current state of the job.
    *
    * Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise specified.
@@ -188,12 +195,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ExecutionStageState> stageStates;
 
-  static {
-    // hack to force ProGuard to consider ExecutionStageState used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ExecutionStageState.class);
-  }
-
   /**
    * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource
    * scheduling jobs are started with some delay after job creation, so start_time is unset before
@@ -205,6 +206,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
+   * Exactly one of step or steps_location should be specified.
+   *
    * The top-level steps that constitute the entire job.
    * The value may be {@code null}.
    */
@@ -216,6 +219,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Step.class);
   }
+
+  /**
+   * The GCS location where the steps are stored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stepsLocation;
 
   /**
    * A set of files the system should be aware of that are used for temporary storage. These
@@ -288,6 +298,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * If this is specified, the job's initial state is populated from the given snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreatedFromSnapshotId() {
+    return createdFromSnapshotId;
+  }
+
+  /**
+   * If this is specified, the job's initial state is populated from the given snapshot.
+   * @param createdFromSnapshotId createdFromSnapshotId or {@code null} for none
+   */
+  public Job setCreatedFromSnapshotId(java.lang.String createdFromSnapshotId) {
+    this.createdFromSnapshotId = createdFromSnapshotId;
     return this;
   }
 
@@ -640,6 +667,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Exactly one of step or steps_location should be specified.
+   *
    * The top-level steps that constitute the entire job.
    * @return value or {@code null} for none
    */
@@ -648,11 +677,30 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Exactly one of step or steps_location should be specified.
+   *
    * The top-level steps that constitute the entire job.
    * @param steps steps or {@code null} for none
    */
   public Job setSteps(java.util.List<Step> steps) {
     this.steps = steps;
+    return this;
+  }
+
+  /**
+   * The GCS location where the steps are stored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStepsLocation() {
+    return stepsLocation;
+  }
+
+  /**
+   * The GCS location where the steps are stored.
+   * @param stepsLocation stepsLocation or {@code null} for none
+   */
+  public Job setStepsLocation(java.lang.String stepsLocation) {
+    this.stepsLocation = stepsLocation;
     return this;
   }
 

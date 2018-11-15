@@ -1247,6 +1247,143 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Snapshot the state of a streaming job.
+       *
+       * Create a request for the method "jobs.snapshot".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Snapshot#execute()} method to invoke the remote operation.
+       *
+       * @param projectId The project which owns the job to be snapshotted.
+       * @param jobId The job to be snapshotted.
+       * @param content the {@link com.google.api.services.dataflow.model.SnapshotJobRequest}
+       * @return the request
+       */
+      public Snapshot snapshot(java.lang.String projectId, java.lang.String jobId, com.google.api.services.dataflow.model.SnapshotJobRequest content) throws java.io.IOException {
+        Snapshot result = new Snapshot(projectId, jobId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Snapshot extends DataflowRequest<com.google.api.services.dataflow.model.Snapshot> {
+
+        private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}:snapshot";
+
+        /**
+         * Snapshot the state of a streaming job.
+         *
+         * Create a request for the method "jobs.snapshot".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Snapshot#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Snapshot#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId The project which owns the job to be snapshotted.
+         * @param jobId The job to be snapshotted.
+         * @param content the {@link com.google.api.services.dataflow.model.SnapshotJobRequest}
+         * @since 1.13
+         */
+        protected Snapshot(java.lang.String projectId, java.lang.String jobId, com.google.api.services.dataflow.model.SnapshotJobRequest content) {
+          super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.Snapshot.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+        }
+
+        @Override
+        public Snapshot set$Xgafv(java.lang.String $Xgafv) {
+          return (Snapshot) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Snapshot setAccessToken(java.lang.String accessToken) {
+          return (Snapshot) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Snapshot setAlt(java.lang.String alt) {
+          return (Snapshot) super.setAlt(alt);
+        }
+
+        @Override
+        public Snapshot setCallback(java.lang.String callback) {
+          return (Snapshot) super.setCallback(callback);
+        }
+
+        @Override
+        public Snapshot setFields(java.lang.String fields) {
+          return (Snapshot) super.setFields(fields);
+        }
+
+        @Override
+        public Snapshot setKey(java.lang.String key) {
+          return (Snapshot) super.setKey(key);
+        }
+
+        @Override
+        public Snapshot setOauthToken(java.lang.String oauthToken) {
+          return (Snapshot) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Snapshot setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Snapshot) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Snapshot setQuotaUser(java.lang.String quotaUser) {
+          return (Snapshot) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Snapshot setUploadType(java.lang.String uploadType) {
+          return (Snapshot) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Snapshot setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Snapshot) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The project which owns the job to be snapshotted. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** The project which owns the job to be snapshotted.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** The project which owns the job to be snapshotted. */
+        public Snapshot setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** The job to be snapshotted. */
+        @com.google.api.client.util.Key
+        private java.lang.String jobId;
+
+        /** The job to be snapshotted.
+         */
+        public java.lang.String getJobId() {
+          return jobId;
+        }
+
+        /** The job to be snapshotted. */
+        public Snapshot setJobId(java.lang.String jobId) {
+          this.jobId = jobId;
+          return this;
+        }
+
+        @Override
+        public Snapshot set(String parameterName, Object value) {
+          return (Snapshot) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates the state of an existing Cloud Dataflow job.
        *
        * Create a request for the method "jobs.update".
@@ -3221,6 +3358,162 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Snapshot the state of a streaming job.
+         *
+         * Create a request for the method "jobs.snapshot".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Snapshot#execute()} method to invoke the remote operation.
+         *
+         * @param projectId The project which owns the job to be snapshotted.
+         * @param location The location that contains this job.
+         * @param jobId The job to be snapshotted.
+         * @param content the {@link com.google.api.services.dataflow.model.SnapshotJobRequest}
+         * @return the request
+         */
+        public Snapshot snapshot(java.lang.String projectId, java.lang.String location, java.lang.String jobId, com.google.api.services.dataflow.model.SnapshotJobRequest content) throws java.io.IOException {
+          Snapshot result = new Snapshot(projectId, location, jobId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Snapshot extends DataflowRequest<com.google.api.services.dataflow.model.Snapshot> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}:snapshot";
+
+          /**
+           * Snapshot the state of a streaming job.
+           *
+           * Create a request for the method "jobs.snapshot".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Snapshot#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Snapshot#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId The project which owns the job to be snapshotted.
+           * @param location The location that contains this job.
+           * @param jobId The job to be snapshotted.
+           * @param content the {@link com.google.api.services.dataflow.model.SnapshotJobRequest}
+           * @since 1.13
+           */
+          protected Snapshot(java.lang.String projectId, java.lang.String location, java.lang.String jobId, com.google.api.services.dataflow.model.SnapshotJobRequest content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.Snapshot.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+          }
+
+          @Override
+          public Snapshot set$Xgafv(java.lang.String $Xgafv) {
+            return (Snapshot) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Snapshot setAccessToken(java.lang.String accessToken) {
+            return (Snapshot) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Snapshot setAlt(java.lang.String alt) {
+            return (Snapshot) super.setAlt(alt);
+          }
+
+          @Override
+          public Snapshot setCallback(java.lang.String callback) {
+            return (Snapshot) super.setCallback(callback);
+          }
+
+          @Override
+          public Snapshot setFields(java.lang.String fields) {
+            return (Snapshot) super.setFields(fields);
+          }
+
+          @Override
+          public Snapshot setKey(java.lang.String key) {
+            return (Snapshot) super.setKey(key);
+          }
+
+          @Override
+          public Snapshot setOauthToken(java.lang.String oauthToken) {
+            return (Snapshot) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Snapshot setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Snapshot) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Snapshot setQuotaUser(java.lang.String quotaUser) {
+            return (Snapshot) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Snapshot setUploadType(java.lang.String uploadType) {
+            return (Snapshot) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Snapshot setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Snapshot) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The project which owns the job to be snapshotted. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** The project which owns the job to be snapshotted.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** The project which owns the job to be snapshotted. */
+          public Snapshot setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** The location that contains this job. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The location that contains this job.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** The location that contains this job. */
+          public Snapshot setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          /** The job to be snapshotted. */
+          @com.google.api.client.util.Key
+          private java.lang.String jobId;
+
+          /** The job to be snapshotted.
+           */
+          public java.lang.String getJobId() {
+            return jobId;
+          }
+
+          /** The job to be snapshotted. */
+          public Snapshot setJobId(java.lang.String jobId) {
+            this.jobId = jobId;
+            return this;
+          }
+
+          @Override
+          public Snapshot set(String parameterName, Object value) {
+            return (Snapshot) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates the state of an existing Cloud Dataflow job.
          *
          * Create a request for the method "jobs.update".
@@ -4638,22 +4931,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. A Cloud Storage path to the template from which to create the job. Must be a
-           * valid Cloud Storage URL, beginning with `gs://`.
+           * Required. A Cloud Storage path to the template from which to create the job. Must be
+           * valid Cloud Storage URL, beginning with 'gs://'.
            */
           @com.google.api.client.util.Key
           private java.lang.String gcsPath;
 
-          /** Required. A Cloud Storage path to the template from which to create the job. Must be a valid Cloud
-         Storage URL, beginning with `gs://`.
+          /** Required. A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+         Storage URL, beginning with 'gs://'.
            */
           public java.lang.String getGcsPath() {
             return gcsPath;
           }
 
           /**
-           * Required. A Cloud Storage path to the template from which to create the job. Must be a
-           * valid Cloud Storage URL, beginning with `gs://`.
+           * Required. A Cloud Storage path to the template from which to create the job. Must be
+           * valid Cloud Storage URL, beginning with 'gs://'.
            */
           public Get setGcsPath(java.lang.String gcsPath) {
             this.gcsPath = gcsPath;
@@ -4814,22 +5107,68 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. A Cloud Storage path to the template from which to create the job. Must be
-           * valid Cloud Storage URL, beginning with 'gs://'.
+           * Path to dynamic template spec file on GCS. The file must be a Json serialized
+           * DynamicTemplateFieSpec object.
+           */
+          @com.google.api.client.util.Key("dynamicTemplate.gcsPath")
+          private java.lang.String dynamicTemplateGcsPath;
+
+          /** Path to dynamic template spec file on GCS. The file must be a Json serialized
+         DynamicTemplateFieSpec object.
+           */
+          public java.lang.String getDynamicTemplateGcsPath() {
+            return dynamicTemplateGcsPath;
+          }
+
+          /**
+           * Path to dynamic template spec file on GCS. The file must be a Json serialized
+           * DynamicTemplateFieSpec object.
+           */
+          public Launch setDynamicTemplateGcsPath(java.lang.String dynamicTemplateGcsPath) {
+            this.dynamicTemplateGcsPath = dynamicTemplateGcsPath;
+            return this;
+          }
+
+          /**
+           * Cloud Storage path for staging dependencies. Must be a valid Cloud Storage URL,
+           * beginning with `gs://`.
+           */
+          @com.google.api.client.util.Key("dynamicTemplate.stagingLocation")
+          private java.lang.String dynamicTemplateStagingLocation;
+
+          /** Cloud Storage path for staging dependencies. Must be a valid Cloud Storage URL, beginning with
+         `gs://`.
+           */
+          public java.lang.String getDynamicTemplateStagingLocation() {
+            return dynamicTemplateStagingLocation;
+          }
+
+          /**
+           * Cloud Storage path for staging dependencies. Must be a valid Cloud Storage URL,
+           * beginning with `gs://`.
+           */
+          public Launch setDynamicTemplateStagingLocation(java.lang.String dynamicTemplateStagingLocation) {
+            this.dynamicTemplateStagingLocation = dynamicTemplateStagingLocation;
+            return this;
+          }
+
+          /**
+           * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+           * Storage URL, beginning with 'gs://'.
            */
           @com.google.api.client.util.Key
           private java.lang.String gcsPath;
 
-          /** Required. A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-         Storage URL, beginning with 'gs://'.
+          /** A Cloud Storage path to the template from which to create the job. Must be valid Cloud Storage URL,
+         beginning with 'gs://'.
            */
           public java.lang.String getGcsPath() {
             return gcsPath;
           }
 
           /**
-           * Required. A Cloud Storage path to the template from which to create the job. Must be
-           * valid Cloud Storage URL, beginning with 'gs://'.
+           * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+           * Storage URL, beginning with 'gs://'.
            */
           public Launch setGcsPath(java.lang.String gcsPath) {
             this.gcsPath = gcsPath;
@@ -5123,22 +5462,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. A Cloud Storage path to the template from which to create the job. Must be a
-         * valid Cloud Storage URL, beginning with `gs://`.
+         * Required. A Cloud Storage path to the template from which to create the job. Must be
+         * valid Cloud Storage URL, beginning with 'gs://'.
          */
         @com.google.api.client.util.Key
         private java.lang.String gcsPath;
 
-        /** Required. A Cloud Storage path to the template from which to create the job. Must be a valid Cloud
-       Storage URL, beginning with `gs://`.
+        /** Required. A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+       Storage URL, beginning with 'gs://'.
          */
         public java.lang.String getGcsPath() {
           return gcsPath;
         }
 
         /**
-         * Required. A Cloud Storage path to the template from which to create the job. Must be a
-         * valid Cloud Storage URL, beginning with `gs://`.
+         * Required. A Cloud Storage path to the template from which to create the job. Must be
+         * valid Cloud Storage URL, beginning with 'gs://'.
          */
         public Get setGcsPath(java.lang.String gcsPath) {
           this.gcsPath = gcsPath;
@@ -5296,22 +5635,68 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. A Cloud Storage path to the template from which to create the job. Must be
-         * valid Cloud Storage URL, beginning with 'gs://'.
+         * Path to dynamic template spec file on GCS. The file must be a Json serialized
+         * DynamicTemplateFieSpec object.
+         */
+        @com.google.api.client.util.Key("dynamicTemplate.gcsPath")
+        private java.lang.String dynamicTemplateGcsPath;
+
+        /** Path to dynamic template spec file on GCS. The file must be a Json serialized
+       DynamicTemplateFieSpec object.
+         */
+        public java.lang.String getDynamicTemplateGcsPath() {
+          return dynamicTemplateGcsPath;
+        }
+
+        /**
+         * Path to dynamic template spec file on GCS. The file must be a Json serialized
+         * DynamicTemplateFieSpec object.
+         */
+        public Launch setDynamicTemplateGcsPath(java.lang.String dynamicTemplateGcsPath) {
+          this.dynamicTemplateGcsPath = dynamicTemplateGcsPath;
+          return this;
+        }
+
+        /**
+         * Cloud Storage path for staging dependencies. Must be a valid Cloud Storage URL, beginning
+         * with `gs://`.
+         */
+        @com.google.api.client.util.Key("dynamicTemplate.stagingLocation")
+        private java.lang.String dynamicTemplateStagingLocation;
+
+        /** Cloud Storage path for staging dependencies. Must be a valid Cloud Storage URL, beginning with
+       `gs://`.
+         */
+        public java.lang.String getDynamicTemplateStagingLocation() {
+          return dynamicTemplateStagingLocation;
+        }
+
+        /**
+         * Cloud Storage path for staging dependencies. Must be a valid Cloud Storage URL, beginning
+         * with `gs://`.
+         */
+        public Launch setDynamicTemplateStagingLocation(java.lang.String dynamicTemplateStagingLocation) {
+          this.dynamicTemplateStagingLocation = dynamicTemplateStagingLocation;
+          return this;
+        }
+
+        /**
+         * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+         * Storage URL, beginning with 'gs://'.
          */
         @com.google.api.client.util.Key
         private java.lang.String gcsPath;
 
-        /** Required. A Cloud Storage path to the template from which to create the job. Must be valid Cloud
-       Storage URL, beginning with 'gs://'.
+        /** A Cloud Storage path to the template from which to create the job. Must be valid Cloud Storage URL,
+       beginning with 'gs://'.
          */
         public java.lang.String getGcsPath() {
           return gcsPath;
         }
 
         /**
-         * Required. A Cloud Storage path to the template from which to create the job. Must be
-         * valid Cloud Storage URL, beginning with 'gs://'.
+         * A Cloud Storage path to the template from which to create the job. Must be valid Cloud
+         * Storage URL, beginning with 'gs://'.
          */
         public Launch setGcsPath(java.lang.String gcsPath) {
           this.gcsPath = gcsPath;

@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Response to a request to lease WorkItems.
+ * Request to create a snapshot of a job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.dataflow.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LeaseWorkItemResponse extends com.google.api.client.json.GenericJson {
+public final class SnapshotJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of the leased WorkItems.
+   * The location that contains this job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<WorkItem> workItems;
+  private java.lang.String location;
 
   /**
-   * A list of the leased WorkItems.
+   * TTL for the snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
+
+  /**
+   * The location that contains this job.
    * @return value or {@code null} for none
    */
-  public java.util.List<WorkItem> getWorkItems() {
-    return workItems;
+  public java.lang.String getLocation() {
+    return location;
   }
 
   /**
-   * A list of the leased WorkItems.
-   * @param workItems workItems or {@code null} for none
+   * The location that contains this job.
+   * @param location location or {@code null} for none
    */
-  public LeaseWorkItemResponse setWorkItems(java.util.List<WorkItem> workItems) {
-    this.workItems = workItems;
+  public SnapshotJobRequest setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
+   * TTL for the snapshot.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * TTL for the snapshot.
+   * @param ttl ttl or {@code null} for none
+   */
+  public SnapshotJobRequest setTtl(String ttl) {
+    this.ttl = ttl;
     return this;
   }
 
   @Override
-  public LeaseWorkItemResponse set(String fieldName, Object value) {
-    return (LeaseWorkItemResponse) super.set(fieldName, value);
+  public SnapshotJobRequest set(String fieldName, Object value) {
+    return (SnapshotJobRequest) super.set(fieldName, value);
   }
 
   @Override
-  public LeaseWorkItemResponse clone() {
-    return (LeaseWorkItemResponse) super.clone();
+  public SnapshotJobRequest clone() {
+    return (SnapshotJobRequest) super.clone();
   }
 
 }

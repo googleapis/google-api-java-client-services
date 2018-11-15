@@ -40,12 +40,6 @@ public final class AssignmentSubmission extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Attachment> attachments;
 
-  static {
-    // hack to force ProGuard to consider Attachment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Attachment.class);
-  }
-
   /**
    * Attachments added by the student. Drive files that correspond to materials with a share mode of
    * STUDENT_COPY may not exist yet if the student has not accessed the assignment in Classroom.

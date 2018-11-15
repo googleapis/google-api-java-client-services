@@ -45,6 +45,12 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClass extends com.goog
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Value> quasiIdsValues;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Value used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Value.class);
+  }
+
   /**
    * Size of the equivalence class, for example number of rows with the above set of values.
    * @return value or {@code null} for none

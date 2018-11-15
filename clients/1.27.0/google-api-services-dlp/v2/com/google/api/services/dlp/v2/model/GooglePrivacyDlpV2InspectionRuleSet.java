@@ -38,12 +38,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSet extends com.google.api.cl
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2InfoType> infoTypes;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2InfoType used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InfoType.class);
-  }
-
   /**
    * Set of rules to be applied to infoTypes. The rules are applied in order.
    * The value may be {@code null}.

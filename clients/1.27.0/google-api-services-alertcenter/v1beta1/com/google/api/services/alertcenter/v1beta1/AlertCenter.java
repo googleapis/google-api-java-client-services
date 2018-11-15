@@ -570,14 +570,14 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       /**
        * Optional. A query string for filtering alert results. For more details, see [Query filters
        * ](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
-       * sdk/alertcenter/reference/filter-fields).
+       * sdk/alertcenter/reference/filter-fields#alerts.list).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. A query string for filtering alert results. For more details, see [Query filters](/admin-
      sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
-     sdk/alertcenter/reference/filter-fields).
+     sdk/alertcenter/reference/filter-fields#alerts.list).
        */
       public java.lang.String getFilter() {
         return filter;
@@ -586,7 +586,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       /**
        * Optional. A query string for filtering alert results. For more details, see [Query filters
        * ](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
-       * sdk/alertcenter/reference/filter-fields).
+       * sdk/alertcenter/reference/filter-fields#alerts.list).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1004,16 +1004,27 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        /**
+         * Optional. A query string for filtering alert feedback results. For more details, see
+         * [Query filters](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter
+         * fields](/admin-sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
+         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /**
-
+        /** Optional. A query string for filtering alert feedback results. For more details, see [Query filters
+       ](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter fields](/admin-
+       sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
+        /**
+         * Optional. A query string for filtering alert feedback results. For more details, see
+         * [Query filters](/admin-sdk/alertcenter/guides/query-filters) and [Supported query filter
+         * fields](/admin-sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
+         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;

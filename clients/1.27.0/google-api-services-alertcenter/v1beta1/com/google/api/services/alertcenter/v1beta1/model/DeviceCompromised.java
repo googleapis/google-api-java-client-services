@@ -44,12 +44,6 @@ public final class DeviceCompromised extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<DeviceCompromisedSecurityDetail> events;
 
-  static {
-    // hack to force ProGuard to consider DeviceCompromisedSecurityDetail used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(DeviceCompromisedSecurityDetail.class);
-  }
-
   /**
    * The email of the user this alert was created for.
    * @return value or {@code null} for none

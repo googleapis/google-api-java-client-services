@@ -36,6 +36,12 @@ public final class ListGuardianInvitationsResponse extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<GuardianInvitation> guardianInvitations;
 
+  static {
+    // hack to force ProGuard to consider GuardianInvitation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GuardianInvitation.class);
+  }
+
   /**
    * Token identifying the next page of results to return. If empty, no further results are
    * available.

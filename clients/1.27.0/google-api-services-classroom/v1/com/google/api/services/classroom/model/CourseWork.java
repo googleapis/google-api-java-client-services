@@ -103,15 +103,15 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional date, in UTC, that submissions for this this course work are due. This must be
-   * specified if `due_time` is specified.
+   * Optional date, in UTC, that submissions for this course work are due. This must be specified if
+   * `due_time` is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date dueDate;
 
   /**
-   * Optional time of day, in UTC, that submissions for this this course work are due. This must be
+   * Optional time of day, in UTC, that submissions for this course work are due. This must be
    * specified if `due_date` is specified.
    * The value may be {@code null}.
    */
@@ -144,6 +144,12 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Material> materials;
+
+  static {
+    // hack to force ProGuard to consider Material used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Material.class);
+  }
 
   /**
    * Maximum grade for this course work. If zero or unspecified, this assignment is considered
@@ -382,8 +388,8 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional date, in UTC, that submissions for this this course work are due. This must be
-   * specified if `due_time` is specified.
+   * Optional date, in UTC, that submissions for this course work are due. This must be specified if
+   * `due_time` is specified.
    * @return value or {@code null} for none
    */
   public Date getDueDate() {
@@ -391,8 +397,8 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional date, in UTC, that submissions for this this course work are due. This must be
-   * specified if `due_time` is specified.
+   * Optional date, in UTC, that submissions for this course work are due. This must be specified if
+   * `due_time` is specified.
    * @param dueDate dueDate or {@code null} for none
    */
   public CourseWork setDueDate(Date dueDate) {
@@ -401,7 +407,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional time of day, in UTC, that submissions for this this course work are due. This must be
+   * Optional time of day, in UTC, that submissions for this course work are due. This must be
    * specified if `due_date` is specified.
    * @return value or {@code null} for none
    */
@@ -410,7 +416,7 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional time of day, in UTC, that submissions for this this course work are due. This must be
+   * Optional time of day, in UTC, that submissions for this course work are due. This must be
    * specified if `due_date` is specified.
    * @param dueTime dueTime or {@code null} for none
    */

@@ -18,8 +18,10 @@ package com.google.api.services.pubsub.model;
 
 /**
  * A message that is published by publishers and consumed by subscribers. The message must contain
- * either a non-empty data field or at least one attribute. See Quotas and limits for more
- * information about message limits.
+ * either a non-empty data field or at least one attribute. Note that client libraries represent
+ * this object differently depending on the language. See the corresponding client library
+ * documentation for more information. See Quotas and limits for more information about message
+ * limits.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:

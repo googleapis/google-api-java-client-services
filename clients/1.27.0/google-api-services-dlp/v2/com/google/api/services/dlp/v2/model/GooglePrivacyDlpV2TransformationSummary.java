@@ -46,8 +46,14 @@ public final class GooglePrivacyDlpV2TransformationSummary extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FieldTransformation> fieldTransformations;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldTransformation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldTransformation.class);
+  }
+
   /**
-   * Set if the transformation was limited to a specific info_type.
+   * Set if the transformation was limited to a specific InfoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +129,7 @@ public final class GooglePrivacyDlpV2TransformationSummary extends com.google.ap
   }
 
   /**
-   * Set if the transformation was limited to a specific info_type.
+   * Set if the transformation was limited to a specific InfoType.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoType getInfoType() {
@@ -131,7 +137,7 @@ public final class GooglePrivacyDlpV2TransformationSummary extends com.google.ap
   }
 
   /**
-   * Set if the transformation was limited to a specific info_type.
+   * Set if the transformation was limited to a specific InfoType.
    * @param infoType infoType or {@code null} for none
    */
   public GooglePrivacyDlpV2TransformationSummary setInfoType(GooglePrivacyDlpV2InfoType infoType) {

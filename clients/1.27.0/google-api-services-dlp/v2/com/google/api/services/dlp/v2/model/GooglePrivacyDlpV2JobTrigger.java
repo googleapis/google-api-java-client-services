@@ -61,6 +61,12 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Error> errors;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Error used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Error.class);
+  }
+
   /**
    * The value may be {@code null}.
    */
@@ -97,6 +103,12 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Trigger> triggers;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Trigger used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Trigger.class);
+  }
 
   /**
    * The last update timestamp of a triggeredJob, output only field.

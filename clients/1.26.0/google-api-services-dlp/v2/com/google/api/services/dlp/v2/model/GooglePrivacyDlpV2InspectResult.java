@@ -37,12 +37,6 @@ public final class GooglePrivacyDlpV2InspectResult extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Finding> findings;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2Finding used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Finding.class);
-  }
-
   /**
    * If true, then this item might have more findings than were returned, and the findings returned
    * are an arbitrary subset of all findings. The findings list might be truncated because the input

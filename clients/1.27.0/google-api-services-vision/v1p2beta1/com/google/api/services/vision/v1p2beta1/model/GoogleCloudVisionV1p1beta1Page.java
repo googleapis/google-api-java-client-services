@@ -36,12 +36,6 @@ public final class GoogleCloudVisionV1p1beta1Page extends com.google.api.client.
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p1beta1Block> blocks;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p1beta1Block used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p1beta1Block.class);
-  }
-
   /**
    * Confidence of the OCR results on the page. Range [0, 1].
    * The value may be {@code null}.

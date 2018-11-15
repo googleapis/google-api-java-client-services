@@ -43,6 +43,12 @@ public final class GoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult e
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1ProductSearchResultsResult> results;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1ProductSearchResultsResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1ProductSearchResultsResult.class);
+  }
+
   /**
    * The bounding polygon around the product detected in the query image.
    * @return value or {@code null} for none

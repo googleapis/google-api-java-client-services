@@ -58,12 +58,6 @@ public final class GoogleCloudVisionV1p2beta1AnnotateImageResponse extends com.g
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1FaceAnnotation> faceAnnotations;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1FaceAnnotation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1FaceAnnotation.class);
-  }
-
   /**
    * If present, text (OCR) detection or document (OCR) text detection has completed successfully.
    * This annotation provides the structural hierarchy for the OCR detected text.
@@ -112,12 +106,6 @@ public final class GoogleCloudVisionV1p2beta1AnnotateImageResponse extends com.g
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1LocalizedObjectAnnotation> localizedObjectAnnotations;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1LocalizedObjectAnnotation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1LocalizedObjectAnnotation.class);
-  }
 
   /**
    * If present, logo detection has completed successfully.

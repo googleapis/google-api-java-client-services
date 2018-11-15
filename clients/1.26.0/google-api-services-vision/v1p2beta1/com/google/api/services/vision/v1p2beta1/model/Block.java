@@ -50,7 +50,7 @@ public final class Block extends com.google.api.client.json.GenericJson {
    *
    *         2----3         |    |         1----0
    *
-   *   and the vertice order will still be (0, 1, 2, 3).
+   *   and the vertex order will still be (0, 1, 2, 3).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class Block extends com.google.api.client.json.GenericJson {
    *
    *         2----3         |    |         1----0
    *
-   *   and the vertice order will still be (0, 1, 2, 3).
+   *   and the vertex order will still be (0, 1, 2, 3).
    * @return value or {@code null} for none
    */
   public BoundingPoly getBoundingBox() {
@@ -135,7 +135,7 @@ public final class Block extends com.google.api.client.json.GenericJson {
    *
    *         2----3         |    |         1----0
    *
-   *   and the vertice order will still be (0, 1, 2, 3).
+   *   and the vertex order will still be (0, 1, 2, 3).
    * @param boundingBox boundingBox or {@code null} for none
    */
   public Block setBoundingBox(BoundingPoly boundingBox) {

@@ -36,12 +36,6 @@ public final class WebPage extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<WebImage> fullMatchingImages;
 
-  static {
-    // hack to force ProGuard to consider WebImage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WebImage.class);
-  }
-
   /**
    * Title for the web page, may contain HTML markups.
    * The value may be {@code null}.
@@ -56,12 +50,6 @@ public final class WebPage extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<WebImage> partialMatchingImages;
-
-  static {
-    // hack to force ProGuard to consider WebImage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WebImage.class);
-  }
 
   /**
    * (Deprecated) Overall relevancy score for the web page.

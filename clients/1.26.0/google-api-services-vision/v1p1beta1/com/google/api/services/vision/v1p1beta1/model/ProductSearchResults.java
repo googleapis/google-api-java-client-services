@@ -46,12 +46,24 @@ public final class ProductSearchResults extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<GroupedResult> productGroupedResults;
 
+  static {
+    // hack to force ProGuard to consider GroupedResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GroupedResult.class);
+  }
+
   /**
    * List of results, one for each product match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Result> results;
+
+  static {
+    // hack to force ProGuard to consider Result used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Result.class);
+  }
 
   /**
    * Timestamp of the index which provided these results. Changes made after this time are not

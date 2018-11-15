@@ -46,6 +46,12 @@ public final class GoogleCloudVisionV1p2beta1ProductSearchResults extends com.go
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult> productGroupedResults;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult.class);
+  }
+
   /**
    * List of results, one for each product match.
    * The value may be {@code null}.

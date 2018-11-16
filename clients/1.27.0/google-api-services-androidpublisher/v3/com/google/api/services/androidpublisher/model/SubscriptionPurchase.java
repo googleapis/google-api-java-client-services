@@ -38,6 +38,14 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.Boolean autoRenewing;
 
   /**
+   * Time at which the subscription will be automatically resumed, in milliseconds since the Epoch.
+   * Only present if the user has requested to pause the subscription.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long autoResumeTimeMillis;
+
+  /**
    * The reason why a subscription was canceled or is not auto-renewing. Possible values are: - User
    * canceled the subscription  - Subscription was canceled by the system, for example because of a
    * billing problem  - Subscription was replaced with a new subscription  - Subscription was
@@ -219,6 +227,25 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
    */
   public SubscriptionPurchase setAutoRenewing(java.lang.Boolean autoRenewing) {
     this.autoRenewing = autoRenewing;
+    return this;
+  }
+
+  /**
+   * Time at which the subscription will be automatically resumed, in milliseconds since the Epoch.
+   * Only present if the user has requested to pause the subscription.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAutoResumeTimeMillis() {
+    return autoResumeTimeMillis;
+  }
+
+  /**
+   * Time at which the subscription will be automatically resumed, in milliseconds since the Epoch.
+   * Only present if the user has requested to pause the subscription.
+   * @param autoResumeTimeMillis autoResumeTimeMillis or {@code null} for none
+   */
+  public SubscriptionPurchase setAutoResumeTimeMillis(java.lang.Long autoResumeTimeMillis) {
+    this.autoResumeTimeMillis = autoResumeTimeMillis;
     return this;
   }
 

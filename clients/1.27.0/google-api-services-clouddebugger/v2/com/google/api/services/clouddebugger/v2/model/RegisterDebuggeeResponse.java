@@ -31,8 +31,8 @@ package com.google.api.services.clouddebugger.v2.model;
 public final class RegisterDebuggeeResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Debuggee resource. The field `id` is guranteed to be set (in addition to the echoed fields). If
-   * the field `is_disabled` is set to `true`, the agent should disable itself by removing all
+   * Debuggee resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
+   * If the field `is_disabled` is set to `true`, the agent should disable itself by removing all
    * breakpoints and detaching from the application. It should however continue to poll
    * `RegisterDebuggee` until reenabled.
    * The value may be {@code null}.
@@ -41,8 +41,8 @@ public final class RegisterDebuggeeResponse extends com.google.api.client.json.G
   private Debuggee debuggee;
 
   /**
-   * Debuggee resource. The field `id` is guranteed to be set (in addition to the echoed fields). If
-   * the field `is_disabled` is set to `true`, the agent should disable itself by removing all
+   * Debuggee resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
+   * If the field `is_disabled` is set to `true`, the agent should disable itself by removing all
    * breakpoints and detaching from the application. It should however continue to poll
    * `RegisterDebuggee` until reenabled.
    * @return value or {@code null} for none
@@ -52,8 +52,8 @@ public final class RegisterDebuggeeResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Debuggee resource. The field `id` is guranteed to be set (in addition to the echoed fields). If
-   * the field `is_disabled` is set to `true`, the agent should disable itself by removing all
+   * Debuggee resource. The field `id` is guaranteed to be set (in addition to the echoed fields).
+   * If the field `is_disabled` is set to `true`, the agent should disable itself by removing all
    * breakpoints and detaching from the application. It should however continue to poll
    * `RegisterDebuggee` until reenabled.
    * @param debuggee debuggee or {@code null} for none

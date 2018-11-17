@@ -46,3 +46,5 @@ api_key
 
 # Generator files
 .cache/
+
+synth.metadata

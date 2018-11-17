@@ -65,6 +65,20 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer networksPerManagedZone;
 
   /**
+   * Maximum allowed number of networks per policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer networksPerPolicy;
+
+  /**
+   * Maximum allowed number of policies per project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer policies;
+
+  /**
    * Maximum allowed number of ResourceRecords per ResourceRecordSet.
    * The value may be {@code null}.
    */
@@ -91,6 +105,20 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rrsetsPerManagedZone;
+
+  /**
+   * Maximum allowed number of target name servers per managed forwarding zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetNameServersPerManagedZone;
+
+  /**
+   * Maximum allowed number of alternative target name servers per policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetNameServersPerPolicy;
 
   /**
    * Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes.
@@ -198,6 +226,40 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of networks per policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNetworksPerPolicy() {
+    return networksPerPolicy;
+  }
+
+  /**
+   * Maximum allowed number of networks per policy.
+   * @param networksPerPolicy networksPerPolicy or {@code null} for none
+   */
+  public Quota setNetworksPerPolicy(java.lang.Integer networksPerPolicy) {
+    this.networksPerPolicy = networksPerPolicy;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of policies per project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPolicies() {
+    return policies;
+  }
+
+  /**
+   * Maximum allowed number of policies per project.
+   * @param policies policies or {@code null} for none
+   */
+  public Quota setPolicies(java.lang.Integer policies) {
+    this.policies = policies;
+    return this;
+  }
+
+  /**
    * Maximum allowed number of ResourceRecords per ResourceRecordSet.
    * @return value or {@code null} for none
    */
@@ -262,6 +324,40 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setRrsetsPerManagedZone(java.lang.Integer rrsetsPerManagedZone) {
     this.rrsetsPerManagedZone = rrsetsPerManagedZone;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of target name servers per managed forwarding zone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetNameServersPerManagedZone() {
+    return targetNameServersPerManagedZone;
+  }
+
+  /**
+   * Maximum allowed number of target name servers per managed forwarding zone.
+   * @param targetNameServersPerManagedZone targetNameServersPerManagedZone or {@code null} for none
+   */
+  public Quota setTargetNameServersPerManagedZone(java.lang.Integer targetNameServersPerManagedZone) {
+    this.targetNameServersPerManagedZone = targetNameServersPerManagedZone;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of alternative target name servers per policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetNameServersPerPolicy() {
+    return targetNameServersPerPolicy;
+  }
+
+  /**
+   * Maximum allowed number of alternative target name servers per policy.
+   * @param targetNameServersPerPolicy targetNameServersPerPolicy or {@code null} for none
+   */
+  public Quota setTargetNameServersPerPolicy(java.lang.Integer targetNameServersPerPolicy) {
+    this.targetNameServersPerPolicy = targetNameServersPerPolicy;
     return this;
   }
 

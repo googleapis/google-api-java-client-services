@@ -30,10 +30,9 @@ package com.google.api.services.appengine.v1.model;
 public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Options for any Google Cloud Build builds created as a part of this deployment.Note that this
-   * is orthogonal to the build parameter, where the deployment depends on an already existing cloud
-   * build. These options will only be used if a new build is created, such as when deploying to the
-   * App Engine flexible environment using files or zip.
+   * Options for any Google Cloud Build builds created as a part of this deployment.These options
+   * will only be used if a new build is created, such as when deploying to the App Engine flexible
+   * environment using files or zip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,12 +54,6 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, FileInfo> files;
 
-  static {
-    // hack to force ProGuard to consider FileInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FileInfo.class);
-  }
-
   /**
    * The zip file for this deployment, if this is a zip deployment.
    * The value may be {@code null}.
@@ -69,10 +62,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private ZipInfo zip;
 
   /**
-   * Options for any Google Cloud Build builds created as a part of this deployment.Note that this
-   * is orthogonal to the build parameter, where the deployment depends on an already existing cloud
-   * build. These options will only be used if a new build is created, such as when deploying to the
-   * App Engine flexible environment using files or zip.
+   * Options for any Google Cloud Build builds created as a part of this deployment.These options
+   * will only be used if a new build is created, such as when deploying to the App Engine flexible
+   * environment using files or zip.
    * @return value or {@code null} for none
    */
   public CloudBuildOptions getCloudBuildOptions() {
@@ -80,10 +72,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Options for any Google Cloud Build builds created as a part of this deployment.Note that this
-   * is orthogonal to the build parameter, where the deployment depends on an already existing cloud
-   * build. These options will only be used if a new build is created, such as when deploying to the
-   * App Engine flexible environment using files or zip.
+   * Options for any Google Cloud Build builds created as a part of this deployment.These options
+   * will only be used if a new build is created, such as when deploying to the App Engine flexible
+   * environment using files or zip.
    * @param cloudBuildOptions cloudBuildOptions or {@code null} for none
    */
   public Deployment setCloudBuildOptions(CloudBuildOptions cloudBuildOptions) {

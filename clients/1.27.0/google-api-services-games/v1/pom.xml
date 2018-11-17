@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-games</artifactId>
-  <version>v1-rev20180920-1.27.0</version>
-  <name>Google Play Game Services API v1-rev20180920-1.27.0</name>
+  <version>v1-rev20181113-1.27.0</version>
+  <name>Google Play Game Services API v1-rev20181113-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

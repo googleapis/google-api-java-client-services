@@ -2232,24 +2232,33 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
-         * The continuation token, which is used to page through large result sets. To get the next
-         * page of results, set this parameter to the value of nextPageToken from the previous
-         * response.
+         * The continuation token, which is used for incremental syncing. To get the next batch of
+         * changes, set this parameter to the value of nextPageToken from the previous response.
+         * This token is treated as a timestamp (in millis since epoch). If specified, the API
+         * returns sessions modified since this time. The page token is ignored if either start or
+         * end time is specified. If none of start time, end time, and the page token is specified,
+         * sessions modified in the last 7 days are returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The continuation token, which is used to page through large result sets. To get the next page of
-       results, set this parameter to the value of nextPageToken from the previous response.
+        /** The continuation token, which is used for incremental syncing. To get the next batch of changes,
+       set this parameter to the value of nextPageToken from the previous response. This token is treated
+       as a timestamp (in millis since epoch). If specified, the API returns sessions modified since this
+       time. The page token is ignored if either start or end time is specified. If none of start time,
+       end time, and the page token is specified, sessions modified in the last 7 days are returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * The continuation token, which is used to page through large result sets. To get the next
-         * page of results, set this parameter to the value of nextPageToken from the previous
-         * response.
+         * The continuation token, which is used for incremental syncing. To get the next batch of
+         * changes, set this parameter to the value of nextPageToken from the previous response.
+         * This token is treated as a timestamp (in millis since epoch). If specified, the API
+         * returns sessions modified since this time. The page token is ignored if either start or
+         * end time is specified. If none of start time, end time, and the page token is specified,
+         * sessions modified in the last 7 days are returned.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

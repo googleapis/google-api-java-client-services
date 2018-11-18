@@ -38,8 +38,7 @@ package com.google.api.services.fitness.model;
 public final class DataPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Used for version checking during transformation; that is, a datapoint can only replace another
-   * datapoint that has an older computation time stamp.
+   * DO NOT USE THIS FIELD. It is ignored, and not stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -102,8 +101,7 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private java.util.List<Value> value;
 
   /**
-   * Used for version checking during transformation; that is, a datapoint can only replace another
-   * datapoint that has an older computation time stamp.
+   * DO NOT USE THIS FIELD. It is ignored, and not stored.
    * @return value or {@code null} for none
    */
   public java.lang.Long getComputationTimeMillis() {
@@ -111,8 +109,7 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used for version checking during transformation; that is, a datapoint can only replace another
-   * datapoint that has an older computation time stamp.
+   * DO NOT USE THIS FIELD. It is ignored, and not stored.
    * @param computationTimeMillis computationTimeMillis or {@code null} for none
    */
   public DataPoint setComputationTimeMillis(java.lang.Long computationTimeMillis) {

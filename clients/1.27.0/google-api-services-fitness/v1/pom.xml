@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-fitness</artifactId>
-  <version>v1-rev20170922-1.27.0</version>
-  <name>Fitness v1-rev20170922-1.27.0</name>
+  <version>v1-rev20181112-1.27.0</version>
+  <name>Fitness v1-rev20181112-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -95,6 +95,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * The bucket's IAM configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IamConfiguration iamConfiguration;
+
+  /**
    * The ID of the bucket. For buckets, the id and name properties are the same.
    * The value may be {@code null}.
    */
@@ -360,6 +367,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * The bucket's IAM configuration.
+   * @return value or {@code null} for none
+   */
+  public IamConfiguration getIamConfiguration() {
+    return iamConfiguration;
+  }
+
+  /**
+   * The bucket's IAM configuration.
+   * @param iamConfiguration iamConfiguration or {@code null} for none
+   */
+  public Bucket setIamConfiguration(IamConfiguration iamConfiguration) {
+    this.iamConfiguration = iamConfiguration;
     return this;
   }
 
@@ -896,6 +920,114 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       return (Encryption) super.clone();
     }
 
+  }
+
+  /**
+   * The bucket's IAM configuration.
+   */
+  public static final class IamConfiguration extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private BucketPolicyOnly bucketPolicyOnly;
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public BucketPolicyOnly getBucketPolicyOnly() {
+      return bucketPolicyOnly;
+    }
+
+    /**
+     * @param bucketPolicyOnly bucketPolicyOnly or {@code null} for none
+     */
+    public IamConfiguration setBucketPolicyOnly(BucketPolicyOnly bucketPolicyOnly) {
+      this.bucketPolicyOnly = bucketPolicyOnly;
+      return this;
+    }
+
+    @Override
+    public IamConfiguration set(String fieldName, Object value) {
+      return (IamConfiguration) super.set(fieldName, value);
+    }
+
+    @Override
+    public IamConfiguration clone() {
+      return (IamConfiguration) super.clone();
+    }
+
+    /**
+     * Model definition for BucketIamConfigurationBucketPolicyOnly.
+     */
+    public static final class BucketPolicyOnly extends com.google.api.client.json.GenericJson {
+
+      /**
+       * If set, access checks only use bucket-level IAM policies or above.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enabled;
+
+      /**
+       * The deadline time for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in
+       * RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false
+       * until the locked time, after which the field is immutable.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private com.google.api.client.util.DateTime lockedTime;
+
+      /**
+       * If set, access checks only use bucket-level IAM policies or above.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getEnabled() {
+        return enabled;
+      }
+
+      /**
+       * If set, access checks only use bucket-level IAM policies or above.
+       * @param enabled enabled or {@code null} for none
+       */
+      public BucketPolicyOnly setEnabled(java.lang.Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+      }
+
+      /**
+       * The deadline time for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in
+       * RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false
+       * until the locked time, after which the field is immutable.
+       * @return value or {@code null} for none
+       */
+      public com.google.api.client.util.DateTime getLockedTime() {
+        return lockedTime;
+      }
+
+      /**
+       * The deadline time for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in
+       * RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false
+       * until the locked time, after which the field is immutable.
+       * @param lockedTime lockedTime or {@code null} for none
+       */
+      public BucketPolicyOnly setLockedTime(com.google.api.client.util.DateTime lockedTime) {
+        this.lockedTime = lockedTime;
+        return this;
+      }
+
+      @Override
+      public BucketPolicyOnly set(String fieldName, Object value) {
+        return (BucketPolicyOnly) super.set(fieldName, value);
+      }
+
+      @Override
+      public BucketPolicyOnly clone() {
+        return (BucketPolicyOnly) super.clone();
+      }
+
+    }
   }
 
   /**

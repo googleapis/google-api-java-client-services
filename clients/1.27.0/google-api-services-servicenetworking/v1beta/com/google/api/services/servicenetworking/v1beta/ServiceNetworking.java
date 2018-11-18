@@ -490,6 +490,196 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         return (AddSubnetwork) super.set(parameterName, value);
       }
     }
+    /**
+     * Allocated ranges specified for the connection may be updated. Operation.
+     *
+     * Create a request for the method "services.patch".
+     *
+     * This request holds the parameters needed by the servicenetworking server.  After setting any
+     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Provider peering service that is managing peering connectivity for a
+    service provider organization.
+     *        For Google services that support this functionality it is
+     *        'services/servicenetworking.googleapis.com'.
+     * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1beta.model.Operation> {
+
+      private static final String REST_PATH = "v1beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^services/[^/]+$");
+
+      /**
+       * Allocated ranges specified for the connection may be updated. Operation.
+       *
+       * Create a request for the method "services.patch".
+       *
+       * This request holds the parameters needed by the the servicenetworking server.  After setting
+       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Provider peering service that is managing peering connectivity for a
+    service provider organization.
+     *        For Google services that support this functionality it is
+     *        'services/servicenetworking.googleapis.com'.
+       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) {
+        super(ServiceNetworking.this, "PATCH", REST_PATH, content, com.google.api.services.servicenetworking.v1beta.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Provider peering service that is managing peering connectivity for a service provider
+       * organization. For Google services that support this functionality it is
+       * 'services/servicenetworking.googleapis.com'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Provider peering service that is managing peering connectivity for a service provider organization.
+     For Google services that support this functionality it is
+     'services/servicenetworking.googleapis.com'.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Provider peering service that is managing peering connectivity for a service provider
+       * organization. For Google services that support this functionality it is
+       * 'services/servicenetworking.googleapis.com'.
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * If a previously defined allocated range is removed, force flag must be set to true.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean force;
+
+      /** If a previously defined allocated range is removed, force flag must be set to true.
+       */
+      public java.lang.Boolean getForce() {
+        return force;
+      }
+
+      /**
+       * If a previously defined allocated range is removed, force flag must be set to true.
+       */
+      public Patch setForce(java.lang.Boolean force) {
+        this.force = force;
+        return this;
+      }
+
+      /**
+       * The update mask. If this is omitted, it defaults to "*".   Only reserved peering ranges
+       * list may be updated.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The update mask. If this is omitted, it defaults to "*".   Only reserved peering ranges list may be
+     updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * The update mask. If this is omitted, it defaults to "*".   Only reserved peering ranges
+       * list may be updated.
+       */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Connections collection.
@@ -681,6 +871,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       service provider organization.
        *        For Google services that support this functionality it is
        *        'services/servicenetworking.googleapis.com'.
+      For "-" all configured public peering
+       *        services will be queried.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -712,6 +904,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       service provider organization.
        *        For Google services that support this functionality it is
        *        'services/servicenetworking.googleapis.com'.
+      For "-" all configured public peering
+       *        services will be queried.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -792,14 +986,16 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         /**
          * Provider peering service that is managing peering connectivity for a service provider
          * organization. For Google services that support this functionality it is
-         * 'services/servicenetworking.googleapis.com'.
+         * 'services/servicenetworking.googleapis.com'. For "-" all configured public peering
+         * services will be queried.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Provider peering service that is managing peering connectivity for a service provider organization.
        For Google services that support this functionality it is
-       'services/servicenetworking.googleapis.com'.
+       'services/servicenetworking.googleapis.com'. For "-" all configured public peering services will be
+       queried.
          */
         public java.lang.String getParent() {
           return parent;
@@ -808,7 +1004,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         /**
          * Provider peering service that is managing peering connectivity for a service provider
          * organization. For Google services that support this functionality it is
-         * 'services/servicenetworking.googleapis.com'.
+         * 'services/servicenetworking.googleapis.com'. For "-" all configured public peering
+         * services will be queried.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

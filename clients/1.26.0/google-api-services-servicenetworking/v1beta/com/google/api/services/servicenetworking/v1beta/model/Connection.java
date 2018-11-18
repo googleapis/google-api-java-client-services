@@ -56,6 +56,14 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> reservedPeeringRanges;
 
   /**
+   * Output only. Name of the peering service associated with this connection. "services/{service
+   * name}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String service;
+
+  /**
    * Name of VPC network connected with service producer network. Must be in a form
    * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
    * {network} is a network name.
@@ -111,6 +119,25 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setReservedPeeringRanges(java.util.List<java.lang.String> reservedPeeringRanges) {
     this.reservedPeeringRanges = reservedPeeringRanges;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the peering service associated with this connection. "services/{service
+   * name}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getService() {
+    return service;
+  }
+
+  /**
+   * Output only. Name of the peering service associated with this connection. "services/{service
+   * name}
+   * @param service service or {@code null} for none
+   */
+  public Connection setService(java.lang.String service) {
+    this.service = service;
     return this;
   }
 

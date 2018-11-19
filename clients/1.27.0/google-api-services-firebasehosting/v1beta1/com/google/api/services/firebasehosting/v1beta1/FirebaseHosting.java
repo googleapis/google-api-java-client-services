@@ -143,6 +143,320 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
   public class Sites {
 
     /**
+     * Gets the Hosting metadata for a specific site.
+     *
+     * Create a request for the method "sites.getConfig".
+     *
+     * This request holds the parameters needed by the firebasehosting server.  After setting any
+     * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The site for which to get the SiteConfig, in the format:
+    sites/site-name/config
+     * @return the request
+     */
+    public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
+      GetConfig result = new GetConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetConfig extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.SiteConfig> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^sites/[^/]+/config$");
+
+      /**
+       * Gets the Hosting metadata for a specific site.
+       *
+       * Create a request for the method "sites.getConfig".
+       *
+       * This request holds the parameters needed by the the firebasehosting server.  After setting any
+       * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The site for which to get the SiteConfig, in the format:
+    sites/site-name/config
+       * @since 1.13
+       */
+      protected GetConfig(java.lang.String name) {
+        super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^sites/[^/]+/config$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetConfig setAccessToken(java.lang.String accessToken) {
+        return (GetConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetConfig setAlt(java.lang.String alt) {
+        return (GetConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetConfig setCallback(java.lang.String callback) {
+        return (GetConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetConfig setFields(java.lang.String fields) {
+        return (GetConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetConfig setKey(java.lang.String key) {
+        return (GetConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetConfig setUploadType(java.lang.String uploadType) {
+        return (GetConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The site for which to get the SiteConfig, in the format: sites/site-name/config
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The site for which to get the SiteConfig, in the format: sites/site-name/config
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The site for which to get the SiteConfig, in the format: sites/site-name/config
+       */
+      public GetConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^sites/[^/]+/config$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetConfig set(String parameterName, Object value) {
+        return (GetConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the Hosting metadata for a specific site.
+     *
+     * Create a request for the method "sites.updateConfig".
+     *
+     * This request holds the parameters needed by the firebasehosting server.  After setting any
+     * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The site for which to update the SiteConfig, in the format:
+    sites/site-name/config
+     * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.SiteConfig}
+     * @return the request
+     */
+    public UpdateConfig updateConfig(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig content) throws java.io.IOException {
+      UpdateConfig result = new UpdateConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateConfig extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.SiteConfig> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^sites/[^/]+/config$");
+
+      /**
+       * Sets the Hosting metadata for a specific site.
+       *
+       * Create a request for the method "sites.updateConfig".
+       *
+       * This request holds the parameters needed by the the firebasehosting server.  After setting any
+       * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The site for which to update the SiteConfig, in the format:
+    sites/site-name/config
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.SiteConfig}
+       * @since 1.13
+       */
+      protected UpdateConfig(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig content) {
+        super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^sites/[^/]+/config$");
+        }
+      }
+
+      @Override
+      public UpdateConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateConfig setAlt(java.lang.String alt) {
+        return (UpdateConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateConfig setCallback(java.lang.String callback) {
+        return (UpdateConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateConfig setFields(java.lang.String fields) {
+        return (UpdateConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateConfig setKey(java.lang.String key) {
+        return (UpdateConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The site for which to update the SiteConfig, in the format: sites/site-
+       * name/config
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The site for which to update the SiteConfig, in the format: sites/site-name/config
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The site for which to update the SiteConfig, in the format: sites/site-
+       * name/config
+       */
+      public UpdateConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^sites/[^/]+/config$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * A set of field names from your [site configuration](../sites.SiteConfig) that you want to
+       * update. A field will be overwritten if, and only if, it's in the mask. If a mask is not
+       * provided then a default mask of only [`max_versions`](../sites.SiteConfig.max_versions)
+       * will be used.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** A set of field names from your [site configuration](../sites.SiteConfig) that you want to update. A
+     field will be overwritten if, and only if, it's in the mask. If a mask is not provided then a
+     default mask of only [`max_versions`](../sites.SiteConfig.max_versions) will be used.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * A set of field names from your [site configuration](../sites.SiteConfig) that you want to
+       * update. A field will be overwritten if, and only if, it's in the mask. If a mask is not
+       * provided then a default mask of only [`max_versions`](../sites.SiteConfig.max_versions)
+       * will be used.
+       */
+      public UpdateConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateConfig set(String parameterName, Object value) {
+        return (UpdateConfig) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Domains collection.
      *
      * <p>The typical use is:</p>

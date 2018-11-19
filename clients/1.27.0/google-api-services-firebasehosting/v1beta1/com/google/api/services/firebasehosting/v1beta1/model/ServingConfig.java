@@ -60,24 +60,12 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Redirect> redirects;
 
-  static {
-    // hack to force ProGuard to consider Redirect used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Redirect.class);
-  }
-
   /**
    * A list of rewrites that will act as if the service were given the destination URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Rewrite> rewrites;
-
-  static {
-    // hack to force ProGuard to consider Rewrite used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Rewrite.class);
-  }
 
   /**
    * Defines how to handle a trailing slash in the URL path.

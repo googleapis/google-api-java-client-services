@@ -65,7 +65,7 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   /**
    * Optional.
    *
-   * Specifies the traffic density to use when caculating commute time. Must not be present if
+   * Specifies the traffic density to use when calculating commute time. Must not be present if
    * departure_hour_local is specified.
    * The value may be {@code null}.
    */
@@ -163,7 +163,7 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   /**
    * Optional.
    *
-   * Specifies the traffic density to use when caculating commute time. Must not be present if
+   * Specifies the traffic density to use when calculating commute time. Must not be present if
    * departure_hour_local is specified.
    * @return value or {@code null} for none
    */
@@ -174,7 +174,7 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   /**
    * Optional.
    *
-   * Specifies the traffic density to use when caculating commute time. Must not be present if
+   * Specifies the traffic density to use when calculating commute time. Must not be present if
    * departure_hour_local is specified.
    * @param roadTraffic roadTraffic or {@code null} for none
    */

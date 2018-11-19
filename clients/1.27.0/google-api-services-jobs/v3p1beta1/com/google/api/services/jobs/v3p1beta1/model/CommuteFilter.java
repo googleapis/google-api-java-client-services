@@ -66,7 +66,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional.
    *
-   * Specifies the traffic density to use when caculating commute time.
+   * Specifies the traffic density to use when calculating commute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +165,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional.
    *
-   * Specifies the traffic density to use when caculating commute time.
+   * Specifies the traffic density to use when calculating commute time.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoadTraffic() {
@@ -175,7 +175,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional.
    *
-   * Specifies the traffic density to use when caculating commute time.
+   * Specifies the traffic density to use when calculating commute time.
    * @param roadTraffic roadTraffic or {@code null} for none
    */
   public CommuteFilter setRoadTraffic(java.lang.String roadTraffic) {

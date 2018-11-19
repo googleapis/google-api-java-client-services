@@ -33,8 +33,6 @@ package com.google.api.services.jobs.v2.model;
 public final class SearchJobsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. Any value provided in this field is ignored.
-   *
    * Optional.
    *
    * Controls whether to disable relevance thresholding. Relevance thresholding removes jobs that
@@ -195,8 +193,6 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String sortBy;
 
   /**
-   * Deprecated. Any value provided in this field is ignored.
-   *
    * Optional.
    *
    * Controls whether to disable relevance thresholding. Relevance thresholding removes jobs that
@@ -213,8 +209,6 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Deprecated. Any value provided in this field is ignored.
-   *
    * Optional.
    *
    * Controls whether to disable relevance thresholding. Relevance thresholding removes jobs that

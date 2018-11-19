@@ -76,6 +76,12 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<MatchingJob> matchingJobs;
 
+  static {
+    // hack to force ProGuard to consider MatchingJob used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MatchingJob.class);
+  }
+
   /**
    * Additional information for the API invocation, such as the request tracking id.
    * The value may be {@code null}.
@@ -100,7 +106,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
 
   /**
    * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true` or if the response is the last page of results. Otherwise, the value is `-1`.
+   * to `true`, or if the response is the last page of results. Otherwise, the value is `-1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,7 +270,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
 
   /**
    * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true` or if the response is the last page of results. Otherwise, the value is `-1`.
+   * to `true`, or if the response is the last page of results. Otherwise, the value is `-1`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -273,7 +279,7 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
 
   /**
    * The precise result count, which is available only if the client set enable_precise_result_size
-   * to `true` or if the response is the last page of results. Otherwise, the value is `-1`.
+   * to `true`, or if the response is the last page of results. Otherwise, the value is `-1`.
    * @param totalSize totalSize or {@code null} for none
    */
   public SearchJobsResponse setTotalSize(java.lang.Integer totalSize) {

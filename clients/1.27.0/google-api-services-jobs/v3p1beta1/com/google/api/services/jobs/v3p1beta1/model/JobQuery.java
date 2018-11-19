@@ -194,9 +194,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * If a location value isn't specified, jobs fitting the other search criteria are retrieved
    * regardless of where they're located.
    *
-   * If multiple values are specified, jobs are retrieved from any of the specified locations, and,
-   * if different values are specified for the LocationFilter.distance_in_miles parameter, the
-   * maximum provided distance is used for all locations.
+   * If multiple values are specified, jobs are retrieved from any of the specified locations. If
+   * different values are specified for the LocationFilter.distance_in_miles parameter, the maximum
+   * provided distance is used for all locations.
    *
    * At most 5 location filters are allowed.
    * The value may be {@code null}.
@@ -575,9 +575,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * If a location value isn't specified, jobs fitting the other search criteria are retrieved
    * regardless of where they're located.
    *
-   * If multiple values are specified, jobs are retrieved from any of the specified locations, and,
-   * if different values are specified for the LocationFilter.distance_in_miles parameter, the
-   * maximum provided distance is used for all locations.
+   * If multiple values are specified, jobs are retrieved from any of the specified locations. If
+   * different values are specified for the LocationFilter.distance_in_miles parameter, the maximum
+   * provided distance is used for all locations.
    *
    * At most 5 location filters are allowed.
    * @return value or {@code null} for none
@@ -595,9 +595,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    * If a location value isn't specified, jobs fitting the other search criteria are retrieved
    * regardless of where they're located.
    *
-   * If multiple values are specified, jobs are retrieved from any of the specified locations, and,
-   * if different values are specified for the LocationFilter.distance_in_miles parameter, the
-   * maximum provided distance is used for all locations.
+   * If multiple values are specified, jobs are retrieved from any of the specified locations. If
+   * different values are specified for the LocationFilter.distance_in_miles parameter, the maximum
+   * provided distance is used for all locations.
    *
    * At most 5 location filters are allowed.
    * @param locationFilters locationFilters or {@code null} for none

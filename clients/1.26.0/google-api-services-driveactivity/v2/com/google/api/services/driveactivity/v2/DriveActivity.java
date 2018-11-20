@@ -20,7 +20,7 @@ package com.google.api.services.driveactivity.v2;
  * Service definition for DriveActivity (v2).
  *
  * <p>
- * 
+ * Provides a historical view of activity in Google Drive.
  * </p>
  *
  * <p>

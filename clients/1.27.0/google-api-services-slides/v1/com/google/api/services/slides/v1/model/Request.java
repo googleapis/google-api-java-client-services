@@ -198,6 +198,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private ReplaceImageRequest replaceImage;
 
   /**
+   * Reroutes a line such that it's connected at the two closest connection sites on the connected
+   * page elements.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RerouteLineRequest rerouteLine;
+
+  /**
    * Ungroups objects, such as groups.
    * The value may be {@code null}.
    */
@@ -217,6 +225,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateImagePropertiesRequest updateImageProperties;
+
+  /**
+   * Updates the category of a line
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateLineCategoryRequest updateLineCategory;
 
   /**
    * Updates the properties of a Line.
@@ -725,6 +740,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Reroutes a line such that it's connected at the two closest connection sites on the connected
+   * page elements.
+   * @return value or {@code null} for none
+   */
+  public RerouteLineRequest getRerouteLine() {
+    return rerouteLine;
+  }
+
+  /**
+   * Reroutes a line such that it's connected at the two closest connection sites on the connected
+   * page elements.
+   * @param rerouteLine rerouteLine or {@code null} for none
+   */
+  public Request setRerouteLine(RerouteLineRequest rerouteLine) {
+    this.rerouteLine = rerouteLine;
+    return this;
+  }
+
+  /**
    * Ungroups objects, such as groups.
    * @return value or {@code null} for none
    */
@@ -772,6 +806,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateImageProperties(UpdateImagePropertiesRequest updateImageProperties) {
     this.updateImageProperties = updateImageProperties;
+    return this;
+  }
+
+  /**
+   * Updates the category of a line
+   * @return value or {@code null} for none
+   */
+  public UpdateLineCategoryRequest getUpdateLineCategory() {
+    return updateLineCategory;
+  }
+
+  /**
+   * Updates the category of a line
+   * @param updateLineCategory updateLineCategory or {@code null} for none
+   */
+  public Request setUpdateLineCategory(UpdateLineCategoryRequest updateLineCategory) {
+    this.updateLineCategory = updateLineCategory;
     return this;
   }
 

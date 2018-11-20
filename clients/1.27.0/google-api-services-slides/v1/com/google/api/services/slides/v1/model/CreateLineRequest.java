@@ -30,6 +30,23 @@ package com.google.api.services.slides.v1.model;
 public final class CreateLineRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The category of line to be created.
+   *
+   * The exact line type created is determined based on the category and how it's routed to connect
+   * to other page elements.
+   *
+   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
+   *
+   * If you do not specify a value for `category`, but specify a value for `line_category`, then the
+   * specified `line_category` value is used.
+   *
+   * If you do not specify either, then STRAIGHT is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
    * The element properties for the line.
    * The value may be {@code null}.
    */
@@ -56,6 +73,43 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String objectId;
+
+  /**
+   * The category of line to be created.
+   *
+   * The exact line type created is determined based on the category and how it's routed to connect
+   * to other page elements.
+   *
+   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
+   *
+   * If you do not specify a value for `category`, but specify a value for `line_category`, then the
+   * specified `line_category` value is used.
+   *
+   * If you do not specify either, then STRAIGHT is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * The category of line to be created.
+   *
+   * The exact line type created is determined based on the category and how it's routed to connect
+   * to other page elements.
+   *
+   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
+   *
+   * If you do not specify a value for `category`, but specify a value for `line_category`, then the
+   * specified `line_category` value is used.
+   *
+   * If you do not specify either, then STRAIGHT is used.
+   * @param category category or {@code null} for none
+   */
+  public CreateLineRequest setCategory(java.lang.String category) {
+    this.category = category;
+    return this;
+  }
 
   /**
    * The element properties for the line.

@@ -36,12 +36,24 @@ public final class PermissionChange extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<Permission> addedPermissions;
 
+  static {
+    // hack to force ProGuard to consider Permission used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Permission.class);
+  }
+
   /**
    * The set of permissions removed by this change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Permission> removedPermissions;
+
+  static {
+    // hack to force ProGuard to consider Permission used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Permission.class);
+  }
 
   /**
    * The set of permissions added by this change.

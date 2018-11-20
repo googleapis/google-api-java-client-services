@@ -36,6 +36,12 @@ public final class GridData extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<DimensionProperties> columnMetadata;
 
+  static {
+    // hack to force ProGuard to consider DimensionProperties used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DimensionProperties.class);
+  }
+
   /**
    * The data in the grid, one entry per row, starting with the row in startRow. The values in
    * RowData will correspond to columns starting at start_column.
@@ -56,6 +62,12 @@ public final class GridData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<DimensionProperties> rowMetadata;
+
+  static {
+    // hack to force ProGuard to consider DimensionProperties used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DimensionProperties.class);
+  }
 
   /**
    * The first column this GridData refers to, zero-based.

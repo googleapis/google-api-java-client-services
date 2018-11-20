@@ -37,6 +37,12 @@ public final class BatchGetValuesByDataFilterRequest extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<DataFilter> dataFilters;
 
+  static {
+    // hack to force ProGuard to consider DataFilter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataFilter.class);
+  }
+
   /**
    * How dates, times, and durations should be represented in the output. This is ignored if
    * value_render_option is FORMATTED_VALUE. The default dateTime render option is

@@ -104,6 +104,12 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<BasicChartSeries> series;
 
+  static {
+    // hack to force ProGuard to consider BasicChartSeries used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BasicChartSeries.class);
+  }
+
   /**
    * The stacked type for charts that support vertical stacking. Applies to Area, Bar, Column,
    * Combo, and Stepped Area charts.

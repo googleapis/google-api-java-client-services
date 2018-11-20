@@ -23,16 +23,16 @@ package com.google.api.services.sheets.v4;
  */
 public class SheetsScopes {
 
-  /** View and manage the files in your Google Drive. */
+  /** See, edit, create, and delete all of your Google Drive files. */
   public static final String DRIVE = "https://www.googleapis.com/auth/drive";
 
   /** View and manage Google Drive files and folders that you have opened or created with this app. */
   public static final String DRIVE_FILE = "https://www.googleapis.com/auth/drive.file";
 
-  /** View the files in your Google Drive. */
+  /** See and download all your Google Drive files. */
   public static final String DRIVE_READONLY = "https://www.googleapis.com/auth/drive.readonly";
 
-  /** View and manage your spreadsheets in Google Drive. */
+  /** See, edit, create, and delete your spreadsheets in Google Drive. */
   public static final String SPREADSHEETS = "https://www.googleapis.com/auth/spreadsheets";
 
   /** View your Google Spreadsheets. */

@@ -36,6 +36,12 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<BandedRange> bandedRanges;
 
+  static {
+    // hack to force ProGuard to consider BandedRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BandedRange.class);
+  }
+
   /**
    * The filter on this sheet, if any.
    * The value may be {@code null}.
@@ -121,6 +127,12 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ProtectedRange> protectedRanges;
+
+  static {
+    // hack to force ProGuard to consider ProtectedRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ProtectedRange.class);
+  }
 
   /**
    * All row groups on this sheet, ordered by increasing range start index, then by group depth.

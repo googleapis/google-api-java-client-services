@@ -50,12 +50,6 @@ public final class ManualRule extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ManualRuleGroup> groups;
 
-  static {
-    // hack to force ProGuard to consider ManualRuleGroup used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ManualRuleGroup.class);
-  }
-
   /**
    * The list of group names and the corresponding items from the source data that map to each group
    * name.

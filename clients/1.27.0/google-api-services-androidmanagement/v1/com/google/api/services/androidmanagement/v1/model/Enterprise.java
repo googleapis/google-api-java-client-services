@@ -93,6 +93,12 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<SigninDetail> signinDetails;
 
+  static {
+    // hack to force ProGuard to consider SigninDetail used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SigninDetail.class);
+  }
+
   /**
    * Terms and conditions that must be accepted when provisioning a device for this enterprise. A
    * page of terms is generated for each value in this list.

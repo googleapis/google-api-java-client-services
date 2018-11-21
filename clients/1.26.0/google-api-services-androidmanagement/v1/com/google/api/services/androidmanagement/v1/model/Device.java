@@ -46,6 +46,12 @@ public final class Device extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ApplicationReport> applicationReports;
 
+  static {
+    // hack to force ProGuard to consider ApplicationReport used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ApplicationReport.class);
+  }
+
   /**
    * The name of the policy currently applied to the device.
    * The value may be {@code null}.
@@ -134,6 +140,12 @@ public final class Device extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<HardwareStatus> hardwareStatusSamples;
 
+  static {
+    // hack to force ProGuard to consider HardwareStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HardwareStatus.class);
+  }
+
   /**
    * Deprecated.
    * The value may be {@code null}.
@@ -171,6 +183,12 @@ public final class Device extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MemoryEvent> memoryEvents;
 
+  static {
+    // hack to force ProGuard to consider MemoryEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MemoryEvent.class);
+  }
+
   /**
    * Memory information. This information is only available if memoryInfoEnabled is true in the
    * device's policy.
@@ -200,6 +218,12 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<NonComplianceDetail> nonComplianceDetails;
+
+  static {
+    // hack to force ProGuard to consider NonComplianceDetail used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NonComplianceDetail.class);
+  }
 
   /**
    * Whether the device is compliant with its policy.

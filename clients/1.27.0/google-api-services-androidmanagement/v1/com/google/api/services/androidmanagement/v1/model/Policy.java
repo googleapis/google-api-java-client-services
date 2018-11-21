@@ -83,6 +83,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ApplicationPolicy> applications;
 
+  static {
+    // hack to force ProGuard to consider ApplicationPolicy used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ApplicationPolicy.class);
+  }
+
   /**
    * Whether auto time is required, which prevents the user from manually setting the date and time.
    * The value may be {@code null}.
@@ -143,6 +149,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ChoosePrivateKeyRule> choosePrivateKeyRules;
+
+  static {
+    // hack to force ProGuard to consider ChoosePrivateKeyRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ChoosePrivateKeyRule.class);
+  }
 
   /**
    * Rules declaring which mitigating actions to take when a device is not compliant with its
@@ -372,6 +384,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<PasswordRequirements> passwordPolicies;
 
+  static {
+    // hack to force ProGuard to consider PasswordRequirements used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PasswordRequirements.class);
+  }
+
   /**
    * Password requirements. DEPRECATED - Use password_policies
    * The value may be {@code null}.
@@ -387,6 +405,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<PermissionGrant> permissionGrants;
 
+  static {
+    // hack to force ProGuard to consider PermissionGrant used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PermissionGrant.class);
+  }
+
   /**
    * If present, only the input methods provided by packages in this list are permitted. If this
    * field is present, but the list is empty, then only system input methods are permitted.
@@ -401,6 +425,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<PersistentPreferredActivity> persistentPreferredActivities;
+
+  static {
+    // hack to force ProGuard to consider PersistentPreferredActivity used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PersistentPreferredActivity.class);
+  }
 
   /**
    * This mode controls which apps are available to the user in the Play Store and the behavior on
@@ -555,7 +585,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean usbFileTransferDisabled;
 
   /**
-   * Whether USB storage is enabled.
+   * Whether USB storage is enabled. Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1845,7 +1875,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether USB storage is enabled.
+   * Whether USB storage is enabled. Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUsbMassStorageEnabled() {
@@ -1853,7 +1883,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether USB storage is enabled.
+   * Whether USB storage is enabled. Deprecated.
    * @param usbMassStorageEnabled usbMassStorageEnabled or {@code null} for none
    */
   public Policy setUsbMassStorageEnabled(java.lang.Boolean usbMassStorageEnabled) {

@@ -108,7 +108,10 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
 
   /**
    * The machine type of the virtual machine to create. Must be the short name of a standard machine
-   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096").
+   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096", where "1"
+   * indicates the number of vCPUs and "4096" indicates the memory in MB). See [Creating an instance
+   * with a custom machine type](https://cloud.google.com/compute/docs/instances/creating-instance-
+   * with-custom-machine-type#create) for more specifications on creating a custom machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,7 +299,10 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
 
   /**
    * The machine type of the virtual machine to create. Must be the short name of a standard machine
-   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096").
+   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096", where "1"
+   * indicates the number of vCPUs and "4096" indicates the memory in MB). See [Creating an instance
+   * with a custom machine type](https://cloud.google.com/compute/docs/instances/creating-instance-
+   * with-custom-machine-type#create) for more specifications on creating a custom machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -305,7 +311,10 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
 
   /**
    * The machine type of the virtual machine to create. Must be the short name of a standard machine
-   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096").
+   * type (such as "n1-standard-1") or a custom machine type (such as "custom-1-4096", where "1"
+   * indicates the number of vCPUs and "4096" indicates the memory in MB). See [Creating an instance
+   * with a custom machine type](https://cloud.google.com/compute/docs/instances/creating-instance-
+   * with-custom-machine-type#create) for more specifications on creating a custom machine type.
    * @param machineType machineType or {@code null} for none
    */
   public VirtualMachine setMachineType(java.lang.String machineType) {

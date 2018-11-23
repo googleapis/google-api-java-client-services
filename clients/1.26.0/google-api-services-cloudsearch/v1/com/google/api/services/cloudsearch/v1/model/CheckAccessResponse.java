@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Model definition for ListItemsResponse.
+ * Model definition for CheckAccessResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,61 +27,40 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListItemsResponse extends com.google.api.client.json.GenericJson {
+public final class CheckAccessResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Returns true if principal has access.  Returns false otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Item> items;
+  private java.lang.Boolean hasAccess;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
-
-  /**
+   * Returns true if principal has access.  Returns false otherwise.
    * @return value or {@code null} for none
    */
-  public java.util.List<Item> getItems() {
-    return items;
+  public java.lang.Boolean getHasAccess() {
+    return hasAccess;
   }
 
   /**
-   * @param items items or {@code null} for none
+   * Returns true if principal has access.  Returns false otherwise.
+   * @param hasAccess hasAccess or {@code null} for none
    */
-  public ListItemsResponse setItems(java.util.List<Item> items) {
-    this.items = items;
-    return this;
-  }
-
-  /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
-  }
-
-  /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
-   * @param nextPageToken nextPageToken or {@code null} for none
-   */
-  public ListItemsResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public CheckAccessResponse setHasAccess(java.lang.Boolean hasAccess) {
+    this.hasAccess = hasAccess;
     return this;
   }
 
   @Override
-  public ListItemsResponse set(String fieldName, Object value) {
-    return (ListItemsResponse) super.set(fieldName, value);
+  public CheckAccessResponse set(String fieldName, Object value) {
+    return (CheckAccessResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListItemsResponse clone() {
-    return (ListItemsResponse) super.clone();
+  public CheckAccessResponse clone() {
+    return (CheckAccessResponse) super.clone();
   }
 
 }

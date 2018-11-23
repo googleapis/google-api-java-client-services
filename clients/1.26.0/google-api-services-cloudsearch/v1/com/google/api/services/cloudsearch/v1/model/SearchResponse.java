@@ -50,6 +50,12 @@ public final class SearchResponse extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<FacetResult> facetResults;
 
+  static {
+    // hack to force ProGuard to consider FacetResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FacetResult.class);
+  }
+
   /**
    * Whether there are more search results matching the query.
    * The value may be {@code null}.
@@ -91,6 +97,12 @@ public final class SearchResponse extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<SearchResult> results;
+
+  static {
+    // hack to force ProGuard to consider SearchResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SearchResult.class);
+  }
 
   /**
    * Suggested spelling for the query.

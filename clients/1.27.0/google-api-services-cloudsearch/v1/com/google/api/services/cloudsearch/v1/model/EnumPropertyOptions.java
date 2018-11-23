@@ -65,12 +65,6 @@ public final class EnumPropertyOptions extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<EnumValuePair> possibleValues;
 
-  static {
-    // hack to force ProGuard to consider EnumValuePair used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EnumValuePair.class);
-  }
-
   /**
    * If set, describes how the enum should be used as a search operator.
    * @return value or {@code null} for none

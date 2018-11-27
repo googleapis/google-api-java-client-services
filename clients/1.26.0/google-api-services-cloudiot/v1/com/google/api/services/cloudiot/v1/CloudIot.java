@@ -184,6 +184,148 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
       public class Registries {
 
         /**
+         * Associates the device with the gateway.
+         *
+         * Create a request for the method "registries.bindDeviceToGateway".
+         *
+         * This request holds the parameters needed by the cloudiot server.  After setting any optional
+         * parameters, call the {@link BindDeviceToGateway#execute()} method to invoke the remote operation.
+         *
+         * @param parent The name of the registry. For example,
+        `projects/example-project/locations/us-central1/registries
+         *        /my-registry`.
+         * @param content the {@link com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest}
+         * @return the request
+         */
+        public BindDeviceToGateway bindDeviceToGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest content) throws java.io.IOException {
+          BindDeviceToGateway result = new BindDeviceToGateway(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BindDeviceToGateway extends CloudIotRequest<com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:bindDeviceToGateway";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registries/[^/]+$");
+
+          /**
+           * Associates the device with the gateway.
+           *
+           * Create a request for the method "registries.bindDeviceToGateway".
+           *
+           * This request holds the parameters needed by the the cloudiot server.  After setting any
+           * optional parameters, call the {@link BindDeviceToGateway#execute()} method to invoke the remote
+           * operation. <p> {@link BindDeviceToGateway#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent The name of the registry. For example,
+        `projects/example-project/locations/us-central1/registries
+         *        /my-registry`.
+           * @param content the {@link com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest}
+           * @since 1.13
+           */
+          protected BindDeviceToGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest content) {
+            super(CloudIot.this, "POST", REST_PATH, content, com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registries/[^/]+$");
+            }
+          }
+
+          @Override
+          public BindDeviceToGateway set$Xgafv(java.lang.String $Xgafv) {
+            return (BindDeviceToGateway) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BindDeviceToGateway setAccessToken(java.lang.String accessToken) {
+            return (BindDeviceToGateway) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BindDeviceToGateway setAlt(java.lang.String alt) {
+            return (BindDeviceToGateway) super.setAlt(alt);
+          }
+
+          @Override
+          public BindDeviceToGateway setCallback(java.lang.String callback) {
+            return (BindDeviceToGateway) super.setCallback(callback);
+          }
+
+          @Override
+          public BindDeviceToGateway setFields(java.lang.String fields) {
+            return (BindDeviceToGateway) super.setFields(fields);
+          }
+
+          @Override
+          public BindDeviceToGateway setKey(java.lang.String key) {
+            return (BindDeviceToGateway) super.setKey(key);
+          }
+
+          @Override
+          public BindDeviceToGateway setOauthToken(java.lang.String oauthToken) {
+            return (BindDeviceToGateway) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BindDeviceToGateway setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BindDeviceToGateway) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BindDeviceToGateway setQuotaUser(java.lang.String quotaUser) {
+            return (BindDeviceToGateway) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BindDeviceToGateway setUploadType(java.lang.String uploadType) {
+            return (BindDeviceToGateway) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BindDeviceToGateway setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BindDeviceToGateway) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the registry. For example, `projects/example-project/locations/us-
+           * central1/registries/my-registry`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The name of the registry. For example, `projects/example-project/locations/us-central1/registries
+         /my-registry`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The name of the registry. For example, `projects/example-project/locations/us-
+           * central1/registries/my-registry`.
+           */
+          public BindDeviceToGateway setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registries/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BindDeviceToGateway set(String parameterName, Object value) {
+            return (BindDeviceToGateway) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a device registry that contains devices.
          *
          * Create a request for the method "registries.create".
@@ -1412,6 +1554,149 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
             return (TestIamPermissions) super.set(parameterName, value);
           }
         }
+        /**
+         * Deletes the association between the device and the gateway.
+         *
+         * Create a request for the method "registries.unbindDeviceFromGateway".
+         *
+         * This request holds the parameters needed by the cloudiot server.  After setting any optional
+         * parameters, call the {@link UnbindDeviceFromGateway#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent The name of the registry. For example,
+        `projects/example-project/locations/us-central1/registries
+         *        /my-registry`.
+         * @param content the {@link com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest}
+         * @return the request
+         */
+        public UnbindDeviceFromGateway unbindDeviceFromGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest content) throws java.io.IOException {
+          UnbindDeviceFromGateway result = new UnbindDeviceFromGateway(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UnbindDeviceFromGateway extends CloudIotRequest<com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:unbindDeviceFromGateway";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registries/[^/]+$");
+
+          /**
+           * Deletes the association between the device and the gateway.
+           *
+           * Create a request for the method "registries.unbindDeviceFromGateway".
+           *
+           * This request holds the parameters needed by the the cloudiot server.  After setting any
+           * optional parameters, call the {@link UnbindDeviceFromGateway#execute()} method to invoke the
+           * remote operation. <p> {@link UnbindDeviceFromGateway#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent The name of the registry. For example,
+        `projects/example-project/locations/us-central1/registries
+         *        /my-registry`.
+           * @param content the {@link com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest}
+           * @since 1.13
+           */
+          protected UnbindDeviceFromGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest content) {
+            super(CloudIot.this, "POST", REST_PATH, content, com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registries/[^/]+$");
+            }
+          }
+
+          @Override
+          public UnbindDeviceFromGateway set$Xgafv(java.lang.String $Xgafv) {
+            return (UnbindDeviceFromGateway) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setAccessToken(java.lang.String accessToken) {
+            return (UnbindDeviceFromGateway) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setAlt(java.lang.String alt) {
+            return (UnbindDeviceFromGateway) super.setAlt(alt);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setCallback(java.lang.String callback) {
+            return (UnbindDeviceFromGateway) super.setCallback(callback);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setFields(java.lang.String fields) {
+            return (UnbindDeviceFromGateway) super.setFields(fields);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setKey(java.lang.String key) {
+            return (UnbindDeviceFromGateway) super.setKey(key);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setOauthToken(java.lang.String oauthToken) {
+            return (UnbindDeviceFromGateway) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UnbindDeviceFromGateway) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setQuotaUser(java.lang.String quotaUser) {
+            return (UnbindDeviceFromGateway) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setUploadType(java.lang.String uploadType) {
+            return (UnbindDeviceFromGateway) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UnbindDeviceFromGateway setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UnbindDeviceFromGateway) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the registry. For example, `projects/example-project/locations/us-
+           * central1/registries/my-registry`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The name of the registry. For example, `projects/example-project/locations/us-central1/registries
+         /my-registry`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The name of the registry. For example, `projects/example-project/locations/us-
+           * central1/registries/my-registry`.
+           */
+          public UnbindDeviceFromGateway setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/registries/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public UnbindDeviceFromGateway set(String parameterName, Object value) {
+            return (UnbindDeviceFromGateway) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Devices collection.
@@ -2110,6 +2395,85 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
              */
             public List setFieldMask(String fieldMask) {
               this.fieldMask = fieldMask;
+              return this;
+            }
+
+            /**
+             * If set, returns only the gateways with which the specified device is associated. The
+             * device ID can be numeric (`num_id`) or the user-defined string (`id`). For example,
+             * if `456` is specified, returns only the gateways to which the device with `num_id`
+             * 456 is bound.
+             */
+            @com.google.api.client.util.Key("gatewayListOptions.associationsDeviceId")
+            private java.lang.String gatewayListOptionsAssociationsDeviceId;
+
+            /** If set, returns only the gateways with which the specified device is associated. The device ID can
+           be numeric (`num_id`) or the user-defined string (`id`). For example, if `456` is specified,
+           returns only the gateways to which the device with `num_id` 456 is bound.
+             */
+            public java.lang.String getGatewayListOptionsAssociationsDeviceId() {
+              return gatewayListOptionsAssociationsDeviceId;
+            }
+
+            /**
+             * If set, returns only the gateways with which the specified device is associated. The
+             * device ID can be numeric (`num_id`) or the user-defined string (`id`). For example,
+             * if `456` is specified, returns only the gateways to which the device with `num_id`
+             * 456 is bound.
+             */
+            public List setGatewayListOptionsAssociationsDeviceId(java.lang.String gatewayListOptionsAssociationsDeviceId) {
+              this.gatewayListOptionsAssociationsDeviceId = gatewayListOptionsAssociationsDeviceId;
+              return this;
+            }
+
+            /**
+             * If set, only devices associated with the specified gateway are returned. The gateway
+             * ID can be numeric (`num_id`) or the user-defined string (`id`). For example, if `123`
+             * is specified, only devices bound to the gateway with `num_id` 123 are returned.
+             */
+            @com.google.api.client.util.Key("gatewayListOptions.associationsGatewayId")
+            private java.lang.String gatewayListOptionsAssociationsGatewayId;
+
+            /** If set, only devices associated with the specified gateway are returned. The gateway ID can be
+           numeric (`num_id`) or the user-defined string (`id`). For example, if `123` is specified, only
+           devices bound to the gateway with `num_id` 123 are returned.
+             */
+            public java.lang.String getGatewayListOptionsAssociationsGatewayId() {
+              return gatewayListOptionsAssociationsGatewayId;
+            }
+
+            /**
+             * If set, only devices associated with the specified gateway are returned. The gateway
+             * ID can be numeric (`num_id`) or the user-defined string (`id`). For example, if `123`
+             * is specified, only devices bound to the gateway with `num_id` 123 are returned.
+             */
+            public List setGatewayListOptionsAssociationsGatewayId(java.lang.String gatewayListOptionsAssociationsGatewayId) {
+              this.gatewayListOptionsAssociationsGatewayId = gatewayListOptionsAssociationsGatewayId;
+              return this;
+            }
+
+            /**
+             * If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is specified,
+             * only non-gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified,
+             * all devices are returned.
+             */
+            @com.google.api.client.util.Key("gatewayListOptions.gatewayType")
+            private java.lang.String gatewayListOptionsGatewayType;
+
+            /** If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is specified, only non-
+           gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified, all devices are returned.
+             */
+            public java.lang.String getGatewayListOptionsGatewayType() {
+              return gatewayListOptionsGatewayType;
+            }
+
+            /**
+             * If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is specified,
+             * only non-gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified,
+             * all devices are returned.
+             */
+            public List setGatewayListOptionsGatewayType(java.lang.String gatewayListOptionsGatewayType) {
+              this.gatewayListOptionsGatewayType = gatewayListOptionsGatewayType;
               return this;
             }
 
@@ -3103,6 +3467,148 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
         public class Groups {
 
           /**
+           * Associates the device with the gateway.
+           *
+           * Create a request for the method "groups.bindDeviceToGateway".
+           *
+           * This request holds the parameters needed by the cloudiot server.  After setting any optional
+           * parameters, call the {@link BindDeviceToGateway#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the registry. For example,
+          `projects/example-project/locations/us-central1/registries
+           *        /my-registry`.
+           * @param content the {@link com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest}
+           * @return the request
+           */
+          public BindDeviceToGateway bindDeviceToGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest content) throws java.io.IOException {
+            BindDeviceToGateway result = new BindDeviceToGateway(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BindDeviceToGateway extends CloudIotRequest<com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}:bindDeviceToGateway";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+$");
+
+            /**
+             * Associates the device with the gateway.
+             *
+             * Create a request for the method "groups.bindDeviceToGateway".
+             *
+             * This request holds the parameters needed by the the cloudiot server.  After setting any
+             * optional parameters, call the {@link BindDeviceToGateway#execute()} method to invoke the remote
+             * operation. <p> {@link BindDeviceToGateway#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param parent The name of the registry. For example,
+          `projects/example-project/locations/us-central1/registries
+           *        /my-registry`.
+             * @param content the {@link com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest}
+             * @since 1.13
+             */
+            protected BindDeviceToGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayRequest content) {
+              super(CloudIot.this, "POST", REST_PATH, content, com.google.api.services.cloudiot.v1.model.BindDeviceToGatewayResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+$");
+              }
+            }
+
+            @Override
+            public BindDeviceToGateway set$Xgafv(java.lang.String $Xgafv) {
+              return (BindDeviceToGateway) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BindDeviceToGateway setAccessToken(java.lang.String accessToken) {
+              return (BindDeviceToGateway) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BindDeviceToGateway setAlt(java.lang.String alt) {
+              return (BindDeviceToGateway) super.setAlt(alt);
+            }
+
+            @Override
+            public BindDeviceToGateway setCallback(java.lang.String callback) {
+              return (BindDeviceToGateway) super.setCallback(callback);
+            }
+
+            @Override
+            public BindDeviceToGateway setFields(java.lang.String fields) {
+              return (BindDeviceToGateway) super.setFields(fields);
+            }
+
+            @Override
+            public BindDeviceToGateway setKey(java.lang.String key) {
+              return (BindDeviceToGateway) super.setKey(key);
+            }
+
+            @Override
+            public BindDeviceToGateway setOauthToken(java.lang.String oauthToken) {
+              return (BindDeviceToGateway) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BindDeviceToGateway setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BindDeviceToGateway) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BindDeviceToGateway setQuotaUser(java.lang.String quotaUser) {
+              return (BindDeviceToGateway) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BindDeviceToGateway setUploadType(java.lang.String uploadType) {
+              return (BindDeviceToGateway) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BindDeviceToGateway setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BindDeviceToGateway) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the registry. For example, `projects/example-project/locations/us-
+             * central1/registries/my-registry`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the registry. For example, `projects/example-project/locations/us-central1/registries
+           /my-registry`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The name of the registry. For example, `projects/example-project/locations/us-
+             * central1/registries/my-registry`.
+             */
+            public BindDeviceToGateway setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BindDeviceToGateway set(String parameterName, Object value) {
+              return (BindDeviceToGateway) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -3532,6 +4038,149 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
               return (TestIamPermissions) super.set(parameterName, value);
             }
           }
+          /**
+           * Deletes the association between the device and the gateway.
+           *
+           * Create a request for the method "groups.unbindDeviceFromGateway".
+           *
+           * This request holds the parameters needed by the cloudiot server.  After setting any optional
+           * parameters, call the {@link UnbindDeviceFromGateway#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent The name of the registry. For example,
+          `projects/example-project/locations/us-central1/registries
+           *        /my-registry`.
+           * @param content the {@link com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest}
+           * @return the request
+           */
+          public UnbindDeviceFromGateway unbindDeviceFromGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest content) throws java.io.IOException {
+            UnbindDeviceFromGateway result = new UnbindDeviceFromGateway(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UnbindDeviceFromGateway extends CloudIotRequest<com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}:unbindDeviceFromGateway";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+$");
+
+            /**
+             * Deletes the association between the device and the gateway.
+             *
+             * Create a request for the method "groups.unbindDeviceFromGateway".
+             *
+             * This request holds the parameters needed by the the cloudiot server.  After setting any
+             * optional parameters, call the {@link UnbindDeviceFromGateway#execute()} method to invoke the
+             * remote operation. <p> {@link UnbindDeviceFromGateway#initialize(com.google.api.client.googleapi
+             * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The name of the registry. For example,
+          `projects/example-project/locations/us-central1/registries
+           *        /my-registry`.
+             * @param content the {@link com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest}
+             * @since 1.13
+             */
+            protected UnbindDeviceFromGateway(java.lang.String parent, com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayRequest content) {
+              super(CloudIot.this, "POST", REST_PATH, content, com.google.api.services.cloudiot.v1.model.UnbindDeviceFromGatewayResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+$");
+              }
+            }
+
+            @Override
+            public UnbindDeviceFromGateway set$Xgafv(java.lang.String $Xgafv) {
+              return (UnbindDeviceFromGateway) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setAccessToken(java.lang.String accessToken) {
+              return (UnbindDeviceFromGateway) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setAlt(java.lang.String alt) {
+              return (UnbindDeviceFromGateway) super.setAlt(alt);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setCallback(java.lang.String callback) {
+              return (UnbindDeviceFromGateway) super.setCallback(callback);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setFields(java.lang.String fields) {
+              return (UnbindDeviceFromGateway) super.setFields(fields);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setKey(java.lang.String key) {
+              return (UnbindDeviceFromGateway) super.setKey(key);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setOauthToken(java.lang.String oauthToken) {
+              return (UnbindDeviceFromGateway) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UnbindDeviceFromGateway) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setQuotaUser(java.lang.String quotaUser) {
+              return (UnbindDeviceFromGateway) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setUploadType(java.lang.String uploadType) {
+              return (UnbindDeviceFromGateway) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UnbindDeviceFromGateway setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UnbindDeviceFromGateway) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the registry. For example, `projects/example-project/locations/us-
+             * central1/registries/my-registry`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the registry. For example, `projects/example-project/locations/us-central1/registries
+           /my-registry`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The name of the registry. For example, `projects/example-project/locations/us-
+             * central1/registries/my-registry`.
+             */
+            public UnbindDeviceFromGateway setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/registries/[^/]+/groups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public UnbindDeviceFromGateway set(String parameterName, Object value) {
+              return (UnbindDeviceFromGateway) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the Devices collection.
@@ -3939,6 +4588,87 @@ public class CloudIot extends com.google.api.client.googleapis.services.json.Abs
                */
               public List setFieldMask(String fieldMask) {
                 this.fieldMask = fieldMask;
+                return this;
+              }
+
+              /**
+               * If set, returns only the gateways with which the specified device is associated.
+               * The device ID can be numeric (`num_id`) or the user-defined string (`id`). For
+               * example, if `456` is specified, returns only the gateways to which the device with
+               * `num_id` 456 is bound.
+               */
+              @com.google.api.client.util.Key("gatewayListOptions.associationsDeviceId")
+              private java.lang.String gatewayListOptionsAssociationsDeviceId;
+
+              /** If set, returns only the gateways with which the specified device is associated. The device ID can
+             be numeric (`num_id`) or the user-defined string (`id`). For example, if `456` is specified,
+             returns only the gateways to which the device with `num_id` 456 is bound.
+               */
+              public java.lang.String getGatewayListOptionsAssociationsDeviceId() {
+                return gatewayListOptionsAssociationsDeviceId;
+              }
+
+              /**
+               * If set, returns only the gateways with which the specified device is associated.
+               * The device ID can be numeric (`num_id`) or the user-defined string (`id`). For
+               * example, if `456` is specified, returns only the gateways to which the device with
+               * `num_id` 456 is bound.
+               */
+              public List setGatewayListOptionsAssociationsDeviceId(java.lang.String gatewayListOptionsAssociationsDeviceId) {
+                this.gatewayListOptionsAssociationsDeviceId = gatewayListOptionsAssociationsDeviceId;
+                return this;
+              }
+
+              /**
+               * If set, only devices associated with the specified gateway are returned. The
+               * gateway ID can be numeric (`num_id`) or the user-defined string (`id`). For
+               * example, if `123` is specified, only devices bound to the gateway with `num_id` 123
+               * are returned.
+               */
+              @com.google.api.client.util.Key("gatewayListOptions.associationsGatewayId")
+              private java.lang.String gatewayListOptionsAssociationsGatewayId;
+
+              /** If set, only devices associated with the specified gateway are returned. The gateway ID can be
+             numeric (`num_id`) or the user-defined string (`id`). For example, if `123` is specified, only
+             devices bound to the gateway with `num_id` 123 are returned.
+               */
+              public java.lang.String getGatewayListOptionsAssociationsGatewayId() {
+                return gatewayListOptionsAssociationsGatewayId;
+              }
+
+              /**
+               * If set, only devices associated with the specified gateway are returned. The
+               * gateway ID can be numeric (`num_id`) or the user-defined string (`id`). For
+               * example, if `123` is specified, only devices bound to the gateway with `num_id` 123
+               * are returned.
+               */
+              public List setGatewayListOptionsAssociationsGatewayId(java.lang.String gatewayListOptionsAssociationsGatewayId) {
+                this.gatewayListOptionsAssociationsGatewayId = gatewayListOptionsAssociationsGatewayId;
+                return this;
+              }
+
+              /**
+               * If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is
+               * specified, only non-gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is
+               * specified, all devices are returned.
+               */
+              @com.google.api.client.util.Key("gatewayListOptions.gatewayType")
+              private java.lang.String gatewayListOptionsGatewayType;
+
+              /** If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is specified, only non-
+             gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified, all devices are returned.
+               */
+              public java.lang.String getGatewayListOptionsGatewayType() {
+                return gatewayListOptionsGatewayType;
+              }
+
+              /**
+               * If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is
+               * specified, only non-gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is
+               * specified, all devices are returned.
+               */
+              public List setGatewayListOptionsGatewayType(java.lang.String gatewayListOptionsGatewayType) {
+                this.gatewayListOptionsGatewayType = gatewayListOptionsGatewayType;
                 return this;
               }
 

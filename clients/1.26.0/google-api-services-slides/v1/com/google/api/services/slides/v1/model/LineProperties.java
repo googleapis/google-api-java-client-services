@@ -47,6 +47,15 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
   private java.lang.String endArrow;
 
   /**
+   * The connection at the end of the line. If unset, there is no connection.
+   *
+   * Only lines with a Type indicating it is a "connector" can have an `end_connection`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LineConnection endConnection;
+
+  /**
    * The fill of the line. The default line fill matches the defaults for new lines created in the
    * Slides editor.
    * The value may be {@code null}.
@@ -67,6 +76,15 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String startArrow;
+
+  /**
+   * The connection at the beginning of the line. If unset, there is no connection.
+   *
+   * Only lines with a Type indicating it is a "connector" can have a `start_connection`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LineConnection startConnection;
 
   /**
    * The thickness of the line.
@@ -106,6 +124,27 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
    */
   public LineProperties setEndArrow(java.lang.String endArrow) {
     this.endArrow = endArrow;
+    return this;
+  }
+
+  /**
+   * The connection at the end of the line. If unset, there is no connection.
+   *
+   * Only lines with a Type indicating it is a "connector" can have an `end_connection`.
+   * @return value or {@code null} for none
+   */
+  public LineConnection getEndConnection() {
+    return endConnection;
+  }
+
+  /**
+   * The connection at the end of the line. If unset, there is no connection.
+   *
+   * Only lines with a Type indicating it is a "connector" can have an `end_connection`.
+   * @param endConnection endConnection or {@code null} for none
+   */
+  public LineProperties setEndConnection(LineConnection endConnection) {
+    this.endConnection = endConnection;
     return this;
   }
 
@@ -159,6 +198,27 @@ public final class LineProperties extends com.google.api.client.json.GenericJson
    */
   public LineProperties setStartArrow(java.lang.String startArrow) {
     this.startArrow = startArrow;
+    return this;
+  }
+
+  /**
+   * The connection at the beginning of the line. If unset, there is no connection.
+   *
+   * Only lines with a Type indicating it is a "connector" can have a `start_connection`.
+   * @return value or {@code null} for none
+   */
+  public LineConnection getStartConnection() {
+    return startConnection;
+  }
+
+  /**
+   * The connection at the beginning of the line. If unset, there is no connection.
+   *
+   * Only lines with a Type indicating it is a "connector" can have a `start_connection`.
+   * @param startConnection startConnection or {@code null} for none
+   */
+  public LineProperties setStartConnection(LineConnection startConnection) {
+    this.startConnection = startConnection;
     return this;
   }
 

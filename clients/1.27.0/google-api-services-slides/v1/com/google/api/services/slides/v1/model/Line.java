@@ -31,6 +31,16 @@ package com.google.api.services.slides.v1.model;
 public final class Line extends com.google.api.client.json.GenericJson {
 
   /**
+   * The category of the line.
+   *
+   * It matches the `category` specified in CreateLineRequest, and can be updated with
+   * UpdateLineCategoryRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lineCategory;
+
+  /**
    * The properties of the line.
    * The value may be {@code null}.
    */
@@ -43,6 +53,29 @@ public final class Line extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String lineType;
+
+  /**
+   * The category of the line.
+   *
+   * It matches the `category` specified in CreateLineRequest, and can be updated with
+   * UpdateLineCategoryRequest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLineCategory() {
+    return lineCategory;
+  }
+
+  /**
+   * The category of the line.
+   *
+   * It matches the `category` specified in CreateLineRequest, and can be updated with
+   * UpdateLineCategoryRequest.
+   * @param lineCategory lineCategory or {@code null} for none
+   */
+  public Line setLineCategory(java.lang.String lineCategory) {
+    this.lineCategory = lineCategory;
+    return this;
+  }
 
   /**
    * The properties of the line.

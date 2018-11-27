@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Model definition for ListItemsResponse.
+ * Model definition for SearchItemsByViewUrlResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,13 +27,19 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListItemsResponse extends com.google.api.client.json.GenericJson {
+public final class SearchItemsByViewUrlResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Item> items;
+
+  static {
+    // hack to force ProGuard to consider Item used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Item.class);
+  }
 
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
@@ -52,7 +58,7 @@ public final class ListItemsResponse extends com.google.api.client.json.GenericJ
   /**
    * @param items items or {@code null} for none
    */
-  public ListItemsResponse setItems(java.util.List<Item> items) {
+  public SearchItemsByViewUrlResponse setItems(java.util.List<Item> items) {
     this.items = items;
     return this;
   }
@@ -69,19 +75,19 @@ public final class ListItemsResponse extends com.google.api.client.json.GenericJ
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListItemsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public SearchItemsByViewUrlResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public ListItemsResponse set(String fieldName, Object value) {
-    return (ListItemsResponse) super.set(fieldName, value);
+  public SearchItemsByViewUrlResponse set(String fieldName, Object value) {
+    return (SearchItemsByViewUrlResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListItemsResponse clone() {
-    return (ListItemsResponse) super.clone();
+  public SearchItemsByViewUrlResponse clone() {
+    return (SearchItemsByViewUrlResponse) super.clone();
   }
 
 }

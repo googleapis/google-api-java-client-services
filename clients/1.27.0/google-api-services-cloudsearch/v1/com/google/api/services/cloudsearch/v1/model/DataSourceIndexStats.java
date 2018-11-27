@@ -45,6 +45,12 @@ public final class DataSourceIndexStats extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<ItemCountByStatus> itemCountByStatus;
 
+  static {
+    // hack to force ProGuard to consider ItemCountByStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ItemCountByStatus.class);
+  }
+
   /**
    * Date for which index stats were calculated. If the date of request is not the current date then
    * stats calculated on the next day are returned. Stats are calculated close to mid night in this

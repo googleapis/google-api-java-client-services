@@ -36,6 +36,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<EmailAddress> emailAddresses;
 
+  static {
+    // hack to force ProGuard to consider EmailAddress used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EmailAddress.class);
+  }
+
   /**
    * The resource name of the person to provide information about. See  People.get from Google
    * People API.
@@ -57,6 +63,12 @@ public final class Person extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Name> personNames;
+
+  static {
+    // hack to force ProGuard to consider Name used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Name.class);
+  }
 
   /**
    * A person's read-only photo. A picture shown next to the person's name to help others recognize

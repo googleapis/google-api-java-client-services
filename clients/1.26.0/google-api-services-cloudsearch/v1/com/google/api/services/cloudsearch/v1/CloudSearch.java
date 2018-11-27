@@ -183,6 +183,304 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       public class Items {
 
         /**
+         * Checks whether an item is accessible by specified principal.
+         *
+         * Create a request for the method "items.checkAccess".
+         *
+         * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+         * parameters, call the {@link CheckAccess#execute()} method to invoke the remote operation.
+         *
+         * @param name Item name, format:
+        datasources/{source_id}/items/{item_id}
+         * @param content the {@link com.google.api.services.cloudsearch.v1.model.Principal}
+         * @return the request
+         */
+        public CheckAccess checkAccess(java.lang.String name, com.google.api.services.cloudsearch.v1.model.Principal content) throws java.io.IOException {
+          CheckAccess result = new CheckAccess(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckAccess extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.CheckAccessResponse> {
+
+          private static final String REST_PATH = "v1/debug/{+name}:checkAccess";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^datasources/[^/]+/items/[^/]+$");
+
+          /**
+           * Checks whether an item is accessible by specified principal.
+           *
+           * Create a request for the method "items.checkAccess".
+           *
+           * This request holds the parameters needed by the the cloudsearch server.  After setting any
+           * optional parameters, call the {@link CheckAccess#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CheckAccess#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Item name, format:
+        datasources/{source_id}/items/{item_id}
+           * @param content the {@link com.google.api.services.cloudsearch.v1.model.Principal}
+           * @since 1.13
+           */
+          protected CheckAccess(java.lang.String name, com.google.api.services.cloudsearch.v1.model.Principal content) {
+            super(CloudSearch.this, "POST", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.CheckAccessResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^datasources/[^/]+/items/[^/]+$");
+            }
+          }
+
+          @Override
+          public CheckAccess set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckAccess) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckAccess setAccessToken(java.lang.String accessToken) {
+            return (CheckAccess) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckAccess setAlt(java.lang.String alt) {
+            return (CheckAccess) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckAccess setCallback(java.lang.String callback) {
+            return (CheckAccess) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckAccess setFields(java.lang.String fields) {
+            return (CheckAccess) super.setFields(fields);
+          }
+
+          @Override
+          public CheckAccess setKey(java.lang.String key) {
+            return (CheckAccess) super.setKey(key);
+          }
+
+          @Override
+          public CheckAccess setOauthToken(java.lang.String oauthToken) {
+            return (CheckAccess) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckAccess) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckAccess setQuotaUser(java.lang.String quotaUser) {
+            return (CheckAccess) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckAccess setUploadType(java.lang.String uploadType) {
+            return (CheckAccess) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckAccess setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckAccess) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Item name, format: datasources/{source_id}/items/{item_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Item name, format: datasources/{source_id}/items/{item_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Item name, format: datasources/{source_id}/items/{item_id}
+           */
+          public CheckAccess setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^datasources/[^/]+/items/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * If set, the request will enable debugging features of Cloud Search. Only turn on this
+           * field, if asked by Google to help with debugging.
+           */
+          @com.google.api.client.util.Key("debugOptions.enableDebugging")
+          private java.lang.Boolean debugOptionsEnableDebugging;
+
+          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
+         asked by Google to help with debugging.
+           */
+          public java.lang.Boolean getDebugOptionsEnableDebugging() {
+            return debugOptionsEnableDebugging;
+          }
+
+          /**
+           * If set, the request will enable debugging features of Cloud Search. Only turn on this
+           * field, if asked by Google to help with debugging.
+           */
+          public CheckAccess setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
+            this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
+            return this;
+          }
+
+          @Override
+          public CheckAccess set(String parameterName, Object value) {
+            return (CheckAccess) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetches the item whose viewUrl exactly matches that of the URL provided in the request.
+         *
+         * Create a request for the method "items.searchByViewUrl".
+         *
+         * This request holds the parameters needed by the cloudsearch server.  After setting any optional
+         * parameters, call the {@link SearchByViewUrl#execute()} method to invoke the remote operation.
+         *
+         * @param name Source name, format:
+        datasources/{source_id}
+         * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlRequest}
+         * @return the request
+         */
+        public SearchByViewUrl searchByViewUrl(java.lang.String name, com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlRequest content) throws java.io.IOException {
+          SearchByViewUrl result = new SearchByViewUrl(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SearchByViewUrl extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlResponse> {
+
+          private static final String REST_PATH = "v1/debug/{+name}/items:searchByViewUrl";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^datasources/[^/]+$");
+
+          /**
+           * Fetches the item whose viewUrl exactly matches that of the URL provided in the request.
+           *
+           * Create a request for the method "items.searchByViewUrl".
+           *
+           * This request holds the parameters needed by the the cloudsearch server.  After setting any
+           * optional parameters, call the {@link SearchByViewUrl#execute()} method to invoke the remote
+           * operation. <p> {@link SearchByViewUrl#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Source name, format:
+        datasources/{source_id}
+           * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlRequest}
+           * @since 1.13
+           */
+          protected SearchByViewUrl(java.lang.String name, com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlRequest content) {
+            super(CloudSearch.this, "POST", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.SearchItemsByViewUrlResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^datasources/[^/]+$");
+            }
+          }
+
+          @Override
+          public SearchByViewUrl set$Xgafv(java.lang.String $Xgafv) {
+            return (SearchByViewUrl) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SearchByViewUrl setAccessToken(java.lang.String accessToken) {
+            return (SearchByViewUrl) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SearchByViewUrl setAlt(java.lang.String alt) {
+            return (SearchByViewUrl) super.setAlt(alt);
+          }
+
+          @Override
+          public SearchByViewUrl setCallback(java.lang.String callback) {
+            return (SearchByViewUrl) super.setCallback(callback);
+          }
+
+          @Override
+          public SearchByViewUrl setFields(java.lang.String fields) {
+            return (SearchByViewUrl) super.setFields(fields);
+          }
+
+          @Override
+          public SearchByViewUrl setKey(java.lang.String key) {
+            return (SearchByViewUrl) super.setKey(key);
+          }
+
+          @Override
+          public SearchByViewUrl setOauthToken(java.lang.String oauthToken) {
+            return (SearchByViewUrl) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SearchByViewUrl setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SearchByViewUrl) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SearchByViewUrl setQuotaUser(java.lang.String quotaUser) {
+            return (SearchByViewUrl) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SearchByViewUrl setUploadType(java.lang.String uploadType) {
+            return (SearchByViewUrl) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SearchByViewUrl setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SearchByViewUrl) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Source name, format: datasources/{source_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Source name, format: datasources/{source_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Source name, format: datasources/{source_id}
+           */
+          public SearchByViewUrl setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^datasources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SearchByViewUrl set(String parameterName, Object value) {
+            return (SearchByViewUrl) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Unmappedids collection.
          *
          * <p>The typical use is:</p>
@@ -338,6 +636,29 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
                     "^datasources/[^/]+/items/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * If set, the request will enable debugging features of Cloud Search. Only turn on this
+             * field, if asked by Google to help with debugging.
+             */
+            @com.google.api.client.util.Key("debugOptions.enableDebugging")
+            private java.lang.Boolean debugOptionsEnableDebugging;
+
+            /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
+           asked by Google to help with debugging.
+             */
+            public java.lang.Boolean getDebugOptionsEnableDebugging() {
+              return debugOptionsEnableDebugging;
+            }
+
+            /**
+             * If set, the request will enable debugging features of Cloud Search. Only turn on this
+             * field, if asked by Google to help with debugging.
+             */
+            public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
+              this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
               return this;
             }
 
@@ -564,6 +885,29 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
                   "^identitysources/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * If set, the request will enable debugging features of Cloud Search. Only turn on this
+           * field, if asked by Google to help with debugging.
+           */
+          @com.google.api.client.util.Key("debugOptions.enableDebugging")
+          private java.lang.Boolean debugOptionsEnableDebugging;
+
+          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
+         asked by Google to help with debugging.
+           */
+          public java.lang.Boolean getDebugOptionsEnableDebugging() {
+            return debugOptionsEnableDebugging;
+          }
+
+          /**
+           * If set, the request will enable debugging features of Cloud Search. Only turn on this
+           * field, if asked by Google to help with debugging.
+           */
+          public ListForunmappedidentity setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
+            this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
           }
 
@@ -796,6 +1140,29 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
                   "^identitysources/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * If set, the request will enable debugging features of Cloud Search. Only turn on this
+           * field, if asked by Google to help with debugging.
+           */
+          @com.google.api.client.util.Key("debugOptions.enableDebugging")
+          private java.lang.Boolean debugOptionsEnableDebugging;
+
+          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
+         asked by Google to help with debugging.
+           */
+          public java.lang.Boolean getDebugOptionsEnableDebugging() {
+            return debugOptionsEnableDebugging;
+          }
+
+          /**
+           * If set, the request will enable debugging features of Cloud Search. Only turn on this
+           * field, if asked by Google to help with debugging.
+           */
+          public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
+            this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
           }
 

@@ -46,6 +46,12 @@ public final class BooleanCondition extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<ConditionValue> values;
 
+  static {
+    // hack to force ProGuard to consider ConditionValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConditionValue.class);
+  }
+
   /**
    * The type of condition.
    * @return value or {@code null} for none

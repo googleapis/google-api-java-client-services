@@ -36,12 +36,6 @@ public final class BatchUpdateValuesRequest extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<ValueRange> data;
 
-  static {
-    // hack to force ProGuard to consider ValueRange used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ValueRange.class);
-  }
-
   /**
    * Determines if the update response should include the values of the cells that were updated. By
    * default, responses do not include the updated values. The `updatedData` field within each of

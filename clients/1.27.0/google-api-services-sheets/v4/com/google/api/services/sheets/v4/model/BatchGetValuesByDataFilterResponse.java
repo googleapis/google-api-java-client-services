@@ -44,6 +44,12 @@ public final class BatchGetValuesByDataFilterResponse extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<MatchedValueRange> valueRanges;
 
+  static {
+    // hack to force ProGuard to consider MatchedValueRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MatchedValueRange.class);
+  }
+
   /**
    * The ID of the spreadsheet the data was retrieved from.
    * @return value or {@code null} for none

@@ -42,6 +42,12 @@ public final class PivotGroupSortValueBucket extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<ExtendedValue> buckets;
 
+  static {
+    // hack to force ProGuard to consider ExtendedValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExtendedValue.class);
+  }
+
   /**
    * The offset in the PivotTable.values list which the values in this grouping should be sorted by.
    * The value may be {@code null}.

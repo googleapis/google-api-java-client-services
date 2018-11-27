@@ -36,12 +36,6 @@ public final class DimensionProperties extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<DeveloperMetadata> developerMetadata;
 
-  static {
-    // hack to force ProGuard to consider DeveloperMetadata used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(DeveloperMetadata.class);
-  }
-
   /**
    * True if this dimension is being filtered. This field is read-only.
    * The value may be {@code null}.

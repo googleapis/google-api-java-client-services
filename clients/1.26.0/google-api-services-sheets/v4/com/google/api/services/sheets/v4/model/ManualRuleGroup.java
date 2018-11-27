@@ -47,6 +47,12 @@ public final class ManualRuleGroup extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<ExtendedValue> items;
 
+  static {
+    // hack to force ProGuard to consider ExtendedValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExtendedValue.class);
+  }
+
   /**
    * The group name, which must be a string. Each group in a given ManualRule must have a unique
    * group name.

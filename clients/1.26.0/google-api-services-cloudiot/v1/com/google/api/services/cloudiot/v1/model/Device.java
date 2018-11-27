@@ -66,6 +66,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Gateway-related configuration and state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GatewayConfig gatewayConfig;
+
+  /**
    * The user-defined device identifier. The device ID must be unique within a device registry.
    * The value may be {@code null}.
    */
@@ -248,6 +255,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setCredentials(java.util.List<DeviceCredential> credentials) {
     this.credentials = credentials;
+    return this;
+  }
+
+  /**
+   * Gateway-related configuration and state.
+   * @return value or {@code null} for none
+   */
+  public GatewayConfig getGatewayConfig() {
+    return gatewayConfig;
+  }
+
+  /**
+   * Gateway-related configuration and state.
+   * @param gatewayConfig gatewayConfig or {@code null} for none
+   */
+  public Device setGatewayConfig(GatewayConfig gatewayConfig) {
+    this.gatewayConfig = gatewayConfig;
     return this;
   }
 

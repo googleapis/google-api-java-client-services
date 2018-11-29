@@ -44,12 +44,6 @@ public final class ListProposalsResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Proposal> proposals;
 
-  static {
-    // hack to force ProGuard to consider Proposal used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Proposal.class);
-  }
-
   /**
    * Continuation token for fetching the next page of results.
    * @return value or {@code null} for none

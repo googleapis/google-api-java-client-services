@@ -37,6 +37,12 @@ public final class ListImpressionMetricsResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<ImpressionMetricsRow> impressionMetricsRows;
 
+  static {
+    // hack to force ProGuard to consider ImpressionMetricsRow used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ImpressionMetricsRow.class);
+  }
+
   /**
    * A token to retrieve the next page of results. Pass this value in the
    * ListImpressionMetricsRequest.pageToken field in the subsequent call to the

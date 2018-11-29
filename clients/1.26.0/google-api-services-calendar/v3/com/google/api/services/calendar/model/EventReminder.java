@@ -31,9 +31,12 @@ public final class EventReminder extends com.google.api.client.json.GenericJson 
 
   /**
    * The method used by this reminder. Possible values are: - "email" - Reminders are sent via
-   * email.  - "sms" - Reminders are sent via SMS. These are only available for G Suite customers.
-   * Requests to set SMS reminders for other account types are ignored.  - "popup" - Reminders are
-   * sent via a UI popup.   Required when adding a reminder.
+   * email.  - "sms" - Deprecated. Once this feature is shutdown, the API will no longer return
+   * reminders using this method. Any newly added SMS reminders will be ignored. See  Google
+   * Calendar SMS notifications to be removed for more information. Reminders are sent via SMS.
+   * These are only available for G Suite customers. Requests to set SMS reminders for other account
+   * types are ignored.  - "popup" - Reminders are sent via a UI popup.   Required when adding a
+   * reminder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +52,12 @@ public final class EventReminder extends com.google.api.client.json.GenericJson 
 
   /**
    * The method used by this reminder. Possible values are: - "email" - Reminders are sent via
-   * email.  - "sms" - Reminders are sent via SMS. These are only available for G Suite customers.
-   * Requests to set SMS reminders for other account types are ignored.  - "popup" - Reminders are
-   * sent via a UI popup.   Required when adding a reminder.
+   * email.  - "sms" - Deprecated. Once this feature is shutdown, the API will no longer return
+   * reminders using this method. Any newly added SMS reminders will be ignored. See  Google
+   * Calendar SMS notifications to be removed for more information. Reminders are sent via SMS.
+   * These are only available for G Suite customers. Requests to set SMS reminders for other account
+   * types are ignored.  - "popup" - Reminders are sent via a UI popup.   Required when adding a
+   * reminder.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -60,9 +66,12 @@ public final class EventReminder extends com.google.api.client.json.GenericJson 
 
   /**
    * The method used by this reminder. Possible values are: - "email" - Reminders are sent via
-   * email.  - "sms" - Reminders are sent via SMS. These are only available for G Suite customers.
-   * Requests to set SMS reminders for other account types are ignored.  - "popup" - Reminders are
-   * sent via a UI popup.   Required when adding a reminder.
+   * email.  - "sms" - Deprecated. Once this feature is shutdown, the API will no longer return
+   * reminders using this method. Any newly added SMS reminders will be ignored. See  Google
+   * Calendar SMS notifications to be removed for more information. Reminders are sent via SMS.
+   * These are only available for G Suite customers. Requests to set SMS reminders for other account
+   * types are ignored.  - "popup" - Reminders are sent via a UI popup.   Required when adding a
+   * reminder.
    * @param method method or {@code null} for none
    */
   public EventReminder setMethod(java.lang.String method) {

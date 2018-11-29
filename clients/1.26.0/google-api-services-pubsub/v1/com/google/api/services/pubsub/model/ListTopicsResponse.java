@@ -44,12 +44,6 @@ public final class ListTopicsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Topic> topics;
 
-  static {
-    // hack to force ProGuard to consider Topic used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Topic.class);
-  }
-
   /**
    * If not empty, indicates that there may be more topics that match the request; this value should
    * be passed in a new `ListTopicsRequest`.

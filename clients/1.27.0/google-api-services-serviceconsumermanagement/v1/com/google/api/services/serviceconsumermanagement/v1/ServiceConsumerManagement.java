@@ -1217,6 +1217,297 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
+       * Apply configuration to an existing tenant project. This project must exist in active state and
+       * have the original owner account. Caller must have the permission to add a project to the given
+       * tenancy unit. Configuration will be applied, but any existing settings on the project will not be
+       * modified. Specified policy bindings will be applied. Existing binding will not be modified.
+       * Specified services will be activated.   No service will be deactivated. New billing configuration
+       * will be applied if specified. Omit billing configuration to keep the existing one. Service
+       * account in the project will be created if previously non existing. Operation fails if any of the
+       * steps fail, but no rollback of already applied configuration changes is attempted. Operation.
+       *
+       * Create a request for the method "tenancyUnits.applyProjectConfig".
+       *
+       * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+       * any optional parameters, call the {@link ApplyProjectConfig#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Name of the tenancy unit.
+       * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
+       * @return the request
+       */
+      public ApplyProjectConfig applyProjectConfig(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest content) throws java.io.IOException {
+        ApplyProjectConfig result = new ApplyProjectConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ApplyProjectConfig extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:applyProjectConfig";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+
+        /**
+         * Apply configuration to an existing tenant project. This project must exist in active state and
+         * have the original owner account. Caller must have the permission to add a project to the given
+         * tenancy unit. Configuration will be applied, but any existing settings on the project will not
+         * be modified. Specified policy bindings will be applied. Existing binding will not be modified.
+         * Specified services will be activated.   No service will be deactivated. New billing
+         * configuration will be applied if specified. Omit billing configuration to keep the existing
+         * one. Service account in the project will be created if previously non existing. Operation fails
+         * if any of the steps fail, but no rollback of already applied configuration changes is
+         * attempted. Operation.
+         *
+         * Create a request for the method "tenancyUnits.applyProjectConfig".
+         *
+         * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+         * setting any optional parameters, call the {@link ApplyProjectConfig#execute()} method to invoke
+         * the remote operation. <p> {@link ApplyProjectConfig#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Name of the tenancy unit.
+         * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
+         * @since 1.13
+         */
+        protected ApplyProjectConfig(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest content) {
+          super(ServiceConsumerManagement.this, "POST", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+        }
+
+        @Override
+        public ApplyProjectConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (ApplyProjectConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ApplyProjectConfig setAccessToken(java.lang.String accessToken) {
+          return (ApplyProjectConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ApplyProjectConfig setAlt(java.lang.String alt) {
+          return (ApplyProjectConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public ApplyProjectConfig setCallback(java.lang.String callback) {
+          return (ApplyProjectConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public ApplyProjectConfig setFields(java.lang.String fields) {
+          return (ApplyProjectConfig) super.setFields(fields);
+        }
+
+        @Override
+        public ApplyProjectConfig setKey(java.lang.String key) {
+          return (ApplyProjectConfig) super.setKey(key);
+        }
+
+        @Override
+        public ApplyProjectConfig setOauthToken(java.lang.String oauthToken) {
+          return (ApplyProjectConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ApplyProjectConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ApplyProjectConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ApplyProjectConfig setQuotaUser(java.lang.String quotaUser) {
+          return (ApplyProjectConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ApplyProjectConfig setUploadType(java.lang.String uploadType) {
+          return (ApplyProjectConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ApplyProjectConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ApplyProjectConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name of the tenancy unit. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the tenancy unit.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Name of the tenancy unit. */
+        public ApplyProjectConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ApplyProjectConfig set(String parameterName, Object value) {
+          return (ApplyProjectConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Attach an existing project to the tenancy unit as a new tenant resource. The project could be
+       * either the tenant project reserved by calling AddTenantProject under tenancy unit for the
+       * producer project of service, or from outside. Caller will be checked against the permission as if
+       * calling AddTenantProject on the same consumer. To trigger the attachement, the targeted tenant
+       * project must be in a folder. Please also make sure ServiceConsumerManagement service account is
+       * the owner of that project. Note that these two requirements are already met if the project is
+       * reserved through AddTenantProject. Operation.
+       *
+       * Create a request for the method "tenancyUnits.attachProject".
+       *
+       * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+       * any optional parameters, call the {@link AttachProject#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Name of the tenancy unit that project will be attached to.
+       * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
+       * @return the request
+       */
+      public AttachProject attachProject(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest content) throws java.io.IOException {
+        AttachProject result = new AttachProject(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AttachProject extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:attachProject";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+
+        /**
+         * Attach an existing project to the tenancy unit as a new tenant resource. The project could be
+         * either the tenant project reserved by calling AddTenantProject under tenancy unit for the
+         * producer project of service, or from outside. Caller will be checked against the permission as
+         * if calling AddTenantProject on the same consumer. To trigger the attachement, the targeted
+         * tenant project must be in a folder. Please also make sure ServiceConsumerManagement service
+         * account is the owner of that project. Note that these two requirements are already met if the
+         * project is reserved through AddTenantProject. Operation.
+         *
+         * Create a request for the method "tenancyUnits.attachProject".
+         *
+         * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+         * setting any optional parameters, call the {@link AttachProject#execute()} method to invoke the
+         * remote operation. <p> {@link AttachProject#initialize(com.google.api.client.googleapis.services
+         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Name of the tenancy unit that project will be attached to.
+         * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
+         * @since 1.13
+         */
+        protected AttachProject(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest content) {
+          super(ServiceConsumerManagement.this, "POST", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+        }
+
+        @Override
+        public AttachProject set$Xgafv(java.lang.String $Xgafv) {
+          return (AttachProject) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AttachProject setAccessToken(java.lang.String accessToken) {
+          return (AttachProject) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AttachProject setAlt(java.lang.String alt) {
+          return (AttachProject) super.setAlt(alt);
+        }
+
+        @Override
+        public AttachProject setCallback(java.lang.String callback) {
+          return (AttachProject) super.setCallback(callback);
+        }
+
+        @Override
+        public AttachProject setFields(java.lang.String fields) {
+          return (AttachProject) super.setFields(fields);
+        }
+
+        @Override
+        public AttachProject setKey(java.lang.String key) {
+          return (AttachProject) super.setKey(key);
+        }
+
+        @Override
+        public AttachProject setOauthToken(java.lang.String oauthToken) {
+          return (AttachProject) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AttachProject setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AttachProject) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AttachProject setQuotaUser(java.lang.String quotaUser) {
+          return (AttachProject) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AttachProject setUploadType(java.lang.String uploadType) {
+          return (AttachProject) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AttachProject setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AttachProject) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Name of the tenancy unit that project will be attached to. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the tenancy unit that project will be attached to.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Name of the tenancy unit that project will be attached to. */
+        public AttachProject setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public AttachProject set(String parameterName, Object value) {
+          return (AttachProject) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a tenancy unit with no tenant resources.
        *
        * Create a request for the method "tenancyUnits.create".

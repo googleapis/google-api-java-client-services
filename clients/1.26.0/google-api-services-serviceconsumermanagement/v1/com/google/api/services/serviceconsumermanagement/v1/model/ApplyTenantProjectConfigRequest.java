@@ -17,7 +17,7 @@
 package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
- * Response for the list request.
+ * Request to apply configuration to an existing tenant project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -28,70 +28,64 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListTenancyUnitsResponse extends com.google.api.client.json.GenericJson {
+public final class ApplyTenantProjectConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Pagination token for large results.
+   * Configuration that should be applied to the existing tenant project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private TenantProjectConfig projectConfig;
 
   /**
-   * Tenancy units matching the request.
+   * Tag of the project. Must be less than 128 characters. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<TenancyUnit> tenancyUnits;
-
-  static {
-    // hack to force ProGuard to consider TenancyUnit used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TenancyUnit.class);
-  }
+  private java.lang.String tag;
 
   /**
-   * Pagination token for large results.
+   * Configuration that should be applied to the existing tenant project.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public TenantProjectConfig getProjectConfig() {
+    return projectConfig;
   }
 
   /**
-   * Pagination token for large results.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * Configuration that should be applied to the existing tenant project.
+   * @param projectConfig projectConfig or {@code null} for none
    */
-  public ListTenancyUnitsResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public ApplyTenantProjectConfigRequest setProjectConfig(TenantProjectConfig projectConfig) {
+    this.projectConfig = projectConfig;
     return this;
   }
 
   /**
-   * Tenancy units matching the request.
+   * Tag of the project. Must be less than 128 characters. Required.
    * @return value or {@code null} for none
    */
-  public java.util.List<TenancyUnit> getTenancyUnits() {
-    return tenancyUnits;
+  public java.lang.String getTag() {
+    return tag;
   }
 
   /**
-   * Tenancy units matching the request.
-   * @param tenancyUnits tenancyUnits or {@code null} for none
+   * Tag of the project. Must be less than 128 characters. Required.
+   * @param tag tag or {@code null} for none
    */
-  public ListTenancyUnitsResponse setTenancyUnits(java.util.List<TenancyUnit> tenancyUnits) {
-    this.tenancyUnits = tenancyUnits;
+  public ApplyTenantProjectConfigRequest setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 
   @Override
-  public ListTenancyUnitsResponse set(String fieldName, Object value) {
-    return (ListTenancyUnitsResponse) super.set(fieldName, value);
+  public ApplyTenantProjectConfigRequest set(String fieldName, Object value) {
+    return (ApplyTenantProjectConfigRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ListTenancyUnitsResponse clone() {
-    return (ListTenancyUnitsResponse) super.clone();
+  public ApplyTenantProjectConfigRequest clone() {
+    return (ApplyTenantProjectConfigRequest) super.clone();
   }
 
 }

@@ -44,6 +44,12 @@ public final class CreativeRestrictions extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<CreativeSpecification> creativeSpecifications;
 
+  static {
+    // hack to force ProGuard to consider CreativeSpecification used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CreativeSpecification.class);
+  }
+
   /**
    * Skippable video ads allow viewers to skip ads after 5 seconds.
    * The value may be {@code null}.

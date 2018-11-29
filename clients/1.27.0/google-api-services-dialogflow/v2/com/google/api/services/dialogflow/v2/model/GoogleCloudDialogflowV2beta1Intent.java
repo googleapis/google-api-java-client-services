@@ -79,12 +79,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> followupIntentInfo;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo.class);
-  }
-
   /**
    * Optional. The list of context names required for this intent to be triggered. Format:
    * `projects//agent/sessions/-/contexts/`.
@@ -167,8 +161,10 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.lang.String parentFollowupIntentName;
 
   /**
-   * Optional. The priority of this intent. Higher numbers represent higher priorities. Zero or
-   * negative numbers mean that the intent is disabled.
+   * Optional. The priority of this intent. Higher numbers represent higher priorities. If this is
+   * zero or unspecified, we use the default priority 500000.
+   *
+   * Negative numbers mean that the intent is disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,12 +195,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> trainingPhrases;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentTrainingPhrase used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentTrainingPhrase.class);
-  }
 
   /**
    * Optional. Indicates whether webhooks are enabled for the intent.
@@ -519,8 +509,10 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The priority of this intent. Higher numbers represent higher priorities. Zero or
-   * negative numbers mean that the intent is disabled.
+   * Optional. The priority of this intent. Higher numbers represent higher priorities. If this is
+   * zero or unspecified, we use the default priority 500000.
+   *
+   * Negative numbers mean that the intent is disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -528,8 +520,10 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The priority of this intent. Higher numbers represent higher priorities. Zero or
-   * negative numbers mean that the intent is disabled.
+   * Optional. The priority of this intent. Higher numbers represent higher priorities. If this is
+   * zero or unspecified, we use the default priority 500000.
+   *
+   * Negative numbers mean that the intent is disabled.
    * @param priority priority or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setPriority(java.lang.Integer priority) {

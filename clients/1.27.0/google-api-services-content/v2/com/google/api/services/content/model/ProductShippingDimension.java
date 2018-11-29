@@ -32,8 +32,6 @@ public final class ProductShippingDimension extends com.google.api.client.json.G
 
   /**
    * The unit of value.
-   *
-   * Acceptable values are:   - "cm"  - "in"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +46,6 @@ public final class ProductShippingDimension extends com.google.api.client.json.G
 
   /**
    * The unit of value.
-   *
-   * Acceptable values are:   - "cm"  - "in"
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -58,8 +54,6 @@ public final class ProductShippingDimension extends com.google.api.client.json.G
 
   /**
    * The unit of value.
-   *
-   * Acceptable values are:   - "cm"  - "in"
    * @param unit unit or {@code null} for none
    */
   public ProductShippingDimension setUnit(java.lang.String unit) {

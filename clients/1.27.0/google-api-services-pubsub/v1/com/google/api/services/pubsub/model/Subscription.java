@@ -30,10 +30,10 @@ package com.google.api.services.pubsub.model;
 public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
-   * This value is the maximum time after a subscriber receives a message before the subscriber
-   * should acknowledge the message. After message delivery but before the ack deadline expires and
-   * before the message is acknowledged, it is an outstanding message and will not be delivered
-   * again during that time (on a best-effort basis).
+   * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
+   * acknowledge receipt before resending the message. In the interval after the message is
+   * delivered and before it is acknowledged, it is considered to be outstanding. During that time
+   * period, the message will not be redelivered (on a best-effort basis).
    *
    * For pull subscriptions, this value is used as the initial value for the ack deadline. To
    * override this value for a given message, call `ModifyAckDeadline` with the corresponding
@@ -128,10 +128,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String topic;
 
   /**
-   * This value is the maximum time after a subscriber receives a message before the subscriber
-   * should acknowledge the message. After message delivery but before the ack deadline expires and
-   * before the message is acknowledged, it is an outstanding message and will not be delivered
-   * again during that time (on a best-effort basis).
+   * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
+   * acknowledge receipt before resending the message. In the interval after the message is
+   * delivered and before it is acknowledged, it is considered to be outstanding. During that time
+   * period, the message will not be redelivered (on a best-effort basis).
    *
    * For pull subscriptions, this value is used as the initial value for the ack deadline. To
    * override this value for a given message, call `ModifyAckDeadline` with the corresponding
@@ -152,10 +152,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This value is the maximum time after a subscriber receives a message before the subscriber
-   * should acknowledge the message. After message delivery but before the ack deadline expires and
-   * before the message is acknowledged, it is an outstanding message and will not be delivered
-   * again during that time (on a best-effort basis).
+   * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to
+   * acknowledge receipt before resending the message. In the interval after the message is
+   * delivered and before it is acknowledged, it is considered to be outstanding. During that time
+   * period, the message will not be redelivered (on a best-effort basis).
    *
    * For pull subscriptions, this value is used as the initial value for the ack deadline. To
    * override this value for a given message, call `ModifyAckDeadline` with the corresponding

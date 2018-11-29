@@ -36,12 +36,6 @@ public final class ListExportsResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<Export> exports;
 
-  static {
-    // hack to force ProGuard to consider Export used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Export.class);
-  }
-
   /**
    * Page token to retrieve the next page of results in the list.
    * The value may be {@code null}.

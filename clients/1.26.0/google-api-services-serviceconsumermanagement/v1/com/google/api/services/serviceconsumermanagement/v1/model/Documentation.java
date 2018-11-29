@@ -87,6 +87,12 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Page> pages;
 
+  static {
+    // hack to force ProGuard to consider Page used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Page.class);
+  }
+
   /**
    * A list of documentation rules that apply to individual API elements.
    *

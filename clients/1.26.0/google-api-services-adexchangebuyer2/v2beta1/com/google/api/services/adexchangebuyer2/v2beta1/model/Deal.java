@@ -187,12 +187,6 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ContactInformation> sellerContacts;
 
-  static {
-    // hack to force ProGuard to consider ContactInformation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContactInformation.class);
-  }
-
   /**
    * The syndication product associated with the deal.
    *
@@ -217,12 +211,6 @@ public final class Deal extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<TargetingCriteria> targetingCriterion;
-
-  static {
-    // hack to force ProGuard to consider TargetingCriteria used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TargetingCriteria.class);
-  }
 
   /**
    * The time when the deal was last updated. @OutputOnly

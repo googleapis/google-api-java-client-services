@@ -58,6 +58,13 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   private MailExportOptions mailOptions;
 
   /**
+   * The requested export location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Option available for Drive export.
    * @return value or {@code null} for none
    */
@@ -122,6 +129,23 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
    */
   public ExportOptions setMailOptions(MailExportOptions mailOptions) {
     this.mailOptions = mailOptions;
+    return this;
+  }
+
+  /**
+   * The requested export location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * The requested export location.
+   * @param region region or {@code null} for none
+   */
+  public ExportOptions setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

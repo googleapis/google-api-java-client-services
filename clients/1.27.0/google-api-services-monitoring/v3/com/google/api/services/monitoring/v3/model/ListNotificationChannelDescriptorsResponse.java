@@ -37,12 +37,6 @@ public final class ListNotificationChannelDescriptorsResponse extends com.google
   @com.google.api.client.util.Key
   private java.util.List<NotificationChannelDescriptor> channelDescriptors;
 
-  static {
-    // hack to force ProGuard to consider NotificationChannelDescriptor used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(NotificationChannelDescriptor.class);
-  }
-
   /**
    * If not empty, indicates that there may be more results that match the request. Use the value in
    * the page_token field in a subsequent request to fetch the next set of results. If empty, all

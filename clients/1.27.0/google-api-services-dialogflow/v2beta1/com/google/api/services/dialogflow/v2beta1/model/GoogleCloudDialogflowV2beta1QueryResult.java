@@ -108,12 +108,6 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Context> outputContexts;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1Context used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1Context.class);
-  }
-
   /**
    * The collection of extracted parameters.
    * The value may be {@code null}.

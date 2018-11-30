@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2beta1BatchUpdateIntentsResponse extend
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Intent> intents;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1Intent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1Intent.class);
+  }
+
   /**
    * The collection of updated or created intents.
    * @return value or {@code null} for none

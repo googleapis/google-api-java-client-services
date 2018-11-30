@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.go
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageListSelectItem> items;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentMessageListSelectItem used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentMessageListSelectItem.class);
+  }
+
   /**
    * Optional. The overall title of the list.
    * The value may be {@code null}.

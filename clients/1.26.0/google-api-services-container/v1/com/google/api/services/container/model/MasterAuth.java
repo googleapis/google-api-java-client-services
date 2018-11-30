@@ -73,7 +73,8 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0
-   * and later, you can disable basic authentication by providing an empty username.
+   * and later, basic authentication can be disabled by leaving username unspecified (or setting it
+   * to the empty string).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +177,8 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0
-   * and later, you can disable basic authentication by providing an empty username.
+   * and later, basic authentication can be disabled by leaving username unspecified (or setting it
+   * to the empty string).
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -185,7 +187,8 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
 
   /**
    * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0
-   * and later, you can disable basic authentication by providing an empty username.
+   * and later, basic authentication can be disabled by leaving username unspecified (or setting it
+   * to the empty string).
    * @param username username or {@code null} for none
    */
   public MasterAuth setUsername(java.lang.String username) {

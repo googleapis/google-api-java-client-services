@@ -38,6 +38,13 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   private FileReference appApk;
 
   /**
+   * A multi-apk app bundle for the application under test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppBundle appBundle;
+
+  /**
    * The initial activity that should be used to start the app. Optional
    * The value may be {@code null}.
    */
@@ -75,12 +82,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<RoboDirective> roboDirectives;
 
-  static {
-    // hack to force ProGuard to consider RoboDirective used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RoboDirective.class);
-  }
-
   /**
    * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
    * Optional
@@ -112,6 +113,23 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
    */
   public AndroidRoboTest setAppApk(FileReference appApk) {
     this.appApk = appApk;
+    return this;
+  }
+
+  /**
+   * A multi-apk app bundle for the application under test.
+   * @return value or {@code null} for none
+   */
+  public AppBundle getAppBundle() {
+    return appBundle;
+  }
+
+  /**
+   * A multi-apk app bundle for the application under test.
+   * @param appBundle appBundle or {@code null} for none
+   */
+  public AndroidRoboTest setAppBundle(AppBundle appBundle) {
+    this.appBundle = appBundle;
     return this;
   }
 

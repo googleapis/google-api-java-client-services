@@ -42,6 +42,13 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   private FileReference appApk;
 
   /**
+   * A multi-apk app bundle for the application under test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppBundle appBundle;
+
+  /**
    * The java package for the application under test. Optional, default is determined by examining
    * the application's manifest.
    * The value may be {@code null}.
@@ -113,6 +120,23 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    */
   public AndroidInstrumentationTest setAppApk(FileReference appApk) {
     this.appApk = appApk;
+    return this;
+  }
+
+  /**
+   * A multi-apk app bundle for the application under test.
+   * @return value or {@code null} for none
+   */
+  public AppBundle getAppBundle() {
+    return appBundle;
+  }
+
+  /**
+   * A multi-apk app bundle for the application under test.
+   * @param appBundle appBundle or {@code null} for none
+   */
+  public AndroidInstrumentationTest setAppBundle(AppBundle appBundle) {
+    this.appBundle = appBundle;
     return this;
   }
 

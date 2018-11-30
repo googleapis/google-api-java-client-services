@@ -55,8 +55,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String entryPoint;
 
   /**
-   * **Beta Feature**
-   *
    * Environment variables that shall be available during function execution.
    * The value may be {@code null}.
    */
@@ -262,8 +260,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * **Beta Feature**
-   *
    * Environment variables that shall be available during function execution.
    * @return value or {@code null} for none
    */
@@ -272,8 +268,6 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * **Beta Feature**
-   *
    * Environment variables that shall be available during function execution.
    * @param environmentVariables environmentVariables or {@code null} for none
    */

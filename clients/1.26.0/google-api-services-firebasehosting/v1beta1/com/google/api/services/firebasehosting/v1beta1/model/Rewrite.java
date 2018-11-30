@@ -17,8 +17,9 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A `Rewrite` represents an internal content rewrite on the version. If the pattern matches, the
- * request will be handled as if it were to the destination path specified in the configuration.
+ * A [`rewrite`](/docs/hosting/full-config#rewrites) represents an internal content rewrite on the
+ * version. If the pattern matches, the request will be handled as if it were to the destination
+ * path specified in the configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -45,8 +46,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String function;
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#section-glob) to match
-   * against the request URL path.
+   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
+   * match against the request URL path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +95,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#section-glob) to match
-   * against the request URL path.
+   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
+   * match against the request URL path.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlob() {
@@ -103,8 +104,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#section-glob) to match
-   * against the request URL path.
+   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
+   * match against the request URL path.
    * @param glob glob or {@code null} for none
    */
   public Rewrite setGlob(java.lang.String glob) {

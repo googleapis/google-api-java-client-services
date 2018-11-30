@@ -17,7 +17,9 @@
 package com.google.api.services.testing.model;
 
 /**
- * Information about the client which invoked the test.
+ * An Android App Bundle file format, containing a BundleConfig.pb file, a base module directory,
+ * zero or more dynamic feature module directories. See https://developer.android.com/guide/app-
+ * bundle/build for guidance on building App Bundles.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -27,64 +29,40 @@ package com.google.api.services.testing.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ClientInfo extends com.google.api.client.json.GenericJson {
+public final class AppBundle extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of detailed information about client.
+   * .aab file representing the app bundle under test.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ClientInfoDetail> clientInfoDetails;
+  private FileReference bundleLocation;
 
   /**
-   * Client name, such as gcloud. Required
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * The list of detailed information about client.
+   * .aab file representing the app bundle under test.
    * @return value or {@code null} for none
    */
-  public java.util.List<ClientInfoDetail> getClientInfoDetails() {
-    return clientInfoDetails;
+  public FileReference getBundleLocation() {
+    return bundleLocation;
   }
 
   /**
-   * The list of detailed information about client.
-   * @param clientInfoDetails clientInfoDetails or {@code null} for none
+   * .aab file representing the app bundle under test.
+   * @param bundleLocation bundleLocation or {@code null} for none
    */
-  public ClientInfo setClientInfoDetails(java.util.List<ClientInfoDetail> clientInfoDetails) {
-    this.clientInfoDetails = clientInfoDetails;
-    return this;
-  }
-
-  /**
-   * Client name, such as gcloud. Required
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Client name, such as gcloud. Required
-   * @param name name or {@code null} for none
-   */
-  public ClientInfo setName(java.lang.String name) {
-    this.name = name;
+  public AppBundle setBundleLocation(FileReference bundleLocation) {
+    this.bundleLocation = bundleLocation;
     return this;
   }
 
   @Override
-  public ClientInfo set(String fieldName, Object value) {
-    return (ClientInfo) super.set(fieldName, value);
+  public AppBundle set(String fieldName, Object value) {
+    return (AppBundle) super.set(fieldName, value);
   }
 
   @Override
-  public ClientInfo clone() {
-    return (ClientInfo) super.clone();
+  public AppBundle clone() {
+    return (AppBundle) super.clone();
   }
 
 }

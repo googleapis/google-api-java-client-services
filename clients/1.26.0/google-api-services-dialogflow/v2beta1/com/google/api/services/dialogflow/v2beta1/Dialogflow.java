@@ -6807,6 +6807,173 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the specified knowledge base.
+         *
+         * Create a request for the method "knowledgeBases.patch".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The knowledge base resource name.
+        The name must be empty when creating a knowledge base.
+        Format:
+         *        `projects//knowledgeBases/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase> {
+
+          private static final String REST_PATH = "v2beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/agent/knowledgeBases/[^/]+$");
+
+          /**
+           * Updates the specified knowledge base.
+           *
+           * Create a request for the method "knowledgeBases.patch".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The knowledge base resource name.
+        The name must be empty when creating a knowledge base.
+        Format:
+         *        `projects//knowledgeBases/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase content) {
+            super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/agent/knowledgeBases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The knowledge base resource name. The name must be empty when creating a knowledge
+           * base. Format: `projects//knowledgeBases/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The knowledge base resource name. The name must be empty when creating a knowledge base. Format:
+         `projects//knowledgeBases/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The knowledge base resource name. The name must be empty when creating a knowledge
+           * base. Format: `projects//knowledgeBases/`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/agent/knowledgeBases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Not specified means `update all`. Currently, only `display_name` can be
+           * updated, an InvalidArgument will be returned for attempting to update other fields.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Not specified means `update all`. Currently, only `display_name` can be updated, an
+         InvalidArgument will be returned for attempting to update other fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Not specified means `update all`. Currently, only `display_name` can be
+           * updated, an InvalidArgument will be returned for attempting to update other fields.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Documents collection.
@@ -7438,6 +7605,316 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified document. Operation
+           *
+           * Create a request for the method "documents.patch".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The document resource name.
+          The name must be empty when creating a document.
+          Format:
+           *        `projects//knowledgeBases//documents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
+
+            /**
+             * Updates the specified document. Operation
+             *
+             * Create a request for the method "documents.patch".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The document resource name.
+          The name must be empty when creating a document.
+          Format:
+           *        `projects//knowledgeBases//documents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document content) {
+              super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The document resource name. The name must be empty when creating a document. Format:
+             * `projects//knowledgeBases//documents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The document resource name. The name must be empty when creating a document. Format:
+           `projects//knowledgeBases//documents/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The document resource name. The name must be empty when creating a document. Format:
+             * `projects//knowledgeBases//documents/`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Not specified means `update all`. Currently, only `display_name` can be
+             * updated, an InvalidArgument will be returned for attempting to update other fields.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. Not specified means `update all`. Currently, only `display_name` can be updated, an
+           InvalidArgument will be returned for attempting to update other fields.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. Not specified means `update all`. Currently, only `display_name` can be
+             * updated, an InvalidArgument will be returned for attempting to update other fields.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Reloads the specified document from its specified source, content_uri or content. The previously
+           * loaded content of the document will be deleted. Note: Even when the content of the document has
+           * not changed, there still may be side effects because of internal implementation changes.
+           * Operation
+           *
+           * Create a request for the method "documents.reload".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Reload#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the document to reload.
+          Format: `projects//knowledgeBases//documents/`
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest}
+           * @return the request
+           */
+          public Reload reload(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest content) throws java.io.IOException {
+            Reload result = new Reload(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Reload extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v2beta1/{+name}:reload";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
+
+            /**
+             * Reloads the specified document from its specified source, content_uri or content. The
+             * previously loaded content of the document will be deleted. Note: Even when the content of the
+             * document has not changed, there still may be side effects because of internal implementation
+             * changes. Operation
+             *
+             * Create a request for the method "documents.reload".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Reload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Reload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the document to reload.
+          Format: `projects//knowledgeBases//documents/`
+             * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest}
+             * @since 1.13
+             */
+            protected Reload(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
+              }
+            }
+
+            @Override
+            public Reload set$Xgafv(java.lang.String $Xgafv) {
+              return (Reload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Reload setAccessToken(java.lang.String accessToken) {
+              return (Reload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Reload setAlt(java.lang.String alt) {
+              return (Reload) super.setAlt(alt);
+            }
+
+            @Override
+            public Reload setCallback(java.lang.String callback) {
+              return (Reload) super.setCallback(callback);
+            }
+
+            @Override
+            public Reload setFields(java.lang.String fields) {
+              return (Reload) super.setFields(fields);
+            }
+
+            @Override
+            public Reload setKey(java.lang.String key) {
+              return (Reload) super.setKey(key);
+            }
+
+            @Override
+            public Reload setOauthToken(java.lang.String oauthToken) {
+              return (Reload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Reload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Reload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Reload setQuotaUser(java.lang.String quotaUser) {
+              return (Reload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Reload setUploadType(java.lang.String uploadType) {
+              return (Reload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Reload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Reload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the document to reload. Format: `projects//knowledgeBases//documents/`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the document to reload. Format: `projects//knowledgeBases//documents/`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the document to reload. Format: `projects//knowledgeBases//documents/`
+             */
+            public Reload setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Reload set(String parameterName, Object value) {
+              return (Reload) super.set(parameterName, value);
             }
           }
 
@@ -11335,6 +11812,173 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates the specified knowledge base.
+       *
+       * Create a request for the method "knowledgeBases.patch".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The knowledge base resource name.
+      The name must be empty when creating a knowledge base.
+      Format:
+       *        `projects//knowledgeBases/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase> {
+
+        private static final String REST_PATH = "v2beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/knowledgeBases/[^/]+$");
+
+        /**
+         * Updates the specified knowledge base.
+         *
+         * Create a request for the method "knowledgeBases.patch".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The knowledge base resource name.
+      The name must be empty when creating a knowledge base.
+      Format:
+       *        `projects//knowledgeBases/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase content) {
+          super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1KnowledgeBase.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/knowledgeBases/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The knowledge base resource name. The name must be empty when creating a knowledge base.
+         * Format: `projects//knowledgeBases/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The knowledge base resource name. The name must be empty when creating a knowledge base. Format:
+       `projects//knowledgeBases/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The knowledge base resource name. The name must be empty when creating a knowledge base.
+         * Format: `projects//knowledgeBases/`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/knowledgeBases/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Not specified means `update all`. Currently, only `display_name` can be
+         * updated, an InvalidArgument will be returned for attempting to update other fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. Not specified means `update all`. Currently, only `display_name` can be updated, an
+       InvalidArgument will be returned for attempting to update other fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. Not specified means `update all`. Currently, only `display_name` can be
+         * updated, an InvalidArgument will be returned for attempting to update other fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Documents collection.
@@ -11966,6 +12610,316 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the specified document. Operation
+         *
+         * Create a request for the method "documents.patch".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The document resource name.
+        The name must be empty when creating a document.
+        Format:
+         *        `projects//knowledgeBases//documents/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+
+          /**
+           * Updates the specified document. Operation
+           *
+           * Create a request for the method "documents.patch".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The document resource name.
+        The name must be empty when creating a document.
+        Format:
+         *        `projects//knowledgeBases//documents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Document content) {
+            super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The document resource name. The name must be empty when creating a document. Format:
+           * `projects//knowledgeBases//documents/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The document resource name. The name must be empty when creating a document. Format:
+         `projects//knowledgeBases//documents/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The document resource name. The name must be empty when creating a document. Format:
+           * `projects//knowledgeBases//documents/`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Not specified means `update all`. Currently, only `display_name` can be
+           * updated, an InvalidArgument will be returned for attempting to update other fields.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Not specified means `update all`. Currently, only `display_name` can be updated, an
+         InvalidArgument will be returned for attempting to update other fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Not specified means `update all`. Currently, only `display_name` can be
+           * updated, an InvalidArgument will be returned for attempting to update other fields.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Reloads the specified document from its specified source, content_uri or content. The previously
+         * loaded content of the document will be deleted. Note: Even when the content of the document has
+         * not changed, there still may be side effects because of internal implementation changes.
+         * Operation
+         *
+         * Create a request for the method "documents.reload".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Reload#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the document to reload.
+        Format: `projects//knowledgeBases//documents/`
+         * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest}
+         * @return the request
+         */
+        public Reload reload(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest content) throws java.io.IOException {
+          Reload result = new Reload(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reload extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2beta1/{+name}:reload";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+
+          /**
+           * Reloads the specified document from its specified source, content_uri or content. The
+           * previously loaded content of the document will be deleted. Note: Even when the content of the
+           * document has not changed, there still may be side effects because of internal implementation
+           * changes. Operation
+           *
+           * Create a request for the method "documents.reload".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Reload#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Reload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the document to reload.
+        Format: `projects//knowledgeBases//documents/`
+           * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest}
+           * @since 1.13
+           */
+          protected Reload(java.lang.String name, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1ReloadDocumentRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reload set$Xgafv(java.lang.String $Xgafv) {
+            return (Reload) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reload setAccessToken(java.lang.String accessToken) {
+            return (Reload) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reload setAlt(java.lang.String alt) {
+            return (Reload) super.setAlt(alt);
+          }
+
+          @Override
+          public Reload setCallback(java.lang.String callback) {
+            return (Reload) super.setCallback(callback);
+          }
+
+          @Override
+          public Reload setFields(java.lang.String fields) {
+            return (Reload) super.setFields(fields);
+          }
+
+          @Override
+          public Reload setKey(java.lang.String key) {
+            return (Reload) super.setKey(key);
+          }
+
+          @Override
+          public Reload setOauthToken(java.lang.String oauthToken) {
+            return (Reload) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reload setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reload) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reload setQuotaUser(java.lang.String quotaUser) {
+            return (Reload) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reload setUploadType(java.lang.String uploadType) {
+            return (Reload) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reload setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reload) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the document to reload. Format: `projects//knowledgeBases//documents/`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the document to reload. Format: `projects//knowledgeBases//documents/`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the document to reload. Format: `projects//knowledgeBases//documents/`
+           */
+          public Reload setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Reload set(String parameterName, Object value) {
+            return (Reload) super.set(parameterName, value);
           }
         }
 

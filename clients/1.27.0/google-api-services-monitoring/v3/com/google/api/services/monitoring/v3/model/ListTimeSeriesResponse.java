@@ -37,12 +37,6 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<Status> executionErrors;
 
-  static {
-    // hack to force ProGuard to consider Status used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Status.class);
-  }
-
   /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
    * To see the additional results, use that value as pageToken in the next call to this method.
@@ -57,12 +51,6 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<TimeSeries> timeSeries;
-
-  static {
-    // hack to force ProGuard to consider TimeSeries used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TimeSeries.class);
-  }
 
   /**
    * Query execution errors that may have caused the time series data returned to be incomplete.

@@ -20,7 +20,7 @@ package com.google.api.services.firebasehosting.v1beta1;
  * Service definition for FirebaseHosting (v1beta1).
  *
  * <p>
- * 
+ * The Firebase Hosting REST API enables programmatic custom deployment for releasing versions of your Firebase hosted content and configuration files.
  * </p>
  *
  * <p>

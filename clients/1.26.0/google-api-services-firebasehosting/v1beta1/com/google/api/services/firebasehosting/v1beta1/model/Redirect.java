@@ -17,8 +17,8 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A `Redirect` represents the configuration for returning an HTTP redirect response given a
- * matching request URL path.
+ * A [`redirect`](/docs/hosting/full-config#redirects) represents the configuration for returning an
+ * HTTP redirect response given a matching request URL path.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -31,8 +31,8 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class Redirect extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#section-glob) to match
-   * against the request URL path.
+   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
+   * match against the request URL path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,9 +40,9 @@ public final class Redirect extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The value to put in the HTTP location header of the response. The location can
-   * contain capture group values from the pattern using a `":"` prefix to identify the segment and
-   * an optional `"*"` to capture the rest of the URL. For example: "glob": "/:capture*",
-   * "statusCode": 301, "location": "https://example.com/foo/:capture"
+   * contain capture group values from the pattern using a `:` prefix to identify the segment and an
+   * optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode":
+   * 301, "location": "https://example.com/foo/:capture"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class Redirect extends com.google.api.client.json.GenericJson {
   private java.lang.Integer statusCode;
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#section-glob) to match
-   * against the request URL path.
+   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
+   * match against the request URL path.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlob() {
@@ -65,8 +65,8 @@ public final class Redirect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#section-glob) to match
-   * against the request URL path.
+   * Required. The user-supplied [glob pattern](/docs/hosting/full-config#glob_pattern_matching) to
+   * match against the request URL path.
    * @param glob glob or {@code null} for none
    */
   public Redirect setGlob(java.lang.String glob) {
@@ -76,9 +76,9 @@ public final class Redirect extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The value to put in the HTTP location header of the response. The location can
-   * contain capture group values from the pattern using a `":"` prefix to identify the segment and
-   * an optional `"*"` to capture the rest of the URL. For example: "glob": "/:capture*",
-   * "statusCode": 301, "location": "https://example.com/foo/:capture"
+   * contain capture group values from the pattern using a `:` prefix to identify the segment and an
+   * optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode":
+   * 301, "location": "https://example.com/foo/:capture"
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -87,9 +87,9 @@ public final class Redirect extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The value to put in the HTTP location header of the response. The location can
-   * contain capture group values from the pattern using a `":"` prefix to identify the segment and
-   * an optional `"*"` to capture the rest of the URL. For example: "glob": "/:capture*",
-   * "statusCode": 301, "location": "https://example.com/foo/:capture"
+   * contain capture group values from the pattern using a `:` prefix to identify the segment and an
+   * optional `*` to capture the rest of the URL. For example: "glob": "/:capture*", "statusCode":
+   * 301, "location": "https://example.com/foo/:capture"
    * @param location location or {@code null} for none
    */
   public Redirect setLocation(java.lang.String location) {

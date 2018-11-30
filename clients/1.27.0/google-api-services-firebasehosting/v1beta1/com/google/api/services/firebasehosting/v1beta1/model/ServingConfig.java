@@ -19,7 +19,7 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 /**
  * The configuration for how incoming requests to a site should be routed and processed before
  * serving content. The patterns are matched and applied according to a specific [priority
- * order](/docs/hosting/url-redirects-rewrites#section-priorities).
+ * order](/docs/hosting/full-config#hosting_priority_order).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -60,12 +60,24 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Redirect> redirects;
 
+  static {
+    // hack to force ProGuard to consider Redirect used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Redirect.class);
+  }
+
   /**
    * A list of rewrites that will act as if the service were given the destination URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Rewrite> rewrites;
+
+  static {
+    // hack to force ProGuard to consider Rewrite used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Rewrite.class);
+  }
 
   /**
    * Defines how to handle a trailing slash in the URL path.

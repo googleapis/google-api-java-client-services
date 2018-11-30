@@ -44,12 +44,6 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<AuthorizationInfo> authorizationInfo;
 
-  static {
-    // hack to force ProGuard to consider AuthorizationInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AuthorizationInfo.class);
-  }
-
   /**
    * Other service-specific data about the request, response, and other information associated with
    * the current audited event.

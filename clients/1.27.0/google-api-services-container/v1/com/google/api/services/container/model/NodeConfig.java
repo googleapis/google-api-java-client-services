@@ -173,6 +173,22 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
+   * List of kubernetes taints to be applied to each node.
+   *
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NodeTaint> taints;
+
+  static {
+    // hack to force ProGuard to consider NodeTaint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NodeTaint.class);
+  }
+
+  /**
    * A list of hardware accelerators to be attached to each node. See
    * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
    * @return value or {@code null} for none
@@ -492,6 +508,29 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * List of kubernetes taints to be applied to each node.
+   *
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NodeTaint> getTaints() {
+    return taints;
+  }
+
+  /**
+   * List of kubernetes taints to be applied to each node.
+   *
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * @param taints taints or {@code null} for none
+   */
+  public NodeConfig setTaints(java.util.List<NodeTaint> taints) {
+    this.taints = taints;
     return this;
   }
 

@@ -172,12 +172,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<YarnApplication> yarnApplications;
 
-  static {
-    // hack to force ProGuard to consider YarnApplication used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(YarnApplication.class);
-  }
-
   /**
    * Output only. If present, the location of miscellaneous control files which may be used as part
    * of job setup and handling. If not present, control files may be placed in the same location as

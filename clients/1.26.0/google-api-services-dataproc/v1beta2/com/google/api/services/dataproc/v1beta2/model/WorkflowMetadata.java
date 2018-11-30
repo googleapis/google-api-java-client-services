@@ -30,11 +30,18 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class WorkflowMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the managed cluster.
+   * Output only. The name of the target cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterName;
+
+  /**
+   * Output only. The UUID of target cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterUuid;
 
   /**
    * Output only. The create cluster operation metadata.
@@ -100,7 +107,7 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   private java.lang.Integer version;
 
   /**
-   * Output only. The name of the managed cluster.
+   * Output only. The name of the target cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterName() {
@@ -108,11 +115,28 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of the managed cluster.
+   * Output only. The name of the target cluster.
    * @param clusterName clusterName or {@code null} for none
    */
   public WorkflowMetadata setClusterName(java.lang.String clusterName) {
     this.clusterName = clusterName;
+    return this;
+  }
+
+  /**
+   * Output only. The UUID of target cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterUuid() {
+    return clusterUuid;
+  }
+
+  /**
+   * Output only. The UUID of target cluster.
+   * @param clusterUuid clusterUuid or {@code null} for none
+   */
+  public WorkflowMetadata setClusterUuid(java.lang.String clusterUuid) {
+    this.clusterUuid = clusterUuid;
     return this;
   }
 

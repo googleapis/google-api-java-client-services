@@ -91,6 +91,16 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> pypiPackages;
 
   /**
+   * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
+   * webserver processes.
+   *
+   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pythonVersion;
+
+  /**
    * Optional. Apache Airflow configuration properties to override.
    *
    * Property keys contain the section and property names, separated by a hyphen, for example "core-
@@ -221,6 +231,29 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setPypiPackages(java.util.Map<String, java.lang.String> pypiPackages) {
     this.pypiPackages = pypiPackages;
+    return this;
+  }
+
+  /**
+   * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
+   * webserver processes.
+   *
+   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPythonVersion() {
+    return pythonVersion;
+  }
+
+  /**
+   * Optional. The major version of Python used to run the Apache Airflow scheduler, worker, and
+   * webserver processes.
+   *
+   * Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
+   * @param pythonVersion pythonVersion or {@code null} for none
+   */
+  public SoftwareConfig setPythonVersion(java.lang.String pythonVersion) {
+    this.pythonVersion = pythonVersion;
     return this;
   }
 

@@ -41,16 +41,6 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> phrases;
 
   /**
-   * Hint strength to use (high, medium or low). If you use a high strength then you are more likely
-   * to see those phrases in the results. If strength is not specified then by default medium
-   * strength will be used. If you'd like different phrases to have different strengths, you can
-   * specify multiple speech_contexts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String strength;
-
-  /**
    * *Optional* A list of strings containing words and phrases "hints" so that the speech
    * recognition is more likely to recognize them. This can be used to improve the accuracy for
    * specific words and phrases, for example, if specific commands are typically spoken by the user.
@@ -72,29 +62,6 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    */
   public SpeechContext setPhrases(java.util.List<java.lang.String> phrases) {
     this.phrases = phrases;
-    return this;
-  }
-
-  /**
-   * Hint strength to use (high, medium or low). If you use a high strength then you are more likely
-   * to see those phrases in the results. If strength is not specified then by default medium
-   * strength will be used. If you'd like different phrases to have different strengths, you can
-   * specify multiple speech_contexts.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStrength() {
-    return strength;
-  }
-
-  /**
-   * Hint strength to use (high, medium or low). If you use a high strength then you are more likely
-   * to see those phrases in the results. If strength is not specified then by default medium
-   * strength will be used. If you'd like different phrases to have different strengths, you can
-   * specify multiple speech_contexts.
-   * @param strength strength or {@code null} for none
-   */
-  public SpeechContext setStrength(java.lang.String strength) {
-    this.strength = strength;
     return this;
   }
 

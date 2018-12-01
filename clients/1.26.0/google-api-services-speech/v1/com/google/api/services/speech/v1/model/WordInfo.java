@@ -39,16 +39,6 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
-   * Output only. A distinct integer value is assigned for every speaker within the audio. This
-   * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer speakerTag;
-
-  /**
    * Output only. Time offset relative to the beginning of the audio, and corresponding to the start
    * of the spoken word. This field is only set if `enable_word_time_offsets=true` and only in the
    * top hypothesis. This is an experimental feature and the accuracy of the time offset can vary.
@@ -82,29 +72,6 @@ public final class WordInfo extends com.google.api.client.json.GenericJson {
    */
   public WordInfo setEndTime(String endTime) {
     this.endTime = endTime;
-    return this;
-  }
-
-  /**
-   * Output only. A distinct integer value is assigned for every speaker within the audio. This
-   * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getSpeakerTag() {
-    return speakerTag;
-  }
-
-  /**
-   * Output only. A distinct integer value is assigned for every speaker within the audio. This
-   * field specifies which one of those speakers was detected to have spoken this word. Value ranges
-   * from '1' to diarization_speaker_count. speaker_tag is set if enable_speaker_diarization =
-   * 'true' and only in the top alternative.
-   * @param speakerTag speakerTag or {@code null} for none
-   */
-  public WordInfo setSpeakerTag(java.lang.Integer speakerTag) {
-    this.speakerTag = speakerTag;
     return this;
   }
 

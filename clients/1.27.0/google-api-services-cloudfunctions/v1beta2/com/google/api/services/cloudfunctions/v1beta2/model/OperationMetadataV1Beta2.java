@@ -59,7 +59,7 @@ public final class OperationMetadataV1Beta2 extends com.google.api.client.json.G
   private String updateTime;
 
   /**
-   * Version id of the function created or updated by an API call. This field is only pupulated for
+   * Version id of the function created or updated by an API call. This field is only populated for
    * Create and Update operations.
    * The value may be {@code null}.
    */
@@ -137,7 +137,7 @@ public final class OperationMetadataV1Beta2 extends com.google.api.client.json.G
   }
 
   /**
-   * Version id of the function created or updated by an API call. This field is only pupulated for
+   * Version id of the function created or updated by an API call. This field is only populated for
    * Create and Update operations.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class OperationMetadataV1Beta2 extends com.google.api.client.json.G
   }
 
   /**
-   * Version id of the function created or updated by an API call. This field is only pupulated for
+   * Version id of the function created or updated by an API call. This field is only populated for
    * Create and Update operations.
    * @param versionId versionId or {@code null} for none
    */

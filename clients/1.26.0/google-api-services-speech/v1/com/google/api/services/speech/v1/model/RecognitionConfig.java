@@ -123,6 +123,12 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<SpeechContext> speechContexts;
 
+  static {
+    // hack to force ProGuard to consider SpeechContext used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SpeechContext.class);
+  }
+
   /**
    * *Optional* Set to true to use an enhanced model for speech recognition. If `use_enhanced` is
    * set to true and the `model` field is not set, then an appropriate enhanced model is chosen if:

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.speech.v1.model;
+package com.google.api.services.speech.v1p1beta1.model;
 
 /**
  * The response message for Operations.ListOperations.
@@ -42,6 +42,12 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<Operation> operations;
+
+  static {
+    // hack to force ProGuard to consider Operation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Operation.class);
+  }
 
   /**
    * The standard List next-page token.

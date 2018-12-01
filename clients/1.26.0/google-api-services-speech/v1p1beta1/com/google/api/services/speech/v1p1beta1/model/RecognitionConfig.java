@@ -56,8 +56,21 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Integer audioChannelCount;
 
   /**
+   * *Optional* Config to enable speaker diarization and set additional parameters to make
+   * diarization better suited for your application. Note: When this is enabled, we send all the
+   * words from the beginning of the audio for the top alternative in every consecutive STREAMING
+   * responses. This is done in order to improve our speaker tags as our models learn to identify
+   * the speakers in the conversation over time. For non-streaming requests, the diarization results
+   * will be provided only in the top alternative of the FINAL SpeechRecognitionResult.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeakerDiarizationConfig diarizationConfig;
+
+  /**
    * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
-   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true."
+   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true." Note: Use
+   * diarization_config instead. This field will be DEPRECATED soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,12 +100,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
-   * of the recognition result using a speaker_tag provided in the WordInfo. Note: When this is
-   * true, we send all the words from the beginning of the audio for the top alternative in every
-   * consecutive STREAMING responses. This is done in order to improve our speaker tags as our
-   * models learn to identify the speakers in the conversation over time. For non-streaming
-   * requests, the diarization results will be provided only in the top alternative of the FINAL
-   * SpeechRecognitionResult.
+   * of the recognition result using a speaker_tag provided in the WordInfo. Note: Use
+   * diarization_config instead. This field will be DEPRECATED soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,8 +280,36 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * *Optional* Config to enable speaker diarization and set additional parameters to make
+   * diarization better suited for your application. Note: When this is enabled, we send all the
+   * words from the beginning of the audio for the top alternative in every consecutive STREAMING
+   * responses. This is done in order to improve our speaker tags as our models learn to identify
+   * the speakers in the conversation over time. For non-streaming requests, the diarization results
+   * will be provided only in the top alternative of the FINAL SpeechRecognitionResult.
+   * @return value or {@code null} for none
+   */
+  public SpeakerDiarizationConfig getDiarizationConfig() {
+    return diarizationConfig;
+  }
+
+  /**
+   * *Optional* Config to enable speaker diarization and set additional parameters to make
+   * diarization better suited for your application. Note: When this is enabled, we send all the
+   * words from the beginning of the audio for the top alternative in every consecutive STREAMING
+   * responses. This is done in order to improve our speaker tags as our models learn to identify
+   * the speakers in the conversation over time. For non-streaming requests, the diarization results
+   * will be provided only in the top alternative of the FINAL SpeechRecognitionResult.
+   * @param diarizationConfig diarizationConfig or {@code null} for none
+   */
+  public RecognitionConfig setDiarizationConfig(SpeakerDiarizationConfig diarizationConfig) {
+    this.diarizationConfig = diarizationConfig;
+    return this;
+  }
+
+  /**
    * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
-   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true."
+   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true." Note: Use
+   * diarization_config instead. This field will be DEPRECATED soon.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiarizationSpeakerCount() {
@@ -281,7 +318,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* If set, specifies the estimated number of speakers in the conversation. If not set,
-   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true."
+   * defaults to '2'. Ignored unless enable_speaker_diarization is set to true." Note: Use
+   * diarization_config instead. This field will be DEPRECATED soon.
    * @param diarizationSpeakerCount diarizationSpeakerCount or {@code null} for none
    */
   public RecognitionConfig setDiarizationSpeakerCount(java.lang.Integer diarizationSpeakerCount) {
@@ -341,12 +379,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
-   * of the recognition result using a speaker_tag provided in the WordInfo. Note: When this is
-   * true, we send all the words from the beginning of the audio for the top alternative in every
-   * consecutive STREAMING responses. This is done in order to improve our speaker tags as our
-   * models learn to identify the speakers in the conversation over time. For non-streaming
-   * requests, the diarization results will be provided only in the top alternative of the FINAL
-   * SpeechRecognitionResult.
+   * of the recognition result using a speaker_tag provided in the WordInfo. Note: Use
+   * diarization_config instead. This field will be DEPRECATED soon.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSpeakerDiarization() {
@@ -355,12 +389,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
 
   /**
    * *Optional* If 'true', enables speaker detection for each recognized word in the top alternative
-   * of the recognition result using a speaker_tag provided in the WordInfo. Note: When this is
-   * true, we send all the words from the beginning of the audio for the top alternative in every
-   * consecutive STREAMING responses. This is done in order to improve our speaker tags as our
-   * models learn to identify the speakers in the conversation over time. For non-streaming
-   * requests, the diarization results will be provided only in the top alternative of the FINAL
-   * SpeechRecognitionResult.
+   * of the recognition result using a speaker_tag provided in the WordInfo. Note: Use
+   * diarization_config instead. This field will be DEPRECATED soon.
    * @param enableSpeakerDiarization enableSpeakerDiarization or {@code null} for none
    */
   public RecognitionConfig setEnableSpeakerDiarization(java.lang.Boolean enableSpeakerDiarization) {

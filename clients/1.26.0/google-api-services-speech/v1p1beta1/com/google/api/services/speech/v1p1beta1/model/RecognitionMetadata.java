@@ -99,15 +99,6 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
   private java.lang.String recordingDeviceType;
 
   /**
-   * A freeform field to tag this input sample with. This can be used for grouping the logs into
-   * separate buckets. This enables selective purging of data based on the tags, and also for
-   * training models in AutoML.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> tags;
-
-  /**
    * Description of the content. Eg. "Recordings of federal supreme court hearings from 2012".
    * @return value or {@code null} for none
    */
@@ -269,27 +260,6 @@ public final class RecognitionMetadata extends com.google.api.client.json.Generi
    */
   public RecognitionMetadata setRecordingDeviceType(java.lang.String recordingDeviceType) {
     this.recordingDeviceType = recordingDeviceType;
-    return this;
-  }
-
-  /**
-   * A freeform field to tag this input sample with. This can be used for grouping the logs into
-   * separate buckets. This enables selective purging of data based on the tags, and also for
-   * training models in AutoML.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getTags() {
-    return tags;
-  }
-
-  /**
-   * A freeform field to tag this input sample with. This can be used for grouping the logs into
-   * separate buckets. This enables selective purging of data based on the tags, and also for
-   * training models in AutoML.
-   * @param tags tags or {@code null} for none
-   */
-  public RecognitionMetadata setTags(java.util.List<java.lang.String> tags) {
-    this.tags = tags;
     return this;
   }
 

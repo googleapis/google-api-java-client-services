@@ -17,8 +17,10 @@
 package com.google.api.services.speech.v1p1beta1.model;
 
 /**
- * The only message returned to the client by the `Recognize` method. It contains the result as zero
- * or more sequential `SpeechRecognitionResult` messages.
+ * The only message returned to the client by the `LongRunningRecognize` method. It contains the
+ * result as zero or more sequential `SpeechRecognitionResult` messages. It is included in the
+ * `result.response` field of the `Operation` returned by the `GetOperation` call of the
+ * `google::longrunning::Operations` service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Speech API. For a detailed explanation see:
@@ -28,7 +30,7 @@ package com.google.api.services.speech.v1p1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RecognizeResponse extends com.google.api.client.json.GenericJson {
+public final class LongRunningRecognizeResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Sequential list of transcription results corresponding to sequential portions of
@@ -52,19 +54,19 @@ public final class RecognizeResponse extends com.google.api.client.json.GenericJ
    * audio.
    * @param results results or {@code null} for none
    */
-  public RecognizeResponse setResults(java.util.List<SpeechRecognitionResult> results) {
+  public LongRunningRecognizeResponse setResults(java.util.List<SpeechRecognitionResult> results) {
     this.results = results;
     return this;
   }
 
   @Override
-  public RecognizeResponse set(String fieldName, Object value) {
-    return (RecognizeResponse) super.set(fieldName, value);
+  public LongRunningRecognizeResponse set(String fieldName, Object value) {
+    return (LongRunningRecognizeResponse) super.set(fieldName, value);
   }
 
   @Override
-  public RecognizeResponse clone() {
-    return (RecognizeResponse) super.clone();
+  public LongRunningRecognizeResponse clone() {
+    return (LongRunningRecognizeResponse) super.clone();
   }
 
 }

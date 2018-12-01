@@ -165,7 +165,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1p1beta1/operations/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+$");
+          java.util.regex.Pattern.compile("^.+$");
 
       /**
        * Gets the latest state of a long-running operation.  Clients can use this method to poll the
@@ -187,7 +187,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^[^/]+$");
+              "^.+$");
         }
       }
 
@@ -271,7 +271,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
-              "^[^/]+$");
+              "^.+$");
         }
         this.name = name;
         return this;
@@ -282,1586 +282,191 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
         return (Get) super.set(parameterName, value);
       }
     }
-
-  }
-
-  /**
-   * An accessor for creating requests from the Projects collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Speech speech = new Speech(...);}
-   *   {@code Speech.Projects.List request = speech.projects().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Projects projects() {
-    return new Projects();
-  }
-
-  /**
-   * The "projects" collection of methods.
-   */
-  public class Projects {
-
     /**
-     * An accessor for creating requests from the Locations collection.
+     * Lists operations that match the specified filter in the request. If the server doesn't support
+     * this method, it returns `UNIMPLEMENTED`.
      *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code Speech speech = new Speech(...);}
-     *   {@code Speech.Locations.List request = speech.locations().list(parameters ...)}
-     * </pre>
+     * NOTE: the `name` binding allows API services to override the binding to use different resource
+     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
+     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+     * compatibility, the default name includes the operations collection id, however overriding users
+     * must ensure the name binding is the parent resource, without the operations collection id.
      *
-     * @return the resource collection
+     * Create a request for the method "operations.list".
+     *
+     * This request holds the parameters needed by the speech server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
      */
-    public Locations locations() {
-      return new Locations();
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
     }
 
-    /**
-     * The "locations" collection of methods.
-     */
-    public class Locations {
+    public class List extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.ListOperationsResponse> {
+
+      private static final String REST_PATH = "v1p1beta1/operations";
 
       /**
-       * An accessor for creating requests from the Datasets collection.
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`.
        *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Speech speech = new Speech(...);}
-       *   {@code Speech.Datasets.List request = speech.datasets().list(parameters ...)}
-       * </pre>
+       * NOTE: the `name` binding allows API services to override the binding to use different resource
+       * name schemes, such as `users/operations`. To override the binding, API services can add a
+       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
+       * compatibility, the default name includes the operations collection id, however overriding users
+       * must ensure the name binding is the parent resource, without the operations collection id.
        *
-       * @return the resource collection
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the the speech server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
        */
-      public Datasets datasets() {
-        return new Datasets();
+      protected List() {
+        super(Speech.this, "GET", REST_PATH, null, com.google.api.services.speech.v1p1beta1.model.ListOperationsResponse.class);
       }
 
-      /**
-       * The "datasets" collection of methods.
-       */
-      public class Datasets {
-
-        /**
-         * Performs asynchronous data upload for AutoML: receive results via the
-         * google.longrunning.Operations interface. Returns either an `Operation.error` or an
-         * `Operation.response` which contains a `Dataset` message.
-         *
-         * Create a request for the method "datasets.create".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-         * @param content the {@link com.google.api.services.speech.v1p1beta1.model.Dataset}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.speech.v1p1beta1.model.Dataset content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.Operation> {
-
-          private static final String REST_PATH = "v1p1beta1/{+parent}/datasets";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Performs asynchronous data upload for AutoML: receive results via the
-           * google.longrunning.Operations interface. Returns either an `Operation.error` or an
-           * `Operation.response` which contains a `Dataset` message.
-           *
-           * Create a request for the method "datasets.create".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-           * @param content the {@link com.google.api.services.speech.v1p1beta1.model.Dataset}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.speech.v1p1beta1.model.Dataset content) {
-            super(Speech.this, "POST", REST_PATH, content, com.google.api.services.speech.v1p1beta1.model.Operation.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. Resource name of the parent. Has the format :-
-         "projects/{project_id}/locations/{location_id}"
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Get the dataset associated with the dataset resource.
-         *
-         * Create a request for the method "datasets.get".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name The resource name of the dataset to retrieve. Form :-
-         *        '/projects/{project_number}/locations/{location_id}/datasets/{dataset_id}'
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.Dataset> {
-
-          private static final String REST_PATH = "v1p1beta1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-
-          /**
-           * Get the dataset associated with the dataset resource.
-           *
-           * Create a request for the method "datasets.get".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
-           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-           * called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The resource name of the dataset to retrieve. Form :-
-         *        '/projects/{project_number}/locations/{location_id}/datasets/{dataset_id}'
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(Speech.this, "GET", REST_PATH, null, com.google.api.services.speech.v1p1beta1.model.Dataset.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * The resource name of the dataset to retrieve. Form :-
-           * '/projects/{project_number}/locations/{location_id}/datasets/{dataset_id}'
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The resource name of the dataset to retrieve. Form :-
-         '/projects/{project_number}/locations/{location_id}/datasets/{dataset_id}'
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * The resource name of the dataset to retrieve. Form :-
-           * '/projects/{project_number}/locations/{location_id}/datasets/{dataset_id}'
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /**
-           * If true then also include information about the models built using this dataset.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean includeModelInfo;
-
-          /** If true then also include information about the models built using this dataset.
-           */
-          public java.lang.Boolean getIncludeModelInfo() {
-            return includeModelInfo;
-          }
-
-          /**
-           * If true then also include information about the models built using this dataset.
-           */
-          public Get setIncludeModelInfo(java.lang.Boolean includeModelInfo) {
-            this.includeModelInfo = includeModelInfo;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Fetch the list of dataset associated with this project.
-         *
-         * Create a request for the method "datasets.list".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.ListDatasetsResponse> {
-
-          private static final String REST_PATH = "v1p1beta1/{+parent}/datasets";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Fetch the list of dataset associated with this project.
-           *
-           * Create a request for the method "datasets.list".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-           * called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(Speech.this, "GET", REST_PATH, null, com.google.api.services.speech.v1p1beta1.model.ListDatasetsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. Resource name of the parent. Has the format :-
-         "projects/{project_id}/locations/{location_id}"
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Filter the response based on display_name of the dataset. For e.g display_name=Foo The
-           * filter string is case sensitive
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String filter;
-
-          /** Filter the response based on display_name of the dataset. For e.g display_name=Foo The filter
-         string is case sensitive
-           */
-          public java.lang.String getFilter() {
-            return filter;
-          }
-
-          /**
-           * Filter the response based on display_name of the dataset. For e.g display_name=Foo The
-           * filter string is case sensitive
-           */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
-            return this;
-          }
-
-          /**
-           * If true then also include information about the models built using the datasets.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.Boolean includeModelInfo;
-
-          /** If true then also include information about the models built using the datasets.
-           */
-          public java.lang.Boolean getIncludeModelInfo() {
-            return includeModelInfo;
-          }
-
-          /**
-           * If true then also include information about the models built using the datasets.
-           */
-          public List setIncludeModelInfo(java.lang.Boolean includeModelInfo) {
-            this.includeModelInfo = includeModelInfo;
-            return this;
-          }
-
-          /** The maximum number of items to return. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of items to return.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The maximum number of items to return. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /** The next_page_token value returned from a previous List request, if any. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The next_page_token value returned from a previous List request, if any.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The next_page_token value returned from a previous List request, if any. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Refresh data for a dataset.
-         *
-         * Create a request for the method "datasets.refreshData".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link RefreshData#execute()} method to invoke the remote operation.
-         *
-         * @param name The resource name of the destination dataset.
-         * @param content the {@link com.google.api.services.speech.v1p1beta1.model.RefreshDataRequest}
-         * @return the request
-         */
-        public RefreshData refreshData(java.lang.String name, com.google.api.services.speech.v1p1beta1.model.RefreshDataRequest content) throws java.io.IOException {
-          RefreshData result = new RefreshData(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class RefreshData extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.Operation> {
-
-          private static final String REST_PATH = "v1p1beta1/{+name}:refreshData";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-
-          /**
-           * Refresh data for a dataset.
-           *
-           * Create a request for the method "datasets.refreshData".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link RefreshData#execute()} method to invoke the remote operation. <p>
-           * {@link
-           * RefreshData#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name The resource name of the destination dataset.
-           * @param content the {@link com.google.api.services.speech.v1p1beta1.model.RefreshDataRequest}
-           * @since 1.13
-           */
-          protected RefreshData(java.lang.String name, com.google.api.services.speech.v1p1beta1.model.RefreshDataRequest content) {
-            super(Speech.this, "POST", REST_PATH, content, com.google.api.services.speech.v1p1beta1.model.Operation.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-            }
-          }
-
-          @Override
-          public RefreshData set$Xgafv(java.lang.String $Xgafv) {
-            return (RefreshData) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public RefreshData setAccessToken(java.lang.String accessToken) {
-            return (RefreshData) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public RefreshData setAlt(java.lang.String alt) {
-            return (RefreshData) super.setAlt(alt);
-          }
-
-          @Override
-          public RefreshData setCallback(java.lang.String callback) {
-            return (RefreshData) super.setCallback(callback);
-          }
-
-          @Override
-          public RefreshData setFields(java.lang.String fields) {
-            return (RefreshData) super.setFields(fields);
-          }
-
-          @Override
-          public RefreshData setKey(java.lang.String key) {
-            return (RefreshData) super.setKey(key);
-          }
-
-          @Override
-          public RefreshData setOauthToken(java.lang.String oauthToken) {
-            return (RefreshData) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public RefreshData setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (RefreshData) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public RefreshData setQuotaUser(java.lang.String quotaUser) {
-            return (RefreshData) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public RefreshData setUploadType(java.lang.String uploadType) {
-            return (RefreshData) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public RefreshData setUploadProtocol(java.lang.String uploadProtocol) {
-            return (RefreshData) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** The resource name of the destination dataset. */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** The resource name of the destination dataset.
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** The resource name of the destination dataset. */
-          public RefreshData setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public RefreshData set(String parameterName, Object value) {
-            return (RefreshData) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
-       * An accessor for creating requests from the LogDataStats collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Speech speech = new Speech(...);}
-       *   {@code Speech.LogDataStats.List request = speech.logDataStats().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public LogDataStats logDataStats() {
-        return new LogDataStats();
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
       }
 
-      /**
-       * The "log_data_stats" collection of methods.
-       */
-      public class LogDataStats {
-
-        /**
-         * List all log data stats associated with this project.
-         *
-         * Create a request for the method "log_data_stats.list".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.ListLogDataStatsResponse> {
-
-          private static final String REST_PATH = "v1p1beta1/{+parent}/log_data_stats";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * List all log data stats associated with this project.
-           *
-           * Create a request for the method "log_data_stats.list".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-           * called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(Speech.this, "GET", REST_PATH, null, com.google.api.services.speech.v1p1beta1.model.ListLogDataStatsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. Resource name of the parent. Has the format :-
-         "projects/{project_id}/locations/{location_id}"
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
-       * An accessor for creating requests from the Models collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Speech speech = new Speech(...);}
-       *   {@code Speech.Models.List request = speech.models().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public Models models() {
-        return new Models();
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
       }
 
-      /**
-       * The "models" collection of methods.
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
        */
-      public class Models {
-
-        /**
-         * Performs asynchronous model training for AutoML: receive results via the
-         * google.longrunning.Operations interface. Returns either an `Operation.error` or an
-         * `Operation.response` which contains a `Model` message.
-         *
-         * Create a request for the method "models.create".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-         * @param content the {@link com.google.api.services.speech.v1p1beta1.model.Model}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.speech.v1p1beta1.model.Model content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.Operation> {
-
-          private static final String REST_PATH = "v1p1beta1/{+parent}/models";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Performs asynchronous model training for AutoML: receive results via the
-           * google.longrunning.Operations interface. Returns either an `Operation.error` or an
-           * `Operation.response` which contains a `Model` message.
-           *
-           * Create a request for the method "models.create".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-           * @param content the {@link com.google.api.services.speech.v1p1beta1.model.Model}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.speech.v1p1beta1.model.Model content) {
-            super(Speech.this, "POST", REST_PATH, content, com.google.api.services.speech.v1p1beta1.model.Operation.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. Resource name of the parent. Has the format :-
-         "projects/{project_id}/locations/{location_id}"
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Required. Resource name of the dataset being used to create the model.
-           * '/projects/{project_id}/locations/{location_id}/datasets/{dataset_id}'
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. Resource name of the dataset being used to create the model.
-         '/projects/{project_id}/locations/{location_id}/datasets/{dataset_id}'
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. Resource name of the dataset being used to create the model.
-           * '/projects/{project_id}/locations/{location_id}/datasets/{dataset_id}'
-           */
-          public Create setName(java.lang.String name) {
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Performs asynchronous model deployment of the model: receive results via the
-         * google.longrunning.Operations interface. After the operation is completed this returns either an
-         * `Operation.error` in case of error or a `google.protobuf.Empty` if the deployment was successful.
-         *
-         * Create a request for the method "models.deploy".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link Deploy#execute()} method to invoke the remote operation.
-         *
-         * @param name Resource name of the model.
-        Format:
-         *        "projects/{project_id}/locations/{location_id}/models/{model_id}"
-         * @param content the {@link com.google.api.services.speech.v1p1beta1.model.DeployModelRequest}
-         * @return the request
-         */
-        public Deploy deploy(java.lang.String name, com.google.api.services.speech.v1p1beta1.model.DeployModelRequest content) throws java.io.IOException {
-          Deploy result = new Deploy(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Deploy extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.Operation> {
-
-          private static final String REST_PATH = "v1p1beta1/{+name}:deploy";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/models/[^/]+$");
-
-          /**
-           * Performs asynchronous model deployment of the model: receive results via the
-           * google.longrunning.Operations interface. After the operation is completed this returns either
-           * an `Operation.error` in case of error or a `google.protobuf.Empty` if the deployment was
-           * successful.
-           *
-           * Create a request for the method "models.deploy".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link Deploy#execute()} method to invoke the remote operation. <p> {@link
-           * Deploy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Resource name of the model.
-        Format:
-         *        "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           * @param content the {@link com.google.api.services.speech.v1p1beta1.model.DeployModelRequest}
-           * @since 1.13
-           */
-          protected Deploy(java.lang.String name, com.google.api.services.speech.v1p1beta1.model.DeployModelRequest content) {
-            super(Speech.this, "POST", REST_PATH, content, com.google.api.services.speech.v1p1beta1.model.Operation.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
-            }
-          }
-
-          @Override
-          public Deploy set$Xgafv(java.lang.String $Xgafv) {
-            return (Deploy) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Deploy setAccessToken(java.lang.String accessToken) {
-            return (Deploy) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Deploy setAlt(java.lang.String alt) {
-            return (Deploy) super.setAlt(alt);
-          }
-
-          @Override
-          public Deploy setCallback(java.lang.String callback) {
-            return (Deploy) super.setCallback(callback);
-          }
-
-          @Override
-          public Deploy setFields(java.lang.String fields) {
-            return (Deploy) super.setFields(fields);
-          }
-
-          @Override
-          public Deploy setKey(java.lang.String key) {
-            return (Deploy) super.setKey(key);
-          }
-
-          @Override
-          public Deploy setOauthToken(java.lang.String oauthToken) {
-            return (Deploy) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Deploy setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Deploy) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Deploy setQuotaUser(java.lang.String quotaUser) {
-            return (Deploy) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Deploy setUploadType(java.lang.String uploadType) {
-            return (Deploy) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Deploy setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Deploy) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Resource name of the model. Format:
-           * "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Resource name of the model. Format:
-         "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Resource name of the model. Format:
-           * "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           */
-          public Deploy setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Deploy set(String parameterName, Object value) {
-            return (Deploy) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Performs asynchronous evaluation of the model: receive results via the
-         * google.longrunning.Operations interface. After the operation is completed this returns either an
-         * `Operation.error` in case of error or a `EvaluateModelResponse` with the evaluation results.
-         *
-         * Create a request for the method "models.evaluate".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
-         *
-         * @param name Resource name of the model.
-        Format:
-         *        "projects/{project_id}/locations/{location_id}/models/{model_id}"
-         * @param content the {@link com.google.api.services.speech.v1p1beta1.model.EvaluateModelRequest}
-         * @return the request
-         */
-        public Evaluate evaluate(java.lang.String name, com.google.api.services.speech.v1p1beta1.model.EvaluateModelRequest content) throws java.io.IOException {
-          Evaluate result = new Evaluate(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Evaluate extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.Operation> {
-
-          private static final String REST_PATH = "v1p1beta1/{+name}:evaluate";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/models/[^/]+$");
-
-          /**
-           * Performs asynchronous evaluation of the model: receive results via the
-           * google.longrunning.Operations interface. After the operation is completed this returns either
-           * an `Operation.error` in case of error or a `EvaluateModelResponse` with the evaluation results.
-           *
-           * Create a request for the method "models.evaluate".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link Evaluate#execute()} method to invoke the remote operation. <p>
-           * {@link
-           * Evaluate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Resource name of the model.
-        Format:
-         *        "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           * @param content the {@link com.google.api.services.speech.v1p1beta1.model.EvaluateModelRequest}
-           * @since 1.13
-           */
-          protected Evaluate(java.lang.String name, com.google.api.services.speech.v1p1beta1.model.EvaluateModelRequest content) {
-            super(Speech.this, "POST", REST_PATH, content, com.google.api.services.speech.v1p1beta1.model.Operation.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
-            }
-          }
-
-          @Override
-          public Evaluate set$Xgafv(java.lang.String $Xgafv) {
-            return (Evaluate) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Evaluate setAccessToken(java.lang.String accessToken) {
-            return (Evaluate) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Evaluate setAlt(java.lang.String alt) {
-            return (Evaluate) super.setAlt(alt);
-          }
-
-          @Override
-          public Evaluate setCallback(java.lang.String callback) {
-            return (Evaluate) super.setCallback(callback);
-          }
-
-          @Override
-          public Evaluate setFields(java.lang.String fields) {
-            return (Evaluate) super.setFields(fields);
-          }
-
-          @Override
-          public Evaluate setKey(java.lang.String key) {
-            return (Evaluate) super.setKey(key);
-          }
-
-          @Override
-          public Evaluate setOauthToken(java.lang.String oauthToken) {
-            return (Evaluate) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Evaluate setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Evaluate) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Evaluate setQuotaUser(java.lang.String quotaUser) {
-            return (Evaluate) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Evaluate setUploadType(java.lang.String uploadType) {
-            return (Evaluate) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Evaluate setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Evaluate) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Resource name of the model. Format:
-           * "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Resource name of the model. Format:
-         "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Resource name of the model. Format:
-           * "projects/{project_id}/locations/{location_id}/models/{model_id}"
-           */
-          public Evaluate setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/models/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Evaluate set(String parameterName, Object value) {
-            return (Evaluate) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Fetch the list of models associated with this project.
-         *
-         * Create a request for the method "models.list".
-         *
-         * This request holds the parameters needed by the speech server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-         * @return the request
-         */
-        public List list(java.lang.String parent) throws java.io.IOException {
-          List result = new List(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class List extends SpeechRequest<com.google.api.services.speech.v1p1beta1.model.ListModelsResponse> {
-
-          private static final String REST_PATH = "v1p1beta1/{+parent}/models";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Fetch the list of models associated with this project.
-           *
-           * Create a request for the method "models.list".
-           *
-           * This request holds the parameters needed by the the speech server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-           * called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. Resource name of the parent. Has the format :-
-         *        "projects/{project_id}/locations/{location_id}"
-           * @since 1.13
-           */
-          protected List(java.lang.String parent) {
-            super(Speech.this, "GET", REST_PATH, null, com.google.api.services.speech.v1p1beta1.model.ListModelsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public List set$Xgafv(java.lang.String $Xgafv) {
-            return (List) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public List setAccessToken(java.lang.String accessToken) {
-            return (List) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public List setAlt(java.lang.String alt) {
-            return (List) super.setAlt(alt);
-          }
-
-          @Override
-          public List setCallback(java.lang.String callback) {
-            return (List) super.setCallback(callback);
-          }
-
-          @Override
-          public List setFields(java.lang.String fields) {
-            return (List) super.setFields(fields);
-          }
-
-          @Override
-          public List setKey(java.lang.String key) {
-            return (List) super.setKey(key);
-          }
-
-          @Override
-          public List setOauthToken(java.lang.String oauthToken) {
-            return (List) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (List) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public List setQuotaUser(java.lang.String quotaUser) {
-            return (List) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public List setUploadType(java.lang.String uploadType) {
-            return (List) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public List setUploadProtocol(java.lang.String uploadProtocol) {
-            return (List) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. Resource name of the parent. Has the format :-
-         "projects/{project_id}/locations/{location_id}"
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. Resource name of the parent. Has the format :-
-           * "projects/{project_id}/locations/{location_id}"
-           */
-          public List setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Filter the response based on display_name of the model. For e.g display_name=Foo The
-           * filter string is case sensitive
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String filter;
-
-          /** Filter the response based on display_name of the model. For e.g display_name=Foo The filter string
-         is case sensitive
-           */
-          public java.lang.String getFilter() {
-            return filter;
-          }
-
-          /**
-           * Filter the response based on display_name of the model. For e.g display_name=Foo The
-           * filter string is case sensitive
-           */
-          public List setFilter(java.lang.String filter) {
-            this.filter = filter;
-            return this;
-          }
-
-          /** The maximum number of items to return. */
-          @com.google.api.client.util.Key
-          private java.lang.Integer pageSize;
-
-          /** The maximum number of items to return.
-           */
-          public java.lang.Integer getPageSize() {
-            return pageSize;
-          }
-
-          /** The maximum number of items to return. */
-          public List setPageSize(java.lang.Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-          }
-
-          /** The next_page_token value returned from a previous List request, if any. */
-          @com.google.api.client.util.Key
-          private java.lang.String pageToken;
-
-          /** The next_page_token value returned from a previous List request, if any.
-           */
-          public java.lang.String getPageToken() {
-            return pageToken;
-          }
-
-          /** The next_page_token value returned from a previous List request, if any. */
-          public List setPageToken(java.lang.String pageToken) {
-            this.pageToken = pageToken;
-            return this;
-          }
-
-          @Override
-          public List set(String parameterName, Object value) {
-            return (List) super.set(parameterName, value);
-          }
-        }
-
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** The name of the operation's parent resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation's parent resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation's parent resource. */
+      public List setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      /** The standard list page size. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The standard list page size.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The standard list page size. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
+
   }
 
   /**

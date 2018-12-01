@@ -20,7 +20,7 @@ package com.google.api.services.container.v1beta1;
  * Service definition for Container (v1beta1).
  *
  * <p>
- * The Google Kubernetes Engine API is used for building and managing container based applications, powered by the open source Kubernetes technology.
+ * Builds and manages container-based applications, powered by the open source Kubernetes technology.
  * </p>
  *
  * <p>

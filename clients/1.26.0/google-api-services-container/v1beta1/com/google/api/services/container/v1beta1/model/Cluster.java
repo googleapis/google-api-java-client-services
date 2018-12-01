@@ -84,7 +84,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String currentMasterVersion;
 
   /**
-   * [Output only] The number of nodes currently in the cluster.
+   * [Output only]  The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * directly to retrieve node information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,8 +218,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
-   * The list of Google Compute Engine [locations](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located.
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's
+   * nodes should be located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,7 +243,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MaintenancePolicy maintenancePolicy;
 
   /**
-   * The authentication information for accessing the master endpoint.
+   * The authentication information for accessing the master endpoint. If unspecified, the defaults
+   * are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to
+   * "admin", a random password will be generated, and a client certificate will be issued.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -417,6 +420,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String tpuIpv4CidrBlock;
 
   /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VerticalPodAutoscaling verticalPodAutoscaling;
+
+  /**
    * [Output only] The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
    * which the cluster resides. This field is deprecated, use location instead.
    * The value may be {@code null}.
@@ -552,7 +562,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The number of nodes currently in the cluster.
+   * [Output only]  The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * directly to retrieve node information.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCurrentNodeCount() {
@@ -560,7 +571,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The number of nodes currently in the cluster.
+   * [Output only]  The number of nodes currently in the cluster. Deprecated. Call Kubernetes API
+   * directly to retrieve node information.
    * @param currentNodeCount currentNodeCount or {@code null} for none
    */
   public Cluster setCurrentNodeCount(java.lang.Integer currentNodeCount) {
@@ -863,8 +875,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Google Compute Engine [locations](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located.
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's
+   * nodes should be located.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -872,8 +884,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Google Compute Engine [locations](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located.
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the cluster's
+   * nodes should be located.
    * @param locations locations or {@code null} for none
    */
   public Cluster setLocations(java.util.List<java.lang.String> locations) {
@@ -922,7 +934,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The authentication information for accessing the master endpoint.
+   * The authentication information for accessing the master endpoint. If unspecified, the defaults
+   * are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to
+   * "admin", a random password will be generated, and a client certificate will be issued.
    * @return value or {@code null} for none
    */
   public MasterAuth getMasterAuth() {
@@ -930,7 +944,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The authentication information for accessing the master endpoint.
+   * The authentication information for accessing the master endpoint. If unspecified, the defaults
+   * are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to
+   * "admin", a random password will be generated, and a client certificate will be issued.
    * @param masterAuth masterAuth or {@code null} for none
    */
   public Cluster setMasterAuth(MasterAuth masterAuth) {
@@ -1331,6 +1347,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {
     this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
+    return this;
+  }
+
+  /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * @return value or {@code null} for none
+   */
+  public VerticalPodAutoscaling getVerticalPodAutoscaling() {
+    return verticalPodAutoscaling;
+  }
+
+  /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * @param verticalPodAutoscaling verticalPodAutoscaling or {@code null} for none
+   */
+  public Cluster setVerticalPodAutoscaling(VerticalPodAutoscaling verticalPodAutoscaling) {
+    this.verticalPodAutoscaling = verticalPodAutoscaling;
     return this;
   }
 

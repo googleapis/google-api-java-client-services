@@ -60,10 +60,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredImageType;
 
   /**
-   * The desired list of Google Compute Engine [locations](/compute/docs/zones#available) in which
-   * the cluster's nodes should be located. Changing the locations a cluster is in will result in
-   * nodes being either created or removed from the cluster, depending on whether locations are
-   * being added or removed.
+   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
+   * being either created or removed from the cluster, depending on whether locations are being
+   * added or removed.
    *
    * This list must always include the cluster's primary zone.
    * The value may be {@code null}.
@@ -157,6 +157,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private PodSecurityPolicyConfig desiredPodSecurityPolicyConfig;
 
   /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VerticalPodAutoscaling desiredVerticalPodAutoscaling;
+
+  /**
    * Configurations for the various addons available to run in the cluster.
    * @return value or {@code null} for none
    */
@@ -225,10 +232,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired list of Google Compute Engine [locations](/compute/docs/zones#available) in which
-   * the cluster's nodes should be located. Changing the locations a cluster is in will result in
-   * nodes being either created or removed from the cluster, depending on whether locations are
-   * being added or removed.
+   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
+   * being either created or removed from the cluster, depending on whether locations are being
+   * added or removed.
    *
    * This list must always include the cluster's primary zone.
    * @return value or {@code null} for none
@@ -238,10 +245,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired list of Google Compute Engine [locations](/compute/docs/zones#available) in which
-   * the cluster's nodes should be located. Changing the locations a cluster is in will result in
-   * nodes being either created or removed from the cluster, depending on whether locations are
-   * being added or removed.
+   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
+   * being either created or removed from the cluster, depending on whether locations are being
+   * added or removed.
    *
    * This list must always include the cluster's primary zone.
    * @param desiredLocations desiredLocations or {@code null} for none
@@ -442,6 +449,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredPodSecurityPolicyConfig(PodSecurityPolicyConfig desiredPodSecurityPolicyConfig) {
     this.desiredPodSecurityPolicyConfig = desiredPodSecurityPolicyConfig;
+    return this;
+  }
+
+  /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * @return value or {@code null} for none
+   */
+  public VerticalPodAutoscaling getDesiredVerticalPodAutoscaling() {
+    return desiredVerticalPodAutoscaling;
+  }
+
+  /**
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * @param desiredVerticalPodAutoscaling desiredVerticalPodAutoscaling or {@code null} for none
+   */
+  public ClusterUpdate setDesiredVerticalPodAutoscaling(VerticalPodAutoscaling desiredVerticalPodAutoscaling) {
+    this.desiredVerticalPodAutoscaling = desiredVerticalPodAutoscaling;
     return this;
   }
 

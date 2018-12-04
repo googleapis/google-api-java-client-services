@@ -37,6 +37,12 @@ public final class UnclaimDevicesRequest extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<PartnerUnclaim> unclaims;
 
+  static {
+    // hack to force ProGuard to consider PartnerUnclaim used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PartnerUnclaim.class);
+  }
+
   /**
    * Required. The list of devices to unclaim.
    * @return value or {@code null} for none

@@ -45,6 +45,13 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
   private DeviceIdentifier deviceIdentifier;
 
   /**
+   * Optional. The metadata to attach to the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceMetadata deviceMetadata;
+
+  /**
    * Required. The section type of the device's provisioning record.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class ClaimDeviceRequest extends com.google.api.client.json.Generic
    */
   public ClaimDeviceRequest setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
     this.deviceIdentifier = deviceIdentifier;
+    return this;
+  }
+
+  /**
+   * Optional. The metadata to attach to the device.
+   * @return value or {@code null} for none
+   */
+  public DeviceMetadata getDeviceMetadata() {
+    return deviceMetadata;
+  }
+
+  /**
+   * Optional. The metadata to attach to the device.
+   * @param deviceMetadata deviceMetadata or {@code null} for none
+   */
+  public ClaimDeviceRequest setDeviceMetadata(DeviceMetadata deviceMetadata) {
+    this.deviceMetadata = deviceMetadata;
     return this;
   }
 

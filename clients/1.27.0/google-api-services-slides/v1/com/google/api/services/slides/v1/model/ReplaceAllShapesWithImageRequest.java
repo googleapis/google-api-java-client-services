@@ -79,7 +79,9 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   private java.util.List<java.lang.String> pageObjectIds;
 
   /**
-   * The replace method. Deprecated: use `image_replace_method` instead.
+   * The replace method.
+   *
+   * Deprecated: use `image_replace_method` instead.
    *
    * If you specify both a `replace_method` and an `image_replace_method`, the
    * `image_replace_method` takes precedence.
@@ -193,7 +195,9 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The replace method. Deprecated: use `image_replace_method` instead.
+   * The replace method.
+   *
+   * Deprecated: use `image_replace_method` instead.
    *
    * If you specify both a `replace_method` and an `image_replace_method`, the
    * `image_replace_method` takes precedence.
@@ -204,7 +208,9 @@ public final class ReplaceAllShapesWithImageRequest extends com.google.api.clien
   }
 
   /**
-   * The replace method. Deprecated: use `image_replace_method` instead.
+   * The replace method.
+   *
+   * Deprecated: use `image_replace_method` instead.
    *
    * If you specify both a `replace_method` and an `image_replace_method`, the
    * `image_replace_method` takes precedence.

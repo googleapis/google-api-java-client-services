@@ -227,7 +227,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateImagePropertiesRequest updateImageProperties;
 
   /**
-   * Updates the category of a line
+   * Updates the category of a line.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -810,7 +810,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Updates the category of a line
+   * Updates the category of a line.
    * @return value or {@code null} for none
    */
   public UpdateLineCategoryRequest getUpdateLineCategory() {
@@ -818,7 +818,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Updates the category of a line
+   * Updates the category of a line.
    * @param updateLineCategory updateLineCategory or {@code null} for none
    */
   public Request setUpdateLineCategory(UpdateLineCategoryRequest updateLineCategory) {

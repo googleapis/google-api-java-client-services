@@ -3229,7 +3229,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * operation.
        *
        * @param metadataOwnerId Required. The owner of the newly set metadata. Set this to the partner ID.
-       * @param deviceId Required. The ID of the reseller partner.
+       * @param deviceId Required. The ID of the device.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.UpdateDeviceMetadataRequest}
        * @return the request
        */
@@ -3261,7 +3261,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param metadataOwnerId Required. The owner of the newly set metadata. Set this to the partner ID.
-         * @param deviceId Required. The ID of the reseller partner.
+         * @param deviceId Required. The ID of the device.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.UpdateDeviceMetadataRequest}
          * @since 1.13
          */
@@ -3342,17 +3342,17 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           return this;
         }
 
-        /** Required. The ID of the reseller partner. */
+        /** Required. The ID of the device. */
         @com.google.api.client.util.Key
         private java.lang.Long deviceId;
 
-        /** Required. The ID of the reseller partner.
+        /** Required. The ID of the device.
          */
         public java.lang.Long getDeviceId() {
           return deviceId;
         }
 
-        /** Required. The ID of the reseller partner. */
+        /** Required. The ID of the device. */
         public Metadata setDeviceId(java.lang.Long deviceId) {
           this.deviceId = deviceId;
           return this;

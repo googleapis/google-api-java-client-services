@@ -293,9 +293,10 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Creates a new presentation using the title given in the request. If a presentationId is provided,
-     * uses it as the ID of the new presentation. Otherwise, a new presentationId is generated. Returns
-     * the created presentation.
+     * Creates a blank presentation using the title given in the request. If a `presentationId` is
+     * provided, it is used as the ID of the new presentation. Otherwise, a new ID is generated. Other
+     * fields in the request, including any provided content, are ignored. Returns the created
+     * presentation.
      *
      * Create a request for the method "presentations.create".
      *
@@ -316,9 +317,10 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1/presentations";
 
       /**
-       * Creates a new presentation using the title given in the request. If a presentationId is
-       * provided, uses it as the ID of the new presentation. Otherwise, a new presentationId is
-       * generated. Returns the created presentation.
+       * Creates a blank presentation using the title given in the request. If a `presentationId` is
+       * provided, it is used as the ID of the new presentation. Otherwise, a new ID is generated. Other
+       * fields in the request, including any provided content, are ignored. Returns the created
+       * presentation.
        *
        * Create a request for the method "presentations.create".
        *

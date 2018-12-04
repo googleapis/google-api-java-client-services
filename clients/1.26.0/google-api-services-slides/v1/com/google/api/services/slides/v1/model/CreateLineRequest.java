@@ -30,7 +30,7 @@ package com.google.api.services.slides.v1.model;
 public final class CreateLineRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The category of line to be created.
+   * The category of the line to be created.
    *
    * The exact line type created is determined based on the category and how it's routed to connect
    * to other page elements.
@@ -54,7 +54,14 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   private PageElementProperties elementProperties;
 
   /**
-   * The category of line to be created.
+   * The category of the line to be created.
+   *
+   * Deprecated: use `category` instead.
+   *
+   * The exact line type created is determined based on the category and how it's routed to connect
+   * to other page elements.
+   *
+   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +82,7 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   private java.lang.String objectId;
 
   /**
-   * The category of line to be created.
+   * The category of the line to be created.
    *
    * The exact line type created is determined based on the category and how it's routed to connect
    * to other page elements.
@@ -93,7 +100,7 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The category of line to be created.
+   * The category of the line to be created.
    *
    * The exact line type created is determined based on the category and how it's routed to connect
    * to other page elements.
@@ -129,7 +136,14 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The category of line to be created.
+   * The category of the line to be created.
+   *
+   * Deprecated: use `category` instead.
+   *
+   * The exact line type created is determined based on the category and how it's routed to connect
+   * to other page elements.
+   *
+   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
    * @return value or {@code null} for none
    */
   public java.lang.String getLineCategory() {
@@ -137,7 +151,14 @@ public final class CreateLineRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The category of line to be created.
+   * The category of the line to be created.
+   *
+   * Deprecated: use `category` instead.
+   *
+   * The exact line type created is determined based on the category and how it's routed to connect
+   * to other page elements.
+   *
+   * If you specify both a `category` and a `line_category`, the `category` takes precedence.
    * @param lineCategory lineCategory or {@code null} for none
    */
   public CreateLineRequest setLineCategory(java.lang.String lineCategory) {

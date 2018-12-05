@@ -70,6 +70,12 @@ public final class ItemMetadata extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Interaction> interactions;
 
+  static {
+    // hack to force ProGuard to consider Interaction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Interaction.class);
+  }
+
   /**
    * Additional keywords or phrases that should match the item. Used internally for user generated
    * content. The maximum number of elements is 100. The maximum length is 8192 characters.

@@ -36,12 +36,6 @@ public final class Snippet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MatchRange> matchRanges;
 
-  static {
-    // hack to force ProGuard to consider MatchRange used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MatchRange.class);
-  }
-
   /**
    * The snippet of the document. The snippet of the document. May contain escaped HTML character
    * that should be unescaped prior to rendering.

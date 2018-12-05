@@ -31,43 +31,44 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class AddSubnetworkRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Resource representing service consumer. It may be different from the project number
-   * in consumer network parameter in case of that network being a shared VPC network. In that case,
-   * Service Networking will validate that this resource belongs to that shared VPC. For example
-   * 'projects/123456'.
+   * Required. A resource that represents the service consumer, such as `projects/123456`. The
+   * project number can be different from the value in the consumer network parameter. For example,
+   * the network might be part of a Shared VPC network. In those cases, Service Networking validates
+   * that this resource belongs to that Shared VPC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumer;
 
   /**
-   * Required. Network name in the consumer project.   This network must have been already peered
-   * with a shared VPC network using CreateConnection method. Must be in a form
-   * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
-   * {network} is network name.
+   * Required. The name of the service consumer's VPC network. The network must have an existing
+   * private connection that was provisioned through the connections.create method. The name must be
+   * in the following format: `projects/{project}/global/networks/{network}`, where {project} is a
+   * project number, such as `12345`. {network} is the name of a VPC network in the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumerNetwork;
 
   /**
-   * Optional. Description of the subnetwork.
+   * An optional description of the subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The prefix length of the IP range. Use usual CIDR range notation. For example, '30'
-   * to provision subnet with x.x.x.x/30 CIDR range. Actual range will be determined using allocated
-   * range for the consumer peered network and returned in the result.
+   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
+   * a pool of available ranges in the service consumer's allocated range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ipPrefixLength;
 
   /**
-   * Required. Cloud [region](/compute/docs/reference/rest/v1/regions) for the new subnetwork.
+   * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
+   * west1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,26 +85,25 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String requestedAddress;
 
   /**
-   * Required. Name for the new subnetwork. Must be a legal
-   * [subnetwork](compute/docs/reference/rest/v1/subnetworks) name.
+   * Required. A name for the new subnet. For information about the naming requirements, see
+   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * Optional. List of members that will be granted 'compute.networkUser' role on the newly added
-   * subnetwork.
+   * A list of members that are granted the `compute.networkUser` role on the subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subnetworkUsers;
 
   /**
-   * Required. Resource representing service consumer. It may be different from the project number
-   * in consumer network parameter in case of that network being a shared VPC network. In that case,
-   * Service Networking will validate that this resource belongs to that shared VPC. For example
-   * 'projects/123456'.
+   * Required. A resource that represents the service consumer, such as `projects/123456`. The
+   * project number can be different from the value in the consumer network parameter. For example,
+   * the network might be part of a Shared VPC network. In those cases, Service Networking validates
+   * that this resource belongs to that Shared VPC.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumer() {
@@ -111,10 +111,10 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Resource representing service consumer. It may be different from the project number
-   * in consumer network parameter in case of that network being a shared VPC network. In that case,
-   * Service Networking will validate that this resource belongs to that shared VPC. For example
-   * 'projects/123456'.
+   * Required. A resource that represents the service consumer, such as `projects/123456`. The
+   * project number can be different from the value in the consumer network parameter. For example,
+   * the network might be part of a Shared VPC network. In those cases, Service Networking validates
+   * that this resource belongs to that Shared VPC.
    * @param consumer consumer or {@code null} for none
    */
   public AddSubnetworkRequest setConsumer(java.lang.String consumer) {
@@ -123,10 +123,10 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Network name in the consumer project.   This network must have been already peered
-   * with a shared VPC network using CreateConnection method. Must be in a form
-   * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
-   * {network} is network name.
+   * Required. The name of the service consumer's VPC network. The network must have an existing
+   * private connection that was provisioned through the connections.create method. The name must be
+   * in the following format: `projects/{project}/global/networks/{network}`, where {project} is a
+   * project number, such as `12345`. {network} is the name of a VPC network in the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerNetwork() {
@@ -134,10 +134,10 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Network name in the consumer project.   This network must have been already peered
-   * with a shared VPC network using CreateConnection method. Must be in a form
-   * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
-   * {network} is network name.
+   * Required. The name of the service consumer's VPC network. The network must have an existing
+   * private connection that was provisioned through the connections.create method. The name must be
+   * in the following format: `projects/{project}/global/networks/{network}`, where {project} is a
+   * project number, such as `12345`. {network} is the name of a VPC network in the project.
    * @param consumerNetwork consumerNetwork or {@code null} for none
    */
   public AddSubnetworkRequest setConsumerNetwork(java.lang.String consumerNetwork) {
@@ -146,7 +146,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Description of the subnetwork.
+   * An optional description of the subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -154,7 +154,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Description of the subnetwork.
+   * An optional description of the subnet.
    * @param description description or {@code null} for none
    */
   public AddSubnetworkRequest setDescription(java.lang.String description) {
@@ -163,9 +163,9 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The prefix length of the IP range. Use usual CIDR range notation. For example, '30'
-   * to provision subnet with x.x.x.x/30 CIDR range. Actual range will be determined using allocated
-   * range for the consumer peered network and returned in the result.
+   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
+   * a pool of available ranges in the service consumer's allocated range.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIpPrefixLength() {
@@ -173,9 +173,9 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The prefix length of the IP range. Use usual CIDR range notation. For example, '30'
-   * to provision subnet with x.x.x.x/30 CIDR range. Actual range will be determined using allocated
-   * range for the consumer peered network and returned in the result.
+   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
+   * a pool of available ranges in the service consumer's allocated range.
    * @param ipPrefixLength ipPrefixLength or {@code null} for none
    */
   public AddSubnetworkRequest setIpPrefixLength(java.lang.Integer ipPrefixLength) {
@@ -184,7 +184,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Cloud [region](/compute/docs/reference/rest/v1/regions) for the new subnetwork.
+   * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
+   * west1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -192,7 +193,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Cloud [region](/compute/docs/reference/rest/v1/regions) for the new subnetwork.
+   * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
+   * west1`.
    * @param region region or {@code null} for none
    */
   public AddSubnetworkRequest setRegion(java.lang.String region) {
@@ -224,8 +226,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Name for the new subnetwork. Must be a legal
-   * [subnetwork](compute/docs/reference/rest/v1/subnetworks) name.
+   * Required. A name for the new subnet. For information about the naming requirements, see
+   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -233,8 +235,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Name for the new subnetwork. Must be a legal
-   * [subnetwork](compute/docs/reference/rest/v1/subnetworks) name.
+   * Required. A name for the new subnet. For information about the naming requirements, see
+   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public AddSubnetworkRequest setSubnetwork(java.lang.String subnetwork) {
@@ -243,8 +245,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. List of members that will be granted 'compute.networkUser' role on the newly added
-   * subnetwork.
+   * A list of members that are granted the `compute.networkUser` role on the subnet.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworkUsers() {
@@ -252,8 +253,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. List of members that will be granted 'compute.networkUser' role on the newly added
-   * subnetwork.
+   * A list of members that are granted the `compute.networkUser` role on the subnet.
    * @param subnetworkUsers subnetworkUsers or {@code null} for none
    */
   public AddSubnetworkRequest setSubnetworkUsers(java.util.List<java.lang.String> subnetworkUsers) {

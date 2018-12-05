@@ -37,6 +37,12 @@ public final class ListCryptoKeyVersionsResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<CryptoKeyVersion> cryptoKeyVersions;
 
+  static {
+    // hack to force ProGuard to consider CryptoKeyVersion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CryptoKeyVersion.class);
+  }
+
   /**
    * A token to retrieve next page of results. Pass this value in
    * ListCryptoKeyVersionsRequest.page_token to retrieve the next page of results.

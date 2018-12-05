@@ -52,19 +52,6 @@ package com.google.api.services.iap.v1beta1.model;
 public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies cloud audit logging configuration for this policy.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<AuditConfig> auditConfigs;
-
-  static {
-    // hack to force ProGuard to consider AuditConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AuditConfig.class);
-  }
-
-  /**
    * Associates a list of `members` to a `role`. `bindings` with no members will result in an error.
    * The value may be {@code null}.
    */
@@ -98,23 +85,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer version;
-
-  /**
-   * Specifies cloud audit logging configuration for this policy.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<AuditConfig> getAuditConfigs() {
-    return auditConfigs;
-  }
-
-  /**
-   * Specifies cloud audit logging configuration for this policy.
-   * @param auditConfigs auditConfigs or {@code null} for none
-   */
-  public Policy setAuditConfigs(java.util.List<AuditConfig> auditConfigs) {
-    this.auditConfigs = auditConfigs;
-    return this;
-  }
 
   /**
    * Associates a list of `members` to a `role`. `bindings` with no members will result in an error.

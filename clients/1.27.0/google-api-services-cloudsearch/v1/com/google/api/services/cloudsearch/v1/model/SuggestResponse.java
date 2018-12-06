@@ -36,12 +36,6 @@ public final class SuggestResponse extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<SuggestResult> suggestResults;
 
-  static {
-    // hack to force ProGuard to consider SuggestResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SuggestResult.class);
-  }
-
   /**
    * List of suggestion results.
    * @return value or {@code null} for none

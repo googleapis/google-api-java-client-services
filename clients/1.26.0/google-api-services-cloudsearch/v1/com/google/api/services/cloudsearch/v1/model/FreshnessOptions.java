@@ -43,7 +43,7 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
 
   /**
    * This property indicates the freshness level of the object in the index. If set, this property
-   * must be a top-level property within the PropertyDefinitions and it must be a timestamp type or
+   * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
    * The value may be {@code null}.
@@ -70,7 +70,7 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
 
   /**
    * This property indicates the freshness level of the object in the index. If set, this property
-   * must be a top-level property within the PropertyDefinitions and it must be a timestamp type or
+   * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
    * @return value or {@code null} for none
@@ -81,7 +81,7 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
 
   /**
    * This property indicates the freshness level of the object in the index. If set, this property
-   * must be a top-level property within the PropertyDefinitions and it must be a timestamp type or
+   * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
    * @param freshnessProperty freshnessProperty or {@code null} for none

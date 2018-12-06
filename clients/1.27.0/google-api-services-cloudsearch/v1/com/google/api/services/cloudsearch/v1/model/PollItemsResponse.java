@@ -38,6 +38,12 @@ public final class PollItemsResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Item> items;
 
+  static {
+    // hack to force ProGuard to consider Item used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Item.class);
+  }
+
   /**
    * Set of items from the queue available for connector to process. These items have the following
    * subset of fields populated:  version metadata.hash structured_data.hash content.hash payload

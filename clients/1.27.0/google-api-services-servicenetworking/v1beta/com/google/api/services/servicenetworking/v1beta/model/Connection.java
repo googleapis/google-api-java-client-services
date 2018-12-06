@@ -17,7 +17,8 @@
 package com.google.api.services.servicenetworking.v1beta.model;
 
 /**
- * Message returning the created service connection.
+ * Represents a private connection resource. A private connection is implemented as a VPC Network
+ * Peering connection between a service producer's VPC network and a service consumer's VPC network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -31,42 +32,45 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of VPC network connected with service producer network. Must be in a form
-   * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
-   * {network} is a network name.
+   * The name of service consumer's VPC network that's connected with service producer network, in
+   * the following format: `projects/{project}/global/networks/{network}`. `{project}` is a project
+   * number, such as in `12345` that includes the VPC service consumer's VPC network. `{network}` is
+   * the name of the service consumer's VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Output only. Name of the peering connection that is created by the peering service.
+   * Output only. The name of the VPC Network Peering connection that was created by the service
+   * producer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peering;
 
   /**
-   * Named IP address range(s) of PEERING type allocated for this service provider. Note that
-   * invoking this method with a different range when connection is already established will not
-   * modify already provisioned service producer subnetworks.
+   * The name of one or more allocated IP address ranges for this service producer of type
+   * `PEERING`. Note that invoking this method with a different range when connection is already
+   * established will not modify already provisioned service producer subnetworks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> reservedPeeringRanges;
 
   /**
-   * Output only. Name of the peering service associated with this connection. "services/{service
-   * name}
+   * Output only. The name of the peering service that's associated with this connection, in the
+   * following format: `services/{service name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * Name of VPC network connected with service producer network. Must be in a form
-   * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
-   * {network} is a network name.
+   * The name of service consumer's VPC network that's connected with service producer network, in
+   * the following format: `projects/{project}/global/networks/{network}`. `{project}` is a project
+   * number, such as in `12345` that includes the VPC service consumer's VPC network. `{network}` is
+   * the name of the service consumer's VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -74,9 +78,10 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of VPC network connected with service producer network. Must be in a form
-   * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
-   * {network} is a network name.
+   * The name of service consumer's VPC network that's connected with service producer network, in
+   * the following format: `projects/{project}/global/networks/{network}`. `{project}` is a project
+   * number, such as in `12345` that includes the VPC service consumer's VPC network. `{network}` is
+   * the name of the service consumer's VPC network.
    * @param network network or {@code null} for none
    */
   public Connection setNetwork(java.lang.String network) {
@@ -85,7 +90,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the peering connection that is created by the peering service.
+   * Output only. The name of the VPC Network Peering connection that was created by the service
+   * producer.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeering() {
@@ -93,7 +99,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the peering connection that is created by the peering service.
+   * Output only. The name of the VPC Network Peering connection that was created by the service
+   * producer.
    * @param peering peering or {@code null} for none
    */
   public Connection setPeering(java.lang.String peering) {
@@ -102,9 +109,9 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Named IP address range(s) of PEERING type allocated for this service provider. Note that
-   * invoking this method with a different range when connection is already established will not
-   * modify already provisioned service producer subnetworks.
+   * The name of one or more allocated IP address ranges for this service producer of type
+   * `PEERING`. Note that invoking this method with a different range when connection is already
+   * established will not modify already provisioned service producer subnetworks.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReservedPeeringRanges() {
@@ -112,9 +119,9 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Named IP address range(s) of PEERING type allocated for this service provider. Note that
-   * invoking this method with a different range when connection is already established will not
-   * modify already provisioned service producer subnetworks.
+   * The name of one or more allocated IP address ranges for this service producer of type
+   * `PEERING`. Note that invoking this method with a different range when connection is already
+   * established will not modify already provisioned service producer subnetworks.
    * @param reservedPeeringRanges reservedPeeringRanges or {@code null} for none
    */
   public Connection setReservedPeeringRanges(java.util.List<java.lang.String> reservedPeeringRanges) {
@@ -123,8 +130,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the peering service associated with this connection. "services/{service
-   * name}
+   * Output only. The name of the peering service that's associated with this connection, in the
+   * following format: `services/{service name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -132,8 +139,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the peering service associated with this connection. "services/{service
-   * name}
+   * Output only. The name of the peering service that's associated with this connection, in the
+   * following format: `services/{service name}`.
    * @param service service or {@code null} for none
    */
   public Connection setService(java.lang.String service) {

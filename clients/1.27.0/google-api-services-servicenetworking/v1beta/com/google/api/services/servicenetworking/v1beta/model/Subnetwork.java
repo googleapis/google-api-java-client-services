@@ -17,7 +17,7 @@
 package com.google.api.services.servicenetworking.v1beta.model;
 
 /**
- * Message returning the created service subnetwork.
+ * Represents a subnet that was created by a peered service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * Subnetwork CIDR range in "10.x.x.x/y" format.
+   * Subnetwork CIDR range in `10.x.x.x/y` format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +45,15 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Shared VPC host project network peered with consumer network. For example:
-   * projects/1234321/global/networks/host-network
+   * In the Shared VPC host project, the VPC network that's peered with the consumer network. For
+   * example: `projects/1234321/global/networks/host-network`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Subnetwork CIDR range in "10.x.x.x/y" format.
+   * Subnetwork CIDR range in `10.x.x.x/y` format.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -61,7 +61,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnetwork CIDR range in "10.x.x.x/y" format.
+   * Subnetwork CIDR range in `10.x.x.x/y` format.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public Subnetwork setIpCidrRange(java.lang.String ipCidrRange) {
@@ -87,8 +87,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shared VPC host project network peered with consumer network. For example:
-   * projects/1234321/global/networks/host-network
+   * In the Shared VPC host project, the VPC network that's peered with the consumer network. For
+   * example: `projects/1234321/global/networks/host-network`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -96,8 +96,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shared VPC host project network peered with consumer network. For example:
-   * projects/1234321/global/networks/host-network
+   * In the Shared VPC host project, the VPC network that's peered with the consumer network. For
+   * example: `projects/1234321/global/networks/host-network`
    * @param network network or {@code null} for none
    */
   public Subnetwork setNetwork(java.lang.String network) {

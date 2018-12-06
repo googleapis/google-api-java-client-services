@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudkms</artifactId>
-  <version>v1-rev20181107-1.27.0</version>
-  <name>Cloud Key Management Service (KMS) API v1-rev20181107-1.27.0</name>
+  <version>v1-rev20181130-1.27.0</version>
+  <name>Cloud Key Management Service (KMS) API v1-rev20181130-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

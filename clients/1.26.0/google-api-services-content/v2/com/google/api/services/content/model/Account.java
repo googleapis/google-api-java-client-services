@@ -18,7 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * Account data. After the creation of a new account it may take a few minutes before it is fully
- * operational.
+ * operational. The methods delete, insert, patch, and update require the admin role.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

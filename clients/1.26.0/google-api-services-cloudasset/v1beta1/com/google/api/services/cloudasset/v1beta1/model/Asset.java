@@ -31,7 +31,7 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the asset. Example: "google.compute.disk".
+   * Type of the asset. Example: "google.compute.Disk".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private Resource resource;
 
   /**
-   * Type of the asset. Example: "google.compute.disk".
+   * Type of the asset. Example: "google.compute.Disk".
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -71,7 +71,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the asset. Example: "google.compute.disk".
+   * Type of the asset. Example: "google.compute.Disk".
    * @param assetType assetType or {@code null} for none
    */
   public Asset setAssetType(java.lang.String assetType) {

@@ -99,12 +99,6 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<Landmark> landmarks;
 
-  static {
-    // hack to force ProGuard to consider Landmark used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Landmark.class);
-  }
-
   /**
    * Yaw angle, which indicates the leftward/rightward angle that the face is pointing relative to
    * the vertical plane perpendicular to the image. Range [-180,180].

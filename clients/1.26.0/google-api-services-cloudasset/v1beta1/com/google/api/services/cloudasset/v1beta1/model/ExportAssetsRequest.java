@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class ExportAssetsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of asset types of which to take a snapshot for. For example: "google.compute.disk". If
+   * A list of asset types of which to take a snapshot for. For example: "google.compute.Disk". If
    * specified, only matching assets will be returned. See [Introduction to Cloud Asset
    * Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) for
    * all supported asset types.
@@ -65,7 +65,7 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   private String readTime;
 
   /**
-   * A list of asset types of which to take a snapshot for. For example: "google.compute.disk". If
+   * A list of asset types of which to take a snapshot for. For example: "google.compute.Disk". If
    * specified, only matching assets will be returned. See [Introduction to Cloud Asset
    * Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) for
    * all supported asset types.
@@ -76,7 +76,7 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * A list of asset types of which to take a snapshot for. For example: "google.compute.disk". If
+   * A list of asset types of which to take a snapshot for. For example: "google.compute.Disk". If
    * specified, only matching assets will be returned. See [Introduction to Cloud Asset
    * Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) for
    * all supported asset types.

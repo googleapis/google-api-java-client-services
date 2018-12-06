@@ -15,6 +15,7 @@
 """This script is used to synthesize generated parts of this library."""
 
 import synthtool as s
+from synthtool.__main__ import extra_args
 from synthtool import log, shell
 from synthtool.sources import git
 import logging
@@ -46,9 +47,11 @@ shell.run(
     cwd=repository
 )
 
+
 def dasherize(name: str):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
+
 
 def generate_service(disco: str):
 
@@ -79,6 +82,7 @@ def generate_service(disco: str):
 
         s.copy(output_dir, f"clients/{template}/{library_name}/{version}")
 
+
 def all_discoveries():
     discos = []
     for file in glob.glob(str(discovery / 'discoveries/*.v*.json')):
@@ -86,10 +90,13 @@ def all_discoveries():
 
     return discos
 
+
 discoveries = all_discoveries()
 
-if len(sys.argv) == 2:
-    discoveries = [discovery for discovery in discoveries if discovery.startswith(sys.argv[1])]
+
+if extra_args():
+    api_name = extra_args()[0]
+    discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
 
 for disco in discoveries:
     generate_service(disco)

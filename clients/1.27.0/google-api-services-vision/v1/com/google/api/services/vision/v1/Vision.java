@@ -1594,8 +1594,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Permanently deletes a ProductSet. All Products and ReferenceImages in the ProductSet will be
-         * deleted.
+         * Permanently deletes a ProductSet. Products and ReferenceImages in the ProductSet are not deleted.
          *
          * The actual image files are not deleted from Google Cloud Storage.
          *
@@ -1627,7 +1626,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
 
           /**
-           * Permanently deletes a ProductSet. All Products and ReferenceImages in the ProductSet will be
+           * Permanently deletes a ProductSet. Products and ReferenceImages in the ProductSet are not
            * deleted.
            *
            * The actual image files are not deleted from Google Cloud Storage.

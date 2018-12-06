@@ -62,6 +62,12 @@ public final class Word extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Symbol> symbols;
 
+  static {
+    // hack to force ProGuard to consider Symbol used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Symbol.class);
+  }
+
   /**
    * The bounding box for the word. The vertices are in the order of top-left, top-right, bottom-
    * right, bottom-left. When a rotation of the bounding box is detected the rotation is represented

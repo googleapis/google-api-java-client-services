@@ -1239,6 +1239,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * Only the fields specified in updateMask field are used. If `updateMask` is not present, the
      * update applies to all fields.
      *
+     * The number of UpdatePhotoRequest messages in a BatchUpdatePhotosRequest must not exceed 20.
+     *
      * Note: To update Pose.altitude, Pose.latLngPair has to be filled as well. Otherwise, the request
      * will fail.
      *
@@ -1273,6 +1275,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        *
        * Only the fields specified in updateMask field are used. If `updateMask` is not present, the
        * update applies to all fields.
+       *
+       * The number of UpdatePhotoRequest messages in a BatchUpdatePhotosRequest must not exceed 20.
        *
        * Note: To update Pose.altitude, Pose.latLngPair has to be filled as well. Otherwise, the request
        * will fail.

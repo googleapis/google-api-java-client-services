@@ -41,12 +41,6 @@ public final class GoogleCloudRedisV1beta1LocationMetadata extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudRedisV1beta1ZoneMetadata> availableZones;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudRedisV1beta1ZoneMetadata used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudRedisV1beta1ZoneMetadata.class);
-  }
-
   /**
    * Output only. The set of available zones in the location. The map is keyed by the lowercase ID
    * of each zone, as defined by GCE. These keys can be specified in `location_id` or

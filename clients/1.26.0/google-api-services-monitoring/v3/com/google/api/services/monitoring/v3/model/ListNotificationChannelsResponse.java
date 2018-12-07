@@ -46,6 +46,12 @@ public final class ListNotificationChannelsResponse extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<NotificationChannel> notificationChannels;
 
+  static {
+    // hack to force ProGuard to consider NotificationChannel used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NotificationChannel.class);
+  }
+
   /**
    * If not empty, indicates that there may be more results that match the request. Use the value in
    * the page_token field in a subsequent request to fetch the next set of results. If empty, all

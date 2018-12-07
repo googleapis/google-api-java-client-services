@@ -52,6 +52,12 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<TimeSeries> timeSeries;
 
+  static {
+    // hack to force ProGuard to consider TimeSeries used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TimeSeries.class);
+  }
+
   /**
    * Query execution errors that may have caused the time series data returned to be incomplete.
    * @return value or {@code null} for none

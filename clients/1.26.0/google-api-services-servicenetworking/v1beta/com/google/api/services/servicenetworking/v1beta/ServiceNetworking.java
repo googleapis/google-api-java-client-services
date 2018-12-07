@@ -311,7 +311,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * requested region and with the requested size that's expressed as a CIDR range (number of leading
      * bits of ipV4 network mask). The method checks against the assigned allocated ranges to find a
      * non-conflicting IP address range. The method will reuse a subnet if subsequent calls contain the
-     * same subnet name, region, prefix length. The response from the `get` operation will be of type
+     * same subnet name, region, prefix length. This method will make producer's tenant project to be a
+     * shared VPC service project as needed. The response from the `get` operation will be of type
      * `Subnetwork` if the operation successfully completes.
      *
      * Create a request for the method "services.addSubnetwork".
@@ -352,8 +353,9 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * requested region and with the requested size that's expressed as a CIDR range (number of
        * leading bits of ipV4 network mask). The method checks against the assigned allocated ranges to
        * find a non-conflicting IP address range. The method will reuse a subnet if subsequent calls
-       * contain the same subnet name, region, prefix length. The response from the `get` operation will
-       * be of type `Subnetwork` if the operation successfully completes.
+       * contain the same subnet name, region, prefix length. This method will make producer's tenant
+       * project to be a shared VPC service project as needed. The response from the `get` operation
+       * will be of type `Subnetwork` if the operation successfully completes.
        *
        * Create a request for the method "services.addSubnetwork".
        *
@@ -678,6 +680,158 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Service producers can use this method to find a currently unused range within consumer allocated
+     * ranges.   This returned range is not reserved, and not guaranteed to remain unused. It will
+     * validate previously provided allocated ranges, find non-conflicting sub-range of requested size
+     * (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation). Operation
+     *
+     * Create a request for the method "services.searchRange".
+     *
+     * This request holds the parameters needed by the servicenetworking server.  After setting any
+     * optional parameters, call the {@link SearchRange#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param parent Required. This is in a form services/{service}.
+    {service} the name of the private access management
+     *        service, for example
+    'service-peering.example.com'.
+     * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.SearchRangeRequest}
+     * @return the request
+     */
+    public SearchRange searchRange(java.lang.String parent, com.google.api.services.servicenetworking.v1beta.model.SearchRangeRequest content) throws java.io.IOException {
+      SearchRange result = new SearchRange(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchRange extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1beta.model.Operation> {
+
+      private static final String REST_PATH = "v1beta/{+parent}:searchRange";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^services/[^/]+$");
+
+      /**
+       * Service producers can use this method to find a currently unused range within consumer
+       * allocated ranges.   This returned range is not reserved, and not guaranteed to remain unused.
+       * It will validate previously provided allocated ranges, find non-conflicting sub-range of
+       * requested size (expressed in number of leading bits of ipv4 network mask, as in CIDR range
+       * notation). Operation
+       *
+       * Create a request for the method "services.searchRange".
+       *
+       * This request holds the parameters needed by the the servicenetworking server.  After setting
+       * any optional parameters, call the {@link SearchRange#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SearchRange#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. This is in a form services/{service}.
+    {service} the name of the private access management
+     *        service, for example
+    'service-peering.example.com'.
+       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.SearchRangeRequest}
+       * @since 1.13
+       */
+      protected SearchRange(java.lang.String parent, com.google.api.services.servicenetworking.v1beta.model.SearchRangeRequest content) {
+        super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1beta.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+      }
+
+      @Override
+      public SearchRange set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchRange) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchRange setAccessToken(java.lang.String accessToken) {
+        return (SearchRange) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchRange setAlt(java.lang.String alt) {
+        return (SearchRange) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchRange setCallback(java.lang.String callback) {
+        return (SearchRange) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchRange setFields(java.lang.String fields) {
+        return (SearchRange) super.setFields(fields);
+      }
+
+      @Override
+      public SearchRange setKey(java.lang.String key) {
+        return (SearchRange) super.setKey(key);
+      }
+
+      @Override
+      public SearchRange setOauthToken(java.lang.String oauthToken) {
+        return (SearchRange) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchRange setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchRange) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchRange setQuotaUser(java.lang.String quotaUser) {
+        return (SearchRange) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchRange setUploadType(java.lang.String uploadType) {
+        return (SearchRange) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchRange setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchRange) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. This is in a form services/{service}. {service} the name of the private access
+       * management service, for example 'service-peering.example.com'.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. This is in a form services/{service}. {service} the name of the private access management
+     service, for example 'service-peering.example.com'.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. This is in a form services/{service}. {service} the name of the private access
+       * management service, for example 'service-peering.example.com'.
+       */
+      public SearchRange setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public SearchRange set(String parameterName, Object value) {
+        return (SearchRange) super.set(parameterName, value);
       }
     }
 

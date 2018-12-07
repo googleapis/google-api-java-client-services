@@ -18,9 +18,9 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The
- * key size must be either 32 or 64 bytes. Outputs a 32 byte digest as an uppercase hex string (for
- * example, 41D1567F7F99F1DC2A5FAB886DEE5BEE). Currently, only string and integer values can be
- * hashed.
+ * key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed
+ * output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and
+ * integer values can be hashed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

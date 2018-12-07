@@ -52,6 +52,12 @@ public final class Authentication extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<AuthenticationRule> rules;
 
+  static {
+    // hack to force ProGuard to consider AuthenticationRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AuthenticationRule.class);
+  }
+
   /**
    * Defines a set of authentication providers that a service supports.
    * @return value or {@code null} for none

@@ -54,7 +54,7 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
 
   /**
    * Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either
-   * GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE. If not specified, the default is GAUGE.
+   * GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
 
   /**
    * Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either
-   * GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE. If not specified, the default is GAUGE.
+   * GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.
    * @return value or {@code null} for none
    */
   public java.lang.String getUtilizationTargetType() {
@@ -123,7 +123,7 @@ public final class AutoscalingPolicyCustomMetricUtilization extends com.google.a
 
   /**
    * Defines how target utilization value is expressed for a Stackdriver Monitoring metric. Either
-   * GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE. If not specified, the default is GAUGE.
+   * GAUGE, DELTA_PER_SECOND, or DELTA_PER_MINUTE.
    * @param utilizationTargetType utilizationTargetType or {@code null} for none
    */
   public AutoscalingPolicyCustomMetricUtilization setUtilizationTargetType(java.lang.String utilizationTargetType) {

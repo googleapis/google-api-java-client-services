@@ -93,7 +93,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
-   * date fingerprint must be provided in order to update the BackendService.
+   * date fingerprint must be provided in order to update the BackendService, otherwise the request
+   * will fail with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * The value may be {@code null}.
@@ -361,7 +362,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
-   * date fingerprint must be provided in order to update the BackendService.
+   * date fingerprint must be provided in order to update the BackendService, otherwise the request
+   * will fail with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #decodeFingerprint()
@@ -374,7 +376,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
-   * date fingerprint must be provided in order to update the BackendService.
+   * date fingerprint must be provided in order to update the BackendService, otherwise the request
+   * will fail with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #getFingerprint()
@@ -389,7 +392,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
-   * date fingerprint must be provided in order to update the BackendService.
+   * date fingerprint must be provided in order to update the BackendService, otherwise the request
+   * will fail with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #encodeFingerprint()
@@ -403,7 +407,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-
-   * date fingerprint must be provided in order to update the BackendService.
+   * date fingerprint must be provided in order to update the BackendService, otherwise the request
+   * will fail with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a BackendService.
    * @see #setFingerprint()

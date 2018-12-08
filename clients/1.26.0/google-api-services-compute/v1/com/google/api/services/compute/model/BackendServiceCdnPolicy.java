@@ -40,7 +40,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
-   * though all responses from this backend had a ?Cache-Control: public, max-age=[TTL]? header,
+   * though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header,
    * regardless of any existing Cache-Control header. The actual headers served in responses will
    * not be altered.
    * The value may be {@code null}.
@@ -76,7 +76,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
-   * though all responses from this backend had a ?Cache-Control: public, max-age=[TTL]? header,
+   * though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header,
    * regardless of any existing Cache-Control header. The actual headers served in responses will
    * not be altered.
    * @return value or {@code null} for none
@@ -89,7 +89,7 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    * Maximum number of seconds the response to a signed URL request will be considered fresh. After
    * this time period, the response will be revalidated before being served. Defaults to 1hr
    * (3600s). When serving responses to signed URL requests, Cloud CDN will internally behave as
-   * though all responses from this backend had a ?Cache-Control: public, max-age=[TTL]? header,
+   * though all responses from this backend had a "Cache-Control: public, max-age=[TTL]" header,
    * regardless of any existing Cache-Control header. The actual headers served in responses will
    * not be altered.
    * @param signedUrlCacheMaxAgeSec signedUrlCacheMaxAgeSec or {@code null} for none

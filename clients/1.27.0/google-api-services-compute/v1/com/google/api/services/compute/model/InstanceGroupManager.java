@@ -72,7 +72,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error 412
+   * conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * The value may be {@code null}.
@@ -258,7 +259,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error 412
+   * conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #decodeFingerprint()
@@ -271,7 +273,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error 412
+   * conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #getFingerprint()
@@ -286,7 +289,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error 412
+   * conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #encodeFingerprint()
@@ -300,7 +304,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored
    * when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to
-   * update the InstanceGroupManager.
+   * update the InstanceGroupManager, otherwise the request will fail with error 412
+   * conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
    * @see #setFingerprint()

@@ -188,9 +188,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is used along with the backend_service field for internal load balancing.
    *
-   * When the load balancing scheme is INTERNAL, a single port or a comma separated list of ports
-   * can be configured. Only packets addressed to these ports will be forwarded to the backends
-   * configured with this forwarding rule.
+   * When the load balancing scheme is INTERNAL, a list of ports can be configured, for example,
+   * ['80'], ['8000','9000'] etc. Only packets addressed to these ports will be forwarded to the
+   * backends configured with this forwarding rule.
    *
    * You may specify a maximum of up to 5 ports.
    * The value may be {@code null}.
@@ -584,9 +584,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is used along with the backend_service field for internal load balancing.
    *
-   * When the load balancing scheme is INTERNAL, a single port or a comma separated list of ports
-   * can be configured. Only packets addressed to these ports will be forwarded to the backends
-   * configured with this forwarding rule.
+   * When the load balancing scheme is INTERNAL, a list of ports can be configured, for example,
+   * ['80'], ['8000','9000'] etc. Only packets addressed to these ports will be forwarded to the
+   * backends configured with this forwarding rule.
    *
    * You may specify a maximum of up to 5 ports.
    * @return value or {@code null} for none
@@ -598,9 +598,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   /**
    * This field is used along with the backend_service field for internal load balancing.
    *
-   * When the load balancing scheme is INTERNAL, a single port or a comma separated list of ports
-   * can be configured. Only packets addressed to these ports will be forwarded to the backends
-   * configured with this forwarding rule.
+   * When the load balancing scheme is INTERNAL, a list of ports can be configured, for example,
+   * ['80'], ['8000','9000'] etc. Only packets addressed to these ports will be forwarded to the
+   * backends configured with this forwarding rule.
    *
    * You may specify a maximum of up to 5 ports.
    * @param ports ports or {@code null} for none

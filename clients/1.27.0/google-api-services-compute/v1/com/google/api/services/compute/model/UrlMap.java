@@ -57,7 +57,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
-   * fingerprint must be provided in order to update the UrlMap.
+   * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
    * The value may be {@code null}.
@@ -191,7 +192,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
-   * fingerprint must be provided in order to update the UrlMap.
+   * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
    * @see #decodeFingerprint()
@@ -204,7 +206,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
-   * fingerprint must be provided in order to update the UrlMap.
+   * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
    * @see #getFingerprint()
@@ -219,7 +222,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
-   * fingerprint must be provided in order to update the UrlMap.
+   * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
    * @see #encodeFingerprint()
@@ -233,7 +237,8 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a UrlMap. An up-to-date
-   * fingerprint must be provided in order to update the UrlMap.
+   * fingerprint must be provided in order to update the UrlMap, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
    * @see #setFingerprint()

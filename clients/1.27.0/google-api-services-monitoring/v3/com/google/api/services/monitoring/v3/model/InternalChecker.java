@@ -72,6 +72,13 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
   private java.lang.String peerProjectId;
 
   /**
+   * The current operational state of the internal checker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The checker's human-readable name. The display name should be unique within a Stackdriver
    * Workspace in order to make it easier to identify; however, uniqueness is not enforced.
    * @return value or {@code null} for none
@@ -165,6 +172,23 @@ public final class InternalChecker extends com.google.api.client.json.GenericJso
    */
   public InternalChecker setPeerProjectId(java.lang.String peerProjectId) {
     this.peerProjectId = peerProjectId;
+    return this;
+  }
+
+  /**
+   * The current operational state of the internal checker.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * The current operational state of the internal checker.
+   * @param state state or {@code null} for none
+   */
+  public InternalChecker setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

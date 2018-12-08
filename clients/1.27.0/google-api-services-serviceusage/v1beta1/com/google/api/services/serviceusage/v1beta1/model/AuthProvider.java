@@ -48,7 +48,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   private java.lang.String audiences;
 
   /**
-   * Redirect URL if JWT token is required but no present or is expired. Implement authorizationUrl
+   * Redirect URL if JWT token is required but not present or is expired. Implement authorizationUrl
    * of securityDefinitions in OpenAPI spec.
    * The value may be {@code null}.
    */
@@ -126,7 +126,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Redirect URL if JWT token is required but no present or is expired. Implement authorizationUrl
+   * Redirect URL if JWT token is required but not present or is expired. Implement authorizationUrl
    * of securityDefinitions in OpenAPI spec.
    * @return value or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Redirect URL if JWT token is required but no present or is expired. Implement authorizationUrl
+   * Redirect URL if JWT token is required but not present or is expired. Implement authorizationUrl
    * of securityDefinitions in OpenAPI spec.
    * @param authorizationUrl authorizationUrl or {@code null} for none
    */

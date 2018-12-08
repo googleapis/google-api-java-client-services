@@ -42,12 +42,6 @@ public final class GooglePrivacyDlpV2CharacterMaskConfig extends com.google.api.
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2CharsToIgnore> charactersToIgnore;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2CharsToIgnore used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2CharsToIgnore.class);
-  }
-
   /**
    * Character to mask the sensitive valuesfor example, "*" for an alphabetic string such as name,
    * or "0" for a numeric string such as ZIP code or credit card number. String must have length 1.

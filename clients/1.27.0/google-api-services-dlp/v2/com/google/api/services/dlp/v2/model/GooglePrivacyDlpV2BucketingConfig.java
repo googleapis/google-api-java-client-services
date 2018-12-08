@@ -42,6 +42,12 @@ public final class GooglePrivacyDlpV2BucketingConfig extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Bucket> buckets;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Bucket used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Bucket.class);
+  }
+
   /**
    * Set of buckets. Ranges must be non-overlapping.
    * @return value or {@code null} for none

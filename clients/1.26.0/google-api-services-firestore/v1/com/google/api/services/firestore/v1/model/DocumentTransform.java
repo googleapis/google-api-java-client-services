@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListIndexes.
+ * A transformation of a document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +27,67 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListIndexesResponse extends com.google.api.client.json.GenericJson {
+public final class DocumentTransform extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested indexes.
+   * The name of the document to transform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Index> indexes;
+  private java.lang.String document;
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The list of transformations to apply to the fields of the document, in order. This must not be
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.util.List<FieldTransform> fieldTransforms;
 
   /**
-   * The requested indexes.
+   * The name of the document to transform.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Index> getIndexes() {
-    return indexes;
+  public java.lang.String getDocument() {
+    return document;
   }
 
   /**
-   * The requested indexes.
-   * @param indexes indexes or {@code null} for none
+   * The name of the document to transform.
+   * @param document document or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setIndexes(java.util.List<GoogleFirestoreAdminV1Index> indexes) {
-    this.indexes = indexes;
+  public DocumentTransform setDocument(java.lang.String document) {
+    this.document = document;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The list of transformations to apply to the fields of the document, in order. This must not be
+   * empty.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.util.List<FieldTransform> getFieldTransforms() {
+    return fieldTransforms;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * The list of transformations to apply to the fields of the document, in order. This must not be
+   * empty.
+   * @param fieldTransforms fieldTransforms or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public DocumentTransform setFieldTransforms(java.util.List<FieldTransform> fieldTransforms) {
+    this.fieldTransforms = fieldTransforms;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.set(fieldName, value);
+  public DocumentTransform set(String fieldName, Object value) {
+    return (DocumentTransform) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse clone() {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.clone();
+  public DocumentTransform clone() {
+    return (DocumentTransform) super.clone();
   }
 
 }

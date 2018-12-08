@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListIndexes.
+ * The response for Firestore.Commit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +27,70 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListIndexesResponse extends com.google.api.client.json.GenericJson {
+public final class CommitResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested indexes.
+   * The time at which the commit occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Index> indexes;
+  private String commitTime;
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The result of applying the writes.
+   *
+   * This i-th write result corresponds to the i-th write in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.util.List<WriteResult> writeResults;
 
   /**
-   * The requested indexes.
+   * The time at which the commit occurred.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Index> getIndexes() {
-    return indexes;
+  public String getCommitTime() {
+    return commitTime;
   }
 
   /**
-   * The requested indexes.
-   * @param indexes indexes or {@code null} for none
+   * The time at which the commit occurred.
+   * @param commitTime commitTime or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setIndexes(java.util.List<GoogleFirestoreAdminV1Index> indexes) {
-    this.indexes = indexes;
+  public CommitResponse setCommitTime(String commitTime) {
+    this.commitTime = commitTime;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The result of applying the writes.
+   *
+   * This i-th write result corresponds to the i-th write in the request.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.util.List<WriteResult> getWriteResults() {
+    return writeResults;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * The result of applying the writes.
+   *
+   * This i-th write result corresponds to the i-th write in the request.
+   * @param writeResults writeResults or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public CommitResponse setWriteResults(java.util.List<WriteResult> writeResults) {
+    this.writeResults = writeResults;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.set(fieldName, value);
+  public CommitResponse set(String fieldName, Object value) {
+    return (CommitResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse clone() {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.clone();
+  public CommitResponse clone() {
+    return (CommitResponse) super.clone();
   }
 
 }

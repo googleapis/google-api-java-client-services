@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListIndexes.
+ * A filter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +27,88 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListIndexesResponse extends com.google.api.client.json.GenericJson {
+public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested indexes.
+   * A composite filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Index> indexes;
+  private CompositeFilter compositeFilter;
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * A filter on a document field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private FieldFilter fieldFilter;
 
   /**
-   * The requested indexes.
+   * A filter that takes exactly one argument.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UnaryFilter unaryFilter;
+
+  /**
+   * A composite filter.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Index> getIndexes() {
-    return indexes;
+  public CompositeFilter getCompositeFilter() {
+    return compositeFilter;
   }
 
   /**
-   * The requested indexes.
-   * @param indexes indexes or {@code null} for none
+   * A composite filter.
+   * @param compositeFilter compositeFilter or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setIndexes(java.util.List<GoogleFirestoreAdminV1Index> indexes) {
-    this.indexes = indexes;
+  public Filter setCompositeFilter(CompositeFilter compositeFilter) {
+    this.compositeFilter = compositeFilter;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * A filter on a document field.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public FieldFilter getFieldFilter() {
+    return fieldFilter;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * A filter on a document field.
+   * @param fieldFilter fieldFilter or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public Filter setFieldFilter(FieldFilter fieldFilter) {
+    this.fieldFilter = fieldFilter;
+    return this;
+  }
+
+  /**
+   * A filter that takes exactly one argument.
+   * @return value or {@code null} for none
+   */
+  public UnaryFilter getUnaryFilter() {
+    return unaryFilter;
+  }
+
+  /**
+   * A filter that takes exactly one argument.
+   * @param unaryFilter unaryFilter or {@code null} for none
+   */
+  public Filter setUnaryFilter(UnaryFilter unaryFilter) {
+    this.unaryFilter = unaryFilter;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.set(fieldName, value);
+  public Filter set(String fieldName, Object value) {
+    return (Filter) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse clone() {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.clone();
+  public Filter clone() {
+    return (Filter) super.clone();
   }
 
 }

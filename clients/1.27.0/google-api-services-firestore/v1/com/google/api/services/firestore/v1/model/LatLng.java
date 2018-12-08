@@ -17,7 +17,9 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListIndexes.
+ * An object representing a latitude/longitude pair. This is expressed as a pair of doubles
+ * representing degrees latitude and degrees longitude. Unless specified otherwise, this must
+ * conform to the WGS84 standard. Values must be within normalized ranges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +29,64 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListIndexesResponse extends com.google.api.client.json.GenericJson {
+public final class LatLng extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested indexes.
+   * The latitude in degrees. It must be in the range [-90.0, +90.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Index> indexes;
+  private java.lang.Double latitude;
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The longitude in degrees. It must be in the range [-180.0, +180.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.lang.Double longitude;
 
   /**
-   * The requested indexes.
+   * The latitude in degrees. It must be in the range [-90.0, +90.0].
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Index> getIndexes() {
-    return indexes;
+  public java.lang.Double getLatitude() {
+    return latitude;
   }
 
   /**
-   * The requested indexes.
-   * @param indexes indexes or {@code null} for none
+   * The latitude in degrees. It must be in the range [-90.0, +90.0].
+   * @param latitude latitude or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setIndexes(java.util.List<GoogleFirestoreAdminV1Index> indexes) {
-    this.indexes = indexes;
+  public LatLng setLatitude(java.lang.Double latitude) {
+    this.latitude = latitude;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The longitude in degrees. It must be in the range [-180.0, +180.0].
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.lang.Double getLongitude() {
+    return longitude;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * The longitude in degrees. It must be in the range [-180.0, +180.0].
+   * @param longitude longitude or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public LatLng setLongitude(java.lang.Double longitude) {
+    this.longitude = longitude;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.set(fieldName, value);
+  public LatLng set(String fieldName, Object value) {
+    return (LatLng) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse clone() {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.clone();
+  public LatLng clone() {
+    return (LatLng) super.clone();
   }
 
 }

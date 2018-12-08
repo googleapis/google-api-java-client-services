@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListFields.
+ * The response for Firestore.ListDocuments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,49 +27,47 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListFieldsResponse extends com.google.api.client.json.GenericJson {
+public final class ListDocumentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested fields.
+   * The Documents found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Field> fields;
+  private java.util.List<Document> documents;
 
   static {
-    // hack to force ProGuard to consider GoogleFirestoreAdminV1Field used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider Document used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleFirestoreAdminV1Field.class);
+    com.google.api.client.util.Data.nullOf(Document.class);
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The next page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The requested fields.
+   * The Documents found.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Field> getFields() {
-    return fields;
+  public java.util.List<Document> getDocuments() {
+    return documents;
   }
 
   /**
-   * The requested fields.
-   * @param fields fields or {@code null} for none
+   * The Documents found.
+   * @param documents documents or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListFieldsResponse setFields(java.util.List<GoogleFirestoreAdminV1Field> fields) {
-    this.fields = fields;
+  public ListDocumentsResponse setDocuments(java.util.List<Document> documents) {
+    this.documents = documents;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The next page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -77,23 +75,22 @@ public final class GoogleFirestoreAdminV1ListFieldsResponse extends com.google.a
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The next page token.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListFieldsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListDocumentsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListFieldsResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListFieldsResponse) super.set(fieldName, value);
+  public ListDocumentsResponse set(String fieldName, Object value) {
+    return (ListDocumentsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListFieldsResponse clone() {
-    return (GoogleFirestoreAdminV1ListFieldsResponse) super.clone();
+  public ListDocumentsResponse clone() {
+    return (ListDocumentsResponse) super.clone();
   }
 
 }

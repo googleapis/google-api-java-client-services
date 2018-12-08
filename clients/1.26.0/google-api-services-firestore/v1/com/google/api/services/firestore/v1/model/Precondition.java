@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListIndexes.
+ * A precondition on a document, used for conditional operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +27,67 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListIndexesResponse extends com.google.api.client.json.GenericJson {
+public final class Precondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested indexes.
+   * When set to `true`, the target document must exist. When set to `false`, the target document
+   * must not exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Index> indexes;
+  private java.lang.Boolean exists;
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * When set, the target document must exist and have been last updated at that time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private String updateTime;
 
   /**
-   * The requested indexes.
+   * When set to `true`, the target document must exist. When set to `false`, the target document
+   * must not exist.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Index> getIndexes() {
-    return indexes;
+  public java.lang.Boolean getExists() {
+    return exists;
   }
 
   /**
-   * The requested indexes.
-   * @param indexes indexes or {@code null} for none
+   * When set to `true`, the target document must exist. When set to `false`, the target document
+   * must not exist.
+   * @param exists exists or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setIndexes(java.util.List<GoogleFirestoreAdminV1Index> indexes) {
-    this.indexes = indexes;
+  public Precondition setExists(java.lang.Boolean exists) {
+    this.exists = exists;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * When set, the target document must exist and have been last updated at that time.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public String getUpdateTime() {
+    return updateTime;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * When set, the target document must exist and have been last updated at that time.
+   * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public Precondition setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.set(fieldName, value);
+  public Precondition set(String fieldName, Object value) {
+    return (Precondition) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse clone() {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.clone();
+  public Precondition clone() {
+    return (Precondition) super.clone();
   }
 
 }

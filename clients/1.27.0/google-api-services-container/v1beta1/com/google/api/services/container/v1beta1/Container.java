@@ -626,6 +626,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
+       * Used to fetch locations that offer GKE.
+       *
        * Create a request for the method "locations.list".
        *
        * This request holds the parameters needed by the container server.  After setting any optional
@@ -649,6 +651,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
+         * Used to fetch locations that offer GKE.
+         *
          * Create a request for the method "locations.list".
          *
          * This request holds the parameters needed by the the container server.  After setting any

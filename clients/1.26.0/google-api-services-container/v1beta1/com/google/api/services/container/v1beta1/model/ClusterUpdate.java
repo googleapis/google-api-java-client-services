@@ -157,6 +157,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private PodSecurityPolicyConfig desiredPodSecurityPolicyConfig;
 
   /**
+   * The desired configuration for exporting resource usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceUsageExportConfig desiredResourceUsageExportConfig;
+
+  /**
    * Cluster-level Vertical Pod Autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -449,6 +456,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredPodSecurityPolicyConfig(PodSecurityPolicyConfig desiredPodSecurityPolicyConfig) {
     this.desiredPodSecurityPolicyConfig = desiredPodSecurityPolicyConfig;
+    return this;
+  }
+
+  /**
+   * The desired configuration for exporting resource usage.
+   * @return value or {@code null} for none
+   */
+  public ResourceUsageExportConfig getDesiredResourceUsageExportConfig() {
+    return desiredResourceUsageExportConfig;
+  }
+
+  /**
+   * The desired configuration for exporting resource usage.
+   * @param desiredResourceUsageExportConfig desiredResourceUsageExportConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
+    this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
     return this;
   }
 

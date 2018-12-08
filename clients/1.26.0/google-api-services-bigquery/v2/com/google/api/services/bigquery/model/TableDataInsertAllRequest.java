@@ -66,9 +66,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   private java.lang.Boolean skipInvalidRows;
 
   /**
-   * [Experimental] If specified, treats the destination table as a base template, and inserts the
-   * rows into an instance table named "{destination}{templateSuffix}". BigQuery will manage
-   * creation of the instance table, using the schema of the base template table. See
+   * If specified, treats the destination table as a base template, and inserts the rows into an
+   * instance table named "{destination}{templateSuffix}". BigQuery will manage creation of the
+   * instance table, using the schema of the base template table. See
    * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for
    * considerations when working with templates tables.
    * The value may be {@code null}.
@@ -149,9 +149,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * [Experimental] If specified, treats the destination table as a base template, and inserts the
-   * rows into an instance table named "{destination}{templateSuffix}". BigQuery will manage
-   * creation of the instance table, using the schema of the base template table. See
+   * If specified, treats the destination table as a base template, and inserts the rows into an
+   * instance table named "{destination}{templateSuffix}". BigQuery will manage creation of the
+   * instance table, using the schema of the base template table. See
    * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for
    * considerations when working with templates tables.
    * @return value or {@code null} for none
@@ -161,9 +161,9 @@ public final class TableDataInsertAllRequest extends com.google.api.client.json.
   }
 
   /**
-   * [Experimental] If specified, treats the destination table as a base template, and inserts the
-   * rows into an instance table named "{destination}{templateSuffix}". BigQuery will manage
-   * creation of the instance table, using the schema of the base template table. See
+   * If specified, treats the destination table as a base template, and inserts the rows into an
+   * instance table named "{destination}{templateSuffix}". BigQuery will manage creation of the
+   * instance table, using the schema of the base template table. See
    * https://cloud.google.com/bigquery/streaming-data-into-bigquery#template-tables for
    * considerations when working with templates tables.
    * @param templateSuffix templateSuffix or {@code null} for none

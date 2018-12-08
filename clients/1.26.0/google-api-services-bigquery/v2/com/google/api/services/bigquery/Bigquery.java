@@ -1073,26 +1073,22 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * [Experimental] The geographic location of the job. Required except for US and EU. See
-       * details at https://cloud.google.com/bigquery/docs/dataset-
-       * locations#specifying_your_location.
+       * The geographic location of the job. Required except for US and EU. See details at
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /**[ Experimental] The geographic location of the job. Required except for US and EU. See details at
-    [ https://cloud.google.com/bigquery/docs/dataset-locations#specifying_your_location.
-    [
-
+      /** The geographic location of the job. Required except for US and EU. See details at
+     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public java.lang.String getLocation() {
         return location;
       }
 
       /**
-       * [Experimental] The geographic location of the job. Required except for US and EU. See
-       * details at https://cloud.google.com/bigquery/docs/dataset-
-       * locations#specifying_your_location.
+       * The geographic location of the job. Required except for US and EU. See details at
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public Cancel setLocation(java.lang.String location) {
         this.location = location;
@@ -1232,26 +1228,22 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * [Experimental] The geographic location of the job. Required except for US and EU. See
-       * details at https://cloud.google.com/bigquery/docs/dataset-
-       * locations#specifying_your_location.
+       * The geographic location of the job. Required except for US and EU. See details at
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /**[ Experimental] The geographic location of the job. Required except for US and EU. See details at
-    [ https://cloud.google.com/bigquery/docs/dataset-locations#specifying_your_location.
-    [
-
+      /** The geographic location of the job. Required except for US and EU. See details at
+     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public java.lang.String getLocation() {
         return location;
       }
 
       /**
-       * [Experimental] The geographic location of the job. Required except for US and EU. See
-       * details at https://cloud.google.com/bigquery/docs/dataset-
-       * locations#specifying_your_location.
+       * The geographic location of the job. Required except for US and EU. See details at
+       * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public Get setLocation(java.lang.String location) {
         this.location = location;
@@ -1388,26 +1380,22 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * [Experimental] The geographic location where the job should run. Required except for US and
-       * EU. See details at https://cloud.google.com/bigquery/docs/dataset-
-       * locations#specifying_your_location.
+       * The geographic location where the job should run. Required except for US and EU. See
+       * details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       @com.google.api.client.util.Key
       private java.lang.String location;
 
-      /**[ Experimental] The geographic location where the job should run. Required except for US and EU. See
-    [ details at https://cloud.google.com/bigquery/docs/dataset-locations#specifying_your_location.
-    [
-
+      /** The geographic location where the job should run. Required except for US and EU. See details at
+     https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public java.lang.String getLocation() {
         return location;
       }
 
       /**
-       * [Experimental] The geographic location where the job should run. Required except for US and
-       * EU. See details at https://cloud.google.com/bigquery/docs/dataset-
-       * locations#specifying_your_location.
+       * The geographic location where the job should run. Required except for US and EU. See
+       * details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
        */
       public GetQueryResults setLocation(java.lang.String location) {
         this.location = location;

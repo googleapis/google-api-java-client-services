@@ -171,7 +171,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String quote;
 
   /**
-   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * The value may be {@code null}.
    */
@@ -604,7 +604,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
@@ -613,7 +613,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * @param rangePartitioning rangePartitioning or {@code null} for none
    */

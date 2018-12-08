@@ -675,6 +675,130 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         return (List) super.set(parameterName, value);
       }
     }
+    /**
+     * Restores, or "undeletes", an alert that was marked for deletion within the past 30 days.
+     * Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been
+     * removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error.
+     * Attempting to undelete an alert which has not been marked for deletion has no effect.
+     *
+     * Create a request for the method "alerts.undelete".
+     *
+     * This request holds the parameters needed by the alertcenter server.  After setting any optional
+     * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+     *
+     * @param alertId Required. The identifier of the alert to undelete.
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest}
+     * @return the request
+     */
+    public Undelete undelete(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest content) throws java.io.IOException {
+      Undelete result = new Undelete(alertId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Undelete extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Alert> {
+
+      private static final String REST_PATH = "v1beta1/alerts/{alertId}:undelete";
+
+      /**
+       * Restores, or "undeletes", an alert that was marked for deletion within the past 30 days.
+       * Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been
+       * removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error.
+       * Attempting to undelete an alert which has not been marked for deletion has no effect.
+       *
+       * Create a request for the method "alerts.undelete".
+       *
+       * This request holds the parameters needed by the the alertcenter server.  After setting any
+       * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param alertId Required. The identifier of the alert to undelete.
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest}
+       * @since 1.13
+       */
+      protected Undelete(java.lang.String alertId, com.google.api.services.alertcenter.v1beta1.model.UndeleteAlertRequest content) {
+        super(AlertCenter.this, "POST", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.Alert.class);
+        this.alertId = com.google.api.client.util.Preconditions.checkNotNull(alertId, "Required parameter alertId must be specified.");
+      }
+
+      @Override
+      public Undelete set$Xgafv(java.lang.String $Xgafv) {
+        return (Undelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Undelete setAccessToken(java.lang.String accessToken) {
+        return (Undelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Undelete setAlt(java.lang.String alt) {
+        return (Undelete) super.setAlt(alt);
+      }
+
+      @Override
+      public Undelete setCallback(java.lang.String callback) {
+        return (Undelete) super.setCallback(callback);
+      }
+
+      @Override
+      public Undelete setFields(java.lang.String fields) {
+        return (Undelete) super.setFields(fields);
+      }
+
+      @Override
+      public Undelete setKey(java.lang.String key) {
+        return (Undelete) super.setKey(key);
+      }
+
+      @Override
+      public Undelete setOauthToken(java.lang.String oauthToken) {
+        return (Undelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Undelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Undelete setQuotaUser(java.lang.String quotaUser) {
+        return (Undelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Undelete setUploadType(java.lang.String uploadType) {
+        return (Undelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Undelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The identifier of the alert to undelete. */
+      @com.google.api.client.util.Key
+      private java.lang.String alertId;
+
+      /** Required. The identifier of the alert to undelete.
+       */
+      public java.lang.String getAlertId() {
+        return alertId;
+      }
+
+      /** Required. The identifier of the alert to undelete. */
+      public Undelete setAlertId(java.lang.String alertId) {
+        this.alertId = alertId;
+        return this;
+      }
+
+      @Override
+      public Undelete set(String parameterName, Object value) {
+        return (Undelete) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the Feedback collection.

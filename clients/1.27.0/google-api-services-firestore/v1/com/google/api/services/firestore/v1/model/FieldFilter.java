@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The response for FirestoreAdmin.ListIndexes.
+ * A filter on a specific field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +27,88 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1ListIndexesResponse extends com.google.api.client.json.GenericJson {
+public final class FieldFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The requested indexes.
+   * The field to filter by.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleFirestoreAdminV1Index> indexes;
+  private FieldReference field;
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The operator to filter by.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.lang.String op;
 
   /**
-   * The requested indexes.
+   * The value to compare to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Value value;
+
+  /**
+   * The field to filter by.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleFirestoreAdminV1Index> getIndexes() {
-    return indexes;
+  public FieldReference getField() {
+    return field;
   }
 
   /**
-   * The requested indexes.
-   * @param indexes indexes or {@code null} for none
+   * The field to filter by.
+   * @param field field or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setIndexes(java.util.List<GoogleFirestoreAdminV1Index> indexes) {
-    this.indexes = indexes;
+  public FieldFilter setField(FieldReference field) {
+    this.field = field;
     return this;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
+   * The operator to filter by.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.lang.String getOp() {
+    return op;
   }
 
   /**
-   * A page token that may be used to request another page of results. If blank, this is the last
-   * page.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * The operator to filter by.
+   * @param op op or {@code null} for none
    */
-  public GoogleFirestoreAdminV1ListIndexesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public FieldFilter setOp(java.lang.String op) {
+    this.op = op;
+    return this;
+  }
+
+  /**
+   * The value to compare to.
+   * @return value or {@code null} for none
+   */
+  public Value getValue() {
+    return value;
+  }
+
+  /**
+   * The value to compare to.
+   * @param value value or {@code null} for none
+   */
+  public FieldFilter setValue(Value value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.set(fieldName, value);
+  public FieldFilter set(String fieldName, Object value) {
+    return (FieldFilter) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1ListIndexesResponse clone() {
-    return (GoogleFirestoreAdminV1ListIndexesResponse) super.clone();
+  public FieldFilter clone() {
+    return (FieldFilter) super.clone();
   }
 
 }

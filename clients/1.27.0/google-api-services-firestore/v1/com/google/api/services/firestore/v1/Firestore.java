@@ -1829,6 +1829,2328 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
+       * An accessor for creating requests from the Documents collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firestore firestore = new Firestore(...);}
+       *   {@code Firestore.Documents.List request = firestore.documents().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Documents documents() {
+        return new Documents();
+      }
+
+      /**
+       * The "documents" collection of methods.
+       */
+      public class Documents {
+
+        /**
+         * Gets multiple documents.
+         *
+         * Documents returned by this method are not guaranteed to be returned in the same order that they
+         * were requested.
+         *
+         * Create a request for the method "documents.batchGet".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         *
+         * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest}
+         * @return the request
+         */
+        public BatchGet batchGet(java.lang.String database, com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest content) throws java.io.IOException {
+          BatchGet result = new BatchGet(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchGet extends FirestoreRequest<com.google.api.services.firestore.v1.model.BatchGetDocumentsResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:batchGet";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Gets multiple documents.
+           *
+           * Documents returned by this method are not guaranteed to be returned in the same order that they
+           * were requested.
+           *
+           * Create a request for the method "documents.batchGet".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest}
+           * @since 1.13
+           */
+          protected BatchGet(java.lang.String database, com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.BatchGetDocumentsResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchGet) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchGet setAccessToken(java.lang.String accessToken) {
+            return (BatchGet) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchGet setAlt(java.lang.String alt) {
+            return (BatchGet) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchGet setCallback(java.lang.String callback) {
+            return (BatchGet) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchGet setFields(java.lang.String fields) {
+            return (BatchGet) super.setFields(fields);
+          }
+
+          @Override
+          public BatchGet setKey(java.lang.String key) {
+            return (BatchGet) super.setKey(key);
+          }
+
+          @Override
+          public BatchGet setOauthToken(java.lang.String oauthToken) {
+            return (BatchGet) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchGet) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchGet setQuotaUser(java.lang.String quotaUser) {
+            return (BatchGet) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchGet setUploadType(java.lang.String uploadType) {
+            return (BatchGet) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchGet) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public BatchGet setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public BatchGet set(String parameterName, Object value) {
+            return (BatchGet) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Starts a new transaction.
+         *
+         * Create a request for the method "documents.beginTransaction".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link BeginTransaction#execute()} method to invoke the remote operation.
+         *
+         * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.BeginTransactionRequest}
+         * @return the request
+         */
+        public BeginTransaction beginTransaction(java.lang.String database, com.google.api.services.firestore.v1.model.BeginTransactionRequest content) throws java.io.IOException {
+          BeginTransaction result = new BeginTransaction(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BeginTransaction extends FirestoreRequest<com.google.api.services.firestore.v1.model.BeginTransactionResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:beginTransaction";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Starts a new transaction.
+           *
+           * Create a request for the method "documents.beginTransaction".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link BeginTransaction#execute()} method to invoke the remote
+           * operation. <p> {@link BeginTransaction#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.BeginTransactionRequest}
+           * @since 1.13
+           */
+          protected BeginTransaction(java.lang.String database, com.google.api.services.firestore.v1.model.BeginTransactionRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.BeginTransactionResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public BeginTransaction set$Xgafv(java.lang.String $Xgafv) {
+            return (BeginTransaction) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BeginTransaction setAccessToken(java.lang.String accessToken) {
+            return (BeginTransaction) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BeginTransaction setAlt(java.lang.String alt) {
+            return (BeginTransaction) super.setAlt(alt);
+          }
+
+          @Override
+          public BeginTransaction setCallback(java.lang.String callback) {
+            return (BeginTransaction) super.setCallback(callback);
+          }
+
+          @Override
+          public BeginTransaction setFields(java.lang.String fields) {
+            return (BeginTransaction) super.setFields(fields);
+          }
+
+          @Override
+          public BeginTransaction setKey(java.lang.String key) {
+            return (BeginTransaction) super.setKey(key);
+          }
+
+          @Override
+          public BeginTransaction setOauthToken(java.lang.String oauthToken) {
+            return (BeginTransaction) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BeginTransaction setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BeginTransaction) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BeginTransaction setQuotaUser(java.lang.String quotaUser) {
+            return (BeginTransaction) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BeginTransaction setUploadType(java.lang.String uploadType) {
+            return (BeginTransaction) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BeginTransaction setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BeginTransaction) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public BeginTransaction setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public BeginTransaction set(String parameterName, Object value) {
+            return (BeginTransaction) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Commits a transaction, while optionally updating documents.
+         *
+         * Create a request for the method "documents.commit".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+         *
+         * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.CommitRequest}
+         * @return the request
+         */
+        public Commit commit(java.lang.String database, com.google.api.services.firestore.v1.model.CommitRequest content) throws java.io.IOException {
+          Commit result = new Commit(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Commit extends FirestoreRequest<com.google.api.services.firestore.v1.model.CommitResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:commit";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Commits a transaction, while optionally updating documents.
+           *
+           * Create a request for the method "documents.commit".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.CommitRequest}
+           * @since 1.13
+           */
+          protected Commit(java.lang.String database, com.google.api.services.firestore.v1.model.CommitRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.CommitResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Commit set$Xgafv(java.lang.String $Xgafv) {
+            return (Commit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Commit setAccessToken(java.lang.String accessToken) {
+            return (Commit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Commit setAlt(java.lang.String alt) {
+            return (Commit) super.setAlt(alt);
+          }
+
+          @Override
+          public Commit setCallback(java.lang.String callback) {
+            return (Commit) super.setCallback(callback);
+          }
+
+          @Override
+          public Commit setFields(java.lang.String fields) {
+            return (Commit) super.setFields(fields);
+          }
+
+          @Override
+          public Commit setKey(java.lang.String key) {
+            return (Commit) super.setKey(key);
+          }
+
+          @Override
+          public Commit setOauthToken(java.lang.String oauthToken) {
+            return (Commit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Commit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Commit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Commit setQuotaUser(java.lang.String quotaUser) {
+            return (Commit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Commit setUploadType(java.lang.String uploadType) {
+            return (Commit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Commit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public Commit setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public Commit set(String parameterName, Object value) {
+            return (Commit) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new document.
+         *
+         * Create a request for the method "documents.createDocument".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link CreateDocument#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource. For example:
+        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+         * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.Document}
+         * @return the request
+         */
+        public CreateDocument createDocument(java.lang.String parent, java.lang.String collectionId, com.google.api.services.firestore.v1.model.Document content) throws java.io.IOException {
+          CreateDocument result = new CreateDocument(parent, collectionId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CreateDocument extends FirestoreRequest<com.google.api.services.firestore.v1.model.Document> {
+
+          private static final String REST_PATH = "v1/{+parent}/{collectionId}";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/.+$");
+
+          /**
+           * Creates a new document.
+           *
+           * Create a request for the method "documents.createDocument".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link CreateDocument#execute()} method to invoke the remote
+           * operation. <p> {@link CreateDocument#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent The parent resource. For example:
+        `projects/{project_id}/databases/{database_id}/documents` or
+         *        `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+           * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.Document}
+           * @since 1.13
+           */
+          protected CreateDocument(java.lang.String parent, java.lang.String collectionId, com.google.api.services.firestore.v1.model.Document content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.Document.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/.+$");
+            }
+            this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
+          }
+
+          @Override
+          public CreateDocument set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateDocument) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateDocument setAccessToken(java.lang.String accessToken) {
+            return (CreateDocument) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CreateDocument setAlt(java.lang.String alt) {
+            return (CreateDocument) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateDocument setCallback(java.lang.String callback) {
+            return (CreateDocument) super.setCallback(callback);
+          }
+
+          @Override
+          public CreateDocument setFields(java.lang.String fields) {
+            return (CreateDocument) super.setFields(fields);
+          }
+
+          @Override
+          public CreateDocument setKey(java.lang.String key) {
+            return (CreateDocument) super.setKey(key);
+          }
+
+          @Override
+          public CreateDocument setOauthToken(java.lang.String oauthToken) {
+            return (CreateDocument) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CreateDocument setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CreateDocument) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CreateDocument setQuotaUser(java.lang.String quotaUser) {
+            return (CreateDocument) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CreateDocument setUploadType(java.lang.String uploadType) {
+            return (CreateDocument) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateDocument setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateDocument) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource. For example:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource. For example: `projects/{project_id}/databases/{database_id}/documents` or
+         `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource. For example:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+           */
+          public CreateDocument setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/.+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The collection ID, relative to `parent`, to list. For example: `chatrooms`. */
+          @com.google.api.client.util.Key
+          private java.lang.String collectionId;
+
+          /** The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+           */
+          public java.lang.String getCollectionId() {
+            return collectionId;
+          }
+
+          /** The collection ID, relative to `parent`, to list. For example: `chatrooms`. */
+          public CreateDocument setCollectionId(java.lang.String collectionId) {
+            this.collectionId = collectionId;
+            return this;
+          }
+
+          /**
+           * The client-assigned document ID to use for this document.
+           *
+           * Optional. If not specified, an ID will be assigned by the service.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String documentId;
+
+          /** The client-assigned document ID to use for this document.
+
+         Optional. If not specified, an ID will be assigned by the service.
+           */
+          public java.lang.String getDocumentId() {
+            return documentId;
+          }
+
+          /**
+           * The client-assigned document ID to use for this document.
+           *
+           * Optional. If not specified, an ID will be assigned by the service.
+           */
+          public CreateDocument setDocumentId(java.lang.String documentId) {
+            this.documentId = documentId;
+            return this;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("mask.fieldPaths")
+          private java.util.List<java.lang.String> maskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getMaskFieldPaths() {
+            return maskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public CreateDocument setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
+            this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          @Override
+          public CreateDocument set(String parameterName, Object value) {
+            return (CreateDocument) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a document.
+         *
+         * Create a request for the method "documents.delete".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the Document to delete. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirestoreRequest<com.google.api.services.firestore.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+
+          /**
+           * Deletes a document.
+           *
+           * Create a request for the method "documents.delete".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the Document to delete. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Firestore.this, "DELETE", REST_PATH, null, com.google.api.services.firestore.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the Document to delete. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the Document to delete. In the format:
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the Document to delete. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * When set to `true`, the target document must exist. When set to `false`, the target
+           * document must not exist.
+           */
+          @com.google.api.client.util.Key("currentDocument.exists")
+          private java.lang.Boolean currentDocumentExists;
+
+          /** When set to `true`, the target document must exist. When set to `false`, the target document must
+         not exist.
+           */
+          public java.lang.Boolean getCurrentDocumentExists() {
+            return currentDocumentExists;
+          }
+
+          /**
+           * When set to `true`, the target document must exist. When set to `false`, the target
+           * document must not exist.
+           */
+          public Delete setCurrentDocumentExists(java.lang.Boolean currentDocumentExists) {
+            this.currentDocumentExists = currentDocumentExists;
+            return this;
+          }
+
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           */
+          @com.google.api.client.util.Key("currentDocument.updateTime")
+          private String currentDocumentUpdateTime;
+
+          /** When set, the target document must exist and have been last updated at that time.
+           */
+          public String getCurrentDocumentUpdateTime() {
+            return currentDocumentUpdateTime;
+          }
+
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           */
+          public Delete setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
+            this.currentDocumentUpdateTime = currentDocumentUpdateTime;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a single document.
+         *
+         * Create a request for the method "documents.get".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the Document to get. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirestoreRequest<com.google.api.services.firestore.v1.model.Document> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+
+          /**
+           * Gets a single document.
+           *
+           * Create a request for the method "documents.get".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the Document to get. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.Document.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the Document to get. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the Document to get. In the format:
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the Document to get. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("mask.fieldPaths")
+          private java.util.List<java.lang.String> maskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getMaskFieldPaths() {
+            return maskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public Get setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
+            this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          /**
+           * Reads the version of the document at the given time. This may not be older than 60
+           * seconds.
+           */
+          @com.google.api.client.util.Key
+          private String readTime;
+
+          /** Reads the version of the document at the given time. This may not be older than 60 seconds.
+           */
+          public String getReadTime() {
+            return readTime;
+          }
+
+          /**
+           * Reads the version of the document at the given time. This may not be older than 60
+           * seconds.
+           */
+          public Get setReadTime(String readTime) {
+            this.readTime = readTime;
+            return this;
+          }
+
+          /** Reads the document in a transaction. */
+          @com.google.api.client.util.Key
+          private java.lang.String transaction;
+
+          /** Reads the document in a transaction.
+           */
+          public java.lang.String getTransaction() {
+            return transaction;
+          }
+
+          /** Reads the document in a transaction. */
+          public Get setTransaction(java.lang.String transaction) {
+            this.transaction = transaction;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists documents.
+         *
+         * Create a request for the method "documents.list".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name. In the format:
+        `projects/{project_id}/databases/{database_id}/documents`
+         *        or
+        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        For example:
+         *        `projects/my-project/databases/my-database/documents` or
+        `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+         * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`
+        or `messages`.
+         * @return the request
+         */
+        public List list(java.lang.String parent, java.lang.String collectionId) throws java.io.IOException {
+          List result = new List(parent, collectionId);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirestoreRequest<com.google.api.services.firestore.v1.model.ListDocumentsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/{collectionId}";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+
+          /**
+           * Lists documents.
+           *
+           * Create a request for the method "documents.list".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name. In the format:
+        `projects/{project_id}/databases/{database_id}/documents`
+         *        or
+        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        For example:
+         *        `projects/my-project/databases/my-database/documents` or
+        `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+           * @param collectionId The collection ID, relative to `parent`, to list. For example: `chatrooms`
+        or `messages`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent, java.lang.String collectionId) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.ListDocumentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name. In the format: `projects/{project_id}/databases/{database_id}/documents`
+         or `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         database/documents/chatrooms/my-chatroom`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String collectionId;
+
+          /** The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
+           */
+          public java.lang.String getCollectionId() {
+            return collectionId;
+          }
+
+          /**
+           * The collection ID, relative to `parent`, to list. For example: `chatrooms` or
+           * `messages`.
+           */
+          public List setCollectionId(java.lang.String collectionId) {
+            this.collectionId = collectionId;
+            return this;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("mask.fieldPaths")
+          private java.util.List<java.lang.String> maskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getMaskFieldPaths() {
+            return maskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public List setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
+            this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          /** The order to sort results by. For example: `priority desc, name`. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** The order to sort results by. For example: `priority desc, name`.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** The order to sort results by. For example: `priority desc, name`. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** The maximum number of documents to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of documents to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of documents to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The `next_page_token` value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The `next_page_token` value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The `next_page_token` value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Reads documents as they were at the given time. This may not be older than 60 seconds.
+           */
+          @com.google.api.client.util.Key
+          private String readTime;
+
+          /** Reads documents as they were at the given time. This may not be older than 60 seconds.
+           */
+          public String getReadTime() {
+            return readTime;
+          }
+
+          /**
+           * Reads documents as they were at the given time. This may not be older than 60 seconds.
+           */
+          public List setReadTime(String readTime) {
+            this.readTime = readTime;
+            return this;
+          }
+
+          /**
+           * If the list should show missing documents. A missing document is a document that does
+           * not exist but has sub-documents. These documents will be returned with a key but will
+           * not have fields, Document.create_time, or Document.update_time set.
+           *
+           * Requests with `show_missing` may not specify `where` or `order_by`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showMissing;
+
+          /** If the list should show missing documents. A missing document is a document that does not exist but
+         has sub-documents. These documents will be returned with a key but will not have fields,
+         Document.create_time, or Document.update_time set.
+
+         Requests with `show_missing` may not specify `where` or `order_by`.
+           */
+          public java.lang.Boolean getShowMissing() {
+            return showMissing;
+          }
+
+          /**
+           * If the list should show missing documents. A missing document is a document that does
+           * not exist but has sub-documents. These documents will be returned with a key but will
+           * not have fields, Document.create_time, or Document.update_time set.
+           *
+           * Requests with `show_missing` may not specify `where` or `order_by`.
+           */
+          public List setShowMissing(java.lang.Boolean showMissing) {
+            this.showMissing = showMissing;
+            return this;
+          }
+
+          /** Reads documents in a transaction. */
+          @com.google.api.client.util.Key
+          private java.lang.String transaction;
+
+          /** Reads documents in a transaction.
+           */
+          public java.lang.String getTransaction() {
+            return transaction;
+          }
+
+          /** Reads documents in a transaction. */
+          public List setTransaction(java.lang.String transaction) {
+            this.transaction = transaction;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the collection IDs underneath a document.
+         *
+         * Create a request for the method "documents.listCollectionIds".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link ListCollectionIds#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent document. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        For example:
+         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         * @param content the {@link com.google.api.services.firestore.v1.model.ListCollectionIdsRequest}
+         * @return the request
+         */
+        public ListCollectionIds listCollectionIds(java.lang.String parent, com.google.api.services.firestore.v1.model.ListCollectionIdsRequest content) throws java.io.IOException {
+          ListCollectionIds result = new ListCollectionIds(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ListCollectionIds extends FirestoreRequest<com.google.api.services.firestore.v1.model.ListCollectionIdsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:listCollectionIds";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+
+          /**
+           * Lists all the collection IDs underneath a document.
+           *
+           * Create a request for the method "documents.listCollectionIds".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link ListCollectionIds#execute()} method to invoke the remote
+           * operation. <p> {@link ListCollectionIds#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent The parent document. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        For example:
+         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           * @param content the {@link com.google.api.services.firestore.v1.model.ListCollectionIdsRequest}
+           * @since 1.13
+           */
+          protected ListCollectionIds(java.lang.String parent, com.google.api.services.firestore.v1.model.ListCollectionIdsRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.ListCollectionIdsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+          }
+
+          @Override
+          public ListCollectionIds set$Xgafv(java.lang.String $Xgafv) {
+            return (ListCollectionIds) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListCollectionIds setAccessToken(java.lang.String accessToken) {
+            return (ListCollectionIds) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListCollectionIds setAlt(java.lang.String alt) {
+            return (ListCollectionIds) super.setAlt(alt);
+          }
+
+          @Override
+          public ListCollectionIds setCallback(java.lang.String callback) {
+            return (ListCollectionIds) super.setCallback(callback);
+          }
+
+          @Override
+          public ListCollectionIds setFields(java.lang.String fields) {
+            return (ListCollectionIds) super.setFields(fields);
+          }
+
+          @Override
+          public ListCollectionIds setKey(java.lang.String key) {
+            return (ListCollectionIds) super.setKey(key);
+          }
+
+          @Override
+          public ListCollectionIds setOauthToken(java.lang.String oauthToken) {
+            return (ListCollectionIds) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListCollectionIds setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListCollectionIds) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListCollectionIds setQuotaUser(java.lang.String quotaUser) {
+            return (ListCollectionIds) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListCollectionIds setUploadType(java.lang.String uploadType) {
+            return (ListCollectionIds) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListCollectionIds setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListCollectionIds) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent document. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent document. In the format:
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example: `projects
+         /my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent document. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           */
+          public ListCollectionIds setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ListCollectionIds set(String parameterName, Object value) {
+            return (ListCollectionIds) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Listens to changes.
+         *
+         * Create a request for the method "documents.listen".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Listen#execute()} method to invoke the remote operation.
+         *
+         * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.ListenRequest}
+         * @return the request
+         */
+        public Listen listen(java.lang.String database, com.google.api.services.firestore.v1.model.ListenRequest content) throws java.io.IOException {
+          Listen result = new Listen(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Listen extends FirestoreRequest<com.google.api.services.firestore.v1.model.ListenResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:listen";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Listens to changes.
+           *
+           * Create a request for the method "documents.listen".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Listen#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Listen#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.ListenRequest}
+           * @since 1.13
+           */
+          protected Listen(java.lang.String database, com.google.api.services.firestore.v1.model.ListenRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.ListenResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Listen set$Xgafv(java.lang.String $Xgafv) {
+            return (Listen) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Listen setAccessToken(java.lang.String accessToken) {
+            return (Listen) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Listen setAlt(java.lang.String alt) {
+            return (Listen) super.setAlt(alt);
+          }
+
+          @Override
+          public Listen setCallback(java.lang.String callback) {
+            return (Listen) super.setCallback(callback);
+          }
+
+          @Override
+          public Listen setFields(java.lang.String fields) {
+            return (Listen) super.setFields(fields);
+          }
+
+          @Override
+          public Listen setKey(java.lang.String key) {
+            return (Listen) super.setKey(key);
+          }
+
+          @Override
+          public Listen setOauthToken(java.lang.String oauthToken) {
+            return (Listen) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Listen setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Listen) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Listen setQuotaUser(java.lang.String quotaUser) {
+            return (Listen) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Listen setUploadType(java.lang.String uploadType) {
+            return (Listen) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Listen setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Listen) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public Listen setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public Listen set(String parameterName, Object value) {
+            return (Listen) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates or inserts a document.
+         *
+         * Create a request for the method "documents.patch".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The resource name of the document, for example
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.Document}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firestore.v1.model.Document content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirestoreRequest<com.google.api.services.firestore.v1.model.Document> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+
+          /**
+           * Updates or inserts a document.
+           *
+           * Create a request for the method "documents.patch".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The resource name of the document, for example
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.Document}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firestore.v1.model.Document content) {
+            super(Firestore.this, "PATCH", REST_PATH, content, com.google.api.services.firestore.v1.model.Document.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The resource name of the document, for example
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The resource name of the document, for example
+         `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The resource name of the document, for example
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * When set to `true`, the target document must exist. When set to `false`, the target
+           * document must not exist.
+           */
+          @com.google.api.client.util.Key("currentDocument.exists")
+          private java.lang.Boolean currentDocumentExists;
+
+          /** When set to `true`, the target document must exist. When set to `false`, the target document must
+         not exist.
+           */
+          public java.lang.Boolean getCurrentDocumentExists() {
+            return currentDocumentExists;
+          }
+
+          /**
+           * When set to `true`, the target document must exist. When set to `false`, the target
+           * document must not exist.
+           */
+          public Patch setCurrentDocumentExists(java.lang.Boolean currentDocumentExists) {
+            this.currentDocumentExists = currentDocumentExists;
+            return this;
+          }
+
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           */
+          @com.google.api.client.util.Key("currentDocument.updateTime")
+          private String currentDocumentUpdateTime;
+
+          /** When set, the target document must exist and have been last updated at that time.
+           */
+          public String getCurrentDocumentUpdateTime() {
+            return currentDocumentUpdateTime;
+          }
+
+          /**
+           * When set, the target document must exist and have been last updated at that time.
+           */
+          public Patch setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
+            this.currentDocumentUpdateTime = currentDocumentUpdateTime;
+            return this;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("mask.fieldPaths")
+          private java.util.List<java.lang.String> maskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getMaskFieldPaths() {
+            return maskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public Patch setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
+            this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          @com.google.api.client.util.Key("updateMask.fieldPaths")
+          private java.util.List<java.lang.String> updateMaskFieldPaths;
+
+          /** The list of field paths in the mask. See Document.fields for a field path syntax reference.
+           */
+          public java.util.List<java.lang.String> getUpdateMaskFieldPaths() {
+            return updateMaskFieldPaths;
+          }
+
+          /**
+           * The list of field paths in the mask. See Document.fields for a field path syntax
+           * reference.
+           */
+          public Patch setUpdateMaskFieldPaths(java.util.List<java.lang.String> updateMaskFieldPaths) {
+            this.updateMaskFieldPaths = updateMaskFieldPaths;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rolls back a transaction.
+         *
+         * Create a request for the method "documents.rollback".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+         *
+         * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.RollbackRequest}
+         * @return the request
+         */
+        public Rollback rollback(java.lang.String database, com.google.api.services.firestore.v1.model.RollbackRequest content) throws java.io.IOException {
+          Rollback result = new Rollback(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Rollback extends FirestoreRequest<com.google.api.services.firestore.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:rollback";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Rolls back a transaction.
+           *
+           * Create a request for the method "documents.rollback".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.RollbackRequest}
+           * @since 1.13
+           */
+          protected Rollback(java.lang.String database, com.google.api.services.firestore.v1.model.RollbackRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.Empty.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Rollback set$Xgafv(java.lang.String $Xgafv) {
+            return (Rollback) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Rollback setAccessToken(java.lang.String accessToken) {
+            return (Rollback) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Rollback setAlt(java.lang.String alt) {
+            return (Rollback) super.setAlt(alt);
+          }
+
+          @Override
+          public Rollback setCallback(java.lang.String callback) {
+            return (Rollback) super.setCallback(callback);
+          }
+
+          @Override
+          public Rollback setFields(java.lang.String fields) {
+            return (Rollback) super.setFields(fields);
+          }
+
+          @Override
+          public Rollback setKey(java.lang.String key) {
+            return (Rollback) super.setKey(key);
+          }
+
+          @Override
+          public Rollback setOauthToken(java.lang.String oauthToken) {
+            return (Rollback) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Rollback) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Rollback setQuotaUser(java.lang.String quotaUser) {
+            return (Rollback) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Rollback setUploadType(java.lang.String uploadType) {
+            return (Rollback) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Rollback) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public Rollback setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public Rollback set(String parameterName, Object value) {
+            return (Rollback) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Runs a query.
+         *
+         * Create a request for the method "documents.runQuery".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link RunQuery#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name. In the format:
+        `projects/{project_id}/databases/{database_id}/documents`
+         *        or
+        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        For example:
+         *        `projects/my-project/databases/my-database/documents` or
+        `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+         * @param content the {@link com.google.api.services.firestore.v1.model.RunQueryRequest}
+         * @return the request
+         */
+        public RunQuery runQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.RunQueryRequest content) throws java.io.IOException {
+          RunQuery result = new RunQuery(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RunQuery extends FirestoreRequest<com.google.api.services.firestore.v1.model.RunQueryResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:runQuery";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+
+          /**
+           * Runs a query.
+           *
+           * Create a request for the method "documents.runQuery".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link RunQuery#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * RunQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name. In the format:
+        `projects/{project_id}/databases/{database_id}/documents`
+         *        or
+        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+        For example:
+         *        `projects/my-project/databases/my-database/documents` or
+        `projects/my-project/databases
+         *        /my-database/documents/chatrooms/my-chatroom`
+           * @param content the {@link com.google.api.services.firestore.v1.model.RunQueryRequest}
+           * @since 1.13
+           */
+          protected RunQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.RunQueryRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.RunQueryResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+          }
+
+          @Override
+          public RunQuery set$Xgafv(java.lang.String $Xgafv) {
+            return (RunQuery) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RunQuery setAccessToken(java.lang.String accessToken) {
+            return (RunQuery) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RunQuery setAlt(java.lang.String alt) {
+            return (RunQuery) super.setAlt(alt);
+          }
+
+          @Override
+          public RunQuery setCallback(java.lang.String callback) {
+            return (RunQuery) super.setCallback(callback);
+          }
+
+          @Override
+          public RunQuery setFields(java.lang.String fields) {
+            return (RunQuery) super.setFields(fields);
+          }
+
+          @Override
+          public RunQuery setKey(java.lang.String key) {
+            return (RunQuery) super.setKey(key);
+          }
+
+          @Override
+          public RunQuery setOauthToken(java.lang.String oauthToken) {
+            return (RunQuery) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RunQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RunQuery) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RunQuery setQuotaUser(java.lang.String quotaUser) {
+            return (RunQuery) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RunQuery setUploadType(java.lang.String uploadType) {
+            return (RunQuery) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RunQuery setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RunQuery) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name. In the format: `projects/{project_id}/databases/{database_id}/documents`
+         or `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         `projects/my-project/databases/my-database/documents` or `projects/my-project/databases/my-
+         database/documents/chatrooms/my-chatroom`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents` or
+           * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+           * `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
+           * /my-database/documents/chatrooms/my-chatroom`
+           */
+          public RunQuery setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public RunQuery set(String parameterName, Object value) {
+            return (RunQuery) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Streams batches of document updates and deletes, in order.
+         *
+         * Create a request for the method "documents.write".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Write#execute()} method to invoke the remote operation.
+         *
+         * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+        This is only
+         *        required in the first message.
+         * @param content the {@link com.google.api.services.firestore.v1.model.WriteRequest}
+         * @return the request
+         */
+        public Write write(java.lang.String database, com.google.api.services.firestore.v1.model.WriteRequest content) throws java.io.IOException {
+          Write result = new Write(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Write extends FirestoreRequest<com.google.api.services.firestore.v1.model.WriteResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:write";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Streams batches of document updates and deletes, in order.
+           *
+           * Create a request for the method "documents.write".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Write#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database The database name. In the format:
+        `projects/{project_id}/databases/{database_id}`.
+        This is only
+         *        required in the first message.
+           * @param content the {@link com.google.api.services.firestore.v1.model.WriteRequest}
+           * @since 1.13
+           */
+          protected Write(java.lang.String database, com.google.api.services.firestore.v1.model.WriteRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.WriteResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Write set$Xgafv(java.lang.String $Xgafv) {
+            return (Write) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Write setAccessToken(java.lang.String accessToken) {
+            return (Write) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Write setAlt(java.lang.String alt) {
+            return (Write) super.setAlt(alt);
+          }
+
+          @Override
+          public Write setCallback(java.lang.String callback) {
+            return (Write) super.setCallback(callback);
+          }
+
+          @Override
+          public Write setFields(java.lang.String fields) {
+            return (Write) super.setFields(fields);
+          }
+
+          @Override
+          public Write setKey(java.lang.String key) {
+            return (Write) super.setKey(key);
+          }
+
+          @Override
+          public Write setOauthToken(java.lang.String oauthToken) {
+            return (Write) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Write setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Write) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Write setQuotaUser(java.lang.String quotaUser) {
+            return (Write) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Write setUploadType(java.lang.String uploadType) {
+            return (Write) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Write setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Write) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`. This
+           * is only required in the first message.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** The database name. In the format: `projects/{project_id}/databases/{database_id}`. This is only
+         required in the first message.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * The database name. In the format: `projects/{project_id}/databases/{database_id}`. This
+           * is only required in the first message.
+           */
+          public Write setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public Write set(String parameterName, Object value) {
+            return (Write) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>

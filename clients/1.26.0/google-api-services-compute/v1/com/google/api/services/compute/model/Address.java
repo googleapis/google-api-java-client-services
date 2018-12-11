@@ -93,14 +93,39 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The URL of the network in which to reserve the address. This field can only be used with
+   * INTERNAL type with VPC_PEERING purpose.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * This signifies the networking tier used for configuring this Address and can only take the
-   * following values: PREMIUM , STANDARD.
+   * following values: PREMIUM, STANDARD. Global forwarding rules can only be Premium Tier. Regional
+   * forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to
+   * regional forwarding rules can be used with any external load balancer. Regional forwarding
+   * rules in Premium Tier can only be used with a Network load balancer.
    *
    * If this field is not specified, it is assumed to be PREMIUM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkTier;
+
+  /**
+   * The prefix length if the resource reprensents an IP range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer prefixLength;
+
+  /**
+   * The purpose of resource, only used with INTERNAL type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
 
   /**
    * [Output Only] URL of the region where the regional address resides. This field is not
@@ -293,8 +318,30 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The URL of the network in which to reserve the address. This field can only be used with
+   * INTERNAL type with VPC_PEERING purpose.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * The URL of the network in which to reserve the address. This field can only be used with
+   * INTERNAL type with VPC_PEERING purpose.
+   * @param network network or {@code null} for none
+   */
+  public Address setNetwork(java.lang.String network) {
+    this.network = network;
+    return this;
+  }
+
+  /**
    * This signifies the networking tier used for configuring this Address and can only take the
-   * following values: PREMIUM , STANDARD.
+   * following values: PREMIUM, STANDARD. Global forwarding rules can only be Premium Tier. Regional
+   * forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to
+   * regional forwarding rules can be used with any external load balancer. Regional forwarding
+   * rules in Premium Tier can only be used with a Network load balancer.
    *
    * If this field is not specified, it is assumed to be PREMIUM.
    * @return value or {@code null} for none
@@ -305,13 +352,50 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * This signifies the networking tier used for configuring this Address and can only take the
-   * following values: PREMIUM , STANDARD.
+   * following values: PREMIUM, STANDARD. Global forwarding rules can only be Premium Tier. Regional
+   * forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to
+   * regional forwarding rules can be used with any external load balancer. Regional forwarding
+   * rules in Premium Tier can only be used with a Network load balancer.
    *
    * If this field is not specified, it is assumed to be PREMIUM.
    * @param networkTier networkTier or {@code null} for none
    */
   public Address setNetworkTier(java.lang.String networkTier) {
     this.networkTier = networkTier;
+    return this;
+  }
+
+  /**
+   * The prefix length if the resource reprensents an IP range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPrefixLength() {
+    return prefixLength;
+  }
+
+  /**
+   * The prefix length if the resource reprensents an IP range.
+   * @param prefixLength prefixLength or {@code null} for none
+   */
+  public Address setPrefixLength(java.lang.Integer prefixLength) {
+    this.prefixLength = prefixLength;
+    return this;
+  }
+
+  /**
+   * The purpose of resource, only used with INTERNAL type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * The purpose of resource, only used with INTERNAL type.
+   * @param purpose purpose or {@code null} for none
+   */
+  public Address setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
     return this;
   }
 

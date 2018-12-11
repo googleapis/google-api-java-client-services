@@ -36,7 +36,9 @@ public final class InterconnectDiagnosticsLinkOpticalPower extends com.google.ap
   private java.lang.String state;
 
   /**
-   * Value of the current optical power, read in dBm.
+   * Value of the current optical power, read in dBm. Take a known good optical value, give it a 10%
+   * margin and trigger warnings relative to that value. In general, a -7dBm warning and a -11dBm
+   * alarm are good optical value estimates for most links.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +60,9 @@ public final class InterconnectDiagnosticsLinkOpticalPower extends com.google.ap
   }
 
   /**
-   * Value of the current optical power, read in dBm.
+   * Value of the current optical power, read in dBm. Take a known good optical value, give it a 10%
+   * margin and trigger warnings relative to that value. In general, a -7dBm warning and a -11dBm
+   * alarm are good optical value estimates for most links.
    * @return value or {@code null} for none
    */
   public java.lang.Float getValue() {
@@ -66,7 +70,9 @@ public final class InterconnectDiagnosticsLinkOpticalPower extends com.google.ap
   }
 
   /**
-   * Value of the current optical power, read in dBm.
+   * Value of the current optical power, read in dBm. Take a known good optical value, give it a 10%
+   * margin and trigger warnings relative to that value. In general, a -7dBm warning and a -11dBm
+   * alarm are good optical value estimates for most links.
    * @param value value or {@code null} for none
    */
   public InterconnectDiagnosticsLinkOpticalPower setValue(java.lang.Float value) {

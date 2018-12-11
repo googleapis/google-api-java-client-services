@@ -55,7 +55,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
-   * fingerprint must be provided in order to update the Subnetwork.
+   * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
    * The value may be {@code null}.
@@ -135,7 +136,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * An array of configurations for secondary IP ranges for VM instances contained in this
    * subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork.
-   * The alias IPs may belong to either primary or secondary ranges.
+   * The alias IPs may belong to either primary or secondary ranges. This field can be updated with
+   * a patch request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +208,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
-   * fingerprint must be provided in order to update the Subnetwork.
+   * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
    * @see #decodeFingerprint()
@@ -219,7 +222,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
-   * fingerprint must be provided in order to update the Subnetwork.
+   * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
    * @see #getFingerprint()
@@ -234,7 +238,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
-   * fingerprint must be provided in order to update the Subnetwork.
+   * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
    * @see #encodeFingerprint()
@@ -248,7 +253,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
    * in optimistic locking. This field will be ignored when inserting a Subnetwork. An up-to-date
-   * fingerprint must be provided in order to update the Subnetwork.
+   * fingerprint must be provided in order to update the Subnetwork, otherwise the request will fail
+   * with error 412 conditionNotMet.
    *
    * To see the latest fingerprint, make a get() request to retrieve a Subnetwork.
    * @see #setFingerprint()
@@ -429,7 +435,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * An array of configurations for secondary IP ranges for VM instances contained in this
    * subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork.
-   * The alias IPs may belong to either primary or secondary ranges.
+   * The alias IPs may belong to either primary or secondary ranges. This field can be updated with
+   * a patch request.
    * @return value or {@code null} for none
    */
   public java.util.List<SubnetworkSecondaryRange> getSecondaryIpRanges() {
@@ -439,7 +446,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * An array of configurations for secondary IP ranges for VM instances contained in this
    * subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork.
-   * The alias IPs may belong to either primary or secondary ranges.
+   * The alias IPs may belong to either primary or secondary ranges. This field can be updated with
+   * a patch request.
    * @param secondaryIpRanges secondaryIpRanges or {@code null} for none
    */
   public Subnetwork setSecondaryIpRanges(java.util.List<SubnetworkSecondaryRange> secondaryIpRanges) {

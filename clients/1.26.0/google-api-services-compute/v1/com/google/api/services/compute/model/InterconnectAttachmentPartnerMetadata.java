@@ -33,7 +33,7 @@ public final class InterconnectAttachmentPartnerMetadata extends com.google.api.
 
   /**
    * Plain text name of the Interconnect this attachment is connected to, as displayed in the
-   * Partner?s portal. For instance ?Chicago 1?. This value may be validated to match approved
+   * Partner?s portal. For instance "Chicago 1". This value may be validated to match approved
    * Partner values.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class InterconnectAttachmentPartnerMetadata extends com.google.api.
 
   /**
    * Plain text name of the Interconnect this attachment is connected to, as displayed in the
-   * Partner?s portal. For instance ?Chicago 1?. This value may be validated to match approved
+   * Partner?s portal. For instance "Chicago 1". This value may be validated to match approved
    * Partner values.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class InterconnectAttachmentPartnerMetadata extends com.google.api.
 
   /**
    * Plain text name of the Interconnect this attachment is connected to, as displayed in the
-   * Partner?s portal. For instance ?Chicago 1?. This value may be validated to match approved
+   * Partner?s portal. For instance "Chicago 1". This value may be validated to match approved
    * Partner values.
    * @param interconnectName interconnectName or {@code null} for none
    */

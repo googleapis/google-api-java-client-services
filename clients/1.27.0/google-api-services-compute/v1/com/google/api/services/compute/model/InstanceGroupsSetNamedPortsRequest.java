@@ -34,7 +34,8 @@ public final class InstanceGroupsSetNamedPortsRequest extends com.google.api.cli
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
    * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
    * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * concurrent request. A request with an incorrect fingerprint will fail with error 412
+   * conditionNotMet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class InstanceGroupsSetNamedPortsRequest extends com.google.api.cli
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
    * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
    * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * concurrent request. A request with an incorrect fingerprint will fail with error 412
+   * conditionNotMet.
    * @see #decodeFingerprint()
    * @return value or {@code null} for none
    */
@@ -65,7 +67,8 @@ public final class InstanceGroupsSetNamedPortsRequest extends com.google.api.cli
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
    * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
    * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * concurrent request. A request with an incorrect fingerprint will fail with error 412
+   * conditionNotMet.
    * @see #getFingerprint()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -80,7 +83,8 @@ public final class InstanceGroupsSetNamedPortsRequest extends com.google.api.cli
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
    * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
    * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * concurrent request. A request with an incorrect fingerprint will fail with error 412
+   * conditionNotMet.
    * @see #encodeFingerprint()
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -94,7 +98,8 @@ public final class InstanceGroupsSetNamedPortsRequest extends com.google.api.cli
    * property to prevent conflicts when multiple users change the named ports settings concurrently.
    * Obtain the fingerprint with the instanceGroups.get method. Then, include the fingerprint in
    * your request to ensure that you do not overwrite changes that were applied from another
-   * concurrent request.
+   * concurrent request. A request with an incorrect fingerprint will fail with error 412
+   * conditionNotMet.
    * @see #setFingerprint()
    *
    * <p>

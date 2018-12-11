@@ -113,6 +113,14 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * This field denotes the logging options for a particular firewall rule. If logging is enabled,
+   * logs will be exported to Stackdriver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FirewallLogConfig logConfig;
+
+  /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -378,6 +386,25 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    */
   public Firewall setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * This field denotes the logging options for a particular firewall rule. If logging is enabled,
+   * logs will be exported to Stackdriver.
+   * @return value or {@code null} for none
+   */
+  public FirewallLogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * This field denotes the logging options for a particular firewall rule. If logging is enabled,
+   * logs will be exported to Stackdriver.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public Firewall setLogConfig(FirewallLogConfig logConfig) {
+    this.logConfig = logConfig;
     return this;
   }
 

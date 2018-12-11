@@ -40,8 +40,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Provisioned bandwidth capacity for the interconnectAttachment. Can be set by the partner to
-   * update the customer's provisioned bandwidth. Output only for for PARTNER type, mutable for
-   * PARTNER_PROVIDER, not available for DEDICATED.
+   * update the customer's provisioned bandwidth. Output only for PARTNER type, mutable for
+   * PARTNER_PROVIDER and DEDICATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +192,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String region;
 
   /**
-   * URL of the cloud router to be used for dynamic routing. This router must be in the same region
+   * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region
    * as this InterconnectAttachment. The InterconnectAttachment will automatically connect the
    * Interconnect to the network & region within which the Cloud Router is configured.
    * The value may be {@code null}.
@@ -221,9 +221,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String type;
 
   /**
-   * Available only for DEDICATED and PARTNER_PROVIDER. Desired VLAN tag for this attachment, in the
-   * range 2-4094. This field refers to 802.1q VLAN tag, also known as IEEE 802.1Q Only specified at
-   * creation time.
+   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation
+   * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,8 +247,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Provisioned bandwidth capacity for the interconnectAttachment. Can be set by the partner to
-   * update the customer's provisioned bandwidth. Output only for for PARTNER type, mutable for
-   * PARTNER_PROVIDER, not available for DEDICATED.
+   * update the customer's provisioned bandwidth. Output only for PARTNER type, mutable for
+   * PARTNER_PROVIDER and DEDICATED.
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidth() {
@@ -258,8 +257,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Provisioned bandwidth capacity for the interconnectAttachment. Can be set by the partner to
-   * update the customer's provisioned bandwidth. Output only for for PARTNER type, mutable for
-   * PARTNER_PROVIDER, not available for DEDICATED.
+   * update the customer's provisioned bandwidth. Output only for PARTNER type, mutable for
+   * PARTNER_PROVIDER and DEDICATED.
    * @param bandwidth bandwidth or {@code null} for none
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {
@@ -607,7 +606,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * URL of the cloud router to be used for dynamic routing. This router must be in the same region
+   * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region
    * as this InterconnectAttachment. The InterconnectAttachment will automatically connect the
    * Interconnect to the network & region within which the Cloud Router is configured.
    * @return value or {@code null} for none
@@ -617,7 +616,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * URL of the cloud router to be used for dynamic routing. This router must be in the same region
+   * URL of the Cloud Router to be used for dynamic routing. This router must be in the same region
    * as this InterconnectAttachment. The InterconnectAttachment will automatically connect the
    * Interconnect to the network & region within which the Cloud Router is configured.
    * @param router router or {@code null} for none
@@ -677,9 +676,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Available only for DEDICATED and PARTNER_PROVIDER. Desired VLAN tag for this attachment, in the
-   * range 2-4094. This field refers to 802.1q VLAN tag, also known as IEEE 802.1Q Only specified at
-   * creation time.
+   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation
+   * time.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVlanTag8021q() {
@@ -687,9 +685,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Available only for DEDICATED and PARTNER_PROVIDER. Desired VLAN tag for this attachment, in the
-   * range 2-4094. This field refers to 802.1q VLAN tag, also known as IEEE 802.1Q Only specified at
-   * creation time.
+   * The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. Only specified at creation
+   * time.
    * @param vlanTag8021q vlanTag8021q or {@code null} for none
    */
   public InterconnectAttachment setVlanTag8021q(java.lang.Integer vlanTag8021q) {

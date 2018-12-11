@@ -57,11 +57,11 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   private java.lang.String linkedVpnTunnel;
 
   /**
-   * [Output Only] Type of how the resource/configuration of the interface is managed.
-   * MANAGED_BY_USER is the default value; MANAGED_BY_ATTACHMENT represents an interface that is
-   * automatically created for PARTNER type interconnectAttachment, Google will automatically
-   * create/update/delete this type of interface when the PARTNER interconnectAttachment is
-   * created/provisioned/deleted.
+   * [Output Only] The resource that configures and manages this interface. MANAGED_BY_USER is the
+   * default value and can be managed by you or other users; MANAGED_BY_ATTACHMENT is an interface
+   * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
+   * of type PARTNER. Google will automatically create, update, and delete this type of interface
+   * when the PARTNER InterconnectAttachment is created, updated, or deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,11 +138,11 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of how the resource/configuration of the interface is managed.
-   * MANAGED_BY_USER is the default value; MANAGED_BY_ATTACHMENT represents an interface that is
-   * automatically created for PARTNER type interconnectAttachment, Google will automatically
-   * create/update/delete this type of interface when the PARTNER interconnectAttachment is
-   * created/provisioned/deleted.
+   * [Output Only] The resource that configures and manages this interface. MANAGED_BY_USER is the
+   * default value and can be managed by you or other users; MANAGED_BY_ATTACHMENT is an interface
+   * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
+   * of type PARTNER. Google will automatically create, update, and delete this type of interface
+   * when the PARTNER InterconnectAttachment is created, updated, or deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagementType() {
@@ -150,11 +150,11 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of how the resource/configuration of the interface is managed.
-   * MANAGED_BY_USER is the default value; MANAGED_BY_ATTACHMENT represents an interface that is
-   * automatically created for PARTNER type interconnectAttachment, Google will automatically
-   * create/update/delete this type of interface when the PARTNER interconnectAttachment is
-   * created/provisioned/deleted.
+   * [Output Only] The resource that configures and manages this interface. MANAGED_BY_USER is the
+   * default value and can be managed by you or other users; MANAGED_BY_ATTACHMENT is an interface
+   * that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment
+   * of type PARTNER. Google will automatically create, update, and delete this type of interface
+   * when the PARTNER InterconnectAttachment is created, updated, or deleted.
    * @param managementType managementType or {@code null} for none
    */
   public RouterInterface setManagementType(java.lang.String managementType) {

@@ -17,7 +17,7 @@
 package com.google.api.services.gmail.model;
 
 /**
- * Settings for a delegate. Delegates can read, send, and delete messages, as well as manage
+ * Settings for a delegate. Delegates can read, send, and delete messages, as well as view and add
  * contacts, for the delegator's account. See "Set up mail delegation" for more information about
  * delegates.
  *

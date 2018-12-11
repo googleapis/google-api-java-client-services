@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * A mobile device compromised alert. Derived from audit logs.
+ * A request to undelete a specific alert that was marked for deletion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
@@ -28,64 +28,43 @@ package com.google.api.services.alertcenter.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DeviceCompromised extends com.google.api.client.json.GenericJson {
+public final class UndeleteAlertRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The email of the user this alert was created for.
+   * Optional. The unique identifier of the G Suite organization account of the customer the alert
+   * is associated with. Inferred from the caller identity if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String email;
+  private java.lang.String customerId;
 
   /**
-   * Required. The list of security events.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<DeviceCompromisedSecurityDetail> events;
-
-  /**
-   * The email of the user this alert was created for.
+   * Optional. The unique identifier of the G Suite organization account of the customer the alert
+   * is associated with. Inferred from the caller identity if not provided.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEmail() {
-    return email;
+  public java.lang.String getCustomerId() {
+    return customerId;
   }
 
   /**
-   * The email of the user this alert was created for.
-   * @param email email or {@code null} for none
+   * Optional. The unique identifier of the G Suite organization account of the customer the alert
+   * is associated with. Inferred from the caller identity if not provided.
+   * @param customerId customerId or {@code null} for none
    */
-  public DeviceCompromised setEmail(java.lang.String email) {
-    this.email = email;
-    return this;
-  }
-
-  /**
-   * Required. The list of security events.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<DeviceCompromisedSecurityDetail> getEvents() {
-    return events;
-  }
-
-  /**
-   * Required. The list of security events.
-   * @param events events or {@code null} for none
-   */
-  public DeviceCompromised setEvents(java.util.List<DeviceCompromisedSecurityDetail> events) {
-    this.events = events;
+  public UndeleteAlertRequest setCustomerId(java.lang.String customerId) {
+    this.customerId = customerId;
     return this;
   }
 
   @Override
-  public DeviceCompromised set(String fieldName, Object value) {
-    return (DeviceCompromised) super.set(fieldName, value);
+  public UndeleteAlertRequest set(String fieldName, Object value) {
+    return (UndeleteAlertRequest) super.set(fieldName, value);
   }
 
   @Override
-  public DeviceCompromised clone() {
-    return (DeviceCompromised) super.clone();
+  public UndeleteAlertRequest clone() {
+    return (UndeleteAlertRequest) super.clone();
   }
 
 }

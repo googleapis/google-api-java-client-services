@@ -61,6 +61,12 @@ public final class MailPhishing extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<GmailMessageInfo> messages;
 
+  static {
+    // hack to force ProGuard to consider GmailMessageInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GmailMessageInfo.class);
+  }
+
   /**
    * The domain ID.
    * @return value or {@code null} for none

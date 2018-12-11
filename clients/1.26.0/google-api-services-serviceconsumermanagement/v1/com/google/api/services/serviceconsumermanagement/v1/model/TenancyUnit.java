@@ -68,12 +68,6 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<TenantResource> tenantResources;
 
-  static {
-    // hack to force ProGuard to consider TenantResource used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TenantResource.class);
-  }
-
   /**
    * @OutputOnly Cloud resource name of the consumer of this service. For example 'projects/123456'.
    * @return value or {@code null} for none

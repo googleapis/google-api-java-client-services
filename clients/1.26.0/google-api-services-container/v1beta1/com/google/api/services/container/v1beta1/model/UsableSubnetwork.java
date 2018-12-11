@@ -52,12 +52,6 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<UsableSubnetworkSecondaryRange> secondaryIpRanges;
 
-  static {
-    // hack to force ProGuard to consider UsableSubnetworkSecondaryRange used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(UsableSubnetworkSecondaryRange.class);
-  }
-
   /**
    * A human readable status message representing the reasons for cases where the caller cannot use
    * the secondary ranges under the subnet. For example if the secondary_ip_ranges is empty due to a

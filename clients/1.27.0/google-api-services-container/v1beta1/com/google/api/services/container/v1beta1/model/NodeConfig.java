@@ -38,12 +38,6 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<AcceleratorConfig> accelerators;
 
-  static {
-    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
-  }
-
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
    * 10GB.
@@ -187,12 +181,6 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<NodeTaint> taints;
-
-  static {
-    // hack to force ProGuard to consider NodeTaint used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(NodeTaint.class);
-  }
 
   /**
    * The workload metadata configuration for this node.

@@ -373,6 +373,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> resourceLabels;
 
   /**
+   * Configuration for exporting resource usages. Resource usage export is disabled when this config
+   * unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceUsageExportConfig resourceUsageExportConfig;
+
+  /**
    * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -1235,6 +1243,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setResourceLabels(java.util.Map<String, java.lang.String> resourceLabels) {
     this.resourceLabels = resourceLabels;
+    return this;
+  }
+
+  /**
+   * Configuration for exporting resource usages. Resource usage export is disabled when this config
+   * unspecified.
+   * @return value or {@code null} for none
+   */
+  public ResourceUsageExportConfig getResourceUsageExportConfig() {
+    return resourceUsageExportConfig;
+  }
+
+  /**
+   * Configuration for exporting resource usages. Resource usage export is disabled when this config
+   * unspecified.
+   * @param resourceUsageExportConfig resourceUsageExportConfig or {@code null} for none
+   */
+  public Cluster setResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
+    this.resourceUsageExportConfig = resourceUsageExportConfig;
     return this;
   }
 

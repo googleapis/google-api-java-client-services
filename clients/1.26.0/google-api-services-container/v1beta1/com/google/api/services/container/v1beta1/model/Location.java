@@ -39,9 +39,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Recommended is a bool combining the drain state of the location (ie- has the region been
-   * drained manually?), and the stockout status of any zone according to Zone Advisor. This will be
-   * internal only for use by pantheon.
+   * Whether the location is recomended for GKE cluster scheduling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +70,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Recommended is a bool combining the drain state of the location (ie- has the region been
-   * drained manually?), and the stockout status of any zone according to Zone Advisor. This will be
-   * internal only for use by pantheon.
+   * Whether the location is recomended for GKE cluster scheduling.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRecommended() {
@@ -82,9 +78,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Recommended is a bool combining the drain state of the location (ie- has the region been
-   * drained manually?), and the stockout status of any zone according to Zone Advisor. This will be
-   * internal only for use by pantheon.
+   * Whether the location is recomended for GKE cluster scheduling.
    * @param recommended recommended or {@code null} for none
    */
   public Location setRecommended(java.lang.Boolean recommended) {

@@ -32,6 +32,14 @@ package com.google.api.services.container.v1beta1.model;
 public final class AddonsConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to
+   * enable Cloud Run addon. This option can only be enabled at cluster creation time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunConfig cloudRunConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -49,6 +57,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private HttpLoadBalancing httpLoadBalancing;
 
   /**
+   * Configuration for Istio, an open platform to connect, manage, and secure microservices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IstioConfig istioConfig;
+
+  /**
    * Configuration for the Kubernetes Dashboard.
    * The value may be {@code null}.
    */
@@ -62,6 +77,25 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private NetworkPolicyConfig networkPolicyConfig;
+
+  /**
+   * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to
+   * enable Cloud Run addon. This option can only be enabled at cluster creation time.
+   * @return value or {@code null} for none
+   */
+  public CloudRunConfig getCloudRunConfig() {
+    return cloudRunConfig;
+  }
+
+  /**
+   * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to
+   * enable Cloud Run addon. This option can only be enabled at cluster creation time.
+   * @param cloudRunConfig cloudRunConfig or {@code null} for none
+   */
+  public AddonsConfig setCloudRunConfig(CloudRunConfig cloudRunConfig) {
+    this.cloudRunConfig = cloudRunConfig;
+    return this;
+  }
 
   /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
@@ -100,6 +134,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setHttpLoadBalancing(HttpLoadBalancing httpLoadBalancing) {
     this.httpLoadBalancing = httpLoadBalancing;
+    return this;
+  }
+
+  /**
+   * Configuration for Istio, an open platform to connect, manage, and secure microservices.
+   * @return value or {@code null} for none
+   */
+  public IstioConfig getIstioConfig() {
+    return istioConfig;
+  }
+
+  /**
+   * Configuration for Istio, an open platform to connect, manage, and secure microservices.
+   * @param istioConfig istioConfig or {@code null} for none
+   */
+  public AddonsConfig setIstioConfig(IstioConfig istioConfig) {
+    this.istioConfig = istioConfig;
     return this;
   }
 

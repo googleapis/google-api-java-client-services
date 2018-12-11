@@ -195,7 +195,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     private java.util.Map<String, java.lang.String> labels;
 
     /**
-     * [Experimental] The geographic location where the data resides.
+     * The geographic location where the data resides.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -289,7 +289,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Experimental] The geographic location where the data resides.
+     * The geographic location where the data resides.
      * @return value or {@code null} for none
      */
     public java.lang.String getLocation() {
@@ -297,7 +297,7 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Experimental] The geographic location where the data resides.
+     * The geographic location where the data resides.
      * @param location location or {@code null} for none
      */
     public Datasets setLocation(java.lang.String location) {

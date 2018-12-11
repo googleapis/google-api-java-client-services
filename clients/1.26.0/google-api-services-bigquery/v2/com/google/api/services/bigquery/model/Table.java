@@ -30,8 +30,8 @@ package com.google.api.services.bigquery.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Experimental] Clustering specification for the table. Must be specified with partitioning,
-   * data in the table will be first partitioned and subsequently clustered.
+   * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
+   * table will be first partitioned and subsequently clustered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,6 +134,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
+   * [Optional] Materialized view definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaterializedViewDefinition materializedView;
+
+  /**
    * [Output-only, Beta] Present iff this table represents a ML model. Describes the training
    * information for the model, and it is required to run 'PREDICT' queries.
    * The value may be {@code null}.
@@ -156,7 +163,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Long numLongTermBytes;
 
   /**
-   * [Output-only] [Experimental] The physical size of this table in bytes, excluding any data in
+   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
    * the streaming buffer. This includes compression and storage used for time travel.
    * The value may be {@code null}.
    */
@@ -172,7 +179,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger numRows;
 
   /**
-   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * The value may be {@code null}.
    */
@@ -180,8 +187,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private RangePartitioning rangePartitioning;
 
   /**
-   * [Experimental] [Optional] If set to true, queries over this table require a partition filter
-   * that can be used for partition elimination to be specified.
+   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
+   * be used for partition elimination to be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,9 +234,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. EXTERNAL: A table that references
-   * data stored in an external storage system, such as Google Cloud Storage. The default value is
-   * TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester]
+   * MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data
+   * stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,8 +250,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private ViewDefinition view;
 
   /**
-   * [Experimental] Clustering specification for the table. Must be specified with partitioning,
-   * data in the table will be first partitioned and subsequently clustered.
+   * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
+   * table will be first partitioned and subsequently clustered.
    * @return value or {@code null} for none
    */
   public Clustering getClustering() {
@@ -252,8 +259,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Experimental] Clustering specification for the table. Must be specified with partitioning,
-   * data in the table will be first partitioned and subsequently clustered.
+   * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the
+   * table will be first partitioned and subsequently clustered.
    * @param clustering clustering or {@code null} for none
    */
   public Table setClustering(Clustering clustering) {
@@ -490,6 +497,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Optional] Materialized view definition.
+   * @return value or {@code null} for none
+   */
+  public MaterializedViewDefinition getMaterializedView() {
+    return materializedView;
+  }
+
+  /**
+   * [Optional] Materialized view definition.
+   * @param materializedView materializedView or {@code null} for none
+   */
+  public Table setMaterializedView(MaterializedViewDefinition materializedView) {
+    this.materializedView = materializedView;
+    return this;
+  }
+
+  /**
    * [Output-only, Beta] Present iff this table represents a ML model. Describes the training
    * information for the model, and it is required to run 'PREDICT' queries.
    * @return value or {@code null} for none
@@ -543,7 +567,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] [Experimental] The physical size of this table in bytes, excluding any data in
+   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
    * the streaming buffer. This includes compression and storage used for time travel.
    * @return value or {@code null} for none
    */
@@ -552,7 +576,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only] [Experimental] The physical size of this table in bytes, excluding any data in
+   * [Output-only] [TrustedTester] The physical size of this table in bytes, excluding any data in
    * the streaming buffer. This includes compression and storage used for time travel.
    * @param numPhysicalBytes numPhysicalBytes or {@code null} for none
    */
@@ -581,7 +605,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * @return value or {@code null} for none
    */
@@ -590,7 +614,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Experimental] Range partitioning specification for this table. Only one of timePartitioning
+   * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * @param rangePartitioning rangePartitioning or {@code null} for none
    */
@@ -600,8 +624,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Experimental] [Optional] If set to true, queries over this table require a partition filter
-   * that can be used for partition elimination to be specified.
+   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
+   * be used for partition elimination to be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequirePartitionFilter() {
@@ -609,8 +633,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Experimental] [Optional] If set to true, queries over this table require a partition filter
-   * that can be used for partition elimination to be specified.
+   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
+   * be used for partition elimination to be specified.
    * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
    */
   public Table setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
@@ -635,8 +659,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
    * </p>
    *
    * <p>
-   *[ Experimental] [Optional] If set to true, queries over this table require a partition filter that
-[ can be used for partition elimination to be specified.
+   *[ Beta] [Optional] If set to true, queries over this table require a partition filter that can be
+[ used for partition elimination to be specified.
    * </p>
    */
   public boolean isRequirePartitionFilter() {
@@ -739,9 +763,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. EXTERNAL: A table that references
-   * data stored in an external storage system, such as Google Cloud Storage. The default value is
-   * TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester]
+   * MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data
+   * stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -750,9 +774,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output-only] Describes the table type. The following values are supported: TABLE: A normal
-   * BigQuery table. VIEW: A virtual table defined by a SQL query. EXTERNAL: A table that references
-   * data stored in an external storage system, such as Google Cloud Storage. The default value is
-   * TABLE.
+   * BigQuery table. VIEW: A virtual table defined by a SQL query. [TrustedTester]
+   * MATERIALIZED_VIEW: SQL query whose result is persisted. EXTERNAL: A table that references data
+   * stored in an external storage system, such as Google Cloud Storage. The default value is TABLE.
    * @param type type or {@code null} for none
    */
   public Table setType(java.lang.String type) {

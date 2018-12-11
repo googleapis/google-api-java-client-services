@@ -147,7 +147,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The geographic location where the dataset should reside. The default value is US. See details
-   * at https://cloud.google.com/bigquery/docs/dataset-locations.
+   * at https://cloud.google.com/bigquery/docs/locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -419,7 +419,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The geographic location where the dataset should reside. The default value is US. See details
-   * at https://cloud.google.com/bigquery/docs/dataset-locations.
+   * at https://cloud.google.com/bigquery/docs/locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -428,7 +428,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The geographic location where the dataset should reside. The default value is US. See details
-   * at https://cloud.google.com/bigquery/docs/dataset-locations.
+   * at https://cloud.google.com/bigquery/docs/locations.
    * @param location location or {@code null} for none
    */
   public Dataset setLocation(java.lang.String location) {

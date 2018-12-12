@@ -37,6 +37,13 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> additionalExperiments;
 
   /**
+   * Additional user labels attached to the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> additionalUserLabels;
+
+  /**
    * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
    * The value may be {@code null}.
    */
@@ -65,6 +72,13 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * The initial number of Google Compute Engine instnaces for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numWorkers;
 
   /**
    * The email address of the service account to run the job as.
@@ -111,6 +125,23 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setAdditionalExperiments(java.util.List<java.lang.String> additionalExperiments) {
     this.additionalExperiments = additionalExperiments;
+    return this;
+  }
+
+  /**
+   * Additional user labels attached to the job.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAdditionalUserLabels() {
+    return additionalUserLabels;
+  }
+
+  /**
+   * Additional user labels attached to the job.
+   * @param additionalUserLabels additionalUserLabels or {@code null} for none
+   */
+  public RuntimeEnvironment setAdditionalUserLabels(java.util.Map<String, java.lang.String> additionalUserLabels) {
+    this.additionalUserLabels = additionalUserLabels;
     return this;
   }
 
@@ -183,6 +214,23 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * The initial number of Google Compute Engine instnaces for the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumWorkers() {
+    return numWorkers;
+  }
+
+  /**
+   * The initial number of Google Compute Engine instnaces for the job.
+   * @param numWorkers numWorkers or {@code null} for none
+   */
+  public RuntimeEnvironment setNumWorkers(java.lang.Integer numWorkers) {
+    this.numWorkers = numWorkers;
     return this;
   }
 

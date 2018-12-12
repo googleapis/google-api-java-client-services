@@ -43,6 +43,12 @@ public final class ComputationTopology extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<StreamLocation> inputs;
 
+  static {
+    // hack to force ProGuard to consider StreamLocation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StreamLocation.class);
+  }
+
   /**
    * The key ranges processed by the computation.
    * The value may be {@code null}.
@@ -62,6 +68,12 @@ public final class ComputationTopology extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.util.List<StreamLocation> outputs;
+
+  static {
+    // hack to force ProGuard to consider StreamLocation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StreamLocation.class);
+  }
 
   /**
    * The state family values.

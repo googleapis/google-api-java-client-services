@@ -195,6 +195,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ExecutionStageState> stageStates;
 
+  static {
+    // hack to force ProGuard to consider ExecutionStageState used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExecutionStageState.class);
+  }
+
   /**
    * The timestamp when the job was started (transitioned to JOB_STATE_PENDING). Flexible resource
    * scheduling jobs are started with some delay after job creation, so start_time is unset before

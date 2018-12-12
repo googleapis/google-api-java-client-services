@@ -36,12 +36,24 @@ public final class ListJobMessagesResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<AutoscalingEvent> autoscalingEvents;
 
+  static {
+    // hack to force ProGuard to consider AutoscalingEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AutoscalingEvent.class);
+  }
+
   /**
    * Messages in ascending timestamp order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<JobMessage> jobMessages;
+
+  static {
+    // hack to force ProGuard to consider JobMessage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(JobMessage.class);
+  }
 
   /**
    * The token to obtain the next page of results if there are more.

@@ -36,6 +36,12 @@ public final class LeaseWorkItemResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<WorkItem> workItems;
 
+  static {
+    // hack to force ProGuard to consider WorkItem used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(WorkItem.class);
+  }
+
   /**
    * A list of the leased WorkItems.
    * @return value or {@code null} for none

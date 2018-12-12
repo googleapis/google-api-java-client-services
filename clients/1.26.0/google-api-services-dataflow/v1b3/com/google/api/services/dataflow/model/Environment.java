@@ -117,6 +117,12 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<WorkerPool> workerPools;
 
+  static {
+    // hack to force ProGuard to consider WorkerPool used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(WorkerPool.class);
+  }
+
   /**
    * The type of cluster manager API to use.  If unknown or unspecified, the service will attempt to
    * choose a reasonable default.  This should be in the form of the API service name, e.g.

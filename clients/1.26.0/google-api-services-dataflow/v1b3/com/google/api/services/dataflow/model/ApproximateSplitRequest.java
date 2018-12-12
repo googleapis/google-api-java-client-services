@@ -38,6 +38,14 @@ public final class ApproximateSplitRequest extends com.google.api.client.json.Ge
   private java.lang.Double fractionConsumed;
 
   /**
+   * The fraction of the remainder of work to split the work item at, from 0.0 (split at the current
+   * position) to 1.0 (end of the input).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double fractionOfRemainder;
+
+  /**
    * A Position at which to split the work item.
    * The value may be {@code null}.
    */
@@ -60,6 +68,25 @@ public final class ApproximateSplitRequest extends com.google.api.client.json.Ge
    */
   public ApproximateSplitRequest setFractionConsumed(java.lang.Double fractionConsumed) {
     this.fractionConsumed = fractionConsumed;
+    return this;
+  }
+
+  /**
+   * The fraction of the remainder of work to split the work item at, from 0.0 (split at the current
+   * position) to 1.0 (end of the input).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getFractionOfRemainder() {
+    return fractionOfRemainder;
+  }
+
+  /**
+   * The fraction of the remainder of work to split the work item at, from 0.0 (split at the current
+   * position) to 1.0 (end of the input).
+   * @param fractionOfRemainder fractionOfRemainder or {@code null} for none
+   */
+  public ApproximateSplitRequest setFractionOfRemainder(java.lang.Double fractionOfRemainder) {
+    this.fractionOfRemainder = fractionOfRemainder;
     return this;
   }
 

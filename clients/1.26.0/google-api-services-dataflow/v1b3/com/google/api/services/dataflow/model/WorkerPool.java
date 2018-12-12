@@ -46,12 +46,6 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Disk> dataDisks;
 
-  static {
-    // hack to force ProGuard to consider Disk used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Disk.class);
-  }
-
   /**
    * The default package set to install.  This allows the service to select a default set of
    * packages which are useful to worker harnesses written in a particular language.
@@ -150,12 +144,6 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<DataflowPackage> packages;
-
-  static {
-    // hack to force ProGuard to consider DataflowPackage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(DataflowPackage.class);
-  }
 
   /**
    * Extra arguments for this worker pool.

@@ -37,12 +37,6 @@ public final class ListVoicesResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Voice> voices;
 
-  static {
-    // hack to force ProGuard to consider Voice used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Voice.class);
-  }
-
   /**
    * The list of voices.
    * @return value or {@code null} for none

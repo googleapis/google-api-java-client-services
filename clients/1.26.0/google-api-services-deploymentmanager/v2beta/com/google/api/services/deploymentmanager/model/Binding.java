@@ -31,10 +31,9 @@ package com.google.api.services.deploymentmanager.model;
 public final class Binding extends com.google.api.client.json.GenericJson {
 
   /**
-   * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
-   * allow user access via current binding. Different bindings, including their conditions, are
-   * examined independently. This field is only visible as GOOGLE_INTERNAL or
-   * CONDITION_TRUSTED_TESTER.
+   * Unimplemented. The condition that is associated with this binding. NOTE: an unsatisfied
+   * condition will not allow user access via current binding. Different bindings, including their
+   * conditions, are examined independently.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +74,9 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
-   * allow user access via current binding. Different bindings, including their conditions, are
-   * examined independently. This field is only visible as GOOGLE_INTERNAL or
-   * CONDITION_TRUSTED_TESTER.
+   * Unimplemented. The condition that is associated with this binding. NOTE: an unsatisfied
+   * condition will not allow user access via current binding. Different bindings, including their
+   * conditions, are examined independently.
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -86,10 +84,9 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
-   * allow user access via current binding. Different bindings, including their conditions, are
-   * examined independently. This field is only visible as GOOGLE_INTERNAL or
-   * CONDITION_TRUSTED_TESTER.
+   * Unimplemented. The condition that is associated with this binding. NOTE: an unsatisfied
+   * condition will not allow user access via current binding. Different bindings, including their
+   * conditions, are examined independently.
    * @param condition condition or {@code null} for none
    */
   public Binding setCondition(Expr condition) {

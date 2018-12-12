@@ -51,14 +51,13 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. Timestamp when the deployment was created, in RFC3339 text format .
+   * Output only. Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +99,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private Operation operation;
 
   /**
-   * Output only. Self link for the deployment.
+   * Output only. Server defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,6 +120,13 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeploymentUpdate update;
+
+  /**
+   * Output only. Update timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String updateTime;
 
   /**
    * An optional user-provided description of the deployment.
@@ -209,7 +215,6 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -217,7 +222,6 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public Deployment setId(java.math.BigInteger id) {
@@ -226,7 +230,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the deployment was created, in RFC3339 text format .
+   * Output only. Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertTime() {
@@ -234,7 +238,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the deployment was created, in RFC3339 text format .
+   * Output only. Creation timestamp in RFC3339 text format.
    * @param insertTime insertTime or {@code null} for none
    */
   public Deployment setInsertTime(java.lang.String insertTime) {
@@ -325,7 +329,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Self link for the deployment.
+   * Output only. Server defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -333,7 +337,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Self link for the deployment.
+   * Output only. Server defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Deployment setSelfLink(java.lang.String selfLink) {
@@ -376,6 +380,23 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   public Deployment setUpdate(DeploymentUpdate update) {
     this.update = update;
+    return this;
+  }
+
+  /**
+   * Output only. Update timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Update timestamp in RFC3339 text format.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Deployment setUpdateTime(java.lang.String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

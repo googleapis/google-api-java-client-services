@@ -1587,7 +1587,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
      * operation.
      *
      * @param project Project ID for this request.
-     * @param resource Name of the resource for this request.
+     * @param resource Name or id of the resource for this request.
      * @return the request
      */
     public GetIamPolicy getIamPolicy(java.lang.String project, java.lang.String resource) throws java.io.IOException {
@@ -1604,7 +1604,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z0-9](?:[-a-z0-9_]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Gets the access control policy for a resource. May be empty if no such policy or resource
@@ -1619,7 +1619,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Project ID for this request.
-       * @param resource Name of the resource for this request.
+       * @param resource Name or id of the resource for this request.
        * @since 1.13
        */
       protected GetIamPolicy(java.lang.String project, java.lang.String resource) {
@@ -1634,7 +1634,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "[a-z0-9](?:[-a-z0-9_]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -1704,22 +1704,22 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         return this;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Name of the resource for this request.
+      /** Name or id of the resource for this request.
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       public GetIamPolicy setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "[a-z0-9](?:[-a-z0-9_]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.resource = resource;
         return this;
@@ -2436,7 +2436,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
      * operation.
      *
      * @param project Project ID for this request.
-     * @param resource Name of the resource for this request.
+     * @param resource Name or id of the resource for this request.
      * @param content the {@link com.google.api.services.deploymentmanager.model.GlobalSetPolicyRequest}
      * @return the request
      */
@@ -2454,7 +2454,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z0-9](?:[-a-z0-9_]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Sets the access control policy on the specified resource. Replaces any existing policy.
@@ -2468,7 +2468,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Project ID for this request.
-       * @param resource Name of the resource for this request.
+       * @param resource Name or id of the resource for this request.
        * @param content the {@link com.google.api.services.deploymentmanager.model.GlobalSetPolicyRequest}
        * @since 1.13
        */
@@ -2484,7 +2484,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "[a-z0-9](?:[-a-z0-9_]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -2544,22 +2544,22 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         return this;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Name of the resource for this request.
+      /** Name or id of the resource for this request.
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       public SetIamPolicy setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "[a-z0-9](?:[-a-z0-9_]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.resource = resource;
         return this;
@@ -2725,7 +2725,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
      * operation.
      *
      * @param project Project ID for this request.
-     * @param resource Name of the resource for this request.
+     * @param resource Name or id of the resource for this request.
      * @param content the {@link com.google.api.services.deploymentmanager.model.TestPermissionsRequest}
      * @return the request
      */
@@ -2743,7 +2743,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
-          java.util.regex.Pattern.compile("(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns permissions that a caller has on the specified resource.
@@ -2757,7 +2757,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
        * after invoking the constructor. </p>
        *
        * @param project Project ID for this request.
-       * @param resource Name of the resource for this request.
+       * @param resource Name or id of the resource for this request.
        * @param content the {@link com.google.api.services.deploymentmanager.model.TestPermissionsRequest}
        * @since 1.13
        */
@@ -2773,7 +2773,7 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -2833,22 +2833,22 @@ public class DeploymentManagerV2Beta extends com.google.api.client.googleapis.se
         return this;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Name of the resource for this request.
+      /** Name or id of the resource for this request.
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Name of the resource for this request. */
+      /** Name or id of the resource for this request. */
       public TestIamPermissions setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
               "Parameter resource must conform to the pattern " +
-              "(?:[-a-z0-9_]{0,62}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.resource = resource;
         return this;

@@ -17,8 +17,8 @@
 package com.google.api.services.deploymentmanager.model;
 
 /**
- * Contains detailed information about a composite type, base type, or base type with specific
- * collection.
+ * Type Information. Contains detailed information about a composite type, base type, or base type
+ * with specific collection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
@@ -68,7 +68,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   private TypeInfoSchemaInfo schema;
 
   /**
-   * Output only. Server-defined URL for the resource.
+   * Output only. Self link for the type provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +169,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Server-defined URL for the resource.
+   * Output only. Self link for the type provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -177,7 +177,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Server-defined URL for the resource.
+   * Output only. Self link for the type provider.
    * @param selfLink selfLink or {@code null} for none
    */
   public TypeInfo setSelfLink(java.lang.String selfLink) {

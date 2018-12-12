@@ -46,14 +46,13 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String finalProperties;
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. Timestamp when the resource was created or acquired, in RFC3339 text format .
+   * Output only. Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +97,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private ResourceUpdate update;
 
   /**
-   * Output only. Timestamp when the resource was updated, in RFC3339 text format .
+   * Output only. Update timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +161,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -170,7 +168,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public Resource setId(java.math.BigInteger id) {
@@ -179,7 +176,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the resource was created or acquired, in RFC3339 text format .
+   * Output only. Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertTime() {
@@ -187,7 +184,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the resource was created or acquired, in RFC3339 text format .
+   * Output only. Creation timestamp in RFC3339 text format.
    * @param insertTime insertTime or {@code null} for none
    */
   public Resource setInsertTime(java.lang.String insertTime) {
@@ -287,7 +284,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the resource was updated, in RFC3339 text format .
+   * Output only. Update timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTime() {
@@ -295,7 +292,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Timestamp when the resource was updated, in RFC3339 text format .
+   * Output only. Update timestamp in RFC3339 text format.
    * @param updateTime updateTime or {@code null} for none
    */
   public Resource setUpdateTime(java.lang.String updateTime) {

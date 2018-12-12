@@ -39,14 +39,13 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. Timestamp when the composite type was created, in RFC3339 text format.
+   * Output only. Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +77,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   private Operation operation;
 
   /**
-   * Output only. Self link for the type provider.
+   * Output only. Server defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +116,6 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -125,7 +123,6 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public CompositeType setId(java.math.BigInteger id) {
@@ -134,7 +131,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Timestamp when the composite type was created, in RFC3339 text format.
+   * Output only. Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertTime() {
@@ -142,7 +139,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Timestamp when the composite type was created, in RFC3339 text format.
+   * Output only. Creation timestamp in RFC3339 text format.
    * @param insertTime insertTime or {@code null} for none
    */
   public CompositeType setInsertTime(java.lang.String insertTime) {
@@ -210,7 +207,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Self link for the type provider.
+   * Output only. Server defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -218,7 +215,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Self link for the type provider.
+   * Output only. Server defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public CompositeType setSelfLink(java.lang.String selfLink) {

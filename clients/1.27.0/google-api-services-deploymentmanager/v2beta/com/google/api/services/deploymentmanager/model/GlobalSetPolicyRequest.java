@@ -31,7 +31,7 @@ package com.google.api.services.deploymentmanager.model;
 public final class GlobalSetPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flatten Policy to create a backwacd compatible wire-format. Deprecated. Use 'policy' to specify
+   * Flatten Policy to create a backward compatible wire-format. Deprecated. Use 'policy' to specify
    * bindings.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
   private Policy policy;
 
   /**
-   * Flatten Policy to create a backwacd compatible wire-format. Deprecated. Use 'policy' to specify
+   * Flatten Policy to create a backward compatible wire-format. Deprecated. Use 'policy' to specify
    * bindings.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GlobalSetPolicyRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Flatten Policy to create a backwacd compatible wire-format. Deprecated. Use 'policy' to specify
+   * Flatten Policy to create a backward compatible wire-format. Deprecated. Use 'policy' to specify
    * bindings.
    * @param bindings bindings or {@code null} for none
    */

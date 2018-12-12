@@ -25,14 +25,16 @@ package com.google.api.services.deploymentmanager.model;
  *
  * Field names correspond to IAM request parameters and field values are their respective values.
  *
- * At present the only supported field names are - "iam_principal", corresponding to
- * IAMContext.principal; - "" (empty string), resulting in one aggretated counter with no field.
+ * Supported field names: - "authority", which is "[token]" if IAMContext.token is present,
+ * otherwise the value of IAMContext.authority_selector if present, and otherwise a representation
+ * of IAMContext.principal; or - "iam_principal", a representation of IAMContext.principal even if a
+ * token or authority selector is present; or - "" (empty string), resulting in a counter with no
+ * fields.
  *
  * Examples: counter { metric: "/debug_access_count" field: "iam_principal" } ==> increment counter
  * /iam/policy/backend_debug_access_count {iam_principal=[value of IAMContext.principal]}
  *
- * At this time we do not support: * multiple field names (though this may be supported in the
- * future) * decrementing the counter * incrementing it by anything other than 1
+ * At this time we do not support multiple field names (though this may be supported in the future).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Deployment Manager API. For a detailed

@@ -33,6 +33,10 @@ public final class LogConfigDataAccessOptions extends com.google.api.client.json
   /**
    * Whether Gin logging should happen in a fail-closed manner at the caller. This is relevant only
    * in the LocalIAM implementation, for now.
+   *
+   * NOTE: Logging to Gin in a fail-closed manner is currently unsupported while work is being done
+   * to satisfy the requirements of go/345. Currently, setting LOG_FAIL_CLOSED mode will have no
+   * effect, but still exists because there is active work being done to support it (b/115874152).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,6 +45,10 @@ public final class LogConfigDataAccessOptions extends com.google.api.client.json
   /**
    * Whether Gin logging should happen in a fail-closed manner at the caller. This is relevant only
    * in the LocalIAM implementation, for now.
+   *
+   * NOTE: Logging to Gin in a fail-closed manner is currently unsupported while work is being done
+   * to satisfy the requirements of go/345. Currently, setting LOG_FAIL_CLOSED mode will have no
+   * effect, but still exists because there is active work being done to support it (b/115874152).
    * @return value or {@code null} for none
    */
   public java.lang.String getLogMode() {
@@ -50,6 +58,10 @@ public final class LogConfigDataAccessOptions extends com.google.api.client.json
   /**
    * Whether Gin logging should happen in a fail-closed manner at the caller. This is relevant only
    * in the LocalIAM implementation, for now.
+   *
+   * NOTE: Logging to Gin in a fail-closed manner is currently unsupported while work is being done
+   * to satisfy the requirements of go/345. Currently, setting LOG_FAIL_CLOSED mode will have no
+   * effect, but still exists because there is active work being done to support it (b/115874152).
    * @param logMode logMode or {@code null} for none
    */
   public LogConfigDataAccessOptions setLogMode(java.lang.String logMode) {

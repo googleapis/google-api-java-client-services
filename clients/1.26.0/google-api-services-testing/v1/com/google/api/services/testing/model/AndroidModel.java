@@ -30,28 +30,28 @@ package com.google.api.services.testing.model;
 public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
-   * The company that this device is branded with. Example: "Google", "Samsung" @OutputOnly
+   * The company that this device is branded with. Example: "Google", "Samsung".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String brand;
 
   /**
-   * The name of the industrial design. This corresponds to android.os.Build.DEVICE @OutputOnly
+   * The name of the industrial design. This corresponds to android.os.Build.DEVICE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String codename;
 
   /**
-   * Whether this device is virtual or physical. @OutputOnly
+   * Whether this device is virtual or physical.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String form;
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique opaque id for this model. Use this for invoking the TestExecutionService.
-   * @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,43 +66,42 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
    * True if and only if tests with this model are recorded by stitching together screenshots. See
-   * use_low_spec_video_recording in device config. @OutputOnly
+   * use_low_spec_video_recording in device config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean lowFpsVideoRecording;
 
   /**
-   * The manufacturer of this device. @OutputOnly
+   * The manufacturer of this device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String manufacturer;
 
   /**
-   * The human-readable marketing name for this device model. Examples: "Nexus 5", "Galaxy S5"
-   * @OutputOnly
+   * The human-readable marketing name for this device model. Examples: "Nexus 5", "Galaxy S5".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Screen density in DPI. This corresponds to ro.sf.lcd_density @OutputOnly
+   * Screen density in DPI. This corresponds to ro.sf.lcd_density
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer screenDensity;
 
   /**
-   * Screen size in the horizontal (X) dimension measured in pixels. @OutputOnly
+   * Screen size in the horizontal (X) dimension measured in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer screenX;
 
   /**
-   * Screen size in the vertical (Y) dimension measured in pixels. @OutputOnly
+   * Screen size in the vertical (Y) dimension measured in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,28 +113,28 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    * android.os.Build.CPU_ABI/CPU_ABI2. The most preferred ABI is the first element in the list.
    *
    * Elements are optionally prefixed by "version_id:" (where version_id is the id of an
-   * AndroidVersion), denoting an ABI that is supported only on a particular version. @OutputOnly
+   * AndroidVersion), denoting an ABI that is supported only on a particular version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedAbis;
 
   /**
-   * The set of Android versions this device supports. @OutputOnly
+   * The set of Android versions this device supports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedVersionIds;
 
   /**
-   * Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * The company that this device is branded with. Example: "Google", "Samsung" @OutputOnly
+   * The company that this device is branded with. Example: "Google", "Samsung".
    * @return value or {@code null} for none
    */
   public java.lang.String getBrand() {
@@ -144,7 +142,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The company that this device is branded with. Example: "Google", "Samsung" @OutputOnly
+   * The company that this device is branded with. Example: "Google", "Samsung".
    * @param brand brand or {@code null} for none
    */
   public AndroidModel setBrand(java.lang.String brand) {
@@ -153,7 +151,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the industrial design. This corresponds to android.os.Build.DEVICE @OutputOnly
+   * The name of the industrial design. This corresponds to android.os.Build.DEVICE.
    * @return value or {@code null} for none
    */
   public java.lang.String getCodename() {
@@ -161,7 +159,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the industrial design. This corresponds to android.os.Build.DEVICE @OutputOnly
+   * The name of the industrial design. This corresponds to android.os.Build.DEVICE.
    * @param codename codename or {@code null} for none
    */
   public AndroidModel setCodename(java.lang.String codename) {
@@ -170,7 +168,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this device is virtual or physical. @OutputOnly
+   * Whether this device is virtual or physical.
    * @return value or {@code null} for none
    */
   public java.lang.String getForm() {
@@ -178,7 +176,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this device is virtual or physical. @OutputOnly
+   * Whether this device is virtual or physical.
    * @param form form or {@code null} for none
    */
   public AndroidModel setForm(java.lang.String form) {
@@ -187,7 +185,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormFactor() {
@@ -195,7 +193,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc.
    * @param formFactor formFactor or {@code null} for none
    */
   public AndroidModel setFormFactor(java.lang.String formFactor) {
@@ -205,7 +203,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique opaque id for this model. Use this for invoking the TestExecutionService.
-   * @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -214,7 +211,6 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
    * The unique opaque id for this model. Use this for invoking the TestExecutionService.
-   * @OutputOnly
    * @param id id or {@code null} for none
    */
   public AndroidModel setId(java.lang.String id) {
@@ -224,7 +220,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
    * True if and only if tests with this model are recorded by stitching together screenshots. See
-   * use_low_spec_video_recording in device config. @OutputOnly
+   * use_low_spec_video_recording in device config.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLowFpsVideoRecording() {
@@ -233,7 +229,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
    * True if and only if tests with this model are recorded by stitching together screenshots. See
-   * use_low_spec_video_recording in device config. @OutputOnly
+   * use_low_spec_video_recording in device config.
    * @param lowFpsVideoRecording lowFpsVideoRecording or {@code null} for none
    */
   public AndroidModel setLowFpsVideoRecording(java.lang.Boolean lowFpsVideoRecording) {
@@ -242,7 +238,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The manufacturer of this device. @OutputOnly
+   * The manufacturer of this device.
    * @return value or {@code null} for none
    */
   public java.lang.String getManufacturer() {
@@ -250,7 +246,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The manufacturer of this device. @OutputOnly
+   * The manufacturer of this device.
    * @param manufacturer manufacturer or {@code null} for none
    */
   public AndroidModel setManufacturer(java.lang.String manufacturer) {
@@ -259,8 +255,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human-readable marketing name for this device model. Examples: "Nexus 5", "Galaxy S5"
-   * @OutputOnly
+   * The human-readable marketing name for this device model. Examples: "Nexus 5", "Galaxy S5".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -268,8 +263,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human-readable marketing name for this device model. Examples: "Nexus 5", "Galaxy S5"
-   * @OutputOnly
+   * The human-readable marketing name for this device model. Examples: "Nexus 5", "Galaxy S5".
    * @param name name or {@code null} for none
    */
   public AndroidModel setName(java.lang.String name) {
@@ -278,7 +272,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Screen density in DPI. This corresponds to ro.sf.lcd_density @OutputOnly
+   * Screen density in DPI. This corresponds to ro.sf.lcd_density
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScreenDensity() {
@@ -286,7 +280,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Screen density in DPI. This corresponds to ro.sf.lcd_density @OutputOnly
+   * Screen density in DPI. This corresponds to ro.sf.lcd_density
    * @param screenDensity screenDensity or {@code null} for none
    */
   public AndroidModel setScreenDensity(java.lang.Integer screenDensity) {
@@ -295,7 +289,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Screen size in the horizontal (X) dimension measured in pixels. @OutputOnly
+   * Screen size in the horizontal (X) dimension measured in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScreenX() {
@@ -303,7 +297,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Screen size in the horizontal (X) dimension measured in pixels. @OutputOnly
+   * Screen size in the horizontal (X) dimension measured in pixels.
    * @param screenX screenX or {@code null} for none
    */
   public AndroidModel setScreenX(java.lang.Integer screenX) {
@@ -312,7 +306,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Screen size in the vertical (Y) dimension measured in pixels. @OutputOnly
+   * Screen size in the vertical (Y) dimension measured in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScreenY() {
@@ -320,7 +314,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Screen size in the vertical (Y) dimension measured in pixels. @OutputOnly
+   * Screen size in the vertical (Y) dimension measured in pixels.
    * @param screenY screenY or {@code null} for none
    */
   public AndroidModel setScreenY(java.lang.Integer screenY) {
@@ -334,7 +328,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    * android.os.Build.CPU_ABI/CPU_ABI2. The most preferred ABI is the first element in the list.
    *
    * Elements are optionally prefixed by "version_id:" (where version_id is the id of an
-   * AndroidVersion), denoting an ABI that is supported only on a particular version. @OutputOnly
+   * AndroidVersion), denoting an ABI that is supported only on a particular version.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedAbis() {
@@ -347,7 +341,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    * android.os.Build.CPU_ABI/CPU_ABI2. The most preferred ABI is the first element in the list.
    *
    * Elements are optionally prefixed by "version_id:" (where version_id is the id of an
-   * AndroidVersion), denoting an ABI that is supported only on a particular version. @OutputOnly
+   * AndroidVersion), denoting an ABI that is supported only on a particular version.
    * @param supportedAbis supportedAbis or {@code null} for none
    */
   public AndroidModel setSupportedAbis(java.util.List<java.lang.String> supportedAbis) {
@@ -356,7 +350,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of Android versions this device supports. @OutputOnly
+   * The set of Android versions this device supports.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedVersionIds() {
@@ -364,7 +358,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of Android versions this device supports. @OutputOnly
+   * The set of Android versions this device supports.
    * @param supportedVersionIds supportedVersionIds or {@code null} for none
    */
   public AndroidModel setSupportedVersionIds(java.util.List<java.lang.String> supportedVersionIds) {
@@ -373,7 +367,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -381,7 +375,7 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * @param tags tags or {@code null} for none
    */
   public AndroidModel setTags(java.util.List<java.lang.String> tags) {

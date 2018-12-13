@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class ToolResultsHistory extends com.google.api.client.json.GenericJson {
 
   /**
-   * A tool results history ID. Required
+   * Required. A tool results history ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String historyId;
 
   /**
-   * The cloud project that owns the tool results history. Required
+   * Required. The cloud project that owns the tool results history.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * A tool results history ID. Required
+   * Required. A tool results history ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getHistoryId() {
@@ -52,7 +52,7 @@ public final class ToolResultsHistory extends com.google.api.client.json.Generic
   }
 
   /**
-   * A tool results history ID. Required
+   * Required. A tool results history ID.
    * @param historyId historyId or {@code null} for none
    */
   public ToolResultsHistory setHistoryId(java.lang.String historyId) {
@@ -61,7 +61,7 @@ public final class ToolResultsHistory extends com.google.api.client.json.Generic
   }
 
   /**
-   * The cloud project that owns the tool results history. Required
+   * Required. The cloud project that owns the tool results history.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -69,7 +69,7 @@ public final class ToolResultsHistory extends com.google.api.client.json.Generic
   }
 
   /**
-   * The cloud project that owns the tool results history. Required
+   * Required. The cloud project that owns the tool results history.
    * @param projectId projectId or {@code null} for none
    */
   public ToolResultsHistory setProjectId(java.lang.String projectId) {

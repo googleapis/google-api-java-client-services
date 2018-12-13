@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * Network emulation parameters
+ * Network emulation parameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,42 +30,42 @@ package com.google.api.services.testing.model;
 public final class TrafficRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Bandwidth in kbits/second
+   * Bandwidth in kbits/second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float bandwidth;
 
   /**
-   * Burst size in kbits
+   * Burst size in kbits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float burst;
 
   /**
-   * Packet delay, must be >= 0
+   * Packet delay, must be >= 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String delay;
 
   /**
-   * Packet duplication ratio (0.0 - 1.0)
+   * Packet duplication ratio (0.0 - 1.0).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float packetDuplicationRatio;
 
   /**
-   * Packet loss ratio (0.0 - 1.0)
+   * Packet loss ratio (0.0 - 1.0).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float packetLossRatio;
 
   /**
-   * Bandwidth in kbits/second
+   * Bandwidth in kbits/second.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBandwidth() {
@@ -73,7 +73,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Bandwidth in kbits/second
+   * Bandwidth in kbits/second.
    * @param bandwidth bandwidth or {@code null} for none
    */
   public TrafficRule setBandwidth(java.lang.Float bandwidth) {
@@ -82,7 +82,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Burst size in kbits
+   * Burst size in kbits.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBurst() {
@@ -90,7 +90,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Burst size in kbits
+   * Burst size in kbits.
    * @param burst burst or {@code null} for none
    */
   public TrafficRule setBurst(java.lang.Float burst) {
@@ -99,7 +99,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Packet delay, must be >= 0
+   * Packet delay, must be >= 0.
    * @return value or {@code null} for none
    */
   public String getDelay() {
@@ -107,7 +107,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Packet delay, must be >= 0
+   * Packet delay, must be >= 0.
    * @param delay delay or {@code null} for none
    */
   public TrafficRule setDelay(String delay) {
@@ -116,7 +116,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Packet duplication ratio (0.0 - 1.0)
+   * Packet duplication ratio (0.0 - 1.0).
    * @return value or {@code null} for none
    */
   public java.lang.Float getPacketDuplicationRatio() {
@@ -124,7 +124,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Packet duplication ratio (0.0 - 1.0)
+   * Packet duplication ratio (0.0 - 1.0).
    * @param packetDuplicationRatio packetDuplicationRatio or {@code null} for none
    */
   public TrafficRule setPacketDuplicationRatio(java.lang.Float packetDuplicationRatio) {
@@ -133,7 +133,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Packet loss ratio (0.0 - 1.0)
+   * Packet loss ratio (0.0 - 1.0).
    * @return value or {@code null} for none
    */
   public java.lang.Float getPacketLossRatio() {
@@ -141,7 +141,7 @@ public final class TrafficRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Packet loss ratio (0.0 - 1.0)
+   * Packet loss ratio (0.0 - 1.0).
    * @param packetLossRatio packetLossRatio or {@code null} for none
    */
   public TrafficRule setPacketLossRatio(java.lang.Float packetLossRatio) {

@@ -17,8 +17,8 @@
 package com.google.api.services.testing.model;
 
 /**
- * Key-value pair of detailed information about the client which invoked the test. For example
- * {'Version', '1.0'}, {'Release Track', 'BETA'}
+ * Key-value pair of detailed information about the client which invoked the test. Examples:
+ * {'Version', '1.0'}, {'Release Track', 'BETA'}.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -31,21 +31,21 @@ package com.google.api.services.testing.model;
 public final class ClientInfoDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * The key of detailed client information. Required
+   * Required. The key of detailed client information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * The value of detailed client information. Required
+   * Required. The value of detailed client information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The key of detailed client information. Required
+   * Required. The key of detailed client information.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -53,7 +53,7 @@ public final class ClientInfoDetail extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The key of detailed client information. Required
+   * Required. The key of detailed client information.
    * @param key key or {@code null} for none
    */
   public ClientInfoDetail setKey(java.lang.String key) {
@@ -62,7 +62,7 @@ public final class ClientInfoDetail extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The value of detailed client information. Required
+   * Required. The value of detailed client information.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -70,7 +70,7 @@ public final class ClientInfoDetail extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The value of detailed client information. Required
+   * Required. The value of detailed client information.
    * @param value value or {@code null} for none
    */
   public ClientInfoDetail setValue(java.lang.String value) {

@@ -30,28 +30,28 @@ package com.google.api.services.testing.model;
 public final class Orientation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id for this orientation. Example: "portrait" @OutputOnly
+   * The id for this orientation. Example: "portrait".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * A human-friendly name for this orientation. Example: "portrait" @OutputOnly
+   * A human-friendly name for this orientation. Example: "portrait".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Tags for this dimension. Examples: "default"
+   * Tags for this dimension. Example: "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * The id for this orientation. Example: "portrait" @OutputOnly
+   * The id for this orientation. Example: "portrait".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -59,7 +59,7 @@ public final class Orientation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The id for this orientation. Example: "portrait" @OutputOnly
+   * The id for this orientation. Example: "portrait".
    * @param id id or {@code null} for none
    */
   public Orientation setId(java.lang.String id) {
@@ -68,7 +68,7 @@ public final class Orientation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-friendly name for this orientation. Example: "portrait" @OutputOnly
+   * A human-friendly name for this orientation. Example: "portrait".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -76,7 +76,7 @@ public final class Orientation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-friendly name for this orientation. Example: "portrait" @OutputOnly
+   * A human-friendly name for this orientation. Example: "portrait".
    * @param name name or {@code null} for none
    */
   public Orientation setName(java.lang.String name) {
@@ -85,7 +85,7 @@ public final class Orientation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tags for this dimension. Examples: "default"
+   * Tags for this dimension. Example: "default".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -93,7 +93,7 @@ public final class Orientation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tags for this dimension. Examples: "default"
+   * Tags for this dimension. Example: "default".
    * @param tags tags or {@code null} for none
    */
   public Orientation setTags(java.util.List<java.lang.String> tags) {

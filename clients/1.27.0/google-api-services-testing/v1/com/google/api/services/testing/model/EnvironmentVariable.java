@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * A key-value pair passed as an environment variable to the test
+ * A key-value pair passed as an environment variable to the test.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class EnvironmentVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Key for the environment variable
+   * Key for the environment variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Value for the environment variable
+   * Value for the environment variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Key for the environment variable
+   * Key for the environment variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -52,7 +52,7 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   }
 
   /**
-   * Key for the environment variable
+   * Key for the environment variable.
    * @param key key or {@code null} for none
    */
   public EnvironmentVariable setKey(java.lang.String key) {
@@ -61,7 +61,7 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   }
 
   /**
-   * Value for the environment variable
+   * Value for the environment variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   }
 
   /**
-   * Value for the environment variable
+   * Value for the environment variable.
    * @param value value or {@code null} for none
    */
   public EnvironmentVariable setValue(java.lang.String value) {

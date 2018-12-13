@@ -30,28 +30,28 @@ package com.google.api.services.testing.model;
 public final class NetworkConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The emulation rule applying to the download traffic
+   * The emulation rule applying to the download traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TrafficRule downRule;
 
   /**
-   * The unique opaque id for this network traffic configuration @OutputOnly
+   * The unique opaque id for this network traffic configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The emulation rule applying to the upload traffic
+   * The emulation rule applying to the upload traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TrafficRule upRule;
 
   /**
-   * The emulation rule applying to the download traffic
+   * The emulation rule applying to the download traffic.
    * @return value or {@code null} for none
    */
   public TrafficRule getDownRule() {
@@ -59,7 +59,7 @@ public final class NetworkConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * The emulation rule applying to the download traffic
+   * The emulation rule applying to the download traffic.
    * @param downRule downRule or {@code null} for none
    */
   public NetworkConfiguration setDownRule(TrafficRule downRule) {
@@ -68,7 +68,7 @@ public final class NetworkConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * The unique opaque id for this network traffic configuration @OutputOnly
+   * The unique opaque id for this network traffic configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -76,7 +76,7 @@ public final class NetworkConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * The unique opaque id for this network traffic configuration @OutputOnly
+   * The unique opaque id for this network traffic configuration.
    * @param id id or {@code null} for none
    */
   public NetworkConfiguration setId(java.lang.String id) {
@@ -85,7 +85,7 @@ public final class NetworkConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * The emulation rule applying to the upload traffic
+   * The emulation rule applying to the upload traffic.
    * @return value or {@code null} for none
    */
   public TrafficRule getUpRule() {
@@ -93,7 +93,7 @@ public final class NetworkConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * The emulation rule applying to the upload traffic
+   * The emulation rule applying to the upload traffic.
    * @param upRule upRule or {@code null} for none
    */
   public NetworkConfiguration setUpRule(TrafficRule upRule) {

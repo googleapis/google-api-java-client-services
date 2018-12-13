@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * An opaque binary blob file to install on the device before the test starts
+ * An opaque binary blob file to install on the device before the test starts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,23 +30,23 @@ package com.google.api.services.testing.model;
 public final class ObbFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opaque Binary Blob (OBB) file(s) to install on the device Required
+   * Required. Opaque Binary Blob (OBB) file(s) to install on the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FileReference obb;
 
   /**
-   * OBB file name which must conform to the format as specified by Android e.g.
-   * [main|patch].0300110.com.example.android.obb which will be installed into   /Android/obb// on
-   * the device Required
+   * Required. OBB file name which must conform to the format as specified by Android e.g.
+   * [main|patch].0300110.com.example.android.obb which will be installed into   \/Android/obb/\/ on
+   * the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String obbFileName;
 
   /**
-   * Opaque Binary Blob (OBB) file(s) to install on the device Required
+   * Required. Opaque Binary Blob (OBB) file(s) to install on the device.
    * @return value or {@code null} for none
    */
   public FileReference getObb() {
@@ -54,7 +54,7 @@ public final class ObbFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Opaque Binary Blob (OBB) file(s) to install on the device Required
+   * Required. Opaque Binary Blob (OBB) file(s) to install on the device.
    * @param obb obb or {@code null} for none
    */
   public ObbFile setObb(FileReference obb) {
@@ -63,9 +63,9 @@ public final class ObbFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBB file name which must conform to the format as specified by Android e.g.
-   * [main|patch].0300110.com.example.android.obb which will be installed into   /Android/obb// on
-   * the device Required
+   * Required. OBB file name which must conform to the format as specified by Android e.g.
+   * [main|patch].0300110.com.example.android.obb which will be installed into   \/Android/obb/\/ on
+   * the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getObbFileName() {
@@ -73,9 +73,9 @@ public final class ObbFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * OBB file name which must conform to the format as specified by Android e.g.
-   * [main|patch].0300110.com.example.android.obb which will be installed into   /Android/obb// on
-   * the device Required
+   * Required. OBB file name which must conform to the format as specified by Android e.g.
+   * [main|patch].0300110.com.example.android.obb which will be installed into   \/Android/obb/\/ on
+   * the device.
    * @param obbFileName obbFileName or {@code null} for none
    */
   public ObbFile setObbFileName(java.lang.String obbFileName) {

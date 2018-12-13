@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * A version of the Android OS
+ * A version of the Android OS.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class AndroidVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API level for this Android version. Examples: 18, 19 @OutputOnly
+   * The API level for this Android version. Examples: 18, 19.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer apiLevel;
 
   /**
-   * The code name for this Android version. Examples: "JellyBean", "KitKat" @OutputOnly
+   * The code name for this Android version. Examples: "JellyBean", "KitKat".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String codeName;
 
   /**
-   * Market share for this version. @OutputOnly
+   * Market share for this version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,35 +52,34 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
 
   /**
    * An opaque id for this Android version. Use this id to invoke the TestExecutionService.
-   * @OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The date this Android version became available in the market. @OutputOnly
+   * The date this Android version became available in the market.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date releaseDate;
 
   /**
-   * Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * A string representing this version of the Android OS. Examples: "4.3", "4.4" @OutputOnly
+   * A string representing this version of the Android OS. Examples: "4.3", "4.4".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String versionString;
 
   /**
-   * The API level for this Android version. Examples: 18, 19 @OutputOnly
+   * The API level for this Android version. Examples: 18, 19.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getApiLevel() {
@@ -88,7 +87,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The API level for this Android version. Examples: 18, 19 @OutputOnly
+   * The API level for this Android version. Examples: 18, 19.
    * @param apiLevel apiLevel or {@code null} for none
    */
   public AndroidVersion setApiLevel(java.lang.Integer apiLevel) {
@@ -97,7 +96,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The code name for this Android version. Examples: "JellyBean", "KitKat" @OutputOnly
+   * The code name for this Android version. Examples: "JellyBean", "KitKat".
    * @return value or {@code null} for none
    */
   public java.lang.String getCodeName() {
@@ -105,7 +104,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The code name for this Android version. Examples: "JellyBean", "KitKat" @OutputOnly
+   * The code name for this Android version. Examples: "JellyBean", "KitKat".
    * @param codeName codeName or {@code null} for none
    */
   public AndroidVersion setCodeName(java.lang.String codeName) {
@@ -114,7 +113,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Market share for this version. @OutputOnly
+   * Market share for this version.
    * @return value or {@code null} for none
    */
   public Distribution getDistribution() {
@@ -122,7 +121,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Market share for this version. @OutputOnly
+   * Market share for this version.
    * @param distribution distribution or {@code null} for none
    */
   public AndroidVersion setDistribution(Distribution distribution) {
@@ -132,7 +131,6 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
 
   /**
    * An opaque id for this Android version. Use this id to invoke the TestExecutionService.
-   * @OutputOnly
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -141,7 +139,6 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
 
   /**
    * An opaque id for this Android version. Use this id to invoke the TestExecutionService.
-   * @OutputOnly
    * @param id id or {@code null} for none
    */
   public AndroidVersion setId(java.lang.String id) {
@@ -150,7 +147,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date this Android version became available in the market. @OutputOnly
+   * The date this Android version became available in the market.
    * @return value or {@code null} for none
    */
   public Date getReleaseDate() {
@@ -158,7 +155,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date this Android version became available in the market. @OutputOnly
+   * The date this Android version became available in the market.
    * @param releaseDate releaseDate or {@code null} for none
    */
   public AndroidVersion setReleaseDate(Date releaseDate) {
@@ -167,7 +164,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -175,7 +172,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * @param tags tags or {@code null} for none
    */
   public AndroidVersion setTags(java.util.List<java.lang.String> tags) {
@@ -184,7 +181,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A string representing this version of the Android OS. Examples: "4.3", "4.4" @OutputOnly
+   * A string representing this version of the Android OS. Examples: "4.3", "4.4".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersionString() {
@@ -192,7 +189,7 @@ public final class AndroidVersion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A string representing this version of the Android OS. Examples: "4.3", "4.4" @OutputOnly
+   * A string representing this version of the Android OS. Examples: "4.3", "4.4".
    * @param versionString versionString or {@code null} for none
    */
   public AndroidVersion setVersionString(java.lang.String versionString) {

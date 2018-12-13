@@ -30,70 +30,70 @@ package com.google.api.services.testing.model;
 public final class TestExecution extends com.google.api.client.json.GenericJson {
 
   /**
-   * How the host machine(s) are configured. @OutputOnly
+   * Output only. How the host machine(s) are configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Environment environment;
 
   /**
-   * Unique id set by the backend. @OutputOnly
+   * Output only. Unique id set by the backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Id of the containing TestMatrix. @OutputOnly
+   * Output only. Id of the containing TestMatrix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matrixId;
 
   /**
-   * The cloud project that owns the test execution. @OutputOnly
+   * Output only. The cloud project that owns the test execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Indicates the current progress of the test execution (e.g., FINISHED). @OutputOnly
+   * Output only. Indicates the current progress of the test execution (e.g., FINISHED).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Additional details about the running test. @OutputOnly
+   * Output only. Additional details about the running test.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestDetails testDetails;
 
   /**
-   * How to run the test. @OutputOnly
+   * Output only. How to run the test.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestSpecification testSpecification;
 
   /**
-   * The time this test execution was initially created. @OutputOnly
+   * Output only. The time this test execution was initially created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestamp;
 
   /**
-   * Where the results for this execution are written. @OutputOnly
+   * Output only. Where the results for this execution are written.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ToolResultsStep toolResultsStep;
 
   /**
-   * How the host machine(s) are configured. @OutputOnly
+   * Output only. How the host machine(s) are configured.
    * @return value or {@code null} for none
    */
   public Environment getEnvironment() {
@@ -101,7 +101,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How the host machine(s) are configured. @OutputOnly
+   * Output only. How the host machine(s) are configured.
    * @param environment environment or {@code null} for none
    */
   public TestExecution setEnvironment(Environment environment) {
@@ -110,7 +110,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Unique id set by the backend. @OutputOnly
+   * Output only. Unique id set by the backend.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -118,7 +118,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Unique id set by the backend. @OutputOnly
+   * Output only. Unique id set by the backend.
    * @param id id or {@code null} for none
    */
   public TestExecution setId(java.lang.String id) {
@@ -127,7 +127,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Id of the containing TestMatrix. @OutputOnly
+   * Output only. Id of the containing TestMatrix.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatrixId() {
@@ -135,7 +135,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Id of the containing TestMatrix. @OutputOnly
+   * Output only. Id of the containing TestMatrix.
    * @param matrixId matrixId or {@code null} for none
    */
   public TestExecution setMatrixId(java.lang.String matrixId) {
@@ -144,7 +144,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The cloud project that owns the test execution. @OutputOnly
+   * Output only. The cloud project that owns the test execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -152,7 +152,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The cloud project that owns the test execution. @OutputOnly
+   * Output only. The cloud project that owns the test execution.
    * @param projectId projectId or {@code null} for none
    */
   public TestExecution setProjectId(java.lang.String projectId) {
@@ -161,7 +161,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates the current progress of the test execution (e.g., FINISHED). @OutputOnly
+   * Output only. Indicates the current progress of the test execution (e.g., FINISHED).
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -169,7 +169,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Indicates the current progress of the test execution (e.g., FINISHED). @OutputOnly
+   * Output only. Indicates the current progress of the test execution (e.g., FINISHED).
    * @param state state or {@code null} for none
    */
   public TestExecution setState(java.lang.String state) {
@@ -178,7 +178,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Additional details about the running test. @OutputOnly
+   * Output only. Additional details about the running test.
    * @return value or {@code null} for none
    */
   public TestDetails getTestDetails() {
@@ -186,7 +186,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Additional details about the running test. @OutputOnly
+   * Output only. Additional details about the running test.
    * @param testDetails testDetails or {@code null} for none
    */
   public TestExecution setTestDetails(TestDetails testDetails) {
@@ -195,7 +195,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How to run the test. @OutputOnly
+   * Output only. How to run the test.
    * @return value or {@code null} for none
    */
   public TestSpecification getTestSpecification() {
@@ -203,7 +203,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How to run the test. @OutputOnly
+   * Output only. How to run the test.
    * @param testSpecification testSpecification or {@code null} for none
    */
   public TestExecution setTestSpecification(TestSpecification testSpecification) {
@@ -212,7 +212,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The time this test execution was initially created. @OutputOnly
+   * Output only. The time this test execution was initially created.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -220,7 +220,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The time this test execution was initially created. @OutputOnly
+   * Output only. The time this test execution was initially created.
    * @param timestamp timestamp or {@code null} for none
    */
   public TestExecution setTimestamp(String timestamp) {
@@ -229,7 +229,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Where the results for this execution are written. @OutputOnly
+   * Output only. Where the results for this execution are written.
    * @return value or {@code null} for none
    */
   public ToolResultsStep getToolResultsStep() {
@@ -237,7 +237,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Where the results for this execution are written. @OutputOnly
+   * Output only. Where the results for this execution are written.
    * @param toolResultsStep toolResultsStep or {@code null} for none
    */
   public TestExecution setToolResultsStep(ToolResultsStep toolResultsStep) {

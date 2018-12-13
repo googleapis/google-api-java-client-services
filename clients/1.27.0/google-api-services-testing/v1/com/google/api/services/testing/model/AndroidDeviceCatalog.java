@@ -30,28 +30,28 @@ package com.google.api.services.testing.model;
 public final class AndroidDeviceCatalog extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of supported Android device models. @OutputOnly
+   * The set of supported Android device models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AndroidModel> models;
 
   /**
-   * The set of supported runtime configurations. @OutputOnly
+   * The set of supported runtime configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AndroidRuntimeConfiguration runtimeConfiguration;
 
   /**
-   * The set of supported Android OS versions. @OutputOnly
+   * The set of supported Android OS versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AndroidVersion> versions;
 
   /**
-   * The set of supported Android device models. @OutputOnly
+   * The set of supported Android device models.
    * @return value or {@code null} for none
    */
   public java.util.List<AndroidModel> getModels() {
@@ -59,7 +59,7 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   }
 
   /**
-   * The set of supported Android device models. @OutputOnly
+   * The set of supported Android device models.
    * @param models models or {@code null} for none
    */
   public AndroidDeviceCatalog setModels(java.util.List<AndroidModel> models) {
@@ -68,7 +68,7 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   }
 
   /**
-   * The set of supported runtime configurations. @OutputOnly
+   * The set of supported runtime configurations.
    * @return value or {@code null} for none
    */
   public AndroidRuntimeConfiguration getRuntimeConfiguration() {
@@ -76,7 +76,7 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   }
 
   /**
-   * The set of supported runtime configurations. @OutputOnly
+   * The set of supported runtime configurations.
    * @param runtimeConfiguration runtimeConfiguration or {@code null} for none
    */
   public AndroidDeviceCatalog setRuntimeConfiguration(AndroidRuntimeConfiguration runtimeConfiguration) {
@@ -85,7 +85,7 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   }
 
   /**
-   * The set of supported Android OS versions. @OutputOnly
+   * The set of supported Android OS versions.
    * @return value or {@code null} for none
    */
   public java.util.List<AndroidVersion> getVersions() {
@@ -93,7 +93,7 @@ public final class AndroidDeviceCatalog extends com.google.api.client.json.Gener
   }
 
   /**
-   * The set of supported Android OS versions. @OutputOnly
+   * The set of supported Android OS versions.
    * @param versions versions or {@code null} for none
    */
   public AndroidDeviceCatalog setVersions(java.util.List<AndroidVersion> versions) {

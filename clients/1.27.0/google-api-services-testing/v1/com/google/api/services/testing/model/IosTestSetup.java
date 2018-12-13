@@ -30,8 +30,8 @@ package com.google.api.services.testing.model;
 public final class IosTestSetup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The network traffic profile used for running the test. Available network profiles can
-   * be queried by using the NETWORK_CONFIGURATION environment type when calling
+   * The network traffic profile used for running the test. Available network profiles can be
+   * queried by using the NETWORK_CONFIGURATION environment type when calling
    * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
    * The value may be {@code null}.
    */
@@ -39,8 +39,8 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
   private java.lang.String networkProfile;
 
   /**
-   * Optional. The network traffic profile used for running the test. Available network profiles can
-   * be queried by using the NETWORK_CONFIGURATION environment type when calling
+   * The network traffic profile used for running the test. Available network profiles can be
+   * queried by using the NETWORK_CONFIGURATION environment type when calling
    * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
    * @return value or {@code null} for none
    */
@@ -49,8 +49,8 @@ public final class IosTestSetup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The network traffic profile used for running the test. Available network profiles can
-   * be queried by using the NETWORK_CONFIGURATION environment type when calling
+   * The network traffic profile used for running the test. Available network profiles can be
+   * queried by using the NETWORK_CONFIGURATION environment type when calling
    * TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
    * @param networkProfile networkProfile or {@code null} for none
    */

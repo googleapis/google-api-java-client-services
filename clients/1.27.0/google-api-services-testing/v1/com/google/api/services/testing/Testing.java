@@ -143,7 +143,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
   public class ApplicationDetailService {
 
     /**
-     * Request the details of an Android application APK.
+     * Gets the details of an Android application APK.
      *
      * Create a request for the method "applicationDetailService.getApkDetails".
      *
@@ -164,7 +164,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "v1/applicationDetailService/getApkDetails";
 
       /**
-       * Request the details of an Android application APK.
+       * Gets the details of an Android application APK.
        *
        * Create a request for the method "applicationDetailService.getApkDetails".
        *
@@ -433,9 +433,9 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Request to run a matrix of tests according to the given specifications. Unsupported environments
-       * will be returned in the state UNSUPPORTED. Matrices are limited to at most 200 supported
-       * executions.
+       * Creates and runs a matrix of tests according to the given specifications. Unsupported
+       * environments will be returned in the state UNSUPPORTED. Matrices are limited to at most 200
+       * supported executions.
        *
        * May return any of the following canonical error codes:
        *
@@ -463,7 +463,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         private static final String REST_PATH = "v1/projects/{projectId}/testMatrices";
 
         /**
-         * Request to run a matrix of tests according to the given specifications. Unsupported
+         * Creates and runs a matrix of tests according to the given specifications. Unsupported
          * environments will be returned in the state UNSUPPORTED. Matrices are limited to at most 200
          * supported executions.
          *
@@ -595,7 +595,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Check the status of a test matrix.
+       * Checks the status of a test matrix.
        *
        * May return any of the following canonical error codes:
        *
@@ -622,7 +622,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         private static final String REST_PATH = "v1/projects/{projectId}/testMatrices/{testMatrixId}";
 
         /**
-         * Check the status of a test matrix.
+         * Checks the status of a test matrix.
          *
          * May return any of the following canonical error codes:
          *
@@ -773,7 +773,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
   public class TestEnvironmentCatalog {
 
     /**
-     * Get the catalog of supported test environments.
+     * Gets the catalog of supported test environments.
      *
      * May return any of the following canonical error codes:
      *
@@ -785,8 +785,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the testing server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param environmentType The type of environment that should be listed.
-    Required
+     * @param environmentType Required. The type of environment that should be listed.
      * @return the request
      */
     public Get get(java.lang.String environmentType) throws java.io.IOException {
@@ -800,7 +799,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "v1/testEnvironmentCatalog/{environmentType}";
 
       /**
-       * Get the catalog of supported test environments.
+       * Gets the catalog of supported test environments.
        *
        * May return any of the following canonical error codes:
        *
@@ -814,8 +813,7 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param environmentType The type of environment that should be listed.
-    Required
+       * @param environmentType Required. The type of environment that should be listed.
        * @since 1.13
        */
       protected Get(java.lang.String environmentType) {
@@ -888,41 +886,33 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The type of environment that should be listed. Required
-       */
+      /** Required. The type of environment that should be listed. */
       @com.google.api.client.util.Key
       private java.lang.String environmentType;
 
-      /** The type of environment that should be listed. Required
+      /** Required. The type of environment that should be listed.
        */
       public java.lang.String getEnvironmentType() {
         return environmentType;
       }
 
-      /**
-       * The type of environment that should be listed. Required
-       */
+      /** Required. The type of environment that should be listed. */
       public Get setEnvironmentType(java.lang.String environmentType) {
         this.environmentType = environmentType;
         return this;
       }
 
-      /**
-       * For authorization, the cloud project requesting the TestEnvironmentCatalog. Optional
-       */
+      /** For authorization, the cloud project requesting the TestEnvironmentCatalog. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** For authorization, the cloud project requesting the TestEnvironmentCatalog. Optional
+      /** For authorization, the cloud project requesting the TestEnvironmentCatalog.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * For authorization, the cloud project requesting the TestEnvironmentCatalog. Optional
-       */
+      /** For authorization, the cloud project requesting the TestEnvironmentCatalog. */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;

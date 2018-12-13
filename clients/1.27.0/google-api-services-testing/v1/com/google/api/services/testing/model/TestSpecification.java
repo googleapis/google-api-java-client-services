@@ -44,7 +44,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private AndroidRoboTest androidRoboTest;
 
   /**
-   * An Android Application with a Test Loop
+   * An Android Application with a Test Loop.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    * Google test account and add it to the device, before executing the test. Note that test
    * accounts might be reused. Many applications show their full set of functionalities when an
    * account is present on the device. Logging into the device with these generated accounts allows
-   * testing more functionalities. Default is false. Optional
+   * testing more functionalities. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,29 +76,29 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disableVideoRecording;
 
   /**
-   * Optional. Test setup requirements for iOS.
+   * Test setup requirements for iOS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IosTestSetup iosTestSetup;
 
   /**
-   * An iOS XCTest, via an .xctestrun file
+   * An iOS XCTest, via an .xctestrun file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IosXcTest iosXcTest;
 
   /**
-   * Test setup requirements for Android e.g. files to install, bootstrap scripts. Optional
+   * Test setup requirements for Android e.g. files to install, bootstrap scripts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TestSetup testSetup;
 
   /**
-   * Max time a test execution is allowed to run before it is automatically cancelled. Optional,
-   * default is 5 min.
+   * Max time a test execution is allowed to run before it is automatically cancelled. The default
+   * value is 5 min.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An Android Application with a Test Loop
+   * An Android Application with a Test Loop.
    * @return value or {@code null} for none
    */
   public AndroidTestLoop getAndroidTestLoop() {
@@ -147,7 +147,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An Android Application with a Test Loop
+   * An Android Application with a Test Loop.
    * @param androidTestLoop androidTestLoop or {@code null} for none
    */
   public TestSpecification setAndroidTestLoop(AndroidTestLoop androidTestLoop) {
@@ -160,7 +160,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    * Google test account and add it to the device, before executing the test. Note that test
    * accounts might be reused. Many applications show their full set of functionalities when an
    * account is present on the device. Logging into the device with these generated accounts allows
-   * testing more functionalities. Default is false. Optional
+   * testing more functionalities. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoGoogleLogin() {
@@ -172,7 +172,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    * Google test account and add it to the device, before executing the test. Note that test
    * accounts might be reused. Many applications show their full set of functionalities when an
    * account is present on the device. Logging into the device with these generated accounts allows
-   * testing more functionalities. Default is false. Optional
+   * testing more functionalities. Default is false.
    * @param autoGoogleLogin autoGoogleLogin or {@code null} for none
    */
   public TestSpecification setAutoGoogleLogin(java.lang.Boolean autoGoogleLogin) {
@@ -215,7 +215,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Test setup requirements for iOS.
+   * Test setup requirements for iOS.
    * @return value or {@code null} for none
    */
   public IosTestSetup getIosTestSetup() {
@@ -223,7 +223,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Test setup requirements for iOS.
+   * Test setup requirements for iOS.
    * @param iosTestSetup iosTestSetup or {@code null} for none
    */
   public TestSpecification setIosTestSetup(IosTestSetup iosTestSetup) {
@@ -232,7 +232,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An iOS XCTest, via an .xctestrun file
+   * An iOS XCTest, via an .xctestrun file.
    * @return value or {@code null} for none
    */
   public IosXcTest getIosXcTest() {
@@ -240,7 +240,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * An iOS XCTest, via an .xctestrun file
+   * An iOS XCTest, via an .xctestrun file.
    * @param iosXcTest iosXcTest or {@code null} for none
    */
   public TestSpecification setIosXcTest(IosXcTest iosXcTest) {
@@ -249,7 +249,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Test setup requirements for Android e.g. files to install, bootstrap scripts. Optional
+   * Test setup requirements for Android e.g. files to install, bootstrap scripts.
    * @return value or {@code null} for none
    */
   public TestSetup getTestSetup() {
@@ -257,7 +257,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Test setup requirements for Android e.g. files to install, bootstrap scripts. Optional
+   * Test setup requirements for Android e.g. files to install, bootstrap scripts.
    * @param testSetup testSetup or {@code null} for none
    */
   public TestSpecification setTestSetup(TestSetup testSetup) {
@@ -266,8 +266,8 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Max time a test execution is allowed to run before it is automatically cancelled. Optional,
-   * default is 5 min.
+   * Max time a test execution is allowed to run before it is automatically cancelled. The default
+   * value is 5 min.
    * @return value or {@code null} for none
    */
   public String getTestTimeout() {
@@ -275,8 +275,8 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Max time a test execution is allowed to run before it is automatically cancelled. Optional,
-   * default is 5 min.
+   * Max time a test execution is allowed to run before it is automatically cancelled. The default
+   * value is 5 min.
    * @param testTimeout testTimeout or {@code null} for none
    */
   public TestSpecification setTestTimeout(String testTimeout) {

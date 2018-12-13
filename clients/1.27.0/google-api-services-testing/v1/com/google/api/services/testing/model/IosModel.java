@@ -30,55 +30,53 @@ package com.google.api.services.testing.model;
 public final class IosModel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Device capabilities. Copied from https://developer.apple.com/library/archive/docum
-   * entation/DeviceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCom
-   * patibilityMatrix.html
+   * Device capabilities. Copied from https://developer.apple.com/library/archive/documentation/Devi
+   * ceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCompatibilityMat
+   * rix.html
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> deviceCapabilities;
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String formFactor;
 
   /**
-   * Output only. The unique opaque id for this model. Use this for invoking the
-   * TestExecutionService.
+   * The unique opaque id for this model. Use this for invoking the TestExecutionService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Output only. The human-readable name for this device model. Examples: "iPhone 4s", "iPad Mini
-   * 2"
+   * The human-readable name for this device model. Examples: "iPhone 4s", "iPad Mini 2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The set of iOS major software versions this device supports.
+   * The set of iOS major software versions this device supports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedVersionIds;
 
   /**
-   * Output only. Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Output only. Device capabilities. Copied from https://developer.apple.com/library/archive/docum
-   * entation/DeviceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCom
-   * patibilityMatrix.html
+   * Device capabilities. Copied from https://developer.apple.com/library/archive/documentation/Devi
+   * ceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCompatibilityMat
+   * rix.html
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeviceCapabilities() {
@@ -86,9 +84,9 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Device capabilities. Copied from https://developer.apple.com/library/archive/docum
-   * entation/DeviceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCom
-   * patibilityMatrix.html
+   * Device capabilities. Copied from https://developer.apple.com/library/archive/documentation/Devi
+   * ceInformation/Reference/iOSDeviceCompatibility/DeviceCompatibilityMatrix/DeviceCompatibilityMat
+   * rix.html
    * @param deviceCapabilities deviceCapabilities or {@code null} for none
    */
   public IosModel setDeviceCapabilities(java.util.List<java.lang.String> deviceCapabilities) {
@@ -97,7 +95,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormFactor() {
@@ -105,7 +103,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this device is a phone, tablet, wearable, etc. @OutputOnly
+   * Whether this device is a phone, tablet, wearable, etc.
    * @param formFactor formFactor or {@code null} for none
    */
   public IosModel setFormFactor(java.lang.String formFactor) {
@@ -114,8 +112,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique opaque id for this model. Use this for invoking the
-   * TestExecutionService.
+   * The unique opaque id for this model. Use this for invoking the TestExecutionService.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -123,8 +120,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique opaque id for this model. Use this for invoking the
-   * TestExecutionService.
+   * The unique opaque id for this model. Use this for invoking the TestExecutionService.
    * @param id id or {@code null} for none
    */
   public IosModel setId(java.lang.String id) {
@@ -133,8 +129,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The human-readable name for this device model. Examples: "iPhone 4s", "iPad Mini
-   * 2"
+   * The human-readable name for this device model. Examples: "iPhone 4s", "iPad Mini 2".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -142,8 +137,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The human-readable name for this device model. Examples: "iPhone 4s", "iPad Mini
-   * 2"
+   * The human-readable name for this device model. Examples: "iPhone 4s", "iPad Mini 2".
    * @param name name or {@code null} for none
    */
   public IosModel setName(java.lang.String name) {
@@ -152,7 +146,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The set of iOS major software versions this device supports.
+   * The set of iOS major software versions this device supports.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedVersionIds() {
@@ -160,7 +154,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The set of iOS major software versions this device supports.
+   * The set of iOS major software versions this device supports.
    * @param supportedVersionIds supportedVersionIds or {@code null} for none
    */
   public IosModel setSupportedVersionIds(java.util.List<java.lang.String> supportedVersionIds) {
@@ -169,7 +163,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -177,7 +171,7 @@ public final class IosModel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Tags for this dimension. Examples: "default", "preview", "deprecated"
+   * Tags for this dimension. Examples: "default", "preview", "deprecated".
    * @param tags tags or {@code null} for none
    */
   public IosModel setTags(java.util.List<java.lang.String> tags) {

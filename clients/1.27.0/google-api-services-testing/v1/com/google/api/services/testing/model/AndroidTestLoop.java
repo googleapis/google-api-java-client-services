@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * A test of an Android Application with a Test Loop. The intent  will be implicitly added, since
+ * A test of an Android Application with a Test Loop. The intent \ will be implicitly added, since
  * Games is the only user of this api, for the time being.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -45,8 +45,8 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
   private AppBundle appBundle;
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
-   * the application's manifest.
+   * The java package for the application under test. The default is determined by examining the
+   * application's manifest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,15 +56,15 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
    * The list of scenario labels that should be run during the test. The scenario labels should map
    * to labels defined in the application's manifest. For example, player_experience and
    * com.google.test.loops.player_experience add all of the loops labeled in the manifest with the
-   * com.google.test.loops.player_experience name to the execution. Optional. Scenarios can also be
-   * specified in the scenarios field.
+   * com.google.test.loops.player_experience name to the execution. Scenarios can also be specified
+   * in the scenarios field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scenarioLabels;
 
   /**
-   * The list of scenarios that should be run during the test. Optional, default is all test loops,
+   * The list of scenarios that should be run during the test. The default is all test loops,
    * derived from the application's manifest.
    * The value may be {@code null}.
    */
@@ -106,8 +106,8 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
-   * the application's manifest.
+   * The java package for the application under test. The default is determined by examining the
+   * application's manifest.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppPackageId() {
@@ -115,8 +115,8 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
-   * the application's manifest.
+   * The java package for the application under test. The default is determined by examining the
+   * application's manifest.
    * @param appPackageId appPackageId or {@code null} for none
    */
   public AndroidTestLoop setAppPackageId(java.lang.String appPackageId) {
@@ -128,8 +128,8 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
    * The list of scenario labels that should be run during the test. The scenario labels should map
    * to labels defined in the application's manifest. For example, player_experience and
    * com.google.test.loops.player_experience add all of the loops labeled in the manifest with the
-   * com.google.test.loops.player_experience name to the execution. Optional. Scenarios can also be
-   * specified in the scenarios field.
+   * com.google.test.loops.player_experience name to the execution. Scenarios can also be specified
+   * in the scenarios field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScenarioLabels() {
@@ -140,8 +140,8 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
    * The list of scenario labels that should be run during the test. The scenario labels should map
    * to labels defined in the application's manifest. For example, player_experience and
    * com.google.test.loops.player_experience add all of the loops labeled in the manifest with the
-   * com.google.test.loops.player_experience name to the execution. Optional. Scenarios can also be
-   * specified in the scenarios field.
+   * com.google.test.loops.player_experience name to the execution. Scenarios can also be specified
+   * in the scenarios field.
    * @param scenarioLabels scenarioLabels or {@code null} for none
    */
   public AndroidTestLoop setScenarioLabels(java.util.List<java.lang.String> scenarioLabels) {
@@ -150,7 +150,7 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The list of scenarios that should be run during the test. Optional, default is all test loops,
+   * The list of scenarios that should be run during the test. The default is all test loops,
    * derived from the application's manifest.
    * @return value or {@code null} for none
    */
@@ -159,7 +159,7 @@ public final class AndroidTestLoop extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The list of scenarios that should be run during the test. Optional, default is all test loops,
+   * The list of scenarios that should be run during the test. The default is all test loops,
    * derived from the application's manifest.
    * @param scenarios scenarios or {@code null} for none
    */

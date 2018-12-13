@@ -30,14 +30,14 @@ package com.google.api.services.testing.model;
 public final class Apk extends com.google.api.client.json.GenericJson {
 
   /**
-   * The path to an APK to be installed on the device before the test begins. Optional
+   * The path to an APK to be installed on the device before the test begins.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FileReference location;
 
   /**
-   * The java package for the APK to be installed. Optional, value is determined by examining the
+   * The java package for the APK to be installed. Value is determined by examining the
    * application's manifest.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   private java.lang.String packageName;
 
   /**
-   * The path to an APK to be installed on the device before the test begins. Optional
+   * The path to an APK to be installed on the device before the test begins.
    * @return value or {@code null} for none
    */
   public FileReference getLocation() {
@@ -53,7 +53,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The path to an APK to be installed on the device before the test begins. Optional
+   * The path to an APK to be installed on the device before the test begins.
    * @param location location or {@code null} for none
    */
   public Apk setLocation(FileReference location) {
@@ -62,7 +62,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The java package for the APK to be installed. Optional, value is determined by examining the
+   * The java package for the APK to be installed. Value is determined by examining the
    * application's manifest.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class Apk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The java package for the APK to be installed. Optional, value is determined by examining the
+   * The java package for the APK to be installed. Value is determined by examining the
    * application's manifest.
    * @param packageName packageName or {@code null} for none
    */

@@ -30,36 +30,36 @@ package com.google.api.services.testing.model;
 public final class Locale extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id for this locale. Example: "en_US" @OutputOnly
+   * The id for this locale. Example: "en_US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * A human-friendly name for this language/locale. Example: "English" @OutputOnly
+   * A human-friendly name for this language/locale. Example: "English".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * A human-friendly string representing the region for this locale. Example: "United States" Not
-   * present for every locale. @OutputOnly
+   * A human-friendly string representing the region for this locale. Example: "United States". Not
+   * present for every locale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Tags for this dimension. Examples: "default"
+   * Tags for this dimension. Example: "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * The id for this locale. Example: "en_US" @OutputOnly
+   * The id for this locale. Example: "en_US".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -67,7 +67,7 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The id for this locale. Example: "en_US" @OutputOnly
+   * The id for this locale. Example: "en_US".
    * @param id id or {@code null} for none
    */
   public Locale setId(java.lang.String id) {
@@ -76,7 +76,7 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-friendly name for this language/locale. Example: "English" @OutputOnly
+   * A human-friendly name for this language/locale. Example: "English".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,7 +84,7 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-friendly name for this language/locale. Example: "English" @OutputOnly
+   * A human-friendly name for this language/locale. Example: "English".
    * @param name name or {@code null} for none
    */
   public Locale setName(java.lang.String name) {
@@ -93,8 +93,8 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-friendly string representing the region for this locale. Example: "United States" Not
-   * present for every locale. @OutputOnly
+   * A human-friendly string representing the region for this locale. Example: "United States". Not
+   * present for every locale.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -102,8 +102,8 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A human-friendly string representing the region for this locale. Example: "United States" Not
-   * present for every locale. @OutputOnly
+   * A human-friendly string representing the region for this locale. Example: "United States". Not
+   * present for every locale.
    * @param region region or {@code null} for none
    */
   public Locale setRegion(java.lang.String region) {
@@ -112,7 +112,7 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tags for this dimension. Examples: "default"
+   * Tags for this dimension. Example: "default".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -120,7 +120,7 @@ public final class Locale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tags for this dimension. Examples: "default"
+   * Tags for this dimension. Example: "default".
    * @param tags tags or {@code null} for none
    */
   public Locale setTags(java.util.List<java.lang.String> tags) {

@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class TestEnvironmentCatalog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Android devices suitable for running Android Instrumentation Tests.
+   * Supported Android devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AndroidDeviceCatalog androidDeviceCatalog;
 
   /**
-   * Supported iOS devices
+   * Supported iOS devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IosDeviceCatalog iosDeviceCatalog;
 
   /**
-   * Supported network configurations
+   * Supported network configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   private ProvidedSoftwareCatalog softwareCatalog;
 
   /**
-   * Android devices suitable for running Android Instrumentation Tests.
+   * Supported Android devices.
    * @return value or {@code null} for none
    */
   public AndroidDeviceCatalog getAndroidDeviceCatalog() {
@@ -66,7 +66,7 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   }
 
   /**
-   * Android devices suitable for running Android Instrumentation Tests.
+   * Supported Android devices.
    * @param androidDeviceCatalog androidDeviceCatalog or {@code null} for none
    */
   public TestEnvironmentCatalog setAndroidDeviceCatalog(AndroidDeviceCatalog androidDeviceCatalog) {
@@ -75,7 +75,7 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   }
 
   /**
-   * Supported iOS devices
+   * Supported iOS devices.
    * @return value or {@code null} for none
    */
   public IosDeviceCatalog getIosDeviceCatalog() {
@@ -83,7 +83,7 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   }
 
   /**
-   * Supported iOS devices
+   * Supported iOS devices.
    * @param iosDeviceCatalog iosDeviceCatalog or {@code null} for none
    */
   public TestEnvironmentCatalog setIosDeviceCatalog(IosDeviceCatalog iosDeviceCatalog) {
@@ -92,7 +92,7 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   }
 
   /**
-   * Supported network configurations
+   * Supported network configurations.
    * @return value or {@code null} for none
    */
   public NetworkConfigurationCatalog getNetworkConfigurationCatalog() {
@@ -100,7 +100,7 @@ public final class TestEnvironmentCatalog extends com.google.api.client.json.Gen
   }
 
   /**
-   * Supported network configurations
+   * Supported network configurations.
    * @param networkConfigurationCatalog networkConfigurationCatalog or {@code null} for none
    */
   public TestEnvironmentCatalog setNetworkConfigurationCatalog(NetworkConfigurationCatalog networkConfigurationCatalog) {

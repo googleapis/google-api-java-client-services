@@ -31,7 +31,7 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
 
   /**
    * A string representing the current version of Android Test Orchestrator that is provided by
-   * TestExecutionService. Example: "1.0.2 beta"
+   * TestExecutionService. Example: "1.0.2 beta".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
 
   /**
    * A string representing the current version of Android Test Orchestrator that is provided by
-   * TestExecutionService. Example: "1.0.2 beta"
+   * TestExecutionService. Example: "1.0.2 beta".
    * @return value or {@code null} for none
    */
   public java.lang.String getOrchestratorVersion() {
@@ -48,7 +48,7 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
 
   /**
    * A string representing the current version of Android Test Orchestrator that is provided by
-   * TestExecutionService. Example: "1.0.2 beta"
+   * TestExecutionService. Example: "1.0.2 beta".
    * @param orchestratorVersion orchestratorVersion or {@code null} for none
    */
   public ProvidedSoftwareCatalog setOrchestratorVersion(java.lang.String orchestratorVersion) {

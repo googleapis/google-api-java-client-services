@@ -30,7 +30,7 @@ package com.google.api.services.testing.model;
 public final class AndroidRuntimeConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of available locales. @OutputOnly
+   * The set of available locales.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class AndroidRuntimeConfiguration extends com.google.api.client.jso
   }
 
   /**
-   * The set of available orientations. @OutputOnly
+   * The set of available orientations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class AndroidRuntimeConfiguration extends com.google.api.client.jso
   }
 
   /**
-   * The set of available locales. @OutputOnly
+   * The set of available locales.
    * @return value or {@code null} for none
    */
   public java.util.List<Locale> getLocales() {
@@ -64,7 +64,7 @@ public final class AndroidRuntimeConfiguration extends com.google.api.client.jso
   }
 
   /**
-   * The set of available locales. @OutputOnly
+   * The set of available locales.
    * @param locales locales or {@code null} for none
    */
   public AndroidRuntimeConfiguration setLocales(java.util.List<Locale> locales) {
@@ -73,7 +73,7 @@ public final class AndroidRuntimeConfiguration extends com.google.api.client.jso
   }
 
   /**
-   * The set of available orientations. @OutputOnly
+   * The set of available orientations.
    * @return value or {@code null} for none
    */
   public java.util.List<Orientation> getOrientations() {
@@ -81,7 +81,7 @@ public final class AndroidRuntimeConfiguration extends com.google.api.client.jso
   }
 
   /**
-   * The set of available orientations. @OutputOnly
+   * The set of available orientations.
    * @param orientations orientations or {@code null} for none
    */
   public AndroidRuntimeConfiguration setOrientations(java.util.List<Orientation> orientations) {

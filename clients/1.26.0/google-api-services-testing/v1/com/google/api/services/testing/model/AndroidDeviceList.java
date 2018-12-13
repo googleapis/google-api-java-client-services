@@ -30,7 +30,7 @@ package com.google.api.services.testing.model;
 public final class AndroidDeviceList extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Android devices Required
+   * Required. A list of Android devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class AndroidDeviceList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of Android devices Required
+   * Required. A list of Android devices.
    * @return value or {@code null} for none
    */
   public java.util.List<AndroidDevice> getAndroidDevices() {
@@ -51,7 +51,7 @@ public final class AndroidDeviceList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of Android devices Required
+   * Required. A list of Android devices.
    * @param androidDevices androidDevices or {@code null} for none
    */
   public AndroidDeviceList setAndroidDevices(java.util.List<AndroidDevice> androidDevices) {

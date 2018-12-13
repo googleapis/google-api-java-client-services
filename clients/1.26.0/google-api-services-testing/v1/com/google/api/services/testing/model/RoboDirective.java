@@ -31,7 +31,7 @@ package com.google.api.services.testing.model;
 public final class RoboDirective extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of action that Robo should perform on the specified element. Required.
+   * Required. The type of action that Robo should perform on the specified element.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,23 +39,23 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
 
   /**
    * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK
-   * on the element matching the resource_name. Optional
+   * on the element matching the resource_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputText;
 
   /**
-   * The android resource name of the target UI element For example,    in Java: R.string.foo    in
-   * xml: @string/foo Only the “foo” part is needed. Reference doc:
-   * https://developer.android.com/guide/topics/resources/accessing-resources.html Required
+   * Required. The android resource name of the target UI element. For example,    in Java:
+   * R.string.foo    in xml: @string/foo Only the "foo" part is needed. Reference doc:
+   * https://developer.android.com/guide/topics/resources/accessing-resources.html
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * The type of action that Robo should perform on the specified element. Required.
+   * Required. The type of action that Robo should perform on the specified element.
    * @return value or {@code null} for none
    */
   public java.lang.String getActionType() {
@@ -63,7 +63,7 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of action that Robo should perform on the specified element. Required.
+   * Required. The type of action that Robo should perform on the specified element.
    * @param actionType actionType or {@code null} for none
    */
   public RoboDirective setActionType(java.lang.String actionType) {
@@ -73,7 +73,7 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
 
   /**
    * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK
-   * on the element matching the resource_name. Optional
+   * on the element matching the resource_name.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputText() {
@@ -82,7 +82,7 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
 
   /**
    * The text that Robo is directed to set. If left empty, the directive will be treated as a CLICK
-   * on the element matching the resource_name. Optional
+   * on the element matching the resource_name.
    * @param inputText inputText or {@code null} for none
    */
   public RoboDirective setInputText(java.lang.String inputText) {
@@ -91,9 +91,9 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The android resource name of the target UI element For example,    in Java: R.string.foo    in
-   * xml: @string/foo Only the “foo” part is needed. Reference doc:
-   * https://developer.android.com/guide/topics/resources/accessing-resources.html Required
+   * Required. The android resource name of the target UI element. For example,    in Java:
+   * R.string.foo    in xml: @string/foo Only the "foo" part is needed. Reference doc:
+   * https://developer.android.com/guide/topics/resources/accessing-resources.html
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -101,9 +101,9 @@ public final class RoboDirective extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The android resource name of the target UI element For example,    in Java: R.string.foo    in
-   * xml: @string/foo Only the “foo” part is needed. Reference doc:
-   * https://developer.android.com/guide/topics/resources/accessing-resources.html Required
+   * Required. The android resource name of the target UI element. For example,    in Java:
+   * R.string.foo    in xml: @string/foo Only the "foo" part is needed. Reference doc:
+   * https://developer.android.com/guide/topics/resources/accessing-resources.html
    * @param resourceName resourceName or {@code null} for none
    */
   public RoboDirective setResourceName(java.lang.String resourceName) {

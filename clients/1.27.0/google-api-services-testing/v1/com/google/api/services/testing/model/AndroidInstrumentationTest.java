@@ -49,7 +49,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   private AppBundle appBundle;
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
+   * The java package for the application under test. The default value is determined by examining
    * the application's manifest.
    * The value may be {@code null}.
    */
@@ -66,21 +66,21 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    *
    * for more information about Android Test Orchestrator.
    *
-   * Optional. If not set, the test will be run without the orchestrator.
+   * If not set, the test will be run without the orchestrator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orchestratorOption;
 
   /**
-   * The APK containing the test code to be executed. Required
+   * Required. The APK containing the test code to be executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FileReference testApk;
 
   /**
-   * The java package for the test to be executed. Optional, default is determined by examining the
+   * The java package for the test to be executed. The default value is determined by examining the
    * application's manifest.
    * The value may be {@code null}.
    */
@@ -88,7 +88,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   private java.lang.String testPackageId;
 
   /**
-   * The InstrumentationTestRunner class. Optional, default is determined by examining the
+   * The InstrumentationTestRunner class. The default value is determined by examining the
    * application's manifest.
    * The value may be {@code null}.
    */
@@ -100,7 +100,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * formats:  - "package package_name"  - "class package_name.class_name"  - "class
    * package_name.class_name#method_name"
    *
-   * Optional, if empty, all targets in the module will be run.
+   * If empty, all targets in the module will be run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
+   * The java package for the application under test. The default value is determined by examining
    * the application's manifest.
    * @return value or {@code null} for none
    */
@@ -150,7 +150,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
+   * The java package for the application under test. The default value is determined by examining
    * the application's manifest.
    * @param appPackageId appPackageId or {@code null} for none
    */
@@ -169,7 +169,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    *
    * for more information about Android Test Orchestrator.
    *
-   * Optional. If not set, the test will be run without the orchestrator.
+   * If not set, the test will be run without the orchestrator.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrchestratorOption() {
@@ -186,7 +186,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    *
    * for more information about Android Test Orchestrator.
    *
-   * Optional. If not set, the test will be run without the orchestrator.
+   * If not set, the test will be run without the orchestrator.
    * @param orchestratorOption orchestratorOption or {@code null} for none
    */
   public AndroidInstrumentationTest setOrchestratorOption(java.lang.String orchestratorOption) {
@@ -195,7 +195,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The APK containing the test code to be executed. Required
+   * Required. The APK containing the test code to be executed.
    * @return value or {@code null} for none
    */
   public FileReference getTestApk() {
@@ -203,7 +203,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The APK containing the test code to be executed. Required
+   * Required. The APK containing the test code to be executed.
    * @param testApk testApk or {@code null} for none
    */
   public AndroidInstrumentationTest setTestApk(FileReference testApk) {
@@ -212,7 +212,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The java package for the test to be executed. Optional, default is determined by examining the
+   * The java package for the test to be executed. The default value is determined by examining the
    * application's manifest.
    * @return value or {@code null} for none
    */
@@ -221,7 +221,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The java package for the test to be executed. Optional, default is determined by examining the
+   * The java package for the test to be executed. The default value is determined by examining the
    * application's manifest.
    * @param testPackageId testPackageId or {@code null} for none
    */
@@ -231,7 +231,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The InstrumentationTestRunner class. Optional, default is determined by examining the
+   * The InstrumentationTestRunner class. The default value is determined by examining the
    * application's manifest.
    * @return value or {@code null} for none
    */
@@ -240,7 +240,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
   }
 
   /**
-   * The InstrumentationTestRunner class. Optional, default is determined by examining the
+   * The InstrumentationTestRunner class. The default value is determined by examining the
    * application's manifest.
    * @param testRunnerClass testRunnerClass or {@code null} for none
    */
@@ -254,7 +254,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * formats:  - "package package_name"  - "class package_name.class_name"  - "class
    * package_name.class_name#method_name"
    *
-   * Optional, if empty, all targets in the module will be run.
+   * If empty, all targets in the module will be run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestTargets() {
@@ -266,7 +266,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * formats:  - "package package_name"  - "class package_name.class_name"  - "class
    * package_name.class_name#method_name"
    *
-   * Optional, if empty, all targets in the module will be run.
+   * If empty, all targets in the module will be run.
    * @param testTargets testTargets or {@code null} for none
    */
   public AndroidInstrumentationTest setTestTargets(java.util.List<java.lang.String> testTargets) {

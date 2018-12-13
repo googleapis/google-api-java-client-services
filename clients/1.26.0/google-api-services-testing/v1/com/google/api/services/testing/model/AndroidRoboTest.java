@@ -45,14 +45,14 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   private AppBundle appBundle;
 
   /**
-   * The initial activity that should be used to start the app. Optional
+   * The initial activity that should be used to start the app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appInitialActivity;
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
+   * The java package for the application under test. The default value is determined by examining
    * the application's manifest.
    * The value may be {@code null}.
    */
@@ -61,14 +61,14 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo
-   * explore the app beyond the first activity. Default is 50. Optional
+   * explore the app beyond the first activity. Default is 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxDepth;
 
   /**
-   * The max number of steps Robo can execute. Default is no limit. Optional
+   * The max number of steps Robo can execute. Default is no limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,15 +76,20 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * A set of directives Robo should apply during the crawl. This allows users to customize the
-   * crawl. For example, the username and password for a test account can be provided. Optional
+   * crawl. For example, the username and password for a test account can be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RoboDirective> roboDirectives;
 
+  static {
+    // hack to force ProGuard to consider RoboDirective used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RoboDirective.class);
+  }
+
   /**
    * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
-   * Optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,6 +103,12 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<RoboStartingIntent> startingIntents;
+
+  static {
+    // hack to force ProGuard to consider RoboStartingIntent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RoboStartingIntent.class);
+  }
 
   /**
    * The APK for the application under test.
@@ -134,7 +145,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The initial activity that should be used to start the app. Optional
+   * The initial activity that should be used to start the app.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppInitialActivity() {
@@ -142,7 +153,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The initial activity that should be used to start the app. Optional
+   * The initial activity that should be used to start the app.
    * @param appInitialActivity appInitialActivity or {@code null} for none
    */
   public AndroidRoboTest setAppInitialActivity(java.lang.String appInitialActivity) {
@@ -151,7 +162,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
+   * The java package for the application under test. The default value is determined by examining
    * the application's manifest.
    * @return value or {@code null} for none
    */
@@ -160,7 +171,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The java package for the application under test. Optional, default is determined by examining
+   * The java package for the application under test. The default value is determined by examining
    * the application's manifest.
    * @param appPackageId appPackageId or {@code null} for none
    */
@@ -171,7 +182,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo
-   * explore the app beyond the first activity. Default is 50. Optional
+   * explore the app beyond the first activity. Default is 50.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDepth() {
@@ -180,7 +191,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo
-   * explore the app beyond the first activity. Default is 50. Optional
+   * explore the app beyond the first activity. Default is 50.
    * @param maxDepth maxDepth or {@code null} for none
    */
   public AndroidRoboTest setMaxDepth(java.lang.Integer maxDepth) {
@@ -189,7 +200,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The max number of steps Robo can execute. Default is no limit. Optional
+   * The max number of steps Robo can execute. Default is no limit.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSteps() {
@@ -197,7 +208,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The max number of steps Robo can execute. Default is no limit. Optional
+   * The max number of steps Robo can execute. Default is no limit.
    * @param maxSteps maxSteps or {@code null} for none
    */
   public AndroidRoboTest setMaxSteps(java.lang.Integer maxSteps) {
@@ -207,7 +218,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * A set of directives Robo should apply during the crawl. This allows users to customize the
-   * crawl. For example, the username and password for a test account can be provided. Optional
+   * crawl. For example, the username and password for a test account can be provided.
    * @return value or {@code null} for none
    */
   public java.util.List<RoboDirective> getRoboDirectives() {
@@ -216,7 +227,7 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * A set of directives Robo should apply during the crawl. This allows users to customize the
-   * crawl. For example, the username and password for a test account can be provided. Optional
+   * crawl. For example, the username and password for a test account can be provided.
    * @param roboDirectives roboDirectives or {@code null} for none
    */
   public AndroidRoboTest setRoboDirectives(java.util.List<RoboDirective> roboDirectives) {
@@ -226,7 +237,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
-   * Optional
    * @return value or {@code null} for none
    */
   public FileReference getRoboScript() {
@@ -235,7 +245,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
 
   /**
    * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
-   * Optional
    * @param roboScript roboScript or {@code null} for none
    */
   public AndroidRoboTest setRoboScript(FileReference roboScript) {

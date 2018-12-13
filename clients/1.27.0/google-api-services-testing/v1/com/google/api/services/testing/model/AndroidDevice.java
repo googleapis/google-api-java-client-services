@@ -30,40 +30,40 @@ package com.google.api.services.testing.model;
 public final class AndroidDevice extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the Android device to be used. Use the EnvironmentDiscoveryService to get supported
-   * options. Required
+   * Required. The id of the Android device to be used. Use the EnvironmentDiscoveryService to get
+   * supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String androidModelId;
 
   /**
-   * The id of the Android OS version to be used. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. The id of the Android OS version to be used. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String androidVersionId;
 
   /**
-   * The locale the test device used for testing. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. The locale the test device used for testing. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locale;
 
   /**
-   * How the device is oriented during the test. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. How the device is oriented during the test. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orientation;
 
   /**
-   * The id of the Android device to be used. Use the EnvironmentDiscoveryService to get supported
-   * options. Required
+   * Required. The id of the Android device to be used. Use the EnvironmentDiscoveryService to get
+   * supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getAndroidModelId() {
@@ -71,8 +71,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the Android device to be used. Use the EnvironmentDiscoveryService to get supported
-   * options. Required
+   * Required. The id of the Android device to be used. Use the EnvironmentDiscoveryService to get
+   * supported options.
    * @param androidModelId androidModelId or {@code null} for none
    */
   public AndroidDevice setAndroidModelId(java.lang.String androidModelId) {
@@ -81,8 +81,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the Android OS version to be used. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. The id of the Android OS version to be used. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getAndroidVersionId() {
@@ -90,8 +90,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the Android OS version to be used. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. The id of the Android OS version to be used. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * @param androidVersionId androidVersionId or {@code null} for none
    */
   public AndroidDevice setAndroidVersionId(java.lang.String androidVersionId) {
@@ -100,8 +100,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The locale the test device used for testing. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. The locale the test device used for testing. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -109,8 +109,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The locale the test device used for testing. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. The locale the test device used for testing. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * @param locale locale or {@code null} for none
    */
   public AndroidDevice setLocale(java.lang.String locale) {
@@ -119,8 +119,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How the device is oriented during the test. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. How the device is oriented during the test. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrientation() {
@@ -128,8 +128,8 @@ public final class AndroidDevice extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * How the device is oriented during the test. Use the EnvironmentDiscoveryService to get
-   * supported options. Required
+   * Required. How the device is oriented during the test. Use the EnvironmentDiscoveryService to
+   * get supported options.
    * @param orientation orientation or {@code null} for none
    */
   public AndroidDevice setOrientation(java.lang.String orientation) {

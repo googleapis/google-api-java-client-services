@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * A file or directory to install on the device before the test starts
+ * A file or directory to install on the device before the test starts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,15 +30,15 @@ package com.google.api.services.testing.model;
 public final class RegularFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required
+   * Required. The source file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FileReference content;
 
   /**
-   * Where to put the content on the device. Must be an absolute, whitelisted path. If the file
-   * exists, it will be replaced. The following device-side directories and any of their
+   * Required. Where to put the content on the device. Must be an absolute, whitelisted path. If the
+   * file exists, it will be replaced. The following device-side directories and any of their
    * subdirectories are whitelisted: ${EXTERNAL_STORAGE}, or /sdcard ${ANDROID_DATA}/local/tmp, or
    * /data/local/tmp Specifying a path outside of these directory trees is invalid.
    *
@@ -47,14 +47,14 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
    * replace it with the external storage path prefix for that device and copy the file there.
    *
    *  It is strongly advised to use the  Environment API in app and test code to access files on the
-   * device in a portable way. Required
+   * device in a portable way.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String devicePath;
 
   /**
-   * Required
+   * Required. The source file.
    * @return value or {@code null} for none
    */
   public FileReference getContent() {
@@ -62,7 +62,7 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required
+   * Required. The source file.
    * @param content content or {@code null} for none
    */
   public RegularFile setContent(FileReference content) {
@@ -71,8 +71,8 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Where to put the content on the device. Must be an absolute, whitelisted path. If the file
-   * exists, it will be replaced. The following device-side directories and any of their
+   * Required. Where to put the content on the device. Must be an absolute, whitelisted path. If the
+   * file exists, it will be replaced. The following device-side directories and any of their
    * subdirectories are whitelisted: ${EXTERNAL_STORAGE}, or /sdcard ${ANDROID_DATA}/local/tmp, or
    * /data/local/tmp Specifying a path outside of these directory trees is invalid.
    *
@@ -81,7 +81,7 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
    * replace it with the external storage path prefix for that device and copy the file there.
    *
    *  It is strongly advised to use the  Environment API in app and test code to access files on the
-   * device in a portable way. Required
+   * device in a portable way.
    * @return value or {@code null} for none
    */
   public java.lang.String getDevicePath() {
@@ -89,8 +89,8 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Where to put the content on the device. Must be an absolute, whitelisted path. If the file
-   * exists, it will be replaced. The following device-side directories and any of their
+   * Required. Where to put the content on the device. Must be an absolute, whitelisted path. If the
+   * file exists, it will be replaced. The following device-side directories and any of their
    * subdirectories are whitelisted: ${EXTERNAL_STORAGE}, or /sdcard ${ANDROID_DATA}/local/tmp, or
    * /data/local/tmp Specifying a path outside of these directory trees is invalid.
    *
@@ -99,7 +99,7 @@ public final class RegularFile extends com.google.api.client.json.GenericJson {
    * replace it with the external storage path prefix for that device and copy the file there.
    *
    *  It is strongly advised to use the  Environment API in app and test code to access files on the
-   * device in a portable way. Required
+   * device in a portable way.
    * @param devicePath devicePath or {@code null} for none
    */
   public RegularFile setDevicePath(java.lang.String devicePath) {

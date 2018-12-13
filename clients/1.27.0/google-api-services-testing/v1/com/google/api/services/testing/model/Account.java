@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * Identifies an account and how to log into it
+ * Identifies an account and how to log into it.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.testing.model;
 public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
-   * An automatic google login account
+   * An automatic google login account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAuto googleAuto;
 
   /**
-   * An automatic google login account
+   * An automatic google login account.
    * @return value or {@code null} for none
    */
   public GoogleAuto getGoogleAuto() {
@@ -45,7 +45,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An automatic google login account
+   * An automatic google login account.
    * @param googleAuto googleAuto or {@code null} for none
    */
   public Account setGoogleAuto(GoogleAuto googleAuto) {

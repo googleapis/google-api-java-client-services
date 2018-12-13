@@ -31,28 +31,28 @@ package com.google.api.services.testing.model;
 public final class IntentFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The android:name value of the  tag
+   * The android:name value of the  tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> actionNames;
 
   /**
-   * The android:name value of the  tag
+   * The android:name value of the  tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> categoryNames;
 
   /**
-   * The android:mimeType value of the  tag
+   * The android:mimeType value of the  tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * The android:name value of the  tag
+   * The android:name value of the  tag.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getActionNames() {
@@ -60,7 +60,7 @@ public final class IntentFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The android:name value of the  tag
+   * The android:name value of the  tag.
    * @param actionNames actionNames or {@code null} for none
    */
   public IntentFilter setActionNames(java.util.List<java.lang.String> actionNames) {
@@ -69,7 +69,7 @@ public final class IntentFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The android:name value of the  tag
+   * The android:name value of the  tag.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategoryNames() {
@@ -77,7 +77,7 @@ public final class IntentFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The android:name value of the  tag
+   * The android:name value of the  tag.
    * @param categoryNames categoryNames or {@code null} for none
    */
   public IntentFilter setCategoryNames(java.util.List<java.lang.String> categoryNames) {
@@ -86,7 +86,7 @@ public final class IntentFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The android:mimeType value of the  tag
+   * The android:mimeType value of the  tag.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -94,7 +94,7 @@ public final class IntentFilter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The android:mimeType value of the  tag
+   * The android:mimeType value of the  tag.
    * @param mimeType mimeType or {@code null} for none
    */
   public IntentFilter setMimeType(java.lang.String mimeType) {

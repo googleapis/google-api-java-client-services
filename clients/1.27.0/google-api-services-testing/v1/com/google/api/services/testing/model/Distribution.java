@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class Distribution extends com.google.api.client.json.GenericJson {
 
   /**
-   * The estimated fraction (0-1) of the total market with this configuration. @OutputOnly
+   * Output only. The estimated fraction (0-1) of the total market with this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double marketShare;
 
   /**
-   * The time this distribution was measured. @OutputOnly
+   * Output only. The time this distribution was measured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String measurementTime;
 
   /**
-   * The estimated fraction (0-1) of the total market with this configuration. @OutputOnly
+   * Output only. The estimated fraction (0-1) of the total market with this configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMarketShare() {
@@ -52,7 +52,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The estimated fraction (0-1) of the total market with this configuration. @OutputOnly
+   * Output only. The estimated fraction (0-1) of the total market with this configuration.
    * @param marketShare marketShare or {@code null} for none
    */
   public Distribution setMarketShare(java.lang.Double marketShare) {
@@ -61,7 +61,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time this distribution was measured. @OutputOnly
+   * Output only. The time this distribution was measured.
    * @return value or {@code null} for none
    */
   public String getMeasurementTime() {
@@ -69,7 +69,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time this distribution was measured. @OutputOnly
+   * Output only. The time this distribution was measured.
    * @param measurementTime measurementTime or {@code null} for none
    */
   public Distribution setMeasurementTime(String measurementTime) {

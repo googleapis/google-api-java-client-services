@@ -37,7 +37,7 @@ public final class ClientInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<ClientInfoDetail> clientInfoDetails;
 
   /**
-   * Client name, such as gcloud. Required
+   * Required. Client name, such as gcloud.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ClientInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client name, such as gcloud. Required
+   * Required. Client name, such as gcloud.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +69,7 @@ public final class ClientInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client name, such as gcloud. Required
+   * Required. Client name, such as gcloud.
    * @param name name or {@code null} for none
    */
   public ClientInfo setName(java.lang.String name) {

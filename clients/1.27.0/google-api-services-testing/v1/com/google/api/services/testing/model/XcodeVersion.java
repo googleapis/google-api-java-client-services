@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class XcodeVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Tags for this Xcode version. Examples: "default"
+   * Tags for this Xcode version. Example: "default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Output only. The id for this version. Example: "9.2"
+   * The id for this version. Example: "9.2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Output only. Tags for this Xcode version. Examples: "default"
+   * Tags for this Xcode version. Example: "default".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -52,7 +52,7 @@ public final class XcodeVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Tags for this Xcode version. Examples: "default"
+   * Tags for this Xcode version. Example: "default".
    * @param tags tags or {@code null} for none
    */
   public XcodeVersion setTags(java.util.List<java.lang.String> tags) {
@@ -61,7 +61,7 @@ public final class XcodeVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The id for this version. Example: "9.2"
+   * The id for this version. Example: "9.2".
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -69,7 +69,7 @@ public final class XcodeVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The id for this version. Example: "9.2"
+   * The id for this version. Example: "9.2".
    * @param version version or {@code null} for none
    */
   public XcodeVersion setVersion(java.lang.String version) {

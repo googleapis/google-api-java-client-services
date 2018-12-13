@@ -30,16 +30,16 @@ package com.google.api.services.testing.model;
 public final class GoogleCloudStorage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The path to a directory in GCS that will eventually contain the results for this test. The
-   * requesting user must have write access on the bucket in the supplied path. Required
+   * Required. The path to a directory in GCS that will eventually contain the results for this
+   * test. The requesting user must have write access on the bucket in the supplied path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsPath;
 
   /**
-   * The path to a directory in GCS that will eventually contain the results for this test. The
-   * requesting user must have write access on the bucket in the supplied path. Required
+   * Required. The path to a directory in GCS that will eventually contain the results for this
+   * test. The requesting user must have write access on the bucket in the supplied path.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsPath() {
@@ -47,8 +47,8 @@ public final class GoogleCloudStorage extends com.google.api.client.json.Generic
   }
 
   /**
-   * The path to a directory in GCS that will eventually contain the results for this test. The
-   * requesting user must have write access on the bucket in the supplied path. Required
+   * Required. The path to a directory in GCS that will eventually contain the results for this
+   * test. The requesting user must have write access on the bucket in the supplied path.
    * @param gcsPath gcsPath or {@code null} for none
    */
   public GoogleCloudStorage setGcsPath(java.lang.String gcsPath) {

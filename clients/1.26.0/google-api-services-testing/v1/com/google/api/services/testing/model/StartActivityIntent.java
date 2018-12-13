@@ -37,14 +37,14 @@ public final class StartActivityIntent extends com.google.api.client.json.Generi
   private java.lang.String action;
 
   /**
-   * Intent categories to set on the intent. Optional.
+   * Intent categories to set on the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> categories;
 
   /**
-   * URI for the action. Optional.
+   * URI for the action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class StartActivityIntent extends com.google.api.client.json.Generi
   }
 
   /**
-   * Intent categories to set on the intent. Optional.
+   * Intent categories to set on the intent.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategories() {
@@ -76,7 +76,7 @@ public final class StartActivityIntent extends com.google.api.client.json.Generi
   }
 
   /**
-   * Intent categories to set on the intent. Optional.
+   * Intent categories to set on the intent.
    * @param categories categories or {@code null} for none
    */
   public StartActivityIntent setCategories(java.util.List<java.lang.String> categories) {
@@ -85,7 +85,7 @@ public final class StartActivityIntent extends com.google.api.client.json.Generi
   }
 
   /**
-   * URI for the action. Optional.
+   * URI for the action.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -93,7 +93,7 @@ public final class StartActivityIntent extends com.google.api.client.json.Generi
   }
 
   /**
-   * URI for the action. Optional.
+   * URI for the action.
    * @param uri uri or {@code null} for none
    */
   public StartActivityIntent setUri(java.lang.String uri) {

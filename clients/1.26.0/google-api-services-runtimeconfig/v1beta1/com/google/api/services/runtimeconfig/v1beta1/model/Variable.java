@@ -79,8 +79,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The binary value of the variable. The length of the value must be less than 4096 bytes. Empty
-   * values are also accepted. The value must be base64 encoded. Only one of `value` or `text` can
-   * be set.
+   * values are also accepted. The value must be base64 encoded, and must comply with IETF RFC4648
+   * (https://www.ietf.org/rfc/rfc4648.txt). Only one of `value` or `text` can be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,8 +188,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The binary value of the variable. The length of the value must be less than 4096 bytes. Empty
-   * values are also accepted. The value must be base64 encoded. Only one of `value` or `text` can
-   * be set.
+   * values are also accepted. The value must be base64 encoded, and must comply with IETF RFC4648
+   * (https://www.ietf.org/rfc/rfc4648.txt). Only one of `value` or `text` can be set.
    * @see #decodeValue()
    * @return value or {@code null} for none
    */
@@ -199,8 +199,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The binary value of the variable. The length of the value must be less than 4096 bytes. Empty
-   * values are also accepted. The value must be base64 encoded. Only one of `value` or `text` can
-   * be set.
+   * values are also accepted. The value must be base64 encoded, and must comply with IETF RFC4648
+   * (https://www.ietf.org/rfc/rfc4648.txt). Only one of `value` or `text` can be set.
    * @see #getValue()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -212,8 +212,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The binary value of the variable. The length of the value must be less than 4096 bytes. Empty
-   * values are also accepted. The value must be base64 encoded. Only one of `value` or `text` can
-   * be set.
+   * values are also accepted. The value must be base64 encoded, and must comply with IETF RFC4648
+   * (https://www.ietf.org/rfc/rfc4648.txt). Only one of `value` or `text` can be set.
    * @see #encodeValue()
    * @param value value or {@code null} for none
    */
@@ -224,8 +224,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
 
   /**
    * The binary value of the variable. The length of the value must be less than 4096 bytes. Empty
-   * values are also accepted. The value must be base64 encoded. Only one of `value` or `text` can
-   * be set.
+   * values are also accepted. The value must be base64 encoded, and must comply with IETF RFC4648
+   * (https://www.ietf.org/rfc/rfc4648.txt). Only one of `value` or `text` can be set.
    * @see #setValue()
    *
    * <p>

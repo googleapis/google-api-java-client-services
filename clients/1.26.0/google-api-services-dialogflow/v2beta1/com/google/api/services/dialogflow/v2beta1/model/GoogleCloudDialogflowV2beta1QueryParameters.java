@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Context> contexts;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1Context used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1Context.class);
+  }
+
   /**
    * Optional. The geo location of this conversational query.
    * The value may be {@code null}.
@@ -83,6 +89,12 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> sessionEntityTypes;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1SessionEntityType used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1SessionEntityType.class);
+  }
 
   /**
    * Optional. The time zone of this conversational query from the [time zone

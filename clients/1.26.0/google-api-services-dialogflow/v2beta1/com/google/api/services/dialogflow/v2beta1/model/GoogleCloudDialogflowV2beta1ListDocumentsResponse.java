@@ -36,12 +36,6 @@ public final class GoogleCloudDialogflowV2beta1ListDocumentsResponse extends com
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Document> documents;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1Document used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1Document.class);
-  }
-
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.

@@ -37,6 +37,12 @@ public final class GoogleCloudDialogflowV2SearchAgentsResponse extends com.googl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2Agent> agents;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2Agent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2Agent.class);
+  }
+
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.

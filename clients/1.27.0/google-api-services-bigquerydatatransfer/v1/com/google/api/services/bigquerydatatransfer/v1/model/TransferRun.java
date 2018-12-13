@@ -121,10 +121,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Output only. Unique ID of the user on whose behalf transfer is done. Applicable only to data
-   * sources that do not support service accounts. When set to 0, the data source service account
-   * credentials are used. May be negative. Note, that this identifier is not stable. It may change
-   * over time even for the same user.
+   * Deprecated. Unique ID of the user on whose behalf transfer is done.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -347,10 +344,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Unique ID of the user on whose behalf transfer is done. Applicable only to data
-   * sources that do not support service accounts. When set to 0, the data source service account
-   * credentials are used. May be negative. Note, that this identifier is not stable. It may change
-   * over time even for the same user.
+   * Deprecated. Unique ID of the user on whose behalf transfer is done.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserId() {
@@ -358,10 +352,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Unique ID of the user on whose behalf transfer is done. Applicable only to data
-   * sources that do not support service accounts. When set to 0, the data source service account
-   * credentials are used. May be negative. Note, that this identifier is not stable. It may change
-   * over time even for the same user.
+   * Deprecated. Unique ID of the user on whose behalf transfer is done.
    * @param userId userId or {@code null} for none
    */
   public TransferRun setUserId(java.lang.Long userId) {

@@ -30,6 +30,13 @@ package com.google.api.services.androidenterprise.model;
 public final class ProductPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * The auto install policy for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoInstallPolicy autoInstallPolicy;
+
+  /**
    * The ID of the product. For example, "app:com.google.android.gm".
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tracks;
+
+  /**
+   * The auto install policy for the product.
+   * @return value or {@code null} for none
+   */
+  public AutoInstallPolicy getAutoInstallPolicy() {
+    return autoInstallPolicy;
+  }
+
+  /**
+   * The auto install policy for the product.
+   * @param autoInstallPolicy autoInstallPolicy or {@code null} for none
+   */
+  public ProductPolicy setAutoInstallPolicy(AutoInstallPolicy autoInstallPolicy) {
+    this.autoInstallPolicy = autoInstallPolicy;
+    return this;
+  }
 
   /**
    * The ID of the product. For example, "app:com.google.android.gm".

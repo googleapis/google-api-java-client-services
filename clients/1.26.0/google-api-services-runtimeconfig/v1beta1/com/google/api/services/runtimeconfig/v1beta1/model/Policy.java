@@ -58,12 +58,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Binding> bindings;
 
-  static {
-    // hack to force ProGuard to consider Binding used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Binding.class);
-  }
-
   /**
    * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates
    * of a policy from overwriting each other. It is strongly suggested that systems make use of the

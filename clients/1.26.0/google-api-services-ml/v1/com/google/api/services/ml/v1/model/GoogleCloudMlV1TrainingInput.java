@@ -150,8 +150,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String region;
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for training.  If not set, Google Cloud ML
-   * will choose a stable version, which is defined in the documentation of runtime version list.
+   * Optional. The Cloud ML Engine runtime version to use for training. If not set, Cloud ML Engine
+   * uses the default stable version, 1.0. For more information, see the runtime version list and
+   * how to manage runtime versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -451,8 +452,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for training.  If not set, Google Cloud ML
-   * will choose a stable version, which is defined in the documentation of runtime version list.
+   * Optional. The Cloud ML Engine runtime version to use for training. If not set, Cloud ML Engine
+   * uses the default stable version, 1.0. For more information, see the runtime version list and
+   * how to manage runtime versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -460,8 +462,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for training.  If not set, Google Cloud ML
-   * will choose a stable version, which is defined in the documentation of runtime version list.
+   * Optional. The Cloud ML Engine runtime version to use for training. If not set, Cloud ML Engine
+   * uses the default stable version, 1.0. For more information, see the runtime version list and
+   * how to manage runtime versions.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRuntimeVersion(java.lang.String runtimeVersion) {

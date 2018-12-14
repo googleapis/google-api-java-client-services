@@ -170,8 +170,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String pythonVersion;
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for this deployment. If not set, Google
-   * Cloud ML will choose a version.
+   * Optional. The Cloud ML Engine runtime version to use for this deployment. If not set, Cloud ML
+   * Engine uses the default stable version, 1.0. For more information, see the [runtime version
+   * list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
+   * engine/docs/versioning).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -533,8 +535,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for this deployment. If not set, Google
-   * Cloud ML will choose a version.
+   * Optional. The Cloud ML Engine runtime version to use for this deployment. If not set, Cloud ML
+   * Engine uses the default stable version, 1.0. For more information, see the [runtime version
+   * list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
+   * engine/docs/versioning).
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -542,8 +546,10 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for this deployment. If not set, Google
-   * Cloud ML will choose a version.
+   * Optional. The Cloud ML Engine runtime version to use for this deployment. If not set, Cloud ML
+   * Engine uses the default stable version, 1.0. For more information, see the [runtime version
+   * list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
+   * engine/docs/versioning).
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1Version setRuntimeVersion(java.lang.String runtimeVersion) {

@@ -17,7 +17,7 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Represents input parameters for a prediction job. Next field: 19
+ * Represents input parameters for a prediction job. Next field: 20
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
@@ -101,8 +101,8 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   private java.lang.String region;
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for this batch prediction. If not set,
-   * Google Cloud ML will pick the runtime version used during the CreateVersion request for this
+   * Optional. The Cloud ML Engine runtime version to use for this batch prediction. If not set,
+   * Cloud ML Engine will pick the runtime version used during the CreateVersion request for this
    * model version, or choose the latest stable version when model version information is not
    * available such as when the model is specified by uri.
    * The value may be {@code null}.
@@ -307,8 +307,8 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   }
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for this batch prediction. If not set,
-   * Google Cloud ML will pick the runtime version used during the CreateVersion request for this
+   * Optional. The Cloud ML Engine runtime version to use for this batch prediction. If not set,
+   * Cloud ML Engine will pick the runtime version used during the CreateVersion request for this
    * model version, or choose the latest stable version when model version information is not
    * available such as when the model is specified by uri.
    * @return value or {@code null} for none
@@ -318,8 +318,8 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   }
 
   /**
-   * Optional. The Google Cloud ML runtime version to use for this batch prediction. If not set,
-   * Google Cloud ML will pick the runtime version used during the CreateVersion request for this
+   * Optional. The Cloud ML Engine runtime version to use for this batch prediction. If not set,
+   * Cloud ML Engine will pick the runtime version used during the CreateVersion request for this
    * model version, or choose the latest stable version when model version information is not
    * available such as when the model is specified by uri.
    * @param runtimeVersion runtimeVersion or {@code null} for none

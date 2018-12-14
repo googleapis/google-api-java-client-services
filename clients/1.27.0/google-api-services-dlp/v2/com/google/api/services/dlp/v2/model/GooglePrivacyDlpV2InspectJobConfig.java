@@ -37,12 +37,6 @@ public final class GooglePrivacyDlpV2InspectJobConfig extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2Action> actions;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2Action used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Action.class);
-  }
-
   /**
    * How and what to scan for.
    * The value may be {@code null}.

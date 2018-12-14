@@ -39,7 +39,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist
-   * of between 3 and 50 characters.
+   * of between 3 and 50 characters..
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,12 +51,6 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<OrderedJob> jobs;
-
-  static {
-    // hack to force ProGuard to consider OrderedJob used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(OrderedJob.class);
-  }
 
   /**
    * Optional. The labels to associate with this template. These labels will be propagated to all
@@ -133,7 +127,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist
-   * of between 3 and 50 characters.
+   * of between 3 and 50 characters..
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -143,7 +137,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Required. The template id.The id must contain only letters (a-z, A-Z), numbers (0-9),
    * underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist
-   * of between 3 and 50 characters.
+   * of between 3 and 50 characters..
    * @param id id or {@code null} for none
    */
   public WorkflowTemplate setId(java.lang.String id) {

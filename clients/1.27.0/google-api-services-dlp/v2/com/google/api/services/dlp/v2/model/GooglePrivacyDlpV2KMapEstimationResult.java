@@ -42,6 +42,12 @@ public final class GooglePrivacyDlpV2KMapEstimationResult extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2KMapEstimationHistogramBucket> kMapEstimationHistogram;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2KMapEstimationHistogramBucket used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2KMapEstimationHistogramBucket.class);
+  }
+
   /**
    * The intervals [min_anonymity, max_anonymity] do not overlap. If a value doesn't correspond to
    * any such interval, the associated frequency is zero. For example, the following records:

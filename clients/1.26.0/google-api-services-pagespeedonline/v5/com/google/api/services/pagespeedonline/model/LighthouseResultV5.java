@@ -48,13 +48,7 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, LighthouseCategoryV5> categories;
-
-  static {
-    // hack to force ProGuard to consider LighthouseCategoryV5 used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LighthouseCategoryV5.class);
-  }
+  private Categories categories;
 
   /**
    * Map of category groups in the LHR.
@@ -168,7 +162,7 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    * Map of categories in the LHR.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, LighthouseCategoryV5> getCategories() {
+  public Categories getCategories() {
     return categories;
   }
 
@@ -176,7 +170,7 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    * Map of categories in the LHR.
    * @param categories categories or {@code null} for none
    */
-  public LighthouseResultV5 setCategories(java.util.Map<String, LighthouseCategoryV5> categories) {
+  public LighthouseResultV5 setCategories(Categories categories) {
     this.categories = categories;
     return this;
   }
@@ -395,6 +389,143 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   @Override
   public LighthouseResultV5 clone() {
     return (LighthouseResultV5) super.clone();
+  }
+
+  /**
+   * Map of categories in the LHR.
+   */
+  public static final class Categories extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The accessibility category, containing all accessibility related audits.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private LighthouseCategoryV5 accessibility;
+
+    /**
+     * The best practices category, containing all web best practice related audits.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key("best-practices")
+    private LighthouseCategoryV5 bestPractices;
+
+    /**
+     * The performance category, containing all performance related audits.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private LighthouseCategoryV5 performance;
+
+    /**
+     * The Progressive-Web-App (PWA) category, containing all pwa related audits.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private LighthouseCategoryV5 pwa;
+
+    /**
+     * The Search-Engine-Optimization (SEO) category, containing all seo related audits.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private LighthouseCategoryV5 seo;
+
+    /**
+     * The accessibility category, containing all accessibility related audits.
+     * @return value or {@code null} for none
+     */
+    public LighthouseCategoryV5 getAccessibility() {
+      return accessibility;
+    }
+
+    /**
+     * The accessibility category, containing all accessibility related audits.
+     * @param accessibility accessibility or {@code null} for none
+     */
+    public Categories setAccessibility(LighthouseCategoryV5 accessibility) {
+      this.accessibility = accessibility;
+      return this;
+    }
+
+    /**
+     * The best practices category, containing all web best practice related audits.
+     * @return value or {@code null} for none
+     */
+    public LighthouseCategoryV5 getBestPractices() {
+      return bestPractices;
+    }
+
+    /**
+     * The best practices category, containing all web best practice related audits.
+     * @param bestPractices bestPractices or {@code null} for none
+     */
+    public Categories setBestPractices(LighthouseCategoryV5 bestPractices) {
+      this.bestPractices = bestPractices;
+      return this;
+    }
+
+    /**
+     * The performance category, containing all performance related audits.
+     * @return value or {@code null} for none
+     */
+    public LighthouseCategoryV5 getPerformance() {
+      return performance;
+    }
+
+    /**
+     * The performance category, containing all performance related audits.
+     * @param performance performance or {@code null} for none
+     */
+    public Categories setPerformance(LighthouseCategoryV5 performance) {
+      this.performance = performance;
+      return this;
+    }
+
+    /**
+     * The Progressive-Web-App (PWA) category, containing all pwa related audits.
+     * @return value or {@code null} for none
+     */
+    public LighthouseCategoryV5 getPwa() {
+      return pwa;
+    }
+
+    /**
+     * The Progressive-Web-App (PWA) category, containing all pwa related audits.
+     * @param pwa pwa or {@code null} for none
+     */
+    public Categories setPwa(LighthouseCategoryV5 pwa) {
+      this.pwa = pwa;
+      return this;
+    }
+
+    /**
+     * The Search-Engine-Optimization (SEO) category, containing all seo related audits.
+     * @return value or {@code null} for none
+     */
+    public LighthouseCategoryV5 getSeo() {
+      return seo;
+    }
+
+    /**
+     * The Search-Engine-Optimization (SEO) category, containing all seo related audits.
+     * @param seo seo or {@code null} for none
+     */
+    public Categories setSeo(LighthouseCategoryV5 seo) {
+      this.seo = seo;
+      return this;
+    }
+
+    @Override
+    public Categories set(String fieldName, Object value) {
+      return (Categories) super.set(fieldName, value);
+    }
+
+    @Override
+    public Categories clone() {
+      return (Categories) super.clone();
+    }
+
   }
 
   /**

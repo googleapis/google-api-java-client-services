@@ -73,6 +73,12 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MetricRule> metricRules;
 
+  static {
+    // hack to force ProGuard to consider MetricRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricRule.class);
+  }
+
   /**
    * List of `QuotaLimit` definitions for the service.
    * @return value or {@code null} for none

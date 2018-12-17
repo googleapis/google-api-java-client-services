@@ -40,12 +40,6 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<PolicyBinding> policyBindings;
 
-  static {
-    // hack to force ProGuard to consider PolicyBinding used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PolicyBinding.class);
-  }
-
   /**
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
    * granted to the Service Consumer Management service account. At least one binding must have the

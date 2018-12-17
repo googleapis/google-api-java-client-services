@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class XpnResourceId extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the service resource. In the case of projects, this field matches the project ID
-   * (e.g., my-project), not the project number (e.g., 12345678).
+   * The ID of the service resource. In the case of projects, this field supports project id (e.g.,
+   * my-project-123) and project number (e.g. 12345678).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class XpnResourceId extends com.google.api.client.json.GenericJson 
   private java.lang.String type;
 
   /**
-   * The ID of the service resource. In the case of projects, this field matches the project ID
-   * (e.g., my-project), not the project number (e.g., 12345678).
+   * The ID of the service resource. In the case of projects, this field supports project id (e.g.,
+   * my-project-123) and project number (e.g. 12345678).
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -54,8 +54,8 @@ public final class XpnResourceId extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The ID of the service resource. In the case of projects, this field matches the project ID
-   * (e.g., my-project), not the project number (e.g., 12345678).
+   * The ID of the service resource. In the case of projects, this field supports project id (e.g.,
+   * my-project-123) and project number (e.g. 12345678).
    * @param id id or {@code null} for none
    */
   public XpnResourceId setId(java.lang.String id) {

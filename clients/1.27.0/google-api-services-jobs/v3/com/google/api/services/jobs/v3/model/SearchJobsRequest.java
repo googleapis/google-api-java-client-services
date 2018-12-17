@@ -59,6 +59,21 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   /**
    * Optional.
    *
+   * Controls whether highly similar jobs are returned next to each other in the search results.
+   * Jobs are identified as highly similar based on their titles, job categories, and locations.
+   * Highly similar results are clustered so that only one representative job of the cluster is
+   * displayed to the job seeker higher up in the results, with the other jobs being displayed lower
+   * down in the results.
+   *
+   * Defaults to DiversificationLevel.SIMPLE if no value is specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String diversificationLevel;
+
+  /**
+   * Optional.
+   *
    * Controls whether to broaden the search when it produces sparse results. Broadened queries
    * append results to the end of the matching results list.
    *
@@ -246,6 +261,39 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    */
   public SearchJobsRequest setDisableKeywordMatch(java.lang.Boolean disableKeywordMatch) {
     this.disableKeywordMatch = disableKeywordMatch;
+    return this;
+  }
+
+  /**
+   * Optional.
+   *
+   * Controls whether highly similar jobs are returned next to each other in the search results.
+   * Jobs are identified as highly similar based on their titles, job categories, and locations.
+   * Highly similar results are clustered so that only one representative job of the cluster is
+   * displayed to the job seeker higher up in the results, with the other jobs being displayed lower
+   * down in the results.
+   *
+   * Defaults to DiversificationLevel.SIMPLE if no value is specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiversificationLevel() {
+    return diversificationLevel;
+  }
+
+  /**
+   * Optional.
+   *
+   * Controls whether highly similar jobs are returned next to each other in the search results.
+   * Jobs are identified as highly similar based on their titles, job categories, and locations.
+   * Highly similar results are clustered so that only one representative job of the cluster is
+   * displayed to the job seeker higher up in the results, with the other jobs being displayed lower
+   * down in the results.
+   *
+   * Defaults to DiversificationLevel.SIMPLE if no value is specified.
+   * @param diversificationLevel diversificationLevel or {@code null} for none
+   */
+  public SearchJobsRequest setDiversificationLevel(java.lang.String diversificationLevel) {
+    this.diversificationLevel = diversificationLevel;
     return this;
   }
 

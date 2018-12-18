@@ -136,6 +136,12 @@ public final class Build extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Secret> secrets;
 
+  static {
+    // hack to force ProGuard to consider Secret used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Secret.class);
+  }
+
   /**
    * The location of the source files to build.
    * The value may be {@code null}.
@@ -177,6 +183,12 @@ public final class Build extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<BuildStep> steps;
+
+  static {
+    // hack to force ProGuard to consider BuildStep used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BuildStep.class);
+  }
 
   /**
    * Substitutions data for `Build` resource.

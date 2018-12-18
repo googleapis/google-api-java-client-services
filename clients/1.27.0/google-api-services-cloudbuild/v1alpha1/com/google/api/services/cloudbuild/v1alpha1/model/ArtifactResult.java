@@ -37,6 +37,12 @@ public final class ArtifactResult extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<FileHashes> fileHash;
 
+  static {
+    // hack to force ProGuard to consider FileHashes used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FileHashes.class);
+  }
+
   /**
    * The path of an artifact in a Google Cloud Storage bucket, with the generation number. For
    * example, `gs://mybucket/path/to/output.jar#generation`.

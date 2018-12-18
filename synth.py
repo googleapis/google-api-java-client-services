@@ -76,6 +76,9 @@ class Discovery:
 def generate_service(name: str, discos: List[Discovery]) -> None:
     library_name = f"google-api-services-{name}"
 
+    # override with the latest revision
+    revision = max([disco.revision for disco in discos])
+
     for template in TEMPLATE_VERSIONS:
         for disco in discos:
             log.info(f"Generating {name} {disco.api_version} {template}.")
@@ -85,15 +88,13 @@ def generate_service(name: str, discos: List[Discovery]) -> None:
             command = (
                 f"python2 -m googleapis.codegen --output_dir={output_dir}"
                 + f" --input={input_file} --language=java --language_variant={template}"
-                + " --version_package"
+                + f" --version_package --package_revision={revision}"
             )
 
             shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
             shell.run(command.split(), cwd=repository)
 
             s.copy(output_dir, f"clients/{template}/{library_name}")
-
-        # TODO(chingor): fix pom version
 
 
 def all_discoveries():
@@ -115,10 +116,6 @@ discoveries = all_discoveries()
 if extra_args():
     api_name = extra_args()[0]
     discoveries = {api_name: discoveries[api_name]}
-    #     discovery for discovery in discoveries if discovery.split(".")[0] == api_name
-    # ]
-
-print(discoveries)
 
 for name, discos in discoveries.items():
     generate_service(name, discos)

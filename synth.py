@@ -14,26 +14,28 @@
 
 """This script is used to synthesize generated parts of this library."""
 
+
+import glob
+import json
+import logging
+from os import path
+from pathlib import Path
+import re
+import sys
+from typing import List
+
+import attr
 import synthtool as s
 from synthtool.__main__ import extra_args
 from synthtool import log, shell
 from synthtool.sources import git
-import logging
-from os import path
-from pathlib import Path
-import glob
-import re
-import sys
 
 logging.basicConfig(level=logging.DEBUG)
 
-TEMPLATE_VERSIONS = [
-    "1.26.0",
-    "1.27.0",
-]
+TEMPLATE_VERSIONS = ["1.26.0", "1.27.0"]
 discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"
 
-repository = Path('.')
+repository = Path(".")
 
 log.debug(f"Cloning {discovery_url}.")
 discovery = git.clone(discovery_url, depth=1)
@@ -42,51 +44,67 @@ log.debug("Cleaning output directory.")
 shell.run("rm -rf .cache".split(), cwd=repository)
 
 log.debug("Installing dependencies.")
-shell.run(
-    "python2 -m pip install -e generator/ --user".split(),
-    cwd=repository
-)
+shell.run("python2 -m pip install -e generator/ --user".split(), cwd=repository)
 
 
 def dasherize(name: str):
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
+    s1 = re.sub("(.)([A-Z][a-z]+)", r"\1-\2", name)
+    return re.sub("([a-z0-9])([A-Z])", r"\1-\2", s1).lower()
 
 
-def generate_service(disco: str):
+@attr.s(auto_attribs=True)
+class Discovery:
+    name: str = None
+    api_version: str = None
+    revision: str = None
+    definition: Path = None
 
-    m = re.search(r"(.*)\.(v.+)\.json$", disco)
-    if m is None:
-        log.info(f"Skipping {disco}.")
-        return
+    @staticmethod
+    def from_disco(disco: Path):
+        with open(disco) as f:
+            data = json.load(f)
+            return Discovery(
+                name=data["name"],
+                api_version=data["version"],
+                revision=data["revision"],
+                definition=disco,
+            )
 
-    name = dasherize(m.group(1))
-    version = m.group(2)
+        return None
 
-    log.info(f"Generating {name} {version}.")
 
+def generate_service(name: str, discos: List[Discovery]) -> None:
     library_name = f"google-api-services-{name}"
-    output_dir = repository / ".cache" / library_name / version
-    input_file = discovery / "discoveries" / disco
 
     for template in TEMPLATE_VERSIONS:
-        log.info(f"\t{template}")
+        for disco in discos:
+            log.info(f"Generating {name} {disco.api_version} {template}.")
+            output_dir = repository / ".cache" / library_name / disco.api_version
+            input_file = discovery / "discoveries" / disco.definition
 
-        command = (
-            f"python2 -m googleapis.codegen --output_dir={output_dir}" +
-            f" --input={input_file} --language=java --language_variant={template}"
-        )
+            command = (
+                f"python2 -m googleapis.codegen --output_dir={output_dir}"
+                + f" --input={input_file} --language=java --language_variant={template}"
+                + " --version_package"
+            )
 
-        shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
-        shell.run(command.split(), cwd=repository)
+            shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
+            shell.run(command.split(), cwd=repository)
 
-        s.copy(output_dir, f"clients/{template}/{library_name}/{version}")
+            s.copy(output_dir, f"clients/{template}/{library_name}")
+
+        # TODO(chingor): fix pom version
 
 
 def all_discoveries():
-    discos = []
-    for file in glob.glob(str(discovery / 'discoveries/*.v*.json')):
-        discos.append(path.basename(file))
+    discos = {}
+    for file in glob.glob(str(discovery / "discoveries/*.v*.json")):
+        disco = Discovery.from_disco(file)
+
+        if not disco.name in discos:
+            discos[disco.name] = []
+
+        discos[disco.name].append(disco)
 
     return discos
 
@@ -96,7 +114,11 @@ discoveries = all_discoveries()
 
 if extra_args():
     api_name = extra_args()[0]
-    discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
+    discoveries = {api_name: discoveries[api_name]}
+    #     discovery for discovery in discoveries if discovery.split(".")[0] == api_name
+    # ]
 
-for disco in discoveries:
-    generate_service(disco)
+print(discoveries)
+
+for name, discos in discoveries.items():
+    generate_service(name, discos)

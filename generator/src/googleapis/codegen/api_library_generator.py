@@ -50,6 +50,8 @@ class ApiLibraryGenerator(TemplateGenerator):
       discovery['modulePath'] = module_path
     if options.get('version_package'):
       discovery['version_module'] = True
+    if options.get('package_revision'):
+      discovery['revision'] = options.get('package_revision')
     self._api = api_loader(discovery)
     self._language = language
 

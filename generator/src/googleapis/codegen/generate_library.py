@@ -106,6 +106,11 @@ flags.DEFINE_string(
     'Use an alternate path for the generated code. This must be a file path'
     ' using "/" as a separator, not "."'
     )
+flags.DEFINE_string(
+    'package_revision',
+    None,
+    'Override the revision for the generated code.'
+    )
 flags.DEFINE_bool('version_package', False, 'Put API version in package paths')
 flags.DEFINE_bool('verbose', False, 'Enable verbose logging')
 
@@ -164,7 +169,8 @@ def main(unused_argv):
            package_path=FLAGS.package_path,
            output_type=FLAGS.output_type,
            language=FLAGS.language,
-           language_variant=FLAGS.language_variant)
+           language_variant=FLAGS.language_variant,
+           package_revision=FLAGS.package_revision)
   return 0
 
 
@@ -172,6 +178,7 @@ def Generate(discovery_doc, package_writer,
              include_timestamp=False,
              version_package=False,
              package_path=None,
+             package_revision=None,
              output_type='plain',
              language='java',
              language_variant='default',
@@ -186,6 +193,7 @@ def Generate(discovery_doc, package_writer,
       'version_package': version_package,
       # Custom package name
       'package_path': package_path,
+      'package_revision': package_revision,
       }
   if FLAGS.monolithic_source_name:
     options['useSingleSourceFile'] = True
@@ -223,6 +231,7 @@ def Generate(discovery_doc, package_writer,
              include_timestamp=include_timestamp,
              version_package=version_package,
              package_path=package_path,
+             package_revision=package_revision,
              output_type=output_type,
              language=language,
              language_variant=language_variant)

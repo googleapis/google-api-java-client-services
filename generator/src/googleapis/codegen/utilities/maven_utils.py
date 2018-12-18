@@ -64,10 +64,9 @@ def GetMavenGroupId(owner_domain):
 def GetMavenVersion(api, language_version):
   """Returns the maven version."""
   if api.get('ownerDomain') == 'google.com':
-    return '%s-rev%s-%s' %(api['version'],
-                           api['revision'],
-                           language_version)
-  return '%s-%s-SNAPSHOT' % (api['version'], language_version)
+    return 'rev%s-%s' %(api['revision'],
+                        language_version)
+  return '%s-SNAPSHOT' % (language_version)
 
 
 def GetMavenMetadata(api, language_version):

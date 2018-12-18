@@ -93,6 +93,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<MetricValueSet> metricValueSets;
 
+  static {
+    // hack to force ProGuard to consider MetricValueSet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricValueSet.class);
+  }
+
   /**
    * Identity of the operation. This must be unique within the scope of the service that generated
    * the operation. If the service calls Check() and Report() on the same operation, the two calls

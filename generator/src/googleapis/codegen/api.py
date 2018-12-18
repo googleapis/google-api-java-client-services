@@ -222,7 +222,6 @@ class Api(template_objects.CodeObject):
     schemas = self.values.get('schemas')
     if schemas:
       for name in sorted(schemas):
-        print(name)
         def_dict = schemas[name]
         # Upgrade the string format schema to a dict.
         if isinstance(def_dict, unicode):

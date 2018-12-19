@@ -84,7 +84,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String securityInvestigationToolLink;
 
   /**
-   * Required. A unique identifier for the system that is reported the alert.
+   * Required. A unique identifier for the system that reported the alert.
    *
    * Supported sources are any of the following:
    *
@@ -238,7 +238,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A unique identifier for the system that is reported the alert.
+   * Required. A unique identifier for the system that reported the alert.
    *
    * Supported sources are any of the following:
    *
@@ -251,7 +251,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A unique identifier for the system that is reported the alert.
+   * Required. A unique identifier for the system that reported the alert.
    *
    * Supported sources are any of the following:
    *

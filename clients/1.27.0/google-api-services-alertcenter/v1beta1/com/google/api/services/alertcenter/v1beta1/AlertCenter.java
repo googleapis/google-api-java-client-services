@@ -1164,6 +1164,281 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
   }
 
   /**
+   * An accessor for creating requests from the V1beta1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AlertCenter alertcenter = new AlertCenter(...);}
+   *   {@code AlertCenter.V1beta1.List request = alertcenter.v1beta1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1beta1 v1beta1() {
+    return new V1beta1();
+  }
+
+  /**
+   * The "v1beta1" collection of methods.
+   */
+  public class V1beta1 {
+
+    /**
+     * Returns customer-level settings.
+     *
+     * Create a request for the method "v1beta1.getSettings".
+     *
+     * This request holds the parameters needed by the alertcenter server.  After setting any optional
+     * parameters, call the {@link GetSettings#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GetSettings getSettings() throws java.io.IOException {
+      GetSettings result = new GetSettings();
+      initialize(result);
+      return result;
+    }
+
+    public class GetSettings extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Settings> {
+
+      private static final String REST_PATH = "v1beta1/settings";
+
+      /**
+       * Returns customer-level settings.
+       *
+       * Create a request for the method "v1beta1.getSettings".
+       *
+       * This request holds the parameters needed by the the alertcenter server.  After setting any
+       * optional parameters, call the {@link GetSettings#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetSettings#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GetSettings() {
+        super(AlertCenter.this, "GET", REST_PATH, null, com.google.api.services.alertcenter.v1beta1.model.Settings.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetSettings setAccessToken(java.lang.String accessToken) {
+        return (GetSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetSettings setAlt(java.lang.String alt) {
+        return (GetSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetSettings setCallback(java.lang.String callback) {
+        return (GetSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetSettings setFields(java.lang.String fields) {
+        return (GetSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetSettings setKey(java.lang.String key) {
+        return (GetSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetSettings setUploadType(java.lang.String uploadType) {
+        return (GetSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert settings are associated with. Inferred from the caller identity if not provided.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Optional. The unique identifier of the G Suite organization account of the customer the alert
+     settings are associated with. Inferred from the caller identity if not provided.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /**
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert settings are associated with. Inferred from the caller identity if not provided.
+       */
+      public GetSettings setCustomerId(java.lang.String customerId) {
+        this.customerId = customerId;
+        return this;
+      }
+
+      @Override
+      public GetSettings set(String parameterName, Object value) {
+        return (GetSettings) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the customer-level settings.
+     *
+     * Create a request for the method "v1beta1.updateSettings".
+     *
+     * This request holds the parameters needed by the alertcenter server.  After setting any optional
+     * parameters, call the {@link UpdateSettings#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.Settings}
+     * @return the request
+     */
+    public UpdateSettings updateSettings(com.google.api.services.alertcenter.v1beta1.model.Settings content) throws java.io.IOException {
+      UpdateSettings result = new UpdateSettings(content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateSettings extends AlertCenterRequest<com.google.api.services.alertcenter.v1beta1.model.Settings> {
+
+      private static final String REST_PATH = "v1beta1/settings";
+
+      /**
+       * Update the customer-level settings.
+       *
+       * Create a request for the method "v1beta1.updateSettings".
+       *
+       * This request holds the parameters needed by the the alertcenter server.  After setting any
+       * optional parameters, call the {@link UpdateSettings#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateSettings#initialize(com.google.api.client.googleapis.services.Abstr
+       * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.Settings}
+       * @since 1.13
+       */
+      protected UpdateSettings(com.google.api.services.alertcenter.v1beta1.model.Settings content) {
+        super(AlertCenter.this, "PATCH", REST_PATH, content, com.google.api.services.alertcenter.v1beta1.model.Settings.class);
+      }
+
+      @Override
+      public UpdateSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateSettings setAlt(java.lang.String alt) {
+        return (UpdateSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateSettings setCallback(java.lang.String callback) {
+        return (UpdateSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateSettings setFields(java.lang.String fields) {
+        return (UpdateSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateSettings setKey(java.lang.String key) {
+        return (UpdateSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert settings are associated with. Inferred from the caller identity if not provided.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Optional. The unique identifier of the G Suite organization account of the customer the alert
+     settings are associated with. Inferred from the caller identity if not provided.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /**
+       * Optional. The unique identifier of the G Suite organization account of the customer the
+       * alert settings are associated with. Inferred from the caller identity if not provided.
+       */
+      public UpdateSettings setCustomerId(java.lang.String customerId) {
+        this.customerId = customerId;
+        return this;
+      }
+
+      @Override
+      public UpdateSettings set(String parameterName, Object value) {
+        return (UpdateSettings) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link AlertCenter}.
    *
    * <p>

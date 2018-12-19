@@ -37,6 +37,12 @@ public final class ListAlertsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Alert> alerts;
 
+  static {
+    // hack to force ProGuard to consider Alert used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Alert.class);
+  }
+
   /**
    * The token for the next page. If not empty, indicates that there may be more alerts that match
    * the listing request; this value can be used in a subsequent ListAlertsRequest to get alerts

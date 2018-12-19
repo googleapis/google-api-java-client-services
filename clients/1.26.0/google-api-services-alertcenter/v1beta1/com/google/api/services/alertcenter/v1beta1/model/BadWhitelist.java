@@ -52,6 +52,12 @@ public final class BadWhitelist extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<GmailMessageInfo> messages;
 
+  static {
+    // hack to force ProGuard to consider GmailMessageInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GmailMessageInfo.class);
+  }
+
   /**
    * The source IP address of the malicious email, for example, `127.0.0.1`.
    * The value may be {@code null}.

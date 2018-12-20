@@ -46,7 +46,8 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   private java.lang.Boolean allRequiredParamsPresent;
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency.
+   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
+   * string keys of the Struct's fields map can change without notice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,12 +59,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessage> fulfillmentMessages;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentMessage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentMessage.class);
-  }
 
   /**
    * The text to be pronounced to the user or shown on the screen.
@@ -105,12 +100,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2Context> outputContexts;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2Context used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2Context.class);
-  }
 
   /**
    * The collection of extracted parameters.
@@ -198,7 +187,8 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency.
+   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
+   * string keys of the Struct's fields map can change without notice.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDiagnosticInfo() {
@@ -206,7 +196,8 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency.
+   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
+   * string keys of the Struct's fields map can change without notice.
    * @param diagnosticInfo diagnosticInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setDiagnosticInfo(java.util.Map<String, java.lang.Object> diagnosticInfo) {

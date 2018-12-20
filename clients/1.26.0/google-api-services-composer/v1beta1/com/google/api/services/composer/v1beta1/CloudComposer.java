@@ -991,6 +991,12 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * environment variable map is not included in `environment`, all custom environment
            * variables  are cleared. It is an error to provide both this mask and a mask specifying
            * one or more individual environment variables.
+           *
+           * config.softwareConfig.imageVersion Upgrade the version of the environment in-place.
+           * Refer to `SoftwareConfig.image_version` for information on how to format the new image
+           * version. Additionally, the new image version cannot effect a version downgrade and must
+           * match the current image version's Composer major version and Airflow major and minor
+           * versions. Consult the Cloud Composer Version List for valid values.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -1069,6 +1075,12 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          variable map is not included in `environment`, all custom environment variables  are cleared. It is
          an error to provide both this mask and a mask specifying one or more individual environment
          variables.
+
+         config.softwareConfig.imageVersion Upgrade the version of the environment in-place. Refer to
+         `SoftwareConfig.image_version` for information on how to format the new image version.
+         Additionally, the new image version cannot effect a version downgrade and must match the current
+         image version's Composer major version and Airflow major and minor versions. Consult the Cloud
+         Composer Version List for valid values.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1153,6 +1165,12 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * environment variable map is not included in `environment`, all custom environment
            * variables  are cleared. It is an error to provide both this mask and a mask specifying
            * one or more individual environment variables.
+           *
+           * config.softwareConfig.imageVersion Upgrade the version of the environment in-place.
+           * Refer to `SoftwareConfig.image_version` for information on how to format the new image
+           * version. Additionally, the new image version cannot effect a version downgrade and must
+           * match the current image version's Composer major version and Airflow major and minor
+           * versions. Consult the Cloud Composer Version List for valid values.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

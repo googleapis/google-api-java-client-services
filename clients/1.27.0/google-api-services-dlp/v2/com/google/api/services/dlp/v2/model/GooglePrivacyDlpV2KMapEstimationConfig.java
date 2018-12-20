@@ -49,12 +49,6 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2TaggedField> quasiIds;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2TaggedField used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2TaggedField.class);
-  }
-
   /**
    * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Required if no column is
    * tagged with a region-specific InfoType (like US_ZIP_5) or a region code.

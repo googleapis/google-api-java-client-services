@@ -38,12 +38,6 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FieldId> excludedFields;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldId used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldId.class);
-  }
-
   /**
    * References to fields uniquely identifying rows within the table. Nested fields in the format,
    * like `person.birthdate.year`, are allowed.
@@ -51,12 +45,6 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2FieldId> identifyingFields;
-
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2FieldId used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2FieldId.class);
-  }
 
   /**
    * Max number of rows to scan. If the table has more rows than this value, the rest of the rows

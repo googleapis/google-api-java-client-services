@@ -37,6 +37,12 @@ public final class GooglePrivacyDlpV2KAnonymityResult extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2KAnonymityHistogramBucket> equivalenceClassHistogramBuckets;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2KAnonymityHistogramBucket used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2KAnonymityHistogramBucket.class);
+  }
+
   /**
    * Histogram of k-anonymity equivalence classes.
    * @return value or {@code null} for none

@@ -65,11 +65,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> envVariables;
 
   /**
-   * Immutable. The version of the software running in the environment. This encapsulates both the
-   * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
-   * regular expression
-   * `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
-   * input, the server will also check if the provided version is supported and deny the creation
+   * The version of the software running in the environment. This encapsulates both the version of
+   * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
+   * expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When
+   * used as input, the server will also check if the provided version is supported and deny the
    * request for an unsupported version.
    *
    * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
@@ -190,11 +189,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The version of the software running in the environment. This encapsulates both the
-   * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
-   * regular expression
-   * `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
-   * input, the server will also check if the provided version is supported and deny the creation
+   * The version of the software running in the environment. This encapsulates both the version of
+   * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
+   * expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When
+   * used as input, the server will also check if the provided version is supported and deny the
    * request for an unsupported version.
    *
    * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or
@@ -219,11 +217,10 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The version of the software running in the environment. This encapsulates both the
-   * version of Cloud Composer functionality and the version of Apache Airflow. It must match the
-   * regular expression
-   * `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When used as
-   * input, the server will also check if the provided version is supported and deny the creation
+   * The version of the software running in the environment. This encapsulates both the version of
+   * Cloud Composer functionality and the version of Apache Airflow. It must match the regular
+   * expression `composer-([0-9]+\.[0-9]+\.[0-9]+|latest)-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?`. When
+   * used as input, the server will also check if the provided version is supported and deny the
    * request for an unsupported version.
    *
    * The Cloud Composer portion of the version is a [semantic version](https://semver.org) or

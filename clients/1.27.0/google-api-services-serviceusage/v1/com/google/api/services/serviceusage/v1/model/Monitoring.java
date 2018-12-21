@@ -49,8 +49,10 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
 
   /**
    * Monitoring configurations for sending metrics to the consumer project. There can be multiple
-   * consumer destinations, each one must have a different monitored resource type. A metric can be
-   * used in at most one consumer destination.
+   * consumer destinations. A monitored resouce type may appear in multiple monitoring destinations
+   * if different aggregations are needed for different sets of metrics associated with that
+   * monitored resource type. A monitored resource and metric pair may only be used once in the
+   * Monitoring configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,8 +66,10 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
 
   /**
    * Monitoring configurations for sending metrics to the producer project. There can be multiple
-   * producer destinations, each one must have a different monitored resource type. A metric can be
-   * used in at most one producer destination.
+   * producer destinations. A monitored resouce type may appear in multiple monitoring destinations
+   * if different aggregations are needed for different sets of metrics associated with that
+   * monitored resource type. A monitored resource and metric pair may only be used once in the
+   * Monitoring configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +83,10 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
 
   /**
    * Monitoring configurations for sending metrics to the consumer project. There can be multiple
-   * consumer destinations, each one must have a different monitored resource type. A metric can be
-   * used in at most one consumer destination.
+   * consumer destinations. A monitored resouce type may appear in multiple monitoring destinations
+   * if different aggregations are needed for different sets of metrics associated with that
+   * monitored resource type. A monitored resource and metric pair may only be used once in the
+   * Monitoring configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<MonitoringDestination> getConsumerDestinations() {
@@ -89,8 +95,10 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
 
   /**
    * Monitoring configurations for sending metrics to the consumer project. There can be multiple
-   * consumer destinations, each one must have a different monitored resource type. A metric can be
-   * used in at most one consumer destination.
+   * consumer destinations. A monitored resouce type may appear in multiple monitoring destinations
+   * if different aggregations are needed for different sets of metrics associated with that
+   * monitored resource type. A monitored resource and metric pair may only be used once in the
+   * Monitoring configuration.
    * @param consumerDestinations consumerDestinations or {@code null} for none
    */
   public Monitoring setConsumerDestinations(java.util.List<MonitoringDestination> consumerDestinations) {
@@ -100,8 +108,10 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
 
   /**
    * Monitoring configurations for sending metrics to the producer project. There can be multiple
-   * producer destinations, each one must have a different monitored resource type. A metric can be
-   * used in at most one producer destination.
+   * producer destinations. A monitored resouce type may appear in multiple monitoring destinations
+   * if different aggregations are needed for different sets of metrics associated with that
+   * monitored resource type. A monitored resource and metric pair may only be used once in the
+   * Monitoring configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<MonitoringDestination> getProducerDestinations() {
@@ -110,8 +120,10 @@ public final class Monitoring extends com.google.api.client.json.GenericJson {
 
   /**
    * Monitoring configurations for sending metrics to the producer project. There can be multiple
-   * producer destinations, each one must have a different monitored resource type. A metric can be
-   * used in at most one producer destination.
+   * producer destinations. A monitored resouce type may appear in multiple monitoring destinations
+   * if different aggregations are needed for different sets of metrics associated with that
+   * monitored resource type. A monitored resource and metric pair may only be used once in the
+   * Monitoring configuration.
    * @param producerDestinations producerDestinations or {@code null} for none
    */
   public Monitoring setProducerDestinations(java.util.List<MonitoringDestination> producerDestinations) {

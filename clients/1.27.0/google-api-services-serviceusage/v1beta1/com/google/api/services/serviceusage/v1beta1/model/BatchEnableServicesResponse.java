@@ -38,12 +38,6 @@ public final class BatchEnableServicesResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<EnableFailure> failures;
 
-  static {
-    // hack to force ProGuard to consider EnableFailure used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EnableFailure.class);
-  }
-
   /**
    * The new state of the services after enabling.
    * The value may be {@code null}.

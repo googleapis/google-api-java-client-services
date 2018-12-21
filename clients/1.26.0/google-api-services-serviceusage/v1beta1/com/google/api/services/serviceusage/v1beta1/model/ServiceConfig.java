@@ -37,6 +37,12 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Api> apis;
 
+  static {
+    // hack to force ProGuard to consider Api used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Api.class);
+  }
+
   /**
    * Auth configuration. Contains only the OAuth rules.
    * The value may be {@code null}.
@@ -57,6 +63,12 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<Endpoint> endpoints;
+
+  static {
+    // hack to force ProGuard to consider Endpoint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Endpoint.class);
+  }
 
   /**
    * The DNS address at which this service is available.

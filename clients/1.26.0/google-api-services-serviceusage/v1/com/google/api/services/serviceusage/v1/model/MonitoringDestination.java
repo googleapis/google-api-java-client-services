@@ -31,7 +31,7 @@ package com.google.api.services.serviceusage.v1.model;
 public final class MonitoringDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Names of the metrics to report to this monitoring destination. Each name must be defined in
+   * Types of the metrics to report to this monitoring destination. Each type must be defined in
    * Service.metrics section.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class MonitoringDestination extends com.google.api.client.json.Gene
   private java.lang.String monitoredResource;
 
   /**
-   * Names of the metrics to report to this monitoring destination. Each name must be defined in
+   * Types of the metrics to report to this monitoring destination. Each type must be defined in
    * Service.metrics section.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class MonitoringDestination extends com.google.api.client.json.Gene
   }
 
   /**
-   * Names of the metrics to report to this monitoring destination. Each name must be defined in
+   * Types of the metrics to report to this monitoring destination. Each type must be defined in
    * Service.metrics section.
    * @param metrics metrics or {@code null} for none
    */

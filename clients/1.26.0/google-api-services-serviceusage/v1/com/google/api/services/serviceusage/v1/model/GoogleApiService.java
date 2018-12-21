@@ -170,12 +170,6 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<LogDescriptor> logs;
 
-  static {
-    // hack to force ProGuard to consider LogDescriptor used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LogDescriptor.class);
-  }
-
   /**
    * Defines the metrics used by this service.
    * The value may be {@code null}.
@@ -190,12 +184,6 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<MonitoredResourceDescriptor> monitoredResources;
-
-  static {
-    // hack to force ProGuard to consider MonitoredResourceDescriptor used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(MonitoredResourceDescriptor.class);
-  }
 
   /**
    * Monitoring configuration.

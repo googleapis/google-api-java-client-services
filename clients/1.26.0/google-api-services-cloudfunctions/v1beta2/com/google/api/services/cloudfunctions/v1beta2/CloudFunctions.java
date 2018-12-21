@@ -397,33 +397,43 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The standard list filter. */
+      /**
+       * Required. A filter for matching the requested operations. The supported formats of filter
+       * are: To query for specific function: project:*,location:*,function:* To query for all of
+       * the latest operations for a project: project:*,latest:true
+       */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** The standard list filter.
+      /** Required. A filter for matching the requested operations. The supported formats of filter are: To
+     query for specific function: project:*,location:*,function:* To query for all of the latest
+     operations for a project: project:*,latest:true
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
-      /** The standard list filter. */
+      /**
+       * Required. A filter for matching the requested operations. The supported formats of filter
+       * are: To query for specific function: project:*,location:*,function:* To query for all of
+       * the latest operations for a project: project:*,latest:true
+       */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
       }
 
-      /** The name of the operation's parent resource. */
+      /** Must not be set. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name of the operation's parent resource.
+      /** Must not be set.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The name of the operation's parent resource. */
+      /** Must not be set. */
       public List setName(java.lang.String name) {
         this.name = name;
         return this;

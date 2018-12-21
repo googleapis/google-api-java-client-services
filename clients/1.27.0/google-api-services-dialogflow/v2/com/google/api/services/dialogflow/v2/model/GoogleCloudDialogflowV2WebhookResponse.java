@@ -45,12 +45,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessage> fulfillmentMessages;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2IntentMessage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2IntentMessage.class);
-  }
-
   /**
    * Optional. The text to be shown on the screen. This value is passed directly to
    * `QueryResult.fulfillment_text`.
@@ -66,12 +60,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2Context> outputContexts;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2Context used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2Context.class);
-  }
 
   /**
    * Optional. This value is passed directly to `QueryResult.webhook_payload`. See the related

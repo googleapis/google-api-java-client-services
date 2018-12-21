@@ -41,12 +41,6 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1QueryResult> alternativeQueryResults;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1QueryResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1QueryResult.class);
-  }
-
   /**
    * The audio data bytes encoded as specified in the request.
    * The value may be {@code null}.

@@ -37,12 +37,6 @@ public final class GoogleCloudDialogflowV2ListIntentsResponse extends com.google
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2Intent> intents;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2Intent used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2Intent.class);
-  }
-
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.

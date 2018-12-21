@@ -36,12 +36,6 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2Context> contexts;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2Context used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2Context.class);
-  }
-
   /**
    * Optional. The geo location of this conversational query.
    * The value may be {@code null}.

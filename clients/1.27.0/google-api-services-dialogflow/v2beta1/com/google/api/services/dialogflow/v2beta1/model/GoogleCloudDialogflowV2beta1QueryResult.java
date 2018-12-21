@@ -46,7 +46,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   private java.lang.Boolean allRequiredParamsPresent;
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency.
+   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
+   * string keys of the Struct's fields map can change without notice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +108,12 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Context> outputContexts;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1Context used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1Context.class);
+  }
 
   /**
    * The collection of extracted parameters.
@@ -202,7 +209,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency.
+   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
+   * string keys of the Struct's fields map can change without notice.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDiagnosticInfo() {
@@ -210,7 +218,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency.
+   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
+   * string keys of the Struct's fields map can change without notice.
    * @param diagnosticInfo diagnosticInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult setDiagnosticInfo(java.util.Map<String, java.lang.Object> diagnosticInfo) {

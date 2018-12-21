@@ -90,12 +90,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> sessionEntityTypes;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1SessionEntityType used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1SessionEntityType.class);
-  }
-
   /**
    * Optional. The time zone of this conversational query from the [time zone
    * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not

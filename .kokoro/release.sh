@@ -23,11 +23,10 @@ setup_environment_secrets
 create_settings_xml_file "settings.xml"
 
 deploy_library() {
-  pushd $1
-  SERVICE=$2
-  API_VERSION=$3
-  REVISION=$4
-  LIBRARY_VERSION=$5
+  SERVICE=$1
+  API_VERSION=$2
+  REVISION=$3
+  LIBRARY_VERSION=$4
   echo "Releasing artifact for ${SERVICE}, ${API_VERSION}, ${REVISION}, ${LIBRARY_VERSION}."
 
   mvn clean install -B
@@ -39,9 +38,9 @@ deploy_library() {
     -Dgpg.homedir=${GPG_HOMEDIR} \
     -DautoReleaseAfterClose=true \
     -B
-  popd
 }
 
+EXIT_CODE=0
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
 do
   library_version=$(echo ${directory} | cut -f2 -d'/')
@@ -55,6 +54,16 @@ do
     echo "Artifact already exists for $service, $api_version, $revision, $library_version."
   else
     output_file="${service}-${api_version}-${revision}-${library_version}-sponge_log.log"
-    deploy_library $directory $service $api_version $revision $library_version | tee $output_file
+    set +e
+    pushd $directory
+    deploy_library $service $api_version $revision $library_version | tee $output_file
+    if [[ $? -ne 0 ]]
+    then
+      EXIT_CODE=127
+    fi
+    popd
+    set -e
   fi
 done
+
+exit $EXIT_CODE

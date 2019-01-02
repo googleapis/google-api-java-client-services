@@ -221,7 +221,8 @@ class Api(template_objects.CodeObject):
     """Loop over the schemas in the discovery doc and build definitions."""
     schemas = self.values.get('schemas')
     if schemas:
-      for name, def_dict in schemas.iteritems():
+      for name in sorted(schemas):
+        def_dict = schemas[name]
         # Upgrade the string format schema to a dict.
         if isinstance(def_dict, unicode):
           def_dict = json.loads(def_dict)

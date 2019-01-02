@@ -69,12 +69,24 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<DimensionGroup> columnGroups;
 
+  static {
+    // hack to force ProGuard to consider DimensionGroup used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DimensionGroup.class);
+  }
+
   /**
    * The conditional format rules in this sheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ConditionalFormatRule> conditionalFormats;
+
+  static {
+    // hack to force ProGuard to consider ConditionalFormatRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConditionalFormatRule.class);
+  }
 
   /**
    * Data in the grid, if this is a grid sheet. The number of GridData objects returned is dependent
@@ -100,6 +112,12 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<DeveloperMetadata> developerMetadata;
 
+  static {
+    // hack to force ProGuard to consider DeveloperMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeveloperMetadata.class);
+  }
+
   /**
    * The filter views in this sheet.
    * The value may be {@code null}.
@@ -107,12 +125,24 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<FilterView> filterViews;
 
+  static {
+    // hack to force ProGuard to consider FilterView used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FilterView.class);
+  }
+
   /**
    * The ranges that are merged together.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GridRange> merges;
+
+  static {
+    // hack to force ProGuard to consider GridRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GridRange.class);
+  }
 
   /**
    * The properties of the sheet.
@@ -140,6 +170,12 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<DimensionGroup> rowGroups;
+
+  static {
+    // hack to force ProGuard to consider DimensionGroup used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DimensionGroup.class);
+  }
 
   /**
    * The banded (alternating colors) ranges on this sheet.

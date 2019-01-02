@@ -49,12 +49,6 @@ public final class GetHistogramResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<HistogramResult> results;
 
-  static {
-    // hack to force ProGuard to consider HistogramResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(HistogramResult.class);
-  }
-
   /**
    * Additional information for the API invocation, such as the request tracking id.
    * @return value or {@code null} for none

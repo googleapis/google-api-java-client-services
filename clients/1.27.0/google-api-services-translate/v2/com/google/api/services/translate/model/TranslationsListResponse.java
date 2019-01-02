@@ -37,12 +37,6 @@ public final class TranslationsListResponse extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<TranslationsResource> translations;
 
-  static {
-    // hack to force ProGuard to consider TranslationsResource used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TranslationsResource.class);
-  }
-
   /**
    * Translations contains list of translation results of given text
    * @return value or {@code null} for none

@@ -38,6 +38,12 @@ public final class SimpleSegment extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<OrFiltersForSegment> orFiltersForSegment;
 
+  static {
+    // hack to force ProGuard to consider OrFiltersForSegment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OrFiltersForSegment.class);
+  }
+
   /**
    * A list of segment filters groups which are combined with logical `AND` operator.
    * @return value or {@code null} for none

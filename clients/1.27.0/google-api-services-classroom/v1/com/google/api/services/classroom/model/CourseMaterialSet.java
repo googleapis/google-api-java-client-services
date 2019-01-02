@@ -37,6 +37,12 @@ public final class CourseMaterialSet extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<CourseMaterial> materials;
 
+  static {
+    // hack to force ProGuard to consider CourseMaterial used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CourseMaterial.class);
+  }
+
   /**
    * Title for this set.
    * The value may be {@code null}.

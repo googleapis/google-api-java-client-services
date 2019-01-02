@@ -43,12 +43,6 @@ public final class SendWorkerMessagesRequest extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<WorkerMessage> workerMessages;
 
-  static {
-    // hack to force ProGuard to consider WorkerMessage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WorkerMessage.class);
-  }
-
   /**
    * The location which contains the job
    * @return value or {@code null} for none

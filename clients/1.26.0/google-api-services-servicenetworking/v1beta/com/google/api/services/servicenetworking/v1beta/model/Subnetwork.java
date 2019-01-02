@@ -17,7 +17,7 @@
 package com.google.api.services.servicenetworking.v1beta.model;
 
 /**
- * Represents a subnet that was created by a peered service.
+ * Represents a subnet that was created or discovered by a private access management service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
@@ -51,6 +51,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * This is a discovered subnet that is not within the current consumer allocated ranges.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean outsideAllocation;
 
   /**
    * Subnetwork CIDR range in `10.x.x.x/y` format.
@@ -102,6 +109,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * This is a discovered subnet that is not within the current consumer allocated ranges.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOutsideAllocation() {
+    return outsideAllocation;
+  }
+
+  /**
+   * This is a discovered subnet that is not within the current consumer allocated ranges.
+   * @param outsideAllocation outsideAllocation or {@code null} for none
+   */
+  public Subnetwork setOutsideAllocation(java.lang.Boolean outsideAllocation) {
+    this.outsideAllocation = outsideAllocation;
     return this;
   }
 

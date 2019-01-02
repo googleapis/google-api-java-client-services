@@ -44,12 +44,6 @@ public final class LintPolicyResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<LintResult> lintResults;
 
-  static {
-    // hack to force ProGuard to consider LintResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LintResult.class);
-  }
-
   /**
    * List of lint results sorted by a composite  key, descending order of severity and ascending
    * order of binding_ordinal. There is no certain order among the same keys.

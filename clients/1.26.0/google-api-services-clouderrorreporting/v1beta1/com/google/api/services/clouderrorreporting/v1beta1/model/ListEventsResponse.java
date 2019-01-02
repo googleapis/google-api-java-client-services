@@ -37,6 +37,12 @@ public final class ListEventsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<ErrorEvent> errorEvents;
 
+  static {
+    // hack to force ProGuard to consider ErrorEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ErrorEvent.class);
+  }
+
   /**
    * If non-empty, more results are available. Pass this token, along with the same query parameters
    * as the first request, to view the next page of results.

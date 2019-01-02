@@ -96,12 +96,6 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1ParameterSpec> params;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudMlV1ParameterSpec used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1ParameterSpec.class);
-  }
-
   /**
    * Optional. The prior hyperparameter tuning job id that users hope to continue with. The job id
    * will be used to find the corresponding vizier study guid and resume the study.

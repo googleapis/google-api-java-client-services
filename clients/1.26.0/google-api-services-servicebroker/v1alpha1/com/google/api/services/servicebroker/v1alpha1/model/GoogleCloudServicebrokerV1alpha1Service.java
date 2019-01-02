@@ -104,6 +104,12 @@ public final class GoogleCloudServicebrokerV1alpha1Service extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudServicebrokerV1alpha1Plan> plans;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudServicebrokerV1alpha1Plan used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudServicebrokerV1alpha1Plan.class);
+  }
+
   /**
    * Tags provide a flexible mechanism to expose a classification, attribute, or base technology of
    * a service.

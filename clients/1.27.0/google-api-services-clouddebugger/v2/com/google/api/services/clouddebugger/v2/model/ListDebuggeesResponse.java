@@ -39,6 +39,12 @@ public final class ListDebuggeesResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Debuggee> debuggees;
 
+  static {
+    // hack to force ProGuard to consider Debuggee used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Debuggee.class);
+  }
+
   /**
    * List of debuggees accessible to the calling user. The fields `debuggee.id` and `description`
    * are guaranteed to be set. The `description` field is a human readable field provided by agents

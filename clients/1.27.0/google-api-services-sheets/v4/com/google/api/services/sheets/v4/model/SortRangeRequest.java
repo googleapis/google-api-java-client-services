@@ -44,12 +44,6 @@ public final class SortRangeRequest extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<SortSpec> sortSpecs;
 
-  static {
-    // hack to force ProGuard to consider SortSpec used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SortSpec.class);
-  }
-
   /**
    * The range to sort.
    * @return value or {@code null} for none

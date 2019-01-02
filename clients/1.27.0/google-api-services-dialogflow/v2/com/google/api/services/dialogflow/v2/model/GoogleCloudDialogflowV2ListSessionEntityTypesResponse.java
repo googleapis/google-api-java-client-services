@@ -44,12 +44,6 @@ public final class GoogleCloudDialogflowV2ListSessionEntityTypesResponse extends
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SessionEntityType> sessionEntityTypes;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudDialogflowV2SessionEntityType used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2SessionEntityType.class);
-  }
-
   /**
    * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none

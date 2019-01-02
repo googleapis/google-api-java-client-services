@@ -39,24 +39,12 @@ public final class TargetingCriteria extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<TargetingValue> exclusions;
 
-  static {
-    // hack to force ProGuard to consider TargetingValue used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TargetingValue.class);
-  }
-
   /**
    * The list of value to include as part of the targeting. Each value is OR'd together.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TargetingValue> inclusions;
-
-  static {
-    // hack to force ProGuard to consider TargetingValue used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TargetingValue.class);
-  }
 
   /**
    * The key representing the shared targeting criterion. Targeting criteria defined by Google ad

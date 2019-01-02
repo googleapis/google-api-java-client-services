@@ -145,12 +145,6 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Material> materials;
 
-  static {
-    // hack to force ProGuard to consider Material used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Material.class);
-  }
-
   /**
    * Maximum grade for this course work. If zero or unspecified, this assignment is considered
    * ungraded. This must be a non-negative integer value.

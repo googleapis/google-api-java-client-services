@@ -36,6 +36,12 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<BasicChartAxis> axis;
 
+  static {
+    // hack to force ProGuard to consider BasicChartAxis used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BasicChartAxis.class);
+  }
+
   /**
    * The type of the chart.
    * The value may be {@code null}.

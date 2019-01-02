@@ -122,6 +122,12 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<Endpoint> endpoints;
 
+  static {
+    // hack to force ProGuard to consider Endpoint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Endpoint.class);
+  }
+
   /**
    * A list of all enum types included in this API service.  Enums referenced directly or indirectly
    * by the `apis` are automatically included.  Enums which are not referenced but shall be included
@@ -132,6 +138,12 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<ServiceUsageEnum> enums;
+
+  static {
+    // hack to force ProGuard to consider ServiceUsageEnum used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ServiceUsageEnum.class);
+  }
 
   /**
    * Experimental configuration.

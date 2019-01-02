@@ -288,6 +288,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.String runtimeChannel;
 
   /**
+   * The path or name of the app's main executable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeMainExecutablePath;
+
+  /**
    * Current serving status of this version. Only the versions with a SERVING status create
    * instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to
    * SERVING.
@@ -891,6 +898,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setRuntimeChannel(java.lang.String runtimeChannel) {
     this.runtimeChannel = runtimeChannel;
+    return this;
+  }
+
+  /**
+   * The path or name of the app's main executable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeMainExecutablePath() {
+    return runtimeMainExecutablePath;
+  }
+
+  /**
+   * The path or name of the app's main executable.
+   * @param runtimeMainExecutablePath runtimeMainExecutablePath or {@code null} for none
+   */
+  public Version setRuntimeMainExecutablePath(java.lang.String runtimeMainExecutablePath) {
+    this.runtimeMainExecutablePath = runtimeMainExecutablePath;
     return this;
   }
 

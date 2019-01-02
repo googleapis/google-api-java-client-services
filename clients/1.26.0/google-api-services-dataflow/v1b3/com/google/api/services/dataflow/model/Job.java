@@ -220,12 +220,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Step> steps;
 
-  static {
-    // hack to force ProGuard to consider Step used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Step.class);
-  }
-
   /**
    * The GCS location where the steps are stored.
    * The value may be {@code null}.

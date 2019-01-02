@@ -37,6 +37,12 @@ public final class ListAppProfilesResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<AppProfile> appProfiles;
 
+  static {
+    // hack to force ProGuard to consider AppProfile used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AppProfile.class);
+  }
+
   /**
    * Locations from which AppProfile information could not be retrieved, due to an outage or some
    * other transient condition. AppProfiles from these locations may be missing from `app_profiles`.

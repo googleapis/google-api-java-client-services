@@ -44,6 +44,12 @@ public final class QueryTestablePermissionsResponse extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<Permission> permissions;
 
+  static {
+    // hack to force ProGuard to consider Permission used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Permission.class);
+  }
+
   /**
    * To retrieve the next page of results, set `QueryTestableRolesRequest.page_token` to this value.
    * @return value or {@code null} for none

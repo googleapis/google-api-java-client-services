@@ -38,6 +38,12 @@ public final class ListActiveBreakpointsResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<Breakpoint> breakpoints;
 
+  static {
+    // hack to force ProGuard to consider Breakpoint used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Breakpoint.class);
+  }
+
   /**
    * A token that can be used in the next method call to block until the list of breakpoints
    * changes.

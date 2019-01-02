@@ -38,12 +38,6 @@ public final class GoogleCloudVideointelligenceV1AnnotateVideoProgress extends c
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1VideoAnnotationProgress> annotationProgress;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1VideoAnnotationProgress used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1VideoAnnotationProgress.class);
-  }
-
   /**
    * Progress metadata for all videos specified in `AnnotateVideoRequest`.
    * @return value or {@code null} for none

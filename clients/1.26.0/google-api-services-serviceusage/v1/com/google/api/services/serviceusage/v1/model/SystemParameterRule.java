@@ -38,6 +38,12 @@ public final class SystemParameterRule extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<SystemParameter> parameters;
 
+  static {
+    // hack to force ProGuard to consider SystemParameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SystemParameter.class);
+  }
+
   /**
    * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs.
    *

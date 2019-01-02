@@ -44,12 +44,6 @@ public final class GoogleCloudMlV1ListVersionsResponse extends com.google.api.cl
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1Version> versions;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudMlV1Version used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1Version.class);
-  }
-
   /**
    * Optional. Pass this token as the `page_token` field of the request for a subsequent call.
    * @return value or {@code null} for none

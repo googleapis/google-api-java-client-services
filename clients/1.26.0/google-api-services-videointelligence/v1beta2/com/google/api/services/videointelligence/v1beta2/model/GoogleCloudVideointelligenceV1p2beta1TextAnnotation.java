@@ -38,12 +38,6 @@ public final class GoogleCloudVideointelligenceV1p2beta1TextAnnotation extends c
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1TextSegment> segments;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1TextSegment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1TextSegment.class);
-  }
-
   /**
    * The detected text.
    * The value may be {@code null}.

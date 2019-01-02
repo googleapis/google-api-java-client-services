@@ -61,6 +61,12 @@ public final class Transcript extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Exon> exons;
 
+  static {
+    // hack to force ProGuard to consider Exon used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Exon.class);
+  }
+
   /**
    * The annotation ID of the gene from which this transcript is transcribed.
    * The value may be {@code null}.

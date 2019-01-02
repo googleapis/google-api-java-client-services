@@ -37,11 +37,23 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<DataSourceRestriction> dataSourceRestrictions;
 
+  static {
+    // hack to force ProGuard to consider DataSourceRestriction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSourceRestriction.class);
+  }
+
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<FacetOptions> facetOptions;
+
+  static {
+    // hack to force ProGuard to consider FacetOptions used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FacetOptions.class);
+  }
 
   /**
    * Maximum number of search results to return in one page. Valid values are between 1 and 100,

@@ -40,12 +40,6 @@ public final class LanguagesListResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<LanguagesResource> languages;
 
-  static {
-    // hack to force ProGuard to consider LanguagesResource used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LanguagesResource.class);
-  }
-
   /**
    * List of source/target languages supported by the translation API. If target parameter is
    * unspecified, the list is sorted by the ASCII code point order of the language code. If target

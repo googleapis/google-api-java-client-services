@@ -58,12 +58,6 @@ public final class AuditConfig extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<AuditLogConfig> auditLogConfigs;
 
-  static {
-    // hack to force ProGuard to consider AuditLogConfig used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AuditLogConfig.class);
-  }
-
   /**
    * Specifies a service that will be enabled for audit logging. For example,
    * `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that

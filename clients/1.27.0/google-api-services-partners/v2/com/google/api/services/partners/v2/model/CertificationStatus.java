@@ -36,6 +36,12 @@ public final class CertificationStatus extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<CertificationExamStatus> examStatuses;
 
+  static {
+    // hack to force ProGuard to consider CertificationExamStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CertificationExamStatus.class);
+  }
+
   /**
    * Whether certification is passing.
    * The value may be {@code null}.

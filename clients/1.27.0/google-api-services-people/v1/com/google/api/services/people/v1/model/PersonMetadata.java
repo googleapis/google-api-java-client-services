@@ -73,12 +73,6 @@ public final class PersonMetadata extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<Source> sources;
 
-  static {
-    // hack to force ProGuard to consider Source used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Source.class);
-  }
-
   /**
    * True if the person resource has been deleted. Populated only for
    * [`connections.list`](/people/api/rest/v1/people.connections/list) requests that include a sync

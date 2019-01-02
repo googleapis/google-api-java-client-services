@@ -41,12 +41,6 @@ public final class GooglePrivacyDlpV2AuxiliaryTable extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2QuasiIdField> quasiIds;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2QuasiIdField used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2QuasiIdField.class);
-  }
-
   /**
    * The relative frequency column must contain a floating-point number between 0 and 1 (inclusive).
    * Null values are assumed to be zero. [required]

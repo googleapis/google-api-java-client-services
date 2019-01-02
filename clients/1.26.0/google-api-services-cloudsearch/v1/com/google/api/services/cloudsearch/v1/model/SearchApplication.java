@@ -36,6 +36,12 @@ public final class SearchApplication extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<DataSourceRestriction> dataSourceRestrictions;
 
+  static {
+    // hack to force ProGuard to consider DataSourceRestriction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSourceRestriction.class);
+  }
+
   /**
    * The default fields for returning facet results. The sources specified here also have been
    * included in data_source_restrictions above.

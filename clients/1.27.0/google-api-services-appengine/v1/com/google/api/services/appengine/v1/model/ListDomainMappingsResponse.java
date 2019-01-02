@@ -36,6 +36,12 @@ public final class ListDomainMappingsResponse extends com.google.api.client.json
   @com.google.api.client.util.Key
   private java.util.List<DomainMapping> domainMappings;
 
+  static {
+    // hack to force ProGuard to consider DomainMapping used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DomainMapping.class);
+  }
+
   /**
    * Continuation token for fetching the next page of results.
    * The value may be {@code null}.

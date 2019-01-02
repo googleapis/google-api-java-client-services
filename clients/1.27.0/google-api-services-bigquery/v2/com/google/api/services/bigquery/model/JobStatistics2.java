@@ -143,14 +143,15 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   /**
    * The type of query statement, if valid. Possible values (new values might be added in the
    * future): "SELECT": SELECT query. "INSERT": INSERT query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language
+   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language "DELETE": DELETE query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language
+   * manipulation-language. "DELETE": DELETE query; see
+   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
-   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... "DROP_TABLE": DROP TABLE
-   * query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... "DROP_VIEW": DROP VIEW query.
+   * manipulation-language. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
+   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "DROP_TABLE": DROP
+   * TABLE query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_VIEW": DROP VIEW
+   * query. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -449,14 +450,15 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   /**
    * The type of query statement, if valid. Possible values (new values might be added in the
    * future): "SELECT": SELECT query. "INSERT": INSERT query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language
+   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language "DELETE": DELETE query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language
+   * manipulation-language. "DELETE": DELETE query; see
+   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
-   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... "DROP_TABLE": DROP TABLE
-   * query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... "DROP_VIEW": DROP VIEW query.
+   * manipulation-language. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
+   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "DROP_TABLE": DROP
+   * TABLE query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_VIEW": DROP VIEW
+   * query. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatementType() {
@@ -466,14 +468,15 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   /**
    * The type of query statement, if valid. Possible values (new values might be added in the
    * future): "SELECT": SELECT query. "INSERT": INSERT query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language
+   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "UPDATE": UPDATE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language "DELETE": DELETE query; see
-   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language
+   * manipulation-language. "DELETE": DELETE query; see
+   * https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language.
    * "MERGE": MERGE query; see https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * manipulation-language "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
-   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... "DROP_TABLE": DROP TABLE
-   * query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... "DROP_VIEW": DROP VIEW query.
+   * manipulation-language. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
+   * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "DROP_TABLE": DROP
+   * TABLE query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_VIEW": DROP VIEW
+   * query. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
    * @param statementType statementType or {@code null} for none
    */
   public JobStatistics2 setStatementType(java.lang.String statementType) {

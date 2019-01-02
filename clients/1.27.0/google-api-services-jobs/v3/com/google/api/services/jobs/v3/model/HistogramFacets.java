@@ -42,6 +42,12 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<CompensationHistogramRequest> compensationHistogramFacets;
 
+  static {
+    // hack to force ProGuard to consider CompensationHistogramRequest used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CompensationHistogramRequest.class);
+  }
+
   /**
    * Optional.
    *
@@ -51,6 +57,12 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<CustomAttributeHistogramRequest> customAttributeHistogramFacets;
+
+  static {
+    // hack to force ProGuard to consider CustomAttributeHistogramRequest used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomAttributeHistogramRequest.class);
+  }
 
   /**
    * Optional.

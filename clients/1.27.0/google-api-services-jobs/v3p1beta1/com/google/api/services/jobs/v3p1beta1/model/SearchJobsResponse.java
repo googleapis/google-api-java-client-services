@@ -82,6 +82,12 @@ public final class SearchJobsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Location> locationFilters;
 
+  static {
+    // hack to force ProGuard to consider Location used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Location.class);
+  }
+
   /**
    * The Job entities that match the specified SearchJobsRequest.
    * The value may be {@code null}.

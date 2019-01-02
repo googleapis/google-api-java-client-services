@@ -37,12 +37,6 @@ public final class GuaranteedFixedPriceTerms extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<PricePerBuyer> fixedPrices;
 
-  static {
-    // hack to force ProGuard to consider PricePerBuyer used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PricePerBuyer.class);
-  }
-
   /**
    * Guaranteed impressions as a percentage. This is the percentage of guaranteed looks that the
    * buyer is guaranteeing to buy.

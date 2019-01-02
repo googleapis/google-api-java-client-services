@@ -43,6 +43,12 @@ public final class StreamingComputationConfig extends com.google.api.client.json
   @com.google.api.client.util.Key
   private java.util.List<ParallelInstruction> instructions;
 
+  static {
+    // hack to force ProGuard to consider ParallelInstruction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ParallelInstruction.class);
+  }
+
   /**
    * Stage name of this computation.
    * The value may be {@code null}.

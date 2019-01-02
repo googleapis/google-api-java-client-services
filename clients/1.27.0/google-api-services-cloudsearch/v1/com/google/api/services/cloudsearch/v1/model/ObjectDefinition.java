@@ -54,12 +54,6 @@ public final class ObjectDefinition extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<PropertyDefinition> propertyDefinitions;
 
-  static {
-    // hack to force ProGuard to consider PropertyDefinition used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PropertyDefinition.class);
-  }
-
   /**
    * Name for the object, which then defines its type. Item indexing requests should set the
    * objectType field equal to this value. For example, if *name* is *Document*, then indexing

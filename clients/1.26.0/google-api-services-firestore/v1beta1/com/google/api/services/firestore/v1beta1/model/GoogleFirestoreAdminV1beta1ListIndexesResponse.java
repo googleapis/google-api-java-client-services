@@ -36,6 +36,12 @@ public final class GoogleFirestoreAdminV1beta1ListIndexesResponse extends com.go
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirestoreAdminV1beta1Index> indexes;
 
+  static {
+    // hack to force ProGuard to consider GoogleFirestoreAdminV1beta1Index used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleFirestoreAdminV1beta1Index.class);
+  }
+
   /**
    * The standard List next-page token.
    * The value may be {@code null}.

@@ -36,24 +36,12 @@ public final class AndroidRuntimeConfiguration extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<Locale> locales;
 
-  static {
-    // hack to force ProGuard to consider Locale used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Locale.class);
-  }
-
   /**
    * The set of available orientations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Orientation> orientations;
-
-  static {
-    // hack to force ProGuard to consider Orientation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Orientation.class);
-  }
 
   /**
    * The set of available locales.

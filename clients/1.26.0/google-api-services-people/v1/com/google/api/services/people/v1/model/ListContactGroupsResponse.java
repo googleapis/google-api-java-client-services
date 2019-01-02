@@ -36,6 +36,12 @@ public final class ListContactGroupsResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<ContactGroup> contactGroups;
 
+  static {
+    // hack to force ProGuard to consider ContactGroup used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContactGroup.class);
+  }
+
   /**
    * The token that can be used to retrieve the next page of results.
    * The value may be {@code null}.

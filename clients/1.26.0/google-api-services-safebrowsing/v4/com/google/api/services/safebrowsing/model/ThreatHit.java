@@ -57,12 +57,6 @@ public final class ThreatHit extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ThreatSource> resources;
 
-  static {
-    // hack to force ProGuard to consider ThreatSource used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ThreatSource.class);
-  }
-
   /**
    * The threat type reported.
    * The value may be {@code null}.

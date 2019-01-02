@@ -37,12 +37,6 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<ClassificationCategory> categories;
 
-  static {
-    // hack to force ProGuard to consider ClassificationCategory used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ClassificationCategory.class);
-  }
-
   /**
    * The overall sentiment for the document. Populated if the user enables
    * AnnotateTextRequest.Features.extract_document_sentiment.
@@ -58,12 +52,6 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<Entity> entities;
-
-  static {
-    // hack to force ProGuard to consider Entity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Entity.class);
-  }
 
   /**
    * The language of the text, which will be the same as the language specified in the request or,
@@ -82,12 +70,6 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Sentence> sentences;
 
-  static {
-    // hack to force ProGuard to consider Sentence used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Sentence.class);
-  }
-
   /**
    * Tokens, along with their syntactic information, in the input document. Populated if the user
    * enables AnnotateTextRequest.Features.extract_syntax.
@@ -95,12 +77,6 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<Token> tokens;
-
-  static {
-    // hack to force ProGuard to consider Token used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Token.class);
-  }
 
   /**
    * Categories identified in the input document.

@@ -57,6 +57,12 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<LogEntry> entries;
 
+  static {
+    // hack to force ProGuard to consider LogEntry used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LogEntry.class);
+  }
+
   /**
    * Optional. Default labels that are added to the labels field of all log entries in entries. If a
    * log entry already has a label with the same key as a label in this parameter, then the log

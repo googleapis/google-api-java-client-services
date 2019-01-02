@@ -43,6 +43,12 @@ public final class ReferenceImage extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<BoundingPoly> boundingPolys;
 
+  static {
+    // hack to force ProGuard to consider BoundingPoly used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BoundingPoly.class);
+  }
+
   /**
    * The resource name of the reference image.
    *

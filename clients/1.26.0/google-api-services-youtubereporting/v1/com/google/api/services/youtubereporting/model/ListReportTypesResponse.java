@@ -46,12 +46,6 @@ public final class ListReportTypesResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<ReportType> reportTypes;
 
-  static {
-    // hack to force ProGuard to consider ReportType used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ReportType.class);
-  }
-
   /**
    * A token to retrieve next page of results. Pass this value in the
    * ListReportTypesRequest.page_token field in the subsequent call to `ListReportTypes` method to

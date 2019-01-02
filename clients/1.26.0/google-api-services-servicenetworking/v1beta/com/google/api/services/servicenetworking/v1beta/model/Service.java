@@ -268,12 +268,6 @@ public final class Service extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Type> systemTypes;
 
-  static {
-    // hack to force ProGuard to consider Type used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Type.class);
-  }
-
   /**
    * The product title for this service.
    * The value may be {@code null}.
@@ -292,12 +286,6 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Type> types;
-
-  static {
-    // hack to force ProGuard to consider Type used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Type.class);
-  }
 
   /**
    * Configuration controlling usage of this service.

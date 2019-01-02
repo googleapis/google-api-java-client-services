@@ -50,6 +50,12 @@ public final class QueryResultBatch extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<EntityResult> entityResults;
 
+  static {
+    // hack to force ProGuard to consider EntityResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityResult.class);
+  }
+
   /**
    * The state of the query after the current batch.
    * The value may be {@code null}.

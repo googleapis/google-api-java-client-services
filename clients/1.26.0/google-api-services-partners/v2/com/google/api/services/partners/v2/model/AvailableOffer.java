@@ -43,12 +43,6 @@ public final class AvailableOffer extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<CountryOfferInfo> countryOfferInfos;
 
-  static {
-    // hack to force ProGuard to consider CountryOfferInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CountryOfferInfo.class);
-  }
-
   /**
    * Description of the offer.
    * The value may be {@code null}.
@@ -97,12 +91,6 @@ public final class AvailableOffer extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<OfferCustomer> qualifiedCustomer;
-
-  static {
-    // hack to force ProGuard to consider OfferCustomer used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(OfferCustomer.class);
-  }
 
   /**
    * Whether or not the list of qualified customers is definitely complete.

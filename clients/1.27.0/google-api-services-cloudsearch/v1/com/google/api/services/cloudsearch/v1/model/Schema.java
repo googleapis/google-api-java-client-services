@@ -36,6 +36,12 @@ public final class Schema extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ObjectDefinition> objectDefinitions;
 
+  static {
+    // hack to force ProGuard to consider ObjectDefinition used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ObjectDefinition.class);
+  }
+
   /**
    * IDs of the Long Running Operations (LROs) currently running for this schema. After modifying
    * the schema, wait for opeations to complete before indexing additional content.

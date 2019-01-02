@@ -37,6 +37,12 @@ public final class FindDevicesByDeviceIdentifierResponse extends com.google.api.
   @com.google.api.client.util.Key
   private java.util.List<Device> devices;
 
+  static {
+    // hack to force ProGuard to consider Device used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Device.class);
+  }
+
   /**
    * A token used to access the next page of results. Omitted if no further results are available.
    * The value may be {@code null}.

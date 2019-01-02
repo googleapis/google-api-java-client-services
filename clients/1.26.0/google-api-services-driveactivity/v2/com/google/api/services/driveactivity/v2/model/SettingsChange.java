@@ -36,6 +36,12 @@ public final class SettingsChange extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<RestrictionChange> restrictionChanges;
 
+  static {
+    // hack to force ProGuard to consider RestrictionChange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RestrictionChange.class);
+  }
+
   /**
    * The set of changes made to restrictions.
    * @return value or {@code null} for none

@@ -80,6 +80,12 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Metric> metrics;
 
+  static {
+    // hack to force ProGuard to consider Metric used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Metric.class);
+  }
+
   /**
    * If k metrics were requested, then the response will contain some data-dependent multiple of k
    * columns in the report.  E.g., if you pivoted on the dimension `ga:browser` then you'd get k

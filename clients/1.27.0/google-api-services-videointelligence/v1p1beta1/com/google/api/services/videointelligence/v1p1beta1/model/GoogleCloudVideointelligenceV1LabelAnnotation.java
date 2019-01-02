@@ -39,6 +39,12 @@ public final class GoogleCloudVideointelligenceV1LabelAnnotation extends com.goo
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1Entity> categoryEntities;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1Entity used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1Entity.class);
+  }
+
   /**
    * Detected entity.
    * The value may be {@code null}.
@@ -59,12 +65,6 @@ public final class GoogleCloudVideointelligenceV1LabelAnnotation extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1LabelSegment> segments;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1LabelSegment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1LabelSegment.class);
-  }
 
   /**
    * Common categories for the detected entity. E.g. when the label is `Terrier` the category is

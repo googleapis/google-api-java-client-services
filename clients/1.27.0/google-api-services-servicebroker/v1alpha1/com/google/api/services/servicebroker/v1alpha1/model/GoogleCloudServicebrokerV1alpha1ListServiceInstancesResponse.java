@@ -44,12 +44,6 @@ public final class GoogleCloudServicebrokerV1alpha1ListServiceInstancesResponse 
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudServicebrokerV1alpha1ServiceInstance> instances;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudServicebrokerV1alpha1ServiceInstance used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudServicebrokerV1alpha1ServiceInstance.class);
-  }
-
   /**
    * This token allows you to get the next page of results for list requests. If the number of
    * results is larger than `pageSize`, use the `nextPageToken` as a value for the query parameter

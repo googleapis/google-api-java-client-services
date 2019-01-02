@@ -40,6 +40,12 @@ public final class NumericBucketingResult extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<BucketizedCount> counts;
 
+  static {
+    // hack to force ProGuard to consider BucketizedCount used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BucketizedCount.class);
+  }
+
   /**
    * Stores the maximum value of the numeric field. Is populated only if
    * [NumericBucketingOption.requires_min_max] is set to true.

@@ -45,12 +45,6 @@ public final class ListTracesResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Trace> traces;
 
-  static {
-    // hack to force ProGuard to consider Trace used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Trace.class);
-  }
-
   /**
    * If defined, indicates that there are more traces that match the request and that this value
    * should be passed to the next request to continue retrieving additional traces.

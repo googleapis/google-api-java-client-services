@@ -84,6 +84,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean explicitlyTrashed;
 
   /**
+   * Links for exporting Google Docs to specific formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> exportLinks;
+
+  /**
    * The final component of fullFileExtension. This is only available for files with binary content
    * in Drive.
    * The value may be {@code null}.
@@ -564,6 +571,23 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setExplicitlyTrashed(java.lang.Boolean explicitlyTrashed) {
     this.explicitlyTrashed = explicitlyTrashed;
+    return this;
+  }
+
+  /**
+   * Links for exporting Google Docs to specific formats.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getExportLinks() {
+    return exportLinks;
+  }
+
+  /**
+   * Links for exporting Google Docs to specific formats.
+   * @param exportLinks exportLinks or {@code null} for none
+   */
+  public File setExportLinks(java.util.Map<String, java.lang.String> exportLinks) {
+    this.exportLinks = exportLinks;
     return this;
   }
 

@@ -36,6 +36,12 @@ public final class GoogleCloudServicebrokerV1beta1ListBindingsResponse extends c
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudServicebrokerV1beta1Binding> bindings;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudServicebrokerV1beta1Binding used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudServicebrokerV1beta1Binding.class);
+  }
+
   /**
    * Used to communicate description of the response. Usually for non-standard error codes.
    * https://github.com/openservicebrokerapi/servicebroker/blob/master/spec.md#service-broker-errors

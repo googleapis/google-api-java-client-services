@@ -37,6 +37,12 @@ public final class ResourceUtilizationReport extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<CPUTime> cpuTime;
 
+  static {
+    // hack to force ProGuard to consider CPUTime used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CPUTime.class);
+  }
+
   /**
    * CPU utilization samples.
    * @return value or {@code null} for none

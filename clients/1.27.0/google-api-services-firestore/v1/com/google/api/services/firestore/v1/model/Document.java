@@ -66,12 +66,6 @@ public final class Document extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, Value> fields;
 
-  static {
-    // hack to force ProGuard to consider Value used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Value.class);
-  }
-
   /**
    * The resource name of the document, for example
    * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.

@@ -39,6 +39,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<AdmissionWhitelistPattern> admissionWhitelistPatterns;
 
+  static {
+    // hack to force ProGuard to consider AdmissionWhitelistPattern used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdmissionWhitelistPattern.class);
+  }
+
   /**
    * Optional. Per-cluster admission rules. Cluster spec format: `location.clusterId`. There can be
    * at most one admission rule per cluster spec. A `location` is either a compute zone (e.g. us-
@@ -48,6 +54,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, AdmissionRule> clusterAdmissionRules;
+
+  static {
+    // hack to force ProGuard to consider AdmissionRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdmissionRule.class);
+  }
 
   /**
    * Required. Default admission rule for a cluster without a per-cluster admission rule.

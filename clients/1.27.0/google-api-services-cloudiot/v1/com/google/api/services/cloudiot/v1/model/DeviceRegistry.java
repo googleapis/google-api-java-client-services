@@ -44,12 +44,6 @@ public final class DeviceRegistry extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<RegistryCredential> credentials;
 
-  static {
-    // hack to force ProGuard to consider RegistryCredential used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RegistryCredential.class);
-  }
-
   /**
    * The configuration for notification of telemetry events received from the device. All telemetry
    * events that were successfully published by the device and acknowledged by Cloud IoT Core are

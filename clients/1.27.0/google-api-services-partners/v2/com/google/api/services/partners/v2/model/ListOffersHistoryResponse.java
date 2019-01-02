@@ -50,6 +50,12 @@ public final class ListOffersHistoryResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<HistoricalOffer> offers;
 
+  static {
+    // hack to force ProGuard to consider HistoricalOffer used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HistoricalOffer.class);
+  }
+
   /**
    * Current response metadata.
    * The value may be {@code null}.

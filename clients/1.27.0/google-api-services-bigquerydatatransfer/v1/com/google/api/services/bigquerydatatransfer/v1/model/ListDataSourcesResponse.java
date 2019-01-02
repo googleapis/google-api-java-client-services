@@ -37,6 +37,12 @@ public final class ListDataSourcesResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<DataSource> dataSources;
 
+  static {
+    // hack to force ProGuard to consider DataSource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataSource.class);
+  }
+
   /**
    * Output only. The next-pagination token. For multiple-page list results, this token can be used
    * as the `ListDataSourcesRequest.page_token` to request the next page of list results.

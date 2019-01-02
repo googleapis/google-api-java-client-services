@@ -50,6 +50,12 @@ public final class SearchResponse extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<FacetResult> facetResults;
 
+  static {
+    // hack to force ProGuard to consider FacetResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FacetResult.class);
+  }
+
   /**
    * Whether there are more search results matching the query.
    * The value may be {@code null}.
@@ -99,24 +105,12 @@ public final class SearchResponse extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<SpellResult> spellResults;
 
-  static {
-    // hack to force ProGuard to consider SpellResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SpellResult.class);
-  }
-
   /**
    * Structured results for the user query. These results are not counted against the page_size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StructuredResult> structuredResults;
-
-  static {
-    // hack to force ProGuard to consider StructuredResult used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(StructuredResult.class);
-  }
 
   /**
    * Debugging information about the response.

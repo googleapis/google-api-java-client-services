@@ -46,12 +46,6 @@ public final class AnnotateTextResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Entity> entities;
 
-  static {
-    // hack to force ProGuard to consider Entity used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Entity.class);
-  }
-
   /**
    * The language of the text, which will be the same as the language specified in the request or,
    * if not specified, the automatically-detected language. See Document.language field for more

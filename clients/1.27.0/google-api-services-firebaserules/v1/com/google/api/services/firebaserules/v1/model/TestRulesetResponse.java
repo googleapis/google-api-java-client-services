@@ -51,6 +51,12 @@ public final class TestRulesetResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<TestResult> testResults;
 
+  static {
+    // hack to force ProGuard to consider TestResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(TestResult.class);
+  }
+
   /**
    * Syntactic and semantic `Source` issues of varying severity. Issues of `ERROR` severity will
    * prevent tests from executing.

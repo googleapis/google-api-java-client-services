@@ -44,12 +44,6 @@ public final class AnnotateFileResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<AnnotateImageResponse> responses;
 
-  static {
-    // hack to force ProGuard to consider AnnotateImageResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AnnotateImageResponse.class);
-  }
-
   /**
    * Information about the file for which this response is generated.
    * @return value or {@code null} for none

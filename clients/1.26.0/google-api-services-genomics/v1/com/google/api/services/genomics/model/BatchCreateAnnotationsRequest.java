@@ -36,6 +36,12 @@ public final class BatchCreateAnnotationsRequest extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<Annotation> annotations;
 
+  static {
+    // hack to force ProGuard to consider Annotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Annotation.class);
+  }
+
   /**
    * A unique request ID which enables the server to detect duplicated requests. If provided,
    * duplicated requests will result in the same response; if not provided, duplicated requests may

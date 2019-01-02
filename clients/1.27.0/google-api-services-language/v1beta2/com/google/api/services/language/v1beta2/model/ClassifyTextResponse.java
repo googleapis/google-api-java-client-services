@@ -37,6 +37,12 @@ public final class ClassifyTextResponse extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<ClassificationCategory> categories;
 
+  static {
+    // hack to force ProGuard to consider ClassificationCategory used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClassificationCategory.class);
+  }
+
   /**
    * Categories representing the input document.
    * @return value or {@code null} for none

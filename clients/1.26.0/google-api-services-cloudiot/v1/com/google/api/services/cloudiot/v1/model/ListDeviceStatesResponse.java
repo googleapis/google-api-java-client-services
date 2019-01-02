@@ -37,6 +37,12 @@ public final class ListDeviceStatesResponse extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<DeviceState> deviceStates;
 
+  static {
+    // hack to force ProGuard to consider DeviceState used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeviceState.class);
+  }
+
   /**
    * The last few device states. States are listed in descending order of server update time,
    * starting from the most recent one.

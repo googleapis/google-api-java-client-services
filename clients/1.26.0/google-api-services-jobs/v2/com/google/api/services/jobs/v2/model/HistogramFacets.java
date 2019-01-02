@@ -58,6 +58,12 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<CustomAttributeHistogramRequest> customAttributeHistogramFacets;
 
+  static {
+    // hack to force ProGuard to consider CustomAttributeHistogramRequest used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomAttributeHistogramRequest.class);
+  }
+
   /**
    * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
    * `EMPLOYMENT_TYPE` etc. This field is equivalent to GetHistogramRequest.

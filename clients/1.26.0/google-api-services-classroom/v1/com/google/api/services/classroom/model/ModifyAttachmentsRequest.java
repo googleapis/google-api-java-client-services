@@ -38,6 +38,12 @@ public final class ModifyAttachmentsRequest extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<Attachment> addAttachments;
 
+  static {
+    // hack to force ProGuard to consider Attachment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Attachment.class);
+  }
+
   /**
    * Attachments to add. A student submission may not have more than 20 attachments.
    *

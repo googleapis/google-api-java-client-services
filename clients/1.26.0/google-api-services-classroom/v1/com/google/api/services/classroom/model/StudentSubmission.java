@@ -171,12 +171,6 @@ public final class StudentSubmission extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<SubmissionHistory> submissionHistory;
 
-  static {
-    // hack to force ProGuard to consider SubmissionHistory used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SubmissionHistory.class);
-  }
-
   /**
    * Last update time of this submission. This may be unset if the student has not accessed this
    * item.

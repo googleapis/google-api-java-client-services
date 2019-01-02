@@ -36,6 +36,12 @@ public final class FacetResult extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<FacetBucket> buckets;
 
+  static {
+    // hack to force ProGuard to consider FacetBucket used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FacetBucket.class);
+  }
+
   /**
    * Object type for which facet results are returned. Can be empty.
    * The value may be {@code null}.

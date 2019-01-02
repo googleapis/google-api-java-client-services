@@ -36,6 +36,12 @@ public final class SearchDeveloperMetadataResponse extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<MatchedDeveloperMetadata> matchedDeveloperMetadata;
 
+  static {
+    // hack to force ProGuard to consider MatchedDeveloperMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MatchedDeveloperMetadata.class);
+  }
+
   /**
    * The metadata matching the criteria of the search request.
    * @return value or {@code null} for none

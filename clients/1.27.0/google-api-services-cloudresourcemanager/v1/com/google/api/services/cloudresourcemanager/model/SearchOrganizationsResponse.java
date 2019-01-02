@@ -47,6 +47,12 @@ public final class SearchOrganizationsResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<Organization> organizations;
 
+  static {
+    // hack to force ProGuard to consider Organization used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Organization.class);
+  }
+
   /**
    * A pagination token to be used to retrieve the next page of results. If the result is too large
    * to fit within the page size specified in the request, this field will be set with a token that

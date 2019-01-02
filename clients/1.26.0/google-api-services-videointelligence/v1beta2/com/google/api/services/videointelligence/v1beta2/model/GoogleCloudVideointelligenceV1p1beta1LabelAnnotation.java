@@ -39,6 +39,12 @@ public final class GoogleCloudVideointelligenceV1p1beta1LabelAnnotation extends 
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1Entity> categoryEntities;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1Entity used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1Entity.class);
+  }
+
   /**
    * Detected entity.
    * The value may be {@code null}.
@@ -53,24 +59,12 @@ public final class GoogleCloudVideointelligenceV1p1beta1LabelAnnotation extends 
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1LabelFrame> frames;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1LabelFrame used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1LabelFrame.class);
-  }
-
   /**
    * All video segments where a label was detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1LabelSegment> segments;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1LabelSegment used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1LabelSegment.class);
-  }
 
   /**
    * Common categories for the detected entity. E.g. when the label is `Terrier` the category is

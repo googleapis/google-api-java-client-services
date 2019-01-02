@@ -36,6 +36,12 @@ public final class ListEnvironmentsResponse extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<Environment> environments;
 
+  static {
+    // hack to force ProGuard to consider Environment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Environment.class);
+  }
+
   /**
    * The page token used to query for the next page if one exists.
    * The value may be {@code null}.

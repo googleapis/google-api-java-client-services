@@ -36,12 +36,6 @@ public final class BatchUpdateIngressRulesRequest extends com.google.api.client.
   @com.google.api.client.util.Key
   private java.util.List<FirewallRule> ingressRules;
 
-  static {
-    // hack to force ProGuard to consider FirewallRule used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FirewallRule.class);
-  }
-
   /**
    * A list of FirewallRules to replace the existing set.
    * @return value or {@code null} for none

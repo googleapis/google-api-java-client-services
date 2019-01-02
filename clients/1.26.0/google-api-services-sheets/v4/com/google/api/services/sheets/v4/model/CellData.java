@@ -103,12 +103,6 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<TextFormatRun> textFormatRuns;
 
-  static {
-    // hack to force ProGuard to consider TextFormatRun used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TextFormatRun.class);
-  }
-
   /**
    * The format the user entered for the cell.
    *

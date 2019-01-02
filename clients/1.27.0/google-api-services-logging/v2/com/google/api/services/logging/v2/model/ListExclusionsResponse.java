@@ -37,12 +37,6 @@ public final class ListExclusionsResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<LogExclusion> exclusions;
 
-  static {
-    // hack to force ProGuard to consider LogExclusion used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LogExclusion.class);
-  }
-
   /**
    * If there might be more results than appear in this response, then nextPageToken is included. To
    * get the next set of results, call the same method again using the value of nextPageToken as

@@ -39,12 +39,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Image> additionalImageLink;
 
-  static {
-    // hack to force ProGuard to consider Image used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Image.class);
-  }
-
   /**
    * The target age group of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#agegroup.
@@ -115,12 +109,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<FeatureDescription> featureDescription;
-
-  static {
-    // hack to force ProGuard to consider FeatureDescription used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FeatureDescription.class);
-  }
 
   /**
    * The flavor of the product. For more information, see
@@ -208,12 +196,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ProductDetail> productDetail;
-
-  static {
-    // hack to force ProGuard to consider ProductDetail used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ProductDetail.class);
-  }
 
   /**
    * The name of the group of products related to the product. For more information, see

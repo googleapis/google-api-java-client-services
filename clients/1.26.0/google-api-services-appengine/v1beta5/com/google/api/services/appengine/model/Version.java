@@ -132,6 +132,12 @@ public final class Version extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ErrorHandler> errorHandlers;
 
+  static {
+    // hack to force ProGuard to consider ErrorHandler used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ErrorHandler.class);
+  }
+
   /**
    * An ordered list of URL-matching patterns that should be applied to incoming requests. The first
    * matching URL handles the request and other request handlers are not attempted.Only returned in
@@ -140,6 +146,12 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<UrlMap> handlers;
+
+  static {
+    // hack to force ProGuard to consider UrlMap used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(UrlMap.class);
+  }
 
   /**
    * Configures health checking for VM instances. Unhealthy instances are be stopped and replaced
@@ -183,6 +195,12 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Library> libraries;
+
+  static {
+    // hack to force ProGuard to consider Library used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Library.class);
+  }
 
   /**
    * A service with manual scaling runs continuously, allowing you to perform complex initialization
@@ -236,6 +254,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String runtimeApiVersion;
+
+  /**
+   * The path or name of the app's main executable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String runtimeMainExecutablePath;
 
   /**
    * Current serving status of this version. Only the versions with a SERVING status create
@@ -749,6 +774,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setRuntimeApiVersion(java.lang.String runtimeApiVersion) {
     this.runtimeApiVersion = runtimeApiVersion;
+    return this;
+  }
+
+  /**
+   * The path or name of the app's main executable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRuntimeMainExecutablePath() {
+    return runtimeMainExecutablePath;
+  }
+
+  /**
+   * The path or name of the app's main executable.
+   * @param runtimeMainExecutablePath runtimeMainExecutablePath or {@code null} for none
+   */
+  public Version setRuntimeMainExecutablePath(java.lang.String runtimeMainExecutablePath) {
+    this.runtimeMainExecutablePath = runtimeMainExecutablePath;
     return this;
   }
 

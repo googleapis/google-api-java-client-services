@@ -38,12 +38,6 @@ public final class PullResponse extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ReceivedMessage> receivedMessages;
 
-  static {
-    // hack to force ProGuard to consider ReceivedMessage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ReceivedMessage.class);
-  }
-
   /**
    * Received Pub/Sub messages. The list will be empty if there are no more messages available in
    * the backlog. For JSON, the response can be entirely empty. The Pub/Sub system may return fewer

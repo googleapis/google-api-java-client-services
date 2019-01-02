@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-appengine</artifactId>
-  <version>v1beta-rev20181120-1.26.0</version>
-  <name>App Engine Admin API v1beta-rev20181120-1.26.0</name>
+  <version>v1beta-rev20181218-1.26.0</version>
+  <name>App Engine Admin API v1beta-rev20181218-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -85,6 +85,11 @@
       </plugin>
     </plugins>
     <sourceDirectory>.</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>./resources</directory>
+      </resource>
+    </resources>
   </build>
 
   <dependencies>

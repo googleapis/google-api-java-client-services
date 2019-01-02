@@ -80,6 +80,12 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Write> writes;
 
+  static {
+    // hack to force ProGuard to consider Write used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Write.class);
+  }
+
   /**
    * Labels associated with this write request.
    * @return value or {@code null} for none

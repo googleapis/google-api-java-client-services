@@ -56,6 +56,12 @@ public final class PivotTable extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, PivotFilterCriteria> criteria;
 
+  static {
+    // hack to force ProGuard to consider PivotFilterCriteria used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PivotFilterCriteria.class);
+  }
+
   /**
    * Each row grouping in the pivot table.
    * The value may be {@code null}.

@@ -45,12 +45,6 @@ public final class ListServicePerimetersResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<ServicePerimeter> servicePerimeters;
 
-  static {
-    // hack to force ProGuard to consider ServicePerimeter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ServicePerimeter.class);
-  }
-
   /**
    * The pagination token to retrieve the next page of results. If the value is empty, no further
    * results remain.

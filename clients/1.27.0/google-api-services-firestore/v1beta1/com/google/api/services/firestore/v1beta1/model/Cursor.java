@@ -47,12 +47,6 @@ public final class Cursor extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Value> values;
 
-  static {
-    // hack to force ProGuard to consider Value used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Value.class);
-  }
-
   /**
    * If the position is just before or just after the given values, relative to the sort order
    * defined by the query.

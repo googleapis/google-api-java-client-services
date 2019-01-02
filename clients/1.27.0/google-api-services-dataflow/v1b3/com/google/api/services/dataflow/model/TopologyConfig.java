@@ -37,12 +37,24 @@ public final class TopologyConfig extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<ComputationTopology> computations;
 
+  static {
+    // hack to force ProGuard to consider ComputationTopology used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ComputationTopology.class);
+  }
+
   /**
    * The disks assigned to a streaming Dataflow job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DataDiskAssignment> dataDiskAssignments;
+
+  static {
+    // hack to force ProGuard to consider DataDiskAssignment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataDiskAssignment.class);
+  }
 
   /**
    * The size (in bits) of keys that will be assigned to source messages.

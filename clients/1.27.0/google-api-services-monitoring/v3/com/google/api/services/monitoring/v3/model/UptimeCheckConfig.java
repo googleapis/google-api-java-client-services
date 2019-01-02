@@ -40,6 +40,12 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<ContentMatcher> contentMatchers;
 
+  static {
+    // hack to force ProGuard to consider ContentMatcher used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContentMatcher.class);
+  }
+
   /**
    * A human-friendly name for the uptime check configuration. The display name should be unique
    * within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is
@@ -64,6 +70,12 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<InternalChecker> internalCheckers;
+
+  static {
+    // hack to force ProGuard to consider InternalChecker used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InternalChecker.class);
+  }
 
   /**
    * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then

@@ -36,6 +36,12 @@ public final class GetSpreadsheetByDataFilterRequest extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<DataFilter> dataFilters;
 
+  static {
+    // hack to force ProGuard to consider DataFilter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataFilter.class);
+  }
+
   /**
    * True if grid data should be returned. This parameter is ignored if a field mask was set in the
    * request.

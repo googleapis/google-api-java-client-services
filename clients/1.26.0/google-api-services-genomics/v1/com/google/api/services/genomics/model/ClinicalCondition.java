@@ -44,12 +44,6 @@ public final class ClinicalCondition extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<ExternalId> externalIds;
 
-  static {
-    // hack to force ProGuard to consider ExternalId used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ExternalId.class);
-  }
-
   /**
    * A set of names for the condition.
    * The value may be {@code null}.

@@ -38,12 +38,6 @@ public final class GoogleCloudVideointelligenceV1ExplicitContentAnnotation exten
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1ExplicitContentFrame> frames;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1ExplicitContentFrame used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1ExplicitContentFrame.class);
-  }
-
   /**
    * All video frames where explicit content was detected.
    * @return value or {@code null} for none

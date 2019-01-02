@@ -60,6 +60,12 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentMessage> fulfillmentMessages;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1IntentMessage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1IntentMessage.class);
+  }
+
   /**
    * The text to be pronounced to the user or shown on the screen.
    * The value may be {@code null}.

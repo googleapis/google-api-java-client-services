@@ -87,12 +87,6 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<VisitedExpression> visitedExpressions;
 
-  static {
-    // hack to force ProGuard to consider VisitedExpression used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(VisitedExpression.class);
-  }
-
   /**
    * Debug messages related to test execution issues encountered during evaluation.
    *

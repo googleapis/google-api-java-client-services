@@ -44,24 +44,12 @@ public final class GoogleCloudVisionV1p2beta1WebDetection extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1WebDetectionWebImage> fullMatchingImages;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1WebDetectionWebImage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1WebDetectionWebImage.class);
-  }
-
   /**
    * Web pages containing the matching images from the Internet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1WebDetectionWebPage> pagesWithMatchingImages;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1WebDetectionWebPage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1WebDetectionWebPage.class);
-  }
 
   /**
    * Partial matching images from the Internet. Those images are similar enough to share some key-
@@ -71,24 +59,12 @@ public final class GoogleCloudVisionV1p2beta1WebDetection extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1WebDetectionWebImage> partialMatchingImages;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1WebDetectionWebImage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1WebDetectionWebImage.class);
-  }
-
   /**
    * The visually similar image results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p2beta1WebDetectionWebImage> visuallySimilarImages;
-
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p2beta1WebDetectionWebImage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p2beta1WebDetectionWebImage.class);
-  }
 
   /**
    * Deduced entities from similar images on the Internet.

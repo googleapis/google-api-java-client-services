@@ -36,6 +36,12 @@ public final class TransformSummary extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<DisplayData> displayData;
 
+  static {
+    // hack to force ProGuard to consider DisplayData used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DisplayData.class);
+  }
+
   /**
    * SDK generated id of this transform instance.
    * The value may be {@code null}.

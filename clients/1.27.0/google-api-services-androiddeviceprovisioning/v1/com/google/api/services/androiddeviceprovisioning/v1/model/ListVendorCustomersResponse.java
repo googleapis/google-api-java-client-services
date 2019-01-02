@@ -37,6 +37,12 @@ public final class ListVendorCustomersResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<Company> customers;
 
+  static {
+    // hack to force ProGuard to consider Company used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Company.class);
+  }
+
   /**
    * A token to retrieve the next page of results. Omitted if no further results are available.
    * The value may be {@code null}.

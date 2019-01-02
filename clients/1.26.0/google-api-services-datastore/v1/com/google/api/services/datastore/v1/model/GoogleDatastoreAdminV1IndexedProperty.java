@@ -17,7 +17,7 @@
 package com.google.api.services.datastore.v1.model;
 
 /**
- * Next tag: 3
+ * A property of an index.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Datastore API. For a detailed explanation see:

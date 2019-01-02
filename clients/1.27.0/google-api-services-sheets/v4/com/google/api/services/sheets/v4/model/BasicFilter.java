@@ -37,12 +37,6 @@ public final class BasicFilter extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, FilterCriteria> criteria;
 
-  static {
-    // hack to force ProGuard to consider FilterCriteria used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FilterCriteria.class);
-  }
-
   /**
    * The range the filter covers.
    * The value may be {@code null}.
@@ -57,12 +51,6 @@ public final class BasicFilter extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<SortSpec> sortSpecs;
-
-  static {
-    // hack to force ProGuard to consider SortSpec used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SortSpec.class);
-  }
 
   /**
    * The criteria for showing/hiding values per column. The map's key is the column index, and the

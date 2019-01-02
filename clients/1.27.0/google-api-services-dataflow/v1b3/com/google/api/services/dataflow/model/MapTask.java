@@ -46,12 +46,6 @@ public final class MapTask extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ParallelInstruction> instructions;
 
-  static {
-    // hack to force ProGuard to consider ParallelInstruction used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ParallelInstruction.class);
-  }
-
   /**
    * System-defined name of the stage containing this MapTask. Unique across the workflow.
    * The value may be {@code null}.

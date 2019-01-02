@@ -44,12 +44,6 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<Request> requests;
 
-  static {
-    // hack to force ProGuard to consider Request used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Request.class);
-  }
-
   /**
    * True if grid data should be returned. Meaningful only if if include_spreadsheet_in_response is
    * 'true'. This parameter is ignored if a field mask was set in the request.

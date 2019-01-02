@@ -37,12 +37,6 @@ public final class Correction extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ServingContext> contexts;
 
-  static {
-    // hack to force ProGuard to consider ServingContext used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ServingContext.class);
-  }
-
   /**
    * Additional details about what was corrected.
    * The value may be {@code null}.

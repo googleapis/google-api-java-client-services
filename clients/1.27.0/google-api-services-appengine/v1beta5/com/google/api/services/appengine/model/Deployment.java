@@ -45,12 +45,6 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, FileInfo> files;
 
-  static {
-    // hack to force ProGuard to consider FileInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FileInfo.class);
-  }
-
   /**
    * Origin of the source code for this deployment. There can be more than one source reference per
    * version if source code is distributed among multiple repositories.

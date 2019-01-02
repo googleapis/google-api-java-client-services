@@ -51,6 +51,12 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Event> events;
 
+  static {
+    // hack to force ProGuard to consider Event used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Event.class);
+  }
+
   /**
    * The user-defined labels associated with this operation.
    * The value may be {@code null}.

@@ -45,6 +45,12 @@ public final class SequenceSegment extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<SegmentSequenceStep> segmentSequenceSteps;
 
+  static {
+    // hack to force ProGuard to consider SegmentSequenceStep used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SegmentSequenceStep.class);
+  }
+
   /**
    * If set, first step condition must match the first hit of the visitor (in the date range).
    * @return value or {@code null} for none

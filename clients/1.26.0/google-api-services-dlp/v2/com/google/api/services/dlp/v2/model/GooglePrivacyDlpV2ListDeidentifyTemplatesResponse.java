@@ -37,6 +37,12 @@ public final class GooglePrivacyDlpV2ListDeidentifyTemplatesResponse extends com
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2DeidentifyTemplate> deidentifyTemplates;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2DeidentifyTemplate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2DeidentifyTemplate.class);
+  }
+
   /**
    * If the next page is available then the next page token to be used in following
    * ListDeidentifyTemplates request.

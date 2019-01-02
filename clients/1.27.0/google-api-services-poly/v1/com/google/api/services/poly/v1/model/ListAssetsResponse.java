@@ -36,6 +36,12 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Asset> assets;
 
+  static {
+    // hack to force ProGuard to consider Asset used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Asset.class);
+  }
+
   /**
    * The continuation token for retrieving the next page. If empty, indicates that there are no more
    * pages. To get the next page, submit the same request specifying this value as the page_token.

@@ -55,12 +55,6 @@ public final class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternati
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2WordInfo> words;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2WordInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2WordInfo.class);
-  }
-
   /**
    * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
    * likelihood that the recognized words are correct. This field is typically provided only for the

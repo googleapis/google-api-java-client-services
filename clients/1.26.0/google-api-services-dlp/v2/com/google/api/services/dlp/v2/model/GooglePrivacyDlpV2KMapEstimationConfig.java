@@ -42,6 +42,12 @@ public final class GooglePrivacyDlpV2KMapEstimationConfig extends com.google.api
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2AuxiliaryTable> auxiliaryTables;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2AuxiliaryTable used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2AuxiliaryTable.class);
+  }
+
   /**
    * Fields considered to be quasi-identifiers. No two columns can have the same tag. [required]
    * The value may be {@code null}.

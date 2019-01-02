@@ -48,12 +48,6 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, GqlQueryParameter> namedBindings;
 
-  static {
-    // hack to force ProGuard to consider GqlQueryParameter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GqlQueryParameter.class);
-  }
-
   /**
    * Numbered binding site @1 references the first numbered parameter, effectively using 1-based
    * indexing, rather than the usual 0.
@@ -64,12 +58,6 @@ public final class GqlQuery extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<GqlQueryParameter> positionalBindings;
-
-  static {
-    // hack to force ProGuard to consider GqlQueryParameter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GqlQueryParameter.class);
-  }
 
   /**
    * A string of the format described

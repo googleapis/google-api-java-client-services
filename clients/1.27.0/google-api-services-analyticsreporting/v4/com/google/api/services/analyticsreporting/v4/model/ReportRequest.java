@@ -53,6 +53,12 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<DateRange> dateRanges;
 
+  static {
+    // hack to force ProGuard to consider DateRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DateRange.class);
+  }
+
   /**
    * The dimension filter clauses for filtering Dimension Values. They are logically combined with
    * the `AND` operator. Note that filtering occurs before any dimensions are aggregated, so that
@@ -62,12 +68,24 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<DimensionFilterClause> dimensionFilterClauses;
 
+  static {
+    // hack to force ProGuard to consider DimensionFilterClause used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DimensionFilterClause.class);
+  }
+
   /**
    * The dimensions requested. Requests can have a total of 7 dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Dimension> dimensions;
+
+  static {
+    // hack to force ProGuard to consider Dimension used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Dimension.class);
+  }
 
   /**
    * Dimension or metric filters that restrict the data returned for your request. To use the
@@ -114,6 +132,12 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<MetricFilterClause> metricFilterClauses;
 
+  static {
+    // hack to force ProGuard to consider MetricFilterClause used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetricFilterClause.class);
+  }
+
   /**
    * The metrics requested. Requests must specify at least one metric. Requests can have a total of
    * 10 metrics.
@@ -122,6 +146,12 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Metric> metrics;
 
+  static {
+    // hack to force ProGuard to consider Metric used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Metric.class);
+  }
+
   /**
    * Sort order on output rows. To compare two rows, the elements of the following are applied in
    * order until a difference is found.  All date ranges in the output get the same row order.
@@ -129,6 +159,12 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<OrderBy> orderBys;
+
+  static {
+    // hack to force ProGuard to consider OrderBy used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OrderBy.class);
+  }
 
   /**
    * Page size is for paging and specifies the maximum number of returned rows. Page size should be
@@ -157,6 +193,12 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<Pivot> pivots;
+
+  static {
+    // hack to force ProGuard to consider Pivot used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Pivot.class);
+  }
 
   /**
    * The desired report [sample](https://support.google.com/analytics/answer/2637192) size. If the

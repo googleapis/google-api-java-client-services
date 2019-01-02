@@ -55,12 +55,6 @@ public final class ErrorContext extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<SourceReference> sourceReferences;
 
-  static {
-    // hack to force ProGuard to consider SourceReference used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SourceReference.class);
-  }
-
   /**
    * The user who caused or was affected by the crash. This can be a user ID, an email address, or
    * an arbitrary token that uniquely identifies the user. When sending an error report, leave this

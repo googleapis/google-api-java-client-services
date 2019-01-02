@@ -38,12 +38,6 @@ public final class ReportWorkItemStatusResponse extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<WorkItemServiceState> workItemServiceStates;
 
-  static {
-    // hack to force ProGuard to consider WorkItemServiceState used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WorkItemServiceState.class);
-  }
-
   /**
    * A set of messages indicating the service-side state for each WorkItem whose status was
    * reported, in the same order as the WorkItemStatus messages in the ReportWorkItemStatusRequest

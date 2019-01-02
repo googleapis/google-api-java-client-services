@@ -36,6 +36,12 @@ public final class UpdateDeveloperMetadataResponse extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<DeveloperMetadata> developerMetadata;
 
+  static {
+    // hack to force ProGuard to consider DeveloperMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeveloperMetadata.class);
+  }
+
   /**
    * The updated developer metadata.
    * @return value or {@code null} for none

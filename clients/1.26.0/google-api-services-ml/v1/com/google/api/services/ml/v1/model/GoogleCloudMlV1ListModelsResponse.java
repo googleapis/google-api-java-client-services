@@ -37,12 +37,6 @@ public final class GoogleCloudMlV1ListModelsResponse extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudMlV1Model> models;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudMlV1Model used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudMlV1Model.class);
-  }
-
   /**
    * Optional. Pass this token as the `page_token` field of the request for a subsequent call.
    * The value may be {@code null}.

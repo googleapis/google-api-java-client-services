@@ -56,12 +56,6 @@ public final class SpeechRecognitionAlternative extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<WordInfo> words;
 
-  static {
-    // hack to force ProGuard to consider WordInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(WordInfo.class);
-  }
-
   /**
    * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
    * estimated greater likelihood that the recognized words are correct. This field is set only for

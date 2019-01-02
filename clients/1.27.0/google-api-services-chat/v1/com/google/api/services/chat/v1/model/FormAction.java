@@ -44,6 +44,12 @@ public final class FormAction extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ActionParameter> parameters;
 
+  static {
+    // hack to force ProGuard to consider ActionParameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ActionParameter.class);
+  }
+
   /**
    * Apps Script function to invoke when the containing element is clicked/activated.
    * @return value or {@code null} for none

@@ -112,12 +112,6 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<PermissionGrant> permissionGrants;
 
-  static {
-    // hack to force ProGuard to consider PermissionGrant used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PermissionGrant.class);
-  }
-
   /**
    * The default policy for all permissions requested by the app. If specified, this overrides the
    * policy-level default_permission_policy which applies to all apps. It does not override the

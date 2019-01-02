@@ -37,6 +37,12 @@ public final class GooglePrivacyDlpV2ListInspectTemplatesResponse extends com.go
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2InspectTemplate> inspectTemplates;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2InspectTemplate used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InspectTemplate.class);
+  }
+
   /**
    * If the next page is available then the next page token to be used in following
    * ListInspectTemplates request.

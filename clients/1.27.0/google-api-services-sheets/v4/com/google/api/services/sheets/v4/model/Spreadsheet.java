@@ -36,12 +36,24 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<DeveloperMetadata> developerMetadata;
 
+  static {
+    // hack to force ProGuard to consider DeveloperMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeveloperMetadata.class);
+  }
+
   /**
    * The named ranges defined in a spreadsheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NamedRange> namedRanges;
+
+  static {
+    // hack to force ProGuard to consider NamedRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NamedRange.class);
+  }
 
   /**
    * Overall properties of a spreadsheet.
@@ -56,6 +68,12 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Sheet> sheets;
+
+  static {
+    // hack to force ProGuard to consider Sheet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Sheet.class);
+  }
 
   /**
    * The ID of the spreadsheet. This field is read-only.

@@ -52,6 +52,12 @@ public final class ListGroupItemsResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<GroupItem> items;
 
+  static {
+    // hack to force ProGuard to consider GroupItem used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GroupItem.class);
+  }
+
   /**
    * Identifies the API resource's type. The value will be `youtube#groupItemListResponse`.
    * The value may be {@code null}.

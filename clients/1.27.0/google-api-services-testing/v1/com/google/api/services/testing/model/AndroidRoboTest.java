@@ -82,12 +82,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.List<RoboDirective> roboDirectives;
 
-  static {
-    // hack to force ProGuard to consider RoboDirective used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RoboDirective.class);
-  }
-
   /**
    * A JSON file with a sequence of actions Robo should perform as a prologue for the crawl.
    * The value may be {@code null}.
@@ -103,12 +97,6 @@ public final class AndroidRoboTest extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<RoboStartingIntent> startingIntents;
-
-  static {
-    // hack to force ProGuard to consider RoboStartingIntent used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RoboStartingIntent.class);
-  }
 
   /**
    * The APK for the application under test.

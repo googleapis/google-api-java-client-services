@@ -39,12 +39,6 @@ public final class SegmentDefinition extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<SegmentFilter> segmentFilters;
 
-  static {
-    // hack to force ProGuard to consider SegmentFilter used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SegmentFilter.class);
-  }
-
   /**
    * A segment is defined by a set of segment filters which are combined together with a logical
    * `AND` operation.

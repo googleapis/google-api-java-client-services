@@ -43,12 +43,6 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
   @com.google.api.client.util.Key
   private java.util.List<GoogleLongrunningOperation> operations;
 
-  static {
-    // hack to force ProGuard to consider GoogleLongrunningOperation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleLongrunningOperation.class);
-  }
-
   /**
    * The standard List next-page token.
    * @return value or {@code null} for none

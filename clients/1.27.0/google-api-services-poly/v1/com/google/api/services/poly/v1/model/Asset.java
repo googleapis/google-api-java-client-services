@@ -68,12 +68,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Format> formats;
 
-  static {
-    // hack to force ProGuard to consider Format used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Format.class);
-  }
-
   /**
    * Whether this asset has been curated by the Poly team.
    * The value may be {@code null}.

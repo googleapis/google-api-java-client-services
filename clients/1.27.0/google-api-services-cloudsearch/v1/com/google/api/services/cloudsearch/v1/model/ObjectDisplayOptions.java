@@ -40,6 +40,12 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
   @com.google.api.client.util.Key
   private java.util.List<Metaline> metalines;
 
+  static {
+    // hack to force ProGuard to consider Metaline used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Metaline.class);
+  }
+
   /**
    * The user friendly label to display in the search result to inidicate the type of the item. This
    * is OPTIONAL; if not given, an object label will not be displayed on the context line of the

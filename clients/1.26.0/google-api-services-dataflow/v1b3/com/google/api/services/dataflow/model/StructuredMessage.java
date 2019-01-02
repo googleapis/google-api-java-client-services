@@ -52,6 +52,12 @@ public final class StructuredMessage extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Parameter> parameters;
 
+  static {
+    // hack to force ProGuard to consider Parameter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Parameter.class);
+  }
+
   /**
    * Idenfier for this message type.  Used by external systems to internationalize or personalize
    * message.

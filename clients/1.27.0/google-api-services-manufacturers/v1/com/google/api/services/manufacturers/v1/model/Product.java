@@ -65,6 +65,12 @@ public final class Product extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Issue> issues;
 
+  static {
+    // hack to force ProGuard to consider Issue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Issue.class);
+  }
+
   /**
    * Name in the format `{target_country}:{content_language}:{product_id}`.
    *

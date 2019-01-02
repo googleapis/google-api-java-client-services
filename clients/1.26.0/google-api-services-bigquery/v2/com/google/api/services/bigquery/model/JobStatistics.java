@@ -81,6 +81,19 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> quotaDeferments;
 
   /**
+   * [Output-only] Job resource usage breakdown by reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ReservationUsage> reservationUsage;
+
+  static {
+    // hack to force ProGuard to consider ReservationUsage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ReservationUsage.class);
+  }
+
+  /**
    * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * The value may be {@code null}.
@@ -94,6 +107,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBytesProcessed;
+
+  /**
+   * [Output-only] Slot-milliseconds for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalSlotMs;
 
   /**
    * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
@@ -219,6 +239,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * [Output-only] Job resource usage breakdown by reservation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ReservationUsage> getReservationUsage() {
+    return reservationUsage;
+  }
+
+  /**
+   * [Output-only] Job resource usage breakdown by reservation.
+   * @param reservationUsage reservationUsage or {@code null} for none
+   */
+  public JobStatistics setReservationUsage(java.util.List<ReservationUsage> reservationUsage) {
+    this.reservationUsage = reservationUsage;
+    return this;
+  }
+
+  /**
    * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * @return value or {@code null} for none
@@ -254,6 +291,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
     return this;
   }
 
+  /**
+   * [Output-only] Slot-milliseconds for the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalSlotMs() {
+    return totalSlotMs;
+  }
+
+  /**
+   * [Output-only] Slot-milliseconds for the job.
+   * @param totalSlotMs totalSlotMs or {@code null} for none
+   */
+  public JobStatistics setTotalSlotMs(java.lang.Long totalSlotMs) {
+    this.totalSlotMs = totalSlotMs;
+    return this;
+  }
+
   @Override
   public JobStatistics set(String fieldName, Object value) {
     return (JobStatistics) super.set(fieldName, value);
@@ -262,6 +316,71 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   @Override
   public JobStatistics clone() {
     return (JobStatistics) super.clone();
+  }
+
+  /**
+   * Model definition for JobStatisticsReservationUsage.
+   */
+  public static final class ReservationUsage extends com.google.api.client.json.GenericJson {
+
+    /**
+     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String name;
+
+    /**
+     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+    private java.lang.Long slotMs;
+
+    /**
+     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getName() {
+      return name;
+    }
+
+    /**
+     * [Output-only] Reservation name or "unreserved" for on-demand resources usage.
+     * @param name name or {@code null} for none
+     */
+    public ReservationUsage setName(java.lang.String name) {
+      this.name = name;
+      return this;
+    }
+
+    /**
+     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Long getSlotMs() {
+      return slotMs;
+    }
+
+    /**
+     * [Output-only] Slot-milliseconds the job spent in the given reservation.
+     * @param slotMs slotMs or {@code null} for none
+     */
+    public ReservationUsage setSlotMs(java.lang.Long slotMs) {
+      this.slotMs = slotMs;
+      return this;
+    }
+
+    @Override
+    public ReservationUsage set(String fieldName, Object value) {
+      return (ReservationUsage) super.set(fieldName, value);
+    }
+
+    @Override
+    public ReservationUsage clone() {
+      return (ReservationUsage) super.clone();
+    }
+
   }
 
 }

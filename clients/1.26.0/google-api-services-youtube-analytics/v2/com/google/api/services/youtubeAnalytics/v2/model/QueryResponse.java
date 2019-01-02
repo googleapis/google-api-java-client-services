@@ -43,12 +43,6 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<ResultTableColumnHeader> columnHeaders;
 
-  static {
-    // hack to force ProGuard to consider ResultTableColumnHeader used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ResultTableColumnHeader.class);
-  }
-
   /**
    * When set, indicates that the operation failed.
    * The value may be {@code null}.

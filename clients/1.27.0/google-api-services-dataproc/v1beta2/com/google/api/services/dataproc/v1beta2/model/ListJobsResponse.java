@@ -36,6 +36,12 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<Job> jobs;
 
+  static {
+    // hack to force ProGuard to consider Job used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Job.class);
+  }
+
   /**
    * Optional. This token is included in the response if there are more results to fetch. To fetch
    * additional results, provide this value as the page_token in a subsequent ListJobsRequest.

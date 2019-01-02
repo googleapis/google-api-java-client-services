@@ -39,6 +39,12 @@ public final class CreateCollectdTimeSeriesRequest extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<CollectdPayload> collectdPayloads;
 
+  static {
+    // hack to force ProGuard to consider CollectdPayload used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CollectdPayload.class);
+  }
+
   /**
    * The version of collectd that collected the data. Example: "5.3.0-192.el6".
    * The value may be {@code null}.

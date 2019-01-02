@@ -18,8 +18,7 @@ package com.google.api.services.accesscontextmanager.v1beta.model;
 
 /**
  * An `AccessLevel` is a label that can be applied to requests to GCP services, along with a list of
- * requirements necessary for the label to be applied. `AccessLevels` can be referenced in
- * `AccessZones` and in the `Cloud Org Policy` API.
+ * requirements necessary for the label to be applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed

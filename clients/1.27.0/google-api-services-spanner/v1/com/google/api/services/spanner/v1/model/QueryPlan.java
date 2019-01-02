@@ -37,6 +37,12 @@ public final class QueryPlan extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<PlanNode> planNodes;
 
+  static {
+    // hack to force ProGuard to consider PlanNode used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PlanNode.class);
+  }
+
   /**
    * The nodes in the query plan. Plan nodes are returned in pre-order starting with the plan root.
    * Each PlanNode's `id` corresponds to its index in `plan_nodes`.

@@ -150,12 +150,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<JobStatus> statusHistory;
 
-  static {
-    // hack to force ProGuard to consider JobStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(JobStatus.class);
-  }
-
   /**
    * Output only. The email address of the user submitting the job. For jobs submitted on the
    * cluster, the address is username@hostname.

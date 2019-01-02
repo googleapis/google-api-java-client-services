@@ -36,12 +36,6 @@ public final class BatchGetContactGroupsResponse extends com.google.api.client.j
   @com.google.api.client.util.Key
   private java.util.List<ContactGroupResponse> responses;
 
-  static {
-    // hack to force ProGuard to consider ContactGroupResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ContactGroupResponse.class);
-  }
-
   /**
    * The list of responses for each requested contact group resource.
    * @return value or {@code null} for none

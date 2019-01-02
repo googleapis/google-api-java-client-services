@@ -112,6 +112,12 @@ public final class GoogleCloudVideointelligenceV1SpeechTranscriptionConfig exten
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1SpeechContext> speechContexts;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1SpeechContext used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1SpeechContext.class);
+  }
+
   /**
    * *Optional* For file formats, such as MXF or MKV, supporting multiple audio tracks, specify up
    * to two tracks. Default: track 0.

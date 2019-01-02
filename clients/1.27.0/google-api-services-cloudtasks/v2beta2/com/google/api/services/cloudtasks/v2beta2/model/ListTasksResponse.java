@@ -47,12 +47,6 @@ public final class ListTasksResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Task> tasks;
 
-  static {
-    // hack to force ProGuard to consider Task used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Task.class);
-  }
-
   /**
    * A token to retrieve next page of results.
    *

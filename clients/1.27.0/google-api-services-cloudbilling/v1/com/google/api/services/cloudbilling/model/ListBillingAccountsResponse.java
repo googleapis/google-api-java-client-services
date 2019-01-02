@@ -36,6 +36,12 @@ public final class ListBillingAccountsResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<BillingAccount> billingAccounts;
 
+  static {
+    // hack to force ProGuard to consider BillingAccount used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BillingAccount.class);
+  }
+
   /**
    * A token to retrieve the next page of results. To retrieve the next page, call
    * `ListBillingAccounts` again with the `page_token` field set to this value. This field is empty

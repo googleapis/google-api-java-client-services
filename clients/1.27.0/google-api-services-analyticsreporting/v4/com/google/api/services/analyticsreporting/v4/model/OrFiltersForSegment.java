@@ -37,12 +37,6 @@ public final class OrFiltersForSegment extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<SegmentFilterClause> segmentFilterClauses;
 
-  static {
-    // hack to force ProGuard to consider SegmentFilterClause used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SegmentFilterClause.class);
-  }
-
   /**
    * List of segment filters to be combined with a `OR` operator.
    * @return value or {@code null} for none

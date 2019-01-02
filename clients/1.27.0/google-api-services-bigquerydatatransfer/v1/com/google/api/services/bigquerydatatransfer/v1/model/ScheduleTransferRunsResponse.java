@@ -37,12 +37,6 @@ public final class ScheduleTransferRunsResponse extends com.google.api.client.js
   @com.google.api.client.util.Key
   private java.util.List<TransferRun> runs;
 
-  static {
-    // hack to force ProGuard to consider TransferRun used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TransferRun.class);
-  }
-
   /**
    * The transfer runs that were scheduled.
    * @return value or {@code null} for none

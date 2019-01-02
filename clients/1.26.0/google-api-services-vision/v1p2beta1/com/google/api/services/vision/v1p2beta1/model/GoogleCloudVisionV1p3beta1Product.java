@@ -78,12 +78,6 @@ public final class GoogleCloudVisionV1p3beta1Product extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVisionV1p3beta1ProductKeyValue> productLabels;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVisionV1p3beta1ProductKeyValue used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVisionV1p3beta1ProductKeyValue.class);
-  }
-
   /**
    * User-provided metadata to be stored with this product. Must be at most 4096 characters long.
    * @return value or {@code null} for none

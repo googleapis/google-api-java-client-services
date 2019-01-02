@@ -36,6 +36,12 @@ public final class ListCoursesResponse extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<Course> courses;
 
+  static {
+    // hack to force ProGuard to consider Course used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Course.class);
+  }
+
   /**
    * Token identifying the next page of results to return. If empty, no further results are
    * available.

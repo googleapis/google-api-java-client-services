@@ -44,6 +44,12 @@ public final class ReportRow extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<DateRangeValues> metrics;
 
+  static {
+    // hack to force ProGuard to consider DateRangeValues used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DateRangeValues.class);
+  }
+
   /**
    * List of requested dimensions.
    * @return value or {@code null} for none

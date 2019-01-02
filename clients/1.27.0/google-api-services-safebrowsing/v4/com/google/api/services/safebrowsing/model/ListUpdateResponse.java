@@ -37,12 +37,6 @@ public final class ListUpdateResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<ThreatEntrySet> additions;
 
-  static {
-    // hack to force ProGuard to consider ThreatEntrySet used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ThreatEntrySet.class);
-  }
-
   /**
    * The expected SHA256 hash of the client state; that is, of the sorted list of all hashes present
    * in the database after applying the provided update. If the client state doesn't match the
@@ -73,12 +67,6 @@ public final class ListUpdateResponse extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<ThreatEntrySet> removals;
-
-  static {
-    // hack to force ProGuard to consider ThreatEntrySet used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ThreatEntrySet.class);
-  }
 
   /**
    * The type of response. This may indicate that an action is required by the client when the

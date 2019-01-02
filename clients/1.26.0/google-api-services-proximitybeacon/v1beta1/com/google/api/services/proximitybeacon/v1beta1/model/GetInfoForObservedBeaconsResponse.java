@@ -36,6 +36,12 @@ public final class GetInfoForObservedBeaconsResponse extends com.google.api.clie
   @com.google.api.client.util.Key
   private java.util.List<BeaconInfo> beacons;
 
+  static {
+    // hack to force ProGuard to consider BeaconInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BeaconInfo.class);
+  }
+
   /**
    * Public information about beacons. May be empty if the request matched no beacons.
    * @return value or {@code null} for none

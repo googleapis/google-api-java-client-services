@@ -90,6 +90,12 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Correction> corrections;
 
+  static {
+    // hack to force ProGuard to consider Correction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Correction.class);
+  }
+
   /**
    * The buyer-defined creative ID of this creative. Can be used to filter the response of the
    * creatives.list method.

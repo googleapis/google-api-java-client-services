@@ -43,12 +43,6 @@ public final class GoogleFirestoreAdminV1beta1Index extends com.google.api.clien
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirestoreAdminV1beta1IndexField> fields;
 
-  static {
-    // hack to force ProGuard to consider GoogleFirestoreAdminV1beta1IndexField used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleFirestoreAdminV1beta1IndexField.class);
-  }
-
   /**
    * The resource name of the index. Output only.
    * The value may be {@code null}.

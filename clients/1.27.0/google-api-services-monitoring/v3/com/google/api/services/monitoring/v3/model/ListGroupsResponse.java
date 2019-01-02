@@ -37,6 +37,12 @@ public final class ListGroupsResponse extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<Group> group;
 
+  static {
+    // hack to force ProGuard to consider Group used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Group.class);
+  }
+
   /**
    * If there are more results than have been returned, then this field is set to a non-empty value.
    * To see the additional results, use that value as pageToken in the next call to this method.

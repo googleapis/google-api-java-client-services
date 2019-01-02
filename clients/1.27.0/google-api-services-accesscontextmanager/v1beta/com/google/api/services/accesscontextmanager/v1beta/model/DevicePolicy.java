@@ -57,12 +57,6 @@ public final class DevicePolicy extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<OsConstraint> osConstraints;
 
-  static {
-    // hack to force ProGuard to consider OsConstraint used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(OsConstraint.class);
-  }
-
   /**
    * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
    * The value may be {@code null}.

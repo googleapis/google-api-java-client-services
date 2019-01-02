@@ -38,12 +38,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1AnnotateVideoResponse ex
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults> annotationResults;
 
-  static {
-    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p1beta1VideoAnnotationResults.class);
-  }
-
   /**
    * Annotation results for all videos specified in `AnnotateVideoRequest`.
    * @return value or {@code null} for none

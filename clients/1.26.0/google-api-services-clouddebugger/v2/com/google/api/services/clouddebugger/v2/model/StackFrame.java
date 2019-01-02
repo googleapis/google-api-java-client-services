@@ -38,12 +38,6 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<Variable> arguments;
 
-  static {
-    // hack to force ProGuard to consider Variable used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Variable.class);
-  }
-
   /**
    * Demangled function name at the call site.
    * The value may be {@code null}.
@@ -58,12 +52,6 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Variable> locals;
-
-  static {
-    // hack to force ProGuard to consider Variable used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Variable.class);
-  }
 
   /**
    * Source location of the call site.

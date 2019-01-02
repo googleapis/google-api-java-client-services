@@ -37,6 +37,12 @@ public final class DayPartTargeting extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<DayPart> dayParts;
 
+  static {
+    // hack to force ProGuard to consider DayPart used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DayPart.class);
+  }
+
   /**
    * The timezone to use for interpreting the day part targeting.
    * The value may be {@code null}.

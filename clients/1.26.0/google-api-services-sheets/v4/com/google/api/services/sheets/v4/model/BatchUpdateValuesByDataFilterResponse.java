@@ -36,12 +36,6 @@ public final class BatchUpdateValuesByDataFilterResponse extends com.google.api.
   @com.google.api.client.util.Key
   private java.util.List<UpdateValuesByDataFilterResponse> responses;
 
-  static {
-    // hack to force ProGuard to consider UpdateValuesByDataFilterResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(UpdateValuesByDataFilterResponse.class);
-  }
-
   /**
    * The spreadsheet the updates were applied to.
    * The value may be {@code null}.

@@ -36,6 +36,12 @@ public final class GoogleCloudServicebrokerV1beta1ListBrokersResponse extends co
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudServicebrokerV1beta1Broker> brokers;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudServicebrokerV1beta1Broker used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudServicebrokerV1beta1Broker.class);
+  }
+
   /**
    * This token allows you to get the next page of results for list requests. If the number of
    * results is larger than `pageSize`, use the `nextPageToken` as a value for the query parameter

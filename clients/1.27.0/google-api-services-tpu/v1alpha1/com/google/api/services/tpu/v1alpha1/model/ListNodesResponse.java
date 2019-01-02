@@ -43,12 +43,6 @@ public final class ListNodesResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Node> nodes;
 
-  static {
-    // hack to force ProGuard to consider Node used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Node.class);
-  }
-
   /**
    * Locations that could not be reached.
    * The value may be {@code null}.

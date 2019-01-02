@@ -37,12 +37,6 @@ public final class BatchUpdatePhotosRequest extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<UpdatePhotoRequest> updatePhotoRequests;
 
-  static {
-    // hack to force ProGuard to consider UpdatePhotoRequest used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(UpdatePhotoRequest.class);
-  }
-
   /**
    * Required. List of UpdatePhotoRequests.
    * @return value or {@code null} for none

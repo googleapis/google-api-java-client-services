@@ -45,12 +45,6 @@ public final class SideInputInfo extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Source> sources;
 
-  static {
-    // hack to force ProGuard to consider Source used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Source.class);
-  }
-
   /**
    * The id of the tag the user code will access this side input by; this should correspond to the
    * tag of some MultiOutputInfo.

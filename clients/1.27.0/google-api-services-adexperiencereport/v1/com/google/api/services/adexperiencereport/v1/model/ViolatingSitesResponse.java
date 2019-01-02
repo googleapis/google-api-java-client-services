@@ -37,6 +37,12 @@ public final class ViolatingSitesResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<SiteSummaryResponse> violatingSites;
 
+  static {
+    // hack to force ProGuard to consider SiteSummaryResponse used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SiteSummaryResponse.class);
+  }
+
   /**
    * A list of summaries of violating sites.
    * @return value or {@code null} for none

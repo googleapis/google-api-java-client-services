@@ -68,12 +68,6 @@ public final class HistogramChartSpec extends com.google.api.client.json.Generic
   @com.google.api.client.util.Key
   private java.util.List<HistogramSeries> series;
 
-  static {
-    // hack to force ProGuard to consider HistogramSeries used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(HistogramSeries.class);
-  }
-
   /**
    * Whether horizontal divider lines should be displayed between items in each column.
    * The value may be {@code null}.

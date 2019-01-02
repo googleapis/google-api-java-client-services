@@ -37,12 +37,6 @@ public final class BatchUpdatePhotosResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<PhotoResponse> results;
 
-  static {
-    // hack to force ProGuard to consider PhotoResponse used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PhotoResponse.class);
-  }
-
   /**
    * List of results for each individual Photo updated, in the same order as the request.
    * @return value or {@code null} for none

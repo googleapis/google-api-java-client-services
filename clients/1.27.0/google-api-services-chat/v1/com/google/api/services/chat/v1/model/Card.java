@@ -36,12 +36,6 @@ public final class Card extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<CardAction> cardActions;
 
-  static {
-    // hack to force ProGuard to consider CardAction used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CardAction.class);
-  }
-
   /**
    * The header of the card. A header usually contains a title and an image.
    * The value may be {@code null}.
@@ -62,12 +56,6 @@ public final class Card extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Section> sections;
-
-  static {
-    // hack to force ProGuard to consider Section used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Section.class);
-  }
 
   /**
    * The actions of this card.

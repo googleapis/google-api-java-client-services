@@ -37,6 +37,12 @@ public final class GooglePrivacyDlpV2ImageLocation extends com.google.api.client
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2BoundingBox> boundingBoxes;
 
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2BoundingBox used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2BoundingBox.class);
+  }
+
   /**
    * Bounding boxes locating the pixels within the image containing the finding.
    * @return value or {@code null} for none

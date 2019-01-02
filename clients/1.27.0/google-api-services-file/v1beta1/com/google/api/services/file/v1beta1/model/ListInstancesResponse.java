@@ -41,6 +41,12 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   @com.google.api.client.util.Key
   private java.util.List<Instance> instances;
 
+  static {
+    // hack to force ProGuard to consider Instance used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Instance.class);
+  }
+
   /**
    * The token you can use to retrieve the next page of results. Not returned if there are no more
    * results in the list.

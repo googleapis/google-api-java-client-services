@@ -42,12 +42,6 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypes extends com.google.api.cli
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2InfoType> infoTypes;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2InfoType used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2InfoType.class);
-  }
-
   /**
    * InfoType list in ExclusionRule rule drops a finding when it overlaps or contained within with a
    * finding of an infoType from this list. For example, for `InspectionRuleSet.info_types`

@@ -44,12 +44,6 @@ public final class ListSubscriptionsResponse extends com.google.api.client.json.
   @com.google.api.client.util.Key
   private java.util.List<Subscription> subscription;
 
-  static {
-    // hack to force ProGuard to consider Subscription used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Subscription.class);
-  }
-
   /**
    * If not empty, indicates that there are more subscriptions that match the request and this value
    * should be passed to the next ListSubscriptionsRequest to continue.

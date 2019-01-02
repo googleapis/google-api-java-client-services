@@ -50,12 +50,6 @@ public final class Logging extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<LoggingDestination> consumerDestinations;
 
-  static {
-    // hack to force ProGuard to consider LoggingDestination used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LoggingDestination.class);
-  }
-
   /**
    * Logging configurations for sending logs to the producer project. There can be multiple producer
    * destinations, each one must have a different monitored resource type. A log can be used in at
@@ -64,12 +58,6 @@ public final class Logging extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<LoggingDestination> producerDestinations;
-
-  static {
-    // hack to force ProGuard to consider LoggingDestination used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LoggingDestination.class);
-  }
 
   /**
    * Logging configurations for sending logs to the consumer project. There can be multiple consumer

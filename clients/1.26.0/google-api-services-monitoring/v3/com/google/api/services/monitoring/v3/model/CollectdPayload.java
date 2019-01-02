@@ -45,12 +45,6 @@ public final class CollectdPayload extends com.google.api.client.json.GenericJso
   @com.google.api.client.util.Key
   private java.util.Map<String, TypedValue> metadata;
 
-  static {
-    // hack to force ProGuard to consider TypedValue used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TypedValue.class);
-  }
-
   /**
    * The name of the plugin. Example: "disk".
    * The value may be {@code null}.
@@ -92,12 +86,6 @@ public final class CollectdPayload extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<CollectdValue> values;
-
-  static {
-    // hack to force ProGuard to consider CollectdValue used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CollectdValue.class);
-  }
 
   /**
    * The end time of the interval.

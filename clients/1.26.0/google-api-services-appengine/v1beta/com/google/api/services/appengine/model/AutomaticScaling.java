@@ -53,12 +53,6 @@ public final class AutomaticScaling extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<CustomMetric> customMetrics;
 
-  static {
-    // hack to force ProGuard to consider CustomMetric used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(CustomMetric.class);
-  }
-
   /**
    * Target scaling by disk usage.
    * The value may be {@code null}.

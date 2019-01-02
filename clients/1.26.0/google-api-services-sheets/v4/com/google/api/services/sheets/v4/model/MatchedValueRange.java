@@ -36,6 +36,12 @@ public final class MatchedValueRange extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<DataFilter> dataFilters;
 
+  static {
+    // hack to force ProGuard to consider DataFilter used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataFilter.class);
+  }
+
   /**
    * The values matched by the DataFilter.
    * The value may be {@code null}.

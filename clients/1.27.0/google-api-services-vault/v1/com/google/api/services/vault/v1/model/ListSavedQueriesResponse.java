@@ -44,12 +44,6 @@ public final class ListSavedQueriesResponse extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<SavedQuery> savedQueries;
 
-  static {
-    // hack to force ProGuard to consider SavedQuery used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SavedQuery.class);
-  }
-
   /**
    * Page token to retrieve the next page of results in the list. If this is empty, then there are
    * no more saved queries to list.

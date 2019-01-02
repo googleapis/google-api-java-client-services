@@ -37,6 +37,12 @@ public final class Query extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<PropertyReference> distinctOn;
 
+  static {
+    // hack to force ProGuard to consider PropertyReference used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PropertyReference.class);
+  }
+
   /**
    * An ending point for the query results. Query cursors are returned in query result batches and
    * [can only be used to limit the same
@@ -90,12 +96,24 @@ public final class Query extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<PropertyOrder> order;
 
+  static {
+    // hack to force ProGuard to consider PropertyOrder used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PropertyOrder.class);
+  }
+
   /**
    * The projection to return. Defaults to returning all properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Projection> projection;
+
+  static {
+    // hack to force ProGuard to consider Projection used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Projection.class);
+  }
 
   /**
    * A starting point for the query results. Query cursors are returned in query result batches and

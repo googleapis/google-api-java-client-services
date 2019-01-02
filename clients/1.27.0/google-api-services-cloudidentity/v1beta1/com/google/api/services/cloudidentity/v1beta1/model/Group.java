@@ -36,6 +36,12 @@ public final class Group extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<EntityKey> additionalGroupKeys;
 
+  static {
+    // hack to force ProGuard to consider EntityKey used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EntityKey.class);
+  }
+
   /**
    * The time when the Group was created. Output only
    * The value may be {@code null}.

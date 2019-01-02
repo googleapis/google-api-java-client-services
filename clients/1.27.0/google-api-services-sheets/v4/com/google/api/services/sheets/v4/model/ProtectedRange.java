@@ -87,6 +87,12 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<GridRange> unprotectedRanges;
 
+  static {
+    // hack to force ProGuard to consider GridRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GridRange.class);
+  }
+
   /**
    * True if this protected range will show a warning when editing. Warning-based protection means
    * that every user can edit data in the protected range, except editing will prompt a warning

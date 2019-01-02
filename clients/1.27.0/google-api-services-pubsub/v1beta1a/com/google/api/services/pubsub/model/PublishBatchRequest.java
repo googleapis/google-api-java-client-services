@@ -36,12 +36,6 @@ public final class PublishBatchRequest extends com.google.api.client.json.Generi
   @com.google.api.client.util.Key
   private java.util.List<PubsubMessage> messages;
 
-  static {
-    // hack to force ProGuard to consider PubsubMessage used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PubsubMessage.class);
-  }
-
   /**
    * The messages in the request will be published on this topic.
    * The value may be {@code null}.

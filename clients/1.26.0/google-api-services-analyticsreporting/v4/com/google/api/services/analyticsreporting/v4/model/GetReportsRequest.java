@@ -39,12 +39,6 @@ public final class GetReportsRequest extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<ReportRequest> reportRequests;
 
-  static {
-    // hack to force ProGuard to consider ReportRequest used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ReportRequest.class);
-  }
-
   /**
    * Enables [resource based quotas](/analytics/devguides/reporting/core/v4/limits-
    * quotas#analytics_reporting_api_v4), (defaults to `False`). If this field is set to `True` the

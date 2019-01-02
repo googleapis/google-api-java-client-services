@@ -45,12 +45,6 @@ public final class GooglePrivacyDlpV2ListStoredInfoTypesResponse extends com.goo
   @com.google.api.client.util.Key
   private java.util.List<GooglePrivacyDlpV2StoredInfoType> storedInfoTypes;
 
-  static {
-    // hack to force ProGuard to consider GooglePrivacyDlpV2StoredInfoType used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2StoredInfoType.class);
-  }
-
   /**
    * If the next page is available then the next page token to be used in following
    * ListStoredInfoTypes request.

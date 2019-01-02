@@ -53,6 +53,12 @@ public final class ServingConfig extends com.google.api.client.json.GenericJson 
   @com.google.api.client.util.Key
   private java.util.List<Header> headers;
 
+  static {
+    // hack to force ProGuard to consider Header used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Header.class);
+  }
+
   /**
    * A list of globs that will cause the response to redirect to another location.
    * The value may be {@code null}.

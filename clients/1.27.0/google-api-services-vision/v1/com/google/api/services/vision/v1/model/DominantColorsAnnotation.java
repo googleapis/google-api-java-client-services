@@ -36,6 +36,12 @@ public final class DominantColorsAnnotation extends com.google.api.client.json.G
   @com.google.api.client.util.Key
   private java.util.List<ColorInfo> colors;
 
+  static {
+    // hack to force ProGuard to consider ColorInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ColorInfo.class);
+  }
+
   /**
    * RGB color values with their score and pixel fraction.
    * @return value or {@code null} for none

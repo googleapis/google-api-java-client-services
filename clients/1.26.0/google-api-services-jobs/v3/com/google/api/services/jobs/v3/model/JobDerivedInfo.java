@@ -48,12 +48,6 @@ public final class JobDerivedInfo extends com.google.api.client.json.GenericJson
   @com.google.api.client.util.Key
   private java.util.List<Location> locations;
 
-  static {
-    // hack to force ProGuard to consider Location used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Location.class);
-  }
-
   /**
    * Job categories derived from Job.title and Job.description.
    * @return value or {@code null} for none

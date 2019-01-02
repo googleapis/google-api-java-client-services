@@ -36,6 +36,12 @@ public final class ListLeadsResponse extends com.google.api.client.json.GenericJ
   @com.google.api.client.util.Key
   private java.util.List<Lead> leads;
 
+  static {
+    // hack to force ProGuard to consider Lead used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Lead.class);
+  }
+
   /**
    * A token to retrieve next page of results. Pass this value in the `ListLeadsRequest.page_token`
    * field in the subsequent call to ListLeads to retrieve the next page of results.

@@ -2680,8 +2680,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
   public class Entries {
 
     /**
-     * Lists log entries. Use this method to retrieve log entries from Logging. For ways to export log
-     * entries, see Exporting Logs.
+     * Lists log entries. Use this method to retrieve log entries that originated from a
+     * project/folder/organization/billing account. For ways to export log entries, see Exporting Logs.
      *
      * Create a request for the method "entries.list".
      *
@@ -2702,8 +2702,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "v2/entries:list";
 
       /**
-       * Lists log entries. Use this method to retrieve log entries from Logging. For ways to export log
-       * entries, see Exporting Logs.
+       * Lists log entries. Use this method to retrieve log entries that originated from a
+       * project/folder/organization/billing account. For ways to export log entries, see Exporting
+       * Logs.
        *
        * Create a request for the method "entries.list".
        *

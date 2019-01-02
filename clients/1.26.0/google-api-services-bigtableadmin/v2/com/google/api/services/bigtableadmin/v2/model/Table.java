@@ -41,6 +41,12 @@ public final class Table extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.Map<String, ClusterState> clusterStates;
 
+  static {
+    // hack to force ProGuard to consider ClusterState used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClusterState.class);
+  }
+
   /**
    * (`CreationOnly`) The column families configured for this table, mapped by column family ID.
    * Views: `SCHEMA_VIEW`, `FULL`

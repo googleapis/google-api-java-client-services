@@ -50,12 +50,6 @@ public final class SeqMapTask extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<SeqMapTaskOutputInfo> outputInfos;
 
-  static {
-    // hack to force ProGuard to consider SeqMapTaskOutputInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SeqMapTaskOutputInfo.class);
-  }
-
   /**
    * System-defined name of the stage containing the SeqDo operation. Unique across the workflow.
    * The value may be {@code null}.

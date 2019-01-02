@@ -36,12 +36,6 @@ public final class ListMembershipsResponse extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<Membership> memberships;
 
-  static {
-    // hack to force ProGuard to consider Membership used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Membership.class);
-  }
-
   /**
    * Continuation token to retrieve the next page of results. It will be empty for the last page of
    * results.

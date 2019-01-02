@@ -41,12 +41,6 @@ public final class CreateTimeSeriesRequest extends com.google.api.client.json.Ge
   @com.google.api.client.util.Key
   private java.util.List<TimeSeries> timeSeries;
 
-  static {
-    // hack to force ProGuard to consider TimeSeries used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(TimeSeries.class);
-  }
-
   /**
    * The new data to be added to a list of time series. Adds at most one data point to each of
    * several time series. The new data point must be more recent than any other point in its time

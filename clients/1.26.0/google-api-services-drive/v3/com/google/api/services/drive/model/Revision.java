@@ -30,6 +30,13 @@ package com.google.api.services.drive.model;
 public final class Revision extends com.google.api.client.json.GenericJson {
 
   /**
+   * Links for exporting Google Docs to specific formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> exportLinks;
+
+  /**
    * The ID of the revision.
    * The value may be {@code null}.
    */
@@ -119,6 +126,23 @@ public final class Revision extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long size;
+
+  /**
+   * Links for exporting Google Docs to specific formats.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getExportLinks() {
+    return exportLinks;
+  }
+
+  /**
+   * Links for exporting Google Docs to specific formats.
+   * @param exportLinks exportLinks or {@code null} for none
+   */
+  public Revision setExportLinks(java.util.Map<String, java.lang.String> exportLinks) {
+    this.exportLinks = exportLinks;
+    return this;
+  }
 
   /**
    * The ID of the revision.

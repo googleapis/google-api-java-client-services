@@ -50,12 +50,6 @@ public final class GridData extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<RowData> rowData;
 
-  static {
-    // hack to force ProGuard to consider RowData used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(RowData.class);
-  }
-
   /**
    * Metadata about the requested rows in the grid, starting with the row in start_row.
    * The value may be {@code null}.

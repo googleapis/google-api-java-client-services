@@ -69,12 +69,6 @@ public final class EntityAnnotation extends com.google.api.client.json.GenericJs
   @com.google.api.client.util.Key
   private java.util.List<LocationInfo> locations;
 
-  static {
-    // hack to force ProGuard to consider LocationInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LocationInfo.class);
-  }
-
   /**
    * Opaque entity ID. Some IDs may be available in [Google Knowledge Graph Search
    * API](https://developers.google.com/knowledge-graph/).
@@ -90,12 +84,6 @@ public final class EntityAnnotation extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<Property> properties;
-
-  static {
-    // hack to force ProGuard to consider Property used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Property.class);
-  }
 
   /**
    * Overall score of the result. Range [0, 1].

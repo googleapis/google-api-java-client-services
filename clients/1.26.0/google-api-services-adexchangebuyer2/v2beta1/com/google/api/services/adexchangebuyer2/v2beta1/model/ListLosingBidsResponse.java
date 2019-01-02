@@ -37,6 +37,12 @@ public final class ListLosingBidsResponse extends com.google.api.client.json.Gen
   @com.google.api.client.util.Key
   private java.util.List<CreativeStatusRow> creativeStatusRows;
 
+  static {
+    // hack to force ProGuard to consider CreativeStatusRow used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CreativeStatusRow.class);
+  }
+
   /**
    * A token to retrieve the next page of results. Pass this value in the
    * ListLosingBidsRequest.pageToken field in the subsequent call to the losingBids.list method to

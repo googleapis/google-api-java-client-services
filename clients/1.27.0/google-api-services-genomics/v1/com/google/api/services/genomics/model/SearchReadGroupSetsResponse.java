@@ -45,6 +45,12 @@ public final class SearchReadGroupSetsResponse extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<ReadGroupSet> readGroupSets;
 
+  static {
+    // hack to force ProGuard to consider ReadGroupSet used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ReadGroupSet.class);
+  }
+
   /**
    * The continuation token, which is used to page through large result sets. Provide this value in
    * a subsequent request to return the next page of results. This field will be empty if there

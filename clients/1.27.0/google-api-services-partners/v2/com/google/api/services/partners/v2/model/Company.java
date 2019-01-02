@@ -109,12 +109,6 @@ public final class Company extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<LocalizedCompanyInfo> localizedInfos;
 
-  static {
-    // hack to force ProGuard to consider LocalizedCompanyInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(LocalizedCompanyInfo.class);
-  }
-
   /**
    * The list of all company locations. If set, must include the primary_location in the list.
    * The value may be {@code null}.
@@ -192,12 +186,6 @@ public final class Company extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<SpecializationStatus> specializationStatus;
-
-  static {
-    // hack to force ProGuard to consider SpecializationStatus used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SpecializationStatus.class);
-  }
 
   /**
    * URL of the company's website.

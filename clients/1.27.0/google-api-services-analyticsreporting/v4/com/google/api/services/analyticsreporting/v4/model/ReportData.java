@@ -88,12 +88,6 @@ public final class ReportData extends com.google.api.client.json.GenericJson {
   @com.google.api.client.util.Key
   private java.util.List<ReportRow> rows;
 
-  static {
-    // hack to force ProGuard to consider ReportRow used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ReportRow.class);
-  }
-
   /**
    * If the results are [sampled](https://support.google.com/analytics/answer/2637192), this returns
    * the total number of samples read, one entry per date range. If the results are not sampled this

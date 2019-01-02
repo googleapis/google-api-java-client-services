@@ -39,6 +39,12 @@ public final class ModifyColumnFamiliesRequest extends com.google.api.client.jso
   @com.google.api.client.util.Key
   private java.util.List<Modification> modifications;
 
+  static {
+    // hack to force ProGuard to consider Modification used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Modification.class);
+  }
+
   /**
    * Modifications to be atomically applied to the specified table's families. Entries are applied
    * in order, meaning that earlier modifications can be masked by later ones (in the case of

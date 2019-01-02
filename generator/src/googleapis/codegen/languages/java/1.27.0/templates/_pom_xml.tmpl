@@ -82,6 +82,11 @@
       </plugin>
     </plugins>
     <sourceDirectory>{% if layout.unzip_source %}{{ layout.source_location }}{% else %}.{% endif %}</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>./resources</directory>
+      </resource>
+    </resources>
   </build>
 
   <dependencies>

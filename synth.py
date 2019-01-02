@@ -24,6 +24,7 @@ from pathlib import Path
 import glob
 import re
 import sys
+import shutil
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -81,6 +82,10 @@ def generate_service(disco: str):
         shell.run(command.split(), cwd=repository)
 
         s.copy(output_dir, f"clients/{template}/{library_name}/{version}")
+
+        resource_dir = repository / "clients" / template / library_name / version / "resources"
+        shell.run(f"mkdir -p {resource_dir}".split())
+        shutil.copy(input_file, resource_dir / path.basename(disco))
 
 
 def all_discoveries():

@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/eFeCSA4VWy7K7nrpB2R4OL12KqY\"",
+ "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/EypJpZNGI7w9y9_eUY9jXBCzT8M\"",
  "discoveryVersion": "v1",
  "id": "bigquery:v2",
  "name": "bigquery",
  "version": "v2",
- "revision": "20181216",
+ "revision": "20181221",
  "title": "BigQuery API",
  "description": "A data platform for customers to create, manage, share and query data.",
  "ownerDomain": "google.com",
@@ -248,11 +248,15 @@
       "properties": {
        "domain": {
         "type": "string",
-        "description": "[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: \"example.com\"."
+        "description": "[Pick one] A domain to grant access to. Any users signed in with the domain specified will be granted the specified access. Example: \"example.com\". Maps to IAM policy member \"domain:DOMAIN\"."
        },
        "groupByEmail": {
         "type": "string",
-        "description": "[Pick one] An email address of a Google Group to grant access to."
+        "description": "[Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member \"group:GROUP\"."
+       },
+       "iamMember": {
+        "type": "string",
+        "description": "[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group."
        },
        "role": {
         "type": "string",
@@ -260,11 +264,11 @@
        },
        "specialGroup": {
         "type": "string",
-        "description": "[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users."
+        "description": "[Pick one] A special group to grant access to. Possible values include: projectOwners: Owners of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters: Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps to similarly-named IAM members."
        },
        "userByEmail": {
         "type": "string",
-        "description": "[Pick one] An email address of a user to grant access to. For example: fred@example.com."
+        "description": "[Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps to IAM policy member \"user:EMAIL\" or \"serviceAccount:EMAIL\"."
        },
        "view": {
         "$ref": "TableReference",
@@ -2414,9 +2418,7 @@
      "description": "[Beta] [Optional] If not set, the table is partitioned by pseudo column, referenced via either '_PARTITIONTIME' as TIMESTAMP type, or '_PARTITIONDATE' as DATE type. If field is specified, the table is instead partitioned by this field. The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED."
     },
     "requirePartitionFilter": {
-     "type": "boolean",
-     "description": "[Beta] [Optional] If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.",
-     "default": "false"
+     "type": "boolean"
     },
     "type": {
      "type": "string",

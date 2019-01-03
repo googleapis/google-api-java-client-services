@@ -48,8 +48,6 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   private java.lang.String field;
 
   /**
-   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
-   * be used for partition elimination to be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +103,6 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
-   * be used for partition elimination to be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequirePartitionFilter() {
@@ -114,41 +110,11 @@ public final class TimePartitioning extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Beta] [Optional] If set to true, queries over this table require a partition filter that can
-   * be used for partition elimination to be specified.
    * @param requirePartitionFilter requirePartitionFilter or {@code null} for none
    */
   public TimePartitioning setRequirePartitionFilter(java.lang.Boolean requirePartitionFilter) {
     this.requirePartitionFilter = requirePartitionFilter;
     return this;
-  }
-
-  /**
-   * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
-   *
-   * <p>
-   * Boolean properties can have four possible values:
-   * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
-   * or {@link Boolean#FALSE}.
-   * </p>
-   *
-   * <p>
-   * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
-   * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
-   * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
-   * </p>
-   *
-   * <p>
-   *[ Beta] [Optional] If set to true, queries over this table require a partition filter that can be
-[ used for partition elimination to be specified.
-   * </p>
-   */
-  public boolean isRequirePartitionFilter() {
-    if (requirePartitionFilter == null || requirePartitionFilter == com.google.api.client.util.Data.NULL_BOOLEAN) {
-      return false;
-    }
-    return requirePartitionFilter;
   }
 
   /**

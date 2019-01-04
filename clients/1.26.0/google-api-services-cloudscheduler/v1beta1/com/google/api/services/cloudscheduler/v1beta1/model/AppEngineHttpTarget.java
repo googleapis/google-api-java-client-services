@@ -62,7 +62,7 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * * `User-Agent`: By default, this header is   `"AppEngine-Google;
    * (+http://code.google.com/appengine)"`.   This header can be modified, but Cloud Scheduler will
    * append   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the   modified `User-
-   * Agent`.
+   * Agent`. * `X-CloudScheduler`: This header will be set to true.
    *
    * If the job has an body, Cloud Scheduler sets the following headers:
    *
@@ -75,12 +75,9 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * The headers below are output only. They cannot be set or overridden:
    *
    * * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal use only.
-   * See   [Reading request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push
-   * /creating-handlers#reading_request_headers).
    *
    * In addition, some App Engine headers, which contain job-specific information, are also be sent
-   * to the job handler; see [request headers](https://cloud.google.comappengine/docs/standard/pytho
-   * n/config/cron#securing_urls_for_cron).
+   * to the job handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +187,7 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * * `User-Agent`: By default, this header is   `"AppEngine-Google;
    * (+http://code.google.com/appengine)"`.   This header can be modified, but Cloud Scheduler will
    * append   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the   modified `User-
-   * Agent`.
+   * Agent`. * `X-CloudScheduler`: This header will be set to true.
    *
    * If the job has an body, Cloud Scheduler sets the following headers:
    *
@@ -203,12 +200,9 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * The headers below are output only. They cannot be set or overridden:
    *
    * * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal use only.
-   * See   [Reading request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push
-   * /creating-handlers#reading_request_headers).
    *
    * In addition, some App Engine headers, which contain job-specific information, are also be sent
-   * to the job handler; see [request headers](https://cloud.google.comappengine/docs/standard/pytho
-   * n/config/cron#securing_urls_for_cron).
+   * to the job handler.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -226,7 +220,7 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * * `User-Agent`: By default, this header is   `"AppEngine-Google;
    * (+http://code.google.com/appengine)"`.   This header can be modified, but Cloud Scheduler will
    * append   `"AppEngine-Google; (+http://code.google.com/appengine)"` to the   modified `User-
-   * Agent`.
+   * Agent`. * `X-CloudScheduler`: This header will be set to true.
    *
    * If the job has an body, Cloud Scheduler sets the following headers:
    *
@@ -239,12 +233,9 @@ public final class AppEngineHttpTarget extends com.google.api.client.json.Generi
    * The headers below are output only. They cannot be set or overridden:
    *
    * * `X-Google-*`: For Google internal use only. * `X-AppEngine-*`: For Google internal use only.
-   * See   [Reading request headers](https://cloud.google.com/appengine/docs/python/taskqueue/push
-   * /creating-handlers#reading_request_headers).
    *
    * In addition, some App Engine headers, which contain job-specific information, are also be sent
-   * to the job handler; see [request headers](https://cloud.google.comappengine/docs/standard/pytho
-   * n/config/cron#securing_urls_for_cron).
+   * to the job handler.
    * @param headers headers or {@code null} for none
    */
   public AppEngineHttpTarget setHeaders(java.util.Map<String, java.lang.String> headers) {

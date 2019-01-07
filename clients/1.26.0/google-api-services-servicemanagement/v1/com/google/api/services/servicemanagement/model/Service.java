@@ -224,7 +224,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private Monitoring monitoring;
 
   /**
-   * The DNS address at which this service is available, e.g. `calendar.googleapis.com`.
+   * The service name, which is a DNS-like logical identifier for the service, such as
+   * `calendar.googleapis.com`. The service name typically goes through DNS verification to make
+   * sure the owner of the service also owns the DNS name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -644,7 +646,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS address at which this service is available, e.g. `calendar.googleapis.com`.
+   * The service name, which is a DNS-like logical identifier for the service, such as
+   * `calendar.googleapis.com`. The service name typically goes through DNS verification to make
+   * sure the owner of the service also owns the DNS name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -652,7 +656,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS address at which this service is available, e.g. `calendar.googleapis.com`.
+   * The service name, which is a DNS-like logical identifier for the service, such as
+   * `calendar.googleapis.com`. The service name typically goes through DNS verification to make
+   * sure the owner of the service also owns the DNS name.
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {

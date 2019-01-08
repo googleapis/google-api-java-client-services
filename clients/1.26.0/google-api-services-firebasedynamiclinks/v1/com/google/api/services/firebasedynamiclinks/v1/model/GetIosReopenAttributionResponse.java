@@ -47,6 +47,14 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
   private java.lang.String invitationId;
 
   /**
+   * FDL input value of the "=" parameter, minimum app version to be returned to Google Firebase SDK
+   * running on iOS-9.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iosMinAppVersion;
+
+  /**
    * The entire FDL, expanded from a short link. It is the same as the requested_link, if it is
    * long.
    * The value may be {@code null}.
@@ -108,6 +116,25 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
    */
   public GetIosReopenAttributionResponse setInvitationId(java.lang.String invitationId) {
     this.invitationId = invitationId;
+    return this;
+  }
+
+  /**
+   * FDL input value of the "=" parameter, minimum app version to be returned to Google Firebase SDK
+   * running on iOS-9.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIosMinAppVersion() {
+    return iosMinAppVersion;
+  }
+
+  /**
+   * FDL input value of the "=" parameter, minimum app version to be returned to Google Firebase SDK
+   * running on iOS-9.
+   * @param iosMinAppVersion iosMinAppVersion or {@code null} for none
+   */
+  public GetIosReopenAttributionResponse setIosMinAppVersion(java.lang.String iosMinAppVersion) {
+    this.iosMinAppVersion = iosMinAppVersion;
     return this;
   }
 

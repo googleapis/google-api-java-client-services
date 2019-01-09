@@ -472,18 +472,28 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be
-     * granted the specified access. Example: "example.com".
+     * granted the specified access. Example: "example.com". Maps to IAM policy member
+     * "domain:DOMAIN".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String domain;
 
     /**
-     * [Pick one] An email address of a Google Group to grant access to.
+     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member
+     * "group:GROUP".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String groupByEmail;
+
+    /**
+     * [Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group,
+     * domain, or special group.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String iamMember;
 
     /**
      * [Required] Describes the rights granted to the user specified by the other member of the access
@@ -496,14 +506,16 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     /**
      * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
      * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
-     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users.
+     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
+     * to similarly-named IAM members.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String specialGroup;
 
     /**
-     * [Pick one] An email address of a user to grant access to. For example: fred@example.com.
+     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps
+     * to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -521,7 +533,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be
-     * granted the specified access. Example: "example.com".
+     * granted the specified access. Example: "example.com". Maps to IAM policy member
+     * "domain:DOMAIN".
      * @return value or {@code null} for none
      */
     public java.lang.String getDomain() {
@@ -530,7 +543,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
     /**
      * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be
-     * granted the specified access. Example: "example.com".
+     * granted the specified access. Example: "example.com". Maps to IAM policy member
+     * "domain:DOMAIN".
      * @param domain domain or {@code null} for none
      */
     public Access setDomain(java.lang.String domain) {
@@ -539,7 +553,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Pick one] An email address of a Google Group to grant access to.
+     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member
+     * "group:GROUP".
      * @return value or {@code null} for none
      */
     public java.lang.String getGroupByEmail() {
@@ -547,11 +562,31 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Pick one] An email address of a Google Group to grant access to.
+     * [Pick one] An email address of a Google Group to grant access to. Maps to IAM policy member
+     * "group:GROUP".
      * @param groupByEmail groupByEmail or {@code null} for none
      */
     public Access setGroupByEmail(java.lang.String groupByEmail) {
       this.groupByEmail = groupByEmail;
+      return this;
+    }
+
+    /**
+     * [Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group,
+     * domain, or special group.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getIamMember() {
+      return iamMember;
+    }
+
+    /**
+     * [Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group,
+     * domain, or special group.
+     * @param iamMember iamMember or {@code null} for none
+     */
+    public Access setIamMember(java.lang.String iamMember) {
+      this.iamMember = iamMember;
       return this;
     }
 
@@ -577,7 +612,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     /**
      * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
      * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
-     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users.
+     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
+     * to similarly-named IAM members.
      * @return value or {@code null} for none
      */
     public java.lang.String getSpecialGroup() {
@@ -587,7 +623,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     /**
      * [Pick one] A special group to grant access to. Possible values include: projectOwners: Owners
      * of the enclosing project. projectReaders: Readers of the enclosing project. projectWriters:
-     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users.
+     * Writers of the enclosing project. allAuthenticatedUsers: All authenticated BigQuery users. Maps
+     * to similarly-named IAM members.
      * @param specialGroup specialGroup or {@code null} for none
      */
     public Access setSpecialGroup(java.lang.String specialGroup) {
@@ -596,7 +633,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Pick one] An email address of a user to grant access to. For example: fred@example.com.
+     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps
+     * to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".
      * @return value or {@code null} for none
      */
     public java.lang.String getUserByEmail() {
@@ -604,7 +642,8 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Pick one] An email address of a user to grant access to. For example: fred@example.com.
+     * [Pick one] An email address of a user to grant access to. For example: fred@example.com. Maps
+     * to IAM policy member "user:EMAIL" or "serviceAccount:EMAIL".
      * @param userByEmail userByEmail or {@code null} for none
      */
     public Access setUserByEmail(java.lang.String userByEmail) {

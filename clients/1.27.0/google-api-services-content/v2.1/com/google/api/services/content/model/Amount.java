@@ -31,33 +31,33 @@ package com.google.api.services.content.model;
 public final class Amount extends com.google.api.client.json.GenericJson {
 
   /**
-   * [required] Value before taxes.
+   * [required] The pre-tax or post-tax price depending on the location of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Price pretax;
+  private Price priceAmount;
 
   /**
    * [required] Tax value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Price tax;
+  private Price taxAmount;
 
   /**
-   * [required] Value before taxes.
+   * [required] The pre-tax or post-tax price depending on the location of the order.
    * @return value or {@code null} for none
    */
-  public Price getPretax() {
-    return pretax;
+  public Price getPriceAmount() {
+    return priceAmount;
   }
 
   /**
-   * [required] Value before taxes.
-   * @param pretax pretax or {@code null} for none
+   * [required] The pre-tax or post-tax price depending on the location of the order.
+   * @param priceAmount priceAmount or {@code null} for none
    */
-  public Amount setPretax(Price pretax) {
-    this.pretax = pretax;
+  public Amount setPriceAmount(Price priceAmount) {
+    this.priceAmount = priceAmount;
     return this;
   }
 
@@ -65,16 +65,16 @@ public final class Amount extends com.google.api.client.json.GenericJson {
    * [required] Tax value.
    * @return value or {@code null} for none
    */
-  public Price getTax() {
-    return tax;
+  public Price getTaxAmount() {
+    return taxAmount;
   }
 
   /**
    * [required] Tax value.
-   * @param tax tax or {@code null} for none
+   * @param taxAmount taxAmount or {@code null} for none
    */
-  public Amount setTax(Price tax) {
-    this.tax = tax;
+  public Amount setTaxAmount(Price taxAmount) {
+    this.taxAmount = taxAmount;
     return this;
   }
 

@@ -87,6 +87,13 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
   private Amount productAmount;
 
   /**
+   * Total amount with remitted tax for the items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductAmount productAmountWithRemittedTax;
+
+  /**
    * The date of the transaction, in ISO 8601 format.
    * The value may be {@code null}.
    */
@@ -226,6 +233,23 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
    */
   public OrderReportTransaction setProductAmount(Amount productAmount) {
     this.productAmount = productAmount;
+    return this;
+  }
+
+  /**
+   * Total amount with remitted tax for the items.
+   * @return value or {@code null} for none
+   */
+  public ProductAmount getProductAmountWithRemittedTax() {
+    return productAmountWithRemittedTax;
+  }
+
+  /**
+   * Total amount with remitted tax for the items.
+   * @param productAmountWithRemittedTax productAmountWithRemittedTax or {@code null} for none
+   */
+  public OrderReportTransaction setProductAmountWithRemittedTax(ProductAmount productAmountWithRemittedTax) {
+    this.productAmountWithRemittedTax = productAmountWithRemittedTax;
     return this;
   }
 

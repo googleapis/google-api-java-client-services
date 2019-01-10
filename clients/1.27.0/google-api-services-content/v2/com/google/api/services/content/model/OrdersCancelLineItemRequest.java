@@ -47,7 +47,8 @@ public final class OrdersCancelLineItemRequest extends com.google.api.client.jso
   private Price amountPretax;
 
   /**
-   * Tax amount that correspond to cancellation amount in amountPretax.
+   * Tax amount that corresponds to cancellation amount in amountPretax. Optional, but if filled,
+   * then amountPretax must be set. Calculated automatically if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +136,8 @@ public final class OrdersCancelLineItemRequest extends com.google.api.client.jso
   }
 
   /**
-   * Tax amount that correspond to cancellation amount in amountPretax.
+   * Tax amount that corresponds to cancellation amount in amountPretax. Optional, but if filled,
+   * then amountPretax must be set. Calculated automatically if not provided.
    * @return value or {@code null} for none
    */
   public Price getAmountTax() {
@@ -143,7 +145,8 @@ public final class OrdersCancelLineItemRequest extends com.google.api.client.jso
   }
 
   /**
-   * Tax amount that correspond to cancellation amount in amountPretax.
+   * Tax amount that corresponds to cancellation amount in amountPretax. Optional, but if filled,
+   * then amountPretax must be set. Calculated automatically if not provided.
    * @param amountTax amountTax or {@code null} for none
    */
   public OrdersCancelLineItemRequest setAmountTax(Price amountTax) {

@@ -38,14 +38,15 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
   private Price amount;
 
   /**
-   * The amount that is refunded. Either amount or amountPretax and amountTax should be filled.
+   * The amount that is refunded. Either amount or amountPretax should be filled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price amountPretax;
 
   /**
-   * Tax amount that correspond to refund amount in amountPretax.
+   * Tax amount that corresponds to refund amount in amountPretax. Optional, but if filled,
+   * amountPretax must be set. Calculated automatically if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,7 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The amount that is refunded. Either amount or amountPretax and amountTax should be filled.
+   * The amount that is refunded. Either amount or amountPretax should be filled.
    * @return value or {@code null} for none
    */
   public Price getAmountPretax() {
@@ -98,7 +99,7 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The amount that is refunded. Either amount or amountPretax and amountTax should be filled.
+   * The amount that is refunded. Either amount or amountPretax should be filled.
    * @param amountPretax amountPretax or {@code null} for none
    */
   public OrdersRefundRequest setAmountPretax(Price amountPretax) {
@@ -107,7 +108,8 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Tax amount that correspond to refund amount in amountPretax.
+   * Tax amount that corresponds to refund amount in amountPretax. Optional, but if filled,
+   * amountPretax must be set. Calculated automatically if not provided.
    * @return value or {@code null} for none
    */
   public Price getAmountTax() {
@@ -115,7 +117,8 @@ public final class OrdersRefundRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Tax amount that correspond to refund amount in amountPretax.
+   * Tax amount that corresponds to refund amount in amountPretax. Optional, but if filled,
+   * amountPretax must be set. Calculated automatically if not provided.
    * @param amountTax amountTax or {@code null} for none
    */
   public OrdersRefundRequest setAmountTax(Price amountTax) {

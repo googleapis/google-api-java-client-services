@@ -171,6 +171,13 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * The party responsible for collecting and remitting taxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taxCollector;
+
+  /**
    * Whether the order was acknowledged.
    * @return value or {@code null} for none
    */
@@ -507,6 +514,23 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   public Order setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * The party responsible for collecting and remitting taxes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaxCollector() {
+    return taxCollector;
+  }
+
+  /**
+   * The party responsible for collecting and remitting taxes.
+   * @param taxCollector taxCollector or {@code null} for none
+   */
+  public Order setTaxCollector(java.lang.String taxCollector) {
+    this.taxCollector = taxCollector;
     return this;
   }
 

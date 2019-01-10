@@ -25,7 +25,7 @@ package com.google.api.services.oslogin.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/compute/docs/oslogin/rest/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/compute/docs/oslogin/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

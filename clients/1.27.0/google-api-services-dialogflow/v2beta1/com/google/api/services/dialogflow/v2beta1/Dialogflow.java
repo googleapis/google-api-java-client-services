@@ -2077,11 +2077,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required for all methods except `create` (`create` populates the name
-        automatically.
-        The unique
-         *        identifier of the entity type. Format:
-        `projects//agent/entityTypes/`.
+         * @param name The unique identifier of the entity type.
+        Required for EntityTypes.UpdateEntityType and
+         *        EntityTypes.BatchUpdateEntityTypes methods.
+        Format: `projects//agent/entityTypes/`.
          * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1EntityType}
          * @return the request
          */
@@ -2109,11 +2108,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required for all methods except `create` (`create` populates the name
-        automatically.
-        The unique
-         *        identifier of the entity type. Format:
-        `projects//agent/entityTypes/`.
+           * @param name The unique identifier of the entity type.
+        Required for EntityTypes.UpdateEntityType and
+         *        EntityTypes.BatchUpdateEntityTypes methods.
+        Format: `projects//agent/entityTypes/`.
            * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1EntityType}
            * @since 1.13
            */
@@ -2183,22 +2181,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required for all methods except `create` (`create` populates the name automatically.
-           * The unique identifier of the entity type. Format: `projects//agent/entityTypes/`.
+           * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
+           * EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required for all methods except `create` (`create` populates the name automatically. The unique
-         identifier of the entity type. Format: `projects//agent/entityTypes/`.
+          /** The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
+         EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required for all methods except `create` (`create` populates the name automatically.
-           * The unique identifier of the entity type. Format: `projects//agent/entityTypes/`.
+           * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
+           * EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5961,10 +5959,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required for all methods except `create` (`create` populates the name
-        automatically.
-        The unique
-         *        identifier of this intent.
+         * @param name The unique identifier of this intent.
+        Required for Intents.UpdateIntent and
+         *        Intents.BatchUpdateIntents
+        methods.
         Format: `projects//agent/intents/`.
          * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Intent}
          * @return the request
@@ -5993,10 +5991,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required for all methods except `create` (`create` populates the name
-        automatically.
-        The unique
-         *        identifier of this intent.
+           * @param name The unique identifier of this intent.
+        Required for Intents.UpdateIntent and
+         *        Intents.BatchUpdateIntents
+        methods.
         Format: `projects//agent/intents/`.
            * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Intent}
            * @since 1.13
@@ -6067,22 +6065,22 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required for all methods except `create` (`create` populates the name automatically.
-           * The unique identifier of this intent. Format: `projects//agent/intents/`.
+           * The unique identifier of this intent. Required for Intents.UpdateIntent and
+           * Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required for all methods except `create` (`create` populates the name automatically. The unique
-         identifier of this intent. Format: `projects//agent/intents/`.
+          /** The unique identifier of this intent. Required for Intents.UpdateIntent and
+         Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required for all methods except `create` (`create` populates the name automatically.
-           * The unique identifier of this intent. Format: `projects//agent/intents/`.
+           * The unique identifier of this intent. Required for Intents.UpdateIntent and
+           * Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

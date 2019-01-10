@@ -45,8 +45,8 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   private java.lang.String entityType;
 
   /**
-   * Required. The text corresponding to the example or template, if there are no annotations. For
-   * annotated examples, it is the text for one of the example's parts.
+   * Required. The text corresponding to the example, if there are no annotations. For annotated
+   * examples, it is the text for one of the example's parts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Required. The text corresponding to the example or template, if there are no annotations. For
-   * annotated examples, it is the text for one of the example's parts.
+   * Required. The text corresponding to the example, if there are no annotations. For annotated
+   * examples, it is the text for one of the example's parts.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -105,8 +105,8 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Required. The text corresponding to the example or template, if there are no annotations. For
-   * annotated examples, it is the text for one of the example's parts.
+   * Required. The text corresponding to the example, if there are no annotations. For annotated
+   * examples, it is the text for one of the example's parts.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart setText(java.lang.String text) {

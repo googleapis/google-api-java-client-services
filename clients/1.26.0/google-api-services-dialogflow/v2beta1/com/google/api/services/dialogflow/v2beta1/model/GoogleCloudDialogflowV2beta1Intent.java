@@ -125,8 +125,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.lang.Boolean mlEnabled;
 
   /**
-   * Required for all methods except `create` (`create` populates the name automatically. The unique
-   * identifier of this intent. Format: `projects//agent/intents/`.
+   * The unique identifier of this intent. Required for Intents.UpdateIntent and
+   * Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.lang.String rootFollowupIntentName;
 
   /**
-   * Optional. The collection of examples/templates that the agent is trained on.
+   * Optional. The collection of examples that the agent is trained on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -431,8 +431,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Required for all methods except `create` (`create` populates the name automatically. The unique
-   * identifier of this intent. Format: `projects//agent/intents/`.
+   * The unique identifier of this intent. Required for Intents.UpdateIntent and
+   * Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -440,8 +440,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Required for all methods except `create` (`create` populates the name automatically. The unique
-   * identifier of this intent. Format: `projects//agent/intents/`.
+   * The unique identifier of this intent. Required for Intents.UpdateIntent and
+   * Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setName(java.lang.String name) {
@@ -582,7 +582,7 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of examples/templates that the agent is trained on.
+   * Optional. The collection of examples that the agent is trained on.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> getTrainingPhrases() {
@@ -590,7 +590,7 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of examples/templates that the agent is trained on.
+   * Optional. The collection of examples that the agent is trained on.
    * @param trainingPhrases trainingPhrases or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setTrainingPhrases(java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> trainingPhrases) {

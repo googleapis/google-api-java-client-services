@@ -45,6 +45,16 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   private EnvironmentMatrix environmentMatrix;
 
   /**
+   * The number of times a TestExecution should be re-attempted if one or more of its test cases
+   * fail for any reason. The maximum number of reruns allowed is 10.
+   *
+   * Default is 0, which implies no reruns.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer flakyTestAttempts;
+
+  /**
    * Output only. Describes why the matrix is considered invalid. Only useful for matrices in the
    * INVALID state.
    * The value may be {@code null}.
@@ -138,6 +148,29 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
    */
   public TestMatrix setEnvironmentMatrix(EnvironmentMatrix environmentMatrix) {
     this.environmentMatrix = environmentMatrix;
+    return this;
+  }
+
+  /**
+   * The number of times a TestExecution should be re-attempted if one or more of its test cases
+   * fail for any reason. The maximum number of reruns allowed is 10.
+   *
+   * Default is 0, which implies no reruns.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFlakyTestAttempts() {
+    return flakyTestAttempts;
+  }
+
+  /**
+   * The number of times a TestExecution should be re-attempted if one or more of its test cases
+   * fail for any reason. The maximum number of reruns allowed is 10.
+   *
+   * Default is 0, which implies no reruns.
+   * @param flakyTestAttempts flakyTestAttempts or {@code null} for none
+   */
+  public TestMatrix setFlakyTestAttempts(java.lang.Integer flakyTestAttempts) {
+    this.flakyTestAttempts = flakyTestAttempts;
     return this;
   }
 

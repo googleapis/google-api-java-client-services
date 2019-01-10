@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents an example or template that the agent is trained on.
+ * Represents an example that the agent is trained on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -46,9 +46,8 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   private java.util.List<GoogleCloudDialogflowV2IntentTrainingPhrasePart> parts;
 
   /**
-   * Optional. Indicates how many times this example or template was added to the intent. Each time
-   * a developer adds an existing sample by editing an intent or training, this counter is
-   * increased.
+   * Optional. Indicates how many times this example was added to the intent. Each time a developer
+   * adds an existing sample by editing an intent or training, this counter is increased.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,9 +99,8 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   }
 
   /**
-   * Optional. Indicates how many times this example or template was added to the intent. Each time
-   * a developer adds an existing sample by editing an intent or training, this counter is
-   * increased.
+   * Optional. Indicates how many times this example was added to the intent. Each time a developer
+   * adds an existing sample by editing an intent or training, this counter is increased.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimesAddedCount() {
@@ -110,9 +108,8 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   }
 
   /**
-   * Optional. Indicates how many times this example or template was added to the intent. Each time
-   * a developer adds an existing sample by editing an intent or training, this counter is
-   * increased.
+   * Optional. Indicates how many times this example was added to the intent. Each time a developer
+   * adds an existing sample by editing an intent or training, this counter is increased.
    * @param timesAddedCount timesAddedCount or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentTrainingPhrase setTimesAddedCount(java.lang.Integer timesAddedCount) {

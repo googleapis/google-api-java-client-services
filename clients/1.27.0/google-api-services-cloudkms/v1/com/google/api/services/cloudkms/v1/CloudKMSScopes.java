@@ -26,6 +26,9 @@ public class CloudKMSScopes {
   /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** View and manage your keys and secrets stored in Cloud Key Management Service. */
+  public static final String CLOUDKMS = "https://www.googleapis.com/auth/cloudkms";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class CloudKMSScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(CLOUDKMS);
     return java.util.Collections.unmodifiableSet(set);
   }
 

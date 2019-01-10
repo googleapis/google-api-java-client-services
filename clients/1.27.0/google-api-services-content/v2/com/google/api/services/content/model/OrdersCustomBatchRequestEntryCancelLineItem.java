@@ -47,7 +47,8 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
   private Price amountPretax;
 
   /**
-   * Tax amount that correspond to cancellation amount in amountPretax.
+   * Tax amount that corresponds to cancellation amount in amountPretax. Optional, but if filled,
+   * then amountPretax must be set. Calculated automatically if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +129,8 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
   }
 
   /**
-   * Tax amount that correspond to cancellation amount in amountPretax.
+   * Tax amount that corresponds to cancellation amount in amountPretax. Optional, but if filled,
+   * then amountPretax must be set. Calculated automatically if not provided.
    * @return value or {@code null} for none
    */
   public Price getAmountTax() {
@@ -136,7 +138,8 @@ public final class OrdersCustomBatchRequestEntryCancelLineItem extends com.googl
   }
 
   /**
-   * Tax amount that correspond to cancellation amount in amountPretax.
+   * Tax amount that corresponds to cancellation amount in amountPretax. Optional, but if filled,
+   * then amountPretax must be set. Calculated automatically if not provided.
    * @param amountTax amountTax or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryCancelLineItem setAmountTax(Price amountTax) {

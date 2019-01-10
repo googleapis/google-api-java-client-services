@@ -84,7 +84,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Amount productAmount;
+  private ProductAmount productAmount;
 
   /**
    * The date of the transaction, in ISO 8601 format.
@@ -216,7 +216,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
    * Total amount for the items.
    * @return value or {@code null} for none
    */
-  public Amount getProductAmount() {
+  public ProductAmount getProductAmount() {
     return productAmount;
   }
 
@@ -224,7 +224,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
    * Total amount for the items.
    * @param productAmount productAmount or {@code null} for none
    */
-  public OrderReportTransaction setProductAmount(Amount productAmount) {
+  public OrderReportTransaction setProductAmount(ProductAmount productAmount) {
     this.productAmount = productAmount;
     return this;
   }

@@ -32,15 +32,15 @@ public final class OrdersCustomBatchRequestEntryReturnRefundLineItem extends com
 
   /**
    * The amount that is refunded. If omitted, refundless return is assumed (same as calling
-   * returnLineItem method). Optional, but if filled then both amountPretax and amountTax must be
-   * set.
+   * returnLineItem method).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price amountPretax;
 
   /**
-   * Tax amount that correspond to refund amount in amountPretax.
+   * Tax amount that corresponds to refund amount in amountPretax. Optional, but if filled, then
+   * amountPretax must be set. Calculated automatically if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,7 @@ public final class OrdersCustomBatchRequestEntryReturnRefundLineItem extends com
 
   /**
    * The amount that is refunded. If omitted, refundless return is assumed (same as calling
-   * returnLineItem method). Optional, but if filled then both amountPretax and amountTax must be
-   * set.
+   * returnLineItem method).
    * @return value or {@code null} for none
    */
   public Price getAmountPretax() {
@@ -94,8 +93,7 @@ public final class OrdersCustomBatchRequestEntryReturnRefundLineItem extends com
 
   /**
    * The amount that is refunded. If omitted, refundless return is assumed (same as calling
-   * returnLineItem method). Optional, but if filled then both amountPretax and amountTax must be
-   * set.
+   * returnLineItem method).
    * @param amountPretax amountPretax or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryReturnRefundLineItem setAmountPretax(Price amountPretax) {
@@ -104,7 +102,8 @@ public final class OrdersCustomBatchRequestEntryReturnRefundLineItem extends com
   }
 
   /**
-   * Tax amount that correspond to refund amount in amountPretax.
+   * Tax amount that corresponds to refund amount in amountPretax. Optional, but if filled, then
+   * amountPretax must be set. Calculated automatically if not provided.
    * @return value or {@code null} for none
    */
   public Price getAmountTax() {
@@ -112,7 +111,8 @@ public final class OrdersCustomBatchRequestEntryReturnRefundLineItem extends com
   }
 
   /**
-   * Tax amount that correspond to refund amount in amountPretax.
+   * Tax amount that corresponds to refund amount in amountPretax. Optional, but if filled, then
+   * amountPretax must be set. Calculated automatically if not provided.
    * @param amountTax amountTax or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryReturnRefundLineItem setAmountTax(Price amountTax) {

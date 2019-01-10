@@ -45,6 +45,27 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   private java.lang.String emailAddress;
 
   /**
+   * Whether user is an order manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean orderManager;
+
+  /**
+   * Whether user can access payment statements.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean paymentsAnalyst;
+
+  /**
+   * Whether user can manage payment settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean paymentsManager;
+
+  /**
    * Whether user is an admin.
    * @return value or {@code null} for none
    */
@@ -75,6 +96,57 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
    */
   public AccountUser setEmailAddress(java.lang.String emailAddress) {
     this.emailAddress = emailAddress;
+    return this;
+  }
+
+  /**
+   * Whether user is an order manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOrderManager() {
+    return orderManager;
+  }
+
+  /**
+   * Whether user is an order manager.
+   * @param orderManager orderManager or {@code null} for none
+   */
+  public AccountUser setOrderManager(java.lang.Boolean orderManager) {
+    this.orderManager = orderManager;
+    return this;
+  }
+
+  /**
+   * Whether user can access payment statements.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPaymentsAnalyst() {
+    return paymentsAnalyst;
+  }
+
+  /**
+   * Whether user can access payment statements.
+   * @param paymentsAnalyst paymentsAnalyst or {@code null} for none
+   */
+  public AccountUser setPaymentsAnalyst(java.lang.Boolean paymentsAnalyst) {
+    this.paymentsAnalyst = paymentsAnalyst;
+    return this;
+  }
+
+  /**
+   * Whether user can manage payment settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPaymentsManager() {
+    return paymentsManager;
+  }
+
+  /**
+   * Whether user can manage payment settings.
+   * @param paymentsManager paymentsManager or {@code null} for none
+   */
+  public AccountUser setPaymentsManager(java.lang.Boolean paymentsManager) {
+    this.paymentsManager = paymentsManager;
     return this;
   }
 

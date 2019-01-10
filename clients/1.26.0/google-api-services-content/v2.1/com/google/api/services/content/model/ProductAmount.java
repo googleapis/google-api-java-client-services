@@ -17,7 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * Model definition for Amount.
+ * Model definition for ProductAmount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -28,24 +28,31 @@ package com.google.api.services.content.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Amount extends com.google.api.client.json.GenericJson {
+public final class ProductAmount extends com.google.api.client.json.GenericJson {
 
   /**
-   * [required] The pre-tax or post-tax price depending on the location of the order.
+   * The pre-tax or post-tax price depending on the location of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price priceAmount;
 
   /**
-   * [required] Tax value.
+   * Remitted tax value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price remittedTaxAmount;
+
+  /**
+   * Tax value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price taxAmount;
 
   /**
-   * [required] The pre-tax or post-tax price depending on the location of the order.
+   * The pre-tax or post-tax price depending on the location of the order.
    * @return value or {@code null} for none
    */
   public Price getPriceAmount() {
@@ -53,16 +60,33 @@ public final class Amount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [required] The pre-tax or post-tax price depending on the location of the order.
+   * The pre-tax or post-tax price depending on the location of the order.
    * @param priceAmount priceAmount or {@code null} for none
    */
-  public Amount setPriceAmount(Price priceAmount) {
+  public ProductAmount setPriceAmount(Price priceAmount) {
     this.priceAmount = priceAmount;
     return this;
   }
 
   /**
-   * [required] Tax value.
+   * Remitted tax value.
+   * @return value or {@code null} for none
+   */
+  public Price getRemittedTaxAmount() {
+    return remittedTaxAmount;
+  }
+
+  /**
+   * Remitted tax value.
+   * @param remittedTaxAmount remittedTaxAmount or {@code null} for none
+   */
+  public ProductAmount setRemittedTaxAmount(Price remittedTaxAmount) {
+    this.remittedTaxAmount = remittedTaxAmount;
+    return this;
+  }
+
+  /**
+   * Tax value.
    * @return value or {@code null} for none
    */
   public Price getTaxAmount() {
@@ -70,22 +94,22 @@ public final class Amount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [required] Tax value.
+   * Tax value.
    * @param taxAmount taxAmount or {@code null} for none
    */
-  public Amount setTaxAmount(Price taxAmount) {
+  public ProductAmount setTaxAmount(Price taxAmount) {
     this.taxAmount = taxAmount;
     return this;
   }
 
   @Override
-  public Amount set(String fieldName, Object value) {
-    return (Amount) super.set(fieldName, value);
+  public ProductAmount set(String fieldName, Object value) {
+    return (ProductAmount) super.set(fieldName, value);
   }
 
   @Override
-  public Amount clone() {
-    return (Amount) super.clone();
+  public ProductAmount clone() {
+    return (ProductAmount) super.clone();
   }
 
 }

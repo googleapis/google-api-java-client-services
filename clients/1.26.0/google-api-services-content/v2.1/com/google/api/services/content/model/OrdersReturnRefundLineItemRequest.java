@@ -46,8 +46,7 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
 
   /**
    * The amount to be refunded. This may be pre-tax or post-tax depending on the location of the
-   * order. If omitted, refundless return is assumed. Optional, but if filled then both priceAmount
-   * and taxAmount must be set.
+   * order. If omitted, refundless return is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +82,8 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
   private java.lang.String reasonText;
 
   /**
-   * The amount of tax to be refunded.
+   * The amount of tax to be refunded. Optional, but if filled, then priceAmount must be set.
+   * Calculated automatically if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,7 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
 
   /**
    * The amount to be refunded. This may be pre-tax or post-tax depending on the location of the
-   * order. If omitted, refundless return is assumed. Optional, but if filled then both priceAmount
-   * and taxAmount must be set.
+   * order. If omitted, refundless return is assumed.
    * @return value or {@code null} for none
    */
   public Price getPriceAmount() {
@@ -135,8 +134,7 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
 
   /**
    * The amount to be refunded. This may be pre-tax or post-tax depending on the location of the
-   * order. If omitted, refundless return is assumed. Optional, but if filled then both priceAmount
-   * and taxAmount must be set.
+   * order. If omitted, refundless return is assumed.
    * @param priceAmount priceAmount or {@code null} for none
    */
   public OrdersReturnRefundLineItemRequest setPriceAmount(Price priceAmount) {
@@ -215,7 +213,8 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
   }
 
   /**
-   * The amount of tax to be refunded.
+   * The amount of tax to be refunded. Optional, but if filled, then priceAmount must be set.
+   * Calculated automatically if not provided.
    * @return value or {@code null} for none
    */
   public Price getTaxAmount() {
@@ -223,7 +222,8 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
   }
 
   /**
-   * The amount of tax to be refunded.
+   * The amount of tax to be refunded. Optional, but if filled, then priceAmount must be set.
+   * Calculated automatically if not provided.
    * @param taxAmount taxAmount or {@code null} for none
    */
   public OrdersReturnRefundLineItemRequest setTaxAmount(Price taxAmount) {

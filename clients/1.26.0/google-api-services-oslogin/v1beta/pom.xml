@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-oslogin</artifactId>
-  <version>v1beta-rev20181023-1.26.0</version>
-  <name>Cloud OS Login API v1beta-rev20181023-1.26.0</name>
+  <version>v1beta-rev20190107-1.26.0</version>
+  <name>Cloud OS Login API v1beta-rev20190107-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

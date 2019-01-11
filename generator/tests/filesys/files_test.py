@@ -45,12 +45,5 @@ class FilesTest(basetest.TestCase):
     self.assertTrue(files.IsFile(os.path.join(self.tempdir, 'a')))
     self.assertFalse(files.IsFile(self.tempdir))
 
-  def testParseGsPath(self):
-    path = '/gs/moo-goo-gai-pan/bismarck/marx/leopold.zip'
-    spec = files.ParseGsPath(path)
-    self.assertIsNotNone(spec)
-    expected = ('moo-goo-gai-pan', 'bismarck/marx/leopold.zip')
-    self.assertEquals(expected, spec)
-
 if __name__ == '__main__':
   basetest.main()

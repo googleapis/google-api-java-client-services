@@ -31,7 +31,9 @@ from googleapis.codegen.filesys import zip_library_package
 
 class GeneratorTest(basetest.TestCase):
 
-  _TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), 'testdata')
+  _TEST_DATA_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), 'testdata')
+  )
 
   def setUp(self):
     self._output_stream = io.BytesIO()

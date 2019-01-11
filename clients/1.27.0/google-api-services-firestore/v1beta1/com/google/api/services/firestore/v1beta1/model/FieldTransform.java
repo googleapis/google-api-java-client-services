@@ -52,6 +52,50 @@ public final class FieldTransform extends com.google.api.client.json.GenericJson
   private java.lang.String fieldPath;
 
   /**
+   * Adds the given value to the field's current value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the given value. If either
+   * of the given value or the current field value are doubles, both values will be interpreted as
+   * doubles. Double arithmetic and representation of double values follow IEEE 754 semantics. If
+   * there is positive/negative integer overflow, the field is resolved to the largest magnitude
+   * positive/negative integer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Value increment;
+
+  /**
+   * Sets the field to the maximum of its current value and the given value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the given value. If a
+   * maximum operation is applied where the field and the input value are of mixed types (that is -
+   * one is an integer and one is a double) the field takes on the type of the larger operand. If
+   * the operands are equivalent (e.g. 3 and 3.0), the field does not change. 0, 0.0, and -0.0 are
+   * all zero. The maximum of a zero stored value and zero input value is always the stored value.
+   * The maximum of any numeric value x and NaN is NaN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Value maximum;
+
+  /**
+   * Sets the field to the minimum of its current value and the given value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the input value. If a
+   * minimum operation is applied where the field and the input value are of mixed types (that is -
+   * one is an integer and one is a double) the field takes on the type of the smaller operand. If
+   * the operands are equivalent (e.g. 3 and 3.0), the field does not change. 0, 0.0, and -0.0 are
+   * all zero. The minimum of a zero stored value and zero input value is always the stored value.
+   * The minimum of any numeric value x and NaN is NaN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Value minimum;
+
+  /**
    * Remove all of the given elements from the array in the field. If the field is not an array, or
    * if the field does not yet exist, it is set to the empty array.
    *
@@ -119,6 +163,103 @@ public final class FieldTransform extends com.google.api.client.json.GenericJson
    */
   public FieldTransform setFieldPath(java.lang.String fieldPath) {
     this.fieldPath = fieldPath;
+    return this;
+  }
+
+  /**
+   * Adds the given value to the field's current value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the given value. If either
+   * of the given value or the current field value are doubles, both values will be interpreted as
+   * doubles. Double arithmetic and representation of double values follow IEEE 754 semantics. If
+   * there is positive/negative integer overflow, the field is resolved to the largest magnitude
+   * positive/negative integer.
+   * @return value or {@code null} for none
+   */
+  public Value getIncrement() {
+    return increment;
+  }
+
+  /**
+   * Adds the given value to the field's current value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the given value. If either
+   * of the given value or the current field value are doubles, both values will be interpreted as
+   * doubles. Double arithmetic and representation of double values follow IEEE 754 semantics. If
+   * there is positive/negative integer overflow, the field is resolved to the largest magnitude
+   * positive/negative integer.
+   * @param increment increment or {@code null} for none
+   */
+  public FieldTransform setIncrement(Value increment) {
+    this.increment = increment;
+    return this;
+  }
+
+  /**
+   * Sets the field to the maximum of its current value and the given value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the given value. If a
+   * maximum operation is applied where the field and the input value are of mixed types (that is -
+   * one is an integer and one is a double) the field takes on the type of the larger operand. If
+   * the operands are equivalent (e.g. 3 and 3.0), the field does not change. 0, 0.0, and -0.0 are
+   * all zero. The maximum of a zero stored value and zero input value is always the stored value.
+   * The maximum of any numeric value x and NaN is NaN.
+   * @return value or {@code null} for none
+   */
+  public Value getMaximum() {
+    return maximum;
+  }
+
+  /**
+   * Sets the field to the maximum of its current value and the given value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the given value. If a
+   * maximum operation is applied where the field and the input value are of mixed types (that is -
+   * one is an integer and one is a double) the field takes on the type of the larger operand. If
+   * the operands are equivalent (e.g. 3 and 3.0), the field does not change. 0, 0.0, and -0.0 are
+   * all zero. The maximum of a zero stored value and zero input value is always the stored value.
+   * The maximum of any numeric value x and NaN is NaN.
+   * @param maximum maximum or {@code null} for none
+   */
+  public FieldTransform setMaximum(Value maximum) {
+    this.maximum = maximum;
+    return this;
+  }
+
+  /**
+   * Sets the field to the minimum of its current value and the given value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the input value. If a
+   * minimum operation is applied where the field and the input value are of mixed types (that is -
+   * one is an integer and one is a double) the field takes on the type of the smaller operand. If
+   * the operands are equivalent (e.g. 3 and 3.0), the field does not change. 0, 0.0, and -0.0 are
+   * all zero. The minimum of a zero stored value and zero input value is always the stored value.
+   * The minimum of any numeric value x and NaN is NaN.
+   * @return value or {@code null} for none
+   */
+  public Value getMinimum() {
+    return minimum;
+  }
+
+  /**
+   * Sets the field to the minimum of its current value and the given value.
+   *
+   * This must be an integer or a double value. If the field is not an integer or double, or if the
+   * field does not yet exist, the transformation will set the field to the input value. If a
+   * minimum operation is applied where the field and the input value are of mixed types (that is -
+   * one is an integer and one is a double) the field takes on the type of the smaller operand. If
+   * the operands are equivalent (e.g. 3 and 3.0), the field does not change. 0, 0.0, and -0.0 are
+   * all zero. The minimum of a zero stored value and zero input value is always the stored value.
+   * The minimum of any numeric value x and NaN is NaN.
+   * @param minimum minimum or {@code null} for none
+   */
+  public FieldTransform setMinimum(Value minimum) {
+    this.minimum = minimum;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-jobs</artifactId>
-  <version>v3p1beta1-rev20181114-1.27.0</version>
-  <name>Cloud Talent Solution API v3p1beta1-rev20181114-1.27.0</name>
+  <version>v3p1beta1-rev20190107-1.27.0</version>
+  <name>Cloud Talent Solution API v3p1beta1-rev20190107-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

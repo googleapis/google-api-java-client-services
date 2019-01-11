@@ -59,6 +59,12 @@ public final class DownloadResponse extends com.google.api.client.json.GenericJs
   private java.lang.String insertionOrders;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String inventorySources;
+
+  /**
    * Retrieved line items in SDF format.
    * The value may be {@code null}.
    */
@@ -130,6 +136,21 @@ public final class DownloadResponse extends com.google.api.client.json.GenericJs
    */
   public DownloadResponse setInsertionOrders(java.lang.String insertionOrders) {
     this.insertionOrders = insertionOrders;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInventorySources() {
+    return inventorySources;
+  }
+
+  /**
+   * @param inventorySources inventorySources or {@code null} for none
+   */
+  public DownloadResponse setInventorySources(java.lang.String inventorySources) {
+    this.inventorySources = inventorySources;
     return this;
   }
 

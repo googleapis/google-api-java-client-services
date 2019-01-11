@@ -17,7 +17,8 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Request to fetch stored campaigns, insertion orders, line items, TrueView ad groups and ads.
+ * Request to fetch stored inventory sources, campaigns, insertion orders, line items, TrueView ad
+ * groups and ads.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the DoubleClick Bid Manager API. For a detailed
@@ -34,6 +35,7 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
    * File types that will be returned.
    *
    * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  - "LINE_ITEM"
+   * - "INVENTORY_SOURCE"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +68,7 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
    * File types that will be returned.
    *
    * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  - "LINE_ITEM"
+   * - "INVENTORY_SOURCE"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypes() {
@@ -76,6 +79,7 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
    * File types that will be returned.
    *
    * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  - "LINE_ITEM"
+   * - "INVENTORY_SOURCE"
    * @param fileTypes fileTypes or {@code null} for none
    */
   public DownloadRequest setFileTypes(java.util.List<java.lang.String> fileTypes) {

@@ -75,11 +75,12 @@ def generate_service(disco: str):
 
         command = (
             f"python2 -m googleapis.codegen --output_dir={output_dir}" +
-            f" --input={input_file} --language=java --language_variant={template}"
+            f" --input={input_file} --language=java --language_variant={template}" +
+            f" --package_path=api/services"
         )
 
         shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
-        shell.run(command.split(), cwd=repository)
+        shell.run(command.split(), cwd=repository, hide_output=False)
 
         s.copy(output_dir, f"clients/{template}/{library_name}/{version}")
 

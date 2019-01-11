@@ -114,7 +114,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> nameServers;
 
   /**
-   * For privately visible zones, the set of GCP resources that the zone is visible from.
+   * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
+   * visible from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +123,7 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * The zone's visibility: public zones are exposed to the Internet, while private zones are
-   * visible only to GCP resources.
+   * visible only to Virtual Private Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -328,7 +329,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For privately visible zones, the set of GCP resources that the zone is visible from.
+   * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
+   * visible from.
    * @return value or {@code null} for none
    */
   public ManagedZonePrivateVisibilityConfig getPrivateVisibilityConfig() {
@@ -336,7 +338,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For privately visible zones, the set of GCP resources that the zone is visible from.
+   * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
+   * visible from.
    * @param privateVisibilityConfig privateVisibilityConfig or {@code null} for none
    */
   public ManagedZone setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfig privateVisibilityConfig) {
@@ -346,7 +349,7 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * The zone's visibility: public zones are exposed to the Internet, while private zones are
-   * visible only to GCP resources.
+   * visible only to Virtual Private Cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -355,7 +358,7 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * The zone's visibility: public zones are exposed to the Internet, while private zones are
-   * visible only to GCP resources.
+   * visible only to Virtual Private Cloud resources.
    * @param visibility visibility or {@code null} for none
    */
   public ManagedZone setVisibility(java.lang.String visibility) {

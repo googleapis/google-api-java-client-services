@@ -17,8 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A policy is a collection of rules applied to one or more networks that specify forwarding
- * behavior for that network.
+ * A policy is a collection of DNS rules applied to one or more Virtual Private Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:

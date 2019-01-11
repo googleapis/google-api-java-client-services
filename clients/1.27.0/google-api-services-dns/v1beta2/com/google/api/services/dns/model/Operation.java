@@ -64,7 +64,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String startTime;
 
   /**
-   * Status of the operation. Can be one of the following: "PENDING" or "DONE" (output only).
+   * Status of the operation. Can be one of the following: "PENDING" or "DONE" (output only). A
+   * status of "DONE" means that the request to update the authoritative servers has been sent, but
+   * the servers might not be updated yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +169,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the operation. Can be one of the following: "PENDING" or "DONE" (output only).
+   * Status of the operation. Can be one of the following: "PENDING" or "DONE" (output only). A
+   * status of "DONE" means that the request to update the authoritative servers has been sent, but
+   * the servers might not be updated yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -175,7 +179,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the operation. Can be one of the following: "PENDING" or "DONE" (output only).
+   * Status of the operation. Can be one of the following: "PENDING" or "DONE" (output only). A
+   * status of "DONE" means that the request to update the authoritative servers has been sent, but
+   * the servers might not be updated yet.
    * @param status status or {@code null} for none
    */
   public Operation setStatus(java.lang.String status) {

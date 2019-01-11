@@ -46,6 +46,13 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.Double deadline;
 
   /**
+   * The JWT audience is used when generating a JWT id token for the backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jwtAudience;
+
+  /**
    * Minimum deadline in seconds needed for this method. Calls having deadline value lower than this
    * will be rejected.
    * The value may be {@code null}.
@@ -60,6 +67,12 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Double operationDeadline;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pathTranslation;
 
   /**
    * Selects the methods to which this rule applies.
@@ -107,6 +120,23 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The JWT audience is used when generating a JWT id token for the backend.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJwtAudience() {
+    return jwtAudience;
+  }
+
+  /**
+   * The JWT audience is used when generating a JWT id token for the backend.
+   * @param jwtAudience jwtAudience or {@code null} for none
+   */
+  public BackendRule setJwtAudience(java.lang.String jwtAudience) {
+    this.jwtAudience = jwtAudience;
+    return this;
+  }
+
+  /**
    * Minimum deadline in seconds needed for this method. Calls having deadline value lower than this
    * will be rejected.
    * @return value or {@code null} for none
@@ -141,6 +171,21 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   public BackendRule setOperationDeadline(java.lang.Double operationDeadline) {
     this.operationDeadline = operationDeadline;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPathTranslation() {
+    return pathTranslation;
+  }
+
+  /**
+   * @param pathTranslation pathTranslation or {@code null} for none
+   */
+  public BackendRule setPathTranslation(java.lang.String pathTranslation) {
+    this.pathTranslation = pathTranslation;
     return this;
   }
 

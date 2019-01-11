@@ -59,8 +59,8 @@ public final class GoogleCloudDialogflowV2EntityType extends com.google.api.clie
   private java.lang.String kind;
 
   /**
-   * Required for all methods except `create` (`create` populates the name automatically. The unique
-   * identifier of the entity type. Format: `projects//agent/entityTypes/`.
+   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
+   * EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +135,8 @@ public final class GoogleCloudDialogflowV2EntityType extends com.google.api.clie
   }
 
   /**
-   * Required for all methods except `create` (`create` populates the name automatically. The unique
-   * identifier of the entity type. Format: `projects//agent/entityTypes/`.
+   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
+   * EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -144,8 +144,8 @@ public final class GoogleCloudDialogflowV2EntityType extends com.google.api.clie
   }
 
   /**
-   * Required for all methods except `create` (`create` populates the name automatically. The unique
-   * identifier of the entity type. Format: `projects//agent/entityTypes/`.
+   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
+   * EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2EntityType setName(java.lang.String name) {

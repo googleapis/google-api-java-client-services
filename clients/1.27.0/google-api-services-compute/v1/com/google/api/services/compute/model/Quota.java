@@ -44,6 +44,13 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.String metric;
 
   /**
+   * [Output Only] Owning resource. This is the resource on which this quota is applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String owner;
+
+  /**
    * [Output Only] Current usage of this metric.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setMetric(java.lang.String metric) {
     this.metric = metric;
+    return this;
+  }
+
+  /**
+   * [Output Only] Owning resource. This is the resource on which this quota is applied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOwner() {
+    return owner;
+  }
+
+  /**
+   * [Output Only] Owning resource. This is the resource on which this quota is applied.
+   * @param owner owner or {@code null} for none
+   */
+  public Quota setOwner(java.lang.String owner) {
+    this.owner = owner;
     return this;
   }
 

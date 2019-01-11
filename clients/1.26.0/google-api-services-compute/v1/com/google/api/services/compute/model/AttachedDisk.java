@@ -51,7 +51,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * to reference the device for mounting, resizing, and so on, from within the instance.
    *
    * If not specified, the server chooses a default device name to apply to this disk, in the form
-   * persistent-disks-x, where x is a number assigned by Google Compute Engine. This field is only
+   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
    * applicable for persistent disks.
    * The value may be {@code null}.
    */
@@ -206,7 +206,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * to reference the device for mounting, resizing, and so on, from within the instance.
    *
    * If not specified, the server chooses a default device name to apply to this disk, in the form
-   * persistent-disks-x, where x is a number assigned by Google Compute Engine. This field is only
+   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
    * applicable for persistent disks.
    * @return value or {@code null} for none
    */
@@ -220,7 +220,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * to reference the device for mounting, resizing, and so on, from within the instance.
    *
    * If not specified, the server chooses a default device name to apply to this disk, in the form
-   * persistent-disks-x, where x is a number assigned by Google Compute Engine. This field is only
+   * persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only
    * applicable for persistent disks.
    * @param deviceName deviceName or {@code null} for none
    */

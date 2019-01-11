@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class AutoscalingPolicyLoadBalancingUtilization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fraction of backend capacity utilization (set in HTTP(s) load balancing configuration) that
+   * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that
    * autoscaler should maintain. Must be a positive float value. If not defined, the default is 0.8.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class AutoscalingPolicyLoadBalancingUtilization extends com.google.
   private java.lang.Double utilizationTarget;
 
   /**
-   * Fraction of backend capacity utilization (set in HTTP(s) load balancing configuration) that
+   * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that
    * autoscaler should maintain. Must be a positive float value. If not defined, the default is 0.8.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class AutoscalingPolicyLoadBalancingUtilization extends com.google.
   }
 
   /**
-   * Fraction of backend capacity utilization (set in HTTP(s) load balancing configuration) that
+   * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that
    * autoscaler should maintain. Must be a positive float value. If not defined, the default is 0.8.
    * @param utilizationTarget utilizationTarget or {@code null} for none
    */

@@ -26,6 +26,7 @@ from googleapis.codegen import java_generator
 # include this specification, the language name is used as a key.
 _GENERATORS_BY_LANGUAGE = {
   'java': java_generator.Java14Generator,
+  'java1_15': java_generator.Java14Generator,
 }
 
 

@@ -354,6 +354,10 @@ class JavaLanguageModel(language_model.LanguageModel):
 
   def DefaultContainerPathForOwner(self, module):
     """Overrides the default."""
+    if module.owner_domain == 'google.com':
+      if ((self._options and self._options.get('google_api'))
+          or not module.package_path):
+        return 'com/google/api/services'
     return '/'.join(utilities.ReversedDomainComponents(module.owner_domain))
 
 

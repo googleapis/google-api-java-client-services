@@ -32,6 +32,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManager extends com.google.api.client.json.GenericJson {
 
   /**
+   * The autohealing policy for this managed instance group. You can specify only one value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InstanceGroupManagerAutoHealingPolicy> autoHealingPolicies;
+
+  /**
    * The base instance name to use for instances in this group. The value must be 1-58 characters
    * long. Instances are named by appending a hyphen and a random four-character string to the base
    * instance name. The base instance name must comply with RFC1035.
@@ -164,6 +171,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * The autohealing policy for this managed instance group. You can specify only one value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InstanceGroupManagerAutoHealingPolicy> getAutoHealingPolicies() {
+    return autoHealingPolicies;
+  }
+
+  /**
+   * The autohealing policy for this managed instance group. You can specify only one value.
+   * @param autoHealingPolicies autoHealingPolicies or {@code null} for none
+   */
+  public InstanceGroupManager setAutoHealingPolicies(java.util.List<InstanceGroupManagerAutoHealingPolicy> autoHealingPolicies) {
+    this.autoHealingPolicies = autoHealingPolicies;
+    return this;
+  }
 
   /**
    * The base instance name to use for instances in this group. The value must be 1-58 characters

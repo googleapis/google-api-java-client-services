@@ -137,6 +137,15 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String selfLink;
 
   /**
+   * [Output Only] The status of this InterconnectLocation. If the status is AVAILABLE, new
+   * Interconnects may be provisioned in this InterconnectLocation. Otherwise, no new Interconnects
+   * may be provisioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * [Output Only] The postal address of the Point of Presence, each line in the address is
    * separated by a newline character.
    * @return value or {@code null} for none
@@ -385,6 +394,27 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   public InterconnectLocation setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] The status of this InterconnectLocation. If the status is AVAILABLE, new
+   * Interconnects may be provisioned in this InterconnectLocation. Otherwise, no new Interconnects
+   * may be provisioned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * [Output Only] The status of this InterconnectLocation. If the status is AVAILABLE, new
+   * Interconnects may be provisioned in this InterconnectLocation. Otherwise, no new Interconnects
+   * may be provisioned.
+   * @param status status or {@code null} for none
+   */
+  public InterconnectLocation setStatus(java.lang.String status) {
+    this.status = status;
     return this;
   }
 

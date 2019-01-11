@@ -123,8 +123,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of link requested. This field indicates speed of each of the links in the bundle, not the
-   * entire bundle. Only 10G per link is allowed for a dedicated interconnect. Options:
-   * Ethernet_10G_LR
+   * entire bundle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,8 +419,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of link requested. This field indicates speed of each of the links in the bundle, not the
-   * entire bundle. Only 10G per link is allowed for a dedicated interconnect. Options:
-   * Ethernet_10G_LR
+   * entire bundle.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkType() {
@@ -430,8 +428,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
 
   /**
    * Type of link requested. This field indicates speed of each of the links in the bundle, not the
-   * entire bundle. Only 10G per link is allowed for a dedicated interconnect. Options:
-   * Ethernet_10G_LR
+   * entire bundle.
    * @param linkType linkType or {@code null} for none
    */
   public Interconnect setLinkType(java.lang.String linkType) {

@@ -456,7 +456,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern ACCELERATOR_TYPE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified accelerator type.
@@ -491,7 +491,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ACCELERATOR_TYPE_PATTERN.matcher(acceleratorType).matches(),
               "Parameter acceleratorType must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -597,7 +597,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ACCELERATOR_TYPE_PATTERN.matcher(acceleratorType).matches(),
               "Parameter acceleratorType must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.acceleratorType = acceleratorType;
         return this;
@@ -1260,7 +1260,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern ADDRESS_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified address resource.
@@ -1295,7 +1295,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -1391,7 +1391,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.address = address;
         return this;
@@ -1481,7 +1481,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern ADDRESS_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified address resource.
@@ -1516,7 +1516,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -1622,7 +1622,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.address = address;
         return this;
@@ -2476,7 +2476,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified autoscaler.
@@ -2511,7 +2511,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -2607,7 +2607,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -2698,7 +2698,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified autoscaler resource. Gets a list of available autoscalers by making a
@@ -2734,7 +2734,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -2840,7 +2840,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -3388,7 +3388,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates an autoscaler in the specified project using the data included in the request. This
@@ -3514,7 +3514,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -3604,7 +3604,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates an autoscaler in the specified project using the data included in the request.
@@ -3729,7 +3729,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -4026,7 +4026,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_BUCKET_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified BackendBucket resource.
@@ -4054,7 +4054,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -4129,7 +4129,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendBucket = backendBucket;
         return this;
@@ -4421,7 +4421,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_BUCKET_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified BackendBucket resource. Gets a list of available backend buckets by
@@ -4450,7 +4450,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -4535,7 +4535,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendBucket = backendBucket;
         return this;
@@ -5017,7 +5017,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_BUCKET_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates the specified BackendBucket resource with the data included in the request. This method
@@ -5047,7 +5047,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -5122,7 +5122,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendBucket = backendBucket;
         return this;
@@ -5209,7 +5209,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_BUCKET_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates the specified BackendBucket resource with the data included in the request.
@@ -5238,7 +5238,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -5313,7 +5313,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_BUCKET_PATTERN.matcher(backendBucket).matches(),
               "Parameter backendBucket must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendBucket = backendBucket;
         return this;
@@ -5896,7 +5896,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified BackendService resource.
@@ -5924,7 +5924,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -5999,7 +5999,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -6290,7 +6290,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified BackendService resource. Gets a list of available backend services.
@@ -6318,7 +6318,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -6403,7 +6403,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -6441,7 +6441,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Gets the most recent health check results for this BackendService.
@@ -6471,7 +6471,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -6545,7 +6545,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -7416,7 +7416,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates the specified BackendService resource with the data included in the request. There are
@@ -7447,7 +7447,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -7522,7 +7522,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -7919,7 +7919,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern DISK_TYPE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified disk type. Gets a list of available disk types by making a list()
@@ -7955,7 +7955,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DISK_TYPE_PATTERN.matcher(diskType).matches(),
               "Parameter diskType must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -8061,7 +8061,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DISK_TYPE_PATTERN.matcher(diskType).matches(),
               "Parameter diskType must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.diskType = diskType;
         return this;
@@ -12368,7 +12368,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern FORWARDING_RULE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified ForwardingRule resource.
@@ -12403,7 +12403,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -12499,7 +12499,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.forwardingRule = forwardingRule;
         return this;
@@ -12589,7 +12589,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern FORWARDING_RULE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified ForwardingRule resource.
@@ -12624,7 +12624,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -12730,7 +12730,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.forwardingRule = forwardingRule;
         return this;
@@ -13281,7 +13281,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern FORWARDING_RULE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Changes target URL for forwarding rule. The new target should be of the same type as the old
@@ -13319,7 +13319,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -13415,7 +13415,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.forwardingRule = forwardingRule;
         return this;
@@ -13524,7 +13524,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern ADDRESS_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified address resource.
@@ -13552,7 +13552,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -13627,7 +13627,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.address = address;
         return this;
@@ -13714,7 +13714,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern ADDRESS_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified address resource. Gets a list of available addresses by making a list()
@@ -13743,7 +13743,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -13828,7 +13828,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
               "Parameter address must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.address = address;
         return this;
@@ -14330,7 +14330,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern FORWARDING_RULE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified GlobalForwardingRule resource.
@@ -14358,7 +14358,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -14433,7 +14433,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.forwardingRule = forwardingRule;
         return this;
@@ -14520,7 +14520,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern FORWARDING_RULE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules
@@ -14549,7 +14549,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -14634,7 +14634,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.forwardingRule = forwardingRule;
         return this;
@@ -15117,7 +15117,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       private final java.util.regex.Pattern FORWARDING_RULE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Changes target URL for the GlobalForwardingRule resource. The new target should be of the same
@@ -15148,7 +15148,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -15223,7 +15223,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(FORWARDING_RULE_PATTERN.matcher(forwardingRule).matches(),
               "Parameter forwardingRule must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.forwardingRule = forwardingRule;
         return this;
@@ -26611,7 +26611,8 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
     /**
      * Deletes the specified instance template. Deleting an instance template is permanent and cannot be
-     * undone. It's not possible to delete templates which are in use by an instance group.
+     * undone. It is not possible to delete templates that are already in use by a managed instance
+     * group.
      *
      * Create a request for the method "instanceTemplates.delete".
      *
@@ -26640,7 +26641,8 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Deletes the specified instance template. Deleting an instance template is permanent and cannot
-       * be undone. It's not possible to delete templates which are in use by an instance group.
+       * be undone. It is not possible to delete templates that are already in use by a managed instance
+       * group.
        *
        * Create a request for the method "instanceTemplates.delete".
        *
@@ -27270,7 +27272,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Retrieves a list of instance templates that are contained within the specified project and zone.
+     * Retrieves a list of instance templates that are contained within the specified project.
      *
      * Create a request for the method "instanceTemplates.list".
      *
@@ -27294,8 +27296,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Retrieves a list of instance templates that are contained within the specified project and
-       * zone.
+       * Retrieves a list of instance templates that are contained within the specified project.
        *
        * Create a request for the method "instanceTemplates.list".
        *
@@ -44524,7 +44525,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param project Project ID for this request.
      * @param zone The name of the zone for this request.
-     * @param nodeGroup Name of the NodeGroup resource to delete.
+     * @param nodeGroup Name of the NodeGroup resource to update.
      * @param content the {@link com.google.api.services.compute.model.NodeGroupsSetNodeTemplateRequest}
      * @return the request
      */
@@ -44560,7 +44561,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param project Project ID for this request.
        * @param zone The name of the zone for this request.
-       * @param nodeGroup Name of the NodeGroup resource to delete.
+       * @param nodeGroup Name of the NodeGroup resource to update.
        * @param content the {@link com.google.api.services.compute.model.NodeGroupsSetNodeTemplateRequest}
        * @since 1.13
        */
@@ -44663,17 +44664,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Name of the NodeGroup resource to delete. */
+      /** Name of the NodeGroup resource to update. */
       @com.google.api.client.util.Key
       private java.lang.String nodeGroup;
 
-      /** Name of the NodeGroup resource to delete.
+      /** Name of the NodeGroup resource to update.
        */
       public java.lang.String getNodeGroup() {
         return nodeGroup;
       }
 
-      /** Name of the NodeGroup resource to delete. */
+      /** Name of the NodeGroup resource to update. */
       public SetNodeTemplate setNodeGroup(java.lang.String nodeGroup) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NODE_GROUP_PATTERN.matcher(nodeGroup).matches(),
@@ -49791,7 +49792,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified autoscaler.
@@ -49826,7 +49827,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -49922,7 +49923,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -50012,7 +50013,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified autoscaler.
@@ -50047,7 +50048,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -50153,7 +50154,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -50701,7 +50702,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates an autoscaler in the specified project using the data included in the request. This
@@ -50827,7 +50828,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -50917,7 +50918,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern AUTOSCALER_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates an autoscaler in the specified project using the data included in the request.
@@ -51042,7 +51043,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(AUTOSCALER_PATTERN.matcher(autoscaler).matches(),
               "Parameter autoscaler must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.autoscaler = autoscaler;
         return this;
@@ -51155,7 +51156,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Deletes the specified regional BackendService resource.
@@ -51190,7 +51191,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -51286,7 +51287,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -51376,7 +51377,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified regional BackendService resource.
@@ -51411,7 +51412,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -51517,7 +51518,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -51559,7 +51560,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Gets the most recent health check results for this regional BackendService.
@@ -51596,7 +51597,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -51691,7 +51692,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -52476,7 +52477,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern BACKEND_SERVICE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Updates the specified regional BackendService resource with the data included in the request.
@@ -52514,7 +52515,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -52610,7 +52611,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(BACKEND_SERVICE_PATTERN.matcher(backendService).matches(),
               "Parameter backendService must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.backendService = backendService;
         return this;
@@ -53008,7 +53009,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern COMMITMENT_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified commitment resource. Gets a list of available commitments by making a
@@ -53044,7 +53045,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(COMMITMENT_PATTERN.matcher(commitment).matches(),
               "Parameter commitment must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -53150,7 +53151,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(COMMITMENT_PATTERN.matcher(commitment).matches(),
               "Parameter commitment must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.commitment = commitment;
         return this;
@@ -53721,7 +53722,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       private final java.util.regex.Pattern DISK_TYPE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
        * Returns the specified regional disk type. Gets a list of available disk types by making a
@@ -53757,7 +53758,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DISK_TYPE_PATTERN.matcher(diskType).matches(),
               "Parameter diskType must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
       }
 
@@ -53863,7 +53864,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DISK_TYPE_PATTERN.matcher(diskType).matches(),
               "Parameter diskType must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
         }
         this.diskType = diskType;
         return this;

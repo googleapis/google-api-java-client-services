@@ -94,6 +94,12 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hostname;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -370,6 +376,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setGuestAccelerators(java.util.List<AcceleratorConfig> guestAccelerators) {
     this.guestAccelerators = guestAccelerators;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHostname() {
+    return hostname;
+  }
+
+  /**
+   * @param hostname hostname or {@code null} for none
+   */
+  public Instance setHostname(java.lang.String hostname) {
+    this.hostname = hostname;
     return this;
   }
 

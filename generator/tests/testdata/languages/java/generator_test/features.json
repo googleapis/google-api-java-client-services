@@ -1,7 +1,7 @@
 {
   "language": "java",
   "description": "Java libraries for Google APIs.",
-  "generator": "gwt",
+  "generator": "java",
   "requires": [],
   "releaseVersion": "1.2.3"
 }

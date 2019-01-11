@@ -24,7 +24,6 @@ import os
 from google.apputils import basetest
 
 from googleapis.codegen import generator_lookup
-from googleapis.codegen import gwt_generator
 from googleapis.codegen import java_generator
 from googleapis.codegen import targets
 
@@ -40,7 +39,7 @@ class GeneratorLookupTest(basetest.TestCase):
 
   def testSupportedLanguage(self):
     languages = generator_lookup.SupportedLanguages()
-    self.assertContainsSubset(['dart', 'gwt', 'java', 'php'], languages)
+    self.assertContainsSubset(['java'], languages)
     self.assertNotIn('java-head', languages)
 
   def testVersionFromFeature(self):
@@ -52,7 +51,7 @@ class GeneratorLookupTest(basetest.TestCase):
     raw_features = json.load(open(features_path))
     generator_name = raw_features['generator']
     gen = generator_lookup.GetGeneratorByLanguage(generator_name)
-    self.assertEquals(gwt_generator.GwtGenerator, gen)
+    self.assertEquals(java_generator.Java14Generator, gen)
 
 
 if __name__ == '__main__':

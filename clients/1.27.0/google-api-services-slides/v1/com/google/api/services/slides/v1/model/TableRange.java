@@ -28,7 +28,7 @@ package com.google.api.services.slides.v1.model;
  * A table range with location = (0, 0), row span = 3 and column span = 2 specifies the following
  * cells:
  *
- *       x     x       [      x      ]
+ *       x     x       [ x    x    x ]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

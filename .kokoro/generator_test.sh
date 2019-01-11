@@ -19,7 +19,7 @@ pushd $(dirname "$0")/..
 python2 -m pip install -e generator/ --user
 
 pushd generator
-for file in `find src/ -name '*_test.py'`
+for file in `find tests/ -name '*_test.py'`
 do
   python2 $file
   es=$?

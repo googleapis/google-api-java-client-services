@@ -45,10 +45,10 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   private java.lang.Long keyLength;
 
   /**
-   * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types.
+   * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys
+   * have the Secure Entry Point flag set and, when active, will only be used to sign resource
+   * record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and
+   * will be used to sign all other types of resource record sets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +96,10 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types.
+   * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys
+   * have the Secure Entry Point flag set and, when active, will only be used to sign resource
+   * record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and
+   * will be used to sign all other types of resource record sets.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyType() {
@@ -107,10 +107,10 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types.
+   * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys
+   * have the Secure Entry Point flag set and, when active, will only be used to sign resource
+   * record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and
+   * will be used to sign all other types of resource record sets.
    * @param keyType keyType or {@code null} for none
    */
   public DnsKeySpec setKeyType(java.lang.String keyType) {

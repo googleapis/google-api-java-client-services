@@ -38,7 +38,7 @@ public final class ManagedZonePrivateVisibilityConfig extends com.google.api.cli
   private java.lang.String kind;
 
   /**
-   * The list of GCE private network IDs that can see this zone.
+   * The list of VPC networks that can see this zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ManagedZonePrivateVisibilityConfig extends com.google.api.cli
   }
 
   /**
-   * The list of GCE private network IDs that can see this zone.
+   * The list of VPC networks that can see this zone.
    * @return value or {@code null} for none
    */
   public java.util.List<ManagedZonePrivateVisibilityConfigNetwork> getNetworks() {
@@ -72,7 +72,7 @@ public final class ManagedZonePrivateVisibilityConfig extends com.google.api.cli
   }
 
   /**
-   * The list of GCE private network IDs that can see this zone.
+   * The list of VPC networks that can see this zone.
    * @param networks networks or {@code null} for none
    */
   public ManagedZonePrivateVisibilityConfig setNetworks(java.util.List<ManagedZonePrivateVisibilityConfigNetwork> networks) {

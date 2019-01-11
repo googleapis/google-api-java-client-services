@@ -65,7 +65,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   private java.lang.Integer ttl;
 
   /**
-   * The identifier of a supported record type, for example, A, AAAA, MX, TXT, and so on.
+   * The identifier of a supported record type. See the list of Supported DNS record types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The identifier of a supported record type, for example, A, AAAA, MX, TXT, and so on.
+   * The identifier of a supported record type. See the list of Supported DNS record types.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -165,7 +165,7 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The identifier of a supported record type, for example, A, AAAA, MX, TXT, and so on.
+   * The identifier of a supported record type. See the list of Supported DNS record types.
    * @param type type or {@code null} for none
    */
   public ResourceRecordSet setType(java.lang.String type) {

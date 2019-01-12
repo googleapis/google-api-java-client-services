@@ -1544,6 +1544,158 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * GetJSONWebKeys gets the public component of the cluster signing keys in JSON Web Key format. This
+         * API is not yet intended for general use, and is not available for all clusters.
+         *
+         * Create a request for the method "clusters.getJwks".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
+         *
+         * @param parent The cluster (project, location, cluster id) to get keys for. Specified in
+        the format
+         *        'projects/locations/clusters'.
+         * @return the request
+         */
+        public GetJwks getJwks(java.lang.String parent) throws java.io.IOException {
+          GetJwks result = new GetJwks(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class GetJwks extends ContainerRequest<com.google.api.services.container.v1beta1.model.GetJSONWebKeysResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/jwks";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * GetJSONWebKeys gets the public component of the cluster signing keys in JSON Web Key format.
+           * This API is not yet intended for general use, and is not available for all clusters.
+           *
+           * Create a request for the method "clusters.getJwks".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The cluster (project, location, cluster id) to get keys for. Specified in
+        the format
+         *        'projects/locations/clusters'.
+           * @since 1.13
+           */
+          protected GetJwks(java.lang.String parent) {
+            super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.v1beta1.model.GetJSONWebKeysResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetJwks set$Xgafv(java.lang.String $Xgafv) {
+            return (GetJwks) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetJwks setAccessToken(java.lang.String accessToken) {
+            return (GetJwks) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetJwks setAlt(java.lang.String alt) {
+            return (GetJwks) super.setAlt(alt);
+          }
+
+          @Override
+          public GetJwks setCallback(java.lang.String callback) {
+            return (GetJwks) super.setCallback(callback);
+          }
+
+          @Override
+          public GetJwks setFields(java.lang.String fields) {
+            return (GetJwks) super.setFields(fields);
+          }
+
+          @Override
+          public GetJwks setKey(java.lang.String key) {
+            return (GetJwks) super.setKey(key);
+          }
+
+          @Override
+          public GetJwks setOauthToken(java.lang.String oauthToken) {
+            return (GetJwks) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetJwks setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetJwks) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetJwks setQuotaUser(java.lang.String quotaUser) {
+            return (GetJwks) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetJwks setUploadType(java.lang.String uploadType) {
+            return (GetJwks) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetJwks setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetJwks) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The cluster (project, location, cluster id) to get keys for. Specified in the format
+           * 'projects/locations/clusters'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The cluster (project, location, cluster id) to get keys for. Specified in the format
+         'projects/locations/clusters'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The cluster (project, location, cluster id) to get keys for. Specified in the format
+           * 'projects/locations/clusters'.
+           */
+          public GetJwks setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public GetJwks set(String parameterName, Object value) {
+            return (GetJwks) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists all clusters owned by a project in either the specified zone or all zones.
          *
          * Create a request for the method "clusters.list".
@@ -5048,6 +5200,183 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             @Override
             public Update set(String parameterName, Object value) {
               return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the WellKnown collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Container container = new Container(...);}
+         *   {@code Container.WellKnown.List request = container.wellKnown().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public WellKnown wellKnown() {
+          return new WellKnown();
+        }
+
+        /**
+         * The "well-known" collection of methods.
+         */
+        public class WellKnown {
+
+          /**
+           * GetOpenIDConfig gets the OIDC discovery document for the cluster. See the OpenID Connect
+           * Discovery 1.0 specification for details. https://openid.net/specs/openid-connect-discovery-
+           * 1_0.html This API is not yet intended for general use, and is not available for all clusters.
+           *
+           * Create a request for the method "well-known.getOpenid-configuration".
+           *
+           * This request holds the parameters needed by the container server.  After setting any optional
+           * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent The cluster (project, location, cluster id) to get the discovery document
+          for. Specified in the
+           *        format 'projects/locations/clusters'.
+           * @return the request
+           */
+          public GetOpenidConfiguration getOpenidConfiguration(java.lang.String parent) throws java.io.IOException {
+            GetOpenidConfiguration result = new GetOpenidConfiguration(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class GetOpenidConfiguration extends ContainerRequest<com.google.api.services.container.v1beta1.model.GetOpenIDConfigResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/.well-known/openid-configuration";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+            /**
+             * GetOpenIDConfig gets the OIDC discovery document for the cluster. See the OpenID Connect
+             * Discovery 1.0 specification for details. https://openid.net/specs/openid-connect-discovery-
+             * 1_0.html This API is not yet intended for general use, and is not available for all clusters.
+             *
+             * Create a request for the method "well-known.getOpenid-configuration".
+             *
+             * This request holds the parameters needed by the the container server.  After setting any
+             * optional parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the
+             * remote operation. <p> {@link GetOpenidConfiguration#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent The cluster (project, location, cluster id) to get the discovery document
+          for. Specified in the
+           *        format 'projects/locations/clusters'.
+             * @since 1.13
+             */
+            protected GetOpenidConfiguration(java.lang.String parent) {
+              super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.v1beta1.model.GetOpenIDConfigResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetOpenidConfiguration set$Xgafv(java.lang.String $Xgafv) {
+              return (GetOpenidConfiguration) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetOpenidConfiguration setAccessToken(java.lang.String accessToken) {
+              return (GetOpenidConfiguration) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetOpenidConfiguration setAlt(java.lang.String alt) {
+              return (GetOpenidConfiguration) super.setAlt(alt);
+            }
+
+            @Override
+            public GetOpenidConfiguration setCallback(java.lang.String callback) {
+              return (GetOpenidConfiguration) super.setCallback(callback);
+            }
+
+            @Override
+            public GetOpenidConfiguration setFields(java.lang.String fields) {
+              return (GetOpenidConfiguration) super.setFields(fields);
+            }
+
+            @Override
+            public GetOpenidConfiguration setKey(java.lang.String key) {
+              return (GetOpenidConfiguration) super.setKey(key);
+            }
+
+            @Override
+            public GetOpenidConfiguration setOauthToken(java.lang.String oauthToken) {
+              return (GetOpenidConfiguration) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetOpenidConfiguration setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetOpenidConfiguration) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetOpenidConfiguration setQuotaUser(java.lang.String quotaUser) {
+              return (GetOpenidConfiguration) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetOpenidConfiguration setUploadType(java.lang.String uploadType) {
+              return (GetOpenidConfiguration) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetOpenidConfiguration setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetOpenidConfiguration) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The cluster (project, location, cluster id) to get the discovery document for.
+             * Specified in the format 'projects/locations/clusters'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The cluster (project, location, cluster id) to get the discovery document for. Specified in the
+           format 'projects/locations/clusters'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * The cluster (project, location, cluster id) to get the discovery document for.
+             * Specified in the format 'projects/locations/clusters'.
+             */
+            public GetOpenidConfiguration setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public GetOpenidConfiguration set(String parameterName, Object value) {
+              return (GetOpenidConfiguration) super.set(parameterName, value);
             }
           }
 

@@ -102,6 +102,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String currentNodeVersion;
 
   /**
+   * Configuration of etcd encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseEncryption databaseEncryption;
+
+  /**
    * The default constraint on the maximum number of pods that can be run simultaneously on a node
    * in the node pool of this cluster. Only honored if cluster created with IP Alias support.
    * The value may be {@code null}.
@@ -608,6 +615,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCurrentNodeVersion(java.lang.String currentNodeVersion) {
     this.currentNodeVersion = currentNodeVersion;
+    return this;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @return value or {@code null} for none
+   */
+  public DatabaseEncryption getDatabaseEncryption() {
+    return databaseEncryption;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @param databaseEncryption databaseEncryption or {@code null} for none
+   */
+  public Cluster setDatabaseEncryption(DatabaseEncryption databaseEncryption) {
+    this.databaseEncryption = databaseEncryption;
     return this;
   }
 

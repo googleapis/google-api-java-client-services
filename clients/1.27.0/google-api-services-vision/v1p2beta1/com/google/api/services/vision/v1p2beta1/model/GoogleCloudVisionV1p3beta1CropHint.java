@@ -31,7 +31,7 @@ public final class GoogleCloudVisionV1p3beta1CropHint extends com.google.api.cli
 
   /**
    * The bounding polygon for the crop region. The coordinates of the bounding box are in the
-   * original image's scale, as returned in `ImageParams`.
+   * original image's scale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudVisionV1p3beta1CropHint extends com.google.api.cli
 
   /**
    * The bounding polygon for the crop region. The coordinates of the bounding box are in the
-   * original image's scale, as returned in `ImageParams`.
+   * original image's scale.
    * @return value or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1BoundingPoly getBoundingPoly() {
@@ -62,7 +62,7 @@ public final class GoogleCloudVisionV1p3beta1CropHint extends com.google.api.cli
 
   /**
    * The bounding polygon for the crop region. The coordinates of the bounding box are in the
-   * original image's scale, as returned in `ImageParams`.
+   * original image's scale.
    * @param boundingPoly boundingPoly or {@code null} for none
    */
   public GoogleCloudVisionV1p3beta1CropHint setBoundingPoly(GoogleCloudVisionV1p3beta1BoundingPoly boundingPoly) {

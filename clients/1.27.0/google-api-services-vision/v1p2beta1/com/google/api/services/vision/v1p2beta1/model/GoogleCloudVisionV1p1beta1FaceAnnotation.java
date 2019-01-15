@@ -45,10 +45,10 @@ public final class GoogleCloudVisionV1p1beta1FaceAnnotation extends com.google.a
 
   /**
    * The bounding polygon around the face. The coordinates of the bounding box are in the original
-   * image's scale, as returned in `ImageParams`. The bounding box is computed to "frame" the face
-   * in accordance with human expectations. It is based on the landmarker results. Note that one or
-   * more x and/or y coordinates may not be generated in the `BoundingPoly` (the polygon will be
-   * unbounded) if only a partial face appears in the image to be annotated.
+   * image's scale. The bounding box is computed to "frame" the face in accordance with human
+   * expectations. It is based on the landmarker results. Note that one or more x and/or y
+   * coordinates may not be generated in the `BoundingPoly` (the polygon will be unbounded) if only
+   * a partial face appears in the image to be annotated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,10 +180,10 @@ public final class GoogleCloudVisionV1p1beta1FaceAnnotation extends com.google.a
 
   /**
    * The bounding polygon around the face. The coordinates of the bounding box are in the original
-   * image's scale, as returned in `ImageParams`. The bounding box is computed to "frame" the face
-   * in accordance with human expectations. It is based on the landmarker results. Note that one or
-   * more x and/or y coordinates may not be generated in the `BoundingPoly` (the polygon will be
-   * unbounded) if only a partial face appears in the image to be annotated.
+   * image's scale. The bounding box is computed to "frame" the face in accordance with human
+   * expectations. It is based on the landmarker results. Note that one or more x and/or y
+   * coordinates may not be generated in the `BoundingPoly` (the polygon will be unbounded) if only
+   * a partial face appears in the image to be annotated.
    * @return value or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1BoundingPoly getBoundingPoly() {
@@ -192,10 +192,10 @@ public final class GoogleCloudVisionV1p1beta1FaceAnnotation extends com.google.a
 
   /**
    * The bounding polygon around the face. The coordinates of the bounding box are in the original
-   * image's scale, as returned in `ImageParams`. The bounding box is computed to "frame" the face
-   * in accordance with human expectations. It is based on the landmarker results. Note that one or
-   * more x and/or y coordinates may not be generated in the `BoundingPoly` (the polygon will be
-   * unbounded) if only a partial face appears in the image to be annotated.
+   * image's scale. The bounding box is computed to "frame" the face in accordance with human
+   * expectations. It is based on the landmarker results. Note that one or more x and/or y
+   * coordinates may not be generated in the `BoundingPoly` (the polygon will be unbounded) if only
+   * a partial face appears in the image to be annotated.
    * @param boundingPoly boundingPoly or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1FaceAnnotation setBoundingPoly(GoogleCloudVisionV1p1beta1BoundingPoly boundingPoly) {

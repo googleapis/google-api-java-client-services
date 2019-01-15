@@ -49,7 +49,8 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The time at which this ProductSet was last indexed. Query results will reflect all
-   * updates before this time. If this ProductSet has never been indexed, this field is 0.
+   * updates before this time. If this ProductSet has never been indexed, this timestamp is the
+   * default value "1970-01-01T00:00:00Z".
    *
    * This field is ignored when creating a ProductSet.
    * The value may be {@code null}.
@@ -110,7 +111,8 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The time at which this ProductSet was last indexed. Query results will reflect all
-   * updates before this time. If this ProductSet has never been indexed, this field is 0.
+   * updates before this time. If this ProductSet has never been indexed, this timestamp is the
+   * default value "1970-01-01T00:00:00Z".
    *
    * This field is ignored when creating a ProductSet.
    * @return value or {@code null} for none
@@ -121,7 +123,8 @@ public final class ProductSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The time at which this ProductSet was last indexed. Query results will reflect all
-   * updates before this time. If this ProductSet has never been indexed, this field is 0.
+   * updates before this time. If this ProductSet has never been indexed, this timestamp is the
+   * default value "1970-01-01T00:00:00Z".
    *
    * This field is ignored when creating a ProductSet.
    * @param indexTime indexTime or {@code null} for none

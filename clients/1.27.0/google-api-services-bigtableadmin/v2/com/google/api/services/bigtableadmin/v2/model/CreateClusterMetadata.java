@@ -52,6 +52,18 @@ public final class CreateClusterMetadata extends com.google.api.client.json.Gene
   private String requestTime;
 
   /**
+   * Keys: the full `name` of each table that existed in the instance when CreateCluster was first
+   * called, i.e. `projects//instances//tables/`. Any table added to the instance by a later API
+   * call will be created in the new cluster by that API call, not this one.
+   *
+   * Values: information on how much of a table's data has been copied to the newly-created cluster
+   * so far.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, TableProgress> tables;
+
+  /**
    * The time at which the operation failed or was completed successfully.
    * @return value or {@code null} for none
    */
@@ -99,6 +111,33 @@ public final class CreateClusterMetadata extends com.google.api.client.json.Gene
    */
   public CreateClusterMetadata setRequestTime(String requestTime) {
     this.requestTime = requestTime;
+    return this;
+  }
+
+  /**
+   * Keys: the full `name` of each table that existed in the instance when CreateCluster was first
+   * called, i.e. `projects//instances//tables/`. Any table added to the instance by a later API
+   * call will be created in the new cluster by that API call, not this one.
+   *
+   * Values: information on how much of a table's data has been copied to the newly-created cluster
+   * so far.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, TableProgress> getTables() {
+    return tables;
+  }
+
+  /**
+   * Keys: the full `name` of each table that existed in the instance when CreateCluster was first
+   * called, i.e. `projects//instances//tables/`. Any table added to the instance by a later API
+   * call will be created in the new cluster by that API call, not this one.
+   *
+   * Values: information on how much of a table's data has been copied to the newly-created cluster
+   * so far.
+   * @param tables tables or {@code null} for none
+   */
+  public CreateClusterMetadata setTables(java.util.Map<String, TableProgress> tables) {
+    this.tables = tables;
     return this;
   }
 

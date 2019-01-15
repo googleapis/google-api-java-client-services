@@ -1185,6 +1185,207 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
 
       }
       /**
+       * An accessor for creating requests from the ImageVersions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudComposer composer = new CloudComposer(...);}
+       *   {@code CloudComposer.ImageVersions.List request = composer.imageVersions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ImageVersions imageVersions() {
+        return new ImageVersions();
+      }
+
+      /**
+       * The "imageVersions" collection of methods.
+       */
+      public class ImageVersions {
+
+        /**
+         * List ImageVersions for provided location.
+         *
+         * Create a request for the method "imageVersions.list".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent List ImageVersions in the given project and location, in the form:
+         *        "projects/{projectId}/locations/{locationId}"
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.ListImageVersionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/imageVersions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List ImageVersions for provided location.
+           *
+           * Create a request for the method "imageVersions.list".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent List ImageVersions in the given project and location, in the form:
+         *        "projects/{projectId}/locations/{locationId}"
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudComposer.this, "GET", REST_PATH, null, com.google.api.services.composer.v1beta1.model.ListImageVersionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * List ImageVersions in the given project and location, in the form:
+           * "projects/{projectId}/locations/{locationId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** List ImageVersions in the given project and location, in the form:
+         "projects/{projectId}/locations/{locationId}"
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * List ImageVersions in the given project and location, in the form:
+           * "projects/{projectId}/locations/{locationId}"
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The maximum number of image_versions to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of image_versions to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of image_versions to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>

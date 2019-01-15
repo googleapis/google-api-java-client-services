@@ -17,7 +17,7 @@
 package com.google.api.services.websecurityscanner.v1alpha.model;
 
 /**
- * A ScanConfig resource contains the configurations to launch a scan.
+ * A ScanConfig resource contains the configurations to launch a scan. next id: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Web Security Scanner API. For a detailed explanation
@@ -52,6 +52,13 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Latest ScanRun if available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScanRun latestRun;
 
   /**
    * The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. If the field is
@@ -151,6 +158,23 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   public ScanConfig setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Latest ScanRun if available.
+   * @return value or {@code null} for none
+   */
+  public ScanRun getLatestRun() {
+    return latestRun;
+  }
+
+  /**
+   * Latest ScanRun if available.
+   * @param latestRun latestRun or {@code null} for none
+   */
+  public ScanConfig setLatestRun(ScanRun latestRun) {
+    this.latestRun = latestRun;
     return this;
   }
 

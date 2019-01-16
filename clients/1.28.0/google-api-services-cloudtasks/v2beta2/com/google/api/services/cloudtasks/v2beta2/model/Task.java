@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudtasks.v2beta3.model;
+package com.google.api.services.cloudtasks.v2beta2.model;
 
 /**
  * A unit of scheduled work.
@@ -30,7 +30,8 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
-   * HTTP request that is sent to the App Engine app handler.
+   * App Engine HTTP request that is sent to the task's target. Can be set only if
+   * app_engine_http_target is set on the queue.
    *
    * An App Engine task is a task that has AppEngineHttpRequest set.
    * The value may be {@code null}.
@@ -46,31 +47,6 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String createTime;
-
-  /**
-   * Output only. The number of attempts dispatched.
-   *
-   * This count includes tasks which have been dispatched but haven't received a response.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer dispatchCount;
-
-  /**
-   * Output only. The status of the task's first attempt.
-   *
-   * Only dispatch_time will be set. The other Attempt information is not retained by Cloud Tasks.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Attempt firstAttempt;
-
-  /**
-   * Output only. The status of the task's last attempt.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Attempt lastAttempt;
 
   /**
    * Optionally caller-specified in CreateTask.
@@ -95,22 +71,35 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The number of attempts which have received a response.
+   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue.
+   *
+   * A pull task is a task that has PullMessage set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer responseCount;
+  private PullMessage pullMessage;
 
   /**
    * The time when the task is scheduled to be attempted.
    *
    * For App Engine queues, this is when the task will be attempted or retried.
    *
+   * For pull queues, this is the time when the task is available to be leased; if a task is
+   * currently leased, this is the time when the current lease expires, that is, the time that the
+   * task was leased plus the lease_duration.
+   *
    * `schedule_time` will be truncated to the nearest microsecond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String scheduleTime;
+
+  /**
+   * Output only. The task status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TaskStatus status;
 
   /**
    * Output only. The view specifies which subset of the Task has been returned.
@@ -120,7 +109,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String view;
 
   /**
-   * HTTP request that is sent to the App Engine app handler.
+   * App Engine HTTP request that is sent to the task's target. Can be set only if
+   * app_engine_http_target is set on the queue.
    *
    * An App Engine task is a task that has AppEngineHttpRequest set.
    * @return value or {@code null} for none
@@ -130,7 +120,8 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * HTTP request that is sent to the App Engine app handler.
+   * App Engine HTTP request that is sent to the task's target. Can be set only if
+   * app_engine_http_target is set on the queue.
    *
    * An App Engine task is a task that has AppEngineHttpRequest set.
    * @param appEngineHttpRequest appEngineHttpRequest or {@code null} for none
@@ -158,65 +149,6 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Output only. The number of attempts dispatched.
-   *
-   * This count includes tasks which have been dispatched but haven't received a response.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getDispatchCount() {
-    return dispatchCount;
-  }
-
-  /**
-   * Output only. The number of attempts dispatched.
-   *
-   * This count includes tasks which have been dispatched but haven't received a response.
-   * @param dispatchCount dispatchCount or {@code null} for none
-   */
-  public Task setDispatchCount(java.lang.Integer dispatchCount) {
-    this.dispatchCount = dispatchCount;
-    return this;
-  }
-
-  /**
-   * Output only. The status of the task's first attempt.
-   *
-   * Only dispatch_time will be set. The other Attempt information is not retained by Cloud Tasks.
-   * @return value or {@code null} for none
-   */
-  public Attempt getFirstAttempt() {
-    return firstAttempt;
-  }
-
-  /**
-   * Output only. The status of the task's first attempt.
-   *
-   * Only dispatch_time will be set. The other Attempt information is not retained by Cloud Tasks.
-   * @param firstAttempt firstAttempt or {@code null} for none
-   */
-  public Task setFirstAttempt(Attempt firstAttempt) {
-    this.firstAttempt = firstAttempt;
-    return this;
-  }
-
-  /**
-   * Output only. The status of the task's last attempt.
-   * @return value or {@code null} for none
-   */
-  public Attempt getLastAttempt() {
-    return lastAttempt;
-  }
-
-  /**
-   * Output only. The status of the task's last attempt.
-   * @param lastAttempt lastAttempt or {@code null} for none
-   */
-  public Task setLastAttempt(Attempt lastAttempt) {
-    this.lastAttempt = lastAttempt;
     return this;
   }
 
@@ -268,19 +200,23 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The number of attempts which have received a response.
+   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue.
+   *
+   * A pull task is a task that has PullMessage set.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getResponseCount() {
-    return responseCount;
+  public PullMessage getPullMessage() {
+    return pullMessage;
   }
 
   /**
-   * Output only. The number of attempts which have received a response.
-   * @param responseCount responseCount or {@code null} for none
+   * LeaseTasks to process the task. Can be set only if pull_target is set on the queue.
+   *
+   * A pull task is a task that has PullMessage set.
+   * @param pullMessage pullMessage or {@code null} for none
    */
-  public Task setResponseCount(java.lang.Integer responseCount) {
-    this.responseCount = responseCount;
+  public Task setPullMessage(PullMessage pullMessage) {
+    this.pullMessage = pullMessage;
     return this;
   }
 
@@ -288,6 +224,10 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The time when the task is scheduled to be attempted.
    *
    * For App Engine queues, this is when the task will be attempted or retried.
+   *
+   * For pull queues, this is the time when the task is available to be leased; if a task is
+   * currently leased, this is the time when the current lease expires, that is, the time that the
+   * task was leased plus the lease_duration.
    *
    * `schedule_time` will be truncated to the nearest microsecond.
    * @return value or {@code null} for none
@@ -301,11 +241,32 @@ public final class Task extends com.google.api.client.json.GenericJson {
    *
    * For App Engine queues, this is when the task will be attempted or retried.
    *
+   * For pull queues, this is the time when the task is available to be leased; if a task is
+   * currently leased, this is the time when the current lease expires, that is, the time that the
+   * task was leased plus the lease_duration.
+   *
    * `schedule_time` will be truncated to the nearest microsecond.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
   public Task setScheduleTime(String scheduleTime) {
     this.scheduleTime = scheduleTime;
+    return this;
+  }
+
+  /**
+   * Output only. The task status.
+   * @return value or {@code null} for none
+   */
+  public TaskStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Output only. The task status.
+   * @param status status or {@code null} for none
+   */
+  public Task setStatus(TaskStatus status) {
+    this.status = status;
     return this;
   }
 

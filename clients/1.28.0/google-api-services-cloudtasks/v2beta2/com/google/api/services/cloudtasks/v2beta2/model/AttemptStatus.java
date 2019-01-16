@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudtasks.v2beta3.model;
+package com.google.api.services.cloudtasks.v2beta2.model;
 
 /**
  * The status of a task attempt.
@@ -27,7 +27,7 @@ package com.google.api.services.cloudtasks.v2beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Attempt extends com.google.api.client.json.GenericJson {
+public final class AttemptStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The time that this attempt was dispatched.
@@ -39,10 +39,10 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
   private String dispatchTime;
 
   /**
-   * Output only. The response from the worker for this attempt.
+   * Output only. The response from the target for this attempt.
    *
-   * If `response_time` is unset, then the task has not been attempted or is currently running and
-   * the `response_status` field is meaningless.
+   * If the task has not been attempted or the task is currently running then the response status is
+   * unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,16 +82,16 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
    * `dispatch_time` will be truncated to the nearest microsecond.
    * @param dispatchTime dispatchTime or {@code null} for none
    */
-  public Attempt setDispatchTime(String dispatchTime) {
+  public AttemptStatus setDispatchTime(String dispatchTime) {
     this.dispatchTime = dispatchTime;
     return this;
   }
 
   /**
-   * Output only. The response from the worker for this attempt.
+   * Output only. The response from the target for this attempt.
    *
-   * If `response_time` is unset, then the task has not been attempted or is currently running and
-   * the `response_status` field is meaningless.
+   * If the task has not been attempted or the task is currently running then the response status is
+   * unset.
    * @return value or {@code null} for none
    */
   public Status getResponseStatus() {
@@ -99,13 +99,13 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The response from the worker for this attempt.
+   * Output only. The response from the target for this attempt.
    *
-   * If `response_time` is unset, then the task has not been attempted or is currently running and
-   * the `response_status` field is meaningless.
+   * If the task has not been attempted or the task is currently running then the response status is
+   * unset.
    * @param responseStatus responseStatus or {@code null} for none
    */
-  public Attempt setResponseStatus(Status responseStatus) {
+  public AttemptStatus setResponseStatus(Status responseStatus) {
     this.responseStatus = responseStatus;
     return this;
   }
@@ -126,7 +126,7 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
    * `response_time` will be truncated to the nearest microsecond.
    * @param responseTime responseTime or {@code null} for none
    */
-  public Attempt setResponseTime(String responseTime) {
+  public AttemptStatus setResponseTime(String responseTime) {
     this.responseTime = responseTime;
     return this;
   }
@@ -147,19 +147,19 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
    * `schedule_time` will be truncated to the nearest microsecond.
    * @param scheduleTime scheduleTime or {@code null} for none
    */
-  public Attempt setScheduleTime(String scheduleTime) {
+  public AttemptStatus setScheduleTime(String scheduleTime) {
     this.scheduleTime = scheduleTime;
     return this;
   }
 
   @Override
-  public Attempt set(String fieldName, Object value) {
-    return (Attempt) super.set(fieldName, value);
+  public AttemptStatus set(String fieldName, Object value) {
+    return (AttemptStatus) super.set(fieldName, value);
   }
 
   @Override
-  public Attempt clone() {
-    return (Attempt) super.clone();
+  public AttemptStatus clone() {
+    return (AttemptStatus) super.clone();
   }
 
 }

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.iap.v1;
+package com.google.api.services.iap.v1beta1;
 
 /**
- * Service definition for CloudIAP (v1).
+ * Service definition for CloudIAP (v1beta1).
  *
  * <p>
  * Controls access to cloud applications running on Google Cloud Platform.
@@ -46,7 +46,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.27.0 of the Cloud Identity-Aware Proxy API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.28.0 of the Cloud Identity-Aware Proxy API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -123,31 +123,31 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
-   * An accessor for creating requests from the V1 collection.
+   * An accessor for creating requests from the V1beta1 collection.
    *
    * <p>The typical use is:</p>
    * <pre>
    *   {@code CloudIAP iap = new CloudIAP(...);}
-   *   {@code CloudIAP.V1.List request = iap.v1().list(parameters ...)}
+   *   {@code CloudIAP.V1beta1.List request = iap.v1beta1().list(parameters ...)}
    * </pre>
    *
    * @return the resource collection
    */
-  public V1 v1() {
-    return new V1();
+  public V1beta1 v1beta1() {
+    return new V1beta1();
   }
 
   /**
-   * The "v1" collection of methods.
+   * The "v1beta1" collection of methods.
    */
-  public class V1 {
+  public class V1beta1 {
 
     /**
      * Gets the access control policy for an Identity-Aware Proxy protected resource. More information
      * about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-
      * access#managing_access_via_the_api
      *
-     * Create a request for the method "v1.getIamPolicy".
+     * Create a request for the method "v1beta1.getIamPolicy".
      *
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
@@ -155,18 +155,18 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * @param resource REQUIRED: The resource for which the policy is being requested.
     See the operation documentation for
      *        the appropriate value for this field.
-     * @param content the {@link com.google.api.services.iap.v1.model.GetIamPolicyRequest}
+     * @param content the {@link com.google.api.services.iap.v1beta1.model.GetIamPolicyRequest}
      * @return the request
      */
-    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.iap.v1.model.GetIamPolicyRequest content) throws java.io.IOException {
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.iap.v1beta1.model.GetIamPolicyRequest content) throws java.io.IOException {
       GetIamPolicy result = new GetIamPolicy(resource, content);
       initialize(result);
       return result;
     }
 
-    public class GetIamPolicy extends CloudIAPRequest<com.google.api.services.iap.v1.model.Policy> {
+    public class GetIamPolicy extends CloudIAPRequest<com.google.api.services.iap.v1beta1.model.Policy> {
 
-      private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+      private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
           java.util.regex.Pattern.compile("^.+$");
@@ -176,7 +176,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * about managing access via IAP can be found at: https://cloud.google.com/iap/docs/managing-
        * access#managing_access_via_the_api
        *
-       * Create a request for the method "v1.getIamPolicy".
+       * Create a request for the method "v1beta1.getIamPolicy".
        *
        * This request holds the parameters needed by the the iap server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
@@ -187,11 +187,11 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * @param resource REQUIRED: The resource for which the policy is being requested.
     See the operation documentation for
      *        the appropriate value for this field.
-       * @param content the {@link com.google.api.services.iap.v1.model.GetIamPolicyRequest}
+       * @param content the {@link com.google.api.services.iap.v1beta1.model.GetIamPolicyRequest}
        * @since 1.13
        */
-      protected GetIamPolicy(java.lang.String resource, com.google.api.services.iap.v1.model.GetIamPolicyRequest content) {
-        super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.Policy.class);
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.iap.v1beta1.model.GetIamPolicyRequest content) {
+        super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1beta1.model.Policy.class);
         this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -293,7 +293,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * existing policy. More information about managing access via IAP can be found at:
      * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
      *
-     * Create a request for the method "v1.setIamPolicy".
+     * Create a request for the method "v1beta1.setIamPolicy".
      *
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
@@ -301,18 +301,18 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * @param resource REQUIRED: The resource for which the policy is being specified.
     See the operation documentation for
      *        the appropriate value for this field.
-     * @param content the {@link com.google.api.services.iap.v1.model.SetIamPolicyRequest}
+     * @param content the {@link com.google.api.services.iap.v1beta1.model.SetIamPolicyRequest}
      * @return the request
      */
-    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.iap.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.iap.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
       SetIamPolicy result = new SetIamPolicy(resource, content);
       initialize(result);
       return result;
     }
 
-    public class SetIamPolicy extends CloudIAPRequest<com.google.api.services.iap.v1.model.Policy> {
+    public class SetIamPolicy extends CloudIAPRequest<com.google.api.services.iap.v1beta1.model.Policy> {
 
-      private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+      private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
           java.util.regex.Pattern.compile("^.+$");
@@ -322,7 +322,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * existing policy. More information about managing access via IAP can be found at:
        * https://cloud.google.com/iap/docs/managing-access#managing_access_via_the_api
        *
-       * Create a request for the method "v1.setIamPolicy".
+       * Create a request for the method "v1beta1.setIamPolicy".
        *
        * This request holds the parameters needed by the the iap server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
@@ -333,11 +333,11 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * @param resource REQUIRED: The resource for which the policy is being specified.
     See the operation documentation for
      *        the appropriate value for this field.
-       * @param content the {@link com.google.api.services.iap.v1.model.SetIamPolicyRequest}
+       * @param content the {@link com.google.api.services.iap.v1beta1.model.SetIamPolicyRequest}
        * @since 1.13
        */
-      protected SetIamPolicy(java.lang.String resource, com.google.api.services.iap.v1.model.SetIamPolicyRequest content) {
-        super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.Policy.class);
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.iap.v1beta1.model.SetIamPolicyRequest content) {
+        super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1beta1.model.Policy.class);
         this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -435,11 +435,13 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More
-     * information about managing access via IAP can be found at: https://cloud.google.com/iap/docs
-     * /managing-access#managing_access_via_the_api
+     * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. If the
+     * resource does not exist or the caller does not have Identity-Aware Proxy permissions a
+     * [google.rpc.Code.PERMISSION_DENIED] will be returned. More information about managing access via
+     * IAP can be found at: https://cloud.google.com/iap/docs/managing-
+     * access#managing_access_via_the_api
      *
-     * Create a request for the method "v1.testIamPermissions".
+     * Create a request for the method "v1beta1.testIamPermissions".
      *
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
@@ -447,28 +449,30 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * @param resource REQUIRED: The resource for which the policy detail is being requested.
     See the operation
      *        documentation for the appropriate value for this field.
-     * @param content the {@link com.google.api.services.iap.v1.model.TestIamPermissionsRequest}
+     * @param content the {@link com.google.api.services.iap.v1beta1.model.TestIamPermissionsRequest}
      * @return the request
      */
-    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.iap.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.iap.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
       TestIamPermissions result = new TestIamPermissions(resource, content);
       initialize(result);
       return result;
     }
 
-    public class TestIamPermissions extends CloudIAPRequest<com.google.api.services.iap.v1.model.TestIamPermissionsResponse> {
+    public class TestIamPermissions extends CloudIAPRequest<com.google.api.services.iap.v1beta1.model.TestIamPermissionsResponse> {
 
-      private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+      private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
           java.util.regex.Pattern.compile("^.+$");
 
       /**
-       * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. More
-       * information about managing access via IAP can be found at: https://cloud.google.com/iap/docs
-       * /managing-access#managing_access_via_the_api
+       * Returns permissions that a caller has on the Identity-Aware Proxy protected resource. If the
+       * resource does not exist or the caller does not have Identity-Aware Proxy permissions a
+       * [google.rpc.Code.PERMISSION_DENIED] will be returned. More information about managing access
+       * via IAP can be found at: https://cloud.google.com/iap/docs/managing-
+       * access#managing_access_via_the_api
        *
-       * Create a request for the method "v1.testIamPermissions".
+       * Create a request for the method "v1beta1.testIamPermissions".
        *
        * This request holds the parameters needed by the the iap server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
@@ -479,11 +483,11 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * @param resource REQUIRED: The resource for which the policy detail is being requested.
     See the operation
      *        documentation for the appropriate value for this field.
-       * @param content the {@link com.google.api.services.iap.v1.model.TestIamPermissionsRequest}
+       * @param content the {@link com.google.api.services.iap.v1beta1.model.TestIamPermissionsRequest}
        * @since 1.13
        */
-      protected TestIamPermissions(java.lang.String resource, com.google.api.services.iap.v1.model.TestIamPermissionsRequest content) {
-        super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1.model.TestIamPermissionsResponse.class);
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.iap.v1beta1.model.TestIamPermissionsRequest content) {
+        super(CloudIAP.this, "POST", REST_PATH, content, com.google.api.services.iap.v1beta1.model.TestIamPermissionsResponse.class);
         this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),

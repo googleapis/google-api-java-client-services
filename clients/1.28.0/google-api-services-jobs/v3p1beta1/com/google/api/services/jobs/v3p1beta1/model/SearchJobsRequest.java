@@ -176,7 +176,15 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
-   * descending order.
+   * descending order. * "location`_`distance": By the distance between the location on jobs and
+   * locations specified in the SearchJobsRequest.job_query.location_filters. When this order is
+   * selected, the SearchJobsRequest.job_query.location_filters must not be empty. When a job has
+   * multiple locations, the location closest to one of the locations specified in the location
+   * filter will be used to calculate location distance. Distance is calculated by the distance
+   * between two lat/long coordinates, with a precision of 10e-4 degrees (11.3 meters). Jobs that
+   * don't have locations specified will be ranked below jobs having locations. Diversification
+   * strategy is still applied unless explicitly disabled in
+   * SearchJobsRequest.diversification_level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -519,7 +527,15 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
-   * descending order.
+   * descending order. * "location`_`distance": By the distance between the location on jobs and
+   * locations specified in the SearchJobsRequest.job_query.location_filters. When this order is
+   * selected, the SearchJobsRequest.job_query.location_filters must not be empty. When a job has
+   * multiple locations, the location closest to one of the locations specified in the location
+   * filter will be used to calculate location distance. Distance is calculated by the distance
+   * between two lat/long coordinates, with a precision of 10e-4 degrees (11.3 meters). Jobs that
+   * don't have locations specified will be ranked below jobs having locations. Diversification
+   * strategy is still applied unless explicitly disabled in
+   * SearchJobsRequest.diversification_level.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -551,7 +567,15 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
-   * descending order.
+   * descending order. * "location`_`distance": By the distance between the location on jobs and
+   * locations specified in the SearchJobsRequest.job_query.location_filters. When this order is
+   * selected, the SearchJobsRequest.job_query.location_filters must not be empty. When a job has
+   * multiple locations, the location closest to one of the locations specified in the location
+   * filter will be used to calculate location distance. Distance is calculated by the distance
+   * between two lat/long coordinates, with a precision of 10e-4 degrees (11.3 meters). Jobs that
+   * don't have locations specified will be ranked below jobs having locations. Diversification
+   * strategy is still applied unless explicitly disabled in
+   * SearchJobsRequest.diversification_level.
    * @param orderBy orderBy or {@code null} for none
    */
   public SearchJobsRequest setOrderBy(java.lang.String orderBy) {

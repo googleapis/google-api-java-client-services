@@ -41,7 +41,8 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The name of the function to execute in the given script. The name does not include parentheses
-   * or parameters.
+   * or parameters. It can reference a function in an included library such as
+   * `Library.libFunction1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The name of the function to execute in the given script. The name does not include parentheses
-   * or parameters.
+   * or parameters. It can reference a function in an included library such as
+   * `Library.libFunction1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFunction() {
@@ -103,7 +105,8 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
 
   /**
    * The name of the function to execute in the given script. The name does not include parentheses
-   * or parameters.
+   * or parameters. It can reference a function in an included library such as
+   * `Library.libFunction1`.
    * @param function function or {@code null} for none
    */
   public ExecutionRequest setFunction(java.lang.String function) {

@@ -46,7 +46,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
    * Optional but at least one of string_values or long_value must be specified.
    *
    * This field is used to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over
-   * filterable `long_value`. For `long_value`, a value between Long.MIN and Long.MIN is allowed.
+   * filterable `long_value`. For `long_value`, a value between Long.MIN and Long.MAX is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -98,7 +98,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
    * Optional but at least one of string_values or long_value must be specified.
    *
    * This field is used to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over
-   * filterable `long_value`. For `long_value`, a value between Long.MIN and Long.MIN is allowed.
+   * filterable `long_value`. For `long_value`, a value between Long.MIN and Long.MAX is allowed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLongValue() {
@@ -109,7 +109,7 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
    * Optional but at least one of string_values or long_value must be specified.
    *
    * This field is used to perform number range search. (`EQ`, `GT`, `GE`, `LE`, `LT`) over
-   * filterable `long_value`. For `long_value`, a value between Long.MIN and Long.MIN is allowed.
+   * filterable `long_value`. For `long_value`, a value between Long.MIN and Long.MAX is allowed.
    * @param longValue longValue or {@code null} for none
    */
   public CustomAttribute setLongValue(java.lang.Long longValue) {

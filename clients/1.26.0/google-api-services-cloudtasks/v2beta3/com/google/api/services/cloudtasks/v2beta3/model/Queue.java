@@ -31,9 +31,7 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class Queue extends com.google.api.client.json.GenericJson {
 
   /**
-   * App Engine HTTP queue.
-   *
-   * An App Engine queue is a queue that has an AppEngineHttpQueue type.
+   * AppEngineHttpQueue settings apply only to AppEngine tasks in this queue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,13 +76,20 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   /**
    * Rate limits for task dispatches.
    *
-   * rate_limits and retry_config are related because they both control task attempts however they
-   * control how tasks are attempted in different ways:
+   * rate_limits and retry_config are related because they both control task attempts. However they
+   * control task attempts in different ways:
    *
    * * rate_limits controls the total rate of   dispatches from a queue (i.e. all traffic dispatched
    * from the   queue, regardless of whether the dispatch is from a first   attempt or a retry). *
    * retry_config controls what happens to   particular a task after its first attempt fails. That
    * is,   retry_config controls task retries (the   second attempt, third attempt, etc).
+   *
+   * The queue's actual dispatch rate is the result of:
+   *
+   * * Number of tasks in the queue * User-specified throttling: rate limits   retry configuration,
+   * and the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
+   * Unavailable) responses from the worker, high error rates, or to smooth   sudden large traffic
+   * spikes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,9 +122,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * App Engine HTTP queue.
-   *
-   * An App Engine queue is a queue that has an AppEngineHttpQueue type.
+   * AppEngineHttpQueue settings apply only to AppEngine tasks in this queue.
    * @return value or {@code null} for none
    */
   public AppEngineHttpQueue getAppEngineHttpQueue() {
@@ -127,9 +130,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * App Engine HTTP queue.
-   *
-   * An App Engine queue is a queue that has an AppEngineHttpQueue type.
+   * AppEngineHttpQueue settings apply only to AppEngine tasks in this queue.
    * @param appEngineHttpQueue appEngineHttpQueue or {@code null} for none
    */
   public Queue setAppEngineHttpQueue(AppEngineHttpQueue appEngineHttpQueue) {
@@ -218,13 +219,20 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   /**
    * Rate limits for task dispatches.
    *
-   * rate_limits and retry_config are related because they both control task attempts however they
-   * control how tasks are attempted in different ways:
+   * rate_limits and retry_config are related because they both control task attempts. However they
+   * control task attempts in different ways:
    *
    * * rate_limits controls the total rate of   dispatches from a queue (i.e. all traffic dispatched
    * from the   queue, regardless of whether the dispatch is from a first   attempt or a retry). *
    * retry_config controls what happens to   particular a task after its first attempt fails. That
    * is,   retry_config controls task retries (the   second attempt, third attempt, etc).
+   *
+   * The queue's actual dispatch rate is the result of:
+   *
+   * * Number of tasks in the queue * User-specified throttling: rate limits   retry configuration,
+   * and the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
+   * Unavailable) responses from the worker, high error rates, or to smooth   sudden large traffic
+   * spikes.
    * @return value or {@code null} for none
    */
   public RateLimits getRateLimits() {
@@ -234,13 +242,20 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   /**
    * Rate limits for task dispatches.
    *
-   * rate_limits and retry_config are related because they both control task attempts however they
-   * control how tasks are attempted in different ways:
+   * rate_limits and retry_config are related because they both control task attempts. However they
+   * control task attempts in different ways:
    *
    * * rate_limits controls the total rate of   dispatches from a queue (i.e. all traffic dispatched
    * from the   queue, regardless of whether the dispatch is from a first   attempt or a retry). *
    * retry_config controls what happens to   particular a task after its first attempt fails. That
    * is,   retry_config controls task retries (the   second attempt, third attempt, etc).
+   *
+   * The queue's actual dispatch rate is the result of:
+   *
+   * * Number of tasks in the queue * User-specified throttling: rate limits   retry configuration,
+   * and the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
+   * Unavailable) responses from the worker, high error rates, or to smooth   sudden large traffic
+   * spikes.
    * @param rateLimits rateLimits or {@code null} for none
    */
   public Queue setRateLimits(RateLimits rateLimits) {

@@ -30,8 +30,7 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
-   * App Engine HTTP request that is sent to the task's target. Can be set only if
-   * app_engine_http_queue is set on the queue.
+   * HTTP request that is sent to the App Engine app handler.
    *
    * An App Engine task is a task that has AppEngineHttpRequest set.
    * The value may be {@code null}.
@@ -121,8 +120,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.String view;
 
   /**
-   * App Engine HTTP request that is sent to the task's target. Can be set only if
-   * app_engine_http_queue is set on the queue.
+   * HTTP request that is sent to the App Engine app handler.
    *
    * An App Engine task is a task that has AppEngineHttpRequest set.
    * @return value or {@code null} for none
@@ -132,8 +130,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * App Engine HTTP request that is sent to the task's target. Can be set only if
-   * app_engine_http_queue is set on the queue.
+   * HTTP request that is sent to the App Engine app handler.
    *
    * An App Engine task is a task that has AppEngineHttpRequest set.
    * @param appEngineHttpRequest appEngineHttpRequest or {@code null} for none

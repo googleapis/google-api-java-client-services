@@ -7,9 +7,9 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-iam</artifactId>
-  <version>v1-rev20190111-1.27.0</version>
-  <name>Identity and Access Management (IAM) API v1-rev20190111-1.27.0</name>
+  <artifactId>google-api-services-iamcredentials</artifactId>
+  <version>v1-rev20181013-1.28.0</version>
+  <name>IAM Service Account Credentials API v1-rev20181013-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -73,13 +73,13 @@
           </execution>
         </executions>
         <configuration>
-          <doctitle>Identity and Access Management (IAM) API ${project.version}</doctitle>
-          <windowtitle>Identity and Access Management (IAM) API ${project.version}</windowtitle>
+          <doctitle>IAM Service Account Credentials API ${project.version}</doctitle>
+          <windowtitle>IAM Service Account Credentials API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/6/docs/api</link>
-            <link>https://google.github.io/google-http-java-client/releases/1.27.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-oauth-java-client/releases/1.27.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-api-java-client/releases/1.27.0/javadoc/index.html</link>
+            <link>https://google.github.io/google-http-java-client/releases/1.28.0/javadoc/index.html</link>
+            <link>https://google.github.io/google-oauth-java-client/releases/1.28.0/javadoc/index.html</link>
+            <link>https://google.github.io/google-api-java-client/releases/1.28.0/javadoc/index.html</link>
           </links>
         </configuration>
       </plugin>
@@ -96,7 +96,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.27.0</version>
+      <version>1.28.0</version>
     </dependency>
   </dependencies>
 

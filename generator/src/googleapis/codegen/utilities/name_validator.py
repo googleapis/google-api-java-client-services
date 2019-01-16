@@ -30,7 +30,7 @@ import re
 # (.) or dash (-).  NOTE: the '$' character is to get around $ref
 # variable name in some APIs.
 _VARNAME_REGEX = re.compile(
-    r'^[a-zA-Z]$|([a-zA-Z_/$@][a-zA-Z0-9_./-]+)$')
+    r'^[a-zA-Z]$|([a-zA-Z_/$@][a-zA-Z0-9_./$-]+)$')
 
 _API_NAME_REGEX = re.compile(r'[a-z][a-zA-Z0-9_]*$')
 _API_VERSION_REGEX = re.compile(r'[a-z0-9][a-zA-Z0-9._-]*$')

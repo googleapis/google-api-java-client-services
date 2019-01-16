@@ -29,7 +29,7 @@ class NameValidatorTest(basetest.TestCase):
   def testVariableNameValidator(self):
     good_names = ['$ref', '_a', '_private', 'a_var.name', 't1', 'max-results',
                   'slashes/are/allowed', '/even/at/the/start/and/end/',
-                  'now_valid.', '@foo']
+                  'now_valid.', '@foo', 'foo$bar']
     bad_names = ['$', '1st_result', '^test', '.variable', '1', '_', 'no spaces',
                  'foo@']
 

@@ -40,7 +40,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The largest end time of all data points in this possibly partial representation of the dataset.
-   * Time is in nanoseconds from epoch. This should also match the first part of the dataset
+   * Time is in nanoseconds from epoch. This should also match the second part of the dataset
    * identifier.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The largest end time of all data points in this possibly partial representation of the dataset.
-   * Time is in nanoseconds from epoch. This should also match the first part of the dataset
+   * Time is in nanoseconds from epoch. This should also match the second part of the dataset
    * identifier.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
 
   /**
    * The largest end time of all data points in this possibly partial representation of the dataset.
-   * Time is in nanoseconds from epoch. This should also match the first part of the dataset
+   * Time is in nanoseconds from epoch. This should also match the second part of the dataset
    * identifier.
    * @param maxEndTimeNs maxEndTimeNs or {@code null} for none
    */

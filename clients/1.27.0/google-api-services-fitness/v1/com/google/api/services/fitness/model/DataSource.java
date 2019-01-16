@@ -48,8 +48,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private Application application;
 
   /**
-   * DO NOT USE THIS FIELD. It is never populated in responses from the platform, and is ignored in
-   * queries.
+   * DO NOT POPULATE THIS FIELD. It is never populated in responses from the platform, and is
+   * ignored in queries. It will be removed in a future version entirely.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +144,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DO NOT USE THIS FIELD. It is never populated in responses from the platform, and is ignored in
-   * queries.
+   * DO NOT POPULATE THIS FIELD. It is never populated in responses from the platform, and is
+   * ignored in queries. It will be removed in a future version entirely.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataQualityStandard() {
@@ -153,8 +153,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DO NOT USE THIS FIELD. It is never populated in responses from the platform, and is ignored in
-   * queries.
+   * DO NOT POPULATE THIS FIELD. It is never populated in responses from the platform, and is
+   * ignored in queries. It will be removed in a future version entirely.
    * @param dataQualityStandard dataQualityStandard or {@code null} for none
    */
   public DataSource setDataQualityStandard(java.util.List<java.lang.String> dataQualityStandard) {

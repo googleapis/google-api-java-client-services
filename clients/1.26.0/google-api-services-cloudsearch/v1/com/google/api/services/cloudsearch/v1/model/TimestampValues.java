@@ -30,14 +30,12 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class TimestampValues extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of elements is 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<String> values;
 
   /**
-   * The maximum number of elements is 100.
    * @return value or {@code null} for none
    */
   public java.util.List<String> getValues() {
@@ -45,7 +43,6 @@ public final class TimestampValues extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of elements is 100.
    * @param values values or {@code null} for none
    */
   public TimestampValues setValues(java.util.List<String> values) {

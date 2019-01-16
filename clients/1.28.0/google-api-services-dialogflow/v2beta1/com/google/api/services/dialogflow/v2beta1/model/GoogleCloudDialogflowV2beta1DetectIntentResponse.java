@@ -42,7 +42,11 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   private java.util.List<GoogleCloudDialogflowV2beta1QueryResult> alternativeQueryResults;
 
   /**
-   * The audio data bytes encoded as specified in the request.
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +111,11 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   }
 
   /**
-   * The audio data bytes encoded as specified in the request.
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
    * @see #decodeOutputAudio()
    * @return value or {@code null} for none
    */
@@ -116,7 +124,11 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   }
 
   /**
-   * The audio data bytes encoded as specified in the request.
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
    * @see #getOutputAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -127,7 +139,11 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   }
 
   /**
-   * The audio data bytes encoded as specified in the request.
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
    * @see #encodeOutputAudio()
    * @param outputAudio outputAudio or {@code null} for none
    */
@@ -137,7 +153,11 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   }
 
   /**
-   * The audio data bytes encoded as specified in the request.
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
    * @see #setOutputAudio()
    *
    * <p>

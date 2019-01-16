@@ -39,7 +39,7 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
   private String dispatchTime;
 
   /**
-   * Output only. The response from the target for this attempt.
+   * Output only. The response from the worker for this attempt.
    *
    * If `response_time` is unset, then the task has not been attempted or is currently running and
    * the `response_status` field is meaningless.
@@ -88,7 +88,7 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The response from the target for this attempt.
+   * Output only. The response from the worker for this attempt.
    *
    * If `response_time` is unset, then the task has not been attempted or is currently running and
    * the `response_status` field is meaningless.
@@ -99,7 +99,7 @@ public final class Attempt extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The response from the target for this attempt.
+   * Output only. The response from the worker for this attempt.
    *
    * If `response_time` is unset, then the task has not been attempted or is currently running and
    * the `response_status` field is meaningless.

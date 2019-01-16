@@ -12133,7 +12133,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
     public class WebPropertyAdWordsLinks {
 
       /**
-       * Deletes a web property-AdWords link.
+       * Deletes a web property-Google Ads link.
        *
        * Create a request for the method "webPropertyAdWordsLinks.delete".
        *
@@ -12141,8 +12141,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param accountId ID of the account which the given web property belongs to.
-       * @param webPropertyId Web property ID to delete the AdWords link for.
-       * @param webPropertyAdWordsLinkId Web property AdWords link ID.
+       * @param webPropertyId Web property ID to delete the Google Ads link for.
+       * @param webPropertyAdWordsLinkId Web property Google Ads link ID.
        * @return the request
        */
       public Delete delete(java.lang.String accountId, java.lang.String webPropertyId, java.lang.String webPropertyAdWordsLinkId) throws java.io.IOException {
@@ -12156,7 +12156,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}";
 
         /**
-         * Deletes a web property-AdWords link.
+         * Deletes a web property-Google Ads link.
          *
          * Create a request for the method "webPropertyAdWordsLinks.delete".
          *
@@ -12167,8 +12167,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId ID of the account which the given web property belongs to.
-         * @param webPropertyId Web property ID to delete the AdWords link for.
-         * @param webPropertyAdWordsLinkId Web property AdWords link ID.
+         * @param webPropertyId Web property ID to delete the Google Ads link for.
+         * @param webPropertyAdWordsLinkId Web property Google Ads link ID.
          * @since 1.13
          */
         protected Delete(java.lang.String accountId, java.lang.String webPropertyId, java.lang.String webPropertyAdWordsLinkId) {
@@ -12229,33 +12229,33 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Web property ID to delete the AdWords link for. */
+        /** Web property ID to delete the Google Ads link for. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyId;
 
-        /** Web property ID to delete the AdWords link for.
+        /** Web property ID to delete the Google Ads link for.
          */
         public java.lang.String getWebPropertyId() {
           return webPropertyId;
         }
 
-        /** Web property ID to delete the AdWords link for. */
+        /** Web property ID to delete the Google Ads link for. */
         public Delete setWebPropertyId(java.lang.String webPropertyId) {
           this.webPropertyId = webPropertyId;
           return this;
         }
 
-        /** Web property AdWords link ID. */
+        /** Web property Google Ads link ID. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyAdWordsLinkId;
 
-        /** Web property AdWords link ID.
+        /** Web property Google Ads link ID.
          */
         public java.lang.String getWebPropertyAdWordsLinkId() {
           return webPropertyAdWordsLinkId;
         }
 
-        /** Web property AdWords link ID. */
+        /** Web property Google Ads link ID. */
         public Delete setWebPropertyAdWordsLinkId(java.lang.String webPropertyAdWordsLinkId) {
           this.webPropertyAdWordsLinkId = webPropertyAdWordsLinkId;
           return this;
@@ -12267,7 +12267,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a web property-AdWords link to which the user has access.
+       * Returns a web property-Google Ads link to which the user has access.
        *
        * Create a request for the method "webPropertyAdWordsLinks.get".
        *
@@ -12275,8 +12275,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param accountId ID of the account which the given web property belongs to.
-       * @param webPropertyId Web property ID to retrieve the AdWords link for.
-       * @param webPropertyAdWordsLinkId Web property-AdWords link ID.
+       * @param webPropertyId Web property ID to retrieve the Google Ads link for.
+       * @param webPropertyAdWordsLinkId Web property-Google Ads link ID.
        * @return the request
        */
       public Get get(java.lang.String accountId, java.lang.String webPropertyId, java.lang.String webPropertyAdWordsLinkId) throws java.io.IOException {
@@ -12290,7 +12290,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}";
 
         /**
-         * Returns a web property-AdWords link to which the user has access.
+         * Returns a web property-Google Ads link to which the user has access.
          *
          * Create a request for the method "webPropertyAdWordsLinks.get".
          *
@@ -12300,8 +12300,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId ID of the account which the given web property belongs to.
-         * @param webPropertyId Web property ID to retrieve the AdWords link for.
-         * @param webPropertyAdWordsLinkId Web property-AdWords link ID.
+         * @param webPropertyId Web property ID to retrieve the Google Ads link for.
+         * @param webPropertyAdWordsLinkId Web property-Google Ads link ID.
          * @since 1.13
          */
         protected Get(java.lang.String accountId, java.lang.String webPropertyId, java.lang.String webPropertyAdWordsLinkId) {
@@ -12372,33 +12372,33 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Web property ID to retrieve the AdWords link for. */
+        /** Web property ID to retrieve the Google Ads link for. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyId;
 
-        /** Web property ID to retrieve the AdWords link for.
+        /** Web property ID to retrieve the Google Ads link for.
          */
         public java.lang.String getWebPropertyId() {
           return webPropertyId;
         }
 
-        /** Web property ID to retrieve the AdWords link for. */
+        /** Web property ID to retrieve the Google Ads link for. */
         public Get setWebPropertyId(java.lang.String webPropertyId) {
           this.webPropertyId = webPropertyId;
           return this;
         }
 
-        /** Web property-AdWords link ID. */
+        /** Web property-Google Ads link ID. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyAdWordsLinkId;
 
-        /** Web property-AdWords link ID.
+        /** Web property-Google Ads link ID.
          */
         public java.lang.String getWebPropertyAdWordsLinkId() {
           return webPropertyAdWordsLinkId;
         }
 
-        /** Web property-AdWords link ID. */
+        /** Web property-Google Ads link ID. */
         public Get setWebPropertyAdWordsLinkId(java.lang.String webPropertyAdWordsLinkId) {
           this.webPropertyAdWordsLinkId = webPropertyAdWordsLinkId;
           return this;
@@ -12410,7 +12410,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Creates a webProperty-AdWords link.
+       * Creates a webProperty-Google Ads link.
        *
        * Create a request for the method "webPropertyAdWordsLinks.insert".
        *
@@ -12433,7 +12433,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks";
 
         /**
-         * Creates a webProperty-AdWords link.
+         * Creates a webProperty-Google Ads link.
          *
          * Create a request for the method "webPropertyAdWordsLinks.insert".
          *
@@ -12529,7 +12529,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Lists webProperty-AdWords links for a given web property.
+       * Lists webProperty-Google Ads links for a given web property.
        *
        * Create a request for the method "webPropertyAdWordsLinks.list".
        *
@@ -12537,7 +12537,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param accountId ID of the account which the given web property belongs to.
-       * @param webPropertyId Web property ID to retrieve the AdWords links for.
+       * @param webPropertyId Web property ID to retrieve the Google Ads links for.
        * @return the request
        */
       public List list(java.lang.String accountId, java.lang.String webPropertyId) throws java.io.IOException {
@@ -12554,7 +12554,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
             java.util.regex.Pattern.compile("\\d+");
 
         /**
-         * Lists webProperty-AdWords links for a given web property.
+         * Lists webProperty-Google Ads links for a given web property.
          *
          * Create a request for the method "webPropertyAdWordsLinks.list".
          *
@@ -12564,7 +12564,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId ID of the account which the given web property belongs to.
-         * @param webPropertyId Web property ID to retrieve the AdWords links for.
+         * @param webPropertyId Web property ID to retrieve the Google Ads links for.
          * @since 1.13
          */
         protected List(java.lang.String accountId, java.lang.String webPropertyId) {
@@ -12644,46 +12644,46 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Web property ID to retrieve the AdWords links for. */
+        /** Web property ID to retrieve the Google Ads links for. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyId;
 
-        /** Web property ID to retrieve the AdWords links for.
+        /** Web property ID to retrieve the Google Ads links for.
          */
         public java.lang.String getWebPropertyId() {
           return webPropertyId;
         }
 
-        /** Web property ID to retrieve the AdWords links for. */
+        /** Web property ID to retrieve the Google Ads links for. */
         public List setWebPropertyId(java.lang.String webPropertyId) {
           this.webPropertyId = webPropertyId;
           return this;
         }
 
-        /** The maximum number of webProperty-AdWords links to include in this response. */
+        /** The maximum number of webProperty-Google Ads links to include in this response. */
         @com.google.api.client.util.Key("max-results")
         private java.lang.Integer maxResults;
 
-        /** The maximum number of webProperty-AdWords links to include in this response.
+        /** The maximum number of webProperty-Google Ads links to include in this response.
          */
         public java.lang.Integer getMaxResults() {
           return maxResults;
         }
 
-        /** The maximum number of webProperty-AdWords links to include in this response. */
+        /** The maximum number of webProperty-Google Ads links to include in this response. */
         public List setMaxResults(java.lang.Integer maxResults) {
           this.maxResults = maxResults;
           return this;
         }
 
         /**
-         * An index of the first webProperty-AdWords link to retrieve. Use this parameter as a
+         * An index of the first webProperty-Google Ads link to retrieve. Use this parameter as a
          * pagination mechanism along with the max-results parameter.
          */
         @com.google.api.client.util.Key("start-index")
         private java.lang.Integer startIndex;
 
-        /** An index of the first webProperty-AdWords link to retrieve. Use this parameter as a pagination
+        /** An index of the first webProperty-Google Ads link to retrieve. Use this parameter as a pagination
        mechanism along with the max-results parameter.
 
        [minimum: 1]
@@ -12693,7 +12693,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * An index of the first webProperty-AdWords link to retrieve. Use this parameter as a
+         * An index of the first webProperty-Google Ads link to retrieve. Use this parameter as a
          * pagination mechanism along with the max-results parameter.
          */
         public List setStartIndex(java.lang.Integer startIndex) {
@@ -12707,7 +12707,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Updates an existing webProperty-AdWords link. This method supports patch semantics.
+       * Updates an existing webProperty-Google Ads link. This method supports patch semantics.
        *
        * Create a request for the method "webPropertyAdWordsLinks.patch".
        *
@@ -12715,8 +12715,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param accountId ID of the account which the given web property belongs to.
-       * @param webPropertyId Web property ID to retrieve the AdWords link for.
-       * @param webPropertyAdWordsLinkId Web property-AdWords link ID.
+       * @param webPropertyId Web property ID to retrieve the Google Ads link for.
+       * @param webPropertyAdWordsLinkId Web property-Google Ads link ID.
        * @param content the {@link com.google.api.services.analytics.model.EntityAdWordsLink}
        * @return the request
        */
@@ -12731,7 +12731,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}";
 
         /**
-         * Updates an existing webProperty-AdWords link. This method supports patch semantics.
+         * Updates an existing webProperty-Google Ads link. This method supports patch semantics.
          *
          * Create a request for the method "webPropertyAdWordsLinks.patch".
          *
@@ -12742,8 +12742,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId ID of the account which the given web property belongs to.
-         * @param webPropertyId Web property ID to retrieve the AdWords link for.
-         * @param webPropertyAdWordsLinkId Web property-AdWords link ID.
+         * @param webPropertyId Web property ID to retrieve the Google Ads link for.
+         * @param webPropertyAdWordsLinkId Web property-Google Ads link ID.
          * @param content the {@link com.google.api.services.analytics.model.EntityAdWordsLink}
          * @since 1.13
          */
@@ -12805,33 +12805,33 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Web property ID to retrieve the AdWords link for. */
+        /** Web property ID to retrieve the Google Ads link for. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyId;
 
-        /** Web property ID to retrieve the AdWords link for.
+        /** Web property ID to retrieve the Google Ads link for.
          */
         public java.lang.String getWebPropertyId() {
           return webPropertyId;
         }
 
-        /** Web property ID to retrieve the AdWords link for. */
+        /** Web property ID to retrieve the Google Ads link for. */
         public Patch setWebPropertyId(java.lang.String webPropertyId) {
           this.webPropertyId = webPropertyId;
           return this;
         }
 
-        /** Web property-AdWords link ID. */
+        /** Web property-Google Ads link ID. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyAdWordsLinkId;
 
-        /** Web property-AdWords link ID.
+        /** Web property-Google Ads link ID.
          */
         public java.lang.String getWebPropertyAdWordsLinkId() {
           return webPropertyAdWordsLinkId;
         }
 
-        /** Web property-AdWords link ID. */
+        /** Web property-Google Ads link ID. */
         public Patch setWebPropertyAdWordsLinkId(java.lang.String webPropertyAdWordsLinkId) {
           this.webPropertyAdWordsLinkId = webPropertyAdWordsLinkId;
           return this;
@@ -12843,7 +12843,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Updates an existing webProperty-AdWords link.
+       * Updates an existing webProperty-Google Ads link.
        *
        * Create a request for the method "webPropertyAdWordsLinks.update".
        *
@@ -12851,8 +12851,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param accountId ID of the account which the given web property belongs to.
-       * @param webPropertyId Web property ID to retrieve the AdWords link for.
-       * @param webPropertyAdWordsLinkId Web property-AdWords link ID.
+       * @param webPropertyId Web property ID to retrieve the Google Ads link for.
+       * @param webPropertyAdWordsLinkId Web property-Google Ads link ID.
        * @param content the {@link com.google.api.services.analytics.model.EntityAdWordsLink}
        * @return the request
        */
@@ -12867,7 +12867,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}";
 
         /**
-         * Updates an existing webProperty-AdWords link.
+         * Updates an existing webProperty-Google Ads link.
          *
          * Create a request for the method "webPropertyAdWordsLinks.update".
          *
@@ -12878,8 +12878,8 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId ID of the account which the given web property belongs to.
-         * @param webPropertyId Web property ID to retrieve the AdWords link for.
-         * @param webPropertyAdWordsLinkId Web property-AdWords link ID.
+         * @param webPropertyId Web property ID to retrieve the Google Ads link for.
+         * @param webPropertyAdWordsLinkId Web property-Google Ads link ID.
          * @param content the {@link com.google.api.services.analytics.model.EntityAdWordsLink}
          * @since 1.13
          */
@@ -12943,33 +12943,33 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /** Web property ID to retrieve the AdWords link for. */
+        /** Web property ID to retrieve the Google Ads link for. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyId;
 
-        /** Web property ID to retrieve the AdWords link for.
+        /** Web property ID to retrieve the Google Ads link for.
          */
         public java.lang.String getWebPropertyId() {
           return webPropertyId;
         }
 
-        /** Web property ID to retrieve the AdWords link for. */
+        /** Web property ID to retrieve the Google Ads link for. */
         public Update setWebPropertyId(java.lang.String webPropertyId) {
           this.webPropertyId = webPropertyId;
           return this;
         }
 
-        /** Web property-AdWords link ID. */
+        /** Web property-Google Ads link ID. */
         @com.google.api.client.util.Key
         private java.lang.String webPropertyAdWordsLinkId;
 
-        /** Web property-AdWords link ID.
+        /** Web property-Google Ads link ID.
          */
         public java.lang.String getWebPropertyAdWordsLinkId() {
           return webPropertyAdWordsLinkId;
         }
 
-        /** Web property-AdWords link ID. */
+        /** Web property-Google Ads link ID. */
         public Update setWebPropertyAdWordsLinkId(java.lang.String webPropertyAdWordsLinkId) {
           this.webPropertyAdWordsLinkId = webPropertyAdWordsLinkId;
           return this;

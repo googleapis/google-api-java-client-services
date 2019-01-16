@@ -67,7 +67,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The text to be pronounced to the user or shown on the screen.
+   * The text to be pronounced to the user or shown on the screen. Note: This is a legacy field,
+   * `fulfillment_messages` should be preferred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +252,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The text to be pronounced to the user or shown on the screen.
+   * The text to be pronounced to the user or shown on the screen. Note: This is a legacy field,
+   * `fulfillment_messages` should be preferred.
    * @return value or {@code null} for none
    */
   public java.lang.String getFulfillmentText() {
@@ -259,7 +261,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The text to be pronounced to the user or shown on the screen.
+   * The text to be pronounced to the user or shown on the screen. Note: This is a legacy field,
+   * `fulfillment_messages` should be preferred.
    * @param fulfillmentText fulfillmentText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult setFulfillmentText(java.lang.String fulfillmentText) {

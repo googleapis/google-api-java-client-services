@@ -45,6 +45,15 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
   }
 
   /**
+   * For multi-channel audio, this is the channel number corresponding to the recognized result for
+   * the audio from that channel. For audio_channel_count = N, its output values can range from '1'
+   * to 'N'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer channelTag;
+
+  /**
    * Output only. May contain one or more recognition hypotheses (up to the maximum specified in
    * `max_alternatives`). These alternatives are ordered in terms of accuracy, with the top (first)
    * alternative being the most probable, as ranked by the recognizer.
@@ -62,6 +71,27 @@ public final class SpeechRecognitionResult extends com.google.api.client.json.Ge
    */
   public SpeechRecognitionResult setAlternatives(java.util.List<SpeechRecognitionAlternative> alternatives) {
     this.alternatives = alternatives;
+    return this;
+  }
+
+  /**
+   * For multi-channel audio, this is the channel number corresponding to the recognized result for
+   * the audio from that channel. For audio_channel_count = N, its output values can range from '1'
+   * to 'N'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getChannelTag() {
+    return channelTag;
+  }
+
+  /**
+   * For multi-channel audio, this is the channel number corresponding to the recognized result for
+   * the audio from that channel. For audio_channel_count = N, its output values can range from '1'
+   * to 'N'.
+   * @param channelTag channelTag or {@code null} for none
+   */
+  public SpeechRecognitionResult setChannelTag(java.lang.Integer channelTag) {
+    this.channelTag = channelTag;
     return this;
   }
 

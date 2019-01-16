@@ -41,7 +41,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableAutomaticPunctuation;
 
   /**
-   * This needs to be set to ‘true’ explicitly and `audio_channel_count` > 1 to get each channel
+   * This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel
    * recognized separately. The recognition result will contain a `channel_tag` field to state which
    * channel that result belongs to. If this is not true, we will only recognize the first channel.
    * The request is billed cumulatively for all channels recognized: `audio_channel_count`
@@ -176,7 +176,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This needs to be set to ‘true’ explicitly and `audio_channel_count` > 1 to get each channel
+   * This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel
    * recognized separately. The recognition result will contain a `channel_tag` field to state which
    * channel that result belongs to. If this is not true, we will only recognize the first channel.
    * The request is billed cumulatively for all channels recognized: `audio_channel_count`
@@ -188,7 +188,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * This needs to be set to ‘true’ explicitly and `audio_channel_count` > 1 to get each channel
+   * This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel
    * recognized separately. The recognition result will contain a `channel_tag` field to state which
    * channel that result belongs to. If this is not true, we will only recognize the first channel.
    * The request is billed cumulatively for all channels recognized: `audio_channel_count`

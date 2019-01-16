@@ -41,6 +41,17 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableAutomaticPunctuation;
 
   /**
+   * This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel
+   * recognized separately. The recognition result will contain a `channel_tag` field to state which
+   * channel that result belongs to. If this is not true, we will only recognize the first channel.
+   * The request is billed cumulatively for all channels recognized: `audio_channel_count`
+   * multiplied by the length of the audio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSeparateRecognitionPerChannel;
+
+  /**
    * *Optional* If `true`, the top result includes a list of words and the start and end time
    * offsets (timestamps) for those words. If `false`, no word-level time offset information is
    * returned. The default is `false`.
@@ -161,6 +172,31 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   public RecognitionConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
     this.enableAutomaticPunctuation = enableAutomaticPunctuation;
+    return this;
+  }
+
+  /**
+   * This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel
+   * recognized separately. The recognition result will contain a `channel_tag` field to state which
+   * channel that result belongs to. If this is not true, we will only recognize the first channel.
+   * The request is billed cumulatively for all channels recognized: `audio_channel_count`
+   * multiplied by the length of the audio.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSeparateRecognitionPerChannel() {
+    return enableSeparateRecognitionPerChannel;
+  }
+
+  /**
+   * This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel
+   * recognized separately. The recognition result will contain a `channel_tag` field to state which
+   * channel that result belongs to. If this is not true, we will only recognize the first channel.
+   * The request is billed cumulatively for all channels recognized: `audio_channel_count`
+   * multiplied by the length of the audio.
+   * @param enableSeparateRecognitionPerChannel enableSeparateRecognitionPerChannel or {@code null} for none
+   */
+  public RecognitionConfig setEnableSeparateRecognitionPerChannel(java.lang.Boolean enableSeparateRecognitionPerChannel) {
+    this.enableSeparateRecognitionPerChannel = enableSeparateRecognitionPerChannel;
     return this;
   }
 

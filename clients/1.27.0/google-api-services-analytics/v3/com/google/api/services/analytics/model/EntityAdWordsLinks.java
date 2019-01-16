@@ -17,7 +17,7 @@
 package com.google.api.services.analytics.model;
 
 /**
- * An entity AdWords link collection provides a list of GA-AdWords links Each resource in this
+ * An entity Google Ads link collection provides a list of GA-Google Ads links Each resource in this
  * collection corresponds to a single link.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,7 +31,7 @@ package com.google.api.services.analytics.model;
 public final class EntityAdWordsLinks extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of entity AdWords links.
+   * A list of entity Google Ads links.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,14 +60,14 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   private java.lang.String kind;
 
   /**
-   * Next link for this AdWords link collection.
+   * Next link for this Google Ads link collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextLink;
 
   /**
-   * Previous link for this AdWords link collection.
+   * Previous link for this Google Ads link collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   private java.lang.Integer totalResults;
 
   /**
-   * A list of entity AdWords links.
+   * A list of entity Google Ads links.
    * @return value or {@code null} for none
    */
   public java.util.List<EntityAdWordsLink> getItems() {
@@ -97,7 +97,7 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of entity AdWords links.
+   * A list of entity Google Ads links.
    * @param items items or {@code null} for none
    */
   public EntityAdWordsLinks setItems(java.util.List<EntityAdWordsLink> items) {
@@ -144,7 +144,7 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   }
 
   /**
-   * Next link for this AdWords link collection.
+   * Next link for this Google Ads link collection.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextLink() {
@@ -152,7 +152,7 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   }
 
   /**
-   * Next link for this AdWords link collection.
+   * Next link for this Google Ads link collection.
    * @param nextLink nextLink or {@code null} for none
    */
   public EntityAdWordsLinks setNextLink(java.lang.String nextLink) {
@@ -161,7 +161,7 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   }
 
   /**
-   * Previous link for this AdWords link collection.
+   * Previous link for this Google Ads link collection.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreviousLink() {
@@ -169,7 +169,7 @@ public final class EntityAdWordsLinks extends com.google.api.client.json.Generic
   }
 
   /**
-   * Previous link for this AdWords link collection.
+   * Previous link for this Google Ads link collection.
    * @param previousLink previousLink or {@code null} for none
    */
   public EntityAdWordsLinks setPreviousLink(java.lang.String previousLink) {

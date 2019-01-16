@@ -65,8 +65,8 @@ public final class LinkedForeignAccount extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
-   * The foreign account ID. For example the an AdWords `linkedAccountId` has the following format
-   * XXX-XXX-XXXX.
+   * The foreign account ID. For example the an Google Ads `linkedAccountId` has the following
+   * format XXX-XXX-XXXX.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +187,8 @@ public final class LinkedForeignAccount extends com.google.api.client.json.Gener
   }
 
   /**
-   * The foreign account ID. For example the an AdWords `linkedAccountId` has the following format
-   * XXX-XXX-XXXX.
+   * The foreign account ID. For example the an Google Ads `linkedAccountId` has the following
+   * format XXX-XXX-XXXX.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedAccountId() {
@@ -196,8 +196,8 @@ public final class LinkedForeignAccount extends com.google.api.client.json.Gener
   }
 
   /**
-   * The foreign account ID. For example the an AdWords `linkedAccountId` has the following format
-   * XXX-XXX-XXXX.
+   * The foreign account ID. For example the an Google Ads `linkedAccountId` has the following
+   * format XXX-XXX-XXXX.
    * @param linkedAccountId linkedAccountId or {@code null} for none
    */
   public LinkedForeignAccount setLinkedAccountId(java.lang.String linkedAccountId) {

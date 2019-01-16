@@ -17,7 +17,7 @@
 package com.google.api.services.analytics.model;
 
 /**
- * JSON template for an AdWords account.
+ * JSON template for an Google Ads account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics API. For a detailed explanation see:
@@ -30,28 +30,30 @@ package com.google.api.services.analytics.model;
 public final class AdWordsAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if auto-tagging is enabled on the AdWords account. Read-only after the insert operation.
+   * True if auto-tagging is enabled on the Google Ads account. Read-only after the insert
+   * operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoTaggingEnabled;
 
   /**
-   * Customer ID. This field is required when creating an AdWords link.
+   * Customer ID. This field is required when creating a Google Ads link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerId;
 
   /**
-   * Resource type for AdWords account.
+   * Resource type for Google Ads account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * True if auto-tagging is enabled on the AdWords account. Read-only after the insert operation.
+   * True if auto-tagging is enabled on the Google Ads account. Read-only after the insert
+   * operation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoTaggingEnabled() {
@@ -59,7 +61,8 @@ public final class AdWordsAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * True if auto-tagging is enabled on the AdWords account. Read-only after the insert operation.
+   * True if auto-tagging is enabled on the Google Ads account. Read-only after the insert
+   * operation.
    * @param autoTaggingEnabled autoTaggingEnabled or {@code null} for none
    */
   public AdWordsAccount setAutoTaggingEnabled(java.lang.Boolean autoTaggingEnabled) {
@@ -68,7 +71,7 @@ public final class AdWordsAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Customer ID. This field is required when creating an AdWords link.
+   * Customer ID. This field is required when creating a Google Ads link.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -76,7 +79,7 @@ public final class AdWordsAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Customer ID. This field is required when creating an AdWords link.
+   * Customer ID. This field is required when creating a Google Ads link.
    * @param customerId customerId or {@code null} for none
    */
   public AdWordsAccount setCustomerId(java.lang.String customerId) {
@@ -85,7 +88,7 @@ public final class AdWordsAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Resource type for AdWords account.
+   * Resource type for Google Ads account.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -93,7 +96,7 @@ public final class AdWordsAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Resource type for AdWords account.
+   * Resource type for Google Ads account.
    * @param kind kind or {@code null} for none
    */
   public AdWordsAccount setKind(java.lang.String kind) {

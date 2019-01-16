@@ -30,7 +30,6 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DateValues extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of elements is 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class DateValues extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum number of elements is 100.
    * @return value or {@code null} for none
    */
   public java.util.List<Date> getValues() {
@@ -51,7 +49,6 @@ public final class DateValues extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum number of elements is 100.
    * @param values values or {@code null} for none
    */
   public DateValues setValues(java.util.List<Date> values) {

@@ -30,16 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class EnumValues extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum allowable length for string values is 32 characters. The maximum number of elements
-   * is 100.
+   * The maximum allowable length for string values is 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> values;
 
   /**
-   * The maximum allowable length for string values is 32 characters. The maximum number of elements
-   * is 100.
+   * The maximum allowable length for string values is 32 characters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -47,8 +45,7 @@ public final class EnumValues extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximum allowable length for string values is 32 characters. The maximum number of elements
-   * is 100.
+   * The maximum allowable length for string values is 32 characters.
    * @param values values or {@code null} for none
    */
   public EnumValues setValues(java.util.List<java.lang.String> values) {

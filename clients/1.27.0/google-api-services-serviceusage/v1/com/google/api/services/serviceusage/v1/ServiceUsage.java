@@ -769,8 +769,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
      * then the entire batch fails, and no state changes occur.
      *
-     * Operation
-     *
      * Create a request for the method "services.batchEnable".
      *
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
@@ -802,8 +800,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /**
        * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
        * then the entire batch fails, and no state changes occur.
-       *
-       * Operation
        *
        * Create a request for the method "services.batchEnable".
        *
@@ -939,8 +935,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      * It is not valid to call the disable method on a service that is not currently enabled. Callers
      * will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled.
      *
-     * Operation
-     *
      * Create a request for the method "services.disable".
      *
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
@@ -975,8 +969,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        *
        * It is not valid to call the disable method on a service that is not currently enabled. Callers
        * will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled.
-       *
-       * Operation
        *
        * Create a request for the method "services.disable".
        *
@@ -1109,8 +1101,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
     /**
      * Enable a service so that it can be used with a project.
      *
-     * Operation
-     *
      * Create a request for the method "services.enable".
      *
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
@@ -1145,8 +1135,6 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Enable a service so that it can be used with a project.
-       *
-       * Operation
        *
        * Create a request for the method "services.enable".
        *

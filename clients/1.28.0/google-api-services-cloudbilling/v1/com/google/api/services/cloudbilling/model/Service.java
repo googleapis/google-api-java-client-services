@@ -30,6 +30,14 @@ package com.google.api.services.cloudbilling.model;
 public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
+   * The business under which the service is offered. Ex. "businessEntities/GCP",
+   * "businessEntities/Maps"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String businessEntityName;
+
+  /**
    * A human readable display name for this service.
    * The value may be {@code null}.
    */
@@ -49,6 +57,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceId;
+
+  /**
+   * The business under which the service is offered. Ex. "businessEntities/GCP",
+   * "businessEntities/Maps"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBusinessEntityName() {
+    return businessEntityName;
+  }
+
+  /**
+   * The business under which the service is offered. Ex. "businessEntities/GCP",
+   * "businessEntities/Maps"
+   * @param businessEntityName businessEntityName or {@code null} for none
+   */
+  public Service setBusinessEntityName(java.lang.String businessEntityName) {
+    this.businessEntityName = businessEntityName;
+    return this;
+  }
 
   /**
    * A human readable display name for this service.

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudbuild</artifactId>
-  <version>v1alpha1-rev20190107-1.26.0</version>
-  <name>Cloud Build API v1alpha1-rev20190107-1.26.0</name>
+  <version>v1alpha1-rev20190116-1.26.0</version>
+  <name>Cloud Build API v1alpha1-rev20190116-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

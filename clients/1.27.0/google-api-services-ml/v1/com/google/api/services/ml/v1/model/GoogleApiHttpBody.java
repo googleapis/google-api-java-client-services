@@ -58,14 +58,14 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJson {
 
   /**
-   * The HTTP Content-Type string representing the content type of the body.
+   * The HTTP Content-Type header value specifying the content type of the body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentType;
 
   /**
-   * HTTP body binary data.
+   * The HTTP request/response body as raw binary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJ
   private java.util.List<java.util.Map<String, java.lang.Object>> extensions;
 
   /**
-   * The HTTP Content-Type string representing the content type of the body.
+   * The HTTP Content-Type header value specifying the content type of the body.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -87,7 +87,7 @@ public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The HTTP Content-Type string representing the content type of the body.
+   * The HTTP Content-Type header value specifying the content type of the body.
    * @param contentType contentType or {@code null} for none
    */
   public GoogleApiHttpBody setContentType(java.lang.String contentType) {
@@ -96,7 +96,7 @@ public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * HTTP body binary data.
+   * The HTTP request/response body as raw binary.
    * @see #decodeData()
    * @return value or {@code null} for none
    */
@@ -105,7 +105,7 @@ public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * HTTP body binary data.
+   * The HTTP request/response body as raw binary.
    * @see #getData()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -116,7 +116,7 @@ public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * HTTP body binary data.
+   * The HTTP request/response body as raw binary.
    * @see #encodeData()
    * @param data data or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class GoogleApiHttpBody extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * HTTP body binary data.
+   * The HTTP request/response body as raw binary.
    * @see #setData()
    *
    * <p>

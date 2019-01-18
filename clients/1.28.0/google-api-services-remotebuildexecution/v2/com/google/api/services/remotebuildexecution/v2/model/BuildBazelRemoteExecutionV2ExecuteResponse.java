@@ -39,6 +39,14 @@ public final class BuildBazelRemoteExecutionV2ExecuteResponse extends com.google
   private java.lang.Boolean cachedResult;
 
   /**
+   * Freeform informational message with details on the execution of the action that may be
+   * displayed to the user upon failure or when requested explicitly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String message;
+
+  /**
    * The result of the action.
    * The value may be {@code null}.
    */
@@ -85,6 +93,25 @@ public final class BuildBazelRemoteExecutionV2ExecuteResponse extends com.google
    */
   public BuildBazelRemoteExecutionV2ExecuteResponse setCachedResult(java.lang.Boolean cachedResult) {
     this.cachedResult = cachedResult;
+    return this;
+  }
+
+  /**
+   * Freeform informational message with details on the execution of the action that may be
+   * displayed to the user upon failure or when requested explicitly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMessage() {
+    return message;
+  }
+
+  /**
+   * Freeform informational message with details on the execution of the action that may be
+   * displayed to the user upon failure or when requested explicitly.
+   * @param message message or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2ExecuteResponse setMessage(java.lang.String message) {
+    this.message = message;
     return this;
   }
 

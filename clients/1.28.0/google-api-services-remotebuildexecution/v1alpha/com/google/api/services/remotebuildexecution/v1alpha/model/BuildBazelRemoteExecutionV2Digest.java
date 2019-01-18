@@ -36,8 +36,10 @@ package com.google.api.services.remotebuildexecution.v1alpha.model;
  * When a `Digest` is used to refer to a proto message, it always refers to the message in binary
  * encoded form. To ensure consistent hashing, clients and servers MUST ensure that they serialize
  * messages according to the following rules, even if there are alternate valid encodings for the
- * same message. - Fields are serialized in tag order. - There are no unknown fields. - There are no
- * duplicate fields. - Fields are serialized according to the default semantics for their type.
+ * same message:
+ *
+ * * Fields are serialized in tag order. * There are no unknown fields. * There are no duplicate
+ * fields. * Fields are serialized according to the default semantics for their type.
  *
  * Most protocol buffer implementations will always follow these rules when serializing, but care
  * should be taken to avoid shortcuts. For instance, concatenating two messages to merge them may

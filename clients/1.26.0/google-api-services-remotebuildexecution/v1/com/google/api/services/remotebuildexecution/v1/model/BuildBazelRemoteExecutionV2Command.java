@@ -49,7 +49,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * default environment variables; these defaults can be overridden using this field. Additional
    * variables can also be specified.
    *
-   * In order to ensure that equivalent `Command`s always hash to the same value, the environment
+   * In order to ensure that equivalent Commands always hash to the same value, the environment
    * variables MUST be lexicographically sorted by name. Sorting of strings is done by code point,
    * equivalently, by the UTF-8 bytes.
    * The value may be {@code null}.
@@ -59,9 +59,9 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
 
   /**
    * A list of the output directories that the client expects to retrieve from the action. Only the
-   * contents of the indicated directories (recursively including the contents of their
-   * subdirectories) will be returned, as well as files listed in `output_files`. Other files that
-   * may be created during command execution are discarded.
+   * listed directories will be returned (an entire directory structure will be returned as a Tree
+   * message digest, see OutputDirectory), as well as files listed in `output_files`. Other files or
+   * directories that may be created during command execution are discarded.
    *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
@@ -73,8 +73,12 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
-   * An output directory cannot be duplicated, be a parent of another output directory, be a parent
-   * of a listed output file, or have the same path as any of the listed output files.
+   * An output directory cannot be duplicated or have the same path as any of the listed output
+   * files.
+   *
+   * Directories leading up to the output directories (but not the output directories themselves)
+   * are created by the worker prior to execution, even if they are not explicitly part of the input
+   * root.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +87,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * A list of the output files that the client expects to retrieve from the action. Only the listed
    * files, as well as directories listed in `output_directories`, will be returned to the client as
-   * output. Other files that may be created during command execution are discarded.
+   * output. Other files or directories that may be created during command execution are discarded.
    *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
@@ -93,8 +97,11 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
-   * An output file cannot be duplicated, be a parent of another output file, be a child of a listed
-   * output directory, or have the same path as any of the listed output directories.
+   * An output file cannot be duplicated, be a parent of another output file, or have the same path
+   * as any of the listed output directories.
+   *
+   * Directories leading up to the output files are created by the worker prior to execution, even
+   * if they are not explicitly part of the input root.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +151,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * default environment variables; these defaults can be overridden using this field. Additional
    * variables can also be specified.
    *
-   * In order to ensure that equivalent `Command`s always hash to the same value, the environment
+   * In order to ensure that equivalent Commands always hash to the same value, the environment
    * variables MUST be lexicographically sorted by name. Sorting of strings is done by code point,
    * equivalently, by the UTF-8 bytes.
    * @return value or {@code null} for none
@@ -158,7 +165,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * default environment variables; these defaults can be overridden using this field. Additional
    * variables can also be specified.
    *
-   * In order to ensure that equivalent `Command`s always hash to the same value, the environment
+   * In order to ensure that equivalent Commands always hash to the same value, the environment
    * variables MUST be lexicographically sorted by name. Sorting of strings is done by code point,
    * equivalently, by the UTF-8 bytes.
    * @param environmentVariables environmentVariables or {@code null} for none
@@ -170,9 +177,9 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
 
   /**
    * A list of the output directories that the client expects to retrieve from the action. Only the
-   * contents of the indicated directories (recursively including the contents of their
-   * subdirectories) will be returned, as well as files listed in `output_files`. Other files that
-   * may be created during command execution are discarded.
+   * listed directories will be returned (an entire directory structure will be returned as a Tree
+   * message digest, see OutputDirectory), as well as files listed in `output_files`. Other files or
+   * directories that may be created during command execution are discarded.
    *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
@@ -184,8 +191,12 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
-   * An output directory cannot be duplicated, be a parent of another output directory, be a parent
-   * of a listed output file, or have the same path as any of the listed output files.
+   * An output directory cannot be duplicated or have the same path as any of the listed output
+   * files.
+   *
+   * Directories leading up to the output directories (but not the output directories themselves)
+   * are created by the worker prior to execution, even if they are not explicitly part of the input
+   * root.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputDirectories() {
@@ -194,9 +205,9 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
 
   /**
    * A list of the output directories that the client expects to retrieve from the action. Only the
-   * contents of the indicated directories (recursively including the contents of their
-   * subdirectories) will be returned, as well as files listed in `output_files`. Other files that
-   * may be created during command execution are discarded.
+   * listed directories will be returned (an entire directory structure will be returned as a Tree
+   * message digest, see OutputDirectory), as well as files listed in `output_files`. Other files or
+   * directories that may be created during command execution are discarded.
    *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
@@ -208,8 +219,12 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
-   * An output directory cannot be duplicated, be a parent of another output directory, be a parent
-   * of a listed output file, or have the same path as any of the listed output files.
+   * An output directory cannot be duplicated or have the same path as any of the listed output
+   * files.
+   *
+   * Directories leading up to the output directories (but not the output directories themselves)
+   * are created by the worker prior to execution, even if they are not explicitly part of the input
+   * root.
    * @param outputDirectories outputDirectories or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputDirectories(java.util.List<java.lang.String> outputDirectories) {
@@ -220,7 +235,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * A list of the output files that the client expects to retrieve from the action. Only the listed
    * files, as well as directories listed in `output_directories`, will be returned to the client as
-   * output. Other files that may be created during command execution are discarded.
+   * output. Other files or directories that may be created during command execution are discarded.
    *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
@@ -230,8 +245,11 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
-   * An output file cannot be duplicated, be a parent of another output file, be a child of a listed
-   * output directory, or have the same path as any of the listed output directories.
+   * An output file cannot be duplicated, be a parent of another output file, or have the same path
+   * as any of the listed output directories.
+   *
+   * Directories leading up to the output files are created by the worker prior to execution, even
+   * if they are not explicitly part of the input root.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputFiles() {
@@ -241,7 +259,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * A list of the output files that the client expects to retrieve from the action. Only the listed
    * files, as well as directories listed in `output_directories`, will be returned to the client as
-   * output. Other files that may be created during command execution are discarded.
+   * output. Other files or directories that may be created during command execution are discarded.
    *
    * The paths are relative to the working directory of the action execution. The paths are
    * specified using a single forward slash (`/`) as a path separator, even if the execution
@@ -251,8 +269,11 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * In order to ensure consistent hashing of the same Action, the output paths MUST be sorted
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
-   * An output file cannot be duplicated, be a parent of another output file, be a child of a listed
-   * output directory, or have the same path as any of the listed output directories.
+   * An output file cannot be duplicated, be a parent of another output file, or have the same path
+   * as any of the listed output directories.
+   *
+   * Directories leading up to the output files are created by the worker prior to execution, even
+   * if they are not explicitly part of the input root.
    * @param outputFiles outputFiles or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setOutputFiles(java.util.List<java.lang.String> outputFiles) {

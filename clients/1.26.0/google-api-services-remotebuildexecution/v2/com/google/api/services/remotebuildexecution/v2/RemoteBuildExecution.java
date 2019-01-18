@@ -145,7 +145,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * Retrieve a cached execution result.
      *
-     * Errors: * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
+     * Errors:
+     *
+     * * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
      *
      * Create a request for the method "actionResults.get".
      *
@@ -182,7 +184,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       /**
        * Retrieve a cached execution result.
        *
-       * Errors: * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
+       * Errors:
+       *
+       * * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
        *
        * Create a request for the method "actionResults.get".
        *
@@ -364,15 +368,15 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * Upload a new execution result.
      *
-     * This method is intended for servers which implement the distributed cache independently of the
-     * Execution API. As a result, it is OPTIONAL for servers to implement.
-     *
      * In order to allow the server to perform access control based on the type of action, and to assist
      * with client debugging, the client MUST first upload the Action that produced the result, along
      * with its Command, into the `ContentAddressableStorage`.
      *
-     * Errors: * `UNIMPLEMENTED`: This method is not supported by the server. * `RESOURCE_EXHAUSTED`:
-     * There is insufficient storage space to add the   entry to the cache.
+     * Errors:
+     *
+     * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
+     * errors occurred in updating the   action result, such as a missing command or action. *
+     * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the   entry to the cache.
      *
      * Create a request for the method "actionResults.update".
      *
@@ -410,15 +414,15 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       /**
        * Upload a new execution result.
        *
-       * This method is intended for servers which implement the distributed cache independently of the
-       * Execution API. As a result, it is OPTIONAL for servers to implement.
-       *
        * In order to allow the server to perform access control based on the type of action, and to
        * assist with client debugging, the client MUST first upload the Action that produced the result,
        * along with its Command, into the `ContentAddressableStorage`.
        *
-       * Errors: * `UNIMPLEMENTED`: This method is not supported by the server. * `RESOURCE_EXHAUSTED`:
-       * There is insufficient storage space to add the   entry to the cache.
+       * Errors:
+       *
+       * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
+       * errors occurred in updating the   action result, such as a missing command or action. *
+       * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the   entry to the cache.
        *
        * Create a request for the method "actionResults.update".
        *
@@ -677,14 +681,18 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * Errors discovered during creation of the `Operation` will be reported as gRPC Status errors,
      * while errors that occurred while running the action will be reported in the `status` field of the
      * `ExecuteResponse`. The server MUST NOT set the `error` field of the `Operation` proto. The
-     * possible errors include: * `INVALID_ARGUMENT`: One or more arguments are invalid. *
-     * `FAILED_PRECONDITION`: One or more errors occurred in setting up the   action requested, such as
-     * a missing input or command or no worker being   available. The client may be able to fix the
-     * errors and retry. * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run
-     * the action. * `UNAVAILABLE`: Due to a transient condition, such as all workers being   occupied
-     * (and the server does not support a queue), the action could not   be started. The client should
-     * retry. * `INTERNAL`: An internal error occurred in the execution engine or the   worker. *
-     * `DEADLINE_EXCEEDED`: The execution timed out.
+     * possible errors include:
+     *
+     * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
+     * errors occurred in setting up the   action requested, such as a missing input or command or no
+     * worker being   available. The client may be able to fix the errors and retry. *
+     * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run   the action. *
+     * `UNAVAILABLE`: Due to a transient condition, such as all workers being   occupied (and the server
+     * does not support a queue), the action could not   be started. The client should retry. *
+     * `INTERNAL`: An internal error occurred in the execution engine or the   worker. *
+     * `DEADLINE_EXCEEDED`: The execution timed out. * `CANCELLED`: The operation was cancelled by the
+     * client. This status is   only possible if the server implements the Operations API
+     * CancelOperation   method, and it was called for the current execution.
      *
      * In the case of a missing input or command, the server SHOULD additionally send a
      * PreconditionFailure error detail where, for each requested blob not present in the CAS, there is
@@ -748,14 +756,18 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Errors discovered during creation of the `Operation` will be reported as gRPC Status errors,
        * while errors that occurred while running the action will be reported in the `status` field of
        * the `ExecuteResponse`. The server MUST NOT set the `error` field of the `Operation` proto. The
-       * possible errors include: * `INVALID_ARGUMENT`: One or more arguments are invalid. *
-       * `FAILED_PRECONDITION`: One or more errors occurred in setting up the   action requested, such
-       * as a missing input or command or no worker being   available. The client may be able to fix the
-       * errors and retry. * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run
-       * the action. * `UNAVAILABLE`: Due to a transient condition, such as all workers being   occupied
-       * (and the server does not support a queue), the action could not   be started. The client should
-       * retry. * `INTERNAL`: An internal error occurred in the execution engine or the   worker. *
-       * `DEADLINE_EXCEEDED`: The execution timed out.
+       * possible errors include:
+       *
+       * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
+       * errors occurred in setting up the   action requested, such as a missing input or command or no
+       * worker being   available. The client may be able to fix the errors and retry. *
+       * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run   the action. *
+       * `UNAVAILABLE`: Due to a transient condition, such as all workers being   occupied (and the
+       * server does not support a queue), the action could not   be started. The client should retry. *
+       * `INTERNAL`: An internal error occurred in the execution engine or the   worker. *
+       * `DEADLINE_EXCEEDED`: The execution timed out. * `CANCELLED`: The operation was cancelled by the
+       * client. This status is   only possible if the server implements the Operations API
+       * CancelOperation   method, and it was called for the current execution.
        *
        * In the case of a missing input or command, the server SHOULD additionally send a
        * PreconditionFailure error detail where, for each requested blob not present in the CAS, there
@@ -918,8 +930,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * This request is equivalent to calling a Bytestream `Read` request on each individual blob, in
      * parallel. The requests may succeed or fail independently.
      *
-     * Errors: * `INVALID_ARGUMENT`: The client attempted to read more than the   server supported
-     * limit.
+     * Errors:
+     *
+     * * `INVALID_ARGUMENT`: The client attempted to read more than the   server supported limit.
      *
      * Every error on individual read will be returned in the corresponding digest status.
      *
@@ -962,8 +975,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This request is equivalent to calling a Bytestream `Read` request on each individual blob, in
        * parallel. The requests may succeed or fail independently.
        *
-       * Errors: * `INVALID_ARGUMENT`: The client attempted to read more than the   server supported
-       * limit.
+       * Errors:
+       *
+       * * `INVALID_ARGUMENT`: The client attempted to read more than the   server supported limit.
        *
        * Every error on individual read will be returned in the corresponding digest status.
        *
@@ -1100,12 +1114,14 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * This request is equivalent to calling a Bytestream `Write` request on each individual blob, in
      * parallel. The requests may succeed or fail independently.
      *
-     * Errors: * `INVALID_ARGUMENT`: The client attempted to upload more than the   server supported
-     * limit.
+     * Errors:
      *
-     * Individual requests may return the following errors, additionally: * `RESOURCE_EXHAUSTED`: There
-     * is insufficient disk quota to store the blob. * `INVALID_ARGUMENT`: The Digest does not match the
-     * provided data.
+     * * `INVALID_ARGUMENT`: The client attempted to upload more than the   server supported limit.
+     *
+     * Individual requests may return the following errors, additionally:
+     *
+     * * `RESOURCE_EXHAUSTED`: There is insufficient disk quota to store the blob. * `INVALID_ARGUMENT`:
+     * The Digest does not match the provided data.
      *
      * Create a request for the method "blobs.batchUpdate".
      *
@@ -1147,12 +1163,14 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This request is equivalent to calling a Bytestream `Write` request on each individual blob, in
        * parallel. The requests may succeed or fail independently.
        *
-       * Errors: * `INVALID_ARGUMENT`: The client attempted to upload more than the   server supported
-       * limit.
+       * Errors:
        *
-       * Individual requests may return the following errors, additionally: * `RESOURCE_EXHAUSTED`:
-       * There is insufficient disk quota to store the blob. * `INVALID_ARGUMENT`: The Digest does not
-       * match the provided data.
+       * * `INVALID_ARGUMENT`: The client attempted to upload more than the   server supported limit.
+       *
+       * Individual requests may return the following errors, additionally:
+       *
+       * * `RESOURCE_EXHAUSTED`: There is insufficient disk quota to store the blob. *
+       * `INVALID_ARGUMENT`: The Digest does not match the provided data.
        *
        * Create a request for the method "blobs.batchUpdate".
        *

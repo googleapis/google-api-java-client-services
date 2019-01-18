@@ -23,11 +23,13 @@ package com.google.api.services.remotebuildexecution.v2.model;
  * as well as possibly some metadata about the file or directory.
  *
  * In order to ensure that two equivalent directory trees hash to the same value, the following
- * restrictions MUST be obeyed when constructing a a `Directory`:   - Every child in the directory
- * must have a path of exactly one segment.     Multiple levels of directory hierarchy may not be
- * collapsed.   - Each child in the directory must have a unique path segment (file name).   - The
- * files, directories and symlinks in the directory must each be sorted     in lexicographical order
- * by path. The path strings must be sorted by code     point, equivalently, by UTF-8 bytes.
+ * restrictions MUST be obeyed when constructing a a `Directory`:
+ *
+ * * Every child in the directory must have a path of exactly one segment.   Multiple levels of
+ * directory hierarchy may not be collapsed. * Each child in the directory must have a unique path
+ * segment (file name). * The files, directories and symlinks in the directory must each be sorted
+ * in lexicographical order by path. The path strings must be sorted by code   point, equivalently,
+ * by UTF-8 bytes.
  *
  * A `Directory` that obeys the restrictions is said to be in canonical form.
  *

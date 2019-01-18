@@ -3374,6 +3374,195 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
+       * Patches a ServiceAccount.
+       *
+       * Currently, only the following fields are updatable: `display_name` and `description`.
+       *
+       * Only fields specified in the request are garaunteed to be returned in the response. Other fields
+       * in the response may be empty.
+       *
+       * Note: The field mask is required.
+       *
+       * Create a request for the method "serviceAccounts.patch".
+       *
+       * This request holds the parameters needed by the iam server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource name of the service account in the following format:
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+      Requests using `-` as a wildcard for
+       *        the `PROJECT_ID` will infer the
+      project from the `account` and the `ACCOUNT` value can be
+       *        the `email`
+      address or the `unique_id` of the service account.
+      In responses the resource
+       *        name will always be in the format
+      `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+       * @param content the {@link com.google.api.services.iam.v1.model.PatchServiceAccountRequest}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.PatchServiceAccountRequest content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends IamRequest<com.google.api.services.iam.v1.model.ServiceAccount> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
+
+        /**
+         * Patches a ServiceAccount.
+         *
+         * Currently, only the following fields are updatable: `display_name` and `description`.
+         *
+         * Only fields specified in the request are garaunteed to be returned in the response. Other
+         * fields in the response may be empty.
+         *
+         * Note: The field mask is required.
+         *
+         * Create a request for the method "serviceAccounts.patch".
+         *
+         * This request holds the parameters needed by the the iam server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource name of the service account in the following format:
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+      Requests using `-` as a wildcard for
+       *        the `PROJECT_ID` will infer the
+      project from the `account` and the `ACCOUNT` value can be
+       *        the `email`
+      address or the `unique_id` of the service account.
+      In responses the resource
+       *        name will always be in the format
+      `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+         * @param content the {@link com.google.api.services.iam.v1.model.PatchServiceAccountRequest}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.PatchServiceAccountRequest content) {
+          super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.ServiceAccount.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/serviceAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the service account in the following format:
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+         *
+         * Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the
+         * `account` and the `ACCOUNT` value can be the `email` address or the `unique_id` of the
+         * service account.
+         *
+         * In responses the resource name will always be in the format
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource name of the service account in the following format:
+       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+
+       Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account` and
+       the `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.
+
+       In responses the resource name will always be in the format
+       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The resource name of the service account in the following format:
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+         *
+         * Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the
+         * `account` and the `ACCOUNT` value can be the `email` address or the `unique_id` of the
+         * service account.
+         *
+         * In responses the resource name will always be in the format
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/serviceAccounts/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
        * Sets the IAM access control policy for a ServiceAccount.
        *
        * Create a request for the method "serviceAccounts.setIamPolicy".

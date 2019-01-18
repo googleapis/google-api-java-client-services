@@ -54,7 +54,8 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates if service activation check should be skipped for this request. Default behavior is
-   * to perform the check and apply relevant quota.
+   * to perform the check and apply relevant quota. WARNING: Setting this flag to "true" will
+   * disable quota enforcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +118,8 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates if service activation check should be skipped for this request. Default behavior is
-   * to perform the check and apply relevant quota.
+   * to perform the check and apply relevant quota. WARNING: Setting this flag to "true" will
+   * disable quota enforcement.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipActivationCheck() {
@@ -126,7 +128,8 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Indicates if service activation check should be skipped for this request. Default behavior is
-   * to perform the check and apply relevant quota.
+   * to perform the check and apply relevant quota. WARNING: Setting this flag to "true" will
+   * disable quota enforcement.
    * @param skipActivationCheck skipActivationCheck or {@code null} for none
    */
   public CheckRequest setSkipActivationCheck(java.lang.Boolean skipActivationCheck) {

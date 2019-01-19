@@ -116,6 +116,16 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String fieldDelimiter;
 
   /**
+   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
+   * infer partition key name(s). All types are strings. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hivePartitioningMode;
+
+  /**
    * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
    * table schema. If true, the extra values are ignored. If false, records with extra columns are
    * treated as bad records, and if there are too many bad records, an invalid error is returned in
@@ -475,6 +485,29 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setFieldDelimiter(java.lang.String fieldDelimiter) {
     this.fieldDelimiter = fieldDelimiter;
+    return this;
+  }
+
+  /**
+   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
+   * infer partition key name(s). All types are strings. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHivePartitioningMode() {
+    return hivePartitioningMode;
+  }
+
+  /**
+   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
+   * infer partition key name(s). All types are strings. Not all storage formats support hive
+   * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * @param hivePartitioningMode hivePartitioningMode or {@code null} for none
+   */
+  public JobConfigurationLoad setHivePartitioningMode(java.lang.String hivePartitioningMode) {
+    this.hivePartitioningMode = hivePartitioningMode;
     return this;
   }
 

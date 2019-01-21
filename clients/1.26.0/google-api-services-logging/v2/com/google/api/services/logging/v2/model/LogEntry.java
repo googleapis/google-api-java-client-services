@@ -67,8 +67,8 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Required. The resource name of the log to which this log entry belongs:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]" "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" A
-   * project number may optionally be used in place of PROJECT_ID. The  project number is translated
-   * to its corresponding PROJECT_ID internally  and the log_name field will contain PROJECT_ID in
+   * project number may optionally be used in place of PROJECT_ID. The project number is translated
+   * to its corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in
    * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
    * be less than 512 characters long and can only include the following characters: upper and lower
@@ -83,7 +83,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String logName;
 
   /**
-   * Output only. Additional metadata about the monitored resource. Only k8s_container, k8s_pod, and
+   * Output only. Additional metadata about the monitored resource.Only k8s_container, k8s_pod, and
    * k8s_node MonitoredResources have this field populated.
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private String receiveTimestamp;
 
   /**
-   * Required. The primary monitored resource associated with this log entry. Example: a log entry
+   * Required. The primary monitored resource associated with this log entry.Example: a log entry
    * that reports a database error would be associated with the monitored resource designating the
    * particular database that reported the error.
    * The value may be {@code null}.
@@ -136,7 +136,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private LogEntrySourceLocation sourceLocation;
 
   /**
-   * Optional. The span ID within the trace associated with the log entry. For Trace spans, this is
+   * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
    * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
    * array, such as "000000000000004a".
    * The value may be {@code null}.
@@ -175,7 +175,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String trace;
 
   /**
-   * Optional. The sampling decision of the trace associated with the log entry. True means that the
+   * Optional. The sampling decision of the trace associated with the log entry.True means that the
    * trace resource name in the trace field was sampled for storage in a trace backend. False means
    * that the trace was not sampled for storage when this log entry was written, or the sampling
    * decision was unknown at the time. A non-sampled trace value is still useful as a request
@@ -267,8 +267,8 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Required. The resource name of the log to which this log entry belongs:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]" "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" A
-   * project number may optionally be used in place of PROJECT_ID. The  project number is translated
-   * to its corresponding PROJECT_ID internally  and the log_name field will contain PROJECT_ID in
+   * project number may optionally be used in place of PROJECT_ID. The project number is translated
+   * to its corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in
    * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
    * be less than 512 characters long and can only include the following characters: upper and lower
@@ -287,8 +287,8 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Required. The resource name of the log to which this log entry belongs:
    * "projects/[PROJECT_ID]/logs/[LOG_ID]" "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
    * "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]" "folders/[FOLDER_ID]/logs/[LOG_ID]" A
-   * project number may optionally be used in place of PROJECT_ID. The  project number is translated
-   * to its corresponding PROJECT_ID internally  and the log_name field will contain PROJECT_ID in
+   * project number may optionally be used in place of PROJECT_ID. The project number is translated
+   * to its corresponding PROJECT_ID internally and the log_name field will contain PROJECT_ID in
    * queries and exports.[LOG_ID] must be URL-encoded within log_name. Example:
    * "organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity". [LOG_ID] must
    * be less than 512 characters long and can only include the following characters: upper and lower
@@ -305,7 +305,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Additional metadata about the monitored resource. Only k8s_container, k8s_pod, and
+   * Output only. Additional metadata about the monitored resource.Only k8s_container, k8s_pod, and
    * k8s_node MonitoredResources have this field populated.
    * @return value or {@code null} for none
    */
@@ -314,7 +314,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Additional metadata about the monitored resource. Only k8s_container, k8s_pod, and
+   * Output only. Additional metadata about the monitored resource.Only k8s_container, k8s_pod, and
    * k8s_node MonitoredResources have this field populated.
    * @param metadata metadata or {@code null} for none
    */
@@ -377,7 +377,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The primary monitored resource associated with this log entry. Example: a log entry
+   * Required. The primary monitored resource associated with this log entry.Example: a log entry
    * that reports a database error would be associated with the monitored resource designating the
    * particular database that reported the error.
    * @return value or {@code null} for none
@@ -387,7 +387,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The primary monitored resource associated with this log entry. Example: a log entry
+   * Required. The primary monitored resource associated with this log entry.Example: a log entry
    * that reports a database error would be associated with the monitored resource designating the
    * particular database that reported the error.
    * @param resource resource or {@code null} for none
@@ -432,7 +432,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The span ID within the trace associated with the log entry. For Trace spans, this is
+   * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
    * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
    * array, such as "000000000000004a".
    * @return value or {@code null} for none
@@ -442,7 +442,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The span ID within the trace associated with the log entry. For Trace spans, this is
+   * Optional. The span ID within the trace associated with the log entry.For Trace spans, this is
    * the same format that the Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte
    * array, such as "000000000000004a".
    * @param spanId spanId or {@code null} for none
@@ -522,7 +522,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The sampling decision of the trace associated with the log entry. True means that the
+   * Optional. The sampling decision of the trace associated with the log entry.True means that the
    * trace resource name in the trace field was sampled for storage in a trace backend. False means
    * that the trace was not sampled for storage when this log entry was written, or the sampling
    * decision was unknown at the time. A non-sampled trace value is still useful as a request
@@ -534,7 +534,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The sampling decision of the trace associated with the log entry. True means that the
+   * Optional. The sampling decision of the trace associated with the log entry.True means that the
    * trace resource name in the trace field was sampled for storage in a trace backend. False means
    * that the trace was not sampled for storage when this log entry was written, or the sampling
    * decision was unknown at the time. A non-sampled trace value is still useful as a request

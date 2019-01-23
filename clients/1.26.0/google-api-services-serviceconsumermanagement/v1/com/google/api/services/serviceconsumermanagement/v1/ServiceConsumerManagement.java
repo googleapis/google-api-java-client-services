@@ -1223,8 +1223,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * modified. Specified policy bindings will be applied. Existing binding will not be modified.
        * Specified services will be activated.   No service will be deactivated. New billing configuration
        * will be applied if specified. Omit billing configuration to keep the existing one. Service
-       * account in the project will be created if previously non existing. Operation fails if any of the
-       * steps fail, but no rollback of already applied configuration changes is attempted. Operation.
+       * account in the project will be created if previously non existing. Specified folder will be
+       * ignored, moving tenant project to a different folder is not supported. Operation fails if any of
+       * the steps fail, but no rollback of already applied configuration changes is attempted. Operation.
        *
        * Create a request for the method "tenancyUnits.applyProjectConfig".
        *
@@ -1256,8 +1257,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * be modified. Specified policy bindings will be applied. Existing binding will not be modified.
          * Specified services will be activated.   No service will be deactivated. New billing
          * configuration will be applied if specified. Omit billing configuration to keep the existing
-         * one. Service account in the project will be created if previously non existing. Operation fails
-         * if any of the steps fail, but no rollback of already applied configuration changes is
+         * one. Service account in the project will be created if previously non existing. Specified
+         * folder will be ignored, moving tenant project to a different folder is not supported. Operation
+         * fails if any of the steps fail, but no rollback of already applied configuration changes is
          * attempted. Operation.
          *
          * Create a request for the method "tenancyUnits.applyProjectConfig".

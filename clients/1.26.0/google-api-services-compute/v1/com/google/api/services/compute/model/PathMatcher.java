@@ -36,12 +36,14 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * all valid URLs to a BackendService resource: -
    * https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService  -
    * compute/v1/projects/project/global/backendServices/backendService  -
-   * global/backendServices/backendService   Use defaultService instead of defaultRouteAction when
-   * simple routing to a backend service is desired and other advanced capabilities like traffic
-   * splitting and URL rewrites are not required. Only one of defaultService, defaultRouteAction or
-   * defaultUrlRedirect must be set. Authorization requires one or more of the following Google IAM
-   * permissions on the specified resource default_service:   - compute.backendBuckets.use  -
-   * compute.backendServices.use
+   * global/backendServices/backendService  If defaultRouteAction is additionally specified,
+   * advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to
+   * the backend. However, if defaultService is specified, defaultRouteAction cannot contain any
+   * weightedBackendServices. Conversely, if defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be specified. Only one of defaultService,
+   * defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set. Authorization
+   * requires one or more of the following Google IAM permissions on the specified resource
+   * default_service:   - compute.backendBuckets.use  - compute.backendServices.use
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,12 +80,14 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * all valid URLs to a BackendService resource: -
    * https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService  -
    * compute/v1/projects/project/global/backendServices/backendService  -
-   * global/backendServices/backendService   Use defaultService instead of defaultRouteAction when
-   * simple routing to a backend service is desired and other advanced capabilities like traffic
-   * splitting and URL rewrites are not required. Only one of defaultService, defaultRouteAction or
-   * defaultUrlRedirect must be set. Authorization requires one or more of the following Google IAM
-   * permissions on the specified resource default_service:   - compute.backendBuckets.use  -
-   * compute.backendServices.use
+   * global/backendServices/backendService  If defaultRouteAction is additionally specified,
+   * advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to
+   * the backend. However, if defaultService is specified, defaultRouteAction cannot contain any
+   * weightedBackendServices. Conversely, if defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be specified. Only one of defaultService,
+   * defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set. Authorization
+   * requires one or more of the following Google IAM permissions on the specified resource
+   * default_service:   - compute.backendBuckets.use  - compute.backendServices.use
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -96,12 +100,14 @@ public final class PathMatcher extends com.google.api.client.json.GenericJson {
    * all valid URLs to a BackendService resource: -
    * https://www.googleapis.com/compute/v1/projects/project/global/backendServices/backendService  -
    * compute/v1/projects/project/global/backendServices/backendService  -
-   * global/backendServices/backendService   Use defaultService instead of defaultRouteAction when
-   * simple routing to a backend service is desired and other advanced capabilities like traffic
-   * splitting and URL rewrites are not required. Only one of defaultService, defaultRouteAction or
-   * defaultUrlRedirect must be set. Authorization requires one or more of the following Google IAM
-   * permissions on the specified resource default_service:   - compute.backendBuckets.use  -
-   * compute.backendServices.use
+   * global/backendServices/backendService  If defaultRouteAction is additionally specified,
+   * advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to
+   * the backend. However, if defaultService is specified, defaultRouteAction cannot contain any
+   * weightedBackendServices. Conversely, if defaultRouteAction specifies any
+   * weightedBackendServices, defaultService must not be specified. Only one of defaultService,
+   * defaultUrlRedirect  or defaultRouteAction.weightedBackendService must be set. Authorization
+   * requires one or more of the following Google IAM permissions on the specified resource
+   * default_service:   - compute.backendBuckets.use  - compute.backendServices.use
    * @param defaultService defaultService or {@code null} for none
    */
   public PathMatcher setDefaultService(java.lang.String defaultService) {

@@ -215,6 +215,30 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
+   * An optional prefix to the service name for this Forwarding Rule. If specified, will be the
+   * first label of the fully qualified service name.
+   *
+   * The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   *
+   * This field is only used for internal load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceLabel;
+
+  /**
+   * [Output Only] The internal fully qualified service name for this Forwarding Rule.
+   *
+   * This field is only used for internal load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceName;
+
+  /**
    * This field is only used for INTERNAL load balancing.
    *
    * For internal load balancing, this field identifies the subnetwork that the load balanced IP
@@ -645,6 +669,60 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * An optional prefix to the service name for this Forwarding Rule. If specified, will be the
+   * first label of the fully qualified service name.
+   *
+   * The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   *
+   * This field is only used for internal load balancing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceLabel() {
+    return serviceLabel;
+  }
+
+  /**
+   * An optional prefix to the service name for this Forwarding Rule. If specified, will be the
+   * first label of the fully qualified service name.
+   *
+   * The label must be 1-63 characters long, and comply with RFC1035. Specifically, the label must
+   * be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which
+   * means the first character must be a lowercase letter, and all following characters must be a
+   * dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+   *
+   * This field is only used for internal load balancing.
+   * @param serviceLabel serviceLabel or {@code null} for none
+   */
+  public ForwardingRule setServiceLabel(java.lang.String serviceLabel) {
+    this.serviceLabel = serviceLabel;
+    return this;
+  }
+
+  /**
+   * [Output Only] The internal fully qualified service name for this Forwarding Rule.
+   *
+   * This field is only used for internal load balancing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceName() {
+    return serviceName;
+  }
+
+  /**
+   * [Output Only] The internal fully qualified service name for this Forwarding Rule.
+   *
+   * This field is only used for internal load balancing.
+   * @param serviceName serviceName or {@code null} for none
+   */
+  public ForwardingRule setServiceName(java.lang.String serviceName) {
+    this.serviceName = serviceName;
     return this;
   }
 

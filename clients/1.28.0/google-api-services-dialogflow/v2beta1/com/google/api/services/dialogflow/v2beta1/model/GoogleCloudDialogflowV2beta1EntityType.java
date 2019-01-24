@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   private java.lang.String displayName;
 
   /**
-   * Optional. The collection of entities associated with the entity type.
+   * Optional. The collection of entity entries associated with the entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. The collection of entities associated with the entity type.
+   * Optional. The collection of entity entries associated with the entity type.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1EntityTypeEntity> getEntities() {
@@ -109,7 +109,7 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. The collection of entities associated with the entity type.
+   * Optional. The collection of entity entries associated with the entity type.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setEntities(java.util.List<GoogleCloudDialogflowV2beta1EntityTypeEntity> entities) {

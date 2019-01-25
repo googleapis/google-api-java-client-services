@@ -1497,6 +1497,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Accountstatuses {
 
     /**
+     * Retrieves multiple Merchant Center account statuses in a single request.
+     *
      * Create a request for the method "accountstatuses.custombatch".
      *
      * This request holds the parameters needed by the content server.  After setting any optional
@@ -1516,6 +1518,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "accountstatuses/batch";
 
       /**
+       * Retrieves multiple Merchant Center account statuses in a single request.
+       *
        * Create a request for the method "accountstatuses.custombatch".
        *
        * This request holds the parameters needed by the the content server.  After setting any optional

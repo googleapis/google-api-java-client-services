@@ -31,18 +31,21 @@ package com.google.api.services.content.model;
 public final class OrderpaymentsNotifyAuthApprovedRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Authorized amount for pre-tax charge on user's credit card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price authAmountPretax;
 
   /**
+   * Authorized amount for tax charge on user's credit card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price authAmountTax;
 
   /**
+   * Authorized amount for pre-tax charge on user's credit card.
    * @return value or {@code null} for none
    */
   public Price getAuthAmountPretax() {
@@ -50,6 +53,7 @@ public final class OrderpaymentsNotifyAuthApprovedRequest extends com.google.api
   }
 
   /**
+   * Authorized amount for pre-tax charge on user's credit card.
    * @param authAmountPretax authAmountPretax or {@code null} for none
    */
   public OrderpaymentsNotifyAuthApprovedRequest setAuthAmountPretax(Price authAmountPretax) {
@@ -58,6 +62,7 @@ public final class OrderpaymentsNotifyAuthApprovedRequest extends com.google.api
   }
 
   /**
+   * Authorized amount for tax charge on user's credit card.
    * @return value or {@code null} for none
    */
   public Price getAuthAmountTax() {
@@ -65,6 +70,7 @@ public final class OrderpaymentsNotifyAuthApprovedRequest extends com.google.api
   }
 
   /**
+   * Authorized amount for tax charge on user's credit card.
    * @param authAmountTax authAmountTax or {@code null} for none
    */
   public OrderpaymentsNotifyAuthApprovedRequest setAuthAmountTax(Price authAmountTax) {

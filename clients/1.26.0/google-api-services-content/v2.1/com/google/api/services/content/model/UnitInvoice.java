@@ -51,11 +51,11 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [required] Price of the unit, before applying taxes.
+   * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Price unitPricePretax;
+  private Price unitPrice;
 
   /**
    * Tax amounts to apply to the unit price.
@@ -99,19 +99,19 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [required] Price of the unit, before applying taxes.
+   * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
    * @return value or {@code null} for none
    */
-  public Price getUnitPricePretax() {
-    return unitPricePretax;
+  public Price getUnitPrice() {
+    return unitPrice;
   }
 
   /**
-   * [required] Price of the unit, before applying taxes.
-   * @param unitPricePretax unitPricePretax or {@code null} for none
+   * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
+   * @param unitPrice unitPrice or {@code null} for none
    */
-  public UnitInvoice setUnitPricePretax(Price unitPricePretax) {
-    this.unitPricePretax = unitPricePretax;
+  public UnitInvoice setUnitPrice(Price unitPrice) {
+    this.unitPrice = unitPrice;
     return this;
   }
 

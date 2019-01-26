@@ -489,200 +489,6 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Updates the allocated ranges that are assigned to a connection. The response from the `get`
-     * operation will be of type `Connection` if the operation successfully completes.
-     *
-     * Create a request for the method "services.patch".
-     *
-     * This request holds the parameters needed by the servicenetworking server.  After setting any
-     * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-     *
-     * @param name The service producer peering service that is managing peering connectivity
-    for a service producer
-     *        organization.
-    For Google services that support this functionality, this is
-     *        `services/servicenetworking.googleapis.com`.
-     * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
-     * @return the request
-     */
-    public Patch patch(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) throws java.io.IOException {
-      Patch result = new Patch(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Patch extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1beta.model.Operation> {
-
-      private static final String REST_PATH = "v1beta/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^services/[^/]+$");
-
-      /**
-       * Updates the allocated ranges that are assigned to a connection. The response from the `get`
-       * operation will be of type `Connection` if the operation successfully completes.
-       *
-       * Create a request for the method "services.patch".
-       *
-       * This request holds the parameters needed by the the servicenetworking server.  After setting
-       * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The service producer peering service that is managing peering connectivity
-    for a service producer
-     *        organization.
-    For Google services that support this functionality, this is
-     *        `services/servicenetworking.googleapis.com`.
-       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
-       * @since 1.13
-       */
-      protected Patch(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) {
-        super(ServiceNetworking.this, "PATCH", REST_PATH, content, com.google.api.services.servicenetworking.v1beta.model.Operation.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^services/[^/]+$");
-        }
-      }
-
-      @Override
-      public Patch set$Xgafv(java.lang.String $Xgafv) {
-        return (Patch) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Patch setAccessToken(java.lang.String accessToken) {
-        return (Patch) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Patch setAlt(java.lang.String alt) {
-        return (Patch) super.setAlt(alt);
-      }
-
-      @Override
-      public Patch setCallback(java.lang.String callback) {
-        return (Patch) super.setCallback(callback);
-      }
-
-      @Override
-      public Patch setFields(java.lang.String fields) {
-        return (Patch) super.setFields(fields);
-      }
-
-      @Override
-      public Patch setKey(java.lang.String key) {
-        return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Patch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Patch setQuotaUser(java.lang.String quotaUser) {
-        return (Patch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Patch setUploadType(java.lang.String uploadType) {
-        return (Patch) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Patch) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * The service producer peering service that is managing peering connectivity for a service
-       * producer organization. For Google services that support this functionality, this is
-       * `services/servicenetworking.googleapis.com`.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The service producer peering service that is managing peering connectivity for a service producer
-     organization. For Google services that support this functionality, this is
-     `services/servicenetworking.googleapis.com`.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * The service producer peering service that is managing peering connectivity for a service
-       * producer organization. For Google services that support this functionality, this is
-       * `services/servicenetworking.googleapis.com`.
-       */
-      public Patch setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^services/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /**
-       * If a previously defined allocated range is removed, force flag must be set to true.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean force;
-
-      /** If a previously defined allocated range is removed, force flag must be set to true.
-       */
-      public java.lang.Boolean getForce() {
-        return force;
-      }
-
-      /**
-       * If a previously defined allocated range is removed, force flag must be set to true.
-       */
-      public Patch setForce(java.lang.Boolean force) {
-        this.force = force;
-        return this;
-      }
-
-      /**
-       * The update mask. If this is omitted, it defaults to "*". You can only update the listed
-       * peering ranges.
-       */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** The update mask. If this is omitted, it defaults to "*". You can only update the listed peering
-     ranges.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /**
-       * The update mask. If this is omitted, it defaults to "*". You can only update the listed
-       * peering ranges.
-       */
-      public Patch setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public Patch set(String parameterName, Object value) {
-        return (Patch) super.set(parameterName, value);
-      }
-    }
-    /**
      * Service producers can use this method to find a currently unused range within consumer allocated
      * ranges.   This returned range is not reserved, and not guaranteed to remain unused. It will
      * validate previously provided allocated ranges, find non-conflicting sub-range of requested size
@@ -832,6 +638,201 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       @Override
       public SearchRange set(String parameterName, Object value) {
         return (SearchRange) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the allocated ranges that are assigned to a connection. The response from the `get`
+     * operation will be of type `Connection` if the operation successfully completes.
+     *
+     * Create a request for the method "services.updateConnections".
+     *
+     * This request holds the parameters needed by the servicenetworking server.  After setting any
+     * optional parameters, call the {@link UpdateConnections#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name The service producer peering service that is managing peering connectivity
+    for a service producer
+     *        organization.
+    For Google services that support this functionality, this is
+     *        `services/servicenetworking.googleapis.com`.
+     * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+     * @return the request
+     */
+    public UpdateConnections updateConnections(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) throws java.io.IOException {
+      UpdateConnections result = new UpdateConnections(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateConnections extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1beta.model.Operation> {
+
+      private static final String REST_PATH = "v1beta/{+name}/connections";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^services/[^/]+$");
+
+      /**
+       * Updates the allocated ranges that are assigned to a connection. The response from the `get`
+       * operation will be of type `Connection` if the operation successfully completes.
+       *
+       * Create a request for the method "services.updateConnections".
+       *
+       * This request holds the parameters needed by the the servicenetworking server.  After setting
+       * any optional parameters, call the {@link UpdateConnections#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateConnections#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name The service producer peering service that is managing peering connectivity
+    for a service producer
+     *        organization.
+    For Google services that support this functionality, this is
+     *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+       * @since 1.13
+       */
+      protected UpdateConnections(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) {
+        super(ServiceNetworking.this, "PATCH", REST_PATH, content, com.google.api.services.servicenetworking.v1beta.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdateConnections set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateConnections) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateConnections setAccessToken(java.lang.String accessToken) {
+        return (UpdateConnections) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateConnections setAlt(java.lang.String alt) {
+        return (UpdateConnections) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateConnections setCallback(java.lang.String callback) {
+        return (UpdateConnections) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateConnections setFields(java.lang.String fields) {
+        return (UpdateConnections) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateConnections setKey(java.lang.String key) {
+        return (UpdateConnections) super.setKey(key);
+      }
+
+      @Override
+      public UpdateConnections setOauthToken(java.lang.String oauthToken) {
+        return (UpdateConnections) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateConnections setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateConnections) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateConnections setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateConnections) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateConnections setUploadType(java.lang.String uploadType) {
+        return (UpdateConnections) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateConnections setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateConnections) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The service producer peering service that is managing peering connectivity for a service
+       * producer organization. For Google services that support this functionality, this is
+       * `services/servicenetworking.googleapis.com`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The service producer peering service that is managing peering connectivity for a service producer
+     organization. For Google services that support this functionality, this is
+     `services/servicenetworking.googleapis.com`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The service producer peering service that is managing peering connectivity for a service
+       * producer organization. For Google services that support this functionality, this is
+       * `services/servicenetworking.googleapis.com`.
+       */
+      public UpdateConnections setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^services/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * If a previously defined allocated range is removed, force flag must be set to true.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean force;
+
+      /** If a previously defined allocated range is removed, force flag must be set to true.
+       */
+      public java.lang.Boolean getForce() {
+        return force;
+      }
+
+      /**
+       * If a previously defined allocated range is removed, force flag must be set to true.
+       */
+      public UpdateConnections setForce(java.lang.Boolean force) {
+        this.force = force;
+        return this;
+      }
+
+      /**
+       * The update mask. If this is omitted, it defaults to "*". You can only update the listed
+       * peering ranges.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** The update mask. If this is omitted, it defaults to "*". You can only update the listed peering
+     ranges.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * The update mask. If this is omitted, it defaults to "*". You can only update the listed
+       * peering ranges.
+       */
+      public UpdateConnections setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateConnections set(String parameterName, Object value) {
+        return (UpdateConnections) super.set(parameterName, value);
       }
     }
 

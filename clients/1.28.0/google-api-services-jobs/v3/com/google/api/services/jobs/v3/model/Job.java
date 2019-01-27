@@ -302,8 +302,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    *
    * The job PostingRegion (for example, state, country) throughout which the job is available. If
    * this field is set, a LocationFilter in a search query within the job region finds this job
-   * posting if an exact location match is not specified. If this field is set to
-   * PostingRegion.NATION_WIDE or [PostingRegion.ADMINISTRATIVE_AREA], setting job addresses to the
+   * posting if an exact location match isn't specified. If this field is set to
+   * PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the
    * same location level as this field is strongly recommended.
    * The value may be {@code null}.
    */
@@ -994,8 +994,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    *
    * The job PostingRegion (for example, state, country) throughout which the job is available. If
    * this field is set, a LocationFilter in a search query within the job region finds this job
-   * posting if an exact location match is not specified. If this field is set to
-   * PostingRegion.NATION_WIDE or [PostingRegion.ADMINISTRATIVE_AREA], setting job addresses to the
+   * posting if an exact location match isn't specified. If this field is set to
+   * PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the
    * same location level as this field is strongly recommended.
    * @return value or {@code null} for none
    */
@@ -1008,8 +1008,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    *
    * The job PostingRegion (for example, state, country) throughout which the job is available. If
    * this field is set, a LocationFilter in a search query within the job region finds this job
-   * posting if an exact location match is not specified. If this field is set to
-   * PostingRegion.NATION_WIDE or [PostingRegion.ADMINISTRATIVE_AREA], setting job addresses to the
+   * posting if an exact location match isn't specified. If this field is set to
+   * PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the
    * same location level as this field is strongly recommended.
    * @param postingRegion postingRegion or {@code null} for none
    */

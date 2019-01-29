@@ -30,7 +30,7 @@ package com.google.api.services.cloudbuild.v1alpha1.model;
 public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
-   * Network on which the workers are created. “default” network is used if empty.
+   * Network on which the workers are created. "default" network is used if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,14 +47,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Subnetwork on which the workers are created. “default” subnetwork is used if empty.
+   * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * Network on which the workers are created. “default” network is used if empty.
+   * Network on which the workers are created. "default" network is used if empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -62,7 +62,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network on which the workers are created. “default” network is used if empty.
+   * Network on which the workers are created. "default" network is used if empty.
    * @param network network or {@code null} for none
    */
   public Network setNetwork(java.lang.String network) {
@@ -94,7 +94,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnetwork on which the workers are created. “default” subnetwork is used if empty.
+   * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -102,7 +102,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subnetwork on which the workers are created. “default” subnetwork is used if empty.
+   * Subnetwork on which the workers are created. "default" subnetwork is used if empty.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public Network setSubnetwork(java.lang.String subnetwork) {

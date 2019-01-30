@@ -118,9 +118,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. IAM identity used by import / export operations to transfer data to/from GCS.
-   * Format is "serviceAccount:".  The value may change over time for a given instance so should be
-   * checked before each import/export operation.
+   * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
+   * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
+   * so should be checked before each import/export operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -388,9 +388,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. IAM identity used by import / export operations to transfer data to/from GCS.
-   * Format is "serviceAccount:".  The value may change over time for a given instance so should be
-   * checked before each import/export operation.
+   * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
+   * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
+   * so should be checked before each import/export operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPersistenceIamIdentity() {
@@ -398,9 +398,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. IAM identity used by import / export operations to transfer data to/from GCS.
-   * Format is "serviceAccount:".  The value may change over time for a given instance so should be
-   * checked before each import/export operation.
+   * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
+   * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
+   * so should be checked before each import/export operation.
    * @param persistenceIamIdentity persistenceIamIdentity or {@code null} for none
    */
   public Instance setPersistenceIamIdentity(java.lang.String persistenceIamIdentity) {

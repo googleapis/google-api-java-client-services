@@ -27,7 +27,7 @@ nosetests.xml
 .classpath
 
 # Built documentation
-docs/
+/docs/
 
 
 # Wheel directory used in Travis builds.

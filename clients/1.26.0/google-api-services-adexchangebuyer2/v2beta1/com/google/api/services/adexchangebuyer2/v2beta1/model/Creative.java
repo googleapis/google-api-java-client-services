@@ -19,7 +19,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 /**
  * A creative and its classification data.
  *
- * Next ID: 39
+ * Next ID: 40
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

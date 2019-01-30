@@ -38,6 +38,17 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String audioEncoding;
 
   /**
+   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized)
+   * text to speech. Effects are applied on top of each other in the order they are given. See
+   *
+   * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
+   * supported profile ids.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> effectsProfileId;
+
+  /**
    * Optional speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
    * original pitch. -20 means decrease 20 semitones from the original pitch.
    * The value may be {@code null}.
@@ -91,6 +102,31 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
    */
   public AudioConfig setAudioEncoding(java.lang.String audioEncoding) {
     this.audioEncoding = audioEncoding;
+    return this;
+  }
+
+  /**
+   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized)
+   * text to speech. Effects are applied on top of each other in the order they are given. See
+   *
+   * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
+   * supported profile ids.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEffectsProfileId() {
+    return effectsProfileId;
+  }
+
+  /**
+   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized)
+   * text to speech. Effects are applied on top of each other in the order they are given. See
+   *
+   * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
+   * supported profile ids.
+   * @param effectsProfileId effectsProfileId or {@code null} for none
+   */
+  public AudioConfig setEffectsProfileId(java.util.List<java.lang.String> effectsProfileId) {
+    this.effectsProfileId = effectsProfileId;
     return this;
   }
 

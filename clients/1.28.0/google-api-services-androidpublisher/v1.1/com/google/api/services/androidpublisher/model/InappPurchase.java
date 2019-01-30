@@ -76,7 +76,8 @@ public final class InappPurchase extends com.google.api.client.json.GenericJson 
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)
+   * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
+   * watching a video ad instead of paying)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,7 +190,8 @@ public final class InappPurchase extends com.google.api.client.json.GenericJson 
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)
+   * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
+   * watching a video ad instead of paying)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseType() {
@@ -199,7 +201,8 @@ public final class InappPurchase extends com.google.api.client.json.GenericJson 
   /**
    * The type of purchase of the inapp product. This field is only set if this purchase was not made
    * using the standard in-app billing flow. Possible values are: - Test (i.e. purchased from a
-   * license testing account)  - Promo (i.e. purchased using a promo code)
+   * license testing account)  - Promo (i.e. purchased using a promo code)  - Rewarded (i.e. from
+   * watching a video ad instead of paying)
    * @param purchaseType purchaseType or {@code null} for none
    */
   public InappPurchase setPurchaseType(java.lang.Integer purchaseType) {

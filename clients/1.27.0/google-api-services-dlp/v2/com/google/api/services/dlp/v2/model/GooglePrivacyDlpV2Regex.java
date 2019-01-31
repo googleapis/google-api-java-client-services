@@ -31,12 +31,39 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Regex extends com.google.api.client.json.GenericJson {
 
   /**
+   * The index of the submatch to extract as findings. When not specified, the entire match is
+   * returned. No more than 3 may be included.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> groupIndexes;
+
+  /**
    * Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax)
    * can be found under the google/re2 repository on GitHub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pattern;
+
+  /**
+   * The index of the submatch to extract as findings. When not specified, the entire match is
+   * returned. No more than 3 may be included.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getGroupIndexes() {
+    return groupIndexes;
+  }
+
+  /**
+   * The index of the submatch to extract as findings. When not specified, the entire match is
+   * returned. No more than 3 may be included.
+   * @param groupIndexes groupIndexes or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Regex setGroupIndexes(java.util.List<java.lang.Integer> groupIndexes) {
+    this.groupIndexes = groupIndexes;
+    return this;
+  }
 
   /**
    * Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax)

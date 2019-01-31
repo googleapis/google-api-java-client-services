@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Model definition for LiveChatSuperChatDetails.
+ * Model definition for LiveChatSuperStickerDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
@@ -27,7 +27,7 @@ package com.google.api.services.youtube.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LiveChatSuperChatDetails extends com.google.api.client.json.GenericJson {
+public final class LiveChatSuperStickerDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * A rendered string that displays the fund amount and currency to the user.
@@ -51,19 +51,19 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
   private java.lang.String currency;
 
   /**
+   * Information about the Super Sticker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SuperStickerMetadata superStickerMetadata;
+
+  /**
    * The tier in which the amount belongs. Lower amounts belong to lower tiers. The lowest tier is
    * 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long tier;
-
-  /**
-   * The comment added by the user to this Super Chat event.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String userComment;
 
   /**
    * A rendered string that displays the fund amount and currency to the user.
@@ -77,7 +77,7 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
    * A rendered string that displays the fund amount and currency to the user.
    * @param amountDisplayString amountDisplayString or {@code null} for none
    */
-  public LiveChatSuperChatDetails setAmountDisplayString(java.lang.String amountDisplayString) {
+  public LiveChatSuperStickerDetails setAmountDisplayString(java.lang.String amountDisplayString) {
     this.amountDisplayString = amountDisplayString;
     return this;
   }
@@ -94,7 +94,7 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
    * The amount purchased by the user, in micros (1,750,000 micros = 1.75).
    * @param amountMicros amountMicros or {@code null} for none
    */
-  public LiveChatSuperChatDetails setAmountMicros(java.math.BigInteger amountMicros) {
+  public LiveChatSuperStickerDetails setAmountMicros(java.math.BigInteger amountMicros) {
     this.amountMicros = amountMicros;
     return this;
   }
@@ -111,8 +111,25 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
    * The currency in which the purchase was made.
    * @param currency currency or {@code null} for none
    */
-  public LiveChatSuperChatDetails setCurrency(java.lang.String currency) {
+  public LiveChatSuperStickerDetails setCurrency(java.lang.String currency) {
     this.currency = currency;
+    return this;
+  }
+
+  /**
+   * Information about the Super Sticker.
+   * @return value or {@code null} for none
+   */
+  public SuperStickerMetadata getSuperStickerMetadata() {
+    return superStickerMetadata;
+  }
+
+  /**
+   * Information about the Super Sticker.
+   * @param superStickerMetadata superStickerMetadata or {@code null} for none
+   */
+  public LiveChatSuperStickerDetails setSuperStickerMetadata(SuperStickerMetadata superStickerMetadata) {
+    this.superStickerMetadata = superStickerMetadata;
     return this;
   }
 
@@ -130,36 +147,19 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
    * 1.
    * @param tier tier or {@code null} for none
    */
-  public LiveChatSuperChatDetails setTier(java.lang.Long tier) {
+  public LiveChatSuperStickerDetails setTier(java.lang.Long tier) {
     this.tier = tier;
     return this;
   }
 
-  /**
-   * The comment added by the user to this Super Chat event.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUserComment() {
-    return userComment;
-  }
-
-  /**
-   * The comment added by the user to this Super Chat event.
-   * @param userComment userComment or {@code null} for none
-   */
-  public LiveChatSuperChatDetails setUserComment(java.lang.String userComment) {
-    this.userComment = userComment;
-    return this;
+  @Override
+  public LiveChatSuperStickerDetails set(String fieldName, Object value) {
+    return (LiveChatSuperStickerDetails) super.set(fieldName, value);
   }
 
   @Override
-  public LiveChatSuperChatDetails set(String fieldName, Object value) {
-    return (LiveChatSuperChatDetails) super.set(fieldName, value);
-  }
-
-  @Override
-  public LiveChatSuperChatDetails clone() {
-    return (LiveChatSuperChatDetails) super.clone();
+  public LiveChatSuperStickerDetails clone() {
+    return (LiveChatSuperStickerDetails) super.clone();
   }
 
 }

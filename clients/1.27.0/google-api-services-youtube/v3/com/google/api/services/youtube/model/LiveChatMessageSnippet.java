@@ -121,6 +121,13 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private LiveChatSuperChatDetails superChatDetails;
 
   /**
+   * Details about the Super Sticker event, this is only set if the type is 'superStickerEvent'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatSuperStickerDetails superStickerDetails;
+
+  /**
    * Details about the text message, this is only set if the type is 'textMessageEvent'.
    * The value may be {@code null}.
    */
@@ -359,6 +366,23 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   public LiveChatMessageSnippet setSuperChatDetails(LiveChatSuperChatDetails superChatDetails) {
     this.superChatDetails = superChatDetails;
+    return this;
+  }
+
+  /**
+   * Details about the Super Sticker event, this is only set if the type is 'superStickerEvent'.
+   * @return value or {@code null} for none
+   */
+  public LiveChatSuperStickerDetails getSuperStickerDetails() {
+    return superStickerDetails;
+  }
+
+  /**
+   * Details about the Super Sticker event, this is only set if the type is 'superStickerEvent'.
+   * @param superStickerDetails superStickerDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setSuperStickerDetails(LiveChatSuperStickerDetails superStickerDetails) {
+    this.superStickerDetails = superStickerDetails;
     return this;
   }
 

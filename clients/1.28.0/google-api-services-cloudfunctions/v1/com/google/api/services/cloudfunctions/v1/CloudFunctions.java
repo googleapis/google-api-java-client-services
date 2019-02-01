@@ -1583,8 +1583,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
-         * does not have a policy set.
+         * Gets the IAM access control policy for a function. Returns an empty policy if the function exists
+         * and does not have a policy set.
          *
          * Create a request for the method "functions.getIamPolicy".
          *
@@ -1611,8 +1611,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
 
           /**
-           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
-           * and does not have a policy set.
+           * Gets the IAM access control policy for a function. Returns an empty policy if the function
+           * exists and does not have a policy set.
            *
            * Create a request for the method "functions.getIamPolicy".
            *
@@ -2091,7 +2091,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
+         * Sets the IAM access control policy on the specified function. Replaces any existing policy.
          *
          * Create a request for the method "functions.setIamPolicy".
          *
@@ -2119,7 +2119,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Sets the IAM access control policy on the specified function. Replaces any existing policy.
            *
            * Create a request for the method "functions.setIamPolicy".
            *
@@ -2234,11 +2234,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * Tests the specified permissions against the IAM access control policy for a function. If the
+         * function does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
          *
          * Create a request for the method "functions.testIamPermissions".
          *
@@ -2266,11 +2263,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/functions/[^/]+$");
 
           /**
-           * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * Tests the specified permissions against the IAM access control policy for a function. If the
+           * function does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
            *
            * Create a request for the method "functions.testIamPermissions".
            *

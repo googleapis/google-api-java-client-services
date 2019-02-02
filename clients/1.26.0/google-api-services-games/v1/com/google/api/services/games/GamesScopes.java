@@ -29,6 +29,9 @@ public class GamesScopes {
   /** Share your Google+ profile information and view and manage your game activity. */
   public static final String GAMES = "https://www.googleapis.com/auth/games";
 
+  /** Know who you are on Google. */
+  public static final String PLUS_ME = "https://www.googleapis.com/auth/plus.me";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -38,6 +41,7 @@ public class GamesScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(DRIVE_APPDATA);
     set.add(GAMES);
+    set.add(PLUS_ME);
     return java.util.Collections.unmodifiableSet(set);
   }
 

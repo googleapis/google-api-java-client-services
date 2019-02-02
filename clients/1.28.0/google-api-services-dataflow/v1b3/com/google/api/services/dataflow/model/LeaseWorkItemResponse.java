@@ -30,11 +30,35 @@ package com.google.api.services.dataflow.model;
 public final class LeaseWorkItemResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Untranslated bag-of-bytes WorkResponse for UnifiedWorker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> unifiedWorkerResponse;
+
+  /**
    * A list of the leased WorkItems.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WorkItem> workItems;
+
+  /**
+   * Untranslated bag-of-bytes WorkResponse for UnifiedWorker.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getUnifiedWorkerResponse() {
+    return unifiedWorkerResponse;
+  }
+
+  /**
+   * Untranslated bag-of-bytes WorkResponse for UnifiedWorker.
+   * @param unifiedWorkerResponse unifiedWorkerResponse or {@code null} for none
+   */
+  public LeaseWorkItemResponse setUnifiedWorkerResponse(java.util.Map<String, java.lang.Object> unifiedWorkerResponse) {
+    this.unifiedWorkerResponse = unifiedWorkerResponse;
+    return this;
+  }
 
   /**
    * A list of the leased WorkItems.

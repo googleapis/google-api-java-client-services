@@ -44,6 +44,13 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   private java.lang.String location;
 
   /**
+   * Untranslated bag-of-bytes WorkProgressUpdateRequest from UnifiedWorker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> unifiedWorkerRequest;
+
+  /**
    * The order is unimportant, except that the order of the WorkItemServiceState messages in the
    * ReportWorkItemStatusResponse corresponds to the order of WorkItemStatus messages here.
    * The value may be {@code null}.
@@ -91,6 +98,23 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
    */
   public ReportWorkItemStatusRequest setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Untranslated bag-of-bytes WorkProgressUpdateRequest from UnifiedWorker.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getUnifiedWorkerRequest() {
+    return unifiedWorkerRequest;
+  }
+
+  /**
+   * Untranslated bag-of-bytes WorkProgressUpdateRequest from UnifiedWorker.
+   * @param unifiedWorkerRequest unifiedWorkerRequest or {@code null} for none
+   */
+  public ReportWorkItemStatusRequest setUnifiedWorkerRequest(java.util.Map<String, java.lang.Object> unifiedWorkerRequest) {
+    this.unifiedWorkerRequest = unifiedWorkerRequest;
     return this;
   }
 

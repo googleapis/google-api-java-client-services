@@ -64,6 +64,13 @@ public final class StreamingComputationConfig extends com.google.api.client.json
   private java.lang.String systemName;
 
   /**
+   * Map from user name of stateful transforms in this stage to their state family.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> transformUserNameToStateFamily;
+
+  /**
    * Unique identifier for this computation.
    * @return value or {@code null} for none
    */
@@ -128,6 +135,23 @@ public final class StreamingComputationConfig extends com.google.api.client.json
    */
   public StreamingComputationConfig setSystemName(java.lang.String systemName) {
     this.systemName = systemName;
+    return this;
+  }
+
+  /**
+   * Map from user name of stateful transforms in this stage to their state family.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTransformUserNameToStateFamily() {
+    return transformUserNameToStateFamily;
+  }
+
+  /**
+   * Map from user name of stateful transforms in this stage to their state family.
+   * @param transformUserNameToStateFamily transformUserNameToStateFamily or {@code null} for none
+   */
+  public StreamingComputationConfig setTransformUserNameToStateFamily(java.util.Map<String, java.lang.String> transformUserNameToStateFamily) {
+    this.transformUserNameToStateFamily = transformUserNameToStateFamily;
     return this;
   }
 

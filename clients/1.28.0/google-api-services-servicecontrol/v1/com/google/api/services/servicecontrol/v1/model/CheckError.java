@@ -44,6 +44,14 @@ public final class CheckError extends com.google.api.client.json.GenericJson {
   private java.lang.String detail;
 
   /**
+   * Contains public information about the check error. If available, `status.code` will be non zero
+   * and client can propagate it out as public error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status status;
+
+  /**
    * Subject to whom this error applies. See the specific code enum for more details on this field.
    * For example:     - “project:”     - “folder:”     - “organization:”
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class CheckError extends com.google.api.client.json.GenericJson {
    */
   public CheckError setDetail(java.lang.String detail) {
     this.detail = detail;
+    return this;
+  }
+
+  /**
+   * Contains public information about the check error. If available, `status.code` will be non zero
+   * and client can propagate it out as public error.
+   * @return value or {@code null} for none
+   */
+  public Status getStatus() {
+    return status;
+  }
+
+  /**
+   * Contains public information about the check error. If available, `status.code` will be non zero
+   * and client can propagate it out as public error.
+   * @param status status or {@code null} for none
+   */
+  public CheckError setStatus(Status status) {
+    this.status = status;
     return this;
   }
 

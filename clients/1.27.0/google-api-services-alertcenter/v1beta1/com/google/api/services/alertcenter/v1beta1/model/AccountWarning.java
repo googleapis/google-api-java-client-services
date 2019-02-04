@@ -41,7 +41,8 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
    * Optional. Details of the login action associated with the warning event. This is only available
    * for:
    *
-   * * Suspicious login * Suspicious login (less secure app) * User suspended (suspicious activity)
+   * * Suspicious login * Suspicious login (less secure app) * Suspicious programmatic login * User
+   * suspended (suspicious activity)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
    * Optional. Details of the login action associated with the warning event. This is only available
    * for:
    *
-   * * Suspicious login * Suspicious login (less secure app) * User suspended (suspicious activity)
+   * * Suspicious login * Suspicious login (less secure app) * Suspicious programmatic login * User
+   * suspended (suspicious activity)
    * @return value or {@code null} for none
    */
   public LoginDetails getLoginDetails() {
@@ -79,7 +81,8 @@ public final class AccountWarning extends com.google.api.client.json.GenericJson
    * Optional. Details of the login action associated with the warning event. This is only available
    * for:
    *
-   * * Suspicious login * Suspicious login (less secure app) * User suspended (suspicious activity)
+   * * Suspicious login * Suspicious login (less secure app) * Suspicious programmatic login * User
+   * suspended (suspicious activity)
    * @param loginDetails loginDetails or {@code null} for none
    */
   public AccountWarning setLoginDetails(LoginDetails loginDetails) {

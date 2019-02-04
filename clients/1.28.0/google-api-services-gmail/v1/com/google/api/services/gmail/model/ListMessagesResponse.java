@@ -30,7 +30,8 @@ package com.google.api.services.gmail.model;
 public final class ListMessagesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of messages.
+   * List of messages. Note that each message resource contains only an id and a threadId.
+   * Additional message details can be fetched using the messages.get method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   private java.lang.Long resultSizeEstimate;
 
   /**
-   * List of messages.
+   * List of messages. Note that each message resource contains only an id and a threadId.
+   * Additional message details can be fetched using the messages.get method.
    * @return value or {@code null} for none
    */
   public java.util.List<Message> getMessages() {
@@ -59,7 +61,8 @@ public final class ListMessagesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * List of messages.
+   * List of messages. Note that each message resource contains only an id and a threadId.
+   * Additional message details can be fetched using the messages.get method.
    * @param messages messages or {@code null} for none
    */
   public ListMessagesResponse setMessages(java.util.List<Message> messages) {

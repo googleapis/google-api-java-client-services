@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class ReportWorkItemStatusResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Untranslated bag-of-bytes WorkProgressUpdateResponse for UnifiedWorker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> unifiedWorkerResponse;
+
+  /**
    * A set of messages indicating the service-side state for each WorkItem whose status was
    * reported, in the same order as the WorkItemStatus messages in the ReportWorkItemStatusRequest
    * which resulting in this response.
@@ -37,6 +44,23 @@ public final class ReportWorkItemStatusResponse extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.List<WorkItemServiceState> workItemServiceStates;
+
+  /**
+   * Untranslated bag-of-bytes WorkProgressUpdateResponse for UnifiedWorker.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getUnifiedWorkerResponse() {
+    return unifiedWorkerResponse;
+  }
+
+  /**
+   * Untranslated bag-of-bytes WorkProgressUpdateResponse for UnifiedWorker.
+   * @param unifiedWorkerResponse unifiedWorkerResponse or {@code null} for none
+   */
+  public ReportWorkItemStatusResponse setUnifiedWorkerResponse(java.util.Map<String, java.lang.Object> unifiedWorkerResponse) {
+    this.unifiedWorkerResponse = unifiedWorkerResponse;
+    return this;
+  }
 
   /**
    * A set of messages indicating the service-side state for each WorkItem whose status was

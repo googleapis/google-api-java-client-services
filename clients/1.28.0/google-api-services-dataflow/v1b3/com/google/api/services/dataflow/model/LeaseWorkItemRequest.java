@@ -51,6 +51,13 @@ public final class LeaseWorkItemRequest extends com.google.api.client.json.Gener
   private String requestedLeaseDuration;
 
   /**
+   * Untranslated bag-of-bytes WorkRequest from UnifiedWorker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> unifiedWorkerRequest;
+
+  /**
    * Filter for WorkItem type.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class LeaseWorkItemRequest extends com.google.api.client.json.Gener
    */
   public LeaseWorkItemRequest setRequestedLeaseDuration(String requestedLeaseDuration) {
     this.requestedLeaseDuration = requestedLeaseDuration;
+    return this;
+  }
+
+  /**
+   * Untranslated bag-of-bytes WorkRequest from UnifiedWorker.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getUnifiedWorkerRequest() {
+    return unifiedWorkerRequest;
+  }
+
+  /**
+   * Untranslated bag-of-bytes WorkRequest from UnifiedWorker.
+   * @param unifiedWorkerRequest unifiedWorkerRequest or {@code null} for none
+   */
+  public LeaseWorkItemRequest setUnifiedWorkerRequest(java.util.Map<String, java.lang.Object> unifiedWorkerRequest) {
+    this.unifiedWorkerRequest = unifiedWorkerRequest;
     return this;
   }
 

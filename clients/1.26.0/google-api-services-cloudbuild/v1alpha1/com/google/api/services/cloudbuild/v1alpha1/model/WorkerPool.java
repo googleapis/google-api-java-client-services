@@ -63,7 +63,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * List of regions to create the `WorkerPool`. Regions can’t be empty. If Cloud Build adds a new
+   * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new
    * GCP region in the future, the existing `WorkerPool` will not be enabled in the new region
    * automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in
    * that region.
@@ -177,7 +177,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of regions to create the `WorkerPool`. Regions can’t be empty. If Cloud Build adds a new
+   * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new
    * GCP region in the future, the existing `WorkerPool` will not be enabled in the new region
    * automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in
    * that region.
@@ -188,7 +188,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of regions to create the `WorkerPool`. Regions can’t be empty. If Cloud Build adds a new
+   * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new
    * GCP region in the future, the existing `WorkerPool` will not be enabled in the new region
    * automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in
    * that region.

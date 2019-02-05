@@ -31,7 +31,7 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 public final class Queue extends com.google.api.client.json.GenericJson {
 
   /**
-   * AppEngineHttpQueue settings apply only to AppEngine tasks in this queue.
+   * AppEngineHttpQueue settings apply only to App Engine tasks in this queue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * AppEngineHttpQueue settings apply only to AppEngine tasks in this queue.
+   * AppEngineHttpQueue settings apply only to App Engine tasks in this queue.
    * @return value or {@code null} for none
    */
   public AppEngineHttpQueue getAppEngineHttpQueue() {
@@ -130,7 +130,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AppEngineHttpQueue settings apply only to AppEngine tasks in this queue.
+   * AppEngineHttpQueue settings apply only to App Engine tasks in this queue.
    * @param appEngineHttpQueue appEngineHttpQueue or {@code null} for none
    */
   public Queue setAppEngineHttpQueue(AppEngineHttpQueue appEngineHttpQueue) {

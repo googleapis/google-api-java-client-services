@@ -54,9 +54,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ipSubnetworks;
 
   /**
-   * The signed-in user originating the request must be a part of one of the provided members.
-   * Syntax: `user:{emailid}` `group:{emailid}` `serviceAccount:{emailid}` If not specified, a
-   * request may come from any user (logged in/not logged in, not present in any groups, etc.).
+   * The request must be made by one of the provided user or service accounts. Groups are not
+   * supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may
+   * come from any user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +127,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The signed-in user originating the request must be a part of one of the provided members.
-   * Syntax: `user:{emailid}` `group:{emailid}` `serviceAccount:{emailid}` If not specified, a
-   * request may come from any user (logged in/not logged in, not present in any groups, etc.).
+   * The request must be made by one of the provided user or service accounts. Groups are not
+   * supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may
+   * come from any user.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMembers() {
@@ -137,9 +137,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The signed-in user originating the request must be a part of one of the provided members.
-   * Syntax: `user:{emailid}` `group:{emailid}` `serviceAccount:{emailid}` If not specified, a
-   * request may come from any user (logged in/not logged in, not present in any groups, etc.).
+   * The request must be made by one of the provided user or service accounts. Groups are not
+   * supported. Syntax: `user:{emailid}` `serviceAccount:{emailid}` If not specified, a request may
+   * come from any user.
    * @param members members or {@code null} for none
    */
   public Condition setMembers(java.util.List<java.lang.String> members) {

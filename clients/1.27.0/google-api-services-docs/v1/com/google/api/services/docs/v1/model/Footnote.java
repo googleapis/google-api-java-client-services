@@ -32,7 +32,7 @@ public final class Footnote extends com.google.api.client.json.GenericJson {
   /**
    * The contents of the footnote.
    *
-   * The indices for a footnote's content begin at zero.
+   * The indexes for a footnote's content begin at zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class Footnote extends com.google.api.client.json.GenericJson {
   /**
    * The contents of the footnote.
    *
-   * The indices for a footnote's content begin at zero.
+   * The indexes for a footnote's content begin at zero.
    * @return value or {@code null} for none
    */
   public java.util.List<StructuralElement> getContent() {
@@ -58,7 +58,7 @@ public final class Footnote extends com.google.api.client.json.GenericJson {
   /**
    * The contents of the footnote.
    *
-   * The indices for a footnote's content begin at zero.
+   * The indexes for a footnote's content begin at zero.
    * @param content content or {@code null} for none
    */
   public Footnote setContent(java.util.List<StructuralElement> content) {

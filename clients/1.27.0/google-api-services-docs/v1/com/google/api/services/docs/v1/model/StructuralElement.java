@@ -33,9 +33,9 @@ public final class StructuralElement extends com.google.api.client.json.GenericJ
    * The zero-based end index of this structural element, exclusive, in Unicode code units of the
    * UTF-16 encoding.
    *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indices. For
+   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
    * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indices.
+   * indexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,9 @@ public final class StructuralElement extends com.google.api.client.json.GenericJ
    * The zero-based start index of this structural element, in Unicode code units of the UTF-16
    * encoding.
    *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indices. For
+   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
    * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indices.
+   * indexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,9 +85,9 @@ public final class StructuralElement extends com.google.api.client.json.GenericJ
    * The zero-based end index of this structural element, exclusive, in Unicode code units of the
    * UTF-16 encoding.
    *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indices. For
+   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
    * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indices.
+   * indexes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -98,9 +98,9 @@ public final class StructuralElement extends com.google.api.client.json.GenericJ
    * The zero-based end index of this structural element, exclusive, in Unicode code units of the
    * UTF-16 encoding.
    *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indices. For
+   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
    * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indices.
+   * indexes.
    * @param endIndex endIndex or {@code null} for none
    */
   public StructuralElement setEndIndex(java.lang.Integer endIndex) {
@@ -146,9 +146,9 @@ public final class StructuralElement extends com.google.api.client.json.GenericJ
    * The zero-based start index of this structural element, in Unicode code units of the UTF-16
    * encoding.
    *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indices. For
+   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
    * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indices.
+   * indexes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -159,9 +159,9 @@ public final class StructuralElement extends com.google.api.client.json.GenericJ
    * The zero-based start index of this structural element, in Unicode code units of the UTF-16
    * encoding.
    *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indices. For
+   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
    * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indices.
+   * indexes.
    * @param startIndex startIndex or {@code null} for none
    */
   public StructuralElement setStartIndex(java.lang.Integer startIndex) {

@@ -20,7 +20,7 @@ package com.google.api.services.docs.v1;
  * Service definition for Docs (v1).
  *
  * <p>
- * An API for creating and editing Google Docs documents.
+ * Reads and writes Google Docs documents.
  * </p>
  *
  * <p>

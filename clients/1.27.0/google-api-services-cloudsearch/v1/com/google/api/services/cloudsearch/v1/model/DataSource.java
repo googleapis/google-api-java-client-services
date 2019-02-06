@@ -89,8 +89,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * For example, if the short name is *value* then queries like *source:value* will only return
    * results for this source. The value must be unique across all data sources. The value must only
    * contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
-   * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep.
-   * Its maximum length is 32 characters.
+   * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep,
+   * people, teams. Its maximum length is 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,8 +230,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * For example, if the short name is *value* then queries like *source:value* will only return
    * results for this source. The value must be unique across all data sources. The value must only
    * contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
-   * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep.
-   * Its maximum length is 32 characters.
+   * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep,
+   * people, teams. Its maximum length is 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortName() {
@@ -243,8 +243,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * For example, if the short name is *value* then queries like *source:value* will only return
    * results for this source. The value must be unique across all data sources. The value must only
    * contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
-   * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep.
-   * Its maximum length is 32 characters.
+   * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep,
+   * people, teams. Its maximum length is 32 characters.
    * @param shortName shortName or {@code null} for none
    */
   public DataSource setShortName(java.lang.String shortName) {

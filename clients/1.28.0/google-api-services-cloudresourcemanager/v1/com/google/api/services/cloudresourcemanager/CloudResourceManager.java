@@ -1862,7 +1862,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the Organization to fetch, e.g. "organizations/1234".
+     * @param name The resource name of the Organization to fetch. This is the organization's
+    relative path in the API,
+     *        formatted as "organizations/[organizationId]".
+    For example, "organizations/1234".
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1889,7 +1892,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the Organization to fetch, e.g. "organizations/1234".
+       * @param name The resource name of the Organization to fetch. This is the organization's
+    relative path in the API,
+     *        formatted as "organizations/[organizationId]".
+    For example, "organizations/1234".
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1967,17 +1973,24 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name of the Organization to fetch, e.g. "organizations/1234". */
+      /**
+       * The resource name of the Organization to fetch. This is the organization's relative path in
+       * the API, formatted as "organizations/[organizationId]". For example, "organizations/1234".
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the Organization to fetch, e.g. "organizations/1234".
+      /** The resource name of the Organization to fetch. This is the organization's relative path in the
+     API, formatted as "organizations/[organizationId]". For example, "organizations/1234".
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The resource name of the Organization to fetch, e.g. "organizations/1234". */
+      /**
+       * The resource name of the Organization to fetch. This is the organization's relative path in
+       * the API, formatted as "organizations/[organizationId]". For example, "organizations/1234".
+       */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

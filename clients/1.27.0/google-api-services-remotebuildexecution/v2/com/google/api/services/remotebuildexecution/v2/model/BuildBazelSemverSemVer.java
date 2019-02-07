@@ -17,7 +17,7 @@
 package com.google.api.services.remotebuildexecution.v2.model;
 
 /**
- * Model definition for BuildBazelSemverSemVer.
+ * The full version of a given tool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed
@@ -31,30 +31,36 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class BuildBazelSemverSemVer extends com.google.api.client.json.GenericJson {
 
   /**
+   * The major version, e.g 10 for 10.2.3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer major;
 
   /**
+   * The minor version, e.g. 2 for 10.2.3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minor;
 
   /**
+   * The patch version, e.g 3 for 10.2.3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer patch;
 
   /**
+   * The pre-release version. Either this field or major/minor/patch fields must be filled. They are
+   * mutually exclusive. Pre-release versions are assumed to be earlier than any released versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String prerelease;
 
   /**
+   * The major version, e.g 10 for 10.2.3.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMajor() {
@@ -62,6 +68,7 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The major version, e.g 10 for 10.2.3.
    * @param major major or {@code null} for none
    */
   public BuildBazelSemverSemVer setMajor(java.lang.Integer major) {
@@ -70,6 +77,7 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The minor version, e.g. 2 for 10.2.3.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinor() {
@@ -77,6 +85,7 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The minor version, e.g. 2 for 10.2.3.
    * @param minor minor or {@code null} for none
    */
   public BuildBazelSemverSemVer setMinor(java.lang.Integer minor) {
@@ -85,6 +94,7 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The patch version, e.g 3 for 10.2.3.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPatch() {
@@ -92,6 +102,7 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The patch version, e.g 3 for 10.2.3.
    * @param patch patch or {@code null} for none
    */
   public BuildBazelSemverSemVer setPatch(java.lang.Integer patch) {
@@ -100,6 +111,8 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The pre-release version. Either this field or major/minor/patch fields must be filled. They are
+   * mutually exclusive. Pre-release versions are assumed to be earlier than any released versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrerelease() {
@@ -107,6 +120,8 @@ public final class BuildBazelSemverSemVer extends com.google.api.client.json.Gen
   }
 
   /**
+   * The pre-release version. Either this field or major/minor/patch fields must be filled. They are
+   * mutually exclusive. Pre-release versions are assumed to be earlier than any released versions.
    * @param prerelease prerelease or {@code null} for none
    */
   public BuildBazelSemverSemVer setPrerelease(java.lang.String prerelease) {

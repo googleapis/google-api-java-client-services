@@ -19,9 +19,10 @@ package com.google.api.services.remotebuildexecution.v1alpha.model;
 /**
  * An optional Metadata to attach to any RPC request to tell the server about an external context of
  * the request. The server may use this for logging or other purposes. To use it, the client
- * attaches the header to the call using the canonical proto serialization: name:
- * build.bazel.remote.execution.v2.requestmetadata-bin contents: the base64 encoded binary
- * RequestMetadata message.
+ * attaches the header to the call using the canonical proto serialization:
+ *
+ * * name: `build.bazel.remote.execution.v2.requestmetadata-bin` * contents: the base64 encoded
+ * binary `RequestMetadata` message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed

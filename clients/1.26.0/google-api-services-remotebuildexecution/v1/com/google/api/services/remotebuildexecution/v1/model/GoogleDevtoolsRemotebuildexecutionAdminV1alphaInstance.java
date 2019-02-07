@@ -41,6 +41,13 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance extend
   private java.lang.String location;
 
   /**
+   * Output only. Whether stack driver logging is enabled for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean loggingEnabled;
+
+  /**
    * Output only. Instance resource name formatted as:
    * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an
    * instance since it is provided in the `instance_id` field.
@@ -70,6 +77,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance extend
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Output only. Whether stack driver logging is enabled for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLoggingEnabled() {
+    return loggingEnabled;
+  }
+
+  /**
+   * Output only. Whether stack driver logging is enabled for the instance.
+   * @param loggingEnabled loggingEnabled or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance setLoggingEnabled(java.lang.Boolean loggingEnabled) {
+    this.loggingEnabled = loggingEnabled;
     return this;
   }
 

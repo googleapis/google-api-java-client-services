@@ -48,6 +48,17 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandResult extends com.g
   private java.lang.Integer exitCode;
 
   /**
+   * Implementation-dependent metadata about the task. Both servers and bots may define messages
+   * which can be encoded here; bots are free to provide metadata in multiple formats, and servers
+   * are free to choose one or more of the values to process and ignore others. In particular, it is
+   * *not* considered an error for the bot to provide the server with a field that it doesn't know
+   * about.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.util.Map<String, java.lang.Object>> metadata;
+
+  /**
    * The output files. The blob referenced by the digest should contain one of the following
    * (implementation-dependent): A marshalled DirectoryMetadata of the returned filesystem A LUCI-
    * style .isolated file
@@ -62,17 +73,6 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandResult extends com.g
    */
   @com.google.api.client.util.Key
   private String overhead;
-
-  /**
-   * Implementation-dependent statistics about the task. Both servers and bots may define messages
-   * which can be encoded here; bots are free to provide statistics in multiple formats, and servers
-   * are free to choose one or more of the values to process and ignore others. In particular, it is
-   * *not* considered an error for the bot to provide the server with a field that it doesn't know
-   * about.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.util.Map<String, java.lang.Object>> statistics;
 
   /**
    * An overall status for the command. For example, if the command timed out, this might have a
@@ -122,6 +122,31 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandResult extends com.g
   }
 
   /**
+   * Implementation-dependent metadata about the task. Both servers and bots may define messages
+   * which can be encoded here; bots are free to provide metadata in multiple formats, and servers
+   * are free to choose one or more of the values to process and ignore others. In particular, it is
+   * *not* considered an error for the bot to provide the server with a field that it doesn't know
+   * about.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.util.Map<String, java.lang.Object>> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Implementation-dependent metadata about the task. Both servers and bots may define messages
+   * which can be encoded here; bots are free to provide metadata in multiple formats, and servers
+   * are free to choose one or more of the values to process and ignore others. In particular, it is
+   * *not* considered an error for the bot to provide the server with a field that it doesn't know
+   * about.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleDevtoolsRemoteworkersV1test2CommandResult setMetadata(java.util.List<java.util.Map<String, java.lang.Object>> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  /**
    * The output files. The blob referenced by the digest should contain one of the following
    * (implementation-dependent): A marshalled DirectoryMetadata of the returned filesystem A LUCI-
    * style .isolated file
@@ -156,31 +181,6 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandResult extends com.g
    */
   public GoogleDevtoolsRemoteworkersV1test2CommandResult setOverhead(String overhead) {
     this.overhead = overhead;
-    return this;
-  }
-
-  /**
-   * Implementation-dependent statistics about the task. Both servers and bots may define messages
-   * which can be encoded here; bots are free to provide statistics in multiple formats, and servers
-   * are free to choose one or more of the values to process and ignore others. In particular, it is
-   * *not* considered an error for the bot to provide the server with a field that it doesn't know
-   * about.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.util.Map<String, java.lang.Object>> getStatistics() {
-    return statistics;
-  }
-
-  /**
-   * Implementation-dependent statistics about the task. Both servers and bots may define messages
-   * which can be encoded here; bots are free to provide statistics in multiple formats, and servers
-   * are free to choose one or more of the values to process and ignore others. In particular, it is
-   * *not* considered an error for the bot to provide the server with a field that it doesn't know
-   * about.
-   * @param statistics statistics or {@code null} for none
-   */
-  public GoogleDevtoolsRemoteworkersV1test2CommandResult setStatistics(java.util.List<java.util.Map<String, java.lang.Object>> statistics) {
-    this.statistics = statistics;
     return this;
   }
 

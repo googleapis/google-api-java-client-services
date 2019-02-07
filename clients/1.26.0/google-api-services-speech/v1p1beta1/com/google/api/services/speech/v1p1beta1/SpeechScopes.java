@@ -17,7 +17,7 @@
 package com.google.api.services.speech.v1p1beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Cloud Speech API.
+ * Available OAuth 2.0 scopes for use with the Cloud Speech-to-Text API.
  *
  * @since 1.4
  */

@@ -46,7 +46,7 @@ public class Speech extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.27.0 of the Cloud Speech API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.27.0 of the Cloud Speech-to-Text API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

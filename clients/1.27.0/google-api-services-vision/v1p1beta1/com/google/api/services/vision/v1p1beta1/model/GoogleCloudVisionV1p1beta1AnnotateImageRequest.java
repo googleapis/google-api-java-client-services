@@ -18,7 +18,7 @@ package com.google.api.services.vision.v1p1beta1.model;
 
 /**
  * Request for performing Google Cloud Vision API tasks over a user-provided image, with user-
- * requested features.
+ * requested features, and with context information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Vision API. For a detailed explanation see:

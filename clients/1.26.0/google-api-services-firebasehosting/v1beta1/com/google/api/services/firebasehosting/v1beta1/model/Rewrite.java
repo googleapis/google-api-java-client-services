@@ -61,6 +61,13 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
+   * The request will be forwarded to Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunRewrite run;
+
+  /**
    * The request will be forwarded to Firebase Dynamic Links.
    * @return value or {@code null} for none
    */
@@ -127,6 +134,23 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
    */
   public Rewrite setPath(java.lang.String path) {
     this.path = path;
+    return this;
+  }
+
+  /**
+   * The request will be forwarded to Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public CloudRunRewrite getRun() {
+    return run;
+  }
+
+  /**
+   * The request will be forwarded to Cloud Run.
+   * @param run run or {@code null} for none
+   */
+  public Rewrite setRun(CloudRunRewrite run) {
+    this.run = run;
     return this;
   }
 

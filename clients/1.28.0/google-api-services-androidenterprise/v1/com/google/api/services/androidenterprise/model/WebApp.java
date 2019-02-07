@@ -37,7 +37,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String displayMode;
 
   /**
-   * A list of icons representing this website. Must have at least one element.
+   * A list of icons representing this website. If absent, a default icon (for create) or the
+   * current icon (for update) will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +101,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of icons representing this website. Must have at least one element.
+   * A list of icons representing this website. If absent, a default icon (for create) or the
+   * current icon (for update) will be used.
    * @return value or {@code null} for none
    */
   public java.util.List<WebAppIcon> getIcons() {
@@ -108,7 +110,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of icons representing this website. Must have at least one element.
+   * A list of icons representing this website. If absent, a default icon (for create) or the
+   * current icon (for update) will be used.
    * @param icons icons or {@code null} for none
    */
   public WebApp setIcons(java.util.List<WebAppIcon> icons) {

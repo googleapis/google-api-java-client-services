@@ -38,10 +38,13 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * The URL of the backendService resource if none of the hostRules match. Use defaultService
-   * instead of defaultRouteAction when simple routing to a backendService is desired and other
-   * advanced capabilities like traffic splitting and rewrites are not required. Only one of
-   * defaultService, defaultRouteAction or defaultUrlRedirect should must be set.
+   * The full or partial URL of the defaultService resource to which traffic is directed if none of
+   * the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions
+   * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
+   * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
+   * Conversely, if routeAction specifies any weightedBackendServices, service must not be
+   * specified. Only one of defaultService, defaultUrlRedirect  or
+   * defaultRouteAction.weightedBackendService must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,10 +153,13 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the backendService resource if none of the hostRules match. Use defaultService
-   * instead of defaultRouteAction when simple routing to a backendService is desired and other
-   * advanced capabilities like traffic splitting and rewrites are not required. Only one of
-   * defaultService, defaultRouteAction or defaultUrlRedirect should must be set.
+   * The full or partial URL of the defaultService resource to which traffic is directed if none of
+   * the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions
+   * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
+   * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
+   * Conversely, if routeAction specifies any weightedBackendServices, service must not be
+   * specified. Only one of defaultService, defaultUrlRedirect  or
+   * defaultRouteAction.weightedBackendService must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultService() {
@@ -161,10 +167,13 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the backendService resource if none of the hostRules match. Use defaultService
-   * instead of defaultRouteAction when simple routing to a backendService is desired and other
-   * advanced capabilities like traffic splitting and rewrites are not required. Only one of
-   * defaultService, defaultRouteAction or defaultUrlRedirect should must be set.
+   * The full or partial URL of the defaultService resource to which traffic is directed if none of
+   * the hostRules match. If defaultRouteAction is additionally specified, advanced routing actions
+   * like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if
+   * defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices.
+   * Conversely, if routeAction specifies any weightedBackendServices, service must not be
+   * specified. Only one of defaultService, defaultUrlRedirect  or
+   * defaultRouteAction.weightedBackendService must be set.
    * @param defaultService defaultService or {@code null} for none
    */
   public UrlMap setDefaultService(java.lang.String defaultService) {

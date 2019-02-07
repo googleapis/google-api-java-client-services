@@ -149,6 +149,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String selfLink;
 
   /**
+   * [Output Only] The status of this managed instance group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStatus status;
+
+  /**
    * The URLs for all TargetPool resources to which instances in the instanceGroup field are added.
    * The target pools automatically apply to all of the instances in the managed instance group.
    * The value may be {@code null}.
@@ -163,6 +170,26 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetSize;
+
+  /**
+   * The update policy for this managed instance group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerUpdatePolicy updatePolicy;
+
+  /**
+   * Specifies the instance templates used by this managed instance group to create instances.
+   *
+   * Each version is defined by an instanceTemplate. Every template can appear at most once per
+   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
+   * relationships between these fields. Exactly one version must leave the targetSize field unset.
+   * That version will be applied to all remaining instances. For more information, read about
+   * canary updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InstanceGroupManagerVersion> versions;
 
   /**
    * [Output Only] The URL of the zone where the managed instance group is located (for zonal
@@ -490,6 +517,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
+   * [Output Only] The status of this managed instance group.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * [Output Only] The status of this managed instance group.
+   * @param status status or {@code null} for none
+   */
+  public InstanceGroupManager setStatus(InstanceGroupManagerStatus status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
    * The URLs for all TargetPool resources to which instances in the instanceGroup field are added.
    * The target pools automatically apply to all of the instances in the managed instance group.
    * @return value or {@code null} for none
@@ -524,6 +568,52 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setTargetSize(java.lang.Integer targetSize) {
     this.targetSize = targetSize;
+    return this;
+  }
+
+  /**
+   * The update policy for this managed instance group.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerUpdatePolicy getUpdatePolicy() {
+    return updatePolicy;
+  }
+
+  /**
+   * The update policy for this managed instance group.
+   * @param updatePolicy updatePolicy or {@code null} for none
+   */
+  public InstanceGroupManager setUpdatePolicy(InstanceGroupManagerUpdatePolicy updatePolicy) {
+    this.updatePolicy = updatePolicy;
+    return this;
+  }
+
+  /**
+   * Specifies the instance templates used by this managed instance group to create instances.
+   *
+   * Each version is defined by an instanceTemplate. Every template can appear at most once per
+   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
+   * relationships between these fields. Exactly one version must leave the targetSize field unset.
+   * That version will be applied to all remaining instances. For more information, read about
+   * canary updates.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InstanceGroupManagerVersion> getVersions() {
+    return versions;
+  }
+
+  /**
+   * Specifies the instance templates used by this managed instance group to create instances.
+   *
+   * Each version is defined by an instanceTemplate. Every template can appear at most once per
+   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
+   * relationships between these fields. Exactly one version must leave the targetSize field unset.
+   * That version will be applied to all remaining instances. For more information, read about
+   * canary updates.
+   * @param versions versions or {@code null} for none
+   */
+  public InstanceGroupManager setVersions(java.util.List<InstanceGroupManagerVersion> versions) {
+    this.versions = versions;
     return this;
   }
 

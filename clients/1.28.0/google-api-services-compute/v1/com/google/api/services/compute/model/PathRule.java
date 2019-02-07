@@ -40,10 +40,12 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> paths;
 
   /**
-   * The URL of the backend service resource if this rule is matched. Use service instead of
-   * routeAction when simple routing to a backend service is desired and other advanced capabilities
-   * like traffic splitting and rewrites are not required. Only one of service, routeAction or
-   * urlRedirect should must be set.
+   * The full or partial URL of the backend service resource to which traffic is directed if this
+   * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
+   * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
+   * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
+   * specifies any  weightedBackendServices, service must not be specified. Only one of urlRedirect,
+   * service or routeAction.weightedBackendService must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,10 +73,12 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the backend service resource if this rule is matched. Use service instead of
-   * routeAction when simple routing to a backend service is desired and other advanced capabilities
-   * like traffic splitting and rewrites are not required. Only one of service, routeAction or
-   * urlRedirect should must be set.
+   * The full or partial URL of the backend service resource to which traffic is directed if this
+   * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
+   * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
+   * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
+   * specifies any  weightedBackendServices, service must not be specified. Only one of urlRedirect,
+   * service or routeAction.weightedBackendService must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -82,10 +86,12 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the backend service resource if this rule is matched. Use service instead of
-   * routeAction when simple routing to a backend service is desired and other advanced capabilities
-   * like traffic splitting and rewrites are not required. Only one of service, routeAction or
-   * urlRedirect should must be set.
+   * The full or partial URL of the backend service resource to which traffic is directed if this
+   * rule is matched. If routeAction is additionally specified, advanced routing actions like URL
+   * Rewrites, etc. take effect prior to sending the request to the backend. However, if service is
+   * specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction
+   * specifies any  weightedBackendServices, service must not be specified. Only one of urlRedirect,
+   * service or routeAction.weightedBackendService must be set.
    * @param service service or {@code null} for none
    */
   public PathRule setService(java.lang.String service) {

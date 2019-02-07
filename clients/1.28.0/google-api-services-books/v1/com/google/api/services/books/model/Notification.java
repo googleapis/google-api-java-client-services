@@ -118,6 +118,12 @@ public final class Notification extends com.google.api.client.json.GenericJson {
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long timeToExpireMs;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
@@ -332,6 +338,21 @@ public final class Notification extends com.google.api.client.json.GenericJson {
    */
   public Notification setTargetUrl(java.lang.String targetUrl) {
     this.targetUrl = targetUrl;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTimeToExpireMs() {
+    return timeToExpireMs;
+  }
+
+  /**
+   * @param timeToExpireMs timeToExpireMs or {@code null} for none
+   */
+  public Notification setTimeToExpireMs(java.lang.Long timeToExpireMs) {
+    this.timeToExpireMs = timeToExpireMs;
     return this;
   }
 

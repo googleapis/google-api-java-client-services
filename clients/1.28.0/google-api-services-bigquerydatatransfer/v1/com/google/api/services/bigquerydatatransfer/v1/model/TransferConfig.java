@@ -116,6 +116,13 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private java.lang.String schedule;
 
   /**
+   * Options customizing the data transfer schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScheduleOptions scheduleOptions;
+
+  /**
    * Output only. State of the most recently updated transfer run.
    * The value may be {@code null}.
    */
@@ -327,6 +334,23 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setSchedule(java.lang.String schedule) {
     this.schedule = schedule;
+    return this;
+  }
+
+  /**
+   * Options customizing the data transfer schedule.
+   * @return value or {@code null} for none
+   */
+  public ScheduleOptions getScheduleOptions() {
+    return scheduleOptions;
+  }
+
+  /**
+   * Options customizing the data transfer schedule.
+   * @param scheduleOptions scheduleOptions or {@code null} for none
+   */
+  public TransferConfig setScheduleOptions(ScheduleOptions scheduleOptions) {
+    this.scheduleOptions = scheduleOptions;
     return this;
   }
 

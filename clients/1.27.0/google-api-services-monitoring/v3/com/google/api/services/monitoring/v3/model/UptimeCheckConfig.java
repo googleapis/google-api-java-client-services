@@ -108,7 +108,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * How often, in seconds, the uptime check is performed. Currently, the only supported values are
    * 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults
-   * to 300s.
+   * to 60s.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,7 +296,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * How often, in seconds, the uptime check is performed. Currently, the only supported values are
    * 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults
-   * to 300s.
+   * to 60s.
    * @return value or {@code null} for none
    */
   public String getPeriod() {
@@ -306,7 +306,7 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   /**
    * How often, in seconds, the uptime check is performed. Currently, the only supported values are
    * 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults
-   * to 300s.
+   * to 60s.
    * @param period period or {@code null} for none
    */
   public UptimeCheckConfig setPeriod(String period) {

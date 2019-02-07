@@ -2179,8 +2179,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -2212,7 +2212,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
@@ -2418,8 +2418,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -2451,7 +2451,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
@@ -5846,8 +5846,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -5879,7 +5879,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
@@ -6085,8 +6085,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -6118,7 +6118,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
@@ -8959,8 +8959,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -8992,7 +8992,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
@@ -9198,8 +9198,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -9231,7 +9231,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
@@ -12285,8 +12285,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.patch".
        *
@@ -12318,7 +12318,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.patch".
@@ -12524,8 +12524,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-       * see the unique_writer_identity field.
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+       * the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".
        *
@@ -12557,7 +12557,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Updates a sink. This method replaces the following fields in the existing sink with values from
-         * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+         * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
          * see the unique_writer_identity field.
          *
          * Create a request for the method "sinks.update".
@@ -13507,8 +13507,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     }
     /**
      * Updates a sink. This method replaces the following fields in the existing sink with values from
-     * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
-     * see the unique_writer_identity field.
+     * the new sink: destination, and filter.The updated sink might also have a new writer_identity; see
+     * the unique_writer_identity field.
      *
      * Create a request for the method "sinks.update".
      *
@@ -13540,7 +13540,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Updates a sink. This method replaces the following fields in the existing sink with values from
-       * the new sink: destination, and filter. The updated sink might also have a new writer_identity;
+       * the new sink: destination, and filter.The updated sink might also have a new writer_identity;
        * see the unique_writer_identity field.
        *
        * Create a request for the method "sinks.update".

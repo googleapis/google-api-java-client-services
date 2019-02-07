@@ -34,6 +34,14 @@ package com.google.api.services.logging.v2.model;
 public final class LogExclusion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The creation timestamp of the exclusion.This field may not be present for older
+   * exclusions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. A description of this exclusion.
    * The value may be {@code null}.
    */
@@ -42,7 +50,7 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set to True, then this exclusion is disabled and it does not exclude any log
-   * entries. You can use exclusions.patch to change the value of this field.
+   * entries. You can update an exclusion to change the value of this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,6 +76,33 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The last update timestamp of the exclusion.This field may not be present for older
+   * exclusions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. The creation timestamp of the exclusion.This field may not be present for older
+   * exclusions.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The creation timestamp of the exclusion.This field may not be present for older
+   * exclusions.
+   * @param createTime createTime or {@code null} for none
+   */
+  public LogExclusion setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
    * Optional. A description of this exclusion.
    * @return value or {@code null} for none
    */
@@ -86,7 +121,7 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set to True, then this exclusion is disabled and it does not exclude any log
-   * entries. You can use exclusions.patch to change the value of this field.
+   * entries. You can update an exclusion to change the value of this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -95,7 +130,7 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If set to True, then this exclusion is disabled and it does not exclude any log
-   * entries. You can use exclusions.patch to change the value of this field.
+   * entries. You can update an exclusion to change the value of this field.
    * @param disabled disabled or {@code null} for none
    */
   public LogExclusion setDisabled(java.lang.Boolean disabled) {
@@ -144,6 +179,25 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
    */
   public LogExclusion setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The last update timestamp of the exclusion.This field may not be present for older
+   * exclusions.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The last update timestamp of the exclusion.This field may not be present for older
+   * exclusions.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public LogExclusion setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

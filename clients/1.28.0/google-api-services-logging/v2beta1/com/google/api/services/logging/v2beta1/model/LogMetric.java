@@ -44,6 +44,14 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   private BucketOptions bucketOptions;
 
   /**
+   * Output only. The creation timestamp of the metric.This field may not be present for older
+   * metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. A description of this metric, which is used in documentation. The maximum length of
    * the description is 8000 characters.
    * The value may be {@code null}.
@@ -107,6 +115,14 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The last update timestamp of the metric.This field may not be present for older
+   * metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Optional. A value_extractor is required when using a distribution logs-based metric to extract
    * the values to record from a log entry. Two functions are supported for value extraction:
    * EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument are:  1. field: The name of the
@@ -149,6 +165,25 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    */
   public LogMetric setBucketOptions(BucketOptions bucketOptions) {
     this.bucketOptions = bucketOptions;
+    return this;
+  }
+
+  /**
+   * Output only. The creation timestamp of the metric.This field may not be present for older
+   * metrics.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The creation timestamp of the metric.This field may not be present for older
+   * metrics.
+   * @param createTime createTime or {@code null} for none
+   */
+  public LogMetric setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -290,6 +325,25 @@ public final class LogMetric extends com.google.api.client.json.GenericJson {
    */
   public LogMetric setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The last update timestamp of the metric.This field may not be present for older
+   * metrics.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The last update timestamp of the metric.This field may not be present for older
+   * metrics.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public LogMetric setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

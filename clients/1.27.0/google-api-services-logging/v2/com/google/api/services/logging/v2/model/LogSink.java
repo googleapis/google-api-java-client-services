@@ -34,11 +34,18 @@ package com.google.api.services.logging.v2.model;
 public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The creation timestamp of the sink.This field may not be present for older sinks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
    * when the sink is created, must have permission to write to the destination or else the log
-   * entries are not exported. For more information, see Exporting Logs With Sinks.
+   * entries are not exported. For more information, see Exporting Logs with Sinks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,23 +94,48 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.String outputVersionFormat;
 
   /**
+   * Output only. The last update timestamp of the sink.This field may not be present for older
+   * sinks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Output only. An IAM identitya service account or groupunder which Logging writes the exported
-   * log entries to the sink's destination. This field is set by sinks.create and sinks.update,
-   * based on the setting of unique_writer_identity in those methods.Until you grant this identity
-   * write-access to the destination, log entry exports from this sink will fail. For more
-   * information, see Granting access for a resource. Consult the destination service's
-   * documentation to determine the appropriate IAM roles to assign to the identity.
+   * log entries to the sink's destination. This field is set by sinks.create and sinks.update based
+   * on the value of unique_writer_identity in those methods.Until you grant this identity write-
+   * access to the destination, log entry exports from this sink will fail. For more information,
+   * see Granting Access for a Resource. Consult the destination service's documentation to
+   * determine the appropriate IAM roles to assign to the identity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String writerIdentity;
 
   /**
+   * Output only. The creation timestamp of the sink.This field may not be present for older sinks.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The creation timestamp of the sink.This field may not be present for older sinks.
+   * @param createTime createTime or {@code null} for none
+   */
+  public LogSink setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
    * Required. The export destination: "storage.googleapis.com/[GCS_BUCKET]"
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
    * when the sink is created, must have permission to write to the destination or else the log
-   * entries are not exported. For more information, see Exporting Logs With Sinks.
+   * entries are not exported. For more information, see Exporting Logs with Sinks.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -115,7 +147,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
    * "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
    * "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set
    * when the sink is created, must have permission to write to the destination or else the log
-   * entries are not exported. For more information, see Exporting Logs With Sinks.
+   * entries are not exported. For more information, see Exporting Logs with Sinks.
    * @param destination destination or {@code null} for none
    */
   public LogSink setDestination(java.lang.String destination) {
@@ -220,12 +252,31 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The last update timestamp of the sink.This field may not be present for older
+   * sinks.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The last update timestamp of the sink.This field may not be present for older
+   * sinks.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public LogSink setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
    * Output only. An IAM identitya service account or groupunder which Logging writes the exported
-   * log entries to the sink's destination. This field is set by sinks.create and sinks.update,
-   * based on the setting of unique_writer_identity in those methods.Until you grant this identity
-   * write-access to the destination, log entry exports from this sink will fail. For more
-   * information, see Granting access for a resource. Consult the destination service's
-   * documentation to determine the appropriate IAM roles to assign to the identity.
+   * log entries to the sink's destination. This field is set by sinks.create and sinks.update based
+   * on the value of unique_writer_identity in those methods.Until you grant this identity write-
+   * access to the destination, log entry exports from this sink will fail. For more information,
+   * see Granting Access for a Resource. Consult the destination service's documentation to
+   * determine the appropriate IAM roles to assign to the identity.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriterIdentity() {
@@ -234,11 +285,11 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. An IAM identitya service account or groupunder which Logging writes the exported
-   * log entries to the sink's destination. This field is set by sinks.create and sinks.update,
-   * based on the setting of unique_writer_identity in those methods.Until you grant this identity
-   * write-access to the destination, log entry exports from this sink will fail. For more
-   * information, see Granting access for a resource. Consult the destination service's
-   * documentation to determine the appropriate IAM roles to assign to the identity.
+   * log entries to the sink's destination. This field is set by sinks.create and sinks.update based
+   * on the value of unique_writer_identity in those methods.Until you grant this identity write-
+   * access to the destination, log entry exports from this sink will fail. For more information,
+   * see Granting Access for a Resource. Consult the destination service's documentation to
+   * determine the appropriate IAM roles to assign to the identity.
    * @param writerIdentity writerIdentity or {@code null} for none
    */
   public LogSink setWriterIdentity(java.lang.String writerIdentity) {

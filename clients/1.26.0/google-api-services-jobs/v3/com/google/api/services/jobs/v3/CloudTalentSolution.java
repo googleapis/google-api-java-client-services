@@ -591,6 +591,166 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
     }
 
     /**
+     * An accessor for creating requests from the ClientEvents collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudTalentSolution jobs = new CloudTalentSolution(...);}
+     *   {@code CloudTalentSolution.ClientEvents.List request = jobs.clientEvents().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ClientEvents clientEvents() {
+      return new ClientEvents();
+    }
+
+    /**
+     * The "clientEvents" collection of methods.
+     */
+    public class ClientEvents {
+
+      /**
+       * Report events issued when end user interacts with customer's application that uses Cloud Talent
+       * Solution. You may inspect the created events in [self service
+       * tools](https://console.cloud.google.com/talent-solution/overview). [Learn
+       * more](https://cloud.google.com/talent-solution/job-search/docs/management-tools) about self
+       * service tools.
+       *
+       * Create a request for the method "clientEvents.create".
+       *
+       * This request holds the parameters needed by the jobs server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Parent project name.
+       * @param content the {@link com.google.api.services.jobs.v3.model.CreateClientEventRequest}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.jobs.v3.model.CreateClientEventRequest content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudTalentSolutionRequest<com.google.api.services.jobs.v3.model.ClientEvent> {
+
+        private static final String REST_PATH = "v3/{+parent}/clientEvents";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Report events issued when end user interacts with customer's application that uses Cloud Talent
+         * Solution. You may inspect the created events in [self service
+         * tools](https://console.cloud.google.com/talent-solution/overview). [Learn
+         * more](https://cloud.google.com/talent-solution/job-search/docs/management-tools) about self
+         * service tools.
+         *
+         * Create a request for the method "clientEvents.create".
+         *
+         * This request holds the parameters needed by the the jobs server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Parent project name.
+         * @param content the {@link com.google.api.services.jobs.v3.model.CreateClientEventRequest}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.jobs.v3.model.CreateClientEventRequest content) {
+          super(CloudTalentSolution.this, "POST", REST_PATH, content, com.google.api.services.jobs.v3.model.ClientEvent.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Parent project name. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Parent project name.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Parent project name. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Companies collection.
      *
      * <p>The typical use is:</p>

@@ -59,8 +59,8 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.Object> parameters;
 
   /**
-   * For Android add-ons only. An ID that represents the user's current session in the Android app
-   * for Google Docs or Sheets, included as extra data in the
+   * Deprecated. For use with Android add-ons only. An ID that represents the user's current session
+   * in the Android app for Google Docs or Sheets, included as extra data in the
    * [Intent](https://developer.android.com/guide/components/intents-filters.html) that launches the
    * add-on. When an Android add-on is run with a session state, it gains the privileges of a
    * [bound](https://developers.google.com/apps-script/guides/bound) scriptthat is, it can access
@@ -138,8 +138,8 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * For Android add-ons only. An ID that represents the user's current session in the Android app
-   * for Google Docs or Sheets, included as extra data in the
+   * Deprecated. For use with Android add-ons only. An ID that represents the user's current session
+   * in the Android app for Google Docs or Sheets, included as extra data in the
    * [Intent](https://developer.android.com/guide/components/intents-filters.html) that launches the
    * add-on. When an Android add-on is run with a session state, it gains the privileges of a
    * [bound](https://developers.google.com/apps-script/guides/bound) scriptthat is, it can access
@@ -153,8 +153,8 @@ public final class ExecutionRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * For Android add-ons only. An ID that represents the user's current session in the Android app
-   * for Google Docs or Sheets, included as extra data in the
+   * Deprecated. For use with Android add-ons only. An ID that represents the user's current session
+   * in the Android app for Google Docs or Sheets, included as extra data in the
    * [Intent](https://developer.android.com/guide/components/intents-filters.html) that launches the
    * add-on. When an Android add-on is run with a session state, it gains the privileges of a
    * [bound](https://developers.google.com/apps-script/guides/bound) scriptthat is, it can access

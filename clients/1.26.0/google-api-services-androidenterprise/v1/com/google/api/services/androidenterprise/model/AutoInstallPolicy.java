@@ -30,7 +30,7 @@ package com.google.api.services.androidenterprise.model;
 public final class AutoInstallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The constraints for the install. Currently there can be at most one constraint.
+   * The constraints for auto-installing the app. You can specify a maximum of one constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,22 +43,22 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The auto install mode. If unset defaults to "doNotAutoInstall".
+   * The auto-install mode. If unset defaults to "doNotAutoInstall".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String autoInstallMode;
 
   /**
-   * The priority of the install, as an unsigned integer. Lower number means higher priority.
+   * The priority of the install, as an unsigned integer. A lower number means higher priority.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer autoInstallPriority;
 
   /**
-   * The minimum version of the app. If a lower version of the app is installed then the app will be
-   * auto-updated according to the auto-install constraints, instead of waiting for the regular
+   * The minimum version of the app. If a lower version of the app is installed, then the app will
+   * be auto-updated according to the auto-install constraints, instead of waiting for the regular
    * auto-update.
    * The value may be {@code null}.
    */
@@ -66,7 +66,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   private java.lang.Integer minimumVersionCode;
 
   /**
-   * The constraints for the install. Currently there can be at most one constraint.
+   * The constraints for auto-installing the app. You can specify a maximum of one constraint.
    * @return value or {@code null} for none
    */
   public java.util.List<AutoInstallConstraint> getAutoInstallConstraint() {
@@ -74,7 +74,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The constraints for the install. Currently there can be at most one constraint.
+   * The constraints for auto-installing the app. You can specify a maximum of one constraint.
    * @param autoInstallConstraint autoInstallConstraint or {@code null} for none
    */
   public AutoInstallPolicy setAutoInstallConstraint(java.util.List<AutoInstallConstraint> autoInstallConstraint) {
@@ -83,7 +83,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The auto install mode. If unset defaults to "doNotAutoInstall".
+   * The auto-install mode. If unset defaults to "doNotAutoInstall".
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoInstallMode() {
@@ -91,7 +91,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The auto install mode. If unset defaults to "doNotAutoInstall".
+   * The auto-install mode. If unset defaults to "doNotAutoInstall".
    * @param autoInstallMode autoInstallMode or {@code null} for none
    */
   public AutoInstallPolicy setAutoInstallMode(java.lang.String autoInstallMode) {
@@ -100,7 +100,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The priority of the install, as an unsigned integer. Lower number means higher priority.
+   * The priority of the install, as an unsigned integer. A lower number means higher priority.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAutoInstallPriority() {
@@ -108,7 +108,7 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The priority of the install, as an unsigned integer. Lower number means higher priority.
+   * The priority of the install, as an unsigned integer. A lower number means higher priority.
    * @param autoInstallPriority autoInstallPriority or {@code null} for none
    */
   public AutoInstallPolicy setAutoInstallPriority(java.lang.Integer autoInstallPriority) {
@@ -117,8 +117,8 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The minimum version of the app. If a lower version of the app is installed then the app will be
-   * auto-updated according to the auto-install constraints, instead of waiting for the regular
+   * The minimum version of the app. If a lower version of the app is installed, then the app will
+   * be auto-updated according to the auto-install constraints, instead of waiting for the regular
    * auto-update.
    * @return value or {@code null} for none
    */
@@ -127,8 +127,8 @@ public final class AutoInstallPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The minimum version of the app. If a lower version of the app is installed then the app will be
-   * auto-updated according to the auto-install constraints, instead of waiting for the regular
+   * The minimum version of the app. If a lower version of the app is installed, then the app will
+   * be auto-updated according to the auto-install constraints, instead of waiting for the regular
    * auto-update.
    * @param minimumVersionCode minimumVersionCode or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * The Auto install constraint. Defines a set of restrictions for installation. At least one of the
+ * The auto-install constraint. Defines a set of restrictions for installation. At least one of the
  * fields must be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,28 +31,28 @@ package com.google.api.services.androidenterprise.model;
 public final class AutoInstallConstraint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Charging state to constrain on.
+   * Charging state constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String chargingStateConstraint;
 
   /**
-   * The idle state of the device to constrain on.
+   * Device idle state constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceIdleStateConstraint;
 
   /**
-   * Network type to constrain on.
+   * Network type constraint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkTypeConstraint;
 
   /**
-   * Charging state to constrain on.
+   * Charging state constraint.
    * @return value or {@code null} for none
    */
   public java.lang.String getChargingStateConstraint() {
@@ -60,7 +60,7 @@ public final class AutoInstallConstraint extends com.google.api.client.json.Gene
   }
 
   /**
-   * Charging state to constrain on.
+   * Charging state constraint.
    * @param chargingStateConstraint chargingStateConstraint or {@code null} for none
    */
   public AutoInstallConstraint setChargingStateConstraint(java.lang.String chargingStateConstraint) {
@@ -69,7 +69,7 @@ public final class AutoInstallConstraint extends com.google.api.client.json.Gene
   }
 
   /**
-   * The idle state of the device to constrain on.
+   * Device idle state constraint.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceIdleStateConstraint() {
@@ -77,7 +77,7 @@ public final class AutoInstallConstraint extends com.google.api.client.json.Gene
   }
 
   /**
-   * The idle state of the device to constrain on.
+   * Device idle state constraint.
    * @param deviceIdleStateConstraint deviceIdleStateConstraint or {@code null} for none
    */
   public AutoInstallConstraint setDeviceIdleStateConstraint(java.lang.String deviceIdleStateConstraint) {
@@ -86,7 +86,7 @@ public final class AutoInstallConstraint extends com.google.api.client.json.Gene
   }
 
   /**
-   * Network type to constrain on.
+   * Network type constraint.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkTypeConstraint() {
@@ -94,7 +94,7 @@ public final class AutoInstallConstraint extends com.google.api.client.json.Gene
   }
 
   /**
-   * Network type to constrain on.
+   * Network type constraint.
    * @param networkTypeConstraint networkTypeConstraint or {@code null} for none
    */
   public AutoInstallConstraint setNetworkTypeConstraint(java.lang.String networkTypeConstraint) {

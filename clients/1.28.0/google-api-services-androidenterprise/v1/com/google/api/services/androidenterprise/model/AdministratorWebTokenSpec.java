@@ -39,6 +39,13 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
   private java.lang.String kind;
 
   /**
+   * Options for displaying the Managed Configuration page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdministratorWebTokenSpecManagedConfigurations managedConfigurations;
+
+  /**
    * The URI of the parent frame hosting the iframe. To prevent XSS, the iframe may not be hosted at
    * other URIs. This URI must be https.
    * The value may be {@code null}.
@@ -97,6 +104,23 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
    */
   public AdministratorWebTokenSpec setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Options for displaying the Managed Configuration page.
+   * @return value or {@code null} for none
+   */
+  public AdministratorWebTokenSpecManagedConfigurations getManagedConfigurations() {
+    return managedConfigurations;
+  }
+
+  /**
+   * Options for displaying the Managed Configuration page.
+   * @param managedConfigurations managedConfigurations or {@code null} for none
+   */
+  public AdministratorWebTokenSpec setManagedConfigurations(AdministratorWebTokenSpecManagedConfigurations managedConfigurations) {
+    this.managedConfigurations = managedConfigurations;
     return this;
   }
 

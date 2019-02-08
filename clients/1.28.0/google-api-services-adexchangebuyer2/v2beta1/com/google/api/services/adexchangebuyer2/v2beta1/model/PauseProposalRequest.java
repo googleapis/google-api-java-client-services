@@ -32,7 +32,7 @@ public final class PauseProposalRequest extends com.google.api.client.json.Gener
 
   /**
    * The reason why the proposal is being paused. This human readable message will be displayed in
-   * the seller's UI. (Max length: 100 unicode code units.)
+   * the seller's UI. (Max length: 1000 unicode code units.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class PauseProposalRequest extends com.google.api.client.json.Gener
 
   /**
    * The reason why the proposal is being paused. This human readable message will be displayed in
-   * the seller's UI. (Max length: 100 unicode code units.)
+   * the seller's UI. (Max length: 1000 unicode code units.)
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -49,7 +49,7 @@ public final class PauseProposalRequest extends com.google.api.client.json.Gener
 
   /**
    * The reason why the proposal is being paused. This human readable message will be displayed in
-   * the seller's UI. (Max length: 100 unicode code units.)
+   * the seller's UI. (Max length: 1000 unicode code units.)
    * @param reason reason or {@code null} for none
    */
   public PauseProposalRequest setReason(java.lang.String reason) {

@@ -54,7 +54,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional.
    *
-   * The departure time used to calculate traffic impact, represented as .google.type.TimeOfDay in
+   * The departure time used to calculate traffic impact, represented as google.type.TimeOfDay in
    * local time zone.
    *
    * Currently traffic model is restricted to hour level resolution.
@@ -138,7 +138,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional.
    *
-   * The departure time used to calculate traffic impact, represented as .google.type.TimeOfDay in
+   * The departure time used to calculate traffic impact, represented as google.type.TimeOfDay in
    * local time zone.
    *
    * Currently traffic model is restricted to hour level resolution.
@@ -151,7 +151,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   /**
    * Optional.
    *
-   * The departure time used to calculate traffic impact, represented as .google.type.TimeOfDay in
+   * The departure time used to calculate traffic impact, represented as google.type.TimeOfDay in
    * local time zone.
    *
    * Currently traffic model is restricted to hour level resolution.

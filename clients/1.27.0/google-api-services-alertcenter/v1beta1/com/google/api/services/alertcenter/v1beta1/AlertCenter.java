@@ -288,7 +288,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Gets the specified alert.
+     * Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
      *
      * Create a request for the method "alerts.get".
      *
@@ -296,7 +296,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param alertId Required. The identifier of the alert to retrieve.
-    Returns a NOT_FOUND error if no such alert.
      * @return the request
      */
     public Get get(java.lang.String alertId) throws java.io.IOException {
@@ -310,7 +309,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1beta1/alerts/{alertId}";
 
       /**
-       * Gets the specified alert.
+       * Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
        *
        * Create a request for the method "alerts.get".
        *
@@ -320,7 +319,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param alertId Required. The identifier of the alert to retrieve.
-    Returns a NOT_FOUND error if no such alert.
        * @since 1.13
        */
       protected Get(java.lang.String alertId) {
@@ -393,23 +391,17 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The identifier of the alert to retrieve. Returns a NOT_FOUND error if no such
-       * alert.
-       */
+      /** Required. The identifier of the alert to retrieve. */
       @com.google.api.client.util.Key
       private java.lang.String alertId;
 
-      /** Required. The identifier of the alert to retrieve. Returns a NOT_FOUND error if no such alert.
+      /** Required. The identifier of the alert to retrieve.
        */
       public java.lang.String getAlertId() {
         return alertId;
       }
 
-      /**
-       * Required. The identifier of the alert to retrieve. Returns a NOT_FOUND error if no such
-       * alert.
-       */
+      /** Required. The identifier of the alert to retrieve. */
       public Get setAlertId(java.lang.String alertId) {
         this.alertId = alertId;
         return this;
@@ -821,7 +813,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
     public class Feedback {
 
       /**
-       * Creates new feedback for an alert.
+       * Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert
+       * returns `NOT_FOUND` error.
        *
        * Create a request for the method "feedback.create".
        *
@@ -829,8 +822,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param alertId Required. The identifier of the alert this feedback belongs to.
-      Returns a `NOT_FOUND` error if no
-       *        such alert.
        * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.AlertFeedback}
        * @return the request
        */
@@ -845,7 +836,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1beta1/alerts/{alertId}/feedback";
 
         /**
-         * Creates new feedback for an alert.
+         * Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert
+         * returns `NOT_FOUND` error.
          *
          * Create a request for the method "feedback.create".
          *
@@ -856,8 +848,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param alertId Required. The identifier of the alert this feedback belongs to.
-      Returns a `NOT_FOUND` error if no
-       *        such alert.
          * @param content the {@link com.google.api.services.alertcenter.v1beta1.model.AlertFeedback}
          * @since 1.13
          */
@@ -921,24 +911,17 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The identifier of the alert this feedback belongs to. Returns a `NOT_FOUND`
-         * error if no such alert.
-         */
+        /** Required. The identifier of the alert this feedback belongs to. */
         @com.google.api.client.util.Key
         private java.lang.String alertId;
 
-        /** Required. The identifier of the alert this feedback belongs to. Returns a `NOT_FOUND` error if no
-       such alert.
+        /** Required. The identifier of the alert this feedback belongs to.
          */
         public java.lang.String getAlertId() {
           return alertId;
         }
 
-        /**
-         * Required. The identifier of the alert this feedback belongs to. Returns a `NOT_FOUND`
-         * error if no such alert.
-         */
+        /** Required. The identifier of the alert this feedback belongs to. */
         public Create setAlertId(java.lang.String alertId) {
           this.alertId = alertId;
           return this;
@@ -973,7 +956,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Lists all the feedback for an alert.
+       * Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert
+       * returns `NOT_FOUND` error.
        *
        * Create a request for the method "feedback.list".
        *
@@ -982,8 +966,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        *
        * @param alertId Required. The alert identifier.
       The "-" wildcard could be used to represent all alerts.
-      If alert
-       *        does not exist returns a `NOT_FOUND` error.
        * @return the request
        */
       public List list(java.lang.String alertId) throws java.io.IOException {
@@ -997,7 +979,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1beta1/alerts/{alertId}/feedback";
 
         /**
-         * Lists all the feedback for an alert.
+         * Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert
+         * returns `NOT_FOUND` error.
          *
          * Create a request for the method "feedback.list".
          *
@@ -1008,8 +991,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          *
          * @param alertId Required. The alert identifier.
       The "-" wildcard could be used to represent all alerts.
-      If alert
-       *        does not exist returns a `NOT_FOUND` error.
          * @since 1.13
          */
         protected List(java.lang.String alertId) {
@@ -1084,13 +1065,11 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
         /**
          * Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
-         * If alert does not exist returns a `NOT_FOUND` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String alertId;
 
-        /** Required. The alert identifier. The "-" wildcard could be used to represent all alerts. If alert
-       does not exist returns a `NOT_FOUND` error.
+        /** Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
          */
         public java.lang.String getAlertId() {
           return alertId;
@@ -1098,7 +1077,6 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
         /**
          * Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
-         * If alert does not exist returns a `NOT_FOUND` error.
          */
         public List setAlertId(java.lang.String alertId) {
           this.alertId = alertId;
@@ -1314,7 +1292,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Update the customer-level settings.
+     * Updates the customer-level settings.
      *
      * Create a request for the method "v1beta1.updateSettings".
      *
@@ -1335,7 +1313,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1beta1/settings";
 
       /**
-       * Update the customer-level settings.
+       * Updates the customer-level settings.
        *
        * Create a request for the method "v1beta1.updateSettings".
        *

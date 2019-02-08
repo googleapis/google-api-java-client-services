@@ -42,6 +42,13 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
   private StartActivityIntent startActivity;
 
   /**
+   * Timeout in seconds for each intent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String timeout;
+
+  /**
    * @return value or {@code null} for none
    */
   public LauncherActivityIntent getLauncherActivity() {
@@ -68,6 +75,23 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
    */
   public RoboStartingIntent setStartActivity(StartActivityIntent startActivity) {
     this.startActivity = startActivity;
+    return this;
+  }
+
+  /**
+   * Timeout in seconds for each intent.
+   * @return value or {@code null} for none
+   */
+  public String getTimeout() {
+    return timeout;
+  }
+
+  /**
+   * Timeout in seconds for each intent.
+   * @param timeout timeout or {@code null} for none
+   */
+  public RoboStartingIntent setTimeout(String timeout) {
+    this.timeout = timeout;
     return this;
   }
 

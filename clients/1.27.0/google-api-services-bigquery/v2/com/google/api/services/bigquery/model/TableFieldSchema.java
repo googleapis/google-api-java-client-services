@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class TableFieldSchema extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Optional] The categories attached to this field, used for field-level access control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Categories categories;
+
+  /**
    * [Optional] The field description. The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * [Optional] The categories attached to this field, used for field-level access control.
+   * @return value or {@code null} for none
+   */
+  public Categories getCategories() {
+    return categories;
+  }
+
+  /**
+   * [Optional] The categories attached to this field, used for field-level access control.
+   * @param categories categories or {@code null} for none
+   */
+  public TableFieldSchema setCategories(Categories categories) {
+    this.categories = categories;
+    return this;
+  }
 
   /**
    * [Optional] The field description. The maximum length is 1,024 characters.
@@ -175,6 +199,50 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   @Override
   public TableFieldSchema clone() {
     return (TableFieldSchema) super.clone();
+  }
+
+  /**
+   * [Optional] The categories attached to this field, used for field-level access control.
+   */
+  public static final class Categories extends com.google.api.client.json.GenericJson {
+
+    /**
+     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most
+     * 5 categories are allowed.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<java.lang.String> names;
+
+    /**
+     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most
+     * 5 categories are allowed.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.String> getNames() {
+      return names;
+    }
+
+    /**
+     * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most
+     * 5 categories are allowed.
+     * @param names names or {@code null} for none
+     */
+    public Categories setNames(java.util.List<java.lang.String> names) {
+      this.names = names;
+      return this;
+    }
+
+    @Override
+    public Categories set(String fieldName, Object value) {
+      return (Categories) super.set(fieldName, value);
+    }
+
+    @Override
+    public Categories clone() {
+      return (Categories) super.clone();
+    }
+
   }
 
 }

@@ -928,12 +928,14 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   public static final class IamConfiguration extends com.google.api.client.json.GenericJson {
 
     /**
+     * The bucket's Bucket Policy Only configuration.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private BucketPolicyOnly bucketPolicyOnly;
 
     /**
+     * The bucket's Bucket Policy Only configuration.
      * @return value or {@code null} for none
      */
     public BucketPolicyOnly getBucketPolicyOnly() {
@@ -941,6 +943,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
+     * The bucket's Bucket Policy Only configuration.
      * @param bucketPolicyOnly bucketPolicyOnly or {@code null} for none
      */
     public IamConfiguration setBucketPolicyOnly(BucketPolicyOnly bucketPolicyOnly) {
@@ -959,7 +962,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Model definition for BucketIamConfigurationBucketPolicyOnly.
+     * The bucket's Bucket Policy Only configuration.
      */
     public static final class BucketPolicyOnly extends com.google.api.client.json.GenericJson {
 

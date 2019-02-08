@@ -64,7 +64,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the operation. Required.
+   * The ID of the Google Cloud Platform Project that owns the operation. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the operation. Required.
+   * The ID of the Google Cloud Platform Project that owns the operation. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -175,7 +175,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the operation. Required.
+   * The ID of the Google Cloud Platform Project that owns the operation. Required.
    * @param projectId projectId or {@code null} for none
    */
   public TransferOperation setProjectId(java.lang.String projectId) {

@@ -31,6 +31,13 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.client.json.GenericJson {
 
   /**
+   * Description of the infotype. Translated when language is provided in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Human readable form of the infoType name.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedBy;
+
+  /**
+   * Description of the infotype. Translated when language is provided in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Description of the infotype. Translated when language is provided in the request.
+   * @param description description or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * Human readable form of the infoType name.

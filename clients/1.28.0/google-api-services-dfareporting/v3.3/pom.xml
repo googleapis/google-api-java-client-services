@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dfareporting</artifactId>
-  <version>v3.3-rev20190124-1.28.0</version>
-  <name>DCM/DFA Reporting And Trafficking API v3.3-rev20190124-1.28.0</name>
+  <version>v3.3-rev20190206-1.28.0</version>
+  <name>DCM/DFA Reporting And Trafficking API v3.3-rev20190206-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -82,7 +82,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   private CreativeAssetId assetIdentifier;
 
   /**
-   * Audio stream bit rate in kbps.This is a read-only field. Applicable to the following creative
+   * Audio stream bit rate in kbps. This is a read-only field. Applicable to the following creative
    * types: INSTREAM_AUDIO, INSTREAM_VIDEO and all VPAID.
    * The value may be {@code null}.
    */
@@ -90,7 +90,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   private java.lang.Integer audioBitRate;
 
   /**
-   * Audio sample bit rate in hertz.This is a read-only field. Applicable to the following creative
+   * Audio sample bit rate in hertz. This is a read-only field. Applicable to the following creative
    * types: INSTREAM_AUDIO, INSTREAM_VIDEO and all VPAID.
    * The value may be {@code null}.
    */
@@ -209,7 +209,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   private java.lang.Integer flashVersion;
 
   /**
-   * Video frame rate for video asset in frames per second.This is a read-only field. Applicable to
+   * Video frame rate for video asset in frames per second. This is a read-only field. Applicable to
    * the following creative types: INSTREAM_VIDEO and all VPAID.
    * The value may be {@code null}.
    */
@@ -585,7 +585,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Audio stream bit rate in kbps.This is a read-only field. Applicable to the following creative
+   * Audio stream bit rate in kbps. This is a read-only field. Applicable to the following creative
    * types: INSTREAM_AUDIO, INSTREAM_VIDEO and all VPAID.
    * @return value or {@code null} for none
    */
@@ -594,7 +594,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Audio stream bit rate in kbps.This is a read-only field. Applicable to the following creative
+   * Audio stream bit rate in kbps. This is a read-only field. Applicable to the following creative
    * types: INSTREAM_AUDIO, INSTREAM_VIDEO and all VPAID.
    * @param audioBitRate audioBitRate or {@code null} for none
    */
@@ -604,7 +604,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Audio sample bit rate in hertz.This is a read-only field. Applicable to the following creative
+   * Audio sample bit rate in hertz. This is a read-only field. Applicable to the following creative
    * types: INSTREAM_AUDIO, INSTREAM_VIDEO and all VPAID.
    * @return value or {@code null} for none
    */
@@ -613,7 +613,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Audio sample bit rate in hertz.This is a read-only field. Applicable to the following creative
+   * Audio sample bit rate in hertz. This is a read-only field. Applicable to the following creative
    * types: INSTREAM_AUDIO, INSTREAM_VIDEO and all VPAID.
    * @param audioSampleRate audioSampleRate or {@code null} for none
    */
@@ -884,7 +884,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Video frame rate for video asset in frames per second.This is a read-only field. Applicable to
+   * Video frame rate for video asset in frames per second. This is a read-only field. Applicable to
    * the following creative types: INSTREAM_VIDEO and all VPAID.
    * @return value or {@code null} for none
    */
@@ -893,7 +893,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Video frame rate for video asset in frames per second.This is a read-only field. Applicable to
+   * Video frame rate for video asset in frames per second. This is a read-only field. Applicable to
    * the following creative types: INSTREAM_VIDEO and all VPAID.
    * @param frameRate frameRate or {@code null} for none
    */

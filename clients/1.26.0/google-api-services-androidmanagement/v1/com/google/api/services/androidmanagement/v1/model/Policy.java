@@ -501,6 +501,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean setWallpaperDisabled;
 
   /**
+   * Actions to take during the setup process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SetupAction> setupActions;
+
+  /**
    * Whether location sharing is disabled.
    * The value may be {@code null}.
    */
@@ -620,8 +627,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean wifiConfigDisabled;
 
   /**
-   * Whether Wi-Fi networks defined in Open Network Configuration are locked so they can't be edited
-   * by the user.
+   * DEPRECATED - Use wifi_config_disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1665,6 +1671,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Actions to take during the setup process.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SetupAction> getSetupActions() {
+    return setupActions;
+  }
+
+  /**
+   * Actions to take during the setup process.
+   * @param setupActions setupActions or {@code null} for none
+   */
+  public Policy setSetupActions(java.util.List<SetupAction> setupActions) {
+    this.setupActions = setupActions;
+    return this;
+  }
+
+  /**
    * Whether location sharing is disabled.
    * @return value or {@code null} for none
    */
@@ -1951,8 +1974,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether Wi-Fi networks defined in Open Network Configuration are locked so they can't be edited
-   * by the user.
+   * DEPRECATED - Use wifi_config_disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWifiConfigsLockdownEnabled() {
@@ -1960,8 +1982,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether Wi-Fi networks defined in Open Network Configuration are locked so they can't be edited
-   * by the user.
+   * DEPRECATED - Use wifi_config_disabled.
    * @param wifiConfigsLockdownEnabled wifiConfigsLockdownEnabled or {@code null} for none
    */
   public Policy setWifiConfigsLockdownEnabled(java.lang.Boolean wifiConfigsLockdownEnabled) {

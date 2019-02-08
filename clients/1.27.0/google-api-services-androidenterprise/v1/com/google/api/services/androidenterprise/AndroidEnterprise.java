@@ -7360,15 +7360,15 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * A pagination token is contained in a request''s response when there are more products. The
+       * A pagination token is contained in a request's response when there are more products. The
        * token can be used in a subsequent request to obtain more products, and so forth. This
        * parameter cannot be used in the initial request.
        */
       @com.google.api.client.util.Key
       private java.lang.String token;
 
-      /** A pagination token is contained in a request''s response when there are more products. The token
-     can be used in a subsequent request to obtain more products, and so forth. This parameter cannot be
+      /** A pagination token is contained in a request's response when there are more products. The token can
+     be used in a subsequent request to obtain more products, and so forth. This parameter cannot be
      used in the initial request.
        */
       public java.lang.String getToken() {
@@ -7376,7 +7376,7 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
 
       /**
-       * A pagination token is contained in a request''s response when there are more products. The
+       * A pagination token is contained in a request's response when there are more products. The
        * token can be used in a subsequent request to obtain more products, and so forth. This
        * parameter cannot be used in the initial request.
        */

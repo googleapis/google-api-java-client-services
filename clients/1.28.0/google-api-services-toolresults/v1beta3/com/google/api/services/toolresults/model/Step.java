@@ -149,6 +149,18 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.util.List<StepLabelsEntry> labels;
 
   /**
+   * Details when multiple steps are run with the same configuration as a group. These details can
+   * be used identify which group this step is part of. It also identifies the groups 'primary step'
+   * which indexes all the group members.
+   *
+   * - In response: present if previously set. - In create request: optional, set iff this step was
+   * performed more than once. - In update request: optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiStep multiStep;
+
+  /**
    * A short human-readable name to display in the UI. Maximum of 100 characters. For example: Clean
    * build
    *
@@ -459,6 +471,33 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setLabels(java.util.List<StepLabelsEntry> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Details when multiple steps are run with the same configuration as a group. These details can
+   * be used identify which group this step is part of. It also identifies the groups 'primary step'
+   * which indexes all the group members.
+   *
+   * - In response: present if previously set. - In create request: optional, set iff this step was
+   * performed more than once. - In update request: optional
+   * @return value or {@code null} for none
+   */
+  public MultiStep getMultiStep() {
+    return multiStep;
+  }
+
+  /**
+   * Details when multiple steps are run with the same configuration as a group. These details can
+   * be used identify which group this step is part of. It also identifies the groups 'primary step'
+   * which indexes all the group members.
+   *
+   * - In response: present if previously set. - In create request: optional, set iff this step was
+   * performed more than once. - In update request: optional
+   * @param multiStep multiStep or {@code null} for none
+   */
+  public Step setMultiStep(MultiStep multiStep) {
+    this.multiStep = multiStep;
     return this;
   }
 

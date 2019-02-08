@@ -54,6 +54,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Enable session affinity. Only applicable in the App Engine flexible environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sessionAffinity;
+
+  /**
    * Google Cloud Platform sub-network where the virtual machines are created. Specify the short
    * name, not the resource path.If a subnetwork name is specified, a network name will also be
    * required unless it is for the default network. If the network that the instance is being
@@ -124,6 +131,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Enable session affinity. Only applicable in the App Engine flexible environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSessionAffinity() {
+    return sessionAffinity;
+  }
+
+  /**
+   * Enable session affinity. Only applicable in the App Engine flexible environment.
+   * @param sessionAffinity sessionAffinity or {@code null} for none
+   */
+  public Network setSessionAffinity(java.lang.Boolean sessionAffinity) {
+    this.sessionAffinity = sessionAffinity;
     return this;
   }
 

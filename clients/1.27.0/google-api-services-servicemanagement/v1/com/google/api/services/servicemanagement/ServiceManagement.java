@@ -1752,17 +1752,24 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /** Requested size of the next page of data. */
+      /**
+       * The max number of items to include in the response list. Page size is 50 if not specified.
+       * Maximum value is 100.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Requested size of the next page of data.
+      /** The max number of items to include in the response list. Page size is 50 if not specified. Maximum
+     value is 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Requested size of the next page of data. */
+      /**
+       * The max number of items to include in the response list. Page size is 50 if not specified.
+       * Maximum value is 100.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -2724,17 +2731,24 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The max number of items to include in the response list. */
+        /**
+         * The max number of items to include in the response list. Page size is 50 if not
+         * specified. Maximum value is 100.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The max number of items to include in the response list.
+        /** The max number of items to include in the response list. Page size is 50 if not specified. Maximum
+       value is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The max number of items to include in the response list. */
+        /**
+         * The max number of items to include in the response list. Page size is 50 if not
+         * specified. Maximum value is 100.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -3863,17 +3877,24 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /** The max number of items to include in the response list. */
+        /**
+         * The max number of items to include in the response list. Page size is 50 if not
+         * specified. Maximum value is 100.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The max number of items to include in the response list.
+        /** The max number of items to include in the response list. Page size is 50 if not specified. Maximum
+       value is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The max number of items to include in the response list. */
+        /**
+         * The max number of items to include in the response list. Page size is 50 if not
+         * specified. Maximum value is 100.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

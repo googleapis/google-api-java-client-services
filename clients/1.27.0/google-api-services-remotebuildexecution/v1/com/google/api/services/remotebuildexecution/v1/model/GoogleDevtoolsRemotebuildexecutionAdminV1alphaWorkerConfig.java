@@ -48,8 +48,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String diskType;
 
   /**
-   * Required. Machine type of the worker, such as n1-standard-2. See
-   * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types.
+   * Required. Machine type of the worker, such as `n1-standard-2`. See
+   * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note
+   * that `f1-micro` and `g1-small` are not yet supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +113,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Required. Machine type of the worker, such as n1-standard-2. See
-   * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types.
+   * Required. Machine type of the worker, such as `n1-standard-2`. See
+   * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note
+   * that `f1-micro` and `g1-small` are not yet supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -121,8 +123,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Required. Machine type of the worker, such as n1-standard-2. See
-   * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types.
+   * Required. Machine type of the worker, such as `n1-standard-2`. See
+   * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note
+   * that `f1-micro` and `g1-small` are not yet supported.
    * @param machineType machineType or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setMachineType(java.lang.String machineType) {

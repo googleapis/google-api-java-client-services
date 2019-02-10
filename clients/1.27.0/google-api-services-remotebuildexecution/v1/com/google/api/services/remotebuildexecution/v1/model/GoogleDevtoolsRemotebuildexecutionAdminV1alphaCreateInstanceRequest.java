@@ -39,7 +39,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceR
   private GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance instance;
 
   /**
-   * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contains only
+   * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only
    * lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with
    * a lowercase letter or a digit.
    * The value may be {@code null}.
@@ -74,7 +74,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceR
   }
 
   /**
-   * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contains only
+   * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only
    * lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with
    * a lowercase letter or a digit.
    * @return value or {@code null} for none
@@ -84,7 +84,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceR
   }
 
   /**
-   * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contains only
+   * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only
    * lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with
    * a lowercase letter or a digit.
    * @param instanceId instanceId or {@code null} for none

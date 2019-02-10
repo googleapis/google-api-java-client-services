@@ -68,7 +68,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the job.
+   * The ID of the Google Cloud Platform Project that owns the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the job.
+   * The ID of the Google Cloud Platform Project that owns the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -199,7 +199,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the job.
+   * The ID of the Google Cloud Platform Project that owns the job.
    * @param projectId projectId or {@code null} for none
    */
   public TransferJob setProjectId(java.lang.String projectId) {

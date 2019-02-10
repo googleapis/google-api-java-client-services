@@ -45,18 +45,31 @@ public final class GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation
   private GoogleCloudVideointelligenceV1p2beta1Entity entity;
 
   /**
-   * Information corresponding to all frames where this object track appears.
+   * Information corresponding to all frames where this object track appears. Non-streaming batch
+   * mode: it may be one or multiple ObjectTrackingFrame messages in frames. Streaming mode: it can
+   * only be one ObjectTrackingFrame message in frames.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1ObjectTrackingFrame> frames;
 
   /**
-   * Each object track corresponds to one video segment where it appears.
+   * Non-streaming batch mode ONLY. Each object track corresponds to one video segment where it
+   * appears.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudVideointelligenceV1p2beta1VideoSegment segment;
+
+  /**
+   * Streaming mode ONLY. In streaming mode, we do not know the end time of a tracked object before
+   * it is completed. Hence, there is no VideoSegment info returned. Instead, we provide a unique
+   * identifiable integer track_id so that the customers can correlate the results of the ongoing
+   * ObjectTrackAnnotation of the same track_id over time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long trackId;
 
   /**
    * Object category's labeling confidence of this track.
@@ -93,7 +106,9 @@ public final class GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation
   }
 
   /**
-   * Information corresponding to all frames where this object track appears.
+   * Information corresponding to all frames where this object track appears. Non-streaming batch
+   * mode: it may be one or multiple ObjectTrackingFrame messages in frames. Streaming mode: it can
+   * only be one ObjectTrackingFrame message in frames.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVideointelligenceV1p2beta1ObjectTrackingFrame> getFrames() {
@@ -101,7 +116,9 @@ public final class GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation
   }
 
   /**
-   * Information corresponding to all frames where this object track appears.
+   * Information corresponding to all frames where this object track appears. Non-streaming batch
+   * mode: it may be one or multiple ObjectTrackingFrame messages in frames. Streaming mode: it can
+   * only be one ObjectTrackingFrame message in frames.
    * @param frames frames or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation setFrames(java.util.List<GoogleCloudVideointelligenceV1p2beta1ObjectTrackingFrame> frames) {
@@ -110,7 +127,8 @@ public final class GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation
   }
 
   /**
-   * Each object track corresponds to one video segment where it appears.
+   * Non-streaming batch mode ONLY. Each object track corresponds to one video segment where it
+   * appears.
    * @return value or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p2beta1VideoSegment getSegment() {
@@ -118,11 +136,35 @@ public final class GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation
   }
 
   /**
-   * Each object track corresponds to one video segment where it appears.
+   * Non-streaming batch mode ONLY. Each object track corresponds to one video segment where it
+   * appears.
    * @param segment segment or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation setSegment(GoogleCloudVideointelligenceV1p2beta1VideoSegment segment) {
     this.segment = segment;
+    return this;
+  }
+
+  /**
+   * Streaming mode ONLY. In streaming mode, we do not know the end time of a tracked object before
+   * it is completed. Hence, there is no VideoSegment info returned. Instead, we provide a unique
+   * identifiable integer track_id so that the customers can correlate the results of the ongoing
+   * ObjectTrackAnnotation of the same track_id over time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTrackId() {
+    return trackId;
+  }
+
+  /**
+   * Streaming mode ONLY. In streaming mode, we do not know the end time of a tracked object before
+   * it is completed. Hence, there is no VideoSegment info returned. Instead, we provide a unique
+   * identifiable integer track_id so that the customers can correlate the results of the ongoing
+   * ObjectTrackAnnotation of the same track_id over time.
+   * @param trackId trackId or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p2beta1ObjectTrackingAnnotation setTrackId(java.lang.Long trackId) {
+    this.trackId = trackId;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-discovery</artifactId>
-  <version>v1-rev20180813-1.28.0</version>
-  <name>APIs Discovery Service v1-rev20180813-1.28.0</name>
+  <version>v1-rev20190129-1.28.0</version>
+  <name>API Discovery Service v1-rev20190129-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -73,8 +73,8 @@
           </execution>
         </executions>
         <configuration>
-          <doctitle>APIs Discovery Service ${project.version}</doctitle>
-          <windowtitle>APIs Discovery Service ${project.version}</windowtitle>
+          <doctitle>API Discovery Service ${project.version}</doctitle>
+          <windowtitle>API Discovery Service ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/6/docs/api</link>
             <link>https://google.github.io/google-http-java-client/releases/1.28.0/javadoc/index.html</link>

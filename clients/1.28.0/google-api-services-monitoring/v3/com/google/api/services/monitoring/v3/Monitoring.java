@@ -1538,6 +1538,32 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /**
+         * If this field is true, then the request means to delete a group with all its descendants.
+         * Otherwise, the request means to delete a group only when it has no descendants. The
+         * default value is false.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean recursive;
+
+        /** If this field is true, then the request means to delete a group with all its descendants.
+       Otherwise, the request means to delete a group only when it has no descendants. The default value
+       is false.
+         */
+        public java.lang.Boolean getRecursive() {
+          return recursive;
+        }
+
+        /**
+         * If this field is true, then the request means to delete a group with all its descendants.
+         * Otherwise, the request means to delete a group only when it has no descendants. The
+         * default value is false.
+         */
+        public Delete setRecursive(java.lang.Boolean recursive) {
+          this.recursive = recursive;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);

@@ -54,7 +54,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Enable session affinity.
+   * Enable session affinity. Only applicable in the App Engine flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable session affinity.
+   * Enable session affinity. Only applicable in the App Engine flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSessionAffinity() {
@@ -143,7 +143,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable session affinity.
+   * Enable session affinity. Only applicable in the App Engine flexible environment.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public Network setSessionAffinity(java.lang.Boolean sessionAffinity) {

@@ -2036,8 +2036,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       /**
        * Removes specified project resource identified by tenant resource tag. It will remove project lien
        * with 'TenantManager' origin if that was added. It will then attempt to delete the project. If
-       * that operation fails, this method fails. After the project has been deleted, or if was already in
-       * DELETED state, resource metadata is permanently removed from the tenancy unit. Operation.
+       * that operation fails, this method fails. Calls to remove already removed or non-existent tenant
+       * project will succeed. After the project has been deleted, or if was already in DELETED state,
+       * resource metadata is permanently removed from the tenancy unit. Operation.
        *
        * Create a request for the method "tenancyUnits.removeProject".
        *
@@ -2067,9 +2068,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         /**
          * Removes specified project resource identified by tenant resource tag. It will remove project
          * lien with 'TenantManager' origin if that was added. It will then attempt to delete the project.
-         * If that operation fails, this method fails. After the project has been deleted, or if was
-         * already in DELETED state, resource metadata is permanently removed from the tenancy unit.
-         * Operation.
+         * If that operation fails, this method fails. Calls to remove already removed or non-existent
+         * tenant project will succeed. After the project has been deleted, or if was already in DELETED
+         * state, resource metadata is permanently removed from the tenancy unit. Operation.
          *
          * Create a request for the method "tenancyUnits.removeProject".
          *

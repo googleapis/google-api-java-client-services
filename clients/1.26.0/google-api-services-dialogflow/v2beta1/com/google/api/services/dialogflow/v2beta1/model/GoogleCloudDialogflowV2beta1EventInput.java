@@ -19,7 +19,7 @@ package com.google.api.services.dialogflow.v2beta1.model;
 /**
  * Events allow for matching intents by event name instead of the natural language input. For
  * instance, input `` can trigger a personalized welcome response. The parameter `name` may be used
- * by the agent in the response: `“Hello #welcome_event.name! What can I do for you today?”`.
+ * by the agent in the response: `"Hello #welcome_event.name! What can I do for you today?"`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

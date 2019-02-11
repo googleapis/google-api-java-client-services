@@ -194,10 +194,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   public static final class Bindings extends com.google.api.client.json.GenericJson {
 
     /**
+     * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
+     * allow user access via current binding. Different bindings, including their conditions, are
+     * examined independently.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
-    private java.lang.Object condition;
+    private Expr condition;
 
     /**
      * A collection of identifiers for members who may assume the provided role. Recognized
@@ -243,16 +246,22 @@ public final class Policy extends com.google.api.client.json.GenericJson {
     private java.lang.String role;
 
     /**
+     * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
+     * allow user access via current binding. Different bindings, including their conditions, are
+     * examined independently.
      * @return value or {@code null} for none
      */
-    public java.lang.Object getCondition() {
+    public Expr getCondition() {
       return condition;
     }
 
     /**
+     * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
+     * allow user access via current binding. Different bindings, including their conditions, are
+     * examined independently.
      * @param condition condition or {@code null} for none
      */
-    public Bindings setCondition(java.lang.Object condition) {
+    public Bindings setCondition(Expr condition) {
       this.condition = condition;
       return this;
     }

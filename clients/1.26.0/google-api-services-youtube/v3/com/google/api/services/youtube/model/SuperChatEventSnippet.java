@@ -81,6 +81,13 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   private java.lang.Boolean isSuperChatForGood;
 
   /**
+   * True if this event is a Super Sticker event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isSuperStickerEvent;
+
+  /**
    * The tier for the paid message, which is based on the amount of money spent to purchase the
    * message.
    * The value may be {@code null}.
@@ -95,6 +102,14 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private Nonprofit nonprofit;
+
+  /**
+   * If this event is a Super Sticker event, this field will contain metadata about the Super
+   * Sticker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SuperStickerMetadata superStickerMetadata;
 
   /**
    * Details about the supporter.
@@ -227,6 +242,23 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
+   * True if this event is a Super Sticker event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsSuperStickerEvent() {
+    return isSuperStickerEvent;
+  }
+
+  /**
+   * True if this event is a Super Sticker event.
+   * @param isSuperStickerEvent isSuperStickerEvent or {@code null} for none
+   */
+  public SuperChatEventSnippet setIsSuperStickerEvent(java.lang.Boolean isSuperStickerEvent) {
+    this.isSuperStickerEvent = isSuperStickerEvent;
+    return this;
+  }
+
+  /**
    * The tier for the paid message, which is based on the amount of money spent to purchase the
    * message.
    * @return value or {@code null} for none
@@ -261,6 +293,25 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
    */
   public SuperChatEventSnippet setNonprofit(Nonprofit nonprofit) {
     this.nonprofit = nonprofit;
+    return this;
+  }
+
+  /**
+   * If this event is a Super Sticker event, this field will contain metadata about the Super
+   * Sticker.
+   * @return value or {@code null} for none
+   */
+  public SuperStickerMetadata getSuperStickerMetadata() {
+    return superStickerMetadata;
+  }
+
+  /**
+   * If this event is a Super Sticker event, this field will contain metadata about the Super
+   * Sticker.
+   * @param superStickerMetadata superStickerMetadata or {@code null} for none
+   */
+  public SuperChatEventSnippet setSuperStickerMetadata(SuperStickerMetadata superStickerMetadata) {
+    this.superStickerMetadata = superStickerMetadata;
     return this;
   }
 

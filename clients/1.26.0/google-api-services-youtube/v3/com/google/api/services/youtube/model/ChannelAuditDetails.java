@@ -52,16 +52,6 @@ public final class ChannelAuditDetails extends com.google.api.client.json.Generi
   private java.lang.Boolean copyrightStrikesGoodStanding;
 
   /**
-   * Describes the general state of the channel. This field will always show if there are any issues
-   * whatsoever with the channel. Currently this field represents the result of the logical and
-   * operation over the community guidelines good standing, the copyright strikes good standing and
-   * the content ID claims good standing, but this may change in the future.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean overallGoodStanding;
-
-  /**
    * Whether or not the channel respects the community guidelines.
    * @return value or {@code null} for none
    */
@@ -109,29 +99,6 @@ public final class ChannelAuditDetails extends com.google.api.client.json.Generi
    */
   public ChannelAuditDetails setCopyrightStrikesGoodStanding(java.lang.Boolean copyrightStrikesGoodStanding) {
     this.copyrightStrikesGoodStanding = copyrightStrikesGoodStanding;
-    return this;
-  }
-
-  /**
-   * Describes the general state of the channel. This field will always show if there are any issues
-   * whatsoever with the channel. Currently this field represents the result of the logical and
-   * operation over the community guidelines good standing, the copyright strikes good standing and
-   * the content ID claims good standing, but this may change in the future.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getOverallGoodStanding() {
-    return overallGoodStanding;
-  }
-
-  /**
-   * Describes the general state of the channel. This field will always show if there are any issues
-   * whatsoever with the channel. Currently this field represents the result of the logical and
-   * operation over the community guidelines good standing, the copyright strikes good standing and
-   * the content ID claims good standing, but this may change in the future.
-   * @param overallGoodStanding overallGoodStanding or {@code null} for none
-   */
-  public ChannelAuditDetails setOverallGoodStanding(java.lang.Boolean overallGoodStanding) {
-    this.overallGoodStanding = overallGoodStanding;
     return this;
   }
 

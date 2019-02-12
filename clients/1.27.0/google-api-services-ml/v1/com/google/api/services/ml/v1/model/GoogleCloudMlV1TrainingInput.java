@@ -58,6 +58,15 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String jobDir;
 
   /**
+   * Optional. The configuration for master.
+   *
+   * Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1ReplicaConfig masterConfig;
+
+  /**
    * Optional. Specifies the type of virtual machine to use for your training job's master worker.
    *
    * The following types are supported:
@@ -98,6 +107,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> packageUris;
+
+  /**
+   * Optional. The config of parameter servers.
+   *
+   * If `parameterServerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1ReplicaConfig parameterServerConfig;
 
   /**
    * Optional. The number of parameter server replicas to use for the training job. Each replica in
@@ -165,6 +184,15 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String scaleTier;
+
+  /**
+   * Optional. The configrations for workers.
+   *
+   * If `workerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1ReplicaConfig workerConfig;
 
   /**
    * Optional. The number of worker replicas to use for the training job. Each replica in the
@@ -245,6 +273,27 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setJobDir(java.lang.String jobDir) {
     this.jobDir = jobDir;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for master.
+   *
+   * Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig getMasterConfig() {
+    return masterConfig;
+  }
+
+  /**
+   * Optional. The configuration for master.
+   *
+   * Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * @param masterConfig masterConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setMasterConfig(GoogleCloudMlV1ReplicaConfig masterConfig) {
+    this.masterConfig = masterConfig;
     return this;
   }
 
@@ -335,6 +384,29 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setPackageUris(java.util.List<java.lang.String> packageUris) {
     this.packageUris = packageUris;
+    return this;
+  }
+
+  /**
+   * Optional. The config of parameter servers.
+   *
+   * If `parameterServerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig getParameterServerConfig() {
+    return parameterServerConfig;
+  }
+
+  /**
+   * Optional. The config of parameter servers.
+   *
+   * If `parameterServerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will
+   * be used.
+   * @param parameterServerConfig parameterServerConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setParameterServerConfig(GoogleCloudMlV1ReplicaConfig parameterServerConfig) {
+    this.parameterServerConfig = parameterServerConfig;
     return this;
   }
 
@@ -490,6 +562,27 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setScaleTier(java.lang.String scaleTier) {
     this.scaleTier = scaleTier;
+    return this;
+  }
+
+  /**
+   * Optional. The configrations for workers.
+   *
+   * If `workerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will be used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig getWorkerConfig() {
+    return workerConfig;
+  }
+
+  /**
+   * Optional. The configrations for workers.
+   *
+   * If `workerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will be used.
+   * @param workerConfig workerConfig or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setWorkerConfig(GoogleCloudMlV1ReplicaConfig workerConfig) {
+    this.workerConfig = workerConfig;
     return this;
   }
 

@@ -30,8 +30,7 @@ package com.google.api.services.docs.v1.model;
 public final class Range extends com.google.api.client.json.GenericJson {
 
   /**
-   * The zero-based end index of this range, exclusive, in Unicode code units of the UTF-16
-   * encoding.
+   * The zero-based end index of this range, exclusive, in UTF-16 code units.
    *
    * In all current uses, an end index must be provided. This field is an Int32Value in order to
    * accommodate future use cases with open-ended ranges.
@@ -49,7 +48,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   private java.lang.String segmentId;
 
   /**
-   * The zero-based start index of this range, in Unicode code units of the UTF-16 encoding.
+   * The zero-based start index of this range, in UTF-16 code units.
    *
    * In all current uses, a start index must be provided. This field is an Int32Value in order to
    * accommodate future use cases with open-ended ranges.
@@ -59,8 +58,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   private java.lang.Integer startIndex;
 
   /**
-   * The zero-based end index of this range, exclusive, in Unicode code units of the UTF-16
-   * encoding.
+   * The zero-based end index of this range, exclusive, in UTF-16 code units.
    *
    * In all current uses, an end index must be provided. This field is an Int32Value in order to
    * accommodate future use cases with open-ended ranges.
@@ -71,8 +69,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based end index of this range, exclusive, in Unicode code units of the UTF-16
-   * encoding.
+   * The zero-based end index of this range, exclusive, in UTF-16 code units.
    *
    * In all current uses, an end index must be provided. This field is an Int32Value in order to
    * accommodate future use cases with open-ended ranges.
@@ -103,7 +100,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based start index of this range, in Unicode code units of the UTF-16 encoding.
+   * The zero-based start index of this range, in UTF-16 code units.
    *
    * In all current uses, a start index must be provided. This field is an Int32Value in order to
    * accommodate future use cases with open-ended ranges.
@@ -114,7 +111,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based start index of this range, in Unicode code units of the UTF-16 encoding.
+   * The zero-based start index of this range, in UTF-16 code units.
    *
    * In all current uses, a start index must be provided. This field is an Int32Value in order to
    * accommodate future use cases with open-ended ranges.

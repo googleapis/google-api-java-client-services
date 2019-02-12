@@ -31,7 +31,7 @@ package com.google.api.services.serviceusage.v1.model;
 public final class Http extends com.google.api.client.json.GenericJson {
 
   /**
-   * When set to true, URL path parmeters will be fully URI-decoded except in cases of single
+   * When set to true, URL path parameters will be fully URI-decoded except in cases of single
    * segment matches in reserved expansion, where "%2F" will be left encoded.
    *
    * The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
@@ -50,7 +50,7 @@ public final class Http extends com.google.api.client.json.GenericJson {
   private java.util.List<HttpRule> rules;
 
   /**
-   * When set to true, URL path parmeters will be fully URI-decoded except in cases of single
+   * When set to true, URL path parameters will be fully URI-decoded except in cases of single
    * segment matches in reserved expansion, where "%2F" will be left encoded.
    *
    * The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
@@ -61,7 +61,7 @@ public final class Http extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, URL path parmeters will be fully URI-decoded except in cases of single
+   * When set to true, URL path parameters will be fully URI-decoded except in cases of single
    * segment matches in reserved expansion, where "%2F" will be left encoded.
    *
    * The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.

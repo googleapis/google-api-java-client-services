@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Data source is a logical namespace for items to be indexed. All items must belong to a data
- * source.  This is the prerequisite before items can be indexed into Cloud Search.
+ * Datasource is a logical namespace for items to be indexed. All items must belong to a datasource.
+ * This is the prerequisite before items can be indexed into Cloud Search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -31,8 +31,8 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, Indexing API rejects any modification calls to this data source such as create,
-   * update, and delete. Disabling this does not imply halting process of previously accepted data.
+   * If true, Indexing API rejects any modification calls to this datasource such as create, update,
+   * and delete. Disabling this does not imply halting process of previously accepted data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableServing;
 
   /**
-   * Required. Display name of the data source The maximum length is 300 characters.
+   * Required. Display name of the datasource The maximum length is 300 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,18 +60,19 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> indexingServiceAccounts;
 
   /**
-   * This restricts visibility to items at a data source level to the disjunction of users/groups
-   * mentioned with the field. Note that, this does not ensure access to a specific item, as users
-   * need to have ACL permissions on the contained items. This ensures a high level access on the
-   * entire data source, and that the individual items are not shared outside this visibility.
+   * This field restricts visibility to items at the datasource level. Items within the datasource
+   * are restricted to the union of users and groups included in this field. Note that, this does
+   * not ensure access to a specific item, as users need to have ACL permissions on the contained
+   * items. This ensures a high level access on the entire datasource, and that the individual items
+   * are not shared outside this visibility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GSuitePrincipal> itemsVisibility;
 
   /**
-   * Name of the data source resource. Format: datasources/{source_id}. The name is ignored when
-   * creating a data source.
+   * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+   * creating a datasource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   /**
    * A short name or alias for the source.  This value will be used to match the 'source' operator.
    * For example, if the short name is *value* then queries like *source:value* will only return
-   * results for this source. The value must be unique across all data sources. The value must only
+   * results for this source. The value must be unique across all datasources. The value must only
    * contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
    * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep,
    * people, teams. Its maximum length is 32 characters.
@@ -97,8 +98,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private java.lang.String shortName;
 
   /**
-   * If true, Indexing API rejects any modification calls to this data source such as create,
-   * update, and delete. Disabling this does not imply halting process of previously accepted data.
+   * If true, Indexing API rejects any modification calls to this datasource such as create, update,
+   * and delete. Disabling this does not imply halting process of previously accepted data.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableModifications() {
@@ -106,8 +107,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, Indexing API rejects any modification calls to this data source such as create,
-   * update, and delete. Disabling this does not imply halting process of previously accepted data.
+   * If true, Indexing API rejects any modification calls to this datasource such as create, update,
+   * and delete. Disabling this does not imply halting process of previously accepted data.
    * @param disableModifications disableModifications or {@code null} for none
    */
   public DataSource setDisableModifications(java.lang.Boolean disableModifications) {
@@ -133,7 +134,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Display name of the data source The maximum length is 300 characters.
+   * Required. Display name of the datasource The maximum length is 300 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -141,7 +142,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Display name of the data source The maximum length is 300 characters.
+   * Required. Display name of the datasource The maximum length is 300 characters.
    * @param displayName displayName or {@code null} for none
    */
   public DataSource setDisplayName(java.lang.String displayName) {
@@ -167,10 +168,11 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This restricts visibility to items at a data source level to the disjunction of users/groups
-   * mentioned with the field. Note that, this does not ensure access to a specific item, as users
-   * need to have ACL permissions on the contained items. This ensures a high level access on the
-   * entire data source, and that the individual items are not shared outside this visibility.
+   * This field restricts visibility to items at the datasource level. Items within the datasource
+   * are restricted to the union of users and groups included in this field. Note that, this does
+   * not ensure access to a specific item, as users need to have ACL permissions on the contained
+   * items. This ensures a high level access on the entire datasource, and that the individual items
+   * are not shared outside this visibility.
    * @return value or {@code null} for none
    */
   public java.util.List<GSuitePrincipal> getItemsVisibility() {
@@ -178,10 +180,11 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This restricts visibility to items at a data source level to the disjunction of users/groups
-   * mentioned with the field. Note that, this does not ensure access to a specific item, as users
-   * need to have ACL permissions on the contained items. This ensures a high level access on the
-   * entire data source, and that the individual items are not shared outside this visibility.
+   * This field restricts visibility to items at the datasource level. Items within the datasource
+   * are restricted to the union of users and groups included in this field. Note that, this does
+   * not ensure access to a specific item, as users need to have ACL permissions on the contained
+   * items. This ensures a high level access on the entire datasource, and that the individual items
+   * are not shared outside this visibility.
    * @param itemsVisibility itemsVisibility or {@code null} for none
    */
   public DataSource setItemsVisibility(java.util.List<GSuitePrincipal> itemsVisibility) {
@@ -190,8 +193,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the data source resource. Format: datasources/{source_id}. The name is ignored when
-   * creating a data source.
+   * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+   * creating a datasource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,8 +202,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the data source resource. Format: datasources/{source_id}. The name is ignored when
-   * creating a data source.
+   * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when
+   * creating a datasource.
    * @param name name or {@code null} for none
    */
   public DataSource setName(java.lang.String name) {
@@ -228,7 +231,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   /**
    * A short name or alias for the source.  This value will be used to match the 'source' operator.
    * For example, if the short name is *value* then queries like *source:value* will only return
-   * results for this source. The value must be unique across all data sources. The value must only
+   * results for this source. The value must be unique across all datasources. The value must only
    * contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
    * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep,
    * people, teams. Its maximum length is 32 characters.
@@ -241,7 +244,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   /**
    * A short name or alias for the source.  This value will be used to match the 'source' operator.
    * For example, if the short name is *value* then queries like *source:value* will only return
-   * results for this source. The value must be unique across all data sources. The value must only
+   * results for this source. The value must be unique across all datasources. The value must only
    * contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be
    * one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep,
    * people, teams. Its maximum length is 32 characters.

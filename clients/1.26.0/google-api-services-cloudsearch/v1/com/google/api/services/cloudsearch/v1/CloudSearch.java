@@ -4221,7 +4221,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     public class Datasources {
 
       /**
-       * Creates data source.
+       * Creates a datasource.
        *
        * Create a request for the method "datasources.create".
        *
@@ -4242,7 +4242,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/settings/datasources";
 
         /**
-         * Creates data source.
+         * Creates a datasource.
          *
          * Create a request for the method "datasources.create".
          *
@@ -4320,14 +4320,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Deletes a data source.
+       * Deletes a datasource.
        *
        * Create a request for the method "datasources.delete".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source.
+       * @param name Name of the datasource.
       Format: datasources/{source_id}.
        * @return the request
        */
@@ -4345,7 +4345,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Deletes a data source.
+         * Deletes a datasource.
          *
          * Create a request for the method "datasources.delete".
          *
@@ -4355,7 +4355,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source.
+         * @param name Name of the datasource.
       Format: datasources/{source_id}.
          * @since 1.13
          */
@@ -4425,19 +4425,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Name of the data source. Format: datasources/{source_id}.
+         * Name of the datasource. Format: datasources/{source_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source. Format: datasources/{source_id}.
+        /** Name of the datasource. Format: datasources/{source_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the data source. Format: datasources/{source_id}.
+         * Name of the datasource. Format: datasources/{source_id}.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4478,14 +4478,14 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Gets a data source.
+       * Gets a datasource.
        *
        * Create a request for the method "datasources.get".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source resource.
+       * @param name Name of the datasource resource.
       Format: datasources/{source_id}.
        * @return the request
        */
@@ -4503,7 +4503,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Gets a data source.
+         * Gets a datasource.
          *
          * Create a request for the method "datasources.get".
          *
@@ -4512,7 +4512,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source resource.
+         * @param name Name of the datasource resource.
       Format: datasources/{source_id}.
          * @since 1.13
          */
@@ -4592,19 +4592,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Name of the data source resource. Format: datasources/{source_id}.
+         * Name of the datasource resource. Format: datasources/{source_id}.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source resource. Format: datasources/{source_id}.
+        /** Name of the datasource resource. Format: datasources/{source_id}.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the data source resource. Format: datasources/{source_id}.
+         * Name of the datasource resource. Format: datasources/{source_id}.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4645,7 +4645,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Lists data sources.
+       * Lists datasources.
        *
        * Create a request for the method "datasources.list".
        *
@@ -4665,7 +4665,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v1/settings/datasources";
 
         /**
-         * Lists data sources.
+         * Lists datasources.
          *
          * Create a request for the method "datasources.list".
          *
@@ -4769,20 +4769,20 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Maximum number of data sources to fetch in a request. The max value is 100. The default
+         * Maximum number of datasources to fetch in a request. The max value is 100. The default
          * value is 10
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of data sources to fetch in a request. The max value is 100. The default value is 10
+        /** Maximum number of datasources to fetch in a request. The max value is 100. The default value is 10
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Maximum number of data sources to fetch in a request. The max value is 100. The default
+         * Maximum number of datasources to fetch in a request. The max value is 100. The default
          * value is 10
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -4812,17 +4812,17 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Updates a data source.
+       * Updates a datasource.
        *
        * Create a request for the method "datasources.update".
        *
        * This request holds the parameters needed by the cloudsearch server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the data source resource.
+       * @param name Name of the datasource resource.
       Format: datasources/{source_id}.
       The name is ignored when creating
-       *        a data source.
+       *        a datasource.
        * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateDataSourceRequest}
        * @return the request
        */
@@ -4840,7 +4840,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^datasources/[^/]+$");
 
         /**
-         * Updates a data source.
+         * Updates a datasource.
          *
          * Create a request for the method "datasources.update".
          *
@@ -4850,10 +4850,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the data source resource.
+         * @param name Name of the datasource resource.
       Format: datasources/{source_id}.
       The name is ignored when creating
-       *        a data source.
+       *        a datasource.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.UpdateDataSourceRequest}
          * @since 1.13
          */
@@ -4923,22 +4923,22 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Name of the data source resource. Format: datasources/{source_id}. The name is ignored
-         * when creating a data source.
+         * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored
+         * when creating a datasource.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the data source resource. Format: datasources/{source_id}. The name is ignored when
-       creating a data source.
+        /** Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating
+       a datasource.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the data source resource. Format: datasources/{source_id}. The name is ignored
-         * when creating a data source.
+         * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored
+         * when creating a datasource.
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

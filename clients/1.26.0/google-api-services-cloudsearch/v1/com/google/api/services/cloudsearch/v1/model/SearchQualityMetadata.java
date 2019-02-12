@@ -31,7 +31,7 @@ public final class SearchQualityMetadata extends com.google.api.client.json.Gene
 
   /**
    * An indication of the quality of the item, used to influence search quality. Value should be
-   * between 0.0 (lowest quality) and 1.0 (highest quality).
+   * between 0.0 (lowest quality) and 1.0 (highest quality). The default value is 0.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class SearchQualityMetadata extends com.google.api.client.json.Gene
 
   /**
    * An indication of the quality of the item, used to influence search quality. Value should be
-   * between 0.0 (lowest quality) and 1.0 (highest quality).
+   * between 0.0 (lowest quality) and 1.0 (highest quality). The default value is 0.0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getQuality() {
@@ -48,7 +48,7 @@ public final class SearchQualityMetadata extends com.google.api.client.json.Gene
 
   /**
    * An indication of the quality of the item, used to influence search quality. Value should be
-   * between 0.0 (lowest quality) and 1.0 (highest quality).
+   * between 0.0 (lowest quality) and 1.0 (highest quality). The default value is 0.0.
    * @param quality quality or {@code null} for none
    */
   public SearchQualityMetadata setQuality(java.lang.Double quality) {

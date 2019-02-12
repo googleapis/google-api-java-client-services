@@ -79,7 +79,9 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private Source source;
 
   /**
-   * The last modified date for the object in the search result.
+   * The last modified date for the object in the search result. If not set in the item, the value
+   * returned here is empty. When `updateTime` is used for calculating freshness and is not set,
+   * this value defaults to 2 years from the current time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +207,9 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last modified date for the object in the search result.
+   * The last modified date for the object in the search result. If not set in the item, the value
+   * returned here is empty. When `updateTime` is used for calculating freshness and is not set,
+   * this value defaults to 2 years from the current time.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -213,7 +217,9 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The last modified date for the object in the search result.
+   * The last modified date for the object in the search result. If not set in the item, the value
+   * returned here is empty. When `updateTime` is used for calculating freshness and is not set,
+   * this value defaults to 2 years from the current time.
    * @param updateTime updateTime or {@code null} for none
    */
   public Metadata setUpdateTime(String updateTime) {

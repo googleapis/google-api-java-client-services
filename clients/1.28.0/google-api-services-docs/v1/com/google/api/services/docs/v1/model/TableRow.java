@@ -30,22 +30,14 @@ package com.google.api.services.docs.v1.model;
 public final class TableRow extends com.google.api.client.json.GenericJson {
 
   /**
-   * The zero-based end index of this row, exclusive, in Unicode code units of the UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based end index of this row, exclusive, in UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer endIndex;
 
   /**
-   * The zero-based start index of this row, in Unicode code units of the UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based start index of this row, in UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,11 +95,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   private TableRowStyle tableRowStyle;
 
   /**
-   * The zero-based end index of this row, exclusive, in Unicode code units of the UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based end index of this row, exclusive, in UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -115,11 +103,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based end index of this row, exclusive, in Unicode code units of the UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based end index of this row, exclusive, in UTF-16 code units.
    * @param endIndex endIndex or {@code null} for none
    */
   public TableRow setEndIndex(java.lang.Integer endIndex) {
@@ -128,11 +112,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based start index of this row, in Unicode code units of the UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based start index of this row, in UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -140,11 +120,7 @@ public final class TableRow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zero-based start index of this row, in Unicode code units of the UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based start index of this row, in UTF-16 code units.
    * @param startIndex startIndex or {@code null} for none
    */
   public TableRow setStartIndex(java.lang.Integer startIndex) {

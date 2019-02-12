@@ -44,12 +44,7 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   private ColumnBreak columnBreak;
 
   /**
-   * The zero-base end index of this paragraph element, exclusive, in Unicode code units of the
-   * UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-base end index of this paragraph element, exclusive, in UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,12 +86,7 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   private PageBreak pageBreak;
 
   /**
-   * The zero-based start index of this paragraph element, in Unicode code units of the UTF-16
-   * encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based start index of this paragraph element, in UTF-16 code units.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,12 +134,7 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The zero-base end index of this paragraph element, exclusive, in Unicode code units of the
-   * UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-base end index of this paragraph element, exclusive, in UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndIndex() {
@@ -157,12 +142,7 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The zero-base end index of this paragraph element, exclusive, in Unicode code units of the
-   * UTF-16 encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-base end index of this paragraph element, exclusive, in UTF-16 code units.
    * @param endIndex endIndex or {@code null} for none
    */
   public ParagraphElement setEndIndex(java.lang.Integer endIndex) {
@@ -256,12 +236,7 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The zero-based start index of this paragraph element, in Unicode code units of the UTF-16
-   * encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based start index of this paragraph element, in UTF-16 code units.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartIndex() {
@@ -269,12 +244,7 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The zero-based start index of this paragraph element, in Unicode code units of the UTF-16
-   * encoding.
-   *
-   * Unicode code units of the UTF-16 encoding means that surrogate pairs consume two indexes. For
-   * example, the "GRINNING FACE" emoji would be represented as "\uD83D\uDE00" and would consume two
-   * indexes.
+   * The zero-based start index of this paragraph element, in UTF-16 code units.
    * @param startIndex startIndex or {@code null} for none
    */
   public ParagraphElement setStartIndex(java.lang.Integer startIndex) {

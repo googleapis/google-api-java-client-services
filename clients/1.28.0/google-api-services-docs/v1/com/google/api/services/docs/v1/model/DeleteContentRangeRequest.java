@@ -44,8 +44,8 @@ public final class DeleteContentRangeRequest extends com.google.api.client.json.
    * Header,   Footer, Footnote, TableCell or TableOfContents. * Deleting the start or end of a
    * Table,   TableOfContents or Equation without deleting the entire element. * Deleting the
    * newline character before a   Table,   TableOfContents or   SectionBreak without deleting the
-   * the element. * Deleting individual rows or cells of a table. Deleting the content within   a
-   * table cell is allowed.
+   * element. * Deleting individual rows or cells of a table. Deleting the content within   a table
+   * cell is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class DeleteContentRangeRequest extends com.google.api.client.json.
    * Header,   Footer, Footnote, TableCell or TableOfContents. * Deleting the start or end of a
    * Table,   TableOfContents or Equation without deleting the entire element. * Deleting the
    * newline character before a   Table,   TableOfContents or   SectionBreak without deleting the
-   * the element. * Deleting individual rows or cells of a table. Deleting the content within   a
-   * table cell is allowed.
+   * element. * Deleting individual rows or cells of a table. Deleting the content within   a table
+   * cell is allowed.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -89,8 +89,8 @@ public final class DeleteContentRangeRequest extends com.google.api.client.json.
    * Header,   Footer, Footnote, TableCell or TableOfContents. * Deleting the start or end of a
    * Table,   TableOfContents or Equation without deleting the entire element. * Deleting the
    * newline character before a   Table,   TableOfContents or   SectionBreak without deleting the
-   * the element. * Deleting individual rows or cells of a table. Deleting the content within   a
-   * table cell is allowed.
+   * element. * Deleting individual rows or cells of a table. Deleting the content within   a table
+   * cell is allowed.
    * @param range range or {@code null} for none
    */
   public DeleteContentRangeRequest setRange(Range range) {

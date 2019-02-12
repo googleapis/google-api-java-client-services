@@ -35,7 +35,8 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class FreshnessOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The duration (in seconds) after which an object should be considered stale.
+   * The duration after which an object should be considered stale. The default value is 180 days
+   * (in seconds).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,13 +47,17 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
+   *
+   * When a property is used to calculate fresheness, the value defaults to 2 years from the current
+   * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String freshnessProperty;
 
   /**
-   * The duration (in seconds) after which an object should be considered stale.
+   * The duration after which an object should be considered stale. The default value is 180 days
+   * (in seconds).
    * @return value or {@code null} for none
    */
   public String getFreshnessDuration() {
@@ -60,7 +65,8 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The duration (in seconds) after which an object should be considered stale.
+   * The duration after which an object should be considered stale. The default value is 180 days
+   * (in seconds).
    * @param freshnessDuration freshnessDuration or {@code null} for none
    */
   public FreshnessOptions setFreshnessDuration(String freshnessDuration) {
@@ -73,6 +79,9 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
+   *
+   * When a property is used to calculate fresheness, the value defaults to 2 years from the current
+   * time.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreshnessProperty() {
@@ -84,6 +93,9 @@ public final class FreshnessOptions extends com.google.api.client.json.GenericJs
    * must be a top-level property within the property definitions and it must be a timestamp type or
    * date type. Otherwise, the Indexing API uses updateTime as the freshness indicator. The maximum
    * length is 256 characters.
+   *
+   * When a property is used to calculate fresheness, the value defaults to 2 years from the current
+   * time.
    * @param freshnessProperty freshnessProperty or {@code null} for none
    */
   public FreshnessOptions setFreshnessProperty(java.lang.String freshnessProperty) {

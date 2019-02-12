@@ -18,7 +18,7 @@ package com.google.api.services.dataflow.model;
 
 /**
  * A descriptive representation of submitted pipeline as well as the executed form.  This data is
- * provided by the Dataflow service for ease of visualizing the pipeline and interpretting Dataflow
+ * provided by the Dataflow service for ease of visualizing the pipeline and interpreting Dataflow
  * provided metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

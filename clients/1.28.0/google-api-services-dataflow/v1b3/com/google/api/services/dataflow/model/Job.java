@@ -123,7 +123,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The location that contains this job.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains this job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -474,7 +475,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The location that contains this job.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains this job.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -482,7 +484,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The location that contains this job.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains this job.
    * @param location location or {@code null} for none
    */
   public Job setLocation(java.lang.String location) {

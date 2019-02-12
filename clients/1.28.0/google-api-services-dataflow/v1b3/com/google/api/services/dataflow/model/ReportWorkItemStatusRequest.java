@@ -37,7 +37,8 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   private String currentWorkerTime;
 
   /**
-   * The location which contains the WorkItem's job.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the WorkItem's job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   }
 
   /**
-   * The location which contains the WorkItem's job.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the WorkItem's job.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -93,7 +95,8 @@ public final class ReportWorkItemStatusRequest extends com.google.api.client.jso
   }
 
   /**
-   * The location which contains the WorkItem's job.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the WorkItem's job.
    * @param location location or {@code null} for none
    */
   public ReportWorkItemStatusRequest setLocation(java.lang.String location) {

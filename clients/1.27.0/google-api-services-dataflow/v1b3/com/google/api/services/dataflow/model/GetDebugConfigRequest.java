@@ -37,7 +37,8 @@ public final class GetDebugConfigRequest extends com.google.api.client.json.Gene
   private java.lang.String componentId;
 
   /**
-   * The location which contains the job specified by job_id.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job specified by job_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GetDebugConfigRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The location which contains the job specified by job_id.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job specified by job_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -76,7 +78,8 @@ public final class GetDebugConfigRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The location which contains the job specified by job_id.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job specified by job_id.
    * @param location location or {@code null} for none
    */
   public GetDebugConfigRequest setLocation(java.lang.String location) {

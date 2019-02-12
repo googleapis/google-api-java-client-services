@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * The version of the SDK used to run the jobl
+ * The version of the SDK used to run the job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -44,7 +44,7 @@ public final class SdkVersion extends com.google.api.client.json.GenericJson {
   private java.lang.String version;
 
   /**
-   * A readable string describing the version of the sdk.
+   * A readable string describing the version of the SDK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class SdkVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A readable string describing the version of the sdk.
+   * A readable string describing the version of the SDK.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersionDisplayName() {
@@ -93,7 +93,7 @@ public final class SdkVersion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A readable string describing the version of the sdk.
+   * A readable string describing the version of the SDK.
    * @param versionDisplayName versionDisplayName or {@code null} for none
    */
   public SdkVersion setVersionDisplayName(java.lang.String versionDisplayName) {

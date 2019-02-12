@@ -44,7 +44,8 @@ public final class SendDebugCaptureRequest extends com.google.api.client.json.Ge
   private java.lang.String data;
 
   /**
-   * The location which contains the job specified by job_id.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job specified by job_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class SendDebugCaptureRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The location which contains the job specified by job_id.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job specified by job_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -100,7 +102,8 @@ public final class SendDebugCaptureRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The location which contains the job specified by job_id.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job specified by job_id.
    * @param location location or {@code null} for none
    */
   public SendDebugCaptureRequest setLocation(java.lang.String location) {

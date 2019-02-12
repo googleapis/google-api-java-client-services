@@ -52,7 +52,8 @@ public final class CreateJobFromTemplateRequest extends com.google.api.client.js
   private java.lang.String jobName;
 
   /**
-   * The location to which to direct the request.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+   * which to direct the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +120,8 @@ public final class CreateJobFromTemplateRequest extends com.google.api.client.js
   }
 
   /**
-   * The location to which to direct the request.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+   * which to direct the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -127,7 +129,8 @@ public final class CreateJobFromTemplateRequest extends com.google.api.client.js
   }
 
   /**
-   * The location to which to direct the request.
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+   * which to direct the request.
    * @param location location or {@code null} for none
    */
   public CreateJobFromTemplateRequest setLocation(java.lang.String location) {

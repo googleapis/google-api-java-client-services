@@ -17,7 +17,8 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Indicates which location failed to respond to a request for data.
+ * Indicates which [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+ * endpoints) failed to respond to a request for data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -30,14 +31,16 @@ package com.google.api.services.dataflow.model;
 public final class FailedLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the failed location.
+   * The name of the [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+   * endpoints) that failed to respond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the failed location.
+   * The name of the [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+   * endpoints) that failed to respond.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,7 +48,8 @@ public final class FailedLocation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the failed location.
+   * The name of the [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+   * endpoints) that failed to respond.
    * @param name name or {@code null} for none
    */
   public FailedLocation setName(java.lang.String name) {

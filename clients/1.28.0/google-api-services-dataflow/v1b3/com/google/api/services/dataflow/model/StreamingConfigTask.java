@@ -30,6 +30,13 @@ package com.google.api.services.dataflow.model;
 public final class StreamingConfigTask extends com.google.api.client.json.GenericJson {
 
   /**
+   * Maximum size for work item commit supported windmill storage layer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxWorkItemCommitBytes;
+
+  /**
    * Set of computation configuration information.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long windmillServicePort;
+
+  /**
+   * Maximum size for work item commit supported windmill storage layer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxWorkItemCommitBytes() {
+    return maxWorkItemCommitBytes;
+  }
+
+  /**
+   * Maximum size for work item commit supported windmill storage layer.
+   * @param maxWorkItemCommitBytes maxWorkItemCommitBytes or {@code null} for none
+   */
+  public StreamingConfigTask setMaxWorkItemCommitBytes(java.lang.Long maxWorkItemCommitBytes) {
+    this.maxWorkItemCommitBytes = maxWorkItemCommitBytes;
+    return this;
+  }
 
   /**
    * Set of computation configuration information.

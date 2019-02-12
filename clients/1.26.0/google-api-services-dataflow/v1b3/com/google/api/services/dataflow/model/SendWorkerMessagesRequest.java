@@ -30,7 +30,8 @@ package com.google.api.services.dataflow.model;
 public final class SendWorkerMessagesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The location which contains the job
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class SendWorkerMessagesRequest extends com.google.api.client.json.
   private java.util.List<WorkerMessage> workerMessages;
 
   /**
-   * The location which contains the job
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -52,7 +54,8 @@ public final class SendWorkerMessagesRequest extends com.google.api.client.json.
   }
 
   /**
-   * The location which contains the job
+   * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints)
+   * that contains the job.
    * @param location location or {@code null} for none
    */
   public SendWorkerMessagesRequest setLocation(java.lang.String location) {

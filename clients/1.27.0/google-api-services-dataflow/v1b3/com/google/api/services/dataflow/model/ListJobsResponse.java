@@ -31,7 +31,8 @@ package com.google.api.services.dataflow.model;
 public final class ListJobsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Zero or more messages describing locations that failed to respond.
+   * Zero or more messages describing the [regional endpoints]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that failed to respond.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   private java.lang.String nextPageToken;
 
   /**
-   * Zero or more messages describing locations that failed to respond.
+   * Zero or more messages describing the [regional endpoints]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that failed to respond.
    * @return value or {@code null} for none
    */
   public java.util.List<FailedLocation> getFailedLocation() {
@@ -72,7 +74,8 @@ public final class ListJobsResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Zero or more messages describing locations that failed to respond.
+   * Zero or more messages describing the [regional endpoints]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that failed to respond.
    * @param failedLocation failedLocation or {@code null} for none
    */
   public ListJobsResponse setFailedLocation(java.util.List<FailedLocation> failedLocation) {

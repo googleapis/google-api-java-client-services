@@ -18,7 +18,7 @@ package com.google.api.services.dataflow.model;
 
 /**
  * Metadata available primarily for filtering jobs. Will be included in the ListJob response and Job
- * SUMMARY view+.
+ * SUMMARY view.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:

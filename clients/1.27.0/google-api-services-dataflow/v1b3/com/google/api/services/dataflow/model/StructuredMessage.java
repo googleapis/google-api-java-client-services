@@ -31,7 +31,7 @@ package com.google.api.services.dataflow.model;
 public final class StructuredMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Idenfier for this message type.  Used by external systems to internationalize or personalize
+   * Identifier for this message type.  Used by external systems to internationalize or personalize
    * message.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class StructuredMessage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Idenfier for this message type.  Used by external systems to internationalize or personalize
+   * Identifier for this message type.  Used by external systems to internationalize or personalize
    * message.
    * @return value or {@code null} for none
    */
@@ -68,7 +68,7 @@ public final class StructuredMessage extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Idenfier for this message type.  Used by external systems to internationalize or personalize
+   * Identifier for this message type.  Used by external systems to internationalize or personalize
    * message.
    * @param messageKey messageKey or {@code null} for none
    */

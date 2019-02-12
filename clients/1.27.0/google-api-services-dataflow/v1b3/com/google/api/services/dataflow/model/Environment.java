@@ -57,6 +57,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> experiments;
 
   /**
+   * Which Flexible Resource Scheduling mode to run in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flexResourceSchedulingGoal;
+
+  /**
    * Experimental settings.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setExperiments(java.util.List<java.lang.String> experiments) {
     this.experiments = experiments;
+    return this;
+  }
+
+  /**
+   * Which Flexible Resource Scheduling mode to run in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlexResourceSchedulingGoal() {
+    return flexResourceSchedulingGoal;
+  }
+
+  /**
+   * Which Flexible Resource Scheduling mode to run in.
+   * @param flexResourceSchedulingGoal flexResourceSchedulingGoal or {@code null} for none
+   */
+  public Environment setFlexResourceSchedulingGoal(java.lang.String flexResourceSchedulingGoal) {
+    this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
     return this;
   }
 

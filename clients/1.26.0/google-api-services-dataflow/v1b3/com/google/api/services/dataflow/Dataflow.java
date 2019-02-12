@@ -418,17 +418,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location that contains this job.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains this job.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         public Aggregated setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -504,6 +511,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Creates a Cloud Dataflow job.
        *
+       * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+       * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+       * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+       *
        * Create a request for the method "jobs.create".
        *
        * This request holds the parameters needed by the dataflow server.  After setting any optional
@@ -525,6 +536,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Creates a Cloud Dataflow job.
+         *
+         * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
          *
          * Create a request for the method "jobs.create".
          *
@@ -614,17 +629,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location that contains this job.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains this job.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         public Create setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -670,6 +692,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Gets the state of the specified Cloud Dataflow job.
        *
+       * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
+       * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+       * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in
+       * `us-central1`.
+       *
        * Create a request for the method "jobs.get".
        *
        * This request holds the parameters needed by the dataflow server.  After setting any optional
@@ -691,6 +718,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Gets the state of the specified Cloud Dataflow job.
+         *
+         * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
+         * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running
+         * in `us-central1`.
          *
          * Create a request for the method "jobs.get".
          *
@@ -806,17 +838,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location that contains this job.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains this job.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         public Get setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -846,6 +885,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Request the job status.
        *
+       * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
+       * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+       * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
+       * are running in `us-central1`.
+       *
        * Create a request for the method "jobs.getMetrics".
        *
        * This request holds the parameters needed by the dataflow server.  After setting any optional
@@ -867,6 +911,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Request the job status.
+         *
+         * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
+         * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
+         * are running in `us-central1`.
          *
          * Create a request for the method "jobs.getMetrics".
          *
@@ -983,17 +1032,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location which contains the job specified by job_id. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains the job specified by job_id.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location which contains the job specified by job_id.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains the job specified by job_id.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location which contains the job specified by job_id. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains the job specified by job_id.
+         */
         public GetMetrics setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -1028,7 +1084,12 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List the jobs of a project in a given region.
+       * List the jobs of a project.
+       *
+       * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get` with
+       * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
+       * list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list`
+       * is not recommended, as you can only get the list of jobs that are running in `us-central1`.
        *
        * Create a request for the method "jobs.list".
        *
@@ -1049,7 +1110,13 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs";
 
         /**
-         * List the jobs of a project in a given region.
+         * List the jobs of a project.
+         *
+         * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get`
+         * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using
+         * `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running
+         * in `us-central1`.
          *
          * Create a request for the method "jobs.list".
          *
@@ -1163,17 +1230,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location that contains this job.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains this job.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         public List setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -1386,6 +1460,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Updates the state of an existing Cloud Dataflow job.
        *
+       * To update the state of an existing job, we recommend using `projects.locations.jobs.update` with
+       * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+       * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
+       * running in `us-central1`.
+       *
        * Create a request for the method "jobs.update".
        *
        * This request holds the parameters needed by the dataflow server.  After setting any optional
@@ -1408,6 +1487,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Updates the state of an existing Cloud Dataflow job.
+         *
+         * To update the state of an existing job, we recommend using `projects.locations.jobs.update`
+         * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state
+         * of jobs that are running in `us-central1`.
          *
          * Create a request for the method "jobs.update".
          *
@@ -1515,17 +1599,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location that contains this job.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains this job.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location that contains this job. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains this job.
+         */
         public Update setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -1856,6 +1947,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Request the job status.
          *
+         * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a
+         * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that
+         * are running in `us-central1`.
+         *
          * Create a request for the method "messages.list".
          *
          * This request holds the parameters needed by the dataflow server.  After setting any optional
@@ -1877,6 +1973,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Request the job status.
+           *
+           * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with
+           * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints).
+           * Using `projects.jobs.messages.list` is not recommended, as you can only request the status of
+           * jobs that are running in `us-central1`.
            *
            * Create a request for the method "messages.list".
            *
@@ -2015,17 +2116,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location which contains the job specified by job_id. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains the job specified by job_id.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location which contains the job specified by job_id.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains the job specified by job_id.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location which contains the job specified by job_id. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains the job specified by job_id.
+           */
           public List setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -2451,7 +2559,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link WorkerMessages#execute()} method to invoke the remote operation.
        *
        * @param projectId The project to send the WorkerMessages to.
-       * @param location The location which contains the job
+       * @param location The [regional endpoint]
+      (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       *        contains the job.
        * @param content the {@link com.google.api.services.dataflow.model.SendWorkerMessagesRequest}
        * @return the request
        */
@@ -2477,7 +2587,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * the constructor. </p>
          *
          * @param projectId The project to send the WorkerMessages to.
-         * @param location The location which contains the job
+         * @param location The [regional endpoint]
+      (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       *        contains the job.
          * @param content the {@link com.google.api.services.dataflow.model.SendWorkerMessagesRequest}
          * @since 1.13
          */
@@ -2558,17 +2670,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location which contains the job */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains the job.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location which contains the job
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       contains the job.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location which contains the job */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) that contains the job.
+         */
         public WorkerMessages setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -2603,13 +2722,19 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Creates a Cloud Dataflow job.
          *
+         * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+         *
          * Create a request for the method "jobs.create".
          *
          * This request holds the parameters needed by the dataflow server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param projectId The ID of the Cloud Platform project that the job belongs to.
-         * @param location The location that contains this job.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
          * @param content the {@link com.google.api.services.dataflow.model.Job}
          * @return the request
          */
@@ -2626,6 +2751,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Creates a Cloud Dataflow job.
            *
+           * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+           *
            * Create a request for the method "jobs.create".
            *
            * This request holds the parameters needed by the the dataflow server.  After setting any
@@ -2635,7 +2764,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The ID of the Cloud Platform project that the job belongs to.
-           * @param location The location that contains this job.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
            * @param content the {@link com.google.api.services.dataflow.model.Job}
            * @since 1.13
            */
@@ -2716,17 +2847,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location that contains this job.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains this job.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           public Create setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -2772,13 +2910,20 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Gets the state of the specified Cloud Dataflow job.
          *
+         * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
+         * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in
+         * `us-central1`.
+         *
          * Create a request for the method "jobs.get".
          *
          * This request holds the parameters needed by the dataflow server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId The ID of the Cloud Platform project that the job belongs to.
-         * @param location The location that contains this job.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
          * @param jobId The job ID.
          * @return the request
          */
@@ -2795,6 +2940,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Gets the state of the specified Cloud Dataflow job.
            *
+           * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
+           * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running
+           * in `us-central1`.
+           *
            * Create a request for the method "jobs.get".
            *
            * This request holds the parameters needed by the the dataflow server.  After setting any
@@ -2803,7 +2953,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The ID of the Cloud Platform project that the job belongs to.
-           * @param location The location that contains this job.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
            * @param jobId The job ID.
            * @since 1.13
            */
@@ -2895,17 +3047,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location that contains this job.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains this job.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           public Get setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -2951,13 +3110,20 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Request the job status.
          *
+         * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
+         * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
+         * are running in `us-central1`.
+         *
          * Create a request for the method "jobs.getMetrics".
          *
          * This request holds the parameters needed by the dataflow server.  After setting any optional
          * parameters, call the {@link GetMetrics#execute()} method to invoke the remote operation.
          *
          * @param projectId A project id.
-         * @param location The location which contains the job specified by job_id.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains the job specified by job_id.
          * @param jobId The job to get messages for.
          * @return the request
          */
@@ -2974,6 +3140,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Request the job status.
            *
+           * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
+           * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
+           * are running in `us-central1`.
+           *
            * Create a request for the method "jobs.getMetrics".
            *
            * This request holds the parameters needed by the the dataflow server.  After setting any
@@ -2983,7 +3154,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId A project id.
-           * @param location The location which contains the job specified by job_id.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains the job specified by job_id.
            * @param jobId The job to get messages for.
            * @since 1.13
            */
@@ -3075,17 +3248,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location which contains the job specified by job_id. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains the job specified by job_id.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location which contains the job specified by job_id.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains the job specified by job_id.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location which contains the job specified by job_id. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains the job specified by job_id.
+           */
           public GetMetrics setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -3136,7 +3316,12 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List the jobs of a project in a given region.
+         * List the jobs of a project.
+         *
+         * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get` with
+         * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
+         * list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list`
+         * is not recommended, as you can only get the list of jobs that are running in `us-central1`.
          *
          * Create a request for the method "jobs.list".
          *
@@ -3144,7 +3329,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param projectId The project which owns the jobs.
-         * @param location The location that contains this job.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String location) throws java.io.IOException {
@@ -3158,7 +3345,13 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs";
 
           /**
-           * List the jobs of a project in a given region.
+           * List the jobs of a project.
+           *
+           * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get`
+           * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using
+           * `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running
+           * in `us-central1`.
            *
            * Create a request for the method "jobs.list".
            *
@@ -3168,7 +3361,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The project which owns the jobs.
-           * @param location The location that contains this job.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String location) {
@@ -3258,17 +3453,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location that contains this job.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains this job.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           public List setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -3516,13 +3718,20 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Updates the state of an existing Cloud Dataflow job.
          *
+         * To update the state of an existing job, we recommend using `projects.locations.jobs.update` with
+         * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
+         * running in `us-central1`.
+         *
          * Create a request for the method "jobs.update".
          *
          * This request holds the parameters needed by the dataflow server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param projectId The ID of the Cloud Platform project that the job belongs to.
-         * @param location The location that contains this job.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
          * @param jobId The job ID.
          * @param content the {@link com.google.api.services.dataflow.model.Job}
          * @return the request
@@ -3540,6 +3749,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Updates the state of an existing Cloud Dataflow job.
            *
+           * To update the state of an existing job, we recommend using `projects.locations.jobs.update`
+           * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state
+           * of jobs that are running in `us-central1`.
+           *
            * Create a request for the method "jobs.update".
            *
            * This request holds the parameters needed by the the dataflow server.  After setting any
@@ -3549,7 +3763,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The ID of the Cloud Platform project that the job belongs to.
-           * @param location The location that contains this job.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains this job.
            * @param jobId The job ID.
            * @param content the {@link com.google.api.services.dataflow.model.Job}
            * @since 1.13
@@ -3632,17 +3848,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location that contains this job.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains this job.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location that contains this job. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains this job.
+           */
           public Update setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -3699,7 +3922,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
            *
            * @param projectId The project id.
-           * @param location The location which contains the job specified by job_id.
+           * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
            * @param jobId The job id.
            * @param content the {@link com.google.api.services.dataflow.model.GetDebugConfigRequest}
            * @return the request
@@ -3726,7 +3951,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId The project id.
-             * @param location The location which contains the job specified by job_id.
+             * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
              * @param jobId The job id.
              * @param content the {@link com.google.api.services.dataflow.model.GetDebugConfigRequest}
              * @since 1.13
@@ -3809,17 +4036,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** The location which contains the job specified by job_id. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
             @com.google.api.client.util.Key
             private java.lang.String location;
 
-            /** The location which contains the job specified by job_id.
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the job specified by job_id.
              */
             public java.lang.String getLocation() {
               return location;
             }
 
-            /** The location which contains the job specified by job_id. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
             public GetConfig setLocation(java.lang.String location) {
               this.location = location;
               return this;
@@ -3855,7 +4089,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link SendCapture#execute()} method to invoke the remote operation.
            *
            * @param projectId The project id.
-           * @param location The location which contains the job specified by job_id.
+           * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
            * @param jobId The job id.
            * @param content the {@link com.google.api.services.dataflow.model.SendDebugCaptureRequest}
            * @return the request
@@ -3882,7 +4118,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId The project id.
-             * @param location The location which contains the job specified by job_id.
+             * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
              * @param jobId The job id.
              * @param content the {@link com.google.api.services.dataflow.model.SendDebugCaptureRequest}
              * @since 1.13
@@ -3965,17 +4203,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** The location which contains the job specified by job_id. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
             @com.google.api.client.util.Key
             private java.lang.String location;
 
-            /** The location which contains the job specified by job_id.
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the job specified by job_id.
              */
             public java.lang.String getLocation() {
               return location;
             }
 
-            /** The location which contains the job specified by job_id. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
             public SendCapture setLocation(java.lang.String location) {
               this.location = location;
               return this;
@@ -4027,13 +4272,20 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Request the job status.
            *
+           * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a
+           * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that
+           * are running in `us-central1`.
+           *
            * Create a request for the method "messages.list".
            *
            * This request holds the parameters needed by the dataflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param projectId A project id.
-           * @param location The location which contains the job specified by job_id.
+           * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
            * @param jobId The job to get messages about.
            * @return the request
            */
@@ -4050,6 +4302,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Request the job status.
              *
+             * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with
+             * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints).
+             * Using `projects.jobs.messages.list` is not recommended, as you can only request the status of
+             * jobs that are running in `us-central1`.
+             *
              * Create a request for the method "messages.list".
              *
              * This request holds the parameters needed by the the dataflow server.  After setting any
@@ -4058,7 +4315,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId A project id.
-             * @param location The location which contains the job specified by job_id.
+             * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
              * @param jobId The job to get messages about.
              * @since 1.13
              */
@@ -4150,17 +4409,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** The location which contains the job specified by job_id. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
             @com.google.api.client.util.Key
             private java.lang.String location;
 
-            /** The location which contains the job specified by job_id.
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the job specified by job_id.
              */
             public java.lang.String getLocation() {
               return location;
             }
 
-            /** The location which contains the job specified by job_id. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
             public List setLocation(java.lang.String location) {
               this.location = location;
               return this;
@@ -4328,7 +4594,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link Lease#execute()} method to invoke the remote operation.
            *
            * @param projectId Identifies the project this worker belongs to.
-           * @param location The location which contains the WorkItem's job.
+           * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the WorkItem's job.
            * @param jobId Identifies the workflow job this worker belongs to.
            * @param content the {@link com.google.api.services.dataflow.model.LeaseWorkItemRequest}
            * @return the request
@@ -4355,7 +4623,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Identifies the project this worker belongs to.
-             * @param location The location which contains the WorkItem's job.
+             * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the WorkItem's job.
              * @param jobId Identifies the workflow job this worker belongs to.
              * @param content the {@link com.google.api.services.dataflow.model.LeaseWorkItemRequest}
              * @since 1.13
@@ -4438,17 +4708,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** The location which contains the WorkItem's job. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the WorkItem's job.
+             */
             @com.google.api.client.util.Key
             private java.lang.String location;
 
-            /** The location which contains the WorkItem's job.
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the WorkItem's job.
              */
             public java.lang.String getLocation() {
               return location;
             }
 
-            /** The location which contains the WorkItem's job. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the WorkItem's job.
+             */
             public Lease setLocation(java.lang.String location) {
               this.location = location;
               return this;
@@ -4484,7 +4761,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link ReportStatus#execute()} method to invoke the remote operation.
            *
            * @param projectId The project which owns the WorkItem's job.
-           * @param location The location which contains the WorkItem's job.
+           * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the WorkItem's job.
            * @param jobId The job which the WorkItem is part of.
            * @param content the {@link com.google.api.services.dataflow.model.ReportWorkItemStatusRequest}
            * @return the request
@@ -4511,7 +4790,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId The project which owns the WorkItem's job.
-             * @param location The location which contains the WorkItem's job.
+             * @param location The [regional endpoint]
+          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the WorkItem's job.
              * @param jobId The job which the WorkItem is part of.
              * @param content the {@link com.google.api.services.dataflow.model.ReportWorkItemStatusRequest}
              * @since 1.13
@@ -4594,17 +4875,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** The location which contains the WorkItem's job. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the WorkItem's job.
+             */
             @com.google.api.client.util.Key
             private java.lang.String location;
 
-            /** The location which contains the WorkItem's job.
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the WorkItem's job.
              */
             public java.lang.String getLocation() {
               return location;
             }
 
-            /** The location which contains the WorkItem's job. */
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the WorkItem's job.
+             */
             public ReportStatus setLocation(java.lang.String location) {
               this.location = location;
               return this;
@@ -4663,7 +4951,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The location to which to direct the request.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
          * @param content the {@link com.google.api.services.dataflow.model.CreateJobFromTemplateRequest}
          * @return the request
          */
@@ -4689,7 +4979,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The location to which to direct the request.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
            * @param content the {@link com.google.api.services.dataflow.model.CreateJobFromTemplateRequest}
            * @since 1.13
            */
@@ -4770,17 +5062,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location to which to direct the request. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location to which to direct the request.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         which to direct the request.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location to which to direct the request. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
           public Create setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -4800,7 +5099,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The location to which to direct the request.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
          * @return the request
          */
         public Get get(java.lang.String projectId, java.lang.String location) throws java.io.IOException {
@@ -4824,7 +5125,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The location to which to direct the request.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
            * @since 1.13
            */
           protected Get(java.lang.String projectId, java.lang.String location) {
@@ -4914,17 +5217,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location to which to direct the request. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location to which to direct the request.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         which to direct the request.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location to which to direct the request. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
           public Get setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -4983,7 +5293,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Launch#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The location to which to direct the request.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
          * @param content the {@link com.google.api.services.dataflow.model.LaunchTemplateParameters}
          * @return the request
          */
@@ -5009,7 +5321,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The location to which to direct the request.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
            * @param content the {@link com.google.api.services.dataflow.model.LaunchTemplateParameters}
            * @since 1.13
            */
@@ -5090,17 +5404,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The location to which to direct the request. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
           @com.google.api.client.util.Key
           private java.lang.String location;
 
-          /** The location to which to direct the request.
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         which to direct the request.
            */
           public java.lang.String getLocation() {
             return location;
           }
 
-          /** The location to which to direct the request. */
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
           public Launch setLocation(java.lang.String location) {
             this.location = location;
             return this;
@@ -5484,17 +5805,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location to which to direct the request. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) to which to direct the request.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location to which to direct the request.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+       which to direct the request.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location to which to direct the request. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) to which to direct the request.
+         */
         public Get setLocation(java.lang.String location) {
           this.location = location;
           return this;
@@ -5703,17 +6031,24 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The location to which to direct the request. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) to which to direct the request.
+         */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** The location to which to direct the request.
+        /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+       which to direct the request.
          */
         public java.lang.String getLocation() {
           return location;
         }
 
-        /** The location to which to direct the request. */
+        /**
+         * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         * endpoints) to which to direct the request.
+         */
         public Launch setLocation(java.lang.String location) {
           this.location = location;
           return this;

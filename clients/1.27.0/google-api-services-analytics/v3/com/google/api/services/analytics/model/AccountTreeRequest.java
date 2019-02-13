@@ -38,12 +38,6 @@ public final class AccountTreeRequest extends com.google.api.client.json.Generic
   private java.lang.String accountName;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AccountSettings accountSettings;
-
-  /**
    * Resource type for account ticket.
    * The value may be {@code null}.
    */
@@ -86,21 +80,6 @@ public final class AccountTreeRequest extends com.google.api.client.json.Generic
    */
   public AccountTreeRequest setAccountName(java.lang.String accountName) {
     this.accountName = accountName;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public AccountSettings getAccountSettings() {
-    return accountSettings;
-  }
-
-  /**
-   * @param accountSettings accountSettings or {@code null} for none
-   */
-  public AccountTreeRequest setAccountSettings(AccountSettings accountSettings) {
-    this.accountSettings = accountSettings;
     return this;
   }
 
@@ -189,107 +168,6 @@ public final class AccountTreeRequest extends com.google.api.client.json.Generic
   @Override
   public AccountTreeRequest clone() {
     return (AccountTreeRequest) super.clone();
-  }
-
-  /**
-   * Model definition for AccountTreeRequestAccountSettings.
-   */
-  public static final class AccountSettings extends com.google.api.client.json.GenericJson {
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean shareAnonymouslyWithOthers;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean shareWithGoogleProducts;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean shareWithSpecialists;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean shareWithSupport;
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getShareAnonymouslyWithOthers() {
-      return shareAnonymouslyWithOthers;
-    }
-
-    /**
-     * @param shareAnonymouslyWithOthers shareAnonymouslyWithOthers or {@code null} for none
-     */
-    public AccountSettings setShareAnonymouslyWithOthers(java.lang.Boolean shareAnonymouslyWithOthers) {
-      this.shareAnonymouslyWithOthers = shareAnonymouslyWithOthers;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getShareWithGoogleProducts() {
-      return shareWithGoogleProducts;
-    }
-
-    /**
-     * @param shareWithGoogleProducts shareWithGoogleProducts or {@code null} for none
-     */
-    public AccountSettings setShareWithGoogleProducts(java.lang.Boolean shareWithGoogleProducts) {
-      this.shareWithGoogleProducts = shareWithGoogleProducts;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getShareWithSpecialists() {
-      return shareWithSpecialists;
-    }
-
-    /**
-     * @param shareWithSpecialists shareWithSpecialists or {@code null} for none
-     */
-    public AccountSettings setShareWithSpecialists(java.lang.Boolean shareWithSpecialists) {
-      this.shareWithSpecialists = shareWithSpecialists;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getShareWithSupport() {
-      return shareWithSupport;
-    }
-
-    /**
-     * @param shareWithSupport shareWithSupport or {@code null} for none
-     */
-    public AccountSettings setShareWithSupport(java.lang.Boolean shareWithSupport) {
-      this.shareWithSupport = shareWithSupport;
-      return this;
-    }
-
-    @Override
-    public AccountSettings set(String fieldName, Object value) {
-      return (AccountSettings) super.set(fieldName, value);
-    }
-
-    @Override
-    public AccountSettings clone() {
-      return (AccountSettings) super.clone();
-    }
-
   }
 
 }

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-analytics</artifactId>
-  <version>v3-rev20180622-1.27.0</version>
-  <name>Google Analytics API v3-rev20180622-1.27.0</name>
+  <version>v3-rev20180730-1.27.0</version>
+  <name>Google Analytics API v3-rev20180730-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -17,7 +17,7 @@
 package com.google.api.services.analytics.model;
 
 /**
- * JSON template for Analytics Entity AdWords Link.
+ * JSON template for Analytics Entity Google Ads Link.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.analytics.model;
 public final class EntityAdWordsLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of AdWords client accounts. These cannot be MCC accounts. This field is required when
-   * creating an AdWords link. It cannot be empty.
+   * A list of Google Ads client accounts. These cannot be MCC accounts. This field is required when
+   * creating a Google Ads link. It cannot be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,21 +51,21 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   private Entity entity;
 
   /**
-   * Entity AdWords link ID
+   * Entity Google Ads link ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Resource type for entity AdWords link.
+   * Resource type for entity Google Ads link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Name of the link. This field is required when creating an AdWords link.
+   * Name of the link. This field is required when creating a Google Ads link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,15 +79,15 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> profileIds;
 
   /**
-   * URL link for this Google Analytics - Google AdWords link.
+   * URL link for this Google Analytics - Google Ads link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * A list of AdWords client accounts. These cannot be MCC accounts. This field is required when
-   * creating an AdWords link. It cannot be empty.
+   * A list of Google Ads client accounts. These cannot be MCC accounts. This field is required when
+   * creating a Google Ads link. It cannot be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<AdWordsAccount> getAdWordsAccounts() {
@@ -95,8 +95,8 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A list of AdWords client accounts. These cannot be MCC accounts. This field is required when
-   * creating an AdWords link. It cannot be empty.
+   * A list of Google Ads client accounts. These cannot be MCC accounts. This field is required when
+   * creating a Google Ads link. It cannot be empty.
    * @param adWordsAccounts adWordsAccounts or {@code null} for none
    */
   public EntityAdWordsLink setAdWordsAccounts(java.util.List<AdWordsAccount> adWordsAccounts) {
@@ -122,7 +122,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Entity AdWords link ID
+   * Entity Google Ads link ID
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -130,7 +130,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Entity AdWords link ID
+   * Entity Google Ads link ID
    * @param id id or {@code null} for none
    */
   public EntityAdWordsLink setId(java.lang.String id) {
@@ -139,7 +139,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Resource type for entity AdWords link.
+   * Resource type for entity Google Ads link.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -147,7 +147,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Resource type for entity AdWords link.
+   * Resource type for entity Google Ads link.
    * @param kind kind or {@code null} for none
    */
   public EntityAdWordsLink setKind(java.lang.String kind) {
@@ -156,7 +156,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the link. This field is required when creating an AdWords link.
+   * Name of the link. This field is required when creating a Google Ads link.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -164,7 +164,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Name of the link. This field is required when creating an AdWords link.
+   * Name of the link. This field is required when creating a Google Ads link.
    * @param name name or {@code null} for none
    */
   public EntityAdWordsLink setName(java.lang.String name) {
@@ -190,7 +190,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URL link for this Google Analytics - Google AdWords link.
+   * URL link for this Google Analytics - Google Ads link.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -198,7 +198,7 @@ public final class EntityAdWordsLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URL link for this Google Analytics - Google AdWords link.
+   * URL link for this Google Analytics - Google Ads link.
    * @param selfLink selfLink or {@code null} for none
    */
   public EntityAdWordsLink setSelfLink(java.lang.String selfLink) {

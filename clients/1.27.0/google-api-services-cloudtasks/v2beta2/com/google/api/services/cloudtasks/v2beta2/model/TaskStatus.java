@@ -32,7 +32,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The number of attempts dispatched.
    *
-   * This count includes tasks which have been dispatched but haven't received a response.
+   * This count includes attempts which have been dispatched but haven't received a response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The number of attempts dispatched.
    *
-   * This count includes tasks which have been dispatched but haven't received a response.
+   * This count includes attempts which have been dispatched but haven't received a response.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAttemptDispatchCount() {
@@ -81,7 +81,7 @@ public final class TaskStatus extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The number of attempts dispatched.
    *
-   * This count includes tasks which have been dispatched but haven't received a response.
+   * This count includes attempts which have been dispatched but haven't received a response.
    * @param attemptDispatchCount attemptDispatchCount or {@code null} for none
    */
   public TaskStatus setAttemptDispatchCount(java.lang.Integer attemptDispatchCount) {

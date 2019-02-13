@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
   /**
    * Optional. The number of conversational query requests after which the context expires. If set
    * to `0` (the default) the context expires immediately. Contexts expire automatically after 20
-   * minutes even if there are no matching queries.
+   * minutes if there are no matching queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
   /**
    * Optional. The number of conversational query requests after which the context expires. If set
    * to `0` (the default) the context expires immediately. Contexts expire automatically after 20
-   * minutes even if there are no matching queries.
+   * minutes if there are no matching queries.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLifespanCount() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
   /**
    * Optional. The number of conversational query requests after which the context expires. If set
    * to `0` (the default) the context expires immediately. Contexts expire automatically after 20
-   * minutes even if there are no matching queries.
+   * minutes if there are no matching queries.
    * @param lifespanCount lifespanCount or {@code null} for none
    */
   public GoogleCloudDialogflowV2Context setLifespanCount(java.lang.Integer lifespanCount) {

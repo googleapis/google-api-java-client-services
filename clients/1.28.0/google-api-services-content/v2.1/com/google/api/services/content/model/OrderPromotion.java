@@ -60,11 +60,12 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   private java.lang.String merchantPromotionId;
 
   /**
-   * Estimated discount applied to pre-tax amount.
+   * Estimated discount applied to price. Amount is pre-tax or post-tax depending on location of
+   * order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Price pretaxValue;
+  private Price priceValue;
 
   /**
    * A short title of the promotion to be shown on the checkout page.
@@ -172,19 +173,21 @@ public final class OrderPromotion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Estimated discount applied to pre-tax amount.
+   * Estimated discount applied to price. Amount is pre-tax or post-tax depending on location of
+   * order.
    * @return value or {@code null} for none
    */
-  public Price getPretaxValue() {
-    return pretaxValue;
+  public Price getPriceValue() {
+    return priceValue;
   }
 
   /**
-   * Estimated discount applied to pre-tax amount.
-   * @param pretaxValue pretaxValue or {@code null} for none
+   * Estimated discount applied to price. Amount is pre-tax or post-tax depending on location of
+   * order.
+   * @param priceValue priceValue or {@code null} for none
    */
-  public OrderPromotion setPretaxValue(Price pretaxValue) {
-    this.pretaxValue = pretaxValue;
+  public OrderPromotion setPriceValue(Price priceValue) {
+    this.priceValue = priceValue;
     return this;
   }
 

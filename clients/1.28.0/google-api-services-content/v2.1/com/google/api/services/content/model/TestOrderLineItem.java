@@ -59,13 +59,6 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   private OrderLineItemShippingDetails shippingDetails;
 
   /**
-   * Unit tax for the line item.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Price unitTax;
-
-  /**
    * Product data from the time of the order placement.
    * @return value or {@code null} for none
    */
@@ -130,23 +123,6 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
    */
   public TestOrderLineItem setShippingDetails(OrderLineItemShippingDetails shippingDetails) {
     this.shippingDetails = shippingDetails;
-    return this;
-  }
-
-  /**
-   * Unit tax for the line item.
-   * @return value or {@code null} for none
-   */
-  public Price getUnitTax() {
-    return unitTax;
-  }
-
-  /**
-   * Unit tax for the line item.
-   * @param unitTax unitTax or {@code null} for none
-   */
-  public TestOrderLineItem setUnitTax(Price unitTax) {
-    this.unitTax = unitTax;
     return this;
   }
 

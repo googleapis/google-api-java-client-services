@@ -59,7 +59,8 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   private OrderLineItemShippingDetails shippingDetails;
 
   /**
-   * Unit tax for the line item.
+   * Deprecated. Ignored if provided. Tax is automatically calculated for MFL orders. For non-MFL
+   * orders, tax settings from Merchant Center are applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +135,8 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Unit tax for the line item.
+   * Deprecated. Ignored if provided. Tax is automatically calculated for MFL orders. For non-MFL
+   * orders, tax settings from Merchant Center are applied.
    * @return value or {@code null} for none
    */
   public Price getUnitTax() {
@@ -142,7 +144,8 @@ public final class TestOrderLineItem extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Unit tax for the line item.
+   * Deprecated. Ignored if provided. Tax is automatically calculated for MFL orders. For non-MFL
+   * orders, tax settings from Merchant Center are applied.
    * @param unitTax unitTax or {@code null} for none
    */
   public TestOrderLineItem setUnitTax(Price unitTax) {

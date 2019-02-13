@@ -128,7 +128,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The PID namespace to run the action inside. If unspecified, a separate isolated namespace is
+   * An optional identifier for a PID namespace to run the action inside. Multiple actions should
+   * use the same string to share a namespace.  If unspecified, a separate isolated namespace is
    * used.
    * The value may be {@code null}.
    */
@@ -381,7 +382,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The PID namespace to run the action inside. If unspecified, a separate isolated namespace is
+   * An optional identifier for a PID namespace to run the action inside. Multiple actions should
+   * use the same string to share a namespace.  If unspecified, a separate isolated namespace is
    * used.
    * @return value or {@code null} for none
    */
@@ -390,7 +392,8 @@ public final class Action extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The PID namespace to run the action inside. If unspecified, a separate isolated namespace is
+   * An optional identifier for a PID namespace to run the action inside. Multiple actions should
+   * use the same string to share a namespace.  If unspecified, a separate isolated namespace is
    * used.
    * @param pidNamespace pidNamespace or {@code null} for none
    */

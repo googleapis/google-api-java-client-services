@@ -815,24 +815,17 @@ public class Genomics extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * The maximum number of results to return. If unspecified, defaults to 256. The maximum
-         * value is 2048.
-         */
+        /** The maximum number of results to return. The maximum value is 256. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If unspecified, defaults to 256. The maximum value is
-       2048.
+        /** The maximum number of results to return. The maximum value is 256.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return. If unspecified, defaults to 256. The maximum
-         * value is 2048.
-         */
+        /** The maximum number of results to return. The maximum value is 256. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

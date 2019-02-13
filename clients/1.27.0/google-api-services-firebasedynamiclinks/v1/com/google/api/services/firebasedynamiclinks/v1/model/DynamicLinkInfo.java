@@ -47,6 +47,13 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
   private AndroidInfo androidInfo;
 
   /**
+   * Optional customizable parameters on the app preview page
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppPreview appPreview;
+
+  /**
    * Desktop related information. See desktop related parameters in the
    * [documentation](https://firebase.google.com/docs/dynamic-links/create-manually).
    * The value may be {@code null}.
@@ -146,6 +153,23 @@ public final class DynamicLinkInfo extends com.google.api.client.json.GenericJso
    */
   public DynamicLinkInfo setAndroidInfo(AndroidInfo androidInfo) {
     this.androidInfo = androidInfo;
+    return this;
+  }
+
+  /**
+   * Optional customizable parameters on the app preview page
+   * @return value or {@code null} for none
+   */
+  public AppPreview getAppPreview() {
+    return appPreview;
+  }
+
+  /**
+   * Optional customizable parameters on the app preview page
+   * @param appPreview appPreview or {@code null} for none
+   */
+  public DynamicLinkInfo setAppPreview(AppPreview appPreview) {
+    this.appPreview = appPreview;
     return this;
   }
 

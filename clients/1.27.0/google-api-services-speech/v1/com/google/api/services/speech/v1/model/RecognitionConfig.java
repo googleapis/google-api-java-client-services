@@ -31,6 +31,18 @@ package com.google.api.services.speech.v1.model;
 public final class RecognitionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * *Optional* The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL
+   * recognition. Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are
+   * '1'-'254'. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or
+   * omitted, defaults to one channel (mono). Note: We only recognize the first channel by default.
+   * To perform independent recognition on each channel set
+   * `enable_separate_recognition_per_channel` to 'true'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer audioChannelCount;
+
+  /**
    * *Optional* If 'true', adds punctuation to recognition result hypotheses. This feature is only
    * available in select languages. Setting this for requests in other languages has no effect at
    * all. The default 'false' value does not add punctuation to result hypotheses. Note: This is
@@ -88,6 +100,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxAlternatives;
+
+  /**
+   * *Optional* Metadata regarding this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RecognitionMetadata metadata;
 
   /**
    * *Optional* Which model to select for the given request. Select the model best suited to your
@@ -150,6 +169,33 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useEnhanced;
+
+  /**
+   * *Optional* The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL
+   * recognition. Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are
+   * '1'-'254'. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or
+   * omitted, defaults to one channel (mono). Note: We only recognize the first channel by default.
+   * To perform independent recognition on each channel set
+   * `enable_separate_recognition_per_channel` to 'true'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAudioChannelCount() {
+    return audioChannelCount;
+  }
+
+  /**
+   * *Optional* The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL
+   * recognition. Valid values for LINEAR16 and FLAC are `1`-`8`. Valid values for OGG_OPUS are
+   * '1'-'254'. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or
+   * omitted, defaults to one channel (mono). Note: We only recognize the first channel by default.
+   * To perform independent recognition on each channel set
+   * `enable_separate_recognition_per_channel` to 'true'.
+   * @param audioChannelCount audioChannelCount or {@code null} for none
+   */
+  public RecognitionConfig setAudioChannelCount(java.lang.Integer audioChannelCount) {
+    this.audioChannelCount = audioChannelCount;
+    return this;
+  }
 
   /**
    * *Optional* If 'true', adds punctuation to recognition result hypotheses. This feature is only
@@ -284,6 +330,23 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   public RecognitionConfig setMaxAlternatives(java.lang.Integer maxAlternatives) {
     this.maxAlternatives = maxAlternatives;
+    return this;
+  }
+
+  /**
+   * *Optional* Metadata regarding this request.
+   * @return value or {@code null} for none
+   */
+  public RecognitionMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * *Optional* Metadata regarding this request.
+   * @param metadata metadata or {@code null} for none
+   */
+  public RecognitionConfig setMetadata(RecognitionMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

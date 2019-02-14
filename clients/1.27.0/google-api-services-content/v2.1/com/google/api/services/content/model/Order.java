@@ -100,12 +100,20 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String merchantOrderId;
 
   /**
-   * The net amount for the order. For example, if an order was originally for a grand total of $100
-   * and a refund was issued for $20, the net amount will be $80.
+   * The net amount for the order (price part). For example, if an order was originally for $100 and
+   * a refund was issued for $20, the net amount will be $80.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Price netAmount;
+  private Price netPriceAmount;
+
+  /**
+   * The net amount for the order (tax part). Note that in certain cases due to taxable base
+   * adjustment netTaxAmount might not match to a sum of tax field across all lineItems and refunds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price netTaxAmount;
 
   /**
    * The status of the payment.
@@ -346,21 +354,40 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The net amount for the order. For example, if an order was originally for a grand total of $100
-   * and a refund was issued for $20, the net amount will be $80.
+   * The net amount for the order (price part). For example, if an order was originally for $100 and
+   * a refund was issued for $20, the net amount will be $80.
    * @return value or {@code null} for none
    */
-  public Price getNetAmount() {
-    return netAmount;
+  public Price getNetPriceAmount() {
+    return netPriceAmount;
   }
 
   /**
-   * The net amount for the order. For example, if an order was originally for a grand total of $100
-   * and a refund was issued for $20, the net amount will be $80.
-   * @param netAmount netAmount or {@code null} for none
+   * The net amount for the order (price part). For example, if an order was originally for $100 and
+   * a refund was issued for $20, the net amount will be $80.
+   * @param netPriceAmount netPriceAmount or {@code null} for none
    */
-  public Order setNetAmount(Price netAmount) {
-    this.netAmount = netAmount;
+  public Order setNetPriceAmount(Price netPriceAmount) {
+    this.netPriceAmount = netPriceAmount;
+    return this;
+  }
+
+  /**
+   * The net amount for the order (tax part). Note that in certain cases due to taxable base
+   * adjustment netTaxAmount might not match to a sum of tax field across all lineItems and refunds.
+   * @return value or {@code null} for none
+   */
+  public Price getNetTaxAmount() {
+    return netTaxAmount;
+  }
+
+  /**
+   * The net amount for the order (tax part). Note that in certain cases due to taxable base
+   * adjustment netTaxAmount might not match to a sum of tax field across all lineItems and refunds.
+   * @param netTaxAmount netTaxAmount or {@code null} for none
+   */
+  public Order setNetTaxAmount(Price netTaxAmount) {
+    this.netTaxAmount = netTaxAmount;
     return this;
   }
 

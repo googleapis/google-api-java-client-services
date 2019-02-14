@@ -38,19 +38,6 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   private Amount additionalChargeAmount;
 
   /**
-   * Promotions applied to the additional charge.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Promotion> additionalChargePromotions;
-
-  static {
-    // hack to force ProGuard to consider Promotion used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Promotion.class);
-  }
-
-  /**
    * [required] Type of the additional charge.
    * The value may be {@code null}.
    */
@@ -71,23 +58,6 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
    */
   public UnitInvoiceAdditionalCharge setAdditionalChargeAmount(Amount additionalChargeAmount) {
     this.additionalChargeAmount = additionalChargeAmount;
-    return this;
-  }
-
-  /**
-   * Promotions applied to the additional charge.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Promotion> getAdditionalChargePromotions() {
-    return additionalChargePromotions;
-  }
-
-  /**
-   * Promotions applied to the additional charge.
-   * @param additionalChargePromotions additionalChargePromotions or {@code null} for none
-   */
-  public UnitInvoiceAdditionalCharge setAdditionalChargePromotions(java.util.List<Promotion> additionalChargePromotions) {
-    this.additionalChargePromotions = additionalChargePromotions;
     return this;
   }
 

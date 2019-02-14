@@ -38,48 +38,11 @@ public final class InvoiceSummary extends com.google.api.client.json.GenericJson
   private java.util.List<InvoiceSummaryAdditionalChargeSummary> additionalChargeSummaries;
 
   /**
-   * [required] Customer balance on this invoice. A negative amount means the customer is paying, a
-   * positive one means the customer is receiving money. Note: the sum of merchant_balance,
-   * customer_balance and google_balance must always be zero.
-   *
-   * Furthermore the absolute value of this amount is expected to be equal to the sum of product
-   * amount and additional charges, minus promotions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Amount customerBalance;
-
-  /**
-   * [required] Google balance on this invoice. A negative amount means Google is paying, a positive
-   * one means Google is receiving money. Note: the sum of merchant_balance, customer_balance and
-   * google_balance must always be zero.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Amount googleBalance;
-
-  /**
-   * [required] Merchant balance on this invoice. A negative amount means the merchant is paying, a
-   * positive one means the merchant is receiving money. Note: the sum of merchant_balance,
-   * customer_balance and google_balance must always be zero.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Amount merchantBalance;
-
-  /**
    * [required] Total price for the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Amount productTotal;
-
-  /**
-   * Summary for each promotion.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Promotion> promotionSummaries;
 
   /**
    * Summary of the total amounts of the additional charges.
@@ -99,75 +62,6 @@ public final class InvoiceSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [required] Customer balance on this invoice. A negative amount means the customer is paying, a
-   * positive one means the customer is receiving money. Note: the sum of merchant_balance,
-   * customer_balance and google_balance must always be zero.
-   *
-   * Furthermore the absolute value of this amount is expected to be equal to the sum of product
-   * amount and additional charges, minus promotions.
-   * @return value or {@code null} for none
-   */
-  public Amount getCustomerBalance() {
-    return customerBalance;
-  }
-
-  /**
-   * [required] Customer balance on this invoice. A negative amount means the customer is paying, a
-   * positive one means the customer is receiving money. Note: the sum of merchant_balance,
-   * customer_balance and google_balance must always be zero.
-   *
-   * Furthermore the absolute value of this amount is expected to be equal to the sum of product
-   * amount and additional charges, minus promotions.
-   * @param customerBalance customerBalance or {@code null} for none
-   */
-  public InvoiceSummary setCustomerBalance(Amount customerBalance) {
-    this.customerBalance = customerBalance;
-    return this;
-  }
-
-  /**
-   * [required] Google balance on this invoice. A negative amount means Google is paying, a positive
-   * one means Google is receiving money. Note: the sum of merchant_balance, customer_balance and
-   * google_balance must always be zero.
-   * @return value or {@code null} for none
-   */
-  public Amount getGoogleBalance() {
-    return googleBalance;
-  }
-
-  /**
-   * [required] Google balance on this invoice. A negative amount means Google is paying, a positive
-   * one means Google is receiving money. Note: the sum of merchant_balance, customer_balance and
-   * google_balance must always be zero.
-   * @param googleBalance googleBalance or {@code null} for none
-   */
-  public InvoiceSummary setGoogleBalance(Amount googleBalance) {
-    this.googleBalance = googleBalance;
-    return this;
-  }
-
-  /**
-   * [required] Merchant balance on this invoice. A negative amount means the merchant is paying, a
-   * positive one means the merchant is receiving money. Note: the sum of merchant_balance,
-   * customer_balance and google_balance must always be zero.
-   * @return value or {@code null} for none
-   */
-  public Amount getMerchantBalance() {
-    return merchantBalance;
-  }
-
-  /**
-   * [required] Merchant balance on this invoice. A negative amount means the merchant is paying, a
-   * positive one means the merchant is receiving money. Note: the sum of merchant_balance,
-   * customer_balance and google_balance must always be zero.
-   * @param merchantBalance merchantBalance or {@code null} for none
-   */
-  public InvoiceSummary setMerchantBalance(Amount merchantBalance) {
-    this.merchantBalance = merchantBalance;
-    return this;
-  }
-
-  /**
    * [required] Total price for the product.
    * @return value or {@code null} for none
    */
@@ -181,23 +75,6 @@ public final class InvoiceSummary extends com.google.api.client.json.GenericJson
    */
   public InvoiceSummary setProductTotal(Amount productTotal) {
     this.productTotal = productTotal;
-    return this;
-  }
-
-  /**
-   * Summary for each promotion.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Promotion> getPromotionSummaries() {
-    return promotionSummaries;
-  }
-
-  /**
-   * Summary for each promotion.
-   * @param promotionSummaries promotionSummaries or {@code null} for none
-   */
-  public InvoiceSummary setPromotionSummaries(java.util.List<Promotion> promotionSummaries) {
-    this.promotionSummaries = promotionSummaries;
     return this;
   }
 

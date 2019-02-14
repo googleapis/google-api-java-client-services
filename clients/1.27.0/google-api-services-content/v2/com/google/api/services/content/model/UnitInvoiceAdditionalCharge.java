@@ -38,7 +38,7 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   private Amount additionalChargeAmount;
 
   /**
-   * Promotions applied to the additional charge.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   }
 
   /**
-   * Promotions applied to the additional charge.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<Promotion> getAdditionalChargePromotions() {
@@ -83,7 +83,7 @@ public final class UnitInvoiceAdditionalCharge extends com.google.api.client.jso
   }
 
   /**
-   * Promotions applied to the additional charge.
+   * Deprecated.
    * @param additionalChargePromotions additionalChargePromotions or {@code null} for none
    */
   public UnitInvoiceAdditionalCharge setAdditionalChargePromotions(java.util.List<Promotion> additionalChargePromotions) {

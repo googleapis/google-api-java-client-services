@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/QAmYRc3uCTT7WgsWEIdZyJ_RGQY\"",
+ "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/8u8vrxEkg1Nq1erIZkOjgM9gFhQ\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20190122",
+ "revision": "20190208",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -1550,7 +1550,7 @@
     },
     "maxTransitTimeInDays": {
      "type": "integer",
-     "description": "Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means next day delivery. Must be greater than or equal to minTransitTimeInDays. Required.",
+     "description": "Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means next day delivery. Must be greater than or equal to minTransitTimeInDays.",
      "format": "uint32"
     },
     "minHandlingTimeInDays": {
@@ -1560,7 +1560,7 @@
     },
     "minTransitTimeInDays": {
      "type": "integer",
-     "description": "Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means next day delivery. Required.",
+     "description": "Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not both.",
      "format": "uint32"
     }
    }
@@ -1651,7 +1651,7 @@
   "Headers": {
    "id": "Headers",
    "type": "object",
-   "description": "A non-empty list of row or column headers for a table. Exactly one of prices, weights, numItems, postalCodeGroupNames, or locations must be set.",
+   "description": "A non-empty list of row or column headers for a table. Exactly one of prices, weights, numItems, postalCodeGroupNames, or location must be set.",
    "properties": {
     "locations": {
      "type": "array",
@@ -1774,28 +1774,9 @@
       "$ref": "InvoiceSummaryAdditionalChargeSummary"
      }
     },
-    "customerBalance": {
-     "$ref": "Amount",
-     "description": "[required] Customer balance on this invoice. A negative amount means the customer is paying, a positive one means the customer is receiving money. Note: the sum of merchant_balance, customer_balance and google_balance must always be zero.\n\nFurthermore the absolute value of this amount is expected to be equal to the sum of product amount and additional charges, minus promotions."
-    },
-    "googleBalance": {
-     "$ref": "Amount",
-     "description": "[required] Google balance on this invoice. A negative amount means Google is paying, a positive one means Google is receiving money. Note: the sum of merchant_balance, customer_balance and google_balance must always be zero."
-    },
-    "merchantBalance": {
-     "$ref": "Amount",
-     "description": "[required] Merchant balance on this invoice. A negative amount means the merchant is paying, a positive one means the merchant is receiving money. Note: the sum of merchant_balance, customer_balance and google_balance must always be zero."
-    },
     "productTotal": {
      "$ref": "Amount",
      "description": "[required] Total price for the product."
-    },
-    "promotionSummaries": {
-     "type": "array",
-     "description": "Summary for each promotion.",
-     "items": {
-      "$ref": "Promotion"
-     }
     }
    }
   },
@@ -2305,9 +2286,13 @@
      "type": "string",
      "description": "Merchant-provided id of the order."
     },
-    "netAmount": {
+    "netPriceAmount": {
      "$ref": "Price",
-     "description": "The net amount for the order. For example, if an order was originally for a grand total of $100 and a refund was issued for $20, the net amount will be $80."
+     "description": "The net amount for the order (price part). For example, if an order was originally for $100 and a refund was issued for $20, the net amount will be $80."
+    },
+    "netTaxAmount": {
+     "$ref": "Price",
+     "description": "The net amount for the order (tax part). Note that in certain cases due to taxable base adjustment netTaxAmount might not match to a sum of tax field across all lineItems and refunds."
     },
     "paymentStatus": {
      "type": "string",
@@ -5416,20 +5401,6 @@
     }
    }
   },
-  "Promotion": {
-   "id": "Promotion",
-   "type": "object",
-   "properties": {
-    "promotionAmount": {
-     "$ref": "Amount",
-     "description": "[required] Amount of the promotion. The values here are the promotion applied to the unit price pretax and to the total of the tax amounts."
-    },
-    "promotionId": {
-     "type": "string",
-     "description": "[required] ID of the promotion."
-    }
-   }
-  },
   "RateGroup": {
    "id": "RateGroup",
    "type": "object",
@@ -5872,16 +5843,7 @@
     },
     "shippingCost": {
      "$ref": "Price",
-     "description": "The total cost of shipping for all items.",
-     "annotations": {
-      "required": [
-       "content.orders.createtestorder"
-      ]
-     }
-    },
-    "shippingCostTax": {
-     "$ref": "Price",
-     "description": "The tax for the total shipping cost.",
+     "description": "The price of shipping for all items. Shipping tax is automatically calculated for MFL orders. For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not taxed in certain states.",
      "annotations": {
       "required": [
        "content.orders.createtestorder"
@@ -6086,13 +6048,6 @@
       "$ref": "UnitInvoiceAdditionalCharge"
      }
     },
-    "promotions": {
-     "type": "array",
-     "description": "Promotions applied to a unit.",
-     "items": {
-      "$ref": "Promotion"
-     }
-    },
     "unitPrice": {
      "$ref": "Price",
      "description": "[required] Pre-tax or post-tax price of the unit depending on the locality of the order."
@@ -6113,13 +6068,6 @@
     "additionalChargeAmount": {
      "$ref": "Amount",
      "description": "[required] Amount of the additional charge."
-    },
-    "additionalChargePromotions": {
-     "type": "array",
-     "description": "Promotions applied to the additional charge.",
-     "items": {
-      "$ref": "Promotion"
-     }
     },
     "type": {
      "type": "string",

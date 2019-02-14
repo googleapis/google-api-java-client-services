@@ -38,6 +38,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private AddonsConfig addonsConfig;
 
   /**
+   * Configuration controlling RBAC group membership information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthenticatorGroupsConfig authenticatorGroupsConfig;
+
+  /**
    * Cluster-level autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -463,6 +470,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAddonsConfig(AddonsConfig addonsConfig) {
     this.addonsConfig = addonsConfig;
+    return this;
+  }
+
+  /**
+   * Configuration controlling RBAC group membership information.
+   * @return value or {@code null} for none
+   */
+  public AuthenticatorGroupsConfig getAuthenticatorGroupsConfig() {
+    return authenticatorGroupsConfig;
+  }
+
+  /**
+   * Configuration controlling RBAC group membership information.
+   * @param authenticatorGroupsConfig authenticatorGroupsConfig or {@code null} for none
+   */
+  public Cluster setAuthenticatorGroupsConfig(AuthenticatorGroupsConfig authenticatorGroupsConfig) {
+    this.authenticatorGroupsConfig = authenticatorGroupsConfig;
     return this;
   }
 

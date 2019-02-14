@@ -45,6 +45,13 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> appliesTo;
 
   /**
+   * True if the flag is only released in Beta.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inBeta;
+
+  /**
    * This is always sql#flag.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class Flag extends com.google.api.client.json.GenericJson {
    */
   public Flag setAppliesTo(java.util.List<java.lang.String> appliesTo) {
     this.appliesTo = appliesTo;
+    return this;
+  }
+
+  /**
+   * True if the flag is only released in Beta.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInBeta() {
+    return inBeta;
+  }
+
+  /**
+   * True if the flag is only released in Beta.
+   * @param inBeta inBeta or {@code null} for none
+   */
+  public Flag setInBeta(java.lang.Boolean inBeta) {
+    this.inBeta = inBeta;
     return this;
   }
 

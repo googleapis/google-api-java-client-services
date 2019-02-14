@@ -30,8 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class ImportContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Options for importing data as CSV. Importing CSV data using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for importing data as CSV.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,16 +47,14 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file
-   * contains CSV data. Importing CSV data using the Cloud SQL Admin API is not supported for
-   * PostgreSQL instances.
+   * contains CSV data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileType;
 
   /**
-   * The PostgreSQL user for this import operation. Defaults to cloudsqlsuperuser. PostgreSQL
-   * instances only.
+   * The PostgreSQL user for this import operation. PostgreSQL instances only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +77,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String uri;
 
   /**
-   * Options for importing data as CSV. Importing CSV data using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for importing data as CSV.
    * @return value or {@code null} for none
    */
   public CsvImportOptions getCsvImportOptions() {
@@ -89,8 +85,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for importing data as CSV. Importing CSV data using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for importing data as CSV.
    * @param csvImportOptions csvImportOptions or {@code null} for none
    */
   public ImportContext setCsvImportOptions(CsvImportOptions csvImportOptions) {
@@ -121,8 +116,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file
-   * contains CSV data. Importing CSV data using the Cloud SQL Admin API is not supported for
-   * PostgreSQL instances.
+   * contains CSV data.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -131,8 +125,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file
-   * contains CSV data. Importing CSV data using the Cloud SQL Admin API is not supported for
-   * PostgreSQL instances.
+   * contains CSV data.
    * @param fileType fileType or {@code null} for none
    */
   public ImportContext setFileType(java.lang.String fileType) {
@@ -141,8 +134,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The PostgreSQL user for this import operation. Defaults to cloudsqlsuperuser. PostgreSQL
-   * instances only.
+   * The PostgreSQL user for this import operation. PostgreSQL instances only.
    * @return value or {@code null} for none
    */
   public java.lang.String getImportUser() {
@@ -150,8 +142,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The PostgreSQL user for this import operation. Defaults to cloudsqlsuperuser. PostgreSQL
-   * instances only.
+   * The PostgreSQL user for this import operation. PostgreSQL instances only.
    * @param importUser importUser or {@code null} for none
    */
   public ImportContext setImportUser(java.lang.String importUser) {
@@ -208,8 +199,7 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for importing data as CSV. Importing CSV data using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for importing data as CSV.
    */
   public static final class CsvImportOptions extends com.google.api.client.json.GenericJson {
 

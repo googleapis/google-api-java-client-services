@@ -6134,6 +6134,150 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
     public class JobTriggers {
 
       /**
+       * Activate a job trigger. Causes the immediate execute of a trigger instead of waiting on the
+       * trigger event to occur.
+       *
+       * Create a request for the method "jobTriggers.activate".
+       *
+       * This request holds the parameters needed by the dlp server.  After setting any optional
+       * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name of the trigger to activate, for example
+      `projects/dlp-test-
+       *        project/jobTriggers/53234423`.
+       * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
+       * @return the request
+       */
+      public Activate activate(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest content) throws java.io.IOException {
+        Activate result = new Activate(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Activate extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DlpJob> {
+
+        private static final String REST_PATH = "v2/{+name}:activate";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/jobTriggers/[^/]+$");
+
+        /**
+         * Activate a job trigger. Causes the immediate execute of a trigger instead of waiting on the
+         * trigger event to occur.
+         *
+         * Create a request for the method "jobTriggers.activate".
+         *
+         * This request holds the parameters needed by the the dlp server.  After setting any optional
+         * parameters, call the {@link Activate#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name of the trigger to activate, for example
+      `projects/dlp-test-
+       *        project/jobTriggers/53234423`.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
+         * @since 1.13
+         */
+        protected Activate(java.lang.String name, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest content) {
+          super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DlpJob.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/jobTriggers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Activate set$Xgafv(java.lang.String $Xgafv) {
+          return (Activate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Activate setAccessToken(java.lang.String accessToken) {
+          return (Activate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Activate setAlt(java.lang.String alt) {
+          return (Activate) super.setAlt(alt);
+        }
+
+        @Override
+        public Activate setCallback(java.lang.String callback) {
+          return (Activate) super.setCallback(callback);
+        }
+
+        @Override
+        public Activate setFields(java.lang.String fields) {
+          return (Activate) super.setFields(fields);
+        }
+
+        @Override
+        public Activate setKey(java.lang.String key) {
+          return (Activate) super.setKey(key);
+        }
+
+        @Override
+        public Activate setOauthToken(java.lang.String oauthToken) {
+          return (Activate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Activate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Activate setQuotaUser(java.lang.String quotaUser) {
+          return (Activate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Activate setUploadType(java.lang.String uploadType) {
+          return (Activate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Activate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name of the trigger to activate, for example `projects/dlp-test-
+         * project/jobTriggers/53234423`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name of the trigger to activate, for example `projects/dlp-test-
+       project/jobTriggers/53234423`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name of the trigger to activate, for example `projects/dlp-test-
+         * project/jobTriggers/53234423`.
+         */
+        public Activate setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/jobTriggers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Activate set(String parameterName, Object value) {
+          return (Activate) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a
        * set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
        *

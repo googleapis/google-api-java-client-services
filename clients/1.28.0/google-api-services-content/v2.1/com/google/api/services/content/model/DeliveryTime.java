@@ -56,7 +56,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Must be greater than or equal to minTransitTimeInDays. Required.
+   * next day delivery. Must be greater than or equal to minTransitTimeInDays.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Required.
+   * next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not
+   * both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Must be greater than or equal to minTransitTimeInDays. Required.
+   * next day delivery. Must be greater than or equal to minTransitTimeInDays.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxTransitTimeInDays() {
@@ -146,7 +147,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Must be greater than or equal to minTransitTimeInDays. Required.
+   * next day delivery. Must be greater than or equal to minTransitTimeInDays.
    * @param maxTransitTimeInDays maxTransitTimeInDays or {@code null} for none
    */
   public DeliveryTime setMaxTransitTimeInDays(java.lang.Long maxTransitTimeInDays) {
@@ -175,7 +176,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Required.
+   * next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not
+   * both.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinTransitTimeInDays() {
@@ -184,7 +186,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Required.
+   * next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not
+   * both.
    * @param minTransitTimeInDays minTransitTimeInDays or {@code null} for none
    */
   public DeliveryTime setMinTransitTimeInDays(java.lang.Long minTransitTimeInDays) {

@@ -38,19 +38,6 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   private java.util.List<UnitInvoiceAdditionalCharge> additionalCharges;
 
   /**
-   * Promotions applied to a unit.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Promotion> promotions;
-
-  static {
-    // hack to force ProGuard to consider Promotion used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Promotion.class);
-  }
-
-  /**
    * [required] Pre-tax or post-tax price of the unit depending on the locality of the order.
    * The value may be {@code null}.
    */
@@ -78,23 +65,6 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
    */
   public UnitInvoice setAdditionalCharges(java.util.List<UnitInvoiceAdditionalCharge> additionalCharges) {
     this.additionalCharges = additionalCharges;
-    return this;
-  }
-
-  /**
-   * Promotions applied to a unit.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Promotion> getPromotions() {
-    return promotions;
-  }
-
-  /**
-   * Promotions applied to a unit.
-   * @param promotions promotions or {@code null} for none
-   */
-  public UnitInvoice setPromotions(java.util.List<Promotion> promotions) {
-    this.promotions = promotions;
     return this;
   }
 

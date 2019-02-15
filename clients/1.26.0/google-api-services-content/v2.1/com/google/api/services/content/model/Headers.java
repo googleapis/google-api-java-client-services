@@ -18,7 +18,7 @@ package com.google.api.services.content.model;
 
 /**
  * A non-empty list of row or column headers for a table. Exactly one of prices, weights, numItems,
- * postalCodeGroupNames, or locations must be set.
+ * postalCodeGroupNames, or location must be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation

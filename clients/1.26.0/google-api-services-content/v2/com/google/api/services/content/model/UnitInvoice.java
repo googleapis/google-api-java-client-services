@@ -38,7 +38,7 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   private java.util.List<UnitInvoiceAdditionalCharge> additionalCharges;
 
   /**
-   * Promotions applied to a unit.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Promotions applied to a unit.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<Promotion> getPromotions() {
@@ -90,7 +90,7 @@ public final class UnitInvoice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Promotions applied to a unit.
+   * Deprecated.
    * @param promotions promotions or {@code null} for none
    */
   public UnitInvoice setPromotions(java.util.List<Promotion> promotions) {

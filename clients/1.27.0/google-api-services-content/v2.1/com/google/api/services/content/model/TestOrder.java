@@ -93,18 +93,13 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total cost of shipping for all items.
+   * The price of shipping for all items. Shipping tax is automatically calculated for MFL orders.
+   * For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not
+   * taxed in certain states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price shippingCost;
-
-  /**
-   * The tax for the total shipping cost.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Price shippingCostTax;
 
   /**
    * The requested shipping option.
@@ -250,7 +245,9 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total cost of shipping for all items.
+   * The price of shipping for all items. Shipping tax is automatically calculated for MFL orders.
+   * For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not
+   * taxed in certain states.
    * @return value or {@code null} for none
    */
   public Price getShippingCost() {
@@ -258,28 +255,13 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The total cost of shipping for all items.
+   * The price of shipping for all items. Shipping tax is automatically calculated for MFL orders.
+   * For non-MFL orders, tax settings from Merchant Center are applied. Note that shipping is not
+   * taxed in certain states.
    * @param shippingCost shippingCost or {@code null} for none
    */
   public TestOrder setShippingCost(Price shippingCost) {
     this.shippingCost = shippingCost;
-    return this;
-  }
-
-  /**
-   * The tax for the total shipping cost.
-   * @return value or {@code null} for none
-   */
-  public Price getShippingCostTax() {
-    return shippingCostTax;
-  }
-
-  /**
-   * The tax for the total shipping cost.
-   * @param shippingCostTax shippingCostTax or {@code null} for none
-   */
-  public TestOrder setShippingCostTax(Price shippingCostTax) {
-    this.shippingCostTax = shippingCostTax;
     return this;
   }
 

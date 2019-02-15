@@ -30,8 +30,7 @@ package com.google.api.services.sqladmin.model;
 public final class ExportContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Options for exporting data as CSV. Exporting in CSV format using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for exporting data as CSV.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +41,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    * databases are exported, except for the mysql system database. If fileType is CSV, you can
    * specify one database, either by using this property or by using the
    * csvExportOptions.selectQuery property, which takes precedence over this property. PostgreSQL
-   * instances: If fileType is SQL, you must specify one database to be exported. A fileType of CSV
-   * is not supported for PostgreSQL instances.
+   * instances: Specify exactly one database to be exported. If fileType is CSV, this database must
+   * match the database used in the csvExportOptions.selectQuery property.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +50,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file
-   * contains CSV data. CSV is not supported for PostgreSQL instances.
+   * contains CSV data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +81,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String uri;
 
   /**
-   * Options for exporting data as CSV. Exporting in CSV format using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for exporting data as CSV.
    * @return value or {@code null} for none
    */
   public CsvExportOptions getCsvExportOptions() {
@@ -91,8 +89,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for exporting data as CSV. Exporting in CSV format using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for exporting data as CSV.
    * @param csvExportOptions csvExportOptions or {@code null} for none
    */
   public ExportContext setCsvExportOptions(CsvExportOptions csvExportOptions) {
@@ -105,8 +102,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    * databases are exported, except for the mysql system database. If fileType is CSV, you can
    * specify one database, either by using this property or by using the
    * csvExportOptions.selectQuery property, which takes precedence over this property. PostgreSQL
-   * instances: If fileType is SQL, you must specify one database to be exported. A fileType of CSV
-   * is not supported for PostgreSQL instances.
+   * instances: Specify exactly one database to be exported. If fileType is CSV, this database must
+   * match the database used in the csvExportOptions.selectQuery property.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDatabases() {
@@ -118,8 +115,8 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
    * databases are exported, except for the mysql system database. If fileType is CSV, you can
    * specify one database, either by using this property or by using the
    * csvExportOptions.selectQuery property, which takes precedence over this property. PostgreSQL
-   * instances: If fileType is SQL, you must specify one database to be exported. A fileType of CSV
-   * is not supported for PostgreSQL instances.
+   * instances: Specify exactly one database to be exported. If fileType is CSV, this database must
+   * match the database used in the csvExportOptions.selectQuery property.
    * @param databases databases or {@code null} for none
    */
   public ExportContext setDatabases(java.util.List<java.lang.String> databases) {
@@ -129,7 +126,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file
-   * contains CSV data. CSV is not supported for PostgreSQL instances.
+   * contains CSV data.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -138,7 +135,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
 
   /**
    * The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file
-   * contains CSV data. CSV is not supported for PostgreSQL instances.
+   * contains CSV data.
    * @param fileType fileType or {@code null} for none
    */
   public ExportContext setFileType(java.lang.String fileType) {
@@ -214,8 +211,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Options for exporting data as CSV. Exporting in CSV format using the Cloud SQL Admin API is not
-   * supported for PostgreSQL instances.
+   * Options for exporting data as CSV.
    */
   public static final class CsvExportOptions extends com.google.api.client.json.GenericJson {
 

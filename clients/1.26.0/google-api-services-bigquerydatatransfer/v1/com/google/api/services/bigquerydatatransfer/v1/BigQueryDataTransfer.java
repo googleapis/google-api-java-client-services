@@ -1723,6 +1723,37 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
             return this;
           }
 
+          /**
+           * Optional version info. If users want to find a very recent access token, that is,
+           * immediately after approving access, users have to set the version_info claim in the
+           * token request. To obtain the version_info, users must use the “none+gsession” response
+           * type. which be return a version_info back in the authorization response which be be put
+           * in a JWT claim in the token request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String versionInfo;
+
+          /** Optional version info. If users want to find a very recent access token, that is, immediately after
+         approving access, users have to set the version_info claim in the token request. To obtain the
+         version_info, users must use the “none+gsession” response type. which be return a version_info back
+         in the authorization response which be be put in a JWT claim in the token request.
+           */
+          public java.lang.String getVersionInfo() {
+            return versionInfo;
+          }
+
+          /**
+           * Optional version info. If users want to find a very recent access token, that is,
+           * immediately after approving access, users have to set the version_info claim in the
+           * token request. To obtain the version_info, users must use the “none+gsession” response
+           * type. which be return a version_info back in the authorization response which be be put
+           * in a JWT claim in the token request.
+           */
+          public Create setVersionInfo(java.lang.String versionInfo) {
+            this.versionInfo = versionInfo;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -2447,6 +2478,37 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /** Required list of fields to be updated in this request. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional version info. If users want to find a very recent access token, that is,
+           * immediately after approving access, users have to set the version_info claim in the
+           * token request. To obtain the version_info, users must use the “none+gsession” response
+           * type. which be return a version_info back in the authorization response which be be put
+           * in a JWT claim in the token request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String versionInfo;
+
+          /** Optional version info. If users want to find a very recent access token, that is, immediately after
+         approving access, users have to set the version_info claim in the token request. To obtain the
+         version_info, users must use the “none+gsession” response type. which be return a version_info back
+         in the authorization response which be be put in a JWT claim in the token request.
+           */
+          public java.lang.String getVersionInfo() {
+            return versionInfo;
+          }
+
+          /**
+           * Optional version info. If users want to find a very recent access token, that is,
+           * immediately after approving access, users have to set the version_info claim in the
+           * token request. To obtain the version_info, users must use the “none+gsession” response
+           * type. which be return a version_info back in the authorization response which be be put
+           * in a JWT claim in the token request.
+           */
+          public Patch setVersionInfo(java.lang.String versionInfo) {
+            this.versionInfo = versionInfo;
             return this;
           }
 
@@ -3593,6 +3655,37 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           return this;
         }
 
+        /**
+         * Optional version info. If users want to find a very recent access token, that is,
+         * immediately after approving access, users have to set the version_info claim in the token
+         * request. To obtain the version_info, users must use the “none+gsession” response type.
+         * which be return a version_info back in the authorization response which be be put in a
+         * JWT claim in the token request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String versionInfo;
+
+        /** Optional version info. If users want to find a very recent access token, that is, immediately after
+       approving access, users have to set the version_info claim in the token request. To obtain the
+       version_info, users must use the “none+gsession” response type. which be return a version_info back
+       in the authorization response which be be put in a JWT claim in the token request.
+         */
+        public java.lang.String getVersionInfo() {
+          return versionInfo;
+        }
+
+        /**
+         * Optional version info. If users want to find a very recent access token, that is,
+         * immediately after approving access, users have to set the version_info claim in the token
+         * request. To obtain the version_info, users must use the “none+gsession” response type.
+         * which be return a version_info back in the authorization response which be be put in a
+         * JWT claim in the token request.
+         */
+        public Create setVersionInfo(java.lang.String versionInfo) {
+          this.versionInfo = versionInfo;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -4317,6 +4410,37 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /** Required list of fields to be updated in this request. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
+          return this;
+        }
+
+        /**
+         * Optional version info. If users want to find a very recent access token, that is,
+         * immediately after approving access, users have to set the version_info claim in the token
+         * request. To obtain the version_info, users must use the “none+gsession” response type.
+         * which be return a version_info back in the authorization response which be be put in a
+         * JWT claim in the token request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String versionInfo;
+
+        /** Optional version info. If users want to find a very recent access token, that is, immediately after
+       approving access, users have to set the version_info claim in the token request. To obtain the
+       version_info, users must use the “none+gsession” response type. which be return a version_info back
+       in the authorization response which be be put in a JWT claim in the token request.
+         */
+        public java.lang.String getVersionInfo() {
+          return versionInfo;
+        }
+
+        /**
+         * Optional version info. If users want to find a very recent access token, that is,
+         * immediately after approving access, users have to set the version_info claim in the token
+         * request. To obtain the version_info, users must use the “none+gsession” response type.
+         * which be return a version_info back in the authorization response which be be put in a
+         * JWT claim in the token request.
+         */
+        public Patch setVersionInfo(java.lang.String versionInfo) {
+          this.versionInfo = versionInfo;
           return this;
         }
 

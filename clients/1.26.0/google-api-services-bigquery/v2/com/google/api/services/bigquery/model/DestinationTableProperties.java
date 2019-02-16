@@ -48,6 +48,15 @@ public final class DestinationTableProperties extends com.google.api.client.json
   private java.lang.String friendlyName;
 
   /**
+   * [Optional] The labels associated with this table. You can use these to organize and group your
+   * tables. This will only be used if the destination table is newly created. If the table already
+   * exists and labels are different than the current labels are provided, the job will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * [Optional] The description for the destination table. This will only be used if the destination
    * table is newly created. If the table already exists and a value different than the current
    * description is provided, the job will fail.
@@ -86,6 +95,27 @@ public final class DestinationTableProperties extends com.google.api.client.json
    */
   public DestinationTableProperties setFriendlyName(java.lang.String friendlyName) {
     this.friendlyName = friendlyName;
+    return this;
+  }
+
+  /**
+   * [Optional] The labels associated with this table. You can use these to organize and group your
+   * tables. This will only be used if the destination table is newly created. If the table already
+   * exists and labels are different than the current labels are provided, the job will fail.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * [Optional] The labels associated with this table. You can use these to organize and group your
+   * tables. This will only be used if the destination table is newly created. If the table already
+   * exists and labels are different than the current labels are provided, the job will fail.
+   * @param labels labels or {@code null} for none
+   */
+  public DestinationTableProperties setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

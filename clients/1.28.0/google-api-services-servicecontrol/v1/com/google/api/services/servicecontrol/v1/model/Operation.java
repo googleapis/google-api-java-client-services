@@ -35,7 +35,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    * related to a specific consumer.
    *
    * - This can be in one of the following formats:     - project:PROJECT_ID,     -
-   * project`_`number:PROJECT_NUMBER,     - api`_`key:API_KEY.
+   * project`_`number:PROJECT_NUMBER,     - projects/RPOJECT_ID or PROJECT_NUMBER,     -
+   * folders/FOLDER_NUMBER,     - organizations/ORGANIZATION_NUMBER,     - api`_`key:API_KEY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +175,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    * related to a specific consumer.
    *
    * - This can be in one of the following formats:     - project:PROJECT_ID,     -
-   * project`_`number:PROJECT_NUMBER,     - api`_`key:API_KEY.
+   * project`_`number:PROJECT_NUMBER,     - projects/RPOJECT_ID or PROJECT_NUMBER,     -
+   * folders/FOLDER_NUMBER,     - organizations/ORGANIZATION_NUMBER,     - api`_`key:API_KEY.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerId() {
@@ -187,7 +189,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    * related to a specific consumer.
    *
    * - This can be in one of the following formats:     - project:PROJECT_ID,     -
-   * project`_`number:PROJECT_NUMBER,     - api`_`key:API_KEY.
+   * project`_`number:PROJECT_NUMBER,     - projects/RPOJECT_ID or PROJECT_NUMBER,     -
+   * folders/FOLDER_NUMBER,     - organizations/ORGANIZATION_NUMBER,     - api`_`key:API_KEY.
    * @param consumerId consumerId or {@code null} for none
    */
   public Operation setConsumerId(java.lang.String consumerId) {

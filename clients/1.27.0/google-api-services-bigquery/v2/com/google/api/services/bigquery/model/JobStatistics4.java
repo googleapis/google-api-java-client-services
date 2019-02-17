@@ -39,6 +39,14 @@ public final class JobStatistics4 extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Long> destinationUriFileCounts;
 
   /**
+   * [Output-only] Number of user bytes extracted into the result. This is the byte count as
+   * computed by BigQuery for billing purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long inputBytes;
+
+  /**
    * [Output-only] Number of files per destination URI or URI pattern specified in the extract
    * configuration. These values will be in the same order as the URIs specified in the
    * 'destinationUris' field.
@@ -56,6 +64,25 @@ public final class JobStatistics4 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics4 setDestinationUriFileCounts(java.util.List<java.lang.Long> destinationUriFileCounts) {
     this.destinationUriFileCounts = destinationUriFileCounts;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of user bytes extracted into the result. This is the byte count as
+   * computed by BigQuery for billing purposes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getInputBytes() {
+    return inputBytes;
+  }
+
+  /**
+   * [Output-only] Number of user bytes extracted into the result. This is the byte count as
+   * computed by BigQuery for billing purposes.
+   * @param inputBytes inputBytes or {@code null} for none
+   */
+  public JobStatistics4 setInputBytes(java.lang.Long inputBytes) {
+    this.inputBytes = inputBytes;
     return this;
   }
 

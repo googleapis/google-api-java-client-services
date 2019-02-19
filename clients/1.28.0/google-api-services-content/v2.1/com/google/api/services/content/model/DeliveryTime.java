@@ -80,6 +80,14 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   private java.lang.Long minTransitTimeInDays;
 
   /**
+   * Transit time table, number of business days spent in transit based on row and column
+   * dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransitTable transitTimeTable;
+
+  /**
    * Business days cutoff time definition. If not configured the cutoff time will be defaulted to
    * 8AM PST.
    * @return value or {@code null} for none
@@ -192,6 +200,25 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
    */
   public DeliveryTime setMinTransitTimeInDays(java.lang.Long minTransitTimeInDays) {
     this.minTransitTimeInDays = minTransitTimeInDays;
+    return this;
+  }
+
+  /**
+   * Transit time table, number of business days spent in transit based on row and column
+   * dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both.
+   * @return value or {@code null} for none
+   */
+  public TransitTable getTransitTimeTable() {
+    return transitTimeTable;
+  }
+
+  /**
+   * Transit time table, number of business days spent in transit based on row and column
+   * dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both.
+   * @param transitTimeTable transitTimeTable or {@code null} for none
+   */
+  public DeliveryTime setTransitTimeTable(TransitTable transitTimeTable) {
+    this.transitTimeTable = transitTimeTable;
     return this;
   }
 

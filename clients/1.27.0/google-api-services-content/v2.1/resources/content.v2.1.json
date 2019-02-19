@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/8u8vrxEkg1Nq1erIZkOjgM9gFhQ\"",
+ "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/jJVwelwojeEb8U1BhXyIHAL-8XY\"",
  "discoveryVersion": "v1",
  "id": "content:v2.1",
  "name": "content",
  "canonicalName": "Shopping Content",
  "version": "v2.1",
- "revision": "20190208",
+ "revision": "20190215",
  "title": "Content API for Shopping",
  "description": "Manages product items, inventory, and Merchant Center accounts for Google Shopping.",
  "ownerDomain": "google.com",
@@ -1562,6 +1562,10 @@
      "type": "integer",
      "description": "Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not both.",
      "format": "uint32"
+    },
+    "transitTimeTable": {
+     "$ref": "TransitTable",
+     "description": "Transit time table, number of business days spent in transit based on row and column dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both."
     }
    }
   },
@@ -5452,11 +5456,137 @@
     }
    }
   },
+  "RegionalInventory": {
+   "id": "RegionalInventory",
+   "type": "object",
+   "description": "Regional inventory resource. contains the regional name and all attributes which are overridden for the specified region.",
+   "properties": {
+    "availability": {
+     "type": "string",
+     "description": "The availability of the product."
+    },
+    "customAttributes": {
+     "type": "array",
+     "description": "A list of custom (merchant-provided) attributes. It can also be used for submitting any attribute of the feed specification in its generic form.",
+     "items": {
+      "$ref": "CustomAttribute"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#regionalInventory\".",
+     "default": "content#regionalInventory"
+    },
+    "price": {
+     "$ref": "Price",
+     "description": "The price of the product."
+    },
+    "regionId": {
+     "type": "string",
+     "description": "The id (name) of the region."
+    },
+    "salePrice": {
+     "$ref": "Price",
+     "description": "The sale price of the product. Mandatory if sale_price_effective_date is defined."
+    },
+    "salePriceEffectiveDate": {
+     "type": "string",
+     "description": "A date range represented by a pair of ISO 8601 dates separated by a space, comma, or slash. Both dates might be specified as 'null' if undecided."
+    }
+   }
+  },
+  "RegionalinventoryCustomBatchRequest": {
+   "id": "RegionalinventoryCustomBatchRequest",
+   "type": "object",
+   "properties": {
+    "entries": {
+     "type": "array",
+     "description": "The request entries to be processed in the batch.",
+     "items": {
+      "$ref": "RegionalinventoryCustomBatchRequestEntry"
+     }
+    }
+   }
+  },
+  "RegionalinventoryCustomBatchRequestEntry": {
+   "id": "RegionalinventoryCustomBatchRequestEntry",
+   "type": "object",
+   "description": "A batch entry encoding a single non-batch regional inventory request.",
+   "properties": {
+    "batchId": {
+     "type": "integer",
+     "description": "An entry ID, unique within the batch request.",
+     "format": "uint32"
+    },
+    "merchantId": {
+     "type": "string",
+     "description": "The ID of the managing account.",
+     "format": "uint64"
+    },
+    "method": {
+     "type": "string"
+    },
+    "productId": {
+     "type": "string",
+     "description": "The ID of the product for which to update price and availability."
+    },
+    "regionalInventory": {
+     "$ref": "RegionalInventory",
+     "description": "Price and availability of the product."
+    }
+   }
+  },
+  "RegionalinventoryCustomBatchResponse": {
+   "id": "RegionalinventoryCustomBatchResponse",
+   "type": "object",
+   "properties": {
+    "entries": {
+     "type": "array",
+     "description": "The result of the execution of the batch requests.",
+     "items": {
+      "$ref": "RegionalinventoryCustomBatchResponseEntry"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#regionalinventoryCustomBatchResponse\".",
+     "default": "content#regionalinventoryCustomBatchResponse"
+    }
+   }
+  },
+  "RegionalinventoryCustomBatchResponseEntry": {
+   "id": "RegionalinventoryCustomBatchResponseEntry",
+   "type": "object",
+   "description": "A batch entry encoding a single non-batch regional inventory response.",
+   "properties": {
+    "batchId": {
+     "type": "integer",
+     "description": "The ID of the request entry this entry responds to.",
+     "format": "uint32"
+    },
+    "errors": {
+     "$ref": "Errors",
+     "description": "A list of errors defined if and only if the request failed."
+    },
+    "kind": {
+     "type": "string",
+     "description": "Identifies what kind of resource this is. Value: the fixed string \"content#regionalinventoryCustomBatchResponseEntry\".",
+     "default": "content#regionalinventoryCustomBatchResponseEntry"
+    },
+    "regionalInventory": {
+     "$ref": "RegionalInventory",
+     "description": "Price and availability of the product."
+    }
+   }
+  },
   "ReturnShipment": {
    "id": "ReturnShipment",
    "type": "object",
    "properties": {
     "creationDate": {
+     "type": "string"
+    },
+    "deliveryDate": {
      "type": "string"
     },
     "returnMethodType": {
@@ -5470,6 +5600,12 @@
      "items": {
       "$ref": "ShipmentTrackingInfo"
      }
+    },
+    "shippingDate": {
+     "type": "string"
+    },
+    "state": {
+     "type": "string"
     }
    }
   },
@@ -6034,6 +6170,60 @@
      "items": {
       "$ref": "OrderLineItemProductVariantAttribute"
      }
+    }
+   }
+  },
+  "TransitTable": {
+   "id": "TransitTable",
+   "type": "object",
+   "properties": {
+    "postalCodeGroupNames": {
+     "type": "array",
+     "description": "A list of postal group names. The last value can be \"all other locations\". Example: [\"zone 1\", \"zone 2\", \"all other locations\"]. The referred postal code groups must match the delivery country of the service.",
+     "items": {
+      "type": "string"
+     }
+    },
+    "rows": {
+     "type": "array",
+     "items": {
+      "$ref": "TransitTableTransitTimeRow"
+     }
+    },
+    "transitTimeLabels": {
+     "type": "array",
+     "description": "A list of transit time labels. The last value can be \"all other labels\". Example: [\"food\", \"electronics\", \"all other labels\"].",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "TransitTableTransitTimeRow": {
+   "id": "TransitTableTransitTimeRow",
+   "type": "object",
+   "properties": {
+    "values": {
+     "type": "array",
+     "items": {
+      "$ref": "TransitTableTransitTimeRowTransitTimeValue"
+     }
+    }
+   }
+  },
+  "TransitTableTransitTimeRowTransitTimeValue": {
+   "id": "TransitTableTransitTimeRowTransitTimeValue",
+   "type": "object",
+   "properties": {
+    "maxTransitTimeInDays": {
+     "type": "integer",
+     "description": "Must be greater than or equal to minTransitTimeInDays.",
+     "format": "uint32"
+    },
+    "minTransitTimeInDays": {
+     "type": "integer",
+     "description": "Transit time range (min-max) in business days. 0 means same day delivery, 1 means next day delivery.",
+     "format": "uint32"
     }
    }
   },
@@ -8718,6 +8908,59 @@
      ],
      "response": {
       "$ref": "ProductstatusesListResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    }
+   }
+  },
+  "regionalinventory": {
+   "methods": {
+    "custombatch": {
+     "id": "content.regionalinventory.custombatch",
+     "path": "regionalinventory/batch",
+     "httpMethod": "POST",
+     "description": "Updates regional inventory for multiple products or regions in a single request.",
+     "request": {
+      "$ref": "RegionalinventoryCustomBatchRequest"
+     },
+     "response": {
+      "$ref": "RegionalinventoryCustomBatchResponse"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/content"
+     ]
+    },
+    "insert": {
+     "id": "content.regionalinventory.insert",
+     "path": "{merchantId}/products/{productId}/regionalinventory",
+     "httpMethod": "POST",
+     "description": "Update the regional inventory of a product in your Merchant Center account. If a regional inventory with the same region ID already exists, this method updates that entry.",
+     "parameters": {
+      "merchantId": {
+       "type": "string",
+       "description": "The ID of the account that contains the product. This account cannot be a multi-client account.",
+       "required": true,
+       "format": "uint64",
+       "location": "path"
+      },
+      "productId": {
+       "type": "string",
+       "description": "The REST id of the product for which to update the regional inventory.",
+       "required": true,
+       "location": "path"
+      }
+     },
+     "parameterOrder": [
+      "merchantId",
+      "productId"
+     ],
+     "request": {
+      "$ref": "RegionalInventory"
+     },
+     "response": {
+      "$ref": "RegionalInventory"
      },
      "scopes": [
       "https://www.googleapis.com/auth/content"

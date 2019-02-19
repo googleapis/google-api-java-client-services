@@ -10225,6 +10225,232 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Regionalinventory collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Regionalinventory.List request = content.regionalinventory().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Regionalinventory regionalinventory() {
+    return new Regionalinventory();
+  }
+
+  /**
+   * The "regionalinventory" collection of methods.
+   */
+  public class Regionalinventory {
+
+    /**
+     * Updates regional inventory for multiple products or regions in a single request.
+     *
+     * Create a request for the method "regionalinventory.custombatch".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Custombatch#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.content.model.RegionalinventoryCustomBatchRequest}
+     * @return the request
+     */
+    public Custombatch custombatch(com.google.api.services.content.model.RegionalinventoryCustomBatchRequest content) throws java.io.IOException {
+      Custombatch result = new Custombatch(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Custombatch extends ShoppingContentRequest<com.google.api.services.content.model.RegionalinventoryCustomBatchResponse> {
+
+      private static final String REST_PATH = "regionalinventory/batch";
+
+      /**
+       * Updates regional inventory for multiple products or regions in a single request.
+       *
+       * Create a request for the method "regionalinventory.custombatch".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Custombatch#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Custombatch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.content.model.RegionalinventoryCustomBatchRequest}
+       * @since 1.13
+       */
+      protected Custombatch(com.google.api.services.content.model.RegionalinventoryCustomBatchRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.RegionalinventoryCustomBatchResponse.class);
+      }
+
+      @Override
+      public Custombatch setAlt(java.lang.String alt) {
+        return (Custombatch) super.setAlt(alt);
+      }
+
+      @Override
+      public Custombatch setFields(java.lang.String fields) {
+        return (Custombatch) super.setFields(fields);
+      }
+
+      @Override
+      public Custombatch setKey(java.lang.String key) {
+        return (Custombatch) super.setKey(key);
+      }
+
+      @Override
+      public Custombatch setOauthToken(java.lang.String oauthToken) {
+        return (Custombatch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Custombatch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Custombatch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Custombatch setQuotaUser(java.lang.String quotaUser) {
+        return (Custombatch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Custombatch setUserIp(java.lang.String userIp) {
+        return (Custombatch) super.setUserIp(userIp);
+      }
+
+      @Override
+      public Custombatch set(String parameterName, Object value) {
+        return (Custombatch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Update the regional inventory of a product in your Merchant Center account. If a regional
+     * inventory with the same region ID already exists, this method updates that entry.
+     *
+     * Create a request for the method "regionalinventory.insert".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
+     * @param productId The REST id of the product for which to update the regional inventory.
+     * @param content the {@link com.google.api.services.content.model.RegionalInventory}
+     * @return the request
+     */
+    public Insert insert(java.math.BigInteger merchantId, java.lang.String productId, com.google.api.services.content.model.RegionalInventory content) throws java.io.IOException {
+      Insert result = new Insert(merchantId, productId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends ShoppingContentRequest<com.google.api.services.content.model.RegionalInventory> {
+
+      private static final String REST_PATH = "{merchantId}/products/{productId}/regionalinventory";
+
+      /**
+       * Update the regional inventory of a product in your Merchant Center account. If a regional
+       * inventory with the same region ID already exists, this method updates that entry.
+       *
+       * Create a request for the method "regionalinventory.insert".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
+       * @param productId The REST id of the product for which to update the regional inventory.
+       * @param content the {@link com.google.api.services.content.model.RegionalInventory}
+       * @since 1.13
+       */
+      protected Insert(java.math.BigInteger merchantId, java.lang.String productId, com.google.api.services.content.model.RegionalInventory content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.RegionalInventory.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /**
+       * The ID of the account that contains the product. This account cannot be a multi-client
+       * account.
+       */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger merchantId;
+
+      /** The ID of the account that contains the product. This account cannot be a multi-client account.
+       */
+      public java.math.BigInteger getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * The ID of the account that contains the product. This account cannot be a multi-client
+       * account.
+       */
+      public Insert setMerchantId(java.math.BigInteger merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The REST id of the product for which to update the regional inventory. */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** The REST id of the product for which to update the regional inventory.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /** The REST id of the product for which to update the regional inventory. */
+      public Insert setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Shippingsettings collection.
    *
    * <p>The typical use is:</p>

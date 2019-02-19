@@ -40,6 +40,12 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String deliveryDate;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String returnMethodType;
 
   /**
@@ -55,6 +61,18 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
   private java.util.List<ShipmentTrackingInfo> shipmentTrackingInfos;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shippingDate;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationDate() {
@@ -66,6 +84,21 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
    */
   public ReturnShipment setCreationDate(java.lang.String creationDate) {
     this.creationDate = creationDate;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeliveryDate() {
+    return deliveryDate;
+  }
+
+  /**
+   * @param deliveryDate deliveryDate or {@code null} for none
+   */
+  public ReturnShipment setDeliveryDate(java.lang.String deliveryDate) {
+    this.deliveryDate = deliveryDate;
     return this;
   }
 
@@ -111,6 +144,36 @@ public final class ReturnShipment extends com.google.api.client.json.GenericJson
    */
   public ReturnShipment setShipmentTrackingInfos(java.util.List<ShipmentTrackingInfo> shipmentTrackingInfos) {
     this.shipmentTrackingInfos = shipmentTrackingInfos;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShippingDate() {
+    return shippingDate;
+  }
+
+  /**
+   * @param shippingDate shippingDate or {@code null} for none
+   */
+  public ReturnShipment setShippingDate(java.lang.String shippingDate) {
+    this.shippingDate = shippingDate;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * @param state state or {@code null} for none
+   */
+  public ReturnShipment setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

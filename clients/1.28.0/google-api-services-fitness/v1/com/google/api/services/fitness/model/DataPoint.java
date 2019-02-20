@@ -69,6 +69,9 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   /**
    * If the data point is contained in a dataset for a derived data source, this field will be
    * populated with the data source stream ID that created the data point originally.
+   *
+   * WARNING: do not rely on this field for anything other than debugging. The value of this field,
+   * if it is set at all, is an implementation detail and is not guaranteed to remain consistent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,6 +176,9 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   /**
    * If the data point is contained in a dataset for a derived data source, this field will be
    * populated with the data source stream ID that created the data point originally.
+   *
+   * WARNING: do not rely on this field for anything other than debugging. The value of this field,
+   * if it is set at all, is an implementation detail and is not guaranteed to remain consistent.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginDataSourceId() {
@@ -182,6 +188,9 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   /**
    * If the data point is contained in a dataset for a derived data source, this field will be
    * populated with the data source stream ID that created the data point originally.
+   *
+   * WARNING: do not rely on this field for anything other than debugging. The value of this field,
+   * if it is set at all, is an implementation detail and is not guaranteed to remain consistent.
    * @param originDataSourceId originDataSourceId or {@code null} for none
    */
   public DataPoint setOriginDataSourceId(java.lang.String originDataSourceId) {

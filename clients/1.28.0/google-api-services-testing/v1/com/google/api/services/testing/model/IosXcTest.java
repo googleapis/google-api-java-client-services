@@ -50,8 +50,8 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
   private FileReference testsZip;
 
   /**
-   * The Xcode version that should be used for the test. Use the EnvironmentDiscoveryService to get
-   * supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+   * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to
+   * get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +105,8 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Xcode version that should be used for the test. Use the EnvironmentDiscoveryService to get
-   * supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+   * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to
+   * get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
    * @return value or {@code null} for none
    */
   public java.lang.String getXcodeVersion() {
@@ -114,8 +114,8 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Xcode version that should be used for the test. Use the EnvironmentDiscoveryService to get
-   * supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+   * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to
+   * get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
    * @param xcodeVersion xcodeVersion or {@code null} for none
    */
   public IosXcTest setXcodeVersion(java.lang.String xcodeVersion) {

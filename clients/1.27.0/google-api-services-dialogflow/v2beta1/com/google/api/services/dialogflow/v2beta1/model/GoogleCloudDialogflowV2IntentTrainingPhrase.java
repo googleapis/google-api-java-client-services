@@ -37,9 +37,24 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   private java.lang.String name;
 
   /**
-   * Required. The collection of training phrase parts (can be annotated). Fields: `entity_type`,
-   * `alias` and `user_defined` should be populated only for the annotated parts of the training
-   * phrase.
+   * Required. The ordered list of training phrase parts. The parts are concatenated in order to
+   * form the training phrase.
+   *
+   * Note: The API does not automatically annotate training phrases like the Dialogflow Console
+   * does.
+   *
+   * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well
+   * formatted when the parts are concatenated.
+   *
+   * If the training phrase does not need to be annotated with parameters, you just need a single
+   * part with only the Part.text field set.
+   *
+   * If you want to annotate the training phrase, you must create multiple parts, where the fields
+   * of each part are populated in one of two ways:
+   *
+   * -   `Part.text` is set to a part of the phrase that has no parameters. -   `Part.text` is set
+   * to a part of the phrase that you want to annotate,     and the `entity_type`, `alias`, and
+   * `user_defined` fields are all     set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,9 +93,24 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   }
 
   /**
-   * Required. The collection of training phrase parts (can be annotated). Fields: `entity_type`,
-   * `alias` and `user_defined` should be populated only for the annotated parts of the training
-   * phrase.
+   * Required. The ordered list of training phrase parts. The parts are concatenated in order to
+   * form the training phrase.
+   *
+   * Note: The API does not automatically annotate training phrases like the Dialogflow Console
+   * does.
+   *
+   * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well
+   * formatted when the parts are concatenated.
+   *
+   * If the training phrase does not need to be annotated with parameters, you just need a single
+   * part with only the Part.text field set.
+   *
+   * If you want to annotate the training phrase, you must create multiple parts, where the fields
+   * of each part are populated in one of two ways:
+   *
+   * -   `Part.text` is set to a part of the phrase that has no parameters. -   `Part.text` is set
+   * to a part of the phrase that you want to annotate,     and the `entity_type`, `alias`, and
+   * `user_defined` fields are all     set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentTrainingPhrasePart> getParts() {
@@ -88,9 +118,24 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrase extends com.googl
   }
 
   /**
-   * Required. The collection of training phrase parts (can be annotated). Fields: `entity_type`,
-   * `alias` and `user_defined` should be populated only for the annotated parts of the training
-   * phrase.
+   * Required. The ordered list of training phrase parts. The parts are concatenated in order to
+   * form the training phrase.
+   *
+   * Note: The API does not automatically annotate training phrases like the Dialogflow Console
+   * does.
+   *
+   * Note: Do not forget to include whitespace at part boundaries, so the training phrase is well
+   * formatted when the parts are concatenated.
+   *
+   * If the training phrase does not need to be annotated with parameters, you just need a single
+   * part with only the Part.text field set.
+   *
+   * If you want to annotate the training phrase, you must create multiple parts, where the fields
+   * of each part are populated in one of two ways:
+   *
+   * -   `Part.text` is set to a part of the phrase that has no parameters. -   `Part.text` is set
+   * to a part of the phrase that you want to annotate,     and the `entity_type`, `alias`, and
+   * `user_defined` fields are all     set.
    * @param parts parts or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentTrainingPhrase setParts(java.util.List<GoogleCloudDialogflowV2IntentTrainingPhrasePart> parts) {

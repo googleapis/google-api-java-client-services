@@ -18,9 +18,8 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * The field type of `value` and `field` do not need to match to be considered equal, but not all
- * comparisons are possible.
- *
- * A `value` of type:
+ * comparisons are possible. EQUAL_TO and NOT_EQUAL_TO attempt to compare even with incompatible
+ * types, but all other comparisons are invalid with incompatible types. A `value` of type:
  *
  * - `string` can be compared against all other types - `boolean` can only be compared against other
  * booleans - `integer` can be compared against doubles or a string if the string value can be

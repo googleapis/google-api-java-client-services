@@ -20,7 +20,7 @@ package com.google.api.services.videointelligence.v1beta2;
  * Service definition for CloudVideoIntelligence (v1beta2).
  *
  * <p>
- * Detects objects, explicit content, and scene changes in videos. It also specifies the region for annotation and transcribes speech to text.
+ * Detects objects, explicit content, and scene changes in videos. It also specifies the region for annotation and transcribes speech to text. Supports both asynchronous API and streaming API.
  * </p>
  *
  * <p>

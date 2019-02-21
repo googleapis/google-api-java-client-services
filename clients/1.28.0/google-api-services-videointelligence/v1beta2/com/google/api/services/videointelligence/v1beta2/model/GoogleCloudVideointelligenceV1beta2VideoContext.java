@@ -67,6 +67,13 @@ public final class GoogleCloudVideointelligenceV1beta2VideoContext extends com.g
   private GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig speechTranscriptionConfig;
 
   /**
+   * Config for TEXT_DETECTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVideointelligenceV1beta2TextDetectionConfig textDetectionConfig;
+
+  /**
    * Config for EXPLICIT_CONTENT_DETECTION.
    * @return value or {@code null} for none
    */
@@ -150,6 +157,23 @@ public final class GoogleCloudVideointelligenceV1beta2VideoContext extends com.g
    */
   public GoogleCloudVideointelligenceV1beta2VideoContext setSpeechTranscriptionConfig(GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig speechTranscriptionConfig) {
     this.speechTranscriptionConfig = speechTranscriptionConfig;
+    return this;
+  }
+
+  /**
+   * Config for TEXT_DETECTION.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2TextDetectionConfig getTextDetectionConfig() {
+    return textDetectionConfig;
+  }
+
+  /**
+   * Config for TEXT_DETECTION.
+   * @param textDetectionConfig textDetectionConfig or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2VideoContext setTextDetectionConfig(GoogleCloudVideointelligenceV1beta2TextDetectionConfig textDetectionConfig) {
+    this.textDetectionConfig = textDetectionConfig;
     return this;
   }
 

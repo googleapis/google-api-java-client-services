@@ -25,7 +25,7 @@ package com.google.api.services.storagetransfer.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/storage/transfer" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/storage-transfer/docs" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

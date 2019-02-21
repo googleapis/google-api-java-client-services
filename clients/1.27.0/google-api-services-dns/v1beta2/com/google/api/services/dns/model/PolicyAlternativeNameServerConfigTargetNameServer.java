@@ -30,7 +30,6 @@ package com.google.api.services.dns.model;
 public final class PolicyAlternativeNameServerConfigTargetNameServer extends com.google.api.client.json.GenericJson {
 
   /**
-   * IPv4 address to forward to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +44,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   private java.lang.String kind;
 
   /**
-   * IPv4 address to forward to.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv4Address() {
@@ -53,7 +51,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer extends com
   }
 
   /**
-   * IPv4 address to forward to.
    * @param ipv4Address ipv4Address or {@code null} for none
    */
   public PolicyAlternativeNameServerConfigTargetNameServer setIpv4Address(java.lang.String ipv4Address) {

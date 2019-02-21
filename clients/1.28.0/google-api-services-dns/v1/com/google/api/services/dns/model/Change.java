@@ -17,11 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A Change represents a set of ResourceRecordSet additions and deletions applied atomically to a
- * ManagedZone. ResourceRecordSets within a ManagedZone are modified by creating a new Change
- * element in the Changes collection. In turn the Changes collection also records the past
- * modifications to the ResourceRecordSets in a ManagedZone. The current state of the ManagedZone is
- * the sum effect of applying all Change elements in the Changes collection in sequence.
+ * Model definition for Change.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -34,28 +30,24 @@ package com.google.api.services.dns.model;
 public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
-   * Which ResourceRecordSets to add?
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceRecordSet> additions;
 
   /**
-   * Which ResourceRecordSets to remove? Must match existing data exactly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceRecordSet> deletions;
 
   /**
-   * Unique identifier for the resource; defined by the server (output only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * If the DNS queries for the zone will be served.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,23 +61,18 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The time that this operation was started by the server (output only). This is in RFC3339 text
-   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startTime;
 
   /**
-   * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent, but the servers might not be updated yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Which ResourceRecordSets to add?
    * @return value or {@code null} for none
    */
   public java.util.List<ResourceRecordSet> getAdditions() {
@@ -93,7 +80,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which ResourceRecordSets to add?
    * @param additions additions or {@code null} for none
    */
   public Change setAdditions(java.util.List<ResourceRecordSet> additions) {
@@ -102,7 +88,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which ResourceRecordSets to remove? Must match existing data exactly.
    * @return value or {@code null} for none
    */
   public java.util.List<ResourceRecordSet> getDeletions() {
@@ -110,7 +95,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which ResourceRecordSets to remove? Must match existing data exactly.
    * @param deletions deletions or {@code null} for none
    */
   public Change setDeletions(java.util.List<ResourceRecordSet> deletions) {
@@ -119,7 +103,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the resource; defined by the server (output only).
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -127,7 +110,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the resource; defined by the server (output only).
    * @param id id or {@code null} for none
    */
   public Change setId(java.lang.String id) {
@@ -136,7 +118,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the DNS queries for the zone will be served.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsServing() {
@@ -144,7 +125,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the DNS queries for the zone will be served.
    * @param isServing isServing or {@code null} for none
    */
   public Change setIsServing(java.lang.Boolean isServing) {
@@ -170,8 +150,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that this operation was started by the server (output only). This is in RFC3339 text
-   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -179,8 +157,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that this operation was started by the server (output only). This is in RFC3339 text
-   * format.
    * @param startTime startTime or {@code null} for none
    */
   public Change setStartTime(java.lang.String startTime) {
@@ -189,8 +165,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent, but the servers might not be updated yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -198,8 +172,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent, but the servers might not be updated yet.
    * @param status status or {@code null} for none
    */
   public Change setStatus(java.lang.String status) {

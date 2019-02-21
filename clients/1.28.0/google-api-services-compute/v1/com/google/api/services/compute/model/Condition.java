@@ -59,14 +59,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private java.lang.String sys;
 
   /**
-   * DEPRECATED. Use 'values' instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String value;
-
-  /**
-   * The objects of the condition. This is mutually exclusive with 'value'.
+   * The objects of the condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,24 +136,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DEPRECATED. Use 'values' instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getValue() {
-    return value;
-  }
-
-  /**
-   * DEPRECATED. Use 'values' instead.
-   * @param value value or {@code null} for none
-   */
-  public Condition setValue(java.lang.String value) {
-    this.value = value;
-    return this;
-  }
-
-  /**
-   * The objects of the condition. This is mutually exclusive with 'value'.
+   * The objects of the condition.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -168,7 +144,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The objects of the condition. This is mutually exclusive with 'value'.
+   * The objects of the condition.
    * @param values values or {@code null} for none
    */
   public Condition setValues(java.util.List<java.lang.String> values) {

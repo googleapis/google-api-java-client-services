@@ -64,12 +64,16 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   private InterconnectDiagnosticsLinkLACPStatus lacpStatus;
 
   /**
+   * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
+   * the received light level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectDiagnosticsLinkOpticalPower receivingOpticalPower;
 
   /**
+   * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
+   * the transmitted light level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,6 +148,8 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   }
 
   /**
+   * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
+   * the received light level.
    * @return value or {@code null} for none
    */
   public InterconnectDiagnosticsLinkOpticalPower getReceivingOpticalPower() {
@@ -151,6 +157,8 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   }
 
   /**
+   * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
+   * the received light level.
    * @param receivingOpticalPower receivingOpticalPower or {@code null} for none
    */
   public InterconnectDiagnosticsLinkStatus setReceivingOpticalPower(InterconnectDiagnosticsLinkOpticalPower receivingOpticalPower) {
@@ -159,6 +167,8 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   }
 
   /**
+   * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
+   * the transmitted light level.
    * @return value or {@code null} for none
    */
   public InterconnectDiagnosticsLinkOpticalPower getTransmittingOpticalPower() {
@@ -166,6 +176,8 @@ public final class InterconnectDiagnosticsLinkStatus extends com.google.api.clie
   }
 
   /**
+   * An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of
+   * the transmitted light level.
    * @param transmittingOpticalPower transmittingOpticalPower or {@code null} for none
    */
   public InterconnectDiagnosticsLinkStatus setTransmittingOpticalPower(InterconnectDiagnosticsLinkOpticalPower transmittingOpticalPower) {

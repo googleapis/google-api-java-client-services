@@ -75,6 +75,19 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String iPProtocol;
 
   /**
+   * This field is used along with the backend_service field for internal load balancing or with the
+   * target field for internal TargetInstance. This field cannot be used with port or portRange
+   * fields.
+   *
+   * When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this field to allow
+   * packets addressed to any ports will be forwarded to the backends configured with this
+   * forwarding rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allPorts;
+
+  /**
    * This field is only used for INTERNAL load balancing.
    *
    * For internal load balancing, this field identifies the BackendService resource to receive the
@@ -255,8 +268,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED" load balancing, only HTTP and
-   * HTTPS targets are valid.
+   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
+   * targets are valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -347,6 +360,35 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setIPProtocol(java.lang.String iPProtocol) {
     this.iPProtocol = iPProtocol;
+    return this;
+  }
+
+  /**
+   * This field is used along with the backend_service field for internal load balancing or with the
+   * target field for internal TargetInstance. This field cannot be used with port or portRange
+   * fields.
+   *
+   * When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this field to allow
+   * packets addressed to any ports will be forwarded to the backends configured with this
+   * forwarding rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllPorts() {
+    return allPorts;
+  }
+
+  /**
+   * This field is used along with the backend_service field for internal load balancing or with the
+   * target field for internal TargetInstance. This field cannot be used with port or portRange
+   * fields.
+   *
+   * When the load balancing scheme is INTERNAL and protocol is TCP/UDP, specify this field to allow
+   * packets addressed to any ports will be forwarded to the backends configured with this
+   * forwarding rule.
+   * @param allPorts allPorts or {@code null} for none
+   */
+  public ForwardingRule setAllPorts(java.lang.Boolean allPorts) {
+    this.allPorts = allPorts;
     return this;
   }
 
@@ -759,8 +801,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED" load balancing, only HTTP and
-   * HTTPS targets are valid.
+   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
+   * targets are valid.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -771,8 +813,8 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * The URL of the target resource to receive the matched traffic. For regional forwarding rules,
    * this target must live in the same region as the forwarding rule. For global forwarding rules,
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
-   * appropriate to the target object. For INTERNAL_SELF_MANAGED" load balancing, only HTTP and
-   * HTTPS targets are valid.
+   * appropriate to the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
+   * targets are valid.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

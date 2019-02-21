@@ -31,8 +31,9 @@ package com.google.api.services.compute.model;
 public final class Network extends com.google.api.client.json.GenericJson {
 
   /**
-   * The range of internal addresses that are legal on this network. This range is a CIDR
-   * specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+   * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on
+   * this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the
+   * client when the network is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPv4Range")
@@ -126,8 +127,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> subnetworks;
 
   /**
-   * The range of internal addresses that are legal on this network. This range is a CIDR
-   * specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+   * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on
+   * this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the
+   * client when the network is created.
    * @return value or {@code null} for none
    */
   public java.lang.String getIPv4Range() {
@@ -135,8 +137,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range of internal addresses that are legal on this network. This range is a CIDR
-   * specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+   * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on
+   * this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the
+   * client when the network is created.
    * @param iPv4Range iPv4Range or {@code null} for none
    */
   public Network setIPv4Range(java.lang.String iPv4Range) {

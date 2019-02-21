@@ -58,9 +58,15 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String jobDir;
 
   /**
-   * Optional. The configuration for master.
+   * Optional. The configuration for your master worker.
    *
-   * Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine
+   * machine type. Learn about [restrictions on accelerator configurations for training.](/ml-
+   * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `masterConfig.imageUri` only if you build a custom image. Only one of
+   * `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring
+   * custom containers](/ml-engine/docs/distributed-training-containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +100,17 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * cloud_tpu      A TPU VM including one Cloud TPU. See more about   using TPUs to train   your
    * model.
    *
+   * You may also use certain Compute Engine machine types directly in this field. The following
+   * types are supported:
+   *
+   * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
+   * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
+   * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
+   * `n1-highcpu-64` - `n1-highcpu-96`
+   *
+   * See more about [using Compute Engine machine types](/ml-engine/docs/tensorflow/machine-types
+   * #compute-engine-machine-types).
+   *
    * You must set this value when `scaleTier` is set to `CUSTOM`.
    * The value may be {@code null}.
    */
@@ -109,10 +126,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.util.List<java.lang.String> packageUris;
 
   /**
-   * Optional. The config of parameter servers.
+   * Optional. The configuration for parameter servers.
    *
-   * If `parameterServerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will
-   * be used.
+   * You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerConfigType` is
+   * set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations
+   * for training.](/ml-engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
+   * server. If `parameterServerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
+   * /distributed-training-containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,6 +159,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * server.
    *
    * The supported values are the same as those described in the entry for `master_type`.
+   *
+   * This value must be consistent with the category of machine type that `masterType` uses. In
+   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
@@ -186,9 +213,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String scaleTier;
 
   /**
-   * Optional. The configrations for workers.
+   * Optional. The configuration for workers.
    *
-   * If `workerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will be used.
+   * You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine
+   * machine type. [Learn about restrictions on accelerator configurations for training.](/ml-
+   * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
+   * `workerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
+   * /distributed-training-containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,6 +245,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. Specifies the type of virtual machine to use for your training job's worker nodes.
    *
    * The supported values are the same as those described in the entry for `masterType`.
+   *
+   * This value must be consistent with the category of machine type that `masterType` uses. In
+   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * types.
+   *
+   * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
+   * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater
    * than zero.
@@ -277,9 +318,15 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for master.
+   * Optional. The configuration for your master worker.
    *
-   * Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine
+   * machine type. Learn about [restrictions on accelerator configurations for training.](/ml-
+   * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `masterConfig.imageUri` only if you build a custom image. Only one of
+   * `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring
+   * custom containers](/ml-engine/docs/distributed-training-containers).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig getMasterConfig() {
@@ -287,9 +334,15 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configuration for master.
+   * Optional. The configuration for your master worker.
    *
-   * Only one of `masterConfig.imageUri` and `runtimeVersion` should be set.
+   * You should only set `masterConfig.acceleratorConfig` if `masterType` is set to a Compute Engine
+   * machine type. Learn about [restrictions on accelerator configurations for training.](/ml-
+   * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `masterConfig.imageUri` only if you build a custom image. Only one of
+   * `masterConfig.imageUri` and `runtimeVersion` should be set. Learn more about [configuring
+   * custom containers](/ml-engine/docs/distributed-training-containers).
    * @param masterConfig masterConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setMasterConfig(GoogleCloudMlV1ReplicaConfig masterConfig) {
@@ -324,6 +377,17 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * A machine equivalent to complex_model_l that   also includes eight NVIDIA Tesla V100 GPUs.
    * cloud_tpu      A TPU VM including one Cloud TPU. See more about   using TPUs to train   your
    * model.
+   *
+   * You may also use certain Compute Engine machine types directly in this field. The following
+   * types are supported:
+   *
+   * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
+   * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
+   * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
+   * `n1-highcpu-64` - `n1-highcpu-96`
+   *
+   * See more about [using Compute Engine machine types](/ml-engine/docs/tensorflow/machine-types
+   * #compute-engine-machine-types).
    *
    * You must set this value when `scaleTier` is set to `CUSTOM`.
    * @return value or {@code null} for none
@@ -360,6 +424,17 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * cloud_tpu      A TPU VM including one Cloud TPU. See more about   using TPUs to train   your
    * model.
    *
+   * You may also use certain Compute Engine machine types directly in this field. The following
+   * types are supported:
+   *
+   * - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` -
+   * `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` -
+   * `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` -
+   * `n1-highcpu-64` - `n1-highcpu-96`
+   *
+   * See more about [using Compute Engine machine types](/ml-engine/docs/tensorflow/machine-types
+   * #compute-engine-machine-types).
+   *
    * You must set this value when `scaleTier` is set to `CUSTOM`.
    * @param masterType masterType or {@code null} for none
    */
@@ -388,10 +463,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The config of parameter servers.
+   * Optional. The configuration for parameter servers.
    *
-   * If `parameterServerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will
-   * be used.
+   * You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerConfigType` is
+   * set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations
+   * for training.](/ml-engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
+   * server. If `parameterServerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
+   * /distributed-training-containers).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig getParameterServerConfig() {
@@ -399,10 +480,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The config of parameter servers.
+   * Optional. The configuration for parameter servers.
    *
-   * If `parameterServerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will
-   * be used.
+   * You should only set `parameterServerConfig.acceleratorConfig` if `parameterServerConfigType` is
+   * set to a Compute Engine machine type. [Learn about restrictions on accelerator configurations
+   * for training.](/ml-engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
+   * server. If `parameterServerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
+   * /distributed-training-containers).
    * @param parameterServerConfig parameterServerConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setParameterServerConfig(GoogleCloudMlV1ReplicaConfig parameterServerConfig) {
@@ -445,6 +532,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * The supported values are the same as those described in the entry for `master_type`.
    *
+   * This value must be consistent with the category of machine type that `masterType` uses. In
+   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * types.
+   *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
    * @return value or {@code null} for none
@@ -458,6 +549,10 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * server.
    *
    * The supported values are the same as those described in the entry for `master_type`.
+   *
+   * This value must be consistent with the category of machine type that `masterType` uses. In
+   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
    * greater than zero.
@@ -566,9 +661,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configrations for workers.
+   * Optional. The configuration for workers.
    *
-   * If `workerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will be used.
+   * You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine
+   * machine type. [Learn about restrictions on accelerator configurations for training.](/ml-
+   * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
+   * `workerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
+   * /distributed-training-containers).
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig getWorkerConfig() {
@@ -576,9 +678,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The configrations for workers.
+   * Optional. The configuration for workers.
    *
-   * If `workerConfig.imageUri` has not been set, the value of `masterConfig.imageUri` will be used.
+   * You should only set `workerConfig.acceleratorConfig` if `workerType` is set to a Compute Engine
+   * machine type. [Learn about restrictions on accelerator configurations for training.](/ml-
+   * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
+   *
+   * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
+   * `workerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
+   * /distributed-training-containers).
    * @param workerConfig workerConfig or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setWorkerConfig(GoogleCloudMlV1ReplicaConfig workerConfig) {
@@ -620,6 +729,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    *
    * The supported values are the same as those described in the entry for `masterType`.
    *
+   * This value must be consistent with the category of machine type that `masterType` uses. In
+   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * types.
+   *
+   * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
+   * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
+   *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater
    * than zero.
    * @return value or {@code null} for none
@@ -632,6 +748,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * Optional. Specifies the type of virtual machine to use for your training job's worker nodes.
    *
    * The supported values are the same as those described in the entry for `masterType`.
+   *
+   * This value must be consistent with the category of machine type that `masterType` uses. In
+   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * types.
+   *
+   * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
+   * machine](/ml-engine/docs/tensorflow/using-tpus#configuring_a_custom_tpu_machine).
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `workerCount` is greater
    * than zero.

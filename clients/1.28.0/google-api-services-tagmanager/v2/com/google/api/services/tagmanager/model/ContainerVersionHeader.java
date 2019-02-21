@@ -65,6 +65,13 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Number of custom templates in the container version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String numCustomTemplates;
+
+  /**
    * Number of macros in the container version.
    * The value may be {@code null}.
    */
@@ -195,6 +202,23 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
    */
   public ContainerVersionHeader setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Number of custom templates in the container version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNumCustomTemplates() {
+    return numCustomTemplates;
+  }
+
+  /**
+   * Number of custom templates in the container version.
+   * @param numCustomTemplates numCustomTemplates or {@code null} for none
+   */
+  public ContainerVersionHeader setNumCustomTemplates(java.lang.String numCustomTemplates) {
+    this.numCustomTemplates = numCustomTemplates;
     return this;
   }
 

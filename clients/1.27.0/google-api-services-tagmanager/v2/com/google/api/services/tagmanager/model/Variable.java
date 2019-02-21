@@ -70,6 +70,13 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
+   * Option to convert a variable value to other value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VariableFormatValue formatValue;
+
+  /**
    * Variable display name.
    * The value may be {@code null}.
    */
@@ -244,6 +251,23 @@ public final class Variable extends com.google.api.client.json.GenericJson {
    */
   public Variable setFingerprint(java.lang.String fingerprint) {
     this.fingerprint = fingerprint;
+    return this;
+  }
+
+  /**
+   * Option to convert a variable value to other value.
+   * @return value or {@code null} for none
+   */
+  public VariableFormatValue getFormatValue() {
+    return formatValue;
+  }
+
+  /**
+   * Option to convert a variable value to other value.
+   * @param formatValue formatValue or {@code null} for none
+   */
+  public Variable setFormatValue(VariableFormatValue formatValue) {
+    this.formatValue = formatValue;
     return this;
   }
 

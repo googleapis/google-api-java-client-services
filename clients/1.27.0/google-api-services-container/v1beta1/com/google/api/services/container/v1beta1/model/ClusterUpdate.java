@@ -53,6 +53,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterAutoscaling desiredClusterAutoscaling;
 
   /**
+   * Configuration of etcd encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseEncryption desiredDatabaseEncryption;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
@@ -218,6 +225,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredClusterAutoscaling(ClusterAutoscaling desiredClusterAutoscaling) {
     this.desiredClusterAutoscaling = desiredClusterAutoscaling;
+    return this;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @return value or {@code null} for none
+   */
+  public DatabaseEncryption getDesiredDatabaseEncryption() {
+    return desiredDatabaseEncryption;
+  }
+
+  /**
+   * Configuration of etcd encryption.
+   * @param desiredDatabaseEncryption desiredDatabaseEncryption or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDatabaseEncryption(DatabaseEncryption desiredDatabaseEncryption) {
+    this.desiredDatabaseEncryption = desiredDatabaseEncryption;
     return this;
   }
 

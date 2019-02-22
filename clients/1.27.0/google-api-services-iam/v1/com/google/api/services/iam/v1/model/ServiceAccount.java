@@ -44,6 +44,13 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
+   * @OutputOnly A bool indicate if the service account is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Optional. A user-specified name for the service account. Must be less than or equal to 100
    * UTF-8 bytes.
    * The value may be {@code null}.
@@ -102,6 +109,23 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String uniqueId;
+
+  /**
+   * @OutputOnly A bool indicate if the service account is disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * @OutputOnly A bool indicate if the service account is disabled.
+   * @param disabled disabled or {@code null} for none
+   */
+  public ServiceAccount setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
+    return this;
+  }
 
   /**
    * Optional. A user-specified name for the service account. Must be less than or equal to 100

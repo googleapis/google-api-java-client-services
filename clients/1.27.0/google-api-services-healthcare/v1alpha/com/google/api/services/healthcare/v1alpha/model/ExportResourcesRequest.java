@@ -34,8 +34,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * server implements a data-driven FHIR-to-SQL schema mapping in support of analytics workloads
    * with BigQuery. Incompatible changes to the output schema may be introduced in the future as a
    * result of continuous collaboration with the FHIR community to refine the [desired SQL
-   * projection of FHIR resources](https://github.com/rbrush/sql-on-fhir/blob/master/sql-on-
-   * fhir.md).
+   * projection of FHIR resources](https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * server implements a data-driven FHIR-to-SQL schema mapping in support of analytics workloads
    * with BigQuery. Incompatible changes to the output schema may be introduced in the future as a
    * result of continuous collaboration with the FHIR community to refine the [desired SQL
-   * projection of FHIR resources](https://github.com/rbrush/sql-on-fhir/blob/master/sql-on-
-   * fhir.md).
+   * projection of FHIR resources](https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md)
    * @return value or {@code null} for none
    */
   public BigQueryLocation getBigqueryDestinationLocation() {
@@ -69,8 +67,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
    * server implements a data-driven FHIR-to-SQL schema mapping in support of analytics workloads
    * with BigQuery. Incompatible changes to the output schema may be introduced in the future as a
    * result of continuous collaboration with the FHIR community to refine the [desired SQL
-   * projection of FHIR resources](https://github.com/rbrush/sql-on-fhir/blob/master/sql-on-
-   * fhir.md).
+   * projection of FHIR resources](https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md)
    * @param bigqueryDestinationLocation bigqueryDestinationLocation or {@code null} for none
    */
   public ExportResourcesRequest setBigqueryDestinationLocation(BigQueryLocation bigqueryDestinationLocation) {

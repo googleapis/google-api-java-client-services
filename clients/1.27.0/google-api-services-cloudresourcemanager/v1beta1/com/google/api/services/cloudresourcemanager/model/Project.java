@@ -70,9 +70,9 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String lifecycleState;
 
   /**
-   * The user-assigned display name of the Project. It must be 4 to 30 characters. Allowed
-   * characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote,
-   * space, and exclamation point.
+   * The optional user-assigned display name of the Project. When present it must be between 4 to 30
+   * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
+   * quote, double-quote, space, and exclamation point.
    *
    * Example: My Project Read-write.
    * The value may be {@code null}.
@@ -198,9 +198,9 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-assigned display name of the Project. It must be 4 to 30 characters. Allowed
-   * characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote,
-   * space, and exclamation point.
+   * The optional user-assigned display name of the Project. When present it must be between 4 to 30
+   * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
+   * quote, double-quote, space, and exclamation point.
    *
    * Example: My Project Read-write.
    * @return value or {@code null} for none
@@ -210,9 +210,9 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-assigned display name of the Project. It must be 4 to 30 characters. Allowed
-   * characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote,
-   * space, and exclamation point.
+   * The optional user-assigned display name of the Project. When present it must be between 4 to 30
+   * characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-
+   * quote, double-quote, space, and exclamation point.
    *
    * Example: My Project Read-write.
    * @param name name or {@code null} for none

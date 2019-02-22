@@ -125,7 +125,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String runtime;
 
   /**
-   * Output only. The email of the function's service account.
+   * The email of the function's service account. If empty, defaults to
+   * {project_id}@appspot.gserviceaccount.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -424,7 +425,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The email of the function's service account.
+   * The email of the function's service account. If empty, defaults to
+   * {project_id}@appspot.gserviceaccount.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -432,7 +434,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The email of the function's service account.
+   * The email of the function's service account. If empty, defaults to
+   * {project_id}@appspot.gserviceaccount.com.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public CloudFunction setServiceAccountEmail(java.lang.String serviceAccountEmail) {

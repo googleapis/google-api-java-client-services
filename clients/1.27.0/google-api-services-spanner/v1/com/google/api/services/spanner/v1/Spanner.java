@@ -4376,7 +4376,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Ends a session, releasing server resources associated with it.
+           * Ends a session, releasing server resources associated with it. This will asynchronously trigger
+           * cancellation of any operations that are running with this session.
            *
            * Create a request for the method "sessions.delete".
            *
@@ -4400,7 +4401,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
 
             /**
-             * Ends a session, releasing server resources associated with it.
+             * Ends a session, releasing server resources associated with it. This will asynchronously trigger
+             * cancellation of any operations that are running with this session.
              *
              * Create a request for the method "sessions.delete".
              *

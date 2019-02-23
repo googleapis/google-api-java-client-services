@@ -67,6 +67,20 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private JobStatistics3 load;
 
   /**
+   * [Output-only] Number of child jobs executed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numChildJobs;
+
+  /**
+   * [Output-only] If this is a child job, the id of the parent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentJobId;
+
+  /**
    * [Output-only] Statistics for a query job.
    * The value may be {@code null}.
    */
@@ -201,6 +215,40 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setLoad(JobStatistics3 load) {
     this.load = load;
+    return this;
+  }
+
+  /**
+   * [Output-only] Number of child jobs executed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumChildJobs() {
+    return numChildJobs;
+  }
+
+  /**
+   * [Output-only] Number of child jobs executed.
+   * @param numChildJobs numChildJobs or {@code null} for none
+   */
+  public JobStatistics setNumChildJobs(java.lang.Long numChildJobs) {
+    this.numChildJobs = numChildJobs;
+    return this;
+  }
+
+  /**
+   * [Output-only] If this is a child job, the id of the parent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentJobId() {
+    return parentJobId;
+  }
+
+  /**
+   * [Output-only] If this is a child job, the id of the parent.
+   * @param parentJobId parentJobId or {@code null} for none
+   */
+  public JobStatistics setParentJobId(java.lang.String parentJobId) {
+    this.parentJobId = parentJobId;
     return this;
   }
 

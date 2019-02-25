@@ -1516,135 +1516,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates a GTM Environment. This method supports patch semantics.
-         *
-         * Create a request for the method "environments.patch".
-         *
-         * This request holds the parameters needed by the tagmanager server.  After setting any optional
-         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-         *
-         * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-         * @param content the {@link com.google.api.services.tagmanager.model.Environment}
-         * @return the request
-         */
-        public Patch patch(java.lang.String path, com.google.api.services.tagmanager.model.Environment content) throws java.io.IOException {
-          Patch result = new Patch(path, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Patch extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
-
-          private static final String REST_PATH = "{+path}";
-
-          /**
-           * Updates a GTM Environment. This method supports patch semantics.
-           *
-           * Create a request for the method "environments.patch".
-           *
-           * This request holds the parameters needed by the the tagmanager server.  After setting any
-           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           * @param content the {@link com.google.api.services.tagmanager.model.Environment}
-           * @since 1.13
-           */
-          protected Patch(java.lang.String path, com.google.api.services.tagmanager.model.Environment content) {
-            super(TagManager.this, "PATCH", REST_PATH, content, com.google.api.services.tagmanager.model.Environment.class);
-            this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
-          }
-
-          @Override
-          public Patch setAlt(java.lang.String alt) {
-            return (Patch) super.setAlt(alt);
-          }
-
-          @Override
-          public Patch setFields(java.lang.String fields) {
-            return (Patch) super.setFields(fields);
-          }
-
-          @Override
-          public Patch setKey(java.lang.String key) {
-            return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Patch) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Patch setQuotaUser(java.lang.String quotaUser) {
-            return (Patch) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Patch setUserIp(java.lang.String userIp) {
-            return (Patch) super.setUserIp(userIp);
-          }
-
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String path;
-
-          /** GTM Environment's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
-          public java.lang.String getPath() {
-            return path;
-          }
-
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
-          public Patch setPath(java.lang.String path) {
-            this.path = path;
-            return this;
-          }
-
-          /**
-           * When provided, this fingerprint must match the fingerprint of the environment in
-           * storage.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String fingerprint;
-
-          /** When provided, this fingerprint must match the fingerprint of the environment in storage.
-           */
-          public java.lang.String getFingerprint() {
-            return fingerprint;
-          }
-
-          /**
-           * When provided, this fingerprint must match the fingerprint of the environment in
-           * storage.
-           */
-          public Patch setFingerprint(java.lang.String fingerprint) {
-            this.fingerprint = fingerprint;
-            return this;
-          }
-
-          @Override
-          public Patch set(String parameterName, Object value) {
-            return (Patch) super.set(parameterName, value);
-          }
-        }
-        /**
          * Re-generates the authorization code for a GTM Environment.
          *
          * Create a request for the method "environments.reauthorize".
@@ -3458,121 +3329,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets a GTM Workspace Proposal.
-         *
-         * Create a request for the method "workspaces.getProposal".
-         *
-         * This request holds the parameters needed by the tagmanager server.  After setting any optional
-         * parameters, call the {@link GetProposal#execute()} method to invoke the remote operation.
-         *
-         * @param path GTM workspace proposal's relative path: Example:
-         *        accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-         * @return the request
-         */
-        public GetProposal getProposal(java.lang.String path) throws java.io.IOException {
-          GetProposal result = new GetProposal(path);
-          initialize(result);
-          return result;
-        }
-
-        public class GetProposal extends TagManagerRequest<com.google.api.services.tagmanager.model.WorkspaceProposal> {
-
-          private static final String REST_PATH = "{+path}";
-
-          /**
-           * Gets a GTM Workspace Proposal.
-           *
-           * Create a request for the method "workspaces.getProposal".
-           *
-           * This request holds the parameters needed by the the tagmanager server.  After setting any
-           * optional parameters, call the {@link GetProposal#execute()} method to invoke the remote
-           * operation. <p> {@link
-           * GetProposal#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param path GTM workspace proposal's relative path: Example:
-         *        accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           * @since 1.13
-           */
-          protected GetProposal(java.lang.String path) {
-            super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.WorkspaceProposal.class);
-            this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public GetProposal setAlt(java.lang.String alt) {
-            return (GetProposal) super.setAlt(alt);
-          }
-
-          @Override
-          public GetProposal setFields(java.lang.String fields) {
-            return (GetProposal) super.setFields(fields);
-          }
-
-          @Override
-          public GetProposal setKey(java.lang.String key) {
-            return (GetProposal) super.setKey(key);
-          }
-
-          @Override
-          public GetProposal setOauthToken(java.lang.String oauthToken) {
-            return (GetProposal) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public GetProposal setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (GetProposal) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public GetProposal setQuotaUser(java.lang.String quotaUser) {
-            return (GetProposal) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public GetProposal setUserIp(java.lang.String userIp) {
-            return (GetProposal) super.setUserIp(userIp);
-          }
-
-          /**
-           * GTM workspace proposal's relative path: Example:
-           * accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String path;
-
-          /** GTM workspace proposal's relative path: Example:
-         accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           */
-          public java.lang.String getPath() {
-            return path;
-          }
-
-          /**
-           * GTM workspace proposal's relative path: Example:
-           * accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           */
-          public GetProposal setPath(java.lang.String path) {
-            this.path = path;
-            return this;
-          }
-
-          @Override
-          public GetProposal set(String parameterName, Object value) {
-            return (GetProposal) super.set(parameterName, value);
-          }
-        }
-        /**
          * Finds conflicting and modified entities in the workspace.
          *
          * Create a request for the method "workspaces.getStatus".
@@ -4286,113 +4042,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           @Override
           public Update set(String parameterName, Object value) {
             return (Update) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Updates a GTM Workspace Proposal.
-         *
-         * Create a request for the method "workspaces.updateProposal".
-         *
-         * This request holds the parameters needed by the tagmanager server.  After setting any optional
-         * parameters, call the {@link UpdateProposal#execute()} method to invoke the remote operation.
-         *
-         * @param path GTM workspace proposal's relative path: Example:
-         *        accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-         * @param content the {@link com.google.api.services.tagmanager.model.UpdateWorkspaceProposalRequest}
-         * @return the request
-         */
-        public UpdateProposal updateProposal(java.lang.String path, com.google.api.services.tagmanager.model.UpdateWorkspaceProposalRequest content) throws java.io.IOException {
-          UpdateProposal result = new UpdateProposal(path, content);
-          initialize(result);
-          return result;
-        }
-
-        public class UpdateProposal extends TagManagerRequest<com.google.api.services.tagmanager.model.WorkspaceProposal> {
-
-          private static final String REST_PATH = "{+path}";
-
-          /**
-           * Updates a GTM Workspace Proposal.
-           *
-           * Create a request for the method "workspaces.updateProposal".
-           *
-           * This request holds the parameters needed by the the tagmanager server.  After setting any
-           * optional parameters, call the {@link UpdateProposal#execute()} method to invoke the remote
-           * operation. <p> {@link UpdateProposal#initialize(com.google.api.client.googleapis.services.Abstr
-           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-           * the constructor. </p>
-           *
-           * @param path GTM workspace proposal's relative path: Example:
-         *        accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           * @param content the {@link com.google.api.services.tagmanager.model.UpdateWorkspaceProposalRequest}
-           * @since 1.13
-           */
-          protected UpdateProposal(java.lang.String path, com.google.api.services.tagmanager.model.UpdateWorkspaceProposalRequest content) {
-            super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.WorkspaceProposal.class);
-            this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
-          }
-
-          @Override
-          public UpdateProposal setAlt(java.lang.String alt) {
-            return (UpdateProposal) super.setAlt(alt);
-          }
-
-          @Override
-          public UpdateProposal setFields(java.lang.String fields) {
-            return (UpdateProposal) super.setFields(fields);
-          }
-
-          @Override
-          public UpdateProposal setKey(java.lang.String key) {
-            return (UpdateProposal) super.setKey(key);
-          }
-
-          @Override
-          public UpdateProposal setOauthToken(java.lang.String oauthToken) {
-            return (UpdateProposal) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public UpdateProposal setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (UpdateProposal) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public UpdateProposal setQuotaUser(java.lang.String quotaUser) {
-            return (UpdateProposal) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public UpdateProposal setUserIp(java.lang.String userIp) {
-            return (UpdateProposal) super.setUserIp(userIp);
-          }
-
-          /**
-           * GTM workspace proposal's relative path: Example:
-           * accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String path;
-
-          /** GTM workspace proposal's relative path: Example:
-         accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           */
-          public java.lang.String getPath() {
-            return path;
-          }
-
-          /**
-           * GTM workspace proposal's relative path: Example:
-           * accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           */
-          public UpdateProposal setPath(java.lang.String path) {
-            this.path = path;
-            return this;
-          }
-
-          @Override
-          public UpdateProposal set(String parameterName, Object value) {
-            return (UpdateProposal) super.set(parameterName, value);
           }
         }
 
@@ -5934,237 +5583,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             @Override
             public Update set(String parameterName, Object value) {
               return (Update) super.set(parameterName, value);
-            }
-          }
-
-        }
-        /**
-         * An accessor for creating requests from the Proposal collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code TagManager tagmanager = new TagManager(...);}
-         *   {@code TagManager.Proposal.List request = tagmanager.proposal().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Proposal proposal() {
-          return new Proposal();
-        }
-
-        /**
-         * The "proposal" collection of methods.
-         */
-        public class Proposal {
-
-          /**
-           * Creates a GTM Workspace Proposal.
-           *
-           * Create a request for the method "proposal.create".
-           *
-           * This request holds the parameters needed by the tagmanager server.  After setting any optional
-           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           *
-           * @param parent GTM Workspace's API relative path. Example: accounts/{aid}/containers/{cid}/workspace/{wid}
-           * @param content the {@link com.google.api.services.tagmanager.model.CreateWorkspaceProposalRequest}
-           * @return the request
-           */
-          public Create create(java.lang.String parent, com.google.api.services.tagmanager.model.CreateWorkspaceProposalRequest content) throws java.io.IOException {
-            Create result = new Create(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.WorkspaceProposal> {
-
-            private static final String REST_PATH = "{+parent}/proposal";
-
-            /**
-             * Creates a GTM Workspace Proposal.
-             *
-             * Create a request for the method "proposal.create".
-             *
-             * This request holds the parameters needed by the the tagmanager server.  After setting any
-             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent GTM Workspace's API relative path. Example: accounts/{aid}/containers/{cid}/workspace/{wid}
-             * @param content the {@link com.google.api.services.tagmanager.model.CreateWorkspaceProposalRequest}
-             * @since 1.13
-             */
-            protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.CreateWorkspaceProposalRequest content) {
-              super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.WorkspaceProposal.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            }
-
-            @Override
-            public Create setAlt(java.lang.String alt) {
-              return (Create) super.setAlt(alt);
-            }
-
-            @Override
-            public Create setFields(java.lang.String fields) {
-              return (Create) super.setFields(fields);
-            }
-
-            @Override
-            public Create setKey(java.lang.String key) {
-              return (Create) super.setKey(key);
-            }
-
-            @Override
-            public Create setOauthToken(java.lang.String oauthToken) {
-              return (Create) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Create) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Create setQuotaUser(java.lang.String quotaUser) {
-              return (Create) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
-            }
-
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{aid}/containers/{cid}/workspace/{wid}
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** GTM Workspace's API relative path. Example: accounts/{aid}/containers/{cid}/workspace/{wid}
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{aid}/containers/{cid}/workspace/{wid}
-             */
-            public Create setParent(java.lang.String parent) {
-              this.parent = parent;
-              return this;
-            }
-
-            @Override
-            public Create set(String parameterName, Object value) {
-              return (Create) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Deletes a GTM Workspace Proposal.
-           *
-           * Create a request for the method "proposal.delete".
-           *
-           * This request holds the parameters needed by the tagmanager server.  After setting any optional
-           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           *
-           * @param path GTM workspace proposal's relative path: Example:
-           *        accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-           * @return the request
-           */
-          public Delete delete(java.lang.String path) throws java.io.IOException {
-            Delete result = new Delete(path);
-            initialize(result);
-            return result;
-          }
-
-          public class Delete extends TagManagerRequest<Void> {
-
-            private static final String REST_PATH = "{+path}";
-
-            /**
-             * Deletes a GTM Workspace Proposal.
-             *
-             * Create a request for the method "proposal.delete".
-             *
-             * This request holds the parameters needed by the the tagmanager server.  After setting any
-             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param path GTM workspace proposal's relative path: Example:
-           *        accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-             * @since 1.13
-             */
-            protected Delete(java.lang.String path) {
-              super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
-              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
-            }
-
-            @Override
-            public Delete setAlt(java.lang.String alt) {
-              return (Delete) super.setAlt(alt);
-            }
-
-            @Override
-            public Delete setFields(java.lang.String fields) {
-              return (Delete) super.setFields(fields);
-            }
-
-            @Override
-            public Delete setKey(java.lang.String key) {
-              return (Delete) super.setKey(key);
-            }
-
-            @Override
-            public Delete setOauthToken(java.lang.String oauthToken) {
-              return (Delete) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Delete) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Delete setQuotaUser(java.lang.String quotaUser) {
-              return (Delete) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
-            }
-
-            /**
-             * GTM workspace proposal's relative path: Example:
-             * accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String path;
-
-            /** GTM workspace proposal's relative path: Example:
-           accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-             */
-            public java.lang.String getPath() {
-              return path;
-            }
-
-            /**
-             * GTM workspace proposal's relative path: Example:
-             * accounts/{aid}/containers/{cid}/workspace/{wid}/workspace_proposal
-             */
-            public Delete setPath(java.lang.String path) {
-              this.path = path;
-              return this;
-            }
-
-            @Override
-            public Delete set(String parameterName, Object value) {
-              return (Delete) super.set(parameterName, value);
             }
           }
 
@@ -8384,6 +7802,736 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             /**
              * When provided, this fingerprint must match the fingerprint of the variable in
              * storage.
+             */
+            public Update setFingerprint(java.lang.String fingerprint) {
+              this.fingerprint = fingerprint;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Zones collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code TagManager tagmanager = new TagManager(...);}
+         *   {@code TagManager.Zones.List request = tagmanager.zones().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Zones zones() {
+          return new Zones();
+        }
+
+        /**
+         * The "zones" collection of methods.
+         */
+        public class Zones {
+
+          /**
+           * Creates a GTM Zone.
+           *
+           * Create a request for the method "zones.create".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param content the {@link com.google.api.services.tagmanager.model.Zone}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.tagmanager.model.Zone content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Zone> {
+
+            private static final String REST_PATH = "{+parent}/zones";
+
+            /**
+             * Creates a GTM Zone.
+             *
+             * Create a request for the method "zones.create".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param content the {@link com.google.api.services.tagmanager.model.Zone}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Zone content) {
+              super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Zone.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUserIp(java.lang.String userIp) {
+              return (Create) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** GTM Workspace's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public Create setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a GTM Zone.
+           *
+           * Create a request for the method "zones.delete".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String path) throws java.io.IOException {
+            Delete result = new Delete(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends TagManagerRequest<Void> {
+
+            private static final String REST_PATH = "{+path}";
+
+            /**
+             * Deletes a GTM Zone.
+             *
+             * Create a request for the method "zones.delete".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String path) {
+              super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUserIp(java.lang.String userIp) {
+              return (Delete) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Zone's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public Delete setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a GTM Zone.
+           *
+           * Create a request for the method "zones.get".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @return the request
+           */
+          public Get get(java.lang.String path) throws java.io.IOException {
+            Get result = new Get(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Zone> {
+
+            private static final String REST_PATH = "{+path}";
+
+            /**
+             * Gets a GTM Zone.
+             *
+             * Create a request for the method "zones.get".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @since 1.13
+             */
+            protected Get(java.lang.String path) {
+              super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Zone.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUserIp(java.lang.String userIp) {
+              return (Get) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Zone's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public Get setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all GTM Zones of a GTM container workspace.
+           *
+           * Create a request for the method "zones.list".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListZonesResponse> {
+
+            private static final String REST_PATH = "{+parent}/zones";
+
+            /**
+             * Lists all GTM Zones of a GTM container workspace.
+             *
+             * Create a request for the method "zones.list".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListZonesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUserIp(java.lang.String userIp) {
+              return (List) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** GTM Workspace's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public List setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Continuation token for fetching the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Reverts changes to a GTM Zone in a GTM Workspace.
+           *
+           * Create a request for the method "zones.revert".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @return the request
+           */
+          public Revert revert(java.lang.String path) throws java.io.IOException {
+            Revert result = new Revert(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertZoneResponse> {
+
+            private static final String REST_PATH = "{+path}:revert";
+
+            /**
+             * Reverts changes to a GTM Zone in a GTM Workspace.
+             *
+             * Create a request for the method "zones.revert".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Revert#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @since 1.13
+             */
+            protected Revert(java.lang.String path) {
+              super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertZoneResponse.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public Revert setAlt(java.lang.String alt) {
+              return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setFields(java.lang.String fields) {
+              return (Revert) super.setFields(fields);
+            }
+
+            @Override
+            public Revert setKey(java.lang.String key) {
+              return (Revert) super.setKey(key);
+            }
+
+            @Override
+            public Revert setOauthToken(java.lang.String oauthToken) {
+              return (Revert) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Revert setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Revert) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Revert setQuotaUser(java.lang.String quotaUser) {
+              return (Revert) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Revert setUserIp(java.lang.String userIp) {
+              return (Revert) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Zone's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public Revert setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the zone in storage.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String fingerprint;
+
+            /** When provided, this fingerprint must match the fingerprint of the zone in storage.
+             */
+            public java.lang.String getFingerprint() {
+              return fingerprint;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the zone in storage.
+             */
+            public Revert setFingerprint(java.lang.String fingerprint) {
+              this.fingerprint = fingerprint;
+              return this;
+            }
+
+            @Override
+            public Revert set(String parameterName, Object value) {
+              return (Revert) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a GTM Zone.
+           *
+           * Create a request for the method "zones.update".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @param content the {@link com.google.api.services.tagmanager.model.Zone}
+           * @return the request
+           */
+          public Update update(java.lang.String path, com.google.api.services.tagmanager.model.Zone content) throws java.io.IOException {
+            Update result = new Update(path, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Zone> {
+
+            private static final String REST_PATH = "{+path}";
+
+            /**
+             * Updates a GTM Zone.
+             *
+             * Create a request for the method "zones.update".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Zone's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @param content the {@link com.google.api.services.tagmanager.model.Zone}
+             * @since 1.13
+             */
+            protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Zone content) {
+              super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Zone.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUserIp(java.lang.String userIp) {
+              return (Update) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Zone's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
+             * }/workspaces/{workspace_id}/zones/{zone_id}
+             */
+            public Update setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the zone in storage.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String fingerprint;
+
+            /** When provided, this fingerprint must match the fingerprint of the zone in storage.
+             */
+            public java.lang.String getFingerprint() {
+              return fingerprint;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the zone in storage.
              */
             public Update setFingerprint(java.lang.String fingerprint) {
               this.fingerprint = fingerprint;

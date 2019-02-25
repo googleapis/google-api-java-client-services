@@ -71,6 +71,13 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.lang.String containerVersionId;
 
   /**
+   * The custom templates in the container that this version was taken from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomTemplate> customTemplate;
+
+  /**
    * A value of true indicates this container version has been deleted.
    * The value may be {@code null}.
    */
@@ -230,6 +237,23 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
    */
   public ContainerVersion setContainerVersionId(java.lang.String containerVersionId) {
     this.containerVersionId = containerVersionId;
+    return this;
+  }
+
+  /**
+   * The custom templates in the container that this version was taken from.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomTemplate> getCustomTemplate() {
+    return customTemplate;
+  }
+
+  /**
+   * The custom templates in the container that this version was taken from.
+   * @param customTemplate customTemplate or {@code null} for none
+   */
+  public ContainerVersion setCustomTemplate(java.util.List<CustomTemplate> customTemplate) {
+    this.customTemplate = customTemplate;
     return this;
   }
 

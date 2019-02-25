@@ -32,7 +32,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable email notification to project owners and editors on job‘s completion/failure.
+   * Enable email notification to project owners and editors on job's completion/failure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2SaveFindings saveFindings;
 
   /**
-   * Enable email notification to project owners and editors on job‘s completion/failure.
+   * Enable email notification to project owners and editors on job's completion/failure.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2JobNotificationEmails getJobNotificationEmails() {
@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   }
 
   /**
-   * Enable email notification to project owners and editors on job‘s completion/failure.
+   * Enable email notification to project owners and editors on job's completion/failure.
    * @param jobNotificationEmails jobNotificationEmails or {@code null} for none
    */
   public GooglePrivacyDlpV2Action setJobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmails jobNotificationEmails) {

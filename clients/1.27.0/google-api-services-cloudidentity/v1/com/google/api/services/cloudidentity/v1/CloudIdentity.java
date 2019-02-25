@@ -640,27 +640,21 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Maximum number of groups to return.
-       *
-       * View  | Default | Maximum ----- | ------- | ------- BASIC | 200     | 1000 FULL  | 50
-       * | 500
+       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
+       * view.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of groups to return.
-
-     View  | Default | Maximum ----- | ------- | ------- BASIC | 200     | 1000 FULL  | 50      | 500
+      /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Maximum number of groups to return.
-       *
-       * View  | Default | Maximum ----- | ------- | ------- BASIC | 200     | 1000 FULL  | 50
-       * | 500
+       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
+       * view.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -1166,27 +1160,21 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Maximum number of groups to return.
-       *
-       * View  | Default | Maximum ----- | ------- | ------- BASIC | 200     | 1000 FULL  | 50
-       * | 500
+       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
+       * view.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of groups to return.
-
-     View  | Default | Maximum ----- | ------- | ------- BASIC | 200     | 1000 FULL  | 50      | 500
+      /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Maximum number of groups to return.
-       *
-       * View  | Default | Maximum ----- | ------- | ------- BASIC | 200     | 1000 FULL  | 50
-       * | 500
+       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
+       * view.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -1924,27 +1912,21 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Maximum number of Memberships to return.
-         *
-         * View | Default | Maximum -----|---------|-------- BASIC| 200     | 1000 FULL | 50      |
-         * 500
+         * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
+         * view.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of Memberships to return.
-
-       View | Default | Maximum -----|---------|-------- BASIC| 200     | 1000 FULL | 50      | 500
+        /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Maximum number of Memberships to return.
-         *
-         * View | Default | Maximum -----|---------|-------- BASIC| 200     | 1000 FULL | 50      |
-         * 500
+         * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
+         * view.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;

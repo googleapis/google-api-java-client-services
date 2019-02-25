@@ -34,8 +34,8 @@ package com.google.api.services.testing.model;
 public final class AndroidMatrix extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ids of the set of Android device to be used. Use the EnvironmentDiscoveryService
-   * to get supported options.
+   * Required. The ids of the set of Android device to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The ids of the set of Android OS version to be used. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,14 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The set of locales the test device will enable for testing. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> locales;
 
   /**
-   * Required. The set of orientations to test with. Use the EnvironmentDiscoveryService to get
+   * Required. The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get
    * supported options.
    * The value may be {@code null}.
    */
@@ -66,8 +66,8 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> orientations;
 
   /**
-   * Required. The ids of the set of Android device to be used. Use the EnvironmentDiscoveryService
-   * to get supported options.
+   * Required. The ids of the set of Android device to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAndroidModelIds() {
@@ -75,8 +75,8 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The ids of the set of Android device to be used. Use the EnvironmentDiscoveryService
-   * to get supported options.
+   * Required. The ids of the set of Android device to be used. Use the
+   * TestEnvironmentDiscoveryService to get supported options.
    * @param androidModelIds androidModelIds or {@code null} for none
    */
   public AndroidMatrix setAndroidModelIds(java.util.List<java.lang.String> androidModelIds) {
@@ -86,7 +86,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The ids of the set of Android OS version to be used. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAndroidVersionIds() {
@@ -95,7 +95,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The ids of the set of Android OS version to be used. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * @param androidVersionIds androidVersionIds or {@code null} for none
    */
   public AndroidMatrix setAndroidVersionIds(java.util.List<java.lang.String> androidVersionIds) {
@@ -105,7 +105,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The set of locales the test device will enable for testing. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocales() {
@@ -114,7 +114,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. The set of locales the test device will enable for testing. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * @param locales locales or {@code null} for none
    */
   public AndroidMatrix setLocales(java.util.List<java.lang.String> locales) {
@@ -123,7 +123,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The set of orientations to test with. Use the EnvironmentDiscoveryService to get
+   * Required. The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get
    * supported options.
    * @return value or {@code null} for none
    */
@@ -132,7 +132,7 @@ public final class AndroidMatrix extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The set of orientations to test with. Use the EnvironmentDiscoveryService to get
+   * Required. The set of orientations to test with. Use the TestEnvironmentDiscoveryService to get
    * supported options.
    * @param orientations orientations or {@code null} for none
    */

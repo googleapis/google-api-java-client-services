@@ -30,7 +30,7 @@ package com.google.api.services.testing.model;
 public final class IosDevice extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The id of the iOS device to be used. Use the EnvironmentDiscoveryService to get
+   * Required. The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get
    * supported options.
    * The value may be {@code null}.
    */
@@ -39,30 +39,30 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The id of the iOS major software version to be used. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String iosVersionId;
 
   /**
-   * Required. The locale the test device used for testing. Use the EnvironmentDiscoveryService to
-   * get supported options.
+   * Required. The locale the test device used for testing. Use the TestEnvironmentDiscoveryService
+   * to get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locale;
 
   /**
-   * Required. How the device is oriented during the test. Use the EnvironmentDiscoveryService to
-   * get supported options.
+   * Required. How the device is oriented during the test. Use the TestEnvironmentDiscoveryService
+   * to get supported options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orientation;
 
   /**
-   * Required. The id of the iOS device to be used. Use the EnvironmentDiscoveryService to get
+   * Required. The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get
    * supported options.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The id of the iOS device to be used. Use the EnvironmentDiscoveryService to get
+   * Required. The id of the iOS device to be used. Use the TestEnvironmentDiscoveryService to get
    * supported options.
    * @param iosModelId iosModelId or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The id of the iOS major software version to be used. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getIosVersionId() {
@@ -91,7 +91,7 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The id of the iOS major software version to be used. Use the
-   * EnvironmentDiscoveryService to get supported options.
+   * TestEnvironmentDiscoveryService to get supported options.
    * @param iosVersionId iosVersionId or {@code null} for none
    */
   public IosDevice setIosVersionId(java.lang.String iosVersionId) {
@@ -100,8 +100,8 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The locale the test device used for testing. Use the EnvironmentDiscoveryService to
-   * get supported options.
+   * Required. The locale the test device used for testing. Use the TestEnvironmentDiscoveryService
+   * to get supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -109,8 +109,8 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The locale the test device used for testing. Use the EnvironmentDiscoveryService to
-   * get supported options.
+   * Required. The locale the test device used for testing. Use the TestEnvironmentDiscoveryService
+   * to get supported options.
    * @param locale locale or {@code null} for none
    */
   public IosDevice setLocale(java.lang.String locale) {
@@ -119,8 +119,8 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. How the device is oriented during the test. Use the EnvironmentDiscoveryService to
-   * get supported options.
+   * Required. How the device is oriented during the test. Use the TestEnvironmentDiscoveryService
+   * to get supported options.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrientation() {
@@ -128,8 +128,8 @@ public final class IosDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. How the device is oriented during the test. Use the EnvironmentDiscoveryService to
-   * get supported options.
+   * Required. How the device is oriented during the test. Use the TestEnvironmentDiscoveryService
+   * to get supported options.
    * @param orientation orientation or {@code null} for none
    */
   public IosDevice setOrientation(java.lang.String orientation) {

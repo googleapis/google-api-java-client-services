@@ -434,8 +434,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the container server.  After setting any optional
        * parameters, call the {@link GetServerConfig#execute()} method to invoke the remote operation.
        *
-       * @param name The name (project and location) of the server config to get
-      Specified in the format
+       * @param name The name (project and location) of the server config to get,
+      specified in the format
        *        'projects/locations'.
        * @return the request
        */
@@ -463,8 +463,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name The name (project and location) of the server config to get
-      Specified in the format
+         * @param name The name (project and location) of the server config to get,
+      specified in the format
        *        'projects/locations'.
          * @since 1.13
          */
@@ -544,13 +544,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The name (project and location) of the server config to get Specified in the format
+         * The name (project and location) of the server config to get, specified in the format
          * 'projects/locations'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name (project and location) of the server config to get Specified in the format
+        /** The name (project and location) of the server config to get, specified in the format
        'projects/locations'.
          */
         public java.lang.String getName() {
@@ -558,7 +558,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The name (project and location) of the server config to get Specified in the format
+         * The name (project and location) of the server config to get, specified in the format
          * 'projects/locations'.
          */
         public GetServerConfig setName(java.lang.String name) {
@@ -6163,13 +6163,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The name (project and location) of the server config to get Specified in the format
+         * The name (project and location) of the server config to get, specified in the format
          * 'projects/locations'.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name (project and location) of the server config to get Specified in the format
+        /** The name (project and location) of the server config to get, specified in the format
        'projects/locations'.
          */
         public java.lang.String getName() {
@@ -6177,7 +6177,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The name (project and location) of the server config to get Specified in the format
+         * The name (project and location) of the server config to get, specified in the format
          * 'projects/locations'.
          */
         public GetServerconfig setName(java.lang.String name) {

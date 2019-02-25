@@ -47,6 +47,16 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
   private java.lang.String principalEmail;
 
   /**
+   * Identity delegation history of an authenticated service account that makes the request. It
+   * contains information on the real authorities that try to access GCP resources by delegating on
+   * a service account. When multiple authorities present, they are guaranteed to be sorted based on
+   * the original ordering of the identity delegation events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ServiceAccountDelegationInfo> serviceAccountDelegationInfo;
+
+  /**
    * The name of the service account key used to create or exchange credentials for authenticating
    * the service account making the request. This is a scheme-less URI full resource name. For
    * example:
@@ -103,6 +113,29 @@ public final class AuthenticationInfo extends com.google.api.client.json.Generic
    */
   public AuthenticationInfo setPrincipalEmail(java.lang.String principalEmail) {
     this.principalEmail = principalEmail;
+    return this;
+  }
+
+  /**
+   * Identity delegation history of an authenticated service account that makes the request. It
+   * contains information on the real authorities that try to access GCP resources by delegating on
+   * a service account. When multiple authorities present, they are guaranteed to be sorted based on
+   * the original ordering of the identity delegation events.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ServiceAccountDelegationInfo> getServiceAccountDelegationInfo() {
+    return serviceAccountDelegationInfo;
+  }
+
+  /**
+   * Identity delegation history of an authenticated service account that makes the request. It
+   * contains information on the real authorities that try to access GCP resources by delegating on
+   * a service account. When multiple authorities present, they are guaranteed to be sorted based on
+   * the original ordering of the identity delegation events.
+   * @param serviceAccountDelegationInfo serviceAccountDelegationInfo or {@code null} for none
+   */
+  public AuthenticationInfo setServiceAccountDelegationInfo(java.util.List<ServiceAccountDelegationInfo> serviceAccountDelegationInfo) {
+    this.serviceAccountDelegationInfo = serviceAccountDelegationInfo;
     return this;
   }
 

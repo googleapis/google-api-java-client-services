@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class NetworksAddPeeringRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether Google Compute Engine manages the routes automatically.
+   * This field will be deprecated soon. Prefer using exchange_subnet_routes in network_peering
+   * instead. Whether Google Compute Engine manages the routes automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +45,16 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
+   * Network peering parameters. In order to specify route policies for peering using import/export
+   * custom routes, you will have to fill all peering related parameters (name, peer network,
+   * exchange_subnet_routes) in network_peeringfield. Corresponding fields in
+   * NetworksAddPeeringRequest will be deprecated soon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPeering networkPeering;
+
+  /**
    * URL of the peer network. It can be either full URL or partial URL. The peer network may belong
    * to a different project. If the partial URL does not contain project, it is assumed that the
    * peer network is in the same project as the current network.
@@ -53,7 +64,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   private java.lang.String peerNetwork;
 
   /**
-   * Whether Google Compute Engine manages the routes automatically.
+   * This field will be deprecated soon. Prefer using exchange_subnet_routes in network_peering
+   * instead. Whether Google Compute Engine manages the routes automatically.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateRoutes() {
@@ -61,7 +73,8 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
   }
 
   /**
-   * Whether Google Compute Engine manages the routes automatically.
+   * This field will be deprecated soon. Prefer using exchange_subnet_routes in network_peering
+   * instead. Whether Google Compute Engine manages the routes automatically.
    * @param autoCreateRoutes autoCreateRoutes or {@code null} for none
    */
   public NetworksAddPeeringRequest setAutoCreateRoutes(java.lang.Boolean autoCreateRoutes) {
@@ -83,6 +96,29 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
    */
   public NetworksAddPeeringRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Network peering parameters. In order to specify route policies for peering using import/export
+   * custom routes, you will have to fill all peering related parameters (name, peer network,
+   * exchange_subnet_routes) in network_peeringfield. Corresponding fields in
+   * NetworksAddPeeringRequest will be deprecated soon.
+   * @return value or {@code null} for none
+   */
+  public NetworkPeering getNetworkPeering() {
+    return networkPeering;
+  }
+
+  /**
+   * Network peering parameters. In order to specify route policies for peering using import/export
+   * custom routes, you will have to fill all peering related parameters (name, peer network,
+   * exchange_subnet_routes) in network_peeringfield. Corresponding fields in
+   * NetworksAddPeeringRequest will be deprecated soon.
+   * @param networkPeering networkPeering or {@code null} for none
+   */
+  public NetworksAddPeeringRequest setNetworkPeering(NetworkPeering networkPeering) {
+    this.networkPeering = networkPeering;
     return this;
   }
 

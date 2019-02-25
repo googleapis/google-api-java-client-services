@@ -28564,24 +28564,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /**
-       * Whether to force attach the disk even if it's currently attached to another instance. This
-       * is only available for regional disks.
-       */
+      /** Whether to force attach the disk even if it's currently attached to another instance. */
       @com.google.api.client.util.Key
       private java.lang.Boolean forceAttach;
 
-      /** Whether to force attach the disk even if it's currently attached to another instance. This is only
-     available for regional disks.
+      /** Whether to force attach the disk even if it's currently attached to another instance.
        */
       public java.lang.Boolean getForceAttach() {
         return forceAttach;
       }
 
-      /**
-       * Whether to force attach the disk even if it's currently attached to another instance. This
-       * is only available for regional disks.
-       */
+      /** Whether to force attach the disk even if it's currently attached to another instance. */
       public AttachDisk setForceAttach(java.lang.Boolean forceAttach) {
         this.forceAttach = forceAttach;
         return this;

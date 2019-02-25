@@ -17,7 +17,7 @@
 package com.google.api.services.ml.v1.model;
 
 /**
- * Represents the configration for a replica in a cluster.
+ * Represents the configuration for a replica in a cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
@@ -31,19 +31,26 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Represents the type and number of accelerators used by the replica. [Learn about restrictions
+   * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
+   * engine-machine-types-with-gpu)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudMlV1AcceleratorConfig acceleratorConfig;
 
   /**
-   * The docker image to run on worker. This image must be in Google Container Registry.
+   * The Docker image to run on the replica. This image must be in Container Registry. Learn more
+   * about [configuring custom containers](/ml-engine/docs/distributed-training-containers).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
+   * Represents the type and number of accelerators used by the replica. [Learn about restrictions
+   * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
+   * engine-machine-types-with-gpu)
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1AcceleratorConfig getAcceleratorConfig() {
@@ -51,6 +58,9 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   }
 
   /**
+   * Represents the type and number of accelerators used by the replica. [Learn about restrictions
+   * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
+   * engine-machine-types-with-gpu)
    * @param acceleratorConfig acceleratorConfig or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig setAcceleratorConfig(GoogleCloudMlV1AcceleratorConfig acceleratorConfig) {
@@ -59,7 +69,8 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   }
 
   /**
-   * The docker image to run on worker. This image must be in Google Container Registry.
+   * The Docker image to run on the replica. This image must be in Container Registry. Learn more
+   * about [configuring custom containers](/ml-engine/docs/distributed-training-containers).
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -67,7 +78,8 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   }
 
   /**
-   * The docker image to run on worker. This image must be in Google Container Registry.
+   * The Docker image to run on the replica. This image must be in Container Registry. Learn more
+   * about [configuring custom containers](/ml-engine/docs/distributed-training-containers).
    * @param imageUri imageUri or {@code null} for none
    */
   public GoogleCloudMlV1ReplicaConfig setImageUri(java.lang.String imageUri) {

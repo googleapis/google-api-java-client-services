@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1AcceleratorConfig extends com.google.api.clien
   private java.lang.Long count;
 
   /**
-   * The available types of accelerators.
+   * The type of accelerator to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1AcceleratorConfig extends com.google.api.clien
   }
 
   /**
-   * The available types of accelerators.
+   * The type of accelerator to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1AcceleratorConfig extends com.google.api.clien
   }
 
   /**
-   * The available types of accelerators.
+   * The type of accelerator to use.
    * @param type type or {@code null} for none
    */
   public GoogleCloudMlV1AcceleratorConfig setType(java.lang.String type) {

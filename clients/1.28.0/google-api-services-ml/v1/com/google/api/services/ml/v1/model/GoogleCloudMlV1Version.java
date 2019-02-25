@@ -22,7 +22,7 @@ package com.google.api.services.ml.v1.model;
  * Each version is a trained model deployed in the cloud, ready to handle prediction requests. A
  * model can have multiple versions. You can get information about all of the versions of a given
  * model by calling [projects.models.versions.list](/ml-
- * engine/reference/rest/v1/projects.models.versions/list).
+ * engine/reference/rest/v1/projects.models.versions/list). Next ID: 29
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
@@ -132,10 +132,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service. The following are currently supported and will be deprecated in Beta
-   * release.   mls1-highmem-1    1 core    2 Gb RAM   mls1-highcpu-4    4 core    2 Gb RAM The
-   * following are available in Beta:   mls1-c1-m2        1 core    2 Gb RAM   Default   mls1-c4-m2
-   * 4 core    2 Gb RAM
+   * prediction service.
+   *
+   *   mls1-c1-m2      The default machine type, with 1 core and 2 GB RAM. The deprecated   name for
+   * this machine type is "mls1-highmem-1".      mls1-c4-m2      In Beta. This machine type has 4
+   * cores and 2 GB RAM. The   deprecated name for this machine type is "mls1-highcpu-4".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -446,10 +447,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service. The following are currently supported and will be deprecated in Beta
-   * release.   mls1-highmem-1    1 core    2 Gb RAM   mls1-highcpu-4    4 core    2 Gb RAM The
-   * following are available in Beta:   mls1-c1-m2        1 core    2 Gb RAM   Default   mls1-c4-m2
-   * 4 core    2 Gb RAM
+   * prediction service.
+   *
+   *   mls1-c1-m2      The default machine type, with 1 core and 2 GB RAM. The deprecated   name for
+   * this machine type is "mls1-highmem-1".      mls1-c4-m2      In Beta. This machine type has 4
+   * cores and 2 GB RAM. The   deprecated name for this machine type is "mls1-highcpu-4".
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -458,10 +460,11 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
 
   /**
    * Optional. The type of machine on which to serve the model. Currently only applies to online
-   * prediction service. The following are currently supported and will be deprecated in Beta
-   * release.   mls1-highmem-1    1 core    2 Gb RAM   mls1-highcpu-4    4 core    2 Gb RAM The
-   * following are available in Beta:   mls1-c1-m2        1 core    2 Gb RAM   Default   mls1-c4-m2
-   * 4 core    2 Gb RAM
+   * prediction service.
+   *
+   *   mls1-c1-m2      The default machine type, with 1 core and 2 GB RAM. The deprecated   name for
+   * this machine type is "mls1-highmem-1".      mls1-c4-m2      In Beta. This machine type has 4
+   * cores and 2 GB RAM. The   deprecated name for this machine type is "mls1-highcpu-4".
    * @param machineType machineType or {@code null} for none
    */
   public GoogleCloudMlV1Version setMachineType(java.lang.String machineType) {

@@ -68,8 +68,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The time the event that caused this alert ceased being active. If provided, the end
-   * time must not be earlier than the start time. If not provided, the end time defaults to the
-   * start time.
+   * time must not be earlier than the start time. If not provided, it indicates an ongoing alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,8 +199,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The time the event that caused this alert ceased being active. If provided, the end
-   * time must not be earlier than the start time. If not provided, the end time defaults to the
-   * start time.
+   * time must not be earlier than the start time. If not provided, it indicates an ongoing alert.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -210,8 +208,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The time the event that caused this alert ceased being active. If provided, the end
-   * time must not be earlier than the start time. If not provided, the end time defaults to the
-   * start time.
+   * time must not be earlier than the start time. If not provided, it indicates an ongoing alert.
    * @param endTime endTime or {@code null} for none
    */
   public Alert setEndTime(String endTime) {

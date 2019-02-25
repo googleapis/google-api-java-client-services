@@ -44,6 +44,12 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
   private DebugOptions debugOptions;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IndexItemOptions indexItemOptions;
+
+  /**
    * Name of the item.  Format: datasources/{source_id}/items/{item_id}
    * The value may be {@code null}.
    */
@@ -88,6 +94,21 @@ public final class IndexItemRequest extends com.google.api.client.json.GenericJs
    */
   public IndexItemRequest setDebugOptions(DebugOptions debugOptions) {
     this.debugOptions = debugOptions;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public IndexItemOptions getIndexItemOptions() {
+    return indexItemOptions;
+  }
+
+  /**
+   * @param indexItemOptions indexItemOptions or {@code null} for none
+   */
+  public IndexItemRequest setIndexItemOptions(IndexItemOptions indexItemOptions) {
+    this.indexItemOptions = indexItemOptions;
     return this;
   }
 

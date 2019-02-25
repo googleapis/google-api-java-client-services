@@ -17,7 +17,7 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Structured results that are returned as part of search request.
+ * Model definition for IndexItemOptions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.cloudsearch.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StructuredResult extends com.google.api.client.json.GenericJson {
+public final class IndexItemOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Representation of a person
+   * Specifies if the index request should allow gsuite principals that do not exist or are deleted
+   * in the index request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Person person;
+  private java.lang.Boolean allowUnknownGsuitePrincipals;
 
   /**
-   * Representation of a person
+   * Specifies if the index request should allow gsuite principals that do not exist or are deleted
+   * in the index request.
    * @return value or {@code null} for none
    */
-  public Person getPerson() {
-    return person;
+  public java.lang.Boolean getAllowUnknownGsuitePrincipals() {
+    return allowUnknownGsuitePrincipals;
   }
 
   /**
-   * Representation of a person
-   * @param person person or {@code null} for none
+   * Specifies if the index request should allow gsuite principals that do not exist or are deleted
+   * in the index request.
+   * @param allowUnknownGsuitePrincipals allowUnknownGsuitePrincipals or {@code null} for none
    */
-  public StructuredResult setPerson(Person person) {
-    this.person = person;
+  public IndexItemOptions setAllowUnknownGsuitePrincipals(java.lang.Boolean allowUnknownGsuitePrincipals) {
+    this.allowUnknownGsuitePrincipals = allowUnknownGsuitePrincipals;
     return this;
   }
 
   @Override
-  public StructuredResult set(String fieldName, Object value) {
-    return (StructuredResult) super.set(fieldName, value);
+  public IndexItemOptions set(String fieldName, Object value) {
+    return (IndexItemOptions) super.set(fieldName, value);
   }
 
   @Override
-  public StructuredResult clone() {
-    return (StructuredResult) super.clone();
+  public IndexItemOptions clone() {
+    return (IndexItemOptions) super.clone();
   }
 
 }

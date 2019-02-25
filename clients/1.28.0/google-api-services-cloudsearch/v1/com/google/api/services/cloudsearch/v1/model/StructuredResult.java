@@ -30,12 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class StructuredResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Representation of a person
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Person person;
 
   /**
+   * Representation of a person
    * @return value or {@code null} for none
    */
   public Person getPerson() {
@@ -43,6 +45,7 @@ public final class StructuredResult extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Representation of a person
    * @param person person or {@code null} for none
    */
   public StructuredResult setPerson(Person person) {

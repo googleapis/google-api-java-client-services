@@ -17,8 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * A zone is a subtree of the DNS namespace under one administrative responsibility. A ManagedZone
- * is a resource that represents a DNS zone hosted by the Cloud DNS service.
+ * Model definition for ManagedZone.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -31,45 +30,36 @@ package com.google.api.services.dns.model;
 public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time that this resource was created on the server. This is in RFC3339 text format. Output
-   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTime;
 
   /**
-   * A mutable string of at most 1024 characters associated with this resource for the user's
-   * convenience. Has no effect on the managed zone's function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The DNS name of this managed zone, for instance "example.com.".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dnsName;
 
   /**
-   * DNSSEC configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedZoneDnsSecConfig dnssecConfig;
 
   /**
-   * The presence for this field indicates that outbound forwarding is enabled for this zone. The
-   * value of this field contains the set of destinations to forward to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedZoneForwardingConfig forwardingConfig;
 
   /**
-   * Unique identifier for the resource; defined by the server (output only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -83,55 +73,42 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * User labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * User assigned name for this resource. Must be unique within the project. The name must be 1-63
-   * characters long, must begin with a letter, end with a letter or digit, and only contain
-   * lowercase letters, digits or dashes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nameServerSet;
 
   /**
-   * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> nameServers;
 
   /**
-   * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
-   * visible from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedZonePrivateVisibilityConfig privateVisibilityConfig;
 
   /**
-   * The zone's visibility: public zones are exposed to the Internet, while private zones are
-   * visible only to Virtual Private Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String visibility;
 
   /**
-   * The time that this resource was created on the server. This is in RFC3339 text format. Output
-   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTime() {
@@ -139,8 +116,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that this resource was created on the server. This is in RFC3339 text format. Output
-   * only.
    * @param creationTime creationTime or {@code null} for none
    */
   public ManagedZone setCreationTime(java.lang.String creationTime) {
@@ -149,8 +124,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A mutable string of at most 1024 characters associated with this resource for the user's
-   * convenience. Has no effect on the managed zone's function.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -158,8 +131,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A mutable string of at most 1024 characters associated with this resource for the user's
-   * convenience. Has no effect on the managed zone's function.
    * @param description description or {@code null} for none
    */
   public ManagedZone setDescription(java.lang.String description) {
@@ -168,7 +139,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS name of this managed zone, for instance "example.com.".
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsName() {
@@ -176,7 +146,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS name of this managed zone, for instance "example.com.".
    * @param dnsName dnsName or {@code null} for none
    */
   public ManagedZone setDnsName(java.lang.String dnsName) {
@@ -185,7 +154,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DNSSEC configuration.
    * @return value or {@code null} for none
    */
   public ManagedZoneDnsSecConfig getDnssecConfig() {
@@ -193,7 +161,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DNSSEC configuration.
    * @param dnssecConfig dnssecConfig or {@code null} for none
    */
   public ManagedZone setDnssecConfig(ManagedZoneDnsSecConfig dnssecConfig) {
@@ -202,8 +169,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The presence for this field indicates that outbound forwarding is enabled for this zone. The
-   * value of this field contains the set of destinations to forward to.
    * @return value or {@code null} for none
    */
   public ManagedZoneForwardingConfig getForwardingConfig() {
@@ -211,8 +176,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The presence for this field indicates that outbound forwarding is enabled for this zone. The
-   * value of this field contains the set of destinations to forward to.
    * @param forwardingConfig forwardingConfig or {@code null} for none
    */
   public ManagedZone setForwardingConfig(ManagedZoneForwardingConfig forwardingConfig) {
@@ -221,7 +184,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the resource; defined by the server (output only)
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -229,7 +191,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier for the resource; defined by the server (output only)
    * @param id id or {@code null} for none
    */
   public ManagedZone setId(java.math.BigInteger id) {
@@ -255,7 +216,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -263,7 +223,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User labels.
    * @param labels labels or {@code null} for none
    */
   public ManagedZone setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -272,9 +231,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned name for this resource. Must be unique within the project. The name must be 1-63
-   * characters long, must begin with a letter, end with a letter or digit, and only contain
-   * lowercase letters, digits or dashes.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -282,9 +238,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned name for this resource. Must be unique within the project. The name must be 1-63
-   * characters long, must begin with a letter, end with a letter or digit, and only contain
-   * lowercase letters, digits or dashes.
    * @param name name or {@code null} for none
    */
   public ManagedZone setName(java.lang.String name) {
@@ -293,8 +246,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset.
    * @return value or {@code null} for none
    */
   public java.lang.String getNameServerSet() {
@@ -302,8 +253,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset.
    * @param nameServerSet nameServerSet or {@code null} for none
    */
   public ManagedZone setNameServerSet(java.lang.String nameServerSet) {
@@ -312,7 +261,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNameServers() {
@@ -320,7 +268,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
    * @param nameServers nameServers or {@code null} for none
    */
   public ManagedZone setNameServers(java.util.List<java.lang.String> nameServers) {
@@ -329,8 +276,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
-   * visible from.
    * @return value or {@code null} for none
    */
   public ManagedZonePrivateVisibilityConfig getPrivateVisibilityConfig() {
@@ -338,8 +283,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For privately visible zones, the set of Virtual Private Cloud resources that the zone is
-   * visible from.
    * @param privateVisibilityConfig privateVisibilityConfig or {@code null} for none
    */
   public ManagedZone setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfig privateVisibilityConfig) {
@@ -348,8 +291,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zone's visibility: public zones are exposed to the Internet, while private zones are
-   * visible only to Virtual Private Cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -357,8 +298,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The zone's visibility: public zones are exposed to the Internet, while private zones are
-   * visible only to Virtual Private Cloud resources.
    * @param visibility visibility or {@code null} for none
    */
   public ManagedZone setVisibility(java.lang.String visibility) {

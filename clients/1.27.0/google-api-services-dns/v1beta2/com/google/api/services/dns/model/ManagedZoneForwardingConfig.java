@@ -38,8 +38,6 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   private java.lang.String kind;
 
   /**
-   * List of target name servers to forward to. Cloud DNS will select the best available name server
-   * if more than one target is given.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +63,6 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   }
 
   /**
-   * List of target name servers to forward to. Cloud DNS will select the best available name server
-   * if more than one target is given.
    * @return value or {@code null} for none
    */
   public java.util.List<ManagedZoneForwardingConfigNameServerTarget> getTargetNameServers() {
@@ -74,8 +70,6 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   }
 
   /**
-   * List of target name servers to forward to. Cloud DNS will select the best available name server
-   * if more than one target is given.
    * @param targetNameServers targetNameServers or {@code null} for none
    */
   public ManagedZoneForwardingConfig setTargetNameServers(java.util.List<ManagedZoneForwardingConfigNameServerTarget> targetNameServers) {

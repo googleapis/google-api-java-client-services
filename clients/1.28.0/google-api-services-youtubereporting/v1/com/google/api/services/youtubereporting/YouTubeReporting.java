@@ -1287,6 +1287,14 @@ public class YouTubeReporting extends com.google.api.client.googleapis.services.
       }
 
       @Override
+      public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+        java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+            ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+        return new com.google.api.client.http.GenericUrl(
+            com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+      }
+
+      @Override
       public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
         return super.executeUsingHead();
       }

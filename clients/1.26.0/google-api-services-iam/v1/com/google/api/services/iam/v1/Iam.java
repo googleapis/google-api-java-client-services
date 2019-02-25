@@ -3993,6 +3993,155 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
+       * Restores a deleted ServiceAccount.
+       *
+       * Create a request for the method "serviceAccounts.undelete".
+       *
+       * This request holds the parameters needed by the iam server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+       *
+       * @param name The resource name of the service account in the following format:
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'.
+      Using `-` as a wildcard for
+       *        the `PROJECT_ID` will infer the project from
+      the account.
+       * @param content the {@link com.google.api.services.iam.v1.model.UndeleteServiceAccountRequest}
+       * @return the request
+       */
+      public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteServiceAccountRequest content) throws java.io.IOException {
+        Undelete result = new Undelete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.UndeleteServiceAccountResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:undelete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
+
+        /**
+         * Restores a deleted ServiceAccount.
+         *
+         * Create a request for the method "serviceAccounts.undelete".
+         *
+         * This request holds the parameters needed by the the iam server.  After setting any optional
+         * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The resource name of the service account in the following format:
+       *        `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'.
+      Using `-` as a wildcard for
+       *        the `PROJECT_ID` will infer the project from
+      the account.
+         * @param content the {@link com.google.api.services.iam.v1.model.UndeleteServiceAccountRequest}
+         * @since 1.13
+         */
+        protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteServiceAccountRequest content) {
+          super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.UndeleteServiceAccountResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/serviceAccounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undelete set$Xgafv(java.lang.String $Xgafv) {
+          return (Undelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undelete setAccessToken(java.lang.String accessToken) {
+          return (Undelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undelete setAlt(java.lang.String alt) {
+          return (Undelete) super.setAlt(alt);
+        }
+
+        @Override
+        public Undelete setCallback(java.lang.String callback) {
+          return (Undelete) super.setCallback(callback);
+        }
+
+        @Override
+        public Undelete setFields(java.lang.String fields) {
+          return (Undelete) super.setFields(fields);
+        }
+
+        @Override
+        public Undelete setKey(java.lang.String key) {
+          return (Undelete) super.setKey(key);
+        }
+
+        @Override
+        public Undelete setOauthToken(java.lang.String oauthToken) {
+          return (Undelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undelete setQuotaUser(java.lang.String quotaUser) {
+          return (Undelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undelete setUploadType(java.lang.String uploadType) {
+          return (Undelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the service account in the following format:
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for
+         * the `PROJECT_ID` will infer the project from the account.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The resource name of the service account in the following format:
+       `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for the
+       `PROJECT_ID` will infer the project from the account.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The resource name of the service account in the following format:
+         * `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}'. Using `-` as a wildcard for
+         * the `PROJECT_ID` will infer the project from the account.
+         */
+        public Undelete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/serviceAccounts/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undelete set(String parameterName, Object value) {
+          return (Undelete) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates a ServiceAccount.
        *
        * Currently, only the following fields are updatable: `display_name` . The `etag` is mandatory.

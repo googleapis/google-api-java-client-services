@@ -334,7 +334,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Compute Engine zones that are supported by this version in the App Engine flexible
-   * environment.
+   * environment. Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1018,7 +1018,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Compute Engine zones that are supported by this version in the App Engine flexible
-   * environment.
+   * environment. Deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getZones() {
@@ -1027,7 +1027,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google Compute Engine zones that are supported by this version in the App Engine flexible
-   * environment.
+   * environment. Deprecated.
    * @param zones zones or {@code null} for none
    */
   public Version setZones(java.util.List<java.lang.String> zones) {

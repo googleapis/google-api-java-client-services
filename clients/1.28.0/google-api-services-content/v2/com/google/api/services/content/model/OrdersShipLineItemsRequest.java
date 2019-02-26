@@ -87,7 +87,7 @@ public final class OrdersShipLineItemsRequest extends com.google.api.client.json
   }
 
   /**
-   * Deprecated. Please use shipmentInfo instead. The tracking id for the shipment.
+   * Deprecated. Please use shipmentInfo instead. The tracking ID for the shipment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +200,7 @@ public final class OrdersShipLineItemsRequest extends com.google.api.client.json
   }
 
   /**
-   * Deprecated. Please use shipmentInfo instead. The tracking id for the shipment.
+   * Deprecated. Please use shipmentInfo instead. The tracking ID for the shipment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingId() {
@@ -208,7 +208,7 @@ public final class OrdersShipLineItemsRequest extends com.google.api.client.json
   }
 
   /**
-   * Deprecated. Please use shipmentInfo instead. The tracking id for the shipment.
+   * Deprecated. Please use shipmentInfo instead. The tracking ID for the shipment.
    * @param trackingId trackingId or {@code null} for none
    */
   public OrdersShipLineItemsRequest setTrackingId(java.lang.String trackingId) {

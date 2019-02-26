@@ -66,7 +66,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private OrderDeliveryDetails deliveryDetails;
 
   /**
-   * The REST id of the order. Globally unique.
+   * The REST ID of the order. Globally unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger merchantId;
 
   /**
-   * Merchant-provided id of the order.
+   * Merchant-provided ID of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,13 +163,6 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Price shippingCostTax;
-
-  /**
-   * The requested shipping option.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String shippingOption;
 
   /**
    * The status of the order.
@@ -271,7 +264,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The REST id of the order. Globally unique.
+   * The REST ID of the order. Globally unique.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -279,7 +272,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The REST id of the order. Globally unique.
+   * The REST ID of the order. Globally unique.
    * @param id id or {@code null} for none
    */
   public Order setId(java.lang.String id) {
@@ -337,7 +330,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Merchant-provided id of the order.
+   * Merchant-provided ID of the order.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantOrderId() {
@@ -345,7 +338,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Merchant-provided id of the order.
+   * Merchant-provided ID of the order.
    * @param merchantOrderId merchantOrderId or {@code null} for none
    */
   public Order setMerchantOrderId(java.lang.String merchantOrderId) {
@@ -507,23 +500,6 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   public Order setShippingCostTax(Price shippingCostTax) {
     this.shippingCostTax = shippingCostTax;
-    return this;
-  }
-
-  /**
-   * The requested shipping option.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getShippingOption() {
-    return shippingOption;
-  }
-
-  /**
-   * The requested shipping option.
-   * @param shippingOption shippingOption or {@code null} for none
-   */
-  public Order setShippingOption(java.lang.String shippingOption) {
-    this.shippingOption = shippingOption;
     return this;
   }
 

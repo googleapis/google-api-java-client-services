@@ -61,7 +61,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   private java.lang.String status;
 
   /**
-   * The tracking id for the shipment. Not updated if missing.
+   * The tracking ID for the shipment. Not updated if missing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +140,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   }
 
   /**
-   * The tracking id for the shipment. Not updated if missing.
+   * The tracking ID for the shipment. Not updated if missing.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingId() {
@@ -148,7 +148,7 @@ public final class OrdersCustomBatchRequestEntryUpdateShipment extends com.googl
   }
 
   /**
-   * The tracking id for the shipment. Not updated if missing.
+   * The tracking ID for the shipment. Not updated if missing.
    * @param trackingId trackingId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateShipment setTrackingId(java.lang.String trackingId) {

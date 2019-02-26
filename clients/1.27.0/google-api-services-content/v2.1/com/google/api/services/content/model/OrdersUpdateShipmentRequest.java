@@ -68,7 +68,7 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   private java.lang.String status;
 
   /**
-   * The tracking id for the shipment. Not updated if missing.
+   * The tracking ID for the shipment. Not updated if missing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   }
 
   /**
-   * The tracking id for the shipment. Not updated if missing.
+   * The tracking ID for the shipment. Not updated if missing.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingId() {
@@ -172,7 +172,7 @@ public final class OrdersUpdateShipmentRequest extends com.google.api.client.jso
   }
 
   /**
-   * The tracking id for the shipment. Not updated if missing.
+   * The tracking ID for the shipment. Not updated if missing.
    * @param trackingId trackingId or {@code null} for none
    */
   public OrdersUpdateShipmentRequest setTrackingId(java.lang.String trackingId) {

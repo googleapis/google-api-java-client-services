@@ -59,7 +59,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   private java.lang.String deliveryDate;
 
   /**
-   * The id of the shipment.
+   * The ID of the shipment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   private java.lang.String status;
 
   /**
-   * The tracking id for the shipment.
+   * The tracking ID for the shipment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +152,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the shipment.
+   * The ID of the shipment.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -160,7 +160,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the shipment.
+   * The ID of the shipment.
    * @param id id or {@code null} for none
    */
   public OrderShipment setId(java.lang.String id) {
@@ -203,7 +203,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The tracking id for the shipment.
+   * The tracking ID for the shipment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingId() {
@@ -211,7 +211,7 @@ public final class OrderShipment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The tracking id for the shipment.
+   * The tracking ID for the shipment.
    * @param trackingId trackingId or {@code null} for none
    */
   public OrderShipment setTrackingId(java.lang.String trackingId) {

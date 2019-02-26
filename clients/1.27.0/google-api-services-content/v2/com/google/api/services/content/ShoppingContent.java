@@ -458,17 +458,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -597,17 +604,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Delete setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -892,17 +906,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Insert setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -1303,17 +1324,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Patch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -1452,17 +1480,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Update setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -1994,17 +2029,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -2413,17 +2455,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Patch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -2560,17 +2609,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Update setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -2674,17 +2730,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -2810,17 +2873,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Delete setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -2947,17 +3017,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Fetchnow setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -3202,17 +3279,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Insert setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -3485,17 +3569,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Patch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -3629,17 +3720,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Update setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -4172,17 +4270,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -4338,17 +4443,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Set setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -4456,17 +4568,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -5104,17 +5223,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Patch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -5928,17 +6054,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Update setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -9599,7 +9732,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Sets (overrides) merchant provided annotations on the line item.
+     * Sets (or overrides if it already exists) merchant provided annotations in the form of key-value
+     * pairs. A common use case would be to supply us with additional structured information about a
+     * line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved
+     * as part of the orders resource.
      *
      * Create a request for the method "orders.setlineitemmetadata".
      *
@@ -9622,7 +9758,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/orders/{orderId}/setLineItemMetadata";
 
       /**
-       * Sets (overrides) merchant provided annotations on the line item.
+       * Sets (or overrides if it already exists) merchant provided annotations in the form of key-value
+       * pairs. A common use case would be to supply us with additional structured information about a
+       * line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved
+       * as part of the orders resource.
        *
        * Create a request for the method "orders.setlineitemmetadata".
        *
@@ -10282,17 +10421,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -10431,17 +10577,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Delete setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -10710,17 +10863,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Insert setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -10855,17 +11015,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Inventory setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -11123,17 +11290,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Sale setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -11241,17 +11415,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -11377,17 +11558,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Delete setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -11636,17 +11824,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Insert setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -12430,17 +12625,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return (Custombatch) super.setUserIp(userIp);
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Custombatch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -13063,17 +13265,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Patch setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -13208,17 +13417,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean dryRun;
 
-      /** Flag to run the request in dry-run mode.
+      /** Flag to simulate a request like in a live environment. If set to true, dry-run mode checks the
+     validity of the request and returns errors (if any).
        */
       public java.lang.Boolean getDryRun() {
         return dryRun;
       }
 
-      /** Flag to run the request in dry-run mode. */
+      /**
+       * Flag to simulate a request like in a live environment. If set to true, dry-run mode checks
+       * the validity of the request and returns errors (if any).
+       */
       public Update setDryRun(java.lang.Boolean dryRun) {
         this.dryRun = dryRun;
         return this;

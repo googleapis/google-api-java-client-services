@@ -51,7 +51,7 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the line item.
+   * The ID of the line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +180,7 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the line item.
+   * The ID of the line item.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -188,7 +188,7 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the line item.
+   * The ID of the line item.
    * @param id id or {@code null} for none
    */
   public OrderLineItem setId(java.lang.String id) {

@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class OrderShipmentLineItemShipment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the line item that is shipped. Either lineItemId or productId is required.
+   * The ID of the line item that is shipped. Either lineItemId or productId is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class OrderShipmentLineItemShipment extends com.google.api.client.j
   private java.lang.Long quantity;
 
   /**
-   * The id of the line item that is shipped. Either lineItemId or productId is required.
+   * The ID of the line item that is shipped. Either lineItemId or productId is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getLineItemId() {
@@ -61,7 +61,7 @@ public final class OrderShipmentLineItemShipment extends com.google.api.client.j
   }
 
   /**
-   * The id of the line item that is shipped. Either lineItemId or productId is required.
+   * The ID of the line item that is shipped. Either lineItemId or productId is required.
    * @param lineItemId lineItemId or {@code null} for none
    */
   public OrderShipmentLineItemShipment setLineItemId(java.lang.String lineItemId) {

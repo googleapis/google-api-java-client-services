@@ -66,7 +66,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   private java.math.BigInteger merchantId;
 
   /**
-   * The merchant order id. Required for updateMerchantOrderId and getByMerchantOrderId methods.
+   * The merchant order ID. Required for updateMerchantOrderId and getByMerchantOrderId methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +236,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The merchant order id. Required for updateMerchantOrderId and getByMerchantOrderId methods.
+   * The merchant order ID. Required for updateMerchantOrderId and getByMerchantOrderId methods.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantOrderId() {
@@ -244,7 +244,7 @@ public final class OrdersCustomBatchRequestEntry extends com.google.api.client.j
   }
 
   /**
-   * The merchant order id. Required for updateMerchantOrderId and getByMerchantOrderId methods.
+   * The merchant order ID. Required for updateMerchantOrderId and getByMerchantOrderId methods.
    * @param merchantOrderId merchantOrderId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntry setMerchantOrderId(java.lang.String merchantOrderId) {

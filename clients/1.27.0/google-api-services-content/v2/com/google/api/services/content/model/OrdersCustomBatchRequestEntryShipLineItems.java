@@ -74,7 +74,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItems extends com.google
   private java.util.List<OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo> shipmentInfos;
 
   /**
-   * Deprecated. Please use shipmentInfo instead. The tracking id for the shipment.
+   * Deprecated. Please use shipmentInfo instead. The tracking ID for the shipment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItems extends com.google
   }
 
   /**
-   * Deprecated. Please use shipmentInfo instead. The tracking id for the shipment.
+   * Deprecated. Please use shipmentInfo instead. The tracking ID for the shipment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingId() {
@@ -178,7 +178,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItems extends com.google
   }
 
   /**
-   * Deprecated. Please use shipmentInfo instead. The tracking id for the shipment.
+   * Deprecated. Please use shipmentInfo instead. The tracking ID for the shipment.
    * @param trackingId trackingId or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryShipLineItems setTrackingId(java.lang.String trackingId) {

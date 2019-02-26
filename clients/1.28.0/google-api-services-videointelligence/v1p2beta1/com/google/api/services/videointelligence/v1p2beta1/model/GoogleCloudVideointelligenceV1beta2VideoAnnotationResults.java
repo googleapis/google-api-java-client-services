@@ -66,6 +66,19 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
   private java.lang.String inputUri;
 
   /**
+   * Annotations for list of objects detected and tracked in video.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation> objectAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation.class);
+  }
+
+  /**
    * Label annotations on video level or user specified segment level. There is exactly one element
    * for each unique label.
    * The value may be {@code null}.
@@ -110,6 +123,20 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
     // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2SpeechTranscription used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2SpeechTranscription.class);
+  }
+
+  /**
+   * OCR text detection and tracking. Annotations for list of detected text snippets. Each will have
+   * list of frame information associated with it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1beta2TextAnnotation> textAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1beta2TextAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1beta2TextAnnotation.class);
   }
 
   /**
@@ -183,6 +210,23 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
   }
 
   /**
+   * Annotations for list of objects detected and tracked in video.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation> getObjectAnnotations() {
+    return objectAnnotations;
+  }
+
+  /**
+   * Annotations for list of objects detected and tracked in video.
+   * @param objectAnnotations objectAnnotations or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2VideoAnnotationResults setObjectAnnotations(java.util.List<GoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation> objectAnnotations) {
+    this.objectAnnotations = objectAnnotations;
+    return this;
+  }
+
+  /**
    * Label annotations on video level or user specified segment level. There is exactly one element
    * for each unique label.
    * @return value or {@code null} for none
@@ -249,6 +293,25 @@ public final class GoogleCloudVideointelligenceV1beta2VideoAnnotationResults ext
    */
   public GoogleCloudVideointelligenceV1beta2VideoAnnotationResults setSpeechTranscriptions(java.util.List<GoogleCloudVideointelligenceV1beta2SpeechTranscription> speechTranscriptions) {
     this.speechTranscriptions = speechTranscriptions;
+    return this;
+  }
+
+  /**
+   * OCR text detection and tracking. Annotations for list of detected text snippets. Each will have
+   * list of frame information associated with it.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1beta2TextAnnotation> getTextAnnotations() {
+    return textAnnotations;
+  }
+
+  /**
+   * OCR text detection and tracking. Annotations for list of detected text snippets. Each will have
+   * list of frame information associated with it.
+   * @param textAnnotations textAnnotations or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2VideoAnnotationResults setTextAnnotations(java.util.List<GoogleCloudVideointelligenceV1beta2TextAnnotation> textAnnotations) {
+    this.textAnnotations = textAnnotations;
     return this;
   }
 

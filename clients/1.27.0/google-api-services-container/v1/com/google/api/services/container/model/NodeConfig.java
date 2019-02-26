@@ -110,9 +110,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
-   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "enable-os-login"  "gci-
-   * update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-env"  "startup-script"
-   * "user-data"
+   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
+   * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
+   * env"  "startup-script"  "user-data"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -351,9 +351,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
-   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "enable-os-login"  "gci-
-   * update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-env"  "startup-script"
-   * "user-data"
+   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
+   * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
+   * env"  "startup-script"  "user-data"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -372,9 +372,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are
    * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
    * not conflict with any other metadata keys for the project or be one of the reserved keys:
-   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "enable-os-login"  "gci-
-   * update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-env"  "startup-script"
-   * "user-data"
+   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
+   * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
+   * env"  "startup-script"  "user-data"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or

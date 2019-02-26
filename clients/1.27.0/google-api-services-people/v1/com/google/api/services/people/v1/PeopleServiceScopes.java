@@ -29,7 +29,7 @@ public class PeopleServiceScopes {
   /** See and download your contacts. */
   public static final String CONTACTS_READONLY = "https://www.googleapis.com/auth/contacts.readonly";
 
-  /** Know the list of people in your circles, your age range, and language. */
+  /** View your basic profile info, including your age range and language. */
   public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
 
   /** View your street addresses. */

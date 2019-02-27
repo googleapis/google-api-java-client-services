@@ -20,7 +20,7 @@ package com.google.api.services.tasks;
  * Service definition for Tasks (v1).
  *
  * <p>
- * Lets you manage your tasks and task lists.
+ * Manages your tasks and task lists.
  * </p>
  *
  * <p>
@@ -501,17 +501,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUserIp(userIp);
       }
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 100. */
+      /**
+       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
+       * allowed: 100).
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 100.
+      /** Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 100. */
+      /**
+       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
+       * allowed: 100).
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -1425,17 +1431,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 100. */
+      /**
+       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
+       * allowed: 100).
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 100.
+      /** Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 100. */
+      /**
+       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
+       * allowed: 100).
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;

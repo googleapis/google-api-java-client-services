@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-tasks</artifactId>
-  <version>v1-rev20141121-1.27.0</version>
-  <name>Tasks API v1-rev20141121-1.27.0</name>
+  <version>v1-rev20190222-1.27.0</version>
+  <name>Tasks API v1-rev20190222-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

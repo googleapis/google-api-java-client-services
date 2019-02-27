@@ -17,7 +17,8 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * Contains an HSM-generated attestation about a key operation.
+ * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying
+ * attestations] (https://cloud.google.com/kms/docs/attest-key).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a

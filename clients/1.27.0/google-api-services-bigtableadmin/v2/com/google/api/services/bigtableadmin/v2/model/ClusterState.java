@@ -31,14 +31,14 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class ClusterState extends com.google.api.client.json.GenericJson {
 
   /**
-   * (`OutputOnly`) The state of replication for the table in this cluster.
+   * Output only. The state of replication for the table in this cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String replicationState;
 
   /**
-   * (`OutputOnly`) The state of replication for the table in this cluster.
+   * Output only. The state of replication for the table in this cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplicationState() {
@@ -46,7 +46,7 @@ public final class ClusterState extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (`OutputOnly`) The state of replication for the table in this cluster.
+   * Output only. The state of replication for the table in this cluster.
    * @param replicationState replicationState or {@code null} for none
    */
   public ClusterState setReplicationState(java.lang.String replicationState) {

@@ -40,6 +40,13 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
   private java.lang.Boolean dockerCacheHit;
 
   /**
+   * The input cache miss ratio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float inputCacheMiss;
+
+  /**
    * The number of errors reported.
    * The value may be {@code null}.
    */
@@ -69,6 +76,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
    */
   public GoogleDevtoolsRemotebuildbotCommandEvents setDockerCacheHit(java.lang.Boolean dockerCacheHit) {
     this.dockerCacheHit = dockerCacheHit;
+    return this;
+  }
+
+  /**
+   * The input cache miss ratio.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getInputCacheMiss() {
+    return inputCacheMiss;
+  }
+
+  /**
+   * The input cache miss ratio.
+   * @param inputCacheMiss inputCacheMiss or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandEvents setInputCacheMiss(java.lang.Float inputCacheMiss) {
+    this.inputCacheMiss = inputCacheMiss;
     return this;
   }
 

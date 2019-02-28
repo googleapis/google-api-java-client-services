@@ -29,7 +29,7 @@ public class PlusDomainsScopes {
   /** Manage your circles and add people and pages. People and pages you add to your circles will be notified. Others may see this information publicly. People you add to circles can use Hangouts with you.. */
   public static final String PLUS_CIRCLES_WRITE = "https://www.googleapis.com/auth/plus.circles.write";
 
-  /** Know the list of people in your circles, your age range, and language. */
+  /** View your basic profile info, including your age range and language. */
   public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
 
   /** Know who you are on Google. */

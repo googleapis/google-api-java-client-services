@@ -72,8 +72,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. Use resource_names instead. One or more project identifiers or project numbers from
-   * which to retrieve log entries. Example: "my-project-1A". If present, these project identifiers
-   * are converted to resource name format and added to the list of resources in resource_names.
+   * which to retrieve log entries. Example: "my-project-1A".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,8 +182,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. Use resource_names instead. One or more project identifiers or project numbers from
-   * which to retrieve log entries. Example: "my-project-1A". If present, these project identifiers
-   * are converted to resource name format and added to the list of resources in resource_names.
+   * which to retrieve log entries. Example: "my-project-1A".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjectIds() {
@@ -193,8 +191,7 @@ public final class ListLogEntriesRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. Use resource_names instead. One or more project identifiers or project numbers from
-   * which to retrieve log entries. Example: "my-project-1A". If present, these project identifiers
-   * are converted to resource name format and added to the list of resources in resource_names.
+   * which to retrieve log entries. Example: "my-project-1A".
    * @param projectIds projectIds or {@code null} for none
    */
   public ListLogEntriesRequest setProjectIds(java.util.List<java.lang.String> projectIds) {

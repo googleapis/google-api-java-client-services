@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-oauth2</artifactId>
-  <version>v1-rev20180628-1.27.0</version>
-  <name>Google OAuth2 API v1-rev20180628-1.27.0</name>
+  <version>v1-rev20190129-1.27.0</version>
+  <name>Google OAuth2 API v1-rev20190129-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

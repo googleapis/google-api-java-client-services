@@ -23,7 +23,7 @@ package com.google.api.services.oauth2;
  */
 public class Oauth2Scopes {
 
-  /** Know the list of people in your circles, your age range, and language. */
+  /** View your basic profile info, including your age range and language. */
   public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
 
   /** Know who you are on Google. */

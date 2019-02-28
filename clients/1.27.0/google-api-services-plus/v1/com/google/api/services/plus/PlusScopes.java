@@ -23,7 +23,7 @@ package com.google.api.services.plus;
  */
 public class PlusScopes {
 
-  /** Know the list of people in your circles, your age range, and language. */
+  /** View your basic profile info, including your age range and language. */
   public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
 
   /** Know who you are on Google. */

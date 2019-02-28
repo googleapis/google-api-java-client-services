@@ -30867,7 +30867,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Performs a reset on the instance. This is a hard reset; the VM does not do a graceful shutdown.
+     * Performs a reset on the instance. This is a hard reset the VM does not do a graceful shutdown.
      * For more information, see Resetting an instance.
      *
      * Create a request for the method "instances.reset".
@@ -30900,7 +30900,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
 
       /**
-       * Performs a reset on the instance. This is a hard reset; the VM does not do a graceful shutdown.
+       * Performs a reset on the instance. This is a hard reset the VM does not do a graceful shutdown.
        * For more information, see Resetting an instance.
        *
        * Create a request for the method "instances.reset".

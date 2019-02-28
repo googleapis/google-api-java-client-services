@@ -81,6 +81,13 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceLastAttempt lastAttempt;
 
   /**
+   * [Output Only] Intended version of this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedInstanceVersion version;
+
+  /**
    * [Output Only] The current action that the managed instance group has scheduled for the
    * instance. Possible values: - NONE The instance is running, and the managed instance group does
    * not have any scheduled actions for this instance.  - CREATING The managed instance group is
@@ -194,6 +201,23 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setLastAttempt(ManagedInstanceLastAttempt lastAttempt) {
     this.lastAttempt = lastAttempt;
+    return this;
+  }
+
+  /**
+   * [Output Only] Intended version of this instance.
+   * @return value or {@code null} for none
+   */
+  public ManagedInstanceVersion getVersion() {
+    return version;
+  }
+
+  /**
+   * [Output Only] Intended version of this instance.
+   * @param version version or {@code null} for none
+   */
+  public ManagedInstance setVersion(ManagedInstanceVersion version) {
+    this.version = version;
     return this;
   }
 

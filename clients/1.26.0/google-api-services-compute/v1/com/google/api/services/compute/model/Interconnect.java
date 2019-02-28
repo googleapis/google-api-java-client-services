@@ -85,7 +85,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String googleIpAddress;
 
   /**
-   * [Output Only] Google reference ID; to be used when raising support tickets with Google or
+   * [Output Only] Google reference ID to be used when raising support tickets with Google or
    * otherwise to debug backend connectivity issues.
    * The value may be {@code null}.
    */
@@ -329,7 +329,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Google reference ID; to be used when raising support tickets with Google or
+   * [Output Only] Google reference ID to be used when raising support tickets with Google or
    * otherwise to debug backend connectivity issues.
    * @return value or {@code null} for none
    */
@@ -338,7 +338,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Google reference ID; to be used when raising support tickets with Google or
+   * [Output Only] Google reference ID to be used when raising support tickets with Google or
    * otherwise to debug backend connectivity issues.
    * @param googleReferenceId googleReferenceId or {@code null} for none
    */

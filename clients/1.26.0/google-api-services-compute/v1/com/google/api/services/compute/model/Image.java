@@ -895,7 +895,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
     private java.lang.String containerType;
 
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging; provided by the client when the
+     * An optional SHA1 checksum of the disk image before unpackaging provided by the client when the
      * disk image is created.
      * The value may be {@code null}.
      */
@@ -932,7 +932,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging; provided by the client when the
+     * An optional SHA1 checksum of the disk image before unpackaging provided by the client when the
      * disk image is created.
      * @return value or {@code null} for none
      */
@@ -941,7 +941,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging; provided by the client when the
+     * An optional SHA1 checksum of the disk image before unpackaging provided by the client when the
      * disk image is created.
      * @param sha1Checksum sha1Checksum or {@code null} for none
      */

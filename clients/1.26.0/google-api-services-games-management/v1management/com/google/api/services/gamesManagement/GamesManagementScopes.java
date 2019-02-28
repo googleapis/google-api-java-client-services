@@ -23,7 +23,7 @@ package com.google.api.services.gamesManagement;
  */
 public class GamesManagementScopes {
 
-  /** Share your Google+ profile information and view and manage your game activity. */
+  /** Create, edit, and delete your Google Play Games activity. */
   public static final String GAMES = "https://www.googleapis.com/auth/games";
 
   /**

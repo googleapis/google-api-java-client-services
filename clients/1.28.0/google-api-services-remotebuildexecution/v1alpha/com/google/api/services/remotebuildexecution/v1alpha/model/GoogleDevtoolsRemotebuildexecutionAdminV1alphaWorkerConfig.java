@@ -65,8 +65,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String minCpuPlatform;
 
   /**
-   * Determines whether the worker is reserved (and therefore won't be preempted). See [Preemptible
-   * VMs](https://cloud.google.com/preemptible-vms/) for more details.
+   * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and
+   * therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/)
+   * for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +154,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Determines whether the worker is reserved (and therefore won't be preempted). See [Preemptible
-   * VMs](https://cloud.google.com/preemptible-vms/) for more details.
+   * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and
+   * therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/)
+   * for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReserved() {
@@ -162,8 +164,9 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Determines whether the worker is reserved (and therefore won't be preempted). See [Preemptible
-   * VMs](https://cloud.google.com/preemptible-vms/) for more details.
+   * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and
+   * therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/)
+   * for more details.
    * @param reserved reserved or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setReserved(java.lang.Boolean reserved) {

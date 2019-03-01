@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudshell</artifactId>
-  <version>v1alpha1-rev20180809-1.27.0</version>
-  <name>Cloud Shell API v1alpha1-rev20180809-1.27.0</name>
+  <version>v1alpha1-rev20190227-1.27.0</version>
+  <name>Cloud Shell API v1alpha1-rev20190227-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

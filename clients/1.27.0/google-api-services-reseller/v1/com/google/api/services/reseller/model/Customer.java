@@ -72,8 +72,9 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Customer contact phone number. This can be continuous numbers, with spaces, etc. But it must be
-   * a real phone number and not, for example, "123". See phone  local format conventions.
+   * Customer contact phone number. Must start with "+" followed by the country code. The rest of
+   * the number can be contiguous numbers or respect the phone local format conventions, but it must
+   * be a real phone number and not, for example, "123". This field is silently ignored if invalid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,8 +194,9 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Customer contact phone number. This can be continuous numbers, with spaces, etc. But it must be
-   * a real phone number and not, for example, "123". See phone  local format conventions.
+   * Customer contact phone number. Must start with "+" followed by the country code. The rest of
+   * the number can be contiguous numbers or respect the phone local format conventions, but it must
+   * be a real phone number and not, for example, "123". This field is silently ignored if invalid.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -202,8 +204,9 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Customer contact phone number. This can be continuous numbers, with spaces, etc. But it must be
-   * a real phone number and not, for example, "123". See phone  local format conventions.
+   * Customer contact phone number. Must start with "+" followed by the country code. The rest of
+   * the number can be contiguous numbers or respect the phone local format conventions, but it must
+   * be a real phone number and not, for example, "123". This field is silently ignored if invalid.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public Customer setPhoneNumber(java.lang.String phoneNumber) {

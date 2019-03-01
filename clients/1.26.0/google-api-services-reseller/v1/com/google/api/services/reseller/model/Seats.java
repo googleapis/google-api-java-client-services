@@ -31,56 +31,46 @@ package com.google.api.services.reseller.model;
 public final class Seats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies the resource as a subscription change plan request. Value: subscriptions#seats
+   * Identifies the resource as a subscription seat setting. Value: subscriptions#seats
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Read-only field containing the current number of licensed seats for FLEXIBLE Google-Apps
-   * subscriptions and secondary subscriptions such as Google-Vault and Drive-storage.
+   * Read-only field containing the current number of users that are assigned a license for the
+   * product defined in skuId. This field's value is equivalent to the numerical count of users
+   * returned by the Enterprise License Manager API method: listForProductAndSku
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer licensedNumberOfSeats;
 
   /**
-   * The maximumNumberOfSeats property is the maximum number of licenses that the customer can
-   * purchase. This property applies to plans other than the annual commitment plan. How a user's
-   * licenses are managed depends on the subscription's payment plan: - annual commitment plan (with
-   * monthly or yearly payments) — For this plan, a reseller is invoiced on the number of user
-   * licenses in the numberOfSeats property. The maximumNumberOfSeats property is a read-only
-   * property in the API's response.   - flexible plan — For this plan, a reseller is invoiced on
-   * the actual number of users which is capped by the maximumNumberOfSeats. This is the maximum
-   * number of user licenses a customer has for user license provisioning. This quantity can be
-   * increased up to the maximum limit defined in the reseller's contract. And the minimum quantity
-   * is the current number of users in the customer account.   - 30-day free trial plan — A
-   * subscription in a 30-day free trial is restricted to maximum 10 seats.
+   * This is a required property and is exclusive to subscriptions with FLEXIBLE or TRIAL plans.
+   * This property sets the maximum number of licensed users allowed on a subscription. This
+   * quantity can be increased up to the maximum limit defined in the reseller's contract. The
+   * minimum quantity is the current number of users in the customer account. Note: G Suite
+   * subscriptions automatically assign a license to every user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maximumNumberOfSeats;
 
   /**
-   * The numberOfSeats property holds the customer's number of user licenses. How a user's licenses
-   * are managed depends on the subscription's plan: - annual commitment plan (with monthly or
-   * yearly pay) — For this plan, a reseller is invoiced on the number of user licenses in the
-   * numberOfSeats property. This is the maximum number of user licenses that a reseller's customer
-   * can create. The reseller can add more licenses, but once set, the numberOfSeats can not be
-   * reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless of
-   * how many of these user licenses are provisioned users.   - flexible plan — For this plan, a
-   * reseller is invoiced on the actual number of users which is capped by the maximumNumberOfSeats.
-   * The numberOfSeats property is not used in the request or response for flexible plan customers.
-   * - 30-day free trial plan — The numberOfSeats property is not used in the request or response
-   * for an account in a 30-day trial.
+   * This is a required property and is exclusive to subscriptions with ANNUAL_MONTHLY_PAY and
+   * ANNUAL_YEARLY_PAY plans. This property sets the maximum number of licenses assignable to users
+   * on a subscription. The reseller can add more licenses, but once set, the numberOfSeats cannot
+   * be reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless
+   * of how many of these user licenses are assigned. Note: G Suite subscriptions automatically
+   * assign a license to every user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numberOfSeats;
 
   /**
-   * Identifies the resource as a subscription change plan request. Value: subscriptions#seats
+   * Identifies the resource as a subscription seat setting. Value: subscriptions#seats
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -88,7 +78,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a subscription change plan request. Value: subscriptions#seats
+   * Identifies the resource as a subscription seat setting. Value: subscriptions#seats
    * @param kind kind or {@code null} for none
    */
   public Seats setKind(java.lang.String kind) {
@@ -97,8 +87,9 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only field containing the current number of licensed seats for FLEXIBLE Google-Apps
-   * subscriptions and secondary subscriptions such as Google-Vault and Drive-storage.
+   * Read-only field containing the current number of users that are assigned a license for the
+   * product defined in skuId. This field's value is equivalent to the numerical count of users
+   * returned by the Enterprise License Manager API method: listForProductAndSku
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLicensedNumberOfSeats() {
@@ -106,8 +97,9 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read-only field containing the current number of licensed seats for FLEXIBLE Google-Apps
-   * subscriptions and secondary subscriptions such as Google-Vault and Drive-storage.
+   * Read-only field containing the current number of users that are assigned a license for the
+   * product defined in skuId. This field's value is equivalent to the numerical count of users
+   * returned by the Enterprise License Manager API method: listForProductAndSku
    * @param licensedNumberOfSeats licensedNumberOfSeats or {@code null} for none
    */
   public Seats setLicensedNumberOfSeats(java.lang.Integer licensedNumberOfSeats) {
@@ -116,17 +108,11 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximumNumberOfSeats property is the maximum number of licenses that the customer can
-   * purchase. This property applies to plans other than the annual commitment plan. How a user's
-   * licenses are managed depends on the subscription's payment plan: - annual commitment plan (with
-   * monthly or yearly payments) — For this plan, a reseller is invoiced on the number of user
-   * licenses in the numberOfSeats property. The maximumNumberOfSeats property is a read-only
-   * property in the API's response.   - flexible plan — For this plan, a reseller is invoiced on
-   * the actual number of users which is capped by the maximumNumberOfSeats. This is the maximum
-   * number of user licenses a customer has for user license provisioning. This quantity can be
-   * increased up to the maximum limit defined in the reseller's contract. And the minimum quantity
-   * is the current number of users in the customer account.   - 30-day free trial plan — A
-   * subscription in a 30-day free trial is restricted to maximum 10 seats.
+   * This is a required property and is exclusive to subscriptions with FLEXIBLE or TRIAL plans.
+   * This property sets the maximum number of licensed users allowed on a subscription. This
+   * quantity can be increased up to the maximum limit defined in the reseller's contract. The
+   * minimum quantity is the current number of users in the customer account. Note: G Suite
+   * subscriptions automatically assign a license to every user.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaximumNumberOfSeats() {
@@ -134,17 +120,11 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The maximumNumberOfSeats property is the maximum number of licenses that the customer can
-   * purchase. This property applies to plans other than the annual commitment plan. How a user's
-   * licenses are managed depends on the subscription's payment plan: - annual commitment plan (with
-   * monthly or yearly payments) — For this plan, a reseller is invoiced on the number of user
-   * licenses in the numberOfSeats property. The maximumNumberOfSeats property is a read-only
-   * property in the API's response.   - flexible plan — For this plan, a reseller is invoiced on
-   * the actual number of users which is capped by the maximumNumberOfSeats. This is the maximum
-   * number of user licenses a customer has for user license provisioning. This quantity can be
-   * increased up to the maximum limit defined in the reseller's contract. And the minimum quantity
-   * is the current number of users in the customer account.   - 30-day free trial plan — A
-   * subscription in a 30-day free trial is restricted to maximum 10 seats.
+   * This is a required property and is exclusive to subscriptions with FLEXIBLE or TRIAL plans.
+   * This property sets the maximum number of licensed users allowed on a subscription. This
+   * quantity can be increased up to the maximum limit defined in the reseller's contract. The
+   * minimum quantity is the current number of users in the customer account. Note: G Suite
+   * subscriptions automatically assign a license to every user.
    * @param maximumNumberOfSeats maximumNumberOfSeats or {@code null} for none
    */
   public Seats setMaximumNumberOfSeats(java.lang.Integer maximumNumberOfSeats) {
@@ -153,17 +133,12 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The numberOfSeats property holds the customer's number of user licenses. How a user's licenses
-   * are managed depends on the subscription's plan: - annual commitment plan (with monthly or
-   * yearly pay) — For this plan, a reseller is invoiced on the number of user licenses in the
-   * numberOfSeats property. This is the maximum number of user licenses that a reseller's customer
-   * can create. The reseller can add more licenses, but once set, the numberOfSeats can not be
-   * reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless of
-   * how many of these user licenses are provisioned users.   - flexible plan — For this plan, a
-   * reseller is invoiced on the actual number of users which is capped by the maximumNumberOfSeats.
-   * The numberOfSeats property is not used in the request or response for flexible plan customers.
-   * - 30-day free trial plan — The numberOfSeats property is not used in the request or response
-   * for an account in a 30-day trial.
+   * This is a required property and is exclusive to subscriptions with ANNUAL_MONTHLY_PAY and
+   * ANNUAL_YEARLY_PAY plans. This property sets the maximum number of licenses assignable to users
+   * on a subscription. The reseller can add more licenses, but once set, the numberOfSeats cannot
+   * be reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless
+   * of how many of these user licenses are assigned. Note: G Suite subscriptions automatically
+   * assign a license to every user.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumberOfSeats() {
@@ -171,17 +146,12 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The numberOfSeats property holds the customer's number of user licenses. How a user's licenses
-   * are managed depends on the subscription's plan: - annual commitment plan (with monthly or
-   * yearly pay) — For this plan, a reseller is invoiced on the number of user licenses in the
-   * numberOfSeats property. This is the maximum number of user licenses that a reseller's customer
-   * can create. The reseller can add more licenses, but once set, the numberOfSeats can not be
-   * reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless of
-   * how many of these user licenses are provisioned users.   - flexible plan — For this plan, a
-   * reseller is invoiced on the actual number of users which is capped by the maximumNumberOfSeats.
-   * The numberOfSeats property is not used in the request or response for flexible plan customers.
-   * - 30-day free trial plan — The numberOfSeats property is not used in the request or response
-   * for an account in a 30-day trial.
+   * This is a required property and is exclusive to subscriptions with ANNUAL_MONTHLY_PAY and
+   * ANNUAL_YEARLY_PAY plans. This property sets the maximum number of licenses assignable to users
+   * on a subscription. The reseller can add more licenses, but once set, the numberOfSeats cannot
+   * be reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless
+   * of how many of these user licenses are assigned. Note: G Suite subscriptions automatically
+   * assign a license to every user.
    * @param numberOfSeats numberOfSeats or {@code null} for none
    */
   public Seats setNumberOfSeats(java.lang.Integer numberOfSeats) {

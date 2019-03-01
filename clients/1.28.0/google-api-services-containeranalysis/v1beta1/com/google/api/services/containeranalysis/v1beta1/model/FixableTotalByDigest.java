@@ -17,7 +17,7 @@
 package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
- * Per resource and severity counts of fixable and total vulnerabilites.
+ * Per resource and severity counts of fixable and total vulnerabilities.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

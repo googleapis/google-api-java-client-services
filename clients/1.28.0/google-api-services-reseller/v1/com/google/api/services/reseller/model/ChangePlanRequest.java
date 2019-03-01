@@ -55,8 +55,9 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
    * more information about the Google payment plans, see API concepts.
    *
    * Possible values are:   - ANNUAL_MONTHLY_PAY - The annual commitment plan with monthly payments
-   * - ANNUAL_YEARLY_PAY - The annual commitment plan with yearly payments   - FLEXIBLE - The
-   * flexible plan   - TRIAL - The 30-day free trial plan
+   * Caution: ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses.   - ANNUAL_YEARLY_PAY -
+   * The annual commitment plan with yearly payments   - FLEXIBLE - The flexible plan   - TRIAL -
+   * The 30-day free trial plan
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +130,9 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
    * more information about the Google payment plans, see API concepts.
    *
    * Possible values are:   - ANNUAL_MONTHLY_PAY - The annual commitment plan with monthly payments
-   * - ANNUAL_YEARLY_PAY - The annual commitment plan with yearly payments   - FLEXIBLE - The
-   * flexible plan   - TRIAL - The 30-day free trial plan
+   * Caution: ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses.   - ANNUAL_YEARLY_PAY -
+   * The annual commitment plan with yearly payments   - FLEXIBLE - The flexible plan   - TRIAL -
+   * The 30-day free trial plan
    * @return value or {@code null} for none
    */
   public java.lang.String getPlanName() {
@@ -142,8 +144,9 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
    * more information about the Google payment plans, see API concepts.
    *
    * Possible values are:   - ANNUAL_MONTHLY_PAY - The annual commitment plan with monthly payments
-   * - ANNUAL_YEARLY_PAY - The annual commitment plan with yearly payments   - FLEXIBLE - The
-   * flexible plan   - TRIAL - The 30-day free trial plan
+   * Caution: ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses.   - ANNUAL_YEARLY_PAY -
+   * The annual commitment plan with yearly payments   - FLEXIBLE - The flexible plan   - TRIAL -
+   * The 30-day free trial plan
    * @param planName planName or {@code null} for none
    */
   public ChangePlanRequest setPlanName(java.lang.String planName) {

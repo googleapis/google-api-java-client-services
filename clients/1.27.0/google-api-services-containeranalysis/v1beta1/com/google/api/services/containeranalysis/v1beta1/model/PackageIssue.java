@@ -46,7 +46,8 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   private VulnerabilityLocation fixedLocation;
 
   /**
-   * The severity (e.g., distro assigned severity) for this vulnerability.
+   * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned
+   * severity) for this vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The severity (e.g., distro assigned severity) for this vulnerability.
+   * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned
+   * severity) for this vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverityName() {
@@ -95,7 +97,8 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The severity (e.g., distro assigned severity) for this vulnerability.
+   * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned
+   * severity) for this vulnerability.
    * @param severityName severityName or {@code null} for none
    */
   public PackageIssue setSeverityName(java.lang.String severityName) {

@@ -44,7 +44,8 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
    * role on the service account that is specified in the `name` field of the request.
    *
    * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`
+   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+   * required; replacing it with a project ID is invalid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +83,8 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
    * role on the service account that is specified in the `name` field of the request.
    *
    * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`
+   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+   * required; replacing it with a project ID is invalid.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDelegates() {
@@ -96,7 +98,8 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
    * role on the service account that is specified in the `name` field of the request.
    *
    * The delegates must have the following format:
-   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`
+   * `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-` wildcard character is
+   * required; replacing it with a project ID is invalid.
    * @param delegates delegates or {@code null} for none
    */
   public GenerateIdTokenRequest setDelegates(java.util.List<java.lang.String> delegates) {

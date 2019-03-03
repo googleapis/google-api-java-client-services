@@ -20,7 +20,7 @@ package com.google.api.services.bigquerydatatransfer.v1;
  * Service definition for BigQueryDataTransfer (v1).
  *
  * <p>
- * Transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.
+ * Schedule queries or transfer external data from SaaS applications to Google BigQuery on a regular basis.
  * </p>
  *
  * <p>

@@ -65,6 +65,17 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   private java.lang.String hyperparameterMetricTag;
 
   /**
+   * Optional. How many failed trials that need to be seen before failing the hyperparameter tuning
+   * job. User can specify this field to override the default failing criteria for CloudML Engine
+   * hyperparameter tuning jobs.
+   *
+   * Defaults to zero, which means to let the service decide when a hyperparameter job should fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxFailedTrials;
+
+  /**
    * Optional. The number of training trials to run concurrently. You can reduce the time it takes
    * to perform hyperparameter tuning by adding trials in parallel. However, each trail only
    * benefits from the information gained in completed trials. That means that a trial does not get
@@ -181,6 +192,31 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
    */
   public GoogleCloudMlV1HyperparameterSpec setHyperparameterMetricTag(java.lang.String hyperparameterMetricTag) {
     this.hyperparameterMetricTag = hyperparameterMetricTag;
+    return this;
+  }
+
+  /**
+   * Optional. How many failed trials that need to be seen before failing the hyperparameter tuning
+   * job. User can specify this field to override the default failing criteria for CloudML Engine
+   * hyperparameter tuning jobs.
+   *
+   * Defaults to zero, which means to let the service decide when a hyperparameter job should fail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxFailedTrials() {
+    return maxFailedTrials;
+  }
+
+  /**
+   * Optional. How many failed trials that need to be seen before failing the hyperparameter tuning
+   * job. User can specify this field to override the default failing criteria for CloudML Engine
+   * hyperparameter tuning jobs.
+   *
+   * Defaults to zero, which means to let the service decide when a hyperparameter job should fail.
+   * @param maxFailedTrials maxFailedTrials or {@code null} for none
+   */
+  public GoogleCloudMlV1HyperparameterSpec setMaxFailedTrials(java.lang.Integer maxFailedTrials) {
+    this.maxFailedTrials = maxFailedTrials;
     return this;
   }
 

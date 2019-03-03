@@ -31,13 +31,6 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The type and number of accelerators to be attached to each machine running the job.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudMlV1AcceleratorConfig accelerator;
-
-  /**
    * Optional. Number of records per batch, defaults to 64. The service will buffer batch_size
    * number of records in memory before invoking one Tensorflow prediction call internally. So take
    * the record size and memory available into consideration when setting this parameter.
@@ -138,23 +131,6 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String versionName;
-
-  /**
-   * Optional. The type and number of accelerators to be attached to each machine running the job.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudMlV1AcceleratorConfig getAccelerator() {
-    return accelerator;
-  }
-
-  /**
-   * Optional. The type and number of accelerators to be attached to each machine running the job.
-   * @param accelerator accelerator or {@code null} for none
-   */
-  public GoogleCloudMlV1PredictionInput setAccelerator(GoogleCloudMlV1AcceleratorConfig accelerator) {
-    this.accelerator = accelerator;
-    return this;
-  }
 
   /**
    * Optional. Number of records per batch, defaults to 64. The service will buffer batch_size

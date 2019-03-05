@@ -38,8 +38,7 @@ public final class ListPhotosResponse extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
-   * List of photos. The maximum number of items returned is based on the pageSize field in the
-   * request.
+   * List of photos. The pageSize field in the request determines the number of items returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +62,7 @@ public final class ListPhotosResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of photos. The maximum number of items returned is based on the pageSize field in the
-   * request.
+   * List of photos. The pageSize field in the request determines the number of items returned.
    * @return value or {@code null} for none
    */
   public java.util.List<Photo> getPhotos() {
@@ -72,8 +70,7 @@ public final class ListPhotosResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * List of photos. The maximum number of items returned is based on the pageSize field in the
-   * request.
+   * List of photos. The pageSize field in the request determines the number of items returned.
    * @param photos photos or {@code null} for none
    */
   public ListPhotosResponse setPhotos(java.util.List<Photo> photos) {

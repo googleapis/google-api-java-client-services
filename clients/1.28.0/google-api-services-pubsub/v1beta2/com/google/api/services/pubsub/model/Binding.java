@@ -57,8 +57,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * * `group:{emailid}`: An email address that represents a Google group.    For example,
    * `admins@example.com`.
    *
-   * * `domain:{domain}`: A Google Apps domain name that represents all the    users of that domain.
-   * For example, `google.com` or `example.com`.
+   * * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that
+   * domain. For example, `google.com` or `example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +112,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * * `group:{emailid}`: An email address that represents a Google group.    For example,
    * `admins@example.com`.
    *
-   * * `domain:{domain}`: A Google Apps domain name that represents all the    users of that domain.
-   * For example, `google.com` or `example.com`.
+   * * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that
+   * domain. For example, `google.com` or `example.com`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMembers() {
@@ -139,8 +139,8 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * * `group:{emailid}`: An email address that represents a Google group.    For example,
    * `admins@example.com`.
    *
-   * * `domain:{domain}`: A Google Apps domain name that represents all the    users of that domain.
-   * For example, `google.com` or `example.com`.
+   * * `domain:{domain}`: The G Suite domain (primary) that represents all the    users of that
+   * domain. For example, `google.com` or `example.com`.
    * @param members members or {@code null} for none
    */
   public Binding setMembers(java.util.List<java.lang.String> members) {

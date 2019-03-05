@@ -30,6 +30,14 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class ClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not
+   * autoscale if this field is unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingConfig autoscalingConfig;
+
+  /**
    * Optional. A Cloud Storage staging bucket used for sharing generated SSH keys and config. If you
    * do not specify a staging bucket, Cloud Dataproc will determine an appropriate Cloud Storage
    * location (US, ASIA, or EU) for your cluster's staging bucket according to the Google Compute
@@ -100,6 +108,25 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private InstanceGroupConfig workerConfig;
+
+  /**
+   * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not
+   * autoscale if this field is unset.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingConfig getAutoscalingConfig() {
+    return autoscalingConfig;
+  }
+
+  /**
+   * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not
+   * autoscale if this field is unset.
+   * @param autoscalingConfig autoscalingConfig or {@code null} for none
+   */
+  public ClusterConfig setAutoscalingConfig(AutoscalingConfig autoscalingConfig) {
+    this.autoscalingConfig = autoscalingConfig;
+    return this;
+  }
 
   /**
    * Optional. A Cloud Storage staging bucket used for sharing generated SSH keys and config. If you

@@ -39,8 +39,7 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Full URL, partial URI, or short name of the accelerator type resource to expose to this
-   * instance. See Compute Engine AcceleratorTypes(
-   * /compute/docs/reference/beta/acceleratorTypes)Examples *
+   * instance. See Compute Engine AcceleratorTypesExamples *
    * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes
    * /nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 *
    * nvidia-tesla-k80Auto Zone Exception: If you are using the Cloud Dataproc Auto Zone Placement
@@ -70,8 +69,7 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Full URL, partial URI, or short name of the accelerator type resource to expose to this
-   * instance. See Compute Engine AcceleratorTypes(
-   * /compute/docs/reference/beta/acceleratorTypes)Examples *
+   * instance. See Compute Engine AcceleratorTypesExamples *
    * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes
    * /nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 *
    * nvidia-tesla-k80Auto Zone Exception: If you are using the Cloud Dataproc Auto Zone Placement
@@ -85,8 +83,7 @@ public final class AcceleratorConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Full URL, partial URI, or short name of the accelerator type resource to expose to this
-   * instance. See Compute Engine AcceleratorTypes(
-   * /compute/docs/reference/beta/acceleratorTypes)Examples *
+   * instance. See Compute Engine AcceleratorTypesExamples *
    * https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes
    * /nvidia-tesla-k80 * projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80 *
    * nvidia-tesla-k80Auto Zone Exception: If you are using the Cloud Dataproc Auto Zone Placement

@@ -39,13 +39,6 @@ public final class GoogleAppsScriptTypeProcess extends com.google.api.client.jso
   private String duration;
 
   /**
-   * User-facing name for the user executing the script.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String executingUser;
-
-  /**
    * Name of the function the started the execution.
    * The value may be {@code null}.
    */
@@ -101,23 +94,6 @@ public final class GoogleAppsScriptTypeProcess extends com.google.api.client.jso
    */
   public GoogleAppsScriptTypeProcess setDuration(String duration) {
     this.duration = duration;
-    return this;
-  }
-
-  /**
-   * User-facing name for the user executing the script.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getExecutingUser() {
-    return executingUser;
-  }
-
-  /**
-   * User-facing name for the user executing the script.
-   * @param executingUser executingUser or {@code null} for none
-   */
-  public GoogleAppsScriptTypeProcess setExecutingUser(java.lang.String executingUser) {
-    this.executingUser = executingUser;
     return this;
   }
 

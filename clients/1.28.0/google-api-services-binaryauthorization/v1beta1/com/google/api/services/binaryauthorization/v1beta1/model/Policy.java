@@ -62,7 +62,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Default admission rule for a cluster without a per-cluster admission rule.
+   * Required. Default admission rule for a cluster without a per-cluster, per- kubernetes-service-
+   * account, or per-istio-service-identity admission rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +136,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Default admission rule for a cluster without a per-cluster admission rule.
+   * Required. Default admission rule for a cluster without a per-cluster, per- kubernetes-service-
+   * account, or per-istio-service-identity admission rule.
    * @return value or {@code null} for none
    */
   public AdmissionRule getDefaultAdmissionRule() {
@@ -143,7 +145,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Default admission rule for a cluster without a per-cluster admission rule.
+   * Required. Default admission rule for a cluster without a per-cluster, per- kubernetes-service-
+   * account, or per-istio-service-identity admission rule.
    * @param defaultAdmissionRule defaultAdmissionRule or {@code null} for none
    */
   public Policy setDefaultAdmissionRule(AdmissionRule defaultAdmissionRule) {

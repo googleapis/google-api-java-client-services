@@ -58,9 +58,9 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   /**
    * Latitude and longitude pair of the pose, as explained here:
    * https://cloud.google.com/datastore/docs/reference/rest/Shared.Types/LatLng When creating a
-   * Photo, if the latitude and longitude pair are not provided here, the geolocation from the exif
-   * header will be used. If the latitude and longitude pair is not provided and cannot be found in
-   * the exif header, the create photo process will fail.
+   * Photo, if the latitude and longitude pair are not provided, the geolocation from the exif
+   * header is used. A latitude and longitude pair not provided in the photo or exif header causes
+   * the photo process to fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,9 +152,9 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   /**
    * Latitude and longitude pair of the pose, as explained here:
    * https://cloud.google.com/datastore/docs/reference/rest/Shared.Types/LatLng When creating a
-   * Photo, if the latitude and longitude pair are not provided here, the geolocation from the exif
-   * header will be used. If the latitude and longitude pair is not provided and cannot be found in
-   * the exif header, the create photo process will fail.
+   * Photo, if the latitude and longitude pair are not provided, the geolocation from the exif
+   * header is used. A latitude and longitude pair not provided in the photo or exif header causes
+   * the photo process to fail.
    * @return value or {@code null} for none
    */
   public LatLng getLatLngPair() {
@@ -164,9 +164,9 @@ public final class Pose extends com.google.api.client.json.GenericJson {
   /**
    * Latitude and longitude pair of the pose, as explained here:
    * https://cloud.google.com/datastore/docs/reference/rest/Shared.Types/LatLng When creating a
-   * Photo, if the latitude and longitude pair are not provided here, the geolocation from the exif
-   * header will be used. If the latitude and longitude pair is not provided and cannot be found in
-   * the exif header, the create photo process will fail.
+   * Photo, if the latitude and longitude pair are not provided, the geolocation from the exif
+   * header is used. A latitude and longitude pair not provided in the photo or exif header causes
+   * the photo process to fail.
    * @param latLngPair latLngPair or {@code null} for none
    */
   public Pose setLatLngPair(LatLng latLngPair) {

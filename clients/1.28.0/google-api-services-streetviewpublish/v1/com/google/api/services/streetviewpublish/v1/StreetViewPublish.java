@@ -149,8 +149,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      *
      * Currently, the only way to set heading, pitch, and roll in CreatePhoto is through the [Photo
      * Sphere XMP metadata](https://developers.google.com/streetview/spherical-metadata) in the photo
-     * bytes. The `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and `pose.level` fields in
-     * Pose are ignored for CreatePhoto.
+     * bytes. CreatePhoto ignores the  `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and
+     * `pose.level` fields in Pose.
      *
      * This method returns the following error codes:
      *
@@ -182,8 +182,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        *
        * Currently, the only way to set heading, pitch, and roll in CreatePhoto is through the [Photo
        * Sphere XMP metadata](https://developers.google.com/streetview/spherical-metadata) in the photo
-       * bytes. The `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and `pose.level` fields
-       * in Pose are ignored for CreatePhoto.
+       * bytes. CreatePhoto ignores the  `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and
+       * `pose.level` fields in Pose.
        *
        * This method returns the following error codes:
        *
@@ -528,14 +528,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
-       * unspecified, the user's language preference for Google services will be used.
+       * unspecified, the user's language preference for Google services is used.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
      http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is unspecified,
-     the user's language preference for Google services will be used.
+     the user's language preference for Google services is used.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -544,7 +544,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
-       * unspecified, the user's language preference for Google services will be used.
+       * unspecified, the user's language preference for Google services is used.
        */
       public Get setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -577,11 +577,11 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Creates an upload session to start uploading photo bytes. The upload URL of the returned
-     * UploadRef is used to upload the bytes for the Photo.
+     * Creates an upload session to start uploading photo bytes.  The method uses the upload URL of the
+     * returned UploadRef to upload the bytes for the Photo.
      *
      * In addition to the photo requirements shown in
-     * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must also meet the
+     * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
      * following requirements:
      *
      * * Photo Sphere XMP metadata must be included in the photo medadata. See
@@ -590,7 +590,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, and the photo must be a full
      * 360 horizontally.
      *
-     * After the upload is complete, the UploadRef is used with CreatePhoto to create the Photo object
+     * After the upload completes, the method uses UploadRef with CreatePhoto to create the Photo object
      * entry.
      *
      * Create a request for the method "photo.startUpload".
@@ -613,12 +613,12 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photo:startUpload";
 
       /**
-       * Creates an upload session to start uploading photo bytes. The upload URL of the returned
-       * UploadRef is used to upload the bytes for the Photo.
+       * Creates an upload session to start uploading photo bytes.  The method uses the upload URL of
+       * the returned UploadRef to upload the bytes for the Photo.
        *
        * In addition to the photo requirements shown in
-       * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must also meet
-       * the following requirements:
+       * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
+       * following requirements:
        *
        * * Photo Sphere XMP metadata must be included in the photo medadata. See
        * https://developers.google.com/streetview/spherical-metadata for the required fields. * The
@@ -626,8 +626,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, and the photo must be a
        * full 360 horizontally.
        *
-       * After the upload is complete, the UploadRef is used with CreatePhoto to create the Photo object
-       * entry.
+       * After the upload completes, the method uses UploadRef with CreatePhoto to create the Photo
+       * object entry.
        *
        * Create a request for the method "photo.startUpload".
        *
@@ -711,9 +711,6 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * Only the fields specified in the updateMask field are used. If `updateMask` is not present, the
      * update applies to all fields.
      *
-     * Note: To update Pose.altitude, Pose.latLngPair has to be filled as well. Otherwise, the request
-     * will fail.
-     *
      * This method returns the following error codes:
      *
      * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo. *
@@ -746,9 +743,6 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        *
        * Only the fields specified in the updateMask field are used. If `updateMask` is not present, the
        * update applies to all fields.
-       *
-       * Note: To update Pose.altitude, Pose.latLngPair has to be filled as well. Otherwise, the request
-       * will fail.
        *
        * This method returns the following error codes:
        *
@@ -847,24 +841,24 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-       * metadata will be entirely replaced with the new Photo metadata in this request. The update
-       * fails if invalid fields are specified. Multiple fields can be specified in a comma-
-       * delimited list.
+       * metadata is entirely replaced with the new Photo metadata in this request. The update fails
+       * if invalid fields are specified. Multiple fields can be specified in a comma-delimited
+       * list.
        *
        * The following fields are valid:
        *
        * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
        * `pose.altitude` * `connections` * `places`
        *
-       * Note: Repeated fields in updateMask mean the entire set of repeated values will be replaced
-       * with the new contents. For example, if updateMask contains `connections` and
-       * `UpdatePhotoRequest.photo.connections` is empty, all connections will be removed.
+       * Note: When updateMask contains repeated fields, the entire set of repeated values get
+       * replaced with the new contents. For example, if updateMask contains `connections` and
+       * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Mask that identifies fields on the photo metadata to update. If not present, the old Photo metadata
-     will be entirely replaced with the new Photo metadata in this request. The update fails if invalid
+     is entirely replaced with the new Photo metadata in this request. The update fails if invalid
      fields are specified. Multiple fields can be specified in a comma-delimited list.
 
      The following fields are valid:
@@ -872,9 +866,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` * `pose.altitude`
      * `connections` * `places`
 
-     Note: Repeated fields in updateMask mean the entire set of repeated values will be replaced with
+     Note: When updateMask contains repeated fields, the entire set of repeated values get replaced with
      the new contents. For example, if updateMask contains `connections` and
-     `UpdatePhotoRequest.photo.connections` is empty, all connections will be removed.
+     `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -882,18 +876,18 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-       * metadata will be entirely replaced with the new Photo metadata in this request. The update
-       * fails if invalid fields are specified. Multiple fields can be specified in a comma-
-       * delimited list.
+       * metadata is entirely replaced with the new Photo metadata in this request. The update fails
+       * if invalid fields are specified. Multiple fields can be specified in a comma-delimited
+       * list.
        *
        * The following fields are valid:
        *
        * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
        * `pose.altitude` * `connections` * `places`
        *
-       * Note: Repeated fields in updateMask mean the entire set of repeated values will be replaced
-       * with the new contents. For example, if updateMask contains `connections` and
-       * `UpdatePhotoRequest.photo.connections` is empty, all connections will be removed.
+       * Note: When updateMask contains repeated fields, the entire set of repeated values get
+       * replaced with the new contents. For example, if updateMask contains `connections` and
+       * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
        */
       public Update setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -931,9 +925,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
     /**
      * Deletes a list of Photos and their metadata.
      *
-     * Note that if BatchDeletePhotos fails, either critical fields are missing or there was an
-     * authentication error. Even if BatchDeletePhotos succeeds, there may have been failures for single
-     * photos in the batch. These failures will be specified in each PhotoResponse.status in
+     * Note that if BatchDeletePhotos fails, either critical fields are missing or there is an
+     * authentication error. Even if BatchDeletePhotos succeeds, individual photos in the batch may have
+     * failures. These failures are specified in each PhotoResponse.status in
      * BatchDeletePhotosResponse.results. See DeletePhoto for specific failures that can occur per
      * photo.
      *
@@ -959,9 +953,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * Deletes a list of Photos and their metadata.
        *
-       * Note that if BatchDeletePhotos fails, either critical fields are missing or there was an
-       * authentication error. Even if BatchDeletePhotos succeeds, there may have been failures for
-       * single photos in the batch. These failures will be specified in each PhotoResponse.status in
+       * Note that if BatchDeletePhotos fails, either critical fields are missing or there is an
+       * authentication error. Even if BatchDeletePhotos succeeds, individual photos in the batch may
+       * have failures. These failures are specified in each PhotoResponse.status in
        * BatchDeletePhotosResponse.results. See DeletePhoto for specific failures that can occur per
        * photo.
        *
@@ -1043,9 +1037,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
     /**
      * Gets the metadata of the specified Photo batch.
      *
-     * Note that if BatchGetPhotos fails, either critical fields are missing or there was an
-     * authentication error. Even if BatchGetPhotos succeeds, there may have been failures for single
-     * photos in the batch. These failures will be specified in each PhotoResponse.status in
+     * Note that if BatchGetPhotos fails, either critical fields are missing or there is an
+     * authentication error. Even if BatchGetPhotos succeeds, individual photos in the batch may have
+     * failures. These failures are specified in each PhotoResponse.status in
      * BatchGetPhotosResponse.results. See GetPhoto for specific failures that can occur per photo.
      *
      * Create a request for the method "photos.batchGet".
@@ -1068,9 +1062,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * Gets the metadata of the specified Photo batch.
        *
-       * Note that if BatchGetPhotos fails, either critical fields are missing or there was an
-       * authentication error. Even if BatchGetPhotos succeeds, there may have been failures for single
-       * photos in the batch. These failures will be specified in each PhotoResponse.status in
+       * Note that if BatchGetPhotos fails, either critical fields are missing or there is an
+       * authentication error. Even if BatchGetPhotos succeeds, individual photos in the batch may have
+       * failures. These failures are specified in each PhotoResponse.status in
        * BatchGetPhotosResponse.results. See GetPhoto for specific failures that can occur per photo.
        *
        * Create a request for the method "photos.batchGet".
@@ -1155,14 +1149,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
-       * unspecified, the user's language preference for Google services will be used.
+       * unspecified, the user's language preference for Google services is used.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
      http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is unspecified,
-     the user's language preference for Google services will be used.
+     the user's language preference for Google services is used.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -1171,7 +1165,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
-       * unspecified, the user's language preference for Google services will be used.
+       * unspecified, the user's language preference for Google services is used.
        */
       public BatchGet setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -1230,9 +1224,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
      * Updates the metadata of Photos, such as pose, place association, connections, etc. Changing the
      * pixels of photos is not supported.
      *
-     * Note that if BatchUpdatePhotos fails, either critical fields are missing or there was an
-     * authentication error. Even if BatchUpdatePhotos succeeds, there may have been failures for single
-     * photos in the batch. These failures will be specified in each PhotoResponse.status in
+     * Note that if BatchUpdatePhotos fails, either critical fields are missing or there is an
+     * authentication error. Even if BatchUpdatePhotos succeeds, individual photos in the batch may have
+     * failures. These failures are specified in each PhotoResponse.status in
      * BatchUpdatePhotosResponse.results. See UpdatePhoto for specific failures that can occur per
      * photo.
      *
@@ -1267,9 +1261,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        * Updates the metadata of Photos, such as pose, place association, connections, etc. Changing the
        * pixels of photos is not supported.
        *
-       * Note that if BatchUpdatePhotos fails, either critical fields are missing or there was an
-       * authentication error. Even if BatchUpdatePhotos succeeds, there may have been failures for
-       * single photos in the batch. These failures will be specified in each PhotoResponse.status in
+       * Note that if BatchUpdatePhotos fails, either critical fields are missing or there is an
+       * authentication error. Even if BatchUpdatePhotos succeeds, individual photos in the batch may
+       * have failures. These failures are specified in each PhotoResponse.status in
        * BatchUpdatePhotosResponse.results. See UpdatePhoto for specific failures that can occur per
        * photo.
        *
@@ -1491,14 +1485,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
-       * unspecified, the user's language preference for Google services will be used.
+       * unspecified, the user's language preference for Google services is used.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
       /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
      http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is unspecified,
-     the user's language preference for Google services will be used.
+     the user's language preference for Google services is used.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
@@ -1507,7 +1501,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       /**
        * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. If language_code is
-       * unspecified, the user's language preference for Google services will be used.
+       * unspecified, the user's language preference for Google services is used.
        */
       public List setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -1516,7 +1510,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of photos to return. `pageSize` must be non-negative. If `pageSize` is
-       * zero or is not provided, the default page size of 100 will be used. The number of photos
+       * zero or is not provided, the default page size of 100 is used. The number of photos
        * returned in the response may be less than `pageSize` if the number of photos that belong to
        * the user is less than `pageSize`.
        */
@@ -1524,7 +1518,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private java.lang.Integer pageSize;
 
       /** The maximum number of photos to return. `pageSize` must be non-negative. If `pageSize` is zero or
-     is not provided, the default page size of 100 will be used. The number of photos returned in the
+     is not provided, the default page size of 100 is used. The number of photos returned in the
      response may be less than `pageSize` if the number of photos that belong to the user is less than
      `pageSize`.
        */
@@ -1534,7 +1528,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of photos to return. `pageSize` must be non-negative. If `pageSize` is
-       * zero or is not provided, the default page size of 100 will be used. The number of photos
+       * zero or is not provided, the default page size of 100 is used. The number of photos
        * returned in the response may be less than `pageSize` if the number of photos that belong to
        * the user is less than `pageSize`.
        */

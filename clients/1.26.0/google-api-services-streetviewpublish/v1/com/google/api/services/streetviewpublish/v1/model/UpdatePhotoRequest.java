@@ -39,18 +39,17 @@ public final class UpdatePhotoRequest extends com.google.api.client.json.Generic
 
   /**
    * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-   * metadata will be entirely replaced with the new Photo metadata in this request. The update
-   * fails if invalid fields are specified. Multiple fields can be specified in a comma-delimited
-   * list.
+   * metadata is entirely replaced with the new Photo metadata in this request. The update fails if
+   * invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
    *
    * The following fields are valid:
    *
    * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
    * `pose.altitude` * `connections` * `places`
    *
-   * Note: Repeated fields in updateMask mean the entire set of repeated values will be replaced
+   * Note: When updateMask contains repeated fields, the entire set of repeated values get replaced
    * with the new contents. For example, if updateMask contains `connections` and
-   * `UpdatePhotoRequest.photo.connections` is empty, all connections will be removed.
+   * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,18 +74,17 @@ public final class UpdatePhotoRequest extends com.google.api.client.json.Generic
 
   /**
    * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-   * metadata will be entirely replaced with the new Photo metadata in this request. The update
-   * fails if invalid fields are specified. Multiple fields can be specified in a comma-delimited
-   * list.
+   * metadata is entirely replaced with the new Photo metadata in this request. The update fails if
+   * invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
    *
    * The following fields are valid:
    *
    * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
    * `pose.altitude` * `connections` * `places`
    *
-   * Note: Repeated fields in updateMask mean the entire set of repeated values will be replaced
+   * Note: When updateMask contains repeated fields, the entire set of repeated values get replaced
    * with the new contents. For example, if updateMask contains `connections` and
-   * `UpdatePhotoRequest.photo.connections` is empty, all connections will be removed.
+   * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -95,18 +93,17 @@ public final class UpdatePhotoRequest extends com.google.api.client.json.Generic
 
   /**
    * Mask that identifies fields on the photo metadata to update. If not present, the old Photo
-   * metadata will be entirely replaced with the new Photo metadata in this request. The update
-   * fails if invalid fields are specified. Multiple fields can be specified in a comma-delimited
-   * list.
+   * metadata is entirely replaced with the new Photo metadata in this request. The update fails if
+   * invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
    *
    * The following fields are valid:
    *
    * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
    * `pose.altitude` * `connections` * `places`
    *
-   * Note: Repeated fields in updateMask mean the entire set of repeated values will be replaced
+   * Note: When updateMask contains repeated fields, the entire set of repeated values get replaced
    * with the new contents. For example, if updateMask contains `connections` and
-   * `UpdatePhotoRequest.photo.connections` is empty, all connections will be removed.
+   * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
    * @param updateMask updateMask or {@code null} for none
    */
   public UpdatePhotoRequest setUpdateMask(String updateMask) {

@@ -52,7 +52,7 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   private java.lang.String fetchStatus;
 
   /**
-   * The id of the data quality issue.
+   * The ID of the data quality issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The id of the data quality issue.
+   * The ID of the data quality issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -153,7 +153,7 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The id of the data quality issue.
+   * The ID of the data quality issue.
    * @param id id or {@code null} for none
    */
   public ProductStatusDataQualityIssue setId(java.lang.String id) {

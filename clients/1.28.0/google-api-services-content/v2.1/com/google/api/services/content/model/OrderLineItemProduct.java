@@ -137,7 +137,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
 
   /**
    * Variant attributes for the item. These are dimensions of the product, such as color, gender,
-   * material, pattern, and size. You can find a comprehensive list of variant attributes
+   * material, pattern, and size. You can find a comprehensive list of variant attributes here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -400,7 +400,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
 
   /**
    * Variant attributes for the item. These are dimensions of the product, such as color, gender,
-   * material, pattern, and size. You can find a comprehensive list of variant attributes
+   * material, pattern, and size. You can find a comprehensive list of variant attributes here.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderLineItemProductVariantAttribute> getVariantAttributes() {
@@ -409,7 +409,7 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
 
   /**
    * Variant attributes for the item. These are dimensions of the product, such as color, gender,
-   * material, pattern, and size. You can find a comprehensive list of variant attributes
+   * material, pattern, and size. You can find a comprehensive list of variant attributes here.
    * @param variantAttributes variantAttributes or {@code null} for none
    */
   public OrderLineItemProduct setVariantAttributes(java.util.List<OrderLineItemProductVariantAttribute> variantAttributes) {

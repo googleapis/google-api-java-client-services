@@ -31,13 +31,6 @@ package com.google.api.services.content.model;
 public final class TestOrder extends com.google.api.client.json.GenericJson {
 
   /**
-   * The details of the customer who placed the order.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TestOrderCustomer customer;
-
-  /**
    * Whether the orderinvoices service should support this order.
    * The value may be {@code null}.
    */
@@ -80,6 +73,13 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   private java.lang.String predefinedDeliveryAddress;
 
   /**
+   * Email address of the customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predefinedEmail;
+
+  /**
    * Promotions associated with the order.
    * The value may be {@code null}.
    */
@@ -107,23 +107,6 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String shippingOption;
-
-  /**
-   * The details of the customer who placed the order.
-   * @return value or {@code null} for none
-   */
-  public TestOrderCustomer getCustomer() {
-    return customer;
-  }
-
-  /**
-   * The details of the customer who placed the order.
-   * @param customer customer or {@code null} for none
-   */
-  public TestOrder setCustomer(TestOrderCustomer customer) {
-    this.customer = customer;
-    return this;
-  }
 
   /**
    * Whether the orderinvoices service should support this order.
@@ -224,6 +207,23 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
    */
   public TestOrder setPredefinedDeliveryAddress(java.lang.String predefinedDeliveryAddress) {
     this.predefinedDeliveryAddress = predefinedDeliveryAddress;
+    return this;
+  }
+
+  /**
+   * Email address of the customer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredefinedEmail() {
+    return predefinedEmail;
+  }
+
+  /**
+   * Email address of the customer.
+   * @param predefinedEmail predefinedEmail or {@code null} for none
+   */
+  public TestOrder setPredefinedEmail(java.lang.String predefinedEmail) {
+    this.predefinedEmail = predefinedEmail;
     return this;
   }
 

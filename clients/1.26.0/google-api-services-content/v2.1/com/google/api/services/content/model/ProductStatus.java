@@ -81,7 +81,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String link;
 
   /**
-   * The id of the product for which status is reported.
+   * The ID of the product for which status is reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +214,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the product for which status is reported.
+   * The ID of the product for which status is reported.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -222,7 +222,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The id of the product for which status is reported.
+   * The ID of the product for which status is reported.
    * @param productId productId or {@code null} for none
    */
   public ProductStatus setProductId(java.lang.String productId) {

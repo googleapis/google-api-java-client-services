@@ -4309,7 +4309,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
      * @param storeCode The code of the store for which to update price and availability. Use online to update price and
      *        availability of an online product.
-     * @param productId The REST id of the product for which to update price and availability.
+     * @param productId The REST ID of the product for which to update price and availability.
      * @param content the {@link com.google.api.services.content.model.InventorySetRequest}
      * @return the request
      */
@@ -4336,7 +4336,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
        * @param storeCode The code of the store for which to update price and availability. Use online to update price and
      *        availability of an online product.
-       * @param productId The REST id of the product for which to update price and availability.
+       * @param productId The REST ID of the product for which to update price and availability.
        * @param content the {@link com.google.api.services.content.model.InventorySetRequest}
        * @since 1.13
        */
@@ -4427,17 +4427,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The REST id of the product for which to update price and availability. */
+      /** The REST ID of the product for which to update price and availability. */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
-      /** The REST id of the product for which to update price and availability.
+      /** The REST ID of the product for which to update price and availability.
        */
       public java.lang.String getProductId() {
         return productId;
       }
 
-      /** The REST id of the product for which to update price and availability. */
+      /** The REST ID of the product for which to update price and availability. */
       public Set setProductId(java.lang.String productId) {
         this.productId = productId;
         return this;
@@ -8598,7 +8598,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Retrieves an order using merchant order id.
+     * Retrieves an order using merchant order ID.
      *
      * Create a request for the method "orders.getbymerchantorderid".
      *
@@ -8607,7 +8607,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * operation.
      *
      * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
-     * @param merchantOrderId The merchant order id to be looked for.
+     * @param merchantOrderId The merchant order ID to be looked for.
      * @return the request
      */
     public Getbymerchantorderid getbymerchantorderid(java.math.BigInteger merchantId, java.lang.String merchantOrderId) throws java.io.IOException {
@@ -8621,7 +8621,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/ordersbymerchantid/{merchantOrderId}";
 
       /**
-       * Retrieves an order using merchant order id.
+       * Retrieves an order using merchant order ID.
        *
        * Create a request for the method "orders.getbymerchantorderid".
        *
@@ -8632,7 +8632,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * invoking the constructor. </p>
        *
        * @param merchantId The ID of the account that manages the order. This cannot be a multi-client account.
-       * @param merchantOrderId The merchant order id to be looked for.
+       * @param merchantOrderId The merchant order ID to be looked for.
        * @since 1.13
        */
       protected Getbymerchantorderid(java.math.BigInteger merchantId, java.lang.String merchantOrderId) {
@@ -8702,17 +8702,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The merchant order id to be looked for. */
+      /** The merchant order ID to be looked for. */
       @com.google.api.client.util.Key
       private java.lang.String merchantOrderId;
 
-      /** The merchant order id to be looked for.
+      /** The merchant order ID to be looked for.
        */
       public java.lang.String getMerchantOrderId() {
         return merchantOrderId;
       }
 
-      /** The merchant order id to be looked for. */
+      /** The merchant order ID to be looked for. */
       public Getbymerchantorderid setMerchantOrderId(java.lang.String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -11452,7 +11452,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
-     * @param productId The REST id of the product.
+     * @param productId The REST ID of the product.
      * @return the request
      */
     public Delete delete(java.math.BigInteger merchantId, java.lang.String productId) throws java.io.IOException {
@@ -11476,7 +11476,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
-       * @param productId The REST id of the product.
+       * @param productId The REST ID of the product.
        * @since 1.13
        */
       protected Delete(java.math.BigInteger merchantId, java.lang.String productId) {
@@ -11542,17 +11542,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The REST id of the product. */
+      /** The REST ID of the product. */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
-      /** The REST id of the product.
+      /** The REST ID of the product.
        */
       public java.lang.String getProductId() {
         return productId;
       }
 
-      /** The REST id of the product. */
+      /** The REST ID of the product. */
       public Delete setProductId(java.lang.String productId) {
         this.productId = productId;
         return this;
@@ -11595,7 +11595,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
-     * @param productId The REST id of the product.
+     * @param productId The REST ID of the product.
      * @return the request
      */
     public Get get(java.math.BigInteger merchantId, java.lang.String productId) throws java.io.IOException {
@@ -11619,7 +11619,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
-       * @param productId The REST id of the product.
+       * @param productId The REST ID of the product.
        * @since 1.13
        */
       protected Get(java.math.BigInteger merchantId, java.lang.String productId) {
@@ -11695,17 +11695,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The REST id of the product. */
+      /** The REST ID of the product. */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
-      /** The REST id of the product.
+      /** The REST ID of the product.
        */
       public java.lang.String getProductId() {
         return productId;
       }
 
-      /** The REST id of the product. */
+      /** The REST ID of the product. */
       public Get setProductId(java.lang.String productId) {
         this.productId = productId;
         return this;
@@ -12151,7 +12151,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
-     * @param productId The REST id of the product.
+     * @param productId The REST ID of the product.
      * @return the request
      */
     public Get get(java.math.BigInteger merchantId, java.lang.String productId) throws java.io.IOException {
@@ -12175,7 +12175,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param merchantId The ID of the account that contains the product. This account cannot be a multi-client account.
-       * @param productId The REST id of the product.
+       * @param productId The REST ID of the product.
        * @since 1.13
        */
       protected Get(java.math.BigInteger merchantId, java.lang.String productId) {
@@ -12251,17 +12251,17 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** The REST id of the product. */
+      /** The REST ID of the product. */
       @com.google.api.client.util.Key
       private java.lang.String productId;
 
-      /** The REST id of the product.
+      /** The REST ID of the product.
        */
       public java.lang.String getProductId() {
         return productId;
       }
 
-      /** The REST id of the product. */
+      /** The REST ID of the product. */
       public Get setProductId(java.lang.String productId) {
         this.productId = productId;
         return this;

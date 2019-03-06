@@ -47,8 +47,9 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
   private java.lang.String lastUpdatedTimestamp;
 
   /**
-   * Email address that can be used for marketing purposes. This field is only filled when
-   * explicitMarketingPreference is equal to 'granted'.
+   * Email address that can be used for marketing purposes. The field may be empty even if
+   * explicitMarketingPreference is 'granted'. This happens when retrieving an old order from the
+   * customer who deleted his account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +94,9 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
   }
 
   /**
-   * Email address that can be used for marketing purposes. This field is only filled when
-   * explicitMarketingPreference is equal to 'granted'.
+   * Email address that can be used for marketing purposes. The field may be empty even if
+   * explicitMarketingPreference is 'granted'. This happens when retrieving an old order from the
+   * customer who deleted his account.
    * @return value or {@code null} for none
    */
   public java.lang.String getMarketingEmailAddress() {
@@ -102,8 +104,9 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
   }
 
   /**
-   * Email address that can be used for marketing purposes. This field is only filled when
-   * explicitMarketingPreference is equal to 'granted'.
+   * Email address that can be used for marketing purposes. The field may be empty even if
+   * explicitMarketingPreference is 'granted'. This happens when retrieving an old order from the
+   * customer who deleted his account.
    * @param marketingEmailAddress marketingEmailAddress or {@code null} for none
    */
   public OrderCustomerMarketingRightsInfo setMarketingEmailAddress(java.lang.String marketingEmailAddress) {

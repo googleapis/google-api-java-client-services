@@ -66,14 +66,14 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
   private java.math.BigInteger merchantId;
 
   /**
-   * Merchant-provided id of the order.
+   * Merchant-provided ID of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantOrderId;
 
   /**
-   * The id of the order.
+   * The ID of the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,7 +186,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
   }
 
   /**
-   * Merchant-provided id of the order.
+   * Merchant-provided ID of the order.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantOrderId() {
@@ -194,7 +194,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
   }
 
   /**
-   * Merchant-provided id of the order.
+   * Merchant-provided ID of the order.
    * @param merchantOrderId merchantOrderId or {@code null} for none
    */
   public OrderReportTransaction setMerchantOrderId(java.lang.String merchantOrderId) {
@@ -203,7 +203,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
   }
 
   /**
-   * The id of the order.
+   * The ID of the order.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderId() {
@@ -211,7 +211,7 @@ public final class OrderReportTransaction extends com.google.api.client.json.Gen
   }
 
   /**
-   * The id of the order.
+   * The ID of the order.
    * @param orderId orderId or {@code null} for none
    */
   public OrderReportTransaction setOrderId(java.lang.String orderId) {

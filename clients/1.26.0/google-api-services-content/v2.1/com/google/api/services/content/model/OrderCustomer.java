@@ -31,13 +31,6 @@ package com.google.api.services.content.model;
 public final class OrderCustomer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String email;
-
-  /**
    * Full name of the customer.
    * The value may be {@code null}.
    */
@@ -50,23 +43,6 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private OrderCustomerMarketingRightsInfo marketingRightsInfo;
-
-  /**
-   * Deprecated.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEmail() {
-    return email;
-  }
-
-  /**
-   * Deprecated.
-   * @param email email or {@code null} for none
-   */
-  public OrderCustomer setEmail(java.lang.String email) {
-    this.email = email;
-    return this;
-  }
 
   /**
    * Full name of the customer.

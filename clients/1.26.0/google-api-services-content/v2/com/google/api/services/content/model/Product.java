@@ -295,8 +295,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String gtin;
 
   /**
-   * The REST id of the product. Content API methods that operate on products take this as their
-   * productId parameter. The REST id for a product is of the form
+   * The REST ID of the product. Content API methods that operate on products take this as their
+   * productId parameter. The REST ID for a product is of the form
    * channel:contentLanguage:targetCountry:offerId.
    * The value may be {@code null}.
    */
@@ -422,7 +422,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple
    * whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters
    * are accepted. See the products feed specification for details. Note: Content API methods that
-   * operate on products take the REST id of the product, not this identifier.
+   * operate on products take the REST ID of the product, not this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1218,8 +1218,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The REST id of the product. Content API methods that operate on products take this as their
-   * productId parameter. The REST id for a product is of the form
+   * The REST ID of the product. Content API methods that operate on products take this as their
+   * productId parameter. The REST ID for a product is of the form
    * channel:contentLanguage:targetCountry:offerId.
    * @return value or {@code null} for none
    */
@@ -1228,8 +1228,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The REST id of the product. Content API methods that operate on products take this as their
-   * productId parameter. The REST id for a product is of the form
+   * The REST ID of the product. Content API methods that operate on products take this as their
+   * productId parameter. The REST ID for a product is of the form
    * channel:contentLanguage:targetCountry:offerId.
    * @param id id or {@code null} for none
    */
@@ -1520,7 +1520,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple
    * whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters
    * are accepted. See the products feed specification for details. Note: Content API methods that
-   * operate on products take the REST id of the product, not this identifier.
+   * operate on products take the REST ID of the product, not this identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferId() {
@@ -1531,7 +1531,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * A unique identifier for the item. Leading and trailing whitespaces are stripped and multiple
    * whitespaces are replaced by a single whitespace upon submission. Only valid unicode characters
    * are accepted. See the products feed specification for details. Note: Content API methods that
-   * operate on products take the REST id of the product, not this identifier.
+   * operate on products take the REST ID of the product, not this identifier.
    * @param offerId offerId or {@code null} for none
    */
   public Product setOfferId(java.lang.String offerId) {

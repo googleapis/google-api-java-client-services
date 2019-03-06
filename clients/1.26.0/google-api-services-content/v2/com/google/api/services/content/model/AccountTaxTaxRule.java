@@ -38,8 +38,8 @@ public final class AccountTaxTaxRule extends com.google.api.client.json.GenericJ
   private java.lang.String country;
 
   /**
-   * State (or province) is which the tax is applicable, described by its location id (also called
-   * criteria id).
+   * State (or province) is which the tax is applicable, described by its location ID (also called
+   * criteria ID).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -85,8 +85,8 @@ public final class AccountTaxTaxRule extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * State (or province) is which the tax is applicable, described by its location id (also called
-   * criteria id).
+   * State (or province) is which the tax is applicable, described by its location ID (also called
+   * criteria ID).
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getLocationId() {
@@ -94,8 +94,8 @@ public final class AccountTaxTaxRule extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * State (or province) is which the tax is applicable, described by its location id (also called
-   * criteria id).
+   * State (or province) is which the tax is applicable, described by its location ID (also called
+   * criteria ID).
    * @param locationId locationId or {@code null} for none
    */
   public AccountTaxTaxRule setLocationId(java.math.BigInteger locationId) {

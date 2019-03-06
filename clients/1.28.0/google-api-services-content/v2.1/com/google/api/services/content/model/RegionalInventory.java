@@ -67,7 +67,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   private Price price;
 
   /**
-   * The id (name) of the region.
+   * The ID (name) of the region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The id (name) of the region.
+   * The ID (name) of the region.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionId() {
@@ -167,7 +167,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The id (name) of the region.
+   * The ID (name) of the region.
    * @param regionId regionId or {@code null} for none
    */
   public RegionalInventory setRegionId(java.lang.String regionId) {

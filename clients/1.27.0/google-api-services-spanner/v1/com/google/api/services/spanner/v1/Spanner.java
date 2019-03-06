@@ -4506,6 +4506,161 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
+           * Executes a batch of SQL DML statements. This method allows many statements to be run with lower
+           * latency than submitting them sequentially with ExecuteSql.
+           *
+           * Statements are executed in order, sequentially. ExecuteBatchDmlResponse will contain a ResultSet
+           * for each DML statement that has successfully executed. If a statement fails, its error status
+           * will be returned as part of the ExecuteBatchDmlResponse. Execution will stop at the first failed
+           * statement; the remaining statements will not run.
+           *
+           * ExecuteBatchDml is expected to return an OK status with a response even if there was an error
+           * while processing one of the DML statements. Clients must inspect response.status to determine if
+           * there were any errors while processing the request.
+           *
+           * See more details in ExecuteBatchDmlRequest and ExecuteBatchDmlResponse.
+           *
+           * Create a request for the method "sessions.executeBatchDml".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link ExecuteBatchDml#execute()} method to invoke the remote operation.
+           *
+           * @param session Required. The session in which the DML statements should be performed.
+           * @param content the {@link com.google.api.services.spanner.v1.model.ExecuteBatchDmlRequest}
+           * @return the request
+           */
+          public ExecuteBatchDml executeBatchDml(java.lang.String session, com.google.api.services.spanner.v1.model.ExecuteBatchDmlRequest content) throws java.io.IOException {
+            ExecuteBatchDml result = new ExecuteBatchDml(session, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ExecuteBatchDml extends SpannerRequest<com.google.api.services.spanner.v1.model.ExecuteBatchDmlResponse> {
+
+            private static final String REST_PATH = "v1/{+session}:executeBatchDml";
+
+            private final java.util.regex.Pattern SESSION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Executes a batch of SQL DML statements. This method allows many statements to be run with lower
+             * latency than submitting them sequentially with ExecuteSql.
+             *
+             * Statements are executed in order, sequentially. ExecuteBatchDmlResponse will contain a
+             * ResultSet for each DML statement that has successfully executed. If a statement fails, its
+             * error status will be returned as part of the ExecuteBatchDmlResponse. Execution will stop at
+             * the first failed statement; the remaining statements will not run.
+             *
+             * ExecuteBatchDml is expected to return an OK status with a response even if there was an error
+             * while processing one of the DML statements. Clients must inspect response.status to determine
+             * if there were any errors while processing the request.
+             *
+             * See more details in ExecuteBatchDmlRequest and ExecuteBatchDmlResponse.
+             *
+             * Create a request for the method "sessions.executeBatchDml".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link ExecuteBatchDml#execute()} method to invoke the remote operation.
+             * <p> {@link ExecuteBatchDml#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+             * lientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param session Required. The session in which the DML statements should be performed.
+             * @param content the {@link com.google.api.services.spanner.v1.model.ExecuteBatchDmlRequest}
+             * @since 1.13
+             */
+            protected ExecuteBatchDml(java.lang.String session, com.google.api.services.spanner.v1.model.ExecuteBatchDmlRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.ExecuteBatchDmlResponse.class);
+              this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public ExecuteBatchDml set$Xgafv(java.lang.String $Xgafv) {
+              return (ExecuteBatchDml) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExecuteBatchDml setAccessToken(java.lang.String accessToken) {
+              return (ExecuteBatchDml) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExecuteBatchDml setAlt(java.lang.String alt) {
+              return (ExecuteBatchDml) super.setAlt(alt);
+            }
+
+            @Override
+            public ExecuteBatchDml setCallback(java.lang.String callback) {
+              return (ExecuteBatchDml) super.setCallback(callback);
+            }
+
+            @Override
+            public ExecuteBatchDml setFields(java.lang.String fields) {
+              return (ExecuteBatchDml) super.setFields(fields);
+            }
+
+            @Override
+            public ExecuteBatchDml setKey(java.lang.String key) {
+              return (ExecuteBatchDml) super.setKey(key);
+            }
+
+            @Override
+            public ExecuteBatchDml setOauthToken(java.lang.String oauthToken) {
+              return (ExecuteBatchDml) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExecuteBatchDml setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExecuteBatchDml) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExecuteBatchDml setQuotaUser(java.lang.String quotaUser) {
+              return (ExecuteBatchDml) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExecuteBatchDml setUploadType(java.lang.String uploadType) {
+              return (ExecuteBatchDml) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExecuteBatchDml setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExecuteBatchDml) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The session in which the DML statements should be performed. */
+            @com.google.api.client.util.Key
+            private java.lang.String session;
+
+            /** Required. The session in which the DML statements should be performed.
+             */
+            public java.lang.String getSession() {
+              return session;
+            }
+
+            /** Required. The session in which the DML statements should be performed. */
+            public ExecuteBatchDml setSession(java.lang.String session) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
+              }
+              this.session = session;
+              return this;
+            }
+
+            @Override
+            public ExecuteBatchDml set(String parameterName, Object value) {
+              return (ExecuteBatchDml) super.set(parameterName, value);
+            }
+          }
+          /**
            * Executes an SQL statement, returning all results in a single reply. This method cannot be used to
            * return a result set larger than 10 MiB; if the query yields more data than that, the query fails
            * with a `FAILED_PRECONDITION` error.

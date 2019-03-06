@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.bigtableadmin.v2.model;
+package com.google.api.services.bigtableadmin.v1.model;
 
 /**
- * The state of a table's data in a particular cluster.
+ * The metadata for the Operation returned by UpdateAppProfile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation
@@ -28,40 +28,16 @@ package com.google.api.services.bigtableadmin.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ClusterState extends com.google.api.client.json.GenericJson {
+public final class UpdateAppProfileMetadata extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Output only. The state of replication for the table in this cluster.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String replicationState;
-
-  /**
-   * Output only. The state of replication for the table in this cluster.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getReplicationState() {
-    return replicationState;
-  }
-
-  /**
-   * Output only. The state of replication for the table in this cluster.
-   * @param replicationState replicationState or {@code null} for none
-   */
-  public ClusterState setReplicationState(java.lang.String replicationState) {
-    this.replicationState = replicationState;
-    return this;
+  @Override
+  public UpdateAppProfileMetadata set(String fieldName, Object value) {
+    return (UpdateAppProfileMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public ClusterState set(String fieldName, Object value) {
-    return (ClusterState) super.set(fieldName, value);
-  }
-
-  @Override
-  public ClusterState clone() {
-    return (ClusterState) super.clone();
+  public UpdateAppProfileMetadata clone() {
+    return (UpdateAppProfileMetadata) super.clone();
   }
 
 }

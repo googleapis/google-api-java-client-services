@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-bigtableadmin</artifactId>
-  <version>v2-rev20190207-1.28.0</version>
-  <name>Cloud Bigtable Admin API v2-rev20190207-1.28.0</name>
+  <version>v1-rev20190115-1.26.0</version>
+  <name>Cloud Bigtable Admin API v1-rev20190115-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -40,8 +40,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.5.1</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.6</source>
+          <target>1.6</target>
         </configuration>
       </plugin>
       <plugin>
@@ -77,9 +77,9 @@
           <windowtitle>Cloud Bigtable Admin API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/6/docs/api</link>
-            <link>https://google.github.io/google-http-java-client/releases/1.28.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-oauth-java-client/releases/1.28.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-api-java-client/releases/1.28.0/javadoc/index.html</link>
+            <link>https://google.github.io/google-http-java-client/releases/1.26.0/javadoc/index.html</link>
+            <link>https://google.github.io/google-oauth-java-client/releases/1.26.0/javadoc/index.html</link>
+            <link>https://google.github.io/google-api-java-client/releases/1.26.0/javadoc/index.html</link>
           </links>
         </configuration>
       </plugin>
@@ -96,7 +96,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.28.0</version>
+      <version>1.26.0</version>
     </dependency>
   </dependencies>
 

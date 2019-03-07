@@ -298,7 +298,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes a `WorkerPool` by its project ID and WorkerPool ID.
+       * Deletes a `WorkerPool` by its project ID and WorkerPool name.
        *
        * This API is experimental.
        *
@@ -326,7 +326,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/workerPools/[^/]+$");
 
         /**
-         * Deletes a `WorkerPool` by its project ID and WorkerPool ID.
+         * Deletes a `WorkerPool` by its project ID and WorkerPool name.
          *
          * This API is experimental.
          *

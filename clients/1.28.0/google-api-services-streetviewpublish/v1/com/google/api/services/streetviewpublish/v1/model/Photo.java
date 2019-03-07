@@ -60,7 +60,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   private java.lang.String downloadUrl;
 
   /**
-   * Output only. Status in Google Maps, whether this photo was published, or rejected.
+   * Output only. Status in Google Maps, whether this photo was published or rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +180,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Status in Google Maps, whether this photo was published, or rejected.
+   * Output only. Status in Google Maps, whether this photo was published or rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getMapsPublishStatus() {
@@ -188,7 +188,7 @@ public final class Photo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Status in Google Maps, whether this photo was published, or rejected.
+   * Output only. Status in Google Maps, whether this photo was published or rejected.
    * @param mapsPublishStatus mapsPublishStatus or {@code null} for none
    */
   public Photo setMapsPublishStatus(java.lang.String mapsPublishStatus) {

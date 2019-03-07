@@ -53,32 +53,20 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> resources;
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. May contain a list of
-   * services or a single wildcard "*". For example, if `storage.googleapis.com` is specified,
-   * access to the storage buckets inside the perimeter must meet the perimeter's access
-   * restrictions.
-   *
-   * Wildcard means that unless explicitly specified by "unrestricted_services" list, any service is
-   * treated as restricted. One of the fields "restricted_services", "unrestricted_services" must
-   * contain a wildcard "*", otherwise the Service Perimeter specification is invalid. It also means
-   * that both field being empty is invalid as well. "restricted_services" can be empty if and only
-   * if "unrestricted_services" list contains a "*" wildcard.
+   * GCP services that are subject to the Service Perimeter restrictions. Must contain a list of
+   * services. For example, if `storage.googleapis.com` is specified, access to the storage buckets
+   * inside the perimeter must meet the perimeter's access restrictions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> restrictedServices;
 
   /**
-   * GCP services that are not subject to the Service Perimeter restrictions. May contain a list of
-   * services or a single wildcard "*". For example, if `logging.googleapis.com` is unrestricted,
-   * users can access logs inside the perimeter as if the perimeter doesn't exist, and it also means
-   * VMs inside the perimeter can access logs outside the perimeter.
+   * GCP services that are not subject to the Service Perimeter restrictions. Deprecated. Must be
+   * set to a single wildcard "*".
    *
    * The wildcard means that unless explicitly specified by "restricted_services" list, any service
-   * is treated as unrestricted. One of the fields "restricted_services", "unrestricted_services"
-   * must contain a wildcard "*", otherwise the Service Perimeter specification is invalid. It also
-   * means that both field being empty is invalid as well. "unrestricted_services" can be empty if
-   * and only if "restricted_services" list contains a "*" wildcard.
+   * is treated as unrestricted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,16 +121,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. May contain a list of
-   * services or a single wildcard "*". For example, if `storage.googleapis.com` is specified,
-   * access to the storage buckets inside the perimeter must meet the perimeter's access
-   * restrictions.
-   *
-   * Wildcard means that unless explicitly specified by "unrestricted_services" list, any service is
-   * treated as restricted. One of the fields "restricted_services", "unrestricted_services" must
-   * contain a wildcard "*", otherwise the Service Perimeter specification is invalid. It also means
-   * that both field being empty is invalid as well. "restricted_services" can be empty if and only
-   * if "unrestricted_services" list contains a "*" wildcard.
+   * GCP services that are subject to the Service Perimeter restrictions. Must contain a list of
+   * services. For example, if `storage.googleapis.com` is specified, access to the storage buckets
+   * inside the perimeter must meet the perimeter's access restrictions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRestrictedServices() {
@@ -150,16 +131,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are subject to the Service Perimeter restrictions. May contain a list of
-   * services or a single wildcard "*". For example, if `storage.googleapis.com` is specified,
-   * access to the storage buckets inside the perimeter must meet the perimeter's access
-   * restrictions.
-   *
-   * Wildcard means that unless explicitly specified by "unrestricted_services" list, any service is
-   * treated as restricted. One of the fields "restricted_services", "unrestricted_services" must
-   * contain a wildcard "*", otherwise the Service Perimeter specification is invalid. It also means
-   * that both field being empty is invalid as well. "restricted_services" can be empty if and only
-   * if "unrestricted_services" list contains a "*" wildcard.
+   * GCP services that are subject to the Service Perimeter restrictions. Must contain a list of
+   * services. For example, if `storage.googleapis.com` is specified, access to the storage buckets
+   * inside the perimeter must meet the perimeter's access restrictions.
    * @param restrictedServices restrictedServices or {@code null} for none
    */
   public ServicePerimeterConfig setRestrictedServices(java.util.List<java.lang.String> restrictedServices) {
@@ -168,16 +142,11 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are not subject to the Service Perimeter restrictions. May contain a list of
-   * services or a single wildcard "*". For example, if `logging.googleapis.com` is unrestricted,
-   * users can access logs inside the perimeter as if the perimeter doesn't exist, and it also means
-   * VMs inside the perimeter can access logs outside the perimeter.
+   * GCP services that are not subject to the Service Perimeter restrictions. Deprecated. Must be
+   * set to a single wildcard "*".
    *
    * The wildcard means that unless explicitly specified by "restricted_services" list, any service
-   * is treated as unrestricted. One of the fields "restricted_services", "unrestricted_services"
-   * must contain a wildcard "*", otherwise the Service Perimeter specification is invalid. It also
-   * means that both field being empty is invalid as well. "unrestricted_services" can be empty if
-   * and only if "restricted_services" list contains a "*" wildcard.
+   * is treated as unrestricted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnrestrictedServices() {
@@ -185,16 +154,11 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * GCP services that are not subject to the Service Perimeter restrictions. May contain a list of
-   * services or a single wildcard "*". For example, if `logging.googleapis.com` is unrestricted,
-   * users can access logs inside the perimeter as if the perimeter doesn't exist, and it also means
-   * VMs inside the perimeter can access logs outside the perimeter.
+   * GCP services that are not subject to the Service Perimeter restrictions. Deprecated. Must be
+   * set to a single wildcard "*".
    *
    * The wildcard means that unless explicitly specified by "restricted_services" list, any service
-   * is treated as unrestricted. One of the fields "restricted_services", "unrestricted_services"
-   * must contain a wildcard "*", otherwise the Service Perimeter specification is invalid. It also
-   * means that both field being empty is invalid as well. "unrestricted_services" can be empty if
-   * and only if "restricted_services" list contains a "*" wildcard.
+   * is treated as unrestricted.
    * @param unrestrictedServices unrestrictedServices or {@code null} for none
    */
   public ServicePerimeterConfig setUnrestrictedServices(java.util.List<java.lang.String> unrestrictedServices) {

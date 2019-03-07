@@ -1174,19 +1174,22 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudscheduler server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The job name. For example:
+         * @param name Optionally caller-specified in CreateJob, after
+        which it becomes output only.
+        The job name. For
+         *        example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
-        * `PROJECT_ID`
-         *        can contain letters ([A-Za-z]), numbers ([0-9]),
-           hyphens (-), colons (:), or periods
-         *        (.).
-           For more information, see
-           [Identifying projects](https://cloud.google.com
-         *        /resource-manager/docs/creating-managing-projects#identifying_projects)
-        * `LOCATION_ID` is
-         *        the canonical ID for the job's location.
-           The list of available locations can be
-         *        obtained by calling
+        * `PROJECT_ID` can
+         *        contain letters ([A-Za-z]), numbers ([0-9]),
+           hyphens (-), colons (:), or periods (.).
+         *        For more information, see
+           [Identifying
+           projects](https://cloud.google.com/resource-
+         *        manager/docs/creating-managing-projects#identifying_projects)
+        * `LOCATION_ID` is the
+         *        canonical ID for the job's location.
+           The list of available locations can be obtained by
+         *        calling
            ListLocations.
            For more information, see
          *        https://cloud.google.com/about/locations/.
@@ -1226,19 +1229,22 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The job name. For example:
+           * @param name Optionally caller-specified in CreateJob, after
+        which it becomes output only.
+        The job name. For
+         *        example:
         `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
-        * `PROJECT_ID`
-         *        can contain letters ([A-Za-z]), numbers ([0-9]),
-           hyphens (-), colons (:), or periods
-         *        (.).
-           For more information, see
-           [Identifying projects](https://cloud.google.com
-         *        /resource-manager/docs/creating-managing-projects#identifying_projects)
-        * `LOCATION_ID` is
-         *        the canonical ID for the job's location.
-           The list of available locations can be
-         *        obtained by calling
+        * `PROJECT_ID` can
+         *        contain letters ([A-Za-z]), numbers ([0-9]),
+           hyphens (-), colons (:), or periods (.).
+         *        For more information, see
+           [Identifying
+           projects](https://cloud.google.com/resource-
+         *        manager/docs/creating-managing-projects#identifying_projects)
+        * `LOCATION_ID` is the
+         *        canonical ID for the job's location.
+           The list of available locations can be obtained by
+         *        calling
            ListLocations.
            For more information, see
          *        https://cloud.google.com/about/locations/.
@@ -1314,6 +1320,8 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
+           * Optionally caller-specified in CreateJob, after which it becomes output only.
+           *
            * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            *
            * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons
@@ -1328,7 +1336,9 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
+          /** Optionally caller-specified in CreateJob, after which it becomes output only.
+
+         The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
 
          * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods
          (.). For more information, see [Identifying projects](https://cloud.google.com/resource-
@@ -1343,6 +1353,8 @@ public class CloudScheduler extends com.google.api.client.googleapis.services.js
           }
 
           /**
+           * Optionally caller-specified in CreateJob, after which it becomes output only.
+           *
            * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
            *
            * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons

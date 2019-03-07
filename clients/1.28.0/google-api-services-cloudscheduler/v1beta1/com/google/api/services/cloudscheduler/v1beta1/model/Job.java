@@ -37,6 +37,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private AppEngineHttpTarget appEngineHttpTarget;
 
   /**
+   * Optionally caller-specified in CreateJob or UpdateJob.
+   *
    * A human-readable description for the job. This string must not contain more than 500
    * characters.
    * The value may be {@code null}.
@@ -59,10 +61,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String lastAttemptTime;
 
   /**
+   * Optionally caller-specified in CreateJob, after which it becomes output only.
+   *
    * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the job's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -88,9 +92,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private RetryConfig retryConfig;
 
   /**
-   * Required.
+   * Required, except when used with UpdateJob.
    *
    * Describes the schedule on which the job will be executed.
+   *
+   * The schedule can be either of the following types:
+   *
+   * * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
    *
    * As a general rule, execution `n + 1` of a job will not begin until execution `n` has finished.
    * Cloud Scheduler will never allow two simultaneously outstanding executions. For example, this
@@ -100,11 +109,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
    *
    * If retry_count > 0 and a job attempt fails, the job will be tried a total of retry_count times,
    * with exponential backoff, until the next scheduled start time.
-   *
-   * The schedule can be either of the following types:
-   *
-   * * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
-   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,6 +173,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optionally caller-specified in CreateJob or UpdateJob.
+   *
    * A human-readable description for the job. This string must not contain more than 500
    * characters.
    * @return value or {@code null} for none
@@ -178,6 +184,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optionally caller-specified in CreateJob or UpdateJob.
+   *
    * A human-readable description for the job. This string must not contain more than 500
    * characters.
    * @param description description or {@code null} for none
@@ -222,10 +230,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optionally caller-specified in CreateJob, after which it becomes output only.
+   *
    * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the job's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -238,10 +248,12 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optionally caller-specified in CreateJob, after which it becomes output only.
+   *
    * The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`.
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the job's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -289,9 +301,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
+   * Required, except when used with UpdateJob.
    *
    * Describes the schedule on which the job will be executed.
+   *
+   * The schedule can be either of the following types:
+   *
+   * * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
    *
    * As a general rule, execution `n + 1` of a job will not begin until execution `n` has finished.
    * Cloud Scheduler will never allow two simultaneously outstanding executions. For example, this
@@ -301,11 +318,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
    *
    * If retry_count > 0 and a job attempt fails, the job will be tried a total of retry_count times,
    * with exponential backoff, until the next scheduled start time.
-   *
-   * The schedule can be either of the following types:
-   *
-   * * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
-   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -313,9 +325,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
+   * Required, except when used with UpdateJob.
    *
    * Describes the schedule on which the job will be executed.
+   *
+   * The schedule can be either of the following types:
+   *
+   * * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
+   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
    *
    * As a general rule, execution `n + 1` of a job will not begin until execution `n` has finished.
    * Cloud Scheduler will never allow two simultaneously outstanding executions. For example, this
@@ -325,11 +342,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
    *
    * If retry_count > 0 and a job attempt fails, the job will be tried a total of retry_count times,
    * with exponential backoff, until the next scheduled start time.
-   *
-   * The schedule can be either of the following types:
-   *
-   * * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like
-   * [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules)
    * @param schedule schedule or {@code null} for none
    */
   public Job setSchedule(java.lang.String schedule) {

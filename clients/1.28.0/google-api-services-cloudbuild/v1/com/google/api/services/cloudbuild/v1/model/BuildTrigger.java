@@ -65,6 +65,14 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String filename;
 
   /**
+   * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
+   * GitHub event is received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitHubEventsConfig github;
+
+  /**
    * Output only. Unique identifier of the trigger.
    * The value may be {@code null}.
    */
@@ -197,6 +205,25 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setFilename(java.lang.String filename) {
     this.filename = filename;
+    return this;
+  }
+
+  /**
+   * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
+   * GitHub event is received.
+   * @return value or {@code null} for none
+   */
+  public GitHubEventsConfig getGithub() {
+    return github;
+  }
+
+  /**
+   * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a
+   * GitHub event is received.
+   * @param github github or {@code null} for none
+   */
+  public BuildTrigger setGithub(GitHubEventsConfig github) {
+    this.github = github;
     return this;
   }
 

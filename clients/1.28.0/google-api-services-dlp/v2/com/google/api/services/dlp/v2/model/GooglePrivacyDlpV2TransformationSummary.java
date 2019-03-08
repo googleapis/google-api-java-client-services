@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Summary of a single tranformation. Only one of 'transformation', 'field_transformation', or
+ * Summary of a single transformation. Only one of 'transformation', 'field_transformation', or
  * 'record_suppress' will be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

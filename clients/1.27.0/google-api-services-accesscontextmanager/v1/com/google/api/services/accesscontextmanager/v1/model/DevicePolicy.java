@@ -58,6 +58,20 @@ public final class DevicePolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<OsConstraint> osConstraints;
 
   /**
+   * Whether the device needs to be approved by the customer admin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requireAdminApproval;
+
+  /**
+   * Whether the device needs to be corp owned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requireCorpOwned;
+
+  /**
    * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
    * The value may be {@code null}.
    */
@@ -112,6 +126,40 @@ public final class DevicePolicy extends com.google.api.client.json.GenericJson {
    */
   public DevicePolicy setOsConstraints(java.util.List<OsConstraint> osConstraints) {
     this.osConstraints = osConstraints;
+    return this;
+  }
+
+  /**
+   * Whether the device needs to be approved by the customer admin.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequireAdminApproval() {
+    return requireAdminApproval;
+  }
+
+  /**
+   * Whether the device needs to be approved by the customer admin.
+   * @param requireAdminApproval requireAdminApproval or {@code null} for none
+   */
+  public DevicePolicy setRequireAdminApproval(java.lang.Boolean requireAdminApproval) {
+    this.requireAdminApproval = requireAdminApproval;
+    return this;
+  }
+
+  /**
+   * Whether the device needs to be corp owned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequireCorpOwned() {
+    return requireCorpOwned;
+  }
+
+  /**
+   * Whether the device needs to be corp owned.
+   * @param requireCorpOwned requireCorpOwned or {@code null} for none
+   */
+  public DevicePolicy setRequireCorpOwned(java.lang.Boolean requireCorpOwned) {
+    this.requireCorpOwned = requireCorpOwned;
     return this;
   }
 

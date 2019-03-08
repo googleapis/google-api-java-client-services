@@ -71,6 +71,14 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean negate;
 
   /**
+   * The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1
+   * alpha-2 codes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> regions;
+
+  /**
    * A list of other access levels defined in the same `Policy`, referenced by resource name.
    * Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be
    * granted for the Condition to be true. Example:
@@ -163,6 +171,25 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    */
   public Condition setNegate(java.lang.Boolean negate) {
     this.negate = negate;
+    return this;
+  }
+
+  /**
+   * The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1
+   * alpha-2 codes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRegions() {
+    return regions;
+  }
+
+  /**
+   * The request must originate from one of the provided countries/regions. Must be valid ISO 3166-1
+   * alpha-2 codes.
+   * @param regions regions or {@code null} for none
+   */
+  public Condition setRegions(java.util.List<java.lang.String> regions) {
+    this.regions = regions;
     return this;
   }
 

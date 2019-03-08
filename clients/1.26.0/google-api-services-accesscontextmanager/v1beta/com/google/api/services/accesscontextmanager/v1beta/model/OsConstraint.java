@@ -46,6 +46,15 @@ public final class OsConstraint extends com.google.api.client.json.GenericJson {
   private java.lang.String osType;
 
   /**
+   * Only allows requests from devices with a verified Chrome OS. Verifications includes
+   * requirements that the device is enterprise-managed, conformant to Dasher domain policies, and
+   * the caller has permission to call the API targeted by the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requireVerifiedChromeOs;
+
+  /**
    * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint.
    * Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
    * @return value or {@code null} for none
@@ -78,6 +87,27 @@ public final class OsConstraint extends com.google.api.client.json.GenericJson {
    */
   public OsConstraint setOsType(java.lang.String osType) {
     this.osType = osType;
+    return this;
+  }
+
+  /**
+   * Only allows requests from devices with a verified Chrome OS. Verifications includes
+   * requirements that the device is enterprise-managed, conformant to Dasher domain policies, and
+   * the caller has permission to call the API targeted by the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequireVerifiedChromeOs() {
+    return requireVerifiedChromeOs;
+  }
+
+  /**
+   * Only allows requests from devices with a verified Chrome OS. Verifications includes
+   * requirements that the device is enterprise-managed, conformant to Dasher domain policies, and
+   * the caller has permission to call the API targeted by the request.
+   * @param requireVerifiedChromeOs requireVerifiedChromeOs or {@code null} for none
+   */
+  public OsConstraint setRequireVerifiedChromeOs(java.lang.Boolean requireVerifiedChromeOs) {
+    this.requireVerifiedChromeOs = requireVerifiedChromeOs;
     return this;
   }
 

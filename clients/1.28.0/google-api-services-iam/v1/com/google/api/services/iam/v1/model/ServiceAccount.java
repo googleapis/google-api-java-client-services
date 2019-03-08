@@ -44,7 +44,8 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * @OutputOnly A bool indicate if the service account is disabled.
+   * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
+   * phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +112,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   private java.lang.String uniqueId;
 
   /**
-   * @OutputOnly A bool indicate if the service account is disabled.
+   * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
+   * phase.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -119,7 +121,8 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * @OutputOnly A bool indicate if the service account is disabled.
+   * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
+   * phase.
    * @param disabled disabled or {@code null} for none
    */
   public ServiceAccount setDisabled(java.lang.Boolean disabled) {

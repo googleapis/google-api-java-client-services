@@ -32,14 +32,14 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2UnwrappedCryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The AES 128/192/256 bit key. [required]
+   * A 128/192/256 bit key. [required]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * The AES 128/192/256 bit key. [required]
+   * A 128/192/256 bit key. [required]
    * @see #decodeKey()
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKey extends com.google.api.c
   }
 
   /**
-   * The AES 128/192/256 bit key. [required]
+   * A 128/192/256 bit key. [required]
    * @see #getKey()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKey extends com.google.api.c
   }
 
   /**
-   * The AES 128/192/256 bit key. [required]
+   * A 128/192/256 bit key. [required]
    * @see #encodeKey()
    * @param key key or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKey extends com.google.api.c
   }
 
   /**
-   * The AES 128/192/256 bit key. [required]
+   * A 128/192/256 bit key. [required]
    * @see #setKey()
    *
    * <p>

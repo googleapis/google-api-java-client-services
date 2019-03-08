@@ -61,7 +61,8 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
 
   /**
    * The path to the page to run the check against. Will be combined with the host (specified within
-   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/"). If the
+   * provided path does not begin with "/", it will be prepended automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,8 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
 
   /**
    * The path to the page to run the check against. Will be combined with the host (specified within
-   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/"). If the
+   * provided path does not begin with "/", it will be prepended automatically.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -161,7 +163,8 @@ public final class HttpCheck extends com.google.api.client.json.GenericJson {
 
   /**
    * The path to the page to run the check against. Will be combined with the host (specified within
-   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
+   * the MonitoredResource) and port to construct the full URL. Optional (defaults to "/"). If the
+   * provided path does not begin with "/", it will be prepended automatically.
    * @param path path or {@code null} for none
    */
   public HttpCheck setPath(java.lang.String path) {

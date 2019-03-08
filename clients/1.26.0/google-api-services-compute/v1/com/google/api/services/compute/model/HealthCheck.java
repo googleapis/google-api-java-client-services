@@ -63,6 +63,12 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private HTTP2HealthCheck http2HealthCheck;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private HTTPHealthCheck httpHealthCheck;
 
   /**
@@ -207,6 +213,21 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setHealthyThreshold(java.lang.Integer healthyThreshold) {
     this.healthyThreshold = healthyThreshold;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public HTTP2HealthCheck getHttp2HealthCheck() {
+    return http2HealthCheck;
+  }
+
+  /**
+   * @param http2HealthCheck http2HealthCheck or {@code null} for none
+   */
+  public HealthCheck setHttp2HealthCheck(HTTP2HealthCheck http2HealthCheck) {
+    this.http2HealthCheck = http2HealthCheck;
     return this;
   }
 

@@ -57,7 +57,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * * `group:{emailid}`: An email address that represents a Google group. For example,
    * `admins@example.com`.
    *
-   * * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain.
+   * * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain.
    * For example, `google.com` or `example.com`.
    * The value may be {@code null}.
    */
@@ -112,7 +112,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * * `group:{emailid}`: An email address that represents a Google group. For example,
    * `admins@example.com`.
    *
-   * * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain.
+   * * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain.
    * For example, `google.com` or `example.com`.
    * @return value or {@code null} for none
    */
@@ -139,7 +139,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * * `group:{emailid}`: An email address that represents a Google group. For example,
    * `admins@example.com`.
    *
-   * * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain.
+   * * `domain:{domain}`: The G Suite domain (primary) that represents all the users of that domain.
    * For example, `google.com` or `example.com`.
    * @param members members or {@code null} for none
    */

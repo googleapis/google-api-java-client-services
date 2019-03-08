@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class TargetVpnGatewaysScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A list of target vpn gateways contained in this scope.
+   * [Output Only] A list of target VPN gateways contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class TargetVpnGatewaysScopedList extends com.google.api.client.jso
   private Warning warning;
 
   /**
-   * [Output Only] A list of target vpn gateways contained in this scope.
+   * [Output Only] A list of target VPN gateways contained in this scope.
    * @return value or {@code null} for none
    */
   public java.util.List<TargetVpnGateway> getTargetVpnGateways() {
@@ -59,7 +59,7 @@ public final class TargetVpnGatewaysScopedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] A list of target vpn gateways contained in this scope.
+   * [Output Only] A list of target VPN gateways contained in this scope.
    * @param targetVpnGateways targetVpnGateways or {@code null} for none
    */
   public TargetVpnGatewaysScopedList setTargetVpnGateways(java.util.List<TargetVpnGateway> targetVpnGateways) {

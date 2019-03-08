@@ -58,8 +58,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * IKE protocol version to use when establishing the VPN tunnel with peer VPN gateway. Acceptable
-   * IKE versions are 1 or 2. Default version is 2.
+   * IKE protocol version to use when establishing the VPN tunnel with the peer VPN gateway.
+   * Acceptable IKE versions are 1 or 2. The default version is 2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +73,9 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Local traffic selector to use when establishing the VPN tunnel with peer VPN gateway. The value
-   * should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be disjoint.
-   * Only IPv4 is supported.
+   * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The
+   * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be
+   * disjoint. Only IPv4 is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * Remote traffic selectors to use when establishing the VPN tunnel with peer VPN gateway. The
+   * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be
    * disjoint. Only IPv4 is supported.
    * The value may be {@code null}.
@@ -117,7 +117,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> remoteTrafficSelector;
 
   /**
-   * URL of router resource to be used for dynamic routing.
+   * URL of the router resource to be used for dynamic routing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,15 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String sharedSecretHash;
 
   /**
-   * [Output Only] The status of the VPN tunnel.
+   * [Output Only] The status of the VPN tunnel, which can be one of the following: - PROVISIONING:
+   * Resource is being allocated for the VPN tunnel.  - WAITING_FOR_FULL_CONFIG: Waiting to receive
+   * all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule,
+   * and Route resources are needed to setup the VPN tunnel.  - FIRST_HANDSHAKE: Successful first
+   * handshake with the peer VPN.  - ESTABLISHED: Secure session is successfully established with
+   * the peer VPN.  - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS  -
+   * AUTHORIZATION_ERROR: Auth error (for example, bad shared secret).  - NEGOTIATION_FAILURE:
+   * Handshake failed.  - DEPROVISIONING: Resources are being deallocated for the VPN tunnel.  -
+   * FAILED: Tunnel creation has failed and the tunnel is not ready to be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +237,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IKE protocol version to use when establishing the VPN tunnel with peer VPN gateway. Acceptable
-   * IKE versions are 1 or 2. Default version is 2.
+   * IKE protocol version to use when establishing the VPN tunnel with the peer VPN gateway.
+   * Acceptable IKE versions are 1 or 2. The default version is 2.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIkeVersion() {
@@ -238,8 +246,8 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IKE protocol version to use when establishing the VPN tunnel with peer VPN gateway. Acceptable
-   * IKE versions are 1 or 2. Default version is 2.
+   * IKE protocol version to use when establishing the VPN tunnel with the peer VPN gateway.
+   * Acceptable IKE versions are 1 or 2. The default version is 2.
    * @param ikeVersion ikeVersion or {@code null} for none
    */
   public VpnTunnel setIkeVersion(java.lang.Integer ikeVersion) {
@@ -265,9 +273,9 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Local traffic selector to use when establishing the VPN tunnel with peer VPN gateway. The value
-   * should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be disjoint.
-   * Only IPv4 is supported.
+   * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The
+   * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be
+   * disjoint. Only IPv4 is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocalTrafficSelector() {
@@ -275,9 +283,9 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Local traffic selector to use when establishing the VPN tunnel with peer VPN gateway. The value
-   * should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be disjoint.
-   * Only IPv4 is supported.
+   * Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The
+   * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be
+   * disjoint. Only IPv4 is supported.
    * @param localTrafficSelector localTrafficSelector or {@code null} for none
    */
   public VpnTunnel setLocalTrafficSelector(java.util.List<java.lang.String> localTrafficSelector) {
@@ -347,7 +355,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Remote traffic selectors to use when establishing the VPN tunnel with peer VPN gateway. The
+   * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be
    * disjoint. Only IPv4 is supported.
    * @return value or {@code null} for none
@@ -357,7 +365,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Remote traffic selectors to use when establishing the VPN tunnel with peer VPN gateway. The
+   * Remote traffic selectors to use when establishing the VPN tunnel with the peer VPN gateway. The
    * value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges should be
    * disjoint. Only IPv4 is supported.
    * @param remoteTrafficSelector remoteTrafficSelector or {@code null} for none
@@ -368,7 +376,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of router resource to be used for dynamic routing.
+   * URL of the router resource to be used for dynamic routing.
    * @return value or {@code null} for none
    */
   public java.lang.String getRouter() {
@@ -376,7 +384,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of router resource to be used for dynamic routing.
+   * URL of the router resource to be used for dynamic routing.
    * @param router router or {@code null} for none
    */
   public VpnTunnel setRouter(java.lang.String router) {
@@ -438,7 +446,15 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the VPN tunnel.
+   * [Output Only] The status of the VPN tunnel, which can be one of the following: - PROVISIONING:
+   * Resource is being allocated for the VPN tunnel.  - WAITING_FOR_FULL_CONFIG: Waiting to receive
+   * all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule,
+   * and Route resources are needed to setup the VPN tunnel.  - FIRST_HANDSHAKE: Successful first
+   * handshake with the peer VPN.  - ESTABLISHED: Secure session is successfully established with
+   * the peer VPN.  - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS  -
+   * AUTHORIZATION_ERROR: Auth error (for example, bad shared secret).  - NEGOTIATION_FAILURE:
+   * Handshake failed.  - DEPROVISIONING: Resources are being deallocated for the VPN tunnel.  -
+   * FAILED: Tunnel creation has failed and the tunnel is not ready to be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -446,7 +462,15 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the VPN tunnel.
+   * [Output Only] The status of the VPN tunnel, which can be one of the following: - PROVISIONING:
+   * Resource is being allocated for the VPN tunnel.  - WAITING_FOR_FULL_CONFIG: Waiting to receive
+   * all VPN-related configs from the user. Network, TargetVpnGateway, VpnTunnel, ForwardingRule,
+   * and Route resources are needed to setup the VPN tunnel.  - FIRST_HANDSHAKE: Successful first
+   * handshake with the peer VPN.  - ESTABLISHED: Secure session is successfully established with
+   * the peer VPN.  - NETWORK_ERROR: Deprecated, replaced by NO_INCOMING_PACKETS  -
+   * AUTHORIZATION_ERROR: Auth error (for example, bad shared secret).  - NEGOTIATION_FAILURE:
+   * Handshake failed.  - DEPROVISIONING: Resources are being deallocated for the VPN tunnel.  -
+   * FAILED: Tunnel creation has failed and the tunnel is not ready to be used.
    * @param status status or {@code null} for none
    */
   public VpnTunnel setStatus(java.lang.String status) {

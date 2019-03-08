@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class VpnTunnelsScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of vpn tunnels contained in this scope.
+   * A list of VPN tunnels contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class VpnTunnelsScopedList extends com.google.api.client.json.Gener
   private Warning warning;
 
   /**
-   * A list of vpn tunnels contained in this scope.
+   * A list of VPN tunnels contained in this scope.
    * @return value or {@code null} for none
    */
   public java.util.List<VpnTunnel> getVpnTunnels() {
@@ -58,7 +58,7 @@ public final class VpnTunnelsScopedList extends com.google.api.client.json.Gener
   }
 
   /**
-   * A list of vpn tunnels contained in this scope.
+   * A list of VPN tunnels contained in this scope.
    * @param vpnTunnels vpnTunnels or {@code null} for none
    */
   public VpnTunnelsScopedList setVpnTunnels(java.util.List<VpnTunnel> vpnTunnels) {

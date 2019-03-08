@@ -46,7 +46,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
 
   /**
    * [Output Only] A list of URLs to the ForwardingRule resources. ForwardingRules are created using
-   * compute.forwardingRules.insert and associated to a VPN gateway.
+   * compute.forwardingRules.insert and associated with a VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,15 +101,16 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The status of the VPN gateway.
+   * [Output Only] The status of the VPN gateway, which can be one of the following: CREATING,
+   * READY, FAILED, or DELETING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output Only] A list of URLs to VpnTunnel resources. VpnTunnels are created using
-   * compute.vpntunnels.insert method and associated to a VPN gateway.
+   * [Output Only] A list of URLs to VpnTunnel resources. VpnTunnels are created using the
+   * compute.vpntunnels.insert method and associated with a VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +152,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
 
   /**
    * [Output Only] A list of URLs to the ForwardingRule resources. ForwardingRules are created using
-   * compute.forwardingRules.insert and associated to a VPN gateway.
+   * compute.forwardingRules.insert and associated with a VPN gateway.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getForwardingRules() {
@@ -160,7 +161,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
 
   /**
    * [Output Only] A list of URLs to the ForwardingRule resources. ForwardingRules are created using
-   * compute.forwardingRules.insert and associated to a VPN gateway.
+   * compute.forwardingRules.insert and associated with a VPN gateway.
    * @param forwardingRules forwardingRules or {@code null} for none
    */
   public TargetVpnGateway setForwardingRules(java.util.List<java.lang.String> forwardingRules) {
@@ -283,7 +284,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The status of the VPN gateway.
+   * [Output Only] The status of the VPN gateway, which can be one of the following: CREATING,
+   * READY, FAILED, or DELETING.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -291,7 +293,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The status of the VPN gateway.
+   * [Output Only] The status of the VPN gateway, which can be one of the following: CREATING,
+   * READY, FAILED, or DELETING.
    * @param status status or {@code null} for none
    */
   public TargetVpnGateway setStatus(java.lang.String status) {
@@ -300,8 +303,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] A list of URLs to VpnTunnel resources. VpnTunnels are created using
-   * compute.vpntunnels.insert method and associated to a VPN gateway.
+   * [Output Only] A list of URLs to VpnTunnel resources. VpnTunnels are created using the
+   * compute.vpntunnels.insert method and associated with a VPN gateway.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTunnels() {
@@ -309,8 +312,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] A list of URLs to VpnTunnel resources. VpnTunnels are created using
-   * compute.vpntunnels.insert method and associated to a VPN gateway.
+   * [Output Only] A list of URLs to VpnTunnel resources. VpnTunnels are created using the
+   * compute.vpntunnels.insert method and associated with a VPN gateway.
    * @param tunnels tunnels or {@code null} for none
    */
   public TargetVpnGateway setTunnels(java.util.List<java.lang.String> tunnels) {

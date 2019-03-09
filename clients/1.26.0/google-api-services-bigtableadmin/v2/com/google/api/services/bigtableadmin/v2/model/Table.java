@@ -32,7 +32,7 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class Table extends com.google.api.client.json.GenericJson {
 
   /**
-   * (`OutputOnly`) Map from cluster ID to per-cluster table state. If it could not be determined
+   * Output only. Map from cluster ID to per-cluster table state. If it could not be determined
    * whether or not the table has data in a particular cluster (for example, if its zone is
    * unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`.
    * Views: `REPLICATION_VIEW`, `FULL`
@@ -64,23 +64,22 @@ public final class Table extends com.google.api.client.json.GenericJson {
   /**
    * (`CreationOnly`) The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
    * Timestamps not matching the granularity will be rejected. If unspecified at creation time, the
-   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`
+   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String granularity;
 
   /**
-   * (`OutputOnly`) The unique name of the table. Values are of the form
-   * `projects//instances//tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`,
-   * `REPLICATION_VIEW`, `FULL`
+   * Output only. The unique name of the table. Values are of the form `projects//instances//tables
+   * /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * (`OutputOnly`) Map from cluster ID to per-cluster table state. If it could not be determined
+   * Output only. Map from cluster ID to per-cluster table state. If it could not be determined
    * whether or not the table has data in a particular cluster (for example, if its zone is
    * unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`.
    * Views: `REPLICATION_VIEW`, `FULL`
@@ -91,7 +90,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (`OutputOnly`) Map from cluster ID to per-cluster table state. If it could not be determined
+   * Output only. Map from cluster ID to per-cluster table state. If it could not be determined
    * whether or not the table has data in a particular cluster (for example, if its zone is
    * unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`.
    * Views: `REPLICATION_VIEW`, `FULL`
@@ -124,7 +123,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   /**
    * (`CreationOnly`) The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
    * Timestamps not matching the granularity will be rejected. If unspecified at creation time, the
-   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`
+   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGranularity() {
@@ -134,7 +133,7 @@ public final class Table extends com.google.api.client.json.GenericJson {
   /**
    * (`CreationOnly`) The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
    * Timestamps not matching the granularity will be rejected. If unspecified at creation time, the
-   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`
+   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
    * @param granularity granularity or {@code null} for none
    */
   public Table setGranularity(java.lang.String granularity) {
@@ -143,9 +142,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (`OutputOnly`) The unique name of the table. Values are of the form
-   * `projects//instances//tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`,
-   * `REPLICATION_VIEW`, `FULL`
+   * Output only. The unique name of the table. Values are of the form `projects//instances//tables
+   * /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -153,9 +151,8 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * (`OutputOnly`) The unique name of the table. Values are of the form
-   * `projects//instances//tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`,
-   * `REPLICATION_VIEW`, `FULL`
+   * Output only. The unique name of the table. Values are of the form `projects//instances//tables
+   * /_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
    * @param name name or {@code null} for none
    */
   public Table setName(java.lang.String name) {

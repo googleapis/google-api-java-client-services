@@ -182,7 +182,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * [Output-only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
-   * cost. UPPER_BOUND: estiamte is upper bound of what the query would cost.
+   * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -539,7 +539,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * [Output-only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
-   * cost. UPPER_BOUND: estiamte is upper bound of what the query would cost.
+   * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
    * @return value or {@code null} for none
    */
   public java.lang.String getTotalBytesProcessedAccuracy() {
@@ -550,7 +550,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * [Output-only] For dry-run jobs, totalBytesProcessed is an estimate and this field specifies the
    * accuracy of the estimate. Possible values can be: UNKNOWN: accuracy of the estimate is unknown.
    * PRECISE: estimate is precise. LOWER_BOUND: estimate is lower bound of what the query would
-   * cost. UPPER_BOUND: estiamte is upper bound of what the query would cost.
+   * cost. UPPER_BOUND: estimate is upper bound of what the query would cost.
    * @param totalBytesProcessedAccuracy totalBytesProcessedAccuracy or {@code null} for none
    */
   public JobStatistics2 setTotalBytesProcessedAccuracy(java.lang.String totalBytesProcessedAccuracy) {

@@ -30,12 +30,7 @@ package com.google.api.services.healthcare.v1alpha.model;
 public final class ExportResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BigQuery destination location. The output will be one BigQuery table per resource type. The
-   * server implements a data-driven FHIR-to-SQL schema mapping in support of analytics workloads
-   * with BigQuery. Incompatible changes to the output schema may be introduced in the future as a
-   * result of continuous collaboration with the FHIR community to refine the [desired SQL
-   * projection of FHIR resources](https://github.com/rbrush/sql-on-fhir/blob/master/sql-on-
-   * fhir.md).
+   * The BigQuery destination location. The output will be one BigQuery table per resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,12 +47,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   private GcsDataLocation gcsDestinationLocation;
 
   /**
-   * The BigQuery destination location. The output will be one BigQuery table per resource type. The
-   * server implements a data-driven FHIR-to-SQL schema mapping in support of analytics workloads
-   * with BigQuery. Incompatible changes to the output schema may be introduced in the future as a
-   * result of continuous collaboration with the FHIR community to refine the [desired SQL
-   * projection of FHIR resources](https://github.com/rbrush/sql-on-fhir/blob/master/sql-on-
-   * fhir.md).
+   * The BigQuery destination location. The output will be one BigQuery table per resource type.
    * @return value or {@code null} for none
    */
   public BigQueryLocation getBigqueryDestinationLocation() {
@@ -65,12 +55,7 @@ public final class ExportResourcesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The BigQuery destination location. The output will be one BigQuery table per resource type. The
-   * server implements a data-driven FHIR-to-SQL schema mapping in support of analytics workloads
-   * with BigQuery. Incompatible changes to the output schema may be introduced in the future as a
-   * result of continuous collaboration with the FHIR community to refine the [desired SQL
-   * projection of FHIR resources](https://github.com/rbrush/sql-on-fhir/blob/master/sql-on-
-   * fhir.md).
+   * The BigQuery destination location. The output will be one BigQuery table per resource type.
    * @param bigqueryDestinationLocation bigqueryDestinationLocation or {@code null} for none
    */
   public ExportResourcesRequest setBigqueryDestinationLocation(BigQueryLocation bigqueryDestinationLocation) {

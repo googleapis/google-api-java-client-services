@@ -92,6 +92,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobPlacement placement;
 
   /**
+   * Job is a Presto job
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrestoJob prestoJob;
+
+  /**
    * Job is a Pyspark job.
    * The value may be {@code null}.
    */
@@ -311,6 +318,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setPlacement(JobPlacement placement) {
     this.placement = placement;
+    return this;
+  }
+
+  /**
+   * Job is a Presto job
+   * @return value or {@code null} for none
+   */
+  public PrestoJob getPrestoJob() {
+    return prestoJob;
+  }
+
+  /**
+   * Job is a Presto job
+   * @param prestoJob prestoJob or {@code null} for none
+   */
+  public Job setPrestoJob(PrestoJob prestoJob) {
+    this.prestoJob = prestoJob;
     return this;
   }
 

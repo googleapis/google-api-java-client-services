@@ -47,10 +47,11 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The properties to set on daemon config files.Property keys are specified in
-   * prefix:property format, such as core:fs.defaultFS. The following are supported prefixes and
-   * their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-
-   * default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties
-   * spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties.
+   * prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes
+   * and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp:
+   * distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig:
+   * pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster
+   * properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +97,11 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The properties to set on daemon config files.Property keys are specified in
-   * prefix:property format, such as core:fs.defaultFS. The following are supported prefixes and
-   * their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-
-   * default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties
-   * spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties.
+   * prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes
+   * and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp:
+   * distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig:
+   * pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster
+   * properties.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProperties() {
@@ -108,10 +110,11 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The properties to set on daemon config files.Property keys are specified in
-   * prefix:property format, such as core:fs.defaultFS. The following are supported prefixes and
-   * their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-
-   * default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties
-   * spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties.
+   * prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes
+   * and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp:
+   * distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig:
+   * pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster
+   * properties.
    * @param properties properties or {@code null} for none
    */
   public SoftwareConfig setProperties(java.util.Map<String, java.lang.String> properties) {

@@ -30,50 +30,58 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class BasicYarnAutoscalingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Timeout used during an autoscaling event (cluster update) between 0 seconds (no
-   * graceful decommission) and 1 day.Default: 0s.
+   * Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to
+   * wait for jobs to complete before forcefully removing workers (and potentially interrupting
+   * jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String gracefulDecommissionTimeout;
 
   /**
-   * Optional. Fraction of suggested decrease in workers to scale down by between 0 and 1. Suggested
-   * decrease when scaling down is determined by the amount of average available memory since the
-   * last cooldown period.Default: 1.0.
+   * Required. Fraction of average pending memory in the last cooldown period for which to remove
+   * workers. A scale-down factor of 1 will result in scaling down so that there is no available
+   * memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables
+   * removing workers, which can be beneficial for autoscaling a single job.Bounds: 0.0, 1.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double scaleDownFactor;
 
   /**
-   * Optional. Minimum workers as a fraction of the current cluster size to to scale down by between
-   * 0 and 1.Default: 0.0.
+   * Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling
+   * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+   * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the
+   * autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double scaleDownMinWorkerFraction;
 
   /**
-   * Required. Fraction of suggested increase in workers to scale up by between 0 and 1. Suggested
-   * increase when scaling up is determined by the amount of average pending memory since the last
-   * cooldown period.
+   * Required. Fraction of average pending memory in the last cooldown period for which to add
+   * workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory
+   * remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result
+   * in a smaller magnitude of scaling up (less aggressive scaling).Bounds: 0.0, 1.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double scaleUpFactor;
 
   /**
-   * Optional. Minimum workers as a fraction of the current cluster size to to scale up by between 0
-   * and 1.Default: 0.0.
+   * Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs.
+   * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at
+   * least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will
+   * scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double scaleUpMinWorkerFraction;
 
   /**
-   * Optional. Timeout used during an autoscaling event (cluster update) between 0 seconds (no
-   * graceful decommission) and 1 day.Default: 0s.
+   * Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to
+   * wait for jobs to complete before forcefully removing workers (and potentially interrupting
+   * jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.
    * @return value or {@code null} for none
    */
   public String getGracefulDecommissionTimeout() {
@@ -81,8 +89,9 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Timeout used during an autoscaling event (cluster update) between 0 seconds (no
-   * graceful decommission) and 1 day.Default: 0s.
+   * Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to
+   * wait for jobs to complete before forcefully removing workers (and potentially interrupting
+   * jobs). Only applicable to downscaling operations.Bounds: 0s, 1d.
    * @param gracefulDecommissionTimeout gracefulDecommissionTimeout or {@code null} for none
    */
   public BasicYarnAutoscalingConfig setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
@@ -91,9 +100,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Fraction of suggested decrease in workers to scale down by between 0 and 1. Suggested
-   * decrease when scaling down is determined by the amount of average available memory since the
-   * last cooldown period.Default: 1.0.
+   * Required. Fraction of average pending memory in the last cooldown period for which to remove
+   * workers. A scale-down factor of 1 will result in scaling down so that there is no available
+   * memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables
+   * removing workers, which can be beneficial for autoscaling a single job.Bounds: 0.0, 1.0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScaleDownFactor() {
@@ -101,9 +111,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Fraction of suggested decrease in workers to scale down by between 0 and 1. Suggested
-   * decrease when scaling down is determined by the amount of average available memory since the
-   * last cooldown period.Default: 1.0.
+   * Required. Fraction of average pending memory in the last cooldown period for which to remove
+   * workers. A scale-down factor of 1 will result in scaling down so that there is no available
+   * memory remaining after the update (more aggressive scaling). A scale-down factor of 0 disables
+   * removing workers, which can be beneficial for autoscaling a single job.Bounds: 0.0, 1.0.
    * @param scaleDownFactor scaleDownFactor or {@code null} for none
    */
   public BasicYarnAutoscalingConfig setScaleDownFactor(java.lang.Double scaleDownFactor) {
@@ -112,8 +123,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Minimum workers as a fraction of the current cluster size to to scale down by between
-   * 0 and 1.Default: 0.0.
+   * Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling
+   * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+   * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the
+   * autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScaleDownMinWorkerFraction() {
@@ -121,8 +134,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Minimum workers as a fraction of the current cluster size to to scale down by between
-   * 0 and 1.Default: 0.0.
+   * Optional. Minimum scale-down threshold as a fraction of total cluster size before scaling
+   * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
+   * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0 means the
+   * autoscaler will scale down on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
    * @param scaleDownMinWorkerFraction scaleDownMinWorkerFraction or {@code null} for none
    */
   public BasicYarnAutoscalingConfig setScaleDownMinWorkerFraction(java.lang.Double scaleDownMinWorkerFraction) {
@@ -131,9 +146,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Required. Fraction of suggested increase in workers to scale up by between 0 and 1. Suggested
-   * increase when scaling up is determined by the amount of average pending memory since the last
-   * cooldown period.
+   * Required. Fraction of average pending memory in the last cooldown period for which to add
+   * workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory
+   * remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result
+   * in a smaller magnitude of scaling up (less aggressive scaling).Bounds: 0.0, 1.0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScaleUpFactor() {
@@ -141,9 +157,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Required. Fraction of suggested increase in workers to scale up by between 0 and 1. Suggested
-   * increase when scaling up is determined by the amount of average pending memory since the last
-   * cooldown period.
+   * Required. Fraction of average pending memory in the last cooldown period for which to add
+   * workers. A scale-up factor of 1.0 will result in scaling up so that there is no pending memory
+   * remaining after the update (more aggressive scaling). A scale-up factor closer to 0 will result
+   * in a smaller magnitude of scaling up (less aggressive scaling).Bounds: 0.0, 1.0.
    * @param scaleUpFactor scaleUpFactor or {@code null} for none
    */
   public BasicYarnAutoscalingConfig setScaleUpFactor(java.lang.Double scaleUpFactor) {
@@ -152,8 +169,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Minimum workers as a fraction of the current cluster size to to scale up by between 0
-   * and 1.Default: 0.0.
+   * Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs.
+   * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at
+   * least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will
+   * scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScaleUpMinWorkerFraction() {
@@ -161,8 +180,10 @@ public final class BasicYarnAutoscalingConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Minimum workers as a fraction of the current cluster size to to scale up by between 0
-   * and 1.Default: 0.0.
+   * Optional. Minimum scale-up threshold as a fraction of total cluster size before scaling occurs.
+   * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must recommend at
+   * least a 2-worker scale-up for the cluster to scale. A threshold of 0 means the autoscaler will
+   * scale up on any recommended change.Bounds: 0.0, 1.0. Default: 0.0.
    * @param scaleUpMinWorkerFraction scaleUpMinWorkerFraction or {@code null} for none
    */
   public BasicYarnAutoscalingConfig setScaleUpMinWorkerFraction(java.lang.Double scaleUpMinWorkerFraction) {

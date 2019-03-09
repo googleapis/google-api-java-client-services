@@ -30,11 +30,11 @@ package com.google.api.services.dataproc.model;
 public final class ClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A Cloud Storage staging bucket used for sharing generated SSH keys and config. If you
-   * do not specify a staging bucket, Cloud Dataproc will determine an appropriate Cloud Storage
-   * location (US, ASIA, or EU) for your cluster's staging bucket according to the Google Compute
-   * Engine zone where your cluster is deployed, and then it will create and manage this project-
-   * level, per-location bucket for you.
+   * Optional. A Google Cloud Storage bucket used to stage job dependencies, config files, and job
+   * driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the
+   * Google Compute Engine zone where your cluster is deployed, and then create and manage this
+   * project-level, per-location bucket (see Cloud Dataproc staging bucket).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private EncryptionConfig encryptionConfig;
 
   /**
-   * Required. The shared Compute Engine config settings for all instances in a cluster.
+   * Optional. The shared Compute Engine config settings for all instances in a cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,11 +95,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private InstanceGroupConfig workerConfig;
 
   /**
-   * Optional. A Cloud Storage staging bucket used for sharing generated SSH keys and config. If you
-   * do not specify a staging bucket, Cloud Dataproc will determine an appropriate Cloud Storage
-   * location (US, ASIA, or EU) for your cluster's staging bucket according to the Google Compute
-   * Engine zone where your cluster is deployed, and then it will create and manage this project-
-   * level, per-location bucket for you.
+   * Optional. A Google Cloud Storage bucket used to stage job dependencies, config files, and job
+   * driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the
+   * Google Compute Engine zone where your cluster is deployed, and then create and manage this
+   * project-level, per-location bucket (see Cloud Dataproc staging bucket).
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigBucket() {
@@ -107,11 +107,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. A Cloud Storage staging bucket used for sharing generated SSH keys and config. If you
-   * do not specify a staging bucket, Cloud Dataproc will determine an appropriate Cloud Storage
-   * location (US, ASIA, or EU) for your cluster's staging bucket according to the Google Compute
-   * Engine zone where your cluster is deployed, and then it will create and manage this project-
-   * level, per-location bucket for you.
+   * Optional. A Google Cloud Storage bucket used to stage job dependencies, config files, and job
+   * driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the
+   * Google Compute Engine zone where your cluster is deployed, and then create and manage this
+   * project-level, per-location bucket (see Cloud Dataproc staging bucket).
    * @param configBucket configBucket or {@code null} for none
    */
   public ClusterConfig setConfigBucket(java.lang.String configBucket) {
@@ -137,7 +137,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The shared Compute Engine config settings for all instances in a cluster.
+   * Optional. The shared Compute Engine config settings for all instances in a cluster.
    * @return value or {@code null} for none
    */
   public GceClusterConfig getGceClusterConfig() {
@@ -145,7 +145,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The shared Compute Engine config settings for all instances in a cluster.
+   * Optional. The shared Compute Engine config settings for all instances in a cluster.
    * @param gceClusterConfig gceClusterConfig or {@code null} for none
    */
   public ClusterConfig setGceClusterConfig(GceClusterConfig gceClusterConfig) {

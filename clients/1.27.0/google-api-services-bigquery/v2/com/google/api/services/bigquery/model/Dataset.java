@@ -496,8 +496,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     private java.lang.String iamMember;
 
     /**
-     * [Required] Describes the rights granted to the user specified by the other member of the access
-     * object. The following string values are supported: READER, WRITER, OWNER.
+     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in
+     * this access entry. The following legacy mappings will be applied: OWNER
+     * roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer
+     * This field will accept any of the above formats, but will return only the legacy format. For
+     * example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as
+     * "OWNER".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -591,8 +595,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] Describes the rights granted to the user specified by the other member of the access
-     * object. The following string values are supported: READER, WRITER, OWNER.
+     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in
+     * this access entry. The following legacy mappings will be applied: OWNER
+     * roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer
+     * This field will accept any of the above formats, but will return only the legacy format. For
+     * example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as
+     * "OWNER".
      * @return value or {@code null} for none
      */
     public java.lang.String getRole() {
@@ -600,8 +608,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * [Required] Describes the rights granted to the user specified by the other member of the access
-     * object. The following string values are supported: READER, WRITER, OWNER.
+     * [Required] An IAM role ID that should be granted to the user, group, or domain specified in
+     * this access entry. The following legacy mappings will be applied: OWNER
+     * roles/bigquery.dataOwner WRITER  roles/bigquery.dataEditor READER  roles/bigquery.dataViewer
+     * This field will accept any of the above formats, but will return only the legacy format. For
+     * example, if you set this field to "roles/bigquery.dataOwner", it will be returned back as
+     * "OWNER".
      * @param role role or {@code null} for none
      */
     public Access setRole(java.lang.String role) {

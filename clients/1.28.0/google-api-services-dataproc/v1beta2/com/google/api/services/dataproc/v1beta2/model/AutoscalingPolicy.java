@@ -54,7 +54,7 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Required. Describes how the autoscaler will operate for secondary workers.
+   * Optional. Describes how the autoscaler will operate for secondary workers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Describes how the autoscaler will operate for secondary workers.
+   * Optional. Describes how the autoscaler will operate for secondary workers.
    * @return value or {@code null} for none
    */
   public InstanceGroupAutoscalingPolicyConfig getSecondaryWorkerConfig() {
@@ -133,7 +133,7 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Describes how the autoscaler will operate for secondary workers.
+   * Optional. Describes how the autoscaler will operate for secondary workers.
    * @param secondaryWorkerConfig secondaryWorkerConfig or {@code null} for none
    */
   public AutoscalingPolicy setSecondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfig secondaryWorkerConfig) {

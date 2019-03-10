@@ -30,8 +30,8 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Cooldown period in between scaling. Note that a cooldown period begins after a
-   * scaling operation has completed.Default: 120s.
+   * Optional. Duration between scaling events. A scaling period starts after the update operation
+   * from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
   private BasicYarnAutoscalingConfig yarnConfig;
 
   /**
-   * Optional. Cooldown period in between scaling. Note that a cooldown period begins after a
-   * scaling operation has completed.Default: 120s.
+   * Optional. Duration between scaling events. A scaling period starts after the update operation
+   * from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
    * @return value or {@code null} for none
    */
   public String getCooldownPeriod() {
@@ -54,8 +54,8 @@ public final class BasicAutoscalingAlgorithm extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Cooldown period in between scaling. Note that a cooldown period begins after a
-   * scaling operation has completed.Default: 120s.
+   * Optional. Duration between scaling events. A scaling period starts after the update operation
+   * from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
    * @param cooldownPeriod cooldownPeriod or {@code null} for none
    */
   public BasicAutoscalingAlgorithm setCooldownPeriod(String cooldownPeriod) {

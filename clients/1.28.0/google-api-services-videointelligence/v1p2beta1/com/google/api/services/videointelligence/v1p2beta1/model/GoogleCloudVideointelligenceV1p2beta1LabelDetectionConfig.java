@@ -31,6 +31,16 @@ package com.google.api.services.videointelligence.v1p2beta1.model;
 public final class GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The confidence threshold we perform filtering on the labels from frame-level detection. If not
+   * set, it is set to 0.4 by default. The valid range for this threshold is [0.1, 0.9]. Any value
+   * set outside of this range will be clipped. Note: for best results please follow the default
+   * threshold. We will update the default threshold everytime when we release a new model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float frameConfidenceThreshold;
+
+  /**
    * What labels should be detected with LABEL_DETECTION, in addition to video-level labels or
    * segment-level labels. If unspecified, defaults to `SHOT_MODE`.
    * The value may be {@code null}.
@@ -54,6 +64,40 @@ public final class GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig ext
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean stationaryCamera;
+
+  /**
+   * The confidence threshold we perform filtering on the labels from video-level and shot-level
+   * detections. If not set, it is set to 0.3 by default. The valid range for this threshold is
+   * [0.1, 0.9]. Any value set outside of this range will be clipped. Note: for best results please
+   * follow the default threshold. We will update the default threshold everytime when we release a
+   * new model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float videoConfidenceThreshold;
+
+  /**
+   * The confidence threshold we perform filtering on the labels from frame-level detection. If not
+   * set, it is set to 0.4 by default. The valid range for this threshold is [0.1, 0.9]. Any value
+   * set outside of this range will be clipped. Note: for best results please follow the default
+   * threshold. We will update the default threshold everytime when we release a new model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFrameConfidenceThreshold() {
+    return frameConfidenceThreshold;
+  }
+
+  /**
+   * The confidence threshold we perform filtering on the labels from frame-level detection. If not
+   * set, it is set to 0.4 by default. The valid range for this threshold is [0.1, 0.9]. Any value
+   * set outside of this range will be clipped. Note: for best results please follow the default
+   * threshold. We will update the default threshold everytime when we release a new model.
+   * @param frameConfidenceThreshold frameConfidenceThreshold or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig setFrameConfidenceThreshold(java.lang.Float frameConfidenceThreshold) {
+    this.frameConfidenceThreshold = frameConfidenceThreshold;
+    return this;
+  }
 
   /**
    * What labels should be detected with LABEL_DETECTION, in addition to video-level labels or
@@ -111,6 +155,31 @@ public final class GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig ext
    */
   public GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig setStationaryCamera(java.lang.Boolean stationaryCamera) {
     this.stationaryCamera = stationaryCamera;
+    return this;
+  }
+
+  /**
+   * The confidence threshold we perform filtering on the labels from video-level and shot-level
+   * detections. If not set, it is set to 0.3 by default. The valid range for this threshold is
+   * [0.1, 0.9]. Any value set outside of this range will be clipped. Note: for best results please
+   * follow the default threshold. We will update the default threshold everytime when we release a
+   * new model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getVideoConfidenceThreshold() {
+    return videoConfidenceThreshold;
+  }
+
+  /**
+   * The confidence threshold we perform filtering on the labels from video-level and shot-level
+   * detections. If not set, it is set to 0.3 by default. The valid range for this threshold is
+   * [0.1, 0.9]. Any value set outside of this range will be clipped. Note: for best results please
+   * follow the default threshold. We will update the default threshold everytime when we release a
+   * new model.
+   * @param videoConfidenceThreshold videoConfidenceThreshold or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig setVideoConfidenceThreshold(java.lang.Float videoConfidenceThreshold) {
+    this.videoConfidenceThreshold = videoConfidenceThreshold;
     return this;
   }
 

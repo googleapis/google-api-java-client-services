@@ -31,70 +31,60 @@ package com.google.api.services.content.model;
 public final class ProductStatusDataQualityIssue extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destination the issue applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destination;
 
   /**
-   * A more detailed error string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detail;
 
   /**
-   * The fetch status for landing_page_errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fetchStatus;
 
   /**
-   * The ID of the data quality issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The attribute name that is relevant for the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * The severity of the data quality issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * The time stamp of the data quality issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timestamp;
 
   /**
-   * The value of that attribute that was found on the landing page
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String valueOnLandingPage;
 
   /**
-   * The value the attribute had at time of evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String valueProvided;
 
   /**
-   * The destination the issue applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -102,7 +92,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The destination the issue applies to.
    * @param destination destination or {@code null} for none
    */
   public ProductStatusDataQualityIssue setDestination(java.lang.String destination) {
@@ -111,7 +100,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * A more detailed error string.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetail() {
@@ -119,7 +107,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * A more detailed error string.
    * @param detail detail or {@code null} for none
    */
   public ProductStatusDataQualityIssue setDetail(java.lang.String detail) {
@@ -128,7 +115,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The fetch status for landing_page_errors.
    * @return value or {@code null} for none
    */
   public java.lang.String getFetchStatus() {
@@ -136,7 +122,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The fetch status for landing_page_errors.
    * @param fetchStatus fetchStatus or {@code null} for none
    */
   public ProductStatusDataQualityIssue setFetchStatus(java.lang.String fetchStatus) {
@@ -145,7 +130,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The ID of the data quality issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -153,7 +137,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The ID of the data quality issue.
    * @param id id or {@code null} for none
    */
   public ProductStatusDataQualityIssue setId(java.lang.String id) {
@@ -162,7 +145,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The attribute name that is relevant for the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -170,7 +152,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The attribute name that is relevant for the issue.
    * @param location location or {@code null} for none
    */
   public ProductStatusDataQualityIssue setLocation(java.lang.String location) {
@@ -179,7 +160,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The severity of the data quality issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -187,7 +167,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The severity of the data quality issue.
    * @param severity severity or {@code null} for none
    */
   public ProductStatusDataQualityIssue setSeverity(java.lang.String severity) {
@@ -196,7 +175,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The time stamp of the data quality issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimestamp() {
@@ -204,7 +182,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The time stamp of the data quality issue.
    * @param timestamp timestamp or {@code null} for none
    */
   public ProductStatusDataQualityIssue setTimestamp(java.lang.String timestamp) {
@@ -213,7 +190,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The value of that attribute that was found on the landing page
    * @return value or {@code null} for none
    */
   public java.lang.String getValueOnLandingPage() {
@@ -221,7 +197,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The value of that attribute that was found on the landing page
    * @param valueOnLandingPage valueOnLandingPage or {@code null} for none
    */
   public ProductStatusDataQualityIssue setValueOnLandingPage(java.lang.String valueOnLandingPage) {
@@ -230,7 +205,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The value the attribute had at time of evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueProvided() {
@@ -238,7 +212,6 @@ public final class ProductStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The value the attribute had at time of evaluation.
    * @param valueProvided valueProvided or {@code null} for none
    */
   public ProductStatusDataQualityIssue setValueProvided(java.lang.String valueProvided) {

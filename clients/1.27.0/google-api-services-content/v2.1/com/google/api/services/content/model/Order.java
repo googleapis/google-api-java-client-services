@@ -45,13 +45,6 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private OrderAddress billingAddress;
 
   /**
-   * The channel type of the order: "purchaseOnGoogle" or "googleExpress".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String channelType;
-
-  /**
    * The details of the customer who placed the order.
    * The value may be {@code null}.
    */
@@ -209,23 +202,6 @@ public final class Order extends com.google.api.client.json.GenericJson {
    */
   public Order setBillingAddress(OrderAddress billingAddress) {
     this.billingAddress = billingAddress;
-    return this;
-  }
-
-  /**
-   * The channel type of the order: "purchaseOnGoogle" or "googleExpress".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getChannelType() {
-    return channelType;
-  }
-
-  /**
-   * The channel type of the order: "purchaseOnGoogle" or "googleExpress".
-   * @param channelType channelType or {@code null} for none
-   */
-  public Order setChannelType(java.lang.String channelType) {
-    this.channelType = channelType;
     return this;
   }
 

@@ -38,13 +38,6 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
   private java.lang.String brand;
 
   /**
-   * The item's channel (online or local).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String channel;
-
-  /**
    * Condition or state of the item.
    * The value may be {@code null}.
    */
@@ -157,23 +150,6 @@ public final class OrderLineItemProduct extends com.google.api.client.json.Gener
    */
   public OrderLineItemProduct setBrand(java.lang.String brand) {
     this.brand = brand;
-    return this;
-  }
-
-  /**
-   * The item's channel (online or local).
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getChannel() {
-    return channel;
-  }
-
-  /**
-   * The item's channel (online or local).
-   * @param channel channel or {@code null} for none
-   */
-  public OrderLineItemProduct setChannel(java.lang.String channel) {
-    this.channel = channel;
     return this;
   }
 

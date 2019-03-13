@@ -17,8 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * The status of a product, i.e., information about a product computed asynchronously by the data
- * quality analysis.
+ * The status of a product, i.e., information about a product computed asynchronously.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -39,7 +38,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   private java.lang.String creationDate;
 
   /**
-   * A list of data quality issues associated with the product.
+   * DEPRECATED - never populated
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +125,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of data quality issues associated with the product.
+   * DEPRECATED - never populated
    * @return value or {@code null} for none
    */
   public java.util.List<ProductStatusDataQualityIssue> getDataQualityIssues() {
@@ -134,7 +133,7 @@ public final class ProductStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of data quality issues associated with the product.
+   * DEPRECATED - never populated
    * @param dataQualityIssues dataQualityIssues or {@code null} for none
    */
   public ProductStatus setDataQualityIssues(java.util.List<ProductStatusDataQualityIssue> dataQualityIssues) {

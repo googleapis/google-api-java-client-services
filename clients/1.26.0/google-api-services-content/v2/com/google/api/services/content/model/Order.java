@@ -38,7 +38,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean acknowledged;
 
   /**
-   * The channel type of the order: "purchaseOnGoogle" or "googleExpress".
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,8 +122,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private java.lang.String placedDate;
 
   /**
-   * Deprecated. Ignored if provided for createTestOrder. The details of the merchant provided
-   * promotions applied to the order. More details about the program are here.
+   * The details of the merchant provided promotions applied to the order. More details about the
+   * program are here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The channel type of the order: "purchaseOnGoogle" or "googleExpress".
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelType() {
@@ -204,7 +204,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The channel type of the order: "purchaseOnGoogle" or "googleExpress".
+   * Deprecated.
    * @param channelType channelType or {@code null} for none
    */
   public Order setChannelType(java.lang.String channelType) {
@@ -400,8 +400,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Ignored if provided for createTestOrder. The details of the merchant provided
-   * promotions applied to the order. More details about the program are here.
+   * The details of the merchant provided promotions applied to the order. More details about the
+   * program are here.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderLegacyPromotion> getPromotions() {
@@ -409,8 +409,8 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. Ignored if provided for createTestOrder. The details of the merchant provided
-   * promotions applied to the order. More details about the program are here.
+   * The details of the merchant provided promotions applied to the order. More details about the
+   * program are here.
    * @param promotions promotions or {@code null} for none
    */
   public Order setPromotions(java.util.List<OrderLegacyPromotion> promotions) {

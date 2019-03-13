@@ -31,84 +31,72 @@ package com.google.api.services.content.model;
 public final class AccountStatusDataQualityIssue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Country for which this issue is reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String country;
 
   /**
-   * The destination the issue applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destination;
 
   /**
-   * A more detailed description of the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detail;
 
   /**
-   * Actual value displayed on the landing page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayedValue;
 
   /**
-   * Example items featuring the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AccountStatusExampleItem> exampleItems;
 
   /**
-   * Issue identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Last time the account was checked for this issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastChecked;
 
   /**
-   * The attribute name that is relevant for the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Number of items in the account found to have the said issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long numItems;
 
   /**
-   * Severity of the problem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * Submitted value that causes the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String submittedValue;
 
   /**
-   * Country for which this issue is reported.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -116,7 +104,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Country for which this issue is reported.
    * @param country country or {@code null} for none
    */
   public AccountStatusDataQualityIssue setCountry(java.lang.String country) {
@@ -125,7 +112,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The destination the issue applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -133,7 +119,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The destination the issue applies to.
    * @param destination destination or {@code null} for none
    */
   public AccountStatusDataQualityIssue setDestination(java.lang.String destination) {
@@ -142,7 +127,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * A more detailed description of the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetail() {
@@ -150,7 +134,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * A more detailed description of the issue.
    * @param detail detail or {@code null} for none
    */
   public AccountStatusDataQualityIssue setDetail(java.lang.String detail) {
@@ -159,7 +142,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Actual value displayed on the landing page.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayedValue() {
@@ -167,7 +149,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Actual value displayed on the landing page.
    * @param displayedValue displayedValue or {@code null} for none
    */
   public AccountStatusDataQualityIssue setDisplayedValue(java.lang.String displayedValue) {
@@ -176,7 +157,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Example items featuring the issue.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountStatusExampleItem> getExampleItems() {
@@ -184,7 +164,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Example items featuring the issue.
    * @param exampleItems exampleItems or {@code null} for none
    */
   public AccountStatusDataQualityIssue setExampleItems(java.util.List<AccountStatusExampleItem> exampleItems) {
@@ -193,7 +172,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Issue identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -201,7 +179,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Issue identifier.
    * @param id id or {@code null} for none
    */
   public AccountStatusDataQualityIssue setId(java.lang.String id) {
@@ -210,7 +187,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Last time the account was checked for this issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastChecked() {
@@ -218,7 +194,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Last time the account was checked for this issue.
    * @param lastChecked lastChecked or {@code null} for none
    */
   public AccountStatusDataQualityIssue setLastChecked(java.lang.String lastChecked) {
@@ -227,7 +202,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The attribute name that is relevant for the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -235,7 +209,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * The attribute name that is relevant for the issue.
    * @param location location or {@code null} for none
    */
   public AccountStatusDataQualityIssue setLocation(java.lang.String location) {
@@ -244,7 +217,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Number of items in the account found to have the said issue.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNumItems() {
@@ -252,7 +224,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Number of items in the account found to have the said issue.
    * @param numItems numItems or {@code null} for none
    */
   public AccountStatusDataQualityIssue setNumItems(java.lang.Long numItems) {
@@ -261,7 +232,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Severity of the problem.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -269,7 +239,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Severity of the problem.
    * @param severity severity or {@code null} for none
    */
   public AccountStatusDataQualityIssue setSeverity(java.lang.String severity) {
@@ -278,7 +247,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Submitted value that causes the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubmittedValue() {
@@ -286,7 +254,6 @@ public final class AccountStatusDataQualityIssue extends com.google.api.client.j
   }
 
   /**
-   * Submitted value that causes the issue.
    * @param submittedValue submittedValue or {@code null} for none
    */
   public AccountStatusDataQualityIssue setSubmittedValue(java.lang.String submittedValue) {

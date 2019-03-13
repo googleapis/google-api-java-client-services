@@ -46,7 +46,7 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   private java.util.List<AccountStatusAccountLevelIssue> accountLevelIssues;
 
   /**
-   * A list of data quality issues.
+   * DEPRECATED - never populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of data quality issues.
+   * DEPRECATED - never populated.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountStatusDataQualityIssue> getDataQualityIssues() {
@@ -117,7 +117,7 @@ public final class AccountStatus extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of data quality issues.
+   * DEPRECATED - never populated.
    * @param dataQualityIssues dataQualityIssues or {@code null} for none
    */
   public AccountStatus setDataQualityIssues(java.util.List<AccountStatusDataQualityIssue> dataQualityIssues) {

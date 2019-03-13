@@ -37,6 +37,13 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.lang.String artifactManifest;
 
   /**
+   * Time to push all non-container artifacts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeSpan artifactTiming;
+
+  /**
    * List of build step digests, in the order corresponding to build step indices.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
    */
   public Results setArtifactManifest(java.lang.String artifactManifest) {
     this.artifactManifest = artifactManifest;
+    return this;
+  }
+
+  /**
+   * Time to push all non-container artifacts.
+   * @return value or {@code null} for none
+   */
+  public TimeSpan getArtifactTiming() {
+    return artifactTiming;
+  }
+
+  /**
+   * Time to push all non-container artifacts.
+   * @param artifactTiming artifactTiming or {@code null} for none
+   */
+  public Results setArtifactTiming(TimeSpan artifactTiming) {
+    this.artifactTiming = artifactTiming;
     return this;
   }
 

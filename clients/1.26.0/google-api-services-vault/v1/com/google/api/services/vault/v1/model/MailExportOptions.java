@@ -37,6 +37,13 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
   private java.lang.String exportFormat;
 
   /**
+   * Set to true to export confidential mode content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean showConfidentialModeContent;
+
+  /**
    * The export file format.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class MailExportOptions extends com.google.api.client.json.GenericJ
    */
   public MailExportOptions setExportFormat(java.lang.String exportFormat) {
     this.exportFormat = exportFormat;
+    return this;
+  }
+
+  /**
+   * Set to true to export confidential mode content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getShowConfidentialModeContent() {
+    return showConfidentialModeContent;
+  }
+
+  /**
+   * Set to true to export confidential mode content.
+   * @param showConfidentialModeContent showConfidentialModeContent or {@code null} for none
+   */
+  public MailExportOptions setShowConfidentialModeContent(java.lang.Boolean showConfidentialModeContent) {
+    this.showConfidentialModeContent = showConfidentialModeContent;
     return this;
   }
 

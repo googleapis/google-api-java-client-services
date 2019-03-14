@@ -83,6 +83,15 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
   }
 
   /**
+   * Directory from which a command is executed. It is a relative directory with respect to the
+   * bot's working directory (i.e., "./"). If it is non-empty, then it must exist under "./".
+   * Otherwise, "./" will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workingDirectory;
+
+  /**
    * The command itself to run (e.g., argv).
    *
    * This field should be passed directly to the underlying operating system, and so it must be
@@ -183,6 +192,27 @@ public final class GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends c
    */
   public GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs setInlineBlobs(java.util.List<GoogleDevtoolsRemoteworkersV1test2Blob> inlineBlobs) {
     this.inlineBlobs = inlineBlobs;
+    return this;
+  }
+
+  /**
+   * Directory from which a command is executed. It is a relative directory with respect to the
+   * bot's working directory (i.e., "./"). If it is non-empty, then it must exist under "./".
+   * Otherwise, "./" will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkingDirectory() {
+    return workingDirectory;
+  }
+
+  /**
+   * Directory from which a command is executed. It is a relative directory with respect to the
+   * bot's working directory (i.e., "./"). If it is non-empty, then it must exist under "./".
+   * Otherwise, "./" will be used.
+   * @param workingDirectory workingDirectory or {@code null} for none
+   */
+  public GoogleDevtoolsRemoteworkersV1test2CommandTaskInputs setWorkingDirectory(java.lang.String workingDirectory) {
+    this.workingDirectory = workingDirectory;
     return this;
   }
 

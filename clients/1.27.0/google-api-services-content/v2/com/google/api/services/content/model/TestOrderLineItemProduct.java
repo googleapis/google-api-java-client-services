@@ -38,7 +38,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private java.lang.String brand;
 
   /**
-   * The item's channel.
+   * Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The item's channel.
+   * Deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -154,7 +154,7 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   }
 
   /**
-   * The item's channel.
+   * Deprecated.
    * @param channel channel or {@code null} for none
    */
   public TestOrderLineItemProduct setChannel(java.lang.String channel) {

@@ -80,8 +80,7 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   private java.lang.String predefinedDeliveryAddress;
 
   /**
-   * Deprecated. The details of the merchant provided promotions applied to the order. More details
-   * about the program are here.
+   * Deprecated. Ignored if provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,8 +235,7 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. The details of the merchant provided promotions applied to the order. More details
-   * about the program are here.
+   * Deprecated. Ignored if provided.
    * @return value or {@code null} for none
    */
   public java.util.List<OrderLegacyPromotion> getPromotions() {
@@ -245,8 +243,7 @@ public final class TestOrder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated. The details of the merchant provided promotions applied to the order. More details
-   * about the program are here.
+   * Deprecated. Ignored if provided.
    * @param promotions promotions or {@code null} for none
    */
   public TestOrder setPromotions(java.util.List<OrderLegacyPromotion> promotions) {

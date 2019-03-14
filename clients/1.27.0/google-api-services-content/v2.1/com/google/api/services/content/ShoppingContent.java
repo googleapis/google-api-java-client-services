@@ -1367,8 +1367,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Retrieves the status of a Merchant Center account. Multi-client accounts can only call this
-     * method for sub-accounts.
+     * Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-
+     * client accounts.
      *
      * Create a request for the method "accountstatuses.get".
      *
@@ -1392,8 +1392,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/accountstatuses/{accountId}";
 
       /**
-       * Retrieves the status of a Merchant Center account. Multi-client accounts can only call this
-       * method for sub-accounts.
+       * Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-
+       * client accounts.
        *
        * Create a request for the method "accountstatuses.get".
        *

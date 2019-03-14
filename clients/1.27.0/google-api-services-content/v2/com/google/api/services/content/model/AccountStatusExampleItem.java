@@ -17,8 +17,7 @@
 package com.google.api.services.content.model;
 
 /**
- * An example of an item that has poor data quality. An item value on the landing page differs from
- * what is submitted, or conflicts with a policy.
+ * Model definition for AccountStatusExampleItem.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Content API for Shopping. For a detailed explanation
@@ -32,42 +31,36 @@ package com.google.api.services.content.model;
 public final class AccountStatusExampleItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique item ID as specified in the uploaded product data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemId;
 
   /**
-   * Landing page of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String link;
 
   /**
-   * The item value that was submitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String submittedValue;
 
   /**
-   * Title of the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The actual value on the landing page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String valueOnLandingPage;
 
   /**
-   * Unique item ID as specified in the uploaded product data.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemId() {
@@ -75,7 +68,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * Unique item ID as specified in the uploaded product data.
    * @param itemId itemId or {@code null} for none
    */
   public AccountStatusExampleItem setItemId(java.lang.String itemId) {
@@ -84,7 +76,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * Landing page of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getLink() {
@@ -92,7 +83,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * Landing page of the item.
    * @param link link or {@code null} for none
    */
   public AccountStatusExampleItem setLink(java.lang.String link) {
@@ -101,7 +91,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * The item value that was submitted.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubmittedValue() {
@@ -109,7 +98,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * The item value that was submitted.
    * @param submittedValue submittedValue or {@code null} for none
    */
   public AccountStatusExampleItem setSubmittedValue(java.lang.String submittedValue) {
@@ -118,7 +106,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * Title of the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -126,7 +113,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * Title of the item.
    * @param title title or {@code null} for none
    */
   public AccountStatusExampleItem setTitle(java.lang.String title) {
@@ -135,7 +121,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * The actual value on the landing page.
    * @return value or {@code null} for none
    */
   public java.lang.String getValueOnLandingPage() {
@@ -143,7 +128,6 @@ public final class AccountStatusExampleItem extends com.google.api.client.json.G
   }
 
   /**
-   * The actual value on the landing page.
    * @param valueOnLandingPage valueOnLandingPage or {@code null} for none
    */
   public AccountStatusExampleItem setValueOnLandingPage(java.lang.String valueOnLandingPage) {

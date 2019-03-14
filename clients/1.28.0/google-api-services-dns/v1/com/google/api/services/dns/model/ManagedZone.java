@@ -91,6 +91,18 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> nameServers;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZonePrivateVisibilityConfig privateVisibilityConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTime() {
@@ -239,6 +251,36 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setNameServers(java.util.List<java.lang.String> nameServers) {
     this.nameServers = nameServers;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ManagedZonePrivateVisibilityConfig getPrivateVisibilityConfig() {
+    return privateVisibilityConfig;
+  }
+
+  /**
+   * @param privateVisibilityConfig privateVisibilityConfig or {@code null} for none
+   */
+  public ManagedZone setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfig privateVisibilityConfig) {
+    this.privateVisibilityConfig = privateVisibilityConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * @param visibility visibility or {@code null} for none
+   */
+  public ManagedZone setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

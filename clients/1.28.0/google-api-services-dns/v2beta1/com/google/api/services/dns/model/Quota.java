@@ -52,6 +52,18 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Integer managedZonesPerNetwork;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer networksPerManagedZone;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Integer resourceRecordsPerRrset;
 
   /**
@@ -134,6 +146,36 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setManagedZones(java.lang.Integer managedZones) {
     this.managedZones = managedZones;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getManagedZonesPerNetwork() {
+    return managedZonesPerNetwork;
+  }
+
+  /**
+   * @param managedZonesPerNetwork managedZonesPerNetwork or {@code null} for none
+   */
+  public Quota setManagedZonesPerNetwork(java.lang.Integer managedZonesPerNetwork) {
+    this.managedZonesPerNetwork = managedZonesPerNetwork;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNetworksPerManagedZone() {
+    return networksPerManagedZone;
+  }
+
+  /**
+   * @param networksPerManagedZone networksPerManagedZone or {@code null} for none
+   */
+  public Quota setNetworksPerManagedZone(java.lang.Integer networksPerManagedZone) {
+    this.networksPerManagedZone = networksPerManagedZone;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-analyticsreporting</artifactId>
-  <version>v4-rev20180725-1.26.0</version>
-  <name>Analytics Reporting API v4-rev20180725-1.26.0</name>
+  <version>v4-rev20190313-1.26.0</version>
+  <name>Analytics Reporting API v4-rev20190313-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

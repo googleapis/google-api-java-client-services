@@ -166,18 +166,15 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Creates a snapshot from the requested subscription. Snapshots are used in Seek operations, which
        * allow you to manage message acknowledgments in bulk. That is, you can set the acknowledgment
-       * state of messages in an existing subscription to the state captured by a snapshot.
-       *
-       * BETA: This feature is part of a beta release. This API might be changed in backward-incompatible
-       * ways and is not recommended for production use. It is not subject to any SLA or deprecation
-       * policy. If the snapshot already exists, returns `ALREADY_EXISTS`. If the requested subscription
-       * doesn't exist, returns `NOT_FOUND`. If the backlog in the subscription is too old -- and the
-       * resulting snapshot would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned.
-       * See also the `Snapshot.expire_time` field. If the name is not provided in the request, the server
-       * will assign a random name for this snapshot on the same project as the subscription, conforming
-       * to the [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names). The
-       * generated name is populated in the returned Snapshot object. Note that for REST API requests, you
-       * must specify a name in the request.
+       * state of messages in an existing subscription to the state captured by a snapshot. If the
+       * snapshot already exists, returns `ALREADY_EXISTS`. If the requested subscription doesn't exist,
+       * returns `NOT_FOUND`. If the backlog in the subscription is too old -- and the resulting snapshot
+       * would expire in less than 1 hour -- then `FAILED_PRECONDITION` is returned. See also the
+       * `Snapshot.expire_time` field. If the name is not provided in the request, the server will assign
+       * a random name for this snapshot on the same project as the subscription, conforming to the
+       * [resource name format](https://cloud.google.com/pubsub/docs/admin#resource_names). The generated
+       * name is populated in the returned Snapshot object. Note that for REST API requests, you must
+       * specify a name in the request.
        *
        * Create a request for the method "snapshots.create".
        *
@@ -213,11 +210,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Creates a snapshot from the requested subscription. Snapshots are used in Seek operations,
          * which allow you to manage message acknowledgments in bulk. That is, you can set the
          * acknowledgment state of messages in an existing subscription to the state captured by a
-         * snapshot.
-         *
-         * BETA: This feature is part of a beta release. This API might be changed in backward-
-         * incompatible ways and is not recommended for production use. It is not subject to any SLA or
-         * deprecation policy. If the snapshot already exists, returns `ALREADY_EXISTS`. If the requested
+         * snapshot. If the snapshot already exists, returns `ALREADY_EXISTS`. If the requested
          * subscription doesn't exist, returns `NOT_FOUND`. If the backlog in the subscription is too old
          * -- and the resulting snapshot would expire in less than 1 hour -- then `FAILED_PRECONDITION` is
          * returned. See also the `Snapshot.expire_time` field. If the name is not provided in the
@@ -356,12 +349,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Removes an existing snapshot. Snapshots are used in Seek operations, which allow you to manage
        * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an
-       * existing subscription to the state captured by a snapshot. BETA: This feature is part of a beta
-       * release. This API might be changed in backward-incompatible ways and is not recommended for
-       * production use. It is not subject to any SLA or deprecation policy. When the snapshot is deleted,
-       * all messages retained in the snapshot are immediately dropped. After a snapshot is deleted, a new
-       * one may be created with the same name, but the new one has no association with the old snapshot
-       * or its subscription, unless the same subscription is specified.
+       * existing subscription to the state captured by a snapshot. When the snapshot is deleted, all
+       * messages retained in the snapshot are immediately dropped. After a snapshot is deleted, a new one
+       * may be created with the same name, but the new one has no association with the old snapshot or
+       * its subscription, unless the same subscription is specified.
        *
        * Create a request for the method "snapshots.delete".
        *
@@ -388,12 +379,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Removes an existing snapshot. Snapshots are used in Seek operations, which allow you to manage
          * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in
-         * an existing subscription to the state captured by a snapshot. BETA: This feature is part of a
-         * beta release. This API might be changed in backward-incompatible ways and is not recommended
-         * for production use. It is not subject to any SLA or deprecation policy. When the snapshot is
-         * deleted, all messages retained in the snapshot are immediately dropped. After a snapshot is
-         * deleted, a new one may be created with the same name, but the new one has no association with
-         * the old snapshot or its subscription, unless the same subscription is specified.
+         * an existing subscription to the state captured by a snapshot. When the snapshot is deleted, all
+         * messages retained in the snapshot are immediately dropped. After a snapshot is deleted, a new
+         * one may be created with the same name, but the new one has no association with the old snapshot
+         * or its subscription, unless the same subscription is specified.
          *
          * Create a request for the method "snapshots.delete".
          *
@@ -504,9 +493,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Gets the configuration details of a snapshot. Snapshots are used in Seek operations, which allow
        * you to manage message acknowledgments in bulk. That is, you can set the acknowledgment state of
-       * messages in an existing subscription to the state captured by a snapshot. BETA: This feature is
-       * part of a beta release. This API might be changed in backward-incompatible ways and is not
-       * recommended for production use. It is not subject to any SLA or deprecation policy.
+       * messages in an existing subscription to the state captured by a snapshot.
        *
        * Create a request for the method "snapshots.get".
        *
@@ -533,9 +520,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Gets the configuration details of a snapshot. Snapshots are used in Seek operations, which
          * allow you to manage message acknowledgments in bulk. That is, you can set the acknowledgment
-         * state of messages in an existing subscription to the state captured by a snapshot. BETA: This
-         * feature is part of a beta release. This API might be changed in backward-incompatible ways and
-         * is not recommended for production use. It is not subject to any SLA or deprecation policy.
+         * state of messages in an existing subscription to the state captured by a snapshot.
          *
          * Create a request for the method "snapshots.get".
          *
@@ -808,9 +793,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Lists the existing snapshots. Snapshots are used in Seek operations, which allow you to manage
        * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an
-       * existing subscription to the state captured by a snapshot. BETA: This feature is part of a beta
-       * release. This API might be changed in backward-incompatible ways and is not recommended for
-       * production use. It is not subject to any SLA or deprecation policy.
+       * existing subscription to the state captured by a snapshot.
        *
        * Create a request for the method "snapshots.list".
        *
@@ -837,9 +820,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Lists the existing snapshots. Snapshots are used in Seek operations, which allow you to manage
          * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in
-         * an existing subscription to the state captured by a snapshot. BETA: This feature is part of a
-         * beta release. This API might be changed in backward-incompatible ways and is not recommended
-         * for production use. It is not subject to any SLA or deprecation policy.
+         * an existing subscription to the state captured by a snapshot.
          *
          * Create a request for the method "snapshots.list".
          *
@@ -1001,10 +982,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Updates an existing snapshot. Snapshots are used in Seek operations, which allow you to manage
        * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an
-       * existing subscription to the state captured by a snapshot. BETA: This feature is part of a beta
-       * release. This API might be changed in backward-incompatible ways and is not recommended for
-       * production use. It is not subject to any SLA or deprecation policy. Note that certain properties
-       * of a snapshot are not modifiable.
+       * existing subscription to the state captured by a snapshot.
        *
        * Create a request for the method "snapshots.patch".
        *
@@ -1031,10 +1009,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Updates an existing snapshot. Snapshots are used in Seek operations, which allow you to manage
          * message acknowledgments in bulk. That is, you can set the acknowledgment state of messages in
-         * an existing subscription to the state captured by a snapshot. BETA: This feature is part of a
-         * beta release. This API might be changed in backward-incompatible ways and is not recommended
-         * for production use. It is not subject to any SLA or deprecation policy. Note that certain
-         * properties of a snapshot are not modifiable.
+         * an existing subscription to the state captured by a snapshot.
          *
          * Create a request for the method "snapshots.patch".
          *
@@ -3007,9 +2982,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * in the request. Snapshots are used in Seek operations, which allow you to manage message
        * acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an existing
        * subscription to the state captured by a snapshot. Note that both the subscription and the
-       * snapshot must be on the same topic. BETA: This feature is part of a beta release. This API might
-       * be changed in backward-incompatible ways and is not recommended for production use. It is not
-       * subject to any SLA or deprecation policy.
+       * snapshot must be on the same topic.
        *
        * Create a request for the method "subscriptions.seek".
        *
@@ -3038,9 +3011,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * in the request. Snapshots are used in Seek operations, which allow you to manage message
          * acknowledgments in bulk. That is, you can set the acknowledgment state of messages in an
          * existing subscription to the state captured by a snapshot. Note that both the subscription and
-         * the snapshot must be on the same topic. BETA: This feature is part of a beta release. This API
-         * might be changed in backward-incompatible ways and is not recommended for production use. It is
-         * not subject to any SLA or deprecation policy.
+         * the snapshot must be on the same topic.
          *
          * Create a request for the method "subscriptions.seek".
          *
@@ -4863,9 +4834,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Lists the names of the snapshots on this topic. Snapshots are used in Seek operations, which
          * allow you to manage message acknowledgments in bulk. That is, you can set the acknowledgment
-         * state of messages in an existing subscription to the state captured by a snapshot. BETA: This
-         * feature is part of a beta release. This API might be changed in backward-incompatible ways and is
-         * not recommended for production use. It is not subject to any SLA or deprecation policy.
+         * state of messages in an existing subscription to the state captured by a snapshot.
          *
          * Create a request for the method "snapshots.list".
          *
@@ -4892,9 +4861,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Lists the names of the snapshots on this topic. Snapshots are used in Seek operations, which
            * allow you to manage message acknowledgments in bulk. That is, you can set the acknowledgment
-           * state of messages in an existing subscription to the state captured by a snapshot. BETA: This
-           * feature is part of a beta release. This API might be changed in backward-incompatible ways and
-           * is not recommended for production use. It is not subject to any SLA or deprecation policy.
+           * state of messages in an existing subscription to the state captured by a snapshot.
            *
            * Create a request for the method "snapshots.list".
            *

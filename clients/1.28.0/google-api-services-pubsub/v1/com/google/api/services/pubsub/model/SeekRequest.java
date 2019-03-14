@@ -17,9 +17,7 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * Request for the `Seek` method. BETA: This feature is part of a beta release. This API might be
- * changed in backward-incompatible ways and is not recommended for production use. It is not
- * subject to any SLA or deprecation policy.
+ * Request for the `Seek` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:

@@ -76,9 +76,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * How long to retain unacknowledged messages in the subscription's backlog, from the moment a
    * message is published. If `retain_acked_messages` is true, then this also configures the
    * retention of acknowledged messages, and thus configures how far back in time a `Seek` can be
-   * done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes. BETA: This
-   * feature is part of a beta release. This API might be changed in backward-incompatible ways and
-   * is not recommended for production use. It is not subject to any SLA or deprecation policy.
+   * done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,10 +107,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * `message_retention_duration` window. This must be true if you would like to
    *
    * Seek to a timestamp.
-   *
-   * BETA: This feature is part of a beta release. This API might be changed in backward-
-   * incompatible ways and is not recommended for production use. It is not subject to any SLA or
-   * deprecation policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,9 +220,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * How long to retain unacknowledged messages in the subscription's backlog, from the moment a
    * message is published. If `retain_acked_messages` is true, then this also configures the
    * retention of acknowledged messages, and thus configures how far back in time a `Seek` can be
-   * done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes. BETA: This
-   * feature is part of a beta release. This API might be changed in backward-incompatible ways and
-   * is not recommended for production use. It is not subject to any SLA or deprecation policy.
+   * done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
    * @return value or {@code null} for none
    */
   public String getMessageRetentionDuration() {
@@ -239,9 +231,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * How long to retain unacknowledged messages in the subscription's backlog, from the moment a
    * message is published. If `retain_acked_messages` is true, then this also configures the
    * retention of acknowledged messages, and thus configures how far back in time a `Seek` can be
-   * done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes. BETA: This
-   * feature is part of a beta release. This API might be changed in backward-incompatible ways and
-   * is not recommended for production use. It is not subject to any SLA or deprecation policy.
+   * done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
    * @param messageRetentionDuration messageRetentionDuration or {@code null} for none
    */
   public Subscription setMessageRetentionDuration(String messageRetentionDuration) {
@@ -299,10 +289,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * `message_retention_duration` window. This must be true if you would like to
    *
    * Seek to a timestamp.
-   *
-   * BETA: This feature is part of a beta release. This API might be changed in backward-
-   * incompatible ways and is not recommended for production use. It is not subject to any SLA or
-   * deprecation policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRetainAckedMessages() {
@@ -315,10 +301,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * `message_retention_duration` window. This must be true if you would like to
    *
    * Seek to a timestamp.
-   *
-   * BETA: This feature is part of a beta release. This API might be changed in backward-
-   * incompatible ways and is not recommended for production use. It is not subject to any SLA or
-   * deprecation policy.
    * @param retainAckedMessages retainAckedMessages or {@code null} for none
    */
   public Subscription setRetainAckedMessages(java.lang.Boolean retainAckedMessages) {

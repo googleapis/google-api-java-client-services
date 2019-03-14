@@ -44,7 +44,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs of the Long Running Operations (LROs) currently running for this schema. After modifying
-   * the schema, wait for opeations to complete before indexing additional content.
+   * the schema, wait for operations to complete before indexing additional content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs of the Long Running Operations (LROs) currently running for this schema. After modifying
-   * the schema, wait for opeations to complete before indexing additional content.
+   * the schema, wait for operations to complete before indexing additional content.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOperationIds() {
@@ -78,7 +78,7 @@ public final class Schema extends com.google.api.client.json.GenericJson {
 
   /**
    * IDs of the Long Running Operations (LROs) currently running for this schema. After modifying
-   * the schema, wait for opeations to complete before indexing additional content.
+   * the schema, wait for operations to complete before indexing additional content.
    * @param operationIds operationIds or {@code null} for none
    */
   public Schema setOperationIds(java.util.List<java.lang.String> operationIds) {

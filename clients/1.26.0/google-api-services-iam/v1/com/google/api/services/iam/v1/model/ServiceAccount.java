@@ -44,6 +44,14 @@ package com.google.api.services.iam.v1.model;
 public final class ServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A user-specified opaque description of the service account. Must be less than or
+   * equal to 256 UTF-8 bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha
    * phase.
    * The value may be {@code null}.
@@ -110,6 +118,25 @@ public final class ServiceAccount extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String uniqueId;
+
+  /**
+   * Optional. A user-specified opaque description of the service account. Must be less than or
+   * equal to 256 UTF-8 bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. A user-specified opaque description of the service account. Must be less than or
+   * equal to 256 UTF-8 bytes.
+   * @param description description or {@code null} for none
+   */
+  public ServiceAccount setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * @OutputOnly A bool indicate if the service account is disabled. The field is currently in alpha

@@ -39,6 +39,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer diskSizeGb;
 
   /**
+   * Optional. The IPAllocationPolicy fields for the GKE cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IPAllocationPolicy ipAllocationPolicy;
+
+  /**
    * Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs
    * used to run the Apache Airflow software, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
@@ -146,6 +153,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setDiskSizeGb(java.lang.Integer diskSizeGb) {
     this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. The IPAllocationPolicy fields for the GKE cluster.
+   * @return value or {@code null} for none
+   */
+  public IPAllocationPolicy getIpAllocationPolicy() {
+    return ipAllocationPolicy;
+  }
+
+  /**
+   * Optional. The IPAllocationPolicy fields for the GKE cluster.
+   * @param ipAllocationPolicy ipAllocationPolicy or {@code null} for none
+   */
+  public NodeConfig setIpAllocationPolicy(IPAllocationPolicy ipAllocationPolicy) {
+    this.ipAllocationPolicy = ipAllocationPolicy;
     return this;
   }
 

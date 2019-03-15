@@ -32,7 +32,7 @@ public class PlusScopes {
   /** View your email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
-  /** View your basic profile info. */
+  /** See your personal info, including any personal info you've made publically available. */
   public static final String USERINFO_PROFILE = "https://www.googleapis.com/auth/userinfo.profile";
 
   /**

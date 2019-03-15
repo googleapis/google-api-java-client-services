@@ -1020,6 +1020,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Modify the members of a contact group owned by the authenticated user.
        *
+       * The only system contact groups that can have members added are `contactGroups/myContacts` and
+       * `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts
+       * removed.
+       *
        * Create a request for the method "members.modify".
        *
        * This request holds the parameters needed by the people server.  After setting any optional
@@ -1044,6 +1048,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Modify the members of a contact group owned by the authenticated user.
+         *
+         * The only system contact groups that can have members added are `contactGroups/myContacts` and
+         * `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts
+         * removed.
          *
          * Create a request for the method "members.modify".
          *

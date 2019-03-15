@@ -45,7 +45,13 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<TrainingRun> trainingRuns;
+  private java.util.List<BqmlTrainingRun> trainingRuns;
+
+  static {
+    // hack to force ProGuard to consider BqmlTrainingRun used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BqmlTrainingRun.class);
+  }
 
   /**
    * [Output-only, Beta] Model options used for the first training run. These options are immutable
@@ -74,7 +80,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
    * user decides to continue a previously cancelled query.
    * @return value or {@code null} for none
    */
-  public java.util.List<TrainingRun> getTrainingRuns() {
+  public java.util.List<BqmlTrainingRun> getTrainingRuns() {
     return trainingRuns;
   }
 
@@ -84,7 +90,7 @@ public final class ModelDefinition extends com.google.api.client.json.GenericJso
    * user decides to continue a previously cancelled query.
    * @param trainingRuns trainingRuns or {@code null} for none
    */
-  public ModelDefinition setTrainingRuns(java.util.List<TrainingRun> trainingRuns) {
+  public ModelDefinition setTrainingRuns(java.util.List<BqmlTrainingRun> trainingRuns) {
     this.trainingRuns = trainingRuns;
     return this;
   }

@@ -6463,8 +6463,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Revisions {
 
     /**
-     * Permanently deletes a revision. This method is only applicable to files with binary content in
-     * Drive.
+     * Permanently deletes a file version. You can only delete revisions for files with binary content,
+     * like images or videos. Revisions for other files, like Google Docs or Sheets, and the last
+     * remaining file version can't be deleted.
      *
      * Create a request for the method "revisions.delete".
      *
@@ -6486,8 +6487,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions/{revisionId}";
 
       /**
-       * Permanently deletes a revision. This method is only applicable to files with binary content in
-       * Drive.
+       * Permanently deletes a file version. You can only delete revisions for files with binary
+       * content, like images or videos. Revisions for other files, like Google Docs or Sheets, and the
+       * last remaining file version can't be deleted.
        *
        * Create a request for the method "revisions.delete".
        *

@@ -23,20 +23,11 @@ package com.google.api.services.genomics;
  */
 public class GenomicsScopes {
 
-  /** View and manage your data in Google BigQuery. */
-  public static final String BIGQUERY = "https://www.googleapis.com/auth/bigquery";
-
   /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
-  /** Manage your data in Google Cloud Storage. */
-  public static final String DEVSTORAGE_READ_WRITE = "https://www.googleapis.com/auth/devstorage.read_write";
-
   /** View and manage Genomics data. */
   public static final String GENOMICS = "https://www.googleapis.com/auth/genomics";
-
-  /** View Genomics data. */
-  public static final String GENOMICS_READONLY = "https://www.googleapis.com/auth/genomics.readonly";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -45,11 +36,8 @@ public class GenomicsScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(BIGQUERY);
     set.add(CLOUD_PLATFORM);
-    set.add(DEVSTORAGE_READ_WRITE);
     set.add(GENOMICS);
-    set.add(GENOMICS_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

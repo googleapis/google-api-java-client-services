@@ -31,6 +31,13 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.json.GenericJson {
 
   /**
+   * Details related to built-in algorithms job. Only set for built-in algorithms jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput;
+
+  /**
    * The number of hyperparameter tuning trials that completed successfully. Only set for
    * hyperparameter tuning jobs.
    * The value may be {@code null}.
@@ -44,6 +51,13 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.Double consumedMLUnits;
+
+  /**
+   * Whether this job is a built-in Algorithm job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isBuiltInAlgorithmJob;
 
   /**
    * Whether this job is a hyperparameter tuning job.
@@ -63,6 +77,23 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
     // hack to force ProGuard to consider GoogleCloudMlV1HyperparameterOutput used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudMlV1HyperparameterOutput.class);
+  }
+
+  /**
+   * Details related to built-in algorithms job. Only set for built-in algorithms jobs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudMlV1BuiltInAlgorithmOutput getBuiltInAlgorithmOutput() {
+    return builtInAlgorithmOutput;
+  }
+
+  /**
+   * Details related to built-in algorithms job. Only set for built-in algorithms jobs.
+   * @param builtInAlgorithmOutput builtInAlgorithmOutput or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingOutput setBuiltInAlgorithmOutput(GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput) {
+    this.builtInAlgorithmOutput = builtInAlgorithmOutput;
+    return this;
   }
 
   /**
@@ -98,6 +129,23 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
    */
   public GoogleCloudMlV1TrainingOutput setConsumedMLUnits(java.lang.Double consumedMLUnits) {
     this.consumedMLUnits = consumedMLUnits;
+    return this;
+  }
+
+  /**
+   * Whether this job is a built-in Algorithm job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsBuiltInAlgorithmJob() {
+    return isBuiltInAlgorithmJob;
+  }
+
+  /**
+   * Whether this job is a built-in Algorithm job.
+   * @param isBuiltInAlgorithmJob isBuiltInAlgorithmJob or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingOutput setIsBuiltInAlgorithmJob(java.lang.Boolean isBuiltInAlgorithmJob) {
+    this.isBuiltInAlgorithmJob = isBuiltInAlgorithmJob;
     return this;
   }
 

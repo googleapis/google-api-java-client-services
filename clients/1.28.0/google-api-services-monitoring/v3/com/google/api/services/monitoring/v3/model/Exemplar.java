@@ -34,8 +34,8 @@ package com.google.api.services.monitoring.v3.model;
 public final class Exemplar extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contextual information about the example value. Examples are:Trace ID:
-   * type.googleapis.com/google.devtools.cloudtrace.v1.TraceLiteral string:
+   * Contextual information about the example value. Examples are:Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContextLiteral string:
    * type.googleapis.com/google.protobuf.StringValueLabels dropped during aggregation:
    * type.googleapis.com/google.monitoring.v3.DroppedLabelsThere may be only a single attachment of
    * any given message type in a single exemplar, and this is enforced by the system.
@@ -59,8 +59,8 @@ public final class Exemplar extends com.google.api.client.json.GenericJson {
   private java.lang.Double value;
 
   /**
-   * Contextual information about the example value. Examples are:Trace ID:
-   * type.googleapis.com/google.devtools.cloudtrace.v1.TraceLiteral string:
+   * Contextual information about the example value. Examples are:Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContextLiteral string:
    * type.googleapis.com/google.protobuf.StringValueLabels dropped during aggregation:
    * type.googleapis.com/google.monitoring.v3.DroppedLabelsThere may be only a single attachment of
    * any given message type in a single exemplar, and this is enforced by the system.
@@ -71,8 +71,8 @@ public final class Exemplar extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contextual information about the example value. Examples are:Trace ID:
-   * type.googleapis.com/google.devtools.cloudtrace.v1.TraceLiteral string:
+   * Contextual information about the example value. Examples are:Trace:
+   * type.googleapis.com/google.monitoring.v3.SpanContextLiteral string:
    * type.googleapis.com/google.protobuf.StringValueLabels dropped during aggregation:
    * type.googleapis.com/google.monitoring.v3.DroppedLabelsThere may be only a single attachment of
    * any given message type in a single exemplar, and this is enforced by the system.

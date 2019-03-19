@@ -93,6 +93,20 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private InsertInlineImageRequest insertInlineImage;
 
   /**
+   * Inserts a page break at the specified location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertPageBreakRequest insertPageBreak;
+
+  /**
+   * Inserts a table at the specified location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertTableRequest insertTable;
+
+  /**
    * Inserts an empty row into a table.
    * The value may be {@code null}.
    */
@@ -277,6 +291,40 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setInsertInlineImage(InsertInlineImageRequest insertInlineImage) {
     this.insertInlineImage = insertInlineImage;
+    return this;
+  }
+
+  /**
+   * Inserts a page break at the specified location.
+   * @return value or {@code null} for none
+   */
+  public InsertPageBreakRequest getInsertPageBreak() {
+    return insertPageBreak;
+  }
+
+  /**
+   * Inserts a page break at the specified location.
+   * @param insertPageBreak insertPageBreak or {@code null} for none
+   */
+  public Request setInsertPageBreak(InsertPageBreakRequest insertPageBreak) {
+    this.insertPageBreak = insertPageBreak;
+    return this;
+  }
+
+  /**
+   * Inserts a table at the specified location.
+   * @return value or {@code null} for none
+   */
+  public InsertTableRequest getInsertTable() {
+    return insertTable;
+  }
+
+  /**
+   * Inserts a table at the specified location.
+   * @param insertTable insertTable or {@code null} for none
+   */
+  public Request setInsertTable(InsertTableRequest insertTable) {
+    this.insertTable = insertTable;
     return this;
   }
 

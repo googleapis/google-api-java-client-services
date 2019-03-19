@@ -69,6 +69,13 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.Integer nodeCount;
 
   /**
+   * The configuration used for the private Composer environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateEnvironmentConfig privateEnvironmentConfig;
+
+  /**
    * The configuration settings for software inside the environment.
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setNodeCount(java.lang.Integer nodeCount) {
     this.nodeCount = nodeCount;
+    return this;
+  }
+
+  /**
+   * The configuration used for the private Composer environment.
+   * @return value or {@code null} for none
+   */
+  public PrivateEnvironmentConfig getPrivateEnvironmentConfig() {
+    return privateEnvironmentConfig;
+  }
+
+  /**
+   * The configuration used for the private Composer environment.
+   * @param privateEnvironmentConfig privateEnvironmentConfig or {@code null} for none
+   */
+  public EnvironmentConfig setPrivateEnvironmentConfig(PrivateEnvironmentConfig privateEnvironmentConfig) {
+    this.privateEnvironmentConfig = privateEnvironmentConfig;
     return this;
   }
 

@@ -2106,7 +2106,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * This token is treated as a timestamp (in millis since epoch). If specified, the API
          * returns sessions modified since this time. The page token is ignored if either start or
          * end time is specified. If none of start time, end time, and the page token is specified,
-         * sessions modified in the last 7 days are returned.
+         * sessions modified in the last 30 days are returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
@@ -2115,7 +2115,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
        set this parameter to the value of nextPageToken from the previous response. This token is treated
        as a timestamp (in millis since epoch). If specified, the API returns sessions modified since this
        time. The page token is ignored if either start or end time is specified. If none of start time,
-       end time, and the page token is specified, sessions modified in the last 7 days are returned.
+       end time, and the page token is specified, sessions modified in the last 30 days are returned.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -2127,7 +2127,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * This token is treated as a timestamp (in millis since epoch). If specified, the API
          * returns sessions modified since this time. The page token is ignored if either start or
          * end time is specified. If none of start time, end time, and the page token is specified,
-         * sessions modified in the last 7 days are returned.
+         * sessions modified in the last 30 days are returned.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

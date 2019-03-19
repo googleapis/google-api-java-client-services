@@ -23,9 +23,6 @@ package com.google.api.services.oauth2;
  */
 public class Oauth2Scopes {
 
-  /** View your basic profile info, including your age range and language. */
-  public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
-
   /** Know who you are on Google. */
   public static final String PLUS_ME = "https://www.googleapis.com/auth/plus.me";
 
@@ -42,7 +39,6 @@ public class Oauth2Scopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(PLUS_LOGIN);
     set.add(PLUS_ME);
     set.add(USERINFO_EMAIL);
     set.add(USERINFO_PROFILE);

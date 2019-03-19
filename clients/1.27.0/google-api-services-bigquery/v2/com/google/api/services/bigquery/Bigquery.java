@@ -1829,29 +1829,6 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which
-       * have no parent.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parentJobId;
-
-      /** If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which have no
-     parent.
-       */
-      public java.lang.String getParentJobId() {
-        return parentJobId;
-      }
-
-      /**
-       * If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which
-       * have no parent.
-       */
-      public List setParentJobId(java.lang.String parentJobId) {
-        this.parentJobId = parentJobId;
-        return this;
-      }
-
       /** Restrict information returned to a set of selected fields */
       @com.google.api.client.util.Key
       private java.lang.String projection;

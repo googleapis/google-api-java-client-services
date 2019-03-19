@@ -56,6 +56,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.String ddlOperationPerformed;
 
   /**
+   * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RoutineReference ddlTargetRoutine;
+
+  /**
    * The DDL target table. Present only for CREATE/DROP TABLE/VIEW queries.
    * The value may be {@code null}.
    */
@@ -151,7 +158,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * manipulation-language. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
    * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "DROP_TABLE": DROP
    * TABLE query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_VIEW": DROP VIEW
-   * query. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
+   * query. "CREATE_FUNCTION": CREATE FUNCTION query. "DROP_FUNCTION" : DROP FUNCTION query.
+   * "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,6 +276,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setDdlOperationPerformed(java.lang.String ddlOperationPerformed) {
     this.ddlOperationPerformed = ddlOperationPerformed;
+    return this;
+  }
+
+  /**
+   * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+   * @return value or {@code null} for none
+   */
+  public RoutineReference getDdlTargetRoutine() {
+    return ddlTargetRoutine;
+  }
+
+  /**
+   * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
+   * @param ddlTargetRoutine ddlTargetRoutine or {@code null} for none
+   */
+  public JobStatistics2 setDdlTargetRoutine(RoutineReference ddlTargetRoutine) {
+    this.ddlTargetRoutine = ddlTargetRoutine;
     return this;
   }
 
@@ -458,7 +483,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * manipulation-language. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
    * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "DROP_TABLE": DROP
    * TABLE query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_VIEW": DROP VIEW
-   * query. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
+   * query. "CREATE_FUNCTION": CREATE FUNCTION query. "DROP_FUNCTION" : DROP FUNCTION query.
+   * "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatementType() {
@@ -476,7 +502,8 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    * manipulation-language. "CREATE_TABLE": CREATE [OR REPLACE] TABLE without AS SELECT.
    * "CREATE_TABLE_AS_SELECT": CREATE [OR REPLACE] TABLE ... AS SELECT ... . "DROP_TABLE": DROP
    * TABLE query. "CREATE_VIEW": CREATE [OR REPLACE] VIEW ... AS SELECT ... . "DROP_VIEW": DROP VIEW
-   * query. "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
+   * query. "CREATE_FUNCTION": CREATE FUNCTION query. "DROP_FUNCTION" : DROP FUNCTION query.
+   * "ALTER_TABLE": ALTER TABLE query. "ALTER_VIEW": ALTER VIEW query.
    * @param statementType statementType or {@code null} for none
    */
   public JobStatistics2 setStatementType(java.lang.String statementType) {

@@ -32,6 +32,8 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated delivery by date, in ISO 8601 format. If not specified only ship by date is updated.
+   *
+   * Provided date should be within 1 year timeframe and can not be a date in the past.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,6 +56,8 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated ship by date, in ISO 8601 format. If not specified only deliver by date is updated.
+   *
+   * Provided date should be within 1 year timeframe and can not be a date in the past.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,6 +65,8 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated delivery by date, in ISO 8601 format. If not specified only ship by date is updated.
+   *
+   * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliverByDate() {
@@ -69,6 +75,8 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated delivery by date, in ISO 8601 format. If not specified only ship by date is updated.
+   *
+   * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @param deliverByDate deliverByDate or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails setDeliverByDate(java.lang.String deliverByDate) {
@@ -114,6 +122,8 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated ship by date, in ISO 8601 format. If not specified only deliver by date is updated.
+   *
+   * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipByDate() {
@@ -122,6 +132,8 @@ public final class OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails ex
 
   /**
    * Updated ship by date, in ISO 8601 format. If not specified only deliver by date is updated.
+   *
+   * Provided date should be within 1 year timeframe and can not be a date in the past.
    * @param shipByDate shipByDate or {@code null} for none
    */
   public OrdersCustomBatchRequestEntryUpdateLineItemShippingDetails setShipByDate(java.lang.String shipByDate) {

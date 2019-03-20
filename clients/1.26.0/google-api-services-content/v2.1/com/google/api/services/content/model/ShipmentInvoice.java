@@ -45,7 +45,8 @@ public final class ShipmentInvoice extends com.google.api.client.json.GenericJso
   private java.util.List<ShipmentInvoiceLineItemInvoice> lineItemInvoices;
 
   /**
-   * [required] ID of the shipment group.
+   * [required] ID of the shipment group. It is assigned by the merchant in the shipLineItems method
+   * and is used to group multiple line items that have the same kind of shipping charges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class ShipmentInvoice extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [required] ID of the shipment group.
+   * [required] ID of the shipment group. It is assigned by the merchant in the shipLineItems method
+   * and is used to group multiple line items that have the same kind of shipping charges.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentGroupId() {
@@ -94,7 +96,8 @@ public final class ShipmentInvoice extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [required] ID of the shipment group.
+   * [required] ID of the shipment group. It is assigned by the merchant in the shipLineItems method
+   * and is used to group multiple line items that have the same kind of shipping charges.
    * @param shipmentGroupId shipmentGroupId or {@code null} for none
    */
   public ShipmentInvoice setShipmentGroupId(java.lang.String shipmentGroupId) {

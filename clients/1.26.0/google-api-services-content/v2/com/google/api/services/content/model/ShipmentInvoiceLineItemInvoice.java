@@ -46,7 +46,9 @@ public final class ShipmentInvoiceLineItemInvoice extends com.google.api.client.
   private java.lang.String productId;
 
   /**
-   * [required] Unit IDs to define specific units within the line item.
+   * [required] The shipment unit ID is assigned by the merchant and defines individual quantities
+   * within a line item. The same ID can be assigned to units that are the same while units that
+   * differ must be assigned a different ID (for example: free or promotional units).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +98,9 @@ public final class ShipmentInvoiceLineItemInvoice extends com.google.api.client.
   }
 
   /**
-   * [required] Unit IDs to define specific units within the line item.
+   * [required] The shipment unit ID is assigned by the merchant and defines individual quantities
+   * within a line item. The same ID can be assigned to units that are the same while units that
+   * differ must be assigned a different ID (for example: free or promotional units).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getShipmentUnitIds() {
@@ -104,7 +108,9 @@ public final class ShipmentInvoiceLineItemInvoice extends com.google.api.client.
   }
 
   /**
-   * [required] Unit IDs to define specific units within the line item.
+   * [required] The shipment unit ID is assigned by the merchant and defines individual quantities
+   * within a line item. The same ID can be assigned to units that are the same while units that
+   * differ must be assigned a different ID (for example: free or promotional units).
    * @param shipmentUnitIds shipmentUnitIds or {@code null} for none
    */
   public ShipmentInvoiceLineItemInvoice setShipmentUnitIds(java.util.List<java.lang.String> shipmentUnitIds) {

@@ -245,6 +245,128 @@ public class AnalyticsReporting extends com.google.api.client.googleapis.service
   }
 
   /**
+   * An accessor for creating requests from the UserActivity collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AnalyticsReporting analyticsreporting = new AnalyticsReporting(...);}
+   *   {@code AnalyticsReporting.UserActivity.List request = analyticsreporting.userActivity().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public UserActivity userActivity() {
+    return new UserActivity();
+  }
+
+  /**
+   * The "userActivity" collection of methods.
+   */
+  public class UserActivity {
+
+    /**
+     * Returns User Activity data.
+     *
+     * Create a request for the method "userActivity.search".
+     *
+     * This request holds the parameters needed by the analyticsreporting server.  After setting any
+     * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.analyticsreporting.v4.model.SearchUserActivityRequest}
+     * @return the request
+     */
+    public Search search(com.google.api.services.analyticsreporting.v4.model.SearchUserActivityRequest content) throws java.io.IOException {
+      Search result = new Search(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends AnalyticsReportingRequest<com.google.api.services.analyticsreporting.v4.model.SearchUserActivityResponse> {
+
+      private static final String REST_PATH = "v4/userActivity:search";
+
+      /**
+       * Returns User Activity data.
+       *
+       * Create a request for the method "userActivity.search".
+       *
+       * This request holds the parameters needed by the the analyticsreporting server.  After setting
+       * any optional parameters, call the {@link Search#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.analyticsreporting.v4.model.SearchUserActivityRequest}
+       * @since 1.13
+       */
+      protected Search(com.google.api.services.analyticsreporting.v4.model.SearchUserActivityRequest content) {
+        super(AnalyticsReporting.this, "POST", REST_PATH, content, com.google.api.services.analyticsreporting.v4.model.SearchUserActivityResponse.class);
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link AnalyticsReporting}.
    *
    * <p>

@@ -2661,6 +2661,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Datafeeds {
 
     /**
+     * Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
+     *
      * Create a request for the method "datafeeds.custombatch".
      *
      * This request holds the parameters needed by the content server.  After setting any optional
@@ -2680,6 +2682,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "datafeeds/batch";
 
       /**
+       * Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
+       *
        * Create a request for the method "datafeeds.custombatch".
        *
        * This request holds the parameters needed by the the content server.  After setting any optional
@@ -3772,6 +3776,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Datafeedstatuses {
 
     /**
+     * Gets multiple Merchant Center datafeed statuses in a single request.
+     *
      * Create a request for the method "datafeedstatuses.custombatch".
      *
      * This request holds the parameters needed by the content server.  After setting any optional
@@ -3791,6 +3797,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "datafeedstatuses/batch";
 
       /**
+       * Gets multiple Merchant Center datafeed statuses in a single request.
+       *
        * Create a request for the method "datafeedstatuses.custombatch".
        *
        * This request holds the parameters needed by the the content server.  After setting any optional
@@ -8873,7 +8881,11 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
     /**
      * Notifies that item return and refund was handled directly by merchant outside of Google payments
-     * processing (e.g. cash refund done in store).
+     * processing (e.g. cash refund done in store). Note: We recommend calling the returnrefundlineitem
+     * method to refund in-store returns. We will issue the refund directly to the customer. This helps
+     * to prevent possible differences arising between merchant and Google transaction records. We also
+     * recommend having the point of sale system communicate with Google to ensure that customers do not
+     * receive a double refund by first refunding via Google then via an in-store return.
      *
      * Create a request for the method "orders.instorerefundlineitem".
      *
@@ -8898,7 +8910,12 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * Notifies that item return and refund was handled directly by merchant outside of Google
-       * payments processing (e.g. cash refund done in store).
+       * payments processing (e.g. cash refund done in store). Note: We recommend calling the
+       * returnrefundlineitem method to refund in-store returns. We will issue the refund directly to
+       * the customer. This helps to prevent possible differences arising between merchant and Google
+       * transaction records. We also recommend having the point of sale system communicate with Google
+       * to ensure that customers do not receive a double refund by first refunding via Google then via
+       * an in-store return.
        *
        * Create a request for the method "orders.instorerefundlineitem".
        *

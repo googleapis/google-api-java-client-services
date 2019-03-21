@@ -37,6 +37,13 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
   private AutoInstallPolicy autoInstallPolicy;
 
   /**
+   * The managed configuration for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedConfiguration managedConfiguration;
+
+  /**
    * The ID of the product. For example, "app:com.google.android.gm".
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class ProductPolicy extends com.google.api.client.json.GenericJson 
    */
   public ProductPolicy setAutoInstallPolicy(AutoInstallPolicy autoInstallPolicy) {
     this.autoInstallPolicy = autoInstallPolicy;
+    return this;
+  }
+
+  /**
+   * The managed configuration for the product.
+   * @return value or {@code null} for none
+   */
+  public ManagedConfiguration getManagedConfiguration() {
+    return managedConfiguration;
+  }
+
+  /**
+   * The managed configuration for the product.
+   * @param managedConfiguration managedConfiguration or {@code null} for none
+   */
+  public ProductPolicy setManagedConfiguration(ManagedConfiguration managedConfiguration) {
+    this.managedConfiguration = managedConfiguration;
     return this;
   }
 

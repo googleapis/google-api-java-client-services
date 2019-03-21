@@ -326,6 +326,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean vm;
 
   /**
+   * Enables VPC connectivity for standard apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpcAccessConnector vpcAccessConnector;
+
+  /**
    * The Google Compute Engine zones that are supported by this version in the App Engine flexible
    * environment. Deprecated.
    * The value may be {@code null}.
@@ -989,6 +996,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setVm(java.lang.Boolean vm) {
     this.vm = vm;
+    return this;
+  }
+
+  /**
+   * Enables VPC connectivity for standard apps.
+   * @return value or {@code null} for none
+   */
+  public VpcAccessConnector getVpcAccessConnector() {
+    return vpcAccessConnector;
+  }
+
+  /**
+   * Enables VPC connectivity for standard apps.
+   * @param vpcAccessConnector vpcAccessConnector or {@code null} for none
+   */
+  public Version setVpcAccessConnector(VpcAccessConnector vpcAccessConnector) {
+    this.vpcAccessConnector = vpcAccessConnector;
     return this;
   }
 

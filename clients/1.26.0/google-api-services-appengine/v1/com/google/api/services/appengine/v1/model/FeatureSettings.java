@@ -41,6 +41,14 @@ public final class FeatureSettings extends com.google.api.client.json.GenericJso
   private java.lang.Boolean splitHealthChecks;
 
   /**
+   * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base
+   * image for VMs, rather than a base Debian image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useContainerOptimizedOs;
+
+  /**
    * Boolean value indicating if split health checks should be used instead of the legacy health
    * checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check'
    * values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated,
@@ -60,6 +68,25 @@ public final class FeatureSettings extends com.google.api.client.json.GenericJso
    */
   public FeatureSettings setSplitHealthChecks(java.lang.Boolean splitHealthChecks) {
     this.splitHealthChecks = splitHealthChecks;
+    return this;
+  }
+
+  /**
+   * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base
+   * image for VMs, rather than a base Debian image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseContainerOptimizedOs() {
+    return useContainerOptimizedOs;
+  }
+
+  /**
+   * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base
+   * image for VMs, rather than a base Debian image.
+   * @param useContainerOptimizedOs useContainerOptimizedOs or {@code null} for none
+   */
+  public FeatureSettings setUseContainerOptimizedOs(java.lang.Boolean useContainerOptimizedOs) {
+    this.useContainerOptimizedOs = useContainerOptimizedOs;
     return this;
   }
 

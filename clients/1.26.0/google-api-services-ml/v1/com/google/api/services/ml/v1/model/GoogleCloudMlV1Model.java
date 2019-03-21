@@ -82,7 +82,25 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Optional. If true, enables StackDriver Logging for online prediction. Default is false.
+   * Optional. If true, enables logging of stderr and stdout streams for online prediction in
+   * Stackdriver Logging. These can be more verbose than the standard access logs (see
+   * `online_prediction_logging`) and thus can incur higher cost. However, they are helpful for
+   * debugging. Note that since Stackdriver logs may incur a cost, particularly if the total QPS in
+   * your project is high, be sure to estimate your costs before enabling this flag.
+   *
+   * Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean onlinePredictionConsoleLogging;
+
+  /**
+   * Optional. If true, online prediction access logs are sent to StackDriver Logging. These logs
+   * are like standard server access logs, containing information like timestamp and latency for
+   * each request. Note that Stackdriver logs may incur a cost, particular if the total QPS in your
+   * project is high.
+   *
+   * Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +268,41 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. If true, enables StackDriver Logging for online prediction. Default is false.
+   * Optional. If true, enables logging of stderr and stdout streams for online prediction in
+   * Stackdriver Logging. These can be more verbose than the standard access logs (see
+   * `online_prediction_logging`) and thus can incur higher cost. However, they are helpful for
+   * debugging. Note that since Stackdriver logs may incur a cost, particularly if the total QPS in
+   * your project is high, be sure to estimate your costs before enabling this flag.
+   *
+   * Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOnlinePredictionConsoleLogging() {
+    return onlinePredictionConsoleLogging;
+  }
+
+  /**
+   * Optional. If true, enables logging of stderr and stdout streams for online prediction in
+   * Stackdriver Logging. These can be more verbose than the standard access logs (see
+   * `online_prediction_logging`) and thus can incur higher cost. However, they are helpful for
+   * debugging. Note that since Stackdriver logs may incur a cost, particularly if the total QPS in
+   * your project is high, be sure to estimate your costs before enabling this flag.
+   *
+   * Default is false.
+   * @param onlinePredictionConsoleLogging onlinePredictionConsoleLogging or {@code null} for none
+   */
+  public GoogleCloudMlV1Model setOnlinePredictionConsoleLogging(java.lang.Boolean onlinePredictionConsoleLogging) {
+    this.onlinePredictionConsoleLogging = onlinePredictionConsoleLogging;
+    return this;
+  }
+
+  /**
+   * Optional. If true, online prediction access logs are sent to StackDriver Logging. These logs
+   * are like standard server access logs, containing information like timestamp and latency for
+   * each request. Note that Stackdriver logs may incur a cost, particular if the total QPS in your
+   * project is high.
+   *
+   * Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOnlinePredictionLogging() {
@@ -258,7 +310,12 @@ public final class GoogleCloudMlV1Model extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. If true, enables StackDriver Logging for online prediction. Default is false.
+   * Optional. If true, online prediction access logs are sent to StackDriver Logging. These logs
+   * are like standard server access logs, containing information like timestamp and latency for
+   * each request. Note that Stackdriver logs may incur a cost, particular if the total QPS in your
+   * project is high.
+   *
+   * Default is false.
    * @param onlinePredictionLogging onlinePredictionLogging or {@code null} for none
    */
   public GoogleCloudMlV1Model setOnlinePredictionLogging(java.lang.Boolean onlinePredictionLogging) {

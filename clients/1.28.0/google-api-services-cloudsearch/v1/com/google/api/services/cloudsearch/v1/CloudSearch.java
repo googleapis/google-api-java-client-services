@@ -5867,7 +5867,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Stats {
 
     /**
-     * Gets indexed item statistics aggreggated across all data sources.
+     * Gets indexed item statistics aggreggated across all data sources. This API only returns
+     * statistics for previous dates; it doesn't return statistics for the current day.
      *
      * Create a request for the method "stats.getIndex".
      *
@@ -5887,7 +5888,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "v1/stats/index";
 
       /**
-       * Gets indexed item statistics aggreggated across all data sources.
+       * Gets indexed item statistics aggreggated across all data sources. This API only returns
+       * statistics for previous dates; it doesn't return statistics for the current day.
        *
        * Create a request for the method "stats.getIndex".
        *

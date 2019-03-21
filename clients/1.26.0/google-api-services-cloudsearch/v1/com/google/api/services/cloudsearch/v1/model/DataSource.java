@@ -17,8 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * Frontend protos implement autoconverters for this message type. If you add fields to this proto,
- * please add corresponding fields to the frontend proto with the same names. LINT.IfChange
+ * Datasource is a logical namespace for items to be indexed. All items must belong to a datasource.
+ * This is the prerequisite before items can be indexed into Cloud Search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

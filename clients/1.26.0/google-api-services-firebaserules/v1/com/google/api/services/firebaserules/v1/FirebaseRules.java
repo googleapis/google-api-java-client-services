@@ -2048,7 +2048,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Filters on `Ruleset.create_time` should use the `date` function which parses strings that
          * conform to the RFC 3339 date/time specifications.
          *
-         * Example: `create_time > date("2017-01-01") AND name=UUID-*`
+         * Example: `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2058,7 +2058,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
       ` Filters on `Ruleset.create_time` should use the `date` function which parses strings that conform
       ` to the RFC 3339 date/time specifications.
       `
-      ` Example: `create_time > date("2017-01-01") AND name=UUID-*`
+      ` Example: `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
       `
 
          */
@@ -2072,7 +2072,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Filters on `Ruleset.create_time` should use the `date` function which parses strings that
          * conform to the RFC 3339 date/time specifications.
          *
-         * Example: `create_time > date("2017-01-01") AND name=UUID-*`
+         * Example: `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

@@ -77,6 +77,15 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Controls the evaluation of a Google-maintained global admission policy for common
+   * system-level images. Images not covered by the global policy will be subject to the project
+   * admission policy. This setting has no effect when specified inside a global admission policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String globalPolicyEvaluationMode;
+
+  /**
    * Output only. The resource name, in the format `projects/policy`. There is at most one policy
    * per project.
    * The value may be {@code null}.
@@ -168,6 +177,27 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the evaluation of a Google-maintained global admission policy for common
+   * system-level images. Images not covered by the global policy will be subject to the project
+   * admission policy. This setting has no effect when specified inside a global admission policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGlobalPolicyEvaluationMode() {
+    return globalPolicyEvaluationMode;
+  }
+
+  /**
+   * Optional. Controls the evaluation of a Google-maintained global admission policy for common
+   * system-level images. Images not covered by the global policy will be subject to the project
+   * admission policy. This setting has no effect when specified inside a global admission policy.
+   * @param globalPolicyEvaluationMode globalPolicyEvaluationMode or {@code null} for none
+   */
+  public Policy setGlobalPolicyEvaluationMode(java.lang.String globalPolicyEvaluationMode) {
+    this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
     return this;
   }
 

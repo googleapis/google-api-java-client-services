@@ -60,6 +60,17 @@ public final class AttestorPublicKey extends com.google.api.client.json.GenericJ
   private java.lang.String id;
 
   /**
+   * A raw PKIX SubjectPublicKeyInfo format public key.
+   *
+   * NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it
+   * MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the
+   * digest of the DER encoding of the public key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PkixPublicKey pkixPublicKey;
+
+  /**
    * ASCII-armored representation of a PGP public key, as the entire output by the command `gpg
    * --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id`
    * should be left blank.  The BinAuthz API handlers will calculate the ID and fill it in
@@ -123,6 +134,31 @@ public final class AttestorPublicKey extends com.google.api.client.json.GenericJ
    */
   public AttestorPublicKey setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * A raw PKIX SubjectPublicKeyInfo format public key.
+   *
+   * NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it
+   * MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the
+   * digest of the DER encoding of the public key.
+   * @return value or {@code null} for none
+   */
+  public PkixPublicKey getPkixPublicKey() {
+    return pkixPublicKey;
+  }
+
+  /**
+   * A raw PKIX SubjectPublicKeyInfo format public key.
+   *
+   * NOTE: `id` may be explicitly provided by the caller when using this type of public key, but it
+   * MUST be a valid RFC3986 URI. If `id` is left blank, a default one will be computed based on the
+   * digest of the DER encoding of the public key.
+   * @param pkixPublicKey pkixPublicKey or {@code null} for none
+   */
+  public AttestorPublicKey setPkixPublicKey(PkixPublicKey pkixPublicKey) {
+    this.pkixPublicKey = pkixPublicKey;
     return this;
   }
 

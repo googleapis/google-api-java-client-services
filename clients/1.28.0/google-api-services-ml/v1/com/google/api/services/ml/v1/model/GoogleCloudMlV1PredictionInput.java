@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   private java.lang.String dataFormat;
 
   /**
-   * Required. The Google Cloud Storage location of the input data files. May contain wildcards.
+   * Required. The Google Cloud Storage location of the input data files. May contain wildcards. See
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +171,7 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   }
 
   /**
-   * Required. The Google Cloud Storage location of the input data files. May contain wildcards.
+   * Required. The Google Cloud Storage location of the input data files. May contain wildcards. See
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputPaths() {
@@ -179,7 +179,7 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   }
 
   /**
-   * Required. The Google Cloud Storage location of the input data files. May contain wildcards.
+   * Required. The Google Cloud Storage location of the input data files. May contain wildcards. See
    * @param inputPaths inputPaths or {@code null} for none
    */
   public GoogleCloudMlV1PredictionInput setInputPaths(java.util.List<java.lang.String> inputPaths) {

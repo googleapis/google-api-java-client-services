@@ -30,11 +30,42 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class DicomConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Tag filtering profile that determines which tags to keep/remove.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filterProfile;
+
+  /**
    * List of tags to keep. Remove all other tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TagFilterList keepList;
+
+  /**
+   * List of tags to remove. Keep all other tags.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TagFilterList removeList;
+
+  /**
+   * Tag filtering profile that determines which tags to keep/remove.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilterProfile() {
+    return filterProfile;
+  }
+
+  /**
+   * Tag filtering profile that determines which tags to keep/remove.
+   * @param filterProfile filterProfile or {@code null} for none
+   */
+  public DicomConfig setFilterProfile(java.lang.String filterProfile) {
+    this.filterProfile = filterProfile;
+    return this;
+  }
 
   /**
    * List of tags to keep. Remove all other tags.
@@ -50,6 +81,23 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
    */
   public DicomConfig setKeepList(TagFilterList keepList) {
     this.keepList = keepList;
+    return this;
+  }
+
+  /**
+   * List of tags to remove. Keep all other tags.
+   * @return value or {@code null} for none
+   */
+  public TagFilterList getRemoveList() {
+    return removeList;
+  }
+
+  /**
+   * List of tags to remove. Keep all other tags.
+   * @param removeList removeList or {@code null} for none
+   */
+  public DicomConfig setRemoveList(TagFilterList removeList) {
+    this.removeList = removeList;
     return this;
   }
 

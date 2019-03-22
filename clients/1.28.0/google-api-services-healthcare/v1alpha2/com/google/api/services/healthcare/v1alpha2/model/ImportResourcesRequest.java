@@ -17,10 +17,7 @@
 package com.google.api.services.healthcare.v1alpha2.model;
 
 /**
- * Request to import resources. The FHIR resources to be imported must have client supplied IDs. The
- * server will retain the resource IDs. The import operation is idempotent. Retry will overwrite
- * existing data identified by client supplied IDs. The import operation is not transactional. The
- * server will not roll back any committed changes upon partial failures.
+ * Request to import resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -58,6 +55,10 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
    *
    * Each Cloud Storage object should be a text file that contains newline delimited JSON structures
    * conforming to FHIR standard.
+   *
+   * To improve performance, use multiple Cloud Storage objects where each object contains a subset
+   * of all of the newline-delimited JSON structures. You can select all of the objects using the
+   * uri as the prefix. The maximum number of objects is 1,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,6 +115,10 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
    *
    * Each Cloud Storage object should be a text file that contains newline delimited JSON structures
    * conforming to FHIR standard.
+   *
+   * To improve performance, use multiple Cloud Storage objects where each object contains a subset
+   * of all of the newline-delimited JSON structures. You can select all of the objects using the
+   * uri as the prefix. The maximum number of objects is 1,000.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1alpha2FhirRestGcsSource getGcsSource() {
@@ -127,6 +132,10 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
    *
    * Each Cloud Storage object should be a text file that contains newline delimited JSON structures
    * conforming to FHIR standard.
+   *
+   * To improve performance, use multiple Cloud Storage objects where each object contains a subset
+   * of all of the newline-delimited JSON structures. You can select all of the objects using the
+   * uri as the prefix. The maximum number of objects is 1,000.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public ImportResourcesRequest setGcsSource(GoogleCloudHealthcareV1alpha2FhirRestGcsSource gcsSource) {

@@ -20,7 +20,7 @@ package com.google.api.services.healthcare.v1alpha;
  * Service definition for CloudHealthcare (v1alpha).
  *
  * <p>
- * 
+ * Manage, store, and access healthcare data in Google Cloud Platform.
  * </p>
  *
  * <p>
@@ -7919,6 +7919,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Searches resources in the given FHIR store.
              *
+             * # Search Parameters
+             *
+             * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
+             * search parameters are supported on each FHIR resource.
+             *
+             * # Search Modifiers
+             *
+             * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains` |
+             * Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
+             * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
+             *
              * Create a request for the method "resources._search".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -7943,6 +7954,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Searches resources in the given FHIR store.
+               *
+               * # Search Parameters
+               *
+               * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
+               * search parameters are supported on each FHIR resource.
+               *
+               * # Search Modifiers
+               *
+               * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains`
+               * | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
+               * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
                *
                * Create a request for the method "resources._search".
                *
@@ -9388,6 +9410,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Searches resources in the given FHIR store.
              *
+             * # Search Parameters
+             *
+             * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
+             * search parameters are supported on each FHIR resource.
+             *
+             * # Search Modifiers
+             *
+             * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains` |
+             * Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
+             * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
+             *
              * Create a request for the method "resources.searchResources".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -9415,6 +9448,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Searches resources in the given FHIR store.
+               *
+               * # Search Parameters
+               *
+               * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
+               * search parameters are supported on each FHIR resource.
+               *
+               * # Search Modifiers
+               *
+               * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains`
+               * | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
+               * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
                *
                * Create a request for the method "resources.searchResources".
                *

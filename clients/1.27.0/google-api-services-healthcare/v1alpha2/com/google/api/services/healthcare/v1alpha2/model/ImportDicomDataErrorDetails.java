@@ -38,8 +38,10 @@ public final class ImportDicomDataErrorDetails extends com.google.api.client.jso
   private java.lang.String dicomStore;
 
   /**
-   * Contains sample errors encountered in imports of individual resources (e.g., a Cloud Storage
-   * object).
+   * Deprecated. Use only for debugging purposes.
+   *
+   * Contains sample errors encountered in imports of individual resources (for example, a Cloud
+   * Storage object).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +73,10 @@ public final class ImportDicomDataErrorDetails extends com.google.api.client.jso
   }
 
   /**
-   * Contains sample errors encountered in imports of individual resources (e.g., a Cloud Storage
-   * object).
+   * Deprecated. Use only for debugging purposes.
+   *
+   * Contains sample errors encountered in imports of individual resources (for example, a Cloud
+   * Storage object).
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorDetail> getSampleErrors() {
@@ -80,8 +84,10 @@ public final class ImportDicomDataErrorDetails extends com.google.api.client.jso
   }
 
   /**
-   * Contains sample errors encountered in imports of individual resources (e.g., a Cloud Storage
-   * object).
+   * Deprecated. Use only for debugging purposes.
+   *
+   * Contains sample errors encountered in imports of individual resources (for example, a Cloud
+   * Storage object).
    * @param sampleErrors sampleErrors or {@code null} for none
    */
   public ImportDicomDataErrorDetails setSampleErrors(java.util.List<ErrorDetail> sampleErrors) {

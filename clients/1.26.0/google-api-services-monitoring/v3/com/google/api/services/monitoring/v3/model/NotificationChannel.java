@@ -35,7 +35,7 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
 
   /**
    * An optional human-readable description of this notification channel. This description may
-   * provide additional details, beyond the display name, for the channel. This may not exceeed 1024
+   * provide additional details, beyond the display name, for the channel. This may not exceed 1024
    * Unicode characters.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
 
   /**
    * An optional human-readable description of this notification channel. This description may
-   * provide additional details, beyond the display name, for the channel. This may not exceeed 1024
+   * provide additional details, beyond the display name, for the channel. This may not exceed 1024
    * Unicode characters.
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
 
   /**
    * An optional human-readable description of this notification channel. This description may
-   * provide additional details, beyond the display name, for the channel. This may not exceeed 1024
+   * provide additional details, beyond the display name, for the channel. This may not exceed 1024
    * Unicode characters.
    * @param description description or {@code null} for none
    */

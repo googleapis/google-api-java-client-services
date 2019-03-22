@@ -55,6 +55,14 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
+   * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
+   * in the HTTP request for every pushed message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OidcToken oidcToken;
+
+  /**
    * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
    * might use "https://example.com/push".
    * The value may be {@code null}.
@@ -112,6 +120,25 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
    */
   public PushConfig setAttributes(java.util.Map<String, java.lang.String> attributes) {
     this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
+   * in the HTTP request for every pushed message.
+   * @return value or {@code null} for none
+   */
+  public OidcToken getOidcToken() {
+    return oidcToken;
+  }
+
+  /**
+   * If specified, Pub/Sub will generate and attach an OIDC JWT token as an `Authorization` header
+   * in the HTTP request for every pushed message.
+   * @param oidcToken oidcToken or {@code null} for none
+   */
+  public PushConfig setOidcToken(OidcToken oidcToken) {
+    this.oidcToken = oidcToken;
     return this;
   }
 

@@ -36,11 +36,32 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class Attestation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenericSignedAttestation genericSignedAttestation;
+
+  /**
    * A PGP signed attestation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PgpSignedAttestation pgpSignedAttestation;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenericSignedAttestation getGenericSignedAttestation() {
+    return genericSignedAttestation;
+  }
+
+  /**
+   * @param genericSignedAttestation genericSignedAttestation or {@code null} for none
+   */
+  public Attestation setGenericSignedAttestation(GenericSignedAttestation genericSignedAttestation) {
+    this.genericSignedAttestation = genericSignedAttestation;
+    return this;
+  }
 
   /**
    * A PGP signed attestation.

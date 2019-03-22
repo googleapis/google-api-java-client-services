@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-logging</artifactId>
-  <version>v2-rev20190223-1.27.0</version>
-  <name>Stackdriver Logging API v2-rev20190223-1.27.0</name>
+  <version>v2-rev20190316-1.27.0</version>
+  <name>Stackdriver Logging API v2-rev20190316-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

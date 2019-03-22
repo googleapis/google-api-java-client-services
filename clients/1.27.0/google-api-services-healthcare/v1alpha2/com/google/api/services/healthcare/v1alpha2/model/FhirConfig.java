@@ -29,6 +29,36 @@ package com.google.api.services.healthcare.v1alpha2.model;
 @SuppressWarnings("javadoc")
 public final class FhirConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
+   * FieldMetadata will be passed through to the output dataset unmodified. All extensions are
+   * removed in the output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FieldMetadata> fieldMetadataList;
+
+  /**
+   * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
+   * FieldMetadata will be passed through to the output dataset unmodified. All extensions are
+   * removed in the output.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FieldMetadata> getFieldMetadataList() {
+    return fieldMetadataList;
+  }
+
+  /**
+   * Specifies FHIR paths to match and how to transform them. Any field that is not matched by a
+   * FieldMetadata will be passed through to the output dataset unmodified. All extensions are
+   * removed in the output.
+   * @param fieldMetadataList fieldMetadataList or {@code null} for none
+   */
+  public FhirConfig setFieldMetadataList(java.util.List<FieldMetadata> fieldMetadataList) {
+    this.fieldMetadataList = fieldMetadataList;
+    return this;
+  }
+
   @Override
   public FhirConfig set(String fieldName, Object value) {
     return (FhirConfig) super.set(fieldName, value);

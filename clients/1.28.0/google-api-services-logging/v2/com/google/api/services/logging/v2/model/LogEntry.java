@@ -83,8 +83,12 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String logName;
 
   /**
-   * Output only. Additional metadata about the monitored resource.Only k8s_container, k8s_pod, and
-   * k8s_node MonitoredResources have this field populated.
+   * Deprecated. Output only. Additional metadata about the monitored resource.Only k8s_container,
+   * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
+   * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
+   * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
+   * field with a key prefix of k8s-pod/. The Stackdriver system labels that were present in the
+   * metadata.systemLabels field will no longer be available in the LogEntry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,8 +309,12 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Additional metadata about the monitored resource.Only k8s_container, k8s_pod, and
-   * k8s_node MonitoredResources have this field populated.
+   * Deprecated. Output only. Additional metadata about the monitored resource.Only k8s_container,
+   * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
+   * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
+   * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
+   * field with a key prefix of k8s-pod/. The Stackdriver system labels that were present in the
+   * metadata.systemLabels field will no longer be available in the LogEntry.
    * @return value or {@code null} for none
    */
   public MonitoredResourceMetadata getMetadata() {
@@ -314,8 +322,12 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Additional metadata about the monitored resource.Only k8s_container, k8s_pod, and
-   * k8s_node MonitoredResources have this field populated.
+   * Deprecated. Output only. Additional metadata about the monitored resource.Only k8s_container,
+   * k8s_pod, and k8s_node MonitoredResources have this field populated for GKE versions older than
+   * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
+   * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
+   * field with a key prefix of k8s-pod/. The Stackdriver system labels that were present in the
+   * metadata.systemLabels field will no longer be available in the LogEntry.
    * @param metadata metadata or {@code null} for none
    */
   public LogEntry setMetadata(MonitoredResourceMetadata metadata) {

@@ -31,6 +31,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class FacetOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum
+   * value is 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numFacetBuckets;
+
+  /**
    * If object_type is set, only those objects of that type will be used to compute facets. If
    * empty, then all objects will be used to compute facets.
    * The value may be {@code null}.
@@ -52,6 +60,25 @@ public final class FacetOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceName;
+
+  /**
+   * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum
+   * value is 100.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumFacetBuckets() {
+    return numFacetBuckets;
+  }
+
+  /**
+   * Maximum number of facet buckets that should be returned for this facet. Defaults to 10. Maximum
+   * value is 100.
+   * @param numFacetBuckets numFacetBuckets or {@code null} for none
+   */
+  public FacetOptions setNumFacetBuckets(java.lang.Integer numFacetBuckets) {
+    this.numFacetBuckets = numFacetBuckets;
+    return this;
+  }
 
   /**
    * If object_type is set, only those objects of that type will be used to compute facets. If

@@ -53,7 +53,7 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * @OutputOnly Google Cloud API name of the service owning this tenancy unit. For example
+   * Output only. Google Cloud API name of the managed service owning this tenancy unit. For example
    * 'serviceconsumermanagement.googleapis.com'.
    * The value may be {@code null}.
    */
@@ -122,7 +122,7 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Google Cloud API name of the service owning this tenancy unit. For example
+   * Output only. Google Cloud API name of the managed service owning this tenancy unit. For example
    * 'serviceconsumermanagement.googleapis.com'.
    * @return value or {@code null} for none
    */
@@ -131,7 +131,7 @@ public final class TenancyUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Google Cloud API name of the service owning this tenancy unit. For example
+   * Output only. Google Cloud API name of the managed service owning this tenancy unit. For example
    * 'serviceconsumermanagement.googleapis.com'.
    * @param service service or {@code null} for none
    */

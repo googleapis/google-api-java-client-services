@@ -17,7 +17,7 @@
 package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
- * Describes billing configuration for a new tenant project.
+ * Describes the billing configuration for a new tenant project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed

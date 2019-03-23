@@ -784,7 +784,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
   public class Services {
 
     /**
-     * Search tenancy units for a service.
+     * Search tenancy units for a managed service.
      *
      * Create a request for the method "services.search".
      *
@@ -811,7 +811,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           java.util.regex.Pattern.compile("^services/[^/]+$");
 
       /**
-       * Search tenancy units for a service.
+       * Search tenancy units for a managed service.
        *
        * Create a request for the method "services.search".
        *
@@ -932,8 +932,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * The maximum number of results returned by this request. Currently, the default maximum is
-       * set to 1000. If page_size is not provided or the size provided is a number larger than
-       * 1000, it will be automatically set to 1000.
+       * set to 1000. If `page_size` isn't provided or the size provided is a number larger than
+       * 1000, it's automatically set to 1000.
        *
        * Optional.
        */
@@ -941,7 +941,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       private java.lang.Integer pageSize;
 
       /** The maximum number of results returned by this request. Currently, the default maximum is set to
-     1000. If page_size is not provided or the size provided is a number larger than 1000, it will be
+     1000. If `page_size` isn't provided or the size provided is a number larger than 1000, it's
      automatically set to 1000.
 
      Optional.
@@ -952,8 +952,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * The maximum number of results returned by this request. Currently, the default maximum is
-       * set to 1000. If page_size is not provided or the size provided is a number larger than
-       * 1000, it will be automatically set to 1000.
+       * set to 1000. If `page_size` isn't provided or the size provided is a number larger than
+       * 1000, it's automatically set to 1000.
        *
        * Optional.
        */
@@ -998,9 +998,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * format: `field_name=literal_string`. The `field_name` is the name of the field you want to
        * compare. Supported fields are `tenant_resources.tag` and `tenant_resources.resource`.
        *
-       * For example, to search tenancy units that contain at least one tenant resource with given
-       * tag 'xyz', use query `tenant_resources.tag=xyz`. To search tenancy units that contain at
-       * least one tenant resource with given resource name 'projects/123456', use query
+       * For example, to search tenancy units that contain at least one tenant resource with a given
+       * tag 'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain
+       * at least one tenant resource with a given resource name 'projects/123456', use the query
        * `tenant_resources.resource=projects/123456`.
        *
        * Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to
@@ -1016,9 +1016,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
      `field_name=literal_string`. The `field_name` is the name of the field you want to compare.
      Supported fields are `tenant_resources.tag` and `tenant_resources.resource`.
 
-     For example, to search tenancy units that contain at least one tenant resource with given tag
-     'xyz', use query `tenant_resources.tag=xyz`. To search tenancy units that contain at least one
-     tenant resource with given resource name 'projects/123456', use query
+     For example, to search tenancy units that contain at least one tenant resource with a given tag
+     'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain at least one
+     tenant resource with a given resource name 'projects/123456', use the query
      `tenant_resources.resource=projects/123456`.
 
      Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to be
@@ -1036,9 +1036,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * format: `field_name=literal_string`. The `field_name` is the name of the field you want to
        * compare. Supported fields are `tenant_resources.tag` and `tenant_resources.resource`.
        *
-       * For example, to search tenancy units that contain at least one tenant resource with given
-       * tag 'xyz', use query `tenant_resources.tag=xyz`. To search tenancy units that contain at
-       * least one tenant resource with given resource name 'projects/123456', use query
+       * For example, to search tenancy units that contain at least one tenant resource with a given
+       * tag 'xyz', use the query `tenant_resources.tag=xyz`. To search tenancy units that contain
+       * at least one tenant resource with a given resource name 'projects/123456', use the query
        * `tenant_resources.resource=projects/123456`.
        *
        * Multiple expressions can be joined with `AND`s. Tenancy units must match all expressions to
@@ -1079,10 +1079,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
     public class TenancyUnits {
 
       /**
-       * Add a new tenant project to the tenancy unit. There can be at most 512 tenant projects in a
+       * Add a new tenant project to the tenancy unit. There can be a maximum of 512 tenant projects in a
        * tenancy unit. If there are previously failed `AddTenantProject` calls, you might need to call
-       * `RemoveTenantProject` first to clean them before you can make another `AddTenantProject` with the
-       * same tag. Operation.
+       * `RemoveTenantProject` first to resolve them before you can make another call to
+       * `AddTenantProject` with the same tag. Operation.
        *
        * Create a request for the method "tenancyUnits.addProject".
        *
@@ -1108,10 +1108,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
 
         /**
-         * Add a new tenant project to the tenancy unit. There can be at most 512 tenant projects in a
-         * tenancy unit. If there are previously failed `AddTenantProject` calls, you might need to call
-         * `RemoveTenantProject` first to clean them before you can make another `AddTenantProject` with
-         * the same tag. Operation.
+         * Add a new tenant project to the tenancy unit. There can be a maximum of 512 tenant projects in
+         * a tenancy unit. If there are previously failed `AddTenantProject` calls, you might need to call
+         * `RemoveTenantProject` first to resolve them before you can make another call to
+         * `AddTenantProject` with the same tag. Operation.
          *
          * Create a request for the method "tenancyUnits.addProject".
          *
@@ -1217,15 +1217,15 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
-       * Apply configuration to an existing tenant project. This project must exist in active state and
-       * have the original owner account. Caller must have the permission to add a project to the given
-       * tenancy unit. Configuration will be applied, but any existing settings on the project will not be
-       * modified. Specified policy bindings will be applied. Existing binding will not be modified.
-       * Specified services will be activated.   No service will be deactivated. New billing configuration
-       * will be applied if specified. Omit billing configuration to keep the existing one. Service
-       * account in the project will be created if previously non existing. Specified folder will be
-       * ignored, moving tenant project to a different folder is not supported. Operation fails if any of
-       * the steps fail, but no rollback of already applied configuration changes is attempted. Operation.
+       * Apply a configuration to an existing tenant project. This project must exist in an active state
+       * and have the original owner account. The caller must have permission to add a project to the
+       * given tenancy unit. The configuration is applied, but any existing settings on the project aren't
+       * modified. Specified policy bindings are applied. Existing bindings aren't modified. Specified
+       * services are activated. No service is deactivated. If specified, new billing configuration is
+       * applied. Omit a billing configuration to keep the existing one. A service account in the project
+       * is created if previously non existed. The specified folder is ignored, as moving a tenant project
+       * to a different folder isn't supported. The operation fails if any of the steps fail, but no
+       * rollback of already applied configuration changes is attempted. Operation.
        *
        * Create a request for the method "tenancyUnits.applyProjectConfig".
        *
@@ -1251,16 +1251,16 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
 
         /**
-         * Apply configuration to an existing tenant project. This project must exist in active state and
-         * have the original owner account. Caller must have the permission to add a project to the given
-         * tenancy unit. Configuration will be applied, but any existing settings on the project will not
-         * be modified. Specified policy bindings will be applied. Existing binding will not be modified.
-         * Specified services will be activated.   No service will be deactivated. New billing
-         * configuration will be applied if specified. Omit billing configuration to keep the existing
-         * one. Service account in the project will be created if previously non existing. Specified
-         * folder will be ignored, moving tenant project to a different folder is not supported. Operation
-         * fails if any of the steps fail, but no rollback of already applied configuration changes is
-         * attempted. Operation.
+         * Apply a configuration to an existing tenant project. This project must exist in an active state
+         * and have the original owner account. The caller must have permission to add a project to the
+         * given tenancy unit. The configuration is applied, but any existing settings on the project
+         * aren't modified. Specified policy bindings are applied. Existing bindings aren't modified.
+         * Specified services are activated. No service is deactivated. If specified, new billing
+         * configuration is applied. Omit a billing configuration to keep the existing one. A service
+         * account in the project is created if previously non existed. The specified folder is ignored,
+         * as moving a tenant project to a different folder isn't supported. The operation fails if any of
+         * the steps fail, but no rollback of already applied configuration changes is attempted.
+         * Operation.
          *
          * Create a request for the method "tenancyUnits.applyProjectConfig".
          *
@@ -1366,13 +1366,13 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
-       * Attach an existing project to the tenancy unit as a new tenant resource. The project could be
-       * either the tenant project reserved by calling AddTenantProject under tenancy unit for the
-       * producer project of service, or from outside. Caller will be checked against the permission as if
-       * calling AddTenantProject on the same consumer. To trigger the attachement, the targeted tenant
-       * project must be in a folder. Please also make sure ServiceConsumerManagement service account is
-       * the owner of that project. Note that these two requirements are already met if the project is
-       * reserved through AddTenantProject. Operation.
+       * Attach an existing project to the tenancy unit as a new tenant resource. The project could either
+       * be the tenant project reserved by calling `AddTenantProject` under a tenancy unit of a service
+       * producer's project of a managed service, or from a separate project. The caller is checked
+       * against a set of permissions as if calling `AddTenantProject` on the same service consumer. To
+       * trigger the attachement, the targeted tenant project must be in a folder. Make sure the
+       * ServiceConsumerManagement service account is the owner of that project. These two requirements
+       * are already met if the project is reserved by calling `AddTenantProject`. Operation.
        *
        * Create a request for the method "tenancyUnits.attachProject".
        *
@@ -1380,7 +1380,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link AttachProject#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Name of the tenancy unit that project will be attached to.
+       * @param name Name of the tenancy unit that the project will be attached to.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
        * @return the request
        */
@@ -1398,13 +1398,14 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
 
         /**
-         * Attach an existing project to the tenancy unit as a new tenant resource. The project could be
-         * either the tenant project reserved by calling AddTenantProject under tenancy unit for the
-         * producer project of service, or from outside. Caller will be checked against the permission as
-         * if calling AddTenantProject on the same consumer. To trigger the attachement, the targeted
-         * tenant project must be in a folder. Please also make sure ServiceConsumerManagement service
-         * account is the owner of that project. Note that these two requirements are already met if the
-         * project is reserved through AddTenantProject. Operation.
+         * Attach an existing project to the tenancy unit as a new tenant resource. The project could
+         * either be the tenant project reserved by calling `AddTenantProject` under a tenancy unit of a
+         * service producer's project of a managed service, or from a separate project. The caller is
+         * checked against a set of permissions as if calling `AddTenantProject` on the same service
+         * consumer. To trigger the attachement, the targeted tenant project must be in a folder. Make
+         * sure the ServiceConsumerManagement service account is the owner of that project. These two
+         * requirements are already met if the project is reserved by calling `AddTenantProject`.
+         * Operation.
          *
          * Create a request for the method "tenancyUnits.attachProject".
          *
@@ -1414,7 +1415,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Name of the tenancy unit that project will be attached to.
+         * @param name Name of the tenancy unit that the project will be attached to.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
          * @since 1.13
          */
@@ -1483,17 +1484,17 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return (AttachProject) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the tenancy unit that project will be attached to. */
+        /** Name of the tenancy unit that the project will be attached to. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit that project will be attached to.
+        /** Name of the tenancy unit that the project will be attached to.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the tenancy unit that project will be attached to. */
+        /** Name of the tenancy unit that the project will be attached to. */
         public AttachProject setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1523,9 +1524,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       service consumer, for example 'projects', or 'organizations'.
        *        {resource id} is the consumer numeric id, such as project number: '123456'.
       {service} the
-       *        name of a service, for example 'service.googleapis.com'.
-      Enabled service binding using the
-       *        new tenancy unit.
+       *        name of a managed service, such as 'service.googleapis.com'.
+      Enables service binding using
+       *        the new tenancy unit.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.CreateTenancyUnitRequest}
        * @return the request
        */
@@ -1559,9 +1560,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       service consumer, for example 'projects', or 'organizations'.
        *        {resource id} is the consumer numeric id, such as project number: '123456'.
       {service} the
-       *        name of a service, for example 'service.googleapis.com'.
-      Enabled service binding using the
-       *        new tenancy unit.
+       *        name of a managed service, such as 'service.googleapis.com'.
+      Enables service binding using
+       *        the new tenancy unit.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.CreateTenancyUnitRequest}
          * @since 1.13
          */
@@ -1634,16 +1635,16 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
          * collection type representing the service consumer, for example 'projects', or
          * 'organizations'. {resource id} is the consumer numeric id, such as project number:
-         * '123456'. {service} the name of a service, for example 'service.googleapis.com'. Enabled
-         * service binding using the new tenancy unit.
+         * '123456'. {service} the name of a managed service, such as 'service.googleapis.com'.
+         * Enables service binding using the new tenancy unit.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** services/{service}/{collection id}/{resource id} {collection id} is the cloud resource collection
        type representing the service consumer, for example 'projects', or 'organizations'. {resource id}
-       is the consumer numeric id, such as project number: '123456'. {service} the name of a service, for
-       example 'service.googleapis.com'. Enabled service binding using the new tenancy unit.
+       is the consumer numeric id, such as project number: '123456'. {service} the name of a managed
+       service, such as 'service.googleapis.com'. Enables service binding using the new tenancy unit.
          */
         public java.lang.String getParent() {
           return parent;
@@ -1653,8 +1654,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * services/{service}/{collection id}/{resource id} {collection id} is the cloud resource
          * collection type representing the service consumer, for example 'projects', or
          * 'organizations'. {resource id} is the consumer numeric id, such as project number:
-         * '123456'. {service} the name of a service, for example 'service.googleapis.com'. Enabled
-         * service binding using the new tenancy unit.
+         * '123456'. {service} the name of a managed service, such as 'service.googleapis.com'.
+         * Enables service binding using the new tenancy unit.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1672,8 +1673,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
-       * Delete a tenancy unit.  Before the tenancy unit is deleted, there should be no tenant resources
-       * in it not in DELETED state. Operation.
+       * Delete a tenancy unit. Before you delete the tenancy unit, there should be no tenant resources in
+       * it that aren't in a DELETED state. Operation.
        *
        * Create a request for the method "tenancyUnits.delete".
        *
@@ -1697,8 +1698,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
 
         /**
-         * Delete a tenancy unit.  Before the tenancy unit is deleted, there should be no tenant resources
-         * in it not in DELETED state. Operation.
+         * Delete a tenancy unit. Before you delete the tenancy unit, there should be no tenant resources
+         * in it that aren't in a DELETED state. Operation.
          *
          * Create a request for the method "tenancyUnits.delete".
          *
@@ -1803,24 +1804,25 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
-       * Find the tenancy unit for a service and consumer. This method should not be used in producers'
-       * runtime path, for example finding the tenant project number when creating VMs. Producers should
-       * persist the tenant project information after the project is created.
+       * Find the tenancy unit for a managed service and service consumer. This method shouldn't be used
+       * in a service producer's runtime path, for example to find the tenant project number when creating
+       * VMs. Service producers must persist the tenant project's information after the project is
+       * created.
        *
        * Create a request for the method "tenancyUnits.list".
        *
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Service and consumer. Required.
+       * @param parent Managed service and service consumer. Required.
       services/{service}/{collection id}/{resource id}
-      {collection id} is
-       *        the cloud resource collection type representing the
-      service consumer, for example
-       *        'projects', or 'organizations'.
-      {resource id} is the consumer numeric id, such as project
-       *        number: '123456'.
-      {service} the name of a service, for example 'service.googleapis.com'.
+       *        {collection id} is the cloud resource collection type representing the
+      service consumer,
+       *        for example 'projects', or 'organizations'.
+      {resource id} is the consumer numeric id, such
+       *        as project number: '123456'.
+      {service} the name of a service, such as
+       *        'service.googleapis.com'.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1837,9 +1839,10 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+$");
 
         /**
-         * Find the tenancy unit for a service and consumer. This method should not be used in producers'
-         * runtime path, for example finding the tenant project number when creating VMs. Producers should
-         * persist the tenant project information after the project is created.
+         * Find the tenancy unit for a managed service and service consumer. This method shouldn't be used
+         * in a service producer's runtime path, for example to find the tenant project number when
+         * creating VMs. Service producers must persist the tenant project's information after the project
+         * is created.
          *
          * Create a request for the method "tenancyUnits.list".
          *
@@ -1849,15 +1852,15 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Service and consumer. Required.
+         * @param parent Managed service and service consumer. Required.
       services/{service}/{collection id}/{resource id}
-      {collection id} is
-       *        the cloud resource collection type representing the
-      service consumer, for example
-       *        'projects', or 'organizations'.
-      {resource id} is the consumer numeric id, such as project
-       *        number: '123456'.
-      {service} the name of a service, for example 'service.googleapis.com'.
+       *        {collection id} is the cloud resource collection type representing the
+      service consumer,
+       *        for example 'projects', or 'organizations'.
+      {resource id} is the consumer numeric id, such
+       *        as project number: '123456'.
+      {service} the name of a service, such as
+       *        'service.googleapis.com'.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1936,30 +1939,30 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Service and consumer. Required. services/{service}/{collection id}/{resource id}
-         * {collection id} is the cloud resource collection type representing the service consumer,
-         * for example 'projects', or 'organizations'. {resource id} is the consumer numeric id,
-         * such as project number: '123456'. {service} the name of a service, for example
-         * 'service.googleapis.com'.
+         * Managed service and service consumer. Required. services/{service}/{collection
+         * id}/{resource id} {collection id} is the cloud resource collection type representing the
+         * service consumer, for example 'projects', or 'organizations'. {resource id} is the
+         * consumer numeric id, such as project number: '123456'. {service} the name of a service,
+         * such as 'service.googleapis.com'.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Service and consumer. Required. services/{service}/{collection id}/{resource id} {collection id} is
-       the cloud resource collection type representing the service consumer, for example 'projects', or
-       'organizations'. {resource id} is the consumer numeric id, such as project number: '123456'.
-       {service} the name of a service, for example 'service.googleapis.com'.
+        /** Managed service and service consumer. Required. services/{service}/{collection id}/{resource id}
+       {collection id} is the cloud resource collection type representing the service consumer, for
+       example 'projects', or 'organizations'. {resource id} is the consumer numeric id, such as project
+       number: '123456'. {service} the name of a service, such as 'service.googleapis.com'.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Service and consumer. Required. services/{service}/{collection id}/{resource id}
-         * {collection id} is the cloud resource collection type representing the service consumer,
-         * for example 'projects', or 'organizations'. {resource id} is the consumer numeric id,
-         * such as project number: '123456'. {service} the name of a service, for example
-         * 'service.googleapis.com'.
+         * Managed service and service consumer. Required. services/{service}/{collection
+         * id}/{resource id} {collection id} is the cloud resource collection type representing the
+         * service consumer, for example 'projects', or 'organizations'. {resource id} is the
+         * consumer numeric id, such as project number: '123456'. {service} the name of a service,
+         * such as 'service.googleapis.com'.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2034,11 +2037,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
-       * Removes specified project resource identified by tenant resource tag. It will remove project lien
-       * with 'TenantManager' origin if that was added. It will then attempt to delete the project. If
-       * that operation fails, this method fails. Calls to remove already removed or non-existent tenant
-       * project will succeed. After the project has been deleted, or if was already in DELETED state,
-       * resource metadata is permanently removed from the tenancy unit. Operation.
+       * Removes the specified project resource identified by a tenant resource tag. The method removes
+       * the project lien with 'TenantManager' origin if that was added. It then attempts to delete the
+       * project. If that operation fails, this method also fails. Calls to remove already removed or non-
+       * existent tenant project succeed. After the project has been deleted, or if was already in a
+       * DELETED state, resource metadata is permanently removed from the tenancy unit. Operation.
        *
        * Create a request for the method "tenancyUnits.removeProject".
        *
@@ -2066,11 +2069,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
 
         /**
-         * Removes specified project resource identified by tenant resource tag. It will remove project
-         * lien with 'TenantManager' origin if that was added. It will then attempt to delete the project.
-         * If that operation fails, this method fails. Calls to remove already removed or non-existent
-         * tenant project will succeed. After the project has been deleted, or if was already in DELETED
-         * state, resource metadata is permanently removed from the tenancy unit. Operation.
+         * Removes the specified project resource identified by a tenant resource tag. The method removes
+         * the project lien with 'TenantManager' origin if that was added. It then attempts to delete the
+         * project. If that operation fails, this method also fails. Calls to remove already removed or
+         * non-existent tenant project succeed. After the project has been deleted, or if was already in a
+         * DELETED state, resource metadata is permanently removed from the tenancy unit. Operation.
          *
          * Create a request for the method "tenancyUnits.removeProject".
          *

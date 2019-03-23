@@ -31,7 +31,7 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class AddTenantProjectRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration of the new tenant project that will be added to tenancy unit resources.
+   * Configuration of the new tenant project to be added to tenancy unit resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class AddTenantProjectRequest extends com.google.api.client.json.Ge
   private java.lang.String tag;
 
   /**
-   * Configuration of the new tenant project that will be added to tenancy unit resources.
+   * Configuration of the new tenant project to be added to tenancy unit resources.
    * @return value or {@code null} for none
    */
   public TenantProjectConfig getProjectConfig() {
@@ -53,7 +53,7 @@ public final class AddTenantProjectRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Configuration of the new tenant project that will be added to tenancy unit resources.
+   * Configuration of the new tenant project to be added to tenancy unit resources.
    * @param projectConfig projectConfig or {@code null} for none
    */
   public AddTenantProjectRequest setProjectConfig(TenantProjectConfig projectConfig) {

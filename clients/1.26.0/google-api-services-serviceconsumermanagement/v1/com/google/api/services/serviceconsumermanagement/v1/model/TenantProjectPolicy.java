@@ -34,7 +34,7 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
    * granted to the Service Consumer Management service account. At least one binding must have the
    * role `roles/owner`. Among the list of members for `roles/owner`, at least one of them must be
-   * either `user` or `group` type.
+   * either the `user` or `group` type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
    * granted to the Service Consumer Management service account. At least one binding must have the
    * role `roles/owner`. Among the list of members for `roles/owner`, at least one of them must be
-   * either `user` or `group` type.
+   * either the `user` or `group` type.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyBinding> getPolicyBindings() {
@@ -61,7 +61,7 @@ public final class TenantProjectPolicy extends com.google.api.client.json.Generi
    * Policy bindings to be applied to the tenant project, in addition to the 'roles/owner' role
    * granted to the Service Consumer Management service account. At least one binding must have the
    * role `roles/owner`. Among the list of members for `roles/owner`, at least one of them must be
-   * either `user` or `group` type.
+   * either the `user` or `group` type.
    * @param policyBindings policyBindings or {@code null} for none
    */
   public TenantProjectPolicy setPolicyBindings(java.util.List<PolicyBinding> policyBindings) {

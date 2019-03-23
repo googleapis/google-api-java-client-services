@@ -1518,17 +1518,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * the agent's default language is used. [Many languages](https://cloud.google.com
+           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
+           * enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of entity synonyms defined in `entity_type`. If not specified, the agent's
-         default language is used. [More than a dozen
-         languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must be
-         enabled in the agent, before they can be used.
+         default language is used. [Many languages](https://cloud.google.com/dialogflow-
+         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
+         before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -1536,9 +1536,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * the agent's default language is used. [Many languages](https://cloud.google.com
+           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
+           * enabled in the agent before they can be used.
            */
           public Create setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -1828,16 +1828,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve entity synonyms for. If not specified, the agent's
-           * default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
+           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+           * the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to retrieve entity synonyms for. If not specified, the agent's default
-         language is used. [More than a dozen languages](https://dialogflow.com/docs/reference/language) are
-         supported. Note: languages must be enabled in the agent, before they can be used.
+         language is used. [Many languages](https://cloud.google.com/dialogflow-
+         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
+         before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -1845,9 +1846,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve entity synonyms for. If not specified, the agent's
-           * default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
+           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+           * the agent before they can be used.
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2000,16 +2001,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
-           * default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
+           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+           * the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to list entity synonyms for. If not specified, the agent's default language
-         is used. [More than a dozen languages](https://dialogflow.com/docs/reference/language) are
-         supported. Note: languages must be enabled in the agent, before they can be used.
+         is used. [Many languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language)
+         are supported. Note: languages must be enabled in the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -2017,9 +2018,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list entity synonyms for. If not specified, the agent's
-           * default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * default language is used. [Many languages](https://cloud.google.com/dialogflow-
+           * enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+           * the agent before they can be used.
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -2210,17 +2211,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * the agent's default language is used. [Many languages](https://cloud.google.com
+           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
+           * enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of entity synonyms defined in `entity_type`. If not specified, the agent's
-         default language is used. [More than a dozen
-         languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must be
-         enabled in the agent, before they can be used.
+         default language is used. [Many languages](https://cloud.google.com/dialogflow-
+         enterprise/docs/reference/language) are supported. Note: languages must be enabled in the agent
+         before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -2228,9 +2229,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of entity synonyms defined in `entity_type`. If not specified,
-           * the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * the agent's default language is used. [Many languages](https://cloud.google.com
+           * /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be
+           * enabled in the agent before they can be used.
            */
           public Patch setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -5355,17 +5356,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
-           * `intent`. If not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * `intent`. If not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of training phrases, parameters and rich messages defined in `intent`. If
-         not specified, the agent's default language is used. [More than a dozen
-         languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must be
-         enabled in the agent, before they can be used.
+         not specified, the agent's default language is used. [Many languages](https://cloud.google.com
+         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+         the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -5373,9 +5374,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
-           * `intent`. If not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * `intent`. If not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           public Create setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -5692,17 +5693,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
-           * If not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * If not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to retrieve training phrases, parameters and rich messages for. If not
-         specified, the agent's default language is used. [More than a dozen
-         languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must be
-         enabled in the agent, before they can be used.
+         specified, the agent's default language is used. [Many languages](https://cloud.google.com
+         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+         the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -5710,9 +5711,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to retrieve training phrases, parameters and rich messages for.
-           * If not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * If not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           public Get setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -5881,17 +5882,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list training phrases, parameters and rich messages for. If
-           * not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent before they can be used.
+           * not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language to list training phrases, parameters and rich messages for. If not
-         specified, the agent's default language is used. [More than a dozen
-         languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must be
-         enabled in the agent before they can be used.
+         specified, the agent's default language is used. [Many languages](https://cloud.google.com
+         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+         the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -5899,9 +5900,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language to list training phrases, parameters and rich messages for. If
-           * not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent before they can be used.
+           * not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           public List setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
@@ -6110,17 +6111,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
-           * `intent`. If not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * `intent`. If not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
           /** Optional. The language of training phrases, parameters and rich messages defined in `intent`. If
-         not specified, the agent's default language is used. [More than a dozen
-         languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must be
-         enabled in the agent, before they can be used.
+         not specified, the agent's default language is used. [Many languages](https://cloud.google.com
+         /dialogflow-enterprise/docs/reference/language) are supported. Note: languages must be enabled in
+         the agent before they can be used.
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
@@ -6128,9 +6129,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Optional. The language of training phrases, parameters and rich messages defined in
-           * `intent`. If not specified, the agent's default language is used. [More than a dozen
-           * languages](https://dialogflow.com/docs/reference/language) are supported. Note:
-           * languages must be enabled in the agent, before they can be used.
+           * `intent`. If not specified, the agent's default language is used. [Many
+           * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+           * supported. Note: languages must be enabled in the agent before they can be used.
            */
           public Patch setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;

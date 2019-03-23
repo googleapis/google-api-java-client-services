@@ -68,7 +68,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The default and maximum values depend on the type of request:
    *
    * * For App Engine tasks, 0 indicates that the   request has the default deadline. The default
-   * deadline depends on the   [scaling type](https://cloud.google.com/appengine/docs/standard/go
+   * deadline depends on the   [scaling   type](https://cloud.google.com/appengine/docs/standard/go
    * /how-instances-are-managed#instance_scaling)   of the service: 10 minutes for standard apps
    * with automatic scaling, 24   hours for standard apps with manual and basic scaling, and 60
    * minutes for   flex apps. If the request deadline is set, it must be in the interval [15
@@ -110,7 +110,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the task's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -223,7 +223,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The default and maximum values depend on the type of request:
    *
    * * For App Engine tasks, 0 indicates that the   request has the default deadline. The default
-   * deadline depends on the   [scaling type](https://cloud.google.com/appengine/docs/standard/go
+   * deadline depends on the   [scaling   type](https://cloud.google.com/appengine/docs/standard/go
    * /how-instances-are-managed#instance_scaling)   of the service: 10 minutes for standard apps
    * with automatic scaling, 24   hours for standard apps with manual and basic scaling, and 60
    * minutes for   flex apps. If the request deadline is set, it must be in the interval [15
@@ -253,7 +253,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * The default and maximum values depend on the type of request:
    *
    * * For App Engine tasks, 0 indicates that the   request has the default deadline. The default
-   * deadline depends on the   [scaling type](https://cloud.google.com/appengine/docs/standard/go
+   * deadline depends on the   [scaling   type](https://cloud.google.com/appengine/docs/standard/go
    * /how-instances-are-managed#instance_scaling)   of the service: 10 minutes for standard apps
    * with automatic scaling, 24   hours for standard apps with manual and basic scaling, and 60
    * minutes for   flex apps. If the request deadline is set, it must be in the interval [15
@@ -319,7 +319,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the task's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -342,7 +342,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the task's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see

@@ -46,7 +46,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the queue's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -86,8 +86,8 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    *
    * The queue's actual dispatch rate is the result of:
    *
-   * * Number of tasks in the queue * User-specified throttling: rate limits   retry configuration,
-   * and the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
+   * * Number of tasks in the queue * User-specified throttling: rate_limits,   retry_config, and
+   * the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
    * Unavailable) responses from the worker, high error rates, or to smooth   sudden large traffic
    * spikes.
    * The value may be {@code null}.
@@ -147,7 +147,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the queue's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -168,7 +168,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
    *
    * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]),    hyphens (-), colons (:), or
-   * periods (.).    For more information, see    [Identifying projects](https://cloud.google.com
+   * periods (.).    For more information, see    [Identifying    projects](https://cloud.google.com
    * /resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the
    * canonical ID for the queue's location.    The list of available locations can be obtained by
    * calling    ListLocations.    For more information, see
@@ -229,8 +229,8 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    *
    * The queue's actual dispatch rate is the result of:
    *
-   * * Number of tasks in the queue * User-specified throttling: rate limits   retry configuration,
-   * and the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
+   * * Number of tasks in the queue * User-specified throttling: rate_limits,   retry_config, and
+   * the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
    * Unavailable) responses from the worker, high error rates, or to smooth   sudden large traffic
    * spikes.
    * @return value or {@code null} for none
@@ -252,8 +252,8 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    *
    * The queue's actual dispatch rate is the result of:
    *
-   * * Number of tasks in the queue * User-specified throttling: rate limits   retry configuration,
-   * and the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
+   * * Number of tasks in the queue * User-specified throttling: rate_limits,   retry_config, and
+   * the   queue's state. * System throttling due to `429` (Too Many Requests) or `503` (Service
    * Unavailable) responses from the worker, high error rates, or to smooth   sudden large traffic
    * spikes.
    * @param rateLimits rateLimits or {@code null} for none

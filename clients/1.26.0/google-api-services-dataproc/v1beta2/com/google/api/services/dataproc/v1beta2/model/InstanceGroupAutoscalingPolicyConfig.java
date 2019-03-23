@@ -32,8 +32,9 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
 
   /**
    * Optional. Maximum number of instances for this group. Required for primary workers. Note that
-   * by default, clusters will not use secondary workers.Primary workers - Bounds: [min_instances,
-   * ). Secondary workers - Bounds: [min_instances, ). Default: 0.
+   * by default, clusters will not use secondary workers. Required for secondary workers if the
+   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required.
+   * Secondary workers - Bounds: [min_instances, ). Default: 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,16 +49,6 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
   private java.lang.Integer minInstances;
 
   /**
-   * Optional. Weight for instance group. Determines fraction of total workers in cluster that will
-   * be composed of instances from this instance group (e.g. if primary workers have weight 2 and
-   * secondary workers have weight 1, then the cluster should have approximately 2 primary workers
-   * to each secondary worker. Cluster may not reach these exact weights if constrained by min/max
-   * bounds or other autoscaling configurations.Note that all groups have an equal weight by
-   * default, so the cluster will attempt to maintain an equal number of workers in each group
-   * within configured size bounds per group. The cluster may not reach this balance of weights if
-   * not allowed by worker-count bounds. For example, if max_instances for secondary workers is 0,
-   * only primary workers will be added. The cluster can also be out of balance when
-   * created.Default: 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +56,9 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
 
   /**
    * Optional. Maximum number of instances for this group. Required for primary workers. Note that
-   * by default, clusters will not use secondary workers.Primary workers - Bounds: [min_instances,
-   * ). Secondary workers - Bounds: [min_instances, ). Default: 0.
+   * by default, clusters will not use secondary workers. Required for secondary workers if the
+   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required.
+   * Secondary workers - Bounds: [min_instances, ). Default: 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxInstances() {
@@ -75,8 +67,9 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
 
   /**
    * Optional. Maximum number of instances for this group. Required for primary workers. Note that
-   * by default, clusters will not use secondary workers.Primary workers - Bounds: [min_instances,
-   * ). Secondary workers - Bounds: [min_instances, ). Default: 0.
+   * by default, clusters will not use secondary workers. Required for secondary workers if the
+   * minimum secondary instances is set.Primary workers - Bounds: [min_instances, ). Required.
+   * Secondary workers - Bounds: [min_instances, ). Default: 0.
    * @param maxInstances maxInstances or {@code null} for none
    */
   public InstanceGroupAutoscalingPolicyConfig setMaxInstances(java.lang.Integer maxInstances) {
@@ -104,16 +97,6 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
   }
 
   /**
-   * Optional. Weight for instance group. Determines fraction of total workers in cluster that will
-   * be composed of instances from this instance group (e.g. if primary workers have weight 2 and
-   * secondary workers have weight 1, then the cluster should have approximately 2 primary workers
-   * to each secondary worker. Cluster may not reach these exact weights if constrained by min/max
-   * bounds or other autoscaling configurations.Note that all groups have an equal weight by
-   * default, so the cluster will attempt to maintain an equal number of workers in each group
-   * within configured size bounds per group. The cluster may not reach this balance of weights if
-   * not allowed by worker-count bounds. For example, if max_instances for secondary workers is 0,
-   * only primary workers will be added. The cluster can also be out of balance when
-   * created.Default: 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWeight() {
@@ -121,16 +104,6 @@ public final class InstanceGroupAutoscalingPolicyConfig extends com.google.api.c
   }
 
   /**
-   * Optional. Weight for instance group. Determines fraction of total workers in cluster that will
-   * be composed of instances from this instance group (e.g. if primary workers have weight 2 and
-   * secondary workers have weight 1, then the cluster should have approximately 2 primary workers
-   * to each secondary worker. Cluster may not reach these exact weights if constrained by min/max
-   * bounds or other autoscaling configurations.Note that all groups have an equal weight by
-   * default, so the cluster will attempt to maintain an equal number of workers in each group
-   * within configured size bounds per group. The cluster may not reach this balance of weights if
-   * not allowed by worker-count bounds. For example, if max_instances for secondary workers is 0,
-   * only primary workers will be added. The cluster can also be out of balance when
-   * created.Default: 1.
    * @param weight weight or {@code null} for none
    */
   public InstanceGroupAutoscalingPolicyConfig setWeight(java.lang.Integer weight) {

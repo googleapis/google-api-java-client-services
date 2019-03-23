@@ -214,6 +214,18 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<ServiceAccount> serviceAccounts;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy;
+
+  /**
    * [Output Only] Whether a VM has been restricted for start because Compute Engine has detected
    * suspicious activity.
    * The value may be {@code null}.
@@ -693,6 +705,36 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setServiceAccounts(java.util.List<ServiceAccount> serviceAccounts) {
     this.serviceAccounts = serviceAccounts;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public Instance setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceIntegrityPolicy getShieldedInstanceIntegrityPolicy() {
+    return shieldedInstanceIntegrityPolicy;
+  }
+
+  /**
+   * @param shieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy or {@code null} for none
+   */
+  public Instance setShieldedInstanceIntegrityPolicy(ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy) {
+    this.shieldedInstanceIntegrityPolicy = shieldedInstanceIntegrityPolicy;
     return this;
   }
 

@@ -118,15 +118,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
-   * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
-   * so should be checked before each import/export operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String persistenceIamIdentity;
-
-  /**
    * Output only. The port number of the exposed Redis endpoint.
    * The value may be {@code null}.
    */
@@ -384,27 +375,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
-   * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
-   * so should be checked before each import/export operation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPersistenceIamIdentity() {
-    return persistenceIamIdentity;
-  }
-
-  /**
-   * Output only. Cloud IAM identity used by import / export operations to transfer data to/from
-   * Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance
-   * so should be checked before each import/export operation.
-   * @param persistenceIamIdentity persistenceIamIdentity or {@code null} for none
-   */
-  public Instance setPersistenceIamIdentity(java.lang.String persistenceIamIdentity) {
-    this.persistenceIamIdentity = persistenceIamIdentity;
     return this;
   }
 

@@ -3174,8 +3174,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the cloudsearch server.  After setting any optional
          * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the Data Source to start a resumable upload.
-        Format: datasources/{source_id}
+         * @param name Name of the Item to start a resumable upload.
+        Format: datasources/{source_id}/items/{item_id}.
          * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
          * @return the request
          */
@@ -3204,8 +3204,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the Data Source to start a resumable upload.
-        Format: datasources/{source_id}
+           * @param name Name of the Item to start a resumable upload.
+        Format: datasources/{source_id}/items/{item_id}.
            * @param content the {@link com.google.api.services.cloudsearch.v1.model.StartUploadItemRequest}
            * @since 1.13
            */
@@ -3275,19 +3275,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Name of the Data Source to start a resumable upload. Format: datasources/{source_id}
+           * Name of the Item to start a resumable upload. Format:
+           * datasources/{source_id}/items/{item_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the Data Source to start a resumable upload. Format: datasources/{source_id}
+          /** Name of the Item to start a resumable upload. Format: datasources/{source_id}/items/{item_id}.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Name of the Data Source to start a resumable upload. Format: datasources/{source_id}
+           * Name of the Item to start a resumable upload. Format:
+           * datasources/{source_id}/items/{item_id}.
            */
           public Upload setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

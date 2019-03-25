@@ -31,7 +31,7 @@ public final class ScoringConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking
-   * signal.
+   * signal. Note that this setting is not available in the Admin UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class ScoringConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking
-   * signal.
+   * signal. Note that this setting is not available in the Admin UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableFreshness() {
@@ -55,7 +55,7 @@ public final class ScoringConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking
-   * signal.
+   * signal. Note that this setting is not available in the Admin UI.
    * @param disableFreshness disableFreshness or {@code null} for none
    */
   public ScoringConfig setDisableFreshness(java.lang.Boolean disableFreshness) {

@@ -20,7 +20,7 @@ package com.google.api.services.groupssettings;
  * Service definition for Groupssettings (v1).
  *
  * <p>
- * Lets you manage permission levels and related settings of a group.
+ * Manages permission levels and related settings of a group.
  * </p>
  *
  * <p>

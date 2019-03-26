@@ -29964,6 +29964,190 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Returns the Shielded Instance Identity of an instance
+     *
+     * Create a request for the method "instances.getShieldedInstanceIdentity".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetShieldedInstanceIdentity#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param instance Name or id of the instance scoping this request.
+     * @return the request
+     */
+    public GetShieldedInstanceIdentity getShieldedInstanceIdentity(java.lang.String project, java.lang.String zone, java.lang.String instance) throws java.io.IOException {
+      GetShieldedInstanceIdentity result = new GetShieldedInstanceIdentity(project, zone, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class GetShieldedInstanceIdentity extends ComputeRequest<com.google.api.services.compute.model.ShieldedInstanceIdentity> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/instances/{instance}/getShieldedInstanceIdentity";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern INSTANCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns the Shielded Instance Identity of an instance
+       *
+       * Create a request for the method "instances.getShieldedInstanceIdentity".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetShieldedInstanceIdentity#execute()} method to invoke the remote
+       * operation. <p> {@link GetShieldedInstanceIdentity#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param instance Name or id of the instance scoping this request.
+       * @since 1.13
+       */
+      protected GetShieldedInstanceIdentity(java.lang.String project, java.lang.String zone, java.lang.String instance) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ShieldedInstanceIdentity.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setAlt(java.lang.String alt) {
+        return (GetShieldedInstanceIdentity) super.setAlt(alt);
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setFields(java.lang.String fields) {
+        return (GetShieldedInstanceIdentity) super.setFields(fields);
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setKey(java.lang.String key) {
+        return (GetShieldedInstanceIdentity) super.setKey(key);
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setOauthToken(java.lang.String oauthToken) {
+        return (GetShieldedInstanceIdentity) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetShieldedInstanceIdentity) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setQuotaUser(java.lang.String quotaUser) {
+        return (GetShieldedInstanceIdentity) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity setUserIp(java.lang.String userIp) {
+        return (GetShieldedInstanceIdentity) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetShieldedInstanceIdentity setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public GetShieldedInstanceIdentity setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name or id of the instance scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Name or id of the instance scoping this request.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Name or id of the instance scoping this request. */
+      public GetShieldedInstanceIdentity setInstance(java.lang.String instance) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public GetShieldedInstanceIdentity set(String parameterName, Object value) {
+        return (GetShieldedInstanceIdentity) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates an instance resource in the specified project using the data included in the request.
      *
      * Create a request for the method "instances.insert".
@@ -33389,6 +33573,235 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Sets the Shielded Instance integrity policy for an instance. You can only use this method on a
+     * running instance. This method supports PATCH semantics and uses the JSON merge patch format and
+     * processing rules.
+     *
+     * Create a request for the method "instances.setShieldedInstanceIntegrityPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link SetShieldedInstanceIntegrityPolicy#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param instance Name or id of the instance scoping this request.
+     * @param content the {@link com.google.api.services.compute.model.ShieldedInstanceIntegrityPolicy}
+     * @return the request
+     */
+    public SetShieldedInstanceIntegrityPolicy setShieldedInstanceIntegrityPolicy(java.lang.String project, java.lang.String zone, java.lang.String instance, com.google.api.services.compute.model.ShieldedInstanceIntegrityPolicy content) throws java.io.IOException {
+      SetShieldedInstanceIntegrityPolicy result = new SetShieldedInstanceIntegrityPolicy(project, zone, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetShieldedInstanceIntegrityPolicy extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/instances/{instance}/setShieldedInstanceIntegrityPolicy";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern INSTANCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Sets the Shielded Instance integrity policy for an instance. You can only use this method on a
+       * running instance. This method supports PATCH semantics and uses the JSON merge patch format and
+       * processing rules.
+       *
+       * Create a request for the method "instances.setShieldedInstanceIntegrityPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link SetShieldedInstanceIntegrityPolicy#execute()} method to invoke the
+       * remote operation. <p> {@link SetShieldedInstanceIntegrityPolicy#initialize(com.google.api.clien
+       * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param instance Name or id of the instance scoping this request.
+       * @param content the {@link com.google.api.services.compute.model.ShieldedInstanceIntegrityPolicy}
+       * @since 1.13
+       */
+      protected SetShieldedInstanceIntegrityPolicy(java.lang.String project, java.lang.String zone, java.lang.String instance, com.google.api.services.compute.model.ShieldedInstanceIntegrityPolicy content) {
+        super(Compute.this, "PATCH", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setAlt(java.lang.String alt) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setFields(java.lang.String fields) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setKey(java.lang.String key) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy setUserIp(java.lang.String userIp) {
+        return (SetShieldedInstanceIntegrityPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public SetShieldedInstanceIntegrityPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public SetShieldedInstanceIntegrityPolicy setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name or id of the instance scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Name or id of the instance scoping this request.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Name or id of the instance scoping this request. */
+      public SetShieldedInstanceIntegrityPolicy setInstance(java.lang.String instance) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.instance = instance;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public SetShieldedInstanceIntegrityPolicy setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public SetShieldedInstanceIntegrityPolicy set(String parameterName, Object value) {
+        return (SetShieldedInstanceIntegrityPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Sets network tags for the specified instance to the data included in the request.
      *
      * Create a request for the method "instances.setTags".
@@ -35127,6 +35540,235 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public UpdateNetworkInterface set(String parameterName, Object value) {
         return (UpdateNetworkInterface) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Shielded Instance config for an instance. You can only use this method on a stopped
+     * instance. This method supports PATCH semantics and uses the JSON merge patch format and
+     * processing rules.
+     *
+     * Create a request for the method "instances.updateShieldedInstanceConfig".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link UpdateShieldedInstanceConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param instance Name or id of the instance scoping this request.
+     * @param content the {@link com.google.api.services.compute.model.ShieldedInstanceConfig}
+     * @return the request
+     */
+    public UpdateShieldedInstanceConfig updateShieldedInstanceConfig(java.lang.String project, java.lang.String zone, java.lang.String instance, com.google.api.services.compute.model.ShieldedInstanceConfig content) throws java.io.IOException {
+      UpdateShieldedInstanceConfig result = new UpdateShieldedInstanceConfig(project, zone, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateShieldedInstanceConfig extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/instances/{instance}/updateShieldedInstanceConfig";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern INSTANCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Updates the Shielded Instance config for an instance. You can only use this method on a stopped
+       * instance. This method supports PATCH semantics and uses the JSON merge patch format and
+       * processing rules.
+       *
+       * Create a request for the method "instances.updateShieldedInstanceConfig".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link UpdateShieldedInstanceConfig#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateShieldedInstanceConfig#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param instance Name or id of the instance scoping this request.
+       * @param content the {@link com.google.api.services.compute.model.ShieldedInstanceConfig}
+       * @since 1.13
+       */
+      protected UpdateShieldedInstanceConfig(java.lang.String project, java.lang.String zone, java.lang.String instance, com.google.api.services.compute.model.ShieldedInstanceConfig content) {
+        super(Compute.this, "PATCH", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setAlt(java.lang.String alt) {
+        return (UpdateShieldedInstanceConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setFields(java.lang.String fields) {
+        return (UpdateShieldedInstanceConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setKey(java.lang.String key) {
+        return (UpdateShieldedInstanceConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateShieldedInstanceConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateShieldedInstanceConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateShieldedInstanceConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig setUserIp(java.lang.String userIp) {
+        return (UpdateShieldedInstanceConfig) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public UpdateShieldedInstanceConfig setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public UpdateShieldedInstanceConfig setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name or id of the instance scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Name or id of the instance scoping this request.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Name or id of the instance scoping this request. */
+      public UpdateShieldedInstanceConfig setInstance(java.lang.String instance) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.instance = instance;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public UpdateShieldedInstanceConfig setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public UpdateShieldedInstanceConfig set(String parameterName, Object value) {
+        return (UpdateShieldedInstanceConfig) super.set(parameterName, value);
       }
     }
 

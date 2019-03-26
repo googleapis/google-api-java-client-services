@@ -60,9 +60,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * If importing ReadGroupSets, an ImportReadGroupSetsResponse is returned. If importing Variants,
-   * an ImportVariantsResponse is returned. For pipelines and exports, an Empty response is
-   * returned.
+   * An Empty object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,9 +139,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If importing ReadGroupSets, an ImportReadGroupSetsResponse is returned. If importing Variants,
-   * an ImportVariantsResponse is returned. For pipelines and exports, an Empty response is
-   * returned.
+   * An Empty object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResponse() {
@@ -151,9 +147,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If importing ReadGroupSets, an ImportReadGroupSetsResponse is returned. If importing Variants,
-   * an ImportVariantsResponse is returned. For pipelines and exports, an Empty response is
-   * returned.
+   * An Empty object.
    * @param response response or {@code null} for none
    */
   public Operation setResponse(java.util.Map<String, java.lang.Object> response) {

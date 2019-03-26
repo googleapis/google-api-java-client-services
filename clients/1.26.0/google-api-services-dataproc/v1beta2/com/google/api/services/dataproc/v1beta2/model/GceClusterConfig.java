@@ -31,13 +31,6 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class GceClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allocation Affinity for consuming Zonal allocation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AllocationAffinity allocationAffinity;
-
-  /**
    * Optional. If true, all instances in the cluster will only have internal IP addresses. By
    * default, clusters are not restricted to internal IP addresses, and will have ephemeral external
    * IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled
@@ -68,6 +61,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
+
+  /**
+   * Optional. Reservation Affinity for consuming Zonal reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
 
   /**
    * Optional. The service account of the instances. Defaults to the default Compute Engine service
@@ -123,23 +123,6 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String zoneUri;
-
-  /**
-   * Allocation Affinity for consuming Zonal allocation.
-   * @return value or {@code null} for none
-   */
-  public AllocationAffinity getAllocationAffinity() {
-    return allocationAffinity;
-  }
-
-  /**
-   * Allocation Affinity for consuming Zonal allocation.
-   * @param allocationAffinity allocationAffinity or {@code null} for none
-   */
-  public GceClusterConfig setAllocationAffinity(AllocationAffinity allocationAffinity) {
-    this.allocationAffinity = allocationAffinity;
-    return this;
-  }
 
   /**
    * Optional. If true, all instances in the cluster will only have internal IP addresses. By
@@ -211,6 +194,23 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * Optional. Reservation Affinity for consuming Zonal reservation.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. Reservation Affinity for consuming Zonal reservation.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GceClusterConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

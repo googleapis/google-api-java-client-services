@@ -72,6 +72,14 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String customReplyTo;
 
   /**
+   * If any of the settings that will be merged have custom roles which is anything other than
+   * owners, managers, or group scopes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customRolesEnabledForSettingsToBeMerged;
+
+  /**
    * Default message deny notification message
    * The value may be {@code null}.
    */
@@ -91,6 +99,13 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
+
+  /**
+   * If a primary Collab Inbox feature is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enableCollaborativeInbox;
 
   /**
    * If favorite replies should be displayed above other replies.
@@ -217,12 +232,43 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String whoCanAddReferences;
 
   /**
+   * Permission to approve members. Possible values are: ALL_OWNERS_CAN_APPROVE
+   * ALL_MANAGERS_CAN_APPROVE ALL_MEMBERS_CAN_APPROVE NONE_CAN_APPROVE
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanApproveMembers;
+
+  /**
+   * Permission to approve pending messages in the moderation queue. Possible values are: NONE
+   * OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanApproveMessages;
+
+  /**
    * Permission to assign topics in a forum to another user. Possible values are: NONE OWNERS_ONLY
    * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanAssignTopics;
+
+  /**
+   * Permission for content assistants. Possible values are: Possible values are: NONE OWNERS_ONLY
+   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanAssistContent;
+
+  /**
+   * Permission to ban users. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanBanUsers;
 
   /**
    * Permission to contact owner of the group via web UI. Possible values are: ANYONE_CAN_CONTACT
@@ -233,12 +279,44 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String whoCanContactOwner;
 
   /**
+   * Permission to delete replies to topics. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanDeleteAnyPost;
+
+  /**
+   * Permission to delete topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanDeleteTopics;
+
+  /**
+   * Permission for who can discover the group. Possible values are: ALL_MEMBERS_CAN_DISCOVER
+   * ALL_IN_DOMAIN_CAN_DISCOVER ANYONE_CAN_DISCOVER
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanDiscoverGroup;
+
+  /**
    * Permission to enter free form tags for topics in a forum. Possible values are: NONE OWNERS_ONLY
    * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanEnterFreeFormTags;
+
+  /**
+   * Permission to hide posts by reporting them as abuse. Possible values are: NONE OWNERS_ONLY
+   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanHideAbuse;
 
   /**
    * Permissions to invite members. Possible values are: ALL_MEMBERS_CAN_INVITE
@@ -263,6 +341,22 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanLeaveGroup;
+
+  /**
+   * Permission to lock topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanLockTopics;
+
+  /**
+   * Permission to make topics appear at the top of the topic list. Possible values are: NONE
+   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanMakeTopicsSticky;
 
   /**
    * Permission to mark a topic as a duplicate of another topic. Possible values are: NONE
@@ -297,12 +391,60 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String whoCanMarkNoResponseNeeded;
 
   /**
+   * Permission for content moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanModerateContent;
+
+  /**
+   * Permission for membership moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanModerateMembers;
+
+  /**
+   * Permission to modify members (change member roles). Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanModifyMembers;
+
+  /**
    * Permission to change tags and categories. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
    * OWNERS_AND_MANAGERS ALL_MEMBERS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanModifyTagsAndCategories;
+
+  /**
+   * Permission to move topics into the group or forum. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanMoveTopicsIn;
+
+  /**
+   * Permission to move topics out of the group or forum. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanMoveTopicsOut;
+
+  /**
+   * Permission to post announcements, a special topic type. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String whoCanPostAnnouncements;
 
   /**
    * Permissions to post messages to the group. Possible values are: NONE_CAN_POST
@@ -347,7 +489,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
 
   /**
    * Permissions to view membership. Possible values are: ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW
+   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -456,6 +598,25 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * If any of the settings that will be merged have custom roles which is anything other than
+   * owners, managers, or group scopes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomRolesEnabledForSettingsToBeMerged() {
+    return customRolesEnabledForSettingsToBeMerged;
+  }
+
+  /**
+   * If any of the settings that will be merged have custom roles which is anything other than
+   * owners, managers, or group scopes.
+   * @param customRolesEnabledForSettingsToBeMerged customRolesEnabledForSettingsToBeMerged or {@code null} for none
+   */
+  public Groups setCustomRolesEnabledForSettingsToBeMerged(java.lang.String customRolesEnabledForSettingsToBeMerged) {
+    this.customRolesEnabledForSettingsToBeMerged = customRolesEnabledForSettingsToBeMerged;
+    return this;
+  }
+
+  /**
    * Default message deny notification message
    * @return value or {@code null} for none
    */
@@ -503,6 +664,23 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   public Groups setEmail(java.lang.String email) {
     this.email = email;
+    return this;
+  }
+
+  /**
+   * If a primary Collab Inbox feature is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnableCollaborativeInbox() {
+    return enableCollaborativeInbox;
+  }
+
+  /**
+   * If a primary Collab Inbox feature is enabled.
+   * @param enableCollaborativeInbox enableCollaborativeInbox or {@code null} for none
+   */
+  public Groups setEnableCollaborativeInbox(java.lang.String enableCollaborativeInbox) {
+    this.enableCollaborativeInbox = enableCollaborativeInbox;
     return this;
   }
 
@@ -806,6 +984,44 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Permission to approve members. Possible values are: ALL_OWNERS_CAN_APPROVE
+   * ALL_MANAGERS_CAN_APPROVE ALL_MEMBERS_CAN_APPROVE NONE_CAN_APPROVE
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanApproveMembers() {
+    return whoCanApproveMembers;
+  }
+
+  /**
+   * Permission to approve members. Possible values are: ALL_OWNERS_CAN_APPROVE
+   * ALL_MANAGERS_CAN_APPROVE ALL_MEMBERS_CAN_APPROVE NONE_CAN_APPROVE
+   * @param whoCanApproveMembers whoCanApproveMembers or {@code null} for none
+   */
+  public Groups setWhoCanApproveMembers(java.lang.String whoCanApproveMembers) {
+    this.whoCanApproveMembers = whoCanApproveMembers;
+    return this;
+  }
+
+  /**
+   * Permission to approve pending messages in the moderation queue. Possible values are: NONE
+   * OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanApproveMessages() {
+    return whoCanApproveMessages;
+  }
+
+  /**
+   * Permission to approve pending messages in the moderation queue. Possible values are: NONE
+   * OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanApproveMessages whoCanApproveMessages or {@code null} for none
+   */
+  public Groups setWhoCanApproveMessages(java.lang.String whoCanApproveMessages) {
+    this.whoCanApproveMessages = whoCanApproveMessages;
+    return this;
+  }
+
+  /**
    * Permission to assign topics in a forum to another user. Possible values are: NONE OWNERS_ONLY
    * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
    * @return value or {@code null} for none
@@ -821,6 +1037,42 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   public Groups setWhoCanAssignTopics(java.lang.String whoCanAssignTopics) {
     this.whoCanAssignTopics = whoCanAssignTopics;
+    return this;
+  }
+
+  /**
+   * Permission for content assistants. Possible values are: Possible values are: NONE OWNERS_ONLY
+   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanAssistContent() {
+    return whoCanAssistContent;
+  }
+
+  /**
+   * Permission for content assistants. Possible values are: Possible values are: NONE OWNERS_ONLY
+   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanAssistContent whoCanAssistContent or {@code null} for none
+   */
+  public Groups setWhoCanAssistContent(java.lang.String whoCanAssistContent) {
+    this.whoCanAssistContent = whoCanAssistContent;
+    return this;
+  }
+
+  /**
+   * Permission to ban users. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanBanUsers() {
+    return whoCanBanUsers;
+  }
+
+  /**
+   * Permission to ban users. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanBanUsers whoCanBanUsers or {@code null} for none
+   */
+  public Groups setWhoCanBanUsers(java.lang.String whoCanBanUsers) {
+    this.whoCanBanUsers = whoCanBanUsers;
     return this;
   }
 
@@ -844,6 +1096,63 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Permission to delete replies to topics. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanDeleteAnyPost() {
+    return whoCanDeleteAnyPost;
+  }
+
+  /**
+   * Permission to delete replies to topics. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanDeleteAnyPost whoCanDeleteAnyPost or {@code null} for none
+   */
+  public Groups setWhoCanDeleteAnyPost(java.lang.String whoCanDeleteAnyPost) {
+    this.whoCanDeleteAnyPost = whoCanDeleteAnyPost;
+    return this;
+  }
+
+  /**
+   * Permission to delete topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanDeleteTopics() {
+    return whoCanDeleteTopics;
+  }
+
+  /**
+   * Permission to delete topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @param whoCanDeleteTopics whoCanDeleteTopics or {@code null} for none
+   */
+  public Groups setWhoCanDeleteTopics(java.lang.String whoCanDeleteTopics) {
+    this.whoCanDeleteTopics = whoCanDeleteTopics;
+    return this;
+  }
+
+  /**
+   * Permission for who can discover the group. Possible values are: ALL_MEMBERS_CAN_DISCOVER
+   * ALL_IN_DOMAIN_CAN_DISCOVER ANYONE_CAN_DISCOVER
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanDiscoverGroup() {
+    return whoCanDiscoverGroup;
+  }
+
+  /**
+   * Permission for who can discover the group. Possible values are: ALL_MEMBERS_CAN_DISCOVER
+   * ALL_IN_DOMAIN_CAN_DISCOVER ANYONE_CAN_DISCOVER
+   * @param whoCanDiscoverGroup whoCanDiscoverGroup or {@code null} for none
+   */
+  public Groups setWhoCanDiscoverGroup(java.lang.String whoCanDiscoverGroup) {
+    this.whoCanDiscoverGroup = whoCanDiscoverGroup;
+    return this;
+  }
+
+  /**
    * Permission to enter free form tags for topics in a forum. Possible values are: NONE OWNERS_ONLY
    * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
    * @return value or {@code null} for none
@@ -859,6 +1168,25 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   public Groups setWhoCanEnterFreeFormTags(java.lang.String whoCanEnterFreeFormTags) {
     this.whoCanEnterFreeFormTags = whoCanEnterFreeFormTags;
+    return this;
+  }
+
+  /**
+   * Permission to hide posts by reporting them as abuse. Possible values are: NONE OWNERS_ONLY
+   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanHideAbuse() {
+    return whoCanHideAbuse;
+  }
+
+  /**
+   * Permission to hide posts by reporting them as abuse. Possible values are: NONE OWNERS_ONLY
+   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanHideAbuse whoCanHideAbuse or {@code null} for none
+   */
+  public Groups setWhoCanHideAbuse(java.lang.String whoCanHideAbuse) {
+    this.whoCanHideAbuse = whoCanHideAbuse;
     return this;
   }
 
@@ -916,6 +1244,44 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   public Groups setWhoCanLeaveGroup(java.lang.String whoCanLeaveGroup) {
     this.whoCanLeaveGroup = whoCanLeaveGroup;
+    return this;
+  }
+
+  /**
+   * Permission to lock topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanLockTopics() {
+    return whoCanLockTopics;
+  }
+
+  /**
+   * Permission to lock topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @param whoCanLockTopics whoCanLockTopics or {@code null} for none
+   */
+  public Groups setWhoCanLockTopics(java.lang.String whoCanLockTopics) {
+    this.whoCanLockTopics = whoCanLockTopics;
+    return this;
+  }
+
+  /**
+   * Permission to make topics appear at the top of the topic list. Possible values are: NONE
+   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanMakeTopicsSticky() {
+    return whoCanMakeTopicsSticky;
+  }
+
+  /**
+   * Permission to make topics appear at the top of the topic list. Possible values are: NONE
+   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanMakeTopicsSticky whoCanMakeTopicsSticky or {@code null} for none
+   */
+  public Groups setWhoCanMakeTopicsSticky(java.lang.String whoCanMakeTopicsSticky) {
+    this.whoCanMakeTopicsSticky = whoCanMakeTopicsSticky;
     return this;
   }
 
@@ -996,6 +1362,63 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Permission for content moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanModerateContent() {
+    return whoCanModerateContent;
+  }
+
+  /**
+   * Permission for content moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @param whoCanModerateContent whoCanModerateContent or {@code null} for none
+   */
+  public Groups setWhoCanModerateContent(java.lang.String whoCanModerateContent) {
+    this.whoCanModerateContent = whoCanModerateContent;
+    return this;
+  }
+
+  /**
+   * Permission for membership moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanModerateMembers() {
+    return whoCanModerateMembers;
+  }
+
+  /**
+   * Permission for membership moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
+   * ALL_MEMBERS
+   * @param whoCanModerateMembers whoCanModerateMembers or {@code null} for none
+   */
+  public Groups setWhoCanModerateMembers(java.lang.String whoCanModerateMembers) {
+    this.whoCanModerateMembers = whoCanModerateMembers;
+    return this;
+  }
+
+  /**
+   * Permission to modify members (change member roles). Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanModifyMembers() {
+    return whoCanModifyMembers;
+  }
+
+  /**
+   * Permission to modify members (change member roles). Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanModifyMembers whoCanModifyMembers or {@code null} for none
+   */
+  public Groups setWhoCanModifyMembers(java.lang.String whoCanModifyMembers) {
+    this.whoCanModifyMembers = whoCanModifyMembers;
+    return this;
+  }
+
+  /**
    * Permission to change tags and categories. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
    * OWNERS_AND_MANAGERS ALL_MEMBERS
    * @return value or {@code null} for none
@@ -1011,6 +1434,63 @@ public final class Groups extends com.google.api.client.json.GenericJson {
    */
   public Groups setWhoCanModifyTagsAndCategories(java.lang.String whoCanModifyTagsAndCategories) {
     this.whoCanModifyTagsAndCategories = whoCanModifyTagsAndCategories;
+    return this;
+  }
+
+  /**
+   * Permission to move topics into the group or forum. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanMoveTopicsIn() {
+    return whoCanMoveTopicsIn;
+  }
+
+  /**
+   * Permission to move topics into the group or forum. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanMoveTopicsIn whoCanMoveTopicsIn or {@code null} for none
+   */
+  public Groups setWhoCanMoveTopicsIn(java.lang.String whoCanMoveTopicsIn) {
+    this.whoCanMoveTopicsIn = whoCanMoveTopicsIn;
+    return this;
+  }
+
+  /**
+   * Permission to move topics out of the group or forum. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanMoveTopicsOut() {
+    return whoCanMoveTopicsOut;
+  }
+
+  /**
+   * Permission to move topics out of the group or forum. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanMoveTopicsOut whoCanMoveTopicsOut or {@code null} for none
+   */
+  public Groups setWhoCanMoveTopicsOut(java.lang.String whoCanMoveTopicsOut) {
+    this.whoCanMoveTopicsOut = whoCanMoveTopicsOut;
+    return this;
+  }
+
+  /**
+   * Permission to post announcements, a special topic type. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWhoCanPostAnnouncements() {
+    return whoCanPostAnnouncements;
+  }
+
+  /**
+   * Permission to post announcements, a special topic type. Possible values are: NONE OWNERS_ONLY
+   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * @param whoCanPostAnnouncements whoCanPostAnnouncements or {@code null} for none
+   */
+  public Groups setWhoCanPostAnnouncements(java.lang.String whoCanPostAnnouncements) {
+    this.whoCanPostAnnouncements = whoCanPostAnnouncements;
     return this;
   }
 
@@ -1113,7 +1593,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
 
   /**
    * Permissions to view membership. Possible values are: ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW
+   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanViewMembership() {
@@ -1122,7 +1602,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
 
   /**
    * Permissions to view membership. Possible values are: ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW
+   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
    * @param whoCanViewMembership whoCanViewMembership or {@code null} for none
    */
   public Groups setWhoCanViewMembership(java.lang.String whoCanViewMembership) {

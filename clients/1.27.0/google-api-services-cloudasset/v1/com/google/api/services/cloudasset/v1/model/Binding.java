@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudasset.v1beta1.model;
+package com.google.api.services.cloudasset.v1.model;
 
 /**
  * Associates `members` with a `role`.

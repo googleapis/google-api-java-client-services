@@ -17,7 +17,7 @@
 package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
- * Describes service account configuration for the tenant project.
+ * Describes the service account configuration for the tenant project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -32,9 +32,9 @@ public final class ServiceAccountConfig extends com.google.api.client.json.Gener
 
   /**
    * ID of the IAM service account to be created in tenant project. The email format of the service
-   * account will be "@.iam.gserviceaccount.com". This account id has to be unique within tenant
-   * project and producers have to guarantee it. And it must be 6-30 characters long, and matches
-   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])`.
+   * account is "@.iam.gserviceaccount.com". This account ID must be unique within tenant project
+   * and service producers have to guarantee it. The ID must be 6-30 characters long, and match the
+   * following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class ServiceAccountConfig extends com.google.api.client.json.Gener
 
   /**
    * ID of the IAM service account to be created in tenant project. The email format of the service
-   * account will be "@.iam.gserviceaccount.com". This account id has to be unique within tenant
-   * project and producers have to guarantee it. And it must be 6-30 characters long, and matches
-   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])`.
+   * account is "@.iam.gserviceaccount.com". This account ID must be unique within tenant project
+   * and service producers have to guarantee it. The ID must be 6-30 characters long, and match the
+   * following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -60,9 +60,9 @@ public final class ServiceAccountConfig extends com.google.api.client.json.Gener
 
   /**
    * ID of the IAM service account to be created in tenant project. The email format of the service
-   * account will be "@.iam.gserviceaccount.com". This account id has to be unique within tenant
-   * project and producers have to guarantee it. And it must be 6-30 characters long, and matches
-   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])`.
+   * account is "@.iam.gserviceaccount.com". This account ID must be unique within tenant project
+   * and service producers have to guarantee it. The ID must be 6-30 characters long, and match the
+   * following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])`.
    * @param accountId accountId or {@code null} for none
    */
   public ServiceAccountConfig setAccountId(java.lang.String accountId) {

@@ -38,9 +38,9 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   private java.lang.String externalResource;
 
   /**
-   * When attaching a reserved project already in Tenancy Units, this is the tag of tenant resource
-   * under the tenancy unit for the service's producer project. The reserved tenant resource must be
-   * in active state.
+   * When attaching a reserved project already in tenancy units, this is the tag of a tenant
+   * resource under the tenancy unit for the managed service's service producer project. The
+   * reserved tenant resource must be in an active state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +71,9 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   }
 
   /**
-   * When attaching a reserved project already in Tenancy Units, this is the tag of tenant resource
-   * under the tenancy unit for the service's producer project. The reserved tenant resource must be
-   * in active state.
+   * When attaching a reserved project already in tenancy units, this is the tag of a tenant
+   * resource under the tenancy unit for the managed service's service producer project. The
+   * reserved tenant resource must be in an active state.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedResource() {
@@ -81,9 +81,9 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   }
 
   /**
-   * When attaching a reserved project already in Tenancy Units, this is the tag of tenant resource
-   * under the tenancy unit for the service's producer project. The reserved tenant resource must be
-   * in active state.
+   * When attaching a reserved project already in tenancy units, this is the tag of a tenant
+   * resource under the tenancy unit for the managed service's service producer project. The
+   * reserved tenant resource must be in an active state.
    * @param reservedResource reservedResource or {@code null} for none
    */
   public AttachTenantProjectRequest setReservedResource(java.lang.String reservedResource) {

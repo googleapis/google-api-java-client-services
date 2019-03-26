@@ -17,7 +17,7 @@
 package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
- * Request message to remove tenant project resource from the tenancy unit.
+ * Request message to remove a tenant project resource from the tenancy unit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed

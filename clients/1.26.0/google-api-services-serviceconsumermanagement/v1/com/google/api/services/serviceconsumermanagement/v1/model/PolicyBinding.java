@@ -31,7 +31,7 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class PolicyBinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uses the same format as in IAM policy. `member` must include both prefix and ID. For example,
+   * Uses the same format as in IAM policy. `member` must include both a prefix and ID. For example,
    * `user:{emailId}`, `serviceAccount:{emailId}`, `group:{emailId}`.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
   private java.lang.String role;
 
   /**
-   * Uses the same format as in IAM policy. `member` must include both prefix and ID. For example,
+   * Uses the same format as in IAM policy. `member` must include both a prefix and ID. For example,
    * `user:{emailId}`, `serviceAccount:{emailId}`, `group:{emailId}`.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class PolicyBinding extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Uses the same format as in IAM policy. `member` must include both prefix and ID. For example,
+   * Uses the same format as in IAM policy. `member` must include both a prefix and ID. For example,
    * `user:{emailId}`, `serviceAccount:{emailId}`, `group:{emailId}`.
    * @param members members or {@code null} for none
    */

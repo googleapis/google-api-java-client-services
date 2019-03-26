@@ -18,9 +18,9 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
  * This structure defines a tenant project to be added to the specified tenancy unit and its initial
- * configuration and properties. A project lien will be created for the tenant project to prevent
- * the tenant project from being deleted accidentally. The lien will be deleted as part of tenant
- * project removal.
+ * configuration and properties. A project lien is created for the tenant project to prevent the
+ * tenant project from being deleted accidentally. The lien is deleted as part of tenant project
+ * removal.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -34,7 +34,7 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class TenantProjectConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Billing account properties.  Billing account must be specified.
+   * Billing account properties. The billing account must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
 
   /**
    * Folder where project in this tenancy unit must be located This folder must have been previously
-   * created with proper permissions for the caller to create and configure a project in it. Valid
-   * folder resource names have the format `folders/{folder_number}` (for example,
+   * created with the required permissions for the caller to create and configure a project in it.
+   * Valid folder resource names have the format `folders/{folder_number}` (for example,
    * `folders/123456`).
    * The value may be {@code null}.
    */
@@ -51,22 +51,22 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   private java.lang.String folder;
 
   /**
-   * Labels that will be applied to this project.
+   * Labels that are applied to this project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Configuration for IAM service account on tenant project.
+   * Configuration for the IAM service account on the tenant project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ServiceAccountConfig serviceAccountConfig;
 
   /**
-   * Google Cloud API names of services that will be activated on this project during provisioning.
-   * If any of these services can not be activated, request will fail. For example:
+   * Google Cloud API names of services that are activated on this project during provisioning.  If
+   * any of these services can't be activated, the request fails. For example:
    * 'compute.googleapis.com','cloudfunctions.googleapis.com'
    * The value may be {@code null}.
    */
@@ -81,7 +81,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   private TenantProjectPolicy tenantProjectPolicy;
 
   /**
-   * Billing account properties.  Billing account must be specified.
+   * Billing account properties. The billing account must be specified.
    * @return value or {@code null} for none
    */
   public BillingConfig getBillingConfig() {
@@ -89,7 +89,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Billing account properties.  Billing account must be specified.
+   * Billing account properties. The billing account must be specified.
    * @param billingConfig billingConfig or {@code null} for none
    */
   public TenantProjectConfig setBillingConfig(BillingConfig billingConfig) {
@@ -99,8 +99,8 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
 
   /**
    * Folder where project in this tenancy unit must be located This folder must have been previously
-   * created with proper permissions for the caller to create and configure a project in it. Valid
-   * folder resource names have the format `folders/{folder_number}` (for example,
+   * created with the required permissions for the caller to create and configure a project in it.
+   * Valid folder resource names have the format `folders/{folder_number}` (for example,
    * `folders/123456`).
    * @return value or {@code null} for none
    */
@@ -110,8 +110,8 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
 
   /**
    * Folder where project in this tenancy unit must be located This folder must have been previously
-   * created with proper permissions for the caller to create and configure a project in it. Valid
-   * folder resource names have the format `folders/{folder_number}` (for example,
+   * created with the required permissions for the caller to create and configure a project in it.
+   * Valid folder resource names have the format `folders/{folder_number}` (for example,
    * `folders/123456`).
    * @param folder folder or {@code null} for none
    */
@@ -121,7 +121,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Labels that will be applied to this project.
+   * Labels that are applied to this project.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -129,7 +129,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Labels that will be applied to this project.
+   * Labels that are applied to this project.
    * @param labels labels or {@code null} for none
    */
   public TenantProjectConfig setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -138,7 +138,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Configuration for IAM service account on tenant project.
+   * Configuration for the IAM service account on the tenant project.
    * @return value or {@code null} for none
    */
   public ServiceAccountConfig getServiceAccountConfig() {
@@ -146,7 +146,7 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Configuration for IAM service account on tenant project.
+   * Configuration for the IAM service account on the tenant project.
    * @param serviceAccountConfig serviceAccountConfig or {@code null} for none
    */
   public TenantProjectConfig setServiceAccountConfig(ServiceAccountConfig serviceAccountConfig) {
@@ -155,8 +155,8 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Google Cloud API names of services that will be activated on this project during provisioning.
-   * If any of these services can not be activated, request will fail. For example:
+   * Google Cloud API names of services that are activated on this project during provisioning.  If
+   * any of these services can't be activated, the request fails. For example:
    * 'compute.googleapis.com','cloudfunctions.googleapis.com'
    * @return value or {@code null} for none
    */
@@ -165,8 +165,8 @@ public final class TenantProjectConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Google Cloud API names of services that will be activated on this project during provisioning.
-   * If any of these services can not be activated, request will fail. For example:
+   * Google Cloud API names of services that are activated on this project during provisioning.  If
+   * any of these services can't be activated, the request fails. For example:
    * 'compute.googleapis.com','cloudfunctions.googleapis.com'
    * @param services services or {@code null} for none
    */

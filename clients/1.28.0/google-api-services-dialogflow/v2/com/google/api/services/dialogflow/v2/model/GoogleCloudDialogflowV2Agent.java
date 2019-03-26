@@ -31,7 +31,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://dialogflow.com/docs/integrations/web-demo) integration.
+   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations
+   * /web-demo) integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +52,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://dialogflow.com/docs/reference/language) for a list of the currently supported
-   * language codes. This field cannot be set by the `Update` method.
+   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
+   * the currently supported language codes. This field cannot be set by the `Update` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://dialogflow.com/docs/integrations/web-demo) integration.
+   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations
+   * /web-demo) integration.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvatarUri() {
@@ -121,7 +123,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://dialogflow.com/docs/integrations/web-demo) integration.
+   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations
+   * /web-demo) integration.
    * @param avatarUri avatarUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2Agent setAvatarUri(java.lang.String avatarUri) {
@@ -158,8 +161,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://dialogflow.com/docs/reference/language) for a list of the currently supported
-   * language codes. This field cannot be set by the `Update` method.
+   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
+   * the currently supported language codes. This field cannot be set by the `Update` method.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultLanguageCode() {
@@ -168,8 +171,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://dialogflow.com/docs/reference/language) for a list of the currently supported
-   * language codes. This field cannot be set by the `Update` method.
+   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
+   * the currently supported language codes. This field cannot be set by the `Update` method.
    * @param defaultLanguageCode defaultLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2Agent setDefaultLanguageCode(java.lang.String defaultLanguageCode) {

@@ -54,9 +54,9 @@ public final class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest extends
 
   /**
    * Optional. The language of training phrases, parameters and rich messages defined in `intents`.
-   * If not specified, the agent's default language is used. [More than a dozen
-   * languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must
-   * be enabled in the agent, before they can be used.
+   * If not specified, the agent's default language is used. [Many
+   * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+   * supported. Note: languages must be enabled in the agent before they can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +126,9 @@ public final class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest extends
 
   /**
    * Optional. The language of training phrases, parameters and rich messages defined in `intents`.
-   * If not specified, the agent's default language is used. [More than a dozen
-   * languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must
-   * be enabled in the agent, before they can be used.
+   * If not specified, the agent's default language is used. [Many
+   * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+   * supported. Note: languages must be enabled in the agent before they can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -137,9 +137,9 @@ public final class GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest extends
 
   /**
    * Optional. The language of training phrases, parameters and rich messages defined in `intents`.
-   * If not specified, the agent's default language is used. [More than a dozen
-   * languages](https://dialogflow.com/docs/reference/language) are supported. Note: languages must
-   * be enabled in the agent, before they can be used.
+   * If not specified, the agent's default language is used. [Many
+   * languages](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) are
+   * supported. Note: languages must be enabled in the agent before they can be used.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1BatchUpdateIntentsRequest setLanguageCode(java.lang.String languageCode) {

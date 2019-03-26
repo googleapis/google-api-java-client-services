@@ -50,7 +50,8 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
 
   /**
    * Optional. The collection of parameters associated with this context. Refer to [this
-   * doc](https://dialogflow.com/docs/actions-and-parameters) for syntax.
+   * doc](https://cloud.google.com/dialogflow-enterprise/docs/intents-actions-parameters) for
+   * syntax.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +103,8 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
 
   /**
    * Optional. The collection of parameters associated with this context. Refer to [this
-   * doc](https://dialogflow.com/docs/actions-and-parameters) for syntax.
+   * doc](https://cloud.google.com/dialogflow-enterprise/docs/intents-actions-parameters) for
+   * syntax.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -111,7 +113,8 @@ public final class GoogleCloudDialogflowV2Context extends com.google.api.client.
 
   /**
    * Optional. The collection of parameters associated with this context. Refer to [this
-   * doc](https://dialogflow.com/docs/actions-and-parameters) for syntax.
+   * doc](https://cloud.google.com/dialogflow-enterprise/docs/intents-actions-parameters) for
+   * syntax.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2Context setParameters(java.util.Map<String, java.lang.Object> parameters) {

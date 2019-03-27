@@ -31,7 +31,7 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class AttachTenantProjectRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * When attaching an external project, this is in the format of `projects/{project_number}’.
+   * When attaching an external project, this is in the format of `projects/{project_number}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   private java.lang.String tag;
 
   /**
-   * When attaching an external project, this is in the format of `projects/{project_number}’.
+   * When attaching an external project, this is in the format of `projects/{project_number}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalResource() {
@@ -62,7 +62,7 @@ public final class AttachTenantProjectRequest extends com.google.api.client.json
   }
 
   /**
-   * When attaching an external project, this is in the format of `projects/{project_number}’.
+   * When attaching an external project, this is in the format of `projects/{project_number}`.
    * @param externalResource externalResource or {@code null} for none
    */
   public AttachTenantProjectRequest setExternalResource(java.lang.String externalResource) {

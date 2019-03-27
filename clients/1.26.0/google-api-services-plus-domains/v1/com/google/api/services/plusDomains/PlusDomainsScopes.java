@@ -26,9 +26,6 @@ public class PlusDomainsScopes {
   /** View your circles and the people and pages in them. */
   public static final String PLUS_CIRCLES_READ = "https://www.googleapis.com/auth/plus.circles.read";
 
-  /** Manage your circles and add people and pages. People and pages you add to your circles will be notified. Others may see this information publicly. People you add to circles can use Hangouts with you.. */
-  public static final String PLUS_CIRCLES_WRITE = "https://www.googleapis.com/auth/plus.circles.write";
-
   /** View your basic profile info, including your age range and language. */
   public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
 
@@ -61,7 +58,6 @@ public class PlusDomainsScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(PLUS_CIRCLES_READ);
-    set.add(PLUS_CIRCLES_WRITE);
     set.add(PLUS_LOGIN);
     set.add(PLUS_ME);
     set.add(PLUS_MEDIA_UPLOAD);

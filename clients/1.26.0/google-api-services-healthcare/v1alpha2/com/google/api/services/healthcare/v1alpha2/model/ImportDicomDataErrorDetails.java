@@ -30,14 +30,6 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class ImportDicomDataErrorDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the DICOM store where the resources have been imported, in the format `projects/{pr
-   * oject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String dicomStore;
-
-  /**
    * Deprecated. Use only for debugging purposes.
    *
    * Contains sample errors encountered in imports of individual resources (for example, a Cloud
@@ -51,25 +43,6 @@ public final class ImportDicomDataErrorDetails extends com.google.api.client.jso
     // hack to force ProGuard to consider ErrorDetail used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ErrorDetail.class);
-  }
-
-  /**
-   * The name of the DICOM store where the resources have been imported, in the format `projects/{pr
-   * oject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDicomStore() {
-    return dicomStore;
-  }
-
-  /**
-   * The name of the DICOM store where the resources have been imported, in the format `projects/{pr
-   * oject_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`
-   * @param dicomStore dicomStore or {@code null} for none
-   */
-  public ImportDicomDataErrorDetails setDicomStore(java.lang.String dicomStore) {
-    this.dicomStore = dicomStore;
-    return this;
   }
 
   /**

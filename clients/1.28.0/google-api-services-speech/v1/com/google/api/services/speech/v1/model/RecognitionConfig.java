@@ -139,8 +139,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * Sample rate in Hertz of the audio data sent in all `RecognitionAudio` messages. Valid values
    * are: 8000-48000. 16000 is optimal. For best results, set the sampling rate of the audio source
    * to 16000 Hz. If that's not possible, use the native sample rate of the audio source (instead of
-   * re-sampling). This field is optional for `FLAC`,  `WAV`. and 'MP3' audio files, and is required
-   * for all other audio formats. For details, see AudioEncoding.
+   * re-sampling). This field is optional for FLAC and WAV audio files, but is required for all
+   * other audio formats. For details, see AudioEncoding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -414,8 +414,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * Sample rate in Hertz of the audio data sent in all `RecognitionAudio` messages. Valid values
    * are: 8000-48000. 16000 is optimal. For best results, set the sampling rate of the audio source
    * to 16000 Hz. If that's not possible, use the native sample rate of the audio source (instead of
-   * re-sampling). This field is optional for `FLAC`,  `WAV`. and 'MP3' audio files, and is required
-   * for all other audio formats. For details, see AudioEncoding.
+   * re-sampling). This field is optional for FLAC and WAV audio files, but is required for all
+   * other audio formats. For details, see AudioEncoding.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -426,8 +426,8 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    * Sample rate in Hertz of the audio data sent in all `RecognitionAudio` messages. Valid values
    * are: 8000-48000. 16000 is optimal. For best results, set the sampling rate of the audio source
    * to 16000 Hz. If that's not possible, use the native sample rate of the audio source (instead of
-   * re-sampling). This field is optional for `FLAC`,  `WAV`. and 'MP3' audio files, and is required
-   * for all other audio formats. For details, see AudioEncoding.
+   * re-sampling). This field is optional for FLAC and WAV audio files, but is required for all
+   * other audio formats. For details, see AudioEncoding.
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public RecognitionConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {

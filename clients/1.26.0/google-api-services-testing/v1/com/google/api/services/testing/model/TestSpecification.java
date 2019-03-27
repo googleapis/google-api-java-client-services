@@ -51,17 +51,6 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private AndroidTestLoop androidTestLoop;
 
   /**
-   * Enables automatic Google account login. If set, the service will automatically generate a
-   * Google test account and add it to the device, before executing the test. Note that test
-   * accounts might be reused. Many applications show their full set of functionalities when an
-   * account is present on the device. Logging into the device with these generated accounts allows
-   * testing more functionalities. Default is false.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean autoGoogleLogin;
-
-  /**
    * Disables performance metrics recording; may reduce test latency.
    * The value may be {@code null}.
    */
@@ -152,31 +141,6 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
    */
   public TestSpecification setAndroidTestLoop(AndroidTestLoop androidTestLoop) {
     this.androidTestLoop = androidTestLoop;
-    return this;
-  }
-
-  /**
-   * Enables automatic Google account login. If set, the service will automatically generate a
-   * Google test account and add it to the device, before executing the test. Note that test
-   * accounts might be reused. Many applications show their full set of functionalities when an
-   * account is present on the device. Logging into the device with these generated accounts allows
-   * testing more functionalities. Default is false.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getAutoGoogleLogin() {
-    return autoGoogleLogin;
-  }
-
-  /**
-   * Enables automatic Google account login. If set, the service will automatically generate a
-   * Google test account and add it to the device, before executing the test. Note that test
-   * accounts might be reused. Many applications show their full set of functionalities when an
-   * account is present on the device. Logging into the device with these generated accounts allows
-   * testing more functionalities. Default is false.
-   * @param autoGoogleLogin autoGoogleLogin or {@code null} for none
-   */
-  public TestSpecification setAutoGoogleLogin(java.lang.Boolean autoGoogleLogin) {
-    this.autoGoogleLogin = autoGoogleLogin;
     return this;
   }
 

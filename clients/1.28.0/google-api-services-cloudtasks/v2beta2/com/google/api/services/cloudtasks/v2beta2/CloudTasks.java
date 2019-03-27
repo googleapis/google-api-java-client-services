@@ -1452,7 +1452,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            hyphens (-), colons (:), or periods (.).
            For
          *        more information, see
-           [Identifying projects](https://cloud.google.com/resource-
+           [Identifying
+           projects](https://cloud.google.com/resource-
          *        manager/docs/creating-managing-projects#identifying_projects)
         * `LOCATION_ID` is the
          *        canonical ID for the queue's location.
@@ -1510,7 +1511,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            hyphens (-), colons (:), or periods (.).
            For
          *        more information, see
-           [Identifying projects](https://cloud.google.com/resource-
+           [Identifying
+           projects](https://cloud.google.com/resource-
          *        manager/docs/creating-managing-projects#identifying_projects)
         * `LOCATION_ID` is the
          *        canonical ID for the queue's location.

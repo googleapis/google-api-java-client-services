@@ -66,6 +66,21 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String databaseVersion;
 
   /**
+   * Disk encryption configuration specific to an instance. Applies only to Second Generation
+   * instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskEncryptionConfiguration diskEncryptionConfiguration;
+
+  /**
+   * Disk encryption status specific to an instance. Applies only to Second Generation instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskEncryptionStatus diskEncryptionStatus;
+
+  /**
    * This field is deprecated and will be removed from a future version of the API. Use the
    * settings.settingsVersion field instead.
    * The value may be {@code null}.
@@ -309,6 +324,42 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * Disk encryption configuration specific to an instance. Applies only to Second Generation
+   * instances.
+   * @return value or {@code null} for none
+   */
+  public DiskEncryptionConfiguration getDiskEncryptionConfiguration() {
+    return diskEncryptionConfiguration;
+  }
+
+  /**
+   * Disk encryption configuration specific to an instance. Applies only to Second Generation
+   * instances.
+   * @param diskEncryptionConfiguration diskEncryptionConfiguration or {@code null} for none
+   */
+  public DatabaseInstance setDiskEncryptionConfiguration(DiskEncryptionConfiguration diskEncryptionConfiguration) {
+    this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+    return this;
+  }
+
+  /**
+   * Disk encryption status specific to an instance. Applies only to Second Generation instances.
+   * @return value or {@code null} for none
+   */
+  public DiskEncryptionStatus getDiskEncryptionStatus() {
+    return diskEncryptionStatus;
+  }
+
+  /**
+   * Disk encryption status specific to an instance. Applies only to Second Generation instances.
+   * @param diskEncryptionStatus diskEncryptionStatus or {@code null} for none
+   */
+  public DatabaseInstance setDiskEncryptionStatus(DiskEncryptionStatus diskEncryptionStatus) {
+    this.diskEncryptionStatus = diskEncryptionStatus;
     return this;
   }
 

@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/gYoLKAjj0P6KeBeXDv50eS4yV-Y\"",
+ "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/2_7rfkcxGEyURAjUJ8X0jf46KhQ\"",
  "discoveryVersion": "v1",
  "id": "plusDomains:v1",
  "name": "plusDomains",
@@ -94,7 +94,7 @@
      "description": "View your email address"
     },
     "https://www.googleapis.com/auth/userinfo.profile": {
-     "description": "See your personal info, including any personal info you've made publically available"
+     "description": "See your personal info, including any personal info you've made publicly available"
     }
    }
   }

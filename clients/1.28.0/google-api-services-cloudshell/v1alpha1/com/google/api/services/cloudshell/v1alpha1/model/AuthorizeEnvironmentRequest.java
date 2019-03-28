@@ -37,12 +37,19 @@ public final class AuthorizeEnvironmentRequest extends com.google.api.client.jso
   private java.lang.String accessToken;
 
   /**
-   * The time when the token expires. If not set, defaults to one hour from when the server received
-   * the request.
+   * The time when the credentials expire. If not set, defaults to one hour from when the server
+   * received the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
+
+  /**
+   * The OAuth ID token that should be sent to the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String idToken;
 
   /**
    * The OAuth access token that should be sent to the environment.
@@ -62,8 +69,8 @@ public final class AuthorizeEnvironmentRequest extends com.google.api.client.jso
   }
 
   /**
-   * The time when the token expires. If not set, defaults to one hour from when the server received
-   * the request.
+   * The time when the credentials expire. If not set, defaults to one hour from when the server
+   * received the request.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -71,12 +78,29 @@ public final class AuthorizeEnvironmentRequest extends com.google.api.client.jso
   }
 
   /**
-   * The time when the token expires. If not set, defaults to one hour from when the server received
-   * the request.
+   * The time when the credentials expire. If not set, defaults to one hour from when the server
+   * received the request.
    * @param expireTime expireTime or {@code null} for none
    */
   public AuthorizeEnvironmentRequest setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * The OAuth ID token that should be sent to the environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdToken() {
+    return idToken;
+  }
+
+  /**
+   * The OAuth ID token that should be sent to the environment.
+   * @param idToken idToken or {@code null} for none
+   */
+  public AuthorizeEnvironmentRequest setIdToken(java.lang.String idToken) {
+    this.idToken = idToken;
     return this;
   }
 

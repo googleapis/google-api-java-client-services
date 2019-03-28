@@ -164,18 +164,18 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
     public class Environments {
 
       /**
-       * Sends an access token to a running environment on behalf of a user. When this completes, the
-       * environment will be authorized to run gcloud commands without requiring the user to manually
-       * authenticate.
+       * Sends OAuth credentials to a running environment on behalf of a user. When this completes, the
+       * environment will be authorized to run various Google Cloud command line tools without requiring
+       * the user to manually authenticate.
        *
        * Create a request for the method "environments.authorize".
        *
        * This request holds the parameters needed by the cloudshell server.  After setting any optional
        * parameters, call the {@link Authorize#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the resource that should receive the token, for example
-      `users/me/environments/default` or
-       *        `users/someone@example.com/environments/default`.
+       * @param name Name of the resource that should receive the credentials, for example
+       *        `users/me/environments/default` or
+      `users/someone@example.com/environments/default`.
        * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.AuthorizeEnvironmentRequest}
        * @return the request
        */
@@ -193,9 +193,9 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
 
         /**
-         * Sends an access token to a running environment on behalf of a user. When this completes, the
-         * environment will be authorized to run gcloud commands without requiring the user to manually
-         * authenticate.
+         * Sends OAuth credentials to a running environment on behalf of a user. When this completes, the
+         * environment will be authorized to run various Google Cloud command line tools without requiring
+         * the user to manually authenticate.
          *
          * Create a request for the method "environments.authorize".
          *
@@ -205,9 +205,9 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
          * Authorize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the resource that should receive the token, for example
-      `users/me/environments/default` or
-       *        `users/someone@example.com/environments/default`.
+         * @param name Name of the resource that should receive the credentials, for example
+       *        `users/me/environments/default` or
+      `users/someone@example.com/environments/default`.
          * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.AuthorizeEnvironmentRequest}
          * @since 1.13
          */
@@ -277,21 +277,21 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Name of the resource that should receive the token, for example
+         * Name of the resource that should receive the credentials, for example
          * `users/me/environments/default` or `users/someone@example.com/environments/default`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the resource that should receive the token, for example `users/me/environments/default` or
-       `users/someone@example.com/environments/default`.
+        /** Name of the resource that should receive the credentials, for example
+       `users/me/environments/default` or `users/someone@example.com/environments/default`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Name of the resource that should receive the token, for example
+         * Name of the resource that should receive the credentials, for example
          * `users/me/environments/default` or `users/someone@example.com/environments/default`.
          */
         public Authorize setName(java.lang.String name) {

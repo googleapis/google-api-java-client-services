@@ -2520,7 +2520,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /**
          * Creates transfer runs for a time range [start_time, end_time]. For each date - or whatever
          * granularity the data source supports - in the range, one transfer run is created. Note that runs
-         * are created per UTC time in the time range.
+         * are created per UTC time in the time range. DEPRECATED: use StartManualTransferRuns instead.
          *
          * Create a request for the method "transferConfigs.scheduleRuns".
          *
@@ -2549,7 +2549,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /**
            * Creates transfer runs for a time range [start_time, end_time]. For each date - or whatever
            * granularity the data source supports - in the range, one transfer run is created. Note that
-           * runs are created per UTC time in the time range.
+           * runs are created per UTC time in the time range. DEPRECATED: use StartManualTransferRuns
+           * instead.
            *
            * Create a request for the method "transferConfigs.scheduleRuns".
            *
@@ -2659,6 +2660,150 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           @Override
           public ScheduleRuns set(String parameterName, Object value) {
             return (ScheduleRuns) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Start manual transfer runs to be executed now with schedule_time equal to current time. The
+         * transfer runs can be created for a time range where the run_time is between start_time
+         * (inclusive) and end_time (exclusive), or for a specific run_time.
+         *
+         * Create a request for the method "transferConfigs.startManualRuns".
+         *
+         * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+         * optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Transfer configuration name in the form:
+        `projects/{project_id}/transferConfigs/{config_id}`.
+         * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
+         * @return the request
+         */
+        public StartManualRuns startManualRuns(java.lang.String parent, com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest content) throws java.io.IOException {
+          StartManualRuns result = new StartManualRuns(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StartManualRuns extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:startManualRuns";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
+
+          /**
+           * Start manual transfer runs to be executed now with schedule_time equal to current time. The
+           * transfer runs can be created for a time range where the run_time is between start_time
+           * (inclusive) and end_time (exclusive), or for a specific run_time.
+           *
+           * Create a request for the method "transferConfigs.startManualRuns".
+           *
+           * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+           * any optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
+           * operation. <p> {@link StartManualRuns#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Transfer configuration name in the form:
+        `projects/{project_id}/transferConfigs/{config_id}`.
+           * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
+           * @since 1.13
+           */
+          protected StartManualRuns(java.lang.String parent, com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest content) {
+            super(BigQueryDataTransfer.this, "POST", REST_PATH, content, com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public StartManualRuns set$Xgafv(java.lang.String $Xgafv) {
+            return (StartManualRuns) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StartManualRuns setAccessToken(java.lang.String accessToken) {
+            return (StartManualRuns) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StartManualRuns setAlt(java.lang.String alt) {
+            return (StartManualRuns) super.setAlt(alt);
+          }
+
+          @Override
+          public StartManualRuns setCallback(java.lang.String callback) {
+            return (StartManualRuns) super.setCallback(callback);
+          }
+
+          @Override
+          public StartManualRuns setFields(java.lang.String fields) {
+            return (StartManualRuns) super.setFields(fields);
+          }
+
+          @Override
+          public StartManualRuns setKey(java.lang.String key) {
+            return (StartManualRuns) super.setKey(key);
+          }
+
+          @Override
+          public StartManualRuns setOauthToken(java.lang.String oauthToken) {
+            return (StartManualRuns) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StartManualRuns setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StartManualRuns) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StartManualRuns setQuotaUser(java.lang.String quotaUser) {
+            return (StartManualRuns) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StartManualRuns setUploadType(java.lang.String uploadType) {
+            return (StartManualRuns) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StartManualRuns setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StartManualRuns) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Transfer configuration name in the form:
+           * `projects/{project_id}/transferConfigs/{config_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Transfer configuration name in the form:
+           * `projects/{project_id}/transferConfigs/{config_id}`.
+           */
+          public StartManualRuns setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public StartManualRuns set(String parameterName, Object value) {
+            return (StartManualRuns) super.set(parameterName, value);
           }
         }
 
@@ -4452,7 +4597,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
       /**
        * Creates transfer runs for a time range [start_time, end_time]. For each date - or whatever
        * granularity the data source supports - in the range, one transfer run is created. Note that runs
-       * are created per UTC time in the time range.
+       * are created per UTC time in the time range. DEPRECATED: use StartManualTransferRuns instead.
        *
        * Create a request for the method "transferConfigs.scheduleRuns".
        *
@@ -4481,7 +4626,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /**
          * Creates transfer runs for a time range [start_time, end_time]. For each date - or whatever
          * granularity the data source supports - in the range, one transfer run is created. Note that
-         * runs are created per UTC time in the time range.
+         * runs are created per UTC time in the time range. DEPRECATED: use StartManualTransferRuns
+         * instead.
          *
          * Create a request for the method "transferConfigs.scheduleRuns".
          *
@@ -4591,6 +4737,150 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         @Override
         public ScheduleRuns set(String parameterName, Object value) {
           return (ScheduleRuns) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Start manual transfer runs to be executed now with schedule_time equal to current time. The
+       * transfer runs can be created for a time range where the run_time is between start_time
+       * (inclusive) and end_time (exclusive), or for a specific run_time.
+       *
+       * Create a request for the method "transferConfigs.startManualRuns".
+       *
+       * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+       * optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Transfer configuration name in the form:
+      `projects/{project_id}/transferConfigs/{config_id}`.
+       * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
+       * @return the request
+       */
+      public StartManualRuns startManualRuns(java.lang.String parent, com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest content) throws java.io.IOException {
+        StartManualRuns result = new StartManualRuns(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class StartManualRuns extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:startManualRuns";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/transferConfigs/[^/]+$");
+
+        /**
+         * Start manual transfer runs to be executed now with schedule_time equal to current time. The
+         * transfer runs can be created for a time range where the run_time is between start_time
+         * (inclusive) and end_time (exclusive), or for a specific run_time.
+         *
+         * Create a request for the method "transferConfigs.startManualRuns".
+         *
+         * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+         * any optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
+         * operation. <p> {@link StartManualRuns#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param parent Transfer configuration name in the form:
+      `projects/{project_id}/transferConfigs/{config_id}`.
+         * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
+         * @since 1.13
+         */
+        protected StartManualRuns(java.lang.String parent, com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest content) {
+          super(BigQueryDataTransfer.this, "POST", REST_PATH, content, com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/transferConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public StartManualRuns set$Xgafv(java.lang.String $Xgafv) {
+          return (StartManualRuns) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public StartManualRuns setAccessToken(java.lang.String accessToken) {
+          return (StartManualRuns) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public StartManualRuns setAlt(java.lang.String alt) {
+          return (StartManualRuns) super.setAlt(alt);
+        }
+
+        @Override
+        public StartManualRuns setCallback(java.lang.String callback) {
+          return (StartManualRuns) super.setCallback(callback);
+        }
+
+        @Override
+        public StartManualRuns setFields(java.lang.String fields) {
+          return (StartManualRuns) super.setFields(fields);
+        }
+
+        @Override
+        public StartManualRuns setKey(java.lang.String key) {
+          return (StartManualRuns) super.setKey(key);
+        }
+
+        @Override
+        public StartManualRuns setOauthToken(java.lang.String oauthToken) {
+          return (StartManualRuns) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public StartManualRuns setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (StartManualRuns) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public StartManualRuns setQuotaUser(java.lang.String quotaUser) {
+          return (StartManualRuns) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public StartManualRuns setUploadType(java.lang.String uploadType) {
+          return (StartManualRuns) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public StartManualRuns setUploadProtocol(java.lang.String uploadProtocol) {
+          return (StartManualRuns) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Transfer configuration name in the form:
+         * `projects/{project_id}/transferConfigs/{config_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Transfer configuration name in the form:
+         * `projects/{project_id}/transferConfigs/{config_id}`.
+         */
+        public StartManualRuns setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/transferConfigs/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public StartManualRuns set(String parameterName, Object value) {
+          return (StartManualRuns) super.set(parameterName, value);
         }
       }
 

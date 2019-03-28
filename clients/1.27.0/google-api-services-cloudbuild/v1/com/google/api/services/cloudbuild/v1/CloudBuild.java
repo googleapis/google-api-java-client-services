@@ -1994,6 +1994,38 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /** Number of results to return in the list. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Number of results to return in the list.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Number of results to return in the list. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Token to provide to skip to a particular spot in the list. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token to provide to skip to a particular spot in the list.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Token to provide to skip to a particular spot in the list. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);

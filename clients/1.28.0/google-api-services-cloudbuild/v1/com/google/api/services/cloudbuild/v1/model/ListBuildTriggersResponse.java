@@ -30,6 +30,13 @@ package com.google.api.services.cloudbuild.v1.model;
 public final class ListBuildTriggersResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Token to receive the next page of results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * `BuildTriggers` for the project, sorted by `create_time` descending.
    * The value may be {@code null}.
    */
@@ -40,6 +47,23 @@ public final class ListBuildTriggersResponse extends com.google.api.client.json.
     // hack to force ProGuard to consider BuildTrigger used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(BuildTrigger.class);
+  }
+
+  /**
+   * Token to receive the next page of results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * Token to receive the next page of results.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public ListBuildTriggersResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
   }
 
   /**

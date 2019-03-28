@@ -46,6 +46,12 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2CryptoDeterministicConfig cryptoDeterministicConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GooglePrivacyDlpV2CryptoHashConfig cryptoHashConfig;
 
   /**
@@ -117,6 +123,21 @@ public final class GooglePrivacyDlpV2PrimitiveTransformation extends com.google.
    */
   public GooglePrivacyDlpV2PrimitiveTransformation setCharacterMaskConfig(GooglePrivacyDlpV2CharacterMaskConfig characterMaskConfig) {
     this.characterMaskConfig = characterMaskConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CryptoDeterministicConfig getCryptoDeterministicConfig() {
+    return cryptoDeterministicConfig;
+  }
+
+  /**
+   * @param cryptoDeterministicConfig cryptoDeterministicConfig or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PrimitiveTransformation setCryptoDeterministicConfig(GooglePrivacyDlpV2CryptoDeterministicConfig cryptoDeterministicConfig) {
+    this.cryptoDeterministicConfig = cryptoDeterministicConfig;
     return this;
   }
 

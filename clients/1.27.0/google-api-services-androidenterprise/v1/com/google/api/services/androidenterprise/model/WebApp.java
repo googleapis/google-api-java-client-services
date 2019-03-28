@@ -17,7 +17,9 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * WebApp resource info.
+ * A WebApps resource represents a web app created for an enterprise. Web apps are published to
+ * managed Google Play and can be distributed like other Android apps. On a user's device, a web app
+ * opens its specified URL.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:
@@ -31,6 +33,13 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
 
   /**
    * The display mode of the web app.
+   *
+   * Possible values include:  - "minimalUi", the device's status bar, navigation bar, the app's
+   * URL, and a refresh button are visible when the app is open. For HTTP URLs, you can only select
+   * this option. - "standalone", the device's status bar and navigation bar are visible when the
+   * app is open. - "fullScreen", the app opens in full screen mode, hiding the device's status and
+   * navigation bars. All browser UI elements, page URL, system status bar and back button are not
+   * visible, and the web app takes up the entirety of the available display area.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +68,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.String startUrl;
 
   /**
-   * The title of the web application as displayed to the user (e.g., amongst a list of other
-   * applications, or as a label for an icon).
+   * The title of the web app as displayed to the user (e.g., amongst a list of other applications,
+   * or as a label for an icon).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +86,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   private java.lang.Long versionCode;
 
   /**
-   * The ID of the application.
+   * The ID of the application. A string of the form "app:" where the package name always starts
+   * with the prefix "com.google.enterprise.webapp." followed by a random id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,6 +95,13 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
 
   /**
    * The display mode of the web app.
+   *
+   * Possible values include:  - "minimalUi", the device's status bar, navigation bar, the app's
+   * URL, and a refresh button are visible when the app is open. For HTTP URLs, you can only select
+   * this option. - "standalone", the device's status bar and navigation bar are visible when the
+   * app is open. - "fullScreen", the app opens in full screen mode, hiding the device's status and
+   * navigation bars. All browser UI elements, page URL, system status bar and back button are not
+   * visible, and the web app takes up the entirety of the available display area.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayMode() {
@@ -93,6 +110,13 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
 
   /**
    * The display mode of the web app.
+   *
+   * Possible values include:  - "minimalUi", the device's status bar, navigation bar, the app's
+   * URL, and a refresh button are visible when the app is open. For HTTP URLs, you can only select
+   * this option. - "standalone", the device's status bar and navigation bar are visible when the
+   * app is open. - "fullScreen", the app opens in full screen mode, hiding the device's status and
+   * navigation bars. All browser UI elements, page URL, system status bar and back button are not
+   * visible, and the web app takes up the entirety of the available display area.
    * @param displayMode displayMode or {@code null} for none
    */
   public WebApp setDisplayMode(java.lang.String displayMode) {
@@ -154,8 +178,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the web application as displayed to the user (e.g., amongst a list of other
-   * applications, or as a label for an icon).
+   * The title of the web app as displayed to the user (e.g., amongst a list of other applications,
+   * or as a label for an icon).
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -163,8 +187,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the web application as displayed to the user (e.g., amongst a list of other
-   * applications, or as a label for an icon).
+   * The title of the web app as displayed to the user (e.g., amongst a list of other applications,
+   * or as a label for an icon).
    * @param title title or {@code null} for none
    */
   public WebApp setTitle(java.lang.String title) {
@@ -196,7 +220,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the application.
+   * The ID of the application. A string of the form "app:" where the package name always starts
+   * with the prefix "com.google.enterprise.webapp." followed by a random id.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebAppId() {
@@ -204,7 +229,8 @@ public final class WebApp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the application.
+   * The ID of the application. A string of the form "app:" where the package name always starts
+   * with the prefix "com.google.enterprise.webapp." followed by a random id.
    * @param webAppId webAppId or {@code null} for none
    */
   public WebApp setWebAppId(java.lang.String webAppId) {

@@ -105,6 +105,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableKubernetesAlpha;
 
   /**
+   * Enable the ability to use Cloud TPUs in this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableTpu;
+
+  /**
    * [Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed
    * from the internet at `https://username:password@endpoint/`.
    *
@@ -356,6 +363,15 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String subnetwork;
 
   /**
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `1.2.3.4/29`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuIpv4CidrBlock;
+
+  /**
    * [Output only] The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
    * which the cluster resides. This field is deprecated, use location instead.
    * The value may be {@code null}.
@@ -535,6 +551,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setEnableKubernetesAlpha(java.lang.Boolean enableKubernetesAlpha) {
     this.enableKubernetesAlpha = enableKubernetesAlpha;
+    return this;
+  }
+
+  /**
+   * Enable the ability to use Cloud TPUs in this cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableTpu() {
+    return enableTpu;
+  }
+
+  /**
+   * Enable the ability to use Cloud TPUs in this cluster.
+   * @param enableTpu enableTpu or {@code null} for none
+   */
+  public Cluster setEnableTpu(java.lang.Boolean enableTpu) {
+    this.enableTpu = enableTpu;
     return this;
   }
 
@@ -1124,6 +1157,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
+    return this;
+  }
+
+  /**
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `1.2.3.4/29`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuIpv4CidrBlock() {
+    return tpuIpv4CidrBlock;
+  }
+
+  /**
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * `1.2.3.4/29`).
+   * @param tpuIpv4CidrBlock tpuIpv4CidrBlock or {@code null} for none
+   */
+  public Cluster setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {
+    this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
     return this;
   }
 

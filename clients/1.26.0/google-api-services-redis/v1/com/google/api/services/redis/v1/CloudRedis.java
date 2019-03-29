@@ -850,6 +850,154 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Failover the master role to current replica node against a specific STANDARD tier redis instance.
+         *
+         * Create a request for the method "instances.failover".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Failover#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region
+         * @param content the {@link com.google.api.services.redis.v1.model.FailoverInstanceRequest}
+         * @return the request
+         */
+        public Failover failover(java.lang.String name, com.google.api.services.redis.v1.model.FailoverInstanceRequest content) throws java.io.IOException {
+          Failover result = new Failover(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Failover extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:failover";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Failover the master role to current replica node against a specific STANDARD tier redis
+           * instance.
+           *
+           * Create a request for the method "instances.failover".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Failover#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Failover#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region
+           * @param content the {@link com.google.api.services.redis.v1.model.FailoverInstanceRequest}
+           * @since 1.13
+           */
+          protected Failover(java.lang.String name, com.google.api.services.redis.v1.model.FailoverInstanceRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Failover set$Xgafv(java.lang.String $Xgafv) {
+            return (Failover) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Failover setAccessToken(java.lang.String accessToken) {
+            return (Failover) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Failover setAlt(java.lang.String alt) {
+            return (Failover) super.setAlt(alt);
+          }
+
+          @Override
+          public Failover setCallback(java.lang.String callback) {
+            return (Failover) super.setCallback(callback);
+          }
+
+          @Override
+          public Failover setFields(java.lang.String fields) {
+            return (Failover) super.setFields(fields);
+          }
+
+          @Override
+          public Failover setKey(java.lang.String key) {
+            return (Failover) super.setKey(key);
+          }
+
+          @Override
+          public Failover setOauthToken(java.lang.String oauthToken) {
+            return (Failover) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Failover setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Failover) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Failover setQuotaUser(java.lang.String quotaUser) {
+            return (Failover) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Failover setUploadType(java.lang.String uploadType) {
+            return (Failover) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Failover setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Failover) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region
+           */
+          public Failover setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Failover set(String parameterName, Object value) {
+            return (Failover) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the details of a specific Redis instance.
          *
          * Create a request for the method "instances.get".

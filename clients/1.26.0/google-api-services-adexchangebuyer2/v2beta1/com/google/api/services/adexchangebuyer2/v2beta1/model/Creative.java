@@ -19,8 +19,6 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 /**
  * A creative and its classification data.
  *
- * Next ID: 42
- *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation
  * see:
@@ -163,7 +161,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> detectedSensitiveCategories;
 
   /**
-   * @OutputOnly The filtering stats for this creative.
+   * @OutputOnly The filtering stats for this creative. Deprecated; please use
+   * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -536,7 +535,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The filtering stats for this creative.
+   * @OutputOnly The filtering stats for this creative. Deprecated; please use
+   * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
    * @return value or {@code null} for none
    */
   public FilteringStats getFilteringStats() {
@@ -544,7 +544,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The filtering stats for this creative.
+   * @OutputOnly The filtering stats for this creative. Deprecated; please use
+   * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
    * @param filteringStats filteringStats or {@code null} for none
    */
   public Creative setFilteringStats(FilteringStats filteringStats) {

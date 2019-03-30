@@ -87,6 +87,16 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountEmail;
 
   /**
+   * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
+   * Managed Encryption Key (CMEK).
+   *
+   * Format:   projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceKmsKeyName;
+
+  /**
    * The prefix of the resources the system should use for temporary storage.  The system will
    * append the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
    * job_name field.  The resulting bucket and object prefix is used as the prefix of the resources
@@ -256,6 +266,29 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setServiceAccountEmail(java.lang.String serviceAccountEmail) {
     this.serviceAccountEmail = serviceAccountEmail;
+    return this;
+  }
+
+  /**
+   * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
+   * Managed Encryption Key (CMEK).
+   *
+   * Format:   projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceKmsKeyName() {
+    return serviceKmsKeyName;
+  }
+
+  /**
+   * If set, contains the Cloud KMS key identifier used to encrypt data at rest, AKA a Customer
+   * Managed Encryption Key (CMEK).
+   *
+   * Format:   projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY
+   * @param serviceKmsKeyName serviceKmsKeyName or {@code null} for none
+   */
+  public Environment setServiceKmsKeyName(java.lang.String serviceKmsKeyName) {
+    this.serviceKmsKeyName = serviceKmsKeyName;
     return this;
   }
 

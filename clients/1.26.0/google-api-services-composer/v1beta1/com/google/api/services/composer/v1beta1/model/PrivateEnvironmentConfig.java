@@ -17,7 +17,7 @@
 package com.google.api.services.composer.v1beta1.model;
 
 /**
- * The configuration information for configuring a private Composer environment.
+ * The configuration information for configuring a Private IP Cloud Composer environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Composer API. For a detailed explanation see:
@@ -30,21 +30,24 @@ package com.google.api.services.composer.v1beta1.model;
 public final class PrivateEnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If `true`, a private Composer environment is created.
+   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is true,
+   * `use_ip_aliases` must be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePrivateEnvironment;
 
   /**
-   * Optional. Configuration for private cluster for a private Composer environment.
+   * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer
+   * environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrivateClusterConfig privateClusterConfig;
 
   /**
-   * Optional. If `true`, a private Composer environment is created.
+   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is true,
+   * `use_ip_aliases` must be true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEnvironment() {
@@ -52,7 +55,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. If `true`, a private Composer environment is created.
+   * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is true,
+   * `use_ip_aliases` must be true.
    * @param enablePrivateEnvironment enablePrivateEnvironment or {@code null} for none
    */
   public PrivateEnvironmentConfig setEnablePrivateEnvironment(java.lang.Boolean enablePrivateEnvironment) {
@@ -61,7 +65,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Configuration for private cluster for a private Composer environment.
+   * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer
+   * environment.
    * @return value or {@code null} for none
    */
   public PrivateClusterConfig getPrivateClusterConfig() {
@@ -69,7 +74,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Configuration for private cluster for a private Composer environment.
+   * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer
+   * environment.
    * @param privateClusterConfig privateClusterConfig or {@code null} for none
    */
   public PrivateEnvironmentConfig setPrivateClusterConfig(PrivateClusterConfig privateClusterConfig) {

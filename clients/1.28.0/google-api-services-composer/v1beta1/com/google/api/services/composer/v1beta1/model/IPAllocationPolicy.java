@@ -50,6 +50,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   /**
    * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods.
    * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+   *
+   * This field is applicable only when `use_ip_aliases` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,14 +79,16 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The name of the services' secondary range used to allocate IP addresses to the
    * cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not
    * both.
+   *
+   * This field is applicable only when `use_ip_aliases` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servicesSecondaryRangeName;
 
   /**
-   * Optional. Whether or not to enable Alias IPs in the GKE cluster. If true or if left blank, a
-   * VPC-native cluster is created.
+   * Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native
+   * cluster is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,6 +136,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   /**
    * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods.
    * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+   *
+   * This field is applicable only when `use_ip_aliases` is true.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterSecondaryRangeName() {
@@ -141,6 +147,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   /**
    * Optional. The name of the cluster's secondary range used to allocate IP addresses to pods.
    * Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
+   *
+   * This field is applicable only when `use_ip_aliases` is true.
    * @param clusterSecondaryRangeName clusterSecondaryRangeName or {@code null} for none
    */
   public IPAllocationPolicy setClusterSecondaryRangeName(java.lang.String clusterSecondaryRangeName) {
@@ -191,6 +199,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The name of the services' secondary range used to allocate IP addresses to the
    * cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not
    * both.
+   *
+   * This field is applicable only when `use_ip_aliases` is true.
    * @return value or {@code null} for none
    */
   public java.lang.String getServicesSecondaryRangeName() {
@@ -201,6 +211,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    * Optional. The name of the services' secondary range used to allocate IP addresses to the
    * cluster. Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not
    * both.
+   *
+   * This field is applicable only when `use_ip_aliases` is true.
    * @param servicesSecondaryRangeName servicesSecondaryRangeName or {@code null} for none
    */
   public IPAllocationPolicy setServicesSecondaryRangeName(java.lang.String servicesSecondaryRangeName) {
@@ -209,8 +221,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Whether or not to enable Alias IPs in the GKE cluster. If true or if left blank, a
-   * VPC-native cluster is created.
+   * Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native
+   * cluster is created.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseIpAliases() {
@@ -218,8 +230,8 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Whether or not to enable Alias IPs in the GKE cluster. If true or if left blank, a
-   * VPC-native cluster is created.
+   * Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native
+   * cluster is created.
    * @param useIpAliases useIpAliases or {@code null} for none
    */
   public IPAllocationPolicy setUseIpAliases(java.lang.Boolean useIpAliases) {

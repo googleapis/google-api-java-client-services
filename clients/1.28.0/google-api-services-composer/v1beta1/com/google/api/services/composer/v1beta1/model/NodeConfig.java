@@ -96,9 +96,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
-   * Optional. The set of Google API scopes to be made available on all node VMs. Defaults to
-   * ["https://www.googleapis.com/auth/cloud-platform"] and must be included in the list of
-   * specified scopes. Cannot be updated.
+   * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes`
+   * is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,10 +118,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"
    *
    * If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork
-   * must belong to the same project as the network.
-   *
-   * For Shared VPC, you must configure the subnetwork with secondary ranges named composer-pods and
-   * composer-services to support Alias IPs.
+   * must belong to the enclosing environment's project and location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,9 +279,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The set of Google API scopes to be made available on all node VMs. Defaults to
-   * ["https://www.googleapis.com/auth/cloud-platform"] and must be included in the list of
-   * specified scopes. Cannot be updated.
+   * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes`
+   * is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -293,9 +288,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The set of Google API scopes to be made available on all node VMs. Defaults to
-   * ["https://www.googleapis.com/auth/cloud-platform"] and must be included in the list of
-   * specified scopes. Cannot be updated.
+   * Optional. The set of Google API scopes to be made available on all node VMs. If `oauth_scopes`
+   * is empty, defaults to ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public NodeConfig setOauthScopes(java.util.List<java.lang.String> oauthScopes) {
@@ -330,10 +324,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"
    *
    * If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork
-   * must belong to the same project as the network.
-   *
-   * For Shared VPC, you must configure the subnetwork with secondary ranges named composer-pods and
-   * composer-services to support Alias IPs.
+   * must belong to the enclosing environment's project and location.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -346,10 +337,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"
    *
    * If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork
-   * must belong to the same project as the network.
-   *
-   * For Shared VPC, you must configure the subnetwork with secondary ranges named composer-pods and
-   * composer-services to support Alias IPs.
+   * must belong to the enclosing environment's project and location.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NodeConfig setSubnetwork(java.lang.String subnetwork) {

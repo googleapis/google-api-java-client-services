@@ -48,7 +48,8 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
    * The selector is a comma-separated list of patterns. Each pattern is a qualified name of the
    * element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and
    * for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or
-   * "foo.*.bar". To specify a default for all applicable elements, the whole pattern "*" is used.
+   * "foo.*.bar". A wildcard will match one or more components. To specify a default for all
+   * applicable elements, the whole pattern "*" is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
    * The selector is a comma-separated list of patterns. Each pattern is a qualified name of the
    * element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and
    * for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or
-   * "foo.*.bar". To specify a default for all applicable elements, the whole pattern "*" is used.
+   * "foo.*.bar". A wildcard will match one or more components. To specify a default for all
+   * applicable elements, the whole pattern "*" is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelector() {
@@ -105,7 +107,8 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
    * The selector is a comma-separated list of patterns. Each pattern is a qualified name of the
    * element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and
    * for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or
-   * "foo.*.bar". To specify a default for all applicable elements, the whole pattern "*" is used.
+   * "foo.*.bar". A wildcard will match one or more components. To specify a default for all
+   * applicable elements, the whole pattern "*" is used.
    * @param selector selector or {@code null} for none
    */
   public DocumentationRule setSelector(java.lang.String selector) {

@@ -50,6 +50,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableLogging;
+
+  /**
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
@@ -114,6 +120,21 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setEnableInboundForwarding(java.lang.Boolean enableInboundForwarding) {
     this.enableInboundForwarding = enableInboundForwarding;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableLogging() {
+    return enableLogging;
+  }
+
+  /**
+   * @param enableLogging enableLogging or {@code null} for none
+   */
+  public Policy setEnableLogging(java.lang.Boolean enableLogging) {
+    this.enableLogging = enableLogging;
     return this;
   }
 

@@ -65,6 +65,26 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
   private java.lang.String httpMethod;
 
   /**
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * generated and attached as an `Authorization` header in the HTTP request.
+   *
+   * This type of authorization should be used when sending requests to a GCP endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OAuthToken oauthToken;
+
+  /**
+   * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
+   * will be generated and attached as an `Authorization` header in the HTTP request.
+   *
+   * This type of authorization should be used when sending requests to third party endpoints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OidcToken oidcToken;
+
+  /**
    * Required.
    *
    * The full URI path that the request will be sent to. This string must begin with either
@@ -174,6 +194,52 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    */
   public HttpTarget setHttpMethod(java.lang.String httpMethod) {
     this.httpMethod = httpMethod;
+    return this;
+  }
+
+  /**
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * generated and attached as an `Authorization` header in the HTTP request.
+   *
+   * This type of authorization should be used when sending requests to a GCP endpoint.
+   * @return value or {@code null} for none
+   */
+  public OAuthToken getOauthToken() {
+    return oauthToken;
+  }
+
+  /**
+   * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
+   * generated and attached as an `Authorization` header in the HTTP request.
+   *
+   * This type of authorization should be used when sending requests to a GCP endpoint.
+   * @param oauthToken oauthToken or {@code null} for none
+   */
+  public HttpTarget setOauthToken(OAuthToken oauthToken) {
+    this.oauthToken = oauthToken;
+    return this;
+  }
+
+  /**
+   * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
+   * will be generated and attached as an `Authorization` header in the HTTP request.
+   *
+   * This type of authorization should be used when sending requests to third party endpoints.
+   * @return value or {@code null} for none
+   */
+  public OidcToken getOidcToken() {
+    return oidcToken;
+  }
+
+  /**
+   * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
+   * will be generated and attached as an `Authorization` header in the HTTP request.
+   *
+   * This type of authorization should be used when sending requests to third party endpoints.
+   * @param oidcToken oidcToken or {@code null} for none
+   */
+  public HttpTarget setOidcToken(OidcToken oidcToken) {
+    this.oidcToken = oidcToken;
     return this;
   }
 

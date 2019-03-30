@@ -67,6 +67,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredImageType;
 
   /**
+   * The desired config of Intra-node visibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
+
+  /**
    * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
    * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
    * being either created or removed from the cluster, depending on whether locations are being
@@ -259,6 +266,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredImageType(java.lang.String desiredImageType) {
     this.desiredImageType = desiredImageType;
+    return this;
+  }
+
+  /**
+   * The desired config of Intra-node visibility.
+   * @return value or {@code null} for none
+   */
+  public IntraNodeVisibilityConfig getDesiredIntraNodeVisibilityConfig() {
+    return desiredIntraNodeVisibilityConfig;
+  }
+
+  /**
+   * The desired config of Intra-node visibility.
+   * @param desiredIntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredIntraNodeVisibilityConfig(IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig) {
+    this.desiredIntraNodeVisibilityConfig = desiredIntraNodeVisibilityConfig;
     return this;
   }
 

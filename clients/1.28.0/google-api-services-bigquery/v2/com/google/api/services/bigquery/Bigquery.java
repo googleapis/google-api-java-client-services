@@ -1970,6 +1970,745 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Models collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Bigquery bigquery = new Bigquery(...);}
+   *   {@code Bigquery.Models.List request = bigquery.models().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Models models() {
+    return new Models();
+  }
+
+  /**
+   * The "models" collection of methods.
+   */
+  public class Models {
+
+    /**
+     * Deletes the model specified by modelId from the dataset.
+     *
+     * Create a request for the method "models.delete".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the model to delete.
+     * @param datasetId Dataset ID of the model to delete.
+     * @param modelId Model ID of the model to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) throws java.io.IOException {
+      Delete result = new Delete(projectId, datasetId, modelId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends BigqueryRequest<Void> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/models/{+modelId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern MODEL_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Deletes the model specified by modelId from the dataset.
+       *
+       * Create a request for the method "models.delete".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the model to delete.
+       * @param datasetId Dataset ID of the model to delete.
+       * @param modelId Model ID of the model to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) {
+        super(Bigquery.this, "DELETE", REST_PATH, null, Void.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.modelId = com.google.api.client.util.Preconditions.checkNotNull(modelId, "Required parameter modelId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
+              "Parameter modelId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the model to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the model to delete.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the model to delete. */
+      public Delete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the model to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the model to delete.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the model to delete. */
+      public Delete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Model ID of the model to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String modelId;
+
+      /** Model ID of the model to delete.
+       */
+      public java.lang.String getModelId() {
+        return modelId;
+      }
+
+      /** Model ID of the model to delete. */
+      public Delete setModelId(java.lang.String modelId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
+              "Parameter modelId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.modelId = modelId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the specified model resource by model ID.
+     *
+     * Create a request for the method "models.get".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the requested model.
+     * @param datasetId Dataset ID of the requested model.
+     * @param modelId Model ID of the requested model.
+     * @return the request
+     */
+    public Get get(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) throws java.io.IOException {
+      Get result = new Get(projectId, datasetId, modelId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends BigqueryRequest<com.google.api.services.bigquery.model.Model> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/models/{+modelId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern MODEL_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets the specified model resource by model ID.
+       *
+       * Create a request for the method "models.get".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the requested model.
+       * @param datasetId Dataset ID of the requested model.
+       * @param modelId Model ID of the requested model.
+       * @since 1.13
+       */
+      protected Get(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId) {
+        super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.Model.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.modelId = com.google.api.client.util.Preconditions.checkNotNull(modelId, "Required parameter modelId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
+              "Parameter modelId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the requested model. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the requested model.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the requested model. */
+      public Get setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the requested model. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the requested model.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the requested model. */
+      public Get setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Model ID of the requested model. */
+      @com.google.api.client.util.Key
+      private java.lang.String modelId;
+
+      /** Model ID of the requested model.
+       */
+      public java.lang.String getModelId() {
+        return modelId;
+      }
+
+      /** Model ID of the requested model. */
+      public Get setModelId(java.lang.String modelId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
+              "Parameter modelId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.modelId = modelId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all models in the specified dataset. Requires the READER dataset role.
+     *
+     * Create a request for the method "models.list".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the models to list.
+     * @param datasetId Dataset ID of the models to list.
+     * @return the request
+     */
+    public List list(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
+      List result = new List(projectId, datasetId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends BigqueryRequest<com.google.api.services.bigquery.model.ListModelsResponse> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/models";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Lists all models in the specified dataset. Requires the READER dataset role.
+       *
+       * Create a request for the method "models.list".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the models to list.
+       * @param datasetId Dataset ID of the models to list.
+       * @since 1.13
+       */
+      protected List(java.lang.String projectId, java.lang.String datasetId) {
+        super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.ListModelsResponse.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the models to list. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the models to list.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the models to list. */
+      public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the models to list. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the models to list.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the models to list. */
+      public List setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** The maximum number of results per page. */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page.
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /** The maximum number of results per page. */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Page token, returned by a previous call to request the next page of results
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Page token, returned by a previous call to request the next page of results
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Page token, returned by a previous call to request the next page of results
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Patch specific fields in the specified model.
+     *
+     * Create a request for the method "models.patch".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the model to patch.
+     * @param datasetId Dataset ID of the model to patch.
+     * @param modelId Model ID of the model to patch.
+     * @param content the {@link com.google.api.services.bigquery.model.Model}
+     * @return the request
+     */
+    public Patch patch(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId, com.google.api.services.bigquery.model.Model content) throws java.io.IOException {
+      Patch result = new Patch(projectId, datasetId, modelId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends BigqueryRequest<com.google.api.services.bigquery.model.Model> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/models/{+modelId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern MODEL_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Patch specific fields in the specified model.
+       *
+       * Create a request for the method "models.patch".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the model to patch.
+       * @param datasetId Dataset ID of the model to patch.
+       * @param modelId Model ID of the model to patch.
+       * @param content the {@link com.google.api.services.bigquery.model.Model}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String projectId, java.lang.String datasetId, java.lang.String modelId, com.google.api.services.bigquery.model.Model content) {
+        super(Bigquery.this, "PATCH", REST_PATH, content, com.google.api.services.bigquery.model.Model.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.modelId = com.google.api.client.util.Preconditions.checkNotNull(modelId, "Required parameter modelId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
+              "Parameter modelId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUserIp(java.lang.String userIp) {
+        return (Patch) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the model to patch. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the model to patch.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the model to patch. */
+      public Patch setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the model to patch. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the model to patch.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the model to patch. */
+      public Patch setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Model ID of the model to patch. */
+      @com.google.api.client.util.Key
+      private java.lang.String modelId;
+
+      /** Model ID of the model to patch.
+       */
+      public java.lang.String getModelId() {
+        return modelId;
+      }
+
+      /** Model ID of the model to patch. */
+      public Patch setModelId(java.lang.String modelId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(MODEL_ID_PATTERN.matcher(modelId).matches(),
+              "Parameter modelId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.modelId = modelId;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>

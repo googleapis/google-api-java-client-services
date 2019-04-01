@@ -100,6 +100,12 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private ManagedZonePeeringConfig peeringConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private ManagedZonePrivateVisibilityConfig privateVisibilityConfig;
 
   /**
@@ -272,6 +278,21 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setNameServers(java.util.List<java.lang.String> nameServers) {
     this.nameServers = nameServers;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ManagedZonePeeringConfig getPeeringConfig() {
+    return peeringConfig;
+  }
+
+  /**
+   * @param peeringConfig peeringConfig or {@code null} for none
+   */
+  public ManagedZone setPeeringConfig(ManagedZonePeeringConfig peeringConfig) {
+    this.peeringConfig = peeringConfig;
     return this;
   }
 

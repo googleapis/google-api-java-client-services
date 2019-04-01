@@ -23,8 +23,8 @@ package com.google.api.services.factchecktools.v1alpha1;
  */
 public class FactCheckToolsScopes {
 
-  /** View and manage your data across Google Cloud Platform services. */
-  public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
+  /** View your email address. */
+  public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -33,7 +33,7 @@ public class FactCheckToolsScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(CLOUD_PLATFORM);
+    set.add(USERINFO_EMAIL);
     return java.util.Collections.unmodifiableSet(set);
   }
 

@@ -25,7 +25,7 @@ package com.google.api.services.cloudasset.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://console.cloud.google.com/apis/api/cloudasset.googleapis.com/overview" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/quickstart-cloud-asset-inventory" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

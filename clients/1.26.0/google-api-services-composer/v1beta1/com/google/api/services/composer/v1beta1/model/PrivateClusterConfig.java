@@ -17,7 +17,7 @@
 package com.google.api.services.composer.v1beta1.model;
 
 /**
- * Configuration options for private cluster of Composer environment.
+ * Configuration options for the private GKE cluster in a Cloud Composer environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Composer API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.composer.v1beta1.model;
 public final class PrivateClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If true, access to public endpoint of gke cluster will be denied.
-   * `IPAllocationPolicy.use_ip_aliases` must be true if this field is set to true. Default value is
-   * false.
+   * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePrivateEndpoint;
 
   /**
-   * The IP range in CIDR notation to use for the hosted master network. This range will be used for
-   * assigning internal IP addresses to the cluster master or set of masters, as well as the ILB VIP
-   * (Internal Load Balance Virtual IP).This range must not overlap with any other ranges in use
-   * within the cluster's network. If left blank, default value of '172.16.0.0/28' will be used.
+   * The IP range in CIDR notation to use for the hosted master network. This range is used for
+   * assigning internal IP addresses to the cluster master or set of masters and to the internal
+   * load balancer virtual IP. This range must not overlap with any other ranges in use within the
+   * cluster's network. If left blank, the default value of '172.16.0.0/28' is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String masterIpv4CidrBlock;
 
   /**
-   * Optional. If true, access to public endpoint of gke cluster will be denied.
-   * `IPAllocationPolicy.use_ip_aliases` must be true if this field is set to true. Default value is
-   * false.
+   * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEndpoint() {
@@ -59,9 +55,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. If true, access to public endpoint of gke cluster will be denied.
-   * `IPAllocationPolicy.use_ip_aliases` must be true if this field is set to true. Default value is
-   * false.
+   * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
    * @param enablePrivateEndpoint enablePrivateEndpoint or {@code null} for none
    */
   public PrivateClusterConfig setEnablePrivateEndpoint(java.lang.Boolean enablePrivateEndpoint) {
@@ -70,10 +64,10 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The IP range in CIDR notation to use for the hosted master network. This range will be used for
-   * assigning internal IP addresses to the cluster master or set of masters, as well as the ILB VIP
-   * (Internal Load Balance Virtual IP).This range must not overlap with any other ranges in use
-   * within the cluster's network. If left blank, default value of '172.16.0.0/28' will be used.
+   * The IP range in CIDR notation to use for the hosted master network. This range is used for
+   * assigning internal IP addresses to the cluster master or set of masters and to the internal
+   * load balancer virtual IP. This range must not overlap with any other ranges in use within the
+   * cluster's network. If left blank, the default value of '172.16.0.0/28' is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getMasterIpv4CidrBlock() {
@@ -81,10 +75,10 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The IP range in CIDR notation to use for the hosted master network. This range will be used for
-   * assigning internal IP addresses to the cluster master or set of masters, as well as the ILB VIP
-   * (Internal Load Balance Virtual IP).This range must not overlap with any other ranges in use
-   * within the cluster's network. If left blank, default value of '172.16.0.0/28' will be used.
+   * The IP range in CIDR notation to use for the hosted master network. This range is used for
+   * assigning internal IP addresses to the cluster master or set of masters and to the internal
+   * load balancer virtual IP. This range must not overlap with any other ranges in use within the
+   * cluster's network. If left blank, the default value of '172.16.0.0/28' is used.
    * @param masterIpv4CidrBlock masterIpv4CidrBlock or {@code null} for none
    */
   public PrivateClusterConfig setMasterIpv4CidrBlock(java.lang.String masterIpv4CidrBlock) {

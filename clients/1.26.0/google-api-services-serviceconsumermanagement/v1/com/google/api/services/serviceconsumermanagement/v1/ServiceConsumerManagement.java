@@ -1804,6 +1804,159 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
       }
       /**
+       * Deletes the specified project resource identified by a tenant resource tag. The mothod removes a
+       * project lien with a 'TenantManager' origin if that was added. It will then attempt to delete the
+       * project. If that operation fails, this method also fails. After the project has been deleted, the
+       * tenant resource state is set to DELETED.  To permanently remove resource metadata, call the
+       * `RemoveTenantProject` method. New resources with the same tag can't be added if there are
+       * existing resources in a DELETED state. Operation.
+       *
+       * Create a request for the method "tenancyUnits.deleteProject".
+       *
+       * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+       * any optional parameters, call the {@link DeleteProject#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+       * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest}
+       * @return the request
+       */
+      public DeleteProject deleteProject(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest content) throws java.io.IOException {
+        DeleteProject result = new DeleteProject(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class DeleteProject extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:deleteProject";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+
+        /**
+         * Deletes the specified project resource identified by a tenant resource tag. The mothod removes
+         * a project lien with a 'TenantManager' origin if that was added. It will then attempt to delete
+         * the project. If that operation fails, this method also fails. After the project has been
+         * deleted, the tenant resource state is set to DELETED.  To permanently remove resource metadata,
+         * call the `RemoveTenantProject` method. New resources with the same tag can't be added if there
+         * are existing resources in a DELETED state. Operation.
+         *
+         * Create a request for the method "tenancyUnits.deleteProject".
+         *
+         * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+         * setting any optional parameters, call the {@link DeleteProject#execute()} method to invoke the
+         * remote operation. <p> {@link DeleteProject#initialize(com.google.api.client.googleapis.services
+         * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest}
+         * @since 1.13
+         */
+        protected DeleteProject(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.DeleteTenantProjectRequest content) {
+          super(ServiceConsumerManagement.this, "POST", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+        }
+
+        @Override
+        public DeleteProject set$Xgafv(java.lang.String $Xgafv) {
+          return (DeleteProject) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public DeleteProject setAccessToken(java.lang.String accessToken) {
+          return (DeleteProject) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public DeleteProject setAlt(java.lang.String alt) {
+          return (DeleteProject) super.setAlt(alt);
+        }
+
+        @Override
+        public DeleteProject setCallback(java.lang.String callback) {
+          return (DeleteProject) super.setCallback(callback);
+        }
+
+        @Override
+        public DeleteProject setFields(java.lang.String fields) {
+          return (DeleteProject) super.setFields(fields);
+        }
+
+        @Override
+        public DeleteProject setKey(java.lang.String key) {
+          return (DeleteProject) super.setKey(key);
+        }
+
+        @Override
+        public DeleteProject setOauthToken(java.lang.String oauthToken) {
+          return (DeleteProject) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public DeleteProject setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (DeleteProject) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public DeleteProject setQuotaUser(java.lang.String quotaUser) {
+          return (DeleteProject) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public DeleteProject setUploadType(java.lang.String uploadType) {
+          return (DeleteProject) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public DeleteProject setUploadProtocol(java.lang.String uploadProtocol) {
+          return (DeleteProject) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the tenancy unit. Such as
+       'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
+        public DeleteProject setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public DeleteProject set(String parameterName, Object value) {
+          return (DeleteProject) super.set(parameterName, value);
+        }
+      }
+      /**
        * Find the tenancy unit for a managed service and service consumer. This method shouldn't be used
        * in a service producer's runtime path, for example to find the tenant project number when creating
        * VMs. Service producers must persist the tenant project's information after the project is
@@ -2185,6 +2338,155 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         @Override
         public RemoveProject set(String parameterName, Object value) {
           return (RemoveProject) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Attempts to undelete a previously deleted tenant project. The project must be in a DELETED state.
+       * There are no guarantees that an undeleted project will be in a fully restored and functional
+       * state. Call the `ApplyTenantProjectConfig` method to update its configuration and then validate
+       * all managed service resources. Operation.
+       *
+       * Create a request for the method "tenancyUnits.undeleteProject".
+       *
+       * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
+       * any optional parameters, call the {@link UndeleteProject#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+       * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest}
+       * @return the request
+       */
+      public UndeleteProject undeleteProject(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest content) throws java.io.IOException {
+        UndeleteProject result = new UndeleteProject(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UndeleteProject extends ServiceConsumerManagementRequest<com.google.api.services.serviceconsumermanagement.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:undeleteProject";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+
+        /**
+         * Attempts to undelete a previously deleted tenant project. The project must be in a DELETED
+         * state. There are no guarantees that an undeleted project will be in a fully restored and
+         * functional state. Call the `ApplyTenantProjectConfig` method to update its configuration and
+         * then validate all managed service resources. Operation.
+         *
+         * Create a request for the method "tenancyUnits.undeleteProject".
+         *
+         * This request holds the parameters needed by the the serviceconsumermanagement server.  After
+         * setting any optional parameters, call the {@link UndeleteProject#execute()} method to invoke
+         * the remote operation. <p> {@link UndeleteProject#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest}
+         * @since 1.13
+         */
+        protected UndeleteProject(java.lang.String name, com.google.api.services.serviceconsumermanagement.v1.model.UndeleteTenantProjectRequest content) {
+          super(ServiceConsumerManagement.this, "POST", REST_PATH, content, com.google.api.services.serviceconsumermanagement.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+        }
+
+        @Override
+        public UndeleteProject set$Xgafv(java.lang.String $Xgafv) {
+          return (UndeleteProject) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UndeleteProject setAccessToken(java.lang.String accessToken) {
+          return (UndeleteProject) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UndeleteProject setAlt(java.lang.String alt) {
+          return (UndeleteProject) super.setAlt(alt);
+        }
+
+        @Override
+        public UndeleteProject setCallback(java.lang.String callback) {
+          return (UndeleteProject) super.setCallback(callback);
+        }
+
+        @Override
+        public UndeleteProject setFields(java.lang.String fields) {
+          return (UndeleteProject) super.setFields(fields);
+        }
+
+        @Override
+        public UndeleteProject setKey(java.lang.String key) {
+          return (UndeleteProject) super.setKey(key);
+        }
+
+        @Override
+        public UndeleteProject setOauthToken(java.lang.String oauthToken) {
+          return (UndeleteProject) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UndeleteProject setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UndeleteProject) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UndeleteProject setQuotaUser(java.lang.String quotaUser) {
+          return (UndeleteProject) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UndeleteProject setUploadType(java.lang.String uploadType) {
+          return (UndeleteProject) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UndeleteProject setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UndeleteProject) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the tenancy unit. Such as
+       'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
+        public UndeleteProject setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^services/[^/]+/[^/]+/[^/]+/tenancyUnits/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public UndeleteProject set(String parameterName, Object value) {
+          return (UndeleteProject) super.set(parameterName, value);
         }
       }
 

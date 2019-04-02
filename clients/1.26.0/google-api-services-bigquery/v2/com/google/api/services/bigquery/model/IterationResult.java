@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for IterationResult.
+ * Information about a single iteration of the training run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,47 +30,72 @@ package com.google.api.services.bigquery.model;
 public final class IterationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+   * [Beta] Information about top clusters for clustering models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClusterInfo> clusterInfos;
+
+  static {
+    // hack to force ProGuard to consider ClusterInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClusterInfo.class);
+  }
+
+  /**
+   * Time taken to run the iteration in milliseconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long durationMs;
 
   /**
-   * [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval
-   * loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option
-   * is specified as no_split or auto_split with input data size less than 500 rows.
+   * Loss computed on the eval data at the end of iteration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double evalLoss;
 
   /**
-   * [Output-only, Beta] Index of the ML training iteration, starting from zero for each training
-   * run.
+   * Index of the iteration, 0 based.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
 
   /**
-   * [Output-only, Beta] Learning rate used for this iteration, it varies for different training
-   * iterations if learn_rate_strategy option is not constant.
+   * Learn rate used for this iteration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double learnRate;
 
   /**
-   * [Output-only, Beta] Training loss computed on the training data at the end of the iteration.
-   * The training loss function is defined by model type.
+   * Loss computed on the training data at the end of iteration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double trainingLoss;
 
   /**
-   * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+   * [Beta] Information about top clusters for clustering models.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClusterInfo> getClusterInfos() {
+    return clusterInfos;
+  }
+
+  /**
+   * [Beta] Information about top clusters for clustering models.
+   * @param clusterInfos clusterInfos or {@code null} for none
+   */
+  public IterationResult setClusterInfos(java.util.List<ClusterInfo> clusterInfos) {
+    this.clusterInfos = clusterInfos;
+    return this;
+  }
+
+  /**
+   * Time taken to run the iteration in milliseconds.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDurationMs() {
@@ -78,7 +103,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
+   * Time taken to run the iteration in milliseconds.
    * @param durationMs durationMs or {@code null} for none
    */
   public IterationResult setDurationMs(java.lang.Long durationMs) {
@@ -87,9 +112,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval
-   * loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option
-   * is specified as no_split or auto_split with input data size less than 500 rows.
+   * Loss computed on the eval data at the end of iteration.
    * @return value or {@code null} for none
    */
   public java.lang.Double getEvalLoss() {
@@ -97,9 +120,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Eval loss computed on the eval data at the end of the iteration. The eval
-   * loss is used for early stopping to avoid overfitting. No eval loss if eval_split_method option
-   * is specified as no_split or auto_split with input data size less than 500 rows.
+   * Loss computed on the eval data at the end of iteration.
    * @param evalLoss evalLoss or {@code null} for none
    */
   public IterationResult setEvalLoss(java.lang.Double evalLoss) {
@@ -108,8 +129,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Index of the ML training iteration, starting from zero for each training
-   * run.
+   * Index of the iteration, 0 based.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -117,8 +137,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Index of the ML training iteration, starting from zero for each training
-   * run.
+   * Index of the iteration, 0 based.
    * @param index index or {@code null} for none
    */
   public IterationResult setIndex(java.lang.Integer index) {
@@ -127,8 +146,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Learning rate used for this iteration, it varies for different training
-   * iterations if learn_rate_strategy option is not constant.
+   * Learn rate used for this iteration.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearnRate() {
@@ -136,8 +154,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Learning rate used for this iteration, it varies for different training
-   * iterations if learn_rate_strategy option is not constant.
+   * Learn rate used for this iteration.
    * @param learnRate learnRate or {@code null} for none
    */
   public IterationResult setLearnRate(java.lang.Double learnRate) {
@@ -146,8 +163,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training loss computed on the training data at the end of the iteration.
-   * The training loss function is defined by model type.
+   * Loss computed on the training data at the end of iteration.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTrainingLoss() {
@@ -155,8 +171,7 @@ public final class IterationResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output-only, Beta] Training loss computed on the training data at the end of the iteration.
-   * The training loss function is defined by model type.
+   * Loss computed on the training data at the end of iteration.
    * @param trainingLoss trainingLoss or {@code null} for none
    */
   public IterationResult setTrainingLoss(java.lang.Double trainingLoss) {

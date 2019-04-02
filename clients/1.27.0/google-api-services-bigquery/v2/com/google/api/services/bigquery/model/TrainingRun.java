@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TrainingRun.
+ * Information about a single training query run for the model.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -30,11 +30,18 @@ package com.google.api.services.bigquery.model;
 public final class TrainingRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output-only, Beta] List of each iteration results.
+   * The evaluation metrics over training/eval data that were computed at the end of training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<IterationResult> iterationResults;
+  private EvaluationMetrics evaluationMetrics;
+
+  /**
+   * Output of each iteration run, results.size() <= max_iterations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IterationResult> results;
 
   static {
     // hack to force ProGuard to consider IterationResult used, since otherwise it would be stripped out
@@ -43,91 +50,74 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only, Beta] Training run start time in milliseconds since the epoch.
+   * The start time of this training run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime startTime;
+  private String startTime;
 
   /**
-   * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is
-   * in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run
-   * successfully completed. CANCELLED: Training run cancelled by the user.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Options that were used for this training run, includes user specified and default options that
+   * were used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TrainingOptions trainingOptions;
 
   /**
-   * [Output-only, Beta] List of each iteration results.
+   * The evaluation metrics over training/eval data that were computed at the end of training.
    * @return value or {@code null} for none
    */
-  public java.util.List<IterationResult> getIterationResults() {
-    return iterationResults;
+  public EvaluationMetrics getEvaluationMetrics() {
+    return evaluationMetrics;
   }
 
   /**
-   * [Output-only, Beta] List of each iteration results.
-   * @param iterationResults iterationResults or {@code null} for none
+   * The evaluation metrics over training/eval data that were computed at the end of training.
+   * @param evaluationMetrics evaluationMetrics or {@code null} for none
    */
-  public TrainingRun setIterationResults(java.util.List<IterationResult> iterationResults) {
-    this.iterationResults = iterationResults;
+  public TrainingRun setEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
+    this.evaluationMetrics = evaluationMetrics;
     return this;
   }
 
   /**
-   * [Output-only, Beta] Training run start time in milliseconds since the epoch.
+   * Output of each iteration run, results.size() <= max_iterations.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getStartTime() {
+  public java.util.List<IterationResult> getResults() {
+    return results;
+  }
+
+  /**
+   * Output of each iteration run, results.size() <= max_iterations.
+   * @param results results or {@code null} for none
+   */
+  public TrainingRun setResults(java.util.List<IterationResult> results) {
+    this.results = results;
+    return this;
+  }
+
+  /**
+   * The start time of this training run.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
     return startTime;
   }
 
   /**
-   * [Output-only, Beta] Training run start time in milliseconds since the epoch.
+   * The start time of this training run.
    * @param startTime startTime or {@code null} for none
    */
-  public TrainingRun setStartTime(com.google.api.client.util.DateTime startTime) {
+  public TrainingRun setStartTime(String startTime) {
     this.startTime = startTime;
     return this;
   }
 
   /**
-   * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is
-   * in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run
-   * successfully completed. CANCELLED: Training run cancelled by the user.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is
-   * in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run
-   * successfully completed. CANCELLED: Training run cancelled by the user.
-   * @param state state or {@code null} for none
-   */
-  public TrainingRun setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Options that were used for this training run, includes user specified and default options that
+   * were used.
    * @return value or {@code null} for none
    */
   public TrainingOptions getTrainingOptions() {
@@ -135,10 +125,8 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
+   * Options that were used for this training run, includes user specified and default options that
+   * were used.
    * @param trainingOptions trainingOptions or {@code null} for none
    */
   public TrainingRun setTrainingOptions(TrainingOptions trainingOptions) {
@@ -156,212 +144,4 @@ public final class TrainingRun extends com.google.api.client.json.GenericJson {
     return (TrainingRun) super.clone();
   }
 
-  /**
-   * [Output-only, Beta] Training options used by this training run. These options are mutable for
-   * subsequent training runs. Default values are explicitly stored for options not specified in the
-   * input query of the first training run. For subsequent training runs, any option not explicitly
-   * specified in the input query will be copied from the previous training run.
-   */
-  public static final class TrainingOptions extends com.google.api.client.json.GenericJson {
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean earlyStop;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Double l1Reg;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Double l2Reg;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Double learnRate;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.String learnRateStrategy;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Double lineSearchInitLearnRate;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-    private java.lang.Long maxIteration;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Double minRelProgress;
-
-    /**
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Boolean warmStart;
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getEarlyStop() {
-      return earlyStop;
-    }
-
-    /**
-     * @param earlyStop earlyStop or {@code null} for none
-     */
-    public TrainingOptions setEarlyStop(java.lang.Boolean earlyStop) {
-      this.earlyStop = earlyStop;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Double getL1Reg() {
-      return l1Reg;
-    }
-
-    /**
-     * @param l1Reg l1Reg or {@code null} for none
-     */
-    public TrainingOptions setL1Reg(java.lang.Double l1Reg) {
-      this.l1Reg = l1Reg;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Double getL2Reg() {
-      return l2Reg;
-    }
-
-    /**
-     * @param l2Reg l2Reg or {@code null} for none
-     */
-    public TrainingOptions setL2Reg(java.lang.Double l2Reg) {
-      this.l2Reg = l2Reg;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Double getLearnRate() {
-      return learnRate;
-    }
-
-    /**
-     * @param learnRate learnRate or {@code null} for none
-     */
-    public TrainingOptions setLearnRate(java.lang.Double learnRate) {
-      this.learnRate = learnRate;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.String getLearnRateStrategy() {
-      return learnRateStrategy;
-    }
-
-    /**
-     * @param learnRateStrategy learnRateStrategy or {@code null} for none
-     */
-    public TrainingOptions setLearnRateStrategy(java.lang.String learnRateStrategy) {
-      this.learnRateStrategy = learnRateStrategy;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Double getLineSearchInitLearnRate() {
-      return lineSearchInitLearnRate;
-    }
-
-    /**
-     * @param lineSearchInitLearnRate lineSearchInitLearnRate or {@code null} for none
-     */
-    public TrainingOptions setLineSearchInitLearnRate(java.lang.Double lineSearchInitLearnRate) {
-      this.lineSearchInitLearnRate = lineSearchInitLearnRate;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Long getMaxIteration() {
-      return maxIteration;
-    }
-
-    /**
-     * @param maxIteration maxIteration or {@code null} for none
-     */
-    public TrainingOptions setMaxIteration(java.lang.Long maxIteration) {
-      this.maxIteration = maxIteration;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Double getMinRelProgress() {
-      return minRelProgress;
-    }
-
-    /**
-     * @param minRelProgress minRelProgress or {@code null} for none
-     */
-    public TrainingOptions setMinRelProgress(java.lang.Double minRelProgress) {
-      this.minRelProgress = minRelProgress;
-      return this;
-    }
-
-    /**
-     * @return value or {@code null} for none
-     */
-    public java.lang.Boolean getWarmStart() {
-      return warmStart;
-    }
-
-    /**
-     * @param warmStart warmStart or {@code null} for none
-     */
-    public TrainingOptions setWarmStart(java.lang.Boolean warmStart) {
-      this.warmStart = warmStart;
-      return this;
-    }
-
-    @Override
-    public TrainingOptions set(String fieldName, Object value) {
-      return (TrainingOptions) super.set(fieldName, value);
-    }
-
-    @Override
-    public TrainingOptions clone() {
-      return (TrainingOptions) super.clone();
-    }
-
-  }
 }

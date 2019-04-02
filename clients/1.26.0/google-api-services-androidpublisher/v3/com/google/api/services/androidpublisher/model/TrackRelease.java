@@ -31,6 +31,12 @@ package com.google.api.services.androidpublisher.model;
 public final class TrackRelease extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CountryTargeting countryTargeting;
+
+  /**
    * The release name, used to identify this release in the Play Console UI. Not required to be
    * unique. This is optional, if not set it will be generated from the version_name in the APKs.
    * The value may be {@code null}.
@@ -74,6 +80,21 @@ public final class TrackRelease extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> versionCodes;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public CountryTargeting getCountryTargeting() {
+    return countryTargeting;
+  }
+
+  /**
+   * @param countryTargeting countryTargeting or {@code null} for none
+   */
+  public TrackRelease setCountryTargeting(CountryTargeting countryTargeting) {
+    this.countryTargeting = countryTargeting;
+    return this;
+  }
 
   /**
    * The release name, used to identify this release in the Play Console UI. Not required to be

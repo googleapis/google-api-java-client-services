@@ -18,8 +18,8 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 
 /**
  * An attestation wrapper that uses the Grafeas `Signature` message. This attestation must define
- * the `plaintext` that the `signatures` verify and any metadata necessary to interpret that
- * plaintext.  The signatures should always be over the `plaintext` bytestring.
+ * the `serialized_payload` that the `signatures` verify and any metadata necessary to interpret
+ * that plaintext.  The signatures should always be over the `serialized_payload` bytestring.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Container Analysis API. For a detailed explanation

@@ -77,6 +77,12 @@ public class ClassroomScopes {
   /** View course work and grades for students in the Google Classroom classes you teach or administer. */
   public static final String CLASSROOM_STUDENT_SUBMISSIONS_STUDENTS_READONLY = "https://www.googleapis.com/auth/classroom.student-submissions.students.readonly";
 
+  /** See, create, and edit topics in Google Classroom. */
+  public static final String CLASSROOM_TOPICS = "https://www.googleapis.com/auth/classroom.topics";
+
+  /** View topics in Google Classroom. */
+  public static final String CLASSROOM_TOPICS_READONLY = "https://www.googleapis.com/auth/classroom.topics.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -102,6 +108,8 @@ public class ClassroomScopes {
     set.add(CLASSROOM_ROSTERS_READONLY);
     set.add(CLASSROOM_STUDENT_SUBMISSIONS_ME_READONLY);
     set.add(CLASSROOM_STUDENT_SUBMISSIONS_STUDENTS_READONLY);
+    set.add(CLASSROOM_TOPICS);
+    set.add(CLASSROOM_TOPICS_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

@@ -132,9 +132,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
-   * attribute of the feed specification in its generic form (e.g., { "name": "size type", "type":
-   * "text", "value": "regular" }). This is useful for submitting attributes not explicitly exposed
-   * by the API.
+   * attribute of the feed specification in its generic form (e.g., { "name": "size type", "value":
+   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -808,9 +807,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
-   * attribute of the feed specification in its generic form (e.g., { "name": "size type", "type":
-   * "text", "value": "regular" }). This is useful for submitting attributes not explicitly exposed
-   * by the API.
+   * attribute of the feed specification in its generic form (e.g., { "name": "size type", "value":
+   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomAttribute> getCustomAttributes() {
@@ -819,9 +817,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of custom (merchant-provided) attributes. It can also be used for submitting any
-   * attribute of the feed specification in its generic form (e.g., { "name": "size type", "type":
-   * "text", "value": "regular" }). This is useful for submitting attributes not explicitly exposed
-   * by the API.
+   * attribute of the feed specification in its generic form (e.g., { "name": "size type", "value":
+   * "regular" }). This is useful for submitting attributes not explicitly exposed by the API.
    * @param customAttributes customAttributes or {@code null} for none
    */
   public Product setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {

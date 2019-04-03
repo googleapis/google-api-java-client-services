@@ -58,8 +58,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The databaseVersion field can not be changed after
    * instance creation. MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6.
-   * PostgreSQL instances: POSTGRES_9_6 MySQL First Generation instances: MYSQL_5_6 (default) or
-   * MYSQL_5_5
+   * PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta. MySQL First Generation
+   * instances: MYSQL_5_6 (default) or MYSQL_5_5
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,8 +307,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The databaseVersion field can not be changed after
    * instance creation. MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6.
-   * PostgreSQL instances: POSTGRES_9_6 MySQL First Generation instances: MYSQL_5_6 (default) or
-   * MYSQL_5_5
+   * PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta. MySQL First Generation
+   * instances: MYSQL_5_6 (default) or MYSQL_5_5
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -318,8 +318,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The database engine type and version. The databaseVersion field can not be changed after
    * instance creation. MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6.
-   * PostgreSQL instances: POSTGRES_9_6 MySQL First Generation instances: MYSQL_5_6 (default) or
-   * MYSQL_5_5
+   * PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta. MySQL First Generation
+   * instances: MYSQL_5_6 (default) or MYSQL_5_5
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public DatabaseInstance setDatabaseVersion(java.lang.String databaseVersion) {

@@ -143,7 +143,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
   public class Activities {
 
     /**
-     * Get an activity.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "activities.get".
      *
@@ -164,7 +164,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "activities/{activityId}";
 
       /**
-       * Get an activity.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "activities.get".
        *
@@ -248,7 +248,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * List all of the activities in the specified collection for a particular user.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "activities.list".
      *
@@ -271,7 +271,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "people/{userId}/activities/{collection}";
 
       /**
-       * List all of the activities in the specified collection for a particular user.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "activities.list".
        *
@@ -430,7 +430,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * Search public activities.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "activities.search".
      *
@@ -451,7 +451,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "activities";
 
       /**
-       * Search public activities.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "activities.search".
        *
@@ -647,7 +647,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
   public class Comments {
 
     /**
-     * Get a comment.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "comments.get".
      *
@@ -668,7 +668,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "comments/{commentId}";
 
       /**
-       * Get a comment.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "comments.get".
        *
@@ -752,7 +752,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * List all of the comments for an activity.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "comments.list".
      *
@@ -773,7 +773,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "activities/{activityId}/comments";
 
       /**
-       * List all of the comments for an activity.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "comments.list".
        *
@@ -1257,7 +1257,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * List all of the people in the specified collection for a particular activity.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "people.listByActivity".
      *
@@ -1279,7 +1279,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "activities/{activityId}/people/{collection}";
 
       /**
-       * List all of the people in the specified collection for a particular activity.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "people.listByActivity".
        *
@@ -1431,7 +1431,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       }
     }
     /**
-     * Search all public profiles.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "people.search".
      *
@@ -1452,7 +1452,7 @@ public class Plus extends com.google.api.client.googleapis.services.json.Abstrac
       private static final String REST_PATH = "people";
 
       /**
-       * Search all public profiles.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "people.search".
        *

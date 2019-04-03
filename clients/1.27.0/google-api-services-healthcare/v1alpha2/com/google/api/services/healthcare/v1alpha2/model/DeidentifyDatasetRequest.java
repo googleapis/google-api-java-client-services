@@ -30,23 +30,26 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class DeidentifyDatasetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deidentify configuration
+   * Deidentify configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeidentifyConfig config;
 
   /**
-   * The name of the dataset resource to which the redacted data should be written (e.g.,
-   * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`). The new dataset must
-   * not exist, or the request will fail.
+   * The name of the dataset resource to create and write the redacted data to (e.g.,
+   * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`).
+   *
+   *  * The destination dataset must not exist.  * The destination dataset must be in the same
+   * project as the source    dataset. De-identifying data across multiple projects is not
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationDataset;
 
   /**
-   * Deidentify configuration
+   * Deidentify configuration.
    * @return value or {@code null} for none
    */
   public DeidentifyConfig getConfig() {
@@ -54,7 +57,7 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Deidentify configuration
+   * Deidentify configuration.
    * @param config config or {@code null} for none
    */
   public DeidentifyDatasetRequest setConfig(DeidentifyConfig config) {
@@ -63,9 +66,12 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The name of the dataset resource to which the redacted data should be written (e.g.,
-   * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`). The new dataset must
-   * not exist, or the request will fail.
+   * The name of the dataset resource to create and write the redacted data to (e.g.,
+   * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`).
+   *
+   *  * The destination dataset must not exist.  * The destination dataset must be in the same
+   * project as the source    dataset. De-identifying data across multiple projects is not
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationDataset() {
@@ -73,9 +79,12 @@ public final class DeidentifyDatasetRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The name of the dataset resource to which the redacted data should be written (e.g.,
-   * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`). The new dataset must
-   * not exist, or the request will fail.
+   * The name of the dataset resource to create and write the redacted data to (e.g.,
+   * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`).
+   *
+   *  * The destination dataset must not exist.  * The destination dataset must be in the same
+   * project as the source    dataset. De-identifying data across multiple projects is not
+   * supported.
    * @param destinationDataset destinationDataset or {@code null} for none
    */
   public DeidentifyDatasetRequest setDestinationDataset(java.lang.String destinationDataset) {

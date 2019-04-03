@@ -41199,6 +41199,2113 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the NetworkEndpointGroups collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.NetworkEndpointGroups.List request = compute.networkEndpointGroups().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public NetworkEndpointGroups networkEndpointGroups() {
+    return new NetworkEndpointGroups();
+  }
+
+  /**
+   * The "networkEndpointGroups" collection of methods.
+   */
+  public class NetworkEndpointGroups {
+
+    /**
+     * Retrieves the list of network endpoint groups and sorts them by zone.
+     *
+     * Create a request for the method "networkEndpointGroups.aggregatedList".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link AggregatedList#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @return the request
+     */
+    public AggregatedList aggregatedList(java.lang.String project) throws java.io.IOException {
+      AggregatedList result = new AggregatedList(project);
+      initialize(result);
+      return result;
+    }
+
+    public class AggregatedList extends ComputeRequest<com.google.api.services.compute.model.NetworkEndpointGroupAggregatedList> {
+
+      private static final String REST_PATH = "{project}/aggregated/networkEndpointGroups";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Retrieves the list of network endpoint groups and sorts them by zone.
+       *
+       * Create a request for the method "networkEndpointGroups.aggregatedList".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link AggregatedList#execute()} method to invoke the remote operation.
+       * <p> {@link AggregatedList#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @since 1.13
+       */
+      protected AggregatedList(java.lang.String project) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.NetworkEndpointGroupAggregatedList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AggregatedList setAlt(java.lang.String alt) {
+        return (AggregatedList) super.setAlt(alt);
+      }
+
+      @Override
+      public AggregatedList setFields(java.lang.String fields) {
+        return (AggregatedList) super.setFields(fields);
+      }
+
+      @Override
+      public AggregatedList setKey(java.lang.String key) {
+        return (AggregatedList) super.setKey(key);
+      }
+
+      @Override
+      public AggregatedList setOauthToken(java.lang.String oauthToken) {
+        return (AggregatedList) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AggregatedList setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AggregatedList) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AggregatedList setQuotaUser(java.lang.String quotaUser) {
+        return (AggregatedList) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AggregatedList setUserIp(java.lang.String userIp) {
+        return (AggregatedList) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public AggregatedList setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. The expression must specify the
+     field name, a comparison operator, and the value that you want to use for filtering. The value must
+     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     example-instance by specifying name != example-instance.
+
+     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
+     false to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based on resource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
+     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
+     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+     (scheduling.automaticRestart = true).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      public AggregatedList setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
+     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+     500) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      public AggregatedList setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public AggregatedList setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      public AggregatedList setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public AggregatedList set(String parameterName, Object value) {
+        return (AggregatedList) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Attach a list of network endpoints to the specified network endpoint group.
+     *
+     * Create a request for the method "networkEndpointGroups.attachNetworkEndpoints".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link AttachNetworkEndpoints#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+     * @param networkEndpointGroup The name of the network endpoint group where you are attaching network endpoints to. It should
+     *        comply with RFC1035.
+     * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroupsAttachEndpointsRequest}
+     * @return the request
+     */
+    public AttachNetworkEndpoints attachNetworkEndpoints(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup, com.google.api.services.compute.model.NetworkEndpointGroupsAttachEndpointsRequest content) throws java.io.IOException {
+      AttachNetworkEndpoints result = new AttachNetworkEndpoints(project, zone, networkEndpointGroup, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AttachNetworkEndpoints extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/attachNetworkEndpoints";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Attach a list of network endpoints to the specified network endpoint group.
+       *
+       * Create a request for the method "networkEndpointGroups.attachNetworkEndpoints".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link AttachNetworkEndpoints#execute()} method to invoke the remote
+       * operation. <p> {@link AttachNetworkEndpoints#initialize(com.google.api.client.googleapis.servic
+       * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       * @param networkEndpointGroup The name of the network endpoint group where you are attaching network endpoints to. It should
+     *        comply with RFC1035.
+       * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroupsAttachEndpointsRequest}
+       * @since 1.13
+       */
+      protected AttachNetworkEndpoints(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup, com.google.api.services.compute.model.NetworkEndpointGroupsAttachEndpointsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.networkEndpointGroup = com.google.api.client.util.Preconditions.checkNotNull(networkEndpointGroup, "Required parameter networkEndpointGroup must be specified.");
+      }
+
+      @Override
+      public AttachNetworkEndpoints setAlt(java.lang.String alt) {
+        return (AttachNetworkEndpoints) super.setAlt(alt);
+      }
+
+      @Override
+      public AttachNetworkEndpoints setFields(java.lang.String fields) {
+        return (AttachNetworkEndpoints) super.setFields(fields);
+      }
+
+      @Override
+      public AttachNetworkEndpoints setKey(java.lang.String key) {
+        return (AttachNetworkEndpoints) super.setKey(key);
+      }
+
+      @Override
+      public AttachNetworkEndpoints setOauthToken(java.lang.String oauthToken) {
+        return (AttachNetworkEndpoints) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AttachNetworkEndpoints setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AttachNetworkEndpoints) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AttachNetworkEndpoints setQuotaUser(java.lang.String quotaUser) {
+        return (AttachNetworkEndpoints) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AttachNetworkEndpoints setUserIp(java.lang.String userIp) {
+        return (AttachNetworkEndpoints) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public AttachNetworkEndpoints setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      public AttachNetworkEndpoints setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The name of the network endpoint group where you are attaching network endpoints to. It
+       * should comply with RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String networkEndpointGroup;
+
+      /** The name of the network endpoint group where you are attaching network endpoints to. It should
+     comply with RFC1035.
+       */
+      public java.lang.String getNetworkEndpointGroup() {
+        return networkEndpointGroup;
+      }
+
+      /**
+       * The name of the network endpoint group where you are attaching network endpoints to. It
+       * should comply with RFC1035.
+       */
+      public AttachNetworkEndpoints setNetworkEndpointGroup(java.lang.String networkEndpointGroup) {
+        this.networkEndpointGroup = networkEndpointGroup;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public AttachNetworkEndpoints setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public AttachNetworkEndpoints set(String parameterName, Object value) {
+        return (AttachNetworkEndpoints) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the specified network endpoint group. The network endpoints in the NEG and the VM
+     * instances they belong to are not terminated when the NEG is deleted. Note that the NEG cannot be
+     * deleted if there are backend services referencing it.
+     *
+     * Create a request for the method "networkEndpointGroups.delete".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+     * @param networkEndpointGroup The name of the network endpoint group to delete. It should comply with RFC1035.
+     * @return the request
+     */
+    public Delete delete(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup) throws java.io.IOException {
+      Delete result = new Delete(project, zone, networkEndpointGroup);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Deletes the specified network endpoint group. The network endpoints in the NEG and the VM
+       * instances they belong to are not terminated when the NEG is deleted. Note that the NEG cannot
+       * be deleted if there are backend services referencing it.
+       *
+       * Create a request for the method "networkEndpointGroups.delete".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       * @param networkEndpointGroup The name of the network endpoint group to delete. It should comply with RFC1035.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup) {
+        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.networkEndpointGroup = com.google.api.client.util.Preconditions.checkNotNull(networkEndpointGroup, "Required parameter networkEndpointGroup must be specified.");
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Delete setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      public Delete setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /** The name of the network endpoint group to delete. It should comply with RFC1035. */
+      @com.google.api.client.util.Key
+      private java.lang.String networkEndpointGroup;
+
+      /** The name of the network endpoint group to delete. It should comply with RFC1035.
+       */
+      public java.lang.String getNetworkEndpointGroup() {
+        return networkEndpointGroup;
+      }
+
+      /** The name of the network endpoint group to delete. It should comply with RFC1035. */
+      public Delete setNetworkEndpointGroup(java.lang.String networkEndpointGroup) {
+        this.networkEndpointGroup = networkEndpointGroup;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Detach a list of network endpoints from the specified network endpoint group.
+     *
+     * Create a request for the method "networkEndpointGroups.detachNetworkEndpoints".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link DetachNetworkEndpoints#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+     * @param networkEndpointGroup The name of the network endpoint group where you are removing network endpoints. It should comply
+     *        with RFC1035.
+     * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroupsDetachEndpointsRequest}
+     * @return the request
+     */
+    public DetachNetworkEndpoints detachNetworkEndpoints(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup, com.google.api.services.compute.model.NetworkEndpointGroupsDetachEndpointsRequest content) throws java.io.IOException {
+      DetachNetworkEndpoints result = new DetachNetworkEndpoints(project, zone, networkEndpointGroup, content);
+      initialize(result);
+      return result;
+    }
+
+    public class DetachNetworkEndpoints extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/detachNetworkEndpoints";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Detach a list of network endpoints from the specified network endpoint group.
+       *
+       * Create a request for the method "networkEndpointGroups.detachNetworkEndpoints".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link DetachNetworkEndpoints#execute()} method to invoke the remote
+       * operation. <p> {@link DetachNetworkEndpoints#initialize(com.google.api.client.googleapis.servic
+       * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       * @param networkEndpointGroup The name of the network endpoint group where you are removing network endpoints. It should comply
+     *        with RFC1035.
+       * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroupsDetachEndpointsRequest}
+       * @since 1.13
+       */
+      protected DetachNetworkEndpoints(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup, com.google.api.services.compute.model.NetworkEndpointGroupsDetachEndpointsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.networkEndpointGroup = com.google.api.client.util.Preconditions.checkNotNull(networkEndpointGroup, "Required parameter networkEndpointGroup must be specified.");
+      }
+
+      @Override
+      public DetachNetworkEndpoints setAlt(java.lang.String alt) {
+        return (DetachNetworkEndpoints) super.setAlt(alt);
+      }
+
+      @Override
+      public DetachNetworkEndpoints setFields(java.lang.String fields) {
+        return (DetachNetworkEndpoints) super.setFields(fields);
+      }
+
+      @Override
+      public DetachNetworkEndpoints setKey(java.lang.String key) {
+        return (DetachNetworkEndpoints) super.setKey(key);
+      }
+
+      @Override
+      public DetachNetworkEndpoints setOauthToken(java.lang.String oauthToken) {
+        return (DetachNetworkEndpoints) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DetachNetworkEndpoints setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DetachNetworkEndpoints) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DetachNetworkEndpoints setQuotaUser(java.lang.String quotaUser) {
+        return (DetachNetworkEndpoints) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DetachNetworkEndpoints setUserIp(java.lang.String userIp) {
+        return (DetachNetworkEndpoints) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public DetachNetworkEndpoints setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      public DetachNetworkEndpoints setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The name of the network endpoint group where you are removing network endpoints. It should
+       * comply with RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String networkEndpointGroup;
+
+      /** The name of the network endpoint group where you are removing network endpoints. It should comply
+     with RFC1035.
+       */
+      public java.lang.String getNetworkEndpointGroup() {
+        return networkEndpointGroup;
+      }
+
+      /**
+       * The name of the network endpoint group where you are removing network endpoints. It should
+       * comply with RFC1035.
+       */
+      public DetachNetworkEndpoints setNetworkEndpointGroup(java.lang.String networkEndpointGroup) {
+        this.networkEndpointGroup = networkEndpointGroup;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public DetachNetworkEndpoints setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public DetachNetworkEndpoints set(String parameterName, Object value) {
+        return (DetachNetworkEndpoints) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by
+     * making a list() request.
+     *
+     * Create a request for the method "networkEndpointGroups.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+     * @param networkEndpointGroup The name of the network endpoint group. It should comply with RFC1035.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup) throws java.io.IOException {
+      Get result = new Get(project, zone, networkEndpointGroup);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.NetworkEndpointGroup> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Returns the specified network endpoint group. Gets a list of available network endpoint groups
+       * by making a list() request.
+       *
+       * Create a request for the method "networkEndpointGroups.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       * @param networkEndpointGroup The name of the network endpoint group. It should comply with RFC1035.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.NetworkEndpointGroup.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.networkEndpointGroup = com.google.api.client.util.Preconditions.checkNotNull(networkEndpointGroup, "Required parameter networkEndpointGroup must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Get setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      public Get setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /** The name of the network endpoint group. It should comply with RFC1035. */
+      @com.google.api.client.util.Key
+      private java.lang.String networkEndpointGroup;
+
+      /** The name of the network endpoint group. It should comply with RFC1035.
+       */
+      public java.lang.String getNetworkEndpointGroup() {
+        return networkEndpointGroup;
+      }
+
+      /** The name of the network endpoint group. It should comply with RFC1035. */
+      public Get setNetworkEndpointGroup(java.lang.String networkEndpointGroup) {
+        this.networkEndpointGroup = networkEndpointGroup;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a network endpoint group in the specified project using the parameters that are included
+     * in the request.
+     *
+     * Create a request for the method "networkEndpointGroups.insert".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where you want to create the network endpoint group. It should comply with
+     *        RFC1035.
+     * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroup}
+     * @return the request
+     */
+    public Insert insert(java.lang.String project, java.lang.String zone, com.google.api.services.compute.model.NetworkEndpointGroup content) throws java.io.IOException {
+      Insert result = new Insert(project, zone, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Creates a network endpoint group in the specified project using the parameters that are
+       * included in the request.
+       *
+       * Create a request for the method "networkEndpointGroups.insert".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where you want to create the network endpoint group. It should comply with
+     *        RFC1035.
+       * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroup}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String project, java.lang.String zone, com.google.api.services.compute.model.NetworkEndpointGroup content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Insert setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where you want to create the network endpoint group. It should comply
+       * with RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where you want to create the network endpoint group. It should comply with
+     RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where you want to create the network endpoint group. It should comply
+       * with RFC1035.
+       */
+      public Insert setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Insert setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the list of network endpoint groups that are located in the specified project and zone.
+     *
+     * Create a request for the method "networkEndpointGroups.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String zone) throws java.io.IOException {
+      List result = new List(project, zone);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.NetworkEndpointGroupList> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Retrieves the list of network endpoint groups that are located in the specified project and
+       * zone.
+       *
+       * Create a request for the method "networkEndpointGroups.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String zone) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.NetworkEndpointGroupList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public List setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      public List setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. The expression must specify the
+     field name, a comparison operator, and the value that you want to use for filtering. The value must
+     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     example-instance by specifying name != example-instance.
+
+     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
+     false to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based on resource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
+     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
+     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+     (scheduling.automaticRestart = true).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
+     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+     500) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the network endpoints in the specified network endpoint group.
+     *
+     * Create a request for the method "networkEndpointGroups.listNetworkEndpoints".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link ListNetworkEndpoints#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+     * @param networkEndpointGroup The name of the network endpoint group from which you want to generate a list of included network
+     *        endpoints. It should comply with RFC1035.
+     * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroupsListEndpointsRequest}
+     * @return the request
+     */
+    public ListNetworkEndpoints listNetworkEndpoints(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup, com.google.api.services.compute.model.NetworkEndpointGroupsListEndpointsRequest content) throws java.io.IOException {
+      ListNetworkEndpoints result = new ListNetworkEndpoints(project, zone, networkEndpointGroup, content);
+      initialize(result);
+      return result;
+    }
+
+    public class ListNetworkEndpoints extends ComputeRequest<com.google.api.services.compute.model.NetworkEndpointGroupsListNetworkEndpoints> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Lists the network endpoints in the specified network endpoint group.
+       *
+       * Create a request for the method "networkEndpointGroups.listNetworkEndpoints".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link ListNetworkEndpoints#execute()} method to invoke the remote
+       * operation. <p> {@link ListNetworkEndpoints#initialize(com.google.api.client.googleapis.services
+       * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       * @param networkEndpointGroup The name of the network endpoint group from which you want to generate a list of included network
+     *        endpoints. It should comply with RFC1035.
+       * @param content the {@link com.google.api.services.compute.model.NetworkEndpointGroupsListEndpointsRequest}
+       * @since 1.13
+       */
+      protected ListNetworkEndpoints(java.lang.String project, java.lang.String zone, java.lang.String networkEndpointGroup, com.google.api.services.compute.model.NetworkEndpointGroupsListEndpointsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.NetworkEndpointGroupsListNetworkEndpoints.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.networkEndpointGroup = com.google.api.client.util.Preconditions.checkNotNull(networkEndpointGroup, "Required parameter networkEndpointGroup must be specified.");
+      }
+
+      @Override
+      public ListNetworkEndpoints setAlt(java.lang.String alt) {
+        return (ListNetworkEndpoints) super.setAlt(alt);
+      }
+
+      @Override
+      public ListNetworkEndpoints setFields(java.lang.String fields) {
+        return (ListNetworkEndpoints) super.setFields(fields);
+      }
+
+      @Override
+      public ListNetworkEndpoints setKey(java.lang.String key) {
+        return (ListNetworkEndpoints) super.setKey(key);
+      }
+
+      @Override
+      public ListNetworkEndpoints setOauthToken(java.lang.String oauthToken) {
+        return (ListNetworkEndpoints) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListNetworkEndpoints setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListNetworkEndpoints) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListNetworkEndpoints setQuotaUser(java.lang.String quotaUser) {
+        return (ListNetworkEndpoints) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListNetworkEndpoints setUserIp(java.lang.String userIp) {
+        return (ListNetworkEndpoints) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public ListNetworkEndpoints setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone where the network endpoint group is located. It should comply with RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /**
+       * The name of the zone where the network endpoint group is located. It should comply with
+       * RFC1035.
+       */
+      public ListNetworkEndpoints setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The name of the network endpoint group from which you want to generate a list of included
+       * network endpoints. It should comply with RFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String networkEndpointGroup;
+
+      /** The name of the network endpoint group from which you want to generate a list of included network
+     endpoints. It should comply with RFC1035.
+       */
+      public java.lang.String getNetworkEndpointGroup() {
+        return networkEndpointGroup;
+      }
+
+      /**
+       * The name of the network endpoint group from which you want to generate a list of included
+       * network endpoints. It should comply with RFC1035.
+       */
+      public ListNetworkEndpoints setNetworkEndpointGroup(java.lang.String networkEndpointGroup) {
+        this.networkEndpointGroup = networkEndpointGroup;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. The expression must specify the
+     field name, a comparison operator, and the value that you want to use for filtering. The value must
+     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     example-instance by specifying name != example-instance.
+
+     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
+     false to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based on resource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
+     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
+     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+     (scheduling.automaticRestart = true).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      public ListNetworkEndpoints setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
+     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+     500) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      public ListNetworkEndpoints setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public ListNetworkEndpoints setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      public ListNetworkEndpoints setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public ListNetworkEndpoints set(String parameterName, Object value) {
+        return (ListNetworkEndpoints) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified resource.
+     *
+     * Create a request for the method "networkEndpointGroups.testIamPermissions".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String project, java.lang.String zone, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(project, zone, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends ComputeRequest<com.google.api.services.compute.model.TestPermissionsResponse> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/networkEndpointGroups/{resource}/testIamPermissions";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns permissions that a caller has on the specified resource.
+       *
+       * Create a request for the method "networkEndpointGroups.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String project, java.lang.String zone, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.TestPermissionsResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUserIp(java.lang.String userIp) {
+        return (TestIamPermissions) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public TestIamPermissions setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public TestIamPermissions setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Networks collection.
    *
    * <p>The typical use is:</p>

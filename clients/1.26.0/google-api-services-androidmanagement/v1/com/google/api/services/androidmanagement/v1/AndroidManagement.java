@@ -3080,6 +3080,759 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
     }
     /**
+     * An accessor for creating requests from the WebApps collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidManagement androidmanagement = new AndroidManagement(...);}
+     *   {@code AndroidManagement.WebApps.List request = androidmanagement.webApps().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public WebApps webApps() {
+      return new WebApps();
+    }
+
+    /**
+     * The "webApps" collection of methods.
+     */
+    public class WebApps {
+
+      /**
+       * Creates a web app.
+       *
+       * Create a request for the method "webApps.create".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent The name of the enterprise in the form enterprises/{enterpriseId}.
+       * @param content the {@link com.google.api.services.androidmanagement.v1.model.WebApp}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.androidmanagement.v1.model.WebApp content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.WebApp> {
+
+        private static final String REST_PATH = "v1/{+parent}/webApps";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+$");
+
+        /**
+         * Creates a web app.
+         *
+         * Create a request for the method "webApps.create".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The name of the enterprise in the form enterprises/{enterpriseId}.
+         * @param content the {@link com.google.api.services.androidmanagement.v1.model.WebApp}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.androidmanagement.v1.model.WebApp content) {
+          super(AndroidManagement.this, "POST", REST_PATH, content, com.google.api.services.androidmanagement.v1.model.WebApp.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^enterprises/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the enterprise in the form enterprises/{enterpriseId}. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The name of the enterprise in the form enterprises/{enterpriseId}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** The name of the enterprise in the form enterprises/{enterpriseId}. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^enterprises/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a web app.
+       *
+       * Create a request for the method "webApps.delete".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+/webApps/[^/]+$");
+
+        /**
+         * Deletes a web app.
+         *
+         * Create a request for the method "webApps.delete".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(AndroidManagement.this, "DELETE", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/webApps/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/webApps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a web app.
+       *
+       * Create a request for the method "webApps.get".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.WebApp> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+/webApps/[^/]+$");
+
+        /**
+         * Gets a web app.
+         *
+         * Create a request for the method "webApps.get".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(AndroidManagement.this, "GET", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.WebApp.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/webApps/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/webApps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists web apps for a given enterprise.
+       *
+       * Create a request for the method "webApps.list".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The name of the enterprise in the form enterprises/{enterpriseId}.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.ListWebAppsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/webApps";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+$");
+
+        /**
+         * Lists web apps for a given enterprise.
+         *
+         * Create a request for the method "webApps.list".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The name of the enterprise in the form enterprises/{enterpriseId}.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(AndroidManagement.this, "GET", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.ListWebAppsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^enterprises/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the enterprise in the form enterprises/{enterpriseId}. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The name of the enterprise in the form enterprises/{enterpriseId}.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** The name of the enterprise in the form enterprises/{enterpriseId}. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^enterprises/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** The requested page size. The actual page size may be fixed to a min or max value. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The requested page size. The actual page size may be fixed to a min or max value.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The requested page size. The actual page size may be fixed to a min or max value. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token identifying a page of results returned by the server.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** A token identifying a page of results returned by the server. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a web app.
+       *
+       * Create a request for the method "webApps.patch".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+       * @param content the {@link com.google.api.services.androidmanagement.v1.model.WebApp}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.androidmanagement.v1.model.WebApp content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.WebApp> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+/webApps/[^/]+$");
+
+        /**
+         * Updates a web app.
+         *
+         * Create a request for the method "webApps.patch".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         * @param content the {@link com.google.api.services.androidmanagement.v1.model.WebApp}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.androidmanagement.v1.model.WebApp content) {
+          super(AndroidManagement.this, "PATCH", REST_PATH, content, com.google.api.services.androidmanagement.v1.model.WebApp.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/webApps/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/webApps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The field mask indicating the fields to update. If not set, all modifiable fields will be
+         * modified.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The field mask indicating the fields to update. If not set, all modifiable fields will be modified.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The field mask indicating the fields to update. If not set, all modifiable fields will be
+         * modified.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the WebTokens collection.
      *
      * <p>The typical use is:</p>

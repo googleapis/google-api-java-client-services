@@ -29,9 +29,6 @@ public class PeopleServiceScopes {
   /** See and download your contacts. */
   public static final String CONTACTS_READONLY = "https://www.googleapis.com/auth/contacts.readonly";
 
-  /** View your basic profile info, including your age range and language. */
-  public static final String PLUS_LOGIN = "https://www.googleapis.com/auth/plus.login";
-
   /** View your street addresses. */
   public static final String USER_ADDRESSES_READ = "https://www.googleapis.com/auth/user.addresses.read";
 
@@ -59,7 +56,6 @@ public class PeopleServiceScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CONTACTS);
     set.add(CONTACTS_READONLY);
-    set.add(PLUS_LOGIN);
     set.add(USER_ADDRESSES_READ);
     set.add(USER_BIRTHDAY_READ);
     set.add(USER_EMAILS_READ);

@@ -144,9 +144,10 @@ public class Appsactivity extends com.google.api.client.googleapis.services.json
 
     /**
      * Returns a list of activities visible to the current logged in user. Visible activities are
-     * determined by the visiblity settings of the object that was acted on, e.g. Drive files a user can
-     * see. An activity is a record of past events. Multiple events may be merged if they are similar. A
-     * request is scoped to activities from a given Google service using the source parameter.
+     * determined by the visibility settings of the object that was acted on, e.g. Drive files a user
+     * can see. An activity is a record of past events. Multiple events may be merged if they are
+     * similar. A request is scoped to activities from a given Google service using the source
+     * parameter.
      *
      * Create a request for the method "activities.list".
      *
@@ -167,7 +168,7 @@ public class Appsactivity extends com.google.api.client.googleapis.services.json
 
       /**
        * Returns a list of activities visible to the current logged in user. Visible activities are
-       * determined by the visiblity settings of the object that was acted on, e.g. Drive files a user
+       * determined by the visibility settings of the object that was acted on, e.g. Drive files a user
        * can see. An activity is a record of past events. Multiple events may be merged if they are
        * similar. A request is scoped to activities from a given Google service using the source
        * parameter.
@@ -348,22 +349,22 @@ public class Appsactivity extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Indicates the user to return activity for. Use the special value me to indicate the
-       * currently authenticated user.
+       * The ID used for ACL checks (does not filter the resulting event list by the assigned
+       * value). Use the special value me to indicate the currently authenticated user.
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** Indicates the user to return activity for. Use the special value me to indicate the currently
-     authenticated user. [default: me]
+      /** The ID used for ACL checks (does not filter the resulting event list by the assigned value). Use
+     the special value me to indicate the currently authenticated user. [default: me]
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
       /**
-       * Indicates the user to return activity for. Use the special value me to indicate the
-       * currently authenticated user.
+       * The ID used for ACL checks (does not filter the resulting event list by the assigned
+       * value). Use the special value me to indicate the currently authenticated user.
        */
       public List setUserId(java.lang.String userId) {
         this.userId = userId;

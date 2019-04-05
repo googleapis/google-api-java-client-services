@@ -143,7 +143,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
   public class Activities {
 
     /**
-     * Get an activity.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "activities.get".
      *
@@ -164,7 +164,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "activities/{activityId}";
 
       /**
-       * Get an activity.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "activities.get".
        *
@@ -248,7 +248,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * List all of the activities in the specified collection for a particular user.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "activities.list".
      *
@@ -271,7 +271,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "people/{userId}/activities/{collection}";
 
       /**
-       * List all of the activities in the specified collection for a particular user.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "activities.list".
        *
@@ -453,7 +453,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
   public class Audiences {
 
     /**
-     * List all of the audiences to which a user can share.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "audiences.list".
      *
@@ -475,7 +475,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "people/{userId}/audiences";
 
       /**
-       * List all of the audiences to which a user can share.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "audiences.list".
        *
@@ -639,7 +639,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
   public class Circles {
 
     /**
-     * List all of the circles for a user.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "circles.list".
      *
@@ -661,7 +661,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "people/{userId}/circles";
 
       /**
-       * List all of the circles for a user.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "circles.list".
        *
@@ -825,7 +825,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
   public class Comments {
 
     /**
-     * Get a comment.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "comments.get".
      *
@@ -846,7 +846,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "comments/{commentId}";
 
       /**
-       * Get a comment.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "comments.get".
        *
@@ -930,105 +930,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Create a new comment in reply to an activity.
-     *
-     * Create a request for the method "comments.insert".
-     *
-     * This request holds the parameters needed by the plusDomains server.  After setting any optional
-     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
-     *
-     * @param activityId The ID of the activity to reply to.
-     * @param content the {@link com.google.api.services.plusDomains.model.Comment}
-     * @return the request
-     */
-    public Insert insert(java.lang.String activityId, com.google.api.services.plusDomains.model.Comment content) throws java.io.IOException {
-      Insert result = new Insert(activityId, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Insert extends PlusDomainsRequest<com.google.api.services.plusDomains.model.Comment> {
-
-      private static final String REST_PATH = "activities/{activityId}/comments";
-
-      /**
-       * Create a new comment in reply to an activity.
-       *
-       * Create a request for the method "comments.insert".
-       *
-       * This request holds the parameters needed by the the plusDomains server.  After setting any
-       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param activityId The ID of the activity to reply to.
-       * @param content the {@link com.google.api.services.plusDomains.model.Comment}
-       * @since 1.13
-       */
-      protected Insert(java.lang.String activityId, com.google.api.services.plusDomains.model.Comment content) {
-        super(PlusDomains.this, "POST", REST_PATH, content, com.google.api.services.plusDomains.model.Comment.class);
-        this.activityId = com.google.api.client.util.Preconditions.checkNotNull(activityId, "Required parameter activityId must be specified.");
-      }
-
-      @Override
-      public Insert setAlt(java.lang.String alt) {
-        return (Insert) super.setAlt(alt);
-      }
-
-      @Override
-      public Insert setFields(java.lang.String fields) {
-        return (Insert) super.setFields(fields);
-      }
-
-      @Override
-      public Insert setKey(java.lang.String key) {
-        return (Insert) super.setKey(key);
-      }
-
-      @Override
-      public Insert setOauthToken(java.lang.String oauthToken) {
-        return (Insert) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Insert) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Insert setQuotaUser(java.lang.String quotaUser) {
-        return (Insert) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
-      }
-
-      /** The ID of the activity to reply to. */
-      @com.google.api.client.util.Key
-      private java.lang.String activityId;
-
-      /** The ID of the activity to reply to.
-       */
-      public java.lang.String getActivityId() {
-        return activityId;
-      }
-
-      /** The ID of the activity to reply to. */
-      public Insert setActivityId(java.lang.String activityId) {
-        this.activityId = activityId;
-        return this;
-      }
-
-      @Override
-      public Insert set(String parameterName, Object value) {
-        return (Insert) super.set(parameterName, value);
-      }
-    }
-    /**
-     * List all of the comments for an activity.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "comments.list".
      *
@@ -1049,7 +951,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "activities/{activityId}/comments";
 
       /**
-       * List all of the comments for an activity.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "comments.list".
        *
@@ -1221,9 +1123,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
   public class Media {
 
     /**
-     * Add a new media item to an album. The current upload size limitations are 36MB for a photo and
-     * 1GB for a video. Uploads do not count against quota if photos are less than 2048 pixels on their
-     * longest side or videos are less than 15 minutes in length.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "media.insert".
      *
@@ -1242,9 +1142,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
     }
 
     /**
-     * Add a new media item to an album. The current upload size limitations are 36MB for a photo and
-     * 1GB for a video. Uploads do not count against quota if photos are less than 2048 pixels on their
-     * longest side or videos are less than 15 minutes in length.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "media.insert".
      *
@@ -1272,9 +1170,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "people/{userId}/media/{collection}";
 
       /**
-       * Add a new media item to an album. The current upload size limitations are 36MB for a photo and
-       * 1GB for a video. Uploads do not count against quota if photos are less than 2048 pixels on
-       * their longest side or videos are less than 15 minutes in length.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "media.insert".
        *
@@ -1296,9 +1192,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       }
 
       /**
-       * Add a new media item to an album. The current upload size limitations are 36MB for a photo and
-       * 1GB for a video. Uploads do not count against quota if photos are less than 2048 pixels on
-       * their longest side or videos are less than 15 minutes in length.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "media.insert".
        *
@@ -1729,7 +1623,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * List all of the people in the specified collection for a particular activity.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "people.listByActivity".
      *
@@ -1751,7 +1645,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "activities/{activityId}/people/{collection}";
 
       /**
-       * List all of the people in the specified collection for a particular activity.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "people.listByActivity".
        *
@@ -1903,7 +1797,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * List all of the people who are members of a circle.
+     * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      *
      * Create a request for the method "people.listByCircle".
      *
@@ -1924,7 +1818,7 @@ public class PlusDomains extends com.google.api.client.googleapis.services.json.
       private static final String REST_PATH = "circles/{circleId}/people";
 
       /**
-       * List all of the people who are members of a circle.
+       * Shut down. See https://developers.google.com/+/api-shutdown for more details.
        *
        * Create a request for the method "people.listByCircle".
        *

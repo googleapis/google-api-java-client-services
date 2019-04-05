@@ -41,9 +41,6 @@ public class PlusDomainsScopes {
   /** View your Google+ posts, comments, and stream. */
   public static final String PLUS_STREAM_READ = "https://www.googleapis.com/auth/plus.stream.read";
 
-  /** Manage your Google+ posts, comments, and stream. */
-  public static final String PLUS_STREAM_WRITE = "https://www.googleapis.com/auth/plus.stream.write";
-
   /** View your email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
@@ -63,7 +60,6 @@ public class PlusDomainsScopes {
     set.add(PLUS_MEDIA_UPLOAD);
     set.add(PLUS_PROFILES_READ);
     set.add(PLUS_STREAM_READ);
-    set.add(PLUS_STREAM_WRITE);
     set.add(USERINFO_EMAIL);
     set.add(USERINFO_PROFILE);
     return java.util.Collections.unmodifiableSet(set);

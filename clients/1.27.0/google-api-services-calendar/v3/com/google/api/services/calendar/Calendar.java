@@ -4830,28 +4830,28 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Upper bound (exclusive) for an event's start time to filter by. Optional. The default is
-       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
-       * e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
-       * will be ignored. If timeMin is set, timeMax must be greater than timeMin.
+       * Upper bound (exclusive) for an event's end time to filter by. Optional. The default is not
+       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for
+       * example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
+       * are ignored. If timeMin is set, timeMax must be greater than timeMin.
        */
       @com.google.api.client.util.Key
       private com.google.api.client.util.DateTime timeMax;
 
-      /** Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to
-     filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored.
-     If timeMin is set, timeMax must be greater than timeMin.
+      /** Upper bound (exclusive) for an event's end time to filter by. Optional. The default is not to
+     filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for example,
+     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If
+     timeMin is set, timeMax must be greater than timeMin.
        */
       public com.google.api.client.util.DateTime getTimeMax() {
         return timeMax;
       }
 
       /**
-       * Upper bound (exclusive) for an event's start time to filter by. Optional. The default is
-       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
-       * e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
-       * will be ignored. If timeMin is set, timeMax must be greater than timeMin.
+       * Upper bound (exclusive) for an event's end time to filter by. Optional. The default is not
+       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for
+       * example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
+       * are ignored. If timeMin is set, timeMax must be greater than timeMin.
        */
       public List setTimeMax(com.google.api.client.util.DateTime timeMax) {
         this.timeMax = timeMax;
@@ -4859,28 +4859,28 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not
-       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-       * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be
-       * ignored. If timeMax is set, timeMin must be smaller than timeMax.
+       * Lower bound (inclusive) for an event's start time to filter by. Optional. The default is
+       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
+       * for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
+       * but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
        */
       @com.google.api.client.util.Key
       private com.google.api.client.util.DateTime timeMin;
 
-      /** Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to
-     filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored.
-     If timeMax is set, timeMin must be smaller than timeMax.
+      /** Lower bound (inclusive) for an event's start time to filter by. Optional. The default is not to
+     filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, for example,
+     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If
+     timeMax is set, timeMin must be smaller than timeMax.
        */
       public com.google.api.client.util.DateTime getTimeMin() {
         return timeMin;
       }
 
       /**
-       * Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not
-       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-       * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be
-       * ignored. If timeMax is set, timeMin must be smaller than timeMax.
+       * Lower bound (inclusive) for an event's start time to filter by. Optional. The default is
+       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
+       * for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
+       * but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
        */
       public List setTimeMin(com.google.api.client.util.DateTime timeMin) {
         this.timeMin = timeMin;
@@ -6314,28 +6314,28 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Upper bound (exclusive) for an event's start time to filter by. Optional. The default is
-       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
-       * e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
-       * will be ignored. If timeMin is set, timeMax must be greater than timeMin.
+       * Upper bound (exclusive) for an event's end time to filter by. Optional. The default is not
+       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for
+       * example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
+       * are ignored. If timeMin is set, timeMax must be greater than timeMin.
        */
       @com.google.api.client.util.Key
       private com.google.api.client.util.DateTime timeMax;
 
-      /** Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to
-     filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored.
-     If timeMin is set, timeMax must be greater than timeMin.
+      /** Upper bound (exclusive) for an event's end time to filter by. Optional. The default is not to
+     filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for example,
+     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If
+     timeMin is set, timeMax must be greater than timeMin.
        */
       public com.google.api.client.util.DateTime getTimeMax() {
         return timeMax;
       }
 
       /**
-       * Upper bound (exclusive) for an event's start time to filter by. Optional. The default is
-       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
-       * e.g., 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
-       * will be ignored. If timeMin is set, timeMax must be greater than timeMin.
+       * Upper bound (exclusive) for an event's end time to filter by. Optional. The default is not
+       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for
+       * example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but
+       * are ignored. If timeMin is set, timeMax must be greater than timeMin.
        */
       public Watch setTimeMax(com.google.api.client.util.DateTime timeMax) {
         this.timeMax = timeMax;
@@ -6343,28 +6343,28 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not
-       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-       * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be
-       * ignored. If timeMax is set, timeMin must be smaller than timeMax.
+       * Lower bound (inclusive) for an event's start time to filter by. Optional. The default is
+       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
+       * for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
+       * but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
        */
       @com.google.api.client.util.Key
       private com.google.api.client.util.DateTime timeMin;
 
-      /** Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to
-     filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be ignored.
-     If timeMax is set, timeMin must be smaller than timeMax.
+      /** Lower bound (inclusive) for an event's start time to filter by. Optional. The default is not to
+     filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, for example,
+     2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If
+     timeMax is set, timeMin must be smaller than timeMax.
        */
       public com.google.api.client.util.DateTime getTimeMin() {
         return timeMin;
       }
 
       /**
-       * Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not
-       * to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, e.g.,
-       * 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but will be
-       * ignored. If timeMax is set, timeMin must be smaller than timeMax.
+       * Lower bound (inclusive) for an event's start time to filter by. Optional. The default is
+       * not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset,
+       * for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided
+       * but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
        */
       public Watch setTimeMin(com.google.api.client.util.DateTime timeMin) {
         this.timeMin = timeMin;

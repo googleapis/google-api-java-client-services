@@ -78,15 +78,6 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then
-   * checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions'
-   * when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isInternal;
-
-  /**
    * The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the
    * configuration. The following monitored resource types are supported for uptime checks:
    * uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
@@ -225,27 +216,6 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
    */
   public UptimeCheckConfig setInternalCheckers(java.util.List<InternalChecker> internalCheckers) {
     this.internalCheckers = internalCheckers;
-    return this;
-  }
-
-  /**
-   * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then
-   * checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions'
-   * when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsInternal() {
-    return isInternal;
-  }
-
-  /**
-   * If this is true, then checks are made only from the 'internal_checkers'. If it is false, then
-   * checks are made only from the 'selected_regions'. It is an error to provide 'selected_regions'
-   * when is_internal is true, or to provide 'internal_checkers' when is_internal is false.
-   * @param isInternal isInternal or {@code null} for none
-   */
-  public UptimeCheckConfig setIsInternal(java.lang.Boolean isInternal) {
-    this.isInternal = isInternal;
     return this;
   }
 

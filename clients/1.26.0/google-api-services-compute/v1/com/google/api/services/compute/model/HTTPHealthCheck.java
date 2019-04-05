@@ -54,6 +54,19 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
   private java.lang.String portName;
 
   /**
+   * Specifies how port is selected for health checking, can be one of following values:
+   * USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The
+   * portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port
+   * specified for each network endpoint is used for health checking. For other backends, the port
+   * or named port specified in the Backend Service is used for health checking.
+   *
+   * If not specified, HTTP health check follows behavior specified in port and portName fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String portSpecification;
+
+  /**
    * Specifies the type of proxy header to append before sending data to the backend, either NONE or
    * PROXY_V1. The default is NONE.
    * The value may be {@code null}.
@@ -130,6 +143,35 @@ public final class HTTPHealthCheck extends com.google.api.client.json.GenericJso
    */
   public HTTPHealthCheck setPortName(java.lang.String portName) {
     this.portName = portName;
+    return this;
+  }
+
+  /**
+   * Specifies how port is selected for health checking, can be one of following values:
+   * USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The
+   * portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port
+   * specified for each network endpoint is used for health checking. For other backends, the port
+   * or named port specified in the Backend Service is used for health checking.
+   *
+   * If not specified, HTTP health check follows behavior specified in port and portName fields.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPortSpecification() {
+    return portSpecification;
+  }
+
+  /**
+   * Specifies how port is selected for health checking, can be one of following values:
+   * USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The
+   * portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port
+   * specified for each network endpoint is used for health checking. For other backends, the port
+   * or named port specified in the Backend Service is used for health checking.
+   *
+   * If not specified, HTTP health check follows behavior specified in port and portName fields.
+   * @param portSpecification portSpecification or {@code null} for none
+   */
+  public HTTPHealthCheck setPortSpecification(java.lang.String portSpecification) {
+    this.portSpecification = portSpecification;
     return this;
   }
 

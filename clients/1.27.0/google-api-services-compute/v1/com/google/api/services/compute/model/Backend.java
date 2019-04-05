@@ -93,6 +93,18 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxConnections;
 
   /**
+   * The max number of simultaneous connections that a single backend network endpoint can handle.
+   * This is used to calculate the capacity of the group. Can be used in either CONNECTION or
+   * UTILIZATION balancing modes. For CONNECTION mode, either maxConnections or
+   * maxConnectionsPerEndpoint must be set.
+   *
+   * This cannot be used for internal load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConnectionsPerEndpoint;
+
+  /**
    * The max number of simultaneous connections that a single backend instance can handle. This is
    * used to calculate the capacity of the group. Can be used in either CONNECTION or UTILIZATION
    * balancing modes. For CONNECTION mode, either maxConnections or maxConnectionsPerInstance must
@@ -114,6 +126,17 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxRate;
+
+  /**
+   * The max requests per second (RPS) that a single backend network endpoint can handle. This is
+   * used to calculate the capacity of the group. Can be used in either balancing mode. For RATE
+   * mode, either maxRate or maxRatePerEndpoint must be set.
+   *
+   * This cannot be used for internal load balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float maxRatePerEndpoint;
 
   /**
    * The max requests per second (RPS) that a single backend instance can handle. This is used to
@@ -278,6 +301,33 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The max number of simultaneous connections that a single backend network endpoint can handle.
+   * This is used to calculate the capacity of the group. Can be used in either CONNECTION or
+   * UTILIZATION balancing modes. For CONNECTION mode, either maxConnections or
+   * maxConnectionsPerEndpoint must be set.
+   *
+   * This cannot be used for internal load balancing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConnectionsPerEndpoint() {
+    return maxConnectionsPerEndpoint;
+  }
+
+  /**
+   * The max number of simultaneous connections that a single backend network endpoint can handle.
+   * This is used to calculate the capacity of the group. Can be used in either CONNECTION or
+   * UTILIZATION balancing modes. For CONNECTION mode, either maxConnections or
+   * maxConnectionsPerEndpoint must be set.
+   *
+   * This cannot be used for internal load balancing.
+   * @param maxConnectionsPerEndpoint maxConnectionsPerEndpoint or {@code null} for none
+   */
+  public Backend setMaxConnectionsPerEndpoint(java.lang.Integer maxConnectionsPerEndpoint) {
+    this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
+    return this;
+  }
+
+  /**
    * The max number of simultaneous connections that a single backend instance can handle. This is
    * used to calculate the capacity of the group. Can be used in either CONNECTION or UTILIZATION
    * balancing modes. For CONNECTION mode, either maxConnections or maxConnectionsPerInstance must
@@ -326,6 +376,31 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setMaxRate(java.lang.Integer maxRate) {
     this.maxRate = maxRate;
+    return this;
+  }
+
+  /**
+   * The max requests per second (RPS) that a single backend network endpoint can handle. This is
+   * used to calculate the capacity of the group. Can be used in either balancing mode. For RATE
+   * mode, either maxRate or maxRatePerEndpoint must be set.
+   *
+   * This cannot be used for internal load balancing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getMaxRatePerEndpoint() {
+    return maxRatePerEndpoint;
+  }
+
+  /**
+   * The max requests per second (RPS) that a single backend network endpoint can handle. This is
+   * used to calculate the capacity of the group. Can be used in either balancing mode. For RATE
+   * mode, either maxRate or maxRatePerEndpoint must be set.
+   *
+   * This cannot be used for internal load balancing.
+   * @param maxRatePerEndpoint maxRatePerEndpoint or {@code null} for none
+   */
+  public Backend setMaxRatePerEndpoint(java.lang.Float maxRatePerEndpoint) {
+    this.maxRatePerEndpoint = maxRatePerEndpoint;
     return this;
   }
 

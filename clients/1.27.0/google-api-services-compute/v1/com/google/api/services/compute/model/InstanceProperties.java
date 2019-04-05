@@ -131,6 +131,12 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<ServiceAccount> serviceAccounts;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
    * A list of tags to apply to the instances that are created from this template. The tags identify
    * valid sources or targets for network firewalls. The setTags method can modify this list of
    * tags. Each tag within the list must comply with RFC1035.
@@ -347,6 +353,21 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setServiceAccounts(java.util.List<ServiceAccount> serviceAccounts) {
     this.serviceAccounts = serviceAccounts;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public InstanceProperties setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

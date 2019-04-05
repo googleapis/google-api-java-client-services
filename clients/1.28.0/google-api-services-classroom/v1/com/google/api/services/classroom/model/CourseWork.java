@@ -194,6 +194,14 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
+   * Identifier for the topic that this coursework is associated with. Must match an existing topic
+   * in the course.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String topicId;
+
+  /**
    * Timestamp of the most recent change to this course work.
    *
    * Read-only.
@@ -593,6 +601,25 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    */
   public CourseWork setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * Identifier for the topic that this coursework is associated with. Must match an existing topic
+   * in the course.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTopicId() {
+    return topicId;
+  }
+
+  /**
+   * Identifier for the topic that this coursework is associated with. Must match an existing topic
+   * in the course.
+   * @param topicId topicId or {@code null} for none
+   */
+  public CourseWork setTopicId(java.lang.String topicId) {
+    this.topicId = topicId;
     return this;
   }
 

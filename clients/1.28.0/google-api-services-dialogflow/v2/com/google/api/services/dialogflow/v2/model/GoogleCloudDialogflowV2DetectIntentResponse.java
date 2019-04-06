@@ -30,6 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2DetectIntentResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outputAudio;
+
+  /**
+   * The config used by the speech synthesizer to generate the output audio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig;
+
+  /**
    * The selected results of the conversational query or event processing. See
    * `alternative_query_results` for additional potential results.
    * The value may be {@code null}.
@@ -51,6 +69,84 @@ public final class GoogleCloudDialogflowV2DetectIntentResponse extends com.googl
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus webhookStatus;
+
+  /**
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
+   * @see #decodeOutputAudio()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutputAudio() {
+    return outputAudio;
+  }
+
+  /**
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
+   * @see #getOutputAudio()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeOutputAudio() {
+    return com.google.api.client.util.Base64.decodeBase64(outputAudio);
+  }
+
+  /**
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
+   * @see #encodeOutputAudio()
+   * @param outputAudio outputAudio or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2DetectIntentResponse setOutputAudio(java.lang.String outputAudio) {
+    this.outputAudio = outputAudio;
+    return this;
+  }
+
+  /**
+   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
+   * based on the values of default platform text responses found in the
+   * `query_result.fulfillment_messages` field. If multiple default text responses exist, they will
+   * be concatenated when generating audio. If no default platform text responses exist, the
+   * generated audio content will be empty.
+   * @see #setOutputAudio()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudDialogflowV2DetectIntentResponse encodeOutputAudio(byte[] outputAudio) {
+    this.outputAudio = com.google.api.client.util.Base64.encodeBase64URLSafeString(outputAudio);
+    return this;
+  }
+
+  /**
+   * The config used by the speech synthesizer to generate the output audio.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2OutputAudioConfig getOutputAudioConfig() {
+    return outputAudioConfig;
+  }
+
+  /**
+   * The config used by the speech synthesizer to generate the output audio.
+   * @param outputAudioConfig outputAudioConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2DetectIntentResponse setOutputAudioConfig(GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig) {
+    this.outputAudioConfig = outputAudioConfig;
+    return this;
+  }
 
   /**
    * The selected results of the conversational query or event processing. See

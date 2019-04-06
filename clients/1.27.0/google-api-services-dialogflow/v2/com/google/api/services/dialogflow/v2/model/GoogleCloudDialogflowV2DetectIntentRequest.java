@@ -39,6 +39,14 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   private java.lang.String inputAudio;
 
   /**
+   * Optional. Instructs the speech synthesizer how to generate the output audio. If this field is
+   * not set and agent-level speech synthesizer is not configured, no output audio is generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig;
+
+  /**
    * Required. The input specification. It can be set to:
    *
    * 1.  an audio config     which instructs the speech recognizer how to process the speech audio,
@@ -108,6 +116,25 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
    */
   public GoogleCloudDialogflowV2DetectIntentRequest encodeInputAudio(byte[] inputAudio) {
     this.inputAudio = com.google.api.client.util.Base64.encodeBase64URLSafeString(inputAudio);
+    return this;
+  }
+
+  /**
+   * Optional. Instructs the speech synthesizer how to generate the output audio. If this field is
+   * not set and agent-level speech synthesizer is not configured, no output audio is generated.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2OutputAudioConfig getOutputAudioConfig() {
+    return outputAudioConfig;
+  }
+
+  /**
+   * Optional. Instructs the speech synthesizer how to generate the output audio. If this field is
+   * not set and agent-level speech synthesizer is not configured, no output audio is generated.
+   * @param outputAudioConfig outputAudioConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2DetectIntentRequest setOutputAudioConfig(GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig) {
+    this.outputAudioConfig = outputAudioConfig;
     return this;
   }
 

@@ -66,6 +66,14 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
   private java.lang.Boolean resetContexts;
 
   /**
+   * Optional. Configures the type of sentiment analysis to perform. If not provided, sentiment
+   * analysis is not performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig;
+
+  /**
    * Optional. Additional session entity types to replace or extend developer entity types with. The
    * entity synonyms apply to all languages and persist for the session of this query.
    * The value may be {@code null}.
@@ -151,6 +159,25 @@ public final class GoogleCloudDialogflowV2QueryParameters extends com.google.api
    */
   public GoogleCloudDialogflowV2QueryParameters setResetContexts(java.lang.Boolean resetContexts) {
     this.resetContexts = resetContexts;
+    return this;
+  }
+
+  /**
+   * Optional. Configures the type of sentiment analysis to perform. If not provided, sentiment
+   * analysis is not performed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SentimentAnalysisRequestConfig getSentimentAnalysisRequestConfig() {
+    return sentimentAnalysisRequestConfig;
+  }
+
+  /**
+   * Optional. Configures the type of sentiment analysis to perform. If not provided, sentiment
+   * analysis is not performed.
+   * @param sentimentAnalysisRequestConfig sentimentAnalysisRequestConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2QueryParameters setSentimentAnalysisRequestConfig(GoogleCloudDialogflowV2SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig) {
+    this.sentimentAnalysisRequestConfig = sentimentAnalysisRequestConfig;
     return this;
   }
 

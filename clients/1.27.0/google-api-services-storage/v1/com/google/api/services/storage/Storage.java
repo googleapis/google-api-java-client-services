@@ -9143,6 +9143,679 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
   public class Projects {
 
     /**
+     * An accessor for creating requests from the HmacKeys collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Storage storage = new Storage(...);}
+     *   {@code Storage.HmacKeys.List request = storage.hmacKeys().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public HmacKeys hmacKeys() {
+      return new HmacKeys();
+    }
+
+    /**
+     * The "hmacKeys" collection of methods.
+     */
+    public class HmacKeys {
+
+      /**
+       * Creates a new HMAC key for the specified service account.
+       *
+       * Create a request for the method "hmacKeys.create".
+       *
+       * This request holds the parameters needed by the storage server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project ID owning the service account.
+       * @param serviceAccountEmail Email address of the service account.
+       * @return the request
+       */
+      public Create create(java.lang.String projectId, java.lang.String serviceAccountEmail) throws java.io.IOException {
+        Create result = new Create(projectId, serviceAccountEmail);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends StorageRequest<com.google.api.services.storage.model.HmacKey> {
+
+        private static final String REST_PATH = "projects/{projectId}/hmacKeys";
+
+        /**
+         * Creates a new HMAC key for the specified service account.
+         *
+         * Create a request for the method "hmacKeys.create".
+         *
+         * This request holds the parameters needed by the the storage server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project ID owning the service account.
+         * @param serviceAccountEmail Email address of the service account.
+         * @since 1.13
+         */
+        protected Create(java.lang.String projectId, java.lang.String serviceAccountEmail) {
+          super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.HmacKey.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.serviceAccountEmail = com.google.api.client.util.Preconditions.checkNotNull(serviceAccountEmail, "Required parameter serviceAccountEmail must be specified.");
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUserIp(java.lang.String userIp) {
+          return (Create) super.setUserIp(userIp);
+        }
+
+        /** Project ID owning the service account. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project ID owning the service account.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project ID owning the service account. */
+        public Create setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** Email address of the service account. */
+        @com.google.api.client.util.Key
+        private java.lang.String serviceAccountEmail;
+
+        /** Email address of the service account.
+         */
+        public java.lang.String getServiceAccountEmail() {
+          return serviceAccountEmail;
+        }
+
+        /** Email address of the service account. */
+        public Create setServiceAccountEmail(java.lang.String serviceAccountEmail) {
+          this.serviceAccountEmail = serviceAccountEmail;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an HMAC key.
+       *
+       * Create a request for the method "hmacKeys.delete".
+       *
+       * This request holds the parameters needed by the storage server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project ID owning the requested key
+       * @param accessId Name of the HMAC key to be deleted.
+       * @return the request
+       */
+      public Delete delete(java.lang.String projectId, java.lang.String accessId) throws java.io.IOException {
+        Delete result = new Delete(projectId, accessId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends StorageRequest<Void> {
+
+        private static final String REST_PATH = "projects/{projectId}/hmacKeys/{accessId}";
+
+        /**
+         * Deletes an HMAC key.
+         *
+         * Create a request for the method "hmacKeys.delete".
+         *
+         * This request holds the parameters needed by the the storage server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project ID owning the requested key
+         * @param accessId Name of the HMAC key to be deleted.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String projectId, java.lang.String accessId) {
+          super(Storage.this, "DELETE", REST_PATH, null, Void.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.accessId = com.google.api.client.util.Preconditions.checkNotNull(accessId, "Required parameter accessId must be specified.");
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUserIp(java.lang.String userIp) {
+          return (Delete) super.setUserIp(userIp);
+        }
+
+        /** Project ID owning the requested key */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project ID owning the requested key
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project ID owning the requested key */
+        public Delete setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** Name of the HMAC key to be deleted. */
+        @com.google.api.client.util.Key
+        private java.lang.String accessId;
+
+        /** Name of the HMAC key to be deleted.
+         */
+        public java.lang.String getAccessId() {
+          return accessId;
+        }
+
+        /** Name of the HMAC key to be deleted. */
+        public Delete setAccessId(java.lang.String accessId) {
+          this.accessId = accessId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves an HMAC key's metadata
+       *
+       * Create a request for the method "hmacKeys.get".
+       *
+       * This request holds the parameters needed by the storage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project ID owning the service account of the requested key.
+       * @param accessId Name of the HMAC key.
+       * @return the request
+       */
+      public Get get(java.lang.String projectId, java.lang.String accessId) throws java.io.IOException {
+        Get result = new Get(projectId, accessId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends StorageRequest<com.google.api.services.storage.model.HmacKeyMetadata> {
+
+        private static final String REST_PATH = "projects/{projectId}/hmacKeys/{accessId}";
+
+        /**
+         * Retrieves an HMAC key's metadata
+         *
+         * Create a request for the method "hmacKeys.get".
+         *
+         * This request holds the parameters needed by the the storage server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project ID owning the service account of the requested key.
+         * @param accessId Name of the HMAC key.
+         * @since 1.13
+         */
+        protected Get(java.lang.String projectId, java.lang.String accessId) {
+          super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.HmacKeyMetadata.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.accessId = com.google.api.client.util.Preconditions.checkNotNull(accessId, "Required parameter accessId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUserIp(java.lang.String userIp) {
+          return (Get) super.setUserIp(userIp);
+        }
+
+        /** Project ID owning the service account of the requested key. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project ID owning the service account of the requested key.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project ID owning the service account of the requested key. */
+        public Get setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** Name of the HMAC key. */
+        @com.google.api.client.util.Key
+        private java.lang.String accessId;
+
+        /** Name of the HMAC key.
+         */
+        public java.lang.String getAccessId() {
+          return accessId;
+        }
+
+        /** Name of the HMAC key. */
+        public Get setAccessId(java.lang.String accessId) {
+          this.accessId = accessId;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a list of HMAC keys matching the criteria.
+       *
+       * Create a request for the method "hmacKeys.list".
+       *
+       * This request holds the parameters needed by the storage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Name of the project in which to look for HMAC keys.
+       * @return the request
+       */
+      public List list(java.lang.String projectId) throws java.io.IOException {
+        List result = new List(projectId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends StorageRequest<com.google.api.services.storage.model.HmacKeysMetadata> {
+
+        private static final String REST_PATH = "projects/{projectId}/hmacKeys";
+
+        /**
+         * Retrieves a list of HMAC keys matching the criteria.
+         *
+         * Create a request for the method "hmacKeys.list".
+         *
+         * This request holds the parameters needed by the the storage server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Name of the project in which to look for HMAC keys.
+         * @since 1.13
+         */
+        protected List(java.lang.String projectId) {
+          super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.HmacKeysMetadata.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUserIp(java.lang.String userIp) {
+          return (List) super.setUserIp(userIp);
+        }
+
+        /** Name of the project in which to look for HMAC keys. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Name of the project in which to look for HMAC keys.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Name of the project in which to look for HMAC keys. */
+        public List setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /**
+         * Maximum number of items plus prefixes to return in a single page of responses. Because
+         * duplicate prefixes are omitted, fewer total results may be returned than requested. The
+         * service uses this parameter or 1,000 items, whichever is smaller.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long maxResults;
+
+        /** Maximum number of items plus prefixes to return in a single page of responses. Because duplicate
+       prefixes are omitted, fewer total results may be returned than requested. The service uses this
+       parameter or 1,000 items, whichever is smaller. [default: 1000] [minimum: 0]
+         */
+        public java.lang.Long getMaxResults() {
+          return maxResults;
+        }
+
+        /**
+         * Maximum number of items plus prefixes to return in a single page of responses. Because
+         * duplicate prefixes are omitted, fewer total results may be returned than requested. The
+         * service uses this parameter or 1,000 items, whichever is smaller.
+         */
+        public List setMaxResults(java.lang.Long maxResults) {
+          this.maxResults = maxResults;
+          return this;
+        }
+
+        /**
+         * A previously-returned page token representing part of the larger set of results to view.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A previously-returned page token representing part of the larger set of results to view.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A previously-returned page token representing part of the larger set of results to view.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /** If present, only keys for the given service account are returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String serviceAccountEmail;
+
+        /** If present, only keys for the given service account are returned.
+         */
+        public java.lang.String getServiceAccountEmail() {
+          return serviceAccountEmail;
+        }
+
+        /** If present, only keys for the given service account are returned. */
+        public List setServiceAccountEmail(java.lang.String serviceAccountEmail) {
+          this.serviceAccountEmail = serviceAccountEmail;
+          return this;
+        }
+
+        /** Whether or not to show keys in the DELETED state. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeletedKeys;
+
+        /** Whether or not to show keys in the DELETED state.
+         */
+        public java.lang.Boolean getShowDeletedKeys() {
+          return showDeletedKeys;
+        }
+
+        /** Whether or not to show keys in the DELETED state. */
+        public List setShowDeletedKeys(java.lang.Boolean showDeletedKeys) {
+          this.showDeletedKeys = showDeletedKeys;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
+       *
+       * Create a request for the method "hmacKeys.update".
+       *
+       * This request holds the parameters needed by the storage server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project ID owning the service account of the updated key.
+       * @param accessId Name of the HMAC key being updated.
+       * @param content the {@link com.google.api.services.storage.model.HmacKeyMetadata}
+       * @return the request
+       */
+      public Update update(java.lang.String projectId, java.lang.String accessId, com.google.api.services.storage.model.HmacKeyMetadata content) throws java.io.IOException {
+        Update result = new Update(projectId, accessId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Update extends StorageRequest<com.google.api.services.storage.model.HmacKeyMetadata> {
+
+        private static final String REST_PATH = "projects/{projectId}/hmacKeys/{accessId}";
+
+        /**
+         * Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
+         *
+         * Create a request for the method "hmacKeys.update".
+         *
+         * This request holds the parameters needed by the the storage server.  After setting any optional
+         * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project ID owning the service account of the updated key.
+         * @param accessId Name of the HMAC key being updated.
+         * @param content the {@link com.google.api.services.storage.model.HmacKeyMetadata}
+         * @since 1.13
+         */
+        protected Update(java.lang.String projectId, java.lang.String accessId, com.google.api.services.storage.model.HmacKeyMetadata content) {
+          super(Storage.this, "PUT", REST_PATH, content, com.google.api.services.storage.model.HmacKeyMetadata.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.accessId = com.google.api.client.util.Preconditions.checkNotNull(accessId, "Required parameter accessId must be specified.");
+        }
+
+        @Override
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
+        }
+
+        @Override
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
+        }
+
+        @Override
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Update setUserIp(java.lang.String userIp) {
+          return (Update) super.setUserIp(userIp);
+        }
+
+        /** Project ID owning the service account of the updated key. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project ID owning the service account of the updated key.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project ID owning the service account of the updated key. */
+        public Update setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** Name of the HMAC key being updated. */
+        @com.google.api.client.util.Key
+        private java.lang.String accessId;
+
+        /** Name of the HMAC key being updated.
+         */
+        public java.lang.String getAccessId() {
+          return accessId;
+        }
+
+        /** Name of the HMAC key being updated. */
+        public Update setAccessId(java.lang.String accessId) {
+          this.accessId = accessId;
+          return this;
+        }
+
+        @Override
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the ServiceAccount collection.
      *
      * <p>The typical use is:</p>

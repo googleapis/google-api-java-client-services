@@ -133,6 +133,14 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   private java.lang.String queryText;
 
   /**
+   * The sentiment analysis result, which depends on the `sentiment_analysis_request_config`
+   * specified in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysisResult;
+
+  /**
    * The Speech recognition confidence between 0.0 and 1.0. A higher number indicates an estimated
    * greater likelihood that the recognized words are correct. The default of 0.0 is a sentinel
    * value indicating that confidence was not set.
@@ -373,6 +381,25 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
    */
   public GoogleCloudDialogflowV2QueryResult setQueryText(java.lang.String queryText) {
     this.queryText = queryText;
+    return this;
+  }
+
+  /**
+   * The sentiment analysis result, which depends on the `sentiment_analysis_request_config`
+   * specified in the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SentimentAnalysisResult getSentimentAnalysisResult() {
+    return sentimentAnalysisResult;
+  }
+
+  /**
+   * The sentiment analysis result, which depends on the `sentiment_analysis_request_config`
+   * specified in the request.
+   * @param sentimentAnalysisResult sentimentAnalysisResult or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2QueryResult setSentimentAnalysisResult(GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysisResult) {
+    this.sentimentAnalysisResult = sentimentAnalysisResult;
     return this;
   }
 

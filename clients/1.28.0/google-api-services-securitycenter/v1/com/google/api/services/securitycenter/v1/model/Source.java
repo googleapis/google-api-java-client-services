@@ -43,7 +43,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The source’s display name. A source’s display name must be unique amongst its siblings, for
+   * The source's display name. A source's display name must be unique amongst its siblings, for
    * example, two sources with the same parent can't share the same display name. The display name
    * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens, and
    * underscores, and can be no longer than 32 characters. This is captured by the regular
@@ -86,7 +86,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source’s display name. A source’s display name must be unique amongst its siblings, for
+   * The source's display name. A source's display name must be unique amongst its siblings, for
    * example, two sources with the same parent can't share the same display name. The display name
    * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens, and
    * underscores, and can be no longer than 32 characters. This is captured by the regular
@@ -98,7 +98,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source’s display name. A source’s display name must be unique amongst its siblings, for
+   * The source's display name. A source's display name must be unique amongst its siblings, for
    * example, two sources with the same parent can't share the same display name. The display name
    * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens, and
    * underscores, and can be no longer than 32 characters. This is captured by the regular

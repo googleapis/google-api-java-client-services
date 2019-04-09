@@ -54,6 +54,22 @@ public final class DeviceClaim extends com.google.api.client.json.GenericJson {
   private java.lang.String sectionType;
 
   /**
+   * The timestamp when the device will exit ‘vacation mode’. This value is present iff the device
+   * is in 'vacation mode'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String vacationModeExpireTime;
+
+  /**
+   * The timestamp when the device was put into ‘vacation mode’. This value is present iff the
+   * device is in 'vacation mode'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String vacationModeStartTime;
+
+  /**
    * The ID of the Customer that purchased the device.
    * @return value or {@code null} for none
    */
@@ -101,6 +117,44 @@ public final class DeviceClaim extends com.google.api.client.json.GenericJson {
    */
   public DeviceClaim setSectionType(java.lang.String sectionType) {
     this.sectionType = sectionType;
+    return this;
+  }
+
+  /**
+   * The timestamp when the device will exit ‘vacation mode’. This value is present iff the device
+   * is in 'vacation mode'.
+   * @return value or {@code null} for none
+   */
+  public String getVacationModeExpireTime() {
+    return vacationModeExpireTime;
+  }
+
+  /**
+   * The timestamp when the device will exit ‘vacation mode’. This value is present iff the device
+   * is in 'vacation mode'.
+   * @param vacationModeExpireTime vacationModeExpireTime or {@code null} for none
+   */
+  public DeviceClaim setVacationModeExpireTime(String vacationModeExpireTime) {
+    this.vacationModeExpireTime = vacationModeExpireTime;
+    return this;
+  }
+
+  /**
+   * The timestamp when the device was put into ‘vacation mode’. This value is present iff the
+   * device is in 'vacation mode'.
+   * @return value or {@code null} for none
+   */
+  public String getVacationModeStartTime() {
+    return vacationModeStartTime;
+  }
+
+  /**
+   * The timestamp when the device was put into ‘vacation mode’. This value is present iff the
+   * device is in 'vacation mode'.
+   * @param vacationModeStartTime vacationModeStartTime or {@code null} for none
+   */
+  public DeviceClaim setVacationModeStartTime(String vacationModeStartTime) {
+    this.vacationModeStartTime = vacationModeStartTime;
     return this;
   }
 

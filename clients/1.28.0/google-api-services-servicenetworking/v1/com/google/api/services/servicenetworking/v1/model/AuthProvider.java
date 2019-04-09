@@ -17,7 +17,7 @@
 package com.google.api.services.servicenetworking.v1.model;
 
 /**
- * Configuration for an anthentication provider, including support for [JSON Web Token
+ * Configuration for an authentication provider, including support for [JSON Web Token
  * (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -52,6 +52,21 @@ public final class UnclaimDeviceRequest extends com.google.api.client.json.Gener
   private java.lang.String sectionType;
 
   /**
+   * The duration of the vacation unlock starting from when the request is processed. (1 day is
+   * treated as 24 hours)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer vacationModeDays;
+
+  /**
+   * The expiration time of the vacation unlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String vacationModeExpireTime;
+
+  /**
    * The device ID returned by `ClaimDevice`.
    * @return value or {@code null} for none
    */
@@ -99,6 +114,42 @@ public final class UnclaimDeviceRequest extends com.google.api.client.json.Gener
    */
   public UnclaimDeviceRequest setSectionType(java.lang.String sectionType) {
     this.sectionType = sectionType;
+    return this;
+  }
+
+  /**
+   * The duration of the vacation unlock starting from when the request is processed. (1 day is
+   * treated as 24 hours)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVacationModeDays() {
+    return vacationModeDays;
+  }
+
+  /**
+   * The duration of the vacation unlock starting from when the request is processed. (1 day is
+   * treated as 24 hours)
+   * @param vacationModeDays vacationModeDays or {@code null} for none
+   */
+  public UnclaimDeviceRequest setVacationModeDays(java.lang.Integer vacationModeDays) {
+    this.vacationModeDays = vacationModeDays;
+    return this;
+  }
+
+  /**
+   * The expiration time of the vacation unlock.
+   * @return value or {@code null} for none
+   */
+  public String getVacationModeExpireTime() {
+    return vacationModeExpireTime;
+  }
+
+  /**
+   * The expiration time of the vacation unlock.
+   * @param vacationModeExpireTime vacationModeExpireTime or {@code null} for none
+   */
+  public UnclaimDeviceRequest setVacationModeExpireTime(String vacationModeExpireTime) {
+    this.vacationModeExpireTime = vacationModeExpireTime;
     return this;
   }
 

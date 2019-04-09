@@ -614,8 +614,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Report events issued when end user interacts with customer's application that uses Cloud Talent
        * Solution. You may inspect the created events in [self service
        * tools](https://console.cloud.google.com/talent-solution/overview). [Learn
-       * more](https://cloud.google.com/talent-solution/job-search/docs/management-tools) about self
-       * service tools.
+       * more](https://cloud.google.com/talent-solution/docs/management-tools) about self service tools.
        *
        * Create a request for the method "clientEvents.create".
        *
@@ -643,8 +642,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Report events issued when end user interacts with customer's application that uses Cloud Talent
          * Solution. You may inspect the created events in [self service
          * tools](https://console.cloud.google.com/talent-solution/overview). [Learn
-         * more](https://cloud.google.com/talent-solution/job-search/docs/management-tools) about self
-         * service tools.
+         * more](https://cloud.google.com/talent-solution/docs/management-tools) about self service tools.
          *
          * Create a request for the method "clientEvents.create".
          *

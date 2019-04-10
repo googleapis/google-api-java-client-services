@@ -38,11 +38,33 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * When the account was put on hold.
+   * The primary email address of the account. If used as an input, this takes precedence over
+   * account ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String email;
+
+  /**
+   * Output only. The first name of the account holder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String firstName;
+
+  /**
+   * Output only. When the account was put on hold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String holdTime;
+
+  /**
+   * Output only. The last name of the account holder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastName;
 
   /**
    * The account's ID as provided by the Admin SDK.
@@ -62,7 +84,43 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When the account was put on hold.
+   * The primary email address of the account. If used as an input, this takes precedence over
+   * account ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmail() {
+    return email;
+  }
+
+  /**
+   * The primary email address of the account. If used as an input, this takes precedence over
+   * account ID.
+   * @param email email or {@code null} for none
+   */
+  public HeldAccount setEmail(java.lang.String email) {
+    this.email = email;
+    return this;
+  }
+
+  /**
+   * Output only. The first name of the account holder.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFirstName() {
+    return firstName;
+  }
+
+  /**
+   * Output only. The first name of the account holder.
+   * @param firstName firstName or {@code null} for none
+   */
+  public HeldAccount setFirstName(java.lang.String firstName) {
+    this.firstName = firstName;
+    return this;
+  }
+
+  /**
+   * Output only. When the account was put on hold.
    * @return value or {@code null} for none
    */
   public String getHoldTime() {
@@ -70,11 +128,28 @@ public final class HeldAccount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When the account was put on hold.
+   * Output only. When the account was put on hold.
    * @param holdTime holdTime or {@code null} for none
    */
   public HeldAccount setHoldTime(String holdTime) {
     this.holdTime = holdTime;
+    return this;
+  }
+
+  /**
+   * Output only. The last name of the account holder.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastName() {
+    return lastName;
+  }
+
+  /**
+   * Output only. The last name of the account holder.
+   * @param lastName lastName or {@code null} for none
+   */
+  public HeldAccount setLastName(java.lang.String lastName) {
+    this.lastName = lastName;
     return this;
   }
 

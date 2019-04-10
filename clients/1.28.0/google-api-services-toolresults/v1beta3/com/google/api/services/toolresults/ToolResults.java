@@ -4711,6 +4711,560 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
+           * An accessor for creating requests from the TestCases collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ToolResults toolresults = new ToolResults(...);}
+           *   {@code ToolResults.TestCases.List request = toolresults.testCases().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public TestCases testCases() {
+            return new TestCases();
+          }
+
+          /**
+           * The "testCases" collection of methods.
+           */
+          public class TestCases {
+
+            /**
+             * Gets details of a Test Case for a Step. Experimental test cases API. Still in active development.
+             *
+             * May return any of the following canonical error codes:
+             *
+             * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
+             * the request is malformed - NOT_FOUND - if the containing Test Case does not exist
+             *
+             * Create a request for the method "testCases.get".
+             *
+             * This request holds the parameters needed by the toolresults server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param projectId A Project id.
+            Required.
+             * @param historyId A History id.
+            Required.
+             * @param executionId A Execution id
+            Required.
+             * @param stepId A Step id. Note: This step must include a TestExecutionStep.
+            Required.
+             * @param testCaseId A Test Case id.
+            Required.
+             * @return the request
+             */
+            public Get get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId, java.lang.String testCaseId) throws java.io.IOException {
+              Get result = new Get(projectId, historyId, executionId, stepId, testCaseId);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ToolResultsRequest<com.google.api.services.toolresults.model.TestCase> {
+
+              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}";
+
+              /**
+               * Gets details of a Test Case for a Step. Experimental test cases API. Still in active
+               * development.
+               *
+               * May return any of the following canonical error codes:
+               *
+               * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
+               * the request is malformed - NOT_FOUND - if the containing Test Case does not exist
+               *
+               * Create a request for the method "testCases.get".
+               *
+               * This request holds the parameters needed by the the toolresults server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param projectId A Project id.
+            Required.
+               * @param historyId A History id.
+            Required.
+               * @param executionId A Execution id
+            Required.
+               * @param stepId A Step id. Note: This step must include a TestExecutionStep.
+            Required.
+               * @param testCaseId A Test Case id.
+            Required.
+               * @since 1.13
+               */
+              protected Get(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId, java.lang.String testCaseId) {
+                super(ToolResults.this, "GET", REST_PATH, null, com.google.api.services.toolresults.model.TestCase.class);
+                this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+                this.historyId = com.google.api.client.util.Preconditions.checkNotNull(historyId, "Required parameter historyId must be specified.");
+                this.executionId = com.google.api.client.util.Preconditions.checkNotNull(executionId, "Required parameter executionId must be specified.");
+                this.stepId = com.google.api.client.util.Preconditions.checkNotNull(stepId, "Required parameter stepId must be specified.");
+                this.testCaseId = com.google.api.client.util.Preconditions.checkNotNull(testCaseId, "Required parameter testCaseId must be specified.");
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUserIp(java.lang.String userIp) {
+                return (Get) super.setUserIp(userIp);
+              }
+
+              /**
+               * A Project id.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String projectId;
+
+              /** A Project id.
+
+             Required.
+               */
+              public java.lang.String getProjectId() {
+                return projectId;
+              }
+
+              /**
+               * A Project id.
+               *
+               * Required.
+               */
+              public Get setProjectId(java.lang.String projectId) {
+                this.projectId = projectId;
+                return this;
+              }
+
+              /**
+               * A History id.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String historyId;
+
+              /** A History id.
+
+             Required.
+               */
+              public java.lang.String getHistoryId() {
+                return historyId;
+              }
+
+              /**
+               * A History id.
+               *
+               * Required.
+               */
+              public Get setHistoryId(java.lang.String historyId) {
+                this.historyId = historyId;
+                return this;
+              }
+
+              /**
+               * A Execution id
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String executionId;
+
+              /** A Execution id
+
+             Required.
+               */
+              public java.lang.String getExecutionId() {
+                return executionId;
+              }
+
+              /**
+               * A Execution id
+               *
+               * Required.
+               */
+              public Get setExecutionId(java.lang.String executionId) {
+                this.executionId = executionId;
+                return this;
+              }
+
+              /**
+               * A Step id. Note: This step must include a TestExecutionStep.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String stepId;
+
+              /** A Step id. Note: This step must include a TestExecutionStep.
+
+             Required.
+               */
+              public java.lang.String getStepId() {
+                return stepId;
+              }
+
+              /**
+               * A Step id. Note: This step must include a TestExecutionStep.
+               *
+               * Required.
+               */
+              public Get setStepId(java.lang.String stepId) {
+                this.stepId = stepId;
+                return this;
+              }
+
+              /**
+               * A Test Case id.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String testCaseId;
+
+              /** A Test Case id.
+
+             Required.
+               */
+              public java.lang.String getTestCaseId() {
+                return testCaseId;
+              }
+
+              /**
+               * A Test Case id.
+               *
+               * Required.
+               */
+              public Get setTestCaseId(java.lang.String testCaseId) {
+                this.testCaseId = testCaseId;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists Test Cases attached to a Step. Experimental test cases API. Still in active development.
+             *
+             * May return any of the following canonical error codes:
+             *
+             * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
+             * the request is malformed - NOT_FOUND - if the containing Step does not exist
+             *
+             * Create a request for the method "testCases.list".
+             *
+             * This request holds the parameters needed by the toolresults server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param projectId A Project id.
+            Required.
+             * @param historyId A History id.
+            Required.
+             * @param executionId A Execution id
+            Required.
+             * @param stepId A Step id. Note: This step must include a TestExecutionStep.
+            Required.
+             * @return the request
+             */
+            public List list(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) throws java.io.IOException {
+              List result = new List(projectId, historyId, executionId, stepId);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ToolResultsRequest<com.google.api.services.toolresults.model.ListTestCasesResponse> {
+
+              private static final String REST_PATH = "{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases";
+
+              /**
+               * Lists Test Cases attached to a Step. Experimental test cases API. Still in active development.
+               *
+               * May return any of the following canonical error codes:
+               *
+               * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if
+               * the request is malformed - NOT_FOUND - if the containing Step does not exist
+               *
+               * Create a request for the method "testCases.list".
+               *
+               * This request holds the parameters needed by the the toolresults server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param projectId A Project id.
+            Required.
+               * @param historyId A History id.
+            Required.
+               * @param executionId A Execution id
+            Required.
+               * @param stepId A Step id. Note: This step must include a TestExecutionStep.
+            Required.
+               * @since 1.13
+               */
+              protected List(java.lang.String projectId, java.lang.String historyId, java.lang.String executionId, java.lang.String stepId) {
+                super(ToolResults.this, "GET", REST_PATH, null, com.google.api.services.toolresults.model.ListTestCasesResponse.class);
+                this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+                this.historyId = com.google.api.client.util.Preconditions.checkNotNull(historyId, "Required parameter historyId must be specified.");
+                this.executionId = com.google.api.client.util.Preconditions.checkNotNull(executionId, "Required parameter executionId must be specified.");
+                this.stepId = com.google.api.client.util.Preconditions.checkNotNull(stepId, "Required parameter stepId must be specified.");
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUserIp(java.lang.String userIp) {
+                return (List) super.setUserIp(userIp);
+              }
+
+              /**
+               * A Project id.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String projectId;
+
+              /** A Project id.
+
+             Required.
+               */
+              public java.lang.String getProjectId() {
+                return projectId;
+              }
+
+              /**
+               * A Project id.
+               *
+               * Required.
+               */
+              public List setProjectId(java.lang.String projectId) {
+                this.projectId = projectId;
+                return this;
+              }
+
+              /**
+               * A History id.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String historyId;
+
+              /** A History id.
+
+             Required.
+               */
+              public java.lang.String getHistoryId() {
+                return historyId;
+              }
+
+              /**
+               * A History id.
+               *
+               * Required.
+               */
+              public List setHistoryId(java.lang.String historyId) {
+                this.historyId = historyId;
+                return this;
+              }
+
+              /**
+               * A Execution id
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String executionId;
+
+              /** A Execution id
+
+             Required.
+               */
+              public java.lang.String getExecutionId() {
+                return executionId;
+              }
+
+              /**
+               * A Execution id
+               *
+               * Required.
+               */
+              public List setExecutionId(java.lang.String executionId) {
+                this.executionId = executionId;
+                return this;
+              }
+
+              /**
+               * A Step id. Note: This step must include a TestExecutionStep.
+               *
+               * Required.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String stepId;
+
+              /** A Step id. Note: This step must include a TestExecutionStep.
+
+             Required.
+               */
+              public java.lang.String getStepId() {
+                return stepId;
+              }
+
+              /**
+               * A Step id. Note: This step must include a TestExecutionStep.
+               *
+               * Required.
+               */
+              public List setStepId(java.lang.String stepId) {
+                this.stepId = stepId;
+                return this;
+              }
+
+              /**
+               * The maximum number of TestCases to fetch.
+               *
+               * Default value: 100. The server will use this default if the field is not set or has
+               * a value of 0.
+               *
+               * Optional.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of TestCases to fetch.
+
+             Default value: 100. The server will use this default if the field is not set or has a value of 0.
+
+             Optional.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * The maximum number of TestCases to fetch.
+               *
+               * Default value: 100. The server will use this default if the field is not set or has
+               * a value of 0.
+               *
+               * Optional.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A continuation token to resume the query at the next item.
+               *
+               * Optional.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A continuation token to resume the query at the next item.
+
+             Optional.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A continuation token to resume the query at the next item.
+               *
+               * Optional.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
            * An accessor for creating requests from the Thumbnails collection.
            *
            * <p>The typical use is:</p>

@@ -145,7 +145,7 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
 
     /**
      * Returns detailed information about an asset given its name. PRIVATE assets are returned only if
-     * the currently authenticated user (via OAuth token) is the author of the asset.
+     * the currently authenticated user (via OAuth token) is the author of the  asset.
      *
      * Create a request for the method "assets.get".
      *
@@ -170,7 +170,7 @@ public class PolyService extends com.google.api.client.googleapis.services.json.
 
       /**
        * Returns detailed information about an asset given its name. PRIVATE assets are returned only if
-       * the currently authenticated user (via OAuth token) is the author of the asset.
+       * the currently authenticated user (via OAuth token) is the author of the  asset.
        *
        * Create a request for the method "assets.get".
        *

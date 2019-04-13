@@ -17,7 +17,7 @@
 package com.google.api.services.people.v1.model;
 
 /**
- * A person's read-only membership in a group.
+ * A person's membership in a group. Only contact group memberships can be modified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private ContactGroupMembership contactGroupMembership;
 
   /**
-   * The domain membership.
+   * The read-only domain membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The domain membership.
+   * The read-only domain membership.
    * @return value or {@code null} for none
    */
   public DomainMembership getDomainMembership() {
@@ -76,7 +76,7 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The domain membership.
+   * The read-only domain membership.
    * @param domainMembership domainMembership or {@code null} for none
    */
   public Membership setDomainMembership(DomainMembership domainMembership) {

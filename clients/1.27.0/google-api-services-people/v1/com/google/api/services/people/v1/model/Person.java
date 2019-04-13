@@ -207,7 +207,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only group memberships.
+   * The person's group memberships.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -608,7 +608,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only group memberships.
+   * The person's group memberships.
    * @return value or {@code null} for none
    */
   public java.util.List<Membership> getMemberships() {
@@ -616,7 +616,7 @@ public final class Person extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The person's read-only group memberships.
+   * The person's group memberships.
    * @param memberships memberships or {@code null} for none
    */
   public Person setMemberships(java.util.List<Membership> memberships) {

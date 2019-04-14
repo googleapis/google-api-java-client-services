@@ -74,7 +74,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * type:dataType.name:developer project
    * number:device.manufacturer:device.model:device.uid:dataStreamName
    *
-   * When any of the optional fields that comprise of the data stream ID are blank, they will be
+   * When any of the optional fields that make up the data stream ID are absent, they will be
    * omitted from the data stream ID. The minimum viable data stream ID would be:
    * type:dataType.name:developer project number
    *
@@ -181,7 +181,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * type:dataType.name:developer project
    * number:device.manufacturer:device.model:device.uid:dataStreamName
    *
-   * When any of the optional fields that comprise of the data stream ID are blank, they will be
+   * When any of the optional fields that make up the data stream ID are absent, they will be
    * omitted from the data stream ID. The minimum viable data stream ID would be:
    * type:dataType.name:developer project number
    *
@@ -213,7 +213,7 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    * type:dataType.name:developer project
    * number:device.manufacturer:device.model:device.uid:dataStreamName
    *
-   * When any of the optional fields that comprise of the data stream ID are blank, they will be
+   * When any of the optional fields that make up the data stream ID are absent, they will be
    * omitted from the data stream ID. The minimum viable data stream ID would be:
    * type:dataType.name:developer project number
    *

@@ -7927,13 +7927,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs. [default: false]
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -7941,7 +7943,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       public Delete setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -7966,7 +7969,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs.
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -8145,13 +8149,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs. [default: false]
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -8159,7 +8165,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       public Get setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -8184,7 +8191,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs.
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -8513,13 +8521,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs. [default: false]
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -8527,7 +8537,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       public Insert setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -8552,7 +8563,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs.
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -8763,13 +8775,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs. [default: false]
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -8777,7 +8791,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       public List setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -8802,7 +8817,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs.
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -9067,13 +9083,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs. [default: false]
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -9081,7 +9099,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       public Patch setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -9106,7 +9125,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs.
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -9371,13 +9391,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs. [default: false]
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -9385,7 +9407,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if they are an administrator of the domain to which the item belongs.
+       * granted access if the file ID parameter refers to a Team Drive and the requester is an
+       * administrator of the domain to which the Team Drive belongs.
        */
       public Update setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -9410,7 +9433,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if they are an administrator of the domain to which the item belongs.
+     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
+     domain to which the Team Drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {

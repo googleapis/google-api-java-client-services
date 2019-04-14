@@ -30,20 +30,23 @@ package com.google.api.services.people.v1.model;
 public final class ContactGroupMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * The contact group ID for the contact group membership. The contact group ID can be custom or
-   * one of these predefined values:
-   *
-   * *  `myContacts` *  `starred` *  A numerical ID for user-created groups.
+   * The read-only contact group ID for the contact group membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contactGroupId;
 
   /**
-   * The contact group ID for the contact group membership. The contact group ID can be custom or
-   * one of these predefined values:
-   *
-   * *  `myContacts` *  `starred` *  A numerical ID for user-created groups.
+   * The resource name for the contact group, assigned by the server. An ASCII string, in the form
+   * of `contactGroups/`contact_group_id. Only contact_group_resource_name can be used for modifying
+   * memberships.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contactGroupResourceName;
+
+  /**
+   * The read-only contact group ID for the contact group membership.
    * @return value or {@code null} for none
    */
   public java.lang.String getContactGroupId() {
@@ -51,14 +54,32 @@ public final class ContactGroupMembership extends com.google.api.client.json.Gen
   }
 
   /**
-   * The contact group ID for the contact group membership. The contact group ID can be custom or
-   * one of these predefined values:
-   *
-   * *  `myContacts` *  `starred` *  A numerical ID for user-created groups.
+   * The read-only contact group ID for the contact group membership.
    * @param contactGroupId contactGroupId or {@code null} for none
    */
   public ContactGroupMembership setContactGroupId(java.lang.String contactGroupId) {
     this.contactGroupId = contactGroupId;
+    return this;
+  }
+
+  /**
+   * The resource name for the contact group, assigned by the server. An ASCII string, in the form
+   * of `contactGroups/`contact_group_id. Only contact_group_resource_name can be used for modifying
+   * memberships.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContactGroupResourceName() {
+    return contactGroupResourceName;
+  }
+
+  /**
+   * The resource name for the contact group, assigned by the server. An ASCII string, in the form
+   * of `contactGroups/`contact_group_id. Only contact_group_resource_name can be used for modifying
+   * memberships.
+   * @param contactGroupResourceName contactGroupResourceName or {@code null} for none
+   */
+  public ContactGroupMembership setContactGroupResourceName(java.lang.String contactGroupResourceName) {
+    this.contactGroupResourceName = contactGroupResourceName;
     return this;
   }
 

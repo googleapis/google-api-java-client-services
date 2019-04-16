@@ -5586,8 +5586,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
        * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       *        "internal".
+       * @param track The track to read or modify.
        * @return the request
        */
       public Get get(java.lang.String packageName, java.lang.String editId, java.lang.String track) throws java.io.IOException {
@@ -5600,9 +5599,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         private static final String REST_PATH = "{packageName}/edits/{editId}/testers/{track}";
 
-        private final java.util.regex.Pattern TRACK_PATTERN =
-            java.util.regex.Pattern.compile("(alpha|beta|production|rollout|internal)");
-
         /**
          * Create a request for the method "testers.get".
          *
@@ -5613,8 +5609,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
          * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       *        "internal".
+         * @param track The track to read or modify.
          * @since 1.13
          */
         protected Get(java.lang.String packageName, java.lang.String editId, java.lang.String track) {
@@ -5622,11 +5617,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
           this.track = com.google.api.client.util.Preconditions.checkNotNull(track, "Required parameter track must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(TRACK_PATTERN.matcher(track).matches(),
-                "Parameter track must conform to the pattern " +
-                "(alpha|beta|production|rollout|internal)");
-          }
         }
 
         @Override
@@ -5712,30 +5702,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The track to read or modify. Acceptable values are: "alpha", "beta", "production",
-         * "rollout" or "internal".
-         */
+        /** The track to read or modify. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       "internal".
+        /** The track to read or modify.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /**
-         * The track to read or modify. Acceptable values are: "alpha", "beta", "production",
-         * "rollout" or "internal".
-         */
+        /** The track to read or modify. */
         public Get setTrack(java.lang.String track) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(TRACK_PATTERN.matcher(track).matches(),
-                "Parameter track must conform to the pattern " +
-                "(alpha|beta|production|rollout|internal)");
-          }
           this.track = track;
           return this;
         }
@@ -5753,8 +5731,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
        * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       *        "internal".
+       * @param track The track to read or modify.
        * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
        * @return the request
        */
@@ -5768,9 +5745,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         private static final String REST_PATH = "{packageName}/edits/{editId}/testers/{track}";
 
-        private final java.util.regex.Pattern TRACK_PATTERN =
-            java.util.regex.Pattern.compile("(alpha|beta|production|rollout|internal)");
-
         /**
          * Create a request for the method "testers.patch".
          *
@@ -5782,8 +5756,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
          * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       *        "internal".
+         * @param track The track to read or modify.
          * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
          * @since 1.13
          */
@@ -5792,11 +5765,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
           this.track = com.google.api.client.util.Preconditions.checkNotNull(track, "Required parameter track must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(TRACK_PATTERN.matcher(track).matches(),
-                "Parameter track must conform to the pattern " +
-                "(alpha|beta|production|rollout|internal)");
-          }
         }
 
         @Override
@@ -5872,30 +5840,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The track to read or modify. Acceptable values are: "alpha", "beta", "production",
-         * "rollout" or "internal".
-         */
+        /** The track to read or modify. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       "internal".
+        /** The track to read or modify.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /**
-         * The track to read or modify. Acceptable values are: "alpha", "beta", "production",
-         * "rollout" or "internal".
-         */
+        /** The track to read or modify. */
         public Patch setTrack(java.lang.String track) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(TRACK_PATTERN.matcher(track).matches(),
-                "Parameter track must conform to the pattern " +
-                "(alpha|beta|production|rollout|internal)");
-          }
           this.track = track;
           return this;
         }
@@ -5913,8 +5869,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
        * @param editId Unique identifier for this edit.
-       * @param track The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       *        "internal".
+       * @param track The track to read or modify.
        * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
        * @return the request
        */
@@ -5928,9 +5883,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         private static final String REST_PATH = "{packageName}/edits/{editId}/testers/{track}";
 
-        private final java.util.regex.Pattern TRACK_PATTERN =
-            java.util.regex.Pattern.compile("(alpha|beta|production|rollout|internal)");
-
         /**
          * Create a request for the method "testers.update".
          *
@@ -5942,8 +5894,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
          * @param editId Unique identifier for this edit.
-         * @param track The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       *        "internal".
+         * @param track The track to read or modify.
          * @param content the {@link com.google.api.services.androidpublisher.model.Testers}
          * @since 1.13
          */
@@ -5952,11 +5903,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
           this.editId = com.google.api.client.util.Preconditions.checkNotNull(editId, "Required parameter editId must be specified.");
           this.track = com.google.api.client.util.Preconditions.checkNotNull(track, "Required parameter track must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(TRACK_PATTERN.matcher(track).matches(),
-                "Parameter track must conform to the pattern " +
-                "(alpha|beta|production|rollout|internal)");
-          }
         }
 
         @Override
@@ -6032,30 +5978,18 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /**
-         * The track to read or modify. Acceptable values are: "alpha", "beta", "production",
-         * "rollout" or "internal".
-         */
+        /** The track to read or modify. */
         @com.google.api.client.util.Key
         private java.lang.String track;
 
-        /** The track to read or modify. Acceptable values are: "alpha", "beta", "production", "rollout" or
-       "internal".
+        /** The track to read or modify.
          */
         public java.lang.String getTrack() {
           return track;
         }
 
-        /**
-         * The track to read or modify. Acceptable values are: "alpha", "beta", "production",
-         * "rollout" or "internal".
-         */
+        /** The track to read or modify. */
         public Update setTrack(java.lang.String track) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(TRACK_PATTERN.matcher(track).matches(),
-                "Parameter track must conform to the pattern " +
-                "(alpha|beta|production|rollout|internal)");
-          }
           this.track = track;
           return this;
         }
@@ -6369,9 +6303,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates the track configuration for the specified track type. When halted, the rollout track
-       * cannot be updated without adding new APKs, and adding new APKs will cause it to resume. This
-       * method supports patch semantics.
+       * Updates the track configuration for the specified track type. This method supports patch
+       * semantics.
        *
        * Create a request for the method "tracks.patch".
        *
@@ -6395,9 +6328,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "{packageName}/edits/{editId}/tracks/{track}";
 
         /**
-         * Updates the track configuration for the specified track type. When halted, the rollout track
-         * cannot be updated without adding new APKs, and adding new APKs will cause it to resume. This
-         * method supports patch semantics.
+         * Updates the track configuration for the specified track type. This method supports patch
+         * semantics.
          *
          * Create a request for the method "tracks.patch".
          *
@@ -6515,8 +6447,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Updates the track configuration for the specified track type. When halted, the rollout track
-       * cannot be updated without adding new APKs, and adding new APKs will cause it to resume.
+       * Updates the track configuration for the specified track type.
        *
        * Create a request for the method "tracks.update".
        *
@@ -6540,8 +6471,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "{packageName}/edits/{editId}/tracks/{track}";
 
         /**
-         * Updates the track configuration for the specified track type. When halted, the rollout track
-         * cannot be updated without adding new APKs, and adding new APKs will cause it to resume.
+         * Updates the track configuration for the specified track type.
          *
          * Create a request for the method "tracks.update".
          *

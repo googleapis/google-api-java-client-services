@@ -39,6 +39,18 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   private java.lang.String uri;
 
   /**
+   * The uri prefix of all generated Cloud Storage objects. For example:
+   * "gs://bucket_name/object_name_prefix". Each object uri is in format:
+   * "gs://bucket_name/object_name_prefix// and only contains assets for that type.  starts from 0.
+   * For example: "gs://bucket_name/object_name_prefix/google.compute.disk/0" is the first shard of
+   * output objects containing all google.compute.disk assets. An INVALID_ARGUMENT error will be
+   * returned if file with the same name "gs://bucket_name/object_name_prefix" already exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uriPrefix;
+
+  /**
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. For example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
@@ -56,6 +68,33 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    */
   public GcsDestination setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * The uri prefix of all generated Cloud Storage objects. For example:
+   * "gs://bucket_name/object_name_prefix". Each object uri is in format:
+   * "gs://bucket_name/object_name_prefix// and only contains assets for that type.  starts from 0.
+   * For example: "gs://bucket_name/object_name_prefix/google.compute.disk/0" is the first shard of
+   * output objects containing all google.compute.disk assets. An INVALID_ARGUMENT error will be
+   * returned if file with the same name "gs://bucket_name/object_name_prefix" already exists.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUriPrefix() {
+    return uriPrefix;
+  }
+
+  /**
+   * The uri prefix of all generated Cloud Storage objects. For example:
+   * "gs://bucket_name/object_name_prefix". Each object uri is in format:
+   * "gs://bucket_name/object_name_prefix// and only contains assets for that type.  starts from 0.
+   * For example: "gs://bucket_name/object_name_prefix/google.compute.disk/0" is the first shard of
+   * output objects containing all google.compute.disk assets. An INVALID_ARGUMENT error will be
+   * returned if file with the same name "gs://bucket_name/object_name_prefix" already exists.
+   * @param uriPrefix uriPrefix or {@code null} for none
+   */
+  public GcsDestination setUriPrefix(java.lang.String uriPrefix) {
+    this.uriPrefix = uriPrefix;
     return this;
   }
 

@@ -29,7 +29,7 @@ public class GamesScopes {
   /** Create, edit, and delete your Google Play Games activity. */
   public static final String GAMES = "https://www.googleapis.com/auth/games";
 
-  /** Know who you are on Google. */
+  /** Associate you with your personal info on Google. */
   public static final String PLUS_ME = "https://www.googleapis.com/auth/plus.me";
 
   /**

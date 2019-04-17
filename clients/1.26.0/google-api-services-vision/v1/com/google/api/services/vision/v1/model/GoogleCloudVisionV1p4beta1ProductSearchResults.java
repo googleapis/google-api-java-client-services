@@ -30,8 +30,8 @@ package com.google.api.services.vision.v1.model;
 public final class GoogleCloudVisionV1p4beta1ProductSearchResults extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp of the index which provided these results. Changes made after this time are not
-   * reflected in the current results.
+   * Timestamp of the index which provided these results. Products added to the product set and
+   * products removed from the product set after this time are not reflected in the current results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class GoogleCloudVisionV1p4beta1ProductSearchResults extends com.go
   private java.util.List<GoogleCloudVisionV1p4beta1ProductSearchResultsResult> results;
 
   /**
-   * Timestamp of the index which provided these results. Changes made after this time are not
-   * reflected in the current results.
+   * Timestamp of the index which provided these results. Products added to the product set and
+   * products removed from the product set after this time are not reflected in the current results.
    * @return value or {@code null} for none
    */
   public String getIndexTime() {
@@ -63,8 +63,8 @@ public final class GoogleCloudVisionV1p4beta1ProductSearchResults extends com.go
   }
 
   /**
-   * Timestamp of the index which provided these results. Changes made after this time are not
-   * reflected in the current results.
+   * Timestamp of the index which provided these results. Products added to the product set and
+   * products removed from the product set after this time are not reflected in the current results.
    * @param indexTime indexTime or {@code null} for none
    */
   public GoogleCloudVisionV1p4beta1ProductSearchResults setIndexTime(String indexTime) {

@@ -183,7 +183,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
       public class UsableSubnetworks {
 
         /**
-         * Lists subnetworks that are usable for creating clusters in a project.
+         * Lists subnetworks that can be used for creating clusters in a project.
          *
          * Create a request for the method "usableSubnetworks.list".
          *
@@ -208,7 +208,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+$");
 
           /**
-           * Lists subnetworks that are usable for creating clusters in a project.
+           * Lists subnetworks that can be used for creating clusters in a project.
            *
            * Create a request for the method "usableSubnetworks.list".
            *
@@ -427,7 +427,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
     public class Locations {
 
       /**
-       * Returns configuration info about the Kubernetes Engine service.
+       * Returns configuration info about the Google Kubernetes Engine service.
        *
        * Create a request for the method "locations.getServerConfig".
        *
@@ -453,7 +453,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Returns configuration info about the Kubernetes Engine service.
+         * Returns configuration info about the Google Kubernetes Engine service.
          *
          * Create a request for the method "locations.getServerConfig".
          *
@@ -626,7 +626,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Used to fetch locations that offer GKE.
+       * Fetches locations that offer Google Kubernetes Engine.
        *
        * Create a request for the method "locations.list".
        *
@@ -651,7 +651,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Used to fetch locations that offer GKE.
+         * Fetches locations that offer Google Kubernetes Engine.
          *
          * Create a request for the method "locations.list".
          *
@@ -939,12 +939,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
          * firewalls#networks).
          *
-         * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+         * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
          * each node to allow the containers on that node to communicate with all other instances in the
          * cluster.
          *
-         * Finally, an entry is added to the project's global metadata indicating which CIDR range is being
-         * used by the cluster.
+         * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+         * cluster is using.
          *
          * Create a request for the method "clusters.create".
          *
@@ -977,12 +977,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * By default, the cluster is created in the project's [default network](/compute/docs/networks-
            * and-firewalls#networks).
            *
-           * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+           * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
            * each node to allow the containers on that node to communicate with all other instances in the
            * cluster.
            *
-           * Finally, an entry is added to the project's global metadata indicating which CIDR range is
-           * being used by the cluster.
+           * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+           * cluster is using.
            *
            * Create a request for the method "clusters.create".
            *
@@ -1101,8 +1101,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          *
          * Firewalls and routes that were configured during cluster creation are also deleted.
          *
-         * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-         * resources) will not be deleted if they weren't present at the initial create time.
+         * Other Google Compute Engine resources that might be in use by the cluster, such as load balancer
+         * resources, are not deleted if they weren't present when the cluster was initially created.
          *
          * Create a request for the method "clusters.delete".
          *
@@ -1132,8 +1132,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            *
            * Firewalls and routes that were configured during cluster creation are also deleted.
            *
-           * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-           * resources) will not be deleted if they weren't present at the initial create time.
+           * Other Google Compute Engine resources that might be in use by the cluster, such as load
+           * balancer resources, are not deleted if they weren't present when the cluster was initially
+           * created.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -1544,8 +1545,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * GetJSONWebKeys gets the public component of the cluster signing keys in JSON Web Key format. This
-         * API is not yet intended for general use, and is not available for all clusters.
+         * Gets the public component of the cluster signing keys in JSON Web Key format. This API is not yet
+         * intended for general use, and is not available for all clusters.
          *
          * Create a request for the method "clusters.getJwks".
          *
@@ -1571,8 +1572,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * GetJSONWebKeys gets the public component of the cluster signing keys in JSON Web Key format.
-           * This API is not yet intended for general use, and is not available for all clusters.
+           * Gets the public component of the cluster signing keys in JSON Web Key format. This API is not
+           * yet intended for general use, and is not available for all clusters.
            *
            * Create a request for the method "clusters.getJwks".
            *
@@ -2612,9 +2613,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Used to set master auth materials. Currently supports :- Changing the admin password for a
-         * specific cluster. This can be either via password generation or explicitly set. Modify
-         * basic_auth.csv and reset the K8S API server.
+         * Sets master auth materials. Currently supports changing the admin password or a specific cluster,
+         * either via password generation or explicitly setting the password.
          *
          * Create a request for the method "clusters.setMasterAuth".
          *
@@ -2641,9 +2641,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Used to set master auth materials. Currently supports :- Changing the admin password for a
-           * specific cluster. This can be either via password generation or explicitly set. Modify
-           * basic_auth.csv and reset the K8S API server.
+           * Sets master auth materials. Currently supports changing the admin password or a specific
+           * cluster, either via password generation or explicitly setting the password.
            *
            * Create a request for the method "clusters.setMasterAuth".
            *
@@ -2900,7 +2899,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Enables/Disables Network Policy for a cluster.
+         * Enables or disables Network Policy for a cluster.
          *
          * Create a request for the method "clusters.setNetworkPolicy".
          *
@@ -2927,7 +2926,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Enables/Disables Network Policy for a cluster.
+           * Enables or disables Network Policy for a cluster.
            *
            * Create a request for the method "clusters.setNetworkPolicy".
            *
@@ -3184,7 +3183,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Start master IP rotation.
+         * Starts master IP rotation.
          *
          * Create a request for the method "clusters.startIpRotation".
          *
@@ -3211,7 +3210,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Start master IP rotation.
+           * Starts master IP rotation.
            *
            * Create a request for the method "clusters.startIpRotation".
            *
@@ -4013,7 +4012,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Retrieves the node pool requested.
+           * Retrieves the requested node pool.
            *
            * Create a request for the method "nodePools.get".
            *
@@ -4039,7 +4038,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Retrieves the node pool requested.
+             * Retrieves the requested node pool.
              *
              * Create a request for the method "nodePools.get".
              *
@@ -4481,7 +4480,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+           * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
            * upgrade successfully completed.
            *
            * Create a request for the method "nodePools.rollback".
@@ -4510,7 +4509,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+             * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
              * upgrade successfully completed.
              *
              * Create a request for the method "nodePools.rollback".
@@ -5225,9 +5224,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         public class WellKnown {
 
           /**
-           * GetOpenIDConfig gets the OIDC discovery document for the cluster. See the OpenID Connect
-           * Discovery 1.0 specification for details. https://openid.net/specs/openid-connect-discovery-
-           * 1_0.html This API is not yet intended for general use, and is not available for all clusters.
+           * Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0
+           * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This API
+           * is not yet intended for general use, and is not available for all clusters.
            *
            * Create a request for the method "well-known.getOpenid-configuration".
            *
@@ -5254,9 +5253,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
             /**
-             * GetOpenIDConfig gets the OIDC discovery document for the cluster. See the OpenID Connect
-             * Discovery 1.0 specification for details. https://openid.net/specs/openid-connect-discovery-
-             * 1_0.html This API is not yet intended for general use, and is not available for all clusters.
+             * Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0
+             * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This
+             * API is not yet intended for general use, and is not available for all clusters.
              *
              * Create a request for the method "well-known.getOpenid-configuration".
              *
@@ -5768,7 +5767,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Lists all operations in a project in a specific zone or all zones.
+         * Lists all operations in a project in the specified zone or all zones.
          *
          * Create a request for the method "operations.list".
          *
@@ -5795,7 +5794,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists all operations in a project in a specific zone or all zones.
+           * Lists all operations in a project in the specified zone or all zones.
            *
            * Create a request for the method "operations.list".
            *
@@ -5994,7 +5993,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
     public class Zones {
 
       /**
-       * Returns configuration info about the Kubernetes Engine service.
+       * Returns configuration info about the Google Kubernetes Engine service.
        *
        * Create a request for the method "zones.getServerconfig".
        *
@@ -6022,7 +6021,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/serverconfig";
 
         /**
-         * Returns configuration info about the Kubernetes Engine service.
+         * Returns configuration info about the Google Kubernetes Engine service.
          *
          * Create a request for the method "zones.getServerconfig".
          *
@@ -6615,12 +6614,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
          * firewalls#networks).
          *
-         * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+         * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
          * each node to allow the containers on that node to communicate with all other instances in the
          * cluster.
          *
-         * Finally, an entry is added to the project's global metadata indicating which CIDR range is being
-         * used by the cluster.
+         * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+         * cluster is using.
          *
          * Create a request for the method "clusters.create".
          *
@@ -6656,12 +6655,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * By default, the cluster is created in the project's [default network](/compute/docs/networks-
            * and-firewalls#networks).
            *
-           * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+           * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
            * each node to allow the containers on that node to communicate with all other instances in the
            * cluster.
            *
-           * Finally, an entry is added to the project's global metadata indicating which CIDR range is
-           * being used by the cluster.
+           * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+           * cluster is using.
            *
            * Create a request for the method "clusters.create".
            *
@@ -6805,8 +6804,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          *
          * Firewalls and routes that were configured during cluster creation are also deleted.
          *
-         * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-         * resources) will not be deleted if they weren't present at the initial create time.
+         * Other Google Compute Engine resources that might be in use by the cluster, such as load balancer
+         * resources, are not deleted if they weren't present when the cluster was initially created.
          *
          * Create a request for the method "clusters.delete".
          *
@@ -6842,8 +6841,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            *
            * Firewalls and routes that were configured during cluster creation are also deleted.
            *
-           * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-           * resources) will not be deleted if they weren't present at the initial create time.
+           * Other Google Compute Engine resources that might be in use by the cluster, such as load
+           * balancer resources, are not deleted if they weren't present when the cluster was initially
+           * created.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -8839,9 +8839,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Used to set master auth materials. Currently supports :- Changing the admin password for a
-         * specific cluster. This can be either via password generation or explicitly set. Modify
-         * basic_auth.csv and reset the K8S API server.
+         * Sets master auth materials. Currently supports changing the admin password or a specific cluster,
+         * either via password generation or explicitly setting the password.
          *
          * Create a request for the method "clusters.setMasterAuth".
          *
@@ -8874,9 +8873,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMasterAuth";
 
           /**
-           * Used to set master auth materials. Currently supports :- Changing the admin password for a
-           * specific cluster. This can be either via password generation or explicitly set. Modify
-           * basic_auth.csv and reset the K8S API server.
+           * Sets master auth materials. Currently supports changing the admin password or a specific
+           * cluster, either via password generation or explicitly setting the password.
            *
            * Create a request for the method "clusters.setMasterAuth".
            *
@@ -9043,7 +9041,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Enables/Disables Network Policy for a cluster.
+         * Enables or disables Network Policy for a cluster.
          *
          * Create a request for the method "clusters.setNetworkPolicy".
          *
@@ -9075,7 +9073,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setNetworkPolicy";
 
           /**
-           * Enables/Disables Network Policy for a cluster.
+           * Enables or disables Network Policy for a cluster.
            *
            * Create a request for the method "clusters.setNetworkPolicy".
            *
@@ -9240,7 +9238,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Start master IP rotation.
+         * Starts master IP rotation.
          *
          * Create a request for the method "clusters.startIpRotation".
          *
@@ -9272,7 +9270,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:startIpRotation";
 
           /**
-           * Start master IP rotation.
+           * Starts master IP rotation.
            *
            * Create a request for the method "clusters.startIpRotation".
            *
@@ -10336,7 +10334,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Retrieves the node pool requested.
+           * Retrieves the requested node pool.
            *
            * Create a request for the method "nodePools.get".
            *
@@ -10370,7 +10368,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}";
 
             /**
-             * Retrieves the node pool requested.
+             * Retrieves the requested node pool.
              *
              * Create a request for the method "nodePools.get".
              *
@@ -10823,7 +10821,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+           * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
            * upgrade successfully completed.
            *
            * Create a request for the method "nodePools.rollback".
@@ -10860,7 +10858,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}:rollback";
 
             /**
-             * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+             * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
              * upgrade successfully completed.
              *
              * Create a request for the method "nodePools.rollback".
@@ -12196,7 +12194,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Lists all operations in a project in a specific zone or all zones.
+         * Lists all operations in a project in the specified zone or all zones.
          *
          * Create a request for the method "operations.list".
          *
@@ -12225,7 +12223,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1beta1/projects/{projectId}/zones/{zone}/operations";
 
           /**
-           * Lists all operations in a project in a specific zone or all zones.
+           * Lists all operations in a project in the specified zone or all zones.
            *
            * Create a request for the method "operations.list".
            *

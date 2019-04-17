@@ -32,16 +32,16 @@ package com.google.api.services.container.v1beta1.model;
 public final class WorkloadMetadataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * NodeMetadata is the configuration for how to expose the node metadata to the workload running
-   * on the node.
+   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the
+   * node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nodeMetadata;
 
   /**
-   * NodeMetadata is the configuration for how to expose the node metadata to the workload running
-   * on the node.
+   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the
+   * node.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodeMetadata() {
@@ -49,8 +49,8 @@ public final class WorkloadMetadataConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * NodeMetadata is the configuration for how to expose the node metadata to the workload running
-   * on the node.
+   * NodeMetadata is the configuration for how to expose metadata to the workloads running on the
+   * node.
    * @param nodeMetadata nodeMetadata or {@code null} for none
    */
   public WorkloadMetadataConfig setNodeMetadata(java.lang.String nodeMetadata) {

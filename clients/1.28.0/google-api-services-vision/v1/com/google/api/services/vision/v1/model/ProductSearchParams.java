@@ -40,10 +40,11 @@ public final class ProductSearchParams extends com.google.api.client.json.Generi
   /**
    * The filtering expression. This can be used to restrict search results based on Product labels.
    * We currently support an AND of OR of key-value expressions, where each expression within an OR
-   * must have the same key.
+   * must have the same key. An '=' should be used to connect the key and value.
    *
-   * For example, "(color = red OR color = blue) AND brand = Google" is acceptable, but not "(color
-   * = red OR brand = Google)" or "color: red".
+   * For example, "(color = red OR color = blue) AND brand = Google" is acceptable, but "(color =
+   * red OR brand = Google)" is not acceptable. "color: red" is not acceptable because it uses a ':'
+   * instead of an '='.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,10 +89,11 @@ public final class ProductSearchParams extends com.google.api.client.json.Generi
   /**
    * The filtering expression. This can be used to restrict search results based on Product labels.
    * We currently support an AND of OR of key-value expressions, where each expression within an OR
-   * must have the same key.
+   * must have the same key. An '=' should be used to connect the key and value.
    *
-   * For example, "(color = red OR color = blue) AND brand = Google" is acceptable, but not "(color
-   * = red OR brand = Google)" or "color: red".
+   * For example, "(color = red OR color = blue) AND brand = Google" is acceptable, but "(color =
+   * red OR brand = Google)" is not acceptable. "color: red" is not acceptable because it uses a ':'
+   * instead of an '='.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -101,10 +103,11 @@ public final class ProductSearchParams extends com.google.api.client.json.Generi
   /**
    * The filtering expression. This can be used to restrict search results based on Product labels.
    * We currently support an AND of OR of key-value expressions, where each expression within an OR
-   * must have the same key.
+   * must have the same key. An '=' should be used to connect the key and value.
    *
-   * For example, "(color = red OR color = blue) AND brand = Google" is acceptable, but not "(color
-   * = red OR brand = Google)" or "color: red".
+   * For example, "(color = red OR color = blue) AND brand = Google" is acceptable, but "(color =
+   * red OR brand = Google)" is not acceptable. "color: red" is not acceptable because it uses a ':'
+   * instead of an '='.
    * @param filter filter or {@code null} for none
    */
   public ProductSearchParams setFilter(java.lang.String filter) {

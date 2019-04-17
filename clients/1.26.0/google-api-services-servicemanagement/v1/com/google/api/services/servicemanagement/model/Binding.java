@@ -31,7 +31,7 @@ package com.google.api.services.servicemanagement.model;
 public final class Binding extends com.google.api.client.json.GenericJson {
 
   /**
-   * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
+   * The condition that is associated with this binding. NOTE: An unsatisfied condition will not
    * allow user access via current binding. Different bindings, including their conditions, are
    * examined independently.
    * The value may be {@code null}.
@@ -74,7 +74,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
+   * The condition that is associated with this binding. NOTE: An unsatisfied condition will not
    * allow user access via current binding. Different bindings, including their conditions, are
    * examined independently.
    * @return value or {@code null} for none
@@ -84,7 +84,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The condition that is associated with this binding. NOTE: an unsatisfied condition will not
+   * The condition that is associated with this binding. NOTE: An unsatisfied condition will not
    * allow user access via current binding. Different bindings, including their conditions, are
    * examined independently.
    * @param condition condition or {@code null} for none

@@ -1,6 +1,6 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/ddTR9wKVw1pTrCI-Y4Sgk1lUlj0\"",
+ "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/NeGzhbiPU6qwRsFXLaZlA0TpY7A\"",
  "discoveryVersion": "v1",
  "id": "plusDomains:v1",
  "name": "plusDomains",
@@ -76,7 +76,7 @@
      "description": "View your basic profile info, including your age range and language"
     },
     "https://www.googleapis.com/auth/plus.me": {
-     "description": "Know who you are on Google"
+     "description": "Associate you with your personal info on Google"
     },
     "https://www.googleapis.com/auth/plus.media.upload": {
      "description": "Send your photos and videos to Google+"
@@ -91,7 +91,7 @@
      "description": "View your email address"
     },
     "https://www.googleapis.com/auth/userinfo.profile": {
-     "description": "See your personal info, including any personal info you've made publically available"
+     "description": "See your personal info, including any personal info you've made publicly available"
     }
    }
   }

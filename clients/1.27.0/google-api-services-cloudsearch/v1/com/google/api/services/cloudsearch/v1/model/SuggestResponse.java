@@ -30,14 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SuggestResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of suggestion results.
+   * List of suggestions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SuggestResult> suggestResults;
 
   /**
-   * List of suggestion results.
+   * List of suggestions.
    * @return value or {@code null} for none
    */
   public java.util.List<SuggestResult> getSuggestResults() {
@@ -45,7 +45,7 @@ public final class SuggestResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * List of suggestion results.
+   * List of suggestions.
    * @param suggestResults suggestResults or {@code null} for none
    */
   public SuggestResponse setSuggestResults(java.util.List<SuggestResult> suggestResults) {

@@ -30,16 +30,16 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class DebugOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-   * asked by Google to help with debugging.
+   * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableDebugging;
 
   /**
-   * If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-   * asked by Google to help with debugging.
+   * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableDebugging() {
@@ -47,8 +47,8 @@ public final class DebugOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-   * asked by Google to help with debugging.
+   * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+   * field.
    * @param enableDebugging enableDebugging or {@code null} for none
    */
   public DebugOptions setEnableDebugging(java.lang.Boolean enableDebugging) {

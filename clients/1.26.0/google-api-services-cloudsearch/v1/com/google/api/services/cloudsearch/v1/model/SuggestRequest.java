@@ -31,7 +31,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
 
   /**
    * The sources to use for suggestions. If not specified, all data sources from the current search
-   * application are used.
+   * application are used. Suggestions are based on Gmail titles. Suggestions from third party
+   * sources are not available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partial query for the completion suggestion.
+   * Partial query for which autocomplete suggestions will be shown. For example, if the query is
+   * "sea", then the server might return "season", "search", "seagull" and so on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +61,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
 
   /**
    * The sources to use for suggestions. If not specified, all data sources from the current search
-   * application are used.
+   * application are used. Suggestions are based on Gmail titles. Suggestions from third party
+   * sources are not available.
    * @return value or {@code null} for none
    */
   public java.util.List<DataSourceRestriction> getDataSourceRestrictions() {
@@ -68,7 +71,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
 
   /**
    * The sources to use for suggestions. If not specified, all data sources from the current search
-   * application are used.
+   * application are used. Suggestions are based on Gmail titles. Suggestions from third party
+   * sources are not available.
    * @param dataSourceRestrictions dataSourceRestrictions or {@code null} for none
    */
   public SuggestRequest setDataSourceRestrictions(java.util.List<DataSourceRestriction> dataSourceRestrictions) {
@@ -77,7 +81,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partial query for the completion suggestion.
+   * Partial query for which autocomplete suggestions will be shown. For example, if the query is
+   * "sea", then the server might return "season", "search", "seagull" and so on.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -85,7 +90,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partial query for the completion suggestion.
+   * Partial query for which autocomplete suggestions will be shown. For example, if the query is
+   * "sea", then the server might return "season", "search", "seagull" and so on.
    * @param query query or {@code null} for none
    */
   public SuggestRequest setQuery(java.lang.String query) {

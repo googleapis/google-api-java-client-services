@@ -315,22 +315,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           @com.google.api.client.util.Key("debugOptions.enableDebugging")
           private java.lang.Boolean debugOptionsEnableDebugging;
 
-          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-         asked by Google to help with debugging.
+          /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
            */
           public java.lang.Boolean getDebugOptionsEnableDebugging() {
             return debugOptionsEnableDebugging;
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           public CheckAccess setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -640,22 +639,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * If set, the request will enable debugging features of Cloud Search. Only turn on this
-             * field, if asked by Google to help with debugging.
+             * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+             * this field.
              */
             @com.google.api.client.util.Key("debugOptions.enableDebugging")
             private java.lang.Boolean debugOptionsEnableDebugging;
 
-            /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-           asked by Google to help with debugging.
+            /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
              */
             public java.lang.Boolean getDebugOptionsEnableDebugging() {
               return debugOptionsEnableDebugging;
             }
 
             /**
-             * If set, the request will enable debugging features of Cloud Search. Only turn on this
-             * field, if asked by Google to help with debugging.
+             * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+             * this field.
              */
             public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
               this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -889,22 +887,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           @com.google.api.client.util.Key("debugOptions.enableDebugging")
           private java.lang.Boolean debugOptionsEnableDebugging;
 
-          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-         asked by Google to help with debugging.
+          /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
            */
           public java.lang.Boolean getDebugOptionsEnableDebugging() {
             return debugOptionsEnableDebugging;
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           public ListForunmappedidentity setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -1144,22 +1141,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           @com.google.api.client.util.Key("debugOptions.enableDebugging")
           private java.lang.Boolean debugOptionsEnableDebugging;
 
-          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-         asked by Google to help with debugging.
+          /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
            */
           public java.lang.Boolean getDebugOptionsEnableDebugging() {
             return debugOptionsEnableDebugging;
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -1399,22 +1395,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public DeleteSchema setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -1567,22 +1562,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public GetSchema setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -1903,22 +1897,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           @com.google.api.client.util.Key("debugOptions.enableDebugging")
           private java.lang.Boolean debugOptionsEnableDebugging;
 
-          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-         asked by Google to help with debugging.
+          /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
            */
           public java.lang.Boolean getDebugOptionsEnableDebugging() {
             return debugOptionsEnableDebugging;
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           public Delete setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -2280,22 +2273,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           @com.google.api.client.util.Key("debugOptions.enableDebugging")
           private java.lang.Boolean debugOptionsEnableDebugging;
 
-          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-         asked by Google to help with debugging.
+          /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
            */
           public java.lang.Boolean getDebugOptionsEnableDebugging() {
             return debugOptionsEnableDebugging;
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           public Get setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -2643,22 +2635,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           @com.google.api.client.util.Key("debugOptions.enableDebugging")
           private java.lang.Boolean debugOptionsEnableDebugging;
 
-          /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-         asked by Google to help with debugging.
+          /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
            */
           public java.lang.Boolean getDebugOptionsEnableDebugging() {
             return debugOptionsEnableDebugging;
           }
 
           /**
-           * If set, the request will enable debugging features of Cloud Search. Only turn on this
-           * field, if asked by Google to help with debugging.
+           * If you are asked by Google to help with debugging, set this field. Otherwise, ignore
+           * this field.
            */
           public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
             this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -4083,22 +4074,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("requestOptions.debugOptions.enableDebugging")
         private java.lang.Boolean requestOptionsDebugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getRequestOptionsDebugOptionsEnableDebugging() {
           return requestOptionsDebugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public List setRequestOptionsDebugOptionsEnableDebugging(java.lang.Boolean requestOptionsDebugOptionsEnableDebugging) {
           this.requestOptionsDebugOptionsEnableDebugging = requestOptionsDebugOptionsEnableDebugging;
@@ -4108,12 +4098,19 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
+         *
+         * When specified, the documents in search results are biased towards the specified
+         * language. Suggest API does not use this parameter. It autocompletes only based on
+         * characters in the query.
          */
         @com.google.api.client.util.Key("requestOptions.languageCode")
         private java.lang.String requestOptionsLanguageCode;
 
         /** The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
        http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
+
+       When specified, the documents in search results are biased towards the specified language. Suggest
+       API does not use this parameter. It autocompletes only based on characters in the query.
          */
         public java.lang.String getRequestOptionsLanguageCode() {
           return requestOptionsLanguageCode;
@@ -4122,6 +4119,10 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         /**
          * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
          * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
+         *
+         * When specified, the documents in search results are biased towards the specified
+         * language. Suggest API does not use this parameter. It autocompletes only based on
+         * characters in the query.
          */
         public List setRequestOptionsLanguageCode(java.lang.String requestOptionsLanguageCode) {
           this.requestOptionsLanguageCode = requestOptionsLanguageCode;
@@ -4452,22 +4453,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public Delete setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -4619,22 +4619,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public Get setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -4748,22 +4747,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -5209,22 +5207,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public Delete setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -5376,22 +5373,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public Get setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
@@ -5505,22 +5501,21 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         @com.google.api.client.util.Key("debugOptions.enableDebugging")
         private java.lang.Boolean debugOptionsEnableDebugging;
 
-        /** If set, the request will enable debugging features of Cloud Search. Only turn on this field, if
-       asked by Google to help with debugging.
+        /** If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
          */
         public java.lang.Boolean getDebugOptionsEnableDebugging() {
           return debugOptionsEnableDebugging;
         }
 
         /**
-         * If set, the request will enable debugging features of Cloud Search. Only turn on this
-         * field, if asked by Google to help with debugging.
+         * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
+         * field.
          */
         public List setDebugOptionsEnableDebugging(java.lang.Boolean debugOptionsEnableDebugging) {
           this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;

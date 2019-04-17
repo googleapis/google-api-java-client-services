@@ -35,6 +35,9 @@ public final class DataSourceRestriction extends com.google.api.client.json.Gene
    * the resulting expressions are joined disjunctively.
    *
    * The maximum number of elements is 20.
+   *
+   * NOTE: Suggest API supports only few filters at the moment:   "objecttype", "type" and
+   * "mimetype". For now, schema specific filters cannot be used to filter suggestions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +56,9 @@ public final class DataSourceRestriction extends com.google.api.client.json.Gene
    * the resulting expressions are joined disjunctively.
    *
    * The maximum number of elements is 20.
+   *
+   * NOTE: Suggest API supports only few filters at the moment:   "objecttype", "type" and
+   * "mimetype". For now, schema specific filters cannot be used to filter suggestions.
    * @return value or {@code null} for none
    */
   public java.util.List<FilterOptions> getFilterOptions() {
@@ -65,6 +71,9 @@ public final class DataSourceRestriction extends com.google.api.client.json.Gene
    * the resulting expressions are joined disjunctively.
    *
    * The maximum number of elements is 20.
+   *
+   * NOTE: Suggest API supports only few filters at the moment:   "objecttype", "type" and
+   * "mimetype". For now, schema specific filters cannot be used to filter suggestions.
    * @param filterOptions filterOptions or {@code null} for none
    */
   public DataSourceRestriction setFilterOptions(java.util.List<FilterOptions> filterOptions) {

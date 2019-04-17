@@ -31,6 +31,13 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class StatusReportingSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Application reporting settings. Only applicable if application_reports_enabled is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApplicationReportingSettings applicationReportingSettings;
+
+  /**
    * Whether app reports are enabled.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class StatusReportingSettings extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean softwareInfoEnabled;
+
+  /**
+   * Application reporting settings. Only applicable if application_reports_enabled is true.
+   * @return value or {@code null} for none
+   */
+  public ApplicationReportingSettings getApplicationReportingSettings() {
+    return applicationReportingSettings;
+  }
+
+  /**
+   * Application reporting settings. Only applicable if application_reports_enabled is true.
+   * @param applicationReportingSettings applicationReportingSettings or {@code null} for none
+   */
+  public StatusReportingSettings setApplicationReportingSettings(ApplicationReportingSettings applicationReportingSettings) {
+    this.applicationReportingSettings = applicationReportingSettings;
+    return this;
+  }
 
   /**
    * Whether app reports are enabled.

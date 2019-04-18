@@ -197,6 +197,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> replicaNames;
 
   /**
+   * Initial root password. Use only on creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rootPassword;
+
+  /**
    * The URI of this resource.
    * The value may be {@code null}.
    */
@@ -637,6 +644,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setReplicaNames(java.util.List<java.lang.String> replicaNames) {
     this.replicaNames = replicaNames;
+    return this;
+  }
+
+  /**
+   * Initial root password. Use only on creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRootPassword() {
+    return rootPassword;
+  }
+
+  /**
+   * Initial root password. Use only on creation.
+   * @param rootPassword rootPassword or {@code null} for none
+   */
+  public DatabaseInstance setRootPassword(java.lang.String rootPassword) {
+    this.rootPassword = rootPassword;
     return this;
   }
 

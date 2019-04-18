@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-servicebroker</artifactId>
-  <version>v1beta1-rev20190325-1.27.0</version>
-  <name>Service Broker API v1beta1-rev20190325-1.27.0</name>
+  <version>v1beta1-rev20190415-1.27.0</version>
+  <name>Service Broker API v1beta1-rev20190415-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

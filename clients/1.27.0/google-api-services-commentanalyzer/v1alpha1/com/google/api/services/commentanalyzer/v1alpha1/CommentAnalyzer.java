@@ -20,7 +20,7 @@ package com.google.api.services.commentanalyzer.v1alpha1;
  * Service definition for CommentAnalyzer (v1alpha1).
  *
  * <p>
- * The Perspective Comment Analyzer API provides information about the potential impact of a comment on a conversation (e.g. it can provide a score for the "toxicity" of a comment).
+ * The Perspective Comment Analyzer API provides information about the potential impact of a comment on a conversation (e.g. it can provide a score for the "toxicity" of a comment). Users can leverage the "SuggestCommentScore" method to submit corrections to improve Perspective over time. Users can set the "doNotStore" flag to ensure that all submitted comments are automatically deleted after scores are returned.
  * </p>
  *
  * <p>

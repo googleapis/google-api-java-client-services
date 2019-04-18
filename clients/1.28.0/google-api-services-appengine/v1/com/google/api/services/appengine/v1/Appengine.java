@@ -515,7 +515,12 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
     /**
      * Recreates the required App Engine features for the specified App Engine application, for example
      * a Cloud Storage bucket or App Engine service account. Use this method if you receive an error
-     * message about a missing feature, for example, Error retrieving the App Engine service account.
+     * message about a missing feature, for example, Error retrieving the App Engine service account. If
+     * you have deleted your App Engine service account, this will not be able to recreate it. Instead,
+     * you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/refere
+     * nce/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAcco
+     * unts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be
+     * found in the Cloud Console Activity Log.
      *
      * Create a request for the method "apps.repair".
      *
@@ -540,7 +545,11 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
        * Recreates the required App Engine features for the specified App Engine application, for
        * example a Cloud Storage bucket or App Engine service account. Use this method if you receive an
        * error message about a missing feature, for example, Error retrieving the App Engine service
-       * account.
+       * account. If you have deleted your App Engine service account, this will not be able to recreate
+       * it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google
+       * .com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%
+       * 2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the
+       * numeric ID can be found in the Cloud Console Activity Log.
        *
        * Create a request for the method "apps.repair".
        *

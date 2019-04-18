@@ -18,7 +18,7 @@ package com.google.api.services.people.v1.model;
 
 /**
  * A request to modify an existing contact group's members. Contacts can be removed from any group
- * but they can only be added to a user group or myContacts or starred system groups.
+ * but they can only be added to a user group or "myContacts" or "starred" system groups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:

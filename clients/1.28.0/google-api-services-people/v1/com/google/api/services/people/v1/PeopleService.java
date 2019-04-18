@@ -2055,8 +2055,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * replaced. Valid values are:
        *
        * * addresses * biographies * birthdays * emailAddresses * events * genders * imClients *
-       * interests * locales * names * nicknames * occupations * organizations * phoneNumbers *
-       * relations * residences * sipAddresses * urls * userDefined
+       * interests * locales * memberships * names * nicknames * occupations * organizations *
+       * phoneNumbers * relations * residences * sipAddresses * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String updatePersonFields;
@@ -2066,8 +2066,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     ** are:
     **
     ** * addresses * biographies * birthdays * emailAddresses * events * genders * imClients * interests
-    ** * locales * names * nicknames * occupations * organizations * phoneNumbers * relations *
-    ** residences * sipAddresses * urls * userDefined
+    ** * locales * memberships * names * nicknames * occupations * organizations * phoneNumbers *
+    ** relations * residences * sipAddresses * urls * userDefined
     **
 
        */
@@ -2081,8 +2081,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * replaced. Valid values are:
        *
        * * addresses * biographies * birthdays * emailAddresses * events * genders * imClients *
-       * interests * locales * names * nicknames * occupations * organizations * phoneNumbers *
-       * relations * residences * sipAddresses * urls * userDefined
+       * interests * locales * memberships * names * nicknames * occupations * organizations *
+       * phoneNumbers * relations * residences * sipAddresses * urls * userDefined
        */
       public UpdateContact setUpdatePersonFields(String updatePersonFields) {
         this.updatePersonFields = updatePersonFields;

@@ -23,13 +23,13 @@ package com.google.api.services.oauth2;
  */
 public class Oauth2Scopes {
 
-  /** Know who you are on Google. */
+  /** Associate you with your personal info on Google. */
   public static final String PLUS_ME = "https://www.googleapis.com/auth/plus.me";
 
   /** View your email address. */
   public static final String USERINFO_EMAIL = "https://www.googleapis.com/auth/userinfo.email";
 
-  /** See your personal info, including any personal info you've made publically available. */
+  /** See your personal info, including any personal info you've made publicly available. */
   public static final String USERINFO_PROFILE = "https://www.googleapis.com/auth/userinfo.profile";
 
   /**

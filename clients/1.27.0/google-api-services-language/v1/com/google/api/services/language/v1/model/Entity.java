@@ -42,8 +42,9 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   /**
    * Metadata associated with the entity.
    *
-   * Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if available. The associated
-   * keys are "wikipedia_url" and "mid", respectively.
+   * For most entity types, the metadata is a Wikipedia URL (`wikipedia_url`) and Knowledge Graph
+   * MID (`mid`), if they are available. For the metadata associated with other entity types, see
+   * the Type table below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +106,9 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   /**
    * Metadata associated with the entity.
    *
-   * Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if available. The associated
-   * keys are "wikipedia_url" and "mid", respectively.
+   * For most entity types, the metadata is a Wikipedia URL (`wikipedia_url`) and Knowledge Graph
+   * MID (`mid`), if they are available. For the metadata associated with other entity types, see
+   * the Type table below.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -116,8 +118,9 @@ public final class Entity extends com.google.api.client.json.GenericJson {
   /**
    * Metadata associated with the entity.
    *
-   * Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if available. The associated
-   * keys are "wikipedia_url" and "mid", respectively.
+   * For most entity types, the metadata is a Wikipedia URL (`wikipedia_url`) and Knowledge Graph
+   * MID (`mid`), if they are available. For the metadata associated with other entity types, see
+   * the Type table below.
    * @param metadata metadata or {@code null} for none
    */
   public Entity setMetadata(java.util.Map<String, java.lang.String> metadata) {

@@ -17,7 +17,8 @@
 package com.google.api.services.cloudsearch.v1.model;
 
 /**
- * A completed query suggestion.
+ * This field does not contain anything as of now and is just used as an indicator that the suggest
+ * result was a phrase completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Search API. For a detailed explanation see:

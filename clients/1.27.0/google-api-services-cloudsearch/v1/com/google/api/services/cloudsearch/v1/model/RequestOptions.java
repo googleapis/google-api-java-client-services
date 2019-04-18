@@ -39,6 +39,10 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   /**
    * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
+   *
+   * When specified, the documents in search results are biased towards the specified language.
+   * Suggest API does not use this parameter. It autocompletes only based on characters in the
+   * query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +85,10 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   /**
    * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
+   *
+   * When specified, the documents in search results are biased towards the specified language.
+   * Suggest API does not use this parameter. It autocompletes only based on characters in the
+   * query.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -90,6 +98,10 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   /**
    * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see
    * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations.
+   *
+   * When specified, the documents in search results are biased towards the specified language.
+   * Suggest API does not use this parameter. It autocompletes only based on characters in the
+   * query.
    * @param languageCode languageCode or {@code null} for none
    */
   public RequestOptions setLanguageCode(java.lang.String languageCode) {

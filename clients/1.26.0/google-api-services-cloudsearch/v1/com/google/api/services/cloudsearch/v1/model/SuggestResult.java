@@ -30,12 +30,15 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class SuggestResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * This is present when the suggestion indicates a person. It contains more information about the
+   * person - like their email ID, name etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PeopleSuggestion peopleSuggestion;
 
   /**
+   * This field will be present if the suggested query is a word/phrase completion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +59,8 @@ public final class SuggestResult extends com.google.api.client.json.GenericJson 
   private java.lang.String suggestedQuery;
 
   /**
+   * This is present when the suggestion indicates a person. It contains more information about the
+   * person - like their email ID, name etc.
    * @return value or {@code null} for none
    */
   public PeopleSuggestion getPeopleSuggestion() {
@@ -63,6 +68,8 @@ public final class SuggestResult extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * This is present when the suggestion indicates a person. It contains more information about the
+   * person - like their email ID, name etc.
    * @param peopleSuggestion peopleSuggestion or {@code null} for none
    */
   public SuggestResult setPeopleSuggestion(PeopleSuggestion peopleSuggestion) {
@@ -71,6 +78,7 @@ public final class SuggestResult extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * This field will be present if the suggested query is a word/phrase completion.
    * @return value or {@code null} for none
    */
   public QuerySuggestion getQuerySuggestion() {
@@ -78,6 +86,7 @@ public final class SuggestResult extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * This field will be present if the suggested query is a word/phrase completion.
    * @param querySuggestion querySuggestion or {@code null} for none
    */
   public SuggestResult setQuerySuggestion(QuerySuggestion querySuggestion) {

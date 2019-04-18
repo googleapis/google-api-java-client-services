@@ -31,7 +31,7 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details related to built-in algorithms job. Only set for built-in algorithms jobs.
+   * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   }
 
   /**
-   * Details related to built-in algorithms job. Only set for built-in algorithms jobs.
+   * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput getBuiltInAlgorithmOutput() {
@@ -88,7 +88,7 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   }
 
   /**
-   * Details related to built-in algorithms job. Only set for built-in algorithms jobs.
+   * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
    * @param builtInAlgorithmOutput builtInAlgorithmOutput or {@code null} for none
    */
   public GoogleCloudMlV1TrainingOutput setBuiltInAlgorithmOutput(GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput) {

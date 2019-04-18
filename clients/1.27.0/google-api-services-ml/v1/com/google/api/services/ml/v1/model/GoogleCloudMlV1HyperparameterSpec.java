@@ -65,11 +65,11 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   private java.lang.String hyperparameterMetricTag;
 
   /**
-   * Optional. How many failed trials that need to be seen before failing the hyperparameter tuning
-   * job. User can specify this field to override the default failing criteria for CloudML Engine
-   * hyperparameter tuning jobs.
+   * Optional. The number of failed trials that need to be seen before failing the hyperparameter
+   * tuning job. You can specify this field to override the default failing criteria for Cloud ML
+   * Engine hyperparameter tuning jobs.
    *
-   * Defaults to zero, which means to let the service decide when a hyperparameter job should fail.
+   * Defaults to zero, which means the service decides when a hyperparameter job should fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,11 +196,11 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   }
 
   /**
-   * Optional. How many failed trials that need to be seen before failing the hyperparameter tuning
-   * job. User can specify this field to override the default failing criteria for CloudML Engine
-   * hyperparameter tuning jobs.
+   * Optional. The number of failed trials that need to be seen before failing the hyperparameter
+   * tuning job. You can specify this field to override the default failing criteria for Cloud ML
+   * Engine hyperparameter tuning jobs.
    *
-   * Defaults to zero, which means to let the service decide when a hyperparameter job should fail.
+   * Defaults to zero, which means the service decides when a hyperparameter job should fail.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxFailedTrials() {
@@ -208,11 +208,11 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   }
 
   /**
-   * Optional. How many failed trials that need to be seen before failing the hyperparameter tuning
-   * job. User can specify this field to override the default failing criteria for CloudML Engine
-   * hyperparameter tuning jobs.
+   * Optional. The number of failed trials that need to be seen before failing the hyperparameter
+   * tuning job. You can specify this field to override the default failing criteria for Cloud ML
+   * Engine hyperparameter tuning jobs.
    *
-   * Defaults to zero, which means to let the service decide when a hyperparameter job should fail.
+   * Defaults to zero, which means the service decides when a hyperparameter job should fail.
    * @param maxFailedTrials maxFailedTrials or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterSpec setMaxFailedTrials(java.lang.Integer maxFailedTrials) {

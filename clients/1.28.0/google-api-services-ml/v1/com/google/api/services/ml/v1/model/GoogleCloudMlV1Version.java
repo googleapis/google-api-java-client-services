@@ -162,6 +162,48 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Optional. The Google Cloud Storage location of the packages for custom prediction and any
+   * additional dependencies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> packageUris;
+
+  /**
+   * class PredictionClass(object):   A Model performs predictions on a given list of instances.
+   *
+   *   The input instances are the raw values sent by the user. It is the   responsibility of a
+   * Model to translate these instances into   actual predictions.
+   *
+   *   The input instances and the output use python data types. The input   instances have been
+   * decoded prior to being passed to the predict   method. The output, which should use python data
+   * types is   encoded after being returned from the predict method.
+   *
+   *   def predict(self, instances, **kwargs):     Returns predictions for the provided instances.
+   *
+   *     Instances are the decoded values from the request. Clients need not     worry about
+   * decoding json nor base64 decoding.
+   *
+   *     Args:       instances: A list of instances, as described in the API.       **kwargs:
+   * Additional keyword arguments, will be passed into the           client's predict method.
+   *
+   *     Returns:       A list of outputs containing the prediction results.
+   *
+   *   @classmethod   def from_path(cls, model_path):     Creates a model using the given model
+   * path.
+   *
+   *     Path is useful, e.g., to load files from the exported directory     containing the model.
+   *
+   *     Args:       model_path: The local directory that contains the exported model           file
+   * along with any additional files uploaded when creating the           version resource.
+   *
+   *     Returns:       An instance implementing this Model class.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predictionClass;
+
+  /**
    * Optional. The version of Python used in prediction. If not set, the default version is '2.7'.
    * Python '3.5' is available when `runtime_version` is set to '1.4' and above. Python '2.7' works
    * with all supported runtime versions.
@@ -513,6 +555,96 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The Google Cloud Storage location of the packages for custom prediction and any
+   * additional dependencies.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPackageUris() {
+    return packageUris;
+  }
+
+  /**
+   * Optional. The Google Cloud Storage location of the packages for custom prediction and any
+   * additional dependencies.
+   * @param packageUris packageUris or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setPackageUris(java.util.List<java.lang.String> packageUris) {
+    this.packageUris = packageUris;
+    return this;
+  }
+
+  /**
+   * class PredictionClass(object):   A Model performs predictions on a given list of instances.
+   *
+   *   The input instances are the raw values sent by the user. It is the   responsibility of a
+   * Model to translate these instances into   actual predictions.
+   *
+   *   The input instances and the output use python data types. The input   instances have been
+   * decoded prior to being passed to the predict   method. The output, which should use python data
+   * types is   encoded after being returned from the predict method.
+   *
+   *   def predict(self, instances, **kwargs):     Returns predictions for the provided instances.
+   *
+   *     Instances are the decoded values from the request. Clients need not     worry about
+   * decoding json nor base64 decoding.
+   *
+   *     Args:       instances: A list of instances, as described in the API.       **kwargs:
+   * Additional keyword arguments, will be passed into the           client's predict method.
+   *
+   *     Returns:       A list of outputs containing the prediction results.
+   *
+   *   @classmethod   def from_path(cls, model_path):     Creates a model using the given model
+   * path.
+   *
+   *     Path is useful, e.g., to load files from the exported directory     containing the model.
+   *
+   *     Args:       model_path: The local directory that contains the exported model           file
+   * along with any additional files uploaded when creating the           version resource.
+   *
+   *     Returns:       An instance implementing this Model class.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredictionClass() {
+    return predictionClass;
+  }
+
+  /**
+   * class PredictionClass(object):   A Model performs predictions on a given list of instances.
+   *
+   *   The input instances are the raw values sent by the user. It is the   responsibility of a
+   * Model to translate these instances into   actual predictions.
+   *
+   *   The input instances and the output use python data types. The input   instances have been
+   * decoded prior to being passed to the predict   method. The output, which should use python data
+   * types is   encoded after being returned from the predict method.
+   *
+   *   def predict(self, instances, **kwargs):     Returns predictions for the provided instances.
+   *
+   *     Instances are the decoded values from the request. Clients need not     worry about
+   * decoding json nor base64 decoding.
+   *
+   *     Args:       instances: A list of instances, as described in the API.       **kwargs:
+   * Additional keyword arguments, will be passed into the           client's predict method.
+   *
+   *     Returns:       A list of outputs containing the prediction results.
+   *
+   *   @classmethod   def from_path(cls, model_path):     Creates a model using the given model
+   * path.
+   *
+   *     Path is useful, e.g., to load files from the exported directory     containing the model.
+   *
+   *     Args:       model_path: The local directory that contains the exported model           file
+   * along with any additional files uploaded when creating the           version resource.
+   *
+   *     Returns:       An instance implementing this Model class.
+   * @param predictionClass predictionClass or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setPredictionClass(java.lang.String predictionClass) {
+    this.predictionClass = predictionClass;
     return this;
   }
 

@@ -65,6 +65,13 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   private java.lang.String installerPackageName;
 
   /**
+   * List of keyed app states reported by the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<KeyedAppState> keyedAppStates;
+
+  /**
    * Package name of the app.
    * The value may be {@code null}.
    */
@@ -175,6 +182,23 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
    */
   public ApplicationReport setInstallerPackageName(java.lang.String installerPackageName) {
     this.installerPackageName = installerPackageName;
+    return this;
+  }
+
+  /**
+   * List of keyed app states reported by the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<KeyedAppState> getKeyedAppStates() {
+    return keyedAppStates;
+  }
+
+  /**
+   * List of keyed app states reported by the app.
+   * @param keyedAppStates keyedAppStates or {@code null} for none
+   */
+  public ApplicationReport setKeyedAppStates(java.util.List<KeyedAppState> keyedAppStates) {
+    this.keyedAppStates = keyedAppStates;
     return this;
   }
 

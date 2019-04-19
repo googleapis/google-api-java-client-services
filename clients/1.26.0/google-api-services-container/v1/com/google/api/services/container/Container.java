@@ -143,6 +143,270 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
   public class Projects {
 
     /**
+     * An accessor for creating requests from the Aggregated collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Container container = new Container(...);}
+     *   {@code Container.Aggregated.List request = container.aggregated().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Aggregated aggregated() {
+      return new Aggregated();
+    }
+
+    /**
+     * The "aggregated" collection of methods.
+     */
+    public class Aggregated {
+
+      /**
+       * An accessor for creating requests from the UsableSubnetworks collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Container container = new Container(...);}
+       *   {@code Container.UsableSubnetworks.List request = container.usableSubnetworks().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public UsableSubnetworks usableSubnetworks() {
+        return new UsableSubnetworks();
+      }
+
+      /**
+       * The "usableSubnetworks" collection of methods.
+       */
+      public class UsableSubnetworks {
+
+        /**
+         * Lists subnetworks that are usable for creating clusters in a project.
+         *
+         * Create a request for the method "usableSubnetworks.list".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent project where subnetworks are usable.
+        Specified in the format 'projects'.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ContainerRequest<com.google.api.services.container.model.ListUsableSubnetworksResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/aggregated/usableSubnetworks";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * Lists subnetworks that are usable for creating clusters in a project.
+           *
+           * Create a request for the method "usableSubnetworks.list".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent project where subnetworks are usable.
+        Specified in the format 'projects'.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.model.ListUsableSubnetworksResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent project where subnetworks are usable. Specified in the format 'projects'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent project where subnetworks are usable. Specified in the format 'projects'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent project where subnetworks are usable. Specified in the format 'projects'.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Filtering currently only supports equality on the networkProjectId and must be in the
+           * form: "networkProjectId=[PROJECTID]", where `networkProjectId` is the project which
+           * owns the listed subnetworks. This defaults to the parent project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Filtering currently only supports equality on the networkProjectId and must be in the form:
+         "networkProjectId=[PROJECTID]", where `networkProjectId` is the project which owns the listed
+         subnetworks. This defaults to the parent project ID.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Filtering currently only supports equality on the networkProjectId and must be in the
+           * form: "networkProjectId=[PROJECTID]", where `networkProjectId` is the project which
+           * owns the listed subnetworks. This defaults to the parent project ID.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The max number of results per page that should be returned. If the number of available
+           * results is larger than `page_size`, a `next_page_token` is returned which can be used
+           * to get the next page of results in subsequent requests. Acceptable values are 0 to 500,
+           * inclusive. (Default: 500)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The max number of results per page that should be returned. If the number of available results is
+         larger than `page_size`, a `next_page_token` is returned which can be used to get the next page of
+         results in subsequent requests. Acceptable values are 0 to 500, inclusive. (Default: 500)
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The max number of results per page that should be returned. If the number of available
+           * results is larger than `page_size`, a `next_page_token` is returned which can be used
+           * to get the next page of results in subsequent requests. Acceptable values are 0 to 500,
+           * inclusive. (Default: 500)
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Specifies a page token to use. Set this to the nextPageToken returned by previous list
+           * requests to get the next page of results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Specifies a page token to use. Set this to the nextPageToken returned by previous list requests to
+         get the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Specifies a page token to use. Set this to the nextPageToken returned by previous list
+           * requests to get the next page of results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -163,7 +427,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
     public class Locations {
 
       /**
-       * Returns configuration info about the Kubernetes Engine service.
+       * Returns configuration info about the Google Kubernetes Engine service.
        *
        * Create a request for the method "locations.getServerConfig".
        *
@@ -189,7 +453,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Returns configuration info about the Kubernetes Engine service.
+         * Returns configuration info about the Google Kubernetes Engine service.
          *
          * Create a request for the method "locations.getServerConfig".
          *
@@ -531,12 +795,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
          * firewalls#networks).
          *
-         * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+         * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
          * each node to allow the containers on that node to communicate with all other instances in the
          * cluster.
          *
-         * Finally, an entry is added to the project's global metadata indicating which CIDR range is being
-         * used by the cluster.
+         * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+         * cluster is using.
          *
          * Create a request for the method "clusters.create".
          *
@@ -569,12 +833,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * By default, the cluster is created in the project's [default network](/compute/docs/networks-
            * and-firewalls#networks).
            *
-           * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+           * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
            * each node to allow the containers on that node to communicate with all other instances in the
            * cluster.
            *
-           * Finally, an entry is added to the project's global metadata indicating which CIDR range is
-           * being used by the cluster.
+           * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+           * cluster is using.
            *
            * Create a request for the method "clusters.create".
            *
@@ -693,8 +957,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          *
          * Firewalls and routes that were configured during cluster creation are also deleted.
          *
-         * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-         * resources) will not be deleted if they weren't present at the initial create time.
+         * Other Google Compute Engine resources that might be in use by the cluster, such as load balancer
+         * resources, are not deleted if they weren't present when the cluster was initially created.
          *
          * Create a request for the method "clusters.delete".
          *
@@ -724,8 +988,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            *
            * Firewalls and routes that were configured during cluster creation are also deleted.
            *
-           * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-           * resources) will not be deleted if they weren't present at the initial create time.
+           * Other Google Compute Engine resources that might be in use by the cluster, such as load
+           * balancer resources, are not deleted if they weren't present when the cluster was initially
+           * created.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -1136,8 +1401,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * GetJSONWebKeys gets the public component of the cluster signing keys in JSON Web Key format. This
-         * API is not yet intended for general use, and is not available for all clusters.
+         * Gets the public component of the cluster signing keys in JSON Web Key format. This API is not yet
+         * intended for general use, and is not available for all clusters.
          *
          * Create a request for the method "clusters.getJwks".
          *
@@ -1163,8 +1428,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * GetJSONWebKeys gets the public component of the cluster signing keys in JSON Web Key format.
-           * This API is not yet intended for general use, and is not available for all clusters.
+           * Gets the public component of the cluster signing keys in JSON Web Key format. This API is not
+           * yet intended for general use, and is not available for all clusters.
            *
            * Create a request for the method "clusters.getJwks".
            *
@@ -2204,8 +2469,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Used to set master auth materials. Currently supports :- Changing the admin password for a
-         * specific cluster. This can be either via password generation or explicitly set the password.
+         * Sets master auth materials. Currently supports changing the admin password or a specific cluster,
+         * either via password generation or explicitly setting the password.
          *
          * Create a request for the method "clusters.setMasterAuth".
          *
@@ -2232,8 +2497,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Used to set master auth materials. Currently supports :- Changing the admin password for a
-           * specific cluster. This can be either via password generation or explicitly set the password.
+           * Sets master auth materials. Currently supports changing the admin password or a specific
+           * cluster, either via password generation or explicitly setting the password.
            *
            * Create a request for the method "clusters.setMasterAuth".
            *
@@ -2490,7 +2755,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Enables/Disables Network Policy for a cluster.
+         * Enables or disables Network Policy for a cluster.
          *
          * Create a request for the method "clusters.setNetworkPolicy".
          *
@@ -2517,7 +2782,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Enables/Disables Network Policy for a cluster.
+           * Enables or disables Network Policy for a cluster.
            *
            * Create a request for the method "clusters.setNetworkPolicy".
            *
@@ -2774,7 +3039,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Start master IP rotation.
+         * Starts master IP rotation.
          *
          * Create a request for the method "clusters.startIpRotation".
          *
@@ -2801,7 +3066,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Start master IP rotation.
+           * Starts master IP rotation.
            *
            * Create a request for the method "clusters.startIpRotation".
            *
@@ -3603,7 +3868,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Retrieves the node pool requested.
+           * Retrieves the requested node pool.
            *
            * Create a request for the method "nodePools.get".
            *
@@ -3629,7 +3894,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Retrieves the node pool requested.
+             * Retrieves the requested node pool.
              *
              * Create a request for the method "nodePools.get".
              *
@@ -4071,7 +4336,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+           * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
            * upgrade successfully completed.
            *
            * Create a request for the method "nodePools.rollback".
@@ -4100,7 +4365,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+             * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
              * upgrade successfully completed.
              *
              * Create a request for the method "nodePools.rollback".
@@ -4217,7 +4482,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Sets the autoscaling settings for a specific node pool.
+           * Sets the autoscaling settings for the specified node pool.
            *
            * Create a request for the method "nodePools.setAutoscaling".
            *
@@ -4245,7 +4510,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Sets the autoscaling settings for a specific node pool.
+             * Sets the autoscaling settings for the specified node pool.
              *
              * Create a request for the method "nodePools.setAutoscaling".
              *
@@ -4651,7 +4916,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Updates the version and/or image type for a specific node pool.
+           * Updates the version and/or image type for the specified node pool.
            *
            * Create a request for the method "nodePools.update".
            *
@@ -4678,7 +4943,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Updates the version and/or image type for a specific node pool.
+             * Updates the version and/or image type for the specified node pool.
              *
              * Create a request for the method "nodePools.update".
              *
@@ -4815,9 +5080,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         public class WellKnown {
 
           /**
-           * GetOpenIDConfig gets the OIDC discovery document for the cluster. See the OpenID Connect
-           * Discovery 1.0 specification for details. https://openid.net/specs/openid-connect-discovery-
-           * 1_0.html This API is not yet intended for general use, and is not available for all clusters.
+           * Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0
+           * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This API
+           * is not yet intended for general use, and is not available for all clusters.
            *
            * Create a request for the method "well-known.getOpenid-configuration".
            *
@@ -4844,9 +5109,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
             /**
-             * GetOpenIDConfig gets the OIDC discovery document for the cluster. See the OpenID Connect
-             * Discovery 1.0 specification for details. https://openid.net/specs/openid-connect-discovery-
-             * 1_0.html This API is not yet intended for general use, and is not available for all clusters.
+             * Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0
+             * specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This
+             * API is not yet intended for general use, and is not available for all clusters.
              *
              * Create a request for the method "well-known.getOpenid-configuration".
              *
@@ -5584,7 +5849,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
     public class Zones {
 
       /**
-       * Returns configuration info about the Kubernetes Engine service.
+       * Returns configuration info about the Google Kubernetes Engine service.
        *
        * Create a request for the method "zones.getServerconfig".
        *
@@ -5612,7 +5877,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/serverconfig";
 
         /**
-         * Returns configuration info about the Kubernetes Engine service.
+         * Returns configuration info about the Google Kubernetes Engine service.
          *
          * Create a request for the method "zones.getServerconfig".
          *
@@ -6205,12 +6470,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
          * firewalls#networks).
          *
-         * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+         * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
          * each node to allow the containers on that node to communicate with all other instances in the
          * cluster.
          *
-         * Finally, an entry is added to the project's global metadata indicating which CIDR range is being
-         * used by the cluster.
+         * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+         * cluster is using.
          *
          * Create a request for the method "clusters.create".
          *
@@ -6246,12 +6511,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * By default, the cluster is created in the project's [default network](/compute/docs/networks-
            * and-firewalls#networks).
            *
-           * One firewall is added for the cluster. After cluster creation, the cluster creates routes for
+           * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
            * each node to allow the containers on that node to communicate with all other instances in the
            * cluster.
            *
-           * Finally, an entry is added to the project's global metadata indicating which CIDR range is
-           * being used by the cluster.
+           * Finally, an entry is added to the project's global metadata indicating which CIDR range the
+           * cluster is using.
            *
            * Create a request for the method "clusters.create".
            *
@@ -6395,8 +6660,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          *
          * Firewalls and routes that were configured during cluster creation are also deleted.
          *
-         * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-         * resources) will not be deleted if they weren't present at the initial create time.
+         * Other Google Compute Engine resources that might be in use by the cluster, such as load balancer
+         * resources, are not deleted if they weren't present when the cluster was initially created.
          *
          * Create a request for the method "clusters.delete".
          *
@@ -6432,8 +6697,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            *
            * Firewalls and routes that were configured during cluster creation are also deleted.
            *
-           * Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
-           * resources) will not be deleted if they weren't present at the initial create time.
+           * Other Google Compute Engine resources that might be in use by the cluster, such as load
+           * balancer resources, are not deleted if they weren't present when the cluster was initially
+           * created.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -8429,8 +8695,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Used to set master auth materials. Currently supports :- Changing the admin password for a
-         * specific cluster. This can be either via password generation or explicitly set the password.
+         * Sets master auth materials. Currently supports changing the admin password or a specific cluster,
+         * either via password generation or explicitly setting the password.
          *
          * Create a request for the method "clusters.setMasterAuth".
          *
@@ -8463,8 +8729,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMasterAuth";
 
           /**
-           * Used to set master auth materials. Currently supports :- Changing the admin password for a
-           * specific cluster. This can be either via password generation or explicitly set the password.
+           * Sets master auth materials. Currently supports changing the admin password or a specific
+           * cluster, either via password generation or explicitly setting the password.
            *
            * Create a request for the method "clusters.setMasterAuth".
            *
@@ -8631,7 +8897,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Enables/Disables Network Policy for a cluster.
+         * Enables or disables Network Policy for a cluster.
          *
          * Create a request for the method "clusters.setNetworkPolicy".
          *
@@ -8663,7 +8929,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setNetworkPolicy";
 
           /**
-           * Enables/Disables Network Policy for a cluster.
+           * Enables or disables Network Policy for a cluster.
            *
            * Create a request for the method "clusters.setNetworkPolicy".
            *
@@ -8828,7 +9094,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Start master IP rotation.
+         * Starts master IP rotation.
          *
          * Create a request for the method "clusters.startIpRotation".
          *
@@ -8860,7 +9126,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:startIpRotation";
 
           /**
-           * Start master IP rotation.
+           * Starts master IP rotation.
            *
            * Create a request for the method "clusters.startIpRotation".
            *
@@ -9246,7 +9512,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         public class NodePools {
 
           /**
-           * Sets the autoscaling settings for a specific node pool.
+           * Sets the autoscaling settings for the specified node pool.
            *
            * Create a request for the method "nodePools.autoscaling".
            *
@@ -9282,7 +9548,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/autoscaling";
 
             /**
-             * Sets the autoscaling settings for a specific node pool.
+             * Sets the autoscaling settings for the specified node pool.
              *
              * Create a request for the method "nodePools.autoscaling".
              *
@@ -9924,7 +10190,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Retrieves the node pool requested.
+           * Retrieves the requested node pool.
            *
            * Create a request for the method "nodePools.get".
            *
@@ -9958,7 +10224,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}";
 
             /**
-             * Retrieves the node pool requested.
+             * Retrieves the requested node pool.
              *
              * Create a request for the method "nodePools.get".
              *
@@ -10411,7 +10677,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+           * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
            * upgrade successfully completed.
            *
            * Create a request for the method "nodePools.rollback".
@@ -10448,7 +10714,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}:rollback";
 
             /**
-             * Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if the last
+             * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last
              * upgrade successfully completed.
              *
              * Create a request for the method "nodePools.rollback".
@@ -11103,7 +11369,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Updates the version and/or image type for a specific node pool.
+           * Updates the version and/or image type for the specified node pool.
            *
            * Create a request for the method "nodePools.update".
            *
@@ -11139,7 +11405,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/update";
 
             /**
-             * Updates the version and/or image type for a specific node pool.
+             * Updates the version and/or image type for the specified node pool.
              *
              * Create a request for the method "nodePools.update".
              *

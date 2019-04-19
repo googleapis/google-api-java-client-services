@@ -635,8 +635,10 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        *
        * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
       as `projects/` plus the
-       *        [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
-       *        Example: `projects/my-project-123`.
+       *        [Google Cloud Platform project
+      ID](https://support.google.com/cloud/answer/6158840).
+       *        Example:
+      `projects/my-project-123`.
        * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ReportedErrorEvent}
        * @return the request
        */
@@ -673,8 +675,10 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          *
          * @param projectName [Required] The resource name of the Google Cloud Platform project. Written
       as `projects/` plus the
-       *        [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
-       *        Example: `projects/my-project-123`.
+       *        [Google Cloud Platform project
+      ID](https://support.google.com/cloud/answer/6158840).
+       *        Example:
+      `projects/my-project-123`.
          * @param content the {@link com.google.api.services.clouderrorreporting.v1beta1.model.ReportedErrorEvent}
          * @since 1.13
          */

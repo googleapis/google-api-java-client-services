@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-drive</artifactId>
-  <version>v2-rev20190404-1.26.0</version>
-  <name>Drive API v2-rev20190404-1.26.0</name>
+  <version>v2-rev20190416-1.26.0</version>
+  <name>Drive API v2-rev20190416-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

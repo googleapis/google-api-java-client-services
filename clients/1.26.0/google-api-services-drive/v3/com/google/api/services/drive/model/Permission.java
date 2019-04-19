@@ -92,6 +92,20 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Details of whether the permissions on this shared drive item are inherited or directly on this
+   * item. This is an output-only field which is present only for shared drive items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PermissionDetails> permissionDetails;
+
+  static {
+    // hack to force ProGuard to consider PermissionDetails used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PermissionDetails.class);
+  }
+
+  /**
    * A link to the user's profile photo, if available.
    * The value may be {@code null}.
    */
@@ -108,8 +122,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * Details of whether the permissions on this Team Drive item are inherited or directly on this
-   * item. This is an output-only field which is present only for Team Drive items.
+   * Deprecated - use permissionDetails instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,6 +288,25 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Details of whether the permissions on this shared drive item are inherited or directly on this
+   * item. This is an output-only field which is present only for shared drive items.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PermissionDetails> getPermissionDetails() {
+    return permissionDetails;
+  }
+
+  /**
+   * Details of whether the permissions on this shared drive item are inherited or directly on this
+   * item. This is an output-only field which is present only for shared drive items.
+   * @param permissionDetails permissionDetails or {@code null} for none
+   */
+  public Permission setPermissionDetails(java.util.List<PermissionDetails> permissionDetails) {
+    this.permissionDetails = permissionDetails;
+    return this;
+  }
+
+  /**
    * A link to the user's profile photo, if available.
    * @return value or {@code null} for none
    */
@@ -313,8 +345,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of whether the permissions on this Team Drive item are inherited or directly on this
-   * item. This is an output-only field which is present only for Team Drive items.
+   * Deprecated - use permissionDetails instead.
    * @return value or {@code null} for none
    */
   public java.util.List<TeamDrivePermissionDetails> getTeamDrivePermissionDetails() {
@@ -322,8 +353,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of whether the permissions on this Team Drive item are inherited or directly on this
-   * item. This is an output-only field which is present only for Team Drive items.
+   * Deprecated - use permissionDetails instead.
    * @param teamDrivePermissionDetails teamDrivePermissionDetails or {@code null} for none
    */
   public Permission setTeamDrivePermissionDetails(java.util.List<TeamDrivePermissionDetails> teamDrivePermissionDetails) {
@@ -356,6 +386,131 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   @Override
   public Permission clone() {
     return (Permission) super.clone();
+  }
+
+  /**
+   * Model definition for PermissionPermissionDetails.
+   */
+  public static final class PermissionDetails extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Whether this permission is inherited. This field is always populated. This is an output-only
+     * field.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean inherited;
+
+    /**
+     * The ID of the item from which this permission is inherited. This is an output-only field and is
+     * only populated for members of the shared drive.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String inheritedFrom;
+
+    /**
+     * The permission type for this user. While new values may be added in future, the following are
+     * currently possible: - file  - member
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String permissionType;
+
+    /**
+     * The primary role for this user. While new values may be added in the future, the following are
+     * currently possible: - organizer  - fileOrganizer  - writer  - commenter  - reader
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String role;
+
+    /**
+     * Whether this permission is inherited. This field is always populated. This is an output-only
+     * field.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getInherited() {
+      return inherited;
+    }
+
+    /**
+     * Whether this permission is inherited. This field is always populated. This is an output-only
+     * field.
+     * @param inherited inherited or {@code null} for none
+     */
+    public PermissionDetails setInherited(java.lang.Boolean inherited) {
+      this.inherited = inherited;
+      return this;
+    }
+
+    /**
+     * The ID of the item from which this permission is inherited. This is an output-only field and is
+     * only populated for members of the shared drive.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getInheritedFrom() {
+      return inheritedFrom;
+    }
+
+    /**
+     * The ID of the item from which this permission is inherited. This is an output-only field and is
+     * only populated for members of the shared drive.
+     * @param inheritedFrom inheritedFrom or {@code null} for none
+     */
+    public PermissionDetails setInheritedFrom(java.lang.String inheritedFrom) {
+      this.inheritedFrom = inheritedFrom;
+      return this;
+    }
+
+    /**
+     * The permission type for this user. While new values may be added in future, the following are
+     * currently possible: - file  - member
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getPermissionType() {
+      return permissionType;
+    }
+
+    /**
+     * The permission type for this user. While new values may be added in future, the following are
+     * currently possible: - file  - member
+     * @param permissionType permissionType or {@code null} for none
+     */
+    public PermissionDetails setPermissionType(java.lang.String permissionType) {
+      this.permissionType = permissionType;
+      return this;
+    }
+
+    /**
+     * The primary role for this user. While new values may be added in the future, the following are
+     * currently possible: - organizer  - fileOrganizer  - writer  - commenter  - reader
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getRole() {
+      return role;
+    }
+
+    /**
+     * The primary role for this user. While new values may be added in the future, the following are
+     * currently possible: - organizer  - fileOrganizer  - writer  - commenter  - reader
+     * @param role role or {@code null} for none
+     */
+    public PermissionDetails setRole(java.lang.String role) {
+      this.role = role;
+      return this;
+    }
+
+    @Override
+    public PermissionDetails set(String fieldName, Object value) {
+      return (PermissionDetails) super.set(fieldName, value);
+    }
+
+    @Override
+    public PermissionDetails clone() {
+      return (PermissionDetails) super.clone();
+    }
+
   }
 
   /**

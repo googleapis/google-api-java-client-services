@@ -333,17 +333,83 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (GetStartPageToken) super.setUserIp(userIp);
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /**
+       * The ID of the shared drive for which the starting pageToken for listing future changes from
+       * that shared drive will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The ID of the shared drive for which the starting pageToken for listing future changes from that
+     shared drive will be returned.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /**
+       * The ID of the shared drive for which the starting pageToken for listing future changes from
+       * that shared drive will be returned.
+       */
+      public GetStartPageToken setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public GetStartPageToken setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public GetStartPageToken setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -366,7 +432,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -376,24 +442,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /**
-       * The ID of the Team Drive for which the starting pageToken for listing future changes from
-       * that Team Drive will be returned.
-       */
+      /** Deprecated use driveId instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** The ID of the Team Drive for which the starting pageToken for listing future changes from that Team
-     Drive will be returned.
+      /** Deprecated use driveId instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /**
-       * The ID of the Team Drive for which the starting pageToken for listing future changes from
-       * that Team Drive will be returned.
-       */
+      /** Deprecated use driveId instead. */
       public GetStartPageToken setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -405,7 +464,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the changes for a user or Team Drive.
+     * Lists the changes for a user or shared drive.
      *
      * Create a request for the method "changes.list".
      *
@@ -428,7 +487,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "changes";
 
       /**
-       * Lists the changes for a user or Team Drive.
+       * Lists the changes for a user or shared drive.
        *
        * Create a request for the method "changes.list".
        *
@@ -518,6 +577,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The shared drive from which changes will be returned. If specified the change IDs will be
+     reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /**
+       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+       */
+      public List setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      /**
        * Whether changes should include the file resource if the file is still accessible by the
        * user at the time of the request, even when a file was removed from the list of changes and
        * there will be no further change entries for this file.
@@ -572,6 +654,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeCorpusRemovals;
       }
 
+      /** Whether both My Drive and shared drive items should be included in results. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeItemsFromAllDrives;
+
+      /** Whether both My Drive and shared drive items should be included in results. [default: false]
+       */
+      public java.lang.Boolean getIncludeItemsFromAllDrives() {
+        return includeItemsFromAllDrives;
+      }
+
+      /** Whether both My Drive and shared drive items should be included in results. */
+      public List setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
+        this.includeItemsFromAllDrives = includeItemsFromAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether both My Drive and shared drive items should be included in results.
+       * </p>
+       */
+      public boolean isIncludeItemsFromAllDrives() {
+        if (includeItemsFromAllDrives == null || includeItemsFromAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return includeItemsFromAllDrives;
+      }
+
       /**
        * Whether to include changes indicating that items have been removed from the list of
        * changes, for example by deletion or loss of access.
@@ -623,17 +748,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeRemoved;
       }
 
-      /** Whether Team Drive files or changes should be included in results. */
+      /** Deprecated use includeItemsFromAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTeamDriveItems;
 
-      /** Whether Team Drive files or changes should be included in results. [default: false]
+      /** Deprecated use includeItemsFromAllDrives instead. [default: false]
        */
       public java.lang.Boolean getIncludeTeamDriveItems() {
         return includeTeamDriveItems;
       }
 
-      /** Whether Team Drive files or changes should be included in results. */
+      /** Deprecated use includeItemsFromAllDrives instead. */
       public List setIncludeTeamDriveItems(java.lang.Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -656,7 +781,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether Team Drive files or changes should be included in results.
+       * Deprecated use includeItemsFromAllDrives instead.
        * </p>
        */
       public boolean isIncludeTeamDriveItems() {
@@ -760,17 +885,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public List setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public List setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -793,7 +961,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -803,26 +971,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /**
-       * The Team Drive from which changes will be returned. If specified the change IDs will be
-       * reflective of the Team Drive; use the combined Team Drive ID and change ID as an
-       * identifier.
-       */
+      /** Deprecated use driveId instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** The Team Drive from which changes will be returned. If specified the change IDs will be reflective
-     of the Team Drive; use the combined Team Drive ID and change ID as an identifier.
+      /** Deprecated use driveId instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /**
-       * The Team Drive from which changes will be returned. If specified the change IDs will be
-       * reflective of the Team Drive; use the combined Team Drive ID and change ID as an
-       * identifier.
-       */
+      /** Deprecated use driveId instead. */
       public List setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -939,6 +1098,29 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
+       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The shared drive from which changes will be returned. If specified the change IDs will be
+     reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /**
+       * The shared drive from which changes will be returned. If specified the change IDs will be
+       * reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+       */
+      public Watch setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      /**
        * Whether changes should include the file resource if the file is still accessible by the
        * user at the time of the request, even when a file was removed from the list of changes and
        * there will be no further change entries for this file.
@@ -993,6 +1175,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeCorpusRemovals;
       }
 
+      /** Whether both My Drive and shared drive items should be included in results. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeItemsFromAllDrives;
+
+      /** Whether both My Drive and shared drive items should be included in results. [default: false]
+       */
+      public java.lang.Boolean getIncludeItemsFromAllDrives() {
+        return includeItemsFromAllDrives;
+      }
+
+      /** Whether both My Drive and shared drive items should be included in results. */
+      public Watch setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
+        this.includeItemsFromAllDrives = includeItemsFromAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether both My Drive and shared drive items should be included in results.
+       * </p>
+       */
+      public boolean isIncludeItemsFromAllDrives() {
+        if (includeItemsFromAllDrives == null || includeItemsFromAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return includeItemsFromAllDrives;
+      }
+
       /**
        * Whether to include changes indicating that items have been removed from the list of
        * changes, for example by deletion or loss of access.
@@ -1044,17 +1269,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeRemoved;
       }
 
-      /** Whether Team Drive files or changes should be included in results. */
+      /** Deprecated use includeItemsFromAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTeamDriveItems;
 
-      /** Whether Team Drive files or changes should be included in results. [default: false]
+      /** Deprecated use includeItemsFromAllDrives instead. [default: false]
        */
       public java.lang.Boolean getIncludeTeamDriveItems() {
         return includeTeamDriveItems;
       }
 
-      /** Whether Team Drive files or changes should be included in results. */
+      /** Deprecated use includeItemsFromAllDrives instead. */
       public Watch setIncludeTeamDriveItems(java.lang.Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -1077,7 +1302,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether Team Drive files or changes should be included in results.
+       * Deprecated use includeItemsFromAllDrives instead.
        * </p>
        */
       public boolean isIncludeTeamDriveItems() {
@@ -1181,17 +1406,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Watch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Watch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -1214,7 +1482,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -1224,26 +1492,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /**
-       * The Team Drive from which changes will be returned. If specified the change IDs will be
-       * reflective of the Team Drive; use the combined Team Drive ID and change ID as an
-       * identifier.
-       */
+      /** Deprecated use driveId instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** The Team Drive from which changes will be returned. If specified the change IDs will be reflective
-     of the Team Drive; use the combined Team Drive ID and change ID as an identifier.
+      /** Deprecated use driveId instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /**
-       * The Team Drive from which changes will be returned. If specified the change IDs will be
-       * reflective of the Team Drive; use the combined Team Drive ID and change ID as an
-       * identifier.
-       */
+      /** Deprecated use driveId instead. */
       public Watch setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -2097,6 +2356,927 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
+   * An accessor for creating requests from the Drives collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Drive drive = new Drive(...);}
+   *   {@code Drive.Drives.List request = drive.drives().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Drives drives() {
+    return new Drives();
+  }
+
+  /**
+   * The "drives" collection of methods.
+   */
+  public class Drives {
+
+    /**
+     * Creates a new shared drive.
+     *
+     * Create a request for the method "drives.create".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param requestId An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
+     *        of a shared drive. A repeated request by the same user and with the same request ID will
+     *        avoid creating duplicates by attempting to create the same shared drive. If the shared
+     *        drive already exists a 409 error will be returned.
+     * @param content the {@link com.google.api.services.drive.model.Drive}
+     * @return the request
+     */
+    public Create create(java.lang.String requestId, com.google.api.services.drive.model.Drive content) throws java.io.IOException {
+      Create result = new Create(requestId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DriveRequest<com.google.api.services.drive.model.Drive> {
+
+      private static final String REST_PATH = "drives";
+
+      /**
+       * Creates a new shared drive.
+       *
+       * Create a request for the method "drives.create".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param requestId An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
+     *        of a shared drive. A repeated request by the same user and with the same request ID will
+     *        avoid creating duplicates by attempting to create the same shared drive. If the shared
+     *        drive already exists a 409 error will be returned.
+       * @param content the {@link com.google.api.services.drive.model.Drive}
+       * @since 1.13
+       */
+      protected Create(java.lang.String requestId, com.google.api.services.drive.model.Drive content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Drive.class);
+        this.requestId = com.google.api.client.util.Preconditions.checkNotNull(requestId, "Required parameter requestId must be specified.");
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUserIp(java.lang.String userIp) {
+        return (Create) super.setUserIp(userIp);
+      }
+
+      /**
+       * An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
+       * creation of a shared drive. A repeated request by the same user and with the same request
+       * ID will avoid creating duplicates by attempting to create the same shared drive. If the
+       * shared drive already exists a 409 error will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An ID, such as a random UUID, which uniquely identifies this user's request for idempotent creation
+     of a shared drive. A repeated request by the same user and with the same request ID will avoid
+     creating duplicates by attempting to create the same shared drive. If the shared drive already
+     exists a 409 error will be returned.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An ID, such as a random UUID, which uniquely identifies this user's request for idempotent
+       * creation of a shared drive. A repeated request by the same user and with the same request
+       * ID will avoid creating duplicates by attempting to create the same shared drive. If the
+       * shared drive already exists a 409 error will be returned.
+       */
+      public Create setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot
+     * contain any untrashed items.
+     *
+     * Create a request for the method "drives.delete".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param driveId The ID of the shared drive.
+     * @return the request
+     */
+    public Delete delete(java.lang.String driveId) throws java.io.IOException {
+      Delete result = new Delete(driveId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DriveRequest<Void> {
+
+      private static final String REST_PATH = "drives/{driveId}";
+
+      /**
+       * Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot
+       * contain any untrashed items.
+       *
+       * Create a request for the method "drives.delete".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param driveId The ID of the shared drive.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String driveId) {
+        super(Drive.this, "DELETE", REST_PATH, null, Void.class);
+        this.driveId = com.google.api.client.util.Preconditions.checkNotNull(driveId, "Required parameter driveId must be specified.");
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** The ID of the shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The ID of the shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** The ID of the shared drive. */
+      public Delete setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets a shared drive's metadata by ID.
+     *
+     * Create a request for the method "drives.get".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param driveId The ID of the shared drive.
+     * @return the request
+     */
+    public Get get(java.lang.String driveId) throws java.io.IOException {
+      Get result = new Get(driveId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DriveRequest<com.google.api.services.drive.model.Drive> {
+
+      private static final String REST_PATH = "drives/{driveId}";
+
+      /**
+       * Gets a shared drive's metadata by ID.
+       *
+       * Create a request for the method "drives.get".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param driveId The ID of the shared drive.
+       * @since 1.13
+       */
+      protected Get(java.lang.String driveId) {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.Drive.class);
+        this.driveId = com.google.api.client.util.Preconditions.checkNotNull(driveId, "Required parameter driveId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** The ID of the shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The ID of the shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** The ID of the shared drive. */
+      public Get setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then the requester will be
+       * granted access if they are an administrator of the domain to which the shared drive
+       * belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useDomainAdminAccess;
+
+      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
+     access if they are an administrator of the domain to which the shared drive belongs. [default:
+     false]
+       */
+      public java.lang.Boolean getUseDomainAdminAccess() {
+        return useDomainAdminAccess;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then the requester will be
+       * granted access if they are an administrator of the domain to which the shared drive
+       * belongs.
+       */
+      public Get setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Issue the request as a domain administrator; if set to true, then the requester will be granted
+     access if they are an administrator of the domain to which the shared drive belongs.
+       * </p>
+       */
+      public boolean isUseDomainAdminAccess() {
+        if (useDomainAdminAccess == null || useDomainAdminAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return useDomainAdminAccess;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Hides a shared drive from the default view.
+     *
+     * Create a request for the method "drives.hide".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Hide#execute()} method to invoke the remote operation.
+     *
+     * @param driveId The ID of the shared drive.
+     * @return the request
+     */
+    public Hide hide(java.lang.String driveId) throws java.io.IOException {
+      Hide result = new Hide(driveId);
+      initialize(result);
+      return result;
+    }
+
+    public class Hide extends DriveRequest<com.google.api.services.drive.model.Drive> {
+
+      private static final String REST_PATH = "drives/{driveId}/hide";
+
+      /**
+       * Hides a shared drive from the default view.
+       *
+       * Create a request for the method "drives.hide".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Hide#execute()} method to invoke the remote operation. <p> {@link
+       * Hide#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param driveId The ID of the shared drive.
+       * @since 1.13
+       */
+      protected Hide(java.lang.String driveId) {
+        super(Drive.this, "POST", REST_PATH, null, com.google.api.services.drive.model.Drive.class);
+        this.driveId = com.google.api.client.util.Preconditions.checkNotNull(driveId, "Required parameter driveId must be specified.");
+      }
+
+      @Override
+      public Hide setAlt(java.lang.String alt) {
+        return (Hide) super.setAlt(alt);
+      }
+
+      @Override
+      public Hide setFields(java.lang.String fields) {
+        return (Hide) super.setFields(fields);
+      }
+
+      @Override
+      public Hide setKey(java.lang.String key) {
+        return (Hide) super.setKey(key);
+      }
+
+      @Override
+      public Hide setOauthToken(java.lang.String oauthToken) {
+        return (Hide) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Hide setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Hide) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Hide setQuotaUser(java.lang.String quotaUser) {
+        return (Hide) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Hide setUserIp(java.lang.String userIp) {
+        return (Hide) super.setUserIp(userIp);
+      }
+
+      /** The ID of the shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The ID of the shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** The ID of the shared drive. */
+      public Hide setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      @Override
+      public Hide set(String parameterName, Object value) {
+        return (Hide) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the user's shared drives.
+     *
+     * Create a request for the method "drives.list".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DriveRequest<com.google.api.services.drive.model.DriveList> {
+
+      private static final String REST_PATH = "drives";
+
+      /**
+       * Lists the user's shared drives.
+       *
+       * Create a request for the method "drives.list".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.DriveList.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Maximum number of shared drives to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of shared drives to return. [default: 10] [minimum: 1] [maximum: 100]
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Maximum number of shared drives to return. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Page token for shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Page token for shared drives.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Page token for shared drives. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** Query string for searching shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.String q;
+
+      /** Query string for searching shared drives.
+       */
+      public java.lang.String getQ() {
+        return q;
+      }
+
+      /** Query string for searching shared drives. */
+      public List setQ(java.lang.String q) {
+        this.q = q;
+        return this;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then all shared drives of the
+       * domain in which the requester is an administrator are returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useDomainAdminAccess;
+
+      /** Issue the request as a domain administrator; if set to true, then all shared drives of the domain
+     in which the requester is an administrator are returned. [default: false]
+       */
+      public java.lang.Boolean getUseDomainAdminAccess() {
+        return useDomainAdminAccess;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then all shared drives of the
+       * domain in which the requester is an administrator are returned.
+       */
+      public List setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Issue the request as a domain administrator; if set to true, then all shared drives of the domain
+     in which the requester is an administrator are returned.
+       * </p>
+       */
+      public boolean isUseDomainAdminAccess() {
+        if (useDomainAdminAccess == null || useDomainAdminAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return useDomainAdminAccess;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Restores a shared drive to the default view.
+     *
+     * Create a request for the method "drives.unhide".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Unhide#execute()} method to invoke the remote operation.
+     *
+     * @param driveId The ID of the shared drive.
+     * @return the request
+     */
+    public Unhide unhide(java.lang.String driveId) throws java.io.IOException {
+      Unhide result = new Unhide(driveId);
+      initialize(result);
+      return result;
+    }
+
+    public class Unhide extends DriveRequest<com.google.api.services.drive.model.Drive> {
+
+      private static final String REST_PATH = "drives/{driveId}/unhide";
+
+      /**
+       * Restores a shared drive to the default view.
+       *
+       * Create a request for the method "drives.unhide".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Unhide#execute()} method to invoke the remote operation. <p> {@link
+       * Unhide#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param driveId The ID of the shared drive.
+       * @since 1.13
+       */
+      protected Unhide(java.lang.String driveId) {
+        super(Drive.this, "POST", REST_PATH, null, com.google.api.services.drive.model.Drive.class);
+        this.driveId = com.google.api.client.util.Preconditions.checkNotNull(driveId, "Required parameter driveId must be specified.");
+      }
+
+      @Override
+      public Unhide setAlt(java.lang.String alt) {
+        return (Unhide) super.setAlt(alt);
+      }
+
+      @Override
+      public Unhide setFields(java.lang.String fields) {
+        return (Unhide) super.setFields(fields);
+      }
+
+      @Override
+      public Unhide setKey(java.lang.String key) {
+        return (Unhide) super.setKey(key);
+      }
+
+      @Override
+      public Unhide setOauthToken(java.lang.String oauthToken) {
+        return (Unhide) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Unhide setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Unhide) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Unhide setQuotaUser(java.lang.String quotaUser) {
+        return (Unhide) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Unhide setUserIp(java.lang.String userIp) {
+        return (Unhide) super.setUserIp(userIp);
+      }
+
+      /** The ID of the shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The ID of the shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** The ID of the shared drive. */
+      public Unhide setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      @Override
+      public Unhide set(String parameterName, Object value) {
+        return (Unhide) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the metadate for a shared drive.
+     *
+     * Create a request for the method "drives.update".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param driveId The ID of the shared drive.
+     * @param content the {@link com.google.api.services.drive.model.Drive}
+     * @return the request
+     */
+    public Update update(java.lang.String driveId, com.google.api.services.drive.model.Drive content) throws java.io.IOException {
+      Update result = new Update(driveId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends DriveRequest<com.google.api.services.drive.model.Drive> {
+
+      private static final String REST_PATH = "drives/{driveId}";
+
+      /**
+       * Updates the metadate for a shared drive.
+       *
+       * Create a request for the method "drives.update".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param driveId The ID of the shared drive.
+       * @param content the {@link com.google.api.services.drive.model.Drive}
+       * @since 1.13
+       */
+      protected Update(java.lang.String driveId, com.google.api.services.drive.model.Drive content) {
+        super(Drive.this, "PATCH", REST_PATH, content, com.google.api.services.drive.model.Drive.class);
+        this.driveId = com.google.api.client.util.Preconditions.checkNotNull(driveId, "Required parameter driveId must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** The ID of the shared drive. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** The ID of the shared drive.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** The ID of the shared drive. */
+      public Update setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then the requester will be
+       * granted access if they are an administrator of the domain to which the shared drive
+       * belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useDomainAdminAccess;
+
+      /** Issue the request as a domain administrator; if set to true, then the requester will be granted
+     access if they are an administrator of the domain to which the shared drive belongs. [default:
+     false]
+       */
+      public java.lang.Boolean getUseDomainAdminAccess() {
+        return useDomainAdminAccess;
+      }
+
+      /**
+       * Issue the request as a domain administrator; if set to true, then the requester will be
+       * granted access if they are an administrator of the domain to which the shared drive
+       * belongs.
+       */
+      public Update setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Issue the request as a domain administrator; if set to true, then the requester will be granted
+     access if they are an administrator of the domain to which the shared drive belongs.
+       * </p>
+       */
+      public boolean isUseDomainAdminAccess() {
+        if (useDomainAdminAccess == null || useDomainAdminAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return useDomainAdminAccess;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Files collection.
    *
    * <p>The typical use is:</p>
@@ -2269,13 +3449,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Drive.
+       * files with binary content in Google Drive.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean keepRevisionForever;
 
       /** Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Drive. [default: false]
+     with binary content in Google Drive. [default: false]
        */
       public java.lang.Boolean getKeepRevisionForever() {
         return keepRevisionForever;
@@ -2283,7 +3463,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Drive.
+       * files with binary content in Google Drive.
        */
       public Copy setKeepRevisionForever(java.lang.Boolean keepRevisionForever) {
         this.keepRevisionForever = keepRevisionForever;
@@ -2308,7 +3488,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Drive.
+     with binary content in Google Drive.
        * </p>
        */
       public boolean isKeepRevisionForever() {
@@ -2334,17 +3514,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Copy setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Copy setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -2367,7 +3590,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -2564,13 +3787,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Drive.
+       * files with binary content in Google Drive.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean keepRevisionForever;
 
       /** Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Drive. [default: false]
+     with binary content in Google Drive. [default: false]
        */
       public java.lang.Boolean getKeepRevisionForever() {
         return keepRevisionForever;
@@ -2578,7 +3801,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Drive.
+       * files with binary content in Google Drive.
        */
       public Create setKeepRevisionForever(java.lang.Boolean keepRevisionForever) {
         this.keepRevisionForever = keepRevisionForever;
@@ -2603,7 +3826,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Drive.
+     with binary content in Google Drive.
        * </p>
        */
       public boolean isKeepRevisionForever() {
@@ -2629,17 +3852,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Create setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Create setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -2662,7 +3928,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -2722,7 +3988,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Permanently deletes a file owned by the user without moving it to the trash. If the file belongs
-     * to a Team Drive the user must be an organizer on the parent. If the target is a folder, all
+     * to a shared drive the user must be an organizer on the parent. If the target is a folder, all
      * descendants owned by the user are also deleted.
      *
      * Create a request for the method "files.delete".
@@ -2745,8 +4011,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Permanently deletes a file owned by the user without moving it to the trash. If the file
-       * belongs to a Team Drive the user must be an organizer on the parent. If the target is a folder,
-       * all descendants owned by the user are also deleted.
+       * belongs to a shared drive the user must be an organizer on the parent. If the target is a
+       * folder, all descendants owned by the user are also deleted.
        *
        * Create a request for the method "files.delete".
        *
@@ -2814,17 +4080,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Delete setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Delete setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -2847,7 +4156,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -3382,17 +4691,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return acknowledgeAbuse;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Get setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Get setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -3415,7 +4767,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -3512,28 +4864,22 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Comma-separated list of bodies of items (files/documents) to which the query applies.
-       * Supported bodies are 'user', 'domain', 'teamDrive' and 'allTeamDrives'. 'allTeamDrives'
-       * must be combined with 'user'; all other values must be used in isolation. Prefer 'user' or
-       * 'teamDrive' to 'allTeamDrives' for efficiency.
+       * Bodies of items (files/documents) to which the query applies. Supported bodies are 'user',
+       * 'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.
        */
       @com.google.api.client.util.Key
       private java.lang.String corpora;
 
-      /** Comma-separated list of bodies of items (files/documents) to which the query applies. Supported
-     bodies are 'user', 'domain', 'teamDrive' and 'allTeamDrives'. 'allTeamDrives' must be combined with
-     'user'; all other values must be used in isolation. Prefer 'user' or 'teamDrive' to 'allTeamDrives'
-     for efficiency.
+      /** Bodies of items (files/documents) to which the query applies. Supported bodies are 'user',
+     'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.
        */
       public java.lang.String getCorpora() {
         return corpora;
       }
 
       /**
-       * Comma-separated list of bodies of items (files/documents) to which the query applies.
-       * Supported bodies are 'user', 'domain', 'teamDrive' and 'allTeamDrives'. 'allTeamDrives'
-       * must be combined with 'user'; all other values must be used in isolation. Prefer 'user' or
-       * 'teamDrive' to 'allTeamDrives' for efficiency.
+       * Bodies of items (files/documents) to which the query applies. Supported bodies are 'user',
+       * 'domain', 'drive' and 'allDrives'. Prefer 'user' or 'drive' to 'allDrives' for efficiency.
        */
       public List setCorpora(java.lang.String corpora) {
         this.corpora = corpora;
@@ -3556,17 +4902,76 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether Team Drive items should be included in results. */
+      /** ID of the shared drive to search. */
+      @com.google.api.client.util.Key
+      private java.lang.String driveId;
+
+      /** ID of the shared drive to search.
+       */
+      public java.lang.String getDriveId() {
+        return driveId;
+      }
+
+      /** ID of the shared drive to search. */
+      public List setDriveId(java.lang.String driveId) {
+        this.driveId = driveId;
+        return this;
+      }
+
+      /** Whether both My Drive and shared drive items should be included in results. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeItemsFromAllDrives;
+
+      /** Whether both My Drive and shared drive items should be included in results. [default: false]
+       */
+      public java.lang.Boolean getIncludeItemsFromAllDrives() {
+        return includeItemsFromAllDrives;
+      }
+
+      /** Whether both My Drive and shared drive items should be included in results. */
+      public List setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
+        this.includeItemsFromAllDrives = includeItemsFromAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether both My Drive and shared drive items should be included in results.
+       * </p>
+       */
+      public boolean isIncludeItemsFromAllDrives() {
+        if (includeItemsFromAllDrives == null || includeItemsFromAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return includeItemsFromAllDrives;
+      }
+
+      /** Deprecated use includeItemsFromAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeTeamDriveItems;
 
-      /** Whether Team Drive items should be included in results. [default: false]
+      /** Deprecated use includeItemsFromAllDrives instead. [default: false]
        */
       public java.lang.Boolean getIncludeTeamDriveItems() {
         return includeTeamDriveItems;
       }
 
-      /** Whether Team Drive items should be included in results. */
+      /** Deprecated use includeItemsFromAllDrives instead. */
       public List setIncludeTeamDriveItems(java.lang.Boolean includeTeamDriveItems) {
         this.includeTeamDriveItems = includeTeamDriveItems;
         return this;
@@ -3589,7 +4994,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether Team Drive items should be included in results.
+       * Deprecated use includeItemsFromAllDrives instead.
        * </p>
        */
       public boolean isIncludeTeamDriveItems() {
@@ -3725,17 +5130,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public List setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public List setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -3758,7 +5206,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -3768,17 +5216,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return supportsTeamDrives;
       }
 
-      /** ID of Team Drive to search. */
+      /** Deprecated use driveId instead. */
       @com.google.api.client.util.Key
       private java.lang.String teamDriveId;
 
-      /** ID of Team Drive to search.
+      /** Deprecated use driveId instead.
        */
       public java.lang.String getTeamDriveId() {
         return teamDriveId;
       }
 
-      /** ID of Team Drive to search. */
+      /** Deprecated use driveId instead. */
       public List setTeamDriveId(java.lang.String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -3948,13 +5396,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Drive.
+       * files with binary content in Google Drive.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean keepRevisionForever;
 
       /** Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Drive. [default: false]
+     with binary content in Google Drive. [default: false]
        */
       public java.lang.Boolean getKeepRevisionForever() {
         return keepRevisionForever;
@@ -3962,7 +5410,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to
-       * files with binary content in Drive.
+       * files with binary content in Google Drive.
        */
       public Update setKeepRevisionForever(java.lang.Boolean keepRevisionForever) {
         this.keepRevisionForever = keepRevisionForever;
@@ -3987,7 +5435,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files
-     with binary content in Drive.
+     with binary content in Google Drive.
        * </p>
        */
       public boolean isKeepRevisionForever() {
@@ -4029,17 +5477,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Update setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Update setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -4062,7 +5553,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -4287,17 +5778,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return acknowledgeAbuse;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Watch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Watch setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -4320,7 +5854,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -4359,14 +5893,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Permissions {
 
     /**
-     * Creates a permission for a file or Team Drive.
+     * Creates a permission for a file or shared drive.
      *
      * Create a request for the method "permissions.create".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID of the file or Team Drive.
+     * @param fileId The ID of the file or shared drive.
      * @param content the {@link com.google.api.services.drive.model.Permission}
      * @return the request
      */
@@ -4381,7 +5915,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Creates a permission for a file or Team Drive.
+       * Creates a permission for a file or shared drive.
        *
        * Create a request for the method "permissions.create".
        *
@@ -4390,7 +5924,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID of the file or Team Drive.
+       * @param fileId The ID of the file or shared drive.
        * @param content the {@link com.google.api.services.drive.model.Permission}
        * @since 1.13
        */
@@ -4438,17 +5972,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Create) super.setUserIp(userIp);
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID of the file or Team Drive.
+      /** The ID of the file or shared drive.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       public Create setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
@@ -4496,17 +6030,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Create setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Create setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -4529,7 +6106,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -4592,15 +6169,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs. [default: false]
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -4608,8 +6185,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       public Create setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -4634,8 +6211,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs.
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -4658,7 +6235,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID of the file or Team Drive.
+     * @param fileId The ID of the file or shared drive.
      * @param permissionId The ID of the permission.
      * @return the request
      */
@@ -4682,7 +6259,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID of the file or Team Drive.
+       * @param fileId The ID of the file or shared drive.
        * @param permissionId The ID of the permission.
        * @since 1.13
        */
@@ -4727,17 +6304,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Delete) super.setUserIp(userIp);
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID of the file or Team Drive.
+      /** The ID of the file or shared drive.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       public Delete setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
@@ -4759,17 +6336,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Delete setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Delete setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -4792,7 +6412,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -4804,15 +6424,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs. [default: false]
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -4820,8 +6440,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       public Delete setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -4846,8 +6466,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs.
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -4981,17 +6601,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Get setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Get setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -5014,7 +6677,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -5026,15 +6689,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs. [default: false]
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -5042,8 +6705,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       public Get setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -5068,8 +6731,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs.
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -5085,14 +6748,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists a file's or Team Drive's permissions.
+     * Lists a file's or shared drive's permissions.
      *
      * Create a request for the method "permissions.list".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID of the file or Team Drive.
+     * @param fileId The ID of the file or shared drive.
      * @return the request
      */
     public List list(java.lang.String fileId) throws java.io.IOException {
@@ -5106,7 +6769,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Lists a file's or Team Drive's permissions.
+       * Lists a file's or shared drive's permissions.
        *
        * Create a request for the method "permissions.list".
        *
@@ -5115,7 +6778,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID of the file or Team Drive.
+       * @param fileId The ID of the file or shared drive.
        * @since 1.13
        */
       protected List(java.lang.String fileId) {
@@ -5168,33 +6831,33 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUserIp(userIp);
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID of the file or Team Drive.
+      /** The ID of the file or shared drive.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       public List setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
       /**
-       * The maximum number of permissions to return per page. When not set for files in a Team
-       * Drive, at most 100 results will be returned. When not set for files that are not in a Team
-       * Drive, the entire list will be returned.
+       * The maximum number of permissions to return per page. When not set for files in a shared
+       * drive, at most 100 results will be returned. When not set for files that are not in a
+       * shared drive, the entire list will be returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of permissions to return per page. When not set for files in a Team Drive, at
-     most 100 results will be returned. When not set for files that are not in a Team Drive, the entire
-     list will be returned.
+      /** The maximum number of permissions to return per page. When not set for files in a shared drive, at
+     most 100 results will be returned. When not set for files that are not in a shared drive, the
+     entire list will be returned.
 
      [minimum: 1] [maximum: 100]
        */
@@ -5203,9 +6866,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of permissions to return per page. When not set for files in a Team
-       * Drive, at most 100 results will be returned. When not set for files that are not in a Team
-       * Drive, the entire list will be returned.
+       * The maximum number of permissions to return per page. When not set for files in a shared
+       * drive, at most 100 results will be returned. When not set for files that are not in a
+       * shared drive, the entire list will be returned.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -5235,17 +6898,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public List setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public List setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -5268,7 +6974,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -5280,15 +6986,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs. [default: false]
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -5296,8 +7002,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       public List setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -5322,8 +7028,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs.
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -5346,7 +7052,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param fileId The ID of the file or Team Drive.
+     * @param fileId The ID of the file or shared drive.
      * @param permissionId The ID of the permission.
      * @param content the {@link com.google.api.services.drive.model.Permission}
      * @return the request
@@ -5371,7 +7077,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId The ID of the file or Team Drive.
+       * @param fileId The ID of the file or shared drive.
        * @param permissionId The ID of the permission.
        * @param content the {@link com.google.api.services.drive.model.Permission}
        * @since 1.13
@@ -5417,17 +7123,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Update) super.setUserIp(userIp);
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** The ID of the file or Team Drive.
+      /** The ID of the file or shared drive.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** The ID of the file or Team Drive. */
+      /** The ID of the file or shared drive. */
       public Update setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
@@ -5492,17 +7198,60 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return removeExpiration;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean supportsAllDrives;
+
+      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+       */
+      public java.lang.Boolean getSupportsAllDrives() {
+        return supportsAllDrives;
+      }
+
+      /** Whether the requesting application supports both My Drives and shared drives. */
+      public Update setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the requesting application supports both My Drives and shared drives.
+       * </p>
+       */
+      public boolean isSupportsAllDrives() {
+        if (supportsAllDrives == null || supportsAllDrives == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return supportsAllDrives;
+      }
+
+      /** Deprecated use supportsAllDrives instead. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsTeamDrives;
 
-      /** Whether the requesting application supports Team Drives. [default: false]
+      /** Deprecated use supportsAllDrives instead. [default: false]
        */
       public java.lang.Boolean getSupportsTeamDrives() {
         return supportsTeamDrives;
       }
 
-      /** Whether the requesting application supports Team Drives. */
+      /** Deprecated use supportsAllDrives instead. */
       public Update setSupportsTeamDrives(java.lang.Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -5525,7 +7274,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports Team Drives.
+       * Deprecated use supportsAllDrives instead.
        * </p>
        */
       public boolean isSupportsTeamDrives() {
@@ -5588,15 +7337,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useDomainAdminAccess;
 
       /** Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs. [default: false]
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs. [default: false]
        */
       public java.lang.Boolean getUseDomainAdminAccess() {
         return useDomainAdminAccess;
@@ -5604,8 +7353,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Issue the request as a domain administrator; if set to true, then the requester will be
-       * granted access if the file ID parameter refers to a Team Drive and the requester is an
-       * administrator of the domain to which the Team Drive belongs.
+       * granted access if the file ID parameter refers to a shared drive and the requester is an
+       * administrator of the domain to which the shared drive belongs.
        */
       public Update setUseDomainAdminAccess(java.lang.Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
@@ -5630,8 +7379,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        *
        * <p>
        * Issue the request as a domain administrator; if set to true, then the requester will be granted
-     access if the file ID parameter refers to a Team Drive and the requester is an administrator of the
-     domain to which the Team Drive belongs.
+     access if the file ID parameter refers to a shared drive and the requester is an administrator of
+     the domain to which the shared drive belongs.
        * </p>
        */
       public boolean isUseDomainAdminAccess() {
@@ -6483,9 +8232,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Revisions {
 
     /**
-     * Permanently deletes a file version. You can only delete revisions for files with binary content,
-     * like images or videos. Revisions for other files, like Google Docs or Sheets, and the last
-     * remaining file version can't be deleted.
+     * Permanently deletes a file version. You can only delete revisions for files with binary content
+     * in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets,
+     * and the last remaining file version can't be deleted.
      *
      * Create a request for the method "revisions.delete".
      *
@@ -6507,9 +8256,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/revisions/{revisionId}";
 
       /**
-       * Permanently deletes a file version. You can only delete revisions for files with binary
-       * content, like images or videos. Revisions for other files, like Google Docs or Sheets, and the
-       * last remaining file version can't be deleted.
+       * Permanently deletes a file version. You can only delete revisions for files with binary content
+       * in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets,
+       * and the last remaining file version can't be deleted.
        *
        * Create a request for the method "revisions.delete".
        *
@@ -7083,7 +8832,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Teamdrives {
 
     /**
-     * Creates a new Team Drive.
+     * Deprecated use drives.create instead.
      *
      * Create a request for the method "teamdrives.create".
      *
@@ -7108,7 +8857,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives";
 
       /**
-       * Creates a new Team Drive.
+       * Deprecated use drives.create instead.
        *
        * Create a request for the method "teamdrives.create".
        *
@@ -7199,8 +8948,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Permanently deletes a Team Drive for which the user is an organizer. The Team Drive cannot
-     * contain any untrashed items.
+     * Deprecated use drives.delete instead.
      *
      * Create a request for the method "teamdrives.delete".
      *
@@ -7221,8 +8969,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives/{teamDriveId}";
 
       /**
-       * Permanently deletes a Team Drive for which the user is an organizer. The Team Drive cannot
-       * contain any untrashed items.
+       * Deprecated use drives.delete instead.
        *
        * Create a request for the method "teamdrives.delete".
        *
@@ -7296,7 +9043,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Gets a Team Drive's metadata by ID.
+     * Deprecated use drives.get instead.
      *
      * Create a request for the method "teamdrives.get".
      *
@@ -7317,7 +9064,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives/{teamDriveId}";
 
       /**
-       * Gets a Team Drive's metadata by ID.
+       * Deprecated use drives.get instead.
        *
        * Create a request for the method "teamdrives.get".
        *
@@ -7452,7 +9199,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the user's Team Drives.
+     * Deprecated use drives.list instead.
      *
      * Create a request for the method "teamdrives.list".
      *
@@ -7472,7 +9219,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives";
 
       /**
-       * Lists the user's Team Drives.
+       * Deprecated use drives.list instead.
        *
        * Create a request for the method "teamdrives.list".
        *
@@ -7637,7 +9384,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a Team Drive's metadata
+     * Deprecated use drives.update instead
      *
      * Create a request for the method "teamdrives.update".
      *
@@ -7659,7 +9406,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "teamdrives/{teamDriveId}";
 
       /**
-       * Updates a Team Drive's metadata
+       * Deprecated use drives.update instead
        *
        * Create a request for the method "teamdrives.update".
        *

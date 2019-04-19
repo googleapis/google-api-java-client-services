@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * A change to a file or Team Drive.
+ * A change to a file or shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive API. For a detailed explanation see:
@@ -28,6 +28,28 @@ package com.google.api.services.drive.model;
  */
 @SuppressWarnings("javadoc")
 public final class Change extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The type of the change. Possible values are file and drive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String changeType;
+
+  /**
+   * The updated state of the shared drive. Present if the changeType is drive, the user is still a
+   * member of the shared drive, and the shared drive has not been deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Drive drive;
+
+  /**
+   * The ID of the shared drive associated with this change.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String driveId;
 
   /**
    * The updated state of the file. Present if the type is file and the file has not been removed
@@ -52,7 +74,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Whether the file or Team Drive has been removed from this list of changes, for example by
+   * Whether the file or shared drive has been removed from this list of changes, for example by
    * deletion or loss of access.
    * The value may be {@code null}.
    */
@@ -60,15 +82,14 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean removed;
 
   /**
-   * The updated state of the Team Drive. Present if the type is teamDrive, the user is still a
-   * member of the Team Drive, and the Team Drive has not been removed.
+   * Deprecated - use drive instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TeamDrive teamDrive;
 
   /**
-   * The ID of the Team Drive associated with this change.
+   * Deprecated - use driveId instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,11 +103,64 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime time;
 
   /**
-   * The type of the change. Possible values are file and teamDrive.
+   * Deprecated - use changeType instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The type of the change. Possible values are file and drive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChangeType() {
+    return changeType;
+  }
+
+  /**
+   * The type of the change. Possible values are file and drive.
+   * @param changeType changeType or {@code null} for none
+   */
+  public Change setChangeType(java.lang.String changeType) {
+    this.changeType = changeType;
+    return this;
+  }
+
+  /**
+   * The updated state of the shared drive. Present if the changeType is drive, the user is still a
+   * member of the shared drive, and the shared drive has not been deleted.
+   * @return value or {@code null} for none
+   */
+  public Drive getDrive() {
+    return drive;
+  }
+
+  /**
+   * The updated state of the shared drive. Present if the changeType is drive, the user is still a
+   * member of the shared drive, and the shared drive has not been deleted.
+   * @param drive drive or {@code null} for none
+   */
+  public Change setDrive(Drive drive) {
+    this.drive = drive;
+    return this;
+  }
+
+  /**
+   * The ID of the shared drive associated with this change.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDriveId() {
+    return driveId;
+  }
+
+  /**
+   * The ID of the shared drive associated with this change.
+   * @param driveId driveId or {@code null} for none
+   */
+  public Change setDriveId(java.lang.String driveId) {
+    this.driveId = driveId;
+    return this;
+  }
 
   /**
    * The updated state of the file. Present if the type is file and the file has not been removed
@@ -142,7 +216,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the file or Team Drive has been removed from this list of changes, for example by
+   * Whether the file or shared drive has been removed from this list of changes, for example by
    * deletion or loss of access.
    * @return value or {@code null} for none
    */
@@ -151,7 +225,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the file or Team Drive has been removed from this list of changes, for example by
+   * Whether the file or shared drive has been removed from this list of changes, for example by
    * deletion or loss of access.
    * @param removed removed or {@code null} for none
    */
@@ -161,8 +235,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The updated state of the Team Drive. Present if the type is teamDrive, the user is still a
-   * member of the Team Drive, and the Team Drive has not been removed.
+   * Deprecated - use drive instead.
    * @return value or {@code null} for none
    */
   public TeamDrive getTeamDrive() {
@@ -170,8 +243,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The updated state of the Team Drive. Present if the type is teamDrive, the user is still a
-   * member of the Team Drive, and the Team Drive has not been removed.
+   * Deprecated - use drive instead.
    * @param teamDrive teamDrive or {@code null} for none
    */
   public Change setTeamDrive(TeamDrive teamDrive) {
@@ -180,7 +252,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Team Drive associated with this change.
+   * Deprecated - use driveId instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTeamDriveId() {
@@ -188,7 +260,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the Team Drive associated with this change.
+   * Deprecated - use driveId instead.
    * @param teamDriveId teamDriveId or {@code null} for none
    */
   public Change setTeamDriveId(java.lang.String teamDriveId) {
@@ -214,7 +286,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the change. Possible values are file and teamDrive.
+   * Deprecated - use changeType instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -222,7 +294,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the change. Possible values are file and teamDrive.
+   * Deprecated - use changeType instead.
    * @param type type or {@code null} for none
    */
   public Change setType(java.lang.String type) {

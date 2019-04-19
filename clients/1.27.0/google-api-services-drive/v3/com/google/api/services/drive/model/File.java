@@ -76,6 +76,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * ID of the shared drive the file resides in. Only populated for items in shared drives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String driveId;
+
+  /**
    * Whether the file has been explicitly trashed, as opposed to recursively trashed from a parent
    * folder.
    * The value may be {@code null}.
@@ -92,7 +99,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The final component of fullFileExtension. This is only available for files with binary content
-   * in Drive.
+   * in Google Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,9 +116,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The full file extension extracted from the name field. May contain multiple concatenated
-   * extensions, such as "tar.gz". This is only available for files with binary content in Drive.
-   * This is automatically updated when the name field changes, however it is not cleared if the new
-   * name does not contain a valid extension.
+   * extensions, such as "tar.gz". This is only available for files with binary content in Google
+   * Drive. This is automatically updated when the name field changes, however it is not cleared if
+   * the new name does not contain a valid extension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +126,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether any users are granted file access directly on this file. This field is only populated
-   * for Team Drive files.
+   * for shared drive files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +142,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the file's head revision. This is currently only available for files with binary
-   * content in Drive.
+   * content in Google Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,17 +192,17 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The MD5 checksum for the content of the file. This is only applicable to files with binary
-   * content in Drive.
+   * content in Google Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String md5Checksum;
 
   /**
-   * The MIME type of the file. Drive will attempt to automatically detect an appropriate value from
-   * uploaded content if no value is provided. The value cannot be changed unless a new revision is
-   * uploaded. If a file is created with a Google Doc MIME type, the uploaded content will be
-   * imported if possible. The supported import formats are published in the About resource.
+   * The MIME type of the file. Google Drive will attempt to automatically detect an appropriate
+   * value from uploaded content if no value is provided. The value cannot be changed unless a new
+   * revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content
+   * will be imported if possible. The supported import formats are published in the About resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,8 +232,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the file. This is not necessarily unique within a folder. Note that for immutable
-   * items such as the top level folders of Team Drives, My Drive root folder, and Application Data
-   * folder the name is constant.
+   * items such as the top level folders of shared drives, My Drive root folder, and Application
+   * Data folder the name is constant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,14 +241,14 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The original filename of the uploaded content if available, or else the original value of the
-   * name field. This is only available for files with binary content in Drive.
+   * name field. This is only available for files with binary content in Google Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originalFilename;
 
   /**
-   * Whether the user owns the file. Not populated for Team Drive files.
+   * Whether the user owns the file. Not populated for items in shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +256,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The owners of the file. Currently, only certain legacy files may have more than one owner. Not
-   * populated for Team Drive files.
+   * populated for items in shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +282,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The full list of permissions for the file. This is only available if the requesting user can
-   * share the file. Not populated for Team Drive files.
+   * share the file. Not populated for items in shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,7 +305,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Long quotaBytesUsed;
 
   /**
-   * Whether the file has been shared. Not populated for Team Drive files.
+   * Whether the file has been shared. Not populated for items in shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,7 +327,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The size of the file's content in bytes. This is only applicable to files with binary content
-   * in Drive.
+   * in Google Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -342,7 +349,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean starred;
 
   /**
-   * ID of the Team Drive the file resides in.
+   * Deprecated - use driveId instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -372,15 +379,16 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean trashed;
 
   /**
-   * The time that the item was trashed (RFC 3339 date-time). Only populated for Team Drive files.
+   * The time that the item was trashed (RFC 3339 date-time). Only populated for items in shared
+   * drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private com.google.api.client.util.DateTime trashedTime;
 
   /**
-   * If the file has been explicitly trashed, the user who trashed it. Only populated for Team Drive
-   * files.
+   * If the file has been explicitly trashed, the user who trashed it. Only populated for items in
+   * shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -424,7 +432,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A link for downloading the content of the file in a browser. This is only available for files
-   * with binary content in Drive.
+   * with binary content in Google Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -439,7 +447,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether users with only writer permission can modify the file's permissions. Not populated for
-   * Team Drive files.
+   * items in shared drives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -556,6 +564,23 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * ID of the shared drive the file resides in. Only populated for items in shared drives.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDriveId() {
+    return driveId;
+  }
+
+  /**
+   * ID of the shared drive the file resides in. Only populated for items in shared drives.
+   * @param driveId driveId or {@code null} for none
+   */
+  public File setDriveId(java.lang.String driveId) {
+    this.driveId = driveId;
+    return this;
+  }
+
+  /**
    * Whether the file has been explicitly trashed, as opposed to recursively trashed from a parent
    * folder.
    * @return value or {@code null} for none
@@ -593,7 +618,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The final component of fullFileExtension. This is only available for files with binary content
-   * in Drive.
+   * in Google Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileExtension() {
@@ -602,7 +627,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The final component of fullFileExtension. This is only available for files with binary content
-   * in Drive.
+   * in Google Drive.
    * @param fileExtension fileExtension or {@code null} for none
    */
   public File setFileExtension(java.lang.String fileExtension) {
@@ -633,9 +658,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The full file extension extracted from the name field. May contain multiple concatenated
-   * extensions, such as "tar.gz". This is only available for files with binary content in Drive.
-   * This is automatically updated when the name field changes, however it is not cleared if the new
-   * name does not contain a valid extension.
+   * extensions, such as "tar.gz". This is only available for files with binary content in Google
+   * Drive. This is automatically updated when the name field changes, however it is not cleared if
+   * the new name does not contain a valid extension.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullFileExtension() {
@@ -644,9 +669,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The full file extension extracted from the name field. May contain multiple concatenated
-   * extensions, such as "tar.gz". This is only available for files with binary content in Drive.
-   * This is automatically updated when the name field changes, however it is not cleared if the new
-   * name does not contain a valid extension.
+   * extensions, such as "tar.gz". This is only available for files with binary content in Google
+   * Drive. This is automatically updated when the name field changes, however it is not cleared if
+   * the new name does not contain a valid extension.
    * @param fullFileExtension fullFileExtension or {@code null} for none
    */
   public File setFullFileExtension(java.lang.String fullFileExtension) {
@@ -656,7 +681,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether any users are granted file access directly on this file. This field is only populated
-   * for Team Drive files.
+   * for shared drive files.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasAugmentedPermissions() {
@@ -665,7 +690,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether any users are granted file access directly on this file. This field is only populated
-   * for Team Drive files.
+   * for shared drive files.
    * @param hasAugmentedPermissions hasAugmentedPermissions or {@code null} for none
    */
   public File setHasAugmentedPermissions(java.lang.Boolean hasAugmentedPermissions) {
@@ -694,7 +719,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the file's head revision. This is currently only available for files with binary
-   * content in Drive.
+   * content in Google Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadRevisionId() {
@@ -703,7 +728,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The ID of the file's head revision. This is currently only available for files with binary
-   * content in Drive.
+   * content in Google Drive.
    * @param headRevisionId headRevisionId or {@code null} for none
    */
   public File setHeadRevisionId(java.lang.String headRevisionId) {
@@ -815,7 +840,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The MD5 checksum for the content of the file. This is only applicable to files with binary
-   * content in Drive.
+   * content in Google Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getMd5Checksum() {
@@ -824,7 +849,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The MD5 checksum for the content of the file. This is only applicable to files with binary
-   * content in Drive.
+   * content in Google Drive.
    * @param md5Checksum md5Checksum or {@code null} for none
    */
   public File setMd5Checksum(java.lang.String md5Checksum) {
@@ -833,10 +858,10 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the file. Drive will attempt to automatically detect an appropriate value from
-   * uploaded content if no value is provided. The value cannot be changed unless a new revision is
-   * uploaded. If a file is created with a Google Doc MIME type, the uploaded content will be
-   * imported if possible. The supported import formats are published in the About resource.
+   * The MIME type of the file. Google Drive will attempt to automatically detect an appropriate
+   * value from uploaded content if no value is provided. The value cannot be changed unless a new
+   * revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content
+   * will be imported if possible. The supported import formats are published in the About resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -844,10 +869,10 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the file. Drive will attempt to automatically detect an appropriate value from
-   * uploaded content if no value is provided. The value cannot be changed unless a new revision is
-   * uploaded. If a file is created with a Google Doc MIME type, the uploaded content will be
-   * imported if possible. The supported import formats are published in the About resource.
+   * The MIME type of the file. Google Drive will attempt to automatically detect an appropriate
+   * value from uploaded content if no value is provided. The value cannot be changed unless a new
+   * revision is uploaded. If a file is created with a Google Doc MIME type, the uploaded content
+   * will be imported if possible. The supported import formats are published in the About resource.
    * @param mimeType mimeType or {@code null} for none
    */
   public File setMimeType(java.lang.String mimeType) {
@@ -910,8 +935,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the file. This is not necessarily unique within a folder. Note that for immutable
-   * items such as the top level folders of Team Drives, My Drive root folder, and Application Data
-   * folder the name is constant.
+   * items such as the top level folders of shared drives, My Drive root folder, and Application
+   * Data folder the name is constant.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -920,8 +945,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the file. This is not necessarily unique within a folder. Note that for immutable
-   * items such as the top level folders of Team Drives, My Drive root folder, and Application Data
-   * folder the name is constant.
+   * items such as the top level folders of shared drives, My Drive root folder, and Application
+   * Data folder the name is constant.
    * @param name name or {@code null} for none
    */
   public File setName(java.lang.String name) {
@@ -931,7 +956,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The original filename of the uploaded content if available, or else the original value of the
-   * name field. This is only available for files with binary content in Drive.
+   * name field. This is only available for files with binary content in Google Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginalFilename() {
@@ -940,7 +965,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The original filename of the uploaded content if available, or else the original value of the
-   * name field. This is only available for files with binary content in Drive.
+   * name field. This is only available for files with binary content in Google Drive.
    * @param originalFilename originalFilename or {@code null} for none
    */
   public File setOriginalFilename(java.lang.String originalFilename) {
@@ -949,7 +974,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user owns the file. Not populated for Team Drive files.
+   * Whether the user owns the file. Not populated for items in shared drives.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOwnedByMe() {
@@ -957,7 +982,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user owns the file. Not populated for Team Drive files.
+   * Whether the user owns the file. Not populated for items in shared drives.
    * @param ownedByMe ownedByMe or {@code null} for none
    */
   public File setOwnedByMe(java.lang.Boolean ownedByMe) {
@@ -967,7 +992,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The owners of the file. Currently, only certain legacy files may have more than one owner. Not
-   * populated for Team Drive files.
+   * populated for items in shared drives.
    * @return value or {@code null} for none
    */
   public java.util.List<User> getOwners() {
@@ -976,7 +1001,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The owners of the file. Currently, only certain legacy files may have more than one owner. Not
-   * populated for Team Drive files.
+   * populated for items in shared drives.
    * @param owners owners or {@code null} for none
    */
   public File setOwners(java.util.List<User> owners) {
@@ -1028,7 +1053,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The full list of permissions for the file. This is only available if the requesting user can
-   * share the file. Not populated for Team Drive files.
+   * share the file. Not populated for items in shared drives.
    * @return value or {@code null} for none
    */
   public java.util.List<Permission> getPermissions() {
@@ -1037,7 +1062,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The full list of permissions for the file. This is only available if the requesting user can
-   * share the file. Not populated for Team Drive files.
+   * share the file. Not populated for items in shared drives.
    * @param permissions permissions or {@code null} for none
    */
   public File setPermissions(java.util.List<Permission> permissions) {
@@ -1084,7 +1109,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the file has been shared. Not populated for Team Drive files.
+   * Whether the file has been shared. Not populated for items in shared drives.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShared() {
@@ -1092,7 +1117,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the file has been shared. Not populated for Team Drive files.
+   * Whether the file has been shared. Not populated for items in shared drives.
    * @param shared shared or {@code null} for none
    */
   public File setShared(java.lang.Boolean shared) {
@@ -1136,7 +1161,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The size of the file's content in bytes. This is only applicable to files with binary content
-   * in Drive.
+   * in Google Drive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -1145,7 +1170,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * The size of the file's content in bytes. This is only applicable to files with binary content
-   * in Drive.
+   * in Google Drive.
    * @param size size or {@code null} for none
    */
   public File setSize(java.lang.Long size) {
@@ -1190,7 +1215,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the Team Drive the file resides in.
+   * Deprecated - use driveId instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTeamDriveId() {
@@ -1198,7 +1223,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the Team Drive the file resides in.
+   * Deprecated - use driveId instead.
    * @param teamDriveId teamDriveId or {@code null} for none
    */
   public File setTeamDriveId(java.lang.String teamDriveId) {
@@ -1262,7 +1287,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that the item was trashed (RFC 3339 date-time). Only populated for Team Drive files.
+   * The time that the item was trashed (RFC 3339 date-time). Only populated for items in shared
+   * drives.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getTrashedTime() {
@@ -1270,7 +1296,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time that the item was trashed (RFC 3339 date-time). Only populated for Team Drive files.
+   * The time that the item was trashed (RFC 3339 date-time). Only populated for items in shared
+   * drives.
    * @param trashedTime trashedTime or {@code null} for none
    */
   public File setTrashedTime(com.google.api.client.util.DateTime trashedTime) {
@@ -1279,8 +1306,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the file has been explicitly trashed, the user who trashed it. Only populated for Team Drive
-   * files.
+   * If the file has been explicitly trashed, the user who trashed it. Only populated for items in
+   * shared drives.
    * @return value or {@code null} for none
    */
   public User getTrashingUser() {
@@ -1288,8 +1315,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the file has been explicitly trashed, the user who trashed it. Only populated for Team Drive
-   * files.
+   * If the file has been explicitly trashed, the user who trashed it. Only populated for items in
+   * shared drives.
    * @param trashingUser trashingUser or {@code null} for none
    */
   public File setTrashingUser(User trashingUser) {
@@ -1386,7 +1413,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A link for downloading the content of the file in a browser. This is only available for files
-   * with binary content in Drive.
+   * with binary content in Google Drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebContentLink() {
@@ -1395,7 +1422,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A link for downloading the content of the file in a browser. This is only available for files
-   * with binary content in Drive.
+   * with binary content in Google Drive.
    * @param webContentLink webContentLink or {@code null} for none
    */
   public File setWebContentLink(java.lang.String webContentLink) {
@@ -1422,7 +1449,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether users with only writer permission can modify the file's permissions. Not populated for
-   * Team Drive files.
+   * items in shared drives.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWritersCanShare() {
@@ -1431,7 +1458,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether users with only writer permission can modify the file's permissions. Not populated for
-   * Team Drive files.
+   * items in shared drives.
    * @param writersCanShare writersCanShare or {@code null} for none
    */
   public File setWritersCanShare(java.lang.Boolean writersCanShare) {
@@ -1485,8 +1512,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canComment;
 
     /**
-     * Whether the current user can copy this file. For a Team Drive item, whether the current user
-     * can copy non-folder descendants of this item, or this item itself if it is not a folder.
+     * Whether the current user can copy this file. For an item in a shared drive, whether the current
+     * user can copy non-folder descendants of this item, or this item itself if it is not a folder.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1501,7 +1528,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can delete children of this folder. This is false when the item is not
-     * a folder. Only populated for Team Drive items.
+     * a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1530,56 +1557,91 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canListChildren;
 
     /**
-     * Whether the current user can move children of this folder outside of the Team Drive. This is
-     * false when the item is not a folder. Only populated for Team Drive items.
+     * Whether the current user can move children of this folder outside of the shared drive. This is
+     * false when the item is not a folder. Only populated for items in shared drives.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canMoveChildrenOutOfDrive;
+
+    /**
+     * Deprecated - use canMoveChildrenOutOfDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canMoveChildrenOutOfTeamDrive;
 
     /**
-     * Whether the current user can move children of this folder within the Team Drive. This is false
-     * when the item is not a folder. Only populated for Team Drive items.
+     * Whether the current user can move children of this folder within the shared drive. This is
+     * false when the item is not a folder. Only populated for items in shared drives.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canMoveChildrenWithinDrive;
+
+    /**
+     * Deprecated - use canMoveChildrenWithinDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canMoveChildrenWithinTeamDrive;
 
     /**
-     * Whether the current user can move this item into a Team Drive. If the item is in a Team Drive,
-     * this field is equivalent to canMoveTeamDriveItem.
+     * Deprecated - use canMoveItemOutOfDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canMoveItemIntoTeamDrive;
 
     /**
-     * Whether the current user can move this Team Drive item outside of this Team Drive by changing
-     * its parent. Note that a request to change the parent of the item may still fail depending on
-     * the new parent that is being added. Only populated for Team Drive items.
+     * Whether the current user can move this item outside of this drive by changing its parent. Note
+     * that a request to change the parent of the item may still fail depending on the new parent that
+     * is being added.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canMoveItemOutOfDrive;
+
+    /**
+     * Deprecated - use canMoveItemOutOfDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canMoveItemOutOfTeamDrive;
 
     /**
-     * Whether the current user can move this Team Drive item within this Team Drive. Note that a
-     * request to change the parent of the item may still fail depending on the new parent that is
-     * being added. Only populated for Team Drive items.
+     * Whether the current user can move this item within this shared drive. Note that a request to
+     * change the parent of the item may still fail depending on the new parent that is being added.
+     * Only populated for items in shared drives.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canMoveItemWithinDrive;
+
+    /**
+     * Deprecated - use canMoveItemWithinDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canMoveItemWithinTeamDrive;
 
     /**
-     * Deprecated - use canMoveItemWithinTeamDrive or canMoveItemOutOfTeamDrive instead.
+     * Deprecated - use canMoveItemWithinDrive or canMoveItemOutOfDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canMoveTeamDriveItem;
 
     /**
-     * Whether the current user can read the revisions resource of this file. For a Team Drive item,
+     * Whether the current user can read the shared drive to which this file belongs. Only populated
+     * for items in shared drives.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canReadDrive;
+
+    /**
+     * Whether the current user can read the revisions resource of this file. For a shared drive item,
      * whether revisions of non-folder descendants of this item, or this item itself if it is not a
      * folder, can be read.
      * The value may be {@code null}.
@@ -1588,8 +1650,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canReadRevisions;
 
     /**
-     * Whether the current user can read the Team Drive to which this file belongs. Only populated for
-     * Team Drive files.
+     * Deprecated - use canReadDrive instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1597,7 +1658,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can remove children from this folder. This is always false when the
-     * item is not a folder. For Team Drive items, use canDeleteChildren or canTrashChildren instead.
+     * item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren
+     * instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1626,7 +1688,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can trash children of this folder. This is false when the item is not
-     * a folder. Only populated for Team Drive items.
+     * a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1710,8 +1772,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can copy this file. For a Team Drive item, whether the current user
-     * can copy non-folder descendants of this item, or this item itself if it is not a folder.
+     * Whether the current user can copy this file. For an item in a shared drive, whether the current
+     * user can copy non-folder descendants of this item, or this item itself if it is not a folder.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanCopy() {
@@ -1719,8 +1781,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can copy this file. For a Team Drive item, whether the current user
-     * can copy non-folder descendants of this item, or this item itself if it is not a folder.
+     * Whether the current user can copy this file. For an item in a shared drive, whether the current
+     * user can copy non-folder descendants of this item, or this item itself if it is not a folder.
      * @param canCopy canCopy or {@code null} for none
      */
     public Capabilities setCanCopy(java.lang.Boolean canCopy) {
@@ -1747,7 +1809,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can delete children of this folder. This is false when the item is not
-     * a folder. Only populated for Team Drive items.
+     * a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanDeleteChildren() {
@@ -1756,7 +1818,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can delete children of this folder. This is false when the item is not
-     * a folder. Only populated for Team Drive items.
+     * a folder. Only populated for items in shared drives.
      * @param canDeleteChildren canDeleteChildren or {@code null} for none
      */
     public Capabilities setCanDeleteChildren(java.lang.Boolean canDeleteChildren) {
@@ -1818,8 +1880,26 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder outside of the Team Drive. This is
-     * false when the item is not a folder. Only populated for Team Drive items.
+     * Whether the current user can move children of this folder outside of the shared drive. This is
+     * false when the item is not a folder. Only populated for items in shared drives.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanMoveChildrenOutOfDrive() {
+      return canMoveChildrenOutOfDrive;
+    }
+
+    /**
+     * Whether the current user can move children of this folder outside of the shared drive. This is
+     * false when the item is not a folder. Only populated for items in shared drives.
+     * @param canMoveChildrenOutOfDrive canMoveChildrenOutOfDrive or {@code null} for none
+     */
+    public Capabilities setCanMoveChildrenOutOfDrive(java.lang.Boolean canMoveChildrenOutOfDrive) {
+      this.canMoveChildrenOutOfDrive = canMoveChildrenOutOfDrive;
+      return this;
+    }
+
+    /**
+     * Deprecated - use canMoveChildrenOutOfDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveChildrenOutOfTeamDrive() {
@@ -1827,8 +1907,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder outside of the Team Drive. This is
-     * false when the item is not a folder. Only populated for Team Drive items.
+     * Deprecated - use canMoveChildrenOutOfDrive instead.
      * @param canMoveChildrenOutOfTeamDrive canMoveChildrenOutOfTeamDrive or {@code null} for none
      */
     public Capabilities setCanMoveChildrenOutOfTeamDrive(java.lang.Boolean canMoveChildrenOutOfTeamDrive) {
@@ -1837,8 +1916,26 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder within the Team Drive. This is false
-     * when the item is not a folder. Only populated for Team Drive items.
+     * Whether the current user can move children of this folder within the shared drive. This is
+     * false when the item is not a folder. Only populated for items in shared drives.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanMoveChildrenWithinDrive() {
+      return canMoveChildrenWithinDrive;
+    }
+
+    /**
+     * Whether the current user can move children of this folder within the shared drive. This is
+     * false when the item is not a folder. Only populated for items in shared drives.
+     * @param canMoveChildrenWithinDrive canMoveChildrenWithinDrive or {@code null} for none
+     */
+    public Capabilities setCanMoveChildrenWithinDrive(java.lang.Boolean canMoveChildrenWithinDrive) {
+      this.canMoveChildrenWithinDrive = canMoveChildrenWithinDrive;
+      return this;
+    }
+
+    /**
+     * Deprecated - use canMoveChildrenWithinDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveChildrenWithinTeamDrive() {
@@ -1846,8 +1943,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder within the Team Drive. This is false
-     * when the item is not a folder. Only populated for Team Drive items.
+     * Deprecated - use canMoveChildrenWithinDrive instead.
      * @param canMoveChildrenWithinTeamDrive canMoveChildrenWithinTeamDrive or {@code null} for none
      */
     public Capabilities setCanMoveChildrenWithinTeamDrive(java.lang.Boolean canMoveChildrenWithinTeamDrive) {
@@ -1856,8 +1952,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this item into a Team Drive. If the item is in a Team Drive,
-     * this field is equivalent to canMoveTeamDriveItem.
+     * Deprecated - use canMoveItemOutOfDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveItemIntoTeamDrive() {
@@ -1865,8 +1960,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this item into a Team Drive. If the item is in a Team Drive,
-     * this field is equivalent to canMoveTeamDriveItem.
+     * Deprecated - use canMoveItemOutOfDrive instead.
      * @param canMoveItemIntoTeamDrive canMoveItemIntoTeamDrive or {@code null} for none
      */
     public Capabilities setCanMoveItemIntoTeamDrive(java.lang.Boolean canMoveItemIntoTeamDrive) {
@@ -1875,9 +1969,28 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this Team Drive item outside of this Team Drive by changing
-     * its parent. Note that a request to change the parent of the item may still fail depending on
-     * the new parent that is being added. Only populated for Team Drive items.
+     * Whether the current user can move this item outside of this drive by changing its parent. Note
+     * that a request to change the parent of the item may still fail depending on the new parent that
+     * is being added.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanMoveItemOutOfDrive() {
+      return canMoveItemOutOfDrive;
+    }
+
+    /**
+     * Whether the current user can move this item outside of this drive by changing its parent. Note
+     * that a request to change the parent of the item may still fail depending on the new parent that
+     * is being added.
+     * @param canMoveItemOutOfDrive canMoveItemOutOfDrive or {@code null} for none
+     */
+    public Capabilities setCanMoveItemOutOfDrive(java.lang.Boolean canMoveItemOutOfDrive) {
+      this.canMoveItemOutOfDrive = canMoveItemOutOfDrive;
+      return this;
+    }
+
+    /**
+     * Deprecated - use canMoveItemOutOfDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveItemOutOfTeamDrive() {
@@ -1885,9 +1998,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this Team Drive item outside of this Team Drive by changing
-     * its parent. Note that a request to change the parent of the item may still fail depending on
-     * the new parent that is being added. Only populated for Team Drive items.
+     * Deprecated - use canMoveItemOutOfDrive instead.
      * @param canMoveItemOutOfTeamDrive canMoveItemOutOfTeamDrive or {@code null} for none
      */
     public Capabilities setCanMoveItemOutOfTeamDrive(java.lang.Boolean canMoveItemOutOfTeamDrive) {
@@ -1896,9 +2007,28 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this Team Drive item within this Team Drive. Note that a
-     * request to change the parent of the item may still fail depending on the new parent that is
-     * being added. Only populated for Team Drive items.
+     * Whether the current user can move this item within this shared drive. Note that a request to
+     * change the parent of the item may still fail depending on the new parent that is being added.
+     * Only populated for items in shared drives.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanMoveItemWithinDrive() {
+      return canMoveItemWithinDrive;
+    }
+
+    /**
+     * Whether the current user can move this item within this shared drive. Note that a request to
+     * change the parent of the item may still fail depending on the new parent that is being added.
+     * Only populated for items in shared drives.
+     * @param canMoveItemWithinDrive canMoveItemWithinDrive or {@code null} for none
+     */
+    public Capabilities setCanMoveItemWithinDrive(java.lang.Boolean canMoveItemWithinDrive) {
+      this.canMoveItemWithinDrive = canMoveItemWithinDrive;
+      return this;
+    }
+
+    /**
+     * Deprecated - use canMoveItemWithinDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveItemWithinTeamDrive() {
@@ -1906,9 +2036,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this Team Drive item within this Team Drive. Note that a
-     * request to change the parent of the item may still fail depending on the new parent that is
-     * being added. Only populated for Team Drive items.
+     * Deprecated - use canMoveItemWithinDrive instead.
      * @param canMoveItemWithinTeamDrive canMoveItemWithinTeamDrive or {@code null} for none
      */
     public Capabilities setCanMoveItemWithinTeamDrive(java.lang.Boolean canMoveItemWithinTeamDrive) {
@@ -1917,7 +2045,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use canMoveItemWithinTeamDrive or canMoveItemOutOfTeamDrive instead.
+     * Deprecated - use canMoveItemWithinDrive or canMoveItemOutOfDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveTeamDriveItem() {
@@ -1925,7 +2053,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Deprecated - use canMoveItemWithinTeamDrive or canMoveItemOutOfTeamDrive instead.
+     * Deprecated - use canMoveItemWithinDrive or canMoveItemOutOfDrive instead.
      * @param canMoveTeamDriveItem canMoveTeamDriveItem or {@code null} for none
      */
     public Capabilities setCanMoveTeamDriveItem(java.lang.Boolean canMoveTeamDriveItem) {
@@ -1934,7 +2062,26 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can read the revisions resource of this file. For a Team Drive item,
+     * Whether the current user can read the shared drive to which this file belongs. Only populated
+     * for items in shared drives.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanReadDrive() {
+      return canReadDrive;
+    }
+
+    /**
+     * Whether the current user can read the shared drive to which this file belongs. Only populated
+     * for items in shared drives.
+     * @param canReadDrive canReadDrive or {@code null} for none
+     */
+    public Capabilities setCanReadDrive(java.lang.Boolean canReadDrive) {
+      this.canReadDrive = canReadDrive;
+      return this;
+    }
+
+    /**
+     * Whether the current user can read the revisions resource of this file. For a shared drive item,
      * whether revisions of non-folder descendants of this item, or this item itself if it is not a
      * folder, can be read.
      * @return value or {@code null} for none
@@ -1944,7 +2091,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can read the revisions resource of this file. For a Team Drive item,
+     * Whether the current user can read the revisions resource of this file. For a shared drive item,
      * whether revisions of non-folder descendants of this item, or this item itself if it is not a
      * folder, can be read.
      * @param canReadRevisions canReadRevisions or {@code null} for none
@@ -1955,8 +2102,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can read the Team Drive to which this file belongs. Only populated for
-     * Team Drive files.
+     * Deprecated - use canReadDrive instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanReadTeamDrive() {
@@ -1964,8 +2110,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can read the Team Drive to which this file belongs. Only populated for
-     * Team Drive files.
+     * Deprecated - use canReadDrive instead.
      * @param canReadTeamDrive canReadTeamDrive or {@code null} for none
      */
     public Capabilities setCanReadTeamDrive(java.lang.Boolean canReadTeamDrive) {
@@ -1975,7 +2120,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can remove children from this folder. This is always false when the
-     * item is not a folder. For Team Drive items, use canDeleteChildren or canTrashChildren instead.
+     * item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren
+     * instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanRemoveChildren() {
@@ -1984,7 +2130,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can remove children from this folder. This is always false when the
-     * item is not a folder. For Team Drive items, use canDeleteChildren or canTrashChildren instead.
+     * item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren
+     * instead.
      * @param canRemoveChildren canRemoveChildren or {@code null} for none
      */
     public Capabilities setCanRemoveChildren(java.lang.Boolean canRemoveChildren) {
@@ -2045,7 +2192,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can trash children of this folder. This is false when the item is not
-     * a folder. Only populated for Team Drive items.
+     * a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanTrashChildren() {
@@ -2054,7 +2201,7 @@ public final class File extends com.google.api.client.json.GenericJson {
 
     /**
      * Whether the current user can trash children of this folder. This is false when the item is not
-     * a folder. Only populated for Team Drive items.
+     * a folder. Only populated for items in shared drives.
      * @param canTrashChildren canTrashChildren or {@code null} for none
      */
     public Capabilities setCanTrashChildren(java.lang.Boolean canTrashChildren) {
@@ -2106,7 +2253,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.String indexableText;
 
     /**
-     * A thumbnail for the file. This will only be used if Drive cannot generate a standard thumbnail.
+     * A thumbnail for the file. This will only be used if Google Drive cannot generate a standard
+     * thumbnail.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2132,7 +2280,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A thumbnail for the file. This will only be used if Drive cannot generate a standard thumbnail.
+     * A thumbnail for the file. This will only be used if Google Drive cannot generate a standard
+     * thumbnail.
      * @return value or {@code null} for none
      */
     public Thumbnail getThumbnail() {
@@ -2140,7 +2289,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A thumbnail for the file. This will only be used if Drive cannot generate a standard thumbnail.
+     * A thumbnail for the file. This will only be used if Google Drive cannot generate a standard
+     * thumbnail.
      * @param thumbnail thumbnail or {@code null} for none
      */
     public ContentHints setThumbnail(Thumbnail thumbnail) {
@@ -2159,7 +2309,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A thumbnail for the file. This will only be used if Drive cannot generate a standard thumbnail.
+     * A thumbnail for the file. This will only be used if Google Drive cannot generate a standard
+     * thumbnail.
      */
     public static final class Thumbnail extends com.google.api.client.json.GenericJson {
 

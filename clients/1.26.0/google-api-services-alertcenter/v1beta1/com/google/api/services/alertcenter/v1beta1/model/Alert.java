@@ -111,6 +111,13 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
+   * Output only. The time this alert was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Output only. The unique identifier for the alert.
    * @return value or {@code null} for none
    */
@@ -297,6 +304,23 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    */
   public Alert setType(java.lang.String type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Output only. The time this alert was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. The time this alert was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Alert setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

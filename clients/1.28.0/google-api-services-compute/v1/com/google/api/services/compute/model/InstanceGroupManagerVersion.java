@@ -30,6 +30,9 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * The URL of the instance template that is specified for this managed instance group. The group
+   * uses this template to create new instances in the managed instance group until the `targetSize`
+   * for this version is reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +59,9 @@ public final class InstanceGroupManagerVersion extends com.google.api.client.jso
   private FixedOrPercent targetSize;
 
   /**
+   * The URL of the instance template that is specified for this managed instance group. The group
+   * uses this template to create new instances in the managed instance group until the `targetSize`
+   * for this version is reached.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -63,6 +69,9 @@ public final class InstanceGroupManagerVersion extends com.google.api.client.jso
   }
 
   /**
+   * The URL of the instance template that is specified for this managed instance group. The group
+   * uses this template to create new instances in the managed instance group until the `targetSize`
+   * for this version is reached.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public InstanceGroupManagerVersion setInstanceTemplate(java.lang.String instanceTemplate) {

@@ -17,7 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * A Node Template resource.
+ * A Node Template resource. To learn more about node templates and sole-tenant nodes, read the
+ * Sole-tenant nodes documentation. (== resource_for beta.nodeTemplates ==) (== resource_for
+ * v1.nodeTemplates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

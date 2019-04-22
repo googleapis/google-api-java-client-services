@@ -181,11 +181,11 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Specifies the instance templates used by this managed instance group to create instances.
    *
-   * Each version is defined by an instanceTemplate. Every template can appear at most once per
-   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
-   * relationships between these fields. Exactly one version must leave the targetSize field unset.
-   * That version will be applied to all remaining instances. For more information, read about
-   * canary updates.
+   * Each version is defined by an instanceTemplate and a name. Every version can appear at most
+   * once per instance group. This field overrides the top-level instanceTemplate field. Read more
+   * about the relationships between these fields. Exactly one version must leave the targetSize
+   * field unset. That version will be applied to all remaining instances. For more information,
+   * read about canary updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -591,11 +591,11 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Specifies the instance templates used by this managed instance group to create instances.
    *
-   * Each version is defined by an instanceTemplate. Every template can appear at most once per
-   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
-   * relationships between these fields. Exactly one version must leave the targetSize field unset.
-   * That version will be applied to all remaining instances. For more information, read about
-   * canary updates.
+   * Each version is defined by an instanceTemplate and a name. Every version can appear at most
+   * once per instance group. This field overrides the top-level instanceTemplate field. Read more
+   * about the relationships between these fields. Exactly one version must leave the targetSize
+   * field unset. That version will be applied to all remaining instances. For more information,
+   * read about canary updates.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceGroupManagerVersion> getVersions() {
@@ -605,11 +605,11 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   /**
    * Specifies the instance templates used by this managed instance group to create instances.
    *
-   * Each version is defined by an instanceTemplate. Every template can appear at most once per
-   * instance group. This field overrides the top-level instanceTemplate field. Read more about the
-   * relationships between these fields. Exactly one version must leave the targetSize field unset.
-   * That version will be applied to all remaining instances. For more information, read about
-   * canary updates.
+   * Each version is defined by an instanceTemplate and a name. Every version can appear at most
+   * once per instance group. This field overrides the top-level instanceTemplate field. Read more
+   * about the relationships between these fields. Exactly one version must leave the targetSize
+   * field unset. That version will be applied to all remaining instances. For more information,
+   * read about canary updates.
    * @param versions versions or {@code null} for none
    */
   public InstanceGroupManager setVersions(java.util.List<InstanceGroupManagerVersion> versions) {

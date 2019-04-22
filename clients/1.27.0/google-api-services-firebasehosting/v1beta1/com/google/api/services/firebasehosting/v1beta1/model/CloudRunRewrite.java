@@ -17,10 +17,10 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A configured rewrite that will direct any requests to a Cloud Run service. If the Cloud Run
- * service does not exist when setting or updating your Firebase Hosting configuration then the
- * request will fail. Any errors from the Cloud Run service (including when the service has been
- * deleted) will be passed back down to the end user.
+ * A configured rewrite that directs requests to a Cloud Run service. If the Cloud Run service does
+ * not exist when setting or updating your Firebase Hosting configuration, then the request fails.
+ * Any errors from the Cloud Run service are passed to the end user (for example, if you delete a
+ * service, any requests directed to that service receive a `404` error).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -33,23 +33,23 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class CloudRunRewrite extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The region where the Cloud Run service is hosted.  Defaults to `us-central1` if not
-   * supplied.
+   * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1`
+   * if not supplied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Required. User supplied ID of the Cloud Run service.
+   * Required. User-defined ID of the Cloud Run service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceId;
 
   /**
-   * Optional. The region where the Cloud Run service is hosted.  Defaults to `us-central1` if not
-   * supplied.
+   * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1`
+   * if not supplied.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -57,8 +57,8 @@ public final class CloudRunRewrite extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The region where the Cloud Run service is hosted.  Defaults to `us-central1` if not
-   * supplied.
+   * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1`
+   * if not supplied.
    * @param region region or {@code null} for none
    */
   public CloudRunRewrite setRegion(java.lang.String region) {
@@ -67,7 +67,7 @@ public final class CloudRunRewrite extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. User supplied ID of the Cloud Run service.
+   * Required. User-defined ID of the Cloud Run service.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceId() {
@@ -75,7 +75,7 @@ public final class CloudRunRewrite extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. User supplied ID of the Cloud Run service.
+   * Required. User-defined ID of the Cloud Run service.
    * @param serviceId serviceId or {@code null} for none
    */
   public CloudRunRewrite setServiceId(java.lang.String serviceId) {

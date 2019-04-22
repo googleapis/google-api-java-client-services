@@ -38,10 +38,9 @@ public final class FileList extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the search process was incomplete. If true, then some search results may be missing,
-   * since all documents were not searched. This may occur when searching multiple Team Drives with
-   * the "default,allTeamDrives" corpora, but all corpora could not be searched. When this happens,
-   * it is suggested that clients narrow their query by choosing a different corpus such as
-   * "default" or "teamDrive".
+   * since all documents were not searched. This may occur when searching multiple drives with the
+   * "allDrives" corpora, but all corpora could not be searched. When this happens, it is suggested
+   * that clients narrow their query by choosing a different corpus such as "default" or "drive".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,10 +109,9 @@ public final class FileList extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the search process was incomplete. If true, then some search results may be missing,
-   * since all documents were not searched. This may occur when searching multiple Team Drives with
-   * the "default,allTeamDrives" corpora, but all corpora could not be searched. When this happens,
-   * it is suggested that clients narrow their query by choosing a different corpus such as
-   * "default" or "teamDrive".
+   * since all documents were not searched. This may occur when searching multiple drives with the
+   * "allDrives" corpora, but all corpora could not be searched. When this happens, it is suggested
+   * that clients narrow their query by choosing a different corpus such as "default" or "drive".
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncompleteSearch() {
@@ -122,10 +120,9 @@ public final class FileList extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the search process was incomplete. If true, then some search results may be missing,
-   * since all documents were not searched. This may occur when searching multiple Team Drives with
-   * the "default,allTeamDrives" corpora, but all corpora could not be searched. When this happens,
-   * it is suggested that clients narrow their query by choosing a different corpus such as
-   * "default" or "teamDrive".
+   * since all documents were not searched. This may occur when searching multiple drives with the
+   * "allDrives" corpora, but all corpora could not be searched. When this happens, it is suggested
+   * that clients narrow their query by choosing a different corpus such as "default" or "drive".
    * @param incompleteSearch incompleteSearch or {@code null} for none
    */
   public FileList setIncompleteSearch(java.lang.Boolean incompleteSearch) {

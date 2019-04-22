@@ -37,11 +37,31 @@ public final class About extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean appInstalled;
 
   /**
-   * Whether the user can create Team Drives.
+   * Whether the user can create shared drives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canCreateDrives;
+
+  /**
+   * Deprecated - use canCreateDrives instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canCreateTeamDrives;
+
+  /**
+   * A list of themes that are supported for shared drives.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DriveThemes> driveThemes;
+
+  static {
+    // hack to force ProGuard to consider DriveThemes used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DriveThemes.class);
+  }
 
   /**
    * A map of source MIME type to possible targets for all supported exports.
@@ -93,7 +113,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   private StorageQuota storageQuota;
 
   /**
-   * A list of themes that are supported for Team Drives.
+   * Deprecated - use driveThemes instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +150,24 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user can create Team Drives.
+   * Whether the user can create shared drives.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanCreateDrives() {
+    return canCreateDrives;
+  }
+
+  /**
+   * Whether the user can create shared drives.
+   * @param canCreateDrives canCreateDrives or {@code null} for none
+   */
+  public About setCanCreateDrives(java.lang.Boolean canCreateDrives) {
+    this.canCreateDrives = canCreateDrives;
+    return this;
+  }
+
+  /**
+   * Deprecated - use canCreateDrives instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanCreateTeamDrives() {
@@ -138,11 +175,28 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user can create Team Drives.
+   * Deprecated - use canCreateDrives instead.
    * @param canCreateTeamDrives canCreateTeamDrives or {@code null} for none
    */
   public About setCanCreateTeamDrives(java.lang.Boolean canCreateTeamDrives) {
     this.canCreateTeamDrives = canCreateTeamDrives;
+    return this;
+  }
+
+  /**
+   * A list of themes that are supported for shared drives.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DriveThemes> getDriveThemes() {
+    return driveThemes;
+  }
+
+  /**
+   * A list of themes that are supported for shared drives.
+   * @param driveThemes driveThemes or {@code null} for none
+   */
+  public About setDriveThemes(java.util.List<DriveThemes> driveThemes) {
+    this.driveThemes = driveThemes;
     return this;
   }
 
@@ -266,7 +320,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of themes that are supported for Team Drives.
+   * Deprecated - use driveThemes instead.
    * @return value or {@code null} for none
    */
   public java.util.List<TeamDriveThemes> getTeamDriveThemes() {
@@ -274,7 +328,7 @@ public final class About extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of themes that are supported for Team Drives.
+   * Deprecated - use driveThemes instead.
    * @param teamDriveThemes teamDriveThemes or {@code null} for none
    */
   public About setTeamDriveThemes(java.util.List<TeamDriveThemes> teamDriveThemes) {
@@ -307,6 +361,95 @@ public final class About extends com.google.api.client.json.GenericJson {
   @Override
   public About clone() {
     return (About) super.clone();
+  }
+
+  /**
+   * Model definition for AboutDriveThemes.
+   */
+  public static final class DriveThemes extends com.google.api.client.json.GenericJson {
+
+    /**
+     * A link to this theme's background image.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String backgroundImageLink;
+
+    /**
+     * The color of this theme as an RGB hex string.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String colorRgb;
+
+    /**
+     * The ID of the theme.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String id;
+
+    /**
+     * A link to this theme's background image.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getBackgroundImageLink() {
+      return backgroundImageLink;
+    }
+
+    /**
+     * A link to this theme's background image.
+     * @param backgroundImageLink backgroundImageLink or {@code null} for none
+     */
+    public DriveThemes setBackgroundImageLink(java.lang.String backgroundImageLink) {
+      this.backgroundImageLink = backgroundImageLink;
+      return this;
+    }
+
+    /**
+     * The color of this theme as an RGB hex string.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getColorRgb() {
+      return colorRgb;
+    }
+
+    /**
+     * The color of this theme as an RGB hex string.
+     * @param colorRgb colorRgb or {@code null} for none
+     */
+    public DriveThemes setColorRgb(java.lang.String colorRgb) {
+      this.colorRgb = colorRgb;
+      return this;
+    }
+
+    /**
+     * The ID of the theme.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getId() {
+      return id;
+    }
+
+    /**
+     * The ID of the theme.
+     * @param id id or {@code null} for none
+     */
+    public DriveThemes setId(java.lang.String id) {
+      this.id = id;
+      return this;
+    }
+
+    @Override
+    public DriveThemes set(String fieldName, Object value) {
+      return (DriveThemes) super.set(fieldName, value);
+    }
+
+    @Override
+    public DriveThemes clone() {
+      return (DriveThemes) super.clone();
+    }
+
   }
 
   /**

@@ -588,15 +588,16 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       /**
        * Optional. The sort order of the list results. If not specified results may be returned in
        * arbitrary order. You can sort the results in descending order based on the creation
-       * timestamp using `order_by="create_time desc"`. Currently, only sorting by `create_time
-       * desc` is supported.
+       * timestamp using `order_by="create_time desc"`. Currently, supported sorting are
+       * `create_time asc`, `create_time desc`, `update_time desc`
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Optional. The sort order of the list results. If not specified results may be returned in arbitrary
      order. You can sort the results in descending order based on the creation timestamp using
-     `order_by="create_time desc"`. Currently, only sorting by `create_time desc` is supported.
+     `order_by="create_time desc"`. Currently, supported sorting are `create_time asc`, `create_time
+     desc`, `update_time desc`
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -605,8 +606,8 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
       /**
        * Optional. The sort order of the list results. If not specified results may be returned in
        * arbitrary order. You can sort the results in descending order based on the creation
-       * timestamp using `order_by="create_time desc"`. Currently, only sorting by `create_time
-       * desc` is supported.
+       * timestamp using `order_by="create_time desc"`. Currently, supported sorting are
+       * `create_time asc`, `create_time desc`, `update_time desc`
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;

@@ -47,8 +47,8 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   }
 
   /**
-   * Details related to built-in algorithms job. Only set this for built-in algorithms jobs and for
-   * trials that succeeded.
+   * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs
+   * that have succeeded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   }
 
   /**
-   * Details related to built-in algorithms job. Only set this for built-in algorithms jobs and for
-   * trials that succeeded.
+   * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs
+   * that have succeeded.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput getBuiltInAlgorithmOutput() {
@@ -109,8 +109,8 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   }
 
   /**
-   * Details related to built-in algorithms job. Only set this for built-in algorithms jobs and for
-   * trials that succeeded.
+   * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs
+   * that have succeeded.
    * @param builtInAlgorithmOutput builtInAlgorithmOutput or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterOutput setBuiltInAlgorithmOutput(GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput) {

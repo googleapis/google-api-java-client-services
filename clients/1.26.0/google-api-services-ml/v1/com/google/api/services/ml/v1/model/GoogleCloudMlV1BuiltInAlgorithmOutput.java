@@ -31,35 +31,36 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Framework on which the built-in algorithm was trained on.
+   * Framework on which the built-in algorithm was trained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String framework;
 
   /**
-   * Built-in algorithm's saved model path. Only set for non-hptuning succeeded jobs.
+   * The Cloud Storage path to the `model/` directory where the training job saves the trained
+   * model. Only set for successful jobs that don't use hyperparameter tuning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelPath;
 
   /**
-   * Python version on which the built-in algorithm was trained on.
+   * Python version on which the built-in algorithm was trained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pythonVersion;
 
   /**
-   * CMLE runtime version on which the built-in algorithm was trained on.
+   * Cloud ML Engine runtime version on which the built-in algorithm was trained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String runtimeVersion;
 
   /**
-   * Framework on which the built-in algorithm was trained on.
+   * Framework on which the built-in algorithm was trained.
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -67,7 +68,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Framework on which the built-in algorithm was trained on.
+   * Framework on which the built-in algorithm was trained.
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput setFramework(java.lang.String framework) {
@@ -76,7 +77,8 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Built-in algorithm's saved model path. Only set for non-hptuning succeeded jobs.
+   * The Cloud Storage path to the `model/` directory where the training job saves the trained
+   * model. Only set for successful jobs that don't use hyperparameter tuning.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelPath() {
@@ -84,7 +86,8 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Built-in algorithm's saved model path. Only set for non-hptuning succeeded jobs.
+   * The Cloud Storage path to the `model/` directory where the training job saves the trained
+   * model. Only set for successful jobs that don't use hyperparameter tuning.
    * @param modelPath modelPath or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput setModelPath(java.lang.String modelPath) {
@@ -93,7 +96,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Python version on which the built-in algorithm was trained on.
+   * Python version on which the built-in algorithm was trained.
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonVersion() {
@@ -101,7 +104,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Python version on which the built-in algorithm was trained on.
+   * Python version on which the built-in algorithm was trained.
    * @param pythonVersion pythonVersion or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput setPythonVersion(java.lang.String pythonVersion) {
@@ -110,7 +113,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * CMLE runtime version on which the built-in algorithm was trained on.
+   * Cloud ML Engine runtime version on which the built-in algorithm was trained.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -118,7 +121,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * CMLE runtime version on which the built-in algorithm was trained on.
+   * Cloud ML Engine runtime version on which the built-in algorithm was trained.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput setRuntimeVersion(java.lang.String runtimeVersion) {

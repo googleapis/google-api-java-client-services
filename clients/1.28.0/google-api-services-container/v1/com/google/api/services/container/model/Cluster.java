@@ -78,14 +78,22 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer currentNodeCount;
 
   /**
-   * [Output only] Deprecated, use [NodePool.version](/kubernetes-
-   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePool) instead. The current version of
-   * the node software components. If they are currently at multiple versions because they're in the
-   * process of being upgraded, this reflects the minimum version of all nodes.
+   * [Output only] Deprecated, use [NodePools.version](/kubernetes-
+   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version
+   * of the node software components. If they are currently at multiple versions because they're in
+   * the process of being upgraded, this reflects the minimum version of all nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentNodeVersion;
+
+  /**
+   * The default constraint on the maximum number of pods that can be run simultaneously on a node
+   * in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaxPodsConstraint defaultMaxPodsConstraint;
 
   /**
    * An optional description of this cluster.
@@ -492,10 +500,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated, use [NodePool.version](/kubernetes-
-   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePool) instead. The current version of
-   * the node software components. If they are currently at multiple versions because they're in the
-   * process of being upgraded, this reflects the minimum version of all nodes.
+   * [Output only] Deprecated, use [NodePools.version](/kubernetes-
+   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version
+   * of the node software components. If they are currently at multiple versions because they're in
+   * the process of being upgraded, this reflects the minimum version of all nodes.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentNodeVersion() {
@@ -503,14 +511,33 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Deprecated, use [NodePool.version](/kubernetes-
-   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePool) instead. The current version of
-   * the node software components. If they are currently at multiple versions because they're in the
-   * process of being upgraded, this reflects the minimum version of all nodes.
+   * [Output only] Deprecated, use [NodePools.version](/kubernetes-
+   * engine/docs/reference/rest/v1/projects.zones.clusters.nodePools) instead. The current version
+   * of the node software components. If they are currently at multiple versions because they're in
+   * the process of being upgraded, this reflects the minimum version of all nodes.
    * @param currentNodeVersion currentNodeVersion or {@code null} for none
    */
   public Cluster setCurrentNodeVersion(java.lang.String currentNodeVersion) {
     this.currentNodeVersion = currentNodeVersion;
+    return this;
+  }
+
+  /**
+   * The default constraint on the maximum number of pods that can be run simultaneously on a node
+   * in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+   * @return value or {@code null} for none
+   */
+  public MaxPodsConstraint getDefaultMaxPodsConstraint() {
+    return defaultMaxPodsConstraint;
+  }
+
+  /**
+   * The default constraint on the maximum number of pods that can be run simultaneously on a node
+   * in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+   * @param defaultMaxPodsConstraint defaultMaxPodsConstraint or {@code null} for none
+   */
+  public Cluster setDefaultMaxPodsConstraint(MaxPodsConstraint defaultMaxPodsConstraint) {
+    this.defaultMaxPodsConstraint = defaultMaxPodsConstraint;
     return this;
   }
 

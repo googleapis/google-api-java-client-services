@@ -81,6 +81,14 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeManagement management;
 
   /**
+   * The constraint on the maximum number of pods that can be run simultaneously on a node in the
+   * node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MaxPodsConstraint maxPodsConstraint;
+
+  /**
    * The name of the node pool.
    * The value may be {@code null}.
    */
@@ -223,6 +231,25 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setManagement(NodeManagement management) {
     this.management = management;
+    return this;
+  }
+
+  /**
+   * The constraint on the maximum number of pods that can be run simultaneously on a node in the
+   * node pool.
+   * @return value or {@code null} for none
+   */
+  public MaxPodsConstraint getMaxPodsConstraint() {
+    return maxPodsConstraint;
+  }
+
+  /**
+   * The constraint on the maximum number of pods that can be run simultaneously on a node in the
+   * node pool.
+   * @param maxPodsConstraint maxPodsConstraint or {@code null} for none
+   */
+  public NodePool setMaxPodsConstraint(MaxPodsConstraint maxPodsConstraint) {
+    this.maxPodsConstraint = maxPodsConstraint;
     return this;
   }
 

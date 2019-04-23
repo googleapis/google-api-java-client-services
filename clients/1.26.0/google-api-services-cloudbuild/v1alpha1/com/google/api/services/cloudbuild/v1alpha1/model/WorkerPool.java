@@ -56,7 +56,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The project ID of the GCP project in which the `WorkerPool` is created.
+   * The project ID of the GCP project for which the `WorkerPool` is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project ID of the GCP project in which the `WorkerPool` is created.
+   * The project ID of the GCP project for which the `WorkerPool` is created.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -168,7 +168,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project ID of the GCP project in which the `WorkerPool` is created.
+   * The project ID of the GCP project for which the `WorkerPool` is created.
    * @param projectId projectId or {@code null} for none
    */
   public WorkerPool setProjectId(java.lang.String projectId) {

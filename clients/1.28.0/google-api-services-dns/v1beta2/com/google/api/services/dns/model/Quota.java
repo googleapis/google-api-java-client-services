@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for Quota.
+ * Limits associated with a Project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -30,6 +30,7 @@ package com.google.api.services.dns.model;
 public final class Quota extends com.google.api.client.json.GenericJson {
 
   /**
+   * Maximum allowed number of DnsKeys per ManagedZone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,78 +44,91 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Maximum allowed number of managed zones in the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer managedZones;
 
   /**
+   * Maximum allowed number of managed zones which can be attached to a network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer managedZonesPerNetwork;
 
   /**
+   * Maximum allowed number of networks to which a privately scoped zone can be attached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer networksPerManagedZone;
 
   /**
+   * Maximum allowed number of networks per policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer networksPerPolicy;
 
   /**
+   * Maximum allowed number of policies per project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer policies;
 
   /**
+   * Maximum allowed number of ResourceRecords per ResourceRecordSet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer resourceRecordsPerRrset;
 
   /**
+   * Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rrsetAdditionsPerChange;
 
   /**
+   * Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rrsetDeletionsPerChange;
 
   /**
+   * Maximum allowed number of ResourceRecordSets per zone in the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rrsetsPerManagedZone;
 
   /**
+   * Maximum allowed number of target name servers per managed forwarding zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetNameServersPerManagedZone;
 
   /**
+   * Maximum allowed number of alternative target name servers per policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetNameServersPerPolicy;
 
   /**
+   * Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalRrdataSizePerChange;
 
   /**
+   * DNSSEC algorithm and key length types that can be used for DnsKeys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,6 +141,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of DnsKeys per ManagedZone.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDnsKeysPerManagedZone() {
@@ -134,6 +149,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of DnsKeys per ManagedZone.
    * @param dnsKeysPerManagedZone dnsKeysPerManagedZone or {@code null} for none
    */
   public Quota setDnsKeysPerManagedZone(java.lang.Integer dnsKeysPerManagedZone) {
@@ -159,6 +175,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of managed zones in the project.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getManagedZones() {
@@ -166,6 +183,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of managed zones in the project.
    * @param managedZones managedZones or {@code null} for none
    */
   public Quota setManagedZones(java.lang.Integer managedZones) {
@@ -174,6 +192,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of managed zones which can be attached to a network.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getManagedZonesPerNetwork() {
@@ -181,6 +200,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of managed zones which can be attached to a network.
    * @param managedZonesPerNetwork managedZonesPerNetwork or {@code null} for none
    */
   public Quota setManagedZonesPerNetwork(java.lang.Integer managedZonesPerNetwork) {
@@ -189,6 +209,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of networks to which a privately scoped zone can be attached.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNetworksPerManagedZone() {
@@ -196,6 +217,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of networks to which a privately scoped zone can be attached.
    * @param networksPerManagedZone networksPerManagedZone or {@code null} for none
    */
   public Quota setNetworksPerManagedZone(java.lang.Integer networksPerManagedZone) {
@@ -204,6 +226,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of networks per policy.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNetworksPerPolicy() {
@@ -211,6 +234,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of networks per policy.
    * @param networksPerPolicy networksPerPolicy or {@code null} for none
    */
   public Quota setNetworksPerPolicy(java.lang.Integer networksPerPolicy) {
@@ -219,6 +243,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of policies per project.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPolicies() {
@@ -226,6 +251,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of policies per project.
    * @param policies policies or {@code null} for none
    */
   public Quota setPolicies(java.lang.Integer policies) {
@@ -234,6 +260,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecords per ResourceRecordSet.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResourceRecordsPerRrset() {
@@ -241,6 +268,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecords per ResourceRecordSet.
    * @param resourceRecordsPerRrset resourceRecordsPerRrset or {@code null} for none
    */
   public Quota setResourceRecordsPerRrset(java.lang.Integer resourceRecordsPerRrset) {
@@ -249,6 +277,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRrsetAdditionsPerChange() {
@@ -256,6 +285,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest.
    * @param rrsetAdditionsPerChange rrsetAdditionsPerChange or {@code null} for none
    */
   public Quota setRrsetAdditionsPerChange(java.lang.Integer rrsetAdditionsPerChange) {
@@ -264,6 +294,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRrsetDeletionsPerChange() {
@@ -271,6 +302,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest.
    * @param rrsetDeletionsPerChange rrsetDeletionsPerChange or {@code null} for none
    */
   public Quota setRrsetDeletionsPerChange(java.lang.Integer rrsetDeletionsPerChange) {
@@ -279,6 +311,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecordSets per zone in the project.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRrsetsPerManagedZone() {
@@ -286,6 +319,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of ResourceRecordSets per zone in the project.
    * @param rrsetsPerManagedZone rrsetsPerManagedZone or {@code null} for none
    */
   public Quota setRrsetsPerManagedZone(java.lang.Integer rrsetsPerManagedZone) {
@@ -294,6 +328,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of target name servers per managed forwarding zone.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetNameServersPerManagedZone() {
@@ -301,6 +336,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of target name servers per managed forwarding zone.
    * @param targetNameServersPerManagedZone targetNameServersPerManagedZone or {@code null} for none
    */
   public Quota setTargetNameServersPerManagedZone(java.lang.Integer targetNameServersPerManagedZone) {
@@ -309,6 +345,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of alternative target name servers per policy.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTargetNameServersPerPolicy() {
@@ -316,6 +353,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed number of alternative target name servers per policy.
    * @param targetNameServersPerPolicy targetNameServersPerPolicy or {@code null} for none
    */
   public Quota setTargetNameServersPerPolicy(java.lang.Integer targetNameServersPerPolicy) {
@@ -324,6 +362,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalRrdataSizePerChange() {
@@ -331,6 +370,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes.
    * @param totalRrdataSizePerChange totalRrdataSizePerChange or {@code null} for none
    */
   public Quota setTotalRrdataSizePerChange(java.lang.Integer totalRrdataSizePerChange) {
@@ -339,6 +379,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * DNSSEC algorithm and key length types that can be used for DnsKeys.
    * @return value or {@code null} for none
    */
   public java.util.List<DnsKeySpec> getWhitelistedKeySpecs() {
@@ -346,6 +387,7 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * DNSSEC algorithm and key length types that can be used for DnsKeys.
    * @param whitelistedKeySpecs whitelistedKeySpecs or {@code null} for none
    */
   public Quota setWhitelistedKeySpecs(java.util.List<DnsKeySpec> whitelistedKeySpecs) {

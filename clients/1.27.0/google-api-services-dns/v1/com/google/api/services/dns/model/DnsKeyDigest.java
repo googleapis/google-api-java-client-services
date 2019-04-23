@@ -30,18 +30,21 @@ package com.google.api.services.dns.model;
 public final class DnsKeyDigest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String digest;
 
   /**
+   * Specifies the algorithm used to calculate this digest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
+   * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
    * @return value or {@code null} for none
    */
   public java.lang.String getDigest() {
@@ -49,6 +52,7 @@ public final class DnsKeyDigest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
    * @param digest digest or {@code null} for none
    */
   public DnsKeyDigest setDigest(java.lang.String digest) {
@@ -57,6 +61,7 @@ public final class DnsKeyDigest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the algorithm used to calculate this digest.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -64,6 +69,7 @@ public final class DnsKeyDigest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies the algorithm used to calculate this digest.
    * @param type type or {@code null} for none
    */
   public DnsKeyDigest setType(java.lang.String type) {

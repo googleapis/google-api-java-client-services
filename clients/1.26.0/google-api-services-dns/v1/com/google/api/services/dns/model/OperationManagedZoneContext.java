@@ -30,18 +30,21 @@ package com.google.api.services.dns.model;
 public final class OperationManagedZoneContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * The post-operation ManagedZone resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedZone newValue;
 
   /**
+   * The pre-operation ManagedZone resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedZone oldValue;
 
   /**
+   * The post-operation ManagedZone resource.
    * @return value or {@code null} for none
    */
   public ManagedZone getNewValue() {
@@ -49,6 +52,7 @@ public final class OperationManagedZoneContext extends com.google.api.client.jso
   }
 
   /**
+   * The post-operation ManagedZone resource.
    * @param newValue newValue or {@code null} for none
    */
   public OperationManagedZoneContext setNewValue(ManagedZone newValue) {
@@ -57,6 +61,7 @@ public final class OperationManagedZoneContext extends com.google.api.client.jso
   }
 
   /**
+   * The pre-operation ManagedZone resource.
    * @return value or {@code null} for none
    */
   public ManagedZone getOldValue() {
@@ -64,6 +69,7 @@ public final class OperationManagedZoneContext extends com.google.api.client.jso
   }
 
   /**
+   * The pre-operation ManagedZone resource.
    * @param oldValue oldValue or {@code null} for none
    */
   public OperationManagedZoneContext setOldValue(ManagedZone oldValue) {

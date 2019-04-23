@@ -38,6 +38,7 @@ public final class ManagedZonePeeringConfig extends com.google.api.client.json.G
   private java.lang.String kind;
 
   /**
+   * The network with which to peer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,6 +64,7 @@ public final class ManagedZonePeeringConfig extends com.google.api.client.json.G
   }
 
   /**
+   * The network with which to peer.
    * @return value or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork getTargetNetwork() {
@@ -70,6 +72,7 @@ public final class ManagedZonePeeringConfig extends com.google.api.client.json.G
   }
 
   /**
+   * The network with which to peer.
    * @param targetNetwork targetNetwork or {@code null} for none
    */
   public ManagedZonePeeringConfig setTargetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {

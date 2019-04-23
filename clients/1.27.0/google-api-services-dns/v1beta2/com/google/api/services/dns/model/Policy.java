@@ -17,7 +17,7 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for Policy.
+ * A policy is a collection of DNS rules applied to one or more Virtual Private Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -30,30 +30,41 @@ package com.google.api.services.dns.model;
 public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Sets an alternative name server for the associated networks. When specified, all DNS queries
+   * are forwarded to a name server that you choose. Names such as .internal are not available when
+   * an alternative name server is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PolicyAlternativeNameServerConfig alternativeNameServerConfig;
 
   /**
+   * A mutable string of at most 1024 characters associated with this resource for the user's
+   * convenience. Has no effect on the policy's function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
+   * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
+   * VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-
+   * networks that are bound to this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableInboundForwarding;
 
   /**
+   * Controls whether logging is enabled for the networks bound to this policy. Defaults to no
+   * logging if not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableLogging;
 
   /**
+   * Unique identifier for the resource; defined by the server (output only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -67,18 +78,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * User assigned name for this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
+   * List of network names specifying networks to which this policy is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PolicyNetwork> networks;
 
   /**
+   * Sets an alternative name server for the associated networks. When specified, all DNS queries
+   * are forwarded to a name server that you choose. Names such as .internal are not available when
+   * an alternative name server is specified.
    * @return value or {@code null} for none
    */
   public PolicyAlternativeNameServerConfig getAlternativeNameServerConfig() {
@@ -86,6 +102,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Sets an alternative name server for the associated networks. When specified, all DNS queries
+   * are forwarded to a name server that you choose. Names such as .internal are not available when
+   * an alternative name server is specified.
    * @param alternativeNameServerConfig alternativeNameServerConfig or {@code null} for none
    */
   public Policy setAlternativeNameServerConfig(PolicyAlternativeNameServerConfig alternativeNameServerConfig) {
@@ -94,6 +113,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A mutable string of at most 1024 characters associated with this resource for the user's
+   * convenience. Has no effect on the policy's function.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -101,6 +122,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A mutable string of at most 1024 characters associated with this resource for the user's
+   * convenience. Has no effect on the policy's function.
    * @param description description or {@code null} for none
    */
   public Policy setDescription(java.lang.String description) {
@@ -109,6 +132,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
+   * VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-
+   * networks that are bound to this policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableInboundForwarding() {
@@ -116,6 +142,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
+   * VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-
+   * networks that are bound to this policy.
    * @param enableInboundForwarding enableInboundForwarding or {@code null} for none
    */
   public Policy setEnableInboundForwarding(java.lang.Boolean enableInboundForwarding) {
@@ -124,6 +153,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Controls whether logging is enabled for the networks bound to this policy. Defaults to no
+   * logging if not set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableLogging() {
@@ -131,6 +162,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Controls whether logging is enabled for the networks bound to this policy. Defaults to no
+   * logging if not set.
    * @param enableLogging enableLogging or {@code null} for none
    */
   public Policy setEnableLogging(java.lang.Boolean enableLogging) {
@@ -139,6 +172,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Unique identifier for the resource; defined by the server (output only).
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -146,6 +180,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Unique identifier for the resource; defined by the server (output only).
    * @param id id or {@code null} for none
    */
   public Policy setId(java.math.BigInteger id) {
@@ -171,6 +206,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * User assigned name for this policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -178,6 +214,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * User assigned name for this policy.
    * @param name name or {@code null} for none
    */
   public Policy setName(java.lang.String name) {
@@ -186,6 +223,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * List of network names specifying networks to which this policy is applied.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyNetwork> getNetworks() {
@@ -193,6 +231,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * List of network names specifying networks to which this policy is applied.
    * @param networks networks or {@code null} for none
    */
   public Policy setNetworks(java.util.List<PolicyNetwork> networks) {

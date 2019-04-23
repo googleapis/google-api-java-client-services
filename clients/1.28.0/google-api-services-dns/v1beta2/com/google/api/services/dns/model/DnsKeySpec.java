@@ -17,7 +17,8 @@
 package com.google.api.services.dns.model;
 
 /**
- * Model definition for DnsKeySpec.
+ * Parameters for DnsKey key generation. Used for generating initial keys for a new ManagedZone and
+ * as default when adding a new DnsKey.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
@@ -30,18 +31,24 @@ package com.google.api.services.dns.model;
 public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * String mnemonic specifying the DNSSEC algorithm of this key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String algorithm;
 
   /**
+   * Length of the keys in bits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long keyLength;
 
   /**
+   * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys
+   * have the Secure Entry Point flag set and, when active, will only be used to sign resource
+   * record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and
+   * will be used to sign all other types of resource record sets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,6 +62,7 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * String mnemonic specifying the DNSSEC algorithm of this key.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlgorithm() {
@@ -62,6 +70,7 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * String mnemonic specifying the DNSSEC algorithm of this key.
    * @param algorithm algorithm or {@code null} for none
    */
   public DnsKeySpec setAlgorithm(java.lang.String algorithm) {
@@ -70,6 +79,7 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Length of the keys in bits.
    * @return value or {@code null} for none
    */
   public java.lang.Long getKeyLength() {
@@ -77,6 +87,7 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Length of the keys in bits.
    * @param keyLength keyLength or {@code null} for none
    */
   public DnsKeySpec setKeyLength(java.lang.Long keyLength) {
@@ -85,6 +96,10 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys
+   * have the Secure Entry Point flag set and, when active, will only be used to sign resource
+   * record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and
+   * will be used to sign all other types of resource record sets.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyType() {
@@ -92,6 +107,10 @@ public final class DnsKeySpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys
+   * have the Secure Entry Point flag set and, when active, will only be used to sign resource
+   * record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and
+   * will be used to sign all other types of resource record sets.
    * @param keyType keyType or {@code null} for none
    */
   public DnsKeySpec setKeyType(java.lang.String keyType) {

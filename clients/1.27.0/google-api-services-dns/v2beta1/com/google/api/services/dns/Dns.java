@@ -143,13 +143,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Changes {
 
     /**
+     * Atomically update the ResourceRecordSet collection.
+     *
      * Create a request for the method "changes.create".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param content the {@link com.google.api.services.dns.model.Change}
      * @return the request
      */
@@ -164,6 +166,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/changes";
 
       /**
+       * Atomically update the ResourceRecordSet collection.
+       *
        * Create a request for the method "changes.create".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -171,8 +175,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param content the {@link com.google.api.services.dns.model.Change}
        * @since 1.13
        */
@@ -217,46 +221,60 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Create) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Create setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Create setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Create setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -268,14 +286,16 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Fetch the representation of an existing Change.
+     *
      * Create a request for the method "changes.get".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
-     * @param changeId
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param changeId The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone, java.lang.String changeId) throws java.io.IOException {
@@ -289,6 +309,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/changes/{changeId}";
 
       /**
+       * Fetch the representation of an existing Change.
+       *
        * Create a request for the method "changes.get".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -296,9 +318,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
-       * @param changeId
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param changeId The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone, java.lang.String changeId) {
@@ -353,61 +375,80 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Get) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
+       */
       @com.google.api.client.util.Key
       private java.lang.String changeId;
 
-      /**
-
+      /** The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
        */
       public java.lang.String getChangeId() {
         return changeId;
       }
 
+      /**
+       * The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
+       */
       public Get setChangeId(java.lang.String changeId) {
         this.changeId = changeId;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Get setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -419,13 +460,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Enumerate Changes to a ResourceRecordSet collection.
+     *
      * Create a request for the method "changes.list".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -439,6 +482,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/changes";
 
       /**
+       * Enumerate Changes to a ResourceRecordSet collection.
+       *
        * Create a request for the method "changes.list".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -446,8 +491,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -501,93 +546,115 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public List setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /**
-
+      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+     results to return.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /**
-
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
+      /** Sorting criterion. The only supported value is change sequence. */
       @com.google.api.client.util.Key
       private java.lang.String sortBy;
 
-      /**
-     [ default: CHANGE_SEQUENCE]
-     [
-
+      /** Sorting criterion. The only supported value is change sequence. [default: CHANGE_SEQUENCE]
        */
       public java.lang.String getSortBy() {
         return sortBy;
       }
 
+      /** Sorting criterion. The only supported value is change sequence. */
       public List setSortBy(java.lang.String sortBy) {
         this.sortBy = sortBy;
         return this;
       }
 
+      /** Sorting order direction: 'ascending' or 'descending'. */
       @com.google.api.client.util.Key
       private java.lang.String sortOrder;
 
-      /**
-
+      /** Sorting order direction: 'ascending' or 'descending'.
        */
       public java.lang.String getSortOrder() {
         return sortOrder;
       }
 
+      /** Sorting order direction: 'ascending' or 'descending'. */
       public List setSortOrder(java.lang.String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -622,14 +689,16 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class DnsKeys {
 
     /**
+     * Fetch the representation of an existing DnsKey.
+     *
      * Create a request for the method "dnsKeys.get".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
-     * @param dnsKeyId
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param dnsKeyId The identifier of the requested DnsKey.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone, java.lang.String dnsKeyId) throws java.io.IOException {
@@ -643,6 +712,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}";
 
       /**
+       * Fetch the representation of an existing DnsKey.
+       *
        * Create a request for the method "dnsKeys.get".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -650,9 +721,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
-       * @param dnsKeyId
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param dnsKeyId The identifier of the requested DnsKey.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone, java.lang.String dnsKeyId) {
@@ -707,76 +778,99 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Get) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /** The identifier of the requested DnsKey. */
       @com.google.api.client.util.Key
       private java.lang.String dnsKeyId;
 
-      /**
-
+      /** The identifier of the requested DnsKey.
        */
       public java.lang.String getDnsKeyId() {
         return dnsKeyId;
       }
 
+      /** The identifier of the requested DnsKey. */
       public Get setDnsKeyId(java.lang.String dnsKeyId) {
         this.dnsKeyId = dnsKeyId;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Get setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
       }
 
+      /**
+       * An optional comma-separated list of digest types to compute and display for key signing
+       * keys. If omitted, the recommended digest type will be computed and displayed.
+       */
       @com.google.api.client.util.Key
       private java.lang.String digestType;
 
-      /**
-
+      /** An optional comma-separated list of digest types to compute and display for key signing keys. If
+     omitted, the recommended digest type will be computed and displayed.
        */
       public java.lang.String getDigestType() {
         return digestType;
       }
 
+      /**
+       * An optional comma-separated list of digest types to compute and display for key signing
+       * keys. If omitted, the recommended digest type will be computed and displayed.
+       */
       public Get setDigestType(java.lang.String digestType) {
         this.digestType = digestType;
         return this;
@@ -788,13 +882,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Enumerate DnsKeys to a ResourceRecordSet collection.
+     *
      * Create a request for the method "dnsKeys.list".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -808,6 +904,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/dnsKeys";
 
       /**
+       * Enumerate DnsKeys to a ResourceRecordSet collection.
+       *
        * Create a request for the method "dnsKeys.list".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -815,8 +913,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -870,76 +968,106 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public List setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * An optional comma-separated list of digest types to compute and display for key signing
+       * keys. If omitted, the recommended digest type will be computed and displayed.
+       */
       @com.google.api.client.util.Key
       private java.lang.String digestType;
 
-      /**
-
+      /** An optional comma-separated list of digest types to compute and display for key signing keys. If
+     omitted, the recommended digest type will be computed and displayed.
        */
       public java.lang.String getDigestType() {
         return digestType;
       }
 
+      /**
+       * An optional comma-separated list of digest types to compute and display for key signing
+       * keys. If omitted, the recommended digest type will be computed and displayed.
+       */
       public List setDigestType(java.lang.String digestType) {
         this.digestType = digestType;
         return this;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /**
-
+      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+     results to return.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /**
-
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -974,14 +1102,16 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ManagedZoneOperations {
 
     /**
+     * Fetch the representation of an existing Operation.
+     *
      * Create a request for the method "managedZoneOperations.get".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
-     * @param operation
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request.
+     * @param operation Identifies the operation addressed by this request.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone, java.lang.String operation) throws java.io.IOException {
@@ -995,6 +1125,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/operations/{operation}";
 
       /**
+       * Fetch the representation of an existing Operation.
+       *
        * Create a request for the method "managedZoneOperations.get".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1002,9 +1134,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
-       * @param operation
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request.
+       * @param operation Identifies the operation addressed by this request.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone, java.lang.String operation) {
@@ -1059,61 +1191,72 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Get) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /** Identifies the managed zone addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /** Identifies the managed zone addressed by this request. */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /** Identifies the operation addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String operation;
 
-      /**
-
+      /** Identifies the operation addressed by this request.
        */
       public java.lang.String getOperation() {
         return operation;
       }
 
+      /** Identifies the operation addressed by this request. */
       public Get setOperation(java.lang.String operation) {
         this.operation = operation;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Get setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -1125,13 +1268,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Enumerate Operations for the given ManagedZone.
+     *
      * Create a request for the method "managedZoneOperations.list".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1145,6 +1290,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/operations";
 
       /**
+       * Enumerate Operations for the given ManagedZone.
+       *
        * Create a request for the method "managedZoneOperations.list".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1152,8 +1299,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -1207,78 +1354,95 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public List setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /** Identifies the managed zone addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /** Identifies the managed zone addressed by this request. */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /**
-
+      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+     results to return.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /**
-
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
+      /** Sorting criterion. The only supported values are START_TIME and ID. */
       @com.google.api.client.util.Key
       private java.lang.String sortBy;
 
-      /**
-     [ default: START_TIME]
-     [
-
+      /** Sorting criterion. The only supported values are START_TIME and ID. [default: START_TIME]
        */
       public java.lang.String getSortBy() {
         return sortBy;
       }
 
+      /** Sorting criterion. The only supported values are START_TIME and ID. */
       public List setSortBy(java.lang.String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -1313,12 +1477,14 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ManagedZones {
 
     /**
+     * Create a new ManagedZone.
+     *
      * Create a request for the method "managedZones.create".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param project
+     * @param project Identifies the project addressed by this request.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -1333,6 +1499,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones";
 
       /**
+       * Create a new ManagedZone.
+       *
        * Create a request for the method "managedZones.create".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1340,7 +1508,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
+       * @param project Identifies the project addressed by this request.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -1384,31 +1552,40 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Create) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Create setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Create setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -1420,13 +1597,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Delete a previously created ManagedZone.
+     *
      * Create a request for the method "managedZones.delete".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public Delete delete(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1440,6 +1619,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}";
 
       /**
+       * Delete a previously created ManagedZone.
+       *
        * Create a request for the method "managedZones.delete".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1447,8 +1628,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected Delete(java.lang.String project, java.lang.String managedZone) {
@@ -1492,46 +1673,60 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Delete) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Delete setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Delete setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Delete setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -1543,13 +1738,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Fetch the representation of an existing ManagedZone.
+     *
      * Create a request for the method "managedZones.get".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1563,6 +1760,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}";
 
       /**
+       * Fetch the representation of an existing ManagedZone.
+       *
        * Create a request for the method "managedZones.get".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1570,8 +1769,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone) {
@@ -1625,46 +1824,60 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Get) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Get setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -1676,12 +1889,14 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Enumerate ManagedZones that have been created but not yet deleted.
+     *
      * Create a request for the method "managedZones.list".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param project
+     * @param project Identifies the project addressed by this request.
      * @return the request
      */
     public List list(java.lang.String project) throws java.io.IOException {
@@ -1695,6 +1910,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones";
 
       /**
+       * Enumerate ManagedZones that have been created but not yet deleted.
+       *
        * Create a request for the method "managedZones.list".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1702,7 +1919,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
+       * @param project Identifies the project addressed by this request.
        * @since 1.13
        */
       protected List(java.lang.String project) {
@@ -1755,61 +1972,79 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public List setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /** Restricts the list to return only zones with this domain name. */
       @com.google.api.client.util.Key
       private java.lang.String dnsName;
 
-      /**
-
+      /** Restricts the list to return only zones with this domain name.
        */
       public java.lang.String getDnsName() {
         return dnsName;
       }
 
+      /** Restricts the list to return only zones with this domain name. */
       public List setDnsName(java.lang.String dnsName) {
         this.dnsName = dnsName;
         return this;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /**
-
+      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+     results to return.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /**
-
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1821,13 +2056,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Apply a partial update to an existing ManagedZone.
+     *
      * Create a request for the method "managedZones.patch".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -1842,6 +2079,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}";
 
       /**
+       * Apply a partial update to an existing ManagedZone.
+       *
        * Create a request for the method "managedZones.patch".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1849,8 +2088,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -1895,46 +2134,60 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Patch) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Patch setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Patch setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Patch setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -1946,13 +2199,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
+     * Update an existing ManagedZone.
+     *
      * Create a request for the method "managedZones.update".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -1967,6 +2222,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}";
 
       /**
+       * Update an existing ManagedZone.
+       *
        * Create a request for the method "managedZones.update".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -1974,8 +2231,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -2020,46 +2277,60 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Update) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Update setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public Update setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Update setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -2094,12 +2365,14 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Projects {
 
     /**
+     * Fetch the representation of an existing Project.
+     *
      * Create a request for the method "projects.get".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project
+     * @param project Identifies the project addressed by this request.
      * @return the request
      */
     public Get get(java.lang.String project) throws java.io.IOException {
@@ -2113,6 +2386,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}";
 
       /**
+       * Fetch the representation of an existing Project.
+       *
        * Create a request for the method "projects.get".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -2120,7 +2395,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
+       * @param project Identifies the project addressed by this request.
        * @since 1.13
        */
       protected Get(java.lang.String project) {
@@ -2173,31 +2448,40 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (Get) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.String clientOperationId;
 
-      /**
-
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
        */
       public java.lang.String getClientOperationId() {
         return clientOperationId;
       }
 
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
       public Get setClientOperationId(java.lang.String clientOperationId) {
         this.clientOperationId = clientOperationId;
         return this;
@@ -2232,13 +2516,15 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ResourceRecordSets {
 
     /**
+     * Enumerate ResourceRecordSets that have been created but not yet deleted.
+     *
      * Create a request for the method "resourceRecordSets.list".
      *
      * This request holds the parameters needed by the dns server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param project
-     * @param managedZone
+     * @param project Identifies the project addressed by this request.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -2252,6 +2538,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "{project}/managedZones/{managedZone}/rrsets";
 
       /**
+       * Enumerate ResourceRecordSets that have been created but not yet deleted.
+       *
        * Create a request for the method "resourceRecordSets.list".
        *
        * This request holds the parameters needed by the the dns server.  After setting any optional
@@ -2259,8 +2547,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
-       * @param managedZone
+       * @param project Identifies the project addressed by this request.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -2314,91 +2602,122 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return (List) super.setUserIp(userIp);
       }
 
+      /** Identifies the project addressed by this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Identifies the project addressed by this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Identifies the project addressed by this request. */
       public List setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /**
-
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
+      /**
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
         return this;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /**
-
+      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+     results to return.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
+      /**
+       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
+       * how many results to return.
+       */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
+      /** Restricts the list to return only records with this fully qualified domain name. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /**
-
+      /** Restricts the list to return only records with this fully qualified domain name.
        */
       public java.lang.String getName() {
         return name;
       }
 
+      /** Restricts the list to return only records with this fully qualified domain name. */
       public List setName(java.lang.String name) {
         this.name = name;
         return this;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /**
-
+      /** Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+     continue a previous list request.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
+      /**
+       * Optional. A tag returned by a previous list request that was truncated. Use this parameter
+       * to continue a previous list request.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
+      /**
+       * Restricts the list to return only records of this type. If present, the "name" parameter
+       * must also be present.
+       */
       @com.google.api.client.util.Key
       private java.lang.String type;
 
-      /**
-
+      /** Restricts the list to return only records of this type. If present, the "name" parameter must also
+     be present.
        */
       public java.lang.String getType() {
         return type;
       }
 
+      /**
+       * Restricts the list to return only records of this type. If present, the "name" parameter
+       * must also be present.
+       */
       public List setType(java.lang.String type) {
         this.type = type;
         return this;

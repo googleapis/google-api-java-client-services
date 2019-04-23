@@ -30,6 +30,8 @@ package com.google.api.services.dns.model;
 public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone.
+   * Output only while state is not OFF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,18 +52,23 @@ public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.Ge
   private java.lang.String kind;
 
   /**
+   * Specifies the mechanism used to provide authenticated denial-of-existence responses. Output
+   * only while state is not OFF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nonExistence;
 
   /**
+   * Specifies whether DNSSEC is enabled, and what mode it is in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
+   * Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone.
+   * Output only while state is not OFF.
    * @return value or {@code null} for none
    */
   public java.util.List<DnsKeySpec> getDefaultKeySpecs() {
@@ -69,6 +76,8 @@ public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * Specifies parameters that will be used for generating initial DnsKeys for this ManagedZone.
+   * Output only while state is not OFF.
    * @param defaultKeySpecs defaultKeySpecs or {@code null} for none
    */
   public ManagedZoneDnsSecConfig setDefaultKeySpecs(java.util.List<DnsKeySpec> defaultKeySpecs) {
@@ -96,6 +105,8 @@ public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * Specifies the mechanism used to provide authenticated denial-of-existence responses. Output
+   * only while state is not OFF.
    * @return value or {@code null} for none
    */
   public java.lang.String getNonExistence() {
@@ -103,6 +114,8 @@ public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * Specifies the mechanism used to provide authenticated denial-of-existence responses. Output
+   * only while state is not OFF.
    * @param nonExistence nonExistence or {@code null} for none
    */
   public ManagedZoneDnsSecConfig setNonExistence(java.lang.String nonExistence) {
@@ -111,6 +124,7 @@ public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * Specifies whether DNSSEC is enabled, and what mode it is in.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -118,6 +132,7 @@ public final class ManagedZoneDnsSecConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * Specifies whether DNSSEC is enabled, and what mode it is in.
    * @param state state or {@code null} for none
    */
   public ManagedZoneDnsSecConfig setState(java.lang.String state) {

@@ -72,7 +72,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the instance, which cannot be changed after the instance is
    * created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the
-   * name must be between 6 and 30 characters in length.
+   * name must be between 2 and 64 characters in length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,7 +189,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the instance, which cannot be changed after the instance is
    * created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the
-   * name must be between 6 and 30 characters in length.
+   * name must be between 2 and 64 characters in length.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,7 +199,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   /**
    * Required. A unique identifier for the instance, which cannot be changed after the instance is
    * created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the
-   * name must be between 6 and 30 characters in length.
+   * name must be between 2 and 64 characters in length.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {

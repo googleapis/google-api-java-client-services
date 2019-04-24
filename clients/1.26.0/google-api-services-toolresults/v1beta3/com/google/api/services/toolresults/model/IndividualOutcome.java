@@ -32,16 +32,50 @@ package com.google.api.services.toolresults.model;
 public final class IndividualOutcome extends com.google.api.client.json.GenericJson {
 
   /**
+   * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive).
+   * The primary step is 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer multistepNumber;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outcomeSummary;
 
   /**
+   * How long it took for this step to run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration runDuration;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stepId;
+
+  /**
+   * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive).
+   * The primary step is 0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMultistepNumber() {
+    return multistepNumber;
+  }
+
+  /**
+   * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive).
+   * The primary step is 0.
+   * @param multistepNumber multistepNumber or {@code null} for none
+   */
+  public IndividualOutcome setMultistepNumber(java.lang.Integer multistepNumber) {
+    this.multistepNumber = multistepNumber;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -55,6 +89,23 @@ public final class IndividualOutcome extends com.google.api.client.json.GenericJ
    */
   public IndividualOutcome setOutcomeSummary(java.lang.String outcomeSummary) {
     this.outcomeSummary = outcomeSummary;
+    return this;
+  }
+
+  /**
+   * How long it took for this step to run.
+   * @return value or {@code null} for none
+   */
+  public Duration getRunDuration() {
+    return runDuration;
+  }
+
+  /**
+   * How long it took for this step to run.
+   * @param runDuration runDuration or {@code null} for none
+   */
+  public IndividualOutcome setRunDuration(Duration runDuration) {
+    this.runDuration = runDuration;
     return this;
   }
 

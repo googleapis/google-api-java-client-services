@@ -1456,7 +1456,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        *        created. Values are of the form
       `projects//instances/a-z*[a-z0-9]`. The final
       segment of
-       *        the name must be between 6 and 30 characters in length.
+       *        the name must be between 2 and 64 characters in length.
        * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceRequest}
        * @return the request
        */
@@ -1515,7 +1515,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        *        created. Values are of the form
       `projects//instances/a-z*[a-z0-9]`. The final
       segment of
-       *        the name must be between 6 and 30 characters in length.
+       *        the name must be between 2 and 64 characters in length.
          * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceRequest}
          * @since 1.13
          */
@@ -1587,14 +1587,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Required. A unique identifier for the instance, which cannot be changed after the
          * instance is created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final
-         * segment of the name must be between 6 and 30 characters in length.
+         * segment of the name must be between 2 and 64 characters in length.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. A unique identifier for the instance, which cannot be changed after the instance is
        created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of the name
-       must be between 6 and 30 characters in length.
+       must be between 2 and 64 characters in length.
          */
         public java.lang.String getName() {
           return name;
@@ -1603,7 +1603,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Required. A unique identifier for the instance, which cannot be changed after the
          * instance is created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final
-         * segment of the name must be between 6 and 30 characters in length.
+         * segment of the name must be between 2 and 64 characters in length.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

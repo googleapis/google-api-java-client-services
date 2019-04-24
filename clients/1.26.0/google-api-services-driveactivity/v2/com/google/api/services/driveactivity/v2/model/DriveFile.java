@@ -17,7 +17,7 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * This item is deprecated; please see `DriveFile` instead.
+ * A Drive item which is a file.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:
@@ -27,16 +27,16 @@ package com.google.api.services.driveactivity.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class File extends com.google.api.client.json.GenericJson {
+public final class DriveFile extends com.google.api.client.json.GenericJson {
 
   @Override
-  public File set(String fieldName, Object value) {
-    return (File) super.set(fieldName, value);
+  public DriveFile set(String fieldName, Object value) {
+    return (DriveFile) super.set(fieldName, value);
   }
 
   @Override
-  public File clone() {
-    return (File) super.clone();
+  public DriveFile clone() {
+    return (DriveFile) super.clone();
   }
 
 }

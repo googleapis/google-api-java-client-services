@@ -37,7 +37,14 @@ public final class Owner extends com.google.api.client.json.GenericJson {
   private Domain domain;
 
   /**
-   * The Team Drive that owns the Drive item.
+   * The drive that owns the item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DriveReference drive;
+
+  /**
+   * This field is deprecated; please use the `drive` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +75,24 @@ public final class Owner extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Team Drive that owns the Drive item.
+   * The drive that owns the item.
+   * @return value or {@code null} for none
+   */
+  public DriveReference getDrive() {
+    return drive;
+  }
+
+  /**
+   * The drive that owns the item.
+   * @param drive drive or {@code null} for none
+   */
+  public Owner setDrive(DriveReference drive) {
+    this.drive = drive;
+    return this;
+  }
+
+  /**
+   * This field is deprecated; please use the `drive` field instead.
    * @return value or {@code null} for none
    */
   public TeamDriveReference getTeamDrive() {
@@ -76,7 +100,7 @@ public final class Owner extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Team Drive that owns the Drive item.
+   * This field is deprecated; please use the `drive` field instead.
    * @param teamDrive teamDrive or {@code null} for none
    */
   public Owner setTeamDrive(TeamDriveReference teamDrive) {

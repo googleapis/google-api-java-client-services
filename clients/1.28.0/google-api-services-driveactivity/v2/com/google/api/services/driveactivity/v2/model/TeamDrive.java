@@ -17,7 +17,7 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * Information about a Team Drive.
+ * This item is deprecated; please see `Drive` instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.driveactivity.v2.model;
 public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the Team Drive. The format is "teamDrives/TEAM_DRIVE_ID".
+   * This field is deprecated; please see `Drive.name` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The root of this Team Drive.
+   * This field is deprecated; please see `Drive.root` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DriveItem root;
 
   /**
-   * The title of the Team Drive.
+   * This field is deprecated; please see `Drive.title` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The resource name of the Team Drive. The format is "teamDrives/TEAM_DRIVE_ID".
+   * This field is deprecated; please see `Drive.name` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,7 +59,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the Team Drive. The format is "teamDrives/TEAM_DRIVE_ID".
+   * This field is deprecated; please see `Drive.name` instead.
    * @param name name or {@code null} for none
    */
   public TeamDrive setName(java.lang.String name) {
@@ -68,7 +68,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The root of this Team Drive.
+   * This field is deprecated; please see `Drive.root` instead.
    * @return value or {@code null} for none
    */
   public DriveItem getRoot() {
@@ -76,7 +76,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The root of this Team Drive.
+   * This field is deprecated; please see `Drive.root` instead.
    * @param root root or {@code null} for none
    */
   public TeamDrive setRoot(DriveItem root) {
@@ -85,7 +85,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the Team Drive.
+   * This field is deprecated; please see `Drive.title` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -93,7 +93,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The title of the Team Drive.
+   * This field is deprecated; please see `Drive.title` instead.
    * @param title title or {@code null} for none
    */
   public TeamDrive setTitle(java.lang.String title) {

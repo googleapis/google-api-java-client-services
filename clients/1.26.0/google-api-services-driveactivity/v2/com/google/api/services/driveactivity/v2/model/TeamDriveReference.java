@@ -17,7 +17,7 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * A lightweight reference to a Team Drive.
+ * This item is deprecated; please see `DriveReference` instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.driveactivity.v2.model;
 public final class TeamDriveReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the Team Drive. The format is "teamDrives/TEAM_DRIVE_ID".
+   * This field is deprecated; please see `DriveReference.name` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The title of the Team Drive.
+   * This field is deprecated; please see `DriveReference.title` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The resource name of the Team Drive. The format is "teamDrives/TEAM_DRIVE_ID".
+   * This field is deprecated; please see `DriveReference.name` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +52,7 @@ public final class TeamDriveReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The resource name of the Team Drive. The format is "teamDrives/TEAM_DRIVE_ID".
+   * This field is deprecated; please see `DriveReference.name` instead.
    * @param name name or {@code null} for none
    */
   public TeamDriveReference setName(java.lang.String name) {
@@ -61,7 +61,7 @@ public final class TeamDriveReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The title of the Team Drive.
+   * This field is deprecated; please see `DriveReference.title` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -69,7 +69,7 @@ public final class TeamDriveReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The title of the Team Drive.
+   * This field is deprecated; please see `DriveReference.title` instead.
    * @param title title or {@code null} for none
    */
   public TeamDriveReference setTitle(java.lang.String title) {

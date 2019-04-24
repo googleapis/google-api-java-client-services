@@ -34,10 +34,24 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private File file;
+  private DriveFile driveFile;
 
   /**
    * The Drive item is a folder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DriveFolder driveFolder;
+
+  /**
+   * This field is deprecated; please use the `driveFile` field instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private File file;
+
+  /**
+   * This field is deprecated; please use the `driveFolder` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,12 +75,46 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
    * The Drive item is a file.
    * @return value or {@code null} for none
    */
+  public DriveFile getDriveFile() {
+    return driveFile;
+  }
+
+  /**
+   * The Drive item is a file.
+   * @param driveFile driveFile or {@code null} for none
+   */
+  public DriveItemReference setDriveFile(DriveFile driveFile) {
+    this.driveFile = driveFile;
+    return this;
+  }
+
+  /**
+   * The Drive item is a folder.
+   * @return value or {@code null} for none
+   */
+  public DriveFolder getDriveFolder() {
+    return driveFolder;
+  }
+
+  /**
+   * The Drive item is a folder.
+   * @param driveFolder driveFolder or {@code null} for none
+   */
+  public DriveItemReference setDriveFolder(DriveFolder driveFolder) {
+    this.driveFolder = driveFolder;
+    return this;
+  }
+
+  /**
+   * This field is deprecated; please use the `driveFile` field instead.
+   * @return value or {@code null} for none
+   */
   public File getFile() {
     return file;
   }
 
   /**
-   * The Drive item is a file.
+   * This field is deprecated; please use the `driveFile` field instead.
    * @param file file or {@code null} for none
    */
   public DriveItemReference setFile(File file) {
@@ -75,7 +123,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Drive item is a folder.
+   * This field is deprecated; please use the `driveFolder` field instead.
    * @return value or {@code null} for none
    */
   public Folder getFolder() {
@@ -83,7 +131,7 @@ public final class DriveItemReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Drive item is a folder.
+   * This field is deprecated; please use the `driveFolder` field instead.
    * @param folder folder or {@code null} for none
    */
   public DriveItemReference setFolder(Folder folder) {

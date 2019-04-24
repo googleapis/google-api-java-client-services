@@ -17,7 +17,7 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * A Drive item which is a folder.
+ * This item is deprecated; please see `DriveFolder` instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.driveactivity.v2.model;
 public final class Folder extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of Drive folder.
+   * This field is deprecated; please see `DriveFolder.type` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The type of Drive folder.
+   * This field is deprecated; please see `DriveFolder.type` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -45,7 +45,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of Drive folder.
+   * This field is deprecated; please see `DriveFolder.type` instead.
    * @param type type or {@code null} for none
    */
   public Folder setType(java.lang.String type) {

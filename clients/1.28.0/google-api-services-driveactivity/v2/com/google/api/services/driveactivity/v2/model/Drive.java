@@ -17,7 +17,7 @@
 package com.google.api.services.driveactivity.v2.model;
 
 /**
- * This item is deprecated; please see `Drive` instead.
+ * Information about a shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:
@@ -27,31 +27,33 @@ package com.google.api.services.driveactivity.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TeamDrive extends com.google.api.client.json.GenericJson {
+public final class Drive extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field is deprecated; please see `Drive.name` instead.
+   * The resource name of the shared drive. The format is "COLLECTION_ID/DRIVE_ID". Clients should
+   * not assume a specific collection ID for this resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * This field is deprecated; please see `Drive.root` instead.
+   * The root of this shared drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DriveItem root;
 
   /**
-   * This field is deprecated; please see `Drive.title` instead.
+   * The title of the shared drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * This field is deprecated; please see `Drive.name` instead.
+   * The resource name of the shared drive. The format is "COLLECTION_ID/DRIVE_ID". Clients should
+   * not assume a specific collection ID for this resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,16 +61,17 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field is deprecated; please see `Drive.name` instead.
+   * The resource name of the shared drive. The format is "COLLECTION_ID/DRIVE_ID". Clients should
+   * not assume a specific collection ID for this resource name.
    * @param name name or {@code null} for none
    */
-  public TeamDrive setName(java.lang.String name) {
+  public Drive setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * This field is deprecated; please see `Drive.root` instead.
+   * The root of this shared drive.
    * @return value or {@code null} for none
    */
   public DriveItem getRoot() {
@@ -76,16 +79,16 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field is deprecated; please see `Drive.root` instead.
+   * The root of this shared drive.
    * @param root root or {@code null} for none
    */
-  public TeamDrive setRoot(DriveItem root) {
+  public Drive setRoot(DriveItem root) {
     this.root = root;
     return this;
   }
 
   /**
-   * This field is deprecated; please see `Drive.title` instead.
+   * The title of the shared drive.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -93,22 +96,22 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field is deprecated; please see `Drive.title` instead.
+   * The title of the shared drive.
    * @param title title or {@code null} for none
    */
-  public TeamDrive setTitle(java.lang.String title) {
+  public Drive setTitle(java.lang.String title) {
     this.title = title;
     return this;
   }
 
   @Override
-  public TeamDrive set(String fieldName, Object value) {
-    return (TeamDrive) super.set(fieldName, value);
+  public Drive set(String fieldName, Object value) {
+    return (Drive) super.set(fieldName, value);
   }
 
   @Override
-  public TeamDrive clone() {
-    return (TeamDrive) super.clone();
+  public Drive clone() {
+    return (Drive) super.clone();
   }
 
 }

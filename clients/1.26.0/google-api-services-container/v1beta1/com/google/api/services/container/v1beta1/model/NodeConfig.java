@@ -162,6 +162,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean preemptible;
 
   /**
+   * Sandbox configuration for this node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SandboxConfig sandboxConfig;
+
+  /**
    * The Google Cloud Platform Service Account to be used by the node VMs. If no Service Account is
    * specified, the "default" service account is used.
    * The value may be {@code null}.
@@ -475,6 +482,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Sandbox configuration for this node.
+   * @return value or {@code null} for none
+   */
+  public SandboxConfig getSandboxConfig() {
+    return sandboxConfig;
+  }
+
+  /**
+   * Sandbox configuration for this node.
+   * @param sandboxConfig sandboxConfig or {@code null} for none
+   */
+  public NodeConfig setSandboxConfig(SandboxConfig sandboxConfig) {
+    this.sandboxConfig = sandboxConfig;
     return this;
   }
 

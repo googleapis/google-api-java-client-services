@@ -31,70 +31,70 @@ package com.google.api.services.container.v1beta1.model;
 public final class Jwk extends com.google.api.client.json.GenericJson {
 
   /**
-   * NOLINT
+   * Algorithm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String alg;
 
   /**
-   * NOLINT
+   * Used for ECDSA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String crv;
 
   /**
-   * NOLINT
+   * Used for RSA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String e;
 
   /**
-   * NOLINT
+   * Key ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kid;
 
   /**
-   * NOLINT
+   * Key Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kty;
 
   /**
-   * Fields for RSA keys. NOLINT
+   * Used for RSA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String n;
 
   /**
-   * NOLINT
+   * Permitted uses for the public keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String use;
 
   /**
-   * Fields for ECDSA keys. NOLINT
+   * Used for ECDSA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String x;
 
   /**
-   * NOLINT
+   * Used for ECDSA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String y;
 
   /**
-   * NOLINT
+   * Algorithm.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlg() {
@@ -102,7 +102,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Algorithm.
    * @param alg alg or {@code null} for none
    */
   public Jwk setAlg(java.lang.String alg) {
@@ -111,7 +111,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Used for ECDSA keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getCrv() {
@@ -119,7 +119,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Used for ECDSA keys.
    * @param crv crv or {@code null} for none
    */
   public Jwk setCrv(java.lang.String crv) {
@@ -128,7 +128,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Used for RSA keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getE() {
@@ -136,7 +136,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Used for RSA keys.
    * @param e e or {@code null} for none
    */
   public Jwk setE(java.lang.String e) {
@@ -145,7 +145,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Key ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getKid() {
@@ -153,7 +153,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Key ID.
    * @param kid kid or {@code null} for none
    */
   public Jwk setKid(java.lang.String kid) {
@@ -162,7 +162,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Key Type.
    * @return value or {@code null} for none
    */
   public java.lang.String getKty() {
@@ -170,7 +170,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Key Type.
    * @param kty kty or {@code null} for none
    */
   public Jwk setKty(java.lang.String kty) {
@@ -179,7 +179,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields for RSA keys. NOLINT
+   * Used for RSA keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getN() {
@@ -187,7 +187,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields for RSA keys. NOLINT
+   * Used for RSA keys.
    * @param n n or {@code null} for none
    */
   public Jwk setN(java.lang.String n) {
@@ -196,7 +196,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Permitted uses for the public keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getUse() {
@@ -204,7 +204,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Permitted uses for the public keys.
    * @param use use or {@code null} for none
    */
   public Jwk setUse(java.lang.String use) {
@@ -213,7 +213,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields for ECDSA keys. NOLINT
+   * Used for ECDSA keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getX() {
@@ -221,7 +221,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields for ECDSA keys. NOLINT
+   * Used for ECDSA keys.
    * @param x x or {@code null} for none
    */
   public Jwk setX(java.lang.String x) {
@@ -230,7 +230,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Used for ECDSA keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getY() {
@@ -238,7 +238,7 @@ public final class Jwk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * NOLINT
+   * Used for ECDSA keys.
    * @param y y or {@code null} for none
    */
   public Jwk setY(java.lang.String y) {

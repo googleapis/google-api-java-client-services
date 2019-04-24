@@ -40,7 +40,8 @@ public final class ContactGroupMembership extends com.google.api.client.json.Gen
    * The resource name for the contact group, assigned by the server. An ASCII string, in the form
    * of `contactGroups/`contact_group_id. Only contact_group_resource_name can be used for modifying
    * memberships. Any contact group membership can be removed, but only user group or "myContacts"
-   * or "starred" system groups memberships can be added.
+   * or "starred" system groups memberships can be added. A contact must always have at least one
+   * contact group membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,8 @@ public final class ContactGroupMembership extends com.google.api.client.json.Gen
    * The resource name for the contact group, assigned by the server. An ASCII string, in the form
    * of `contactGroups/`contact_group_id. Only contact_group_resource_name can be used for modifying
    * memberships. Any contact group membership can be removed, but only user group or "myContacts"
-   * or "starred" system groups memberships can be added.
+   * or "starred" system groups memberships can be added. A contact must always have at least one
+   * contact group membership.
    * @return value or {@code null} for none
    */
   public java.lang.String getContactGroupResourceName() {
@@ -78,7 +80,8 @@ public final class ContactGroupMembership extends com.google.api.client.json.Gen
    * The resource name for the contact group, assigned by the server. An ASCII string, in the form
    * of `contactGroups/`contact_group_id. Only contact_group_resource_name can be used for modifying
    * memberships. Any contact group membership can be removed, but only user group or "myContacts"
-   * or "starred" system groups memberships can be added.
+   * or "starred" system groups memberships can be added. A contact must always have at least one
+   * contact group membership.
    * @param contactGroupResourceName contactGroupResourceName or {@code null} for none
    */
   public ContactGroupMembership setContactGroupResourceName(java.lang.String contactGroupResourceName) {

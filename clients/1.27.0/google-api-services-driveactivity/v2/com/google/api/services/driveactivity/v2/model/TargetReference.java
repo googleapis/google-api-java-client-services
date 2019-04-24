@@ -30,6 +30,13 @@ package com.google.api.services.driveactivity.v2.model;
 public final class TargetReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * The target is a shared drive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DriveReference drive;
+
+  /**
    * The target is a Drive item.
    * The value may be {@code null}.
    */
@@ -37,11 +44,28 @@ public final class TargetReference extends com.google.api.client.json.GenericJso
   private DriveItemReference driveItem;
 
   /**
-   * The target is a Team Drive.
+   * This field is deprecated; please use the `drive` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TeamDriveReference teamDrive;
+
+  /**
+   * The target is a shared drive.
+   * @return value or {@code null} for none
+   */
+  public DriveReference getDrive() {
+    return drive;
+  }
+
+  /**
+   * The target is a shared drive.
+   * @param drive drive or {@code null} for none
+   */
+  public TargetReference setDrive(DriveReference drive) {
+    this.drive = drive;
+    return this;
+  }
 
   /**
    * The target is a Drive item.
@@ -61,7 +85,7 @@ public final class TargetReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The target is a Team Drive.
+   * This field is deprecated; please use the `drive` field instead.
    * @return value or {@code null} for none
    */
   public TeamDriveReference getTeamDrive() {
@@ -69,7 +93,7 @@ public final class TargetReference extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The target is a Team Drive.
+   * This field is deprecated; please use the `drive` field instead.
    * @param teamDrive teamDrive or {@code null} for none
    */
   public TargetReference setTeamDrive(TeamDriveReference teamDrive) {

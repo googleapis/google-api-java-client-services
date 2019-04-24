@@ -100,7 +100,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] Deprecated, use [NodePool.version](/kubernetes-
-   * engine/docs/reference/rest/v1beta1/projects.zones.clusters.nodePool) instead. The current
+   * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
    * The value may be {@code null}.
@@ -621,7 +621,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] Deprecated, use [NodePool.version](/kubernetes-
-   * engine/docs/reference/rest/v1beta1/projects.zones.clusters.nodePool) instead. The current
+   * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
    * @return value or {@code null} for none
@@ -632,7 +632,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] Deprecated, use [NodePool.version](/kubernetes-
-   * engine/docs/reference/rest/v1beta1/projects.zones.clusters.nodePool) instead. The current
+   * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
    * @param currentNodeVersion currentNodeVersion or {@code null} for none

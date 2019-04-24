@@ -80,8 +80,10 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * The set of visited expressions for a given test. This returns positions and evaluation results
-   * of all visited expressions.
+   * The set of visited permission expressions for a given test. This returns the positions and
+   * evaluation results of all visited permission expressions which were relevant to the test case,
+   * e.g. ``` match /path {   allow read if:  } ``` For a detailed report of the intermediate
+   * evaluation states, see the `expression_reports` field
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,8 +188,10 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of visited expressions for a given test. This returns positions and evaluation results
-   * of all visited expressions.
+   * The set of visited permission expressions for a given test. This returns the positions and
+   * evaluation results of all visited permission expressions which were relevant to the test case,
+   * e.g. ``` match /path {   allow read if:  } ``` For a detailed report of the intermediate
+   * evaluation states, see the `expression_reports` field
    * @return value or {@code null} for none
    */
   public java.util.List<VisitedExpression> getVisitedExpressions() {
@@ -195,8 +199,10 @@ public final class TestResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The set of visited expressions for a given test. This returns positions and evaluation results
-   * of all visited expressions.
+   * The set of visited permission expressions for a given test. This returns the positions and
+   * evaluation results of all visited permission expressions which were relevant to the test case,
+   * e.g. ``` match /path {   allow read if:  } ``` For a detailed report of the intermediate
+   * evaluation states, see the `expression_reports` field
    * @param visitedExpressions visitedExpressions or {@code null} for none
    */
   public TestResult setVisitedExpressions(java.util.List<VisitedExpression> visitedExpressions) {

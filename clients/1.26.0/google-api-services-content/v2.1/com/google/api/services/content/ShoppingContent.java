@@ -866,7 +866,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Performs an action on a link between a Merchant Center account and another account.
+     * Performs an action on a link between two Merchant Center accounts, namely accountId and
+     * linkedAccountId.
      *
      * Create a request for the method "accounts.link".
      *
@@ -891,7 +892,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/accounts/{accountId}/link";
 
       /**
-       * Performs an action on a link between a Merchant Center account and another account.
+       * Performs an action on a link between two Merchant Center accounts, namely accountId and
+       * linkedAccountId.
        *
        * Create a request for the method "accounts.link".
        *
@@ -4912,8 +4914,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   public class Orderinvoices {
 
     /**
-     * Creates a charge invoice for a shipment group, and triggers a charge capture for non-facilitated
-     * payment orders.
+     * Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice
+     * enabled orders.
      *
      * Create a request for the method "orderinvoices.createchargeinvoice".
      *
@@ -4936,8 +4938,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/orderinvoices/{orderId}/createChargeInvoice";
 
       /**
-       * Creates a charge invoice for a shipment group, and triggers a charge capture for non-
-       * facilitated payment orders.
+       * Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice
+       * enabled orders.
        *
        * Create a request for the method "orderinvoices.createchargeinvoice".
        *
@@ -5031,10 +5033,10 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Creates a refund invoice for one or more shipment groups, and triggers a refund for non-
-     * facilitated payment orders. This can only be used for line items that have previously been
-     * charged using createChargeInvoice. All amounts (except for the summary) are incremental with
-     * respect to the previous invoice.
+     * Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice
+     * enabled orders. This can only be used for line items that have previously been charged using
+     * createChargeInvoice. All amounts (except for the summary) are incremental with respect to the
+     * previous invoice.
      *
      * Create a request for the method "orderinvoices.createrefundinvoice".
      *
@@ -5057,8 +5059,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/orderinvoices/{orderId}/createRefundInvoice";
 
       /**
-       * Creates a refund invoice for one or more shipment groups, and triggers a refund for non-
-       * facilitated payment orders. This can only be used for line items that have previously been
+       * Creates a refund invoice for one or more shipment groups, and triggers a refund for
+       * orderinvoice enabled orders. This can only be used for line items that have previously been
        * charged using createChargeInvoice. All amounts (except for the summary) are incremental with
        * respect to the previous invoice.
        *

@@ -425,7 +425,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price price;
 
   /**
-   * Categories of the item (formatted as in products feed specification).
+   * Categories of the item (formatted as in products data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -446,7 +446,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price salePrice;
 
   /**
-   * Date range during which the item is on sale (see products feed specification).
+   * Date range during which the item is on sale (see products data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -538,6 +538,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String targetCountry;
 
   /**
+   * The tax category of the product, used to configure detailed tax nexus in account-level tax
+   * settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taxCategory;
+
+  /**
    * Tax information.
    * The value may be {@code null}.
    */
@@ -550,6 +558,14 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * The transit time label of the product, used to group product in account-level transit time
+   * tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transitTimeLabel;
 
   /**
    * The preference of the denominator of the unit price.
@@ -1499,7 +1515,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Categories of the item (formatted as in products feed specification).
+   * Categories of the item (formatted as in products data specification).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProductTypes() {
@@ -1507,7 +1523,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Categories of the item (formatted as in products feed specification).
+   * Categories of the item (formatted as in products data specification).
    * @param productTypes productTypes or {@code null} for none
    */
   public Product setProductTypes(java.util.List<java.lang.String> productTypes) {
@@ -1550,7 +1566,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products feed specification).
+   * Date range during which the item is on sale (see products data specification).
    * @return value or {@code null} for none
    */
   public java.lang.String getSalePriceEffectiveDate() {
@@ -1558,7 +1574,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products feed specification).
+   * Date range during which the item is on sale (see products data specification).
    * @param salePriceEffectiveDate salePriceEffectiveDate or {@code null} for none
    */
   public Product setSalePriceEffectiveDate(java.lang.String salePriceEffectiveDate) {
@@ -1773,6 +1789,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The tax category of the product, used to configure detailed tax nexus in account-level tax
+   * settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaxCategory() {
+    return taxCategory;
+  }
+
+  /**
+   * The tax category of the product, used to configure detailed tax nexus in account-level tax
+   * settings.
+   * @param taxCategory taxCategory or {@code null} for none
+   */
+  public Product setTaxCategory(java.lang.String taxCategory) {
+    this.taxCategory = taxCategory;
+    return this;
+  }
+
+  /**
    * Tax information.
    * @return value or {@code null} for none
    */
@@ -1803,6 +1838,25 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * The transit time label of the product, used to group product in account-level transit time
+   * tables.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransitTimeLabel() {
+    return transitTimeLabel;
+  }
+
+  /**
+   * The transit time label of the product, used to group product in account-level transit time
+   * tables.
+   * @param transitTimeLabel transitTimeLabel or {@code null} for none
+   */
+  public Product setTransitTimeLabel(java.lang.String transitTimeLabel) {
+    this.transitTimeLabel = transitTimeLabel;
     return this;
   }
 

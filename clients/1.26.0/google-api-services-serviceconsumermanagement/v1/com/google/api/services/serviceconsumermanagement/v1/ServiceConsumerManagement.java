@@ -1091,6 +1091,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * operation.
        *
        * @param parent Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AddTenantProjectRequest}
        * @return the request
        */
@@ -1122,6 +1124,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AddTenantProjectRequest}
          * @since 1.13
          */
@@ -1190,17 +1194,24 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return (AddProject) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the tenancy unit. */
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Name of the tenancy unit.
+        /** Name of the tenancy unit. Such as
+       'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Name of the tenancy unit. */
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
         public AddProject setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1223,9 +1234,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * modified. Specified policy bindings are applied. Existing bindings aren't modified. Specified
        * services are activated. No service is deactivated. If specified, new billing configuration is
        * applied. Omit a billing configuration to keep the existing one. A service account in the project
-       * is created if previously non existed. The specified folder is ignored, as moving a tenant project
-       * to a different folder isn't supported. The operation fails if any of the steps fail, but no
-       * rollback of already applied configuration changes is attempted. Operation.
+       * is created if previously non existed. Specified labels will be appended to tenant project, note
+       * that the value of existing label key will be updated if the same label key is requested. The
+       * specified folder is ignored, as moving a tenant project to a different folder isn't supported.
+       * The operation fails if any of the steps fail, but no rollback of already applied configuration
+       * changes is attempted. Operation.
        *
        * Create a request for the method "tenancyUnits.applyProjectConfig".
        *
@@ -1234,6 +1247,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * remote operation.
        *
        * @param name Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
        * @return the request
        */
@@ -1257,10 +1272,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * aren't modified. Specified policy bindings are applied. Existing bindings aren't modified.
          * Specified services are activated. No service is deactivated. If specified, new billing
          * configuration is applied. Omit a billing configuration to keep the existing one. A service
-         * account in the project is created if previously non existed. The specified folder is ignored,
-         * as moving a tenant project to a different folder isn't supported. The operation fails if any of
-         * the steps fail, but no rollback of already applied configuration changes is attempted.
-         * Operation.
+         * account in the project is created if previously non existed. Specified labels will be appended
+         * to tenant project, note that the value of existing label key will be updated if the same label
+         * key is requested. The specified folder is ignored, as moving a tenant project to a different
+         * folder isn't supported. The operation fails if any of the steps fail, but no rollback of
+         * already applied configuration changes is attempted. Operation.
          *
          * Create a request for the method "tenancyUnits.applyProjectConfig".
          *
@@ -1271,6 +1287,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * after invoking the constructor. </p>
          *
          * @param name Name of the tenancy unit.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.ApplyTenantProjectConfigRequest}
          * @since 1.13
          */
@@ -1339,17 +1357,24 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return (ApplyProjectConfig) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the tenancy unit. */
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit.
+        /** Name of the tenancy unit. Such as
+       'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the tenancy unit. */
+        /**
+         * Name of the tenancy unit. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
         public ApplyProjectConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1381,6 +1406,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * operation.
        *
        * @param name Name of the tenancy unit that the project will be attached to.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
        * @return the request
        */
@@ -1416,6 +1443,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * invoking the constructor. </p>
          *
          * @param name Name of the tenancy unit that the project will be attached to.
+      Such as
+       *        'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1.model.AttachTenantProjectRequest}
          * @since 1.13
          */
@@ -1484,17 +1513,24 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return (AttachProject) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name of the tenancy unit that the project will be attached to. */
+        /**
+         * Name of the tenancy unit that the project will be attached to. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name of the tenancy unit that the project will be attached to.
+        /** Name of the tenancy unit that the project will be attached to. Such as
+       'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name of the tenancy unit that the project will be attached to. */
+        /**
+         * Name of the tenancy unit that the project will be attached to. Such as
+         * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+         */
         public AttachProject setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

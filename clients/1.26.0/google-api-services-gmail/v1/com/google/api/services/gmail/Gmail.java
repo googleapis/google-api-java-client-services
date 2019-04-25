@@ -4750,6 +4750,121 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
+       * Gets language settings.
+       *
+       * Create a request for the method "settings.getLanguage".
+       *
+       * This request holds the parameters needed by the gmail server.  After setting any optional
+       * parameters, call the {@link GetLanguage#execute()} method to invoke the remote operation.
+       *
+       * @param userId User's email address. The special value "me" can be used to indicate the authenticated user.
+       *        [default: me]
+       * @return the request
+       */
+      public GetLanguage getLanguage(java.lang.String userId) throws java.io.IOException {
+        GetLanguage result = new GetLanguage(userId);
+        initialize(result);
+        return result;
+      }
+
+      public class GetLanguage extends GmailRequest<com.google.api.services.gmail.model.LanguageSettings> {
+
+        private static final String REST_PATH = "{userId}/settings/language";
+
+        /**
+         * Gets language settings.
+         *
+         * Create a request for the method "settings.getLanguage".
+         *
+         * This request holds the parameters needed by the the gmail server.  After setting any optional
+         * parameters, call the {@link GetLanguage#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * GetLanguage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param userId User's email address. The special value "me" can be used to indicate the authenticated user.
+       *        [default: me]
+         * @since 1.13
+         */
+        protected GetLanguage(java.lang.String userId) {
+          super(Gmail.this, "GET", REST_PATH, null, com.google.api.services.gmail.model.LanguageSettings.class);
+          this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetLanguage setAlt(java.lang.String alt) {
+          return (GetLanguage) super.setAlt(alt);
+        }
+
+        @Override
+        public GetLanguage setFields(java.lang.String fields) {
+          return (GetLanguage) super.setFields(fields);
+        }
+
+        @Override
+        public GetLanguage setKey(java.lang.String key) {
+          return (GetLanguage) super.setKey(key);
+        }
+
+        @Override
+        public GetLanguage setOauthToken(java.lang.String oauthToken) {
+          return (GetLanguage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetLanguage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetLanguage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetLanguage setQuotaUser(java.lang.String quotaUser) {
+          return (GetLanguage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetLanguage setUserIp(java.lang.String userIp) {
+          return (GetLanguage) super.setUserIp(userIp);
+        }
+
+        /**
+         * User's email address. The special value "me" can be used to indicate the authenticated
+         * user.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String userId;
+
+        /** User's email address. The special value "me" can be used to indicate the authenticated user.
+       [default: me]
+         */
+        public java.lang.String getUserId() {
+          return userId;
+        }
+
+        /**
+         * User's email address. The special value "me" can be used to indicate the authenticated
+         * user.
+         */
+        public GetLanguage setUserId(java.lang.String userId) {
+          this.userId = userId;
+          return this;
+        }
+
+        @Override
+        public GetLanguage set(String parameterName, Object value) {
+          return (GetLanguage) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets POP settings.
        *
        * Create a request for the method "settings.getPop".
@@ -5199,6 +5314,123 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public UpdateImap set(String parameterName, Object value) {
           return (UpdateImap) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates language settings.
+       *
+       * If successful, the return object contains the displayLanguage that was saved for the user, which
+       * may differ from the value passed into the request. This is because the requested displayLanguage
+       * may not be directly supported by Gmail but have a close variant that is, and so the variant may
+       * be chosen and saved instead.
+       *
+       * Create a request for the method "settings.updateLanguage".
+       *
+       * This request holds the parameters needed by the gmail server.  After setting any optional
+       * parameters, call the {@link UpdateLanguage#execute()} method to invoke the remote operation.
+       *
+       * @param userId User's email address. The special value "me" can be used to indicate the authenticated user.
+       *        [default: me]
+       * @param content the {@link com.google.api.services.gmail.model.LanguageSettings}
+       * @return the request
+       */
+      public UpdateLanguage updateLanguage(java.lang.String userId, com.google.api.services.gmail.model.LanguageSettings content) throws java.io.IOException {
+        UpdateLanguage result = new UpdateLanguage(userId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateLanguage extends GmailRequest<com.google.api.services.gmail.model.LanguageSettings> {
+
+        private static final String REST_PATH = "{userId}/settings/language";
+
+        /**
+         * Updates language settings.
+         *
+         * If successful, the return object contains the displayLanguage that was saved for the user,
+         * which may differ from the value passed into the request. This is because the requested
+         * displayLanguage may not be directly supported by Gmail but have a close variant that is, and so
+         * the variant may be chosen and saved instead.
+         *
+         * Create a request for the method "settings.updateLanguage".
+         *
+         * This request holds the parameters needed by the the gmail server.  After setting any optional
+         * parameters, call the {@link UpdateLanguage#execute()} method to invoke the remote operation.
+         * <p> {@link UpdateLanguage#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param userId User's email address. The special value "me" can be used to indicate the authenticated user.
+       *        [default: me]
+         * @param content the {@link com.google.api.services.gmail.model.LanguageSettings}
+         * @since 1.13
+         */
+        protected UpdateLanguage(java.lang.String userId, com.google.api.services.gmail.model.LanguageSettings content) {
+          super(Gmail.this, "PUT", REST_PATH, content, com.google.api.services.gmail.model.LanguageSettings.class);
+          this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+        }
+
+        @Override
+        public UpdateLanguage setAlt(java.lang.String alt) {
+          return (UpdateLanguage) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateLanguage setFields(java.lang.String fields) {
+          return (UpdateLanguage) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateLanguage setKey(java.lang.String key) {
+          return (UpdateLanguage) super.setKey(key);
+        }
+
+        @Override
+        public UpdateLanguage setOauthToken(java.lang.String oauthToken) {
+          return (UpdateLanguage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateLanguage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateLanguage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateLanguage setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateLanguage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateLanguage setUserIp(java.lang.String userIp) {
+          return (UpdateLanguage) super.setUserIp(userIp);
+        }
+
+        /**
+         * User's email address. The special value "me" can be used to indicate the authenticated
+         * user.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String userId;
+
+        /** User's email address. The special value "me" can be used to indicate the authenticated user.
+       [default: me]
+         */
+        public java.lang.String getUserId() {
+          return userId;
+        }
+
+        /**
+         * User's email address. The special value "me" can be used to indicate the authenticated
+         * user.
+         */
+        public UpdateLanguage setUserId(java.lang.String userId) {
+          this.userId = userId;
+          return this;
+        }
+
+        @Override
+        public UpdateLanguage set(String parameterName, Object value) {
+          return (UpdateLanguage) super.set(parameterName, value);
         }
       }
       /**

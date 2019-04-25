@@ -51,6 +51,13 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
   private TagFilterList removeList;
 
   /**
+   * If set, skip the redaction. Otherwise, all IDs are redacted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipIdRedaction;
+
+  /**
    * Tag filtering profile that determines which tags to keep/remove.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class DicomConfig extends com.google.api.client.json.GenericJson {
    */
   public DicomConfig setRemoveList(TagFilterList removeList) {
     this.removeList = removeList;
+    return this;
+  }
+
+  /**
+   * If set, skip the redaction. Otherwise, all IDs are redacted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipIdRedaction() {
+    return skipIdRedaction;
+  }
+
+  /**
+   * If set, skip the redaction. Otherwise, all IDs are redacted.
+   * @param skipIdRedaction skipIdRedaction or {@code null} for none
+   */
+  public DicomConfig setSkipIdRedaction(java.lang.Boolean skipIdRedaction) {
+    this.skipIdRedaction = skipIdRedaction;
     return this;
   }
 

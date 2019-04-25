@@ -47,6 +47,13 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   private java.lang.String languageCode;
 
   /**
+   * Optional. Which variant of the Speech model to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelVariant;
+
+  /**
    * Optional. The collection of phrase hints which are used to boost accuracy of speech
    * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
    * text/docs/basics#phrase-hints) for more details.
@@ -100,6 +107,23 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    */
   public GoogleCloudDialogflowV2InputAudioConfig setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Optional. Which variant of the Speech model to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelVariant() {
+    return modelVariant;
+  }
+
+  /**
+   * Optional. Which variant of the Speech model to use.
+   * @param modelVariant modelVariant or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2InputAudioConfig setModelVariant(java.lang.String modelVariant) {
+    this.modelVariant = modelVariant;
     return this;
   }
 

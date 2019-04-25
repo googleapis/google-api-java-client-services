@@ -39,7 +39,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> additionalImageLinks;
 
   /**
-   * Additional categories of the item (formatted as in products feed specification).
+   * Additional categories of the item (formatted as in products data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -449,7 +449,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price price;
 
   /**
-   * Your category of the item (formatted as in products feed specification).
+   * Your category of the item (formatted as in products data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -470,7 +470,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private Price salePrice;
 
   /**
-   * Date range during which the item is on sale (see products feed specification).
+   * Date range during which the item is on sale (see products data specification).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -627,7 +627,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional categories of the item (formatted as in products feed specification).
+   * Additional categories of the item (formatted as in products data specification).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalProductTypes() {
@@ -635,7 +635,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional categories of the item (formatted as in products feed specification).
+   * Additional categories of the item (formatted as in products data specification).
    * @param additionalProductTypes additionalProductTypes or {@code null} for none
    */
   public Product setAdditionalProductTypes(java.util.List<java.lang.String> additionalProductTypes) {
@@ -1588,7 +1588,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Your category of the item (formatted as in products feed specification).
+   * Your category of the item (formatted as in products data specification).
    * @return value or {@code null} for none
    */
   public java.lang.String getProductType() {
@@ -1596,7 +1596,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Your category of the item (formatted as in products feed specification).
+   * Your category of the item (formatted as in products data specification).
    * @param productType productType or {@code null} for none
    */
   public Product setProductType(java.lang.String productType) {
@@ -1639,7 +1639,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products feed specification).
+   * Date range during which the item is on sale (see products data specification).
    * @return value or {@code null} for none
    */
   public java.lang.String getSalePriceEffectiveDate() {
@@ -1647,7 +1647,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date range during which the item is on sale (see products feed specification).
+   * Date range during which the item is on sale (see products data specification).
    * @param salePriceEffectiveDate salePriceEffectiveDate or {@code null} for none
    */
   public Product setSalePriceEffectiveDate(java.lang.String salePriceEffectiveDate) {

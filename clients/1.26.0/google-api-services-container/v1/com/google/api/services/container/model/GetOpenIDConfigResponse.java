@@ -32,56 +32,56 @@ package com.google.api.services.container.model;
 public final class GetOpenIDConfigResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * NOLINT
+   * Supported claims.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("claims_supported")
   private java.util.List<java.lang.String> claimsSupported;
 
   /**
-   * NOLINT
+   * Supported grant types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("grant_types")
   private java.util.List<java.lang.String> grantTypes;
 
   /**
-   * NOLINT
+   * supported ID Token signing Algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("id_token_signing_alg_values_supported")
   private java.util.List<java.lang.String> idTokenSigningAlgValuesSupported;
 
   /**
-   * NOLINT
+   * OIDC Issuer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String issuer;
 
   /**
-   * NOLINT
+   * JSON Web Key uri.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("jwks_uri")
   private java.lang.String jwksUri;
 
   /**
-   * NOLINT
+   * Supported response types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("response_types_supported")
   private java.util.List<java.lang.String> responseTypesSupported;
 
   /**
-   * NOLINT
+   * Supported subject types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("subject_types_supported")
   private java.util.List<java.lang.String> subjectTypesSupported;
 
   /**
-   * NOLINT
+   * Supported claims.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getClaimsSupported() {
@@ -89,7 +89,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported claims.
    * @param claimsSupported claimsSupported or {@code null} for none
    */
   public GetOpenIDConfigResponse setClaimsSupported(java.util.List<java.lang.String> claimsSupported) {
@@ -98,7 +98,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported grant types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGrantTypes() {
@@ -106,7 +106,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported grant types.
    * @param grantTypes grantTypes or {@code null} for none
    */
   public GetOpenIDConfigResponse setGrantTypes(java.util.List<java.lang.String> grantTypes) {
@@ -115,7 +115,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * supported ID Token signing Algorithms.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdTokenSigningAlgValuesSupported() {
@@ -123,7 +123,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * supported ID Token signing Algorithms.
    * @param idTokenSigningAlgValuesSupported idTokenSigningAlgValuesSupported or {@code null} for none
    */
   public GetOpenIDConfigResponse setIdTokenSigningAlgValuesSupported(java.util.List<java.lang.String> idTokenSigningAlgValuesSupported) {
@@ -132,7 +132,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * OIDC Issuer.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuer() {
@@ -140,7 +140,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * OIDC Issuer.
    * @param issuer issuer or {@code null} for none
    */
   public GetOpenIDConfigResponse setIssuer(java.lang.String issuer) {
@@ -149,7 +149,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * JSON Web Key uri.
    * @return value or {@code null} for none
    */
   public java.lang.String getJwksUri() {
@@ -157,7 +157,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * JSON Web Key uri.
    * @param jwksUri jwksUri or {@code null} for none
    */
   public GetOpenIDConfigResponse setJwksUri(java.lang.String jwksUri) {
@@ -166,7 +166,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported response types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResponseTypesSupported() {
@@ -174,7 +174,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported response types.
    * @param responseTypesSupported responseTypesSupported or {@code null} for none
    */
   public GetOpenIDConfigResponse setResponseTypesSupported(java.util.List<java.lang.String> responseTypesSupported) {
@@ -183,7 +183,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported subject types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubjectTypesSupported() {
@@ -191,7 +191,7 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * NOLINT
+   * Supported subject types.
    * @param subjectTypesSupported subjectTypesSupported or {@code null} for none
    */
   public GetOpenIDConfigResponse setSubjectTypesSupported(java.util.List<java.lang.String> subjectTypesSupported) {

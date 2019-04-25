@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InspectJobConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Actions to execute at the completion of the job. Are executed in the order provided.
+   * Actions to execute at the completion of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2InspectJobConfig extends com.google.api.cli
   private GooglePrivacyDlpV2StorageConfig storageConfig;
 
   /**
-   * Actions to execute at the completion of the job. Are executed in the order provided.
+   * Actions to execute at the completion of the job.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Action> getActions() {
@@ -74,7 +74,7 @@ public final class GooglePrivacyDlpV2InspectJobConfig extends com.google.api.cli
   }
 
   /**
-   * Actions to execute at the completion of the job. Are executed in the order provided.
+   * Actions to execute at the completion of the job.
    * @param actions actions or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectJobConfig setActions(java.util.List<GooglePrivacyDlpV2Action> actions) {

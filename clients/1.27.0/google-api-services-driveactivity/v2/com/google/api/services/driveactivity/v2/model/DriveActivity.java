@@ -69,7 +69,7 @@ public final class DriveActivity extends com.google.api.client.json.GenericJson 
   private ActionDetail primaryActionDetail;
 
   /**
-   * All Drive objects this activity is about (e.g. file, folder, Team Drive). This represents the
+   * All Google Drive objects this activity is about (e.g. file, folder, drive). This represents the
    * state of the target immediately after the actions occurred.
    * The value may be {@code null}.
    */
@@ -146,7 +146,7 @@ public final class DriveActivity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * All Drive objects this activity is about (e.g. file, folder, Team Drive). This represents the
+   * All Google Drive objects this activity is about (e.g. file, folder, drive). This represents the
    * state of the target immediately after the actions occurred.
    * @return value or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class DriveActivity extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * All Drive objects this activity is about (e.g. file, folder, Team Drive). This represents the
+   * All Google Drive objects this activity is about (e.g. file, folder, drive). This represents the
    * state of the target immediately after the actions occurred.
    * @param targets targets or {@code null} for none
    */

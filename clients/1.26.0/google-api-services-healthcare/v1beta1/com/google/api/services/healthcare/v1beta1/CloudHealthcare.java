@@ -7727,137 +7727,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Executes all the requests in the given Bundle.
-           *
-           * Create a request for the method "fhirStores.executeBundle".
-           *
-           * This request holds the parameters needed by the healthcare server.  After setting any optional
-           * parameters, call the {@link ExecuteBundle#execute()} method to invoke the remote operation.
-           *
-           * @param parent Name of the FHIR store in which this bundle will be executed.
-           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
-           * @return the request
-           */
-          public ExecuteBundle executeBundle(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
-            ExecuteBundle result = new ExecuteBundle(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class ExecuteBundle extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-            private static final String REST_PATH = "v1beta1/{+parent}/fhir";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-
-            /**
-             * Executes all the requests in the given Bundle.
-             *
-             * Create a request for the method "fhirStores.executeBundle".
-             *
-             * This request holds the parameters needed by the the healthcare server.  After setting any
-             * optional parameters, call the {@link ExecuteBundle#execute()} method to invoke the remote
-             * operation. <p> {@link ExecuteBundle#initialize(com.google.api.client.googleapis.services.Abstra
-             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-             * the constructor. </p>
-             *
-             * @param parent Name of the FHIR store in which this bundle will be executed.
-             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
-             * @since 1.13
-             */
-            protected ExecuteBundle(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
-              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-              }
-            }
-
-            @Override
-            public ExecuteBundle set$Xgafv(java.lang.String $Xgafv) {
-              return (ExecuteBundle) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public ExecuteBundle setAccessToken(java.lang.String accessToken) {
-              return (ExecuteBundle) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public ExecuteBundle setAlt(java.lang.String alt) {
-              return (ExecuteBundle) super.setAlt(alt);
-            }
-
-            @Override
-            public ExecuteBundle setCallback(java.lang.String callback) {
-              return (ExecuteBundle) super.setCallback(callback);
-            }
-
-            @Override
-            public ExecuteBundle setFields(java.lang.String fields) {
-              return (ExecuteBundle) super.setFields(fields);
-            }
-
-            @Override
-            public ExecuteBundle setKey(java.lang.String key) {
-              return (ExecuteBundle) super.setKey(key);
-            }
-
-            @Override
-            public ExecuteBundle setOauthToken(java.lang.String oauthToken) {
-              return (ExecuteBundle) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public ExecuteBundle setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (ExecuteBundle) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public ExecuteBundle setQuotaUser(java.lang.String quotaUser) {
-              return (ExecuteBundle) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public ExecuteBundle setUploadType(java.lang.String uploadType) {
-              return (ExecuteBundle) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public ExecuteBundle setUploadProtocol(java.lang.String uploadProtocol) {
-              return (ExecuteBundle) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Name of the FHIR store in which this bundle will be executed. */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Name of the FHIR store in which this bundle will be executed.
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /** Name of the FHIR store in which this bundle will be executed. */
-            public ExecuteBundle setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            @Override
-            public ExecuteBundle set(String parameterName, Object value) {
-              return (ExecuteBundle) super.set(parameterName, value);
-            }
-          }
-          /**
            * Export resources from the FHIR store to the specified destination.
            *
            * This method returns an Operation that can be used to track the status of the export by calling
@@ -9171,69 +9040,74 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Fhir {
 
             /**
-             * Searches resources in the given FHIR store.
+             * Retrieves the N most recent `Observation` resources for a subject matching search criteria
+             * specified as query parameters, grouped by `Observation.code`, sorted from most recent to oldest.
              *
-             * # Search Parameters
+             * Implements the FHIR extended operation [Observation-
+             * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
              *
-             * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
-             * search parameters are supported on each FHIR resource.
+             * Search terms are provided as query parameters following the same pattern as the search method.
+             * This operation accepts an additional query parameter `max`, which specifies N, the maximum number
+             * of Observations to return from each group, with a default of 1.
              *
-             * # Search Modifiers
+             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+             * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
+             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
+             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead.
              *
-             * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains` |
-             * Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
-             * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
-             *
-             * Create a request for the method "fhir._search".
+             * Create a request for the method "fhir.Observation-lastn".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+             * parameters, call the {@link ObservationLastn#execute()} method to invoke the remote operation.
              *
              * @param parent Name of the FHIR store to retrieve resources from.
-             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
              * @return the request
              */
-            public Search search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) throws java.io.IOException {
-              Search result = new Search(parent, content);
+            public ObservationLastn observationLastn(java.lang.String parent) throws java.io.IOException {
+              ObservationLastn result = new ObservationLastn(parent);
               initialize(result);
               return result;
             }
 
-            public class Search extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+            public class ObservationLastn extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
-              private static final String REST_PATH = "v1beta1/{+parent}/fhir/_search";
+              private static final String REST_PATH = "v1beta1/{+parent}/fhir/Observation/$lastn";
 
               private final java.util.regex.Pattern PARENT_PATTERN =
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
               /**
-               * Searches resources in the given FHIR store.
+               * Retrieves the N most recent `Observation` resources for a subject matching search criteria
+               * specified as query parameters, grouped by `Observation.code`, sorted from most recent to
+               * oldest.
                *
-               * # Search Parameters
+               * Implements the FHIR extended operation [Observation-
+               * lastn](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn).
                *
-               * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
-               * search parameters are supported on each FHIR resource.
+               * Search terms are provided as query parameters following the same pattern as the search method.
+               * This operation accepts an additional query parameter `max`, which specifies N, the maximum
+               * number of Observations to return from each group, with a default of 1.
                *
-               * # Search Modifiers
+               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+               * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
+               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+               * error might be returned instead.
                *
-               * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains`
-               * | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
-               * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
-               *
-               * Create a request for the method "fhir._search".
+               * Create a request for the method "fhir.Observation-lastn".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
+               * optional parameters, call the {@link ObservationLastn#execute()} method to invoke the remote
+               * operation. <p> {@link ObservationLastn#initialize(com.google.api.client.googleapis.services.Abs
+               * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
                *
                * @param parent Name of the FHIR store to retrieve resources from.
-               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
                * @since 1.13
                */
-              protected Search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) {
-                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+              protected ObservationLastn(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9243,58 +9117,68 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public Search set$Xgafv(java.lang.String $Xgafv) {
-                return (Search) super.set$Xgafv($Xgafv);
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
               }
 
               @Override
-              public Search setAccessToken(java.lang.String accessToken) {
-                return (Search) super.setAccessToken(accessToken);
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
               }
 
               @Override
-              public Search setAlt(java.lang.String alt) {
-                return (Search) super.setAlt(alt);
+              public ObservationLastn set$Xgafv(java.lang.String $Xgafv) {
+                return (ObservationLastn) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public Search setCallback(java.lang.String callback) {
-                return (Search) super.setCallback(callback);
+              public ObservationLastn setAccessToken(java.lang.String accessToken) {
+                return (ObservationLastn) super.setAccessToken(accessToken);
               }
 
               @Override
-              public Search setFields(java.lang.String fields) {
-                return (Search) super.setFields(fields);
+              public ObservationLastn setAlt(java.lang.String alt) {
+                return (ObservationLastn) super.setAlt(alt);
               }
 
               @Override
-              public Search setKey(java.lang.String key) {
-                return (Search) super.setKey(key);
+              public ObservationLastn setCallback(java.lang.String callback) {
+                return (ObservationLastn) super.setCallback(callback);
               }
 
               @Override
-              public Search setOauthToken(java.lang.String oauthToken) {
-                return (Search) super.setOauthToken(oauthToken);
+              public ObservationLastn setFields(java.lang.String fields) {
+                return (ObservationLastn) super.setFields(fields);
               }
 
               @Override
-              public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Search) super.setPrettyPrint(prettyPrint);
+              public ObservationLastn setKey(java.lang.String key) {
+                return (ObservationLastn) super.setKey(key);
               }
 
               @Override
-              public Search setQuotaUser(java.lang.String quotaUser) {
-                return (Search) super.setQuotaUser(quotaUser);
+              public ObservationLastn setOauthToken(java.lang.String oauthToken) {
+                return (ObservationLastn) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public Search setUploadType(java.lang.String uploadType) {
-                return (Search) super.setUploadType(uploadType);
+              public ObservationLastn setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ObservationLastn) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public Search setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Search) super.setUploadProtocol(uploadProtocol);
+              public ObservationLastn setQuotaUser(java.lang.String quotaUser) {
+                return (ObservationLastn) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ObservationLastn setUploadType(java.lang.String uploadType) {
+                return (ObservationLastn) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ObservationLastn setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ObservationLastn) super.setUploadProtocol(uploadProtocol);
               }
 
               /** Name of the FHIR store to retrieve resources from. */
@@ -9308,7 +9192,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** Name of the FHIR store to retrieve resources from. */
-              public Search setParent(java.lang.String parent) {
+              public ObservationLastn setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -9319,35 +9203,534 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public Search set(String parameterName, Object value) {
-                return (Search) super.set(parameterName, value);
+              public ObservationLastn set(String parameterName, Object value) {
+                return (ObservationLastn) super.set(parameterName, value);
               }
             }
             /**
-             * Deletes FHIR resources matching a search query.
+             * Retrieves all the resources in the patient compartment for a `Patient` resource.
              *
-             * Note: unless resource versioning is disabled by setting the disable_resource_versioning flag on
-             * the FHIR store, the deleted resources will be moved to a history repository that can still be
-             * retrieved through GetResourceVersion and related methods, unless they are removed by the
-             * DeleteResourceVersions method.
+             * Implements the FHIR extended operation [Patient-
+             * everything](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything).
              *
-             * Create a request for the method "fhir.conditionalDeleteResource".
+             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+             * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
+             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
+             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead.
+             *
+             * Create a request for the method "fhir.Patient-everything".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link ConditionalDeleteResource#execute()} method to invoke the remote
-             * operation.
+             * parameters, call the {@link PatientEverything#execute()} method to invoke the remote operation.
              *
-             * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The type of the resource to update.
+             * @param name Name of the `Patient` resource for which the information is required.
              * @return the request
              */
-            public ConditionalDeleteResource conditionalDeleteResource(java.lang.String parent, java.lang.String type) throws java.io.IOException {
-              ConditionalDeleteResource result = new ConditionalDeleteResource(parent, type);
+            public PatientEverything patientEverything(java.lang.String name) throws java.io.IOException {
+              PatientEverything result = new PatientEverything(name);
               initialize(result);
               return result;
             }
 
-            public class ConditionalDeleteResource extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+            public class PatientEverything extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}/$everything";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
+
+              /**
+               * Retrieves all the resources in the patient compartment for a `Patient` resource.
+               *
+               * Implements the FHIR extended operation [Patient-
+               * everything](http://hl7.org/implement/standards/fhir/STU3/patient-operations.html#everything).
+               *
+               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+               * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
+               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+               * error might be returned instead.
+               *
+               * Create a request for the method "fhir.Patient-everything".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link PatientEverything#execute()} method to invoke the remote
+               * operation. <p> {@link PatientEverything#initialize(com.google.api.client.googleapis.services.Ab
+               * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param name Name of the `Patient` resource for which the information is required.
+               * @since 1.13
+               */
+              protected PatientEverything(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public PatientEverything set$Xgafv(java.lang.String $Xgafv) {
+                return (PatientEverything) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public PatientEverything setAccessToken(java.lang.String accessToken) {
+                return (PatientEverything) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public PatientEverything setAlt(java.lang.String alt) {
+                return (PatientEverything) super.setAlt(alt);
+              }
+
+              @Override
+              public PatientEverything setCallback(java.lang.String callback) {
+                return (PatientEverything) super.setCallback(callback);
+              }
+
+              @Override
+              public PatientEverything setFields(java.lang.String fields) {
+                return (PatientEverything) super.setFields(fields);
+              }
+
+              @Override
+              public PatientEverything setKey(java.lang.String key) {
+                return (PatientEverything) super.setKey(key);
+              }
+
+              @Override
+              public PatientEverything setOauthToken(java.lang.String oauthToken) {
+                return (PatientEverything) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public PatientEverything setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (PatientEverything) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public PatientEverything setQuotaUser(java.lang.String quotaUser) {
+                return (PatientEverything) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public PatientEverything setUploadType(java.lang.String uploadType) {
+                return (PatientEverything) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public PatientEverything setUploadProtocol(java.lang.String uploadProtocol) {
+                return (PatientEverything) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Name of the `Patient` resource for which the information is required. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Name of the `Patient` resource for which the information is required.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Name of the `Patient` resource for which the information is required. */
+              public PatientEverything setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The response includes records prior to the end date. If no end date is provided,
+               * all records subsequent to the start date are in scope.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String end;
+
+              /** The response includes records prior to the end date. If no end date is provided, all records
+             subsequent to the start date are in scope.
+               */
+              public java.lang.String getEnd() {
+                return end;
+              }
+
+              /**
+               * The response includes records prior to the end date. If no end date is provided,
+               * all records subsequent to the start date are in scope.
+               */
+              public PatientEverything setEnd(java.lang.String end) {
+                this.end = end;
+                return this;
+              }
+
+              /**
+               * The response includes records subsequent to the start date. If no start date is
+               * provided, all records prior to the end date are in scope.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String start;
+
+              /** The response includes records subsequent to the start date. If no start date is provided, all
+             records prior to the end date are in scope.
+               */
+              public java.lang.String getStart() {
+                return start;
+              }
+
+              /**
+               * The response includes records subsequent to the start date. If no start date is
+               * provided, all records prior to the end date are in scope.
+               */
+              public PatientEverything setStart(java.lang.String start) {
+                this.start = start;
+                return this;
+              }
+
+              @Override
+              public PatientEverything set(String parameterName, Object value) {
+                return (PatientEverything) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
+             * store. To remove all versions of a resource, first delete the current version and then call this
+             * method.
+             *
+             * This is not a FHIR standard operation.
+             *
+             * Create a request for the method "fhir.Resource-purge".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ResourcePurge#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the resource to purge.
+             * @return the request
+             */
+            public ResourcePurge resourcePurge(java.lang.String name) throws java.io.IOException {
+              ResourcePurge result = new ResourcePurge(name);
+              initialize(result);
+              return result;
+            }
+
+            public class ResourcePurge extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}/$purge";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+
+              /**
+               * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
+               * store. To remove all versions of a resource, first delete the current version and then call
+               * this method.
+               *
+               * This is not a FHIR standard operation.
+               *
+               * Create a request for the method "fhir.Resource-purge".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ResourcePurge#execute()} method to invoke the remote
+               * operation. <p> {@link ResourcePurge#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name The name of the resource to purge.
+               * @since 1.13
+               */
+              protected ResourcePurge(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+                }
+              }
+
+              @Override
+              public ResourcePurge set$Xgafv(java.lang.String $Xgafv) {
+                return (ResourcePurge) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ResourcePurge setAccessToken(java.lang.String accessToken) {
+                return (ResourcePurge) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ResourcePurge setAlt(java.lang.String alt) {
+                return (ResourcePurge) super.setAlt(alt);
+              }
+
+              @Override
+              public ResourcePurge setCallback(java.lang.String callback) {
+                return (ResourcePurge) super.setCallback(callback);
+              }
+
+              @Override
+              public ResourcePurge setFields(java.lang.String fields) {
+                return (ResourcePurge) super.setFields(fields);
+              }
+
+              @Override
+              public ResourcePurge setKey(java.lang.String key) {
+                return (ResourcePurge) super.setKey(key);
+              }
+
+              @Override
+              public ResourcePurge setOauthToken(java.lang.String oauthToken) {
+                return (ResourcePurge) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ResourcePurge setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ResourcePurge) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ResourcePurge setQuotaUser(java.lang.String quotaUser) {
+                return (ResourcePurge) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ResourcePurge setUploadType(java.lang.String uploadType) {
+                return (ResourcePurge) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ResourcePurge setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ResourcePurge) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the resource to purge. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the resource to purge.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the resource to purge. */
+              public ResourcePurge setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public ResourcePurge set(String parameterName, Object value) {
+                return (ResourcePurge) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the FHIR [capability
+             * statement](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html) for the store,
+             * which contains a description of functionality supported by the server.
+             *
+             * Implements the FHIR standard [capabilities
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities).
+             *
+             * On success, the response body will contain a JSON-encoded representation of a
+             * `CapabilityStatement` resource.
+             *
+             * Create a request for the method "fhir.capabilities".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Capabilities#execute()} method to invoke the remote operation.
+             *
+             * @param name Name of the FHIR store to retrieve the capabilities for.
+             * @return the request
+             */
+            public Capabilities capabilities(java.lang.String name) throws java.io.IOException {
+              Capabilities result = new Capabilities(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Capabilities extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}/fhir/metadata";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              /**
+               * Gets the FHIR [capability
+               * statement](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html) for the
+               * store, which contains a description of functionality supported by the server.
+               *
+               * Implements the FHIR standard [capabilities
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities).
+               *
+               * On success, the response body will contain a JSON-encoded representation of a
+               * `CapabilityStatement` resource.
+               *
+               * Create a request for the method "fhir.capabilities".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Capabilities#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Capabilities#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Name of the FHIR store to retrieve the capabilities for.
+               * @since 1.13
+               */
+              protected Capabilities(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Capabilities set$Xgafv(java.lang.String $Xgafv) {
+                return (Capabilities) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Capabilities setAccessToken(java.lang.String accessToken) {
+                return (Capabilities) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Capabilities setAlt(java.lang.String alt) {
+                return (Capabilities) super.setAlt(alt);
+              }
+
+              @Override
+              public Capabilities setCallback(java.lang.String callback) {
+                return (Capabilities) super.setCallback(callback);
+              }
+
+              @Override
+              public Capabilities setFields(java.lang.String fields) {
+                return (Capabilities) super.setFields(fields);
+              }
+
+              @Override
+              public Capabilities setKey(java.lang.String key) {
+                return (Capabilities) super.setKey(key);
+              }
+
+              @Override
+              public Capabilities setOauthToken(java.lang.String oauthToken) {
+                return (Capabilities) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Capabilities setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Capabilities) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Capabilities setQuotaUser(java.lang.String quotaUser) {
+                return (Capabilities) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Capabilities setUploadType(java.lang.String uploadType) {
+                return (Capabilities) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Capabilities setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Capabilities) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Name of the FHIR store to retrieve the capabilities for. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Name of the FHIR store to retrieve the capabilities for.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Name of the FHIR store to retrieve the capabilities for. */
+              public Capabilities setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Capabilities set(String parameterName, Object value) {
+                return (Capabilities) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes FHIR resources that match a search query.
+             *
+             * Implements the FHIR standard [conditional delete
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1). If multiple
+             * resources match, all of them will be deleted.
+             *
+             * Search terms are provided as query parameters following the same pattern as the search method.
+             *
+             * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
+             * the FHIR store, the deleted resources will be moved to a history repository that can still be
+             * retrieved through vread and related methods, unless they are removed by the purge method.
+             *
+             * Create a request for the method "fhir.conditionalDelete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the FHIR store this resource belongs to.
+             * @param type The type of the resource to delete.
+             * @return the request
+             */
+            public ConditionalDelete conditionalDelete(java.lang.String parent, java.lang.String type) throws java.io.IOException {
+              ConditionalDelete result = new ConditionalDelete(parent, type);
+              initialize(result);
+              return result;
+            }
+
+            public class ConditionalDelete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/fhir/{+type}";
 
@@ -9358,26 +9741,31 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^[^/]+$");
 
               /**
-               * Deletes FHIR resources matching a search query.
+               * Deletes FHIR resources that match a search query.
                *
-               * Note: unless resource versioning is disabled by setting the disable_resource_versioning flag on
+               * Implements the FHIR standard [conditional delete
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1). If multiple
+               * resources match, all of them will be deleted.
+               *
+               * Search terms are provided as query parameters following the same pattern as the search method.
+               *
+               * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
                * the FHIR store, the deleted resources will be moved to a history repository that can still be
-               * retrieved through GetResourceVersion and related methods, unless they are removed by the
-               * DeleteResourceVersions method.
+               * retrieved through vread and related methods, unless they are removed by the purge method.
                *
-               * Create a request for the method "fhir.conditionalDeleteResource".
+               * Create a request for the method "fhir.conditionalDelete".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link ConditionalDeleteResource#execute()} method to invoke the
-               * remote operation. <p> {@link ConditionalDeleteResource#initialize(com.google.api.client.googlea
-               * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-               * immediately after invoking the constructor. </p>
+               * optional parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote
+               * operation. <p> {@link ConditionalDelete#initialize(com.google.api.client.googleapis.services.Ab
+               * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The type of the resource to update.
+               * @param type The type of the resource to delete.
                * @since 1.13
                */
-              protected ConditionalDeleteResource(java.lang.String parent, java.lang.String type) {
+              protected ConditionalDelete(java.lang.String parent, java.lang.String type) {
                 super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -9394,58 +9782,58 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public ConditionalDeleteResource set$Xgafv(java.lang.String $Xgafv) {
-                return (ConditionalDeleteResource) super.set$Xgafv($Xgafv);
+              public ConditionalDelete set$Xgafv(java.lang.String $Xgafv) {
+                return (ConditionalDelete) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public ConditionalDeleteResource setAccessToken(java.lang.String accessToken) {
-                return (ConditionalDeleteResource) super.setAccessToken(accessToken);
+              public ConditionalDelete setAccessToken(java.lang.String accessToken) {
+                return (ConditionalDelete) super.setAccessToken(accessToken);
               }
 
               @Override
-              public ConditionalDeleteResource setAlt(java.lang.String alt) {
-                return (ConditionalDeleteResource) super.setAlt(alt);
+              public ConditionalDelete setAlt(java.lang.String alt) {
+                return (ConditionalDelete) super.setAlt(alt);
               }
 
               @Override
-              public ConditionalDeleteResource setCallback(java.lang.String callback) {
-                return (ConditionalDeleteResource) super.setCallback(callback);
+              public ConditionalDelete setCallback(java.lang.String callback) {
+                return (ConditionalDelete) super.setCallback(callback);
               }
 
               @Override
-              public ConditionalDeleteResource setFields(java.lang.String fields) {
-                return (ConditionalDeleteResource) super.setFields(fields);
+              public ConditionalDelete setFields(java.lang.String fields) {
+                return (ConditionalDelete) super.setFields(fields);
               }
 
               @Override
-              public ConditionalDeleteResource setKey(java.lang.String key) {
-                return (ConditionalDeleteResource) super.setKey(key);
+              public ConditionalDelete setKey(java.lang.String key) {
+                return (ConditionalDelete) super.setKey(key);
               }
 
               @Override
-              public ConditionalDeleteResource setOauthToken(java.lang.String oauthToken) {
-                return (ConditionalDeleteResource) super.setOauthToken(oauthToken);
+              public ConditionalDelete setOauthToken(java.lang.String oauthToken) {
+                return (ConditionalDelete) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public ConditionalDeleteResource setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (ConditionalDeleteResource) super.setPrettyPrint(prettyPrint);
+              public ConditionalDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConditionalDelete) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public ConditionalDeleteResource setQuotaUser(java.lang.String quotaUser) {
-                return (ConditionalDeleteResource) super.setQuotaUser(quotaUser);
+              public ConditionalDelete setQuotaUser(java.lang.String quotaUser) {
+                return (ConditionalDelete) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public ConditionalDeleteResource setUploadType(java.lang.String uploadType) {
-                return (ConditionalDeleteResource) super.setUploadType(uploadType);
+              public ConditionalDelete setUploadType(java.lang.String uploadType) {
+                return (ConditionalDelete) super.setUploadType(uploadType);
               }
 
               @Override
-              public ConditionalDeleteResource setUploadProtocol(java.lang.String uploadProtocol) {
-                return (ConditionalDeleteResource) super.setUploadProtocol(uploadProtocol);
+              public ConditionalDelete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConditionalDelete) super.setUploadProtocol(uploadProtocol);
               }
 
               /** The name of the FHIR store this resource belongs to. */
@@ -9459,7 +9847,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The name of the FHIR store this resource belongs to. */
-              public ConditionalDeleteResource setParent(java.lang.String parent) {
+              public ConditionalDelete setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -9469,18 +9857,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The type of the resource to update. */
+              /** The type of the resource to delete. */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The type of the resource to update.
+              /** The type of the resource to delete.
                */
               public java.lang.String getType() {
                 return type;
               }
 
-              /** The type of the resource to update. */
-              public ConditionalDeleteResource setType(java.lang.String type) {
+              /** The type of the resource to delete. */
+              public ConditionalDelete setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
                       "Parameter type must conform to the pattern " +
@@ -9491,32 +9879,48 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public ConditionalDeleteResource set(String parameterName, Object value) {
-                return (ConditionalDeleteResource) super.set(parameterName, value);
+              public ConditionalDelete set(String parameterName, Object value) {
+                return (ConditionalDelete) super.set(parameterName, value);
               }
             }
             /**
-             * Updates parts of a resource if the resource exists based on the search criteria specified via
-             * query parameters.
+             * If a resource is found based on the search criteria specified in the query parameters, updates
+             * part of that resource by applying the operations specified in a [JSON
+             * Patch](http://jsonpatch.com/) document.
              *
-             * Create a request for the method "fhir.conditionalPatchResource".
+             * Implements the FHIR standard [conditional patch
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+             *
+             * Search terms are provided as query parameters following the same pattern as the search method.
+             *
+             * If the search criteria identify more than one match, the request will return a `412 Precondition
+             * Failed` error.
+             *
+             * The request body must contain a JSON Patch document, and the request headers must contain
+             * `Content-Type: application/json-patch+json`.
+             *
+             * On success, the response body will contain a JSON-encoded representation of the updated resource,
+             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
+             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
+             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.conditionalPatch".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link ConditionalPatchResource#execute()} method to invoke the remote
-             * operation.
+             * parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The type of the resource to update.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
-            public ConditionalPatchResource conditionalPatchResource(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
-              ConditionalPatchResource result = new ConditionalPatchResource(parent, type, content);
+            public ConditionalPatch conditionalPatch(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              ConditionalPatch result = new ConditionalPatch(parent, type, content);
               initialize(result);
               return result;
             }
 
-            public class ConditionalPatchResource extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+            public class ConditionalPatch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/fhir/{+type}";
 
@@ -9527,23 +9931,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^[^/]+$");
 
               /**
-               * Updates parts of a resource if the resource exists based on the search criteria specified via
-               * query parameters.
+               * If a resource is found based on the search criteria specified in the query parameters, updates
+               * part of that resource by applying the operations specified in a [JSON
+               * Patch](http://jsonpatch.com/) document.
                *
-               * Create a request for the method "fhir.conditionalPatchResource".
+               * Implements the FHIR standard [conditional patch
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+               *
+               * Search terms are provided as query parameters following the same pattern as the search method.
+               *
+               * If the search criteria identify more than one match, the request will return a `412
+               * Precondition Failed` error.
+               *
+               * The request body must contain a JSON Patch document, and the request headers must contain
+               * `Content-Type: application/json-patch+json`.
+               *
+               * On success, the response body will contain a JSON-encoded representation of the updated
+               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead.
+               *
+               * Create a request for the method "fhir.conditionalPatch".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link ConditionalPatchResource#execute()} method to invoke the
-               * remote operation. <p> {@link ConditionalPatchResource#initialize(com.google.api.client.googleap
-               * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-               * immediately after invoking the constructor. </p>
+               * optional parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote
+               * operation. <p> {@link ConditionalPatch#initialize(com.google.api.client.googleapis.services.Abs
+               * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The type of the resource to update.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
-              protected ConditionalPatchResource(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+              protected ConditionalPatch(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
                 super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -9560,58 +9982,58 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public ConditionalPatchResource set$Xgafv(java.lang.String $Xgafv) {
-                return (ConditionalPatchResource) super.set$Xgafv($Xgafv);
+              public ConditionalPatch set$Xgafv(java.lang.String $Xgafv) {
+                return (ConditionalPatch) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public ConditionalPatchResource setAccessToken(java.lang.String accessToken) {
-                return (ConditionalPatchResource) super.setAccessToken(accessToken);
+              public ConditionalPatch setAccessToken(java.lang.String accessToken) {
+                return (ConditionalPatch) super.setAccessToken(accessToken);
               }
 
               @Override
-              public ConditionalPatchResource setAlt(java.lang.String alt) {
-                return (ConditionalPatchResource) super.setAlt(alt);
+              public ConditionalPatch setAlt(java.lang.String alt) {
+                return (ConditionalPatch) super.setAlt(alt);
               }
 
               @Override
-              public ConditionalPatchResource setCallback(java.lang.String callback) {
-                return (ConditionalPatchResource) super.setCallback(callback);
+              public ConditionalPatch setCallback(java.lang.String callback) {
+                return (ConditionalPatch) super.setCallback(callback);
               }
 
               @Override
-              public ConditionalPatchResource setFields(java.lang.String fields) {
-                return (ConditionalPatchResource) super.setFields(fields);
+              public ConditionalPatch setFields(java.lang.String fields) {
+                return (ConditionalPatch) super.setFields(fields);
               }
 
               @Override
-              public ConditionalPatchResource setKey(java.lang.String key) {
-                return (ConditionalPatchResource) super.setKey(key);
+              public ConditionalPatch setKey(java.lang.String key) {
+                return (ConditionalPatch) super.setKey(key);
               }
 
               @Override
-              public ConditionalPatchResource setOauthToken(java.lang.String oauthToken) {
-                return (ConditionalPatchResource) super.setOauthToken(oauthToken);
+              public ConditionalPatch setOauthToken(java.lang.String oauthToken) {
+                return (ConditionalPatch) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public ConditionalPatchResource setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (ConditionalPatchResource) super.setPrettyPrint(prettyPrint);
+              public ConditionalPatch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConditionalPatch) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public ConditionalPatchResource setQuotaUser(java.lang.String quotaUser) {
-                return (ConditionalPatchResource) super.setQuotaUser(quotaUser);
+              public ConditionalPatch setQuotaUser(java.lang.String quotaUser) {
+                return (ConditionalPatch) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public ConditionalPatchResource setUploadType(java.lang.String uploadType) {
-                return (ConditionalPatchResource) super.setUploadType(uploadType);
+              public ConditionalPatch setUploadType(java.lang.String uploadType) {
+                return (ConditionalPatch) super.setUploadType(uploadType);
               }
 
               @Override
-              public ConditionalPatchResource setUploadProtocol(java.lang.String uploadProtocol) {
-                return (ConditionalPatchResource) super.setUploadProtocol(uploadProtocol);
+              public ConditionalPatch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConditionalPatch) super.setUploadProtocol(uploadProtocol);
               }
 
               /** The name of the FHIR store this resource belongs to. */
@@ -9625,7 +10047,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The name of the FHIR store this resource belongs to. */
-              public ConditionalPatchResource setParent(java.lang.String parent) {
+              public ConditionalPatch setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -9646,7 +10068,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The type of the resource to update. */
-              public ConditionalPatchResource setType(java.lang.String type) {
+              public ConditionalPatch setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
                       "Parameter type must conform to the pattern " +
@@ -9657,32 +10079,51 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public ConditionalPatchResource set(String parameterName, Object value) {
-                return (ConditionalPatchResource) super.set(parameterName, value);
+              public ConditionalPatch set(String parameterName, Object value) {
+                return (ConditionalPatch) super.set(parameterName, value);
               }
             }
             /**
-             * Updates the entire resource if the resource exists based on the search criteria specified via
-             * query parameters.
+             * If a resource is found based on the search criteria specified in the query parameters, updates
+             * the entire contents of that resource.
              *
-             * Create a request for the method "fhir.conditionalUpdateResource".
+             * Implements the FHIR standard [conditional update
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update).
+             *
+             * Search terms are provided as query parameters following the same pattern as the search method.
+             *
+             * If the search criteria identify more than one match, the request will return a `412 Precondition
+             * Failed` error. If the search criteria identify zero matches, and the supplied resource body
+             * contains an `id`, and the FHIR store has [enable_update_create](FhirStore.enable_update_create)
+             * set, creates the resource with the client-specified ID. If the search criteria identify zero
+             * matches, and the supplied resource body does not contain an `id`, the resource will be created
+             * with a server-assigned ID as per the create method.
+             *
+             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
+             * `Content-Type: application/fhir+json`.
+             *
+             * On success, the response body will contain a JSON-encoded representation of the updated resource,
+             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
+             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
+             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.conditionalUpdate".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link ConditionalUpdateResource#execute()} method to invoke the remote
-             * operation.
+             * parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The type of the resource to update.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
-            public ConditionalUpdateResource conditionalUpdateResource(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
-              ConditionalUpdateResource result = new ConditionalUpdateResource(parent, type, content);
+            public ConditionalUpdate conditionalUpdate(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              ConditionalUpdate result = new ConditionalUpdate(parent, type, content);
               initialize(result);
               return result;
             }
 
-            public class ConditionalUpdateResource extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+            public class ConditionalUpdate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/fhir/{+type}";
 
@@ -9693,23 +10134,45 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^[^/]+$");
 
               /**
-               * Updates the entire resource if the resource exists based on the search criteria specified via
-               * query parameters.
+               * If a resource is found based on the search criteria specified in the query parameters, updates
+               * the entire contents of that resource.
                *
-               * Create a request for the method "fhir.conditionalUpdateResource".
+               * Implements the FHIR standard [conditional update
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update).
+               *
+               * Search terms are provided as query parameters following the same pattern as the search method.
+               *
+               * If the search criteria identify more than one match, the request will return a `412
+               * Precondition Failed` error. If the search criteria identify zero matches, and the supplied
+               * resource body contains an `id`, and the FHIR store has
+               * [enable_update_create](FhirStore.enable_update_create) set, creates the resource with the
+               * client-specified ID. If the search criteria identify zero matches, and the supplied resource
+               * body does not contain an `id`, the resource will be created with a server-assigned ID as per
+               * the create method.
+               *
+               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
+               * contain `Content-Type: application/fhir+json`.
+               *
+               * On success, the response body will contain a JSON-encoded representation of the updated
+               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead.
+               *
+               * Create a request for the method "fhir.conditionalUpdate".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link ConditionalUpdateResource#execute()} method to invoke the
-               * remote operation. <p> {@link ConditionalUpdateResource#initialize(com.google.api.client.googlea
-               * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
-               * immediately after invoking the constructor. </p>
+               * optional parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote
+               * operation. <p> {@link ConditionalUpdate#initialize(com.google.api.client.googleapis.services.Ab
+               * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The type of the resource to update.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
-              protected ConditionalUpdateResource(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+              protected ConditionalUpdate(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
                 super(CloudHealthcare.this, "PUT", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -9726,58 +10189,58 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public ConditionalUpdateResource set$Xgafv(java.lang.String $Xgafv) {
-                return (ConditionalUpdateResource) super.set$Xgafv($Xgafv);
+              public ConditionalUpdate set$Xgafv(java.lang.String $Xgafv) {
+                return (ConditionalUpdate) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public ConditionalUpdateResource setAccessToken(java.lang.String accessToken) {
-                return (ConditionalUpdateResource) super.setAccessToken(accessToken);
+              public ConditionalUpdate setAccessToken(java.lang.String accessToken) {
+                return (ConditionalUpdate) super.setAccessToken(accessToken);
               }
 
               @Override
-              public ConditionalUpdateResource setAlt(java.lang.String alt) {
-                return (ConditionalUpdateResource) super.setAlt(alt);
+              public ConditionalUpdate setAlt(java.lang.String alt) {
+                return (ConditionalUpdate) super.setAlt(alt);
               }
 
               @Override
-              public ConditionalUpdateResource setCallback(java.lang.String callback) {
-                return (ConditionalUpdateResource) super.setCallback(callback);
+              public ConditionalUpdate setCallback(java.lang.String callback) {
+                return (ConditionalUpdate) super.setCallback(callback);
               }
 
               @Override
-              public ConditionalUpdateResource setFields(java.lang.String fields) {
-                return (ConditionalUpdateResource) super.setFields(fields);
+              public ConditionalUpdate setFields(java.lang.String fields) {
+                return (ConditionalUpdate) super.setFields(fields);
               }
 
               @Override
-              public ConditionalUpdateResource setKey(java.lang.String key) {
-                return (ConditionalUpdateResource) super.setKey(key);
+              public ConditionalUpdate setKey(java.lang.String key) {
+                return (ConditionalUpdate) super.setKey(key);
               }
 
               @Override
-              public ConditionalUpdateResource setOauthToken(java.lang.String oauthToken) {
-                return (ConditionalUpdateResource) super.setOauthToken(oauthToken);
+              public ConditionalUpdate setOauthToken(java.lang.String oauthToken) {
+                return (ConditionalUpdate) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public ConditionalUpdateResource setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (ConditionalUpdateResource) super.setPrettyPrint(prettyPrint);
+              public ConditionalUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConditionalUpdate) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public ConditionalUpdateResource setQuotaUser(java.lang.String quotaUser) {
-                return (ConditionalUpdateResource) super.setQuotaUser(quotaUser);
+              public ConditionalUpdate setQuotaUser(java.lang.String quotaUser) {
+                return (ConditionalUpdate) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public ConditionalUpdateResource setUploadType(java.lang.String uploadType) {
-                return (ConditionalUpdateResource) super.setUploadType(uploadType);
+              public ConditionalUpdate setUploadType(java.lang.String uploadType) {
+                return (ConditionalUpdate) super.setUploadType(uploadType);
               }
 
               @Override
-              public ConditionalUpdateResource setUploadProtocol(java.lang.String uploadProtocol) {
-                return (ConditionalUpdateResource) super.setUploadProtocol(uploadProtocol);
+              public ConditionalUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConditionalUpdate) super.setUploadProtocol(uploadProtocol);
               }
 
               /** The name of the FHIR store this resource belongs to. */
@@ -9791,7 +10254,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The name of the FHIR store this resource belongs to. */
-              public ConditionalUpdateResource setParent(java.lang.String parent) {
+              public ConditionalUpdate setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -9812,7 +10275,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The type of the resource to update. */
-              public ConditionalUpdateResource setType(java.lang.String type) {
+              public ConditionalUpdate setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
                       "Parameter type must conform to the pattern " +
@@ -9823,30 +10286,48 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public ConditionalUpdateResource set(String parameterName, Object value) {
-                return (ConditionalUpdateResource) super.set(parameterName, value);
+              public ConditionalUpdate set(String parameterName, Object value) {
+                return (ConditionalUpdate) super.set(parameterName, value);
               }
             }
             /**
              * Creates a FHIR resource.
              *
-             * Create a request for the method "fhir.createResource".
+             * Implements the FHIR standard [create
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#create), which creates a new
+             * resource with a server-assigned resource ID.
+             *
+             * Also supports the FHIR standard [conditional create
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate), specified by
+             * supplying an `If-None-Exist` header containing a FHIR search query. If no resources match this
+             * search query, the server processes the create operation as normal.
+             *
+             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
+             * `Content-Type: application/fhir+json`.
+             *
+             * On success, the response body will contain a JSON-encoded representation of the resource as it
+             * was created on the server, including the server-assigned resource ID and version ID. Errors
+             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
+             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
+             * a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.create".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link CreateResource#execute()} method to invoke the remote operation.
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
              * @param type The type of the resource to create.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
-            public CreateResource createResource(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
-              CreateResource result = new CreateResource(parent, type, content);
+            public Create create(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              Create result = new Create(parent, type, content);
               initialize(result);
               return result;
             }
 
-            public class CreateResource extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/fhir/{+type}";
 
@@ -9859,20 +10340,38 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Creates a FHIR resource.
                *
-               * Create a request for the method "fhir.createResource".
+               * Implements the FHIR standard [create
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#create), which creates a
+               * new resource with a server-assigned resource ID.
+               *
+               * Also supports the FHIR standard [conditional create
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate), specified by
+               * supplying an `If-None-Exist` header containing a FHIR search query. If no resources match this
+               * search query, the server processes the create operation as normal.
+               *
+               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
+               * contain `Content-Type: application/fhir+json`.
+               *
+               * On success, the response body will contain a JSON-encoded representation of the resource as it
+               * was created on the server, including the server-assigned resource ID and version ID. Errors
+               * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
+               * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR
+               * store, a generic GCP error might be returned instead.
+               *
+               * Create a request for the method "fhir.create".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link CreateResource#execute()} method to invoke the remote
-               * operation. <p> {@link CreateResource#initialize(com.google.api.client.googleapis.services.Abstr
-               * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-               * the constructor. </p>
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
                * @param type The type of the resource to create.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
-              protected CreateResource(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+              protected Create(java.lang.String parent, java.lang.String type, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
                 super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -9889,58 +10388,58 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public CreateResource set$Xgafv(java.lang.String $Xgafv) {
-                return (CreateResource) super.set$Xgafv($Xgafv);
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public CreateResource setAccessToken(java.lang.String accessToken) {
-                return (CreateResource) super.setAccessToken(accessToken);
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
               }
 
               @Override
-              public CreateResource setAlt(java.lang.String alt) {
-                return (CreateResource) super.setAlt(alt);
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
               }
 
               @Override
-              public CreateResource setCallback(java.lang.String callback) {
-                return (CreateResource) super.setCallback(callback);
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
               }
 
               @Override
-              public CreateResource setFields(java.lang.String fields) {
-                return (CreateResource) super.setFields(fields);
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
               }
 
               @Override
-              public CreateResource setKey(java.lang.String key) {
-                return (CreateResource) super.setKey(key);
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
               }
 
               @Override
-              public CreateResource setOauthToken(java.lang.String oauthToken) {
-                return (CreateResource) super.setOauthToken(oauthToken);
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public CreateResource setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (CreateResource) super.setPrettyPrint(prettyPrint);
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public CreateResource setQuotaUser(java.lang.String quotaUser) {
-                return (CreateResource) super.setQuotaUser(quotaUser);
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public CreateResource setUploadType(java.lang.String uploadType) {
-                return (CreateResource) super.setUploadType(uploadType);
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
               }
 
               @Override
-              public CreateResource setUploadProtocol(java.lang.String uploadProtocol) {
-                return (CreateResource) super.setUploadProtocol(uploadProtocol);
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
               /** The name of the FHIR store this resource belongs to. */
@@ -9954,7 +10453,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The name of the FHIR store this resource belongs to. */
-              public CreateResource setParent(java.lang.String parent) {
+              public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -9975,7 +10474,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The type of the resource to create. */
-              public CreateResource setType(java.lang.String type) {
+              public Create setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
                       "Parameter type must conform to the pattern " +
@@ -9986,17 +10485,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public CreateResource set(String parameterName, Object value) {
-                return (CreateResource) super.set(parameterName, value);
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
               }
             }
             /**
              * Deletes a FHIR resource.
              *
-             * Note: unless resource versioning is disabled by setting the disable_resource_versioning flag on
+             * Implements the FHIR standard [delete
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#delete).
+             *
+             * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
              * the FHIR store, the deleted resources will be moved to a history repository that can still be
-             * retrieved through GetResourceVersion and related methods, unless they are removed by the
-             * DeleteResourceVersions method.
+             * retrieved through vread and related methods, unless they are removed by the purge method.
              *
              * Create a request for the method "fhir.delete".
              *
@@ -10022,10 +10523,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Deletes a FHIR resource.
                *
-               * Note: unless resource versioning is disabled by setting the disable_resource_versioning flag on
+               * Implements the FHIR standard [delete
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#delete).
+               *
+               * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
                * the FHIR store, the deleted resources will be moved to a history repository that can still be
-               * retrieved through GetResourceVersion and related methods, unless they are removed by the
-               * DeleteResourceVersions method.
+               * retrieved through vread and related methods, unless they are removed by the purge method.
                *
                * Create a request for the method "fhir.delete".
                *
@@ -10130,176 +10633,231 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Deletes all the historical versions of a resource (excluding current version) from the FHIR
-             * store. To remove all versions of a resource, first delete the current version and call this
-             * method.
+             * Executes all the requests in the given Bundle.
              *
-             * Create a request for the method "fhir.delete$purge".
+             * Implements the FHIR standard [batch/transaction
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction).
+             *
+             * Supports all interactions within a bundle, except search. This method accepts Bundles of type
+             * `batch` and `transaction`, processing them according to the [batch processing
+             * rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1) and [transaction
+             * processing rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2).
+             *
+             * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers must
+             * contain `Content-Type: application/fhir+json`.
+             *
+             * For a batch bundle or a successful transaction the response body will contain a JSON-encoded
+             * representation of a `Bundle` resource of type `batch-response` or `transaction-response`
+             * containing one entry for each entry in the request, with the outcome of processing the entry. In
+             * the case of an error for a transaction bundle, the response body will contain a JSON-encoded
+             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
+             * to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.executeBundle".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link Delete$purge#execute()} method to invoke the remote operation.
+             * parameters, call the {@link ExecuteBundle#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the resource to purge.
+             * @param parent Name of the FHIR store in which this bundle will be executed.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
-            public Delete$purge delete$purge(java.lang.String name) throws java.io.IOException {
-              Delete$purge result = new Delete$purge(name);
+            public ExecuteBundle executeBundle(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+              ExecuteBundle result = new ExecuteBundle(parent, content);
               initialize(result);
               return result;
             }
 
-            public class Delete$purge extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+            public class ExecuteBundle extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
-              private static final String REST_PATH = "v1beta1/{+name}/$purge";
+              private static final String REST_PATH = "v1beta1/{+parent}/fhir";
 
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
               /**
-               * Deletes all the historical versions of a resource (excluding current version) from the FHIR
-               * store. To remove all versions of a resource, first delete the current version and call this
-               * method.
+               * Executes all the requests in the given Bundle.
                *
-               * Create a request for the method "fhir.delete$purge".
+               * Implements the FHIR standard [batch/transaction
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction).
+               *
+               * Supports all interactions within a bundle, except search. This method accepts Bundles of type
+               * `batch` and `transaction`, processing them according to the [batch processing
+               * rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1) and [transaction
+               * processing rules](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2).
+               *
+               * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers
+               * must contain `Content-Type: application/fhir+json`.
+               *
+               * For a batch bundle or a successful transaction the response body will contain a JSON-encoded
+               * representation of a `Bundle` resource of type `batch-response` or `transaction-response`
+               * containing one entry for each entry in the request, with the outcome of processing the entry.
+               * In the case of an error for a transaction bundle, the response body will contain a JSON-encoded
+               * `OperationOutcome` resource describing the reason for the error. If the request cannot be
+               * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               *
+               * Create a request for the method "fhir.executeBundle".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link Delete$purge#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * Delete$purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               * optional parameters, call the {@link ExecuteBundle#execute()} method to invoke the remote
+               * operation. <p> {@link ExecuteBundle#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
                *
-               * @param name The name of the resource to purge.
+               * @param parent Name of the FHIR store in which this bundle will be executed.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
-              protected Delete$purge(java.lang.String name) {
-                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              protected ExecuteBundle(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
                 }
               }
 
               @Override
-              public Delete$purge set$Xgafv(java.lang.String $Xgafv) {
-                return (Delete$purge) super.set$Xgafv($Xgafv);
+              public ExecuteBundle set$Xgafv(java.lang.String $Xgafv) {
+                return (ExecuteBundle) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public Delete$purge setAccessToken(java.lang.String accessToken) {
-                return (Delete$purge) super.setAccessToken(accessToken);
+              public ExecuteBundle setAccessToken(java.lang.String accessToken) {
+                return (ExecuteBundle) super.setAccessToken(accessToken);
               }
 
               @Override
-              public Delete$purge setAlt(java.lang.String alt) {
-                return (Delete$purge) super.setAlt(alt);
+              public ExecuteBundle setAlt(java.lang.String alt) {
+                return (ExecuteBundle) super.setAlt(alt);
               }
 
               @Override
-              public Delete$purge setCallback(java.lang.String callback) {
-                return (Delete$purge) super.setCallback(callback);
+              public ExecuteBundle setCallback(java.lang.String callback) {
+                return (ExecuteBundle) super.setCallback(callback);
               }
 
               @Override
-              public Delete$purge setFields(java.lang.String fields) {
-                return (Delete$purge) super.setFields(fields);
+              public ExecuteBundle setFields(java.lang.String fields) {
+                return (ExecuteBundle) super.setFields(fields);
               }
 
               @Override
-              public Delete$purge setKey(java.lang.String key) {
-                return (Delete$purge) super.setKey(key);
+              public ExecuteBundle setKey(java.lang.String key) {
+                return (ExecuteBundle) super.setKey(key);
               }
 
               @Override
-              public Delete$purge setOauthToken(java.lang.String oauthToken) {
-                return (Delete$purge) super.setOauthToken(oauthToken);
+              public ExecuteBundle setOauthToken(java.lang.String oauthToken) {
+                return (ExecuteBundle) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public Delete$purge setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Delete$purge) super.setPrettyPrint(prettyPrint);
+              public ExecuteBundle setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ExecuteBundle) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public Delete$purge setQuotaUser(java.lang.String quotaUser) {
-                return (Delete$purge) super.setQuotaUser(quotaUser);
+              public ExecuteBundle setQuotaUser(java.lang.String quotaUser) {
+                return (ExecuteBundle) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public Delete$purge setUploadType(java.lang.String uploadType) {
-                return (Delete$purge) super.setUploadType(uploadType);
+              public ExecuteBundle setUploadType(java.lang.String uploadType) {
+                return (ExecuteBundle) super.setUploadType(uploadType);
               }
 
               @Override
-              public Delete$purge setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Delete$purge) super.setUploadProtocol(uploadProtocol);
+              public ExecuteBundle setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ExecuteBundle) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** The name of the resource to purge. */
+              /** Name of the FHIR store in which this bundle will be executed. */
               @com.google.api.client.util.Key
-              private java.lang.String name;
+              private java.lang.String parent;
 
-              /** The name of the resource to purge.
+              /** Name of the FHIR store in which this bundle will be executed.
                */
-              public java.lang.String getName() {
-                return name;
+              public java.lang.String getParent() {
+                return parent;
               }
 
-              /** The name of the resource to purge. */
-              public Delete$purge setName(java.lang.String name) {
+              /** Name of the FHIR store in which this bundle will be executed. */
+              public ExecuteBundle setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
                 }
-                this.name = name;
+                this.parent = parent;
                 return this;
               }
 
               @Override
-              public Delete$purge set(String parameterName, Object value) {
-                return (Delete$purge) super.set(parameterName, value);
+              public ExecuteBundle set(String parameterName, Object value) {
+                return (ExecuteBundle) super.set(parameterName, value);
               }
             }
             /**
-             * Gets a FHIR resource.
+             * Lists all the versions of a resource (including the current version and deleted versions) from
+             * the FHIR store.
              *
-             * Create a request for the method "fhir.get".
+             * Implements the per-resource form of the FHIR standard [history
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#history).
+             *
+             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+             * of type `history`, containing the version history sorted from most recent to oldest versions.
+             * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
+             * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+             * FHIR store, a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.history".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * parameters, call the {@link History#execute()} method to invoke the remote operation.
              *
              * @param name The name of the resource to retrieve.
              * @return the request
              */
-            public Get get(java.lang.String name) throws java.io.IOException {
-              Get result = new Get(name);
+            public History history(java.lang.String name) throws java.io.IOException {
+              History result = new History(name);
               initialize(result);
               return result;
             }
 
-            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+            public class History extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
-              private static final String REST_PATH = "v1beta1/{+name}";
+              private static final String REST_PATH = "v1beta1/{+name}/_history";
 
               private final java.util.regex.Pattern NAME_PATTERN =
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Gets a FHIR resource.
+               * Lists all the versions of a resource (including the current version and deleted versions) from
+               * the FHIR store.
                *
-               * Create a request for the method "fhir.get".
+               * Implements the per-resource form of the FHIR standard [history
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#history).
+               *
+               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+               * of type `history`, containing the version history sorted from most recent to oldest versions.
+               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead.
+               *
+               * Create a request for the method "fhir.history".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               * optional parameters, call the {@link History#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * History#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name The name of the resource to retrieve.
                * @since 1.13
                */
-              protected Get(java.lang.String name) {
+              protected History(java.lang.String name) {
                 super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -10320,58 +10878,58 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public Get set$Xgafv(java.lang.String $Xgafv) {
-                return (Get) super.set$Xgafv($Xgafv);
+              public History set$Xgafv(java.lang.String $Xgafv) {
+                return (History) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public Get setAccessToken(java.lang.String accessToken) {
-                return (Get) super.setAccessToken(accessToken);
+              public History setAccessToken(java.lang.String accessToken) {
+                return (History) super.setAccessToken(accessToken);
               }
 
               @Override
-              public Get setAlt(java.lang.String alt) {
-                return (Get) super.setAlt(alt);
+              public History setAlt(java.lang.String alt) {
+                return (History) super.setAlt(alt);
               }
 
               @Override
-              public Get setCallback(java.lang.String callback) {
-                return (Get) super.setCallback(callback);
+              public History setCallback(java.lang.String callback) {
+                return (History) super.setCallback(callback);
               }
 
               @Override
-              public Get setFields(java.lang.String fields) {
-                return (Get) super.setFields(fields);
+              public History setFields(java.lang.String fields) {
+                return (History) super.setFields(fields);
               }
 
               @Override
-              public Get setKey(java.lang.String key) {
-                return (Get) super.setKey(key);
+              public History setKey(java.lang.String key) {
+                return (History) super.setKey(key);
               }
 
               @Override
-              public Get setOauthToken(java.lang.String oauthToken) {
-                return (Get) super.setOauthToken(oauthToken);
+              public History setOauthToken(java.lang.String oauthToken) {
+                return (History) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Get) super.setPrettyPrint(prettyPrint);
+              public History setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (History) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public Get setQuotaUser(java.lang.String quotaUser) {
-                return (Get) super.setQuotaUser(quotaUser);
+              public History setQuotaUser(java.lang.String quotaUser) {
+                return (History) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public Get setUploadType(java.lang.String uploadType) {
-                return (Get) super.setUploadType(uploadType);
+              public History setUploadType(java.lang.String uploadType) {
+                return (History) super.setUploadType(uploadType);
               }
 
               @Override
-              public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Get) super.setUploadProtocol(uploadProtocol);
+              public History setUploadProtocol(java.lang.String uploadProtocol) {
+                return (History) super.setUploadProtocol(uploadProtocol);
               }
 
               /** The name of the resource to retrieve. */
@@ -10385,7 +10943,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** The name of the resource to retrieve. */
-              public Get setName(java.lang.String name) {
+              public History setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                       "Parameter name must conform to the pattern " +
@@ -10395,154 +10953,143 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              @Override
-              public Get set(String parameterName, Object value) {
-                return (Get) super.set(parameterName, value);
+              /**
+               * Only include resource versions that were current at some point during the time
+               * period specified in the date time value. The date parameter format is yyyy-mm-
+               * ddThh:mm:ss[Z|(+|-)hh:mm]
+               *
+               * Clients may specify any of the following:
+               *
+               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
+               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String at;
+
+              /** Only include resource versions that were current at some point during the time period specified in
+             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
+
+             Clients may specify any of the following:
+
+             *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day: `_at=2019-01-20`
+             *  A specific second: `_at=2018-12-31T23:59:58Z`
+               */
+              public java.lang.String getAt() {
+                return at;
               }
-            }
-            /**
-             * Gets the FHIR capability statement for the store, which contains a description of functionality
-             * supported by the server.
-             *
-             * Create a request for the method "fhir.getMetadata".
-             *
-             * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link GetMetadata#execute()} method to invoke the remote operation.
-             *
-             * @param name Name of the FHIR store to retrieve the capabilities for.
-             * @return the request
-             */
-            public GetMetadata getMetadata(java.lang.String name) throws java.io.IOException {
-              GetMetadata result = new GetMetadata(name);
-              initialize(result);
-              return result;
-            }
-
-            public class GetMetadata extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-              private static final String REST_PATH = "v1beta1/{+name}/fhir/metadata";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
               /**
-               * Gets the FHIR capability statement for the store, which contains a description of functionality
-               * supported by the server.
+               * Only include resource versions that were current at some point during the time
+               * period specified in the date time value. The date parameter format is yyyy-mm-
+               * ddThh:mm:ss[Z|(+|-)hh:mm]
                *
-               * Create a request for the method "fhir.getMetadata".
+               * Clients may specify any of the following:
                *
-               * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link GetMetadata#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * GetMetadata#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Name of the FHIR store to retrieve the capabilities for.
-               * @since 1.13
+               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
+               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
                */
-              protected GetMetadata(java.lang.String name) {
-                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-                }
+              public History setAt(java.lang.String at) {
+                this.at = at;
+                return this;
               }
 
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public GetMetadata set$Xgafv(java.lang.String $Xgafv) {
-                return (GetMetadata) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public GetMetadata setAccessToken(java.lang.String accessToken) {
-                return (GetMetadata) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public GetMetadata setAlt(java.lang.String alt) {
-                return (GetMetadata) super.setAlt(alt);
-              }
-
-              @Override
-              public GetMetadata setCallback(java.lang.String callback) {
-                return (GetMetadata) super.setCallback(callback);
-              }
-
-              @Override
-              public GetMetadata setFields(java.lang.String fields) {
-                return (GetMetadata) super.setFields(fields);
-              }
-
-              @Override
-              public GetMetadata setKey(java.lang.String key) {
-                return (GetMetadata) super.setKey(key);
-              }
-
-              @Override
-              public GetMetadata setOauthToken(java.lang.String oauthToken) {
-                return (GetMetadata) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public GetMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (GetMetadata) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public GetMetadata setQuotaUser(java.lang.String quotaUser) {
-                return (GetMetadata) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public GetMetadata setUploadType(java.lang.String uploadType) {
-                return (GetMetadata) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public GetMetadata setUploadProtocol(java.lang.String uploadProtocol) {
-                return (GetMetadata) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /** Name of the FHIR store to retrieve the capabilities for. */
+              /** The maximum number of search results on a page. Defaults to 1000. */
               @com.google.api.client.util.Key
-              private java.lang.String name;
+              private java.lang.Integer count;
 
-              /** Name of the FHIR store to retrieve the capabilities for.
+              /** The maximum number of search results on a page. Defaults to 1000.
                */
-              public java.lang.String getName() {
-                return name;
+              public java.lang.Integer getCount() {
+                return count;
               }
 
-              /** Name of the FHIR store to retrieve the capabilities for. */
-              public GetMetadata setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-                }
-                this.name = name;
+              /** The maximum number of search results on a page. Defaults to 1000. */
+              public History setCount(java.lang.Integer count) {
+                this.count = count;
+                return this;
+              }
+
+              /**
+               * Used to retrieve the first, previous, next, or last page of resource versions when
+               * using pagination. Value should be set to the value of the `link.url` field returned
+               * in the response to the previous request, where `link.relation` is "first",
+               * "previous", "next" or "last".
+               *
+               * Omit `page` if no previous request has been made.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String page;
+
+              /** Used to retrieve the first, previous, next, or last page of resource versions when using
+             pagination. Value should be set to the value of the `link.url` field returned in the response to
+             the previous request, where `link.relation` is "first", "previous", "next" or "last".
+
+             Omit `page` if no previous request has been made.
+               */
+              public java.lang.String getPage() {
+                return page;
+              }
+
+              /**
+               * Used to retrieve the first, previous, next, or last page of resource versions when
+               * using pagination. Value should be set to the value of the `link.url` field returned
+               * in the response to the previous request, where `link.relation` is "first",
+               * "previous", "next" or "last".
+               *
+               * Omit `page` if no previous request has been made.
+               */
+              public History setPage(java.lang.String page) {
+                this.page = page;
+                return this;
+              }
+
+              /**
+               * Only include resource versions that were created at or after the given instant in
+               * time. The instant in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for
+               * example 2015-02-07T13:28:17.239+02:00 or 2017-01-01T00:00:00Z). The time must be
+               * specified to the second and include a time zone.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String since;
+
+              /** Only include resource versions that were created at or after the given instant in time. The instant
+             in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for example 2015-02-07T13:28:17.239+02:00 or
+             2017-01-01T00:00:00Z). The time must be specified to the second and include a time zone.
+               */
+              public java.lang.String getSince() {
+                return since;
+              }
+
+              /**
+               * Only include resource versions that were created at or after the given instant in
+               * time. The instant in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for
+               * example 2015-02-07T13:28:17.239+02:00 or 2017-01-01T00:00:00Z). The time must be
+               * specified to the second and include a time zone.
+               */
+              public History setSince(java.lang.String since) {
+                this.since = since;
                 return this;
               }
 
               @Override
-              public GetMetadata set(String parameterName, Object value) {
-                return (GetMetadata) super.set(parameterName, value);
+              public History set(String parameterName, Object value) {
+                return (History) super.set(parameterName, value);
               }
             }
             /**
-             * Updates part of an existing resource.
+             * Updates part of an existing resource by applying the operations specified in a [JSON
+             * Patch](http://jsonpatch.com/) document.
+             *
+             * Implements the FHIR standard [patch
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+             *
+             * The request body must contain a JSON Patch document, and the request headers must contain
+             * `Content-Type: application/json-patch+json`.
+             *
+             * On success, the response body will contain a JSON-encoded representation of the updated resource,
+             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
+             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
+             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
              *
              * Create a request for the method "fhir.patch".
              *
@@ -10567,7 +11114,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Updates part of an existing resource.
+               * Updates part of an existing resource by applying the operations specified in a [JSON
+               * Patch](http://jsonpatch.com/) document.
+               *
+               * Implements the FHIR standard [patch
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#patch).
+               *
+               * The request body must contain a JSON Patch document, and the request headers must contain
+               * `Content-Type: application/json-patch+json`.
+               *
+               * On success, the response body will contain a JSON-encoded representation of the updated
+               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead.
                *
                * Create a request for the method "fhir.patch".
                *
@@ -10673,83 +11233,75 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Searches resources in the given FHIR store.
+             * Gets the contents of a FHIR resource.
              *
-             * # Search Parameters
+             * Implements the FHIR standard [read
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#read).
              *
-             * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
-             * search parameters are supported on each FHIR resource.
+             * Also supports the FHIR standard [conditional read
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cread) specified by supplying
+             * an `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag
+             * value.
              *
-             * # Search Modifiers
+             * On success, the response body will contain a JSON-encoded representation of the resource. Errors
+             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
+             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
+             * a generic GCP error might be returned instead.
              *
-             * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains` |
-             * Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
-             * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
-             *
-             * Create a request for the method "fhir.searchResources".
+             * Create a request for the method "fhir.read".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link SearchResources#execute()} method to invoke the remote operation.
+             * parameters, call the {@link Read#execute()} method to invoke the remote operation.
              *
-             * @param parent Name of the FHIR store to retrieve resources from.
-             * @param resourceType The type of the resource to search.
+             * @param name The name of the resource to retrieve.
              * @return the request
              */
-            public SearchResources searchResources(java.lang.String parent, java.lang.String resourceType) throws java.io.IOException {
-              SearchResources result = new SearchResources(parent, resourceType);
+            public Read read(java.lang.String name) throws java.io.IOException {
+              Read result = new Read(name);
               initialize(result);
               return result;
             }
 
-            public class SearchResources extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+            public class Read extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
 
-              private static final String REST_PATH = "v1beta1/{+parent}/fhir/{+resourceType}";
+              private static final String REST_PATH = "v1beta1/{+name}";
 
-              private final java.util.regex.Pattern PARENT_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-
-              private final java.util.regex.Pattern RESOURCE_TYPE_PATTERN =
-                  java.util.regex.Pattern.compile("^.+$");
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Searches resources in the given FHIR store.
+               * Gets the contents of a FHIR resource.
                *
-               * # Search Parameters
+               * Implements the FHIR standard [read
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#read).
                *
-               * The server's capability statement, retrieved through GetCapabilityStatement, indicates which
-               * search parameters are supported on each FHIR resource.
+               * Also supports the FHIR standard [conditional read
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#cread) specified by
+               * supplying an `If-Modified-Since` header with a date/time value or an `If-None-Match` header
+               * with an ETag value.
                *
-               * # Search Modifiers
+               * On success, the response body will contain a JSON-encoded representation of the resource.
+               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead.
                *
-               * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains`
-               * | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
-               * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
-               *
-               * Create a request for the method "fhir.searchResources".
+               * Create a request for the method "fhir.read".
                *
                * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link SearchResources#execute()} method to invoke the remote
-               * operation. <p> {@link SearchResources#initialize(com.google.api.client.googleapis.services.Abst
-               * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-               * the constructor. </p>
+               * optional parameters, call the {@link Read#execute()} method to invoke the remote operation. <p>
+               * {@link Read#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Name of the FHIR store to retrieve resources from.
-               * @param resourceType The type of the resource to search.
+               * @param name The name of the resource to retrieve.
                * @since 1.13
                */
-              protected SearchResources(java.lang.String parent, java.lang.String resourceType) {
+              protected Read(java.lang.String name) {
                 super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                      "Parameter parent must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-                }
-                this.resourceType = com.google.api.client.util.Preconditions.checkNotNull(resourceType, "Required parameter resourceType must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_TYPE_PATTERN.matcher(resourceType).matches(),
-                      "Parameter resourceType must conform to the pattern " +
-                      "^.+$");
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
                 }
               }
 
@@ -10764,58 +11316,258 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               @Override
-              public SearchResources set$Xgafv(java.lang.String $Xgafv) {
-                return (SearchResources) super.set$Xgafv($Xgafv);
+              public Read set$Xgafv(java.lang.String $Xgafv) {
+                return (Read) super.set$Xgafv($Xgafv);
               }
 
               @Override
-              public SearchResources setAccessToken(java.lang.String accessToken) {
-                return (SearchResources) super.setAccessToken(accessToken);
+              public Read setAccessToken(java.lang.String accessToken) {
+                return (Read) super.setAccessToken(accessToken);
               }
 
               @Override
-              public SearchResources setAlt(java.lang.String alt) {
-                return (SearchResources) super.setAlt(alt);
+              public Read setAlt(java.lang.String alt) {
+                return (Read) super.setAlt(alt);
               }
 
               @Override
-              public SearchResources setCallback(java.lang.String callback) {
-                return (SearchResources) super.setCallback(callback);
+              public Read setCallback(java.lang.String callback) {
+                return (Read) super.setCallback(callback);
               }
 
               @Override
-              public SearchResources setFields(java.lang.String fields) {
-                return (SearchResources) super.setFields(fields);
+              public Read setFields(java.lang.String fields) {
+                return (Read) super.setFields(fields);
               }
 
               @Override
-              public SearchResources setKey(java.lang.String key) {
-                return (SearchResources) super.setKey(key);
+              public Read setKey(java.lang.String key) {
+                return (Read) super.setKey(key);
               }
 
               @Override
-              public SearchResources setOauthToken(java.lang.String oauthToken) {
-                return (SearchResources) super.setOauthToken(oauthToken);
+              public Read setOauthToken(java.lang.String oauthToken) {
+                return (Read) super.setOauthToken(oauthToken);
               }
 
               @Override
-              public SearchResources setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (SearchResources) super.setPrettyPrint(prettyPrint);
+              public Read setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Read) super.setPrettyPrint(prettyPrint);
               }
 
               @Override
-              public SearchResources setQuotaUser(java.lang.String quotaUser) {
-                return (SearchResources) super.setQuotaUser(quotaUser);
+              public Read setQuotaUser(java.lang.String quotaUser) {
+                return (Read) super.setQuotaUser(quotaUser);
               }
 
               @Override
-              public SearchResources setUploadType(java.lang.String uploadType) {
-                return (SearchResources) super.setUploadType(uploadType);
+              public Read setUploadType(java.lang.String uploadType) {
+                return (Read) super.setUploadType(uploadType);
               }
 
               @Override
-              public SearchResources setUploadProtocol(java.lang.String uploadProtocol) {
-                return (SearchResources) super.setUploadProtocol(uploadProtocol);
+              public Read setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Read) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the resource to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the resource to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The name of the resource to retrieve. */
+              public Read setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Read set(String parameterName, Object value) {
+                return (Read) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Searches for resources in the given FHIR store according to criteria specified as query
+             * parameters.
+             *
+             * Implements the FHIR standard [search
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#search) using the search
+             * semantics described in the [FHIR Search
+             * specification](http://hl7.org/implement/standards/fhir/STU3/search.html).
+             *
+             * Supports three methods of search defined by the specification:
+             *
+             * *  `GET [base]?[parameters]` to search across all resources. *  `GET [base]/[type]?[parameters]`
+             * to search resources of a specified type. *  `POST [base]/[type]/_search?[parameters]` as an
+             * alternate form having the same semantics as the `GET` method.
+             *
+             * The `GET` methods do not support compartment searches. The `POST` method does not support
+             * `application/x-www-form-urlencoded` search parameters.
+             *
+             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+             * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
+             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
+             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead.
+             *
+             * # Search Parameters
+             *
+             * The server's capability statement, retrieved through capabilities, indicates what search
+             * parameters are supported on each FHIR resource. A list of all search parameters defined by the
+             * specification can be found in the [FHIR Search Parameter
+             * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
+             *
+             * # Search Modifiers
+             *
+             * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains` |
+             * Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
+             * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
+             *
+             * Create a request for the method "fhir.search".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+             *
+             * @param parent Name of the FHIR store to retrieve resources from.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
+             * @return the request
+             */
+            public Search search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) throws java.io.IOException {
+              Search result = new Search(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Search extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/fhir/_search";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              /**
+               * Searches for resources in the given FHIR store according to criteria specified as query
+               * parameters.
+               *
+               * Implements the FHIR standard [search
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#search) using the search
+               * semantics described in the [FHIR Search
+               * specification](http://hl7.org/implement/standards/fhir/STU3/search.html).
+               *
+               * Supports three methods of search defined by the specification:
+               *
+               * *  `GET [base]?[parameters]` to search across all resources. *  `GET
+               * [base]/[type]?[parameters]` to search resources of a specified type. *  `POST
+               * [base]/[type]/_search?[parameters]` as an alternate form having the same semantics as the `GET`
+               * method.
+               *
+               * The `GET` methods do not support compartment searches. The `POST` method does not support
+               * `application/x-www-form-urlencoded` search parameters.
+               *
+               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
+               * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
+               * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
+               * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
+               * be returned instead.
+               *
+               * # Search Parameters
+               *
+               * The server's capability statement, retrieved through capabilities, indicates what search
+               * parameters are supported on each FHIR resource. A list of all search parameters defined by the
+               * specification can be found in the [FHIR Search Parameter
+               * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
+               *
+               * # Search Modifiers
+               *
+               * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains`
+               * | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
+               * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
+               *
+               * Create a request for the method "fhir.search".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Name of the FHIR store to retrieve resources from.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest}
+               * @since 1.13
+               */
+              protected Search(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.SearchResourcesRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Search set$Xgafv(java.lang.String $Xgafv) {
+                return (Search) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Search setAccessToken(java.lang.String accessToken) {
+                return (Search) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Search setAlt(java.lang.String alt) {
+                return (Search) super.setAlt(alt);
+              }
+
+              @Override
+              public Search setCallback(java.lang.String callback) {
+                return (Search) super.setCallback(callback);
+              }
+
+              @Override
+              public Search setFields(java.lang.String fields) {
+                return (Search) super.setFields(fields);
+              }
+
+              @Override
+              public Search setKey(java.lang.String key) {
+                return (Search) super.setKey(key);
+              }
+
+              @Override
+              public Search setOauthToken(java.lang.String oauthToken) {
+                return (Search) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Search) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Search setQuotaUser(java.lang.String quotaUser) {
+                return (Search) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Search setUploadType(java.lang.String uploadType) {
+                return (Search) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Search setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Search) super.setUploadProtocol(uploadProtocol);
               }
 
               /** Name of the FHIR store to retrieve resources from. */
@@ -10829,7 +11581,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /** Name of the FHIR store to retrieve resources from. */
-              public SearchResources setParent(java.lang.String parent) {
+              public Search setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                       "Parameter parent must conform to the pattern " +
@@ -10839,35 +11591,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The type of the resource to search. */
-              @com.google.api.client.util.Key
-              private java.lang.String resourceType;
-
-              /** The type of the resource to search.
-               */
-              public java.lang.String getResourceType() {
-                return resourceType;
-              }
-
-              /** The type of the resource to search. */
-              public SearchResources setResourceType(java.lang.String resourceType) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_TYPE_PATTERN.matcher(resourceType).matches(),
-                      "Parameter resourceType must conform to the pattern " +
-                      "^.+$");
-                }
-                this.resourceType = resourceType;
-                return this;
-              }
-
               @Override
-              public SearchResources set(String parameterName, Object value) {
-                return (SearchResources) super.set(parameterName, value);
+              public Search set(String parameterName, Object value) {
+                return (Search) super.set(parameterName, value);
               }
             }
             /**
-             * Updates the entire resource or creates a new resource with a client specified ID if the resource
-             * does not exist and the FHIR store has enable_update_create set.
+             * Updates the entire contents of a resource.
+             *
+             * Implements the FHIR standard [update
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#update).
+             *
+             * If the specified resource does not exist and the FHIR store has
+             * [enable_update_create](FhirStore.enable_update_create) set, creates the resource with the client-
+             * specified ID.
+             *
+             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
+             * `Content-Type: application/fhir+json`. The resource must contain an `id` element having an
+             * identical value to the ID in the REST path of the request.
+             *
+             * On success, the response body will contain a JSON-encoded representation of the updated resource,
+             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
+             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
+             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
              *
              * Create a request for the method "fhir.update".
              *
@@ -10892,8 +11638,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Updates the entire resource or creates a new resource with a client specified ID if the
-               * resource does not exist and the FHIR store has enable_update_create set.
+               * Updates the entire contents of a resource.
+               *
+               * Implements the FHIR standard [update
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#update).
+               *
+               * If the specified resource does not exist and the FHIR store has
+               * [enable_update_create](FhirStore.enable_update_create) set, creates the resource with the
+               * client-specified ID.
+               *
+               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
+               * contain `Content-Type: application/fhir+json`. The resource must contain an `id` element having
+               * an identical value to the ID in the REST path of the request.
+               *
+               * On success, the response body will contain a JSON-encoded representation of the updated
+               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead.
                *
                * Create a request for the method "fhir.update".
                *
@@ -10998,781 +11760,162 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return (Update) super.set(parameterName, value);
               }
             }
-
             /**
-             * An accessor for creating requests from the Observation collection.
+             * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
              *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
-             *   {@code CloudHealthcare.Observation.List request = healthcare.observation().list(parameters ...)}
-             * </pre>
+             * Implements the FHIR standard [vread
+             * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
              *
-             * @return the resource collection
+             * On success, the response body will contain a JSON-encoded representation of the resource. Errors
+             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
+             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
+             * a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.vread".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Vread#execute()} method to invoke the remote operation.
+             *
+             * @param name The name of the resource version to retrieve.
+             * @return the request
              */
-            public Observation observation() {
-              return new Observation();
+            public Vread vread(java.lang.String name) throws java.io.IOException {
+              Vread result = new Vread(name);
+              initialize(result);
+              return result;
             }
 
-            /**
-             * The "Observation" collection of methods.
-             */
-            public class Observation {
+            public class Vread extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+/_history/[^/]+$");
 
               /**
-               * Get N most recent observations for patient, grouped by code that match given query parameters.
+               * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
                *
-               * Create a request for the method "Observation.get$lastn".
+               * Implements the FHIR standard [vread
+               * interaction](http://hl7.org/implement/standards/fhir/STU3/http.html#vread).
                *
-               * This request holds the parameters needed by the healthcare server.  After setting any optional
-               * parameters, call the {@link Get$lastn#execute()} method to invoke the remote operation.
+               * On success, the response body will contain a JSON-encoded representation of the resource.
+               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead.
                *
-               * @param parent Name of the FHIR store to retrieve resources from.
-               * @return the request
-               */
-              public Get$lastn get$lastn(java.lang.String parent) throws java.io.IOException {
-                Get$lastn result = new Get$lastn(parent);
-                initialize(result);
-                return result;
-              }
-
-              public class Get$lastn extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-                private static final String REST_PATH = "v1beta1/{+parent}/fhir/Observation/$lastn";
-
-                private final java.util.regex.Pattern PARENT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-
-                /**
-                 * Get N most recent observations for patient, grouped by code that match given query parameters.
-                 *
-                 * Create a request for the method "Observation.get$lastn".
-                 *
-                 * This request holds the parameters needed by the the healthcare server.  After setting any
-                 * optional parameters, call the {@link Get$lastn#execute()} method to invoke the remote
-                 * operation. <p> {@link
-                 * Get$lastn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param parent Name of the FHIR store to retrieve resources from.
-                 * @since 1.13
-                 */
-                protected Get$lastn(java.lang.String parent) {
-                  super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public Get$lastn set$Xgafv(java.lang.String $Xgafv) {
-                  return (Get$lastn) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Get$lastn setAccessToken(java.lang.String accessToken) {
-                  return (Get$lastn) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Get$lastn setAlt(java.lang.String alt) {
-                  return (Get$lastn) super.setAlt(alt);
-                }
-
-                @Override
-                public Get$lastn setCallback(java.lang.String callback) {
-                  return (Get$lastn) super.setCallback(callback);
-                }
-
-                @Override
-                public Get$lastn setFields(java.lang.String fields) {
-                  return (Get$lastn) super.setFields(fields);
-                }
-
-                @Override
-                public Get$lastn setKey(java.lang.String key) {
-                  return (Get$lastn) super.setKey(key);
-                }
-
-                @Override
-                public Get$lastn setOauthToken(java.lang.String oauthToken) {
-                  return (Get$lastn) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Get$lastn setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Get$lastn) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Get$lastn setQuotaUser(java.lang.String quotaUser) {
-                  return (Get$lastn) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Get$lastn setUploadType(java.lang.String uploadType) {
-                  return (Get$lastn) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Get$lastn setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Get$lastn) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** Name of the FHIR store to retrieve resources from. */
-                @com.google.api.client.util.Key
-                private java.lang.String parent;
-
-                /** Name of the FHIR store to retrieve resources from.
-                 */
-                public java.lang.String getParent() {
-                  return parent;
-                }
-
-                /** Name of the FHIR store to retrieve resources from. */
-                public Get$lastn setParent(java.lang.String parent) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                        "Parameter parent must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-                  }
-                  this.parent = parent;
-                  return this;
-                }
-
-                @Override
-                public Get$lastn set(String parameterName, Object value) {
-                  return (Get$lastn) super.set(parameterName, value);
-                }
-              }
-
-            }
-            /**
-             * An accessor for creating requests from the Patient collection.
-             *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
-             *   {@code CloudHealthcare.Patient.List request = healthcare.patient().list(parameters ...)}
-             * </pre>
-             *
-             * @return the resource collection
-             */
-            public Patient patient() {
-              return new Patient();
-            }
-
-            /**
-             * The "Patient" collection of methods.
-             */
-            public class Patient {
-
-              /**
-               * Gets all the resources in the patient compartment.
+               * Create a request for the method "fhir.vread".
                *
-               * Create a request for the method "Patient.get$everything".
-               *
-               * This request holds the parameters needed by the healthcare server.  After setting any optional
-               * parameters, call the {@link Get$everything#execute()} method to invoke the remote operation.
-               *
-               * @param name Name of the patient for which the information is required.
-               * @return the request
-               */
-              public Get$everything get$everything(java.lang.String name) throws java.io.IOException {
-                Get$everything result = new Get$everything(name);
-                initialize(result);
-                return result;
-              }
-
-              public class Get$everything extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-                private static final String REST_PATH = "v1beta1/{+name}/$everything";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
-
-                /**
-                 * Gets all the resources in the patient compartment.
-                 *
-                 * Create a request for the method "Patient.get$everything".
-                 *
-                 * This request holds the parameters needed by the the healthcare server.  After setting any
-                 * optional parameters, call the {@link Get$everything#execute()} method to invoke the remote
-                 * operation. <p> {@link Get$everything#initialize(com.google.api.client.googleapis.services.Abstr
-                 * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-                 * the constructor. </p>
-                 *
-                 * @param name Name of the patient for which the information is required.
-                 * @since 1.13
-                 */
-                protected Get$everything(java.lang.String name) {
-                  super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public Get$everything set$Xgafv(java.lang.String $Xgafv) {
-                  return (Get$everything) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Get$everything setAccessToken(java.lang.String accessToken) {
-                  return (Get$everything) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Get$everything setAlt(java.lang.String alt) {
-                  return (Get$everything) super.setAlt(alt);
-                }
-
-                @Override
-                public Get$everything setCallback(java.lang.String callback) {
-                  return (Get$everything) super.setCallback(callback);
-                }
-
-                @Override
-                public Get$everything setFields(java.lang.String fields) {
-                  return (Get$everything) super.setFields(fields);
-                }
-
-                @Override
-                public Get$everything setKey(java.lang.String key) {
-                  return (Get$everything) super.setKey(key);
-                }
-
-                @Override
-                public Get$everything setOauthToken(java.lang.String oauthToken) {
-                  return (Get$everything) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Get$everything setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Get$everything) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Get$everything setQuotaUser(java.lang.String quotaUser) {
-                  return (Get$everything) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Get$everything setUploadType(java.lang.String uploadType) {
-                  return (Get$everything) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Get$everything setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Get$everything) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** Name of the patient for which the information is required. */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** Name of the patient for which the information is required.
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /** Name of the patient for which the information is required. */
-                public Get$everything setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                /**
-                 * The response includes records prior to the end date. If no end date is provided,
-                 * all records subsequent to the start date are in scope.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String end;
-
-                /** The response includes records prior to the end date. If no end date is provided, all records
-               subsequent to the start date are in scope.
-                 */
-                public java.lang.String getEnd() {
-                  return end;
-                }
-
-                /**
-                 * The response includes records prior to the end date. If no end date is provided,
-                 * all records subsequent to the start date are in scope.
-                 */
-                public Get$everything setEnd(java.lang.String end) {
-                  this.end = end;
-                  return this;
-                }
-
-                /**
-                 * The response includes records subsequent to the start date. If no start date is
-                 * provided, all records prior to the end date are in scope.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String start;
-
-                /** The response includes records subsequent to the start date. If no start date is provided, all
-               records prior to the end date are in scope.
-                 */
-                public java.lang.String getStart() {
-                  return start;
-                }
-
-                /**
-                 * The response includes records subsequent to the start date. If no start date is
-                 * provided, all records prior to the end date are in scope.
-                 */
-                public Get$everything setStart(java.lang.String start) {
-                  this.start = start;
-                  return this;
-                }
-
-                @Override
-                public Get$everything set(String parameterName, Object value) {
-                  return (Get$everything) super.set(parameterName, value);
-                }
-              }
-
-            }
-            /**
-             * An accessor for creating requests from the History collection.
-             *
-             * <p>The typical use is:</p>
-             * <pre>
-             *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
-             *   {@code CloudHealthcare.History.List request = healthcare.history().list(parameters ...)}
-             * </pre>
-             *
-             * @return the resource collection
-             */
-            public History history() {
-              return new History();
-            }
-
-            /**
-             * The "_history" collection of methods.
-             */
-            public class History {
-
-              /**
-               * Gets a version (current or historical) of FHIR resource by version id.
-               *
-               * Create a request for the method "_history.get".
-               *
-               * This request holds the parameters needed by the healthcare server.  After setting any optional
-               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Vread#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Vread#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name The name of the resource version to retrieve.
-               * @return the request
+               * @since 1.13
                */
-              public Get get(java.lang.String name) throws java.io.IOException {
-                Get result = new Get(name);
-                initialize(result);
-                return result;
-              }
-
-              public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-                private static final String REST_PATH = "v1beta1/{+name}";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+/_history/[^/]+$");
-
-                /**
-                 * Gets a version (current or historical) of FHIR resource by version id.
-                 *
-                 * Create a request for the method "_history.get".
-                 *
-                 * This request holds the parameters needed by the the healthcare server.  After setting any
-                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param name The name of the resource version to retrieve.
-                 * @since 1.13
-                 */
-                protected Get(java.lang.String name) {
-                  super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+/_history/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public Get set$Xgafv(java.lang.String $Xgafv) {
-                  return (Get) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public Get setAccessToken(java.lang.String accessToken) {
-                  return (Get) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public Get setAlt(java.lang.String alt) {
-                  return (Get) super.setAlt(alt);
-                }
-
-                @Override
-                public Get setCallback(java.lang.String callback) {
-                  return (Get) super.setCallback(callback);
-                }
-
-                @Override
-                public Get setFields(java.lang.String fields) {
-                  return (Get) super.setFields(fields);
-                }
-
-                @Override
-                public Get setKey(java.lang.String key) {
-                  return (Get) super.setKey(key);
-                }
-
-                @Override
-                public Get setOauthToken(java.lang.String oauthToken) {
-                  return (Get) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (Get) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public Get setQuotaUser(java.lang.String quotaUser) {
-                  return (Get) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public Get setUploadType(java.lang.String uploadType) {
-                  return (Get) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (Get) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** The name of the resource version to retrieve. */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** The name of the resource version to retrieve.
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /** The name of the resource version to retrieve. */
-                public Get setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+/_history/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                @Override
-                public Get set(String parameterName, Object value) {
-                  return (Get) super.set(parameterName, value);
+              protected Vread(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+/_history/[^/]+$");
                 }
               }
-              /**
-               * Lists all the versions of a resource (including the current version and deleted versions) from
-               * the FHIR store.
-               *
-               * Create a request for the method "_history.list".
-               *
-               * This request holds the parameters needed by the healthcare server.  After setting any optional
-               * parameters, call the {@link List#execute()} method to invoke the remote operation.
-               *
-               * @param name The name of the resource to retrieve.
-               * @return the request
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Vread set$Xgafv(java.lang.String $Xgafv) {
+                return (Vread) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Vread setAccessToken(java.lang.String accessToken) {
+                return (Vread) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Vread setAlt(java.lang.String alt) {
+                return (Vread) super.setAlt(alt);
+              }
+
+              @Override
+              public Vread setCallback(java.lang.String callback) {
+                return (Vread) super.setCallback(callback);
+              }
+
+              @Override
+              public Vread setFields(java.lang.String fields) {
+                return (Vread) super.setFields(fields);
+              }
+
+              @Override
+              public Vread setKey(java.lang.String key) {
+                return (Vread) super.setKey(key);
+              }
+
+              @Override
+              public Vread setOauthToken(java.lang.String oauthToken) {
+                return (Vread) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Vread setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Vread) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Vread setQuotaUser(java.lang.String quotaUser) {
+                return (Vread) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Vread setUploadType(java.lang.String uploadType) {
+                return (Vread) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Vread setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Vread) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The name of the resource version to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The name of the resource version to retrieve.
                */
-              public List list(java.lang.String name) throws java.io.IOException {
-                List result = new List(name);
-                initialize(result);
-                return result;
+              public java.lang.String getName() {
+                return name;
               }
 
-              public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-                private static final String REST_PATH = "v1beta1/{+name}/_history";
-
-                private final java.util.regex.Pattern NAME_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
-
-                /**
-                 * Lists all the versions of a resource (including the current version and deleted versions) from
-                 * the FHIR store.
-                 *
-                 * Create a request for the method "_history.list".
-                 *
-                 * This request holds the parameters needed by the the healthcare server.  After setting any
-                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                 * must be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param name The name of the resource to retrieve.
-                 * @since 1.13
-                 */
-                protected List(java.lang.String name) {
-                  super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
-                  }
+              /** The name of the resource version to retrieve. */
+              public Vread setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+/_history/[^/]+$");
                 }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public List set$Xgafv(java.lang.String $Xgafv) {
-                  return (List) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public List setAccessToken(java.lang.String accessToken) {
-                  return (List) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public List setAlt(java.lang.String alt) {
-                  return (List) super.setAlt(alt);
-                }
-
-                @Override
-                public List setCallback(java.lang.String callback) {
-                  return (List) super.setCallback(callback);
-                }
-
-                @Override
-                public List setFields(java.lang.String fields) {
-                  return (List) super.setFields(fields);
-                }
-
-                @Override
-                public List setKey(java.lang.String key) {
-                  return (List) super.setKey(key);
-                }
-
-                @Override
-                public List setOauthToken(java.lang.String oauthToken) {
-                  return (List) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (List) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public List setQuotaUser(java.lang.String quotaUser) {
-                  return (List) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public List setUploadType(java.lang.String uploadType) {
-                  return (List) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public List setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (List) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /** The name of the resource to retrieve. */
-                @com.google.api.client.util.Key
-                private java.lang.String name;
-
-                /** The name of the resource to retrieve.
-                 */
-                public java.lang.String getName() {
-                  return name;
-                }
-
-                /** The name of the resource to retrieve. */
-                public List setName(java.lang.String name) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                        "Parameter name must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
-                  }
-                  this.name = name;
-                  return this;
-                }
-
-                /**
-                 * Only include resource versions that were current at some point during the time
-                 * period specified in the date time value. The date parameter format is yyyy-mm-
-                 * ddThh:mm:ss[Z|(+|-)hh:mm] Clients may specify any of the following: An entire
-                 * year: `_at=2019` An entire month: `_at=2019-01` A specific day: `_at=2019-01-20`
-                 * A specific second: `_at=2018-12-31T23:59:58Z`
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String at;
-
-                /** Only include resource versions that were current at some point during the time period specified in
-               the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm] Clients may
-               specify any of the following: An entire year: `_at=2019` An entire month: `_at=2019-01` A specific
-               day: `_at=2019-01-20` A specific second: `_at=2018-12-31T23:59:58Z`
-                 */
-                public java.lang.String getAt() {
-                  return at;
-                }
-
-                /**
-                 * Only include resource versions that were current at some point during the time
-                 * period specified in the date time value. The date parameter format is yyyy-mm-
-                 * ddThh:mm:ss[Z|(+|-)hh:mm] Clients may specify any of the following: An entire
-                 * year: `_at=2019` An entire month: `_at=2019-01` A specific day: `_at=2019-01-20`
-                 * A specific second: `_at=2018-12-31T23:59:58Z`
-                 */
-                public List setAt(java.lang.String at) {
-                  this.at = at;
-                  return this;
-                }
-
-                /** The maximum number of search results on a page. */
-                @com.google.api.client.util.Key
-                private java.lang.Integer count;
-
-                /** The maximum number of search results on a page.
-                 */
-                public java.lang.Integer getCount() {
-                  return count;
-                }
-
-                /** The maximum number of search results on a page. */
-                public List setCount(java.lang.Integer count) {
-                  this.count = count;
-                  return this;
-                }
-
-                /**
-                 * Used to retrieve the first, previous, next, or last page of resource versions
-                 * when using pagination. Value should be set to the value of the `link.url` field
-                 * returned in the response to the previous request, where `link.relation` is
-                 * "first", "previous", "next" or "last". Omit `page` if no previous request has
-                 * been made.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String page;
-
-                /** Used to retrieve the first, previous, next, or last page of resource versions when using
-               pagination. Value should be set to the value of the `link.url` field returned in the response to
-               the previous request, where `link.relation` is "first", "previous", "next" or "last". Omit `page`
-               if no previous request has been made.
-                 */
-                public java.lang.String getPage() {
-                  return page;
-                }
-
-                /**
-                 * Used to retrieve the first, previous, next, or last page of resource versions
-                 * when using pagination. Value should be set to the value of the `link.url` field
-                 * returned in the response to the previous request, where `link.relation` is
-                 * "first", "previous", "next" or "last". Omit `page` if no previous request has
-                 * been made.
-                 */
-                public List setPage(java.lang.String page) {
-                  this.page = page;
-                  return this;
-                }
-
-                /**
-                 * Only include resource versions that were created at or after the given instant in
-                 * time. The instant in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for
-                 * example 2015-02-07T13:28:17.239+02:00 or 2017-01-01T00:00:00Z). The time must be
-                 * specified to the second and include a time zone.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String since;
-
-                /** Only include resource versions that were created at or after the given instant in time. The instant
-               in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for example 2015-02-07T13:28:17.239+02:00 or
-               2017-01-01T00:00:00Z). The time must be specified to the second and include a time zone.
-                 */
-                public java.lang.String getSince() {
-                  return since;
-                }
-
-                /**
-                 * Only include resource versions that were created at or after the given instant in
-                 * time. The instant in time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz (for
-                 * example 2015-02-07T13:28:17.239+02:00 or 2017-01-01T00:00:00Z). The time must be
-                 * specified to the second and include a time zone.
-                 */
-                public List setSince(java.lang.String since) {
-                  this.since = since;
-                  return this;
-                }
-
-                @Override
-                public List set(String parameterName, Object value) {
-                  return (List) super.set(parameterName, value);
-                }
+                this.name = name;
+                return this;
               }
 
+              @Override
+              public Vread set(String parameterName, Object value) {
+                return (Vread) super.set(parameterName, value);
+              }
             }
+
           }
         }
         /**

@@ -70,6 +70,13 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
   private java.lang.String utmCampaign;
 
   /**
+   * Scion content value to be propagated by iSDK to Scion at app-reopen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String utmContent;
+
+  /**
    * Scion medium value to be propagated by iSDK to Scion at app-reopen.
    * The value may be {@code null}.
    */
@@ -82,6 +89,13 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String utmSource;
+
+  /**
+   * Scion term value to be propagated by iSDK to Scion at app-reopen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String utmTerm;
 
   /**
    * The deep-link attributed the app universal link open. For both regular FDL links and invite FDL
@@ -175,6 +189,23 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
   }
 
   /**
+   * Scion content value to be propagated by iSDK to Scion at app-reopen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUtmContent() {
+    return utmContent;
+  }
+
+  /**
+   * Scion content value to be propagated by iSDK to Scion at app-reopen.
+   * @param utmContent utmContent or {@code null} for none
+   */
+  public GetIosReopenAttributionResponse setUtmContent(java.lang.String utmContent) {
+    this.utmContent = utmContent;
+    return this;
+  }
+
+  /**
    * Scion medium value to be propagated by iSDK to Scion at app-reopen.
    * @return value or {@code null} for none
    */
@@ -205,6 +236,23 @@ public final class GetIosReopenAttributionResponse extends com.google.api.client
    */
   public GetIosReopenAttributionResponse setUtmSource(java.lang.String utmSource) {
     this.utmSource = utmSource;
+    return this;
+  }
+
+  /**
+   * Scion term value to be propagated by iSDK to Scion at app-reopen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUtmTerm() {
+    return utmTerm;
+  }
+
+  /**
+   * Scion term value to be propagated by iSDK to Scion at app-reopen.
+   * @param utmTerm utmTerm or {@code null} for none
+   */
+  public GetIosReopenAttributionResponse setUtmTerm(java.lang.String utmTerm) {
+    this.utmTerm = utmTerm;
     return this;
   }
 

@@ -15,12 +15,24 @@
 
 set -eo pipefail
 
+if [[ -z "${CREDENTIALS}" ]]; then
+  CREDENTIALS=${KOKORO_KEYSTORE_DIR}/73713_docuploader_service_account
+fi
+
+if [[ -z "${STAGING_BUCKET}" ]]; then
+  echo "Need to set STAGING_BUCKET environment variable"
+  exit 1
+fi
+
 source $(dirname "$0")/common.sh
 MAVEN_SETTINGS_FILE=$(realpath $(dirname "$0")/../)/settings.xml
 pushd $(dirname "$0")/../
 
 setup_environment_secrets
 create_settings_xml_file "settings.xml"
+
+# install docuploader package
+python3 -m pip install gcp-docuploader
 
 deploy_library() {
   SERVICE=$1
@@ -38,6 +50,21 @@ deploy_library() {
     -Dgpg.homedir=${GPG_HOMEDIR} \
     -DautoReleaseAfterClose=true \
     -B
+
+  pushd target/site/apidocs
+
+  # create metadata
+  python3 -m docuploader create-metadata \
+    --name ${SERVICE} \
+    --version ${API_VERSION}-${REVISION}-${LIBRARY_VERSION} \
+    --language java
+
+  # upload docs
+  python3 -m docuploader upload . \
+    --credentials ${CREDENTIALS} \
+    --staging-bucket ${STAGING_BUCKET}
+
+  popd
 }
 
 EXIT_CODE=0

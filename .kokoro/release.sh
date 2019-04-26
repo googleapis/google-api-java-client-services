@@ -51,7 +51,8 @@ deploy_library() {
     -DautoReleaseAfterClose=true \
     -B
 
-  pushd target/site/apidocs
+  # javadoc build during package is put into target/apidocs (not target/site/apidocs)
+  pushd target/apidocs
 
   # create metadata
   python3 -m docuploader create-metadata \

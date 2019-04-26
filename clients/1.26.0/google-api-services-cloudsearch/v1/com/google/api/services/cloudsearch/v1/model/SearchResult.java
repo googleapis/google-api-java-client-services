@@ -66,7 +66,8 @@ public final class SearchResult extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The URL of the search result. The URL contains a Google redirect to the actual item.
+   * The URL of the search result. The URL contains a Google redirect to the actual item. This URL
+   * is signed and shouldn't be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +161,8 @@ public final class SearchResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the search result. The URL contains a Google redirect to the actual item.
+   * The URL of the search result. The URL contains a Google redirect to the actual item. This URL
+   * is signed and shouldn't be changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -168,7 +170,8 @@ public final class SearchResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the search result. The URL contains a Google redirect to the actual item.
+   * The URL of the search result. The URL contains a Google redirect to the actual item. This URL
+   * is signed and shouldn't be changed.
    * @param url url or {@code null} for none
    */
   public SearchResult setUrl(java.lang.String url) {

@@ -34,7 +34,7 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
    * property values will be displayed in the order given here. If a property holds multiple values,
    * all of the values will be diplayed before the next properties. For this reason, it is a good
    * practice to specify singular properties before repeated properties in this list. All of the
-   * properties must set is_returnable to true. The maximum number of elements is 3.
+   * properties must set is_returnable to true. The maximum number of metalines is 3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
    * property values will be displayed in the order given here. If a property holds multiple values,
    * all of the values will be diplayed before the next properties. For this reason, it is a good
    * practice to specify singular properties before repeated properties in this list. All of the
-   * properties must set is_returnable to true. The maximum number of elements is 3.
+   * properties must set is_returnable to true. The maximum number of metalines is 3.
    * @return value or {@code null} for none
    */
   public java.util.List<Metaline> getMetalines() {
@@ -72,7 +72,7 @@ public final class ObjectDisplayOptions extends com.google.api.client.json.Gener
    * property values will be displayed in the order given here. If a property holds multiple values,
    * all of the values will be diplayed before the next properties. For this reason, it is a good
    * practice to specify singular properties before repeated properties in this list. All of the
-   * properties must set is_returnable to true. The maximum number of elements is 3.
+   * properties must set is_returnable to true. The maximum number of metalines is 3.
    * @param metalines metalines or {@code null} for none
    */
   public ObjectDisplayOptions setMetalines(java.util.List<Metaline> metalines) {

@@ -36,6 +36,13 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean preemptible;
 
   /**
+   * Whether the node is created under a reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reserved;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -47,6 +54,23 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
    */
   public SchedulingConfig setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Whether the node is created under a reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReserved() {
+    return reserved;
+  }
+
+  /**
+   * Whether the node is created under a reservation.
+   * @param reserved reserved or {@code null} for none
+   */
+  public SchedulingConfig setReserved(java.lang.Boolean reserved) {
+    this.reserved = reserved;
     return this;
   }
 

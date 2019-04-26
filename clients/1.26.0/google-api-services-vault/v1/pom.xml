@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-vault</artifactId>
-  <version>v1-rev20190320-1.26.0</version>
-  <name>G Suite Vault API v1-rev20190320-1.26.0</name>
+  <version>v1-rev20190411-1.26.0</version>
+  <name>G Suite Vault API v1-rev20190411-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

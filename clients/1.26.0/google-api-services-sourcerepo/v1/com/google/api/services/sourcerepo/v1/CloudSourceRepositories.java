@@ -1491,6 +1491,146 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         }
       }
       /**
+       * Synchronize a connected repo.
+       *
+       * The response contains SyncRepoMetadata in the metadata field.
+       *
+       * Create a request for the method "repos.sync".
+       *
+       * This request holds the parameters needed by the sourcerepo server.  After setting any optional
+       * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the repo to synchronize. Values are of the form
+      `projects//repos/`.
+       * @param content the {@link com.google.api.services.sourcerepo.v1.model.SyncRepoRequest}
+       * @return the request
+       */
+      public Sync sync(java.lang.String name, com.google.api.services.sourcerepo.v1.model.SyncRepoRequest content) throws java.io.IOException {
+        Sync result = new Sync(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Sync extends CloudSourceRepositoriesRequest<com.google.api.services.sourcerepo.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:sync";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+
+        /**
+         * Synchronize a connected repo.
+         *
+         * The response contains SyncRepoMetadata in the metadata field.
+         *
+         * Create a request for the method "repos.sync".
+         *
+         * This request holds the parameters needed by the the sourcerepo server.  After setting any
+         * optional parameters, call the {@link Sync#execute()} method to invoke the remote operation. <p>
+         * {@link Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the repo to synchronize. Values are of the form
+      `projects//repos/`.
+         * @param content the {@link com.google.api.services.sourcerepo.v1.model.SyncRepoRequest}
+         * @since 1.13
+         */
+        protected Sync(java.lang.String name, com.google.api.services.sourcerepo.v1.model.SyncRepoRequest content) {
+          super(CloudSourceRepositories.this, "POST", REST_PATH, content, com.google.api.services.sourcerepo.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/repos/.+$");
+          }
+        }
+
+        @Override
+        public Sync set$Xgafv(java.lang.String $Xgafv) {
+          return (Sync) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Sync setAccessToken(java.lang.String accessToken) {
+          return (Sync) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Sync setAlt(java.lang.String alt) {
+          return (Sync) super.setAlt(alt);
+        }
+
+        @Override
+        public Sync setCallback(java.lang.String callback) {
+          return (Sync) super.setCallback(callback);
+        }
+
+        @Override
+        public Sync setFields(java.lang.String fields) {
+          return (Sync) super.setFields(fields);
+        }
+
+        @Override
+        public Sync setKey(java.lang.String key) {
+          return (Sync) super.setKey(key);
+        }
+
+        @Override
+        public Sync setOauthToken(java.lang.String oauthToken) {
+          return (Sync) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Sync setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Sync) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Sync setQuotaUser(java.lang.String quotaUser) {
+          return (Sync) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Sync setUploadType(java.lang.String uploadType) {
+          return (Sync) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Sync setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Sync) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the repo to synchronize. Values are of the form `projects//repos/`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the repo to synchronize. Values are of the form `projects//repos/`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the repo to synchronize. Values are of the form `projects//repos/`.
+         */
+        public Sync setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/repos/.+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Sync set(String parameterName, Object value) {
+          return (Sync) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
        * this will return an empty set of permissions, not a NOT_FOUND error.
        *

@@ -127,6 +127,13 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   private java.lang.String utmCampaign;
 
   /**
+   * Scion content value to be propagated by iSDK to Scion at app-reopen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String utmContent;
+
+  /**
    * Scion medium value to be propagated by iSDK to Scion at post-install.
    * The value may be {@code null}.
    */
@@ -139,6 +146,13 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String utmSource;
+
+  /**
+   * Scion term value to be propagated by iSDK to Scion at app-reopen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String utmTerm;
 
   /**
    * The minimum version for app, specified by dev through ?imv= parameter. Return to iSDK to allow
@@ -369,6 +383,23 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
   }
 
   /**
+   * Scion content value to be propagated by iSDK to Scion at app-reopen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUtmContent() {
+    return utmContent;
+  }
+
+  /**
+   * Scion content value to be propagated by iSDK to Scion at app-reopen.
+   * @param utmContent utmContent or {@code null} for none
+   */
+  public GetIosPostInstallAttributionResponse setUtmContent(java.lang.String utmContent) {
+    this.utmContent = utmContent;
+    return this;
+  }
+
+  /**
    * Scion medium value to be propagated by iSDK to Scion at post-install.
    * @return value or {@code null} for none
    */
@@ -399,6 +430,23 @@ public final class GetIosPostInstallAttributionResponse extends com.google.api.c
    */
   public GetIosPostInstallAttributionResponse setUtmSource(java.lang.String utmSource) {
     this.utmSource = utmSource;
+    return this;
+  }
+
+  /**
+   * Scion term value to be propagated by iSDK to Scion at app-reopen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUtmTerm() {
+    return utmTerm;
+  }
+
+  /**
+   * Scion term value to be propagated by iSDK to Scion at app-reopen.
+   * @param utmTerm utmTerm or {@code null} for none
+   */
+  public GetIosPostInstallAttributionResponse setUtmTerm(java.lang.String utmTerm) {
+    this.utmTerm = utmTerm;
     return this;
   }
 

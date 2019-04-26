@@ -31,7 +31,7 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class Metaline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of displayed properties for the metaline.
+   * The list of displayed properties for the metaline. The maxiumum number of properties is 5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Metaline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of displayed properties for the metaline.
+   * The list of displayed properties for the metaline. The maxiumum number of properties is 5.
    * @return value or {@code null} for none
    */
   public java.util.List<DisplayedProperty> getProperties() {
@@ -52,7 +52,7 @@ public final class Metaline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of displayed properties for the metaline.
+   * The list of displayed properties for the metaline. The maxiumum number of properties is 5.
    * @param properties properties or {@code null} for none
    */
   public Metaline setProperties(java.util.List<DisplayedProperty> properties) {

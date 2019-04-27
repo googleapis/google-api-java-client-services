@@ -37,9 +37,11 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
    * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain
    * is a G Suite domain, for example:
    *
-   * |Filter|Description| |------|-----------| |owner.directorycustomerid:123456789|Organizations
-   * with `owner.directory_customer_id` equal to `123456789`.| |domain:google.com|Organizations
-   * corresponding to the domain `google.com`.|
+   * | Filter                              | Description                      |
+   * |-------------------------------------|----------------------------------| |
+   * owner.directorycustomerid:123456789 | Organizations with `owner.directory_customer_id` equal to
+   * `123456789`.| | domain:google.com                   | Organizations corresponding to the domain
+   * `google.com`.|
    *
    * This field is optional.
    * The value may be {@code null}.
@@ -69,9 +71,11 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
    * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain
    * is a G Suite domain, for example:
    *
-   * |Filter|Description| |------|-----------| |owner.directorycustomerid:123456789|Organizations
-   * with `owner.directory_customer_id` equal to `123456789`.| |domain:google.com|Organizations
-   * corresponding to the domain `google.com`.|
+   * | Filter                              | Description                      |
+   * |-------------------------------------|----------------------------------| |
+   * owner.directorycustomerid:123456789 | Organizations with `owner.directory_customer_id` equal to
+   * `123456789`.| | domain:google.com                   | Organizations corresponding to the domain
+   * `google.com`.|
    *
    * This field is optional.
    * @return value or {@code null} for none
@@ -87,9 +91,11 @@ public final class SearchOrganizationsRequest extends com.google.api.client.json
    * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain
    * is a G Suite domain, for example:
    *
-   * |Filter|Description| |------|-----------| |owner.directorycustomerid:123456789|Organizations
-   * with `owner.directory_customer_id` equal to `123456789`.| |domain:google.com|Organizations
-   * corresponding to the domain `google.com`.|
+   * | Filter                              | Description                      |
+   * |-------------------------------------|----------------------------------| |
+   * owner.directorycustomerid:123456789 | Organizations with `owner.directory_customer_id` equal to
+   * `123456789`.| | domain:google.com                   | Organizations corresponding to the domain
+   * `google.com`.|
    *
    * This field is optional.
    * @param filter filter or {@code null} for none

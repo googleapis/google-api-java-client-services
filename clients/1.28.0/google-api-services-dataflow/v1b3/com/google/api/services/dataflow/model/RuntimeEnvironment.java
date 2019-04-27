@@ -37,7 +37,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> additionalExperiments;
 
   /**
-   * Additional user labels attached to the job.
+   * Additional user labels to be specified for the job. Keys and values should follow the
+   * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
+   * /labeling-resources#restrictions) page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +131,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional user labels attached to the job.
+   * Additional user labels to be specified for the job. Keys and values should follow the
+   * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
+   * /labeling-resources#restrictions) page.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAdditionalUserLabels() {
@@ -137,7 +141,9 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Additional user labels attached to the job.
+   * Additional user labels to be specified for the job. Keys and values should follow the
+   * restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs
+   * /labeling-resources#restrictions) page.
    * @param additionalUserLabels additionalUserLabels or {@code null} for none
    */
   public RuntimeEnvironment setAdditionalUserLabels(java.util.Map<String, java.lang.String> additionalUserLabels) {

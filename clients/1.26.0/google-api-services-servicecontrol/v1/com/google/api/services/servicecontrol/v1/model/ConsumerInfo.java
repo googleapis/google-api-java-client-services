@@ -49,6 +49,8 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Long projectNumber;
 
   /**
+   * The type of the consumer which should have been defined in [Google Resource
+   * Manager](https://cloud.google.com/resource-manager/).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,6 +101,8 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The type of the consumer which should have been defined in [Google Resource
+   * Manager](https://cloud.google.com/resource-manager/).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -106,6 +110,8 @@ public final class ConsumerInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The type of the consumer which should have been defined in [Google Resource
+   * Manager](https://cloud.google.com/resource-manager/).
    * @param type type or {@code null} for none
    */
   public ConsumerInfo setType(java.lang.String type) {

@@ -32,7 +32,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The version of software inside the cluster. It must be one of the supported Cloud
    * Dataproc Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the
-   * "preview" version. If unspecified, it defaults to the latest version.
+   * "preview" version. If unspecified, it defaults to the latest Debian version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The version of software inside the cluster. It must be one of the supported Cloud
    * Dataproc Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the
-   * "preview" version. If unspecified, it defaults to the latest version.
+   * "preview" version. If unspecified, it defaults to the latest Debian version.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageVersion() {
@@ -70,7 +70,7 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. The version of software inside the cluster. It must be one of the supported Cloud
    * Dataproc Versions, such as "1.2" (including a subminor version, such as "1.2.29"), or the
-   * "preview" version. If unspecified, it defaults to the latest version.
+   * "preview" version. If unspecified, it defaults to the latest Debian version.
    * @param imageVersion imageVersion or {@code null} for none
    */
   public SoftwareConfig setImageVersion(java.lang.String imageVersion) {

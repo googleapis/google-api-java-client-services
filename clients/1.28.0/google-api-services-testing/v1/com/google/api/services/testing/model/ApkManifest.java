@@ -65,6 +65,13 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   private java.lang.String packageName;
 
   /**
+   * Specifies the API Level on which the application is designed to run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer targetSdkVersion;
+
+  /**
    * User-readable name for the application.
    * @return value or {@code null} for none
    */
@@ -144,6 +151,23 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
    */
   public ApkManifest setPackageName(java.lang.String packageName) {
     this.packageName = packageName;
+    return this;
+  }
+
+  /**
+   * Specifies the API Level on which the application is designed to run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTargetSdkVersion() {
+    return targetSdkVersion;
+  }
+
+  /**
+   * Specifies the API Level on which the application is designed to run.
+   * @param targetSdkVersion targetSdkVersion or {@code null} for none
+   */
+  public ApkManifest setTargetSdkVersion(java.lang.Integer targetSdkVersion) {
+    this.targetSdkVersion = targetSdkVersion;
     return this;
   }
 

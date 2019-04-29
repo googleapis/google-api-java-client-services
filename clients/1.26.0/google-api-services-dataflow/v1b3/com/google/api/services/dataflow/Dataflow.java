@@ -143,6 +143,154 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
   public class Projects {
 
     /**
+     * Deletes a snapshot.
+     *
+     * Create a request for the method "projects.deleteSnapshots".
+     *
+     * This request holds the parameters needed by the dataflow server.  After setting any optional
+     * parameters, call the {@link DeleteSnapshots#execute()} method to invoke the remote operation.
+     *
+     * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+     * @return the request
+     */
+    public DeleteSnapshots deleteSnapshots(java.lang.String projectId) throws java.io.IOException {
+      DeleteSnapshots result = new DeleteSnapshots(projectId);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteSnapshots extends DataflowRequest<com.google.api.services.dataflow.model.DeleteSnapshotResponse> {
+
+      private static final String REST_PATH = "v1b3/projects/{projectId}/snapshots";
+
+      /**
+       * Deletes a snapshot.
+       *
+       * Create a request for the method "projects.deleteSnapshots".
+       *
+       * This request holds the parameters needed by the the dataflow server.  After setting any
+       * optional parameters, call the {@link DeleteSnapshots#execute()} method to invoke the remote
+       * operation. <p> {@link DeleteSnapshots#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+       * @since 1.13
+       */
+      protected DeleteSnapshots(java.lang.String projectId) {
+        super(Dataflow.this, "DELETE", REST_PATH, null, com.google.api.services.dataflow.model.DeleteSnapshotResponse.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+      }
+
+      @Override
+      public DeleteSnapshots set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteSnapshots) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteSnapshots setAccessToken(java.lang.String accessToken) {
+        return (DeleteSnapshots) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteSnapshots setAlt(java.lang.String alt) {
+        return (DeleteSnapshots) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteSnapshots setCallback(java.lang.String callback) {
+        return (DeleteSnapshots) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteSnapshots setFields(java.lang.String fields) {
+        return (DeleteSnapshots) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteSnapshots setKey(java.lang.String key) {
+        return (DeleteSnapshots) super.setKey(key);
+      }
+
+      @Override
+      public DeleteSnapshots setOauthToken(java.lang.String oauthToken) {
+        return (DeleteSnapshots) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteSnapshots setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteSnapshots) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteSnapshots setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteSnapshots) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteSnapshots setUploadType(java.lang.String uploadType) {
+        return (DeleteSnapshots) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteSnapshots setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteSnapshots) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The ID of the Cloud Platform project that the snapshot belongs to. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** The ID of the Cloud Platform project that the snapshot belongs to.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** The ID of the Cloud Platform project that the snapshot belongs to. */
+      public DeleteSnapshots setProjectId(java.lang.String projectId) {
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** The location that contains this snapshot. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** The location that contains this snapshot.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** The location that contains this snapshot. */
+      public DeleteSnapshots setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
+      /** The ID of the snapshot. */
+      @com.google.api.client.util.Key
+      private java.lang.String snapshotId;
+
+      /** The ID of the snapshot.
+       */
+      public java.lang.String getSnapshotId() {
+        return snapshotId;
+      }
+
+      /** The ID of the snapshot. */
+      public DeleteSnapshots setSnapshotId(java.lang.String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+      }
+
+      @Override
+      public DeleteSnapshots set(String parameterName, Object value) {
+        return (DeleteSnapshots) super.set(parameterName, value);
+      }
+    }
+    /**
      * Send a worker_message to the service.
      *
      * Create a request for the method "projects.workerMessages".
@@ -4923,6 +5071,687 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * An accessor for creating requests from the Snapshots collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.Snapshots.List request = dataflow.snapshots().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Snapshots snapshots() {
+        return new Snapshots();
+      }
+
+      /**
+       * The "snapshots" collection of methods.
+       */
+      public class Snapshots {
+
+        /**
+         * Deletes a snapshot.
+         *
+         * Create a request for the method "snapshots.delete".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+         * @param location The location that contains this snapshot.
+         * @param snapshotId The ID of the snapshot.
+         * @return the request
+         */
+        public Delete delete(java.lang.String projectId, java.lang.String location, java.lang.String snapshotId) throws java.io.IOException {
+          Delete result = new Delete(projectId, location, snapshotId);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataflowRequest<com.google.api.services.dataflow.model.DeleteSnapshotResponse> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/snapshots/{snapshotId}";
+
+          /**
+           * Deletes a snapshot.
+           *
+           * Create a request for the method "snapshots.delete".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+           * @param location The location that contains this snapshot.
+           * @param snapshotId The ID of the snapshot.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String projectId, java.lang.String location, java.lang.String snapshotId) {
+            super(Dataflow.this, "DELETE", REST_PATH, null, com.google.api.services.dataflow.model.DeleteSnapshotResponse.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            this.snapshotId = com.google.api.client.util.Preconditions.checkNotNull(snapshotId, "Required parameter snapshotId must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the Cloud Platform project that the snapshot belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** The ID of the Cloud Platform project that the snapshot belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** The ID of the Cloud Platform project that the snapshot belongs to. */
+          public Delete setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** The location that contains this snapshot. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The location that contains this snapshot.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** The location that contains this snapshot. */
+          public Delete setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          /** The ID of the snapshot. */
+          @com.google.api.client.util.Key
+          private java.lang.String snapshotId;
+
+          /** The ID of the snapshot.
+           */
+          public java.lang.String getSnapshotId() {
+            return snapshotId;
+          }
+
+          /** The ID of the snapshot. */
+          public Delete setSnapshotId(java.lang.String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about a snapshot.
+         *
+         * Create a request for the method "snapshots.get".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+         * @param location The location that contains this snapshot.
+         * @param snapshotId The ID of the snapshot.
+         * @return the request
+         */
+        public Get get(java.lang.String projectId, java.lang.String location, java.lang.String snapshotId) throws java.io.IOException {
+          Get result = new Get(projectId, location, snapshotId);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataflowRequest<com.google.api.services.dataflow.model.Snapshot> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/snapshots/{snapshotId}";
+
+          /**
+           * Gets information about a snapshot.
+           *
+           * Create a request for the method "snapshots.get".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+           * @param location The location that contains this snapshot.
+           * @param snapshotId The ID of the snapshot.
+           * @since 1.13
+           */
+          protected Get(java.lang.String projectId, java.lang.String location, java.lang.String snapshotId) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.Snapshot.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            this.snapshotId = com.google.api.client.util.Preconditions.checkNotNull(snapshotId, "Required parameter snapshotId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The ID of the Cloud Platform project that the snapshot belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** The ID of the Cloud Platform project that the snapshot belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** The ID of the Cloud Platform project that the snapshot belongs to. */
+          public Get setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** The location that contains this snapshot. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The location that contains this snapshot.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** The location that contains this snapshot. */
+          public Get setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          /** The ID of the snapshot. */
+          @com.google.api.client.util.Key
+          private java.lang.String snapshotId;
+
+          /** The ID of the snapshot.
+           */
+          public java.lang.String getSnapshotId() {
+            return snapshotId;
+          }
+
+          /** The ID of the snapshot. */
+          public Get setSnapshotId(java.lang.String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists snapshots.
+         *
+         * Create a request for the method "snapshots.list".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param projectId The project ID to list snapshots for.
+         * @param location The location to list snapshots in.
+         * @return the request
+         */
+        public List list(java.lang.String projectId, java.lang.String location) throws java.io.IOException {
+          List result = new List(projectId, location);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListSnapshotsResponse> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/snapshots";
+
+          /**
+           * Lists snapshots.
+           *
+           * Create a request for the method "snapshots.list".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId The project ID to list snapshots for.
+           * @param location The location to list snapshots in.
+           * @since 1.13
+           */
+          protected List(java.lang.String projectId, java.lang.String location) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListSnapshotsResponse.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The project ID to list snapshots for. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** The project ID to list snapshots for.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** The project ID to list snapshots for. */
+          public List setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /** The location to list snapshots in. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The location to list snapshots in.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** The location to list snapshots in. */
+          public List setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Sql collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.Sql.List request = dataflow.sql().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Sql sql() {
+        return new Sql();
+      }
+
+      /**
+       * The "sql" collection of methods.
+       */
+      public class Sql {
+
+        /**
+         * Validates a GoogleSQL query for Cloud Dataflow syntax. Will always confirm the given query parses
+         * correctly, and if able to look up schema information from DataCatalog, will validate that the
+         * query analyzes properly as well.
+         *
+         * Create a request for the method "sql.validate".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
+         *
+         * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
+         * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
+         * @return the request
+         */
+        public Validate validate(java.lang.String projectId, java.lang.String location) throws java.io.IOException {
+          Validate result = new Validate(projectId, location);
+          initialize(result);
+          return result;
+        }
+
+        public class Validate extends DataflowRequest<com.google.api.services.dataflow.model.ValidateResponse> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/sql:validate";
+
+          /**
+           * Validates a GoogleSQL query for Cloud Dataflow syntax. Will always confirm the given query
+           * parses correctly, and if able to look up schema information from DataCatalog, will validate
+           * that the query analyzes properly as well.
+           *
+           * Create a request for the method "sql.validate".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
+           * @param location The [regional endpoint]
+        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         *        which to direct the request.
+           * @since 1.13
+           */
+          protected Validate(java.lang.String projectId, java.lang.String location) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ValidateResponse.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Validate set$Xgafv(java.lang.String $Xgafv) {
+            return (Validate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Validate setAccessToken(java.lang.String accessToken) {
+            return (Validate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Validate setAlt(java.lang.String alt) {
+            return (Validate) super.setAlt(alt);
+          }
+
+          @Override
+          public Validate setCallback(java.lang.String callback) {
+            return (Validate) super.setCallback(callback);
+          }
+
+          @Override
+          public Validate setFields(java.lang.String fields) {
+            return (Validate) super.setFields(fields);
+          }
+
+          @Override
+          public Validate setKey(java.lang.String key) {
+            return (Validate) super.setKey(key);
+          }
+
+          @Override
+          public Validate setOauthToken(java.lang.String oauthToken) {
+            return (Validate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Validate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Validate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Validate setQuotaUser(java.lang.String quotaUser) {
+            return (Validate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Validate setUploadType(java.lang.String uploadType) {
+            return (Validate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Validate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Validate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The ID of the Cloud Platform project that the job belongs to. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. The ID of the Cloud Platform project that the job belongs to.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. The ID of the Cloud Platform project that the job belongs to. */
+          public Validate setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         which to direct the request.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) to which to direct the request.
+           */
+          public Validate setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          /** The sql query to validate. */
+          @com.google.api.client.util.Key
+          private java.lang.String query;
+
+          /** The sql query to validate.
+           */
+          public java.lang.String getQuery() {
+            return query;
+          }
+
+          /** The sql query to validate. */
+          public Validate setQuery(java.lang.String query) {
+            this.query = query;
+            return this;
+          }
+
+          @Override
+          public Validate set(String parameterName, Object value) {
+            return (Validate) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Templates collection.
        *
        * <p>The typical use is:</p>
@@ -5523,6 +6352,329 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the Snapshots collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dataflow dataflow = new Dataflow(...);}
+     *   {@code Dataflow.Snapshots.List request = dataflow.snapshots().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Snapshots snapshots() {
+      return new Snapshots();
+    }
+
+    /**
+     * The "snapshots" collection of methods.
+     */
+    public class Snapshots {
+
+      /**
+       * Gets information about a snapshot.
+       *
+       * Create a request for the method "snapshots.get".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+       * @param snapshotId The ID of the snapshot.
+       * @return the request
+       */
+      public Get get(java.lang.String projectId, java.lang.String snapshotId) throws java.io.IOException {
+        Get result = new Get(projectId, snapshotId);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DataflowRequest<com.google.api.services.dataflow.model.Snapshot> {
+
+        private static final String REST_PATH = "v1b3/projects/{projectId}/snapshots/{snapshotId}";
+
+        /**
+         * Gets information about a snapshot.
+         *
+         * Create a request for the method "snapshots.get".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId The ID of the Cloud Platform project that the snapshot belongs to.
+         * @param snapshotId The ID of the snapshot.
+         * @since 1.13
+         */
+        protected Get(java.lang.String projectId, java.lang.String snapshotId) {
+          super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.Snapshot.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.snapshotId = com.google.api.client.util.Preconditions.checkNotNull(snapshotId, "Required parameter snapshotId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The ID of the Cloud Platform project that the snapshot belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** The ID of the Cloud Platform project that the snapshot belongs to.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** The ID of the Cloud Platform project that the snapshot belongs to. */
+        public Get setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** The ID of the snapshot. */
+        @com.google.api.client.util.Key
+        private java.lang.String snapshotId;
+
+        /** The ID of the snapshot.
+         */
+        public java.lang.String getSnapshotId() {
+          return snapshotId;
+        }
+
+        /** The ID of the snapshot. */
+        public Get setSnapshotId(java.lang.String snapshotId) {
+          this.snapshotId = snapshotId;
+          return this;
+        }
+
+        /** The location that contains this snapshot. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** The location that contains this snapshot.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** The location that contains this snapshot. */
+        public Get setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists snapshots.
+       *
+       * Create a request for the method "snapshots.list".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param projectId The project ID to list snapshots for.
+       * @return the request
+       */
+      public List list(java.lang.String projectId) throws java.io.IOException {
+        List result = new List(projectId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListSnapshotsResponse> {
+
+        private static final String REST_PATH = "v1b3/projects/{projectId}/snapshots";
+
+        /**
+         * Lists snapshots.
+         *
+         * Create a request for the method "snapshots.list".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId The project ID to list snapshots for.
+         * @since 1.13
+         */
+        protected List(java.lang.String projectId) {
+          super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListSnapshotsResponse.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The project ID to list snapshots for. */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** The project ID to list snapshots for.
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** The project ID to list snapshots for. */
+        public List setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** The location to list snapshots in. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** The location to list snapshots in.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** The location to list snapshots in. */
+        public List setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
     }
     /**
      * An accessor for creating requests from the Templates collection.

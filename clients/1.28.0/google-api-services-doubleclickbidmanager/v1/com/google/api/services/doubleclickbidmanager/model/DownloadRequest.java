@@ -32,10 +32,11 @@ package com.google.api.services.doubleclickbidmanager.model;
 public final class DownloadRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * File types that will be returned.
+   * File types that will be returned. If INVENTORY_SOURCE is requested, no other file types may be
+   * requested.
    *
-   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  - "LINE_ITEM"
-   * - "INVENTORY_SOURCE"
+   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  -
+   * "INVENTORY_SOURCE"  - "LINE_ITEM"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +51,8 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.Long> filterIds;
 
   /**
-   * Filter type used to filter entities to fetch.
+   * Filter type used to filter entities to fetch. PARTNER_ID and INVENTORY_SOURCE_ID may only be
+   * used when downloading inventory sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,10 +67,11 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   private java.lang.String version;
 
   /**
-   * File types that will be returned.
+   * File types that will be returned. If INVENTORY_SOURCE is requested, no other file types may be
+   * requested.
    *
-   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  - "LINE_ITEM"
-   * - "INVENTORY_SOURCE"
+   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  -
+   * "INVENTORY_SOURCE"  - "LINE_ITEM"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypes() {
@@ -76,10 +79,11 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * File types that will be returned.
+   * File types that will be returned. If INVENTORY_SOURCE is requested, no other file types may be
+   * requested.
    *
-   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  - "LINE_ITEM"
-   * - "INVENTORY_SOURCE"
+   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  -
+   * "INVENTORY_SOURCE"  - "LINE_ITEM"
    * @param fileTypes fileTypes or {@code null} for none
    */
   public DownloadRequest setFileTypes(java.util.List<java.lang.String> fileTypes) {
@@ -107,7 +111,8 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Filter type used to filter entities to fetch.
+   * Filter type used to filter entities to fetch. PARTNER_ID and INVENTORY_SOURCE_ID may only be
+   * used when downloading inventory sources.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterType() {
@@ -115,7 +120,8 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Filter type used to filter entities to fetch.
+   * Filter type used to filter entities to fetch. PARTNER_ID and INVENTORY_SOURCE_ID may only be
+   * used when downloading inventory sources.
    * @param filterType filterType or {@code null} for none
    */
   public DownloadRequest setFilterType(java.lang.String filterType) {

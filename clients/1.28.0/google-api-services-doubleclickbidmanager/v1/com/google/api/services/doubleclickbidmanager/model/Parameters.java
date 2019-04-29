@@ -51,7 +51,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> groupBys;
 
   /**
-   * Whether to include data from Invite Media.
+   * Deprecated. This field is no longer in use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to include data from Invite Media.
+   * Deprecated. This field is no longer in use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeInviteData() {
@@ -114,7 +114,7 @@ public final class Parameters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to include data from Invite Media.
+   * Deprecated. This field is no longer in use.
    * @param includeInviteData includeInviteData or {@code null} for none
    */
   public Parameters setIncludeInviteData(java.lang.Boolean includeInviteData) {

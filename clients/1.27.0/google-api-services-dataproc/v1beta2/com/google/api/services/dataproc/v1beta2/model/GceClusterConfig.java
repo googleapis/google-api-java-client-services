@@ -98,8 +98,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/sub0
-   * projects/[project_id]/regions/us-east1/sub0 sub0
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
+   * projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,8 +275,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/sub0
-   * projects/[project_id]/regions/us-east1/sub0 sub0
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
+   * projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetworkUri() {
@@ -286,8 +286,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be
    * specified with network_uri.A full URL, partial URI, or short name are valid. Examples:
-   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/sub0
-   * projects/[project_id]/regions/us-east1/sub0 sub0
+   * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0
+   * projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
    * @param subnetworkUri subnetworkUri or {@code null} for none
    */
   public GceClusterConfig setSubnetworkUri(java.lang.String subnetworkUri) {

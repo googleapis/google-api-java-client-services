@@ -47,7 +47,8 @@ public final class AutomaticScaling extends com.google.api.client.json.GenericJs
   private CpuUtilization cpuUtilization;
 
   /**
-   * Target scaling by user-provided metrics.
+   * Target scaling by user-provided metrics. Only applicable in the App Engine flexible
+   * environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +176,8 @@ public final class AutomaticScaling extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Target scaling by user-provided metrics.
+   * Target scaling by user-provided metrics. Only applicable in the App Engine flexible
+   * environment.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomMetric> getCustomMetrics() {
@@ -183,7 +185,8 @@ public final class AutomaticScaling extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Target scaling by user-provided metrics.
+   * Target scaling by user-provided metrics. Only applicable in the App Engine flexible
+   * environment.
    * @param customMetrics customMetrics or {@code null} for none
    */
   public AutomaticScaling setCustomMetrics(java.util.List<CustomMetric> customMetrics) {

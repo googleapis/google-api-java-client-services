@@ -60,7 +60,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long agencyId;
 
   /**
-   * @OutputOnly The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative via API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> clickThroughUrls;
 
   /**
-   * @OutputOnly Shows any corrections that were applied to this creative.
+   * Output only. Shows any corrections that were applied to this creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String creativeId;
 
   /**
-   * @OutputOnly The top-level deals status of this creative. If disapproved, an entry for
+   * Output only. The top-level deals status of this creative. If disapproved, an entry for
    * 'auctionType=DIRECT_DEALS' (or 'ALL') in serving_restrictions will also exist. Note that this
    * may be nuanced with other contextual restrictions, in which case, it may be preferable to read
    * from serving_restrictions directly. Can be used to filter the response of the creatives.list
@@ -121,21 +121,21 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> declaredClickThroughUrls;
 
   /**
-   * @OutputOnly Detected advertiser IDs, if any.
+   * Output only. Detected advertiser IDs, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> detectedAdvertiserIds;
 
   /**
-   * @OutputOnly The detected domains for this creative.
+   * Output only. The detected domains for this creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> detectedDomains;
 
   /**
-   * @OutputOnly The detected languages for this creative. The order is arbitrary. The codes are 2
+   * Output only. The detected languages for this creative. The order is arbitrary. The codes are 2
    * or 5 characters and are documented at
    * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
    * The value may be {@code null}.
@@ -144,7 +144,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> detectedLanguages;
 
   /**
-   * @OutputOnly Detected product categories, if any. See the ad-product-categories.txt file in the
+   * Output only. Detected product categories, if any. See the ad-product-categories.txt file in the
    * technical documentation for a list of IDs.
    * The value may be {@code null}.
    */
@@ -152,7 +152,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> detectedProductCategories;
 
   /**
-   * @OutputOnly Detected sensitive categories, if any. See the ad-sensitive-categories.txt file in
+   * Output only. Detected sensitive categories, if any. See the ad-sensitive-categories.txt file in
    * the technical documentation for a list of IDs. You should use these IDs along with the
    * excluded-sensitive-category field in the bid request to filter your bids.
    * The value may be {@code null}.
@@ -161,7 +161,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> detectedSensitiveCategories;
 
   /**
-   * @OutputOnly The filtering stats for this creative. Deprecated; please use
+   * Output only. The filtering stats for this creative. Deprecated; please use
    * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
    * The value may be {@code null}.
    */
@@ -190,7 +190,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private NativeContent native__;
 
   /**
-   * @OutputOnly The top-level open auction status of this creative. If disapproved, an entry for
+   * Output only. The top-level open auction status of this creative. If disapproved, an entry for
    * 'auctionType = OPEN_AUCTION' (or 'ALL') in serving_restrictions will also exist. Note that this
    * may be nuanced with other contextual restrictions, in which case, it may be preferable to read
    * from serving_restrictions directly. Can be used to filter the response of the creatives.list
@@ -208,7 +208,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> restrictedCategories;
 
   /**
-   * @OutputOnly The granular status of this ad in specific contexts. A context here relates to
+   * Output only. The granular status of this ad in specific contexts. A context here relates to
    * where something ultimately serves (for example, a physical location, a platform, an HTTPS vs
    * HTTP request, or the type of auction).
    * The value may be {@code null}.
@@ -225,7 +225,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> vendorIds;
 
   /**
-   * @OutputOnly The version of this creative.
+   * Output only. The version of this creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,7 +309,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative via API.
    * @return value or {@code null} for none
    */
   public String getApiUpdateTime() {
@@ -317,7 +317,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The last update timestamp of the creative via API.
+   * Output only. The last update timestamp of the creative via API.
    * @param apiUpdateTime apiUpdateTime or {@code null} for none
    */
   public Creative setApiUpdateTime(String apiUpdateTime) {
@@ -362,7 +362,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Shows any corrections that were applied to this creative.
+   * Output only. Shows any corrections that were applied to this creative.
    * @return value or {@code null} for none
    */
   public java.util.List<Correction> getCorrections() {
@@ -370,7 +370,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Shows any corrections that were applied to this creative.
+   * Output only. Shows any corrections that were applied to this creative.
    * @param corrections corrections or {@code null} for none
    */
   public Creative setCorrections(java.util.List<Correction> corrections) {
@@ -398,7 +398,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The top-level deals status of this creative. If disapproved, an entry for
+   * Output only. The top-level deals status of this creative. If disapproved, an entry for
    * 'auctionType=DIRECT_DEALS' (or 'ALL') in serving_restrictions will also exist. Note that this
    * may be nuanced with other contextual restrictions, in which case, it may be preferable to read
    * from serving_restrictions directly. Can be used to filter the response of the creatives.list
@@ -410,7 +410,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The top-level deals status of this creative. If disapproved, an entry for
+   * Output only. The top-level deals status of this creative. If disapproved, an entry for
    * 'auctionType=DIRECT_DEALS' (or 'ALL') in serving_restrictions will also exist. Note that this
    * may be nuanced with other contextual restrictions, in which case, it may be preferable to read
    * from serving_restrictions directly. Can be used to filter the response of the creatives.list
@@ -440,7 +440,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Detected advertiser IDs, if any.
+   * Output only. Detected advertiser IDs, if any.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getDetectedAdvertiserIds() {
@@ -448,7 +448,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Detected advertiser IDs, if any.
+   * Output only. Detected advertiser IDs, if any.
    * @param detectedAdvertiserIds detectedAdvertiserIds or {@code null} for none
    */
   public Creative setDetectedAdvertiserIds(java.util.List<java.lang.Long> detectedAdvertiserIds) {
@@ -457,7 +457,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The detected domains for this creative.
+   * Output only. The detected domains for this creative.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDetectedDomains() {
@@ -465,7 +465,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The detected domains for this creative.
+   * Output only. The detected domains for this creative.
    * @param detectedDomains detectedDomains or {@code null} for none
    */
   public Creative setDetectedDomains(java.util.List<java.lang.String> detectedDomains) {
@@ -474,7 +474,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The detected languages for this creative. The order is arbitrary. The codes are 2
+   * Output only. The detected languages for this creative. The order is arbitrary. The codes are 2
    * or 5 characters and are documented at
    * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
    * @return value or {@code null} for none
@@ -484,7 +484,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The detected languages for this creative. The order is arbitrary. The codes are 2
+   * Output only. The detected languages for this creative. The order is arbitrary. The codes are 2
    * or 5 characters and are documented at
    * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
    * @param detectedLanguages detectedLanguages or {@code null} for none
@@ -495,7 +495,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Detected product categories, if any. See the ad-product-categories.txt file in the
+   * Output only. Detected product categories, if any. See the ad-product-categories.txt file in the
    * technical documentation for a list of IDs.
    * @return value or {@code null} for none
    */
@@ -504,7 +504,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Detected product categories, if any. See the ad-product-categories.txt file in the
+   * Output only. Detected product categories, if any. See the ad-product-categories.txt file in the
    * technical documentation for a list of IDs.
    * @param detectedProductCategories detectedProductCategories or {@code null} for none
    */
@@ -514,7 +514,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Detected sensitive categories, if any. See the ad-sensitive-categories.txt file in
+   * Output only. Detected sensitive categories, if any. See the ad-sensitive-categories.txt file in
    * the technical documentation for a list of IDs. You should use these IDs along with the
    * excluded-sensitive-category field in the bid request to filter your bids.
    * @return value or {@code null} for none
@@ -524,7 +524,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly Detected sensitive categories, if any. See the ad-sensitive-categories.txt file in
+   * Output only. Detected sensitive categories, if any. See the ad-sensitive-categories.txt file in
    * the technical documentation for a list of IDs. You should use these IDs along with the
    * excluded-sensitive-category field in the bid request to filter your bids.
    * @param detectedSensitiveCategories detectedSensitiveCategories or {@code null} for none
@@ -535,7 +535,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The filtering stats for this creative. Deprecated; please use
+   * Output only. The filtering stats for this creative. Deprecated; please use
    * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
    * @return value or {@code null} for none
    */
@@ -544,7 +544,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The filtering stats for this creative. Deprecated; please use
+   * Output only. The filtering stats for this creative. Deprecated; please use
    * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
    * @param filteringStats filteringStats or {@code null} for none
    */
@@ -605,7 +605,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The top-level open auction status of this creative. If disapproved, an entry for
+   * Output only. The top-level open auction status of this creative. If disapproved, an entry for
    * 'auctionType = OPEN_AUCTION' (or 'ALL') in serving_restrictions will also exist. Note that this
    * may be nuanced with other contextual restrictions, in which case, it may be preferable to read
    * from serving_restrictions directly. Can be used to filter the response of the creatives.list
@@ -617,7 +617,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The top-level open auction status of this creative. If disapproved, an entry for
+   * Output only. The top-level open auction status of this creative. If disapproved, an entry for
    * 'auctionType = OPEN_AUCTION' (or 'ALL') in serving_restrictions will also exist. Note that this
    * may be nuanced with other contextual restrictions, in which case, it may be preferable to read
    * from serving_restrictions directly. Can be used to filter the response of the creatives.list
@@ -647,7 +647,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The granular status of this ad in specific contexts. A context here relates to
+   * Output only. The granular status of this ad in specific contexts. A context here relates to
    * where something ultimately serves (for example, a physical location, a platform, an HTTPS vs
    * HTTP request, or the type of auction).
    * @return value or {@code null} for none
@@ -657,7 +657,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The granular status of this ad in specific contexts. A context here relates to
+   * Output only. The granular status of this ad in specific contexts. A context here relates to
    * where something ultimately serves (for example, a physical location, a platform, an HTTPS vs
    * HTTP request, or the type of auction).
    * @param servingRestrictions servingRestrictions or {@code null} for none
@@ -687,7 +687,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The version of this creative.
+   * Output only. The version of this creative.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -695,7 +695,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @OutputOnly The version of this creative.
+   * Output only. The version of this creative.
    * @param version version or {@code null} for none
    */
   public Creative setVersion(java.lang.Integer version) {

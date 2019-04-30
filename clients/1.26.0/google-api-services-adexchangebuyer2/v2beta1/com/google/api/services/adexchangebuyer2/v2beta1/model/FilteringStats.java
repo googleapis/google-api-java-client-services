@@ -17,8 +17,8 @@
 package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
- * @OutputOnly Filtering reasons for this creative during a period of a single day (from midnight to
- * midnight Pacific).
+ * Output only. Filtering reasons for this creative during a period of a single day (from midnight
+ * to midnight Pacific).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Ad Exchange Buyer API II. For a detailed explanation

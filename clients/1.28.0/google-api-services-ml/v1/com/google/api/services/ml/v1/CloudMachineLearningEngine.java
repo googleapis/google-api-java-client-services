@@ -1302,17 +1302,18 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. Specifies the subset of jobs to retrieve. You can filter on the value of one or
          * more attributes of the job object. For example, retrieve jobs with a job identifier that
-         * starts with 'census': gcloud ml-engine jobs list --filter='jobId:census*' List all failed
-         * jobs with names that start with 'rnn': gcloud ml-engine jobs list --filter='jobId:rnn*
-         * AND state:FAILED' For more examples, see the guide to monitoring jobs.
+         * starts with 'census': gcloud ai-platform jobs list --filter='jobId:census*' List all
+         * failed jobs with names that start with 'rnn': gcloud ai-platform jobs list
+         * --filter='jobId:rnn* AND state:FAILED' For more examples, see the guide to monitoring
+         * jobs.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. Specifies the subset of jobs to retrieve. You can filter on the value of one or more
        attributes of the job object. For example, retrieve jobs with a job identifier that starts with
-       'census': gcloud ml-engine jobs list --filter='jobId:census*' List all failed jobs with names that
-       start with 'rnn': gcloud ml-engine jobs list --filter='jobId:rnn* AND state:FAILED' For more
+       'census': gcloud ai-platform jobs list --filter='jobId:census*' List all failed jobs with names
+       that start with 'rnn': gcloud ai-platform jobs list --filter='jobId:rnn* AND state:FAILED' For more
        examples, see the guide to monitoring jobs.
          */
         public java.lang.String getFilter() {
@@ -1322,9 +1323,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. Specifies the subset of jobs to retrieve. You can filter on the value of one or
          * more attributes of the job object. For example, retrieve jobs with a job identifier that
-         * starts with 'census': gcloud ml-engine jobs list --filter='jobId:census*' List all failed
-         * jobs with names that start with 'rnn': gcloud ml-engine jobs list --filter='jobId:rnn*
-         * AND state:FAILED' For more examples, see the guide to monitoring jobs.
+         * starts with 'census': gcloud ai-platform jobs list --filter='jobId:census*' List all
+         * failed jobs with names that start with 'rnn': gcloud ai-platform jobs list
+         * --filter='jobId:rnn* AND state:FAILED' For more examples, see the guide to monitoring
+         * jobs.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

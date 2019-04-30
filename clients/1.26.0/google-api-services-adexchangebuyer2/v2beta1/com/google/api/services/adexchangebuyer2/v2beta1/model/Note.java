@@ -31,14 +31,14 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class Note extends com.google.api.client.json.GenericJson {
 
   /**
-   * The timestamp for when this note was created. @OutputOnly
+   * Output only. The timestamp for when this note was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The role of the person (buyer/seller) creating the note. @OutputOnly
+   * Output only. The role of the person (buyer/seller) creating the note.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,21 +55,21 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private java.lang.String note;
 
   /**
-   * The unique ID for the note. @OutputOnly
+   * Output only. The unique ID for the note.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String noteId;
 
   /**
-   * The revision number of the proposal when the note is created. @OutputOnly
+   * Output only. The revision number of the proposal when the note is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long proposalRevision;
 
   /**
-   * The timestamp for when this note was created. @OutputOnly
+   * Output only. The timestamp for when this note was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -77,7 +77,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp for when this note was created. @OutputOnly
+   * Output only. The timestamp for when this note was created.
    * @param createTime createTime or {@code null} for none
    */
   public Note setCreateTime(String createTime) {
@@ -86,7 +86,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role of the person (buyer/seller) creating the note. @OutputOnly
+   * Output only. The role of the person (buyer/seller) creating the note.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatorRole() {
@@ -94,7 +94,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role of the person (buyer/seller) creating the note. @OutputOnly
+   * Output only. The role of the person (buyer/seller) creating the note.
    * @param creatorRole creatorRole or {@code null} for none
    */
   public Note setCreatorRole(java.lang.String creatorRole) {
@@ -126,7 +126,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID for the note. @OutputOnly
+   * Output only. The unique ID for the note.
    * @return value or {@code null} for none
    */
   public java.lang.String getNoteId() {
@@ -134,7 +134,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID for the note. @OutputOnly
+   * Output only. The unique ID for the note.
    * @param noteId noteId or {@code null} for none
    */
   public Note setNoteId(java.lang.String noteId) {
@@ -143,7 +143,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision number of the proposal when the note is created. @OutputOnly
+   * Output only. The revision number of the proposal when the note is created.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProposalRevision() {
@@ -151,7 +151,7 @@ public final class Note extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision number of the proposal when the note is created. @OutputOnly
+   * Output only. The revision number of the proposal when the note is created.
    * @param proposalRevision proposalRevision or {@code null} for none
    */
   public Note setProposalRevision(java.lang.Long proposalRevision) {

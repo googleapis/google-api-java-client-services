@@ -31,14 +31,14 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class DealServingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tracks which parties (if any) have paused a deal. @OutputOnly
+   * Output only. Tracks which parties (if any) have paused a deal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DealPauseStatus dealPauseStatus;
 
   /**
-   * Tracks which parties (if any) have paused a deal. @OutputOnly
+   * Output only. Tracks which parties (if any) have paused a deal.
    * @return value or {@code null} for none
    */
   public DealPauseStatus getDealPauseStatus() {
@@ -46,7 +46,7 @@ public final class DealServingMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * Tracks which parties (if any) have paused a deal. @OutputOnly
+   * Output only. Tracks which parties (if any) have paused a deal.
    * @param dealPauseStatus dealPauseStatus or {@code null} for none
    */
   public DealServingMetadata setDealPauseStatus(DealPauseStatus dealPauseStatus) {

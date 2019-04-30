@@ -40,7 +40,7 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class Proposal extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reference to the buyer that will get billed for this proposal. @OutputOnly
+   * Output only. Reference to the buyer that will get billed for this proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,28 +98,28 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * True if the proposal is being renegotiated. @OutputOnly
+   * Output only. True if the proposal is being renegotiated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isRenegotiating;
 
   /**
-   * True, if the buyside inventory setup is complete for this proposal. @OutputOnly
+   * Output only. True, if the buyside inventory setup is complete for this proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSetupComplete;
 
   /**
-   * The role of the last user that either updated the proposal or left a comment. @OutputOnly
+   * Output only. The role of the last user that either updated the proposal or left a comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastUpdaterOrCommentorRole;
 
   /**
-   * The notes associated with this proposal. @OutputOnly
+   * Output only. The notes associated with this proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,39 +132,39 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the buyer/seller created the proposal. @OutputOnly
+   * Output only. Indicates whether the buyer/seller created the proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originatorRole;
 
   /**
-   * Private auction ID if this proposal is a private auction proposal. @OutputOnly
+   * Output only. Private auction ID if this proposal is a private auction proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateAuctionId;
 
   /**
-   * The unique ID of the proposal. @OutputOnly
+   * Output only. The unique ID of the proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String proposalId;
 
   /**
-   * The revision number for the proposal. Each update to the proposal or the deal causes the
-   * proposal revision number to auto-increment. The buyer keeps track of the last revision number
-   * they know of and pass it in when making an update. If the head revision number on the server
-   * has since incremented, then an ABORTED error is returned during the update operation to let the
-   * buyer know that a subsequent update was made. @OutputOnly
+   * Output only. The revision number for the proposal. Each update to the proposal or the deal
+   * causes the proposal revision number to auto-increment. The buyer keeps track of the last
+   * revision number they know of and pass it in when making an update. If the head revision number
+   * on the server has since incremented, then an ABORTED error is returned during the update
+   * operation to let the buyer know that a subsequent update was made.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long proposalRevision;
 
   /**
-   * The current state of the proposal. @OutputOnly
+   * Output only. The current state of the proposal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +181,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   private Seller seller;
 
   /**
-   * Contact information for the seller. @OutputOnly
+   * Output only. Contact information for the seller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,14 +194,14 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the proposal was last revised. @OutputOnly
+   * Output only. The time when the proposal was last revised.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Reference to the buyer that will get billed for this proposal. @OutputOnly
+   * Output only. Reference to the buyer that will get billed for this proposal.
    * @return value or {@code null} for none
    */
   public Buyer getBilledBuyer() {
@@ -209,7 +209,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the buyer that will get billed for this proposal. @OutputOnly
+   * Output only. Reference to the buyer that will get billed for this proposal.
    * @param billedBuyer billedBuyer or {@code null} for none
    */
   public Proposal setBilledBuyer(Buyer billedBuyer) {
@@ -311,7 +311,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if the proposal is being renegotiated. @OutputOnly
+   * Output only. True if the proposal is being renegotiated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsRenegotiating() {
@@ -319,7 +319,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if the proposal is being renegotiated. @OutputOnly
+   * Output only. True if the proposal is being renegotiated.
    * @param isRenegotiating isRenegotiating or {@code null} for none
    */
   public Proposal setIsRenegotiating(java.lang.Boolean isRenegotiating) {
@@ -328,7 +328,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True, if the buyside inventory setup is complete for this proposal. @OutputOnly
+   * Output only. True, if the buyside inventory setup is complete for this proposal.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSetupComplete() {
@@ -336,7 +336,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True, if the buyside inventory setup is complete for this proposal. @OutputOnly
+   * Output only. True, if the buyside inventory setup is complete for this proposal.
    * @param isSetupComplete isSetupComplete or {@code null} for none
    */
   public Proposal setIsSetupComplete(java.lang.Boolean isSetupComplete) {
@@ -345,7 +345,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role of the last user that either updated the proposal or left a comment. @OutputOnly
+   * Output only. The role of the last user that either updated the proposal or left a comment.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastUpdaterOrCommentorRole() {
@@ -353,7 +353,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The role of the last user that either updated the proposal or left a comment. @OutputOnly
+   * Output only. The role of the last user that either updated the proposal or left a comment.
    * @param lastUpdaterOrCommentorRole lastUpdaterOrCommentorRole or {@code null} for none
    */
   public Proposal setLastUpdaterOrCommentorRole(java.lang.String lastUpdaterOrCommentorRole) {
@@ -362,7 +362,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The notes associated with this proposal. @OutputOnly
+   * Output only. The notes associated with this proposal.
    * @return value or {@code null} for none
    */
   public java.util.List<Note> getNotes() {
@@ -370,7 +370,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The notes associated with this proposal. @OutputOnly
+   * Output only. The notes associated with this proposal.
    * @param notes notes or {@code null} for none
    */
   public Proposal setNotes(java.util.List<Note> notes) {
@@ -379,7 +379,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the buyer/seller created the proposal. @OutputOnly
+   * Output only. Indicates whether the buyer/seller created the proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginatorRole() {
@@ -387,7 +387,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the buyer/seller created the proposal. @OutputOnly
+   * Output only. Indicates whether the buyer/seller created the proposal.
    * @param originatorRole originatorRole or {@code null} for none
    */
   public Proposal setOriginatorRole(java.lang.String originatorRole) {
@@ -396,7 +396,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Private auction ID if this proposal is a private auction proposal. @OutputOnly
+   * Output only. Private auction ID if this proposal is a private auction proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateAuctionId() {
@@ -404,7 +404,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Private auction ID if this proposal is a private auction proposal. @OutputOnly
+   * Output only. Private auction ID if this proposal is a private auction proposal.
    * @param privateAuctionId privateAuctionId or {@code null} for none
    */
   public Proposal setPrivateAuctionId(java.lang.String privateAuctionId) {
@@ -413,7 +413,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the proposal. @OutputOnly
+   * Output only. The unique ID of the proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getProposalId() {
@@ -421,7 +421,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the proposal. @OutputOnly
+   * Output only. The unique ID of the proposal.
    * @param proposalId proposalId or {@code null} for none
    */
   public Proposal setProposalId(java.lang.String proposalId) {
@@ -430,11 +430,11 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision number for the proposal. Each update to the proposal or the deal causes the
-   * proposal revision number to auto-increment. The buyer keeps track of the last revision number
-   * they know of and pass it in when making an update. If the head revision number on the server
-   * has since incremented, then an ABORTED error is returned during the update operation to let the
-   * buyer know that a subsequent update was made. @OutputOnly
+   * Output only. The revision number for the proposal. Each update to the proposal or the deal
+   * causes the proposal revision number to auto-increment. The buyer keeps track of the last
+   * revision number they know of and pass it in when making an update. If the head revision number
+   * on the server has since incremented, then an ABORTED error is returned during the update
+   * operation to let the buyer know that a subsequent update was made.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProposalRevision() {
@@ -442,11 +442,11 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision number for the proposal. Each update to the proposal or the deal causes the
-   * proposal revision number to auto-increment. The buyer keeps track of the last revision number
-   * they know of and pass it in when making an update. If the head revision number on the server
-   * has since incremented, then an ABORTED error is returned during the update operation to let the
-   * buyer know that a subsequent update was made. @OutputOnly
+   * Output only. The revision number for the proposal. Each update to the proposal or the deal
+   * causes the proposal revision number to auto-increment. The buyer keeps track of the last
+   * revision number they know of and pass it in when making an update. If the head revision number
+   * on the server has since incremented, then an ABORTED error is returned during the update
+   * operation to let the buyer know that a subsequent update was made.
    * @param proposalRevision proposalRevision or {@code null} for none
    */
   public Proposal setProposalRevision(java.lang.Long proposalRevision) {
@@ -455,7 +455,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current state of the proposal. @OutputOnly
+   * Output only. The current state of the proposal.
    * @return value or {@code null} for none
    */
   public java.lang.String getProposalState() {
@@ -463,7 +463,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The current state of the proposal. @OutputOnly
+   * Output only. The current state of the proposal.
    * @param proposalState proposalState or {@code null} for none
    */
   public Proposal setProposalState(java.lang.String proposalState) {
@@ -495,7 +495,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contact information for the seller. @OutputOnly
+   * Output only. Contact information for the seller.
    * @return value or {@code null} for none
    */
   public java.util.List<ContactInformation> getSellerContacts() {
@@ -503,7 +503,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contact information for the seller. @OutputOnly
+   * Output only. Contact information for the seller.
    * @param sellerContacts sellerContacts or {@code null} for none
    */
   public Proposal setSellerContacts(java.util.List<ContactInformation> sellerContacts) {
@@ -512,7 +512,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the proposal was last revised. @OutputOnly
+   * Output only. The time when the proposal was last revised.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -520,7 +520,7 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the proposal was last revised. @OutputOnly
+   * Output only. The time when the proposal was last revised.
    * @param updateTime updateTime or {@code null} for none
    */
   public Proposal setUpdateTime(String updateTime) {

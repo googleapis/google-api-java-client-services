@@ -31,28 +31,28 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 public final class DeliveryControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specified the creative blocking levels to be applied. @OutputOnly
+   * Output only. Specified the creative blocking levels to be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creativeBlockingLevel;
 
   /**
-   * Specifies how the impression delivery will be paced. @OutputOnly
+   * Output only. Specifies how the impression delivery will be paced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deliveryRateType;
 
   /**
-   * Specifies any frequency caps. @OutputOnly
+   * Output only. Specifies any frequency caps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<FrequencyCap> frequencyCaps;
 
   /**
-   * Specified the creative blocking levels to be applied. @OutputOnly
+   * Output only. Specified the creative blocking levels to be applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreativeBlockingLevel() {
@@ -60,7 +60,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specified the creative blocking levels to be applied. @OutputOnly
+   * Output only. Specified the creative blocking levels to be applied.
    * @param creativeBlockingLevel creativeBlockingLevel or {@code null} for none
    */
   public DeliveryControl setCreativeBlockingLevel(java.lang.String creativeBlockingLevel) {
@@ -69,7 +69,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how the impression delivery will be paced. @OutputOnly
+   * Output only. Specifies how the impression delivery will be paced.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliveryRateType() {
@@ -77,7 +77,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies how the impression delivery will be paced. @OutputOnly
+   * Output only. Specifies how the impression delivery will be paced.
    * @param deliveryRateType deliveryRateType or {@code null} for none
    */
   public DeliveryControl setDeliveryRateType(java.lang.String deliveryRateType) {
@@ -86,7 +86,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies any frequency caps. @OutputOnly
+   * Output only. Specifies any frequency caps.
    * @return value or {@code null} for none
    */
   public java.util.List<FrequencyCap> getFrequencyCaps() {
@@ -94,7 +94,7 @@ public final class DeliveryControl extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies any frequency caps. @OutputOnly
+   * Output only. Specifies any frequency caps.
    * @param frequencyCaps frequencyCaps or {@code null} for none
    */
   public DeliveryControl setFrequencyCaps(java.util.List<FrequencyCap> frequencyCaps) {

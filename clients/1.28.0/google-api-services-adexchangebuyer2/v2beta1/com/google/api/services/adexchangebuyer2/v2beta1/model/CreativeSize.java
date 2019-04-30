@@ -55,8 +55,8 @@ public final class CreativeSize extends com.google.api.client.json.GenericJson {
   private java.lang.String creativeSizeType;
 
   /**
-   * The native template for this creative. It will have a value only if creative_size_type =
-   * CreativeSizeType.NATIVE. @OutputOnly
+   * Output only. The native template for this creative. It will have a value only if
+   * creative_size_type = CreativeSizeType.NATIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +135,8 @@ public final class CreativeSize extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The native template for this creative. It will have a value only if creative_size_type =
-   * CreativeSizeType.NATIVE. @OutputOnly
+   * Output only. The native template for this creative. It will have a value only if
+   * creative_size_type = CreativeSizeType.NATIVE.
    * @return value or {@code null} for none
    */
   public java.lang.String getNativeTemplate() {
@@ -144,8 +144,8 @@ public final class CreativeSize extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The native template for this creative. It will have a value only if creative_size_type =
-   * CreativeSizeType.NATIVE. @OutputOnly
+   * Output only. The native template for this creative. It will have a value only if
+   * creative_size_type = CreativeSizeType.NATIVE.
    * @param nativeTemplate nativeTemplate or {@code null} for none
    */
   public CreativeSize setNativeTemplate(java.lang.String nativeTemplate) {

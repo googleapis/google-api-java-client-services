@@ -79,43 +79,43 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.Long createProductRevision;
 
   /**
-   * The time of the deal creation. @OutputOnly
+   * Output only. The time of the deal creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Specifies the creative pre-approval policy. @OutputOnly
+   * Output only. Specifies the creative pre-approval policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creativePreApprovalPolicy;
 
   /**
-   * Restricitions about the creatives associated with the deal (i.e., size) This is available for
-   * Programmatic Guaranteed/Preferred Deals in Ad Manager. @OutputOnly
+   * Output only. Restricitions about the creatives associated with the deal (i.e., size) This is
+   * available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CreativeRestrictions creativeRestrictions;
 
   /**
-   * Specifies whether the creative is safeFrame compatible. @OutputOnly
+   * Output only. Specifies whether the creative is safeFrame compatible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creativeSafeFrameCompatibility;
 
   /**
-   * A unique deal ID for the deal (server-assigned). @OutputOnly
+   * Output only. A unique deal ID for the deal (server-assigned).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dealId;
 
   /**
-   * Metadata about the serving status of this deal. @OutputOnly
+   * Output only. Metadata about the serving status of this deal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,37 +151,37 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The external deal ID assigned to this deal once the deal is finalized. This is the deal ID that
-   * shows up in serving/reporting etc. @OutputOnly
+   * Output only. The external deal ID assigned to this deal once the deal is finalized. This is the
+   * deal ID that shows up in serving/reporting etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalDealId;
 
   /**
-   * True, if the buyside inventory setup is complete for this deal. @OutputOnly
+   * Output only. True, if the buyside inventory setup is complete for this deal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSetupComplete;
 
   /**
-   * Specifies the creative source for programmatic deals. PUBLISHER means creative is provided by
-   * seller and ADVERTISER means creative is provided by buyer. @OutputOnly
+   * Output only. Specifies the creative source for programmatic deals. PUBLISHER means creative is
+   * provided by seller and ADVERTISER means creative is provided by buyer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String programmaticCreativeSource;
 
   /**
-   * ID of the proposal that this deal is part of. @OutputOnly
+   * Output only. ID of the proposal that this deal is part of.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String proposalId;
 
   /**
-   * Seller contact information for the deal. @OutputOnly
+   * Output only. Seller contact information for the deal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.String syndicationProduct;
 
   /**
-   * Specifies the subset of inventory targeted by the deal. @OutputOnly
+   * Output only. Specifies the subset of inventory targeted by the deal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +219,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.util.List<TargetingCriteria> targetingCriterion;
 
   /**
-   * The time when the deal was last updated. @OutputOnly
+   * Output only. The time when the deal was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -342,7 +342,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time of the deal creation. @OutputOnly
+   * Output only. The time of the deal creation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -350,7 +350,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time of the deal creation. @OutputOnly
+   * Output only. The time of the deal creation.
    * @param createTime createTime or {@code null} for none
    */
   public Deal setCreateTime(String createTime) {
@@ -359,7 +359,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the creative pre-approval policy. @OutputOnly
+   * Output only. Specifies the creative pre-approval policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreativePreApprovalPolicy() {
@@ -367,7 +367,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the creative pre-approval policy. @OutputOnly
+   * Output only. Specifies the creative pre-approval policy.
    * @param creativePreApprovalPolicy creativePreApprovalPolicy or {@code null} for none
    */
   public Deal setCreativePreApprovalPolicy(java.lang.String creativePreApprovalPolicy) {
@@ -376,8 +376,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricitions about the creatives associated with the deal (i.e., size) This is available for
-   * Programmatic Guaranteed/Preferred Deals in Ad Manager. @OutputOnly
+   * Output only. Restricitions about the creatives associated with the deal (i.e., size) This is
+   * available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
    * @return value or {@code null} for none
    */
   public CreativeRestrictions getCreativeRestrictions() {
@@ -385,8 +385,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Restricitions about the creatives associated with the deal (i.e., size) This is available for
-   * Programmatic Guaranteed/Preferred Deals in Ad Manager. @OutputOnly
+   * Output only. Restricitions about the creatives associated with the deal (i.e., size) This is
+   * available for Programmatic Guaranteed/Preferred Deals in Ad Manager.
    * @param creativeRestrictions creativeRestrictions or {@code null} for none
    */
   public Deal setCreativeRestrictions(CreativeRestrictions creativeRestrictions) {
@@ -395,7 +395,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether the creative is safeFrame compatible. @OutputOnly
+   * Output only. Specifies whether the creative is safeFrame compatible.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreativeSafeFrameCompatibility() {
@@ -403,7 +403,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether the creative is safeFrame compatible. @OutputOnly
+   * Output only. Specifies whether the creative is safeFrame compatible.
    * @param creativeSafeFrameCompatibility creativeSafeFrameCompatibility or {@code null} for none
    */
   public Deal setCreativeSafeFrameCompatibility(java.lang.String creativeSafeFrameCompatibility) {
@@ -412,7 +412,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique deal ID for the deal (server-assigned). @OutputOnly
+   * Output only. A unique deal ID for the deal (server-assigned).
    * @return value or {@code null} for none
    */
   public java.lang.String getDealId() {
@@ -420,7 +420,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique deal ID for the deal (server-assigned). @OutputOnly
+   * Output only. A unique deal ID for the deal (server-assigned).
    * @param dealId dealId or {@code null} for none
    */
   public Deal setDealId(java.lang.String dealId) {
@@ -429,7 +429,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata about the serving status of this deal. @OutputOnly
+   * Output only. Metadata about the serving status of this deal.
    * @return value or {@code null} for none
    */
   public DealServingMetadata getDealServingMetadata() {
@@ -437,7 +437,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata about the serving status of this deal. @OutputOnly
+   * Output only. Metadata about the serving status of this deal.
    * @param dealServingMetadata dealServingMetadata or {@code null} for none
    */
   public Deal setDealServingMetadata(DealServingMetadata dealServingMetadata) {
@@ -516,8 +516,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The external deal ID assigned to this deal once the deal is finalized. This is the deal ID that
-   * shows up in serving/reporting etc. @OutputOnly
+   * Output only. The external deal ID assigned to this deal once the deal is finalized. This is the
+   * deal ID that shows up in serving/reporting etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalDealId() {
@@ -525,8 +525,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The external deal ID assigned to this deal once the deal is finalized. This is the deal ID that
-   * shows up in serving/reporting etc. @OutputOnly
+   * Output only. The external deal ID assigned to this deal once the deal is finalized. This is the
+   * deal ID that shows up in serving/reporting etc.
    * @param externalDealId externalDealId or {@code null} for none
    */
   public Deal setExternalDealId(java.lang.String externalDealId) {
@@ -535,7 +535,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True, if the buyside inventory setup is complete for this deal. @OutputOnly
+   * Output only. True, if the buyside inventory setup is complete for this deal.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSetupComplete() {
@@ -543,7 +543,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True, if the buyside inventory setup is complete for this deal. @OutputOnly
+   * Output only. True, if the buyside inventory setup is complete for this deal.
    * @param isSetupComplete isSetupComplete or {@code null} for none
    */
   public Deal setIsSetupComplete(java.lang.Boolean isSetupComplete) {
@@ -552,8 +552,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the creative source for programmatic deals. PUBLISHER means creative is provided by
-   * seller and ADVERTISER means creative is provided by buyer. @OutputOnly
+   * Output only. Specifies the creative source for programmatic deals. PUBLISHER means creative is
+   * provided by seller and ADVERTISER means creative is provided by buyer.
    * @return value or {@code null} for none
    */
   public java.lang.String getProgrammaticCreativeSource() {
@@ -561,8 +561,8 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the creative source for programmatic deals. PUBLISHER means creative is provided by
-   * seller and ADVERTISER means creative is provided by buyer. @OutputOnly
+   * Output only. Specifies the creative source for programmatic deals. PUBLISHER means creative is
+   * provided by seller and ADVERTISER means creative is provided by buyer.
    * @param programmaticCreativeSource programmaticCreativeSource or {@code null} for none
    */
   public Deal setProgrammaticCreativeSource(java.lang.String programmaticCreativeSource) {
@@ -571,7 +571,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the proposal that this deal is part of. @OutputOnly
+   * Output only. ID of the proposal that this deal is part of.
    * @return value or {@code null} for none
    */
   public java.lang.String getProposalId() {
@@ -579,7 +579,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of the proposal that this deal is part of. @OutputOnly
+   * Output only. ID of the proposal that this deal is part of.
    * @param proposalId proposalId or {@code null} for none
    */
   public Deal setProposalId(java.lang.String proposalId) {
@@ -588,7 +588,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Seller contact information for the deal. @OutputOnly
+   * Output only. Seller contact information for the deal.
    * @return value or {@code null} for none
    */
   public java.util.List<ContactInformation> getSellerContacts() {
@@ -596,7 +596,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Seller contact information for the deal. @OutputOnly
+   * Output only. Seller contact information for the deal.
    * @param sellerContacts sellerContacts or {@code null} for none
    */
   public Deal setSellerContacts(java.util.List<ContactInformation> sellerContacts) {
@@ -628,7 +628,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the subset of inventory targeted by the deal. @OutputOnly
+   * Output only. Specifies the subset of inventory targeted by the deal.
    * @return value or {@code null} for none
    */
   public MarketplaceTargeting getTargeting() {
@@ -636,7 +636,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the subset of inventory targeted by the deal. @OutputOnly
+   * Output only. Specifies the subset of inventory targeted by the deal.
    * @param targeting targeting or {@code null} for none
    */
   public Deal setTargeting(MarketplaceTargeting targeting) {
@@ -664,7 +664,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the deal was last updated. @OutputOnly
+   * Output only. The time when the deal was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -672,7 +672,7 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time when the deal was last updated. @OutputOnly
+   * Output only. The time when the deal was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Deal setUpdateTime(String updateTime) {

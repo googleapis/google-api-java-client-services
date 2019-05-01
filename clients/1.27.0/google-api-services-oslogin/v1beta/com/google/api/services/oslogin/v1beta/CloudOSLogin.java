@@ -20,7 +20,7 @@ package com.google.api.services.oslogin.v1beta;
  * Service definition for CloudOSLogin (v1beta).
  *
  * <p>
- * Manages OS login configuration for Google account users.
+ * You can use OS Login to manage access to your VM instances using IAM roles. For more information, read [OS Login](/compute/docs/oslogin/).
  * </p>
  *
  * <p>

@@ -54,6 +54,21 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
+   * Optional: list of nodes. Some producers need to use per-node metadata to calculate SLO. This
+   * field allows such producers to publish per-node SLO meta data, which will be consumed by SSA
+   * Eligibility Exporter and published in the form of per node metric to Monarch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata> nodes;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata.class);
+  }
+
+  /**
    * Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers
    * specified in the service SLO configuration.
    *
@@ -99,6 +114,27 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setExclusions(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions) {
     this.exclusions = exclusions;
+    return this;
+  }
+
+  /**
+   * Optional: list of nodes. Some producers need to use per-node metadata to calculate SLO. This
+   * field allows such producers to publish per-node SLO meta data, which will be consumed by SSA
+   * Eligibility Exporter and published in the form of per node metric to Monarch.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata> getNodes() {
+    return nodes;
+  }
+
+  /**
+   * Optional: list of nodes. Some producers need to use per-node metadata to calculate SLO. This
+   * field allows such producers to publish per-node SLO meta data, which will be consumed by SSA
+   * Eligibility Exporter and published in the form of per node metric to Monarch.
+   * @param nodes nodes or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setNodes(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata> nodes) {
+    this.nodes = nodes;
     return this;
   }
 

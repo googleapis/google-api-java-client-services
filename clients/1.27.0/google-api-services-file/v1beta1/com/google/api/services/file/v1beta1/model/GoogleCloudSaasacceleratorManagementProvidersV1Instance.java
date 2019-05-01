@@ -24,15 +24,15 @@ package com.google.api.services.file.v1beta1.model;
  *
  * ```json Instance: {   "name":   "projects/snapchat/locations/us-east1/instances/prod-instance",
  * "create_time": {     "seconds": 1526406431,   },   "labels": {     "env": "prod",     "foo":
- * "bar"   },   "state": READY,   "software_version": "cloud-sql-09-28-2018",
- * "maintenance_policy_names": {     "UpdatePolicy":     "projects/snapchat/locations/us-
- * east1/maintenancePolicies/prod-update-policy",   }   "rollout_metadata": {     "projects/cloud-
- * sql/locations/global/rolloutTypes/software_update": {       "release":       "projects/cloud-
- * sql/locations/global/releases/cloud-sql-09-28-2018",       "rollout":       "projects/cloud-
- * sql/locations/us-east1/rollouts/cloud-sql-09-28-2018-canary",     }     "projects/cloud-
- * sql/locations/global/rolloutTypes/instance_restart": {       "release":       "projects/cloud-
- * sql/locations/global/releases/cloud-sql-09-20-repair",       "rollout":       "projects/cloud-
- * sql/locations/us-east1/rollouts/cloud-sql-09-20-repair-100-percent",     }   }
+ * "bar"   },   "state": READY,   "software_versions": {     "software_update": "cloud-
+ * sql-09-28-2018",   },   "maintenance_policy_names": {     "UpdatePolicy":
+ * "projects/snapchat/locations/us-east1/maintenancePolicies/prod-update-policy",   }
+ * "rollout_metadata": {     "projects/cloud-sql/locations/global/rolloutTypes/software_update": {
+ * "release":       "projects/cloud-sql/locations/global/releases/cloud-sql-09-28-2018",
+ * "rollout":       "projects/cloud-sql/locations/us-east1/rollouts/cloud-sql-09-28-2018-canary",
+ * },     "projects/cloud-sql/locations/global/rolloutTypes/instance_restart": {       "release":
+ * "projects/cloud-sql/locations/global/releases/cloud-sql-09-20-repair",       "rollout":
+ * "projects/cloud-sql/locations/us-east1/rollouts/cloud-sql-09-20-repair-100-percent",     }   }
  * "tenant_project_id": "cloud-sql-test-tenant",   "producer_metadata": {     "cloud-sql-tier":
  * "basic",     "cloud-sql-instance-size": "1G",   },   "provisioned_resources": [     {
  * "resource-type": "compute-instance",       "resource-url":
@@ -67,9 +67,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   /**
    * The MaintenancePolicies that have been attached to the instance. The key must be of the type
    * name of the oneof policy name defined in MaintenancePolicy, and the referenced policy must
-   * define the same policy type. For complete details of MaintenancePolicy, please refer to //depot
-   * /google3/google/cloud/saasaccelerator/maintenancepolicy/api/v1/maintenance_policy_resources.pro
-   * to
+   * define the same policy type. For complete details of MaintenancePolicy, please refer to go
+   * /cloud-saas-mw-ug.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,9 +185,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   /**
    * The MaintenancePolicies that have been attached to the instance. The key must be of the type
    * name of the oneof policy name defined in MaintenancePolicy, and the referenced policy must
-   * define the same policy type. For complete details of MaintenancePolicy, please refer to //depot
-   * /google3/google/cloud/saasaccelerator/maintenancepolicy/api/v1/maintenance_policy_resources.pro
-   * to
+   * define the same policy type. For complete details of MaintenancePolicy, please refer to go
+   * /cloud-saas-mw-ug.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMaintenancePolicyNames() {
@@ -198,9 +196,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   /**
    * The MaintenancePolicies that have been attached to the instance. The key must be of the type
    * name of the oneof policy name defined in MaintenancePolicy, and the referenced policy must
-   * define the same policy type. For complete details of MaintenancePolicy, please refer to //depot
-   * /google3/google/cloud/saasaccelerator/maintenancepolicy/api/v1/maintenance_policy_resources.pro
-   * to
+   * define the same policy type. For complete details of MaintenancePolicy, please refer to go
+   * /cloud-saas-mw-ug.
    * @param maintenancePolicyNames maintenancePolicyNames or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenancePolicyNames(java.util.Map<String, java.lang.String> maintenancePolicyNames) {

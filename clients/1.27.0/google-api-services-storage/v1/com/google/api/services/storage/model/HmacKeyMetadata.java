@@ -38,7 +38,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String accessId;
 
   /**
-   * HTTP 1.1 Entity tag for the access-control entry.
+   * HTTP 1.1 Entity tag for the HMAC key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,14 +91,14 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String timeCreated;
+  private com.google.api.client.util.DateTime timeCreated;
 
   /**
    * The last modification time of the HMAC key metadata in RFC 3339 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String updated;
+  private com.google.api.client.util.DateTime updated;
 
   /**
    * The ID of the HMAC Key.
@@ -118,7 +118,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * HTTP 1.1 Entity tag for the access-control entry.
+   * HTTP 1.1 Entity tag for the HMAC key.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -126,7 +126,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * HTTP 1.1 Entity tag for the access-control entry.
+   * HTTP 1.1 Entity tag for the HMAC key.
    * @param etag etag or {@code null} for none
    */
   public HmacKeyMetadata setEtag(java.lang.String etag) {
@@ -240,7 +240,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
    * The creation time of the HMAC key in RFC 3339 format.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTimeCreated() {
+  public com.google.api.client.util.DateTime getTimeCreated() {
     return timeCreated;
   }
 
@@ -248,7 +248,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
    * The creation time of the HMAC key in RFC 3339 format.
    * @param timeCreated timeCreated or {@code null} for none
    */
-  public HmacKeyMetadata setTimeCreated(java.lang.String timeCreated) {
+  public HmacKeyMetadata setTimeCreated(com.google.api.client.util.DateTime timeCreated) {
     this.timeCreated = timeCreated;
     return this;
   }
@@ -257,7 +257,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
    * The last modification time of the HMAC key metadata in RFC 3339 format.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUpdated() {
+  public com.google.api.client.util.DateTime getUpdated() {
     return updated;
   }
 
@@ -265,7 +265,7 @@ public final class HmacKeyMetadata extends com.google.api.client.json.GenericJso
    * The last modification time of the HMAC key metadata in RFC 3339 format.
    * @param updated updated or {@code null} for none
    */
-  public HmacKeyMetadata setUpdated(java.lang.String updated) {
+  public HmacKeyMetadata setUpdated(com.google.api.client.util.DateTime updated) {
     this.updated = updated;
     return this;
   }

@@ -33,6 +33,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class ClusterAutoscaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults;
+
+  /**
    * Enables automatic node pool creation and deletion.
    * The value may be {@code null}.
    */
@@ -45,6 +52,23 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceLimit> resourceLimits;
+
+  /**
+   * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+   * @return value or {@code null} for none
+   */
+  public AutoprovisioningNodePoolDefaults getAutoprovisioningNodePoolDefaults() {
+    return autoprovisioningNodePoolDefaults;
+  }
+
+  /**
+   * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
+   * @param autoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults or {@code null} for none
+   */
+  public ClusterAutoscaling setAutoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults) {
+    this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
+    return this;
+  }
 
   /**
    * Enables automatic node pool creation and deletion.

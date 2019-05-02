@@ -189,6 +189,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * "node_pool" object, since this configuration (along with the "node_config") will be used to
    * create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the
    * same time.
+   *
+   * This field is deprecated, use node_pool.initial_node_count instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,13 +329,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private NetworkPolicy networkPolicy;
 
   /**
-   * Parameters used in creating the cluster's nodes. See `nodeConfig` for the description of its
-   * properties. For requests, this field should only be used in lieu of a "node_pool" object, since
-   * this configuration (along with the "initial_node_count") will be used to create a "NodePool"
-   * object with an auto-generated name. Do not use this and a node_pool at the same time. For
-   * responses, this field will be populated with the node configuration of the first node pool.
+   * Parameters used in creating the cluster's nodes. For requests, this field should only be used
+   * in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count")
+   * will be used to create a "NodePool" object with an auto-generated name. Do not use this and a
+   * node_pool at the same time. For responses, this field will be populated with the node
+   * configuration of the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    *
-   * If unspecified, the defaults are used.
+   * If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -821,6 +824,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * "node_pool" object, since this configuration (along with the "node_config") will be used to
    * create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the
    * same time.
+   *
+   * This field is deprecated, use node_pool.initial_node_count instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialNodeCount() {
@@ -834,6 +839,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    * "node_pool" object, since this configuration (along with the "node_config") will be used to
    * create a "NodePool" object with an auto-generated name. Do not use this and a node_pool at the
    * same time.
+   *
+   * This field is deprecated, use node_pool.initial_node_count instead.
    * @param initialNodeCount initialNodeCount or {@code null} for none
    */
   public Cluster setInitialNodeCount(java.lang.Integer initialNodeCount) {
@@ -1154,13 +1161,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parameters used in creating the cluster's nodes. See `nodeConfig` for the description of its
-   * properties. For requests, this field should only be used in lieu of a "node_pool" object, since
-   * this configuration (along with the "initial_node_count") will be used to create a "NodePool"
-   * object with an auto-generated name. Do not use this and a node_pool at the same time. For
-   * responses, this field will be populated with the node configuration of the first node pool.
+   * Parameters used in creating the cluster's nodes. For requests, this field should only be used
+   * in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count")
+   * will be used to create a "NodePool" object with an auto-generated name. Do not use this and a
+   * node_pool at the same time. For responses, this field will be populated with the node
+   * configuration of the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    *
-   * If unspecified, the defaults are used.
+   * If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
    * @return value or {@code null} for none
    */
   public NodeConfig getNodeConfig() {
@@ -1168,13 +1176,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Parameters used in creating the cluster's nodes. See `nodeConfig` for the description of its
-   * properties. For requests, this field should only be used in lieu of a "node_pool" object, since
-   * this configuration (along with the "initial_node_count") will be used to create a "NodePool"
-   * object with an auto-generated name. Do not use this and a node_pool at the same time. For
-   * responses, this field will be populated with the node configuration of the first node pool.
+   * Parameters used in creating the cluster's nodes. For requests, this field should only be used
+   * in lieu of a "node_pool" object, since this configuration (along with the "initial_node_count")
+   * will be used to create a "NodePool" object with an auto-generated name. Do not use this and a
+   * node_pool at the same time. For responses, this field will be populated with the node
+   * configuration of the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    *
-   * If unspecified, the defaults are used.
+   * If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
    * @param nodeConfig nodeConfig or {@code null} for none
    */
   public Cluster setNodeConfig(NodeConfig nodeConfig) {

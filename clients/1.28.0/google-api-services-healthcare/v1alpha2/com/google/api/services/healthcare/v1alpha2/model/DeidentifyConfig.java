@@ -32,15 +32,6 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class DeidentifyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configures how annotations (such as the location and infoTypes of sensitive information that
-   * was found) are created during de-identification. If unspecified, no annotations will be
-   * created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnnotationConfig annotation;
-
-  /**
    * Configures de-id of application/DICOM content.
    * The value may be {@code null}.
    */
@@ -62,46 +53,11 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   private ImageConfig image;
 
   /**
-   * Configuration for how inspection occurs on text and images.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InspectionConfig inspectionConfig;
-
-  /**
    * Configures de-identification of text wherever it is found in the source_dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TextConfig text;
-
-  /**
-   * Configuration for how transformations occur on annotations of text and images.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TransformationConfig transformationConfig;
-
-  /**
-   * Configures how annotations (such as the location and infoTypes of sensitive information that
-   * was found) are created during de-identification. If unspecified, no annotations will be
-   * created.
-   * @return value or {@code null} for none
-   */
-  public AnnotationConfig getAnnotation() {
-    return annotation;
-  }
-
-  /**
-   * Configures how annotations (such as the location and infoTypes of sensitive information that
-   * was found) are created during de-identification. If unspecified, no annotations will be
-   * created.
-   * @param annotation annotation or {@code null} for none
-   */
-  public DeidentifyConfig setAnnotation(AnnotationConfig annotation) {
-    this.annotation = annotation;
-    return this;
-  }
 
   /**
    * Configures de-id of application/DICOM content.
@@ -155,23 +111,6 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Configuration for how inspection occurs on text and images.
-   * @return value or {@code null} for none
-   */
-  public InspectionConfig getInspectionConfig() {
-    return inspectionConfig;
-  }
-
-  /**
-   * Configuration for how inspection occurs on text and images.
-   * @param inspectionConfig inspectionConfig or {@code null} for none
-   */
-  public DeidentifyConfig setInspectionConfig(InspectionConfig inspectionConfig) {
-    this.inspectionConfig = inspectionConfig;
-    return this;
-  }
-
-  /**
    * Configures de-identification of text wherever it is found in the source_dataset.
    * @return value or {@code null} for none
    */
@@ -185,23 +124,6 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
    */
   public DeidentifyConfig setText(TextConfig text) {
     this.text = text;
-    return this;
-  }
-
-  /**
-   * Configuration for how transformations occur on annotations of text and images.
-   * @return value or {@code null} for none
-   */
-  public TransformationConfig getTransformationConfig() {
-    return transformationConfig;
-  }
-
-  /**
-   * Configuration for how transformations occur on annotations of text and images.
-   * @param transformationConfig transformationConfig or {@code null} for none
-   */
-  public DeidentifyConfig setTransformationConfig(TransformationConfig transformationConfig) {
-    this.transformationConfig = transformationConfig;
     return this;
   }
 

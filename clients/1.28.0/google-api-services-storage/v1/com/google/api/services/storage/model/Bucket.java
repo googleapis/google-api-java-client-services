@@ -138,6 +138,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private java.lang.String location;
 
   /**
+   * The type of the bucket location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationType;
+
+  /**
    * The bucket's logging configuration, which defines the destination bucket and optional name
    * prefix for the current bucket's logs.
    * The value may be {@code null}.
@@ -471,6 +478,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * The type of the bucket location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationType() {
+    return locationType;
+  }
+
+  /**
+   * The type of the bucket location.
+   * @param locationType locationType or {@code null} for none
+   */
+  public Bucket setLocationType(java.lang.String locationType) {
+    this.locationType = locationType;
     return this;
   }
 

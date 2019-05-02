@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.cloudscheduler.v1beta1.model;
+package com.google.api.services.cloudscheduler.v1.model;
 
 /**
  * Contains information needed for generating an [OpenID Connect

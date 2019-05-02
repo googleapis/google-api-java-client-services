@@ -19,7 +19,7 @@ package com.google.api.services.cloudscheduler.v1beta1.model;
 /**
  * Contains information needed for generating an [OpenID Connect
  * token](https://developers.google.com/identity/protocols/OpenIDConnect). This type of
- * authorization should be used when sending requests to third party endpoints.
+ * authorization should be used when sending requests to third party endpoints or Cloud Run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Scheduler API. For a detailed explanation see:

@@ -30,14 +30,14 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class TransferJob extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTime;
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was last modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private TransferSpec transferSpec;
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was created.
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -108,7 +108,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was created.
    * @param creationTime creationTime or {@code null} for none
    */
   public TransferJob setCreationTime(String creationTime) {
@@ -117,7 +117,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was deleted.
    * @return value or {@code null} for none
    */
   public String getDeletionTime() {
@@ -125,7 +125,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was deleted.
    * @param deletionTime deletionTime or {@code null} for none
    */
   public TransferJob setDeletionTime(String deletionTime) {
@@ -153,7 +153,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was last modified.
    * @return value or {@code null} for none
    */
   public String getLastModificationTime() {
@@ -161,7 +161,7 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field cannot be changed by user requests.
+   * Output only. The time that the transfer job was last modified.
    * @param lastModificationTime lastModificationTime or {@code null} for none
    */
   public TransferJob setLastModificationTime(String lastModificationTime) {

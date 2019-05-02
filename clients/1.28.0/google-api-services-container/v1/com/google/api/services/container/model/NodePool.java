@@ -96,6 +96,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output only] The pod CIDR block size per node in this node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer podIpv4CidrSize;
+
+  /**
    * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -267,6 +274,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output only] The pod CIDR block size per node in this node pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPodIpv4CidrSize() {
+    return podIpv4CidrSize;
+  }
+
+  /**
+   * [Output only] The pod CIDR block size per node in this node pool.
+   * @param podIpv4CidrSize podIpv4CidrSize or {@code null} for none
+   */
+  public NodePool setPodIpv4CidrSize(java.lang.Integer podIpv4CidrSize) {
+    this.podIpv4CidrSize = podIpv4CidrSize;
     return this;
   }
 

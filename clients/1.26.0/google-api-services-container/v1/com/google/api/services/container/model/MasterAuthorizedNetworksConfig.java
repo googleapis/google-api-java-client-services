@@ -33,7 +33,7 @@ package com.google.api.services.container.model;
 public final class MasterAuthorizedNetworksConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * cidr_blocks define up to 10 external networks that could access Kubernetes master through
+   * cidr_blocks define up to 50 external networks that could access Kubernetes master through
    * HTTPS.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   private java.lang.Boolean enabled;
 
   /**
-   * cidr_blocks define up to 10 external networks that could access Kubernetes master through
+   * cidr_blocks define up to 50 external networks that could access Kubernetes master through
    * HTTPS.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   }
 
   /**
-   * cidr_blocks define up to 10 external networks that could access Kubernetes master through
+   * cidr_blocks define up to 50 external networks that could access Kubernetes master through
    * HTTPS.
    * @param cidrBlocks cidrBlocks or {@code null} for none
    */

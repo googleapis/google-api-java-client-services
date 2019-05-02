@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-webmasters</artifactId>
-  <version>v3-rev20180627-1.26.0</version>
-  <name>Search Console API v3-rev20180627-1.26.0</name>
+  <version>v3-rev20190428-1.26.0</version>
+  <name>Search Console API v3-rev20190428-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

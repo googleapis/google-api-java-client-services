@@ -78,7 +78,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
    * will be generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to third party endpoints.
+   * This type of authorization should be used when sending requests to third party endpoints or
+   * Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,7 +225,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
    * will be generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to third party endpoints.
+   * This type of authorization should be used when sending requests to third party endpoints or
+   * Cloud Run.
    * @return value or {@code null} for none
    */
   public OidcToken getOidcToken() {
@@ -235,7 +237,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
    * will be generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to third party endpoints.
+   * This type of authorization should be used when sending requests to third party endpoints or
+   * Cloud Run.
    * @param oidcToken oidcToken or {@code null} for none
    */
   public HttpTarget setOidcToken(OidcToken oidcToken) {

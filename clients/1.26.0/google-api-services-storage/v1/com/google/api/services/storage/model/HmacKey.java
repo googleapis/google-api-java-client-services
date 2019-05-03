@@ -42,7 +42,7 @@ public final class HmacKey extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object metadata;
+  private HmacKeyMetadata metadata;
 
   /**
    * HMAC secret key material.
@@ -72,7 +72,7 @@ public final class HmacKey extends com.google.api.client.json.GenericJson {
    * Key metadata.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getMetadata() {
+  public HmacKeyMetadata getMetadata() {
     return metadata;
   }
 
@@ -80,7 +80,7 @@ public final class HmacKey extends com.google.api.client.json.GenericJson {
    * Key metadata.
    * @param metadata metadata or {@code null} for none
    */
-  public HmacKey setMetadata(java.lang.Object metadata) {
+  public HmacKey setMetadata(HmacKeyMetadata metadata) {
     this.metadata = metadata;
     return this;
   }

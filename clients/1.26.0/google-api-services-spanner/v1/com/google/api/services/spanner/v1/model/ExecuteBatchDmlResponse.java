@@ -22,16 +22,19 @@ package com.google.api.services.spanner.v1.model;
  * payload. Clients can determine whether all DML statements have run successfully, or if a
  * statement failed, using one of the following approaches:
  *
- *   1. Check if 'status' field is OkStatus.   2. Check if result_sets_size() equals the number of
- * statements in      ExecuteBatchDmlRequest.
+ *   1. Check if `'status'` field is `OkStatus`.   2. Check if `result_sets_size()` equals the
+ * number of statements in      ExecuteBatchDmlRequest.
  *
- * Example 1: A request with 5 DML statements, all executed successfully. Result: A response with 5
- * ResultSets, one for each statement in the same order, and an OK status.
+ * Example 1: A request with 5 DML statements, all executed successfully.
  *
- * Example 2: A request with 5 DML statements. The 3rd statement has a syntax error. Result: A
- * response with 2 ResultSets, for the first 2 statements that run successfully, and a syntax error
- * (INVALID_ARGUMENT) status. From result_set_size() client can determine that the 3rd statement has
- * failed.
+ * Result: A response with 5 ResultSets, one for each statement in the same order, and an
+ * `OkStatus`.
+ *
+ * Example 2: A request with 5 DML statements. The 3rd statement has a syntax error.
+ *
+ * Result: A response with 2 ResultSets, for the first 2 statements that run successfully, and a
+ * syntax error (`INVALID_ARGUMENT`) status. From `result_set_size()` client can determine that the
+ * 3rd statement has failed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:

@@ -46,6 +46,14 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * The geographic placement of nodes in this instance configuration and their replication
+   * properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ReplicaInfo> replicas;
+
+  /**
    * The name of this instance configuration as it appears in UIs.
    * @return value or {@code null} for none
    */
@@ -78,6 +86,25 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
    */
   public InstanceConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The geographic placement of nodes in this instance configuration and their replication
+   * properties.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ReplicaInfo> getReplicas() {
+    return replicas;
+  }
+
+  /**
+   * The geographic placement of nodes in this instance configuration and their replication
+   * properties.
+   * @param replicas replicas or {@code null} for none
+   */
+  public InstanceConfig setReplicas(java.util.List<ReplicaInfo> replicas) {
+    this.replicas = replicas;
     return this;
   }
 

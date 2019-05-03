@@ -43,7 +43,7 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
    * statement. Execution will stop at the first failed statement; the remaining statements will not
    * run.
    *
-   * REQUIRES: statements_size() > 0.
+   * REQUIRES: `statements_size()` > 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
    * statement. Execution will stop at the first failed statement; the remaining statements will not
    * run.
    *
-   * REQUIRES: statements_size() > 0.
+   * REQUIRES: `statements_size()` > 0.
    * @return value or {@code null} for none
    */
   public java.util.List<Statement> getStatements() {
@@ -96,7 +96,7 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
    * statement. Execution will stop at the first failed statement; the remaining statements will not
    * run.
    *
-   * REQUIRES: statements_size() > 0.
+   * REQUIRES: `statements_size()` > 0.
    * @param statements statements or {@code null} for none
    */
   public ExecuteBatchDmlRequest setStatements(java.util.List<Statement> statements) {

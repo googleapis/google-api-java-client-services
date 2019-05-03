@@ -114,6 +114,13 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> substitutions;
 
   /**
+   * Tags for annotation of a `BuildTrigger`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tags;
+
+  /**
    * Template describing the types of source changes to trigger a build.
    *
    * Branch and tag names in trigger templates are interpreted as regular expressions. Any branch or
@@ -318,6 +325,23 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setSubstitutions(java.util.Map<String, java.lang.String> substitutions) {
     this.substitutions = substitutions;
+    return this;
+  }
+
+  /**
+   * Tags for annotation of a `BuildTrigger`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Tags for annotation of a `BuildTrigger`
+   * @param tags tags or {@code null} for none
+   */
+  public BuildTrigger setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

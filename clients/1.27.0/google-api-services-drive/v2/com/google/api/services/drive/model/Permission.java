@@ -686,48 +686,42 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   public static final class TeamDrivePermissionDetails extends com.google.api.client.json.GenericJson {
 
     /**
-     * Additional roles for this user. Only commenter is currently possible, though more may be
-     * supported in the future.
+     * Deprecated - use permissionDetails/additionalRoles instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.util.List<java.lang.String> additionalRoles;
 
     /**
-     * Whether this permission is inherited. This field is always populated. This is an output-only
-     * field.
+     * Deprecated - use permissionDetails/inherited instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean inherited;
 
     /**
-     * The ID of the item from which this permission is inherited. This is an output-only field and is
-     * only populated for members of the Team Drive.
+     * Deprecated - use permissionDetails/inheritedFrom instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String inheritedFrom;
 
     /**
-     * The primary role for this user. While new values may be added in the future, the following are
-     * currently possible: - organizer  - fileOrganizer  - writer  - reader
+     * Deprecated - use permissionDetails/role instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String role;
 
     /**
-     * The Team Drive permission type for this user. While new values may be added in future, the
-     * following are currently possible: - file  - member
+     * Deprecated - use permissionDetails/permissionType instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String teamDrivePermissionType;
 
     /**
-     * Additional roles for this user. Only commenter is currently possible, though more may be
-     * supported in the future.
+     * Deprecated - use permissionDetails/additionalRoles instead.
      * @return value or {@code null} for none
      */
     public java.util.List<java.lang.String> getAdditionalRoles() {
@@ -735,8 +729,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Additional roles for this user. Only commenter is currently possible, though more may be
-     * supported in the future.
+     * Deprecated - use permissionDetails/additionalRoles instead.
      * @param additionalRoles additionalRoles or {@code null} for none
      */
     public TeamDrivePermissionDetails setAdditionalRoles(java.util.List<java.lang.String> additionalRoles) {
@@ -745,8 +738,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether this permission is inherited. This field is always populated. This is an output-only
-     * field.
+     * Deprecated - use permissionDetails/inherited instead.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getInherited() {
@@ -754,8 +746,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether this permission is inherited. This field is always populated. This is an output-only
-     * field.
+     * Deprecated - use permissionDetails/inherited instead.
      * @param inherited inherited or {@code null} for none
      */
     public TeamDrivePermissionDetails setInherited(java.lang.Boolean inherited) {
@@ -764,8 +755,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the item from which this permission is inherited. This is an output-only field and is
-     * only populated for members of the Team Drive.
+     * Deprecated - use permissionDetails/inheritedFrom instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getInheritedFrom() {
@@ -773,8 +763,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the item from which this permission is inherited. This is an output-only field and is
-     * only populated for members of the Team Drive.
+     * Deprecated - use permissionDetails/inheritedFrom instead.
      * @param inheritedFrom inheritedFrom or {@code null} for none
      */
     public TeamDrivePermissionDetails setInheritedFrom(java.lang.String inheritedFrom) {
@@ -783,8 +772,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The primary role for this user. While new values may be added in the future, the following are
-     * currently possible: - organizer  - fileOrganizer  - writer  - reader
+     * Deprecated - use permissionDetails/role instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getRole() {
@@ -792,8 +780,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The primary role for this user. While new values may be added in the future, the following are
-     * currently possible: - organizer  - fileOrganizer  - writer  - reader
+     * Deprecated - use permissionDetails/role instead.
      * @param role role or {@code null} for none
      */
     public TeamDrivePermissionDetails setRole(java.lang.String role) {
@@ -802,8 +789,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Team Drive permission type for this user. While new values may be added in future, the
-     * following are currently possible: - file  - member
+     * Deprecated - use permissionDetails/permissionType instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getTeamDrivePermissionType() {
@@ -811,8 +797,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The Team Drive permission type for this user. While new values may be added in future, the
-     * following are currently possible: - file  - member
+     * Deprecated - use permissionDetails/permissionType instead.
      * @param teamDrivePermissionType teamDrivePermissionType or {@code null} for none
      */
     public TeamDrivePermissionDetails setTeamDrivePermissionType(java.lang.String teamDrivePermissionType) {

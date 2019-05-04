@@ -571,28 +571,28 @@ public final class About extends com.google.api.client.json.GenericJson {
   public static final class TeamDriveThemes extends com.google.api.client.json.GenericJson {
 
     /**
-     * A link to this Team Drive theme's background image.
+     * Deprecated - use driveThemes/backgroundImageLink instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String backgroundImageLink;
 
     /**
-     * The color of this Team Drive theme as an RGB hex string.
+     * Deprecated - use driveThemes/colorRgb instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String colorRgb;
 
     /**
-     * The ID of the theme.
+     * Deprecated - use driveThemes/id instead.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String id;
 
     /**
-     * A link to this Team Drive theme's background image.
+     * Deprecated - use driveThemes/backgroundImageLink instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getBackgroundImageLink() {
@@ -600,7 +600,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * A link to this Team Drive theme's background image.
+     * Deprecated - use driveThemes/backgroundImageLink instead.
      * @param backgroundImageLink backgroundImageLink or {@code null} for none
      */
     public TeamDriveThemes setBackgroundImageLink(java.lang.String backgroundImageLink) {
@@ -609,7 +609,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The color of this Team Drive theme as an RGB hex string.
+     * Deprecated - use driveThemes/colorRgb instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getColorRgb() {
@@ -617,7 +617,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The color of this Team Drive theme as an RGB hex string.
+     * Deprecated - use driveThemes/colorRgb instead.
      * @param colorRgb colorRgb or {@code null} for none
      */
     public TeamDriveThemes setColorRgb(java.lang.String colorRgb) {
@@ -626,7 +626,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the theme.
+     * Deprecated - use driveThemes/id instead.
      * @return value or {@code null} for none
      */
     public java.lang.String getId() {
@@ -634,7 +634,7 @@ public final class About extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The ID of the theme.
+     * Deprecated - use driveThemes/id instead.
      * @param id id or {@code null} for none
      */
     public TeamDriveThemes setId(java.lang.String id) {

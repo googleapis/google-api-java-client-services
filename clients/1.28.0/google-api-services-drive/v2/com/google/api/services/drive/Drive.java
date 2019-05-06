@@ -747,17 +747,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Get setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -780,7 +790,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -959,17 +971,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public GetStartPageToken setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -992,7 +1014,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -1276,17 +1300,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeDeleted;
       }
 
-      /** Whether both My Drive and shared drive items should be included in results. */
+      /**
+       * Deprecated - Whether both My Drive and shared drive items should be included in results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
+       * will be included in the results.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeItemsFromAllDrives;
 
-      /** Whether both My Drive and shared drive items should be included in results. [default: false]
+      /** Deprecated - Whether both My Drive and shared drive items should be included in results. This
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
+     in the results. [default: false]
        */
       public java.lang.Boolean getIncludeItemsFromAllDrives() {
         return includeItemsFromAllDrives;
       }
 
-      /** Whether both My Drive and shared drive items should be included in results. */
+      /**
+       * Deprecated - Whether both My Drive and shared drive items should be included in results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
+       * will be included in the results.
+       */
       public List setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
         this.includeItemsFromAllDrives = includeItemsFromAllDrives;
         return this;
@@ -1309,7 +1343,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether both My Drive and shared drive items should be included in results.
+       * Deprecated - Whether both My Drive and shared drive items should be included in results. This
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
+     in the results.
        * </p>
        */
       public boolean isIncludeItemsFromAllDrives() {
@@ -1497,17 +1533,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public List setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -1530,7 +1576,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -1806,17 +1854,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeDeleted;
       }
 
-      /** Whether both My Drive and shared drive items should be included in results. */
+      /**
+       * Deprecated - Whether both My Drive and shared drive items should be included in results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
+       * will be included in the results.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeItemsFromAllDrives;
 
-      /** Whether both My Drive and shared drive items should be included in results. [default: false]
+      /** Deprecated - Whether both My Drive and shared drive items should be included in results. This
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
+     in the results. [default: false]
        */
       public java.lang.Boolean getIncludeItemsFromAllDrives() {
         return includeItemsFromAllDrives;
       }
 
-      /** Whether both My Drive and shared drive items should be included in results. */
+      /**
+       * Deprecated - Whether both My Drive and shared drive items should be included in results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
+       * will be included in the results.
+       */
       public Watch setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
         this.includeItemsFromAllDrives = includeItemsFromAllDrives;
         return this;
@@ -1839,7 +1897,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether both My Drive and shared drive items should be included in results.
+       * Deprecated - Whether both My Drive and shared drive items should be included in results. This
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
+     in the results.
        * </p>
        */
       public boolean isIncludeItemsFromAllDrives() {
@@ -2027,17 +2087,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Watch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -2060,7 +2130,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -2590,17 +2662,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Insert setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -2623,7 +2705,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -4924,17 +5008,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return pinned;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Copy setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -4957,7 +5051,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -5162,17 +5258,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Delete setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -5195,7 +5301,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -5808,17 +5916,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Get setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -5841,7 +5959,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -6224,17 +6344,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return pinned;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Insert setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -6257,7 +6387,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -6551,17 +6683,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether both My Drive and shared drive items should be included in results. */
+      /**
+       * Deprecated - Whether both My Drive and shared drive items should be included in results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
+       * will be included in the results.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeItemsFromAllDrives;
 
-      /** Whether both My Drive and shared drive items should be included in results. [default: false]
+      /** Deprecated - Whether both My Drive and shared drive items should be included in results. This
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
+     in the results. [default: false]
        */
       public java.lang.Boolean getIncludeItemsFromAllDrives() {
         return includeItemsFromAllDrives;
       }
 
-      /** Whether both My Drive and shared drive items should be included in results. */
+      /**
+       * Deprecated - Whether both My Drive and shared drive items should be included in results.
+       * This parameter will only be effective until June 1, 2020. Afterwards shared drive items
+       * will be included in the results.
+       */
       public List setIncludeItemsFromAllDrives(java.lang.Boolean includeItemsFromAllDrives) {
         this.includeItemsFromAllDrives = includeItemsFromAllDrives;
         return this;
@@ -6584,7 +6726,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether both My Drive and shared drive items should be included in results.
+       * Deprecated - Whether both My Drive and shared drive items should be included in results. This
+     parameter will only be effective until June 1, 2020. Afterwards shared drive items will be included
+     in the results.
        * </p>
        */
       public boolean isIncludeItemsFromAllDrives() {
@@ -6766,17 +6910,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public List setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -6799,7 +6953,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -7285,17 +7441,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return setModifiedDate;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Patch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -7318,7 +7484,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -7584,17 +7752,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Touch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -7617,7 +7795,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -7767,17 +7947,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Trash setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -7800,7 +7990,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -7949,17 +8141,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Untrash setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -7982,7 +8184,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -8501,17 +8705,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return setModifiedDate;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Update setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -8534,7 +8748,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -8912,17 +9128,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Watch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -8945,7 +9171,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -9409,17 +9637,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Insert setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -9442,7 +9680,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -9737,17 +9977,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Delete setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -9770,7 +10020,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -10002,17 +10254,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Get setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -10035,7 +10297,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -10417,17 +10681,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return sendNotificationEmails;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Insert setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -10450,7 +10724,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -10714,17 +10990,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public List setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -10747,7 +11033,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -11014,17 +11302,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return removeExpiration;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Patch setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -11047,7 +11345,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {
@@ -11365,17 +11665,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return removeExpiration;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
 
-      /** Whether the requesting application supports both My Drives and shared drives. [default: false]
+      /** Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives. [default: false]
        */
       public java.lang.Boolean getSupportsAllDrives() {
         return supportsAllDrives;
       }
 
-      /** Whether the requesting application supports both My Drives and shared drives. */
+      /**
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives.
+       * This parameter will only be effective until June 1, 2020. Afterwards all applications are
+       * assumed to support shared drives.
+       */
       public Update setSupportsAllDrives(java.lang.Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -11398,7 +11708,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the requesting application supports both My Drives and shared drives.
+       * Deprecated - Whether the requesting application supports both My Drives and shared drives. This
+     parameter will only be effective until June 1, 2020. Afterwards all applications are assumed to
+     support shared drives.
        * </p>
        */
       public boolean isSupportsAllDrives() {

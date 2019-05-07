@@ -32,7 +32,7 @@ public final class AddChartRequest extends com.google.api.client.json.GenericJso
   /**
    * The chart that should be added to the spreadsheet, including the position where it should be
    * placed. The chartId field is optional; if one is not set, an id will be randomly generated. (It
-   * is an error to specify the ID of a chart that already exists.)
+   * is an error to specify the ID of an embedded object that already exists.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class AddChartRequest extends com.google.api.client.json.GenericJso
   /**
    * The chart that should be added to the spreadsheet, including the position where it should be
    * placed. The chartId field is optional; if one is not set, an id will be randomly generated. (It
-   * is an error to specify the ID of a chart that already exists.)
+   * is an error to specify the ID of an embedded object that already exists.)
    * @return value or {@code null} for none
    */
   public EmbeddedChart getChart() {
@@ -51,7 +51,7 @@ public final class AddChartRequest extends com.google.api.client.json.GenericJso
   /**
    * The chart that should be added to the spreadsheet, including the position where it should be
    * placed. The chartId field is optional; if one is not set, an id will be randomly generated. (It
-   * is an error to specify the ID of a chart that already exists.)
+   * is an error to specify the ID of an embedded object that already exists.)
    * @param chart chart or {@code null} for none
    */
   public AddChartRequest setChart(EmbeddedChart chart) {

@@ -56,7 +56,7 @@ deploy_library() {
 
   # create metadata
   python3 -m docuploader create-metadata \
-    --name ${SERVICE} \
+    --name google-api-services-${SERVICE} \
     --version ${API_VERSION}-${REVISION}-${LIBRARY_VERSION} \
     --language java
 

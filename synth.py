@@ -55,84 +55,36 @@ def dasherize(name: str):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
 
-
-def generate_service(disco: str):
-
-    m = re.search(r"(.*)\.(v.+)\.json$", disco)
-    if m is None:
-        log.info(f"Skipping {disco}.")
-        return
-
-    name = dasherize(m.group(1))
-    version = m.group(2)
-
-    log.info(f"Generating {name} {version}.")
-
-    library_name = f"google-api-services-{name}"
-    output_dir = repository / ".cache" / library_name / version
+def generate_client(disco: str, name: str, version: str, template: str, flags = []):
+    output_dir = repository / ".cache" / name / template / version
     input_file = discovery / "discoveries" / disco
-
-    for template in TEMPLATE_VERSIONS:
-        log.info(f"\t{template}")
-
-        command = (
-            f"python2 -m googleapis.codegen --output_dir={output_dir}" +
-            f" --input={input_file} --language=java --language_variant={template}" +
-            f" --package_path=api/services"
-        )
-
-        shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
-        shell.run(command.split(), cwd=repository, hide_output=False)
-
-        s.copy(output_dir, f"clients/{name}/{template}/{version}")
-
-        resource_dir = repository / "clients" / name / template / version / "resources"
-        shell.run(f"mkdir -p {resource_dir}".split())
-        shutil.copy(input_file, resource_dir / path.basename(disco))
-
-
-def generate_latest_service(disco: str):
-
-    m = re.search(r"(.*)\.(v.+)\.json$", disco)
-    if m is None:
-        log.info(f"Skipping {disco}.")
-        return
-
-    name = dasherize(m.group(1))
-    version = m.group(2)
-
-    log.info(f"Generating {name} {version}.")
-
-    library_name = f"{name}-{version}"
-    output_dir = repository / ".cache" / library_name / version
-    input_file = discovery / "discoveries" / disco
-
-    log.info(f"\tlatest")
-
-    latest_version = "0.1.0" # FIXME
 
     command = (
         f"python2 -m googleapis.codegen --output_dir={output_dir}" +
         f" --input={input_file} --language=java --language_variant=latest" +
-        f" --package_path=api/services --version_package=true"
-    )
+        f" --package_path=api/services"
+    ).split()
+
+    command.extend(flags)
 
     shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
-    shell.run(command.split(), cwd=repository, hide_output=False)
+    shell.run(command, cwd=repository, hide_output=False)
 
-    s.copy(output_dir, f"clients/{name}/latest/{version}")
+    s.copy(output_dir, f"clients/{name}/{template}/{version}")
 
-    resource_dir = repository / "clients" / name / "latest" / version / "resources"
+    resource_dir = repository / "clients" / name / template / version / "resources"
     shell.run(f"mkdir -p {resource_dir}".split())
     shutil.copy(input_file, resource_dir / path.basename(disco))
 
+
+def write_metadata_file(name: str, version: str, latest_version: str):
     # write metadata file
     metadata_file = repository / "clients" / name / "metadata.json"
     log.info(f"Writing json metadata to {metadata_file}")
     metadata = {
         "maven": {
             "repositoryUrl": "http://repo1.maven.org/maven2/",
-            "artifactId": library_name,
+            "artifactId": f"{name}-{version}",
             "version": latest_version,
             "repositoryId": "google-api-services"
         }
@@ -157,5 +109,23 @@ if extra_args():
     discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
 
 for disco in discoveries:
-    generate_service(disco)
-    generate_latest_service(disco)
+    m = re.search(r"(.*)\.(v.+)\.json$", disco)
+    if m is None:
+        log.info(f"Skipping {disco}.")
+        break
+
+    latest_version = "0.1.0" # FIXME
+
+    name = dasherize(m.group(1))
+    version = m.group(2)
+    log.info(f"Generating {name} {version}.")
+
+    for template in TEMPLATE_VERSIONS:
+        log.info(f"\t{template}")
+        generate_client(disco, name, version, template)
+
+    log.info("\tlatest")
+    generate_client(disco, name, version, "latest", [
+        "--version_package=true"
+    ])
+    write_metadata_file(name, version, latest_version)

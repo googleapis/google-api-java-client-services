@@ -108,7 +108,7 @@ def generate_service(disco: str):
     }
     metadata_file = repository / "metadata" / f"{library_name}.json"
     with open(metadata_file, "w") as outfile:
-        json.dump(metadata, outfile)
+        json.dump(metadata, outfile, indent=2)
 
 
 def all_discoveries():

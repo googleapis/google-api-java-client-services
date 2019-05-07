@@ -17,8 +17,8 @@
 import re
 
 
-def GetMavenArtifactId(api_name, package_path='', canonical_name='',
-                       owner_domain='google.com'):
+def GetMavenArtifactId(api_name, api_version='', package_path='',
+                       canonical_name='', language_version=''):
   """Returns the maven artifact id for a given api.
 
   Args:
@@ -38,16 +38,15 @@ def GetMavenArtifactId(api_name, package_path='', canonical_name='',
   if package_path and canonical_name:
     api_name = canonical_name.lower().replace(' ', '')
 
-  parts = []
-  if owner_domain == 'google.com':
-    parts.extend(['google', 'api', 'services'])
-  if package_path:
-    parts.extend(re.split(r'\.|/', package_path))
-  parts.append(api_name)
+  parts = ['google', 'api', 'services', api_name]
+
+  if language_version == 'latest':
+    parts = [api_name, api_version]
+
   return '-'.join(parts)
 
 
-def GetMavenGroupId(owner_domain):
+def GetMavenGroupId(language_version):
   """Returns the maven group id for a given owner domain.
 
   Args:
@@ -55,28 +54,33 @@ def GetMavenGroupId(owner_domain):
   Returns:
     (str) The group id.
   """
-  if owner_domain == 'google.com':
-    return 'com.google.apis'
+  if language_version == 'latest':
+    return 'com.google.apis.services'
   else:
-    return '.'.join(reversed(owner_domain.split('.')))
+    return 'com.google.apis'
 
 
 def GetMavenVersion(api, language_version):
   """Returns the maven version."""
-  if api.get('ownerDomain') == 'google.com':
+  if language_version == 'latest':
+    return '0.1.0'
+  else:
     return '%s-rev%s-%s' %(api['version'],
                            api['revision'],
                            language_version)
-  return '%s-%s-SNAPSHOT' % (api['version'], language_version)
 
 
 def GetMavenMetadata(api, language_version):
   """Returns a dict of useful maven metadata."""
-  owner_domain = api.get('ownerDomain', 'google.com')
+  artifact_id = GetMavenArtifactId(
+    api['name'],
+    api['version'],
+    api.get('packagePath'),
+    api.get('canonicalName'),
+    language_version
+  )
   return {
-      'artifact_id': GetMavenArtifactId(
-          api['name'], api.get('packagePath'),
-          api.get('canonicalName'), owner_domain),
-      'group_id': GetMavenGroupId(owner_domain),
-      'version': GetMavenVersion(api, language_version),
-      }
+    'artifact_id': artifact_id,
+    'group_id': GetMavenGroupId(language_version),
+    'version': GetMavenVersion(api, language_version),
+  }

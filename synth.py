@@ -22,6 +22,7 @@ import logging
 from os import path
 from pathlib import Path
 import glob
+import json
 import re
 import sys
 import shutil
@@ -29,9 +30,9 @@ import shutil
 logging.basicConfig(level=logging.DEBUG)
 
 TEMPLATE_VERSIONS = [
-    "1.26.0",
-    "1.27.0",
-    "1.28.0",
+    # "1.26.0",
+    # "1.27.0",
+    "1.28.0"
 ]
 discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"
 
@@ -83,11 +84,61 @@ def generate_service(disco: str):
         shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
         shell.run(command.split(), cwd=repository, hide_output=False)
 
-        s.copy(output_dir, f"clients/{template}/{library_name}/{version}")
+        s.copy(output_dir, f"clients/{name}/{template}/{version}")
 
-        resource_dir = repository / "clients" / template / library_name / version / "resources"
+        resource_dir = repository / "clients" / name / template / version / "resources"
         shell.run(f"mkdir -p {resource_dir}".split())
         shutil.copy(input_file, resource_dir / path.basename(disco))
+
+
+def generate_latest_service(disco: str):
+
+    m = re.search(r"(.*)\.(v.+)\.json$", disco)
+    if m is None:
+        log.info(f"Skipping {disco}.")
+        return
+
+    name = dasherize(m.group(1))
+    version = m.group(2)
+
+    log.info(f"Generating {name} {version}.")
+
+    library_name = f"{name}-{version}"
+    output_dir = repository / ".cache" / library_name / version
+    input_file = discovery / "discoveries" / disco
+
+    log.info(f"\tlatest")
+
+    latest_version = "0.1.0" # FIXME
+
+    command = (
+        f"python2 -m googleapis.codegen --output_dir={output_dir}" +
+        f" --input={input_file} --language=java --language_variant=latest" +
+        f" --package_path=api/services --version_package=true"
+    )
+
+    shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
+    shell.run(command.split(), cwd=repository, hide_output=False)
+
+    s.copy(output_dir, f"clients/{name}/latest/{version}")
+
+    resource_dir = repository / "clients" / name / "latest" / version / "resources"
+    shell.run(f"mkdir -p {resource_dir}".split())
+    shutil.copy(input_file, resource_dir / path.basename(disco))
+
+    # write metadata file
+    metadata_file = repository / "clients" / name / "metadata.json"
+    log.info(f"Writing json metadata to {metadata_file}")
+    metadata = {
+        "maven": {
+            "repositoryUrl": "http://repo1.maven.org/maven2/",
+            "artifactId": library_name,
+            "version": latest_version,
+            "repositoryId": "google-api-services"
+        }
+    }
+    with open(metadata_file, "w") as outfile:
+        json.dump(metadata, outfile, indent=2)
 
 
 def all_discoveries():
@@ -107,3 +158,4 @@ if extra_args():
 
 for disco in discoveries:
     generate_service(disco)
+    generate_latest_service(disco)

@@ -107,6 +107,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private InsertTableRequest insertTable;
 
   /**
+   * Inserts an empty column into a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertTableColumnRequest insertTableColumn;
+
+  /**
    * Inserts an empty row into a table.
    * The value may be {@code null}.
    */
@@ -133,6 +140,20 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateParagraphStyleRequest updateParagraphStyle;
+
+  /**
+   * Updates the properties of columns in a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateTableColumnPropertiesRequest updateTableColumnProperties;
+
+  /**
+   * Updates the row style in a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateTableRowStyleRequest updateTableRowStyle;
 
   /**
    * Updates the text style at the specified range.
@@ -329,6 +350,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Inserts an empty column into a table.
+   * @return value or {@code null} for none
+   */
+  public InsertTableColumnRequest getInsertTableColumn() {
+    return insertTableColumn;
+  }
+
+  /**
+   * Inserts an empty column into a table.
+   * @param insertTableColumn insertTableColumn or {@code null} for none
+   */
+  public Request setInsertTableColumn(InsertTableColumnRequest insertTableColumn) {
+    this.insertTableColumn = insertTableColumn;
+    return this;
+  }
+
+  /**
    * Inserts an empty row into a table.
    * @return value or {@code null} for none
    */
@@ -393,6 +431,40 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateParagraphStyle(UpdateParagraphStyleRequest updateParagraphStyle) {
     this.updateParagraphStyle = updateParagraphStyle;
+    return this;
+  }
+
+  /**
+   * Updates the properties of columns in a table.
+   * @return value or {@code null} for none
+   */
+  public UpdateTableColumnPropertiesRequest getUpdateTableColumnProperties() {
+    return updateTableColumnProperties;
+  }
+
+  /**
+   * Updates the properties of columns in a table.
+   * @param updateTableColumnProperties updateTableColumnProperties or {@code null} for none
+   */
+  public Request setUpdateTableColumnProperties(UpdateTableColumnPropertiesRequest updateTableColumnProperties) {
+    this.updateTableColumnProperties = updateTableColumnProperties;
+    return this;
+  }
+
+  /**
+   * Updates the row style in a table.
+   * @return value or {@code null} for none
+   */
+  public UpdateTableRowStyleRequest getUpdateTableRowStyle() {
+    return updateTableRowStyle;
+  }
+
+  /**
+   * Updates the row style in a table.
+   * @param updateTableRowStyle updateTableRowStyle or {@code null} for none
+   */
+  public Request setUpdateTableRowStyle(UpdateTableRowStyleRequest updateTableRowStyle) {
+    this.updateTableRowStyle = updateTableRowStyle;
     return this;
   }
 

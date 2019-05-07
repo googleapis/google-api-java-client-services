@@ -6439,6 +6439,343 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Internalappsharingartifacts collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Internalappsharingartifacts.List request = androidpublisher.internalappsharingartifacts().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Internalappsharingartifacts internalappsharingartifacts() {
+    return new Internalappsharingartifacts();
+  }
+
+  /**
+   * The "internalappsharingartifacts" collection of methods.
+   */
+  public class Internalappsharingartifacts {
+
+    /**
+     * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
+     * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
+     * recommended). See: https://developers.google.com/api-client-library/java/google-api-java-
+     * client/errors for an example in java.
+     *
+     * Create a request for the method "internalappsharingartifacts.uploadapk".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote operation.
+     *
+     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @return the request
+     */
+    public Uploadapk uploadapk(java.lang.String packageName) throws java.io.IOException {
+      Uploadapk result = new Uploadapk(packageName);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please
+     * increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is
+     * recommended). See: https://developers.google.com/api-client-library/java/google-api-java-
+     * client/errors for an example in java.
+     *
+     * Create a request for the method "internalappsharingartifacts.uploadapk".
+     *
+     * This request holds the parameters needed by the the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Uploadapk uploadapk(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Uploadapk result = new Uploadapk(packageName, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Uploadapk extends AndroidPublisherRequest<Void> {
+
+      private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/apk";
+
+      /**
+       * Uploads an APK to internal app sharing. If you are using the Google API client libraries,
+       * please increase the timeout of the http request before calling this endpoint (a timeout of 2
+       * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
+       * java-client/errors for an example in java.
+       *
+       * Create a request for the method "internalappsharingartifacts.uploadapk".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadapk#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @since 1.13
+       */
+      protected Uploadapk(java.lang.String packageName) {
+        super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      /**
+       * Uploads an APK to internal app sharing. If you are using the Google API client libraries,
+       * please increase the timeout of the http request before calling this endpoint (a timeout of 2
+       * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
+       * java-client/errors for an example in java.
+       *
+       * Create a request for the method "internalappsharingartifacts.uploadapk".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadapk#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Uploadapk(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Uploadapk setAlt(java.lang.String alt) {
+        return (Uploadapk) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadapk setFields(java.lang.String fields) {
+        return (Uploadapk) super.setFields(fields);
+      }
+
+      @Override
+      public Uploadapk setKey(java.lang.String key) {
+        return (Uploadapk) super.setKey(key);
+      }
+
+      @Override
+      public Uploadapk setOauthToken(java.lang.String oauthToken) {
+        return (Uploadapk) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Uploadapk setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Uploadapk) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Uploadapk setQuotaUser(java.lang.String quotaUser) {
+        return (Uploadapk) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Uploadapk setUserIp(java.lang.String userIp) {
+        return (Uploadapk) super.setUserIp(userIp);
+      }
+
+      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Unique identifier for the Android app; for example, "com.spiffygame".
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      public Uploadapk setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Uploadapk set(String parameterName, Object value) {
+        return (Uploadapk) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries,
+     * please increase the timeout of the http request before calling this endpoint (a timeout of 2
+     * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
+     * java-client/errors for an example in java.
+     *
+     * Create a request for the method "internalappsharingartifacts.uploadbundle".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadbundle#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @return the request
+     */
+    public Uploadbundle uploadbundle(java.lang.String packageName) throws java.io.IOException {
+      Uploadbundle result = new Uploadbundle(packageName);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries,
+     * please increase the timeout of the http request before calling this endpoint (a timeout of 2
+     * minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-
+     * java-client/errors for an example in java.
+     *
+     * Create a request for the method "internalappsharingartifacts.uploadbundle".
+     *
+     * This request holds the parameters needed by the the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadbundle#execute()} method to invoke the remote
+     * operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+     * @param mediaContent The media HTTP content or {@code null} if none.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Uploadbundle uploadbundle(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Uploadbundle result = new Uploadbundle(packageName, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Uploadbundle extends AndroidPublisherRequest<Void> {
+
+      private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/bundle";
+
+      /**
+       * Uploads an app bundle to internal app sharing. If you are using the Google API client
+       * libraries, please increase the timeout of the http request before calling this endpoint (a
+       * timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-
+       * library/java/google-api-java-client/errors for an example in java.
+       *
+       * Create a request for the method "internalappsharingartifacts.uploadbundle".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadbundle#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadbundle#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @since 1.13
+       */
+      protected Uploadbundle(java.lang.String packageName) {
+        super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      /**
+       * Uploads an app bundle to internal app sharing. If you are using the Google API client
+       * libraries, please increase the timeout of the http request before calling this endpoint (a
+       * timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-
+       * library/java/google-api-java-client/errors for an example in java.
+       *
+       * Create a request for the method "internalappsharingartifacts.uploadbundle".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadbundle#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadbundle#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param packageName Unique identifier for the Android app; for example, "com.spiffygame".
+       * @param mediaContent The media HTTP content or {@code null} if none.
+       * @since 1.13
+       */
+      protected Uploadbundle(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Uploadbundle setAlt(java.lang.String alt) {
+        return (Uploadbundle) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadbundle setFields(java.lang.String fields) {
+        return (Uploadbundle) super.setFields(fields);
+      }
+
+      @Override
+      public Uploadbundle setKey(java.lang.String key) {
+        return (Uploadbundle) super.setKey(key);
+      }
+
+      @Override
+      public Uploadbundle setOauthToken(java.lang.String oauthToken) {
+        return (Uploadbundle) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Uploadbundle setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Uploadbundle) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Uploadbundle setQuotaUser(java.lang.String quotaUser) {
+        return (Uploadbundle) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Uploadbundle setUserIp(java.lang.String userIp) {
+        return (Uploadbundle) super.setUserIp(userIp);
+      }
+
+      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Unique identifier for the Android app; for example, "com.spiffygame".
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Unique identifier for the Android app; for example, "com.spiffygame". */
+      public Uploadbundle setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Uploadbundle set(String parameterName, Object value) {
+        return (Uploadbundle) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Orders collection.
    *
    * <p>The typical use is:</p>

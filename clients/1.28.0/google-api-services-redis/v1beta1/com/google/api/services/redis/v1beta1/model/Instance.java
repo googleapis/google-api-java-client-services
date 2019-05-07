@@ -146,6 +146,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * supported values are:
    *
    *  *   `REDIS_4_0` for Redis 4.0 compatibility  *   `REDIS_3_2` for Redis 3.2 compatibility
+   * (default)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -444,6 +445,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * supported values are:
    *
    *  *   `REDIS_4_0` for Redis 4.0 compatibility  *   `REDIS_3_2` for Redis 3.2 compatibility
+   * (default)
    * @return value or {@code null} for none
    */
   public java.lang.String getRedisVersion() {
@@ -456,6 +458,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * supported values are:
    *
    *  *   `REDIS_4_0` for Redis 4.0 compatibility  *   `REDIS_3_2` for Redis 3.2 compatibility
+   * (default)
    * @param redisVersion redisVersion or {@code null} for none
    */
   public Instance setRedisVersion(java.lang.String redisVersion) {

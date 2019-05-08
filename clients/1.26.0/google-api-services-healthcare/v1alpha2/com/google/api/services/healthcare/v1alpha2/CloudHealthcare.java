@@ -11991,7 +11991,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The type of the resource to update.
+             * @param type The FHIR resource type to delete, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
              * @return the request
              */
             public ConditionalDelete conditionalDelete(java.lang.String parent, java.lang.String type) throws java.io.IOException {
@@ -12032,7 +12035,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The type of the resource to update.
+               * @param type The FHIR resource type to delete, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
                * @since 1.13
                */
               protected ConditionalDelete(java.lang.String parent, java.lang.String type) {
@@ -12127,17 +12133,26 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The type of the resource to update. */
+              /**
+               * The FHIR resource type to delete, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The type of the resource to update.
+              /** The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the
+             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
                */
               public java.lang.String getType() {
                 return type;
               }
 
-              /** The type of the resource to update. */
+              /**
+               * The FHIR resource type to delete, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               */
               public ConditionalDelete setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
@@ -12180,7 +12195,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The type of the resource to update.
+             * @param type The FHIR resource type to update, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
              * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
              * @return the request
              */
@@ -12231,7 +12249,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The type of the resource to update.
+               * @param type The FHIR resource type to update, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
                * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
                * @since 1.13
                */
@@ -12327,17 +12348,26 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The type of the resource to update. */
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The type of the resource to update.
+              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the
+             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
                */
               public java.lang.String getType() {
                 return type;
               }
 
-              /** The type of the resource to update. */
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+               */
               public ConditionalPatch setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
@@ -12383,7 +12413,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The type of the resource to update.
+             * @param type The FHIR resource type to update, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            Must
+             *        match the resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
              * @return the request
              */
@@ -12437,7 +12472,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The type of the resource to update.
+               * @param type The FHIR resource type to update, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            Must
+             *        match the resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
                * @since 1.13
                */
@@ -12533,17 +12573,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The type of the resource to update. */
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * the resource type in the provided content.
+               */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The type of the resource to update.
+              /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the
+             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+             the resource type in the provided content.
                */
               public java.lang.String getType() {
                 return type;
               }
 
-              /** The type of the resource to update. */
+              /**
+               * The FHIR resource type to update, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * the resource type in the provided content.
+               */
               public ConditionalUpdate setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),
@@ -12586,7 +12638,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The type of the resource to create.
+             * @param type The FHIR resource type to create, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            Must
+             *        match the resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
              * @return the request
              */
@@ -12636,7 +12693,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The type of the resource to create.
+               * @param type The FHIR resource type to create, such as Patient or Observation. For a
+            complete list, see the [FHIR
+             *        Resource
+            Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
+            Must
+             *        match the resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
                * @since 1.13
                */
@@ -12732,17 +12794,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /** The type of the resource to create. */
+              /**
+               * The FHIR resource type to create, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * the resource type in the provided content.
+               */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
-              /** The type of the resource to create.
+              /** The FHIR resource type to create, such as Patient or Observation. For a complete list, see the
+             [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+             the resource type in the provided content.
                */
               public java.lang.String getType() {
                 return type;
               }
 
-              /** The type of the resource to create. */
+              /**
+               * The FHIR resource type to create, such as Patient or Observation. For a complete
+               * list, see the [FHIR Resource
+               * Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html). Must match
+               * the resource type in the provided content.
+               */
               public Create setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TYPE_PATTERN.matcher(type).matches(),

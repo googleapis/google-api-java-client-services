@@ -30,14 +30,16 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class SearchResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the resource to search.
+   * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
+   * [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * The type of the resource to search.
+   * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
+   * [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -45,7 +47,8 @@ public final class SearchResourcesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The type of the resource to search.
+   * The FHIR resource type to search, such as Patient or Observation. For a complete list, see the
+   * [FHIR Resource Index](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html).
    * @param resourceType resourceType or {@code null} for none
    */
   public SearchResourcesRequest setResourceType(java.lang.String resourceType) {

@@ -31,8 +31,10 @@ package com.google.api.services.content.model;
 public final class OrderCustomerMarketingRightsInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Last known user selection regarding marketing preferences. In certain cases this selection
-   * might not be known, so this field would be empty.
+   * Last known customer selection regarding marketing preferences. In certain cases this selection
+   * might not be known, so this field would be empty. If a customer selected granted in their most
+   * recent order, they can be subscribed to marketing emails. Customers who have chosen denied must
+   * not be subscribed, or must be unsubscribed if already opted-in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +58,10 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
   private java.lang.String marketingEmailAddress;
 
   /**
-   * Last known user selection regarding marketing preferences. In certain cases this selection
-   * might not be known, so this field would be empty.
+   * Last known customer selection regarding marketing preferences. In certain cases this selection
+   * might not be known, so this field would be empty. If a customer selected granted in their most
+   * recent order, they can be subscribed to marketing emails. Customers who have chosen denied must
+   * not be subscribed, or must be unsubscribed if already opted-in.
    * @return value or {@code null} for none
    */
   public java.lang.String getExplicitMarketingPreference() {
@@ -65,8 +69,10 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
   }
 
   /**
-   * Last known user selection regarding marketing preferences. In certain cases this selection
-   * might not be known, so this field would be empty.
+   * Last known customer selection regarding marketing preferences. In certain cases this selection
+   * might not be known, so this field would be empty. If a customer selected granted in their most
+   * recent order, they can be subscribed to marketing emails. Customers who have chosen denied must
+   * not be subscribed, or must be unsubscribed if already opted-in.
    * @param explicitMarketingPreference explicitMarketingPreference or {@code null} for none
    */
   public OrderCustomerMarketingRightsInfo setExplicitMarketingPreference(java.lang.String explicitMarketingPreference) {

@@ -38,7 +38,9 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   private java.lang.String fullName;
 
   /**
-   * Customer's marketing preferences.
+   * Customer's marketing preferences. Contains the marketing opt-in information that is current at
+   * the time that the merchant call. User preference selections can change from one order to the
+   * next so preferences must be checked with every order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,9 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Customer's marketing preferences.
+   * Customer's marketing preferences. Contains the marketing opt-in information that is current at
+   * the time that the merchant call. User preference selections can change from one order to the
+   * next so preferences must be checked with every order.
    * @return value or {@code null} for none
    */
   public OrderCustomerMarketingRightsInfo getMarketingRightsInfo() {
@@ -70,7 +74,9 @@ public final class OrderCustomer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Customer's marketing preferences.
+   * Customer's marketing preferences. Contains the marketing opt-in information that is current at
+   * the time that the merchant call. User preference selections can change from one order to the
+   * next so preferences must be checked with every order.
    * @param marketingRightsInfo marketingRightsInfo or {@code null} for none
    */
   public OrderCustomer setMarketingRightsInfo(OrderCustomerMarketingRightsInfo marketingRightsInfo) {

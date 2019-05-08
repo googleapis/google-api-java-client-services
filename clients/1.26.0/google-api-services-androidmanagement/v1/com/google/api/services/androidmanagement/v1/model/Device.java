@@ -254,6 +254,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Map of selected system properties name and value related to the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> systemProperties;
+
+  /**
    * The user who owns the device.
    * The value may be {@code null}.
    */
@@ -781,6 +788,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Map of selected system properties name and value related to the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSystemProperties() {
+    return systemProperties;
+  }
+
+  /**
+   * Map of selected system properties name and value related to the device.
+   * @param systemProperties systemProperties or {@code null} for none
+   */
+  public Device setSystemProperties(java.util.Map<String, java.lang.String> systemProperties) {
+    this.systemProperties = systemProperties;
     return this;
   }
 

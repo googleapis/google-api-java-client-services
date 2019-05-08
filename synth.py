@@ -70,16 +70,30 @@ def generate_client(disco: str, name: str, version: str, template: str, flags = 
     shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
     shell.run(command, cwd=repository, hide_output=False)
 
-    s.copy(output_dir, f"clients/{name}/{template}/{version}")
+    s.copy(output_dir, f"clients/{name}/{version}/{template}/")
 
-    resource_dir = repository / "clients" / name / template / version / "resources"
+    resource_dir = repository / "clients" / name / version / template / "resources"
     shell.run(f"mkdir -p {resource_dir}".split())
     shutil.copy(input_file, resource_dir / path.basename(disco))
 
+def read_metadata_file(name: str, version: str):
+    metadata_file = repository / "clients" / name / version / "metadata.json"
+    try:
+        with open(metadata_file, "r") as fh:
+            return json.load(fh)
+    except FileNotFoundError:
+        return {
+            "maven": {
+                "repositoryUrl": "http://repo1.maven.org/maven2/",
+                "artifactId": f"{name}-{version}",
+                "version": "0.0.0",
+                "repositoryId": "google-api-services"
+            }
+        }
 
 def write_metadata_file(name: str, version: str, latest_version: str):
     # write metadata file
-    metadata_file = repository / "clients" / name / "metadata.json"
+    metadata_file = repository / "clients" / name / version / "metadata.json"
     log.info(f"Writing json metadata to {metadata_file}")
     metadata = {
         "maven": {
@@ -100,9 +114,25 @@ def all_discoveries():
 
     return discos
 
+def has_changed(name: str, version: str):
+    return True # FIXME
+
+def minor_version_bump(semver: str):
+    parts = semver.split(".")
+    parts[1] = str(int(parts[1]) + 1)
+    return ".".join(parts)
+
+def update_pom_version(name: str, version: str, old_version: str, new_version: str):
+    pom_file = repository / "clients" / name / version / "latest" / "pom.xml"
+    newlines = []
+    with open(pom_file) as f:
+        for line in f:
+            newlines.append(line.replace(f"<version>{old_version}</version>", f"<version>{new_version}</version>"))
+    with open(pom_file, "w") as f:
+        for line in newlines:
+            f.write(line)
 
 discoveries = all_discoveries()
-
 
 if extra_args():
     api_name = extra_args()[0]
@@ -114,11 +144,12 @@ for disco in discoveries:
         log.info(f"Skipping {disco}.")
         break
 
-    latest_version = "0.1.0" # FIXME
-
     name = dasherize(m.group(1))
     version = m.group(2)
     log.info(f"Generating {name} {version}.")
+
+    metadata = read_metadata_file(name, version)
+    current_version = metadata["maven"]["version"]
 
     for template in TEMPLATE_VERSIONS:
         log.info(f"\t{template}")
@@ -128,4 +159,11 @@ for disco in discoveries:
     generate_client(disco, name, version, "latest", [
         "--version_package=true"
     ])
-    write_metadata_file(name, version, latest_version)
+
+    # if changes, bump latest version and write metadata file
+    if has_changed(name, version):
+        new_version = minor_version_bump(current_version)
+        update_pom_version(name, version, current_version, new_version)
+        current_version = new_version
+
+    write_metadata_file(name, version, current_version)

@@ -6504,7 +6504,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       return result;
     }
 
-    public class Uploadapk extends AndroidPublisherRequest<Void> {
+    public class Uploadapk extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InternalAppSharingArtifact> {
 
       private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/apk";
 
@@ -6526,7 +6526,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadapk(java.lang.String packageName) {
-        super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
       }
 
@@ -6553,7 +6553,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadapk(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
         initializeMediaUpload(mediaContent);
       }
@@ -6662,7 +6662,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       return result;
     }
 
-    public class Uploadbundle extends AndroidPublisherRequest<Void> {
+    public class Uploadbundle extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InternalAppSharingArtifact> {
 
       private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/bundle";
 
@@ -6684,7 +6684,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadbundle(java.lang.String packageName) {
-        super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
       }
 
@@ -6711,7 +6711,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadbundle(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
         initializeMediaUpload(mediaContent);
       }

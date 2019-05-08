@@ -115,7 +115,13 @@ def all_discoveries():
     return discos
 
 def has_changed(name: str, version: str):
-    return True # FIXME
+    path = repository / "clients" / name / version / "latest"
+    output = shell.run(["git", "status", path, "--porcelain"])
+    if output:
+        print(output)
+        return True
+
+    return False
 
 def minor_version_bump(semver: str):
     parts = semver.split(".")

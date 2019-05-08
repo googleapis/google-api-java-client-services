@@ -96,6 +96,13 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Whether Stackdriver monitoring should be enabled on the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableStackdriverMonitoring;
+
+  /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
    * adhere to the name and value restrictions on VM labels imposed by Compute Engine.
    *
@@ -269,6 +276,23 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    */
   public VirtualMachine setDisks(java.util.List<Disk> disks) {
     this.disks = disks;
+    return this;
+  }
+
+  /**
+   * Whether Stackdriver monitoring should be enabled on the VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableStackdriverMonitoring() {
+    return enableStackdriverMonitoring;
+  }
+
+  /**
+   * Whether Stackdriver monitoring should be enabled on the VM.
+   * @param enableStackdriverMonitoring enableStackdriverMonitoring or {@code null} for none
+   */
+  public VirtualMachine setEnableStackdriverMonitoring(java.lang.Boolean enableStackdriverMonitoring) {
+    this.enableStackdriverMonitoring = enableStackdriverMonitoring;
     return this;
   }
 

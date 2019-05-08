@@ -117,8 +117,8 @@ def all_discoveries():
 def has_changed(name: str, version: str):
     path = repository / "clients" / name / version / "latest"
     output = shell.run(["git", "status", path, "--porcelain"])
-    if output:
-        print(output)
+    if output.stdout:
+        print(output.stdout)
         return True
 
     return False
@@ -169,6 +169,7 @@ for disco in discoveries:
     # if changes, bump latest version and write metadata file
     if has_changed(name, version):
         new_version = minor_version_bump(current_version)
+        log.info(f"Found changes - bumping version {current_version} -> {new_version}")
         update_pom_version(name, version, current_version, new_version)
         current_version = new_version
 

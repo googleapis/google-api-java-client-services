@@ -57,8 +57,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should have the format of
-   * `operations/some/unique/name`.
+   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
+   * `operations/{unique_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should have the format of
-   * `operations/some/unique/name`.
+   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
+   * `operations/{unique_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -147,8 +147,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should have the format of
-   * `operations/some/unique/name`.
+   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
+   * `operations/{unique_id}`.
    * @param name name or {@code null} for none
    */
   public Operation setName(java.lang.String name) {

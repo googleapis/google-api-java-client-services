@@ -3970,7 +3970,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * The following fields may be specified by teachers:
          *
          * * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` *
-         * `scheduled_time` * `submission_modification_mode`
+         * `scheduled_time` * `submission_modification_mode` * `topic_id`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -3984,7 +3984,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        The following fields may be specified by teachers:
 
        * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-       `submission_modification_mode`
+       `submission_modification_mode` * `topic_id`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -4000,7 +4000,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * The following fields may be specified by teachers:
          *
          * * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` *
-         * `scheduled_time` * `submission_modification_mode`
+         * `scheduled_time` * `submission_modification_mode` * `topic_id`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

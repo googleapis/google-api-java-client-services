@@ -1,39 +1,28 @@
 {
+  "canonicalName": "Container Analysis",
+  "auth": {
+    "oauth2": {
+      "scopes": {
+        "https://www.googleapis.com/auth/cloud-platform": {
+          "description": "View and manage your data across Google Cloud Platform services"
+        }
+      }
+    }
+  },
+  "rootUrl": "https://containeranalysis.googleapis.com/",
+  "ownerDomain": "google.com",
+  "name": "containeranalysis",
+  "batchPath": "batch",
+  "fullyEncodeReservedExpansion": true,
+  "title": "Container Analysis API",
   "ownerName": "Google",
   "resources": {
     "projects": {
       "resources": {
         "operations": {
           "methods": {
-            "patch": {
-              "response": {
-                "$ref": "Operation"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "PATCH",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "description": "The name of the Operation.\nShould be of the form \"projects/{provider_id}/operations/{operation_id}\".",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/operations/[^/]+$"
-                }
-              },
-              "flatPath": "v1alpha1/projects/{projectsId}/operations/{operationsId}",
-              "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.projects.operations.patch",
-              "request": {
-                "$ref": "UpdateOperationRequest"
-              },
-              "description": "Updates an existing operation returns an error if operation\n does not exist. The only valid operations are to update mark the done bit\nchange the result."
-            },
             "create": {
+              "flatPath": "v1alpha1/projects/{projectsId}/operations",
               "path": "v1alpha1/{+parent}/operations",
               "id": "containeranalysis.projects.operations.create",
               "description": "Creates a new `Operation`.",
@@ -49,22 +38,338 @@
               "httpMethod": "POST",
               "parameters": {
                 "parent": {
+                  "location": "path",
                   "description": "The project Id that this operation should be created under.",
                   "required": true,
                   "type": "string",
-                  "pattern": "^projects/[^/]+$",
+                  "pattern": "^projects/[^/]+$"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            },
+            "patch": {
+              "description": "Updates an existing operation returns an error if operation\n does not exist. The only valid operations are to update mark the done bit\nchange the result.",
+              "request": {
+                "$ref": "UpdateOperationRequest"
+              },
+              "response": {
+                "$ref": "Operation"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "PATCH",
+              "parameters": {
+                "name": {
+                  "pattern": "^projects/[^/]+/operations/[^/]+$",
+                  "location": "path",
+                  "description": "The name of the Operation.\nShould be of the form \"projects/{provider_id}/operations/{operation_id}\".",
+                  "required": true,
+                  "type": "string"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/operations/{operationsId}",
+              "path": "v1alpha1/{+name}",
+              "id": "containeranalysis.projects.operations.patch"
+            }
+          }
+        },
+        "occurrences": {
+          "methods": {
+            "getNotes": {
+              "response": {
+                "$ref": "Note"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "location": "path",
+                  "description": "The name of the occurrence in the form\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}/notes",
+              "path": "v1alpha1/{+name}/notes",
+              "id": "containeranalysis.projects.occurrences.getNotes",
+              "description": "Gets the `Note` attached to the given `Occurrence`."
+            },
+            "delete": {
+              "httpMethod": "DELETE",
+              "response": {
+                "$ref": "Empty"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "description": "The name of the occurrence in the form of\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
                   "location": "path"
                 }
               },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
-              "flatPath": "v1alpha1/projects/{projectsId}/operations"
-            }
-          }
-        },
-        "occurrences": {
-          "methods": {
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}",
+              "id": "containeranalysis.projects.occurrences.delete",
+              "path": "v1alpha1/{+name}",
+              "description": "Deletes the given `Occurrence` from the system. Use this when\nan `Occurrence` is no longer applicable for the given resource."
+            },
+            "list": {
+              "description": "Lists active `Occurrences` for a given project matching the filters.",
+              "response": {
+                "$ref": "ListOccurrencesResponse"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "GET",
+              "parameters": {
+                "kind": {
+                  "location": "query",
+                  "enum": [
+                    "KIND_UNSPECIFIED",
+                    "PACKAGE_VULNERABILITY",
+                    "BUILD_DETAILS",
+                    "IMAGE_BASIS",
+                    "PACKAGE_MANAGER",
+                    "DEPLOYABLE",
+                    "DISCOVERY",
+                    "ATTESTATION_AUTHORITY"
+                  ],
+                  "description": "The kind of occurrences to filter on.",
+                  "type": "string"
+                },
+                "pageSize": {
+                  "location": "query",
+                  "description": "Number of occurrences to return in the list.",
+                  "format": "int32",
+                  "type": "integer"
+                },
+                "parent": {
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path",
+                  "description": "This contains the project Id for example: projects/{project_id}.",
+                  "required": true,
+                  "type": "string"
+                },
+                "name": {
+                  "description": "The name field contains the project Id. For example:\n\"projects/{project_id}\n@Deprecated",
+                  "type": "string",
+                  "location": "query"
+                },
+                "filter": {
+                  "location": "query",
+                  "description": "The filter expression.",
+                  "type": "string"
+                },
+                "pageToken": {
+                  "description": "Token to provide to skip to a particular spot in the list.",
+                  "type": "string",
+                  "location": "query"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences",
+              "path": "v1alpha1/{+parent}/occurrences",
+              "id": "containeranalysis.projects.occurrences.list"
+            },
+            "create": {
+              "response": {
+                "$ref": "Occurrence"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "POST",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "name": {
+                  "location": "query",
+                  "description": "The name of the project.  Should be of the form \"projects/{project_id}\".\n@Deprecated",
+                  "type": "string"
+                },
+                "parent": {
+                  "description": "This field contains the project Id for example: \"projects/{project_id}\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences",
+              "path": "v1alpha1/{+parent}/occurrences",
+              "id": "containeranalysis.projects.occurrences.create",
+              "request": {
+                "$ref": "Occurrence"
+              },
+              "description": "Creates a new `Occurrence`. Use this method to create `Occurrences`\nfor a resource."
+            },
+            "setIamPolicy": {
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}:setIamPolicy",
+              "path": "v1alpha1/{+resource}:setIamPolicy",
+              "id": "containeranalysis.projects.occurrences.setIamPolicy",
+              "request": {
+                "$ref": "SetIamPolicyRequest"
+              },
+              "description": "Sets the access control policy on the specified `Note` or `Occurrence`.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na `Note` or an `Occurrence`, respectively.\nAttempting to call this method without these permissions will result in a `\n`PERMISSION_DENIED` error.\nAttempting to call this method on a non-existent resource will result in a\n`NOT_FOUND` error if the user has `containeranalysis.notes.list` permission\non a `Note` or `containeranalysis.occurrences.list` on an `Occurrence`, or\na `PERMISSION_DENIED` error otherwise. The resource takes the following\nformats: `projects/{projectid}/occurrences/{occurrenceid}` for occurrences\nand projects/{projectid}/notes/{noteid} for notes",
+              "response": {
+                "$ref": "Policy"
+              },
+              "parameterOrder": [
+                "resource"
+              ],
+              "httpMethod": "POST",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "resource": {
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
+                  "location": "path",
+                  "description": "REQUIRED: The resource for which the policy is being specified.\nSee the operation documentation for the appropriate value for this field.",
+                  "required": true,
+                  "type": "string"
+                }
+              }
+            },
+            "getIamPolicy": {
+              "request": {
+                "$ref": "GetIamPolicyRequest"
+              },
+              "description": "Gets the access control policy for a note or an `Occurrence` resource.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na note or occurrence, respectively.\nAttempting to call this method on a resource without the required\npermission will result in a `PERMISSION_DENIED` error. Attempting to call\nthis method on a non-existent resource will result in a `NOT_FOUND` error\nif the user has list permission on the project, or a `PERMISSION_DENIED`\nerror otherwise. The resource takes the following formats:\n`projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and\nprojects/{PROJECT_ID}/notes/{NOTE_ID} for notes",
+              "response": {
+                "$ref": "Policy"
+              },
+              "parameterOrder": [
+                "resource"
+              ],
+              "httpMethod": "POST",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "resource": {
+                  "description": "REQUIRED: The resource for which the policy is being requested.\nSee the operation documentation for the appropriate value for this field.",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}:getIamPolicy",
+              "path": "v1alpha1/{+resource}:getIamPolicy",
+              "id": "containeranalysis.projects.occurrences.getIamPolicy"
+            },
+            "patch": {
+              "description": "Updates an existing occurrence.",
+              "request": {
+                "$ref": "Occurrence"
+              },
+              "response": {
+                "$ref": "Occurrence"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "PATCH",
+              "parameters": {
+                "updateMask": {
+                  "location": "query",
+                  "description": "The fields to update.",
+                  "format": "google-fieldmask",
+                  "type": "string"
+                },
+                "name": {
+                  "location": "path",
+                  "description": "The name of the occurrence.\nShould be of the form \"projects/{project_id}/occurrences/{OCCURRENCE_ID}\".",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}",
+              "path": "v1alpha1/{+name}",
+              "id": "containeranalysis.projects.occurrences.patch"
+            },
+            "get": {
+              "description": "Returns the requested `Occurrence`.",
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "Occurrence"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "parameters": {
+                "name": {
+                  "description": "The name of the occurrence of the form\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}",
+              "id": "containeranalysis.projects.occurrences.get",
+              "path": "v1alpha1/{+name}"
+            },
+            "getVulnerabilitySummary": {
+              "description": "Gets a summary of the number and severity of occurrences.",
+              "httpMethod": "GET",
+              "response": {
+                "$ref": "GetVulnzOccurrencesSummaryResponse"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "parameters": {
+                "parent": {
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path",
+                  "description": "This contains the project Id for example: projects/{project_id}",
+                  "required": true,
+                  "type": "string"
+                },
+                "filter": {
+                  "location": "query",
+                  "description": "The filter expression.",
+                  "type": "string"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/occurrences:vulnerabilitySummary",
+              "id": "containeranalysis.projects.occurrences.getVulnerabilitySummary",
+              "path": "v1alpha1/{+parent}/occurrences:vulnerabilitySummary"
+            },
             "testIamPermissions": {
               "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}:testIamPermissions",
               "id": "containeranalysis.projects.occurrences.testIamPermissions",
@@ -82,438 +387,40 @@
               },
               "parameters": {
                 "resource": {
-                  "location": "path",
                   "description": "REQUIRED: The resource for which the policy detail is being requested.\nSee the operation documentation for the appropriate value for this field.",
                   "required": true,
                   "type": "string",
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$"
+                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
+                  "location": "path"
                 }
               },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ]
-            },
-            "delete": {
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}",
-              "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.projects.occurrences.delete",
-              "description": "Deletes the given `Occurrence` from the system. Use this when\nan `Occurrence` is no longer applicable for the given resource.",
-              "response": {
-                "$ref": "Empty"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "DELETE",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "description": "The name of the occurrence in the form of\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$"
-                }
-              }
-            },
-            "getNotes": {
-              "httpMethod": "GET",
-              "response": {
-                "$ref": "Note"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "description": "The name of the occurrence in the form\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}/notes",
-              "id": "containeranalysis.projects.occurrences.getNotes",
-              "path": "v1alpha1/{+name}/notes",
-              "description": "Gets the `Note` attached to the given `Occurrence`."
-            },
-            "list": {
-              "description": "Lists active `Occurrences` for a given project matching the filters.",
-              "response": {
-                "$ref": "ListOccurrencesResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "GET",
-              "parameters": {
-                "filter": {
-                  "location": "query",
-                  "description": "The filter expression.",
-                  "type": "string"
-                },
-                "pageToken": {
-                  "description": "Token to provide to skip to a particular spot in the list.",
-                  "type": "string",
-                  "location": "query"
-                },
-                "kind": {
-                  "location": "query",
-                  "enum": [
-                    "KIND_UNSPECIFIED",
-                    "PACKAGE_VULNERABILITY",
-                    "BUILD_DETAILS",
-                    "IMAGE_BASIS",
-                    "PACKAGE_MANAGER",
-                    "DEPLOYABLE",
-                    "DISCOVERY",
-                    "ATTESTATION_AUTHORITY"
-                  ],
-                  "description": "The kind of occurrences to filter on.",
-                  "type": "string"
-                },
-                "pageSize": {
-                  "description": "Number of occurrences to return in the list.",
-                  "format": "int32",
-                  "type": "integer",
-                  "location": "query"
-                },
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path",
-                  "description": "This contains the project Id for example: projects/{project_id}.",
-                  "required": true,
-                  "type": "string"
-                },
-                "name": {
-                  "location": "query",
-                  "description": "The name field contains the project Id. For example:\n\"projects/{project_id}\n@Deprecated",
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences",
-              "path": "v1alpha1/{+parent}/occurrences",
-              "id": "containeranalysis.projects.occurrences.list"
-            },
-            "setIamPolicy": {
-              "description": "Sets the access control policy on the specified `Note` or `Occurrence`.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na `Note` or an `Occurrence`, respectively.\nAttempting to call this method without these permissions will result in a `\n`PERMISSION_DENIED` error.\nAttempting to call this method on a non-existent resource will result in a\n`NOT_FOUND` error if the user has `containeranalysis.notes.list` permission\non a `Note` or `containeranalysis.occurrences.list` on an `Occurrence`, or\na `PERMISSION_DENIED` error otherwise. The resource takes the following\nformats: `projects/{projectid}/occurrences/{occurrenceid}` for occurrences\nand projects/{projectid}/notes/{noteid} for notes",
-              "request": {
-                "$ref": "SetIamPolicyRequest"
-              },
-              "response": {
-                "$ref": "Policy"
-              },
-              "parameterOrder": [
-                "resource"
-              ],
-              "httpMethod": "POST",
-              "parameters": {
-                "resource": {
-                  "description": "REQUIRED: The resource for which the policy is being specified.\nSee the operation documentation for the appropriate value for this field.",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}:setIamPolicy",
-              "path": "v1alpha1/{+resource}:setIamPolicy",
-              "id": "containeranalysis.projects.occurrences.setIamPolicy"
-            },
-            "create": {
-              "request": {
-                "$ref": "Occurrence"
-              },
-              "description": "Creates a new `Occurrence`. Use this method to create `Occurrences`\nfor a resource.",
-              "response": {
-                "$ref": "Occurrence"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "parent": {
-                  "location": "path",
-                  "description": "This field contains the project Id for example: \"projects/{project_id}\"",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$"
-                },
-                "name": {
-                  "location": "query",
-                  "description": "The name of the project.  Should be of the form \"projects/{project_id}\".\n@Deprecated",
-                  "type": "string"
-                }
-              },
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences",
-              "path": "v1alpha1/{+parent}/occurrences",
-              "id": "containeranalysis.projects.occurrences.create"
-            },
-            "getIamPolicy": {
-              "response": {
-                "$ref": "Policy"
-              },
-              "parameterOrder": [
-                "resource"
-              ],
-              "httpMethod": "POST",
-              "parameters": {
-                "resource": {
-                  "description": "REQUIRED: The resource for which the policy is being requested.\nSee the operation documentation for the appropriate value for this field.",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}:getIamPolicy",
-              "path": "v1alpha1/{+resource}:getIamPolicy",
-              "id": "containeranalysis.projects.occurrences.getIamPolicy",
-              "description": "Gets the access control policy for a note or an `Occurrence` resource.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na note or occurrence, respectively.\nAttempting to call this method on a resource without the required\npermission will result in a `PERMISSION_DENIED` error. Attempting to call\nthis method on a non-existent resource will result in a `NOT_FOUND` error\nif the user has list permission on the project, or a `PERMISSION_DENIED`\nerror otherwise. The resource takes the following formats:\n`projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and\nprojects/{PROJECT_ID}/notes/{NOTE_ID} for notes",
-              "request": {
-                "$ref": "GetIamPolicyRequest"
-              }
-            },
-            "patch": {
-              "response": {
-                "$ref": "Occurrence"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "PATCH",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "parameters": {
-                "name": {
-                  "description": "The name of the occurrence.\nShould be of the form \"projects/{project_id}/occurrences/{OCCURRENCE_ID}\".",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
-                  "location": "path"
-                },
-                "updateMask": {
-                  "description": "The fields to update.",
-                  "format": "google-fieldmask",
-                  "type": "string",
-                  "location": "query"
-                }
-              },
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}",
-              "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.projects.occurrences.patch",
-              "request": {
-                "$ref": "Occurrence"
-              },
-              "description": "Updates an existing occurrence."
-            },
-            "get": {
-              "description": "Returns the requested `Occurrence`.",
-              "httpMethod": "GET",
-              "parameterOrder": [
-                "name"
-              ],
-              "response": {
-                "$ref": "Occurrence"
-              },
-              "parameters": {
-                "name": {
-                  "pattern": "^projects/[^/]+/occurrences/[^/]+$",
-                  "location": "path",
-                  "description": "The name of the occurrence of the form\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences/{occurrencesId}",
-              "id": "containeranalysis.projects.occurrences.get",
-              "path": "v1alpha1/{+name}"
-            },
-            "getVulnerabilitySummary": {
-              "response": {
-                "$ref": "GetVulnzOccurrencesSummaryResponse"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "GET",
-              "parameters": {
-                "filter": {
-                  "description": "The filter expression.",
-                  "type": "string",
-                  "location": "query"
-                },
-                "parent": {
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path",
-                  "description": "This contains the project Id for example: projects/{project_id}",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/occurrences:vulnerabilitySummary",
-              "path": "v1alpha1/{+parent}/occurrences:vulnerabilitySummary",
-              "id": "containeranalysis.projects.occurrences.getVulnerabilitySummary",
-              "description": "Gets a summary of the number and severity of occurrences."
             }
           }
         },
         "notes": {
-          "resources": {
-            "occurrences": {
-              "methods": {
-                "list": {
-                  "description": "Lists `Occurrences` referencing the specified `Note`. Use this method to\nget all occurrences referencing your `Note` across all your customer\nprojects.",
-                  "response": {
-                    "$ref": "ListNoteOccurrencesResponse"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "httpMethod": "GET",
-                  "parameters": {
-                    "filter": {
-                      "location": "query",
-                      "description": "The filter expression.",
-                      "type": "string"
-                    },
-                    "name": {
-                      "description": "The name field will contain the note name for example:\n  \"provider/{provider_id}/notes/{note_id}\"",
-                      "required": true,
-                      "type": "string",
-                      "pattern": "^projects/[^/]+/notes/[^/]+$",
-                      "location": "path"
-                    },
-                    "pageToken": {
-                      "description": "Token to provide to skip to a particular spot in the list.",
-                      "type": "string",
-                      "location": "query"
-                    },
-                    "pageSize": {
-                      "location": "query",
-                      "description": "Number of notes to return in the list.",
-                      "format": "int32",
-                      "type": "integer"
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ],
-                  "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}/occurrences",
-                  "path": "v1alpha1/{+name}/occurrences",
-                  "id": "containeranalysis.projects.notes.occurrences.list"
-                }
-              }
-            }
-          },
           "methods": {
-            "create": {
-              "flatPath": "v1alpha1/projects/{projectsId}/notes",
-              "path": "v1alpha1/{+parent}/notes",
-              "id": "containeranalysis.projects.notes.create",
-              "description": "Creates a new `Note`.",
+            "getIamPolicy": {
+              "description": "Gets the access control policy for a note or an `Occurrence` resource.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na note or occurrence, respectively.\nAttempting to call this method on a resource without the required\npermission will result in a `PERMISSION_DENIED` error. Attempting to call\nthis method on a non-existent resource will result in a `NOT_FOUND` error\nif the user has list permission on the project, or a `PERMISSION_DENIED`\nerror otherwise. The resource takes the following formats:\n`projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and\nprojects/{PROJECT_ID}/notes/{NOTE_ID} for notes",
               "request": {
-                "$ref": "Note"
+                "$ref": "GetIamPolicyRequest"
               },
-              "response": {
-                "$ref": "Note"
-              },
-              "parameterOrder": [
-                "parent"
-              ],
-              "httpMethod": "POST",
-              "parameters": {
-                "name": {
-                  "location": "query",
-                  "description": "The name of the project.\nShould be of the form \"providers/{provider_id}\".\n@Deprecated",
-                  "type": "string"
-                },
-                "parent": {
-                  "location": "path",
-                  "description": "This field contains the project Id for example:\n\"projects/{project_id}",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$"
-                },
-                "noteId": {
-                  "description": "The ID to use for this note.",
-                  "type": "string",
-                  "location": "query"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "setIamPolicy": {
-              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}:setIamPolicy",
-              "id": "containeranalysis.projects.notes.setIamPolicy",
-              "path": "v1alpha1/{+resource}:setIamPolicy",
-              "description": "Sets the access control policy on the specified `Note` or `Occurrence`.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na `Note` or an `Occurrence`, respectively.\nAttempting to call this method without these permissions will result in a `\n`PERMISSION_DENIED` error.\nAttempting to call this method on a non-existent resource will result in a\n`NOT_FOUND` error if the user has `containeranalysis.notes.list` permission\non a `Note` or `containeranalysis.occurrences.list` on an `Occurrence`, or\na `PERMISSION_DENIED` error otherwise. The resource takes the following\nformats: `projects/{projectid}/occurrences/{occurrenceid}` for occurrences\nand projects/{projectid}/notes/{noteid} for notes",
-              "request": {
-                "$ref": "SetIamPolicyRequest"
-              },
-              "httpMethod": "POST",
-              "parameterOrder": [
-                "resource"
-              ],
               "response": {
                 "$ref": "Policy"
               },
+              "parameterOrder": [
+                "resource"
+              ],
+              "httpMethod": "POST",
               "parameters": {
                 "resource": {
-                  "description": "REQUIRED: The resource for which the policy is being specified.\nSee the operation documentation for the appropriate value for this field.",
+                  "description": "REQUIRED: The resource for which the policy is being requested.\nSee the operation documentation for the appropriate value for this field.",
                   "required": true,
                   "type": "string",
                   "pattern": "^projects/[^/]+/notes/[^/]+$",
                   "location": "path"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ]
-            },
-            "getIamPolicy": {
-              "response": {
-                "$ref": "Policy"
-              },
-              "parameterOrder": [
-                "resource"
-              ],
-              "httpMethod": "POST",
-              "parameters": {
-                "resource": {
-                  "location": "path",
-                  "description": "REQUIRED: The resource for which the policy is being requested.\nSee the operation documentation for the appropriate value for this field.",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/notes/[^/]+$"
                 }
               },
               "scopes": [
@@ -521,49 +428,22 @@
               ],
               "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}:getIamPolicy",
               "path": "v1alpha1/{+resource}:getIamPolicy",
-              "id": "containeranalysis.projects.notes.getIamPolicy",
-              "description": "Gets the access control policy for a note or an `Occurrence` resource.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na note or occurrence, respectively.\nAttempting to call this method on a resource without the required\npermission will result in a `PERMISSION_DENIED` error. Attempting to call\nthis method on a non-existent resource will result in a `NOT_FOUND` error\nif the user has list permission on the project, or a `PERMISSION_DENIED`\nerror otherwise. The resource takes the following formats:\n`projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and\nprojects/{PROJECT_ID}/notes/{NOTE_ID} for notes",
-              "request": {
-                "$ref": "GetIamPolicyRequest"
-              }
-            },
-            "get": {
-              "httpMethod": "GET",
-              "response": {
-                "$ref": "Note"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "parameters": {
-                "name": {
-                  "description": "The name of the note in the form of\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/notes/[^/]+$",
-                  "location": "path"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}",
-              "id": "containeranalysis.projects.notes.get",
-              "path": "v1alpha1/{+name}",
-              "description": "Returns the requested `Note`."
+              "id": "containeranalysis.projects.notes.getIamPolicy"
             },
             "patch": {
+              "path": "v1alpha1/{+name}",
+              "id": "containeranalysis.projects.notes.patch",
               "description": "Updates an existing `Note`.",
               "request": {
                 "$ref": "Note"
               },
-              "httpMethod": "PATCH",
-              "parameterOrder": [
-                "name"
-              ],
               "response": {
                 "$ref": "Note"
               },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "PATCH",
               "parameters": {
                 "updateMask": {
                   "description": "The fields to update.",
@@ -582,47 +462,16 @@
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
-              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}",
-              "id": "containeranalysis.projects.notes.patch",
-              "path": "v1alpha1/{+name}"
+              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}"
             },
-            "testIamPermissions": {
-              "httpMethod": "POST",
-              "parameterOrder": [
-                "resource"
-              ],
+            "get": {
               "response": {
-                "$ref": "TestIamPermissionsResponse"
-              },
-              "parameters": {
-                "resource": {
-                  "pattern": "^projects/[^/]+/notes/[^/]+$",
-                  "location": "path",
-                  "description": "REQUIRED: The resource for which the policy detail is being requested.\nSee the operation documentation for the appropriate value for this field.",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}:testIamPermissions",
-              "id": "containeranalysis.projects.notes.testIamPermissions",
-              "path": "v1alpha1/{+resource}:testIamPermissions",
-              "description": "Returns the permissions that a caller has on the specified note or\noccurrence resource. Requires list permission on the project (for example,\n\"storage.objects.list\" on the containing bucket for testing permission of\nan object). Attempting to call this method on a non-existent resource will\nresult in a `NOT_FOUND` error if the user has list permission on the\nproject, or a `PERMISSION_DENIED` error otherwise. The resource takes the\nfollowing formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for\n`Occurrences` and `projects/{PROJECT_ID}/notes/{NOTE_ID}` for `Notes`",
-              "request": {
-                "$ref": "TestIamPermissionsRequest"
-              }
-            },
-            "delete": {
-              "description": "Deletes the given `Note` from the system.",
-              "httpMethod": "DELETE",
-              "response": {
-                "$ref": "Empty"
+                "$ref": "Note"
               },
               "parameterOrder": [
                 "name"
               ],
+              "httpMethod": "GET",
               "parameters": {
                 "name": {
                   "description": "The name of the note in the form of\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
@@ -636,14 +485,64 @@
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}",
+              "path": "v1alpha1/{+name}",
+              "id": "containeranalysis.projects.notes.get",
+              "description": "Returns the requested `Note`."
+            },
+            "testIamPermissions": {
+              "response": {
+                "$ref": "TestIamPermissionsResponse"
+              },
+              "parameterOrder": [
+                "resource"
+              ],
+              "httpMethod": "POST",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
+                "resource": {
+                  "description": "REQUIRED: The resource for which the policy detail is being requested.\nSee the operation documentation for the appropriate value for this field.",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/notes/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}:testIamPermissions",
+              "path": "v1alpha1/{+resource}:testIamPermissions",
+              "id": "containeranalysis.projects.notes.testIamPermissions",
+              "request": {
+                "$ref": "TestIamPermissionsRequest"
+              },
+              "description": "Returns the permissions that a caller has on the specified note or\noccurrence resource. Requires list permission on the project (for example,\n\"storage.objects.list\" on the containing bucket for testing permission of\nan object). Attempting to call this method on a non-existent resource will\nresult in a `NOT_FOUND` error if the user has list permission on the\nproject, or a `PERMISSION_DENIED` error otherwise. The resource takes the\nfollowing formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for\n`Occurrences` and `projects/{PROJECT_ID}/notes/{NOTE_ID}` for `Notes`"
+            },
+            "delete": {
+              "response": {
+                "$ref": "Empty"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "DELETE",
+              "parameters": {
+                "name": {
+                  "description": "The name of the note in the form of\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/notes/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}",
+              "path": "v1alpha1/{+name}",
               "id": "containeranalysis.projects.notes.delete",
-              "path": "v1alpha1/{+name}"
+              "description": "Deletes the given `Note` from the system."
             },
             "list": {
-              "flatPath": "v1alpha1/projects/{projectsId}/notes",
-              "path": "v1alpha1/{+parent}/notes",
-              "id": "containeranalysis.projects.notes.list",
-              "description": "Lists all `Notes` for a given project.",
               "response": {
                 "$ref": "ListNotesResponse"
               },
@@ -655,6 +554,21 @@
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "parameters": {
+                "filter": {
+                  "location": "query",
+                  "description": "The filter expression.",
+                  "type": "string"
+                },
+                "name": {
+                  "location": "query",
+                  "description": "The name field will contain the project Id for example:\n\"providers/{provider_id}\n@Deprecated",
+                  "type": "string"
+                },
+                "pageToken": {
+                  "location": "query",
+                  "description": "Token to provide to skip to a particular spot in the list.",
+                  "type": "string"
+                },
                 "pageSize": {
                   "location": "query",
                   "description": "Number of notes to return in the list.",
@@ -667,21 +581,123 @@
                   "required": true,
                   "type": "string",
                   "pattern": "^projects/[^/]+$"
-                },
-                "filter": {
-                  "description": "The filter expression.",
+                }
+              },
+              "flatPath": "v1alpha1/projects/{projectsId}/notes",
+              "path": "v1alpha1/{+parent}/notes",
+              "id": "containeranalysis.projects.notes.list",
+              "description": "Lists all `Notes` for a given project."
+            },
+            "setIamPolicy": {
+              "httpMethod": "POST",
+              "parameterOrder": [
+                "resource"
+              ],
+              "response": {
+                "$ref": "Policy"
+              },
+              "parameters": {
+                "resource": {
+                  "location": "path",
+                  "description": "REQUIRED: The resource for which the policy is being specified.\nSee the operation documentation for the appropriate value for this field.",
+                  "required": true,
                   "type": "string",
-                  "location": "query"
-                },
+                  "pattern": "^projects/[^/]+/notes/[^/]+$"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}:setIamPolicy",
+              "id": "containeranalysis.projects.notes.setIamPolicy",
+              "path": "v1alpha1/{+resource}:setIamPolicy",
+              "description": "Sets the access control policy on the specified `Note` or `Occurrence`.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na `Note` or an `Occurrence`, respectively.\nAttempting to call this method without these permissions will result in a `\n`PERMISSION_DENIED` error.\nAttempting to call this method on a non-existent resource will result in a\n`NOT_FOUND` error if the user has `containeranalysis.notes.list` permission\non a `Note` or `containeranalysis.occurrences.list` on an `Occurrence`, or\na `PERMISSION_DENIED` error otherwise. The resource takes the following\nformats: `projects/{projectid}/occurrences/{occurrenceid}` for occurrences\nand projects/{projectid}/notes/{noteid} for notes",
+              "request": {
+                "$ref": "SetIamPolicyRequest"
+              }
+            },
+            "create": {
+              "path": "v1alpha1/{+parent}/notes",
+              "id": "containeranalysis.projects.notes.create",
+              "request": {
+                "$ref": "Note"
+              },
+              "description": "Creates a new `Note`.",
+              "response": {
+                "$ref": "Note"
+              },
+              "parameterOrder": [
+                "parent"
+              ],
+              "httpMethod": "POST",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "parameters": {
                 "name": {
                   "location": "query",
-                  "description": "The name field will contain the project Id for example:\n\"providers/{provider_id}\n@Deprecated",
+                  "description": "The name of the project.\nShould be of the form \"providers/{provider_id}\".\n@Deprecated",
                   "type": "string"
                 },
-                "pageToken": {
-                  "description": "Token to provide to skip to a particular spot in the list.",
+                "parent": {
+                  "description": "This field contains the project Id for example:\n\"projects/{project_id}",
+                  "required": true,
                   "type": "string",
-                  "location": "query"
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path"
+                },
+                "noteId": {
+                  "location": "query",
+                  "description": "The ID to use for this note.",
+                  "type": "string"
+                }
+              },
+              "flatPath": "v1alpha1/projects/{projectsId}/notes"
+            }
+          },
+          "resources": {
+            "occurrences": {
+              "methods": {
+                "list": {
+                  "response": {
+                    "$ref": "ListNoteOccurrencesResponse"
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "GET",
+                  "parameters": {
+                    "name": {
+                      "description": "The name field will contain the note name for example:\n  \"provider/{provider_id}/notes/{note_id}\"",
+                      "required": true,
+                      "type": "string",
+                      "pattern": "^projects/[^/]+/notes/[^/]+$",
+                      "location": "path"
+                    },
+                    "pageToken": {
+                      "description": "Token to provide to skip to a particular spot in the list.",
+                      "type": "string",
+                      "location": "query"
+                    },
+                    "pageSize": {
+                      "location": "query",
+                      "description": "Number of notes to return in the list.",
+                      "format": "int32",
+                      "type": "integer"
+                    },
+                    "filter": {
+                      "location": "query",
+                      "description": "The filter expression.",
+                      "type": "string"
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1alpha1/projects/{projectsId}/notes/{notesId}/occurrences",
+                  "path": "v1alpha1/{+name}/occurrences",
+                  "id": "containeranalysis.projects.notes.occurrences.list",
+                  "description": "Lists `Occurrences` referencing the specified `Note`. Use this method to\nget all occurrences referencing your `Note` across all your customer\nprojects."
                 }
               }
             }
@@ -690,52 +706,51 @@
         "scanConfigs": {
           "methods": {
             "get": {
-              "httpMethod": "GET",
+              "description": "Gets a specific scan configuration for a project.",
               "response": {
                 "$ref": "ScanConfig"
               },
               "parameterOrder": [
                 "name"
               ],
-              "parameters": {
-                "name": {
-                  "location": "path",
-                  "description": "The name of the ScanConfig in the form\nprojects/{project_id}/scanConfigs/{scan_config_id}",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$"
-                }
-              },
+              "httpMethod": "GET",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
+              "parameters": {
+                "name": {
+                  "description": "The name of the ScanConfig in the form\nprojects/{project_id}/scanConfigs/{scan_config_id}",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^projects/[^/]+/scanConfigs/[^/]+$",
+                  "location": "path"
+                }
+              },
               "flatPath": "v1alpha1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
-              "id": "containeranalysis.projects.scanConfigs.get",
               "path": "v1alpha1/{+name}",
-              "description": "Gets a specific scan configuration for a project."
+              "id": "containeranalysis.projects.scanConfigs.get"
             },
             "list": {
-              "description": "Lists scan configurations for a project.",
-              "httpMethod": "GET",
               "response": {
                 "$ref": "ListScanConfigsResponse"
               },
               "parameterOrder": [
                 "parent"
               ],
+              "httpMethod": "GET",
               "parameters": {
                 "pageSize": {
-                  "location": "query",
                   "description": "The number of items to return.",
                   "format": "int32",
-                  "type": "integer"
+                  "type": "integer",
+                  "location": "query"
                 },
                 "parent": {
+                  "pattern": "^projects/[^/]+$",
+                  "location": "path",
                   "description": "This containers the project Id i.e.: projects/{project_id}",
                   "required": true,
-                  "type": "string",
-                  "pattern": "^projects/[^/]+$",
-                  "location": "path"
+                  "type": "string"
                 },
                 "filter": {
                   "description": "The filter expression.",
@@ -743,21 +758,20 @@
                   "location": "query"
                 },
                 "pageToken": {
-                  "location": "query",
                   "description": "The page token to use for the next request.",
-                  "type": "string"
+                  "type": "string",
+                  "location": "query"
                 }
               },
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "flatPath": "v1alpha1/projects/{projectsId}/scanConfigs",
+              "path": "v1alpha1/{+parent}/scanConfigs",
               "id": "containeranalysis.projects.scanConfigs.list",
-              "path": "v1alpha1/{+parent}/scanConfigs"
+              "description": "Lists scan configurations for a project."
             },
             "patch": {
-              "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.projects.scanConfigs.patch",
               "request": {
                 "$ref": "ScanConfig"
               },
@@ -787,7 +801,9 @@
                   "location": "path"
                 }
               },
-              "flatPath": "v1alpha1/projects/{projectsId}/scanConfigs/{scanConfigsId}"
+              "flatPath": "v1alpha1/projects/{projectsId}/scanConfigs/{scanConfigsId}",
+              "path": "v1alpha1/{+name}",
+              "id": "containeranalysis.projects.scanConfigs.patch"
             }
           }
         }
@@ -796,154 +812,11 @@
     "providers": {
       "resources": {
         "notes": {
-          "resources": {
-            "occurrences": {
-              "methods": {
-                "list": {
-                  "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}/occurrences",
-                  "path": "v1alpha1/{+name}/occurrences",
-                  "id": "containeranalysis.providers.notes.occurrences.list",
-                  "description": "Lists `Occurrences` referencing the specified `Note`. Use this method to\nget all occurrences referencing your `Note` across all your customer\nprojects.",
-                  "response": {
-                    "$ref": "ListNoteOccurrencesResponse"
-                  },
-                  "parameterOrder": [
-                    "name"
-                  ],
-                  "httpMethod": "GET",
-                  "parameters": {
-                    "pageSize": {
-                      "location": "query",
-                      "description": "Number of notes to return in the list.",
-                      "format": "int32",
-                      "type": "integer"
-                    },
-                    "filter": {
-                      "location": "query",
-                      "description": "The filter expression.",
-                      "type": "string"
-                    },
-                    "name": {
-                      "description": "The name field will contain the note name for example:\n  \"provider/{provider_id}/notes/{note_id}\"",
-                      "required": true,
-                      "type": "string",
-                      "pattern": "^providers/[^/]+/notes/[^/]+$",
-                      "location": "path"
-                    },
-                    "pageToken": {
-                      "location": "query",
-                      "description": "Token to provide to skip to a particular spot in the list.",
-                      "type": "string"
-                    }
-                  },
-                  "scopes": [
-                    "https://www.googleapis.com/auth/cloud-platform"
-                  ]
-                }
-              }
-            }
-          },
           "methods": {
-            "testIamPermissions": {
-              "description": "Returns the permissions that a caller has on the specified note or\noccurrence resource. Requires list permission on the project (for example,\n\"storage.objects.list\" on the containing bucket for testing permission of\nan object). Attempting to call this method on a non-existent resource will\nresult in a `NOT_FOUND` error if the user has list permission on the\nproject, or a `PERMISSION_DENIED` error otherwise. The resource takes the\nfollowing formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for\n`Occurrences` and `projects/{PROJECT_ID}/notes/{NOTE_ID}` for `Notes`",
-              "request": {
-                "$ref": "TestIamPermissionsRequest"
-              },
-              "httpMethod": "POST",
-              "parameterOrder": [
-                "resource"
-              ],
-              "response": {
-                "$ref": "TestIamPermissionsResponse"
-              },
-              "parameters": {
-                "resource": {
-                  "pattern": "^providers/[^/]+/notes/[^/]+$",
-                  "location": "path",
-                  "description": "REQUIRED: The resource for which the policy detail is being requested.\nSee the operation documentation for the appropriate value for this field.",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}:testIamPermissions",
-              "id": "containeranalysis.providers.notes.testIamPermissions",
-              "path": "v1alpha1/{+resource}:testIamPermissions"
-            },
-            "delete": {
-              "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.providers.notes.delete",
-              "description": "Deletes the given `Note` from the system.",
-              "response": {
-                "$ref": "Empty"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "DELETE",
-              "parameters": {
-                "name": {
-                  "pattern": "^providers/[^/]+/notes/[^/]+$",
-                  "location": "path",
-                  "description": "The name of the note in the form of\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
-                  "required": true,
-                  "type": "string"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}"
-            },
-            "list": {
-              "description": "Lists all `Notes` for a given project.",
-              "response": {
-                "$ref": "ListNotesResponse"
-              },
-              "parameterOrder": [
-                "name"
-              ],
-              "httpMethod": "GET",
-              "parameters": {
-                "filter": {
-                  "location": "query",
-                  "description": "The filter expression.",
-                  "type": "string"
-                },
-                "name": {
-                  "description": "The name field will contain the project Id for example:\n\"providers/{provider_id}\n@Deprecated",
-                  "required": true,
-                  "type": "string",
-                  "pattern": "^providers/[^/]+$",
-                  "location": "path"
-                },
-                "pageToken": {
-                  "description": "Token to provide to skip to a particular spot in the list.",
-                  "type": "string",
-                  "location": "query"
-                },
-                "pageSize": {
-                  "location": "query",
-                  "description": "Number of notes to return in the list.",
-                  "format": "int32",
-                  "type": "integer"
-                },
-                "parent": {
-                  "description": "This field contains the project Id for example: \"projects/{PROJECT_ID}\".",
-                  "type": "string",
-                  "location": "query"
-                }
-              },
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
-              "flatPath": "v1alpha1/providers/{providersId}/notes",
-              "path": "v1alpha1/{+name}/notes",
-              "id": "containeranalysis.providers.notes.list"
-            },
             "setIamPolicy": {
+              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}:setIamPolicy",
+              "path": "v1alpha1/{+resource}:setIamPolicy",
+              "id": "containeranalysis.providers.notes.setIamPolicy",
               "request": {
                 "$ref": "SetIamPolicyRequest"
               },
@@ -966,16 +839,9 @@
                   "pattern": "^providers/[^/]+/notes/[^/]+$",
                   "location": "path"
                 }
-              },
-              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}:setIamPolicy",
-              "path": "v1alpha1/{+resource}:setIamPolicy",
-              "id": "containeranalysis.providers.notes.setIamPolicy"
+              }
             },
             "create": {
-              "request": {
-                "$ref": "Note"
-              },
-              "description": "Creates a new `Note`.",
               "response": {
                 "$ref": "Note"
               },
@@ -983,17 +849,7 @@
                 "name"
               ],
               "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
               "parameters": {
-                "name": {
-                  "pattern": "^providers/[^/]+$",
-                  "location": "path",
-                  "description": "The name of the project.\nShould be of the form \"providers/{provider_id}\".\n@Deprecated",
-                  "required": true,
-                  "type": "string"
-                },
                 "parent": {
                   "location": "query",
                   "description": "This field contains the project Id for example:\n\"projects/{project_id}",
@@ -1003,19 +859,31 @@
                   "location": "query",
                   "description": "The ID to use for this note.",
                   "type": "string"
+                },
+                "name": {
+                  "location": "path",
+                  "description": "The name of the project.\nShould be of the form \"providers/{provider_id}\".\n@Deprecated",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^providers/[^/]+$"
                 }
               },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
               "flatPath": "v1alpha1/providers/{providersId}/notes",
               "path": "v1alpha1/{+name}/notes",
-              "id": "containeranalysis.providers.notes.create"
+              "id": "containeranalysis.providers.notes.create",
+              "description": "Creates a new `Note`.",
+              "request": {
+                "$ref": "Note"
+              }
             },
             "getIamPolicy": {
-              "path": "v1alpha1/{+resource}:getIamPolicy",
-              "id": "containeranalysis.providers.notes.getIamPolicy",
+              "description": "Gets the access control policy for a note or an `Occurrence` resource.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na note or occurrence, respectively.\nAttempting to call this method on a resource without the required\npermission will result in a `PERMISSION_DENIED` error. Attempting to call\nthis method on a non-existent resource will result in a `NOT_FOUND` error\nif the user has list permission on the project, or a `PERMISSION_DENIED`\nerror otherwise. The resource takes the following formats:\n`projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and\nprojects/{PROJECT_ID}/notes/{NOTE_ID} for notes",
               "request": {
                 "$ref": "GetIamPolicyRequest"
               },
-              "description": "Gets the access control policy for a note or an `Occurrence` resource.\nRequires `containeranalysis.notes.setIamPolicy` or\n`containeranalysis.occurrences.setIamPolicy` permission if the resource is\na note or occurrence, respectively.\nAttempting to call this method on a resource without the required\npermission will result in a `PERMISSION_DENIED` error. Attempting to call\nthis method on a non-existent resource will result in a `NOT_FOUND` error\nif the user has list permission on the project, or a `PERMISSION_DENIED`\nerror otherwise. The resource takes the following formats:\n`projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for occurrences and\nprojects/{PROJECT_ID}/notes/{NOTE_ID} for notes",
               "response": {
                 "$ref": "Policy"
               },
@@ -1023,9 +891,6 @@
                 "resource"
               ],
               "httpMethod": "POST",
-              "scopes": [
-                "https://www.googleapis.com/auth/cloud-platform"
-              ],
               "parameters": {
                 "resource": {
                   "pattern": "^providers/[^/]+/notes/[^/]+$",
@@ -1035,9 +900,17 @@
                   "type": "string"
                 }
               },
-              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}:getIamPolicy"
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}:getIamPolicy",
+              "path": "v1alpha1/{+resource}:getIamPolicy",
+              "id": "containeranalysis.providers.notes.getIamPolicy"
             },
             "patch": {
+              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}",
+              "path": "v1alpha1/{+name}",
+              "id": "containeranalysis.providers.notes.patch",
               "request": {
                 "$ref": "Note"
               },
@@ -1053,32 +926,82 @@
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
               "parameters": {
-                "updateMask": {
-                  "location": "query",
-                  "description": "The fields to update.",
-                  "format": "google-fieldmask",
-                  "type": "string"
-                },
                 "name": {
                   "location": "path",
                   "description": "The name of the note.\nShould be of the form \"projects/{provider_id}/notes/{note_id}\".",
                   "required": true,
                   "type": "string",
                   "pattern": "^providers/[^/]+/notes/[^/]+$"
+                },
+                "updateMask": {
+                  "location": "query",
+                  "description": "The fields to update.",
+                  "format": "google-fieldmask",
+                  "type": "string"
                 }
-              },
-              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}",
-              "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.providers.notes.patch"
+              }
             },
             "get": {
+              "httpMethod": "GET",
               "response": {
                 "$ref": "Note"
               },
               "parameterOrder": [
                 "name"
               ],
-              "httpMethod": "GET",
+              "parameters": {
+                "name": {
+                  "description": "The name of the note in the form of\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^providers/[^/]+/notes/[^/]+$",
+                  "location": "path"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}",
+              "id": "containeranalysis.providers.notes.get",
+              "path": "v1alpha1/{+name}",
+              "description": "Returns the requested `Note`."
+            },
+            "testIamPermissions": {
+              "path": "v1alpha1/{+resource}:testIamPermissions",
+              "id": "containeranalysis.providers.notes.testIamPermissions",
+              "description": "Returns the permissions that a caller has on the specified note or\noccurrence resource. Requires list permission on the project (for example,\n\"storage.objects.list\" on the containing bucket for testing permission of\nan object). Attempting to call this method on a non-existent resource will\nresult in a `NOT_FOUND` error if the user has list permission on the\nproject, or a `PERMISSION_DENIED` error otherwise. The resource takes the\nfollowing formats: `projects/{PROJECT_ID}/occurrences/{OCCURRENCE_ID}` for\n`Occurrences` and `projects/{PROJECT_ID}/notes/{NOTE_ID}` for `Notes`",
+              "request": {
+                "$ref": "TestIamPermissionsRequest"
+              },
+              "response": {
+                "$ref": "TestIamPermissionsResponse"
+              },
+              "parameterOrder": [
+                "resource"
+              ],
+              "httpMethod": "POST",
+              "parameters": {
+                "resource": {
+                  "location": "path",
+                  "description": "REQUIRED: The resource for which the policy detail is being requested.\nSee the operation documentation for the appropriate value for this field.",
+                  "required": true,
+                  "type": "string",
+                  "pattern": "^providers/[^/]+/notes/[^/]+$"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ],
+              "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}:testIamPermissions"
+            },
+            "delete": {
+              "response": {
+                "$ref": "Empty"
+              },
+              "parameterOrder": [
+                "name"
+              ],
+              "httpMethod": "DELETE",
               "scopes": [
                 "https://www.googleapis.com/auth/cloud-platform"
               ],
@@ -1093,8 +1016,101 @@
               },
               "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}",
               "path": "v1alpha1/{+name}",
-              "id": "containeranalysis.providers.notes.get",
-              "description": "Returns the requested `Note`."
+              "id": "containeranalysis.providers.notes.delete",
+              "description": "Deletes the given `Note` from the system."
+            },
+            "list": {
+              "flatPath": "v1alpha1/providers/{providersId}/notes",
+              "id": "containeranalysis.providers.notes.list",
+              "path": "v1alpha1/{+name}/notes",
+              "description": "Lists all `Notes` for a given project.",
+              "httpMethod": "GET",
+              "parameterOrder": [
+                "name"
+              ],
+              "response": {
+                "$ref": "ListNotesResponse"
+              },
+              "parameters": {
+                "pageSize": {
+                  "description": "Number of notes to return in the list.",
+                  "format": "int32",
+                  "type": "integer",
+                  "location": "query"
+                },
+                "parent": {
+                  "location": "query",
+                  "description": "This field contains the project Id for example: \"projects/{PROJECT_ID}\".",
+                  "type": "string"
+                },
+                "filter": {
+                  "description": "The filter expression.",
+                  "type": "string",
+                  "location": "query"
+                },
+                "name": {
+                  "pattern": "^providers/[^/]+$",
+                  "location": "path",
+                  "description": "The name field will contain the project Id for example:\n\"providers/{provider_id}\n@Deprecated",
+                  "required": true,
+                  "type": "string"
+                },
+                "pageToken": {
+                  "description": "Token to provide to skip to a particular spot in the list.",
+                  "type": "string",
+                  "location": "query"
+                }
+              },
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            }
+          },
+          "resources": {
+            "occurrences": {
+              "methods": {
+                "list": {
+                  "description": "Lists `Occurrences` referencing the specified `Note`. Use this method to\nget all occurrences referencing your `Note` across all your customer\nprojects.",
+                  "response": {
+                    "$ref": "ListNoteOccurrencesResponse"
+                  },
+                  "parameterOrder": [
+                    "name"
+                  ],
+                  "httpMethod": "GET",
+                  "parameters": {
+                    "pageSize": {
+                      "location": "query",
+                      "description": "Number of notes to return in the list.",
+                      "format": "int32",
+                      "type": "integer"
+                    },
+                    "filter": {
+                      "description": "The filter expression.",
+                      "type": "string",
+                      "location": "query"
+                    },
+                    "name": {
+                      "pattern": "^providers/[^/]+/notes/[^/]+$",
+                      "location": "path",
+                      "description": "The name field will contain the note name for example:\n  \"provider/{provider_id}/notes/{note_id}\"",
+                      "required": true,
+                      "type": "string"
+                    },
+                    "pageToken": {
+                      "location": "query",
+                      "description": "Token to provide to skip to a particular spot in the list.",
+                      "type": "string"
+                    }
+                  },
+                  "scopes": [
+                    "https://www.googleapis.com/auth/cloud-platform"
+                  ],
+                  "flatPath": "v1alpha1/providers/{providersId}/notes/{notesId}/occurrences",
+                  "path": "v1alpha1/{+name}/occurrences",
+                  "id": "containeranalysis.providers.notes.occurrences.list"
+                }
+              }
             }
           }
         }
@@ -1103,9 +1119,9 @@
   },
   "parameters": {
     "fields": {
+      "location": "query",
       "description": "Selector specifying which fields to include in a partial response.",
-      "type": "string",
-      "location": "query"
+      "type": "string"
     },
     "uploadType": {
       "description": "Legacy upload protocol for media (e.g. \"media\", \"multipart\").",
@@ -1136,6 +1152,8 @@
       "type": "string"
     },
     "alt": {
+      "description": "Data format for response.",
+      "default": "json",
       "enum": [
         "json",
         "media",
@@ -1147,9 +1165,7 @@
         "Media download with context-dependent Content-Type",
         "Responses with Content-Type of application/x-protobuf"
       ],
-      "location": "query",
-      "description": "Data format for response.",
-      "default": "json"
+      "location": "query"
     },
     "access_token": {
       "description": "OAuth access token.",
@@ -1157,19 +1173,19 @@
       "location": "query"
     },
     "key": {
-      "location": "query",
       "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
-      "type": "string"
-    },
-    "upload_protocol": {
-      "location": "query",
-      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
-      "type": "string"
-    },
-    "quotaUser": {
-      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
       "type": "string",
       "location": "query"
+    },
+    "upload_protocol": {
+      "description": "Upload protocol for media (e.g. \"raw\", \"multipart\").",
+      "type": "string",
+      "location": "query"
+    },
+    "quotaUser": {
+      "location": "query",
+      "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.",
+      "type": "string"
     },
     "prettyPrint": {
       "location": "query",
@@ -1184,34 +1200,71 @@
   "description": "An implementation of the Grafeas API, which stores, and enables querying and retrieval of critical metadata about all of your software artifacts.",
   "kind": "discovery#restDescription",
   "basePath": "",
-  "id": "containeranalysis:v1alpha1",
+  "revision": "20190503",
   "documentationLink": "https://cloud.google.com/container-analysis/api/reference/rest/",
-  "revision": "20190419",
+  "id": "containeranalysis:v1alpha1",
   "discoveryVersion": "v1",
   "version_module": true,
   "schemas": {
+    "BuildDetails": {
+      "description": "Message encapsulating build provenance details.",
+      "type": "object",
+      "properties": {
+        "provenanceBytes": {
+          "description": "Serialized JSON representation of the provenance, used in generating the\n`BuildSignature` in the corresponding Result. After verifying the\nsignature, `provenance_bytes` can be unmarshalled and compared to the\nprovenance to confirm that it is unchanged. A base64-encoded string\nrepresentation of the provenance bytes is used for the signature in order\nto interoperate with openssl which expects this format for signature\nverification.\n\nThe serialized form is captured both to avoid ambiguity in how the\nprovenance is marshalled to json as well to prevent incompatibilities with\nfuture changes.",
+          "type": "string"
+        },
+        "provenance": {
+          "description": "The actual provenance",
+          "$ref": "BuildProvenance"
+        }
+      },
+      "id": "BuildDetails"
+    },
+    "Hash": {
+      "description": "Container message for hash values.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The type of hash that was performed.",
+          "type": "string",
+          "enumDescriptions": [
+            "No hash requested.",
+            "A sha256 hash."
+          ],
+          "enum": [
+            "NONE",
+            "SHA256"
+          ]
+        },
+        "value": {
+          "description": "The hash value.",
+          "format": "byte",
+          "type": "string"
+        }
+      },
+      "id": "Hash"
+    },
     "SetIamPolicyRequest": {
       "description": "Request message for `SetIamPolicy` method.",
       "type": "object",
       "properties": {
-        "policy": {
-          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of\nthe policy is limited to a few 10s of KB. An empty policy is a\nvalid policy but certain Cloud Platform services (such as Projects)\nmight reject them.",
-          "$ref": "Policy"
-        },
         "updateMask": {
           "description": "OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only\nthe fields in the mask will be modified. If no mask is provided, the\nfollowing default mask is used:\npaths: \"bindings, etag\"\nThis field is only used by Cloud IAM.",
           "format": "google-fieldmask",
           "type": "string"
+        },
+        "policy": {
+          "$ref": "Policy",
+          "description": "REQUIRED: The complete policy to be applied to the `resource`. The size of\nthe policy is limited to a few 10s of KB. An empty policy is a\nvalid policy but certain Cloud Platform services (such as Projects)\nmight reject them."
         }
       },
       "id": "SetIamPolicyRequest"
     },
     "VulnerabilityLocation": {
+      "description": "The location of the vulnerability",
+      "type": "object",
       "properties": {
-        "cpeUri": {
-          "description": "The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/)\nformat. Examples include distro or storage location for vulnerable jar.\nThis field can be used as a filter in list requests.",
-          "type": "string"
-        },
         "package": {
           "description": "The package being described.",
           "type": "string"
@@ -1219,16 +1272,26 @@
         "version": {
           "description": "The version of the package being described.\nThis field can be used as a filter in list requests.",
           "$ref": "Version"
+        },
+        "cpeUri": {
+          "description": "The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/)\nformat. Examples include distro or storage location for vulnerable jar.\nThis field can be used as a filter in list requests.",
+          "type": "string"
         }
       },
-      "id": "VulnerabilityLocation",
-      "description": "The location of the vulnerability",
-      "type": "object"
+      "id": "VulnerabilityLocation"
     },
     "GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContext": {
       "description": "A SourceContext referring to a Gerrit project.",
       "type": "object",
       "properties": {
+        "gerritProject": {
+          "description": "The full project name within the host. Projects may be nested, so\n\"project/subproject\" is a valid project name. The \"repo name\" is\nthe hostURI/project.",
+          "type": "string"
+        },
+        "aliasContext": {
+          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1AliasContext",
+          "description": "An alias, which may be a branch or tag."
+        },
         "hostUri": {
           "description": "The URI of a running Gerrit instance.",
           "type": "string"
@@ -1236,14 +1299,6 @@
         "revisionId": {
           "description": "A revision (commit) ID.",
           "type": "string"
-        },
-        "gerritProject": {
-          "description": "The full project name within the host. Projects may be nested, so\n\"project/subproject\" is a valid project name. The \"repo name\" is\nthe hostURI/project.",
-          "type": "string"
-        },
-        "aliasContext": {
-          "description": "An alias, which may be a branch or tag.",
-          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1AliasContext"
         }
       },
       "id": "GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContext"
@@ -1252,6 +1307,10 @@
       "description": "Command describes a step performed as part of the build pipeline.",
       "type": "object",
       "properties": {
+        "id": {
+          "description": "Optional unique identifier for this Command, used in wait_for to reference\nthis Command as a dependency.",
+          "type": "string"
+        },
         "dir": {
           "description": "Working directory (relative to project source root) used when running\nthis Command.",
           "type": "string"
@@ -1280,61 +1339,57 @@
         "name": {
           "description": "Name of the command, as presented on the command line, or if the command is\npackaged as a Docker container, as presented to `docker pull`.",
           "type": "string"
-        },
-        "id": {
-          "description": "Optional unique identifier for this Command, used in wait_for to reference\nthis Command as a dependency.",
-          "type": "string"
         }
       },
       "id": "Command"
     },
     "Attestation": {
+      "description": "Occurrence that represents a single \"attestation\".  The authenticity of an\nAttestation can be verified using the attached signature. If the verifier\ntrusts the public key of the signer, then verifying the signature is\nsufficient to establish trust.  In this circumstance, the\nAttestationAuthority to which this Attestation is attached is primarily\nuseful for look-up (how to find this Attestation if you already know the\nAuthority and artifact to be verified) and intent (which authority was this\nattestation intended to sign for).",
+      "type": "object",
       "properties": {
         "pgpSignedAttestation": {
           "$ref": "PgpSignedAttestation"
         }
       },
-      "id": "Attestation",
-      "description": "Occurrence that represents a single \"attestation\".  The authenticity of an\nAttestation can be verified using the attached signature. If the verifier\ntrusts the public key of the signer, then verifying the signature is\nsufficient to establish trust.  In this circumstance, the\nAttestationAuthority to which this Attestation is attached is primarily\nuseful for look-up (how to find this Attestation if you already know the\nAuthority and artifact to be verified) and intent (which authority was this\nattestation intended to sign for).",
-      "type": "object"
+      "id": "Attestation"
     },
     "Location": {
+      "description": "An occurrence of a particular package installation found within a\nsystem's filesystem.\ne.g. glibc was found in /var/lib/dpkg/status",
+      "type": "object",
       "properties": {
+        "cpeUri": {
+          "description": "The cpe_uri in [cpe format](https://cpe.mitre.org/specification/)\ndenoting the package manager version distributing a package.",
+          "type": "string"
+        },
         "version": {
-          "$ref": "Version",
-          "description": "The version installed at this location."
+          "description": "The version installed at this location.",
+          "$ref": "Version"
         },
         "path": {
           "description": "The path from which we gathered that this package/version is installed.",
           "type": "string"
-        },
-        "cpeUri": {
-          "description": "The cpe_uri in [cpe format](https://cpe.mitre.org/specification/)\ndenoting the package manager version distributing a package.",
-          "type": "string"
         }
       },
-      "id": "Location",
-      "description": "An occurrence of a particular package installation found within a\nsystem's filesystem.\ne.g. glibc was found in /var/lib/dpkg/status",
-      "type": "object"
+      "id": "Location"
     },
     "Resource": {
+      "description": "Resource is an entity that can have metadata. E.g., a Docker image.",
+      "type": "object",
       "properties": {
+        "uri": {
+          "description": "The unique URI of the resource. E.g.,\n\"https://gcr.io/project/image@sha256:foo\" for a Docker image.",
+          "type": "string"
+        },
         "name": {
           "description": "The name of the resource. E.g., the name of a Docker image - \"Debian\".",
           "type": "string"
         },
         "contentHash": {
-          "description": "The hash of the resource content. E.g., the Docker digest.",
-          "$ref": "Hash"
-        },
-        "uri": {
-          "description": "The unique URI of the resource. E.g.,\n\"https://gcr.io/project/image@sha256:foo\" for a Docker image.",
-          "type": "string"
+          "$ref": "Hash",
+          "description": "The hash of the resource content. E.g., the Docker digest."
         }
       },
-      "id": "Resource",
-      "description": "Resource is an entity that can have metadata. E.g., a Docker image.",
-      "type": "object"
+      "id": "Resource"
     },
     "TestIamPermissionsRequest": {
       "description": "Request message for `TestIamPermissions` method.",
@@ -1352,6 +1407,14 @@
     },
     "Artifact": {
       "properties": {
+        "name": {
+          "description": "Name of the artifact. This may be the path to a binary or jar file, or in\nthe case of a container build, the name used to push the container image to\nGoogle Container Registry, as presented to `docker push`.\n\nThis field is deprecated in favor of the plural `names` field; it continues\nto exist here to allow existing BuildProvenance serialized to json in\ngoogle.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to\ndeserialize back into proto.",
+          "type": "string"
+        },
+        "checksum": {
+          "description": "Hash or checksum value of a binary, or Docker Registry 2.0 digest of a\ncontainer.",
+          "type": "string"
+        },
         "id": {
           "description": "Artifact ID, if any; for container images, this will be a URL by digest\nlike gcr.io/projectID/imagename@sha256:123456",
           "type": "string"
@@ -1362,14 +1425,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "name": {
-          "description": "Name of the artifact. This may be the path to a binary or jar file, or in\nthe case of a container build, the name used to push the container image to\nGoogle Container Registry, as presented to `docker push`.\n\nThis field is deprecated in favor of the plural `names` field; it continues\nto exist here to allow existing BuildProvenance serialized to json in\ngoogle.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to\ndeserialize back into proto.",
-          "type": "string"
-        },
-        "checksum": {
-          "description": "Hash or checksum value of a binary, or Docker Registry 2.0 digest of a\ncontainer.",
-          "type": "string"
         }
       },
       "id": "Artifact",
@@ -1377,8 +1432,6 @@
       "type": "object"
     },
     "Version": {
-      "description": "Version contains structured information about the version of the package.\nFor a discussion of this in Debian/Ubuntu:\nhttp://serverfault.com/questions/604541/debian-packages-version-convention\nFor a discussion of this in Redhat/Fedora/Centos:\nhttp://blog.jasonantman.com/2014/07/how-yum-and-rpm-compare-versions/",
-      "type": "object",
       "properties": {
         "name": {
           "description": "The main part of the version name.",
@@ -1408,7 +1461,9 @@
           "type": "string"
         }
       },
-      "id": "Version"
+      "id": "Version",
+      "description": "Version contains structured information about the version of the package.\nFor a discussion of this in Debian/Ubuntu:\nhttp://serverfault.com/questions/604541/debian-packages-version-convention\nFor a discussion of this in Redhat/Fedora/Centos:\nhttp://blog.jasonantman.com/2014/07/how-yum-and-rpm-compare-versions/",
+      "type": "object"
     },
     "Package": {
       "description": "This represents a particular package that is distributed over\nvarious channels.\ne.g. glibc (aka libc6) is distributed by many, at various versions.",
@@ -1429,6 +1484,8 @@
       "id": "Package"
     },
     "Deployable": {
+      "description": "An artifact that can be deployed in some runtime.",
+      "type": "object",
       "properties": {
         "resourceUri": {
           "description": "Resource URI for the artifact being deployed.",
@@ -1438,11 +1495,11 @@
           }
         }
       },
-      "id": "Deployable",
-      "description": "An artifact that can be deployed in some runtime.",
-      "type": "object"
+      "id": "Deployable"
     },
     "GoogleDevtoolsContaineranalysisV1alpha1OperationMetadata": {
+      "description": "Metadata for all operations used and required for all operations\nthat created by Container Analysis Providers",
+      "type": "object",
       "properties": {
         "createTime": {
           "description": "Output only. The time this operation was created.",
@@ -1455,19 +1512,10 @@
           "type": "string"
         }
       },
-      "id": "GoogleDevtoolsContaineranalysisV1alpha1OperationMetadata",
-      "description": "Metadata for all operations used and required for all operations\nthat created by Container Analysis Providers",
-      "type": "object"
+      "id": "GoogleDevtoolsContaineranalysisV1alpha1OperationMetadata"
     },
     "Fingerprint": {
       "properties": {
-        "v2Blob": {
-          "description": "The ordered list of v2 blobs that represent a given image.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "v1Name": {
           "description": "The layer-id of the final layer in the Docker image's v1\nrepresentation.\nThis field can be used as a filter in list requests.",
           "type": "string"
@@ -1475,6 +1523,13 @@
         "v2Name": {
           "description": "Output only. The name of the image's v2 blobs computed via:\n  [bottom] := v2_blobbottom := sha256(v2_blob[N] + \" \" + v2_name[N+1])\nOnly the name of the final blob is kept.\nThis field can be used as a filter in list requests.",
           "type": "string"
+        },
+        "v2Blob": {
+          "description": "The ordered list of v2 blobs that represent a given image.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "id": "Fingerprint",
@@ -1482,38 +1537,28 @@
       "type": "object"
     },
     "AuditConfig": {
-      "description": "Specifies the audit configuration for a service.\nThe configuration determines which permission types are logged, and what\nidentities, if any, are exempted from logging.\nAn AuditConfig must have one or more AuditLogConfigs.\n\nIf there are AuditConfigs for both `allServices` and a specific service,\nthe union of the two AuditConfigs is used for that service: the log_types\nspecified in each AuditConfig are enabled, and the exempted_members in each\nAuditLogConfig are exempted.\n\nExample Policy with multiple AuditConfigs:\n\n    {\n      \"audit_configs\": [\n        {\n          \"service\": \"allServices\"\n          \"audit_log_configs\": [\n            {\n              \"log_type\": \"DATA_READ\",\n              \"exempted_members\": [\n                \"user:foo@gmail.com\"\n              ]\n            },\n            {\n              \"log_type\": \"DATA_WRITE\",\n            },\n            {\n              \"log_type\": \"ADMIN_READ\",\n            }\n          ]\n        },\n        {\n          \"service\": \"fooservice.googleapis.com\"\n          \"audit_log_configs\": [\n            {\n              \"log_type\": \"DATA_READ\",\n            },\n            {\n              \"log_type\": \"DATA_WRITE\",\n              \"exempted_members\": [\n                \"user:bar@gmail.com\"\n              ]\n            }\n          ]\n        }\n      ]\n    }\n\nFor fooservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ\nlogging. It also exempts foo@gmail.com from DATA_READ logging, and\nbar@gmail.com from DATA_WRITE logging.",
-      "type": "object",
       "properties": {
-        "service": {
-          "description": "Specifies a service that will be enabled for audit logging.\nFor example, `storage.googleapis.com`, `cloudsql.googleapis.com`.\n`allServices` is a special value that covers all services.",
-          "type": "string"
-        },
         "auditLogConfigs": {
           "description": "The configuration for logging of each type of permission.",
           "type": "array",
           "items": {
             "$ref": "AuditLogConfig"
           }
+        },
+        "service": {
+          "description": "Specifies a service that will be enabled for audit logging.\nFor example, `storage.googleapis.com`, `cloudsql.googleapis.com`.\n`allServices` is a special value that covers all services.",
+          "type": "string"
         }
       },
-      "id": "AuditConfig"
+      "id": "AuditConfig",
+      "description": "Specifies the audit configuration for a service.\nThe configuration determines which permission types are logged, and what\nidentities, if any, are exempted from logging.\nAn AuditConfig must have one or more AuditLogConfigs.\n\nIf there are AuditConfigs for both `allServices` and a specific service,\nthe union of the two AuditConfigs is used for that service: the log_types\nspecified in each AuditConfig are enabled, and the exempted_members in each\nAuditLogConfig are exempted.\n\nExample Policy with multiple AuditConfigs:\n\n    {\n      \"audit_configs\": [\n        {\n          \"service\": \"allServices\"\n          \"audit_log_configs\": [\n            {\n              \"log_type\": \"DATA_READ\",\n              \"exempted_members\": [\n                \"user:foo@gmail.com\"\n              ]\n            },\n            {\n              \"log_type\": \"DATA_WRITE\",\n            },\n            {\n              \"log_type\": \"ADMIN_READ\",\n            }\n          ]\n        },\n        {\n          \"service\": \"fooservice.googleapis.com\"\n          \"audit_log_configs\": [\n            {\n              \"log_type\": \"DATA_READ\",\n            },\n            {\n              \"log_type\": \"DATA_WRITE\",\n              \"exempted_members\": [\n                \"user:bar@gmail.com\"\n              ]\n            }\n          ]\n        }\n      ]\n    }\n\nFor fooservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ\nlogging. It also exempts foo@gmail.com from DATA_READ logging, and\nbar@gmail.com from DATA_WRITE logging.",
+      "type": "object"
     },
     "Discovery": {
       "description": "A note that indicates a type of analysis a provider would perform. This note\nexists in a provider's project. A `Discovery` occurrence is created in a\nconsumer's project at the start of analysis. The occurrence's operation will\nindicate the status of the analysis. Absence of an occurrence linked to this\nnote for a resource indicates that analysis hasn't started.",
       "type": "object",
       "properties": {
         "analysisKind": {
-          "enum": [
-            "KIND_UNSPECIFIED",
-            "PACKAGE_VULNERABILITY",
-            "BUILD_DETAILS",
-            "IMAGE_BASIS",
-            "PACKAGE_MANAGER",
-            "DEPLOYABLE",
-            "DISCOVERY",
-            "ATTESTATION_AUTHORITY"
-          ],
           "description": "The kind of analysis that is handled by this discovery.",
           "type": "string",
           "enumDescriptions": [
@@ -1525,6 +1570,16 @@
             "The note and occurrence track deployment events.",
             "The note and occurrence track the initial discovery status of a resource.",
             "This represents a logical \"role\" that can attest to artifacts."
+          ],
+          "enum": [
+            "KIND_UNSPECIFIED",
+            "PACKAGE_VULNERABILITY",
+            "BUILD_DETAILS",
+            "IMAGE_BASIS",
+            "PACKAGE_MANAGER",
+            "DEPLOYABLE",
+            "DISCOVERY",
+            "ATTESTATION_AUTHORITY"
           ]
         }
       },
@@ -1558,25 +1613,19 @@
       "id": "RepoSource"
     },
     "BuildSignature": {
-      "description": "Message encapsulating the signature of the verified build.",
-      "type": "object",
       "properties": {
-        "keyId": {
-          "description": "An Id for the key used to sign. This could be either an Id for the key\nstored in `public_key` (such as the Id or fingerprint for a PGP key, or the\nCN for a cert), or a reference to an external key (such as a reference to a\nkey in Cloud Key Management Service).",
-          "type": "string"
-        },
         "keyType": {
-          "enum": [
-            "KEY_TYPE_UNSPECIFIED",
-            "PGP_ASCII_ARMORED",
-            "PKIX_PEM"
-          ],
           "description": "The type of the key, either stored in `public_key` or referenced in\n`key_id`",
           "type": "string",
           "enumDescriptions": [
             "`KeyType` is not set.",
             "`PGP ASCII Armored` public key.",
             "`PKIX PEM` public key."
+          ],
+          "enum": [
+            "KEY_TYPE_UNSPECIFIED",
+            "PGP_ASCII_ARMORED",
+            "PKIX_PEM"
           ]
         },
         "signature": {
@@ -1586,17 +1635,23 @@
         "publicKey": {
           "description": "Public key of the builder which can be used to verify that the related\nfindings are valid and unchanged. If `key_type` is empty, this defaults\nto PEM encoded public keys.\n\nThis field may be empty if `key_id` references an external key.\n\nFor Cloud Build based signatures, this is a PEM encoded public\nkey. To verify the Cloud Build signature, place the contents of\nthis field into a file (public.pem). The signature field is base64-decoded\ninto its binary representation in signature.bin, and the provenance bytes\nfrom `BuildDetails` are base64-decoded into a binary representation in\nsigned.bin. OpenSSL can then verify the signature:\n`openssl sha256 -verify public.pem -signature signature.bin signed.bin`",
           "type": "string"
+        },
+        "keyId": {
+          "description": "An Id for the key used to sign. This could be either an Id for the key\nstored in `public_key` (such as the Id or fingerprint for a PGP key, or the\nCN for a cert), or a reference to an external key (such as a reference to a\nkey in Cloud Key Management Service).",
+          "type": "string"
         }
       },
-      "id": "BuildSignature"
+      "id": "BuildSignature",
+      "description": "Message encapsulating the signature of the verified build.",
+      "type": "object"
     },
     "CreateOperationRequest": {
       "description": "Request for creating an operation",
       "type": "object",
       "properties": {
         "operation": {
-          "$ref": "Operation",
-          "description": "The operation to create."
+          "description": "The operation to create.",
+          "$ref": "Operation"
         },
         "operationId": {
           "description": "The ID to use for this operation.",
@@ -1609,13 +1664,27 @@
       "description": "Provides information about the scan status of a discovered resource.",
       "type": "object",
       "properties": {
+        "continuousAnalysis": {
+          "enum": [
+            "CONTINUOUS_ANALYSIS_UNSPECIFIED",
+            "ACTIVE",
+            "INACTIVE"
+          ],
+          "description": "Whether the resource is continuously analyzed.",
+          "type": "string",
+          "enumDescriptions": [
+            "Unknown",
+            "The resource is continuously analyzed.",
+            "The resource is ignored for continuous analysis."
+          ]
+        },
         "analysisStatusError": {
-          "$ref": "Status",
-          "description": "When an error is encountered this will contain a LocalizedMessage under\ndetails to show to the user. The LocalizedMessage output only and\npopulated by the API."
+          "description": "When an error is encountered this will contain a LocalizedMessage under\ndetails to show to the user. The LocalizedMessage output only and\npopulated by the API.",
+          "$ref": "Status"
         },
         "operation": {
-          "$ref": "Operation",
-          "description": "Output only. An operation that indicates the status of the current scan.\nThis field is deprecated, do not use."
+          "description": "Output only. An operation that indicates the status of the current scan.\nThis field is deprecated, do not use.",
+          "$ref": "Operation"
         },
         "analysisStatus": {
           "enumDescriptions": [
@@ -1636,20 +1705,6 @@
           ],
           "description": "The status of discovery for the resource.",
           "type": "string"
-        },
-        "continuousAnalysis": {
-          "enumDescriptions": [
-            "Unknown",
-            "The resource is continuously analyzed.",
-            "The resource is ignored for continuous analysis."
-          ],
-          "enum": [
-            "CONTINUOUS_ANALYSIS_UNSPECIFIED",
-            "ACTIVE",
-            "INACTIVE"
-          ],
-          "description": "Whether the resource is continuously analyzed.",
-          "type": "string"
         }
       },
       "id": "Discovered"
@@ -1659,12 +1714,12 @@
       "type": "object",
       "properties": {
         "gerrit": {
-          "description": "A SourceContext referring to a Gerrit project.",
-          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContext"
+          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContext",
+          "description": "A SourceContext referring to a Gerrit project."
         },
         "cloudRepo": {
-          "description": "A SourceContext referring to a revision in a Google Cloud Source Repo.",
-          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext"
+          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext",
+          "description": "A SourceContext referring to a revision in a Google Cloud Source Repo."
         },
         "labels": {
           "additionalProperties": {
@@ -1681,6 +1736,8 @@
       "id": "GoogleDevtoolsContaineranalysisV1alpha1SourceContext"
     },
     "GoogleDevtoolsContaineranalysisV1alpha1AliasContext": {
+      "description": "An alias to a repo revision.",
+      "type": "object",
       "properties": {
         "name": {
           "description": "The alias name.",
@@ -1703,13 +1760,9 @@
           "type": "string"
         }
       },
-      "id": "GoogleDevtoolsContaineranalysisV1alpha1AliasContext",
-      "description": "An alias to a repo revision.",
-      "type": "object"
+      "id": "GoogleDevtoolsContaineranalysisV1alpha1AliasContext"
     },
     "Expr": {
-      "description": "Represents an expression text. Example:\n\n    title: \"User account presence\"\n    description: \"Determines whether the request has a user account\"\n    expression: \"size(request.user) \u003e 0\"",
-      "type": "object",
       "properties": {
         "description": {
           "description": "An optional description of the expression. This is a longer text which\ndescribes the expression, e.g. when hovered over it in a UI.",
@@ -1728,15 +1781,14 @@
           "type": "string"
         }
       },
-      "id": "Expr"
+      "id": "Expr",
+      "description": "Represents an expression text. Example:\n\n    title: \"User account presence\"\n    description: \"Determines whether the request has a user account\"\n    expression: \"size(request.user) \u003e 0\"",
+      "type": "object"
     },
     "PackageIssue": {
       "description": "This message wraps a location affected by a vulnerability and its\nassociated fix (if one is available).",
       "type": "object",
       "properties": {
-        "severityName": {
-          "type": "string"
-        },
         "affectedLocation": {
           "description": "The location of the vulnerability.",
           "$ref": "VulnerabilityLocation"
@@ -1744,23 +1796,15 @@
         "fixedLocation": {
           "$ref": "VulnerabilityLocation",
           "description": "The location of the available fix for vulnerability."
+        },
+        "severityName": {
+          "type": "string"
         }
       },
       "id": "PackageIssue"
     },
     "Deployment": {
       "properties": {
-        "address": {
-          "description": "Address of the runtime element hosting this deployment.",
-          "type": "string"
-        },
-        "resourceUri": {
-          "description": "Output only. Resource URI for the artifact being deployed taken from the\ndeployable field with the same name.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "userEmail": {
           "description": "Identity of the user that triggered this deployment.",
           "type": "string"
@@ -1794,6 +1838,17 @@
           "description": "Beginning of the lifetime of this deployment.",
           "format": "google-datetime",
           "type": "string"
+        },
+        "address": {
+          "description": "Address of the runtime element hosting this deployment.",
+          "type": "string"
+        },
+        "resourceUri": {
+          "description": "Output only. Resource URI for the artifact being deployed taken from the\ndeployable field with the same name.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "id": "Deployment",
@@ -1804,18 +1859,6 @@
       "description": "Identifies all occurrences of this vulnerability in the package for a\nspecific distro/location\nFor example: glibc in cpe:/o:debian:debian_linux:8 for versions 2.1 - 2.2",
       "type": "object",
       "properties": {
-        "isObsolete": {
-          "description": "Whether this Detail is obsolete. Occurrences are expected not to point to\nobsolete details.",
-          "type": "boolean"
-        },
-        "packageType": {
-          "description": "The type of package; whether native or non native(ruby gems,\nnode.js packages etc)",
-          "type": "string"
-        },
-        "fixedLocation": {
-          "description": "The fix for this specific package version.",
-          "$ref": "VulnerabilityLocation"
-        },
         "description": {
           "description": "A vendor-specific description of this note.",
           "type": "string"
@@ -1824,13 +1867,13 @@
           "description": "The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in\nwhich the vulnerability manifests.  Examples include distro or storage\nlocation for vulnerable jar.\nThis field can be used as a filter in list requests.",
           "type": "string"
         },
+        "minAffectedVersion": {
+          "$ref": "Version",
+          "description": "The min version of the package in which the vulnerability exists."
+        },
         "severityName": {
           "description": "The severity (eg: distro assigned severity) for this vulnerability.",
           "type": "string"
-        },
-        "minAffectedVersion": {
-          "description": "The min version of the package in which the vulnerability exists.",
-          "$ref": "Version"
         },
         "maxAffectedVersion": {
           "description": "The max version of the package in which the vulnerability exists.\nThis field can be used as a filter in list requests.",
@@ -1838,6 +1881,18 @@
         },
         "package": {
           "description": "The name of the package where the vulnerability was found.\nThis field can be used as a filter in list requests.",
+          "type": "string"
+        },
+        "isObsolete": {
+          "description": "Whether this Detail is obsolete. Occurrences are expected not to point to\nobsolete details.",
+          "type": "boolean"
+        },
+        "fixedLocation": {
+          "$ref": "VulnerabilityLocation",
+          "description": "The fix for this specific package version."
+        },
+        "packageType": {
+          "description": "The type of package; whether native or non native(ruby gems,\nnode.js packages etc)",
           "type": "string"
         }
       },
@@ -1864,6 +1919,8 @@
       "id": "TestIamPermissionsResponse"
     },
     "Basis": {
+      "description": "Basis describes the base image portion (Note) of the DockerImage\nrelationship.  Linked occurrences are derived from this or an\nequivalent image via:\n  FROM \u003cBasis.resource_url\u003e\nOr an equivalent reference, e.g. a tag of the resource_url.",
+      "type": "object",
       "properties": {
         "fingerprint": {
           "description": "The fingerprint of the base image.",
@@ -1874,9 +1931,7 @@
           "type": "string"
         }
       },
-      "id": "Basis",
-      "description": "Basis describes the base image portion (Note) of the DockerImage\nrelationship.  Linked occurrences are derived from this or an\nequivalent image via:\n  FROM \u003cBasis.resource_url\u003e\nOr an equivalent reference, e.g. a tag of the resource_url.",
-      "type": "object"
+      "id": "Basis"
     },
     "VulnerabilityType": {
       "description": "VulnerabilityType provides metadata about a security vulnerability.",
@@ -1954,26 +2009,14 @@
       "description": "`Occurrence` includes information about analysis occurrences for an image.",
       "type": "object",
       "properties": {
-        "discovered": {
-          "$ref": "Discovered",
-          "description": "Describes the initial scan status for this resource."
-        },
-        "noteName": {
-          "description": "An analysis note associated with this image, in the form\n\"providers/{provider_id}/notes/{NOTE_ID}\"\nThis field can be used as a filter in list requests.",
-          "type": "string"
-        },
-        "deployment": {
-          "description": "Describes the deployment of an artifact on a runtime.",
-          "$ref": "Deployment"
-        },
-        "vulnerabilityDetails": {
-          "description": "Details of a security vulnerability note.",
-          "$ref": "VulnerabilityDetails"
-        },
         "createTime": {
           "description": "Output only. The time this `Occurrence` was created.",
           "format": "google-datetime",
           "type": "string"
+        },
+        "vulnerabilityDetails": {
+          "description": "Details of a security vulnerability note.",
+          "$ref": "VulnerabilityDetails"
         },
         "updateTime": {
           "description": "Output only. The time this `Occurrence` was last updated.",
@@ -1985,8 +2028,8 @@
           "type": "string"
         },
         "derivedImage": {
-          "description": "Describes how this resource derives from the basis\nin the associated note.",
-          "$ref": "Derived"
+          "$ref": "Derived",
+          "description": "Describes how this resource derives from the basis\nin the associated note."
         },
         "buildDetails": {
           "$ref": "BuildDetails",
@@ -2024,41 +2067,35 @@
           "description": "The unique URL of the image or the container for which the `Occurrence`\napplies. For example, https://gcr.io/project/image@sha256:foo This field\ncan be used as a filter in list requests.",
           "type": "string"
         },
-        "attestation": {
-          "$ref": "Attestation",
-          "description": "Describes an attestation of an artifact."
-        },
         "name": {
           "description": "Output only. The name of the `Occurrence` in the form\n\"projects/{project_id}/occurrences/{OCCURRENCE_ID}\"",
           "type": "string"
         },
+        "attestation": {
+          "description": "Describes an attestation of an artifact.",
+          "$ref": "Attestation"
+        },
         "installation": {
           "$ref": "Installation",
           "description": "Describes the installation of a package on the linked resource."
+        },
+        "discovered": {
+          "$ref": "Discovered",
+          "description": "Describes the initial scan status for this resource."
+        },
+        "noteName": {
+          "description": "An analysis note associated with this image, in the form\n\"providers/{provider_id}/notes/{NOTE_ID}\"\nThis field can be used as a filter in list requests.",
+          "type": "string"
+        },
+        "deployment": {
+          "$ref": "Deployment",
+          "description": "Describes the deployment of an artifact on a runtime."
         }
       },
       "id": "Occurrence"
     },
     "Note": {
-      "description": "Provides a detailed description of a `Note`.",
-      "type": "object",
       "properties": {
-        "shortDescription": {
-          "description": "A one sentence description of this `Note`.",
-          "type": "string"
-        },
-        "attestationAuthority": {
-          "$ref": "AttestationAuthority",
-          "description": "A note describing an attestation role."
-        },
-        "name": {
-          "description": "The name of the note in the form\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
-          "type": "string"
-        },
-        "vulnerabilityType": {
-          "description": "A package vulnerability type of note.",
-          "$ref": "VulnerabilityType"
-        },
         "package": {
           "description": "A note describing a package hosted by various package managers.",
           "$ref": "Package"
@@ -2068,14 +2105,14 @@
           "format": "google-datetime",
           "type": "string"
         },
+        "discovery": {
+          "description": "A note describing a provider/analysis type.",
+          "$ref": "Discovery"
+        },
         "updateTime": {
           "description": "Output only. The time this note was last updated. This field can be used as\na filter in list requests.",
           "format": "google-datetime",
           "type": "string"
-        },
-        "discovery": {
-          "$ref": "Discovery",
-          "description": "A note describing a provider/analysis type."
         },
         "relatedUrl": {
           "description": "URLs associated with this note",
@@ -2090,8 +2127,8 @@
           "type": "string"
         },
         "baseImage": {
-          "$ref": "Basis",
-          "description": "A note describing a base image."
+          "description": "A note describing a base image.",
+          "$ref": "Basis"
         },
         "kind": {
           "description": "Output only. This explicitly denotes which kind of note is specified. This\nfield can be used as a filter in list requests.",
@@ -2117,30 +2154,46 @@
             "ATTESTATION_AUTHORITY"
           ]
         },
-        "deployable": {
-          "description": "A note describing something that can be deployed.",
-          "$ref": "Deployable"
-        },
         "buildType": {
-          "$ref": "BuildType",
-          "description": "Build provenance type for a verifiable build."
+          "description": "Build provenance type for a verifiable build.",
+          "$ref": "BuildType"
         },
         "longDescription": {
           "description": "A detailed description of this `Note`.",
           "type": "string"
+        },
+        "deployable": {
+          "$ref": "Deployable",
+          "description": "A note describing something that can be deployed."
+        },
+        "shortDescription": {
+          "description": "A one sentence description of this `Note`.",
+          "type": "string"
+        },
+        "attestationAuthority": {
+          "$ref": "AttestationAuthority",
+          "description": "A note describing an attestation role."
+        },
+        "name": {
+          "description": "The name of the note in the form\n\"providers/{provider_id}/notes/{NOTE_ID}\"",
+          "type": "string"
+        },
+        "vulnerabilityType": {
+          "$ref": "VulnerabilityType",
+          "description": "A package vulnerability type of note."
         }
       },
-      "id": "Note"
-    },
-    "Empty": {
-      "properties": {},
-      "id": "Empty",
-      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`.",
+      "id": "Note",
+      "description": "Provides a detailed description of a `Note`.",
       "type": "object"
     },
-    "SeverityCount": {
-      "description": "The number of occurrences created for a specific severity.",
+    "Empty": {
+      "description": "A generic empty message that you can re-use to avoid defining duplicated\nempty messages in your APIs. A typical example is to use it as the request\nor the response type of an API method. For instance:\n\n    service Foo {\n      rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);\n    }\n\nThe JSON representation for `Empty` is empty JSON object `{}`.",
       "type": "object",
+      "properties": {},
+      "id": "Empty"
+    },
+    "SeverityCount": {
       "properties": {
         "severity": {
           "enumDescriptions": [
@@ -2168,16 +2221,14 @@
           "type": "string"
         }
       },
-      "id": "SeverityCount"
+      "id": "SeverityCount",
+      "description": "The number of occurrences created for a specific severity.",
+      "type": "object"
     },
     "Derived": {
       "description": "Derived describes the derived image portion (Occurrence) of the\nDockerImage relationship.  This image would be produced from a Dockerfile\nwith FROM \u003cDockerImage.Basis in attached Note\u003e.",
       "type": "object",
       "properties": {
-        "fingerprint": {
-          "description": "The fingerprint of the derived image.",
-          "$ref": "Fingerprint"
-        },
         "layerInfo": {
           "description": "This contains layer-specific metadata, if populated it has length\n\"distance\" and is ordered with [distance] being the layer immediately\nfollowing the base image and [1] being the final layer.",
           "type": "array",
@@ -2193,11 +2244,17 @@
         "baseResourceUrl": {
           "description": "Output only. This contains the base image URL for the derived image\noccurrence.",
           "type": "string"
+        },
+        "fingerprint": {
+          "$ref": "Fingerprint",
+          "description": "The fingerprint of the derived image."
         }
       },
       "id": "Derived"
     },
     "AuditLogConfig": {
+      "description": "Provides the configuration for logging a type of permissions.\nExample:\n\n    {\n      \"audit_log_configs\": [\n        {\n          \"log_type\": \"DATA_READ\",\n          \"exempted_members\": [\n            \"user:foo@gmail.com\"\n          ]\n        },\n        {\n          \"log_type\": \"DATA_WRITE\",\n        }\n      ]\n    }\n\nThis enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting\nfoo@gmail.com from DATA_READ logging.",
+      "type": "object",
       "properties": {
         "exemptedMembers": {
           "description": "Specifies the identities that do not cause logging for this type of\npermission.\nFollows the same format of Binding.members.",
@@ -2207,6 +2264,8 @@
           }
         },
         "logType": {
+          "description": "The log type that this config enables.",
+          "type": "string",
           "enumDescriptions": [
             "Default case. Should never be this.",
             "Admin reads. Example: CloudIAM getIamPolicy",
@@ -2218,32 +2277,15 @@
             "ADMIN_READ",
             "DATA_WRITE",
             "DATA_READ"
-          ],
-          "description": "The log type that this config enables.",
-          "type": "string"
+          ]
         }
       },
-      "id": "AuditLogConfig",
-      "description": "Provides the configuration for logging a type of permissions.\nExample:\n\n    {\n      \"audit_log_configs\": [\n        {\n          \"log_type\": \"DATA_READ\",\n          \"exempted_members\": [\n            \"user:foo@gmail.com\"\n          ]\n        },\n        {\n          \"log_type\": \"DATA_WRITE\",\n        }\n      ]\n    }\n\nThis enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting\nfoo@gmail.com from DATA_READ logging.",
-      "type": "object"
+      "id": "AuditLogConfig"
     },
     "Source": {
+      "description": "Source describes the location of the source used for the build.",
+      "type": "object",
       "properties": {
-        "storageSource": {
-          "$ref": "StorageSource",
-          "description": "If provided, get the source from this location in in Google Cloud\nStorage."
-        },
-        "fileHashes": {
-          "additionalProperties": {
-            "$ref": "FileHashes"
-          },
-          "description": "Hash(es) of the build source, which can be used to verify that the original\nsource integrity was maintained in the build.\n\nThe keys to this map are file paths used as build source and the values\ncontain the hash values for those files.\n\nIf the build source came in a single package such as a gzipped tarfile\n(.tar.gz), the FileHash will be for the single path to that file.",
-          "type": "object"
-        },
-        "artifactStorageSource": {
-          "$ref": "StorageSource",
-          "description": "If provided, the input binary artifacts for the build came from this\nlocation."
-        },
         "additionalContexts": {
           "description": "If provided, some of the source code used for the build may be found in\nthese locations, in the case where the source repository had multiple\nremotes or submodules. This list will not include the context specified in\nthe context field.",
           "type": "array",
@@ -2256,52 +2298,39 @@
           "description": "If provided, the source code used for the build came from this location."
         },
         "repoSource": {
-          "$ref": "RepoSource",
-          "description": "If provided, get source from this location in a Cloud Repo."
-        }
-      },
-      "id": "Source",
-      "description": "Source describes the location of the source used for the build.",
-      "type": "object"
-    },
-    "GoogleDevtoolsContaineranalysisV1alpha1GitSourceContext": {
-      "description": "A GitSourceContext denotes a particular revision in a third party Git\nrepository (e.g., GitHub).",
-      "type": "object",
-      "properties": {
-        "revisionId": {
-          "description": "Required.\nGit commit hash.",
-          "type": "string"
+          "description": "If provided, get source from this location in a Cloud Repo.",
+          "$ref": "RepoSource"
         },
-        "url": {
-          "description": "Git repository URL.",
-          "type": "string"
+        "storageSource": {
+          "description": "If provided, get the source from this location in in Google Cloud\nStorage.",
+          "$ref": "StorageSource"
+        },
+        "fileHashes": {
+          "additionalProperties": {
+            "$ref": "FileHashes"
+          },
+          "description": "Hash(es) of the build source, which can be used to verify that the original\nsource integrity was maintained in the build.\n\nThe keys to this map are file paths used as build source and the values\ncontain the hash values for those files.\n\nIf the build source came in a single package such as a gzipped tarfile\n(.tar.gz), the FileHash will be for the single path to that file.",
+          "type": "object"
+        },
+        "artifactStorageSource": {
+          "$ref": "StorageSource",
+          "description": "If provided, the input binary artifacts for the build came from this\nlocation."
         }
       },
-      "id": "GoogleDevtoolsContaineranalysisV1alpha1GitSourceContext"
+      "id": "Source"
     },
     "BuildProvenance": {
-      "description": "Provenance of a build. Contains all information needed to verify the full\ndetails about the build from source to completion.",
-      "type": "object",
       "properties": {
-        "projectId": {
-          "description": "ID of the project.",
-          "type": "string"
-        },
-        "finishTime": {
-          "description": "Time at which execution of the build was finished.",
-          "format": "google-datetime",
-          "type": "string"
-        },
         "creator": {
           "description": "E-mail address of the user who initiated this build. Note that this was the\nuser's e-mail address at the time the build was initiated; this address may\nnot represent the same end-user for all time.",
           "type": "string"
         },
-        "builderVersion": {
-          "description": "Version string of the builder at the time this build was executed.",
-          "type": "string"
-        },
         "logsBucket": {
           "description": "Google Cloud Storage bucket where logs were written.",
+          "type": "string"
+        },
+        "builderVersion": {
+          "description": "Version string of the builder at the time this build was executed.",
           "type": "string"
         },
         "commands": {
@@ -2346,13 +2375,37 @@
           "description": "Time at which the build was created.",
           "format": "google-datetime",
           "type": "string"
+        },
+        "projectId": {
+          "description": "ID of the project.",
+          "type": "string"
+        },
+        "finishTime": {
+          "description": "Time at which execution of the build was finished.",
+          "format": "google-datetime",
+          "type": "string"
         }
       },
-      "id": "BuildProvenance"
+      "id": "BuildProvenance",
+      "description": "Provenance of a build. Contains all information needed to verify the full\ndetails about the build from source to completion.",
+      "type": "object"
+    },
+    "GoogleDevtoolsContaineranalysisV1alpha1GitSourceContext": {
+      "description": "A GitSourceContext denotes a particular revision in a third party Git\nrepository (e.g., GitHub).",
+      "type": "object",
+      "properties": {
+        "revisionId": {
+          "description": "Required.\nGit commit hash.",
+          "type": "string"
+        },
+        "url": {
+          "description": "Git repository URL.",
+          "type": "string"
+        }
+      },
+      "id": "GoogleDevtoolsContaineranalysisV1alpha1GitSourceContext"
     },
     "Policy": {
-      "description": "Defines an Identity and Access Management (IAM) policy. It is used to\nspecify access control policies for Cloud Platform resources.\n\n\nA `Policy` consists of a list of `bindings`. A `binding` binds a list of\n`members` to a `role`, where the members can be user accounts, Google groups,\nGoogle domains, and service accounts. A `role` is a named list of permissions\ndefined by IAM.\n\n**JSON Example**\n\n    {\n      \"bindings\": [\n        {\n          \"role\": \"roles/owner\",\n          \"members\": [\n            \"user:mike@example.com\",\n            \"group:admins@example.com\",\n            \"domain:google.com\",\n            \"serviceAccount:my-other-app@appspot.gserviceaccount.com\"\n          ]\n        },\n        {\n          \"role\": \"roles/viewer\",\n          \"members\": [\"user:sean@example.com\"]\n        }\n      ]\n    }\n\n**YAML Example**\n\n    bindings:\n    - members:\n      - user:mike@example.com\n      - group:admins@example.com\n      - domain:google.com\n      - serviceAccount:my-other-app@appspot.gserviceaccount.com\n      role: roles/owner\n    - members:\n      - user:sean@example.com\n      role: roles/viewer\n\n\nFor a description of IAM and its features, see the\n[IAM developer's guide](https://cloud.google.com/iam/docs).",
-      "type": "object",
       "properties": {
         "auditConfigs": {
           "description": "Specifies cloud audit logging configuration for this policy.",
@@ -2379,31 +2432,13 @@
           "type": "integer"
         }
       },
-      "id": "Policy"
-    },
-    "ListNoteOccurrencesResponse": {
-      "description": "Response including listed occurrences for a note.",
-      "type": "object",
-      "properties": {
-        "occurrences": {
-          "description": "The occurrences attached to the specified note.",
-          "type": "array",
-          "items": {
-            "$ref": "Occurrence"
-          }
-        },
-        "nextPageToken": {
-          "description": "Token to receive the next page of notes.",
-          "type": "string"
-        }
-      },
-      "id": "ListNoteOccurrencesResponse"
+      "id": "Policy",
+      "description": "Defines an Identity and Access Management (IAM) policy. It is used to\nspecify access control policies for Cloud Platform resources.\n\n\nA `Policy` consists of a list of `bindings`. A `binding` binds a list of\n`members` to a `role`, where the members can be user accounts, Google groups,\nGoogle domains, and service accounts. A `role` is a named list of permissions\ndefined by IAM.\n\n**JSON Example**\n\n    {\n      \"bindings\": [\n        {\n          \"role\": \"roles/owner\",\n          \"members\": [\n            \"user:mike@example.com\",\n            \"group:admins@example.com\",\n            \"domain:google.com\",\n            \"serviceAccount:my-other-app@appspot.gserviceaccount.com\"\n          ]\n        },\n        {\n          \"role\": \"roles/viewer\",\n          \"members\": [\"user:sean@example.com\"]\n        }\n      ]\n    }\n\n**YAML Example**\n\n    bindings:\n    - members:\n      - user:mike@example.com\n      - group:admins@example.com\n      - domain:google.com\n      - serviceAccount:my-other-app@appspot.gserviceaccount.com\n      role: roles/owner\n    - members:\n      - user:sean@example.com\n      role: roles/viewer\n\n\nFor a description of IAM and its features, see the\n[IAM developer's guide](https://cloud.google.com/iam/docs).",
+      "type": "object"
     },
     "VulnerabilityDetails": {
       "properties": {
         "effectiveSeverity": {
-          "description": "The distro assigned severity for this vulnerability when that is\navailable and note provider assigned severity when distro has not yet\nassigned a severity for this vulnerability.",
-          "type": "string",
           "enumDescriptions": [
             "Unknown Impact",
             "Minimal Impact",
@@ -2419,7 +2454,9 @@
             "MEDIUM",
             "HIGH",
             "CRITICAL"
-          ]
+          ],
+          "description": "The distro assigned severity for this vulnerability when that is\navailable and note provider assigned severity when distro has not yet\nassigned a severity for this vulnerability.",
+          "type": "string"
         },
         "packageIssue": {
           "description": "The set of affected locations and their fixes (if available) within\nthe associated resource.",
@@ -2462,23 +2499,74 @@
       "description": "Used by Occurrence to point to where the vulnerability exists and how\nto fix it.",
       "type": "object"
     },
-    "AttestationAuthority": {
-      "description": "Note kind that represents a logical attestation \"role\" or \"authority\".  For\nexample, an organization might have one `AttestationAuthority` for \"QA\" and\none for \"build\".  This Note is intended to act strictly as a grouping\nmechanism for the attached Occurrences (Attestations).  This grouping\nmechanism also provides a security boundary, since IAM ACLs gate the ability\nfor a principle to attach an Occurrence to a given Note.  It also provides a\nsingle point of lookup to find all attached Attestation Occurrences, even if\nthey don't all live in the same project.",
+    "ListNoteOccurrencesResponse": {
+      "description": "Response including listed occurrences for a note.",
       "type": "object",
+      "properties": {
+        "nextPageToken": {
+          "description": "Token to receive the next page of notes.",
+          "type": "string"
+        },
+        "occurrences": {
+          "description": "The occurrences attached to the specified note.",
+          "type": "array",
+          "items": {
+            "$ref": "Occurrence"
+          }
+        }
+      },
+      "id": "ListNoteOccurrencesResponse"
+    },
+    "AttestationAuthority": {
       "properties": {
         "hint": {
           "$ref": "AttestationAuthorityHint"
         }
       },
-      "id": "AttestationAuthority"
+      "id": "AttestationAuthority",
+      "description": "Note kind that represents a logical attestation \"role\" or \"authority\".  For\nexample, an organization might have one `AttestationAuthority` for \"QA\" and\none for \"build\".  This Note is intended to act strictly as a grouping\nmechanism for the attached Occurrences (Attestations).  This grouping\nmechanism also provides a security boundary, since IAM ACLs gate the ability\nfor a principle to attach an Occurrence to a given Note.  It also provides a\nsingle point of lookup to find all attached Attestation Occurrences, even if\nthey don't all live in the same project.",
+      "type": "object"
+    },
+    "GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext": {
+      "properties": {
+        "revisionId": {
+          "description": "A revision ID.",
+          "type": "string"
+        },
+        "repoId": {
+          "description": "The ID of the repo.",
+          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1RepoId"
+        },
+        "aliasContext": {
+          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1AliasContext",
+          "description": "An alias, which may be a branch or tag."
+        }
+      },
+      "id": "GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext",
+      "description": "A CloudRepoSourceContext denotes a particular revision in a Google Cloud\nSource Repo.",
+      "type": "object"
     },
     "Operation": {
-      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
-      "type": "object",
       "properties": {
+        "done": {
+          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
+          "type": "boolean"
+        },
+        "response": {
+          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`.",
+          "type": "object",
+          "additionalProperties": {
+            "description": "Properties of the object. Contains field @type with type URL.",
+            "type": "any"
+          }
+        },
+        "name": {
+          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should be a resource name ending with `operations/{unique_id}`.",
+          "type": "string"
+        },
         "error": {
-          "description": "The error result of the operation in case of failure or cancellation.",
-          "$ref": "Status"
+          "$ref": "Status",
+          "description": "The error result of the operation in case of failure or cancellation."
         },
         "metadata": {
           "additionalProperties": {
@@ -2487,55 +2575,11 @@
           },
           "description": "Service-specific metadata associated with the operation.  It typically\ncontains progress information and common metadata such as create time.\nSome services might not provide such metadata.  Any method that returns a\nlong-running operation should document the metadata type, if any.",
           "type": "object"
-        },
-        "done": {
-          "description": "If the value is `false`, it means the operation is still in progress.\nIf `true`, the operation is completed, and either `error` or `response` is\navailable.",
-          "type": "boolean"
-        },
-        "response": {
-          "additionalProperties": {
-            "description": "Properties of the object. Contains field @type with type URL.",
-            "type": "any"
-          },
-          "description": "The normal response of the operation in case of success.  If the original\nmethod returns no data on success, such as `Delete`, the response is\n`google.protobuf.Empty`.  If the original method is standard\n`Get`/`Create`/`Update`, the response should be the resource.  For other\nmethods, the response should have the type `XxxResponse`, where `Xxx`\nis the original method name.  For example, if the original method name\nis `TakeSnapshot()`, the inferred response type is\n`TakeSnapshotResponse`.",
-          "type": "object"
-        },
-        "name": {
-          "description": "The server-assigned name, which is only unique within the same service that\noriginally returns it. If you use the default HTTP mapping, the\n`name` should have the format of `operations/some/unique/name`.",
-          "type": "string"
         }
       },
-      "id": "Operation"
-    },
-    "GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext": {
-      "description": "A CloudRepoSourceContext denotes a particular revision in a Google Cloud\nSource Repo.",
-      "type": "object",
-      "properties": {
-        "aliasContext": {
-          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1AliasContext",
-          "description": "An alias, which may be a branch or tag."
-        },
-        "revisionId": {
-          "description": "A revision ID.",
-          "type": "string"
-        },
-        "repoId": {
-          "$ref": "GoogleDevtoolsContaineranalysisV1alpha1RepoId",
-          "description": "The ID of the repo."
-        }
-      },
-      "id": "GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext"
-    },
-    "AttestationAuthorityHint": {
-      "description": "This submessage provides human-readable hints about the purpose of the\nAttestationAuthority.  Because the name of a Note acts as its resource\nreference, it is important to disambiguate the canonical name of the Note\n(which might be a UUID for security purposes) from \"readable\" names more\nsuitable for debug output.  Note that these hints should NOT be used to\nlook up AttestationAuthorities in security sensitive contexts, such as when\nlooking up Attestations to verify.",
-      "type": "object",
-      "properties": {
-        "humanReadableName": {
-          "description": "The human readable name of this Attestation Authority, for example \"qa\".",
-          "type": "string"
-        }
-      },
-      "id": "AttestationAuthorityHint"
+      "id": "Operation",
+      "description": "This resource represents a long-running operation that is the result of a\nnetwork API call.",
+      "type": "object"
     },
     "FileHashes": {
       "description": "Container message for hashes of byte content of files, used in Source\nmessages to verify integrity of source input to the build.",
@@ -2551,10 +2595,33 @@
       },
       "id": "FileHashes"
     },
+    "AttestationAuthorityHint": {
+      "properties": {
+        "humanReadableName": {
+          "description": "The human readable name of this Attestation Authority, for example \"qa\".",
+          "type": "string"
+        }
+      },
+      "id": "AttestationAuthorityHint",
+      "description": "This submessage provides human-readable hints about the purpose of the\nAttestationAuthority.  Because the name of a Note acts as its resource\nreference, it is important to disambiguate the canonical name of the Note\n(which might be a UUID for security purposes) from \"readable\" names more\nsuitable for debug output.  Note that these hints should NOT be used to\nlook up AttestationAuthorities in security sensitive contexts, such as when\nlooking up Attestations to verify.",
+      "type": "object"
+    },
     "PgpSignedAttestation": {
       "description": "An attestation wrapper with a PGP-compatible signature.\nThis message only supports `ATTACHED` signatures, where the payload that is\nsigned is included alongside the signature itself in the same file.",
       "type": "object",
       "properties": {
+        "contentType": {
+          "enum": [
+            "CONTENT_TYPE_UNSPECIFIED",
+            "SIMPLE_SIGNING_JSON"
+          ],
+          "description": "Type (for example schema) of the attestation payload that was signed.\nThe verifier must ensure that the provided type is one that the verifier\nsupports, and that the attestation payload is a valid instantiation of that\ntype (for example by validating a JSON schema).",
+          "type": "string",
+          "enumDescriptions": [
+            "`ContentType` is not set.",
+            "Atomic format attestation signature. See\nhttps://github.com/containers/image/blob/8a5d2f82a6e3263290c8e0276c3e0f64e77723e7/docs/atomic-signature.md\nThe payload extracted from `signature` is a JSON blob conforming to the\nlinked schema."
+          ]
+        },
         "signature": {
           "description": "The raw content of the signature, as output by GNU Privacy Guard (GPG) or\nequivalent.  Since this message only supports attached signatures, the\npayload that was signed must be attached. While the signature format\nsupported is dependent on the verification implementation, currently only\nASCII-armored (`--armor` to gpg), non-clearsigned (`--sign` rather than\n`--clearsign` to gpg) are supported. Concretely, `gpg --sign --armor\n--output=signature.gpg payload.json` will create the signature content\nexpected in this field in `signature.gpg` for the `payload.json`\nattestation payload.",
           "type": "string"
@@ -2562,24 +2629,18 @@
         "pgpKeyId": {
           "description": "The cryptographic fingerprint of the key used to generate the signature,\nas output by, e.g. `gpg --list-keys`. This should be the version 4, full\n160-bit fingerprint, expressed as a 40 character hexadecimal string. See\nhttps://tools.ietf.org/html/rfc4880#section-12.2 for details.\nImplementations may choose to acknowledge \"LONG\", \"SHORT\", or other\nabbreviated key IDs, but only the full fingerprint is guaranteed to work.\nIn gpg, the full fingerprint can be retrieved from the `fpr` field\nreturned when calling --list-keys with --with-colons.  For example:\n```\ngpg --with-colons --with-fingerprint --force-v4-certs \\\n    --list-keys attester@example.com\ntru::1:1513631572:0:3:1:5\npub:...\u003cSNIP\u003e...\nfpr:::::::::24FF6481B76AC91E66A00AC657A93A81EF3AE6FB:\n```\nAbove, the fingerprint is `24FF6481B76AC91E66A00AC657A93A81EF3AE6FB`.",
           "type": "string"
-        },
-        "contentType": {
-          "enumDescriptions": [
-            "`ContentType` is not set.",
-            "Atomic format attestation signature. See\nhttps://github.com/containers/image/blob/8a5d2f82a6e3263290c8e0276c3e0f64e77723e7/docs/atomic-signature.md\nThe payload extracted from `signature` is a JSON blob conforming to the\nlinked schema."
-          ],
-          "enum": [
-            "CONTENT_TYPE_UNSPECIFIED",
-            "SIMPLE_SIGNING_JSON"
-          ],
-          "description": "Type (for example schema) of the attestation payload that was signed.\nThe verifier must ensure that the provided type is one that the verifier\nsupports, and that the attestation payload is a valid instantiation of that\ntype (for example by validating a JSON schema).",
-          "type": "string"
         }
       },
       "id": "PgpSignedAttestation"
     },
     "Status": {
+      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). The error model is designed to be:\n\n- Simple to use and understand for most users\n- Flexible enough to meet unexpected needs\n\n# Overview\n\nThe `Status` message contains three pieces of data: error code, error\nmessage, and error details. The error code should be an enum value of\ngoogle.rpc.Code, but it may accept additional error codes if needed.  The\nerror message should be a developer-facing English message that helps\ndevelopers *understand* and *resolve* the error. If a localized user-facing\nerror message is needed, put the localized message in the error details or\nlocalize it in the client. The optional error details may contain arbitrary\ninformation about the error. There is a predefined set of error detail types\nin the package `google.rpc` that can be used for common error conditions.\n\n# Language mapping\n\nThe `Status` message is the logical representation of the error model, but it\nis not necessarily the actual wire format. When the `Status` message is\nexposed in different client libraries and different wire protocols, it can be\nmapped differently. For example, it will likely be mapped to some exceptions\nin Java, but more likely mapped to some error codes in C.\n\n# Other uses\n\nThe error model and the `Status` message can be used in a variety of\nenvironments, either with or without APIs, to provide a\nconsistent developer experience across different environments.\n\nExample uses of this error model include:\n\n- Partial errors. If a service needs to return partial errors to the client,\n    it may embed the `Status` in the normal response to indicate the partial\n    errors.\n\n- Workflow errors. A typical workflow has multiple steps. Each step may\n    have a `Status` message for error reporting.\n\n- Batch operations. If a client uses batch request and batch response, the\n    `Status` message should be used directly inside batch response, one for\n    each error sub-response.\n\n- Asynchronous operations. If an API call embeds asynchronous operation\n    results in its response, the status of those operations should be\n    represented directly using the `Status` message.\n\n- Logging. If some API errors are stored in logs, the message `Status` could\n    be used directly after any stripping needed for security/privacy reasons.",
+      "type": "object",
       "properties": {
+        "message": {
+          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client.",
+          "type": "string"
+        },
         "details": {
           "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use.",
           "type": "array",
@@ -2595,19 +2656,17 @@
           "description": "The status code, which should be an enum value of google.rpc.Code.",
           "format": "int32",
           "type": "integer"
-        },
-        "message": {
-          "description": "A developer-facing error message, which should be in English. Any\nuser-facing error message should be localized and sent in the\ngoogle.rpc.Status.details field, or localized by the client.",
-          "type": "string"
         }
       },
-      "id": "Status",
-      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). The error model is designed to be:\n\n- Simple to use and understand for most users\n- Flexible enough to meet unexpected needs\n\n# Overview\n\nThe `Status` message contains three pieces of data: error code, error\nmessage, and error details. The error code should be an enum value of\ngoogle.rpc.Code, but it may accept additional error codes if needed.  The\nerror message should be a developer-facing English message that helps\ndevelopers *understand* and *resolve* the error. If a localized user-facing\nerror message is needed, put the localized message in the error details or\nlocalize it in the client. The optional error details may contain arbitrary\ninformation about the error. There is a predefined set of error detail types\nin the package `google.rpc` that can be used for common error conditions.\n\n# Language mapping\n\nThe `Status` message is the logical representation of the error model, but it\nis not necessarily the actual wire format. When the `Status` message is\nexposed in different client libraries and different wire protocols, it can be\nmapped differently. For example, it will likely be mapped to some exceptions\nin Java, but more likely mapped to some error codes in C.\n\n# Other uses\n\nThe error model and the `Status` message can be used in a variety of\nenvironments, either with or without APIs, to provide a\nconsistent developer experience across different environments.\n\nExample uses of this error model include:\n\n- Partial errors. If a service needs to return partial errors to the client,\n    it may embed the `Status` in the normal response to indicate the partial\n    errors.\n\n- Workflow errors. A typical workflow has multiple steps. Each step may\n    have a `Status` message for error reporting.\n\n- Batch operations. If a client uses batch request and batch response, the\n    `Status` message should be used directly inside batch response, one for\n    each error sub-response.\n\n- Asynchronous operations. If an API call embeds asynchronous operation\n    results in its response, the status of those operations should be\n    represented directly using the `Status` message.\n\n- Logging. If some API errors are stored in logs, the message `Status` could\n    be used directly after any stripping needed for security/privacy reasons.",
-      "type": "object"
+      "id": "Status"
     },
     "Layer": {
+      "description": "Layer holds metadata specific to a layer of a Docker image.",
+      "type": "object",
       "properties": {
         "directive": {
+          "description": "The recovered Dockerfile directive used to construct this layer.",
+          "type": "string",
           "enumDescriptions": [
             "Default value for unsupported/missing directive",
             "https://docs.docker.com/engine/reference/builder/",
@@ -2647,18 +2706,14 @@
             "STOPSIGNAL",
             "HEALTHCHECK",
             "SHELL"
-          ],
-          "description": "The recovered Dockerfile directive used to construct this layer.",
-          "type": "string"
+          ]
         },
         "arguments": {
           "description": "The recovered arguments to the Dockerfile directive.",
           "type": "string"
         }
       },
-      "id": "Layer",
-      "description": "Layer holds metadata specific to a layer of a Docker image.",
-      "type": "object"
+      "id": "Layer"
     },
     "ListNotesResponse": {
       "description": "Response including listed notes.",
@@ -2682,6 +2737,10 @@
       "description": "Associates `members` with a `role`.",
       "type": "object",
       "properties": {
+        "condition": {
+          "$ref": "Expr",
+          "description": "The condition that is associated with this binding.\nNOTE: An unsatisfied condition will not allow user access via current\nbinding. Different bindings, including their conditions, are examined\nindependently."
+        },
         "members": {
           "description": "Specifies the identities requesting access for a Cloud Platform resource.\n`members` can have the following values:\n\n* `allUsers`: A special identifier that represents anyone who is\n   on the internet; with or without a Google account.\n\n* `allAuthenticatedUsers`: A special identifier that represents anyone\n   who is authenticated with a Google account or a service account.\n\n* `user:{emailid}`: An email address that represents a specific Google\n   account. For example, `alice@gmail.com` .\n\n\n* `serviceAccount:{emailid}`: An email address that represents a service\n   account. For example, `my-other-app@appspot.gserviceaccount.com`.\n\n* `group:{emailid}`: An email address that represents a Google group.\n   For example, `admins@example.com`.\n\n\n* `domain:{domain}`: The G Suite domain (primary) that represents all the\n   users of that domain. For example, `google.com` or `example.com`.\n\n",
           "type": "array",
@@ -2692,10 +2751,6 @@
         "role": {
           "description": "Role that is assigned to `members`.\nFor example, `roles/viewer`, `roles/editor`, or `roles/owner`.",
           "type": "string"
-        },
-        "condition": {
-          "description": "The condition that is associated with this binding.\nNOTE: An unsatisfied condition will not allow user access via current\nbinding. Different bindings, including their conditions, are examined\nindependently.",
-          "$ref": "Expr"
         }
       },
       "id": "Binding"
@@ -2704,20 +2759,18 @@
       "description": "Note holding the version of the provider's builder and the signature of\nthe provenance message in linked BuildDetails.",
       "type": "object",
       "properties": {
-        "signature": {
-          "$ref": "BuildSignature",
-          "description": "Signature of the build in Occurrences pointing to the Note containing this\n`BuilderDetails`."
-        },
         "builderVersion": {
           "description": "Version of the builder which produced this Note.",
           "type": "string"
+        },
+        "signature": {
+          "description": "Signature of the build in Occurrences pointing to the Note containing this\n`BuilderDetails`.",
+          "$ref": "BuildSignature"
         }
       },
       "id": "BuildType"
     },
     "RelatedUrl": {
-      "description": "Metadata for any related URL information",
-      "type": "object",
       "properties": {
         "url": {
           "description": "Specific URL to associate with the note",
@@ -2728,7 +2781,9 @@
           "type": "string"
         }
       },
-      "id": "RelatedUrl"
+      "id": "RelatedUrl",
+      "description": "Metadata for any related URL information",
+      "type": "object"
     },
     "Installation": {
       "description": "This represents how a particular software package may be installed on\na system.",
@@ -2749,8 +2804,6 @@
       "id": "Installation"
     },
     "GetVulnzOccurrencesSummaryResponse": {
-      "description": "A summary of how many vulnz occurrences there are per severity type.\ncounts by groups, or if we should have different summary messages\nlike this.",
-      "type": "object",
       "properties": {
         "counts": {
           "description": "A map of how many occurrences were found for each severity.",
@@ -2760,9 +2813,13 @@
           }
         }
       },
-      "id": "GetVulnzOccurrencesSummaryResponse"
+      "id": "GetVulnzOccurrencesSummaryResponse",
+      "description": "A summary of how many vulnz occurrences there are per severity type.\ncounts by groups, or if we should have different summary messages\nlike this.",
+      "type": "object"
     },
     "UpdateOperationRequest": {
+      "description": "Request for updating an existing operation",
+      "type": "object",
       "properties": {
         "updateMask": {
           "description": "The fields to update.",
@@ -2770,26 +2827,16 @@
           "type": "string"
         },
         "operation": {
-          "description": "The operation to create.",
-          "$ref": "Operation"
+          "$ref": "Operation",
+          "description": "The operation to create."
         }
       },
-      "id": "UpdateOperationRequest",
-      "description": "Request for updating an existing operation",
-      "type": "object"
+      "id": "UpdateOperationRequest"
     },
     "Distribution": {
       "description": "This represents a particular channel of distribution for a given package.\ne.g. Debian's jessie-backports dpkg mirror",
       "type": "object",
       "properties": {
-        "maintainer": {
-          "description": "A freeform string denoting the maintainer of this package.",
-          "type": "string"
-        },
-        "latestVersion": {
-          "description": "The latest available version of this package in\nthis distribution channel.",
-          "$ref": "Version"
-        },
         "description": {
           "description": "The distribution channel-specific description of this package.",
           "type": "string"
@@ -2803,6 +2850,8 @@
           "type": "string"
         },
         "architecture": {
+          "description": "The CPU architecture for which packages in this distribution\nchannel were built",
+          "type": "string",
           "enumDescriptions": [
             "Unknown architecture",
             "X86 architecture",
@@ -2812,9 +2861,15 @@
             "ARCHITECTURE_UNSPECIFIED",
             "X86",
             "X64"
-          ],
-          "description": "The CPU architecture for which packages in this distribution\nchannel were built",
+          ]
+        },
+        "maintainer": {
+          "description": "A freeform string denoting the maintainer of this package.",
           "type": "string"
+        },
+        "latestVersion": {
+          "$ref": "Version",
+          "description": "The latest available version of this package in\nthis distribution channel."
         }
       },
       "id": "Distribution"
@@ -2867,29 +2922,22 @@
       "description": "Response including listed active occurrences.",
       "type": "object",
       "properties": {
+        "nextPageToken": {
+          "description": "The next pagination token in the list response. It should be used as\n`page_token` for the following request. An empty value means no more\nresults.",
+          "type": "string"
+        },
         "occurrences": {
           "description": "The occurrences requested.",
           "type": "array",
           "items": {
             "$ref": "Occurrence"
           }
-        },
-        "nextPageToken": {
-          "description": "The next pagination token in the list response. It should be used as\n`page_token` for the following request. An empty value means no more\nresults.",
-          "type": "string"
         }
       },
       "id": "ListOccurrencesResponse"
     },
     "StorageSource": {
-      "description": "StorageSource describes the location of the source in an archive file in\nGoogle Cloud Storage.",
-      "type": "object",
       "properties": {
-        "generation": {
-          "description": "Google Cloud Storage generation for the object.",
-          "format": "int64",
-          "type": "string"
-        },
         "bucket": {
           "description": "Google Cloud Storage bucket containing source (see [Bucket Name\nRequirements]\n(https://cloud.google.com/storage/docs/bucket-naming#requirements)).",
           "type": "string"
@@ -2897,47 +2945,15 @@
         "object": {
           "description": "Google Cloud Storage object containing source.",
           "type": "string"
-        }
-      },
-      "id": "StorageSource"
-    },
-    "BuildDetails": {
-      "properties": {
-        "provenanceBytes": {
-          "description": "Serialized JSON representation of the provenance, used in generating the\n`BuildSignature` in the corresponding Result. After verifying the\nsignature, `provenance_bytes` can be unmarshalled and compared to the\nprovenance to confirm that it is unchanged. A base64-encoded string\nrepresentation of the provenance bytes is used for the signature in order\nto interoperate with openssl which expects this format for signature\nverification.\n\nThe serialized form is captured both to avoid ambiguity in how the\nprovenance is marshalled to json as well to prevent incompatibilities with\nfuture changes.",
-          "type": "string"
         },
-        "provenance": {
-          "description": "The actual provenance",
-          "$ref": "BuildProvenance"
-        }
-      },
-      "id": "BuildDetails",
-      "description": "Message encapsulating build provenance details.",
-      "type": "object"
-    },
-    "Hash": {
-      "properties": {
-        "type": {
-          "enumDescriptions": [
-            "No hash requested.",
-            "A sha256 hash."
-          ],
-          "enum": [
-            "NONE",
-            "SHA256"
-          ],
-          "description": "The type of hash that was performed.",
-          "type": "string"
-        },
-        "value": {
-          "description": "The hash value.",
-          "format": "byte",
+        "generation": {
+          "description": "Google Cloud Storage generation for the object.",
+          "format": "int64",
           "type": "string"
         }
       },
-      "id": "Hash",
-      "description": "Container message for hash values.",
+      "id": "StorageSource",
+      "description": "StorageSource describes the location of the source in an archive file in\nGoogle Cloud Storage.",
       "type": "object"
     }
   },
@@ -2945,21 +2961,5 @@
   "icons": {
     "x32": "http://www.google.com/images/icons/product/search-32.gif",
     "x16": "http://www.google.com/images/icons/product/search-16.gif"
-  },
-  "canonicalName": "Container Analysis",
-  "auth": {
-    "oauth2": {
-      "scopes": {
-        "https://www.googleapis.com/auth/cloud-platform": {
-          "description": "View and manage your data across Google Cloud Platform services"
-        }
-      }
-    }
-  },
-  "rootUrl": "https://containeranalysis.googleapis.com/",
-  "ownerDomain": "google.com",
-  "name": "containeranalysis",
-  "batchPath": "batch",
-  "fullyEncodeReservedExpansion": true,
-  "title": "Container Analysis API"
+  }
 }

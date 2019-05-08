@@ -315,6 +315,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Long maximumTimeToLock;
 
   /**
+   * The minimum allowed Android API level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minimumApiLevel;
+
+  /**
    * Whether configuring mobile networks is disabled.
    * The value may be {@code null}.
    */
@@ -445,6 +452,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String playStoreMode;
+
+  /**
+   * Rules that define the behavior when a particular policy can not be applied on device
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PolicyEnforcementRule> policyEnforcementRules;
 
   /**
    * Allows showing UI on a device for a user to choose a private key alias if there are no matching
@@ -1269,6 +1283,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The minimum allowed Android API level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinimumApiLevel() {
+    return minimumApiLevel;
+  }
+
+  /**
+   * The minimum allowed Android API level.
+   * @param minimumApiLevel minimumApiLevel or {@code null} for none
+   */
+  public Policy setMinimumApiLevel(java.lang.Integer minimumApiLevel) {
+    this.minimumApiLevel = minimumApiLevel;
+    return this;
+  }
+
+  /**
    * Whether configuring mobile networks is disabled.
    * @return value or {@code null} for none
    */
@@ -1538,6 +1569,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setPlayStoreMode(java.lang.String playStoreMode) {
     this.playStoreMode = playStoreMode;
+    return this;
+  }
+
+  /**
+   * Rules that define the behavior when a particular policy can not be applied on device
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PolicyEnforcementRule> getPolicyEnforcementRules() {
+    return policyEnforcementRules;
+  }
+
+  /**
+   * Rules that define the behavior when a particular policy can not be applied on device
+   * @param policyEnforcementRules policyEnforcementRules or {@code null} for none
+   */
+  public Policy setPolicyEnforcementRules(java.util.List<PolicyEnforcementRule> policyEnforcementRules) {
+    this.policyEnforcementRules = policyEnforcementRules;
     return this;
   }
 

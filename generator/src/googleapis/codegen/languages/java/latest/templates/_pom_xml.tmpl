@@ -38,13 +38,18 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.api.revision>{{ api.revision }}</project.api.revision>
     <project.api.version>{{ api.version }}</project.api.version>
+    <project.maven-compiler-plugin.version>3.5.1</project.maven-compiler-plugin.version>
+    <project.nexus-staging-maven-plugin.version>1.6.5</project.nexus-staging-maven-plugin.version>
+    <project.maven-source-plugin.version>2.2.1</project.maven-source-plugin.version>
+    <project.maven-javadoc-plugin.version>2.9.1</project.maven-javadoc-plugin.version>
+    <project.maven-gpg-plugin.version>1.6</project.maven-gpg-plugin.version>
   </properties
 
   <build>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>${project.maven-compile-plugin.version}</version>
         <configuration>
           <source>1.7</source>
           <target>1.7</target>
@@ -53,7 +58,7 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.5</version>
+        <version>${project.nexus-staging-maven-plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>ossrh</serverId>
@@ -64,12 +69,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>2.2.1</version>
+        <version>${project.maven-source-plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
+        <version>${project.maven-javadoc-plugin.version}</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -121,7 +126,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
+            <version>${project.maven-gpg-plugin.version}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>

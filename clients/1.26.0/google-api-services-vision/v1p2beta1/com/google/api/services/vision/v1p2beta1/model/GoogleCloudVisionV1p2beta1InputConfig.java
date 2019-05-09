@@ -30,6 +30,17 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class GoogleCloudVisionV1p2beta1InputConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * File content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
+   * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateFiles requests. It does not work for
+   * AsyncBatchAnnotateFiles requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String content;
+
+  /**
    * The Google Cloud Storage location to read the input from.
    * The value may be {@code null}.
    */
@@ -43,6 +54,67 @@ public final class GoogleCloudVisionV1p2beta1InputConfig extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
+
+  /**
+   * File content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
+   * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateFiles requests. It does not work for
+   * AsyncBatchAnnotateFiles requests.
+   * @see #decodeContent()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContent() {
+    return content;
+  }
+
+  /**
+   * File content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
+   * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateFiles requests. It does not work for
+   * AsyncBatchAnnotateFiles requests.
+   * @see #getContent()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContent() {
+    return com.google.api.client.util.Base64.decodeBase64(content);
+  }
+
+  /**
+   * File content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
+   * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateFiles requests. It does not work for
+   * AsyncBatchAnnotateFiles requests.
+   * @see #encodeContent()
+   * @param content content or {@code null} for none
+   */
+  public GoogleCloudVisionV1p2beta1InputConfig setContent(java.lang.String content) {
+    this.content = content;
+    return this;
+  }
+
+  /**
+   * File content, represented as a stream of bytes. Note: As with all `bytes` fields, protobuffers
+   * use a pure binary representation, whereas JSON representations use base64.
+   *
+   * Currently, this field only works for BatchAnnotateFiles requests. It does not work for
+   * AsyncBatchAnnotateFiles requests.
+   * @see #setContent()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudVisionV1p2beta1InputConfig encodeContent(byte[] content) {
+    this.content = com.google.api.client.util.Base64.encodeBase64URLSafeString(content);
+    return this;
+  }
 
   /**
    * The Google Cloud Storage location to read the input from.

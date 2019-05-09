@@ -92,6 +92,13 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
   private java.lang.String requestedResourceName;
 
   /**
+   * Properties related to the resource represented by requested_resource_name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceProperties requestedResourceProperties;
+
+  /**
    * Access was approved.
    * @return value or {@code null} for none
    */
@@ -236,6 +243,23 @@ public final class ApprovalRequest extends com.google.api.client.json.GenericJso
    */
   public ApprovalRequest setRequestedResourceName(java.lang.String requestedResourceName) {
     this.requestedResourceName = requestedResourceName;
+    return this;
+  }
+
+  /**
+   * Properties related to the resource represented by requested_resource_name.
+   * @return value or {@code null} for none
+   */
+  public ResourceProperties getRequestedResourceProperties() {
+    return requestedResourceProperties;
+  }
+
+  /**
+   * Properties related to the resource represented by requested_resource_name.
+   * @param requestedResourceProperties requestedResourceProperties or {@code null} for none
+   */
+  public ApprovalRequest setRequestedResourceProperties(ResourceProperties requestedResourceProperties) {
+    this.requestedResourceProperties = requestedResourceProperties;
     return this;
   }
 

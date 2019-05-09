@@ -128,6 +128,19 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
   private RuntimeError runtimeError;
 
   /**
+   * The Stack Pack advice strings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StackPacks> stackPacks;
+
+  static {
+    // hack to force ProGuard to consider StackPacks used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StackPacks.class);
+  }
+
+  /**
    * Timing information for this LHR.
    * The value may be {@code null}.
    */
@@ -344,6 +357,23 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
    */
   public LighthouseResultV5 setRuntimeError(RuntimeError runtimeError) {
     this.runtimeError = runtimeError;
+    return this;
+  }
+
+  /**
+   * The Stack Pack advice strings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StackPacks> getStackPacks() {
+    return stackPacks;
+  }
+
+  /**
+   * The Stack Pack advice strings.
+   * @param stackPacks stackPacks or {@code null} for none
+   */
+  public LighthouseResultV5 setStackPacks(java.util.List<StackPacks> stackPacks) {
+    this.stackPacks = stackPacks;
     return this;
   }
 
@@ -1271,6 +1301,119 @@ public final class LighthouseResultV5 extends com.google.api.client.json.Generic
     @Override
     public RuntimeError clone() {
       return (RuntimeError) super.clone();
+    }
+
+  }
+
+  /**
+   * Model definition for LighthouseResultV5StackPacks.
+   */
+  public static final class StackPacks extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The stack pack advice strings.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.Map<String, java.lang.String> descriptions;
+
+    /**
+     * The stack pack icon data uri.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String iconDataURL;
+
+    /**
+     * The stack pack id.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String id;
+
+    /**
+     * The stack pack title.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String title;
+
+    /**
+     * The stack pack advice strings.
+     * @return value or {@code null} for none
+     */
+    public java.util.Map<String, java.lang.String> getDescriptions() {
+      return descriptions;
+    }
+
+    /**
+     * The stack pack advice strings.
+     * @param descriptions descriptions or {@code null} for none
+     */
+    public StackPacks setDescriptions(java.util.Map<String, java.lang.String> descriptions) {
+      this.descriptions = descriptions;
+      return this;
+    }
+
+    /**
+     * The stack pack icon data uri.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getIconDataURL() {
+      return iconDataURL;
+    }
+
+    /**
+     * The stack pack icon data uri.
+     * @param iconDataURL iconDataURL or {@code null} for none
+     */
+    public StackPacks setIconDataURL(java.lang.String iconDataURL) {
+      this.iconDataURL = iconDataURL;
+      return this;
+    }
+
+    /**
+     * The stack pack id.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getId() {
+      return id;
+    }
+
+    /**
+     * The stack pack id.
+     * @param id id or {@code null} for none
+     */
+    public StackPacks setId(java.lang.String id) {
+      this.id = id;
+      return this;
+    }
+
+    /**
+     * The stack pack title.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getTitle() {
+      return title;
+    }
+
+    /**
+     * The stack pack title.
+     * @param title title or {@code null} for none
+     */
+    public StackPacks setTitle(java.lang.String title) {
+      this.title = title;
+      return this;
+    }
+
+    @Override
+    public StackPacks set(String fieldName, Object value) {
+      return (StackPacks) super.set(fieldName, value);
+    }
+
+    @Override
+    public StackPacks clone() {
+      return (StackPacks) super.clone();
     }
 
   }

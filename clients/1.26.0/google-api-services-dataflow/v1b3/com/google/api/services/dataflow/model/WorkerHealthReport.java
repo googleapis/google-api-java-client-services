@@ -33,6 +33,13 @@ package com.google.api.services.dataflow.model;
 public final class WorkerHealthReport extends com.google.api.client.json.GenericJson {
 
   /**
+   * A message describing any unusual health reports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String msg;
+
+  /**
    * The pods running on the worker. See: http://kubernetes.io/v1.1/docs/api-
    * reference/v1/definitions.html#_v1_pod
    *
@@ -52,7 +59,15 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
   private String reportInterval;
 
   /**
-   * Whether the VM is healthy.
+   * Whether the VM is in a permanently broken state. Broken VMs should be abandoned or deleted ASAP
+   * to avoid assigning or completing any work.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean vmIsBroken;
+
+  /**
+   * Whether the VM is currently healthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,6 +79,23 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private String vmStartupTime;
+
+  /**
+   * A message describing any unusual health reports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMsg() {
+    return msg;
+  }
+
+  /**
+   * A message describing any unusual health reports.
+   * @param msg msg or {@code null} for none
+   */
+  public WorkerHealthReport setMsg(java.lang.String msg) {
+    this.msg = msg;
+    return this;
+  }
 
   /**
    * The pods running on the worker. See: http://kubernetes.io/v1.1/docs/api-
@@ -110,7 +142,26 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether the VM is healthy.
+   * Whether the VM is in a permanently broken state. Broken VMs should be abandoned or deleted ASAP
+   * to avoid assigning or completing any work.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVmIsBroken() {
+    return vmIsBroken;
+  }
+
+  /**
+   * Whether the VM is in a permanently broken state. Broken VMs should be abandoned or deleted ASAP
+   * to avoid assigning or completing any work.
+   * @param vmIsBroken vmIsBroken or {@code null} for none
+   */
+  public WorkerHealthReport setVmIsBroken(java.lang.Boolean vmIsBroken) {
+    this.vmIsBroken = vmIsBroken;
+    return this;
+  }
+
+  /**
+   * Whether the VM is currently healthy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVmIsHealthy() {
@@ -118,7 +169,7 @@ public final class WorkerHealthReport extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether the VM is healthy.
+   * Whether the VM is currently healthy.
    * @param vmIsHealthy vmIsHealthy or {@code null} for none
    */
   public WorkerHealthReport setVmIsHealthy(java.lang.Boolean vmIsHealthy) {

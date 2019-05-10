@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-serviceusage</artifactId>
-  <version>v1beta1-rev20190503-1.26.0</version>
-  <name>Service Usage API v1beta1-rev20190503-1.26.0</name>
+  <version>v1beta1-rev20190507-1.26.0</version>
+  <name>Service Usage API v1beta1-rev20190507-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

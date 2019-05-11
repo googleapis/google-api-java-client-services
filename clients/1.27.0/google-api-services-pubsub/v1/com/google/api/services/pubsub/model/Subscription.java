@@ -57,9 +57,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
    * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
-   * `expiration_policy.ttl` is 1 day. BETA: This feature is part of a beta release. This API might
-   * be changed in backward-incompatible ways and is not recommended for production use. It is not
-   * subject to any SLA or deprecation policy.
+   * `expiration_policy.ttl` is 1 day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,9 +173,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
    * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
-   * `expiration_policy.ttl` is 1 day. BETA: This feature is part of a beta release. This API might
-   * be changed in backward-incompatible ways and is not recommended for production use. It is not
-   * subject to any SLA or deprecation policy.
+   * `expiration_policy.ttl` is 1 day.
    * @return value or {@code null} for none
    */
   public ExpirationPolicy getExpirationPolicy() {
@@ -189,9 +185,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * considered active as long as any connected subscriber is successfully consuming messages from
    * the subscription or is issuing operations on the subscription. If `expiration_policy` is not
    * set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for
-   * `expiration_policy.ttl` is 1 day. BETA: This feature is part of a beta release. This API might
-   * be changed in backward-incompatible ways and is not recommended for production use. It is not
-   * subject to any SLA or deprecation policy.
+   * `expiration_policy.ttl` is 1 day.
    * @param expirationPolicy expirationPolicy or {@code null} for none
    */
   public Subscription setExpirationPolicy(ExpirationPolicy expirationPolicy) {

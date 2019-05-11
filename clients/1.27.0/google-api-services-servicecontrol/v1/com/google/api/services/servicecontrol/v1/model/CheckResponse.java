@@ -75,6 +75,13 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String serviceConfigId;
 
   /**
+   * Unimplemented. The current service rollout id used to process the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceRolloutId;
+
+  /**
    * Indicate the decision of the check.
    *
    * If no check errors are present, the service should process the operation. Otherwise the service
@@ -164,6 +171,23 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
    */
   public CheckResponse setServiceConfigId(java.lang.String serviceConfigId) {
     this.serviceConfigId = serviceConfigId;
+    return this;
+  }
+
+  /**
+   * Unimplemented. The current service rollout id used to process the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceRolloutId() {
+    return serviceRolloutId;
+  }
+
+  /**
+   * Unimplemented. The current service rollout id used to process the request.
+   * @param serviceRolloutId serviceRolloutId or {@code null} for none
+   */
+  public CheckResponse setServiceRolloutId(java.lang.String serviceRolloutId) {
+    this.serviceRolloutId = serviceRolloutId;
     return this;
   }
 

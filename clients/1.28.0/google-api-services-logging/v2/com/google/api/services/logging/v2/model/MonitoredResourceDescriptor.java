@@ -67,6 +67,13 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
   }
 
   /**
+   * Optional. The launch stage of the monitored resource definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchStage;
+
+  /**
    * Optional. The resource name of the monitored resource descriptor:
    * "projects/{project_id}/monitoredResourceDescriptors/{type}" where {type} is the value of the
    * type field in this object and {project_id} is a project ID that provides API-specific context
@@ -143,6 +150,23 @@ public final class MonitoredResourceDescriptor extends com.google.api.client.jso
    */
   public MonitoredResourceDescriptor setLabels(java.util.List<LabelDescriptor> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The launch stage of the monitored resource definition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchStage() {
+    return launchStage;
+  }
+
+  /**
+   * Optional. The launch stage of the monitored resource definition.
+   * @param launchStage launchStage or {@code null} for none
+   */
+  public MonitoredResourceDescriptor setLaunchStage(java.lang.String launchStage) {
+    this.launchStage = launchStage;
     return this;
   }
 

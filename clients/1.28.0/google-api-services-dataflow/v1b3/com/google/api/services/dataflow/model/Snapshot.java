@@ -58,6 +58,13 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceJobId;
 
   /**
+   * State of the snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * The time after which this snapshot will be automatically deleted.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSourceJobId(java.lang.String sourceJobId) {
     this.sourceJobId = sourceJobId;
+    return this;
+  }
+
+  /**
+   * State of the snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * State of the snapshot.
+   * @param state state or {@code null} for none
+   */
+  public Snapshot setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

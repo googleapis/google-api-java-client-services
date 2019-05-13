@@ -17,7 +17,8 @@
 package com.google.api.services.monitoring.v3.model;
 
 /**
- * An internal checker allows uptime checks to run on private/internal GCP resources.
+ * An internal checker allows uptime checks to run on private/internal GCP resources.DEPRECATED. Use
+ * PrivateChecker instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed

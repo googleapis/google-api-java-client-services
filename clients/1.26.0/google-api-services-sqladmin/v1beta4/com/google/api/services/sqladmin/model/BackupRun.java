@@ -82,6 +82,13 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * The location of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The URI of this resource.
    * The value may be {@code null}.
    */
@@ -240,6 +247,23 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
    */
   public BackupRun setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The location of the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The location of the backup.
+   * @param location location or {@code null} for none
+   */
+  public BackupRun setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

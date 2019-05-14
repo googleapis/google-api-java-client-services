@@ -52,6 +52,13 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.String kind;
 
   /**
+   * The location of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Reserved for future use.
    * The value may be {@code null}.
    */
@@ -115,6 +122,23 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    */
   public BackupConfiguration setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The location of the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The location of the backup.
+   * @param location location or {@code null} for none
+   */
+  public BackupConfiguration setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

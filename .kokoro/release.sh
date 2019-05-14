@@ -71,8 +71,8 @@ deploy_library() {
 EXIT_CODE=0
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
 do
-  library_version=$(echo ${directory} | cut -f2 -d'/')
-  service=$(echo ${directory} | cut -f3 -d'/' | cut -f4 -d'-')
+  service=$(echo ${directory} | cut -f2 -d'/' | cut -f4 -d'-')
+  library_version=$(echo ${directory} | cut -f3 -d'/')
   api_version=$(echo ${directory} | cut -f4 -d'/')
   revision=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" ${directory}/pom.xml | cut -f2 -d'-')
   artifact_id=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='artifactId']/text()" ${directory}/pom.xml)
@@ -81,6 +81,7 @@ do
   then
     echo "Artifact already exists for $service, $api_version, $revision, $library_version."
   else
+    echo "Deploying $service, $api_version, $revision, $library_version."
     output_file="${service}-${api_version}-${revision}-${library_version}-sponge_log.log"
     set +e
     pushd $directory

@@ -34,7 +34,8 @@ public final class RecognitionAudio extends com.google.api.client.json.GenericJs
 
   /**
    * The audio data bytes encoded as specified in `RecognitionConfig`. Note: as with all bytes
-   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * fields, proto buffers use a pure binary representation, whereas JSON representations use
+   * base64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class RecognitionAudio extends com.google.api.client.json.GenericJs
 
   /**
    * The audio data bytes encoded as specified in `RecognitionConfig`. Note: as with all bytes
-   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * fields, proto buffers use a pure binary representation, whereas JSON representations use
+   * base64.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -63,7 +65,8 @@ public final class RecognitionAudio extends com.google.api.client.json.GenericJs
 
   /**
    * The audio data bytes encoded as specified in `RecognitionConfig`. Note: as with all bytes
-   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * fields, proto buffers use a pure binary representation, whereas JSON representations use
+   * base64.
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -75,7 +78,8 @@ public final class RecognitionAudio extends com.google.api.client.json.GenericJs
 
   /**
    * The audio data bytes encoded as specified in `RecognitionConfig`. Note: as with all bytes
-   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * fields, proto buffers use a pure binary representation, whereas JSON representations use
+   * base64.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -86,7 +90,8 @@ public final class RecognitionAudio extends com.google.api.client.json.GenericJs
 
   /**
    * The audio data bytes encoded as specified in `RecognitionConfig`. Note: as with all bytes
-   * fields, protobuffers use a pure binary representation, whereas JSON representations use base64.
+   * fields, proto buffers use a pure binary representation, whereas JSON representations use
+   * base64.
    * @see #setContent()
    *
    * <p>

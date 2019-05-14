@@ -146,13 +146,6 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Experimental configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Experimental experimental;
-
-  /**
    * HTTP configuration.
    * The value may be {@code null}.
    */
@@ -481,23 +474,6 @@ public final class GoogleApiService extends com.google.api.client.json.GenericJs
    */
   public GoogleApiService setEnums(java.util.List<ServiceUsageEnum> enums) {
     this.enums = enums;
-    return this;
-  }
-
-  /**
-   * Experimental configuration.
-   * @return value or {@code null} for none
-   */
-  public Experimental getExperimental() {
-    return experimental;
-  }
-
-  /**
-   * Experimental configuration.
-   * @param experimental experimental or {@code null} for none
-   */
-  public GoogleApiService setExperimental(Experimental experimental) {
-    this.experimental = experimental;
     return this;
   }
 

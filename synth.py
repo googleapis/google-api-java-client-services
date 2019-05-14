@@ -83,9 +83,9 @@ def generate_service(disco: str):
         shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
         shell.run(command.split(), cwd=repository, hide_output=False)
 
-        s.copy(output_dir, f"clients/{template}/{library_name}/{version}")
+        s.copy(output_dir, f"clients/{library_name}/{template}/{version}")
 
-        resource_dir = repository / "clients" / template / library_name / version / "resources"
+        resource_dir = repository / "clients" / library_name / template / version / "resources"
         shell.run(f"mkdir -p {resource_dir}".split())
         shutil.copy(input_file, resource_dir / path.basename(disco))
 

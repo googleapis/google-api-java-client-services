@@ -51,11 +51,6 @@ shell.run(
     cwd=repository
 )
 
-
-def dasherize(name: str):
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
-
 def write_metadata_file(name: str, version: str, metadata: dict):
     metadata_file = f'clients/{name}/{version}.metadata.json'
     print(f"Writing json metadata to {metadata_file}")
@@ -114,8 +109,6 @@ def generate_service(disco: str):
     # write the metadata file
     metadata = maven_metadata(str(repository / "clients" / library_name / TEMPLATE_VERSIONS[-1] / version / "pom.xml"))
     write_metadata_file(library_name, version, metadata)
-
-
 
 def all_discoveries():
     discos = []

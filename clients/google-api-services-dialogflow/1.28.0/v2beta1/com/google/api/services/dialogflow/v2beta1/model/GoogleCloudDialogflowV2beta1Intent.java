@@ -39,8 +39,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   private java.lang.String action;
 
   /**
-   * Optional. The list of platforms for which the first response will be taken from among the
-   * messages assigned to the DEFAULT_PLATFORM.
+   * Optional. The list of platforms for which the first responses will be copied from the messages
+   * in PLATFORM_UNSPECIFIED (i.e. default platform).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +229,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The list of platforms for which the first response will be taken from among the
-   * messages assigned to the DEFAULT_PLATFORM.
+   * Optional. The list of platforms for which the first responses will be copied from the messages
+   * in PLATFORM_UNSPECIFIED (i.e. default platform).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDefaultResponsePlatforms() {
@@ -238,8 +238,8 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The list of platforms for which the first response will be taken from among the
-   * messages assigned to the DEFAULT_PLATFORM.
+   * Optional. The list of platforms for which the first responses will be copied from the messages
+   * in PLATFORM_UNSPECIFIED (i.e. default platform).
    * @param defaultResponsePlatforms defaultResponsePlatforms or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setDefaultResponsePlatforms(java.util.List<java.lang.String> defaultResponsePlatforms) {

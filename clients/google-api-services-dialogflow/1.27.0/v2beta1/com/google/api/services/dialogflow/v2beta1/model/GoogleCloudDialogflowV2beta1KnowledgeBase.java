@@ -19,8 +19,8 @@ package com.google.api.services.dialogflow.v2beta1.model;
 /**
  * Represents knowledge base resource.
  *
- * Note: resource `projects.agent.knowledgeBases` is deprecated, please use
- * `projects.knowledgeBases` instead.
+ * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+ * `projects.knowledgeBases`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

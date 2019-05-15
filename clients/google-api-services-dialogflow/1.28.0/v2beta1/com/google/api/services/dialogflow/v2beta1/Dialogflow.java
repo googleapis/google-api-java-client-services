@@ -6184,6 +6184,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Creates a knowledge base.
          *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
+         *
          * Create a request for the method "knowledgeBases.create".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -6209,6 +6212,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Creates a knowledge base.
+           *
+           * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+           * `projects.knowledgeBases`.
            *
            * Create a request for the method "knowledgeBases.create".
            *
@@ -6321,6 +6327,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Deletes the specified knowledge base.
          *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
+         *
          * Create a request for the method "knowledgeBases.delete".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -6345,6 +6354,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Deletes the specified knowledge base.
+           *
+           * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+           * `projects.knowledgeBases`.
            *
            * Create a request for the method "knowledgeBases.delete".
            *
@@ -6481,6 +6493,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Retrieves the specified knowledge base.
          *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
+         *
          * Create a request for the method "knowledgeBases.get".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -6505,6 +6520,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Retrieves the specified knowledge base.
+           *
+           * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+           * `projects.knowledgeBases`.
            *
            * Create a request for the method "knowledgeBases.get".
            *
@@ -6627,6 +6645,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Returns the list of all knowledge bases of the specified agent.
          *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
+         *
          * Create a request for the method "knowledgeBases.list".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -6651,6 +6672,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns the list of all knowledge bases of the specified agent.
+           *
+           * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+           * `projects.knowledgeBases`.
            *
            * Create a request for the method "knowledgeBases.list".
            *
@@ -6809,6 +6833,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Updates the specified knowledge base.
          *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
+         *
          * Create a request for the method "knowledgeBases.patch".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -6836,6 +6863,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Updates the specified knowledge base.
+           *
+           * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+           * `projects.knowledgeBases`.
            *
            * Create a request for the method "knowledgeBases.patch".
            *
@@ -6997,6 +7027,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Creates a new document.
            *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
            * Operation
            *
            * Create a request for the method "documents.create".
@@ -7024,6 +7057,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Creates a new document.
+             *
+             * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+             * `projects.knowledgeBases.documents`.
              *
              * Operation
              *
@@ -7140,6 +7176,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Deletes the specified document.
            *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
            * Operation
            *
            * Create a request for the method "documents.delete".
@@ -7166,6 +7205,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Deletes the specified document.
+             *
+             * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+             * `projects.knowledgeBases.documents`.
              *
              * Operation
              *
@@ -7279,6 +7321,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Retrieves the specified document.
            *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
            * Create a request for the method "documents.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -7303,6 +7348,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Retrieves the specified document.
+             *
+             * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+             * `projects.knowledgeBases.documents`.
              *
              * Create a request for the method "documents.get".
              *
@@ -7425,6 +7473,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Returns the list of all documents of the knowledge base.
            *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
            * Create a request for the method "documents.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -7449,6 +7500,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Returns the list of all documents of the knowledge base.
+             *
+             * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+             * `projects.knowledgeBases.documents`.
              *
              * Create a request for the method "documents.list".
              *
@@ -7607,7 +7661,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified document. Operation
+           * Updates the specified document.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
+           * Operation
            *
            * Create a request for the method "documents.patch".
            *
@@ -7635,7 +7694,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/agent/knowledgeBases/[^/]+/documents/[^/]+$");
 
             /**
-             * Updates the specified document. Operation
+             * Updates the specified document.
+             *
+             * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+             * `projects.knowledgeBases.documents`.
+             *
+             * Operation
              *
              * Create a request for the method "documents.patch".
              *
@@ -7777,6 +7841,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Reloads the specified document from its specified source, content_uri or content. The previously
            * loaded content of the document will be deleted. Note: Even when the content of the document has
            * not changed, there still may be side effects because of internal implementation changes.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
            * Operation
            *
            * Create a request for the method "documents.reload".
@@ -7806,7 +7874,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Reloads the specified document from its specified source, content_uri or content. The
              * previously loaded content of the document will be deleted. Note: Even when the content of the
              * document has not changed, there still may be side effects because of internal implementation
-             * changes. Operation
+             * changes.
+             *
+             * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+             * `projects.knowledgeBases.documents`.
+             *
+             * Operation
              *
              * Create a request for the method "documents.reload".
              *
@@ -10082,6 +10155,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       /**
        * Creates a knowledge base.
        *
+       * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+       * `projects.knowledgeBases`.
+       *
        * Create a request for the method "knowledgeBases.create".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -10107,6 +10183,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Creates a knowledge base.
+         *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
          *
          * Create a request for the method "knowledgeBases.create".
          *
@@ -10219,6 +10298,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       /**
        * Deletes the specified knowledge base.
        *
+       * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+       * `projects.knowledgeBases`.
+       *
        * Create a request for the method "knowledgeBases.delete".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -10243,6 +10325,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Deletes the specified knowledge base.
+         *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
          *
          * Create a request for the method "knowledgeBases.delete".
          *
@@ -10377,6 +10462,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       /**
        * Retrieves the specified knowledge base.
        *
+       * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+       * `projects.knowledgeBases`.
+       *
        * Create a request for the method "knowledgeBases.get".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -10401,6 +10489,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Retrieves the specified knowledge base.
+         *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
          *
          * Create a request for the method "knowledgeBases.get".
          *
@@ -10521,6 +10612,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       /**
        * Returns the list of all knowledge bases of the specified agent.
        *
+       * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+       * `projects.knowledgeBases`.
+       *
        * Create a request for the method "knowledgeBases.list".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -10545,6 +10639,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Returns the list of all knowledge bases of the specified agent.
+         *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
          *
          * Create a request for the method "knowledgeBases.list".
          *
@@ -10703,6 +10800,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       /**
        * Updates the specified knowledge base.
        *
+       * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+       * `projects.knowledgeBases`.
+       *
        * Create a request for the method "knowledgeBases.patch".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -10730,6 +10830,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Updates the specified knowledge base.
+         *
+         * Note: The `projects.agent.knowledgeBases` resource is deprecated; only use
+         * `projects.knowledgeBases`.
          *
          * Create a request for the method "knowledgeBases.patch".
          *
@@ -10891,6 +10994,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Creates a new document.
          *
+         * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+         * `projects.knowledgeBases.documents`.
+         *
          * Operation
          *
          * Create a request for the method "documents.create".
@@ -10918,6 +11024,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Creates a new document.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
            *
            * Operation
            *
@@ -11034,6 +11143,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Deletes the specified document.
          *
+         * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+         * `projects.knowledgeBases.documents`.
+         *
          * Operation
          *
          * Create a request for the method "documents.delete".
@@ -11060,6 +11172,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Deletes the specified document.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
            *
            * Operation
            *
@@ -11173,6 +11288,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Retrieves the specified document.
          *
+         * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+         * `projects.knowledgeBases.documents`.
+         *
          * Create a request for the method "documents.get".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -11197,6 +11315,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Retrieves the specified document.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
            *
            * Create a request for the method "documents.get".
            *
@@ -11319,6 +11440,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Returns the list of all documents of the knowledge base.
          *
+         * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+         * `projects.knowledgeBases.documents`.
+         *
          * Create a request for the method "documents.list".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
@@ -11343,6 +11467,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns the list of all documents of the knowledge base.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
            *
            * Create a request for the method "documents.list".
            *
@@ -11501,7 +11628,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the specified document. Operation
+         * Updates the specified document.
+         *
+         * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+         * `projects.knowledgeBases.documents`.
+         *
+         * Operation
          *
          * Create a request for the method "documents.patch".
          *
@@ -11529,7 +11661,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/knowledgeBases/[^/]+/documents/[^/]+$");
 
           /**
-           * Updates the specified document. Operation
+           * Updates the specified document.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
+           * Operation
            *
            * Create a request for the method "documents.patch".
            *
@@ -11671,6 +11808,10 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * Reloads the specified document from its specified source, content_uri or content. The previously
          * loaded content of the document will be deleted. Note: Even when the content of the document has
          * not changed, there still may be side effects because of internal implementation changes.
+         *
+         * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+         * `projects.knowledgeBases.documents`.
+         *
          * Operation
          *
          * Create a request for the method "documents.reload".
@@ -11700,7 +11841,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Reloads the specified document from its specified source, content_uri or content. The
            * previously loaded content of the document will be deleted. Note: Even when the content of the
            * document has not changed, there still may be side effects because of internal implementation
-           * changes. Operation
+           * changes.
+           *
+           * Note: The `projects.agent.knowledgeBases.documents` resource is deprecated; only use
+           * `projects.knowledgeBases.documents`.
+           *
+           * Operation
            *
            * Create a request for the method "documents.reload".
            *

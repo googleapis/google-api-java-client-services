@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * A description of how to set up an iOS device prior to a test.
+ * A description of how to set up an iOS device prior to running the test.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:

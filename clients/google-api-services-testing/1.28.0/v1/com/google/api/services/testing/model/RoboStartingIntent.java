@@ -30,12 +30,14 @@ package com.google.api.services.testing.model;
 public final class RoboStartingIntent extends com.google.api.client.json.GenericJson {
 
   /**
+   * An intent that starts the main launcher activity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LauncherActivityIntent launcherActivity;
 
   /**
+   * An intent that starts an activity with specific details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +51,7 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
   private String timeout;
 
   /**
+   * An intent that starts the main launcher activity.
    * @return value or {@code null} for none
    */
   public LauncherActivityIntent getLauncherActivity() {
@@ -56,6 +59,7 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
   }
 
   /**
+   * An intent that starts the main launcher activity.
    * @param launcherActivity launcherActivity or {@code null} for none
    */
   public RoboStartingIntent setLauncherActivity(LauncherActivityIntent launcherActivity) {
@@ -64,6 +68,7 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
   }
 
   /**
+   * An intent that starts an activity with specific details.
    * @return value or {@code null} for none
    */
   public StartActivityIntent getStartActivity() {
@@ -71,6 +76,7 @@ public final class RoboStartingIntent extends com.google.api.client.json.Generic
   }
 
   /**
+   * An intent that starts an activity with specific details.
    * @param startActivity startActivity or {@code null} for none
    */
   public RoboStartingIntent setStartActivity(StartActivityIntent startActivity) {

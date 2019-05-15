@@ -51,14 +51,14 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   private AndroidTestLoop androidTestLoop;
 
   /**
-   * Disables performance metrics recording; may reduce test latency.
+   * Disables performance metrics recording. May reduce test latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disablePerformanceMetrics;
 
   /**
-   * Disables video recording; may reduce test latency.
+   * Disables video recording. May reduce test latency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Disables performance metrics recording; may reduce test latency.
+   * Disables performance metrics recording. May reduce test latency.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisablePerformanceMetrics() {
@@ -153,7 +153,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Disables performance metrics recording; may reduce test latency.
+   * Disables performance metrics recording. May reduce test latency.
    * @param disablePerformanceMetrics disablePerformanceMetrics or {@code null} for none
    */
   public TestSpecification setDisablePerformanceMetrics(java.lang.Boolean disablePerformanceMetrics) {
@@ -162,7 +162,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Disables video recording; may reduce test latency.
+   * Disables video recording. May reduce test latency.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableVideoRecording() {
@@ -170,7 +170,7 @@ public final class TestSpecification extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Disables video recording; may reduce test latency.
+   * Disables video recording. May reduce test latency.
    * @param disableVideoRecording disableVideoRecording or {@code null} for none
    */
   public TestSpecification setDisableVideoRecording(java.lang.Boolean disableVideoRecording) {

@@ -30,21 +30,21 @@ package com.google.api.services.testing.model;
 public final class DeviceFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * A reference to an opaque binary blob file
+   * A reference to an opaque binary blob file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObbFile obbFile;
 
   /**
-   * A reference to a regular file
+   * A reference to a regular file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RegularFile regularFile;
 
   /**
-   * A reference to an opaque binary blob file
+   * A reference to an opaque binary blob file.
    * @return value or {@code null} for none
    */
   public ObbFile getObbFile() {
@@ -52,7 +52,7 @@ public final class DeviceFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to an opaque binary blob file
+   * A reference to an opaque binary blob file.
    * @param obbFile obbFile or {@code null} for none
    */
   public DeviceFile setObbFile(ObbFile obbFile) {
@@ -61,7 +61,7 @@ public final class DeviceFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to a regular file
+   * A reference to a regular file.
    * @return value or {@code null} for none
    */
   public RegularFile getRegularFile() {
@@ -69,7 +69,7 @@ public final class DeviceFile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A reference to a regular file
+   * A reference to a regular file.
    * @param regularFile regularFile or {@code null} for none
    */
   public DeviceFile setRegularFile(RegularFile regularFile) {

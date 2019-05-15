@@ -17,8 +17,8 @@
 package com.google.api.services.testing.model;
 
 /**
- * A group of one or more TestExecutions, built by taking a product of values over a pre-defined set
- * of axes.
+ * TestMatrix captures all details about a test. It contains the environment configuration, test
+ * specification, test executions and overall state and outcome.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   private ClientInfo clientInfo;
 
   /**
-   * Required. How the host machine(s) are configured.
+   * Required. The devices the tests are being executed on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,6 +63,13 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   private java.lang.String invalidMatrixDetails;
 
   /**
+   * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outcomeSummary;
+
+  /**
    * The cloud project that owns the test matrix.
    * The value may be {@code null}.
    */
@@ -77,7 +84,7 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   private ResultStorage resultStorage;
 
   /**
-   * Output only. Indicates the current progress of the test matrix (e.g., FINISHED).
+   * Output only. Indicates the current progress of the test matrix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +142,7 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. How the host machine(s) are configured.
+   * Required. The devices the tests are being executed on.
    * @return value or {@code null} for none
    */
   public EnvironmentMatrix getEnvironmentMatrix() {
@@ -143,7 +150,7 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. How the host machine(s) are configured.
+   * Required. The devices the tests are being executed on.
    * @param environmentMatrix environmentMatrix or {@code null} for none
    */
   public TestMatrix setEnvironmentMatrix(EnvironmentMatrix environmentMatrix) {
@@ -194,6 +201,23 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutcomeSummary() {
+    return outcomeSummary;
+  }
+
+  /**
+   * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+   * @param outcomeSummary outcomeSummary or {@code null} for none
+   */
+  public TestMatrix setOutcomeSummary(java.lang.String outcomeSummary) {
+    this.outcomeSummary = outcomeSummary;
+    return this;
+  }
+
+  /**
    * The cloud project that owns the test matrix.
    * @return value or {@code null} for none
    */
@@ -228,7 +252,7 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates the current progress of the test matrix (e.g., FINISHED).
+   * Output only. Indicates the current progress of the test matrix.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -236,7 +260,7 @@ public final class TestMatrix extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates the current progress of the test matrix (e.g., FINISHED).
+   * Output only. Indicates the current progress of the test matrix.
    * @param state state or {@code null} for none
    */
   public TestMatrix setState(java.lang.String state) {

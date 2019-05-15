@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-videointelligence",
+    "version": "v1beta2-rev20190308-1.28.0"
+  }
+}

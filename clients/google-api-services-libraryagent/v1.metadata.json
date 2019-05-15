@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-libraryagent",
+    "version": "v1-rev20190105-1.28.0"
+  }
+}

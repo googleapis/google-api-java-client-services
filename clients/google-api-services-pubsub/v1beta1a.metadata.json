@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-pubsub",
+    "version": "v1beta1a-rev20180604-1.28.0"
+  }
+}

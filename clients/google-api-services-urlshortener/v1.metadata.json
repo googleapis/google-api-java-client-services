@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-urlshortener",
+    "version": "v1-rev20150519-1.28.0"
+  }
+}

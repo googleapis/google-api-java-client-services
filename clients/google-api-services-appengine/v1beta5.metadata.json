@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-appengine",
+    "version": "v1beta5-rev20181218-1.28.0"
+  }
+}

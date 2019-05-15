@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-playcustomapp",
+    "version": "v1-rev20170622-1.28.0"
+  }
+}

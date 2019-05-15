@@ -22,6 +22,8 @@ import logging
 from os import path
 from pathlib import Path
 import glob
+import json
+from lxml import etree
 import re
 import sys
 import shutil
@@ -54,6 +56,26 @@ def dasherize(name: str):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
 
+def write_metadata_file(name: str, version: str, metadata: dict):
+    metadata_file = f'clients/{name}/{version}.metadata.json'
+    print(f"Writing json metadata to {metadata_file}")
+    metadata = {
+        "maven": metadata
+    }
+    with open(metadata_file, "w") as outfile:
+        json.dump(metadata, outfile, indent=2)
+
+def maven_metadata(pom_file: str):
+    tree = etree.parse(pom_file)
+    root = tree.getroot()
+    version = root.find("{http://maven.apache.org/POM/4.0.0}version").text
+    group_id = root.find("{http://maven.apache.org/POM/4.0.0}groupId").text
+    artifact_id = root.find("{http://maven.apache.org/POM/4.0.0}artifactId").text
+    return {
+        "groupId": group_id,
+        "artifactId": artifact_id,
+        "version": version
+    }
 
 def generate_service(disco: str):
 
@@ -88,6 +110,11 @@ def generate_service(disco: str):
         resource_dir = repository / "clients" / library_name / template / version / "resources"
         shell.run(f"mkdir -p {resource_dir}".split())
         shutil.copy(input_file, resource_dir / path.basename(disco))
+
+    # write the metadata file
+    metadata = maven_metadata(str(repository / "clients" / library_name / TEMPLATE_VERSIONS[-1] / version / "pom.xml"))
+    write_metadata_file(library_name, version, metadata)
+
 
 
 def all_discoveries():

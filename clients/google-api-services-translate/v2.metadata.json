@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-translate",
+    "version": "v2-rev20170525-1.28.0"
+  }
+}

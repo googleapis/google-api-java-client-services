@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-cloudtasks",
+    "version": "v2-rev20190412-1.28.0"
+  }
+}

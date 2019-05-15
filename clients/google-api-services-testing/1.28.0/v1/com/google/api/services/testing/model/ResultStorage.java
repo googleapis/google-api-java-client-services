@@ -37,6 +37,13 @@ public final class ResultStorage extends com.google.api.client.json.GenericJson 
   private GoogleCloudStorage googleCloudStorage;
 
   /**
+   * Output only. URL to the results in the Firebase Web Console.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resultsUrl;
+
+  /**
    * Output only. The tool results execution that results are written to.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class ResultStorage extends com.google.api.client.json.GenericJson 
    */
   public ResultStorage setGoogleCloudStorage(GoogleCloudStorage googleCloudStorage) {
     this.googleCloudStorage = googleCloudStorage;
+    return this;
+  }
+
+  /**
+   * Output only. URL to the results in the Firebase Web Console.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResultsUrl() {
+    return resultsUrl;
+  }
+
+  /**
+   * Output only. URL to the results in the Firebase Web Console.
+   * @param resultsUrl resultsUrl or {@code null} for none
+   */
+  public ResultStorage setResultsUrl(java.lang.String resultsUrl) {
+    this.resultsUrl = resultsUrl;
     return this;
   }
 

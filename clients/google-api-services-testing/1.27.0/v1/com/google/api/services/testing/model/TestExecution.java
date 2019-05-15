@@ -17,7 +17,7 @@
 package com.google.api.services.testing.model;
 
 /**
- * Specifies a single test to be executed in a single environment.
+ * A single test executed in a single environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Testing API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   private Environment environment;
 
   /**
-   * Output only. Unique id set by the backend.
+   * Output only. Unique id set by the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Unique id set by the backend.
+   * Output only. Unique id set by the service.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -118,7 +118,7 @@ public final class TestExecution extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Unique id set by the backend.
+   * Output only. Unique id set by the service.
    * @param id id or {@code null} for none
    */
   public TestExecution setId(java.lang.String id) {

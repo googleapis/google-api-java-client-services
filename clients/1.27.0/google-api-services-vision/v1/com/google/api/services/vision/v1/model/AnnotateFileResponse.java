@@ -45,6 +45,13 @@ public final class AnnotateFileResponse extends com.google.api.client.json.Gener
   private java.util.List<AnnotateImageResponse> responses;
 
   /**
+   * This field gives the total number of pages in the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalPages;
+
+  /**
    * Information about the file for which this response is generated.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class AnnotateFileResponse extends com.google.api.client.json.Gener
    */
   public AnnotateFileResponse setResponses(java.util.List<AnnotateImageResponse> responses) {
     this.responses = responses;
+    return this;
+  }
+
+  /**
+   * This field gives the total number of pages in the file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalPages() {
+    return totalPages;
+  }
+
+  /**
+   * This field gives the total number of pages in the file.
+   * @param totalPages totalPages or {@code null} for none
+   */
+  public AnnotateFileResponse setTotalPages(java.lang.Integer totalPages) {
+    this.totalPages = totalPages;
     return this;
   }
 

@@ -55,6 +55,14 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   private RevisionTemplate revisionTemplate;
 
   /**
+   * Template holds the latest specification for the Revision to be stamped out. Not currently
+   * supported by Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RevisionTemplate template;
+
+  /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
    * the sequence number containing the latest generation of the desired state.
    *
@@ -107,6 +115,25 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
    */
   public ConfigurationSpec setRevisionTemplate(RevisionTemplate revisionTemplate) {
     this.revisionTemplate = revisionTemplate;
+    return this;
+  }
+
+  /**
+   * Template holds the latest specification for the Revision to be stamped out. Not currently
+   * supported by Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public RevisionTemplate getTemplate() {
+    return template;
+  }
+
+  /**
+   * Template holds the latest specification for the Revision to be stamped out. Not currently
+   * supported by Cloud Run.
+   * @param template template or {@code null} for none
+   */
+  public ConfigurationSpec setTemplate(RevisionTemplate template) {
+    this.template = template;
     return this;
   }
 

@@ -78,6 +78,26 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
   private ServiceSpecRunLatest runLatest;
 
   /**
+   * Template holds the latest specification for the Revision to be stamped out.
+   *
+   * Not currently supported by Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RevisionTemplate template;
+
+  /**
+   * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
+   * Configurations. This will replace existing service specs (ServiceSpecRunLatest,
+   * ServiceSpecPinnedType, ServiceSpecReleaseType, and ServiceSpecManualType).
+   *
+   * Not currently supported by Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TrafficTarget> traffic;
+
+  /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
    * the sequence number containing the latest generation of the desired state.
    *
@@ -183,6 +203,52 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
    */
   public ServiceSpec setRunLatest(ServiceSpecRunLatest runLatest) {
     this.runLatest = runLatest;
+    return this;
+  }
+
+  /**
+   * Template holds the latest specification for the Revision to be stamped out.
+   *
+   * Not currently supported by Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public RevisionTemplate getTemplate() {
+    return template;
+  }
+
+  /**
+   * Template holds the latest specification for the Revision to be stamped out.
+   *
+   * Not currently supported by Cloud Run.
+   * @param template template or {@code null} for none
+   */
+  public ServiceSpec setTemplate(RevisionTemplate template) {
+    this.template = template;
+    return this;
+  }
+
+  /**
+   * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
+   * Configurations. This will replace existing service specs (ServiceSpecRunLatest,
+   * ServiceSpecPinnedType, ServiceSpecReleaseType, and ServiceSpecManualType).
+   *
+   * Not currently supported by Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TrafficTarget> getTraffic() {
+    return traffic;
+  }
+
+  /**
+   * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
+   * Configurations. This will replace existing service specs (ServiceSpecRunLatest,
+   * ServiceSpecPinnedType, ServiceSpecReleaseType, and ServiceSpecManualType).
+   *
+   * Not currently supported by Cloud Run.
+   * @param traffic traffic or {@code null} for none
+   */
+  public ServiceSpec setTraffic(java.util.List<TrafficTarget> traffic) {
+    this.traffic = traffic;
     return this;
   }
 

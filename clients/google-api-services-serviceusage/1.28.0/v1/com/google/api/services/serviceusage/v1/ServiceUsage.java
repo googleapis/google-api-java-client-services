@@ -776,11 +776,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      *
      * @param parent Parent to enable services on.
     An example name would be:
-    `projects/123`
-    where `123` is the project
-     *        number (not project ID).
-    The `BatchEnableServices` method currently only supports
-     *        projects.
+    `projects/123` where `123` is the project
+     *        number.
+    The `BatchEnableServices` method currently only supports projects.
      * @param content the {@link com.google.api.services.serviceusage.v1.model.BatchEnableServicesRequest}
      * @return the request
      */
@@ -811,11 +809,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        *
        * @param parent Parent to enable services on.
     An example name would be:
-    `projects/123`
-    where `123` is the project
-     *        number (not project ID).
-    The `BatchEnableServices` method currently only supports
-     *        projects.
+    `projects/123` where `123` is the project
+     *        number.
+    The `BatchEnableServices` method currently only supports projects.
        * @param content the {@link com.google.api.services.serviceusage.v1.model.BatchEnableServicesRequest}
        * @since 1.13
        */
@@ -887,8 +883,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /**
        * Parent to enable services on.
        *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
+       * An example name would be: `projects/123` where `123` is the project number.
        *
        * The `BatchEnableServices` method currently only supports projects.
        */
@@ -897,7 +892,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /** Parent to enable services on.
 
-     An example name would be: `projects/123` where `123` is the project number (not project ID).
+     An example name would be: `projects/123` where `123` is the project number.
 
      The `BatchEnableServices` method currently only supports projects.
        */
@@ -908,8 +903,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /**
        * Parent to enable services on.
        *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
+       * An example name would be: `projects/123` where `123` is the project number.
        *
        * The `BatchEnableServices` method currently only supports projects.
        */
@@ -944,9 +938,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
     The enable and disable methods currently
      *        only support projects.
     An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
-     *        project ID).
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the
+    project number.
      * @param content the {@link com.google.api.services.serviceusage.v1.model.DisableServiceRequest}
      * @return the request
      */
@@ -982,9 +975,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
     The enable and disable methods currently
      *        only support projects.
     An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
-     *        project ID).
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the
+    project number.
        * @param content the {@link com.google.api.services.serviceusage.v1.model.DisableServiceRequest}
        * @since 1.13
        */
@@ -1059,7 +1051,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * The enable and disable methods currently only support projects.
        *
        * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * is the project number.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -1069,7 +1061,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      The enable and disable methods currently only support projects.
 
      An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
-     project number (not project ID).
+     project number.
        */
       public java.lang.String getName() {
         return name;
@@ -1081,7 +1073,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * The enable and disable methods currently only support projects.
        *
        * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * is the project number.
        */
       public Disable setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1114,9 +1106,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      *        public or is shared with
     the user enabling the service.
     An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
-     *        project ID).
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the
+    project number.
      * @param content the {@link com.google.api.services.serviceusage.v1.model.EnableServiceRequest}
      * @return the request
      */
@@ -1152,9 +1143,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      *        public or is shared with
     the user enabling the service.
     An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
-     *        project ID).
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the
+    project number.
        * @param content the {@link com.google.api.services.serviceusage.v1.model.EnableServiceRequest}
        * @since 1.13
        */
@@ -1232,7 +1222,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * the service.
        *
        * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * is the project number.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -1245,7 +1235,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      service.
 
      An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
-     project number (not project ID).
+     project number.
        */
       public java.lang.String getName() {
         return name;
@@ -1260,7 +1250,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * the service.
        *
        * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * is the project number.
        */
       public Enable setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1287,9 +1277,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      *
      * @param name Name of the consumer and service to get the `ConsumerState` for.
     An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
-     *        project ID).
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the
+    project number.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1317,9 +1306,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        *
        * @param name Name of the consumer and service to get the `ConsumerState` for.
     An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
-     *        project ID).
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the
+    project number.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1401,7 +1389,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * Name of the consumer and service to get the `ConsumerState` for.
        *
        * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * is the project number.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -1409,7 +1397,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /** Name of the consumer and service to get the `ConsumerState` for.
 
      An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
-     project number (not project ID).
+     project number.
        */
       public java.lang.String getName() {
         return name;
@@ -1419,7 +1407,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * Name of the consumer and service to get the `ConsumerState` for.
        *
        * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * is the project number.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1450,9 +1438,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      *
      * @param parent Parent to search for services on.
     An example name would be:
-    `projects/123`
-    where `123` is the
-     *        project number (not project ID).
+    `projects/123` where `123` is the
+     *        project number.
      * @return the request
      */
     public List list(java.lang.String parent) throws java.io.IOException {
@@ -1484,9 +1471,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        *
        * @param parent Parent to search for services on.
     An example name would be:
-    `projects/123`
-    where `123` is the
-     *        project number (not project ID).
+    `projects/123` where `123` is the
+     *        project number.
        * @since 1.13
        */
       protected List(java.lang.String parent) {
@@ -1567,15 +1553,14 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /**
        * Parent to search for services on.
        *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
+       * An example name would be: `projects/123` where `123` is the project number.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Parent to search for services on.
 
-     An example name would be: `projects/123` where `123` is the project number (not project ID).
+     An example name would be: `projects/123` where `123` is the project number.
        */
       public java.lang.String getParent() {
         return parent;
@@ -1584,8 +1569,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       /**
        * Parent to search for services on.
        *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
+       * An example name would be: `projects/123` where `123` is the project number.
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {

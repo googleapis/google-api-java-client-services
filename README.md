@@ -6,7 +6,7 @@ This repository contains the generated source for individual APIs that utilize
 ## Requirements
 
 * [Google APIs Java Client Library for Java][google-api-java-client]
-* Java 6 (or higher)
+* Java 7 (or higher)
 * Android 1.6 (or higher)
 
 

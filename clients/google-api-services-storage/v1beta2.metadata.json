@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-storage",
+    "version": "v1beta2-rev20180905-1.28.0"
+  }
+}

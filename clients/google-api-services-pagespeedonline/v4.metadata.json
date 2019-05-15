@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-pagespeedonline",
+    "version": "v4-rev20180606-1.28.0"
+  }
+}

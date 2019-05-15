@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-webfonts",
+    "version": "v1-rev20160302-1.28.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-chat",
+    "version": "v1-rev20180806-1.28.0"
+  }
+}

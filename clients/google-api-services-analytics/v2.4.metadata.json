@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-analytics",
+    "version": "v2.4-rev20180622-1.28.0"
+  }
+}

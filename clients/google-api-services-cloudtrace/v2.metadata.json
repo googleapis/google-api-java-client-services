@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-cloudtrace",
+    "version": "v2-rev20190312-1.28.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-clouddebugger",
+    "version": "v2-rev20181114-1.28.0"
+  }
+}

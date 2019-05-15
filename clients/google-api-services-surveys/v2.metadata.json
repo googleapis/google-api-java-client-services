@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-surveys",
+    "version": "v2-rev20180508-1.28.0"
+  }
+}

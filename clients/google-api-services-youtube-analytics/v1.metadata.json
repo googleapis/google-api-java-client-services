@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-youtubeAnalytics",
+    "version": "v1-rev20180805-1.28.0"
+  }
+}

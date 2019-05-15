@@ -144,6 +144,10 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
   public class Projects {
 
     /**
+     * A policy specifies the attestors that must attest to a container image, before the project is
+     * allowed to deploy that image. There is at most one policy per project. All image admission
+     * requests are permitted if a project has no policy.
+     *
      * Gets the policy for this project. Returns a default policy if the project does not have one.
      *
      * Create a request for the method "projects.getPolicy".
@@ -169,6 +173,10 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
           java.util.regex.Pattern.compile("^projects/[^/]+/policy$");
 
       /**
+       * A policy specifies the attestors that must attest to a container image, before the project is
+       * allowed to deploy that image. There is at most one policy per project. All image admission
+       * requests are permitted if a project has no policy.
+       *
        * Gets the policy for this project. Returns a default policy if the project does not have one.
        *
        * Create a request for the method "projects.getPolicy".

@@ -84,7 +84,7 @@ def generate_service(disco: str):
         log.info(f"Skipping {disco}.")
         return
 
-    name = dasherize(m.group(1))
+    name = m.group(1)
     version = m.group(2)
 
     log.info(f"Generating {name} {version}.")

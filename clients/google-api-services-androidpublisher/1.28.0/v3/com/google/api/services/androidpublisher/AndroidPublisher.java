@@ -6504,7 +6504,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       return result;
     }
 
-    public class Uploadapk extends AndroidPublisherRequest<Void> {
+    public class Uploadapk extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InternalAppSharingArtifact> {
 
       private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/apk";
 
@@ -6526,7 +6526,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadapk(java.lang.String packageName) {
-        super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
       }
 
@@ -6553,7 +6553,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadapk(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
         initializeMediaUpload(mediaContent);
       }
@@ -6662,7 +6662,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       return result;
     }
 
-    public class Uploadbundle extends AndroidPublisherRequest<Void> {
+    public class Uploadbundle extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.InternalAppSharingArtifact> {
 
       private static final String REST_PATH = "internalappsharing/{packageName}/artifacts/bundle";
 
@@ -6684,7 +6684,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadbundle(java.lang.String packageName) {
-        super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
       }
 
@@ -6711,7 +6711,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * @since 1.13
        */
       protected Uploadbundle(java.lang.String packageName, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
-        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, Void.class);
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, null, com.google.api.services.androidpublisher.model.InternalAppSharingArtifact.class);
         this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
         initializeMediaUpload(mediaContent);
       }
@@ -6991,6 +6991,149 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
     public class Products {
 
       /**
+       * Acknowledges a purchase of an inapp item.
+       *
+       * Create a request for the method "products.acknowledge".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+       * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
+       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest}
+       * @return the request
+       */
+      public Acknowledge acknowledge(java.lang.String packageName, java.lang.String productId, java.lang.String token, com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest content) throws java.io.IOException {
+        Acknowledge result = new Acknowledge(packageName, productId, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Acknowledge extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "{packageName}/purchases/products/{productId}/tokens/{token}:acknowledge";
+
+        /**
+         * Acknowledges a purchase of an inapp item.
+         *
+         * Create a request for the method "products.acknowledge".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         * @param productId The inapp product SKU (for example, 'com.some.thing.inapp1').
+         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest}
+         * @since 1.13
+         */
+        protected Acknowledge(java.lang.String packageName, java.lang.String productId, java.lang.String token, com.google.api.services.androidpublisher.model.ProductPurchasesAcknowledgeRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.productId = com.google.api.client.util.Preconditions.checkNotNull(productId, "Required parameter productId must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Acknowledge setAlt(java.lang.String alt) {
+          return (Acknowledge) super.setAlt(alt);
+        }
+
+        @Override
+        public Acknowledge setFields(java.lang.String fields) {
+          return (Acknowledge) super.setFields(fields);
+        }
+
+        @Override
+        public Acknowledge setKey(java.lang.String key) {
+          return (Acknowledge) super.setKey(key);
+        }
+
+        @Override
+        public Acknowledge setOauthToken(java.lang.String oauthToken) {
+          return (Acknowledge) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Acknowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Acknowledge) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Acknowledge setQuotaUser(java.lang.String quotaUser) {
+          return (Acknowledge) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Acknowledge setUserIp(java.lang.String userIp) {
+          return (Acknowledge) super.setUserIp(userIp);
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        public Acknowledge setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The inapp product SKU (for example, 'com.some.thing.inapp1'). */
+        @com.google.api.client.util.Key
+        private java.lang.String productId;
+
+        /** The inapp product SKU (for example, 'com.some.thing.inapp1').
+         */
+        public java.lang.String getProductId() {
+          return productId;
+        }
+
+        /** The inapp product SKU (for example, 'com.some.thing.inapp1'). */
+        public Acknowledge setProductId(java.lang.String productId) {
+          this.productId = productId;
+          return this;
+        }
+
+        /** The token provided to the user's device when the subscription was purchased. */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /** The token provided to the user's device when the subscription was purchased. */
+        public Acknowledge setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Acknowledge set(String parameterName, Object value) {
+          return (Acknowledge) super.set(parameterName, value);
+        }
+      }
+      /**
        * Checks the purchase and consumption status of an inapp item.
        *
        * Create a request for the method "products.get".
@@ -7161,6 +7304,152 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
      */
     public class Subscriptions {
 
+      /**
+       * Acknowledges a subscription purchase.
+       *
+       * Create a request for the method "subscriptions.acknowledge".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName The package name of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
+       * @param token The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
+       * @return the request
+       */
+      public Acknowledge acknowledge(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token, com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest content) throws java.io.IOException {
+        Acknowledge result = new Acknowledge(packageName, subscriptionId, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Acknowledge extends AndroidPublisherRequest<Void> {
+
+        private static final String REST_PATH = "{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:acknowledge";
+
+        /**
+         * Acknowledges a subscription purchase.
+         *
+         * Create a request for the method "subscriptions.acknowledge".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName The package name of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
+         * @param token The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
+         * @since 1.13
+         */
+        protected Acknowledge(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token, com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.subscriptionId = com.google.api.client.util.Preconditions.checkNotNull(subscriptionId, "Required parameter subscriptionId must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Acknowledge setAlt(java.lang.String alt) {
+          return (Acknowledge) super.setAlt(alt);
+        }
+
+        @Override
+        public Acknowledge setFields(java.lang.String fields) {
+          return (Acknowledge) super.setFields(fields);
+        }
+
+        @Override
+        public Acknowledge setKey(java.lang.String key) {
+          return (Acknowledge) super.setKey(key);
+        }
+
+        @Override
+        public Acknowledge setOauthToken(java.lang.String oauthToken) {
+          return (Acknowledge) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Acknowledge setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Acknowledge) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Acknowledge setQuotaUser(java.lang.String quotaUser) {
+          return (Acknowledge) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Acknowledge setUserIp(java.lang.String userIp) {
+          return (Acknowledge) super.setUserIp(userIp);
+        }
+
+        /**
+         * The package name of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** The package name of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * The package name of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        public Acknowledge setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The purchased subscription ID (for example, 'monthly001'). */
+        @com.google.api.client.util.Key
+        private java.lang.String subscriptionId;
+
+        /** The purchased subscription ID (for example, 'monthly001').
+         */
+        public java.lang.String getSubscriptionId() {
+          return subscriptionId;
+        }
+
+        /** The purchased subscription ID (for example, 'monthly001'). */
+        public Acknowledge setSubscriptionId(java.lang.String subscriptionId) {
+          this.subscriptionId = subscriptionId;
+          return this;
+        }
+
+        /** The token provided to the user's device when the subscription was purchased. */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /** The token provided to the user's device when the subscription was purchased. */
+        public Acknowledge setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Acknowledge set(String parameterName, Object value) {
+          return (Acknowledge) super.set(parameterName, value);
+        }
+      }
       /**
        * Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
        *

@@ -31,6 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class ProductPurchase extends com.google.api.client.json.GenericJson {
 
   /**
+   * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
+   * - Acknowledged
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer acknowledgementState;
+
+  /**
    * The consumption state of the inapp product. Possible values are: - Yet to be consumed  -
    * Consumed
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer purchaseType;
+
+  /**
+   * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
+   * - Acknowledged
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAcknowledgementState() {
+    return acknowledgementState;
+  }
+
+  /**
+   * The acknowledgement state of the inapp product. Possible values are: - Yet to be acknowledged
+   * - Acknowledged
+   * @param acknowledgementState acknowledgementState or {@code null} for none
+   */
+  public ProductPurchase setAcknowledgementState(java.lang.Integer acknowledgementState) {
+    this.acknowledgementState = acknowledgementState;
+    return this;
+  }
 
   /**
    * The consumption state of the inapp product. Possible values are: - Yet to be consumed  -

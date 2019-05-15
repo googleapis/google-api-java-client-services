@@ -17,7 +17,10 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Publish the results of a DlpJob to a pub sub channel. Compatible with: Inspect, Risk
+ * Publish a message into given Pub/Sub topic when DlpJob has completed. The message contains a
+ * single field, `DlpJobName`, which is equal to the finished job's
+ * [`DlpJob.name`](/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob). Compatible with: Inspect,
+ * Risk
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

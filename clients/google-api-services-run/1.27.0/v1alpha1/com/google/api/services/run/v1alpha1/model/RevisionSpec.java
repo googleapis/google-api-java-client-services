@@ -58,6 +58,21 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer containerConcurrency;
 
   /**
+   * Containers holds the single container that defines the unit of execution for this Revision. In
+   * the context of a Revision, we disallow a number of fields on this Container, including: name
+   * and lifecycle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Container> containers;
+
+  static {
+    // hack to force ProGuard to consider Container used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Container.class);
+  }
+
+  /**
    * Deprecated and not currently populated by Cloud Run. See metadata.generation instead, which is
    * the sequence number containing the latest generation of the desired state.
    *
@@ -155,6 +170,27 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    */
   public RevisionSpec setContainerConcurrency(java.lang.Integer containerConcurrency) {
     this.containerConcurrency = containerConcurrency;
+    return this;
+  }
+
+  /**
+   * Containers holds the single container that defines the unit of execution for this Revision. In
+   * the context of a Revision, we disallow a number of fields on this Container, including: name
+   * and lifecycle.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Container> getContainers() {
+    return containers;
+  }
+
+  /**
+   * Containers holds the single container that defines the unit of execution for this Revision. In
+   * the context of a Revision, we disallow a number of fields on this Container, including: name
+   * and lifecycle.
+   * @param containers containers or {@code null} for none
+   */
+  public RevisionSpec setContainers(java.util.List<Container> containers) {
+    this.containers = containers;
     return this;
   }
 

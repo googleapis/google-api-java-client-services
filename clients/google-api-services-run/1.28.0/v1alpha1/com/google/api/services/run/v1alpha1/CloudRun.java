@@ -3663,6 +3663,938 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       }
 
     }
+    /**
+     * An accessor for creating requests from the Triggers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Triggers.List request = run.triggers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Triggers triggers() {
+      return new Triggers();
+    }
+
+    /**
+     * The "triggers" collection of methods.
+     */
+    public class Triggers {
+
+      /**
+       * Creates a new trigger.
+       *
+       * Create a request for the method "triggers.create".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number in which this trigger should
+      be created.
+       * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Trigger content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Trigger> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+parent}/triggers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Creates a new trigger.
+         *
+         * Create a request for the method "triggers.create".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number in which this trigger should
+      be created.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Trigger content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Trigger.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number in which this trigger should be created.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number in which this trigger should be created.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number in which this trigger should be created.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to delete a trigger.
+       *
+       * Create a request for the method "triggers.delete".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the trigger being deleted. If needed, replace
+      {namespace_id} with the project ID.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Empty> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/triggers/[^/]+$");
+
+        /**
+         * Rpc to delete a trigger.
+         *
+         * Create a request for the method "triggers.delete".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the trigger being deleted. If needed, replace
+      {namespace_id} with the project ID.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/triggers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the trigger being deleted. If needed, replace {namespace_id} with the project
+         * ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the trigger being deleted. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the trigger being deleted. If needed, replace {namespace_id} with the project
+         * ID.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/triggers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String apiVersion;
+
+        /** Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getApiVersion() {
+          return apiVersion;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        public Delete setApiVersion(java.lang.String apiVersion) {
+          this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String kind;
+
+        /** Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getKind() {
+          return kind;
+        }
+
+        /** Cloud Run currently ignores this parameter. */
+        public Delete setKind(java.lang.String kind) {
+          this.kind = kind;
+          return this;
+        }
+
+        /**
+         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * /garbage-collection/ for more information.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String propagationPolicy;
+
+        /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
+       in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+       for more information.
+         */
+        public java.lang.String getPropagationPolicy() {
+          return propagationPolicy;
+        }
+
+        /**
+         * Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+         * deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers
+         * /garbage-collection/ for more information.
+         */
+        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+          this.propagationPolicy = propagationPolicy;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to get information about a trigger.
+       *
+       * Create a request for the method "triggers.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the trigger being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Trigger> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/triggers/[^/]+$");
+
+        /**
+         * Rpc to get information about a trigger.
+         *
+         * Create a request for the method "triggers.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the trigger being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Trigger.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/triggers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the trigger being retrieved. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/triggers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to list triggers.
+       *
+       * Create a request for the method "triggers.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number from which the triggers should
+      be listed.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListTriggersResponse> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+parent}/triggers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Rpc to list triggers.
+         *
+         * Create a request for the method "triggers.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number from which the triggers should
+      be listed.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListTriggersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number from which the triggers should be listed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number from which the triggers should be listed.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number from which the triggers should be listed.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional encoded string to continue paging. */
+        @com.google.api.client.util.Key("continue")
+        private java.lang.String continue__;
+
+        /** Optional encoded string to continue paging.
+         */
+        public java.lang.String getContinue() {
+          return continue__;
+        }
+
+        /** Optional encoded string to continue paging. */
+        public List setContinue(java.lang.String continue__) {
+          this.continue__ = continue__;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String fieldSelector;
+
+        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public java.lang.String getFieldSelector() {
+          return fieldSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public List setFieldSelector(java.lang.String fieldSelector) {
+          this.fieldSelector = fieldSelector;
+          return this;
+        }
+
+        /** Not currently used by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeUninitialized;
+
+        /** Not currently used by Cloud Run.
+         */
+        public java.lang.Boolean getIncludeUninitialized() {
+          return includeUninitialized;
+        }
+
+        /** Not currently used by Cloud Run. */
+        public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+          this.includeUninitialized = includeUninitialized;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String labelSelector;
+
+        /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+         */
+        public java.lang.String getLabelSelector() {
+          return labelSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        public List setLabelSelector(java.lang.String labelSelector) {
+          this.labelSelector = labelSelector;
+          return this;
+        }
+
+        /** The maximum number of records that should be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer limit;
+
+        /** The maximum number of records that should be returned.
+         */
+        public java.lang.Integer getLimit() {
+          return limit;
+        }
+
+        /** The maximum number of records that should be returned. */
+        public List setLimit(java.lang.Integer limit) {
+          this.limit = limit;
+          return this;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String resourceVersion;
+
+        /** The baseline resource version from which the list or watch operation should start. Not currently
+       used by Cloud Run.
+         */
+        public java.lang.String getResourceVersion() {
+          return resourceVersion;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        public List setResourceVersion(java.lang.String resourceVersion) {
+          this.resourceVersion = resourceVersion;
+          return this;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean watch;
+
+        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+       Cloud Run.
+         */
+        public java.lang.Boolean getWatch() {
+          return watch;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        public List setWatch(java.lang.Boolean watch) {
+          this.watch = watch;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to replace a trigger.
+       *
+       * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+       * Run will work to make the 'status' match the requested 'spec'.
+       *
+       * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+       * control.
+       *
+       * Create a request for the method "triggers.replaceTrigger".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ReplaceTrigger#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the trigger being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+       * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+       * @return the request
+       */
+      public ReplaceTrigger replaceTrigger(java.lang.String name, com.google.api.services.run.v1alpha1.model.Trigger content) throws java.io.IOException {
+        ReplaceTrigger result = new ReplaceTrigger(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceTrigger extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Trigger> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/triggers/[^/]+$");
+
+        /**
+         * Rpc to replace a trigger.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+         * Cloud Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic
+         * concurrency control.
+         *
+         * Create a request for the method "triggers.replaceTrigger".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ReplaceTrigger#execute()} method to invoke the remote operation.
+         * <p> {@link ReplaceTrigger#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name The name of the trigger being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+         * @since 1.13
+         */
+        protected ReplaceTrigger(java.lang.String name, com.google.api.services.run.v1alpha1.model.Trigger content) {
+          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Trigger.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/triggers/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceTrigger set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceTrigger) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceTrigger setAccessToken(java.lang.String accessToken) {
+          return (ReplaceTrigger) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceTrigger setAlt(java.lang.String alt) {
+          return (ReplaceTrigger) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceTrigger setCallback(java.lang.String callback) {
+          return (ReplaceTrigger) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceTrigger setFields(java.lang.String fields) {
+          return (ReplaceTrigger) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceTrigger setKey(java.lang.String key) {
+          return (ReplaceTrigger) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceTrigger setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceTrigger) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceTrigger setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceTrigger) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceTrigger setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceTrigger) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceTrigger setUploadType(java.lang.String uploadType) {
+          return (ReplaceTrigger) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceTrigger setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceTrigger) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the trigger being retrieved. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public ReplaceTrigger setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/triggers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ReplaceTrigger set(String parameterName, Object value) {
+          return (ReplaceTrigger) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -7855,6 +8787,940 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public TestIamPermissions set(String parameterName, Object value) {
             return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Triggers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Triggers.List request = run.triggers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Triggers triggers() {
+        return new Triggers();
+      }
+
+      /**
+       * The "triggers" collection of methods.
+       */
+      public class Triggers {
+
+        /**
+         * Creates a new trigger.
+         *
+         * Create a request for the method "triggers.create".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number in which this trigger should
+        be created.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Trigger content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Trigger> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/triggers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new trigger.
+           *
+           * Create a request for the method "triggers.create".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number in which this trigger should
+        be created.
+           * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.run.v1alpha1.model.Trigger content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Trigger.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number in which this trigger should be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number in which this trigger should be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number in which this trigger should be created.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to delete a trigger.
+         *
+         * Create a request for the method "triggers.delete".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the trigger being deleted. If needed, replace
+        {namespace_id} with the project ID.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Empty> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+
+          /**
+           * Rpc to delete a trigger.
+           *
+           * Create a request for the method "triggers.delete".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the trigger being deleted. If needed, replace
+        {namespace_id} with the project ID.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the trigger being deleted. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the trigger being deleted. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the trigger being deleted. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String apiVersion;
+
+          /** Cloud Run currently ignores this parameter.
+           */
+          public java.lang.String getApiVersion() {
+            return apiVersion;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          public Delete setApiVersion(java.lang.String apiVersion) {
+            this.apiVersion = apiVersion;
+            return this;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String kind;
+
+          /** Cloud Run currently ignores this parameter.
+           */
+          public java.lang.String getKind() {
+            return kind;
+          }
+
+          /** Cloud Run currently ignores this parameter. */
+          public Delete setKind(java.lang.String kind) {
+            this.kind = kind;
+            return this;
+          }
+
+          /**
+           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * information.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String propagationPolicy;
+
+          /** Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and deletes
+         in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/
+         for more information.
+           */
+          public java.lang.String getPropagationPolicy() {
+            return propagationPolicy;
+          }
+
+          /**
+           * Specifies the propagation policy of delete. Cloud Run currently ignores this setting,
+           * and deletes in the background. Please see
+           * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+           * information.
+           */
+          public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+            this.propagationPolicy = propagationPolicy;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to get information about a trigger.
+         *
+         * Create a request for the method "triggers.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the trigger being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Trigger> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+
+          /**
+           * Rpc to get information about a trigger.
+           *
+           * Create a request for the method "triggers.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the trigger being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.Trigger.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the trigger being retrieved. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to list triggers.
+         *
+         * Create a request for the method "triggers.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number from which the triggers should
+        be listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListTriggersResponse> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/triggers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Rpc to list triggers.
+           *
+           * Create a request for the method "triggers.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number from which the triggers should
+        be listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListTriggersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number from which the triggers should be listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number from which the triggers should be listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number from which the triggers should be listed.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional encoded string to continue paging. */
+          @com.google.api.client.util.Key("continue")
+          private java.lang.String continue__;
+
+          /** Optional encoded string to continue paging.
+           */
+          public java.lang.String getContinue() {
+            return continue__;
+          }
+
+          /** Optional encoded string to continue paging. */
+          public List setContinue(java.lang.String continue__) {
+            this.continue__ = continue__;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldSelector;
+
+          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public java.lang.String getFieldSelector() {
+            return fieldSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public List setFieldSelector(java.lang.String fieldSelector) {
+            this.fieldSelector = fieldSelector;
+            return this;
+          }
+
+          /** Not currently used by Cloud Run. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeUninitialized;
+
+          /** Not currently used by Cloud Run.
+           */
+          public java.lang.Boolean getIncludeUninitialized() {
+            return includeUninitialized;
+          }
+
+          /** Not currently used by Cloud Run. */
+          public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+            this.includeUninitialized = includeUninitialized;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String labelSelector;
+
+          /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+           */
+          public java.lang.String getLabelSelector() {
+            return labelSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          public List setLabelSelector(java.lang.String labelSelector) {
+            this.labelSelector = labelSelector;
+            return this;
+          }
+
+          /** The maximum number of records that should be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer limit;
+
+          /** The maximum number of records that should be returned.
+           */
+          public java.lang.Integer getLimit() {
+            return limit;
+          }
+
+          /** The maximum number of records that should be returned. */
+          public List setLimit(java.lang.Integer limit) {
+            this.limit = limit;
+            return this;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceVersion;
+
+          /** The baseline resource version from which the list or watch operation should start. Not currently
+         used by Cloud Run.
+           */
+          public java.lang.String getResourceVersion() {
+            return resourceVersion;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          public List setResourceVersion(java.lang.String resourceVersion) {
+            this.resourceVersion = resourceVersion;
+            return this;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean watch;
+
+          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+         Cloud Run.
+           */
+          public java.lang.Boolean getWatch() {
+            return watch;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          public List setWatch(java.lang.Boolean watch) {
+            this.watch = watch;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to replace a trigger.
+         *
+         * Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud
+         * Run will work to make the 'status' match the requested 'spec'.
+         *
+         * May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * control.
+         *
+         * Create a request for the method "triggers.replaceTrigger".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link ReplaceTrigger#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the trigger being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+         * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+         * @return the request
+         */
+        public ReplaceTrigger replaceTrigger(java.lang.String name, com.google.api.services.run.v1alpha1.model.Trigger content) throws java.io.IOException {
+          ReplaceTrigger result = new ReplaceTrigger(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReplaceTrigger extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.Trigger> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+
+          /**
+           * Rpc to replace a trigger.
+           *
+           * Only the spec and metadata labels and annotations are modifiable. After the Update request,
+           * Cloud Run will work to make the 'status' match the requested 'spec'.
+           *
+           * May provide metadata.resourceVersion to enforce update from last read for optimistic
+           * concurrency control.
+           *
+           * Create a request for the method "triggers.replaceTrigger".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link ReplaceTrigger#execute()} method to invoke the remote operation.
+           * <p> {@link ReplaceTrigger#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name The name of the trigger being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+           * @param content the {@link com.google.api.services.run.v1alpha1.model.Trigger}
+           * @since 1.13
+           */
+          protected ReplaceTrigger(java.lang.String name, com.google.api.services.run.v1alpha1.model.Trigger content) {
+            super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1alpha1.model.Trigger.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReplaceTrigger set$Xgafv(java.lang.String $Xgafv) {
+            return (ReplaceTrigger) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReplaceTrigger setAccessToken(java.lang.String accessToken) {
+            return (ReplaceTrigger) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReplaceTrigger setAlt(java.lang.String alt) {
+            return (ReplaceTrigger) super.setAlt(alt);
+          }
+
+          @Override
+          public ReplaceTrigger setCallback(java.lang.String callback) {
+            return (ReplaceTrigger) super.setCallback(callback);
+          }
+
+          @Override
+          public ReplaceTrigger setFields(java.lang.String fields) {
+            return (ReplaceTrigger) super.setFields(fields);
+          }
+
+          @Override
+          public ReplaceTrigger setKey(java.lang.String key) {
+            return (ReplaceTrigger) super.setKey(key);
+          }
+
+          @Override
+          public ReplaceTrigger setOauthToken(java.lang.String oauthToken) {
+            return (ReplaceTrigger) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReplaceTrigger setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReplaceTrigger) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReplaceTrigger setQuotaUser(java.lang.String quotaUser) {
+            return (ReplaceTrigger) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReplaceTrigger setUploadType(java.lang.String uploadType) {
+            return (ReplaceTrigger) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReplaceTrigger setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReplaceTrigger) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the trigger being retrieved. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public ReplaceTrigger setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ReplaceTrigger set(String parameterName, Object value) {
+            return (ReplaceTrigger) super.set(parameterName, value);
           }
         }
 

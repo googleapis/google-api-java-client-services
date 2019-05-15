@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class PrivateClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether to enable route sharing over the network peering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePeeringRouteSharing;
+
+  /**
    * Whether the master's internal IP address is used as the cluster endpoint.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String publicEndpoint;
+
+  /**
+   * Whether to enable route sharing over the network peering.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePeeringRouteSharing() {
+    return enablePeeringRouteSharing;
+  }
+
+  /**
+   * Whether to enable route sharing over the network peering.
+   * @param enablePeeringRouteSharing enablePeeringRouteSharing or {@code null} for none
+   */
+  public PrivateClusterConfig setEnablePeeringRouteSharing(java.lang.Boolean enablePeeringRouteSharing) {
+    this.enablePeeringRouteSharing = enablePeeringRouteSharing;
+    return this;
+  }
 
   /**
    * Whether the master's internal IP address is used as the cluster endpoint.

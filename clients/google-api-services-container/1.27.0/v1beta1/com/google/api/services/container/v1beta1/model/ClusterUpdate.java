@@ -141,8 +141,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The node pool to be upgraded. This field is mandatory if "desired_node_version",
-   * "desired_image_family" or "desired_node_pool_autoscaling" is specified and there is more than
-   * one node pool on the cluster.
+   * "desired_image_family", "desired_node_pool_autoscaling", or "desired_workload_metadata_config"
+   * is specified and there is more than one node pool on the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,6 +171,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private PodSecurityPolicyConfig desiredPodSecurityPolicyConfig;
 
   /**
+   * The desired private cluster configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateClusterConfig desiredPrivateClusterConfig;
+
+  /**
    * The desired configuration for exporting resource usage.
    * The value may be {@code null}.
    */
@@ -183,6 +190,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private VerticalPodAutoscaling desiredVerticalPodAutoscaling;
+
+  /**
+   * Configuration for Workload Identity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityConfig desiredWorkloadIdentityConfig;
 
   /**
    * Configurations for the various addons available to run in the cluster.
@@ -438,8 +452,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The node pool to be upgraded. This field is mandatory if "desired_node_version",
-   * "desired_image_family" or "desired_node_pool_autoscaling" is specified and there is more than
-   * one node pool on the cluster.
+   * "desired_image_family", "desired_node_pool_autoscaling", or "desired_workload_metadata_config"
+   * is specified and there is more than one node pool on the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredNodePoolId() {
@@ -448,8 +462,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The node pool to be upgraded. This field is mandatory if "desired_node_version",
-   * "desired_image_family" or "desired_node_pool_autoscaling" is specified and there is more than
-   * one node pool on the cluster.
+   * "desired_image_family", "desired_node_pool_autoscaling", or "desired_workload_metadata_config"
+   * is specified and there is more than one node pool on the cluster.
    * @param desiredNodePoolId desiredNodePoolId or {@code null} for none
    */
   public ClusterUpdate setDesiredNodePoolId(java.lang.String desiredNodePoolId) {
@@ -508,6 +522,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The desired private cluster configuration.
+   * @return value or {@code null} for none
+   */
+  public PrivateClusterConfig getDesiredPrivateClusterConfig() {
+    return desiredPrivateClusterConfig;
+  }
+
+  /**
+   * The desired private cluster configuration.
+   * @param desiredPrivateClusterConfig desiredPrivateClusterConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {
+    this.desiredPrivateClusterConfig = desiredPrivateClusterConfig;
+    return this;
+  }
+
+  /**
    * The desired configuration for exporting resource usage.
    * @return value or {@code null} for none
    */
@@ -538,6 +569,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredVerticalPodAutoscaling(VerticalPodAutoscaling desiredVerticalPodAutoscaling) {
     this.desiredVerticalPodAutoscaling = desiredVerticalPodAutoscaling;
+    return this;
+  }
+
+  /**
+   * Configuration for Workload Identity.
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityConfig getDesiredWorkloadIdentityConfig() {
+    return desiredWorkloadIdentityConfig;
+  }
+
+  /**
+   * Configuration for Workload Identity.
+   * @param desiredWorkloadIdentityConfig desiredWorkloadIdentityConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredWorkloadIdentityConfig(WorkloadIdentityConfig desiredWorkloadIdentityConfig) {
+    this.desiredWorkloadIdentityConfig = desiredWorkloadIdentityConfig;
     return this;
   }
 

@@ -7369,15 +7369,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The maximum number of orders to return in the response, used for paging. The default value
-       * is 25 orders per page, and the maximum allowed value is 250 orders per page. Known issue:
-       * All List calls will return all Orders without limit regardless of the value of this field.
+       * is 25 orders per page, and the maximum allowed value is 250 orders per page.
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
       /** The maximum number of orders to return in the response, used for paging. The default value is 25
-     orders per page, and the maximum allowed value is 250 orders per page. Known issue: All List calls
-     will return all Orders without limit regardless of the value of this field.
+     orders per page, and the maximum allowed value is 250 orders per page.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -7385,8 +7383,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /**
        * The maximum number of orders to return in the response, used for paging. The default value
-       * is 25 orders per page, and the maximum allowed value is 250 orders per page. Known issue:
-       * All List calls will return all Orders without limit regardless of the value of this field.
+       * is 25 orders per page, and the maximum allowed value is 250 orders per page.
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -7394,31 +7391,25 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The ordering of the returned list. The only supported value are placedDate desc and
-       * placedDate asc for now, which returns orders sorted by placement date. "placedDate desc"
-       * stands for listing orders by placement date, from oldest to most recent. "placedDate asc"
-       * stands for listing orders by placement date, from most recent to oldest. In future releases
-       * we'll support other sorting criteria.
+       * Order results by placement date in descending or ascending order.
+       *
+       * Acceptable values are: - placedDateAsc - placedDateDesc
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** The ordering of the returned list. The only supported value are placedDate desc and placedDate asc
-     for now, which returns orders sorted by placement date. "placedDate desc" stands for listing orders
-     by placement date, from oldest to most recent. "placedDate asc" stands for listing orders by
-     placement date, from most recent to oldest. In future releases we'll support other sorting
-     criteria.
+      /** Order results by placement date in descending or ascending order.
+
+     Acceptable values are: - placedDateAsc - placedDateDesc
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * The ordering of the returned list. The only supported value are placedDate desc and
-       * placedDate asc for now, which returns orders sorted by placement date. "placedDate desc"
-       * stands for listing orders by placement date, from oldest to most recent. "placedDate asc"
-       * stands for listing orders by placement date, from most recent to oldest. In future releases
-       * we'll support other sorting criteria.
+       * Order results by placement date in descending or ascending order.
+       *
+       * Acceptable values are: - placedDateAsc - placedDateDesc
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -7476,7 +7467,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * Obtains orders that match any of the specified statuses. Multiple values can be specified
        * with comma separation. Additionally, please note that active is a shortcut for
-       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped ,
+       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
        * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
        */
       @com.google.api.client.util.Key
@@ -7484,7 +7475,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
       /** Obtains orders that match any of the specified statuses. Multiple values can be specified with
      comma separation. Additionally, please note that active is a shortcut for pendingShipment and
-     partiallyShipped, and completed is a shortcut for shipped , partiallyDelivered, delivered,
+     partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered, delivered,
      partiallyReturned, returned, and canceled.
        */
       public java.util.List<java.lang.String> getStatuses() {
@@ -7494,7 +7485,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       /**
        * Obtains orders that match any of the specified statuses. Multiple values can be specified
        * with comma separation. Additionally, please note that active is a shortcut for
-       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped ,
+       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
        * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
        */
       public List setStatuses(java.util.List<java.lang.String> statuses) {

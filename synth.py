@@ -100,14 +100,14 @@ def generate_service(disco: str):
         shell.run(f"mkdir -p {output_dir}".split(), cwd=repository / "generator")
         shell.run(command.split(), cwd=repository, hide_output=False)
 
-        s.copy(output_dir, f"clients/{library_name}/{template}/{version}")
+        s.copy(output_dir, f"clients/{library_name}/{version}/{template}")
 
-        resource_dir = repository / "clients" / library_name / template / version / "resources"
+        resource_dir = repository / "clients" / library_name / version / template / "resources"
         shell.run(f"mkdir -p {resource_dir}".split())
         shutil.copy(input_file, resource_dir / path.basename(disco))
 
     # write the metadata file
-    metadata = maven_metadata(str(repository / "clients" / library_name / TEMPLATE_VERSIONS[-1] / version / "pom.xml"))
+    metadata = maven_metadata(str(repository / "clients" / library_name / version / TEMPLATE_VERSIONS[-1] / "pom.xml"))
     write_metadata_file(library_name, version, metadata)
 
 def all_discoveries():

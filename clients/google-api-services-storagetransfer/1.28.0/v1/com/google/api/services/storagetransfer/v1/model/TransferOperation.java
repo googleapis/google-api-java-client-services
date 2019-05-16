@@ -64,7 +64,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * The ID of the Google Cloud Platform Project that owns the operation. Required.
+   * The ID of the Google Cloud Platform Project that owns the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   private java.lang.String transferJobName;
 
   /**
-   * Transfer specification. Required.
+   * Transfer specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the Google Cloud Platform Project that owns the operation. Required.
+   * The ID of the Google Cloud Platform Project that owns the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -175,7 +175,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The ID of the Google Cloud Platform Project that owns the operation. Required.
+   * The ID of the Google Cloud Platform Project that owns the operation.
    * @param projectId projectId or {@code null} for none
    */
   public TransferOperation setProjectId(java.lang.String projectId) {
@@ -235,7 +235,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Transfer specification. Required.
+   * Transfer specification.
    * @return value or {@code null} for none
    */
   public TransferSpec getTransferSpec() {
@@ -243,7 +243,7 @@ public final class TransferOperation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Transfer specification. Required.
+   * Transfer specification.
    * @param transferSpec transferSpec or {@code null} for none
    */
   public TransferOperation setTransferSpec(TransferSpec transferSpec) {

@@ -32,16 +32,16 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class GcsData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google Cloud Storage bucket name (see [Bucket Name
-   * Requirements](https://cloud.google.com/storage/docs/naming#requirements)). Required.
+   * Required. Google Cloud Storage bucket name (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/naming#requirements)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bucketName;
 
   /**
-   * Google Cloud Storage bucket name (see [Bucket Name
-   * Requirements](https://cloud.google.com/storage/docs/naming#requirements)). Required.
+   * Required. Google Cloud Storage bucket name (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/naming#requirements)).
    * @return value or {@code null} for none
    */
   public java.lang.String getBucketName() {
@@ -49,8 +49,8 @@ public final class GcsData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Cloud Storage bucket name (see [Bucket Name
-   * Requirements](https://cloud.google.com/storage/docs/naming#requirements)). Required.
+   * Required. Google Cloud Storage bucket name (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/naming#requirements)).
    * @param bucketName bucketName or {@code null} for none
    */
   public GcsData setBucketName(java.lang.String bucketName) {

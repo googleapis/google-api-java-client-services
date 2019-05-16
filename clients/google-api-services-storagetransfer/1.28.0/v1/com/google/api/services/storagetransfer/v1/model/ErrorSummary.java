@@ -37,7 +37,7 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   private java.lang.String errorCode;
 
   /**
-   * Count of this type of error. Required.
+   * Required. Count of this type of error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -76,7 +76,7 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Count of this type of error. Required.
+   * Required. Count of this type of error.
    * @return value or {@code null} for none
    */
   public java.lang.Long getErrorCount() {
@@ -84,7 +84,7 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Count of this type of error. Required.
+   * Required. Count of this type of error.
    * @param errorCount errorCount or {@code null} for none
    */
   public ErrorSummary setErrorCount(java.lang.Long errorCount) {

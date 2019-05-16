@@ -64,16 +64,16 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class HttpData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URL that points to the file that stores the object list entries. This file must allow
-   * public access.  Currently, only URLs with HTTP and HTTPS schemes are supported. Required.
+   * Required. The URL that points to the file that stores the object list entries. This file must
+   * allow public access.  Currently, only URLs with HTTP and HTTPS schemes are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String listUrl;
 
   /**
-   * The URL that points to the file that stores the object list entries. This file must allow
-   * public access.  Currently, only URLs with HTTP and HTTPS schemes are supported. Required.
+   * Required. The URL that points to the file that stores the object list entries. This file must
+   * allow public access.  Currently, only URLs with HTTP and HTTPS schemes are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getListUrl() {
@@ -81,8 +81,8 @@ public final class HttpData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL that points to the file that stores the object list entries. This file must allow
-   * public access.  Currently, only URLs with HTTP and HTTPS schemes are supported. Required.
+   * Required. The URL that points to the file that stores the object list entries. This file must
+   * allow public access.  Currently, only URLs with HTTP and HTTPS schemes are supported.
    * @param listUrl listUrl or {@code null} for none
    */
   public HttpData setListUrl(java.lang.String listUrl) {

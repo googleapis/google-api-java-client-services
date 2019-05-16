@@ -30,14 +30,14 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class GoogleServiceAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
+   * Email address of the service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountEmail;
 
   /**
-   * Required.
+   * Email address of the service account.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountEmail() {
@@ -45,7 +45,7 @@ public final class GoogleServiceAccount extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required.
+   * Email address of the service account.
    * @param accountEmail accountEmail or {@code null} for none
    */
   public GoogleServiceAccount setAccountEmail(java.lang.String accountEmail) {

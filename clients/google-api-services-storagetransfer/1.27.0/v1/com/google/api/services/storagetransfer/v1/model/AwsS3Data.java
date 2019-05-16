@@ -31,24 +31,25 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class AwsS3Data extends com.google.api.client.json.GenericJson {
 
   /**
-   * AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket
-   * must be granted to the access ID of the AWS access key. Required.
+   * Required. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the
+   * bucket must be granted to the access ID of the AWS access key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsAccessKey awsAccessKey;
 
   /**
-   * S3 Bucket name (see [Creating a bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-
-   * bucket-get-location-example.html)). Required.
+   * Required. S3 Bucket name (see [Creating a
+   * bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
+   * example.html)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bucketName;
 
   /**
-   * AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket
-   * must be granted to the access ID of the AWS access key. Required.
+   * Required. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the
+   * bucket must be granted to the access ID of the AWS access key.
    * @return value or {@code null} for none
    */
   public AwsAccessKey getAwsAccessKey() {
@@ -56,8 +57,8 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket
-   * must be granted to the access ID of the AWS access key. Required.
+   * Required. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the
+   * bucket must be granted to the access ID of the AWS access key.
    * @param awsAccessKey awsAccessKey or {@code null} for none
    */
   public AwsS3Data setAwsAccessKey(AwsAccessKey awsAccessKey) {
@@ -66,8 +67,9 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * S3 Bucket name (see [Creating a bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-
-   * bucket-get-location-example.html)). Required.
+   * Required. S3 Bucket name (see [Creating a
+   * bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
+   * example.html)).
    * @return value or {@code null} for none
    */
   public java.lang.String getBucketName() {
@@ -75,8 +77,9 @@ public final class AwsS3Data extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * S3 Bucket name (see [Creating a bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-
-   * bucket-get-location-example.html)). Required.
+   * Required. S3 Bucket name (see [Creating a
+   * bucket](http://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-
+   * example.html)).
    * @param bucketName bucketName or {@code null} for none
    */
   public AwsS3Data setBucketName(java.lang.String bucketName) {

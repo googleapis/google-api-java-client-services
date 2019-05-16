@@ -39,7 +39,8 @@ public final class MetricDescriptorMetadata extends com.google.api.client.json.G
   private String ingestDelay;
 
   /**
-   * The launch stage of the metric definition.
+   * Deprecated. Please use the MetricDescriptor.launch_stage instead. The launch stage of the
+   * metric definition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class MetricDescriptorMetadata extends com.google.api.client.json.G
   }
 
   /**
-   * The launch stage of the metric definition.
+   * Deprecated. Please use the MetricDescriptor.launch_stage instead. The launch stage of the
+   * metric definition.
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunchStage() {
@@ -82,7 +84,8 @@ public final class MetricDescriptorMetadata extends com.google.api.client.json.G
   }
 
   /**
-   * The launch stage of the metric definition.
+   * Deprecated. Please use the MetricDescriptor.launch_stage instead. The launch stage of the
+   * metric definition.
    * @param launchStage launchStage or {@code null} for none
    */
   public MetricDescriptorMetadata setLaunchStage(java.lang.String launchStage) {

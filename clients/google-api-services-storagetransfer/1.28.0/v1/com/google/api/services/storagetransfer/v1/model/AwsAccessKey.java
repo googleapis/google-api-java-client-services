@@ -31,21 +31,21 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class AwsAccessKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * AWS access key ID. Required.
+   * Required. AWS access key ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessKeyId;
 
   /**
-   * AWS secret access key. This field is not returned in RPC responses. Required.
+   * Required. AWS secret access key. This field is not returned in RPC responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretAccessKey;
 
   /**
-   * AWS access key ID. Required.
+   * Required. AWS access key ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessKeyId() {
@@ -53,7 +53,7 @@ public final class AwsAccessKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AWS access key ID. Required.
+   * Required. AWS access key ID.
    * @param accessKeyId accessKeyId or {@code null} for none
    */
   public AwsAccessKey setAccessKeyId(java.lang.String accessKeyId) {
@@ -62,7 +62,7 @@ public final class AwsAccessKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AWS secret access key. This field is not returned in RPC responses. Required.
+   * Required. AWS secret access key. This field is not returned in RPC responses.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretAccessKey() {
@@ -70,7 +70,7 @@ public final class AwsAccessKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AWS secret access key. This field is not returned in RPC responses. Required.
+   * Required. AWS secret access key. This field is not returned in RPC responses.
    * @param secretAccessKey secretAccessKey or {@code null} for none
    */
   public AwsAccessKey setSecretAccessKey(java.lang.String secretAccessKey) {

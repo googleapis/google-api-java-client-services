@@ -38,8 +38,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private Date scheduleEndDate;
 
   /**
-   * The first day the recurring transfer is scheduled to run. If `scheduleStartDate` is in the
-   * past, the transfer will run for the first time on the following day. Required.
+   * Required. The first day the recurring transfer is scheduled to run. If `scheduleStartDate` is
+   * in the past, the transfer will run for the first time on the following day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The first day the recurring transfer is scheduled to run. If `scheduleStartDate` is in the
-   * past, the transfer will run for the first time on the following day. Required.
+   * Required. The first day the recurring transfer is scheduled to run. If `scheduleStartDate` is
+   * in the past, the transfer will run for the first time on the following day.
    * @return value or {@code null} for none
    */
   public Date getScheduleStartDate() {
@@ -86,8 +86,8 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The first day the recurring transfer is scheduled to run. If `scheduleStartDate` is in the
-   * past, the transfer will run for the first time on the following day. Required.
+   * Required. The first day the recurring transfer is scheduled to run. If `scheduleStartDate` is
+   * in the past, the transfer will run for the first time on the following day.
    * @param scheduleStartDate scheduleStartDate or {@code null} for none
    */
   public Schedule setScheduleStartDate(Date scheduleStartDate) {

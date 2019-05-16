@@ -155,10 +155,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId The ID of the Google Cloud Platform Console project that the Google service
-    account is associated
-     *        with.
-    Required.
+     * @param projectId Required. The ID of the Google Cloud Platform Console project that the
+    Google service account is
+     *        associated with.
      * @return the request
      */
     public Get get(java.lang.String projectId) throws java.io.IOException {
@@ -186,10 +185,9 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The ID of the Google Cloud Platform Console project that the Google service
-    account is associated
-     *        with.
-    Required.
+       * @param projectId Required. The ID of the Google Cloud Platform Console project that the
+    Google service account is
+     *        associated with.
        * @since 1.13
        */
       protected Get(java.lang.String projectId) {
@@ -263,22 +261,22 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The ID of the Google Cloud Platform Console project that the Google service account is
-       * associated with. Required.
+       * Required. The ID of the Google Cloud Platform Console project that the Google service
+       * account is associated with.
        */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the Google Cloud Platform Console project that the Google service account is associated
-     with. Required.
+      /** Required. The ID of the Google Cloud Platform Console project that the Google service account is
+     associated with.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
       /**
-       * The ID of the Google Cloud Platform Console project that the Google service account is
-       * associated with. Required.
+       * Required. The ID of the Google Cloud Platform Console project that the Google service
+       * account is associated with.
        */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
@@ -420,8 +418,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param jobName The job to get.
-    Required.
+     * @param jobName Required. The job to get.
      * @return the request
      */
     public Get get(java.lang.String jobName) throws java.io.IOException {
@@ -447,8 +444,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param jobName The job to get.
-    Required.
+       * @param jobName Required. The job to get.
        * @since 1.13
        */
       protected Get(java.lang.String jobName) {
@@ -526,21 +522,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The job to get. Required.
-       */
+      /** Required. The job to get. */
       @com.google.api.client.util.Key
       private java.lang.String jobName;
 
-      /** The job to get. Required.
+      /** Required. The job to get.
        */
       public java.lang.String getJobName() {
         return jobName;
       }
 
-      /**
-       * The job to get. Required.
-       */
+      /** Required. The job to get. */
       public Get setJobName(java.lang.String jobName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
@@ -552,19 +544,19 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The ID of the Google Cloud Platform Console project that owns the job. Required.
+       * Required. The ID of the Google Cloud Platform Console project that owns the job.
        */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The ID of the Google Cloud Platform Console project that owns the job. Required.
+      /** Required. The ID of the Google Cloud Platform Console project that owns the job.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
       /**
-       * The ID of the Google Cloud Platform Console project that owns the job. Required.
+       * Required. The ID of the Google Cloud Platform Console project that owns the job.
        */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
@@ -678,7 +670,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * A list of query parameters specified as JSON text in the form of
+       * Required. A list of query parameters specified as JSON text in the form of:
        * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
        * "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support
        * multiple values, their values must be specified with array notation. `project_id` is
@@ -688,18 +680,19 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** A list of query parameters specified as JSON text in the form of {"project_id":"my_project_id",
-     "job_names":["jobid1","jobid2",...], "job_statuses":["status1","status2",...]}. Since `job_names`
-     and `job_statuses` support multiple values, their values must be specified with array notation.
-     `project_id` is required. `job_names` and `job_statuses` are optional.  The valid values for
-     `job_statuses` are case-insensitive: `ENABLED`, `DISABLED`, and `DELETED`.
+      /** Required. A list of query parameters specified as JSON text in the form of:
+     {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
+     "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support multiple
+     values, their values must be specified with array notation. `project_id` is required. `job_names`
+     and `job_statuses` are optional.  The valid values for `job_statuses` are case-insensitive:
+     `ENABLED`, `DISABLED`, and `DELETED`.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * A list of query parameters specified as JSON text in the form of
+       * Required. A list of query parameters specified as JSON text in the form of:
        * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
        * "job_statuses":["status1","status2",...]}. Since `job_names` and `job_statuses` support
        * multiple values, their values must be specified with array notation. `project_id` is
@@ -757,8 +750,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param jobName The name of job to update.
-    Required.
+     * @param jobName Required. The name of job to update.
      * @param content the {@link com.google.api.services.storagetransfer.v1.model.UpdateTransferJobRequest}
      * @return the request
      */
@@ -787,8 +779,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param jobName The name of job to update.
-    Required.
+       * @param jobName Required. The name of job to update.
        * @param content the {@link com.google.api.services.storagetransfer.v1.model.UpdateTransferJobRequest}
        * @since 1.13
        */
@@ -857,21 +848,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The name of job to update. Required.
-       */
+      /** Required. The name of job to update. */
       @com.google.api.client.util.Key
       private java.lang.String jobName;
 
-      /** The name of job to update. Required.
+      /** Required. The name of job to update.
        */
       public java.lang.String getJobName() {
         return jobName;
       }
 
-      /**
-       * The name of job to update. Required.
-       */
+      /** Required. The name of job to update. */
       public Patch setJobName(java.lang.String jobName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
@@ -1325,7 +1312,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param name The value `transferOperations`.
+     * @param name Required. The value `transferOperations`.
      * @return the request
      */
     public List list(java.lang.String name) throws java.io.IOException {
@@ -1358,7 +1345,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The value `transferOperations`.
+       * @param name Required. The value `transferOperations`.
        * @since 1.13
        */
       protected List(java.lang.String name) {
@@ -1436,17 +1423,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The value `transferOperations`. */
+      /** Required. The value `transferOperations`. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The value `transferOperations`.
+      /** Required. The value `transferOperations`.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The value `transferOperations`. */
+      /** Required. The value `transferOperations`. */
       public List setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1458,33 +1445,39 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * A list of query parameters specified as JSON text in the form of {\"project_id\" :
-       * \"my_project_id\", \"job_names\" : [\"jobid1\", \"jobid2\",...], \"operation_names\" :
-       * [\"opid1\", \"opid2\",...], \"transfer_statuses\":[\"status1\", \"status2\",...]}. Since
-       * `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they must
-       * be specified with array notation. `job_names`, `operation_names`, and `transfer_statuses`
-       * are optional.
+       * Required. A list of query parameters specified as JSON text in the form of:
+       * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
+       * "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}.
+       * Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they
+       * must be specified with array notation. `project_id` is required. `job_names`,
+       * `operation_names`, and `transfer_statuses` are optional. The valid values for
+       * `transfer_statuses` are case-insensitive: `IN_PROGRESS`, `PAUSED`, `SUCCESS`, `FAILED`, and
+       * `ABORTED`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** A list of query parameters specified as JSON text in the form of {\"project_id\" :
-     \"my_project_id\", \"job_names\" : [\"jobid1\", \"jobid2\",...], \"operation_names\" : [\"opid1\",
-     \"opid2\",...], \"transfer_statuses\":[\"status1\", \"status2\",...]}. Since `job_names`,
-     `operation_names`, and `transfer_statuses` support multiple values, they must be specified with
-     array notation. `job_names`, `operation_names`, and `transfer_statuses` are optional.
+      /** Required. A list of query parameters specified as JSON text in the form of:
+     {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
+     "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}. Since
+     `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they must be
+     specified with array notation. `project_id` is required. `job_names`, `operation_names`, and
+     `transfer_statuses` are optional. The valid values for `transfer_statuses` are case-insensitive:
+     `IN_PROGRESS`, `PAUSED`, `SUCCESS`, `FAILED`, and `ABORTED`.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * A list of query parameters specified as JSON text in the form of {\"project_id\" :
-       * \"my_project_id\", \"job_names\" : [\"jobid1\", \"jobid2\",...], \"operation_names\" :
-       * [\"opid1\", \"opid2\",...], \"transfer_statuses\":[\"status1\", \"status2\",...]}. Since
-       * `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they must
-       * be specified with array notation. `job_names`, `operation_names`, and `transfer_statuses`
-       * are optional.
+       * Required. A list of query parameters specified as JSON text in the form of:
+       * {"project_id":"my_project_id", "job_names":["jobid1","jobid2",...],
+       * "operation_names":["opid1","opid2",...], "transfer_statuses":["status1","status2",...]}.
+       * Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they
+       * must be specified with array notation. `project_id` is required. `job_names`,
+       * `operation_names`, and `transfer_statuses` are optional. The valid values for
+       * `transfer_statuses` are case-insensitive: `IN_PROGRESS`, `PAUSED`, `SUCCESS`, `FAILED`, and
+       * `ABORTED`.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1536,8 +1529,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Pause#execute()} method to invoke the remote operation.
      *
-     * @param name The name of the transfer operation.
-    Required.
+     * @param name Required. The name of the transfer operation.
      * @param content the {@link com.google.api.services.storagetransfer.v1.model.PauseTransferOperationRequest}
      * @return the request
      */
@@ -1565,8 +1557,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of the transfer operation.
-    Required.
+       * @param name Required. The name of the transfer operation.
        * @param content the {@link com.google.api.services.storagetransfer.v1.model.PauseTransferOperationRequest}
        * @since 1.13
        */
@@ -1635,21 +1626,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (Pause) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The name of the transfer operation. Required.
-       */
+      /** Required. The name of the transfer operation. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name of the transfer operation. Required.
+      /** Required. The name of the transfer operation.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The name of the transfer operation. Required.
-       */
+      /** Required. The name of the transfer operation. */
       public Pause setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1673,8 +1660,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
      *
-     * @param name The name of the transfer operation.
-    Required.
+     * @param name Required. The name of the transfer operation.
      * @param content the {@link com.google.api.services.storagetransfer.v1.model.ResumeTransferOperationRequest}
      * @return the request
      */
@@ -1702,8 +1688,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of the transfer operation.
-    Required.
+       * @param name Required. The name of the transfer operation.
        * @param content the {@link com.google.api.services.storagetransfer.v1.model.ResumeTransferOperationRequest}
        * @since 1.13
        */
@@ -1772,21 +1757,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (Resume) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The name of the transfer operation. Required.
-       */
+      /** Required. The name of the transfer operation. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The name of the transfer operation. Required.
+      /** Required. The name of the transfer operation.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The name of the transfer operation. Required.
-       */
+      /** Required. The name of the transfer operation. */
       public Resume setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

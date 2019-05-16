@@ -37,8 +37,8 @@ public final class ErrorLogEntry extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> errorDetails;
 
   /**
-   * A URL that refers to the target (a data source, a data sink, or an object) with which the error
-   * is associated. Required.
+   * Required. A URL that refers to the target (a data source, a data sink, or an object) with which
+   * the error is associated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class ErrorLogEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A URL that refers to the target (a data source, a data sink, or an object) with which the error
-   * is associated. Required.
+   * Required. A URL that refers to the target (a data source, a data sink, or an object) with which
+   * the error is associated.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -71,8 +71,8 @@ public final class ErrorLogEntry extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A URL that refers to the target (a data source, a data sink, or an object) with which the error
-   * is associated. Required.
+   * Required. A URL that refers to the target (a data source, a data sink, or an object) with which
+   * the error is associated.
    * @param url url or {@code null} for none
    */
   public ErrorLogEntry setUrl(java.lang.String url) {

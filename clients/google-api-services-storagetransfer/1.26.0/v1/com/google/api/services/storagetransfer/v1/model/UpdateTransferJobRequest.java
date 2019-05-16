@@ -30,16 +30,16 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class UpdateTransferJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the job. Required.
+   * Required. The ID of the Google Cloud Platform Console project that owns the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * The job to update. `transferJob` is expected to specify only three fields: `description`,
-   * `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other fields will be
-   * rejected with an error `INVALID_ARGUMENT`. Required.
+   * Required. The job to update. `transferJob` is expected to specify only three fields:
+   * `description`, `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other
+   * fields will be rejected with an error `INVALID_ARGUMENT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   private String updateTransferJobFieldMask;
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the job. Required.
+   * Required. The ID of the Google Cloud Platform Console project that owns the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -65,7 +65,7 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The ID of the Google Cloud Platform Console project that owns the job. Required.
+   * Required. The ID of the Google Cloud Platform Console project that owns the job.
    * @param projectId projectId or {@code null} for none
    */
   public UpdateTransferJobRequest setProjectId(java.lang.String projectId) {
@@ -74,9 +74,9 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The job to update. `transferJob` is expected to specify only three fields: `description`,
-   * `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other fields will be
-   * rejected with an error `INVALID_ARGUMENT`. Required.
+   * Required. The job to update. `transferJob` is expected to specify only three fields:
+   * `description`, `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other
+   * fields will be rejected with an error `INVALID_ARGUMENT`.
    * @return value or {@code null} for none
    */
   public TransferJob getTransferJob() {
@@ -84,9 +84,9 @@ public final class UpdateTransferJobRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The job to update. `transferJob` is expected to specify only three fields: `description`,
-   * `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other fields will be
-   * rejected with an error `INVALID_ARGUMENT`. Required.
+   * Required. The job to update. `transferJob` is expected to specify only three fields:
+   * `description`, `transferSpec`, and `status`.  An UpdateTransferJobRequest that specifies other
+   * fields will be rejected with an error `INVALID_ARGUMENT`.
    * @param transferJob transferJob or {@code null} for none
    */
   public UpdateTransferJobRequest setTransferJob(TransferJob transferJob) {

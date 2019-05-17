@@ -37,7 +37,10 @@ package com.google.api.services.file.v1.model;
  * "basic",     "cloud-sql-instance-size": "1G",   },   "provisioned_resources": [     {
  * "resource-type": "compute-instance",       "resource-url":
  * "https://www.googleapis.com/compute/v1/projects/cloud-sql/zones/us-east1-b/instances/vm-1",     }
- * ], } ```
+ * ],   "maintenance_schedules": {     "csa_rollout": {        "start_time": {           "seconds":
+ * 1526406431,        },        "end_time": {           "seconds": 1535406431,        },     },
+ * "ncsa_rollout": {        "start_time": {           "seconds": 1526406431,        },
+ * "end_time": {           "seconds": 1535406431,        },     }   } } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -73,6 +76,13 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> maintenancePolicyNames;
+
+  /**
+   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> maintenanceSchedules;
 
   /**
    * Unique name of the resource. It uses the form:
@@ -202,6 +212,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenancePolicyNames(java.util.Map<String, java.lang.String> maintenancePolicyNames) {
     this.maintenancePolicyNames = maintenancePolicyNames;
+    return this;
+  }
+
+  /**
+   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> getMaintenanceSchedules() {
+    return maintenanceSchedules;
+  }
+
+  /**
+   * The MaintenanceSchedule contains the scheduling information of published maintenance schedule.
+   * @param maintenanceSchedules maintenanceSchedules or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setMaintenanceSchedules(java.util.Map<String, GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule> maintenanceSchedules) {
+    this.maintenanceSchedules = maintenanceSchedules;
     return this;
   }
 

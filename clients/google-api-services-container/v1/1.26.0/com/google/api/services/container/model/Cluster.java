@@ -306,7 +306,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] The size of the address space on each node for hosting containers. This is
-   * provisioned from within the `container_ipv4_cidr` range.
+   * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
+   * cluster is in route-based network mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1033,7 +1034,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] The size of the address space on each node for hosting containers. This is
-   * provisioned from within the `container_ipv4_cidr` range.
+   * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
+   * cluster is in route-based network mode.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeIpv4CidrSize() {
@@ -1042,7 +1044,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output only] The size of the address space on each node for hosting containers. This is
-   * provisioned from within the `container_ipv4_cidr` range.
+   * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
+   * cluster is in route-based network mode.
    * @param nodeIpv4CidrSize nodeIpv4CidrSize or {@code null} for none
    */
   public Cluster setNodeIpv4CidrSize(java.lang.Integer nodeIpv4CidrSize) {

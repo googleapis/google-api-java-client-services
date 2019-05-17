@@ -3640,31 +3640,34 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Requested page size. Fewer tasks than requested might be returned.
+             * Maximum page size.
              *
-             * The maximum page size is 1000. If unspecified, the page size will be the maximum.
              * Fewer tasks than requested might be returned, even if more tasks exist; use
              * next_page_token in the response to determine if more tasks exist.
+             *
+             * The maximum page size is 1000. If unspecified, the page size will be the maximum.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Requested page size. Fewer tasks than requested might be returned.
+            /** Maximum page size.
 
-           The maximum page size is 1000. If unspecified, the page size will be the maximum. Fewer tasks than
-           requested might be returned, even if more tasks exist; use next_page_token in the response to
-           determine if more tasks exist.
+           Fewer tasks than requested might be returned, even if more tasks exist; use next_page_token in the
+           response to determine if more tasks exist.
+
+           The maximum page size is 1000. If unspecified, the page size will be the maximum.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Requested page size. Fewer tasks than requested might be returned.
+             * Maximum page size.
              *
-             * The maximum page size is 1000. If unspecified, the page size will be the maximum.
              * Fewer tasks than requested might be returned, even if more tasks exist; use
              * next_page_token in the response to determine if more tasks exist.
+             *
+             * The maximum page size is 1000. If unspecified, the page size will be the maximum.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

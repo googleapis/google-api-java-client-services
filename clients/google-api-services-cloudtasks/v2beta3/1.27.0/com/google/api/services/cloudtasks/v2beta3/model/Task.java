@@ -67,6 +67,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
    *
    * The default and maximum values depend on the type of request:
    *
+   * * For HTTP tasks, the default is 10 minutes. The deadline   must be in the interval [15
+   * seconds, 30 minutes].
+   *
    * * For App Engine tasks, 0 indicates that the   request has the default deadline. The default
    * deadline depends on the   [scaling   type](https://cloud.google.com/appengine/docs/standard/go
    * /how-instances-are-managed#instance_scaling)   of the service: 10 minutes for standard apps
@@ -93,6 +96,15 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Attempt firstAttempt;
+
+  /**
+   * HTTP request that is sent to the task's target.
+   *
+   * An HTTP task is a task that has HttpRequest set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpRequest httpRequest;
 
   /**
    * Output only. The status of the task's last attempt.
@@ -222,6 +234,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
    *
    * The default and maximum values depend on the type of request:
    *
+   * * For HTTP tasks, the default is 10 minutes. The deadline   must be in the interval [15
+   * seconds, 30 minutes].
+   *
    * * For App Engine tasks, 0 indicates that the   request has the default deadline. The default
    * deadline depends on the   [scaling   type](https://cloud.google.com/appengine/docs/standard/go
    * /how-instances-are-managed#instance_scaling)   of the service: 10 minutes for standard apps
@@ -251,6 +266,9 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * it may not react to cancelled requests.
    *
    * The default and maximum values depend on the type of request:
+   *
+   * * For HTTP tasks, the default is 10 minutes. The deadline   must be in the interval [15
+   * seconds, 30 minutes].
    *
    * * For App Engine tasks, 0 indicates that the   request has the default deadline. The default
    * deadline depends on the   [scaling   type](https://cloud.google.com/appengine/docs/standard/go
@@ -290,6 +308,27 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setFirstAttempt(Attempt firstAttempt) {
     this.firstAttempt = firstAttempt;
+    return this;
+  }
+
+  /**
+   * HTTP request that is sent to the task's target.
+   *
+   * An HTTP task is a task that has HttpRequest set.
+   * @return value or {@code null} for none
+   */
+  public HttpRequest getHttpRequest() {
+    return httpRequest;
+  }
+
+  /**
+   * HTTP request that is sent to the task's target.
+   *
+   * An HTTP task is a task that has HttpRequest set.
+   * @param httpRequest httpRequest or {@code null} for none
+   */
+  public Task setHttpRequest(HttpRequest httpRequest) {
+    this.httpRequest = httpRequest;
     return this;
   }
 

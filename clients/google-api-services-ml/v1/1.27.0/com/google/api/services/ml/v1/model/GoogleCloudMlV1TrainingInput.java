@@ -133,7 +133,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * for training.](/ml-engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
-   * server. If `parameterServerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
    * /distributed-training-containers).
    * The value may be {@code null}.
@@ -161,7 +161,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `master_type`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * other words, both must be AI Platform machine types or both must be Compute Engine machine
    * types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
@@ -189,16 +189,16 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Required. The Google Compute Engine region to run the training job in. See the available
-   * regions for ML Engine services.
+   * regions for AI Platform services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for training. If not set, Cloud ML Engine
-   * uses the default stable version, 1.0. For more information, see the runtime version list and
-   * how to manage runtime versions.
+   * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
+   * default stable version, 1.0. For more information, see the runtime version list and how to
+   * manage runtime versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,7 +220,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
    * /distributed-training-containers).
    * The value may be {@code null}.
@@ -247,7 +247,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `masterType`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * other words, both must be AI Platform machine types or both must be Compute Engine machine
    * types.
    *
    * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
@@ -470,7 +470,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * for training.](/ml-engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
-   * server. If `parameterServerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
    * /distributed-training-containers).
    * @return value or {@code null} for none
@@ -487,7 +487,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * for training.](/ml-engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `parameterServerConfig.imageUri` only if you build a custom image for your parameter
-   * server. If `parameterServerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * server. If `parameterServerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
    * /distributed-training-containers).
    * @param parameterServerConfig parameterServerConfig or {@code null} for none
@@ -533,7 +533,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `master_type`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * other words, both must be AI Platform machine types or both must be Compute Engine machine
    * types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
@@ -551,7 +551,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `master_type`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * other words, both must be AI Platform machine types or both must be Compute Engine machine
    * types.
    *
    * This value must be present when `scaleTier` is set to `CUSTOM` and `parameter_server_count` is
@@ -603,7 +603,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Required. The Google Compute Engine region to run the training job in. See the available
-   * regions for ML Engine services.
+   * regions for AI Platform services.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -612,7 +612,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
 
   /**
    * Required. The Google Compute Engine region to run the training job in. See the available
-   * regions for ML Engine services.
+   * regions for AI Platform services.
    * @param region region or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRegion(java.lang.String region) {
@@ -621,9 +621,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for training. If not set, Cloud ML Engine
-   * uses the default stable version, 1.0. For more information, see the runtime version list and
-   * how to manage runtime versions.
+   * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
+   * default stable version, 1.0. For more information, see the runtime version list and how to
+   * manage runtime versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -631,9 +631,9 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for training. If not set, Cloud ML Engine
-   * uses the default stable version, 1.0. For more information, see the runtime version list and
-   * how to manage runtime versions.
+   * Optional. The AI Platform runtime version to use for training. If not set, AI Platform uses the
+   * default stable version, 1.0. For more information, see the runtime version list and how to
+   * manage runtime versions.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1TrainingInput setRuntimeVersion(java.lang.String runtimeVersion) {
@@ -668,7 +668,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
    * /distributed-training-containers).
    * @return value or {@code null} for none
@@ -685,7 +685,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * engine/docs/tensorflow/using-gpus#compute-engine-machine-types-with-gpu)
    *
    * Set `workerConfig.imageUri` only if you build a custom image for your worker. If
-   * `workerConfig.imageUri` has not been set, Cloud ML Engine uses the value of
+   * `workerConfig.imageUri` has not been set, AI Platform uses the value of
    * `masterConfig.imageUri`. Learn more about [configuring custom containers](/ml-engine/docs
    * /distributed-training-containers).
    * @param workerConfig workerConfig or {@code null} for none
@@ -730,7 +730,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `masterType`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * other words, both must be AI Platform machine types or both must be Compute Engine machine
    * types.
    *
    * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU
@@ -750,7 +750,7 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    * The supported values are the same as those described in the entry for `masterType`.
    *
    * This value must be consistent with the category of machine type that `masterType` uses. In
-   * other words, both must be Cloud ML Engine machine types or both must be Compute Engine machine
+   * other words, both must be AI Platform machine types or both must be Compute Engine machine
    * types.
    *
    * If you use `cloud_tpu` for this value, see special instructions for [configuring a custom TPU

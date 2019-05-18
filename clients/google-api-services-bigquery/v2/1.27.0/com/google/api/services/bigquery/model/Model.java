@@ -76,7 +76,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Label columns that were used to train this model. The output of the model will
-   * have a “predicted_” prefix to these columns.
+   * have a "predicted_" prefix to these columns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,7 +239,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Label columns that were used to train this model. The output of the model will
-   * have a “predicted_” prefix to these columns.
+   * have a "predicted_" prefix to these columns.
    * @return value or {@code null} for none
    */
   public java.util.List<StandardSqlField> getLabelColumns() {
@@ -248,7 +248,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Label columns that were used to train this model. The output of the model will
-   * have a “predicted_” prefix to these columns.
+   * have a "predicted_" prefix to these columns.
    * @param labelColumns labelColumns or {@code null} for none
    */
   public Model setLabelColumns(java.util.List<StandardSqlField> labelColumns) {

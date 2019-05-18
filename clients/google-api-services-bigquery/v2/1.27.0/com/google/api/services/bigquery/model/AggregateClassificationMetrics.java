@@ -17,10 +17,10 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Aggregate metrics for classification models. For multi-class models, the metrics are either
- * macro-averaged: metrics are calculated for each label and then an unweighted average is taken of
- * those values or micro-averaged: the metric is calculated globally by counting the total number of
- * correctly predicted rows.
+ * Aggregate metrics for classification/classifier models. For multi-class models, the metrics are
+ * either macro-averaged or micro-averaged. When macro-averaged, the metrics are calculated for each
+ * label and then an unweighted average is taken of those values. When micro-averaged, the metric is
+ * calculated globally by counting the total number of correctly predicted rows.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

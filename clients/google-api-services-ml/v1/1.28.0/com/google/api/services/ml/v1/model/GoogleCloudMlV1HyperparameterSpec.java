@@ -31,8 +31,8 @@ package com.google.api.services.ml.v1.model;
 public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default
-   * CloudML Engine hyperparameter tuning algorithm if unspecified.
+   * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI
+   * Platform hyperparameter tuning algorithm if unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Optional. The number of failed trials that need to be seen before failing the hyperparameter
-   * tuning job. You can specify this field to override the default failing criteria for Cloud ML
-   * Engine hyperparameter tuning jobs.
+   * tuning job. You can specify this field to override the default failing criteria for AI Platform
+   * hyperparameter tuning jobs.
    *
    * Defaults to zero, which means the service decides when a hyperparameter job should fail.
    * The value may be {@code null}.
@@ -116,8 +116,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   private java.lang.String resumePreviousJobId;
 
   /**
-   * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default
-   * CloudML Engine hyperparameter tuning algorithm if unspecified.
+   * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI
+   * Platform hyperparameter tuning algorithm if unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlgorithm() {
@@ -125,8 +125,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   }
 
   /**
-   * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default
-   * CloudML Engine hyperparameter tuning algorithm if unspecified.
+   * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI
+   * Platform hyperparameter tuning algorithm if unspecified.
    * @param algorithm algorithm or {@code null} for none
    */
   public GoogleCloudMlV1HyperparameterSpec setAlgorithm(java.lang.String algorithm) {
@@ -197,8 +197,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Optional. The number of failed trials that need to be seen before failing the hyperparameter
-   * tuning job. You can specify this field to override the default failing criteria for Cloud ML
-   * Engine hyperparameter tuning jobs.
+   * tuning job. You can specify this field to override the default failing criteria for AI Platform
+   * hyperparameter tuning jobs.
    *
    * Defaults to zero, which means the service decides when a hyperparameter job should fail.
    * @return value or {@code null} for none
@@ -209,8 +209,8 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
 
   /**
    * Optional. The number of failed trials that need to be seen before failing the hyperparameter
-   * tuning job. You can specify this field to override the default failing criteria for Cloud ML
-   * Engine hyperparameter tuning jobs.
+   * tuning job. You can specify this field to override the default failing criteria for AI Platform
+   * hyperparameter tuning jobs.
    *
    * Defaults to zero, which means the service decides when a hyperparameter job should fail.
    * @param maxFailedTrials maxFailedTrials or {@code null} for none

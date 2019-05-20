@@ -53,7 +53,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   private java.lang.String pythonVersion;
 
   /**
-   * Cloud ML Engine runtime version on which the built-in algorithm was trained.
+   * AI Platform runtime version on which the built-in algorithm was trained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Cloud ML Engine runtime version on which the built-in algorithm was trained.
+   * AI Platform runtime version on which the built-in algorithm was trained.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -121,7 +121,7 @@ public final class GoogleCloudMlV1BuiltInAlgorithmOutput extends com.google.api.
   }
 
   /**
-   * Cloud ML Engine runtime version on which the built-in algorithm was trained.
+   * AI Platform runtime version on which the built-in algorithm was trained.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1BuiltInAlgorithmOutput setRuntimeVersion(java.lang.String runtimeVersion) {

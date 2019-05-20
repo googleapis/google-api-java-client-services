@@ -22,7 +22,7 @@ package com.google.api.services.ml.v1.model;
  * Each version is a trained model deployed in the cloud, ready to handle prediction requests. A
  * model can have multiple versions. You can get information about all of the versions of a given
  * model by calling [projects.models.versions.list](/ml-
- * engine/reference/rest/v1/projects.models.versions/list). Next ID: 30
+ * engine/reference/rest/v1/projects.models.versions/list).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Machine Learning Engine. For a detailed
@@ -52,9 +52,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
-   * Required. The Google Cloud Storage location of the trained model used to create the version.
-   * See the [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more
-   * information.
+   * Required. The Cloud Storage location of the trained model used to create the version. See the
+   * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
    *
    * When passing Version to [projects.models.versions.create](/ml-
    * engine/reference/rest/v1/projects.models.versions/create) the model service uses the specified
@@ -93,11 +92,14 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String etag;
 
   /**
-   * Optional. The machine learning framework Cloud ML Engine uses to train this version of the
-   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a
-   * framework, Cloud ML Engine will analyze files in the deployment_uri to determine a framework.
-   * If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model
-   * to 1.4 or greater.
+   * Optional. The machine learning framework AI Platform uses to train this version of the model.
+   * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
+   * Platform will analyze files in the deployment_uri to determine a framework. If you choose
+   * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
+   * greater.
+   *
+   * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,42 +164,60 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Optional. The Google Cloud Storage location of the packages for custom prediction and any
-   * additional dependencies.
+   * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code).
+   *
+   * For a custom prediction routine, one of these packages must contain your Predictor class (see
+   * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
+   * used by your Predictor or scikit-learn pipeline uses that are not already included in your
+   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list).
+   *
+   * If you specify this field, you must also set
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> packageUris;
 
   /**
-   * class PredictionClass(object):   A Model performs predictions on a given list of instances.
+   * Optional. The fully qualified name (module_name.class_name) of a class that implements the
+   * Predictor interface described in this reference field. The module containing this class should
+   * be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris).
    *
-   *   The input instances are the raw values sent by the user. It is the   responsibility of a
-   * Model to translate these instances into   actual predictions.
+   * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
    *
-   *   The input instances and the output use python data types. The input   instances have been
-   * decoded prior to being passed to the predict   method. The output, which should use python data
-   * types is   encoded after being returned from the predict method.
+   * The following code sample provides the Predictor interface:
    *
-   *   def predict(self, instances, **kwargs):     Returns predictions for the provided instances.
+   * ```py class Predictor(object): Interface for constructing custom predictors.
    *
-   *     Instances are the decoded values from the request. Clients need not     worry about
-   * decoding json nor base64 decoding.
+   * def predict(self, instances, **kwargs):     Performs custom prediction.
    *
-   *     Args:       instances: A list of instances, as described in the API.       **kwargs:
-   * Additional keyword arguments, will be passed into the           client's predict method.
+   *     Instances are the decoded values from the request. They have already     been deserialized
+   * from JSON.
    *
-   *     Returns:       A list of outputs containing the prediction results.
+   *     Args:         instances: A list of prediction input instances.         **kwargs: A
+   * dictionary of keyword args provided as additional             fields on the predict request
+   * body.
    *
-   *   @classmethod   def from_path(cls, model_path):     Creates a model using the given model
-   * path.
+   *     Returns:         A list of outputs containing the prediction results. This list must
+   * be JSON serializable.          raise NotImplementedError()
    *
-   *     Path is useful, e.g., to load files from the exported directory     containing the model.
+   * @classmethod def from_path(cls, model_dir):     Creates an instance of Predictor using the
+   * given path.
    *
-   *     Args:       model_path: The local directory that contains the exported model           file
-   * along with any additional files uploaded when creating the           version resource.
+   *     Loading of the predictor should be done in this method.
    *
-   *     Returns:       An instance implementing this Model class.
+   *     Args:         model_dir: The local directory that contains the exported model
+   * file along with any additional files uploaded when creating the             version resource.
+   *
+   *     Returns:         An instance implementing this Predictor class.          raise
+   * NotImplementedError() ```
+   *
+   * Learn more about [the Predictor interface and custom prediction routines](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,9 +233,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String pythonVersion;
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for this deployment. If not set, Cloud ML
-   * Engine uses the default stable version, 1.0. For more information, see the [runtime version
-   * list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
+   * Optional. The AI Platform runtime version to use for this deployment. If not set, AI Platform
+   * uses the default stable version, 1.0. For more information, see the [runtime version list](/ml-
+   * engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
    * engine/docs/versioning).
    * The value may be {@code null}.
    */
@@ -268,9 +288,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The Google Cloud Storage location of the trained model used to create the version.
-   * See the [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more
-   * information.
+   * Required. The Cloud Storage location of the trained model used to create the version. See the
+   * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
    *
    * When passing Version to [projects.models.versions.create](/ml-
    * engine/reference/rest/v1/projects.models.versions/create) the model service uses the specified
@@ -284,9 +303,8 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The Google Cloud Storage location of the trained model used to create the version.
-   * See the [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more
-   * information.
+   * Required. The Cloud Storage location of the trained model used to create the version. See the
+   * [guide to model deployment](/ml-engine/docs/tensorflow/deploying-models) for more information.
    *
    * When passing Version to [projects.models.versions.create](/ml-
    * engine/reference/rest/v1/projects.models.versions/create) the model service uses the specified
@@ -400,11 +418,14 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The machine learning framework Cloud ML Engine uses to train this version of the
-   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a
-   * framework, Cloud ML Engine will analyze files in the deployment_uri to determine a framework.
-   * If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model
-   * to 1.4 or greater.
+   * Optional. The machine learning framework AI Platform uses to train this version of the model.
+   * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
+   * Platform will analyze files in the deployment_uri to determine a framework. If you choose
+   * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
+   * greater.
+   *
+   * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines).
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -412,11 +433,14 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The machine learning framework Cloud ML Engine uses to train this version of the
-   * model. Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a
-   * framework, Cloud ML Engine will analyze files in the deployment_uri to determine a framework.
-   * If you choose `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model
-   * to 1.4 or greater.
+   * Optional. The machine learning framework AI Platform uses to train this version of the model.
+   * Valid values are `TENSORFLOW`, `SCIKIT_LEARN`, `XGBOOST`. If you do not specify a framework, AI
+   * Platform will analyze files in the deployment_uri to determine a framework. If you choose
+   * `SCIKIT_LEARN` or `XGBOOST`, you must also set the runtime version of the model to 1.4 or
+   * greater.
+   *
+   * Do **not** specify a framework if you're deploying a [custom prediction routine](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines).
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudMlV1Version setFramework(java.lang.String framework) {
@@ -559,8 +583,17 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Google Cloud Storage location of the packages for custom prediction and any
-   * additional dependencies.
+   * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code).
+   *
+   * For a custom prediction routine, one of these packages must contain your Predictor class (see
+   * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
+   * used by your Predictor or scikit-learn pipeline uses that are not already included in your
+   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list).
+   *
+   * If you specify this field, you must also set
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPackageUris() {
@@ -568,8 +601,17 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Google Cloud Storage location of the packages for custom prediction and any
-   * additional dependencies.
+   * Optional. Cloud Storage paths (`gs://…`) of packages for [custom prediction routines](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines) or [scikit-learn pipelines with custom code
+   * ](/ml-engine/docs/scikit/exporting-for-prediction#custom-pipeline-code).
+   *
+   * For a custom prediction routine, one of these packages must contain your Predictor class (see
+   * [`predictionClass`](#Version.FIELDS.prediction_class)). Additionally, include any dependencies
+   * used by your Predictor or scikit-learn pipeline uses that are not already included in your
+   * selected [runtime version](/ml-engine/docs/tensorflow/runtime-version-list).
+   *
+   * If you specify this field, you must also set
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
    * @param packageUris packageUris or {@code null} for none
    */
   public GoogleCloudMlV1Version setPackageUris(java.util.List<java.lang.String> packageUris) {
@@ -578,34 +620,43 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * class PredictionClass(object):   A Model performs predictions on a given list of instances.
+   * Optional. The fully qualified name (module_name.class_name) of a class that implements the
+   * Predictor interface described in this reference field. The module containing this class should
+   * be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris).
    *
-   *   The input instances are the raw values sent by the user. It is the   responsibility of a
-   * Model to translate these instances into   actual predictions.
+   * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
    *
-   *   The input instances and the output use python data types. The input   instances have been
-   * decoded prior to being passed to the predict   method. The output, which should use python data
-   * types is   encoded after being returned from the predict method.
+   * The following code sample provides the Predictor interface:
    *
-   *   def predict(self, instances, **kwargs):     Returns predictions for the provided instances.
+   * ```py class Predictor(object): Interface for constructing custom predictors.
    *
-   *     Instances are the decoded values from the request. Clients need not     worry about
-   * decoding json nor base64 decoding.
+   * def predict(self, instances, **kwargs):     Performs custom prediction.
    *
-   *     Args:       instances: A list of instances, as described in the API.       **kwargs:
-   * Additional keyword arguments, will be passed into the           client's predict method.
+   *     Instances are the decoded values from the request. They have already     been deserialized
+   * from JSON.
    *
-   *     Returns:       A list of outputs containing the prediction results.
+   *     Args:         instances: A list of prediction input instances.         **kwargs: A
+   * dictionary of keyword args provided as additional             fields on the predict request
+   * body.
    *
-   *   @classmethod   def from_path(cls, model_path):     Creates a model using the given model
-   * path.
+   *     Returns:         A list of outputs containing the prediction results. This list must
+   * be JSON serializable.          raise NotImplementedError()
    *
-   *     Path is useful, e.g., to load files from the exported directory     containing the model.
+   * @classmethod def from_path(cls, model_dir):     Creates an instance of Predictor using the
+   * given path.
    *
-   *     Args:       model_path: The local directory that contains the exported model           file
-   * along with any additional files uploaded when creating the           version resource.
+   *     Loading of the predictor should be done in this method.
    *
-   *     Returns:       An instance implementing this Model class.
+   *     Args:         model_dir: The local directory that contains the exported model
+   * file along with any additional files uploaded when creating the             version resource.
+   *
+   *     Returns:         An instance implementing this Predictor class.          raise
+   * NotImplementedError() ```
+   *
+   * Learn more about [the Predictor interface and custom prediction routines](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines).
    * @return value or {@code null} for none
    */
   public java.lang.String getPredictionClass() {
@@ -613,34 +664,43 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * class PredictionClass(object):   A Model performs predictions on a given list of instances.
+   * Optional. The fully qualified name (module_name.class_name) of a class that implements the
+   * Predictor interface described in this reference field. The module containing this class should
+   * be included in a package provided to the [`packageUris` field](#Version.FIELDS.package_uris).
    *
-   *   The input instances are the raw values sent by the user. It is the   responsibility of a
-   * Model to translate these instances into   actual predictions.
+   * Specify this field if and only if you are deploying a [custom prediction routine (beta)](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines). If you specify this field, you must set
+   * [`runtimeVersion`](#Version.FIELDS.runtime_version) to 1.4 or greater.
    *
-   *   The input instances and the output use python data types. The input   instances have been
-   * decoded prior to being passed to the predict   method. The output, which should use python data
-   * types is   encoded after being returned from the predict method.
+   * The following code sample provides the Predictor interface:
    *
-   *   def predict(self, instances, **kwargs):     Returns predictions for the provided instances.
+   * ```py class Predictor(object): Interface for constructing custom predictors.
    *
-   *     Instances are the decoded values from the request. Clients need not     worry about
-   * decoding json nor base64 decoding.
+   * def predict(self, instances, **kwargs):     Performs custom prediction.
    *
-   *     Args:       instances: A list of instances, as described in the API.       **kwargs:
-   * Additional keyword arguments, will be passed into the           client's predict method.
+   *     Instances are the decoded values from the request. They have already     been deserialized
+   * from JSON.
    *
-   *     Returns:       A list of outputs containing the prediction results.
+   *     Args:         instances: A list of prediction input instances.         **kwargs: A
+   * dictionary of keyword args provided as additional             fields on the predict request
+   * body.
    *
-   *   @classmethod   def from_path(cls, model_path):     Creates a model using the given model
-   * path.
+   *     Returns:         A list of outputs containing the prediction results. This list must
+   * be JSON serializable.          raise NotImplementedError()
    *
-   *     Path is useful, e.g., to load files from the exported directory     containing the model.
+   * @classmethod def from_path(cls, model_dir):     Creates an instance of Predictor using the
+   * given path.
    *
-   *     Args:       model_path: The local directory that contains the exported model           file
-   * along with any additional files uploaded when creating the           version resource.
+   *     Loading of the predictor should be done in this method.
    *
-   *     Returns:       An instance implementing this Model class.
+   *     Args:         model_dir: The local directory that contains the exported model
+   * file along with any additional files uploaded when creating the             version resource.
+   *
+   *     Returns:         An instance implementing this Predictor class.          raise
+   * NotImplementedError() ```
+   *
+   * Learn more about [the Predictor interface and custom prediction routines](/ml-
+   * engine/docs/tensorflow/custom-prediction-routines).
    * @param predictionClass predictionClass or {@code null} for none
    */
   public GoogleCloudMlV1Version setPredictionClass(java.lang.String predictionClass) {
@@ -670,9 +730,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for this deployment. If not set, Cloud ML
-   * Engine uses the default stable version, 1.0. For more information, see the [runtime version
-   * list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
+   * Optional. The AI Platform runtime version to use for this deployment. If not set, AI Platform
+   * uses the default stable version, 1.0. For more information, see the [runtime version list](/ml-
+   * engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
    * engine/docs/versioning).
    * @return value or {@code null} for none
    */
@@ -681,9 +741,9 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for this deployment. If not set, Cloud ML
-   * Engine uses the default stable version, 1.0. For more information, see the [runtime version
-   * list](/ml-engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
+   * Optional. The AI Platform runtime version to use for this deployment. If not set, AI Platform
+   * uses the default stable version, 1.0. For more information, see the [runtime version list](/ml-
+   * engine/docs/runtime-version-list) and [how to manage runtime versions](/ml-
    * engine/docs/versioning).
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */

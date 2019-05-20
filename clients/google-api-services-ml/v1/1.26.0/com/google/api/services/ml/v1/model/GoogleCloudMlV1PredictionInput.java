@@ -87,17 +87,17 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
 
   /**
    * Required. The Google Compute Engine region to run the prediction job in. See the available
-   * regions for ML Engine services.
+   * regions for AI Platform services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for this batch prediction. If not set,
-   * Cloud ML Engine will pick the runtime version used during the CreateVersion request for this
-   * model version, or choose the latest stable version when model version information is not
-   * available such as when the model is specified by uri.
+   * Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI
+   * Platform will pick the runtime version used during the CreateVersion request for this model
+   * version, or choose the latest stable version when model version information is not available
+   * such as when the model is specified by uri.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +265,7 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
 
   /**
    * Required. The Google Compute Engine region to run the prediction job in. See the available
-   * regions for ML Engine services.
+   * regions for AI Platform services.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -274,7 +274,7 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
 
   /**
    * Required. The Google Compute Engine region to run the prediction job in. See the available
-   * regions for ML Engine services.
+   * regions for AI Platform services.
    * @param region region or {@code null} for none
    */
   public GoogleCloudMlV1PredictionInput setRegion(java.lang.String region) {
@@ -283,10 +283,10 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   }
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for this batch prediction. If not set,
-   * Cloud ML Engine will pick the runtime version used during the CreateVersion request for this
-   * model version, or choose the latest stable version when model version information is not
-   * available such as when the model is specified by uri.
+   * Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI
+   * Platform will pick the runtime version used during the CreateVersion request for this model
+   * version, or choose the latest stable version when model version information is not available
+   * such as when the model is specified by uri.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuntimeVersion() {
@@ -294,10 +294,10 @@ public final class GoogleCloudMlV1PredictionInput extends com.google.api.client.
   }
 
   /**
-   * Optional. The Cloud ML Engine runtime version to use for this batch prediction. If not set,
-   * Cloud ML Engine will pick the runtime version used during the CreateVersion request for this
-   * model version, or choose the latest stable version when model version information is not
-   * available such as when the model is specified by uri.
+   * Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI
+   * Platform will pick the runtime version used during the CreateVersion request for this model
+   * version, or choose the latest stable version when model version information is not available
+   * such as when the model is specified by uri.
    * @param runtimeVersion runtimeVersion or {@code null} for none
    */
   public GoogleCloudMlV1PredictionInput setRuntimeVersion(java.lang.String runtimeVersion) {

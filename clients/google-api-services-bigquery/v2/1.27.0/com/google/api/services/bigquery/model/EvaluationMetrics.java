@@ -18,7 +18,8 @@ package com.google.api.services.bigquery.model;
 
 /**
  * Evaluation metrics of a model. These are either computed on all training data or just the eval
- * data based on whether eval data was used during training.
+ * data based on whether eval data was used during training. These are not present for imported
+ * models.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -31,7 +32,7 @@ package com.google.api.services.bigquery.model;
 public final class EvaluationMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Populated for binary classification models.
+   * Populated for binary classification/classifier models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private ClusteringMetrics clusteringMetrics;
 
   /**
-   * Populated for multi-class classification models.
+   * Populated for multi-class classification/classifier models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private RegressionMetrics regressionMetrics;
 
   /**
-   * Populated for binary classification models.
+   * Populated for binary classification/classifier models.
    * @return value or {@code null} for none
    */
   public BinaryClassificationMetrics getBinaryClassificationMetrics() {
@@ -67,7 +68,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Populated for binary classification models.
+   * Populated for binary classification/classifier models.
    * @param binaryClassificationMetrics binaryClassificationMetrics or {@code null} for none
    */
   public EvaluationMetrics setBinaryClassificationMetrics(BinaryClassificationMetrics binaryClassificationMetrics) {
@@ -93,7 +94,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Populated for multi-class classification models.
+   * Populated for multi-class classification/classifier models.
    * @return value or {@code null} for none
    */
   public MultiClassClassificationMetrics getMultiClassClassificationMetrics() {
@@ -101,7 +102,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Populated for multi-class classification models.
+   * Populated for multi-class classification/classifier models.
    * @param multiClassClassificationMetrics multiClassClassificationMetrics or {@code null} for none
    */
   public EvaluationMetrics setMultiClassClassificationMetrics(MultiClassClassificationMetrics multiClassClassificationMetrics) {

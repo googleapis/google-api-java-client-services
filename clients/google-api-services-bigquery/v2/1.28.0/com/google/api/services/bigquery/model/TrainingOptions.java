@@ -67,14 +67,14 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Whether to stop early when the loss doesn't improve significantly any more (compared to
-   * min_relative_progress).
+   * min_relative_progress). Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean earlyStop;
 
   /**
-   * Specifies the initial learning rate for line search to start at.
+   * Specifies the initial learning rate for the line search learn rate strategy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,21 +102,22 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double l2Regularization;
 
   /**
-   * Weights associated with each label class, for rebalancing the training data.
+   * Weights associated with each label class, for rebalancing the training data. Only applicable
+   * for classification models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Double> labelClassWeights;
 
   /**
-   * Learning rate in training.
+   * Learning rate in training. Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double learnRate;
 
   /**
-   * The strategy to determine learning rate.
+   * The strategy to determine learn rate for the current iteration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +131,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String lossType;
 
   /**
-   * The maximum number of iterations in training.
+   * The maximum number of iterations in training. Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -138,11 +139,19 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
 
   /**
    * When early_stop is true, stops training when accuracy improvement is less than
-   * 'min_relative_progress'.
+   * 'min_relative_progress'. Used only for iterative training algorithms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double minRelativeProgress;
+
+  /**
+   * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
+   * models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelUri;
 
   /**
    * [Beta] Number of clusters for clustering models.
@@ -150,6 +159,13 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numClusters;
+
+  /**
+   * Optimization strategy for training linear regression models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String optimizationStrategy;
 
   /**
    * Whether to train a model from the last checkpoint.
@@ -244,7 +260,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Whether to stop early when the loss doesn't improve significantly any more (compared to
-   * min_relative_progress).
+   * min_relative_progress). Used only for iterative training algorithms.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEarlyStop() {
@@ -253,7 +269,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
 
   /**
    * Whether to stop early when the loss doesn't improve significantly any more (compared to
-   * min_relative_progress).
+   * min_relative_progress). Used only for iterative training algorithms.
    * @param earlyStop earlyStop or {@code null} for none
    */
   public TrainingOptions setEarlyStop(java.lang.Boolean earlyStop) {
@@ -262,7 +278,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the initial learning rate for line search to start at.
+   * Specifies the initial learning rate for the line search learn rate strategy.
    * @return value or {@code null} for none
    */
   public java.lang.Double getInitialLearnRate() {
@@ -270,7 +286,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Specifies the initial learning rate for line search to start at.
+   * Specifies the initial learning rate for the line search learn rate strategy.
    * @param initialLearnRate initialLearnRate or {@code null} for none
    */
   public TrainingOptions setInitialLearnRate(java.lang.Double initialLearnRate) {
@@ -330,7 +346,8 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Weights associated with each label class, for rebalancing the training data.
+   * Weights associated with each label class, for rebalancing the training data. Only applicable
+   * for classification models.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Double> getLabelClassWeights() {
@@ -338,7 +355,8 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Weights associated with each label class, for rebalancing the training data.
+   * Weights associated with each label class, for rebalancing the training data. Only applicable
+   * for classification models.
    * @param labelClassWeights labelClassWeights or {@code null} for none
    */
   public TrainingOptions setLabelClassWeights(java.util.Map<String, java.lang.Double> labelClassWeights) {
@@ -347,7 +365,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Learning rate in training.
+   * Learning rate in training. Used only for iterative training algorithms.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearnRate() {
@@ -355,7 +373,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Learning rate in training.
+   * Learning rate in training. Used only for iterative training algorithms.
    * @param learnRate learnRate or {@code null} for none
    */
   public TrainingOptions setLearnRate(java.lang.Double learnRate) {
@@ -364,7 +382,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The strategy to determine learning rate.
+   * The strategy to determine learn rate for the current iteration.
    * @return value or {@code null} for none
    */
   public java.lang.String getLearnRateStrategy() {
@@ -372,7 +390,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The strategy to determine learning rate.
+   * The strategy to determine learn rate for the current iteration.
    * @param learnRateStrategy learnRateStrategy or {@code null} for none
    */
   public TrainingOptions setLearnRateStrategy(java.lang.String learnRateStrategy) {
@@ -398,7 +416,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of iterations in training.
+   * The maximum number of iterations in training. Used only for iterative training algorithms.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxIterations() {
@@ -406,7 +424,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The maximum number of iterations in training.
+   * The maximum number of iterations in training. Used only for iterative training algorithms.
    * @param maxIterations maxIterations or {@code null} for none
    */
   public TrainingOptions setMaxIterations(java.lang.Long maxIterations) {
@@ -416,7 +434,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
 
   /**
    * When early_stop is true, stops training when accuracy improvement is less than
-   * 'min_relative_progress'.
+   * 'min_relative_progress'. Used only for iterative training algorithms.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMinRelativeProgress() {
@@ -425,11 +443,30 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
 
   /**
    * When early_stop is true, stops training when accuracy improvement is less than
-   * 'min_relative_progress'.
+   * 'min_relative_progress'. Used only for iterative training algorithms.
    * @param minRelativeProgress minRelativeProgress or {@code null} for none
    */
   public TrainingOptions setMinRelativeProgress(java.lang.Double minRelativeProgress) {
     this.minRelativeProgress = minRelativeProgress;
+    return this;
+  }
+
+  /**
+   * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
+   * models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelUri() {
+    return modelUri;
+  }
+
+  /**
+   * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
+   * models.
+   * @param modelUri modelUri or {@code null} for none
+   */
+  public TrainingOptions setModelUri(java.lang.String modelUri) {
+    this.modelUri = modelUri;
     return this;
   }
 
@@ -447,6 +484,23 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setNumClusters(java.lang.Long numClusters) {
     this.numClusters = numClusters;
+    return this;
+  }
+
+  /**
+   * Optimization strategy for training linear regression models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOptimizationStrategy() {
+    return optimizationStrategy;
+  }
+
+  /**
+   * Optimization strategy for training linear regression models.
+   * @param optimizationStrategy optimizationStrategy or {@code null} for none
+   */
+  public TrainingOptions setOptimizationStrategy(java.lang.String optimizationStrategy) {
+    this.optimizationStrategy = optimizationStrategy;
     return this;
   }
 

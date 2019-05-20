@@ -72,8 +72,8 @@ EXIT_CODE=0
 for directory in `find clients -mindepth 3 -maxdepth 3 -type d | sort`
 do
   service=$(echo ${directory} | cut -f2 -d'/' | cut -f4 -d'-')
-  library_version=$(echo ${directory} | cut -f3 -d'/')
-  api_version=$(echo ${directory} | cut -f4 -d'/')
+  api_version=$(echo ${directory} | cut -f3 -d'/')
+  library_version=$(echo ${directory} | cut -ff -d'/')
   revision=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='version']/text()" ${directory}/pom.xml | cut -f2 -d'-')
   artifact_id=$(xmllint --xpath "/*[local-name()='project']/*[local-name()='artifactId']/text()" ${directory}/pom.xml)
 

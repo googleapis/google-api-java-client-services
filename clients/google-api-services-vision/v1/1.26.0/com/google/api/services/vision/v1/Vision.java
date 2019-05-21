@@ -143,6 +143,115 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
   public class Files {
 
     /**
+     * Service that performs image detection and annotation for a batch of files. Now only
+     * "application/pdf", "image/tiff" and "image/gif" are supported.
+     *
+     * This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages)
+     * frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation
+     * for each image extracted.
+     *
+     * Create a request for the method "files.annotate".
+     *
+     * This request holds the parameters needed by the vision server.  After setting any optional
+     * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest}
+     * @return the request
+     */
+    public Annotate annotate(com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest content) throws java.io.IOException {
+      Annotate result = new Annotate(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Annotate extends VisionRequest<com.google.api.services.vision.v1.model.BatchAnnotateFilesResponse> {
+
+      private static final String REST_PATH = "v1/files:annotate";
+
+      /**
+       * Service that performs image detection and annotation for a batch of files. Now only
+       * "application/pdf", "image/tiff" and "image/gif" are supported.
+       *
+       * This service will extract at most 5 (customers can specify which 5 in
+       * AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and
+       * perform detection and annotation for each image extracted.
+       *
+       * Create a request for the method "files.annotate".
+       *
+       * This request holds the parameters needed by the the vision server.  After setting any optional
+       * parameters, call the {@link Annotate#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest}
+       * @since 1.13
+       */
+      protected Annotate(com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest content) {
+        super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.BatchAnnotateFilesResponse.class);
+      }
+
+      @Override
+      public Annotate set$Xgafv(java.lang.String $Xgafv) {
+        return (Annotate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Annotate setAccessToken(java.lang.String accessToken) {
+        return (Annotate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Annotate setAlt(java.lang.String alt) {
+        return (Annotate) super.setAlt(alt);
+      }
+
+      @Override
+      public Annotate setCallback(java.lang.String callback) {
+        return (Annotate) super.setCallback(callback);
+      }
+
+      @Override
+      public Annotate setFields(java.lang.String fields) {
+        return (Annotate) super.setFields(fields);
+      }
+
+      @Override
+      public Annotate setKey(java.lang.String key) {
+        return (Annotate) super.setKey(key);
+      }
+
+      @Override
+      public Annotate setOauthToken(java.lang.String oauthToken) {
+        return (Annotate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Annotate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Annotate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Annotate setQuotaUser(java.lang.String quotaUser) {
+        return (Annotate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Annotate setUploadType(java.lang.String uploadType) {
+        return (Annotate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Annotate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Annotate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Annotate set(String parameterName, Object value) {
+        return (Annotate) super.set(parameterName, value);
+      }
+    }
+    /**
      * Run asynchronous image detection and annotation for a list of generic files, such as PDF files,
      * which may contain multiple pages and multiple images per page. Progress and results can be
      * retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains
@@ -369,6 +478,119 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
       @Override
       public Annotate set(String parameterName, Object value) {
         return (Annotate) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Run asynchronous image detection and annotation for a list of images.
+     *
+     * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
+     * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
+     * `AsyncBatchAnnotateImagesResponse` (results).
+     *
+     * This service will write image annotation outputs to json files in customer GCS bucket, each json
+     * file containing BatchAnnotateImagesResponse proto.
+     *
+     * Create a request for the method "images.asyncBatchAnnotate".
+     *
+     * This request holds the parameters needed by the vision server.  After setting any optional
+     * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest}
+     * @return the request
+     */
+    public AsyncBatchAnnotate asyncBatchAnnotate(com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest content) throws java.io.IOException {
+      AsyncBatchAnnotate result = new AsyncBatchAnnotate(content);
+      initialize(result);
+      return result;
+    }
+
+    public class AsyncBatchAnnotate extends VisionRequest<com.google.api.services.vision.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/images:asyncBatchAnnotate";
+
+      /**
+       * Run asynchronous image detection and annotation for a list of images.
+       *
+       * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
+       * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
+       * `AsyncBatchAnnotateImagesResponse` (results).
+       *
+       * This service will write image annotation outputs to json files in customer GCS bucket, each
+       * json file containing BatchAnnotateImagesResponse proto.
+       *
+       * Create a request for the method "images.asyncBatchAnnotate".
+       *
+       * This request holds the parameters needed by the the vision server.  After setting any optional
+       * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote
+       * operation. <p> {@link AsyncBatchAnnotate#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest}
+       * @since 1.13
+       */
+      protected AsyncBatchAnnotate(com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest content) {
+        super(Vision.this, "POST", REST_PATH, content, com.google.api.services.vision.v1.model.Operation.class);
+      }
+
+      @Override
+      public AsyncBatchAnnotate set$Xgafv(java.lang.String $Xgafv) {
+        return (AsyncBatchAnnotate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setAccessToken(java.lang.String accessToken) {
+        return (AsyncBatchAnnotate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setAlt(java.lang.String alt) {
+        return (AsyncBatchAnnotate) super.setAlt(alt);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setCallback(java.lang.String callback) {
+        return (AsyncBatchAnnotate) super.setCallback(callback);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setFields(java.lang.String fields) {
+        return (AsyncBatchAnnotate) super.setFields(fields);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setKey(java.lang.String key) {
+        return (AsyncBatchAnnotate) super.setKey(key);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setOauthToken(java.lang.String oauthToken) {
+        return (AsyncBatchAnnotate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AsyncBatchAnnotate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setQuotaUser(java.lang.String quotaUser) {
+        return (AsyncBatchAnnotate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setUploadType(java.lang.String uploadType) {
+        return (AsyncBatchAnnotate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AsyncBatchAnnotate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AsyncBatchAnnotate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public AsyncBatchAnnotate set(String parameterName, Object value) {
+        return (AsyncBatchAnnotate) super.set(parameterName, value);
       }
     }
 
@@ -1760,10 +1982,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          *
          * The actual image files are not deleted from Google Cloud Storage.
          *
-         * Possible errors:
-         *
-         * none
-         *
          * Create a request for the method "productSets.delete".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
@@ -1792,10 +2010,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * deleted.
            *
            * The actual image files are not deleted from Google Cloud Storage.
-           *
-           * Possible errors:
-           *
-           * none
            *
            * Create a request for the method "productSets.delete".
            *
@@ -2614,10 +2828,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Removes a Product from the specified ProductSet.
          *
-         * Possible errors:
-         *
-         * none
-         *
          * Create a request for the method "productSets.removeProduct".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
@@ -2644,10 +2854,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Removes a Product from the specified ProductSet.
-           *
-           * Possible errors:
-           *
-           * none
            *
            * Create a request for the method "productSets.removeProduct".
            *
@@ -3192,10 +3398,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * Metadata of the product and all its images will be deleted right away, but search queries against
          * ProductSets containing the product may still work until all related caches are refreshed.
          *
-         * Possible errors:
-         *
-         * none
-         *
          * Create a request for the method "products.delete".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
@@ -3225,10 +3427,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Metadata of the product and all its images will be deleted right away, but search queries
            * against ProductSets containing the product may still work until all related caches are
            * refreshed.
-           *
-           * Possible errors:
-           *
-           * none
            *
            * Create a request for the method "products.delete".
            *
@@ -4128,10 +4326,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            *
            * The actual image files are not deleted from Google Cloud Storage.
            *
-           * Possible errors:
-           *
-           * none
-           *
            * Create a request for the method "referenceImages.delete".
            *
            * This request holds the parameters needed by the vision server.  After setting any optional
@@ -4162,10 +4356,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * containing the image may still work until all related caches are refreshed.
              *
              * The actual image files are not deleted from Google Cloud Storage.
-             *
-             * Possible errors:
-             *
-             * none
              *
              * Create a request for the method "referenceImages.delete".
              *

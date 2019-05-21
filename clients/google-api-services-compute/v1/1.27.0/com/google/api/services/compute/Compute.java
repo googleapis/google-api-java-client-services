@@ -55,7 +55,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://compute.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -8864,16 +8864,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Application consistent snapshot (ie. VSS). */
       @com.google.api.client.util.Key
       private java.lang.Boolean guestFlush;
 
-      /**
-
+      /** Application consistent snapshot (ie. VSS).
        */
       public java.lang.Boolean getGuestFlush() {
         return guestFlush;
       }
 
+      /** Application consistent snapshot (ie. VSS). */
       public CreateSnapshot setGuestFlush(java.lang.Boolean guestFlush) {
         this.guestFlush = guestFlush;
         return this;

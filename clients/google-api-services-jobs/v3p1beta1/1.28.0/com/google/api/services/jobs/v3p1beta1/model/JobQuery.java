@@ -148,7 +148,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    *
    * This filter specifies a list of job names to be excluded during search.
    *
-   * At most 200 excluded job names are allowed.
+   * At most 400 excluded job names are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -472,7 +472,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    *
    * This filter specifies a list of job names to be excluded during search.
    *
-   * At most 200 excluded job names are allowed.
+   * At most 400 excluded job names are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedJobs() {
@@ -484,7 +484,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
    *
    * This filter specifies a list of job names to be excluded during search.
    *
-   * At most 200 excluded job names are allowed.
+   * At most 400 excluded job names are allowed.
    * @param excludedJobs excludedJobs or {@code null} for none
    */
   public JobQuery setExcludedJobs(java.util.List<java.lang.String> excludedJobs) {

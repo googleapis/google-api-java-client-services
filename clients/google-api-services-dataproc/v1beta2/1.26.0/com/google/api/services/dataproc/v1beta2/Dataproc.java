@@ -3537,11 +3537,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          *
          * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
-         * @param content the {@link com.google.api.services.dataproc.v1beta2.model.GetIamPolicyRequest}
          * @return the request
          */
-        public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.dataproc.v1beta2.model.GetIamPolicyRequest content) throws java.io.IOException {
-          GetIamPolicy result = new GetIamPolicy(resource, content);
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
           initialize(result);
           return result;
         }
@@ -3567,17 +3566,26 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            *
            * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
-           * @param content the {@link com.google.api.services.dataproc.v1beta2.model.GetIamPolicyRequest}
            * @since 1.13
            */
-          protected GetIamPolicy(java.lang.String resource, com.google.api.services.dataproc.v1beta2.model.GetIamPolicyRequest content) {
-            super(Dataproc.this, "POST", REST_PATH, content, com.google.api.services.dataproc.v1beta2.model.Policy.class);
+          protected GetIamPolicy(java.lang.String resource) {
+            super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.v1beta2.model.Policy.class);
             this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                   "Parameter resource must conform to the pattern " +
                   "^projects/[^/]+/regions/[^/]+/autoscalingPolicies/[^/]+$");
             }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
           }
 
           @Override

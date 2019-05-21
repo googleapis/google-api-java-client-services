@@ -43,6 +43,17 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String configurationName;
 
   /**
+   * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
+   * Configuration should be used for this traffic target. When provided LatestRevision must be true
+   * if RevisionName is empty; it must be false when RevisionName is non-empty.
+   *
+   * Not currently supported in Cloud Run. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean latestRevision;
+
+  /**
    * Name is optionally used to expose a dedicated hostname for referencing this target exclusively.
    *
    * Not currently supported by Cloud Run. +optional
@@ -72,6 +83,26 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   private java.lang.String revisionName;
 
   /**
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+   *
+   * Not currently supported in Cloud Run. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tag;
+
+  /**
+   * Output only. URL displays the URL for accessing named traffic targets. URL is displayed in
+   * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
+   * may not contain anything else (e.g. basic auth, url path, etc.
+   *
+   * Not currently supported in Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String url;
+
+  /**
    * ConfigurationName of a configuration to whose latest revision we will send this portion of
    * traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we
    * will automatically migrate traffic from the prior "latest ready" revision to the new one. This
@@ -97,6 +128,31 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
    */
   public TrafficTarget setConfigurationName(java.lang.String configurationName) {
     this.configurationName = configurationName;
+    return this;
+  }
+
+  /**
+   * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
+   * Configuration should be used for this traffic target. When provided LatestRevision must be true
+   * if RevisionName is empty; it must be false when RevisionName is non-empty.
+   *
+   * Not currently supported in Cloud Run. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLatestRevision() {
+    return latestRevision;
+  }
+
+  /**
+   * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
+   * Configuration should be used for this traffic target. When provided LatestRevision must be true
+   * if RevisionName is empty; it must be false when RevisionName is non-empty.
+   *
+   * Not currently supported in Cloud Run. +optional
+   * @param latestRevision latestRevision or {@code null} for none
+   */
+  public TrafficTarget setLatestRevision(java.lang.Boolean latestRevision) {
+    this.latestRevision = latestRevision;
     return this;
   }
 
@@ -164,6 +220,52 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
    */
   public TrafficTarget setRevisionName(java.lang.String revisionName) {
     this.revisionName = revisionName;
+    return this;
+  }
+
+  /**
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+   *
+   * Not currently supported in Cloud Run. +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   * Tag is optionally used to expose a dedicated url for referencing this target exclusively.
+   *
+   * Not currently supported in Cloud Run. +optional
+   * @param tag tag or {@code null} for none
+   */
+  public TrafficTarget setTag(java.lang.String tag) {
+    this.tag = tag;
+    return this;
+  }
+
+  /**
+   * Output only. URL displays the URL for accessing named traffic targets. URL is displayed in
+   * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
+   * may not contain anything else (e.g. basic auth, url path, etc.
+   *
+   * Not currently supported in Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUrl() {
+    return url;
+  }
+
+  /**
+   * Output only. URL displays the URL for accessing named traffic targets. URL is displayed in
+   * status, and is disallowed on spec. URL must contain a scheme (e.g. http://) and a hostname, but
+   * may not contain anything else (e.g. basic auth, url path, etc.
+   *
+   * Not currently supported in Cloud Run.
+   * @param url url or {@code null} for none
+   */
+  public TrafficTarget setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 

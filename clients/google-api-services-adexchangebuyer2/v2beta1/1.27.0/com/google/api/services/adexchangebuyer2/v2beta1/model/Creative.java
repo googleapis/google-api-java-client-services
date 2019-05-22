@@ -161,14 +161,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Integer> detectedSensitiveCategories;
 
   /**
-   * Output only. The filtering stats for this creative. Deprecated; please use
-   * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FilteringStats filteringStats;
-
-  /**
    * An HTML creative.
    * The value may be {@code null}.
    */
@@ -531,25 +523,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setDetectedSensitiveCategories(java.util.List<java.lang.Integer> detectedSensitiveCategories) {
     this.detectedSensitiveCategories = detectedSensitiveCategories;
-    return this;
-  }
-
-  /**
-   * Output only. The filtering stats for this creative. Deprecated; please use
-   * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
-   * @return value or {@code null} for none
-   */
-  public FilteringStats getFilteringStats() {
-    return filteringStats;
-  }
-
-  /**
-   * Output only. The filtering stats for this creative. Deprecated; please use
-   * bidders.accounts.filterSets.filteredBids.creatives.list method instead.
-   * @param filteringStats filteringStats or {@code null} for none
-   */
-  public Creative setFilteringStats(FilteringStats filteringStats) {
-    this.filteringStats = filteringStats;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.websecurityscanner.v1beta.model;
 
 /**
- * A ScanConfig resource contains the configurations to launch a scan. next id: 12
+ * A ScanConfig resource contains the configurations to launch a scan.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Web Security Scanner API. For a detailed explanation
@@ -84,6 +84,13 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The risk level selected for the scan
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String riskLevel;
 
   /**
    * The schedule of the ScanConfig.
@@ -241,6 +248,23 @@ public final class ScanConfig extends com.google.api.client.json.GenericJson {
    */
   public ScanConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The risk level selected for the scan
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRiskLevel() {
+    return riskLevel;
+  }
+
+  /**
+   * The risk level selected for the scan
+   * @param riskLevel riskLevel or {@code null} for none
+   */
+  public ScanConfig setRiskLevel(java.lang.String riskLevel) {
+    this.riskLevel = riskLevel;
     return this;
   }
 

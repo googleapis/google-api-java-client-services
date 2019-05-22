@@ -41,7 +41,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   private BlockAction blockAction;
 
   /**
-   * The top-level policy to enforce. For example, applications or passwordRequirements.
+   * The top-level policy to enforce. For example, applications or passwordPolicies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   }
 
   /**
-   * The top-level policy to enforce. For example, applications or passwordRequirements.
+   * The top-level policy to enforce. For example, applications or passwordPolicies.
    * @return value or {@code null} for none
    */
   public java.lang.String getSettingName() {
@@ -85,7 +85,7 @@ public final class PolicyEnforcementRule extends com.google.api.client.json.Gene
   }
 
   /**
-   * The top-level policy to enforce. For example, applications or passwordRequirements.
+   * The top-level policy to enforce. For example, applications or passwordPolicies.
    * @param settingName settingName or {@code null} for none
    */
   public PolicyEnforcementRule setSettingName(java.lang.String settingName) {

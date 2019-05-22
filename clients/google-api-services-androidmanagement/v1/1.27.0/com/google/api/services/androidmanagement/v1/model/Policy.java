@@ -159,7 +159,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Rules declaring which mitigating actions to take when a device is not compliant with its
    * policy. When the conditions for multiple rules are satisfied, all of the mitigating actions for
-   * the rules are taken. There is a maximum limit of 100 rules.
+   * the rules are taken. There is a maximum limit of 100 rules. Use policy enforcement rules
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -921,7 +922,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Rules declaring which mitigating actions to take when a device is not compliant with its
    * policy. When the conditions for multiple rules are satisfied, all of the mitigating actions for
-   * the rules are taken. There is a maximum limit of 100 rules.
+   * the rules are taken. There is a maximum limit of 100 rules. Use policy enforcement rules
+   * instead.
    * @return value or {@code null} for none
    */
   public java.util.List<ComplianceRule> getComplianceRules() {
@@ -931,7 +933,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   /**
    * Rules declaring which mitigating actions to take when a device is not compliant with its
    * policy. When the conditions for multiple rules are satisfied, all of the mitigating actions for
-   * the rules are taken. There is a maximum limit of 100 rules.
+   * the rules are taken. There is a maximum limit of 100 rules. Use policy enforcement rules
+   * instead.
    * @param complianceRules complianceRules or {@code null} for none
    */
   public Policy setComplianceRules(java.util.List<ComplianceRule> complianceRules) {

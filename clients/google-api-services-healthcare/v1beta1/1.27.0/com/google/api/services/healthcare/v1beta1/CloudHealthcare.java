@@ -3159,7 +3159,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * SearchForInstances returns a list of matching instances. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
            *
            * Create a request for the method "dicomStores.searchForInstances".
            *
@@ -3192,7 +3192,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * SearchForInstances returns a list of matching instances. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
              *
              * Create a request for the method "dicomStores.searchForInstances".
              *
@@ -3354,7 +3354,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * SearchForSeries returns a list of matching series. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
            *
            * Create a request for the method "dicomStores.searchForSeries".
            *
@@ -3387,7 +3387,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * SearchForSeries returns a list of matching series. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
              *
              * Create a request for the method "dicomStores.searchForSeries".
              *
@@ -3549,7 +3549,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * SearchForStudies returns a list of matching studies. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
            *
            * Create a request for the method "dicomStores.searchForStudies".
            *
@@ -3582,7 +3582,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * SearchForStudies returns a list of matching studies. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
              *
              * Create a request for the method "dicomStores.searchForStudies".
              *
@@ -3886,7 +3886,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-           * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.6.1.
+           * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
            *
            * Create a request for the method "dicomStores.storeInstances".
            *
@@ -3920,7 +3920,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.6.1.
+             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
              *
              * Create a request for the method "dicomStores.storeInstances".
              *
@@ -4430,7 +4430,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * RetrieveStudyMetadata returns instance associated with the given study presented as metadata with
              * the bulk data removed. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.6.
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
              *
              * Create a request for the method "studies.retrieveMetadata".
              *
@@ -4464,7 +4464,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * RetrieveStudyMetadata returns instance associated with the given study presented as metadata
                * with the bulk data removed. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.6.
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                *
                * Create a request for the method "studies.retrieveMetadata".
                *
@@ -4626,7 +4626,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * RetrieveStudy returns all instances within the given study. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.1.
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
              *
              * Create a request for the method "studies.retrieveStudy".
              *
@@ -4659,7 +4659,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * RetrieveStudy returns all instances within the given study. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.1.
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                *
                * Create a request for the method "studies.retrieveStudy".
                *
@@ -4821,7 +4821,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * SearchForInstances returns a list of matching instances. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
              *
              * Create a request for the method "studies.searchForInstances".
              *
@@ -4854,7 +4854,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * SearchForInstances returns a list of matching instances. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
                *
                * Create a request for the method "studies.searchForInstances".
                *
@@ -5016,7 +5016,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * SearchForSeries returns a list of matching series. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
              *
              * Create a request for the method "studies.searchForSeries".
              *
@@ -5049,7 +5049,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * SearchForSeries returns a list of matching series. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
                *
                * Create a request for the method "studies.searchForSeries".
                *
@@ -5211,7 +5211,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.6.1.
+             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
              *
              * Create a request for the method "studies.storeInstances".
              *
@@ -5245,7 +5245,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-               * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.6.1.
+               * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
                *
                * Create a request for the method "studies.storeInstances".
                *
@@ -5605,7 +5605,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * RetrieveSeriesMetadata returns instance associated with the given study and series, presented as
                * metadata with the bulk data removed. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.6.
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                *
                * Create a request for the method "series.retrieveMetadata".
                *
@@ -5639,7 +5639,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveSeriesMetadata returns instance associated with the given study and series, presented
                  * as metadata with the bulk data removed. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.6.
+                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                  *
                  * Create a request for the method "series.retrieveMetadata".
                  *
@@ -5801,7 +5801,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * RetrieveSeries returns all instances within the given study and series. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.2.
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                *
                * Create a request for the method "series.retrieveSeries".
                *
@@ -5834,7 +5834,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * RetrieveSeries returns all instances within the given study and series. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.2.
+                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                  *
                  * Create a request for the method "series.retrieveSeries".
                  *
@@ -5996,7 +5996,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * SearchForInstances returns a list of matching instances. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
                *
                * Create a request for the method "series.searchForInstances".
                *
@@ -6029,7 +6029,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * SearchForInstances returns a list of matching instances. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.7
+                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
                  *
                  * Create a request for the method "series.searchForInstances".
                  *
@@ -6399,7 +6399,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstance returns instance associated with the given study, series, and SOP Instance UID.
-                 * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.3.
+                 * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                  *
                  * Create a request for the method "instances.retrieveInstance".
                  *
@@ -6411,7 +6411,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  *        ore_id}`).
                  * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                 QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}/instance/{instance_id}`).
+                 *        `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                  * @return the request
                  */
                 public RetrieveInstance retrieveInstance(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6432,7 +6432,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstance returns instance associated with the given study, series, and SOP Instance
-                   * UID. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.3.
+                   * UID. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                    *
                    * Create a request for the method "instances.retrieveInstance".
                    *
@@ -6447,7 +6447,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  *        ore_id}`).
                    * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                 QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}/instance/{instance_id}`).
+                 *        `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                    * @since 1.13
                    */
                   protected RetrieveInstance(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6562,13 +6562,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                    * QIDO-RS standard (e.g.,
-                   * `studies/{study_id}/series/{series_id}/instance/{instance_id}`).
+                   * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
                   /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                 `studies/{study_id}/series/{series_id}/instance/{instance_id}`).
+                 `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
@@ -6577,7 +6577,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                    * QIDO-RS standard (e.g.,
-                   * `studies/{study_id}/series/{series_id}/instance/{instance_id}`).
+                   * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                    */
                   public RetrieveInstance setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -6597,7 +6597,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
                  * Instance UID presented as metadata with the bulk data removed. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.6.
+                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                  *
                  * Create a request for the method "instances.retrieveMetadata".
                  *
@@ -6631,7 +6631,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
                    * Instance UID presented as metadata with the bulk data removed. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.6.
+                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                    *
                    * Create a request for the method "instances.retrieveMetadata".
                    *
@@ -6796,7 +6796,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 /**
                  * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
                  * Instance UID in an acceptable Rendered Media Type. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.8.
+                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                  *
                  * Create a request for the method "instances.retrieveRendered".
                  *
@@ -6808,7 +6808,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  *        ore_id}`).
                  * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                 QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}/instance/{instance_id}/rendered`).
+                 *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                  * @return the request
                  */
                 public RetrieveRendered retrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6830,7 +6830,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
                    * Instance UID in an acceptable Rendered Media Type. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.8.
+                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                    *
                    * Create a request for the method "instances.retrieveRendered".
                    *
@@ -6845,7 +6845,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  *        ore_id}`).
                    * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                 QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}/instance/{instance_id}/rendered`).
+                 *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                    * @since 1.13
                    */
                   protected RetrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6960,13 +6960,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                    * QIDO-RS standard (e.g.,
-                   * `studies/{study_id}/series/{series_id}/instance/{instance_id}/rendered`).
+                   * `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
                   /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                 `studies/{study_id}/series/{series_id}/instance/{instance_id}/rendered`).
+                 `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
@@ -6975,7 +6975,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                    * QIDO-RS standard (e.g.,
-                   * `studies/{study_id}/series/{series_id}/instance/{instance_id}/rendered`).
+                   * `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                    */
                   public RetrieveRendered setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -7015,8 +7015,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
-                   * frame numbers. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.4.
+                   * frame numbers. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                    *
                    * Create a request for the method "frames.retrieveFrames".
                    *
@@ -7028,7 +7027,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    *        ore_id}`).
                    * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                   QIDO-RS standard (e.g.,
-                   *        `studies/{study_id}/series/{series_id}/instance/{instance_id}/frames/{frame_list}`).
+                   *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                    * @return the request
                    */
                   public RetrieveFrames retrieveFrames(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7050,7 +7049,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     /**
                      * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
                      * frame numbers. See
-                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.4.
+                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                      *
                      * Create a request for the method "frames.retrieveFrames".
                      *
@@ -7065,7 +7064,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    *        ore_id}`).
                      * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                   QIDO-RS standard (e.g.,
-                   *        `studies/{study_id}/series/{series_id}/instance/{instance_id}/frames/{frame_list}`).
+                   *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                      * @since 1.13
                      */
                     protected RetrieveFrames(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7181,14 +7180,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instance/{inst
-                     * ance_id}/frames/{frame_list}`).
+                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{ins
+                     * tance_id}/frames/{frame_list}`).
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
                     /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                   `studies/{study_id}/series/{series_id}/instance/{instance_id}/frames/{frame_list}`).
+                   `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                      */
                     public java.lang.String getDicomWebPath() {
                       return dicomWebPath;
@@ -7196,8 +7195,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instance/{inst
-                     * ance_id}/frames/{frame_list}`).
+                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{ins
+                     * tance_id}/frames/{frame_list}`).
                      */
                     public RetrieveFrames setDicomWebPath(java.lang.String dicomWebPath) {
                       if (!getSuppressPatternChecks()) {
@@ -7217,7 +7216,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
                    * UID and frame numbers in an acceptable Rendered Media Type. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.8.
+                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                    *
                    * Create a request for the method "frames.retrieveRendered".
                    *
@@ -7229,8 +7228,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    *        ore_id}`).
                    * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                   QIDO-RS standard (e.g.,
-                   *        `studies/{study_id}/series/{series_id}/instance/{instance_id}/frames/{frame_list}/rendered
-                   *        `).
+                   *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rendere
+                   *        d`).
                    * @return the request
                    */
                   public RetrieveRendered retrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7252,7 +7251,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     /**
                      * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
                      * UID and frame numbers in an acceptable Rendered Media Type. See
-                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_6.5.8.
+                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
                      *
                      * Create a request for the method "frames.retrieveRendered".
                      *
@@ -7267,8 +7266,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    *        ore_id}`).
                      * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
                   QIDO-RS standard (e.g.,
-                   *        `studies/{study_id}/series/{series_id}/instance/{instance_id}/frames/{frame_list}/rendered
-                   *        `).
+                   *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rendere
+                   *        d`).
                      * @since 1.13
                      */
                     protected RetrieveRendered(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7384,14 +7383,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instance/{inst
-                     * ance_id}/frames/{frame_list}/rendered`).
+                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{ins
+                     * tance_id}/frames/{frame_list}/rendered`).
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
                     /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                   `studies/{study_id}/series/{series_id}/instance/{instance_id}/frames/{frame_list}/rendered`).
+                   `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rendered`).
                      */
                     public java.lang.String getDicomWebPath() {
                       return dicomWebPath;
@@ -7399,8 +7398,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instance/{inst
-                     * ance_id}/frames/{frame_list}/rendered`).
+                     * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{ins
+                     * tance_id}/frames/{frame_list}/rendered`).
                      */
                     public RetrieveRendered setDicomWebPath(java.lang.String dicomWebPath) {
                       if (!getSuppressPatternChecks()) {

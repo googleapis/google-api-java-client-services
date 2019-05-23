@@ -35,7 +35,8 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
   /**
    * The BigQuery output destination.
    *
-   * For now, only exporting to a dataset in the current project is supported
+   * You can only export to a BigQuery dataset that's in the same project as the DICOM store you're
+   * exporting from.
    *
    * The BigQuery location requires two IAM roles: `roles/bigquery.dataEditor` and
    * `roles/bigquery.jobUser`.
@@ -56,7 +57,8 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
   /**
    * The BigQuery output destination.
    *
-   * For now, only exporting to a dataset in the current project is supported
+   * You can only export to a BigQuery dataset that's in the same project as the DICOM store you're
+   * exporting from.
    *
    * The BigQuery location requires two IAM roles: `roles/bigquery.dataEditor` and
    * `roles/bigquery.jobUser`.
@@ -69,7 +71,8 @@ public final class ExportDicomDataRequest extends com.google.api.client.json.Gen
   /**
    * The BigQuery output destination.
    *
-   * For now, only exporting to a dataset in the current project is supported
+   * You can only export to a BigQuery dataset that's in the same project as the DICOM store you're
+   * exporting from.
    *
    * The BigQuery location requires two IAM roles: `roles/bigquery.dataEditor` and
    * `roles/bigquery.jobUser`.

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-composer</artifactId>
-  <version>v1-rev20190311-1.28.0</version>
-  <name>Cloud Composer API v1-rev20190311-1.28.0</name>
+  <version>v1-rev20190514-1.28.0</version>
+  <name>Cloud Composer API v1-rev20190514-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

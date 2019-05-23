@@ -190,7 +190,8 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the composer server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent must be of the form "projects/{projectId}/locations/{locationId}".
+         * @param parent The parent must be of the form
+        "projects/{projectId}/locations/{locationId}".
          * @param content the {@link com.google.api.services.composer.v1beta1.model.Environment}
          * @return the request
          */
@@ -218,7 +219,8 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent must be of the form "projects/{projectId}/locations/{locationId}".
+           * @param parent The parent must be of the form
+        "projects/{projectId}/locations/{locationId}".
            * @param content the {@link com.google.api.services.composer.v1beta1.model.Environment}
            * @since 1.13
            */
@@ -287,7 +289,9 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent must be of the form "projects/{projectId}/locations/{locationId}". */
+          /**
+           * The parent must be of the form "projects/{projectId}/locations/{locationId}".
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -297,7 +301,9 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
             return parent;
           }
 
-          /** The parent must be of the form "projects/{projectId}/locations/{locationId}". */
+          /**
+           * The parent must be of the form "projects/{projectId}/locations/{locationId}".
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

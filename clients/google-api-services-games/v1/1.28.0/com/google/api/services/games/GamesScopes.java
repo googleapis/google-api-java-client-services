@@ -29,9 +29,6 @@ public class GamesScopes {
   /** Create, edit, and delete your Google Play Games activity. */
   public static final String GAMES = "https://www.googleapis.com/auth/games";
 
-  /** Associate you with your personal info on Google. */
-  public static final String PLUS_ME = "https://www.googleapis.com/auth/plus.me";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -41,7 +38,6 @@ public class GamesScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(DRIVE_APPDATA);
     set.add(GAMES);
-    set.add(PLUS_ME);
     return java.util.Collections.unmodifiableSet(set);
   }
 

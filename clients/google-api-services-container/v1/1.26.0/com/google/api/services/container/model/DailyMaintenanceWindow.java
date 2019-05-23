@@ -41,7 +41,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
 
   /**
    * Time within the maintenance window to start the maintenance operations. Time format should be
-   * in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”, where HH : [00-23] and MM :
+   * in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM :
    * [00-59] GMT.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
 
   /**
    * Time within the maintenance window to start the maintenance operations. Time format should be
-   * in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”, where HH : [00-23] and MM :
+   * in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM :
    * [00-59] GMT.
    * @return value or {@code null} for none
    */
@@ -81,7 +81,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
 
   /**
    * Time within the maintenance window to start the maintenance operations. Time format should be
-   * in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”, where HH : [00-23] and MM :
+   * in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM", where HH : [00-23] and MM :
    * [00-59] GMT.
    * @param startTime startTime or {@code null} for none
    */

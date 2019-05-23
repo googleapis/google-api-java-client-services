@@ -31,11 +31,35 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class MaliciousEntity extends com.google.api.client.json.GenericJson {
 
   /**
+   * The header from display name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * The sender email address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fromHeader;
+
+  /**
+   * The header from display name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * The header from display name.
+   * @param displayName displayName or {@code null} for none
+   */
+  public MaliciousEntity setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * The sender email address.

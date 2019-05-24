@@ -4714,6 +4714,191 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         }
         /**
+         * An accessor for creating requests from the Snapshots collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dataflow dataflow = new Dataflow(...);}
+         *   {@code Dataflow.Snapshots.List request = dataflow.snapshots().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Snapshots snapshots() {
+          return new Snapshots();
+        }
+
+        /**
+         * The "snapshots" collection of methods.
+         */
+        public class Snapshots {
+
+          /**
+           * Lists snapshots.
+           *
+           * Create a request for the method "snapshots.list".
+           *
+           * This request holds the parameters needed by the dataflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param projectId The project ID to list snapshots for.
+           * @param location The location to list snapshots in.
+           * @param jobId If specified, list snapshots created from this job.
+           * @return the request
+           */
+          public List list(java.lang.String projectId, java.lang.String location, java.lang.String jobId) throws java.io.IOException {
+            List result = new List(projectId, location, jobId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListSnapshotsResponse> {
+
+            private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/snapshots";
+
+            /**
+             * Lists snapshots.
+             *
+             * Create a request for the method "snapshots.list".
+             *
+             * This request holds the parameters needed by the the dataflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectId The project ID to list snapshots for.
+             * @param location The location to list snapshots in.
+             * @param jobId If specified, list snapshots created from this job.
+             * @since 1.13
+             */
+            protected List(java.lang.String projectId, java.lang.String location, java.lang.String jobId) {
+              super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListSnapshotsResponse.class);
+              this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+              this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+              this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The project ID to list snapshots for. */
+            @com.google.api.client.util.Key
+            private java.lang.String projectId;
+
+            /** The project ID to list snapshots for.
+             */
+            public java.lang.String getProjectId() {
+              return projectId;
+            }
+
+            /** The project ID to list snapshots for. */
+            public List setProjectId(java.lang.String projectId) {
+              this.projectId = projectId;
+              return this;
+            }
+
+            /** The location to list snapshots in. */
+            @com.google.api.client.util.Key
+            private java.lang.String location;
+
+            /** The location to list snapshots in.
+             */
+            public java.lang.String getLocation() {
+              return location;
+            }
+
+            /** The location to list snapshots in. */
+            public List setLocation(java.lang.String location) {
+              this.location = location;
+              return this;
+            }
+
+            /** If specified, list snapshots created from this job. */
+            @com.google.api.client.util.Key
+            private java.lang.String jobId;
+
+            /** If specified, list snapshots created from this job.
+             */
+            public java.lang.String getJobId() {
+              return jobId;
+            }
+
+            /** If specified, list snapshots created from this job. */
+            public List setJobId(java.lang.String jobId) {
+              this.jobId = jobId;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the WorkItems collection.
          *
          * <p>The typical use is:</p>
@@ -5543,6 +5728,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /** The location to list snapshots in. */
           public List setLocation(java.lang.String location) {
             this.location = location;
+            return this;
+          }
+
+          /** If specified, list snapshots created from this job. */
+          @com.google.api.client.util.Key
+          private java.lang.String jobId;
+
+          /** If specified, list snapshots created from this job.
+           */
+          public java.lang.String getJobId() {
+            return jobId;
+          }
+
+          /** If specified, list snapshots created from this job. */
+          public List setJobId(java.lang.String jobId) {
+            this.jobId = jobId;
             return this;
           }
 
@@ -6650,6 +6851,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** The project ID to list snapshots for. */
         public List setProjectId(java.lang.String projectId) {
           this.projectId = projectId;
+          return this;
+        }
+
+        /** If specified, list snapshots created from this job. */
+        @com.google.api.client.util.Key
+        private java.lang.String jobId;
+
+        /** If specified, list snapshots created from this job.
+         */
+        public java.lang.String getJobId() {
+          return jobId;
+        }
+
+        /** If specified, list snapshots created from this job. */
+        public List setJobId(java.lang.String jobId) {
+          this.jobId = jobId;
           return this;
         }
 

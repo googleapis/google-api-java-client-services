@@ -30,6 +30,13 @@ package com.google.api.services.run.v1alpha1.model;
 public final class DomainMappingCondition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Last time the condition transitioned from one status to another. +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastTransitionTime;
+
+  /**
    * Human readable message indicating details about the current status. +optional
    * The value may be {@code null}.
    */
@@ -44,6 +51,13 @@ public final class DomainMappingCondition extends com.google.api.client.json.Gen
   private java.lang.String reason;
 
   /**
+   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
    * Status of the condition, one of True, False, Unknown.
    * The value may be {@code null}.
    */
@@ -56,6 +70,23 @@ public final class DomainMappingCondition extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Last time the condition transitioned from one status to another. +optional
+   * @return value or {@code null} for none
+   */
+  public String getLastTransitionTime() {
+    return lastTransitionTime;
+  }
+
+  /**
+   * Last time the condition transitioned from one status to another. +optional
+   * @param lastTransitionTime lastTransitionTime or {@code null} for none
+   */
+  public DomainMappingCondition setLastTransitionTime(String lastTransitionTime) {
+    this.lastTransitionTime = lastTransitionTime;
+    return this;
+  }
 
   /**
    * Human readable message indicating details about the current status. +optional
@@ -88,6 +119,23 @@ public final class DomainMappingCondition extends com.google.api.client.json.Gen
    */
   public DomainMappingCondition setReason(java.lang.String reason) {
     this.reason = reason;
+    return this;
+  }
+
+  /**
+   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * @param severity severity or {@code null} for none
+   */
+  public DomainMappingCondition setSeverity(java.lang.String severity) {
+    this.severity = severity;
     return this;
   }
 

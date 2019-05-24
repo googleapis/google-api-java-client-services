@@ -51,6 +51,13 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
   private java.lang.String reason;
 
   /**
+   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String severity;
+
+  /**
    * Status of the condition, one of True, False, Unknown.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class TriggerCondition extends com.google.api.client.json.GenericJs
    */
   public TriggerCondition setReason(java.lang.String reason) {
     this.reason = reason;
+    return this;
+  }
+
+  /**
+   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSeverity() {
+    return severity;
+  }
+
+  /**
+   * How to interpret failures of this condition, one of Error, Warning, Info +optional
+   * @param severity severity or {@code null} for none
+   */
+  public TriggerCondition setSeverity(java.lang.String severity) {
+    this.severity = severity;
     return this;
   }
 

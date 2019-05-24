@@ -6322,6 +6322,748 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         }
         /**
+         * An accessor for creating requests from the Templates collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code TagManager tagmanager = new TagManager(...);}
+         *   {@code TagManager.Templates.List request = tagmanager.templates().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Templates templates() {
+          return new Templates();
+        }
+
+        /**
+         * The "templates" collection of methods.
+         */
+        public class Templates {
+
+          /**
+           * Creates a GTM Custom Template.
+           *
+           * Create a request for the method "templates.create".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.tagmanager.model.CustomTemplate content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
+
+            private static final String REST_PATH = "{+parent}/templates";
+
+            /**
+             * Creates a GTM Custom Template.
+             *
+             * Create a request for the method "templates.create".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.CustomTemplate content) {
+              super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.CustomTemplate.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUserIp(java.lang.String userIp) {
+              return (Create) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** GTM Workspace's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public Create setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a GTM Template.
+           *
+           * Create a request for the method "templates.delete".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+           * @return the request
+           */
+          public Delete delete(java.lang.String path) throws java.io.IOException {
+            Delete result = new Delete(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends TagManagerRequest<Void> {
+
+            private static final String REST_PATH = "{+path}";
+
+            /**
+             * Deletes a GTM Template.
+             *
+             * Create a request for the method "templates.delete".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String path) {
+              super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUserIp(java.lang.String userIp) {
+              return (Delete) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Custom Template's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public Delete setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a GTM Template.
+           *
+           * Create a request for the method "templates.get".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+           * @return the request
+           */
+          public Get get(java.lang.String path) throws java.io.IOException {
+            Get result = new Get(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
+
+            private static final String REST_PATH = "{+path}";
+
+            /**
+             * Gets a GTM Template.
+             *
+             * Create a request for the method "templates.get".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+             * @since 1.13
+             */
+            protected Get(java.lang.String path) {
+              super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.CustomTemplate.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUserIp(java.lang.String userIp) {
+              return (Get) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Custom Template's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public Get setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all GTM Templates of a GTM container workspace.
+           *
+           * Create a request for the method "templates.list".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListTemplatesResponse> {
+
+            private static final String REST_PATH = "{+parent}/templates";
+
+            /**
+             * Lists all GTM Templates of a GTM container workspace.
+             *
+             * Create a request for the method "templates.list".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent GTM Workspace's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListTemplatesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUserIp(java.lang.String userIp) {
+              return (List) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** GTM Workspace's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * GTM Workspace's API relative path. Example:
+             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             */
+            public List setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Continuation token for fetching the next page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Continuation token for fetching the next page of results. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Reverts changes to a GTM Template in a GTM Workspace.
+           *
+           * Create a request for the method "templates.revert".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+           * @return the request
+           */
+          public Revert revert(java.lang.String path) throws java.io.IOException {
+            Revert result = new Revert(path);
+            initialize(result);
+            return result;
+          }
+
+          public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertTemplateResponse> {
+
+            private static final String REST_PATH = "{+path}:revert";
+
+            /**
+             * Reverts changes to a GTM Template in a GTM Workspace.
+             *
+             * Create a request for the method "templates.revert".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Revert#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+             * @since 1.13
+             */
+            protected Revert(java.lang.String path) {
+              super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertTemplateResponse.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public Revert setAlt(java.lang.String alt) {
+              return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setFields(java.lang.String fields) {
+              return (Revert) super.setFields(fields);
+            }
+
+            @Override
+            public Revert setKey(java.lang.String key) {
+              return (Revert) super.setKey(key);
+            }
+
+            @Override
+            public Revert setOauthToken(java.lang.String oauthToken) {
+              return (Revert) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Revert setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Revert) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Revert setQuotaUser(java.lang.String quotaUser) {
+              return (Revert) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Revert setUserIp(java.lang.String userIp) {
+              return (Revert) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Custom Template's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public Revert setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the template in
+             * storage.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String fingerprint;
+
+            /** When provided, this fingerprint must match the fingerprint of the template in storage.
+             */
+            public java.lang.String getFingerprint() {
+              return fingerprint;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the template in
+             * storage.
+             */
+            public Revert setFingerprint(java.lang.String fingerprint) {
+              this.fingerprint = fingerprint;
+              return this;
+            }
+
+            @Override
+            public Revert set(String parameterName, Object value) {
+              return (Revert) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a GTM Template.
+           *
+           * Create a request for the method "templates.update".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+           * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
+           * @return the request
+           */
+          public Update update(java.lang.String path, com.google.api.services.tagmanager.model.CustomTemplate content) throws java.io.IOException {
+            Update result = new Update(path, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
+
+            private static final String REST_PATH = "{+path}";
+
+            /**
+             * Updates a GTM Template.
+             *
+             * Create a request for the method "templates.update".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param path GTM Custom Template's API relative path. Example:
+           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
+           *        ate_id}
+             * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
+             * @since 1.13
+             */
+            protected Update(java.lang.String path, com.google.api.services.tagmanager.model.CustomTemplate content) {
+              super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.CustomTemplate.class);
+              this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUserIp(java.lang.String userIp) {
+              return (Update) super.setUserIp(userIp);
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** GTM Custom Template's API relative path. Example:
+           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /**
+             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
+             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
+             */
+            public Update setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the templates in
+             * storage.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String fingerprint;
+
+            /** When provided, this fingerprint must match the fingerprint of the templates in storage.
+             */
+            public java.lang.String getFingerprint() {
+              return fingerprint;
+            }
+
+            /**
+             * When provided, this fingerprint must match the fingerprint of the templates in
+             * storage.
+             */
+            public Update setFingerprint(java.lang.String fingerprint) {
+              this.fingerprint = fingerprint;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Triggers collection.
          *
          * <p>The typical use is:</p>

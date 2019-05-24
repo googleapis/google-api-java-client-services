@@ -40,7 +40,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
 
   /**
    * Time within the maintenance window to start the maintenance operations. It must be in format
-   * "HH:MM”, where HH : [00-23] and MM : [00-59] GMT.
+   * "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
 
   /**
    * Time within the maintenance window to start the maintenance operations. It must be in format
-   * "HH:MM”, where HH : [00-23] and MM : [00-59] GMT.
+   * "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTime() {
@@ -76,7 +76,7 @@ public final class DailyMaintenanceWindow extends com.google.api.client.json.Gen
 
   /**
    * Time within the maintenance window to start the maintenance operations. It must be in format
-   * "HH:MM”, where HH : [00-23] and MM : [00-59] GMT.
+   * "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
    * @param startTime startTime or {@code null} for none
    */
   public DailyMaintenanceWindow setStartTime(java.lang.String startTime) {

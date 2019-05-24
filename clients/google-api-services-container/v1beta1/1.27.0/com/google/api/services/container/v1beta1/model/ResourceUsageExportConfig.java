@@ -38,6 +38,13 @@ public final class ResourceUsageExportConfig extends com.google.api.client.json.
   private BigQueryDestination bigqueryDestination;
 
   /**
+   * Configuration to enable resource consumption metering.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConsumptionMeteringConfig consumptionMeteringConfig;
+
+  /**
    * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be
    * created in the cluster to meter network egress traffic.
    * The value may be {@code null}.
@@ -59,6 +66,23 @@ public final class ResourceUsageExportConfig extends com.google.api.client.json.
    */
   public ResourceUsageExportConfig setBigqueryDestination(BigQueryDestination bigqueryDestination) {
     this.bigqueryDestination = bigqueryDestination;
+    return this;
+  }
+
+  /**
+   * Configuration to enable resource consumption metering.
+   * @return value or {@code null} for none
+   */
+  public ConsumptionMeteringConfig getConsumptionMeteringConfig() {
+    return consumptionMeteringConfig;
+  }
+
+  /**
+   * Configuration to enable resource consumption metering.
+   * @param consumptionMeteringConfig consumptionMeteringConfig or {@code null} for none
+   */
+  public ResourceUsageExportConfig setConsumptionMeteringConfig(ConsumptionMeteringConfig consumptionMeteringConfig) {
+    this.consumptionMeteringConfig = consumptionMeteringConfig;
     return this;
   }
 

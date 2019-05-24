@@ -86,6 +86,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String projectId;
 
   /**
+   * The desired image type for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadMetadataConfig workloadMetadataConfig;
+
+  /**
    * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
    * which the cluster resides. This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
@@ -218,6 +225,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * The desired image type for the node pool.
+   * @return value or {@code null} for none
+   */
+  public WorkloadMetadataConfig getWorkloadMetadataConfig() {
+    return workloadMetadataConfig;
+  }
+
+  /**
+   * The desired image type for the node pool.
+   * @param workloadMetadataConfig workloadMetadataConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setWorkloadMetadataConfig(WorkloadMetadataConfig workloadMetadataConfig) {
+    this.workloadMetadataConfig = workloadMetadataConfig;
     return this;
   }
 

@@ -45,9 +45,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   /**
    * The source’s display name. A source’s display name must be unique amongst its siblings, for
    * example, two sources with the same parent can't share the same display name. The display name
-   * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens, and
-   * underscores, and can be no longer than 32 characters. This is captured by the regular
-   * expression: [\p{L}\p{N}]({\p{L}\p{N}_- ]{0,30}[\p{L}\p{N}])?.
+   * must have a length between 1 and 64 characters (inclusive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +86,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   /**
    * The source’s display name. A source’s display name must be unique amongst its siblings, for
    * example, two sources with the same parent can't share the same display name. The display name
-   * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens, and
-   * underscores, and can be no longer than 32 characters. This is captured by the regular
-   * expression: [\p{L}\p{N}]({\p{L}\p{N}_- ]{0,30}[\p{L}\p{N}])?.
+   * must have a length between 1 and 64 characters (inclusive).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -100,9 +96,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   /**
    * The source’s display name. A source’s display name must be unique amongst its siblings, for
    * example, two sources with the same parent can't share the same display name. The display name
-   * must start and end with a letter or digit, may contain letters, digits, spaces, hyphens, and
-   * underscores, and can be no longer than 32 characters. This is captured by the regular
-   * expression: [\p{L}\p{N}]({\p{L}\p{N}_- ]{0,30}[\p{L}\p{N}])?.
+   * must have a length between 1 and 64 characters (inclusive).
    * @param displayName displayName or {@code null} for none
    */
   public Source setDisplayName(java.lang.String displayName) {

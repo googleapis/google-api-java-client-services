@@ -31,6 +31,13 @@ package com.google.api.services.fcm.v1.model;
 public final class ApnsConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Options for features provided by the FCM SDK for iOS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApnsFcmOptions fcmOptions;
+
+  /**
    * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request
    * headers](https://goo.gl/C6Yhia) for supported headers, e.g. "apns-priority": "10".
    * The value may be {@code null}.
@@ -46,6 +53,23 @@ public final class ApnsConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
+
+  /**
+   * Options for features provided by the FCM SDK for iOS.
+   * @return value or {@code null} for none
+   */
+  public ApnsFcmOptions getFcmOptions() {
+    return fcmOptions;
+  }
+
+  /**
+   * Options for features provided by the FCM SDK for iOS.
+   * @param fcmOptions fcmOptions or {@code null} for none
+   */
+  public ApnsConfig setFcmOptions(ApnsFcmOptions fcmOptions) {
+    this.fcmOptions = fcmOptions;
+    return this;
+  }
 
   /**
    * HTTP request headers defined in Apple Push Notification Service. Refer to [APNs request

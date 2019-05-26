@@ -1602,6 +1602,457 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
+     * An accessor for creating requests from the Eventtypes collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Eventtypes.List request = run.eventtypes().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Eventtypes eventtypes() {
+      return new Eventtypes();
+    }
+
+    /**
+     * The "eventtypes" collection of methods.
+     */
+    public class Eventtypes {
+
+      /**
+       * Rpc to get information about an EventType.
+       *
+       * Create a request for the method "eventtypes.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the trigger being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.EventType> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/eventtypes/[^/]+$");
+
+        /**
+         * Rpc to get information about an EventType.
+         *
+         * Create a request for the method "eventtypes.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the trigger being retrieved. If needed, replace
+      {namespace_id} with the project ID.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.EventType.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/eventtypes/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the trigger being retrieved. If needed, replace {namespace_id} with the project ID.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+         * project ID.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/eventtypes/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rpc to list EventTypes.
+       *
+       * Create a request for the method "eventtypes.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The project ID or project number from which the EventTypes should be
+      listed.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListEventTypesResponse> {
+
+        private static final String REST_PATH = "apis/eventing.knative.dev/v1alpha1/{+parent}/eventtypes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Rpc to list EventTypes.
+         *
+         * Create a request for the method "eventtypes.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The project ID or project number from which the EventTypes should be
+      listed.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListEventTypesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The project ID or project number from which the EventTypes should be listed.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The project ID or project number from which the EventTypes should be listed.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The project ID or project number from which the EventTypes should be listed.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional encoded string to continue paging. */
+        @com.google.api.client.util.Key("continue")
+        private java.lang.String continue__;
+
+        /** Optional encoded string to continue paging.
+         */
+        public java.lang.String getContinue() {
+          return continue__;
+        }
+
+        /** Optional encoded string to continue paging. */
+        public List setContinue(java.lang.String continue__) {
+          this.continue__ = continue__;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String fieldSelector;
+
+        /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+       format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public java.lang.String getFieldSelector() {
+          return fieldSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a specific value for a field name. Send this in a
+         * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+         */
+        public List setFieldSelector(java.lang.String fieldSelector) {
+          this.fieldSelector = fieldSelector;
+          return this;
+        }
+
+        /** Not currently used by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeUninitialized;
+
+        /** Not currently used by Cloud Run.
+         */
+        public java.lang.Boolean getIncludeUninitialized() {
+          return includeUninitialized;
+        }
+
+        /** Not currently used by Cloud Run. */
+        public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+          this.includeUninitialized = includeUninitialized;
+          return this;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String labelSelector;
+
+        /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+         */
+        public java.lang.String getLabelSelector() {
+          return labelSelector;
+        }
+
+        /**
+         * Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+         * and notIn.
+         */
+        public List setLabelSelector(java.lang.String labelSelector) {
+          this.labelSelector = labelSelector;
+          return this;
+        }
+
+        /** The maximum number of records that should be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer limit;
+
+        /** The maximum number of records that should be returned.
+         */
+        public java.lang.Integer getLimit() {
+          return limit;
+        }
+
+        /** The maximum number of records that should be returned. */
+        public List setLimit(java.lang.Integer limit) {
+          this.limit = limit;
+          return this;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String resourceVersion;
+
+        /** The baseline resource version from which the list or watch operation should start. Not currently
+       used by Cloud Run.
+         */
+        public java.lang.String getResourceVersion() {
+          return resourceVersion;
+        }
+
+        /**
+         * The baseline resource version from which the list or watch operation should start. Not
+         * currently used by Cloud Run.
+         */
+        public List setResourceVersion(java.lang.String resourceVersion) {
+          this.resourceVersion = resourceVersion;
+          return this;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean watch;
+
+        /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+       Cloud Run.
+         */
+        public java.lang.Boolean getWatch() {
+          return watch;
+        }
+
+        /**
+         * Flag that indicates that the client expects to watch this resource as well. Not currently
+         * used by Cloud Run.
+         */
+        public List setWatch(java.lang.Boolean watch) {
+          this.watch = watch;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Revisions collection.
      *
      * <p>The typical use is:</p>
@@ -6128,6 +6579,457 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * The project ID or project number from which the domain mappings should be listed.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional encoded string to continue paging. */
+          @com.google.api.client.util.Key("continue")
+          private java.lang.String continue__;
+
+          /** Optional encoded string to continue paging.
+           */
+          public java.lang.String getContinue() {
+            return continue__;
+          }
+
+          /** Optional encoded string to continue paging. */
+          public List setContinue(java.lang.String continue__) {
+            this.continue__ = continue__;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fieldSelector;
+
+          /** Allows to filter resources based on a specific value for a field name. Send this in a query string
+         format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public java.lang.String getFieldSelector() {
+            return fieldSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a specific value for a field name. Send this in a
+           * query string format. i.e. 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
+           */
+          public List setFieldSelector(java.lang.String fieldSelector) {
+            this.fieldSelector = fieldSelector;
+            return this;
+          }
+
+          /** Not currently used by Cloud Run. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeUninitialized;
+
+          /** Not currently used by Cloud Run.
+           */
+          public java.lang.Boolean getIncludeUninitialized() {
+            return includeUninitialized;
+          }
+
+          /** Not currently used by Cloud Run. */
+          public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+            this.includeUninitialized = includeUninitialized;
+            return this;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String labelSelector;
+
+          /** Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+           */
+          public java.lang.String getLabelSelector() {
+            return labelSelector;
+          }
+
+          /**
+           * Allows to filter resources based on a label. Supported operations are =, !=, exists,
+           * in, and notIn.
+           */
+          public List setLabelSelector(java.lang.String labelSelector) {
+            this.labelSelector = labelSelector;
+            return this;
+          }
+
+          /** The maximum number of records that should be returned. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer limit;
+
+          /** The maximum number of records that should be returned.
+           */
+          public java.lang.Integer getLimit() {
+            return limit;
+          }
+
+          /** The maximum number of records that should be returned. */
+          public List setLimit(java.lang.Integer limit) {
+            this.limit = limit;
+            return this;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resourceVersion;
+
+          /** The baseline resource version from which the list or watch operation should start. Not currently
+         used by Cloud Run.
+           */
+          public java.lang.String getResourceVersion() {
+            return resourceVersion;
+          }
+
+          /**
+           * The baseline resource version from which the list or watch operation should start. Not
+           * currently used by Cloud Run.
+           */
+          public List setResourceVersion(java.lang.String resourceVersion) {
+            this.resourceVersion = resourceVersion;
+            return this;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean watch;
+
+          /** Flag that indicates that the client expects to watch this resource as well. Not currently used by
+         Cloud Run.
+           */
+          public java.lang.Boolean getWatch() {
+            return watch;
+          }
+
+          /**
+           * Flag that indicates that the client expects to watch this resource as well. Not
+           * currently used by Cloud Run.
+           */
+          public List setWatch(java.lang.Boolean watch) {
+            this.watch = watch;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Eventtypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Eventtypes.List request = run.eventtypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Eventtypes eventtypes() {
+        return new Eventtypes();
+      }
+
+      /**
+       * The "eventtypes" collection of methods.
+       */
+      public class Eventtypes {
+
+        /**
+         * Rpc to get information about an EventType.
+         *
+         * Create a request for the method "eventtypes.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the trigger being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.EventType> {
+
+          private static final String REST_PATH = "v1alpha1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/eventtypes/[^/]+$");
+
+          /**
+           * Rpc to get information about an EventType.
+           *
+           * Create a request for the method "eventtypes.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the trigger being retrieved. If needed, replace
+        {namespace_id} with the project ID.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.EventType.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/eventtypes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the trigger being retrieved. If needed, replace {namespace_id} with the project ID.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the trigger being retrieved. If needed, replace {namespace_id} with the
+           * project ID.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/eventtypes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rpc to list EventTypes.
+         *
+         * Create a request for the method "eventtypes.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The project ID or project number from which the EventTypes should be
+        listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v1alpha1.model.ListEventTypesResponse> {
+
+          private static final String REST_PATH = "v1alpha1/{+parent}/eventtypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Rpc to list EventTypes.
+           *
+           * Create a request for the method "eventtypes.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The project ID or project number from which the EventTypes should be
+        listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1alpha1.model.ListEventTypesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The project ID or project number from which the EventTypes should be listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The project ID or project number from which the EventTypes should be listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The project ID or project number from which the EventTypes should be listed.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

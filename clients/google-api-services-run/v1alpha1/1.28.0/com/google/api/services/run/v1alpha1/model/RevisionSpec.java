@@ -109,6 +109,12 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer timeoutSeconds;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Volume> volumes;
+
+  /**
    * ConcurrencyModel specifies the desired concurrency model (Single or Multi) for the Revision.
    * Defaults to Multi. Deprecated in favor of ContainerConcurrency. +optional
    * @return value or {@code null} for none
@@ -275,6 +281,21 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    */
   public RevisionSpec setTimeoutSeconds(java.lang.Integer timeoutSeconds) {
     this.timeoutSeconds = timeoutSeconds;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Volume> getVolumes() {
+    return volumes;
+  }
+
+  /**
+   * @param volumes volumes or {@code null} for none
+   */
+  public RevisionSpec setVolumes(java.util.List<Volume> volumes) {
+    this.volumes = volumes;
     return this;
   }
 

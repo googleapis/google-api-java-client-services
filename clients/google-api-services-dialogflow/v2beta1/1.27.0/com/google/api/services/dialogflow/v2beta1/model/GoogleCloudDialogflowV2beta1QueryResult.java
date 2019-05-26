@@ -37,9 +37,11 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   private java.lang.String action;
 
   /**
-   * This field is set to: - `false` if the matched intent has required parameters and not all of
-   * the required parameter values have been collected. - `true` if all required parameter values
-   * have been collected, or if the    matched intent doesn't contain any required parameters.
+   * This field is set to:
+   *
+   * - `false` if the matched intent has required parameters and not all of    the required
+   * parameter values have been collected. - `true` if all required parameter values have been
+   * collected, or if the    matched intent doesn't contain any required parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,11 +132,13 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * The original conversational query text: - If natural language text was provided as input,
-   * `query_text` contains   a copy of the input. - If natural language speech audio was provided as
-   * input, `query_text`   contains the speech recognition result. If speech recognizer produced
-   * multiple alternatives, a particular one is picked. - If an event was provided as input,
-   * `query_text` is not set.
+   * The original conversational query text:
+   *
+   * - If natural language text was provided as input, `query_text` contains   a copy of the input.
+   * - If natural language speech audio was provided as input, `query_text`   contains the speech
+   * recognition result. If speech recognizer produced   multiple alternatives, a particular one is
+   * picked. - If automatic spell correction is enabled, `query_text` will contain the   corrected
+   * user input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,9 +199,11 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * This field is set to: - `false` if the matched intent has required parameters and not all of
-   * the required parameter values have been collected. - `true` if all required parameter values
-   * have been collected, or if the    matched intent doesn't contain any required parameters.
+   * This field is set to:
+   *
+   * - `false` if the matched intent has required parameters and not all of    the required
+   * parameter values have been collected. - `true` if all required parameter values have been
+   * collected, or if the    matched intent doesn't contain any required parameters.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllRequiredParamsPresent() {
@@ -205,9 +211,11 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * This field is set to: - `false` if the matched intent has required parameters and not all of
-   * the required parameter values have been collected. - `true` if all required parameter values
-   * have been collected, or if the    matched intent doesn't contain any required parameters.
+   * This field is set to:
+   *
+   * - `false` if the matched intent has required parameters and not all of    the required
+   * parameter values have been collected. - `true` if all required parameter values have been
+   * collected, or if the    matched intent doesn't contain any required parameters.
    * @param allRequiredParamsPresent allRequiredParamsPresent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult setAllRequiredParamsPresent(java.lang.Boolean allRequiredParamsPresent) {
@@ -387,11 +395,13 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The original conversational query text: - If natural language text was provided as input,
-   * `query_text` contains   a copy of the input. - If natural language speech audio was provided as
-   * input, `query_text`   contains the speech recognition result. If speech recognizer produced
-   * multiple alternatives, a particular one is picked. - If an event was provided as input,
-   * `query_text` is not set.
+   * The original conversational query text:
+   *
+   * - If natural language text was provided as input, `query_text` contains   a copy of the input.
+   * - If natural language speech audio was provided as input, `query_text`   contains the speech
+   * recognition result. If speech recognizer produced   multiple alternatives, a particular one is
+   * picked. - If automatic spell correction is enabled, `query_text` will contain the   corrected
+   * user input.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryText() {
@@ -399,11 +409,13 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
   }
 
   /**
-   * The original conversational query text: - If natural language text was provided as input,
-   * `query_text` contains   a copy of the input. - If natural language speech audio was provided as
-   * input, `query_text`   contains the speech recognition result. If speech recognizer produced
-   * multiple alternatives, a particular one is picked. - If an event was provided as input,
-   * `query_text` is not set.
+   * The original conversational query text:
+   *
+   * - If natural language text was provided as input, `query_text` contains   a copy of the input.
+   * - If natural language speech audio was provided as input, `query_text`   contains the speech
+   * recognition result. If speech recognizer produced   multiple alternatives, a particular one is
+   * picked. - If automatic spell correction is enabled, `query_text` will contain the   corrected
+   * user input.
    * @param queryText queryText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult setQueryText(java.lang.String queryText) {

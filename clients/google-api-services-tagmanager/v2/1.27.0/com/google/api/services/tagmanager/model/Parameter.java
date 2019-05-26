@@ -56,7 +56,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * 'true' or 'false'  - integer: The value represents a 64-bit signed integer value, in base 10  -
    * list: A list of parameters should be specified  - map: A map of parameters should be specified
    * - template: The value represents any text; this can include variable references (even variable
-   * references that might return non-string types)
+   * references that might return non-string types)  - trigger_reference: The value represents a
+   * trigger, represented as the trigger id
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +129,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * 'true' or 'false'  - integer: The value represents a 64-bit signed integer value, in base 10  -
    * list: A list of parameters should be specified  - map: A map of parameters should be specified
    * - template: The value represents any text; this can include variable references (even variable
-   * references that might return non-string types)
+   * references that might return non-string types)  - trigger_reference: The value represents a
+   * trigger, represented as the trigger id
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -140,7 +142,8 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * 'true' or 'false'  - integer: The value represents a 64-bit signed integer value, in base 10  -
    * list: A list of parameters should be specified  - map: A map of parameters should be specified
    * - template: The value represents any text; this can include variable references (even variable
-   * references that might return non-string types)
+   * references that might return non-string types)  - trigger_reference: The value represents a
+   * trigger, represented as the trigger id
    * @param type type or {@code null} for none
    */
   public Parameter setType(java.lang.String type) {

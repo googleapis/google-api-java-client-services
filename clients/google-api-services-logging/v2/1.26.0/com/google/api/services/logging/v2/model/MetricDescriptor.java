@@ -64,6 +64,13 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. The launch stage of the metric definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchStage;
+
+  /**
    * Optional. Metadata which can be used to guide usage of the metric.
    * The value may be {@code null}.
    */
@@ -187,6 +194,23 @@ public final class MetricDescriptor extends com.google.api.client.json.GenericJs
    */
   public MetricDescriptor setLabels(java.util.List<LabelDescriptor> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The launch stage of the metric definition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchStage() {
+    return launchStage;
+  }
+
+  /**
+   * Optional. The launch stage of the metric definition.
+   * @param launchStage launchStage or {@code null} for none
+   */
+  public MetricDescriptor setLaunchStage(java.lang.String launchStage) {
+    this.launchStage = launchStage;
     return this;
   }
 

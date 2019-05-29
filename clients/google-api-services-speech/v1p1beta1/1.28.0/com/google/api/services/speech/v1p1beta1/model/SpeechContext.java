@@ -31,6 +31,19 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class SpeechContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Hint Boost. Positive value will increase the probability that a specific phrase will be
+   * recognized over other similar sounding phrases. The higher the boost, the higher the chance of
+   * false positive recognition as well. Negative boost values would correspond to anti-biasing.
+   * Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can
+   * accept a wide range of positive values, most use cases are best served with values between 0
+   * and 20. We recommend using a binary search approach to finding the optimal value for your use
+   * case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float boost;
+
+  /**
    * *Optional* A list of strings containing words and phrases "hints" so that the speech
    * recognition is more likely to recognize them. This can be used to improve the accuracy for
    * specific words and phrases, for example, if specific commands are typically spoken by the user.
@@ -40,6 +53,35 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> phrases;
+
+  /**
+   * Hint Boost. Positive value will increase the probability that a specific phrase will be
+   * recognized over other similar sounding phrases. The higher the boost, the higher the chance of
+   * false positive recognition as well. Negative boost values would correspond to anti-biasing.
+   * Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can
+   * accept a wide range of positive values, most use cases are best served with values between 0
+   * and 20. We recommend using a binary search approach to finding the optimal value for your use
+   * case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getBoost() {
+    return boost;
+  }
+
+  /**
+   * Hint Boost. Positive value will increase the probability that a specific phrase will be
+   * recognized over other similar sounding phrases. The higher the boost, the higher the chance of
+   * false positive recognition as well. Negative boost values would correspond to anti-biasing.
+   * Anti-biasing is not enabled, so negative boost will simply be ignored. Though `boost` can
+   * accept a wide range of positive values, most use cases are best served with values between 0
+   * and 20. We recommend using a binary search approach to finding the optimal value for your use
+   * case.
+   * @param boost boost or {@code null} for none
+   */
+  public SpeechContext setBoost(java.lang.Float boost) {
+    this.boost = boost;
+    return this;
+  }
 
   /**
    * *Optional* A list of strings containing words and phrases "hints" so that the speech

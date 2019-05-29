@@ -74,6 +74,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   private java.lang.String state;
 
   /**
+   * Statistics about this storedInfoType version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2StoredInfoTypeStats stats;
+
+  /**
    * StoredInfoType configuration.
    * @return value or {@code null} for none
    */
@@ -154,6 +161,23 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
    */
   public GooglePrivacyDlpV2StoredInfoTypeVersion setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Statistics about this storedInfoType version.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2StoredInfoTypeStats getStats() {
+    return stats;
+  }
+
+  /**
+   * Statistics about this storedInfoType version.
+   * @param stats stats or {@code null} for none
+   */
+  public GooglePrivacyDlpV2StoredInfoTypeVersion setStats(GooglePrivacyDlpV2StoredInfoTypeStats stats) {
+    this.stats = stats;
     return this;
   }
 

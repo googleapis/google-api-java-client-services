@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-dlp",
-    "version": "v2-rev20190511-1.28.0"
+    "version": "v2-rev20190526-1.28.0"
   }
 }

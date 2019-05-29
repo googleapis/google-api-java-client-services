@@ -47,17 +47,17 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   private java.lang.String clientToken;
 
   /**
-   * Contains the language as detected from the text content.  If no language was specified in the
-   * request, the first (the most likely) language is used to select an appropriate model.  Sorted
-   * in order of likelihood.
+   * Contains the languages detected from the text content, sorted in order of likelihood.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> detectedLanguages;
 
   /**
-   * The language(s) requested by the client, as specified in the request. If the request did not
-   * specify any language, this will be empty and the detected_languages field will be populated.
+   * The language(s) used by CommentAnalyzer service to choose which Model to use when analyzing the
+   * comment. Might better be called "effective_languages". The logic used to make the choice is as
+   * follows:   if Request.languages.empty()     effective_languages = detected_languages   else
+   * effective_languages = Request.languages
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +102,7 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Contains the language as detected from the text content.  If no language was specified in the
-   * request, the first (the most likely) language is used to select an appropriate model.  Sorted
-   * in order of likelihood.
+   * Contains the languages detected from the text content, sorted in order of likelihood.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDetectedLanguages() {
@@ -112,9 +110,7 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Contains the language as detected from the text content.  If no language was specified in the
-   * request, the first (the most likely) language is used to select an appropriate model.  Sorted
-   * in order of likelihood.
+   * Contains the languages detected from the text content, sorted in order of likelihood.
    * @param detectedLanguages detectedLanguages or {@code null} for none
    */
   public AnalyzeCommentResponse setDetectedLanguages(java.util.List<java.lang.String> detectedLanguages) {
@@ -123,8 +119,10 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The language(s) requested by the client, as specified in the request. If the request did not
-   * specify any language, this will be empty and the detected_languages field will be populated.
+   * The language(s) used by CommentAnalyzer service to choose which Model to use when analyzing the
+   * comment. Might better be called "effective_languages". The logic used to make the choice is as
+   * follows:   if Request.languages.empty()     effective_languages = detected_languages   else
+   * effective_languages = Request.languages
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguages() {
@@ -132,8 +130,10 @@ public final class AnalyzeCommentResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The language(s) requested by the client, as specified in the request. If the request did not
-   * specify any language, this will be empty and the detected_languages field will be populated.
+   * The language(s) used by CommentAnalyzer service to choose which Model to use when analyzing the
+   * comment. Might better be called "effective_languages". The logic used to make the choice is as
+   * follows:   if Request.languages.empty()     effective_languages = detected_languages   else
+   * effective_languages = Request.languages
    * @param languages languages or {@code null} for none
    */
   public AnalyzeCommentResponse setLanguages(java.util.List<java.lang.String> languages) {

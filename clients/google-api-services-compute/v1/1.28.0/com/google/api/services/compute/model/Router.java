@@ -37,9 +37,9 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private RouterBgp bgp;
 
   /**
-   * BGP information that needs to be configured into the routing stack to establish the BGP
-   * peering. It must specify peer ASN and either interface name, IP, or peer IP. Please refer to
-   * RFC4273.
+   * BGP information that must be configured into the routing stack to establish BGP peering. This
+   * information must specify the peer ASN and either the interface name, IP address, or peer IP
+   * address. Please refer to RFC4273.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Router interfaces. Each interface requires either one linked resource (e.g. linkedVpnTunnel),
-   * or IP address and IP address range (e.g. ipRange), or both.
+   * Router interfaces. Each interface requires either one linked resource, (for example,
+   * linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * A list of Nat services created in this router.
+   * A list of NAT services created in this router.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,9 +139,9 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * BGP information that needs to be configured into the routing stack to establish the BGP
-   * peering. It must specify peer ASN and either interface name, IP, or peer IP. Please refer to
-   * RFC4273.
+   * BGP information that must be configured into the routing stack to establish BGP peering. This
+   * information must specify the peer ASN and either the interface name, IP address, or peer IP
+   * address. Please refer to RFC4273.
    * @return value or {@code null} for none
    */
   public java.util.List<RouterBgpPeer> getBgpPeers() {
@@ -149,9 +149,9 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * BGP information that needs to be configured into the routing stack to establish the BGP
-   * peering. It must specify peer ASN and either interface name, IP, or peer IP. Please refer to
-   * RFC4273.
+   * BGP information that must be configured into the routing stack to establish BGP peering. This
+   * information must specify the peer ASN and either the interface name, IP address, or peer IP
+   * address. Please refer to RFC4273.
    * @param bgpPeers bgpPeers or {@code null} for none
    */
   public Router setBgpPeers(java.util.List<RouterBgpPeer> bgpPeers) {
@@ -211,8 +211,8 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Router interfaces. Each interface requires either one linked resource (e.g. linkedVpnTunnel),
-   * or IP address and IP address range (e.g. ipRange), or both.
+   * Router interfaces. Each interface requires either one linked resource, (for example,
+   * linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
    * @return value or {@code null} for none
    */
   public java.util.List<RouterInterface> getInterfaces() {
@@ -220,8 +220,8 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Router interfaces. Each interface requires either one linked resource (e.g. linkedVpnTunnel),
-   * or IP address and IP address range (e.g. ipRange), or both.
+   * Router interfaces. Each interface requires either one linked resource, (for example,
+   * linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
    * @param interfaces interfaces or {@code null} for none
    */
   public Router setInterfaces(java.util.List<RouterInterface> interfaces) {
@@ -272,7 +272,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of Nat services created in this router.
+   * A list of NAT services created in this router.
    * @return value or {@code null} for none
    */
   public java.util.List<RouterNat> getNats() {
@@ -280,7 +280,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of Nat services created in this router.
+   * A list of NAT services created in this router.
    * @param nats nats or {@code null} for none
    */
   public Router setNats(java.util.List<RouterNat> nats) {

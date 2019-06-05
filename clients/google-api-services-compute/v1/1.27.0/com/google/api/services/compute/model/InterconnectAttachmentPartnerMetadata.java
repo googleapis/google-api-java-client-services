@@ -49,7 +49,7 @@ public final class InterconnectAttachmentPartnerMetadata extends com.google.api.
   private java.lang.String partnerName;
 
   /**
-   * URL of the Partner?s portal for this Attachment. Partners may customise this to be a deep-link
+   * URL of the Partner?s portal for this Attachment. Partners may customise this to be a deep link
    * to the specific resource on the Partner portal. This value may be validated to match approved
    * Partner values.
    * The value may be {@code null}.
@@ -98,7 +98,7 @@ public final class InterconnectAttachmentPartnerMetadata extends com.google.api.
   }
 
   /**
-   * URL of the Partner?s portal for this Attachment. Partners may customise this to be a deep-link
+   * URL of the Partner?s portal for this Attachment. Partners may customise this to be a deep link
    * to the specific resource on the Partner portal. This value may be validated to match approved
    * Partner values.
    * @return value or {@code null} for none
@@ -108,7 +108,7 @@ public final class InterconnectAttachmentPartnerMetadata extends com.google.api.
   }
 
   /**
-   * URL of the Partner?s portal for this Attachment. Partners may customise this to be a deep-link
+   * URL of the Partner?s portal for this Attachment. Partners may customise this to be a deep link
    * to the specific resource on the Partner portal. This value may be validated to match approved
    * Partner values.
    * @param portalUrl portalUrl or {@code null} for none

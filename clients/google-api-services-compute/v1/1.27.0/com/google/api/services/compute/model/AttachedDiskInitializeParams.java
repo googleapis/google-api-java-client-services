@@ -117,6 +117,26 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private CustomerEncryptionKey sourceImageEncryptionKey;
 
   /**
+   * The source snapshot to create this disk. When creating a new instance, one of
+   * initializeParams.sourceSnapshot or disks.source is required except for local SSD.
+   *
+   * To create a disk with a snapshot that you created, specify the snapshot name in the following
+   * format: global/snapshots/my-backup
+   *
+   * If the source snapshot is deleted later, this field will not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceSnapshot;
+
+  /**
+   * The customer-supplied encryption key of the source snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey sourceSnapshotEncryptionKey;
+
+  /**
    * An optional description. Provide this property when creating the disk.
    * @return value or {@code null} for none
    */
@@ -298,6 +318,52 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
     this.sourceImageEncryptionKey = sourceImageEncryptionKey;
+    return this;
+  }
+
+  /**
+   * The source snapshot to create this disk. When creating a new instance, one of
+   * initializeParams.sourceSnapshot or disks.source is required except for local SSD.
+   *
+   * To create a disk with a snapshot that you created, specify the snapshot name in the following
+   * format: global/snapshots/my-backup
+   *
+   * If the source snapshot is deleted later, this field will not be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceSnapshot() {
+    return sourceSnapshot;
+  }
+
+  /**
+   * The source snapshot to create this disk. When creating a new instance, one of
+   * initializeParams.sourceSnapshot or disks.source is required except for local SSD.
+   *
+   * To create a disk with a snapshot that you created, specify the snapshot name in the following
+   * format: global/snapshots/my-backup
+   *
+   * If the source snapshot is deleted later, this field will not be set.
+   * @param sourceSnapshot sourceSnapshot or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setSourceSnapshot(java.lang.String sourceSnapshot) {
+    this.sourceSnapshot = sourceSnapshot;
+    return this;
+  }
+
+  /**
+   * The customer-supplied encryption key of the source snapshot.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getSourceSnapshotEncryptionKey() {
+    return sourceSnapshotEncryptionKey;
+  }
+
+  /**
+   * The customer-supplied encryption key of the source snapshot.
+   * @param sourceSnapshotEncryptionKey sourceSnapshotEncryptionKey or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setSourceSnapshotEncryptionKey(CustomerEncryptionKey sourceSnapshotEncryptionKey) {
+    this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
     return this;
   }
 

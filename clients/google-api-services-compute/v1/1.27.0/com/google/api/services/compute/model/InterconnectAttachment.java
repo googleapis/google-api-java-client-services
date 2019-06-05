@@ -39,9 +39,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.Boolean adminEnabled;
 
   /**
-   * Provisioned bandwidth capacity for the interconnectAttachment. Can be set by the partner to
-   * update the customer's provisioned bandwidth. Output only for PARTNER type, mutable for
-   * PARTNER_PROVIDER and DEDICATED.
+   * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
+   * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
+   * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
+   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
+   * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
+   * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,10 +95,11 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Desired availability domain for the attachment. Only available for type PARTNER, at creation
-   * time. For improved reliability, customers should configure a pair of attachments with one per
-   * availability domain. The selected availability domain will be provided to the Partner via the
-   * pairing key so that the provisioned circuit will lie in the specified domain. If not specified,
-   * the value will default to AVAILABILITY_DOMAIN_ANY.
+   * time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY  -
+   * AVAILABILITY_DOMAIN_1  - AVAILABILITY_DOMAIN_2 For improved reliability, customers should
+   * configure a pair of attachments, one per availability domain. The selected availability domain
+   * will be provided to the Partner via the pairing key, so that the provisioned circuit will lie
+   * in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +147,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * [Output Only] The current status of whether or not this interconnect attachment is functional.
+   * [Output Only] The current status of whether or not this interconnect attachment is functional,
+   * which can take one of the following values: - OS_ACTIVE: The attachment has been turned up and
+   * is ready to use.  - OS_UNPROVISIONED: The attachment is not ready to use yet, because turnup is
+   * not complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,9 +166,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String pairingKey;
 
   /**
-   * Optional BGP ASN for the router that should be supplied by a layer 3 Partner if they configured
-   * BGP on behalf of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER,
-   * not available for DEDICATED.
+   * Optional BGP ASN for the router supplied by a Layer 3 Partner if they configured BGP on behalf
+   * of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER, not available
+   * for DEDICATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -208,13 +216,29 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The current state of this attachment's functionality.
+   * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
+   * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
+   * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
+   * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
+   * one of the following values: - ACTIVE: The attachment has been turned up and is ready to use.
+   * - UNPROVISIONED: The attachment is not ready to use yet, because turnup is not complete.  -
+   * PENDING_PARTNER: A newly-created PARTNER attachment that has not yet been configured on the
+   * Partner side.  - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the process of
+   * provisioning after a PARTNER_PROVIDER attachment was created that references it.  -
+   * PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER attachment that is waiting for a customer to
+   * activate it.  - DEFUNCT: The attachment was deleted externally and is no longer functional.
+   * This could be because the associated Interconnect was removed, or because the other side of a
+   * Partner attachment was deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
+   * The type of interconnect attachment this is, which can take one of the following values: -
+   * DEDICATED: an attachment to a Dedicated Interconnect.  - PARTNER: an attachment to a Partner
+   * Interconnect, created by the customer.  - PARTNER_PROVIDER: an attachment to a Partner
+   * Interconnect, created by the partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,9 +270,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Provisioned bandwidth capacity for the interconnectAttachment. Can be set by the partner to
-   * update the customer's provisioned bandwidth. Output only for PARTNER type, mutable for
-   * PARTNER_PROVIDER and DEDICATED.
+   * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
+   * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
+   * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
+   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
+   * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
+   * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidth() {
@@ -256,9 +284,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Provisioned bandwidth capacity for the interconnectAttachment. Can be set by the partner to
-   * update the customer's provisioned bandwidth. Output only for PARTNER type, mutable for
-   * PARTNER_PROVIDER and DEDICATED.
+   * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
+   * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
+   * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
+   * mutable for PARTNER_PROVIDER and DEDICATED, and can take one of the following values: -
+   * BPS_50M: 50 Mbit/s  - BPS_100M: 100 Mbit/s  - BPS_200M: 200 Mbit/s  - BPS_300M: 300 Mbit/s  -
+   * BPS_400M: 400 Mbit/s  - BPS_500M: 500 Mbit/s  - BPS_1G: 1 Gbit/s  - BPS_2G: 2 Gbit/s  - BPS_5G:
+   * 5 Gbit/s  - BPS_10G: 10 Gbit/s
    * @param bandwidth bandwidth or {@code null} for none
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {
@@ -367,10 +399,11 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Desired availability domain for the attachment. Only available for type PARTNER, at creation
-   * time. For improved reliability, customers should configure a pair of attachments with one per
-   * availability domain. The selected availability domain will be provided to the Partner via the
-   * pairing key so that the provisioned circuit will lie in the specified domain. If not specified,
-   * the value will default to AVAILABILITY_DOMAIN_ANY.
+   * time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY  -
+   * AVAILABILITY_DOMAIN_1  - AVAILABILITY_DOMAIN_2 For improved reliability, customers should
+   * configure a pair of attachments, one per availability domain. The selected availability domain
+   * will be provided to the Partner via the pairing key, so that the provisioned circuit will lie
+   * in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdgeAvailabilityDomain() {
@@ -379,10 +412,11 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Desired availability domain for the attachment. Only available for type PARTNER, at creation
-   * time. For improved reliability, customers should configure a pair of attachments with one per
-   * availability domain. The selected availability domain will be provided to the Partner via the
-   * pairing key so that the provisioned circuit will lie in the specified domain. If not specified,
-   * the value will default to AVAILABILITY_DOMAIN_ANY.
+   * time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY  -
+   * AVAILABILITY_DOMAIN_1  - AVAILABILITY_DOMAIN_2 For improved reliability, customers should
+   * configure a pair of attachments, one per availability domain. The selected availability domain
+   * will be provided to the Partner via the pairing key, so that the provisioned circuit will lie
+   * in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
    * @param edgeAvailabilityDomain edgeAvailabilityDomain or {@code null} for none
    */
   public InterconnectAttachment setEdgeAvailabilityDomain(java.lang.String edgeAvailabilityDomain) {
@@ -488,7 +522,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current status of whether or not this interconnect attachment is functional.
+   * [Output Only] The current status of whether or not this interconnect attachment is functional,
+   * which can take one of the following values: - OS_ACTIVE: The attachment has been turned up and
+   * is ready to use.  - OS_UNPROVISIONED: The attachment is not ready to use yet, because turnup is
+   * not complete.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationalStatus() {
@@ -496,7 +533,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current status of whether or not this interconnect attachment is functional.
+   * [Output Only] The current status of whether or not this interconnect attachment is functional,
+   * which can take one of the following values: - OS_ACTIVE: The attachment has been turned up and
+   * is ready to use.  - OS_UNPROVISIONED: The attachment is not ready to use yet, because turnup is
+   * not complete.
    * @param operationalStatus operationalStatus or {@code null} for none
    */
   public InterconnectAttachment setOperationalStatus(java.lang.String operationalStatus) {
@@ -526,9 +566,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional BGP ASN for the router that should be supplied by a layer 3 Partner if they configured
-   * BGP on behalf of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER,
-   * not available for DEDICATED.
+   * Optional BGP ASN for the router supplied by a Layer 3 Partner if they configured BGP on behalf
+   * of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER, not available
+   * for DEDICATED.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPartnerAsn() {
@@ -536,9 +576,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional BGP ASN for the router that should be supplied by a layer 3 Partner if they configured
-   * BGP on behalf of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER,
-   * not available for DEDICATED.
+   * Optional BGP ASN for the router supplied by a Layer 3 Partner if they configured BGP on behalf
+   * of the customer. Output only for PARTNER type, input only for PARTNER_PROVIDER, not available
+   * for DEDICATED.
    * @param partnerAsn partnerAsn or {@code null} for none
    */
   public InterconnectAttachment setPartnerAsn(java.lang.Long partnerAsn) {
@@ -644,7 +684,19 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current state of this attachment's functionality.
+   * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
+   * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
+   * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
+   * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
+   * one of the following values: - ACTIVE: The attachment has been turned up and is ready to use.
+   * - UNPROVISIONED: The attachment is not ready to use yet, because turnup is not complete.  -
+   * PENDING_PARTNER: A newly-created PARTNER attachment that has not yet been configured on the
+   * Partner side.  - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the process of
+   * provisioning after a PARTNER_PROVIDER attachment was created that references it.  -
+   * PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER attachment that is waiting for a customer to
+   * activate it.  - DEFUNCT: The attachment was deleted externally and is no longer functional.
+   * This could be because the associated Interconnect was removed, or because the other side of a
+   * Partner attachment was deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -652,7 +704,19 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current state of this attachment's functionality.
+   * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
+   * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
+   * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
+   * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
+   * one of the following values: - ACTIVE: The attachment has been turned up and is ready to use.
+   * - UNPROVISIONED: The attachment is not ready to use yet, because turnup is not complete.  -
+   * PENDING_PARTNER: A newly-created PARTNER attachment that has not yet been configured on the
+   * Partner side.  - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the process of
+   * provisioning after a PARTNER_PROVIDER attachment was created that references it.  -
+   * PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER attachment that is waiting for a customer to
+   * activate it.  - DEFUNCT: The attachment was deleted externally and is no longer functional.
+   * This could be because the associated Interconnect was removed, or because the other side of a
+   * Partner attachment was deleted.
    * @param state state or {@code null} for none
    */
   public InterconnectAttachment setState(java.lang.String state) {
@@ -661,6 +725,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * The type of interconnect attachment this is, which can take one of the following values: -
+   * DEDICATED: an attachment to a Dedicated Interconnect.  - PARTNER: an attachment to a Partner
+   * Interconnect, created by the customer.  - PARTNER_PROVIDER: an attachment to a Partner
+   * Interconnect, created by the partner.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -668,6 +736,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * The type of interconnect attachment this is, which can take one of the following values: -
+   * DEDICATED: an attachment to a Dedicated Interconnect.  - PARTNER: an attachment to a Partner
+   * Interconnect, created by the customer.  - PARTNER_PROVIDER: an attachment to a Partner
+   * Interconnect, created by the partner.
    * @param type type or {@code null} for none
    */
   public InterconnectAttachment setType(java.lang.String type) {

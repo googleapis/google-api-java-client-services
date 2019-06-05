@@ -852,6 +852,162 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Export Redis instance data into a Redis RDB format file in GCS.
+         *
+         * Redis will continue serving during this operation.
+         *
+         * The returned operation is automatically deleted after a few hours, so there is no need to call
+         * DeleteOperation.
+         *
+         * Create a request for the method "instances.export".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region.
+         * @param content the {@link com.google.api.services.redis.v1.model.ExportInstanceRequest}
+         * @return the request
+         */
+        public Export export(java.lang.String name, com.google.api.services.redis.v1.model.ExportInstanceRequest content) throws java.io.IOException {
+          Export result = new Export(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Export extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:export";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Export Redis instance data into a Redis RDB format file in GCS.
+           *
+           * Redis will continue serving during this operation.
+           *
+           * The returned operation is automatically deleted after a few hours, so there is no need to call
+           * DeleteOperation.
+           *
+           * Create a request for the method "instances.export".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation. <p> {@link
+           * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region.
+           * @param content the {@link com.google.api.services.redis.v1.model.ExportInstanceRequest}
+           * @since 1.13
+           */
+          protected Export(java.lang.String name, com.google.api.services.redis.v1.model.ExportInstanceRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Export set$Xgafv(java.lang.String $Xgafv) {
+            return (Export) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Export setAccessToken(java.lang.String accessToken) {
+            return (Export) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Export setAlt(java.lang.String alt) {
+            return (Export) super.setAlt(alt);
+          }
+
+          @Override
+          public Export setCallback(java.lang.String callback) {
+            return (Export) super.setCallback(callback);
+          }
+
+          @Override
+          public Export setFields(java.lang.String fields) {
+            return (Export) super.setFields(fields);
+          }
+
+          @Override
+          public Export setKey(java.lang.String key) {
+            return (Export) super.setKey(key);
+          }
+
+          @Override
+          public Export setOauthToken(java.lang.String oauthToken) {
+            return (Export) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Export) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Export setQuotaUser(java.lang.String quotaUser) {
+            return (Export) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Export setUploadType(java.lang.String uploadType) {
+            return (Export) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Export setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Export) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public Export setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Export set(String parameterName, Object value) {
+            return (Export) super.set(parameterName, value);
+          }
+        }
+        /**
          * Initiates a failover of the master node to current replica node for a specific STANDARD tier
          * Cloud Memorystore for Redis instance.
          *
@@ -1152,6 +1308,165 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Import a Redis RDB snapshot file from GCS into a Redis instance.
+         *
+         * Redis may stop serving during this operation. Instance state will be IMPORTING for entire
+         * operation. When complete, the instance will contain only data from the imported file.
+         *
+         * The returned operation is automatically deleted after a few hours, so there is no need to call
+         * DeleteOperation.
+         *
+         * Create a request for the method "instances.import".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link CloudRedisImport#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region.
+         * @param content the {@link com.google.api.services.redis.v1.model.ImportInstanceRequest}
+         * @return the request
+         */
+        public CloudRedisImport redisImport(java.lang.String name, com.google.api.services.redis.v1.model.ImportInstanceRequest content) throws java.io.IOException {
+          CloudRedisImport result = new CloudRedisImport(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CloudRedisImport extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:import";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Import a Redis RDB snapshot file from GCS into a Redis instance.
+           *
+           * Redis may stop serving during this operation. Instance state will be IMPORTING for entire
+           * operation. When complete, the instance will contain only data from the imported file.
+           *
+           * The returned operation is automatically deleted after a few hours, so there is no need to call
+           * DeleteOperation.
+           *
+           * Create a request for the method "instances.import".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link CloudRedisImport#execute()} method to invoke the remote operation.
+           * <p> {@link CloudRedisImport#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name Required. Redis instance resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        where
+         *        `location_id` refers to a GCP region.
+           * @param content the {@link com.google.api.services.redis.v1.model.ImportInstanceRequest}
+           * @since 1.13
+           */
+          protected CloudRedisImport(java.lang.String name, com.google.api.services.redis.v1.model.ImportInstanceRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public CloudRedisImport set$Xgafv(java.lang.String $Xgafv) {
+            return (CloudRedisImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CloudRedisImport setAccessToken(java.lang.String accessToken) {
+            return (CloudRedisImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CloudRedisImport setAlt(java.lang.String alt) {
+            return (CloudRedisImport) super.setAlt(alt);
+          }
+
+          @Override
+          public CloudRedisImport setCallback(java.lang.String callback) {
+            return (CloudRedisImport) super.setCallback(callback);
+          }
+
+          @Override
+          public CloudRedisImport setFields(java.lang.String fields) {
+            return (CloudRedisImport) super.setFields(fields);
+          }
+
+          @Override
+          public CloudRedisImport setKey(java.lang.String key) {
+            return (CloudRedisImport) super.setKey(key);
+          }
+
+          @Override
+          public CloudRedisImport setOauthToken(java.lang.String oauthToken) {
+            return (CloudRedisImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CloudRedisImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CloudRedisImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CloudRedisImport setQuotaUser(java.lang.String quotaUser) {
+            return (CloudRedisImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CloudRedisImport setUploadType(java.lang.String uploadType) {
+            return (CloudRedisImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CloudRedisImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CloudRedisImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis instance resource name using the form:
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
+         to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis instance resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public CloudRedisImport setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CloudRedisImport set(String parameterName, Object value) {
+            return (CloudRedisImport) super.set(parameterName, value);
           }
         }
         /**

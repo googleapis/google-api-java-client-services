@@ -31,7 +31,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class Message extends com.google.api.client.json.GenericJson {
 
   /**
-   * The datetime when the message was created. Set by the server.
+   * Output only. The datetime when the message was created. Set by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The parsed version of the raw message data.
+   * Output only. The parsed version of the raw message data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String sendTime;
 
   /**
-   * The datetime when the message was created. Set by the server.
+   * Output only. The datetime when the message was created. Set by the server.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -112,7 +112,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The datetime when the message was created. Set by the server.
+   * Output only. The datetime when the message was created. Set by the server.
    * @param createTime createTime or {@code null} for none
    */
   public Message setCreateTime(String createTime) {
@@ -237,7 +237,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parsed version of the raw message data.
+   * Output only. The parsed version of the raw message data.
    * @return value or {@code null} for none
    */
   public ParsedData getParsedData() {
@@ -245,7 +245,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parsed version of the raw message data.
+   * Output only. The parsed version of the raw message data.
    * @param parsedData parsedData or {@code null} for none
    */
   public Message setParsedData(ParsedData parsedData) {

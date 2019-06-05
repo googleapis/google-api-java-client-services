@@ -17,8 +17,8 @@
 package com.google.api.services.healthcare.v1alpha2.model;
 
 /**
- * Configuration for the FHIR BigQuery and GCS schema. Determines how the server generates the
- * schema.
+ * Configuration for the FHIR BigQuery and Cloud Storage schema. Determines how the server generates
+ * the schema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:

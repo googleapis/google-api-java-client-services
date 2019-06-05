@@ -5666,14 +5666,14 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * A monitoring filter that specifies which time series should be returned. The filter must
          * specify a single metric type, and can additionally specify metric labels and other
          * information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time"
-         * AND metric.label.instance_name = "my-instance-name"
+         * AND metric.labels.instance_name = "my-instance-name"
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** A monitoring filter that specifies which time series should be returned. The filter must specify a
        single metric type, and can additionally specify metric labels and other information. For example:
-       metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND metric.label.instance_name =
+       metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name =
        "my-instance-name"
          */
         public java.lang.String getFilter() {
@@ -5684,7 +5684,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * A monitoring filter that specifies which time series should be returned. The filter must
          * specify a single metric type, and can additionally specify metric labels and other
          * information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time"
-         * AND metric.label.instance_name = "my-instance-name"
+         * AND metric.labels.instance_name = "my-instance-name"
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

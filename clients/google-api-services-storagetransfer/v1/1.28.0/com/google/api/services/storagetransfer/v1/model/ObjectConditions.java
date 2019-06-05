@@ -76,9 +76,10 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * `maxTimeElapsedSinceLastModification` and objects that don't have a `lastModificationTime` are
    * transferred.
    *
-   * Note that `NOW` refers to the creation time of the transfer job, and `lastModificationTime`
-   * refers to the time of the last change to the object's content or metadata. Specifically, this
-   * would be the `updated` property of GCS objects and the `LastModified` field of S3 objects.
+   * Note that, for each `TransferOperation` started by this `TransferJob`, `NOW` refers to the
+   * `start_time` of the 'TransferOperation`. Also, `lastModificationTime` refers to the time of the
+   * last change to the object's content or metadata - specifically, this would be the `updated`
+   * property of GCS objects and the `LastModified` field of S3 objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +90,10 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * `minTimeElapsedSinceLastModification` and objects that don't have a `lastModificationTime` are
    * transferred.
    *
-   * Note that `NOW` refers to the creation time of the transfer job, and `lastModificationTime`
-   * refers to the time of the last change to the object's content or metadata. Specifically, this
-   * would be the `updated` property of GCS objects and the `LastModified` field of S3 objects.
+   * Note that, for each `TransferOperation` started by this `TransferJob`, `NOW` refers to the
+   * `start_time` of the 'TransferOperation`. Also, `lastModificationTime` refers to the time of the
+   * last change to the object's content or metadata - specifically, this would be the `updated`
+   * property of GCS objects and the `LastModified` field of S3 objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,9 +194,10 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * `maxTimeElapsedSinceLastModification` and objects that don't have a `lastModificationTime` are
    * transferred.
    *
-   * Note that `NOW` refers to the creation time of the transfer job, and `lastModificationTime`
-   * refers to the time of the last change to the object's content or metadata. Specifically, this
-   * would be the `updated` property of GCS objects and the `LastModified` field of S3 objects.
+   * Note that, for each `TransferOperation` started by this `TransferJob`, `NOW` refers to the
+   * `start_time` of the 'TransferOperation`. Also, `lastModificationTime` refers to the time of the
+   * last change to the object's content or metadata - specifically, this would be the `updated`
+   * property of GCS objects and the `LastModified` field of S3 objects.
    * @return value or {@code null} for none
    */
   public String getMaxTimeElapsedSinceLastModification() {
@@ -206,9 +209,10 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * `maxTimeElapsedSinceLastModification` and objects that don't have a `lastModificationTime` are
    * transferred.
    *
-   * Note that `NOW` refers to the creation time of the transfer job, and `lastModificationTime`
-   * refers to the time of the last change to the object's content or metadata. Specifically, this
-   * would be the `updated` property of GCS objects and the `LastModified` field of S3 objects.
+   * Note that, for each `TransferOperation` started by this `TransferJob`, `NOW` refers to the
+   * `start_time` of the 'TransferOperation`. Also, `lastModificationTime` refers to the time of the
+   * last change to the object's content or metadata - specifically, this would be the `updated`
+   * property of GCS objects and the `LastModified` field of S3 objects.
    * @param maxTimeElapsedSinceLastModification maxTimeElapsedSinceLastModification or {@code null} for none
    */
   public ObjectConditions setMaxTimeElapsedSinceLastModification(String maxTimeElapsedSinceLastModification) {
@@ -221,9 +225,10 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * `minTimeElapsedSinceLastModification` and objects that don't have a `lastModificationTime` are
    * transferred.
    *
-   * Note that `NOW` refers to the creation time of the transfer job, and `lastModificationTime`
-   * refers to the time of the last change to the object's content or metadata. Specifically, this
-   * would be the `updated` property of GCS objects and the `LastModified` field of S3 objects.
+   * Note that, for each `TransferOperation` started by this `TransferJob`, `NOW` refers to the
+   * `start_time` of the 'TransferOperation`. Also, `lastModificationTime` refers to the time of the
+   * last change to the object's content or metadata - specifically, this would be the `updated`
+   * property of GCS objects and the `LastModified` field of S3 objects.
    * @return value or {@code null} for none
    */
   public String getMinTimeElapsedSinceLastModification() {
@@ -235,9 +240,10 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    * `minTimeElapsedSinceLastModification` and objects that don't have a `lastModificationTime` are
    * transferred.
    *
-   * Note that `NOW` refers to the creation time of the transfer job, and `lastModificationTime`
-   * refers to the time of the last change to the object's content or metadata. Specifically, this
-   * would be the `updated` property of GCS objects and the `LastModified` field of S3 objects.
+   * Note that, for each `TransferOperation` started by this `TransferJob`, `NOW` refers to the
+   * `start_time` of the 'TransferOperation`. Also, `lastModificationTime` refers to the time of the
+   * last change to the object's content or metadata - specifically, this would be the `updated`
+   * property of GCS objects and the `LastModified` field of S3 objects.
    * @param minTimeElapsedSinceLastModification minTimeElapsedSinceLastModification or {@code null} for none
    */
   public ObjectConditions setMinTimeElapsedSinceLastModification(String minTimeElapsedSinceLastModification) {

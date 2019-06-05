@@ -37,8 +37,8 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean allowNullHeader;
 
   /**
-   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment
-   * terminator.
+   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as the
+   * segment terminator, matching the HL7 version 2 specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment
-   * terminator.
+   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as the
+   * segment terminator, matching the HL7 version 2 specification.
    * @see #decodeSegmentTerminator()
    * @return value or {@code null} for none
    */
@@ -72,8 +72,8 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment
-   * terminator.
+   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as the
+   * segment terminator, matching the HL7 version 2 specification.
    * @see #getSegmentTerminator()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -84,8 +84,8 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment
-   * terminator.
+   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as the
+   * segment terminator, matching the HL7 version 2 specification.
    * @see #encodeSegmentTerminator()
    * @param segmentTerminator segmentTerminator or {@code null} for none
    */
@@ -95,8 +95,8 @@ public final class ParserConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment
-   * terminator.
+   * Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as the
+   * segment terminator, matching the HL7 version 2 specification.
    * @see #setSegmentTerminator()
    *
    * <p>

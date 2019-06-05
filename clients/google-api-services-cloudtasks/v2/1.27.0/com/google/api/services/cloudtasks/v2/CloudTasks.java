@@ -2489,7 +2489,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            *
            * Tasks cannot be updated after creation; there is no UpdateTask command.
            *
-           * * For App Engine queues, the maximum task size is   100KB.
+           * * The maximum task size is 100KB.
            *
            * Create a request for the method "tasks.create".
            *
@@ -2521,7 +2521,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              *
              * Tasks cannot be updated after creation; there is no UpdateTask command.
              *
-             * * For App Engine queues, the maximum task size is   100KB.
+             * * The maximum task size is 100KB.
              *
              * Create a request for the method "tasks.create".
              *

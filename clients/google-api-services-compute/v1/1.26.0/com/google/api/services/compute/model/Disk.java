@@ -47,8 +47,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * Encrypts the disk using a customer-supplied encryption key.
    *
    * After you encrypt a disk with a customer-supplied key, you must provide the same key if you use
-   * the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual
-   * machine).
+   * the disk later (e.g. to create a disk snapshot, to create a disk image, to create a machine
+   * image, or to attach the disk to a virtual machine).
    *
    * Customer-supplied encryption keys do not protect access to metadata of the disk.
    *
@@ -272,7 +272,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * pd-ssd
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,7 +281,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Links to the users of the disk (attached instances) in form:
-   * project/zones/zone/instances/instance
+   * projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,8 +333,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * Encrypts the disk using a customer-supplied encryption key.
    *
    * After you encrypt a disk with a customer-supplied key, you must provide the same key if you use
-   * the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual
-   * machine).
+   * the disk later (e.g. to create a disk snapshot, to create a disk image, to create a machine
+   * image, or to attach the disk to a virtual machine).
    *
    * Customer-supplied encryption keys do not protect access to metadata of the disk.
    *
@@ -350,8 +351,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    * Encrypts the disk using a customer-supplied encryption key.
    *
    * After you encrypt a disk with a customer-supplied key, you must provide the same key if you use
-   * the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual
-   * machine).
+   * the disk later (e.g. to create a disk snapshot, to create a disk image, to create a machine
+   * image, or to attach the disk to a virtual machine).
    *
    * Customer-supplied encryption keys do not protect access to metadata of the disk.
    *
@@ -896,7 +897,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * pd-ssd
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -905,7 +907,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the disk type resource describing which disk type to use to create the disk. Provide
-   * this when creating the disk. For example: project/zones/zone/diskTypes/pd-standard or pd-ssd
+   * this when creating the disk. For example: projects/project/zones/zone/diskTypes/pd-standard or
+   * pd-ssd
    * @param type type or {@code null} for none
    */
   public Disk setType(java.lang.String type) {
@@ -915,7 +918,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Links to the users of the disk (attached instances) in form:
-   * project/zones/zone/instances/instance
+   * projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsers() {
@@ -924,7 +927,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Links to the users of the disk (attached instances) in form:
-   * project/zones/zone/instances/instance
+   * projects/project/zones/zone/instances/instance
    * @param users users or {@code null} for none
    */
   public Disk setUsers(java.util.List<java.lang.String> users) {

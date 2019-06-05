@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class RouterNatSubnetworkToNat extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL for the subnetwork resource to use NAT.
+   * URL for the subnetwork resource that will use NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class RouterNatSubnetworkToNat extends com.google.api.client.json.G
   private java.util.List<java.lang.String> secondaryIpRangeNames;
 
   /**
-   * Specify the options for NAT ranges in the Subnetwork. All usages of single value are valid
+   * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid
    * except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is:
    * ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
    * The value may be {@code null}.
@@ -55,7 +55,7 @@ public final class RouterNatSubnetworkToNat extends com.google.api.client.json.G
   private java.util.List<java.lang.String> sourceIpRangesToNat;
 
   /**
-   * URL for the subnetwork resource to use NAT.
+   * URL for the subnetwork resource that will use NAT.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -63,7 +63,7 @@ public final class RouterNatSubnetworkToNat extends com.google.api.client.json.G
   }
 
   /**
-   * URL for the subnetwork resource to use NAT.
+   * URL for the subnetwork resource that will use NAT.
    * @param name name or {@code null} for none
    */
   public RouterNatSubnetworkToNat setName(java.lang.String name) {
@@ -93,7 +93,7 @@ public final class RouterNatSubnetworkToNat extends com.google.api.client.json.G
   }
 
   /**
-   * Specify the options for NAT ranges in the Subnetwork. All usages of single value are valid
+   * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid
    * except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is:
    * ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
    * @return value or {@code null} for none
@@ -103,7 +103,7 @@ public final class RouterNatSubnetworkToNat extends com.google.api.client.json.G
   }
 
   /**
-   * Specify the options for NAT ranges in the Subnetwork. All usages of single value are valid
+   * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid
    * except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is:
    * ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
    * @param sourceIpRangesToNat sourceIpRangesToNat or {@code null} for none

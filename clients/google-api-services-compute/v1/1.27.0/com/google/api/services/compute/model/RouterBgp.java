@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class RouterBgp extends com.google.api.client.json.GenericJson {
 
   /**
-   * User-specified flag to indicate which mode to use for advertisement.
+   * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or
+   * CUSTOM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,8 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   private java.lang.Long asn;
 
   /**
-   * User-specified flag to indicate which mode to use for advertisement.
+   * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or
+   * CUSTOM.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdvertiseMode() {
@@ -80,7 +82,8 @@ public final class RouterBgp extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-specified flag to indicate which mode to use for advertisement.
+   * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or
+   * CUSTOM.
    * @param advertiseMode advertiseMode or {@code null} for none
    */
   public RouterBgp setAdvertiseMode(java.lang.String advertiseMode) {

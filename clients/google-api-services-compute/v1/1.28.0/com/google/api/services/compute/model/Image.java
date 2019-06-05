@@ -895,8 +895,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
     private java.lang.String containerType;
 
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging provided by the client when the
-     * disk image is created.
+     * [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before
+     * unpackaging provided by the client when the disk image is created.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -932,8 +932,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging provided by the client when the
-     * disk image is created.
+     * [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before
+     * unpackaging provided by the client when the disk image is created.
      * @return value or {@code null} for none
      */
     public java.lang.String getSha1Checksum() {
@@ -941,8 +941,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional SHA1 checksum of the disk image before unpackaging provided by the client when the
-     * disk image is created.
+     * [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before
+     * unpackaging provided by the client when the disk image is created.
      * @param sha1Checksum sha1Checksum or {@code null} for none
      */
     public RawDisk setSha1Checksum(java.lang.String sha1Checksum) {

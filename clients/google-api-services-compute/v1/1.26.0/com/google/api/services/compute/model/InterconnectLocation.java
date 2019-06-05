@@ -57,7 +57,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String city;
 
   /**
-   * [Output Only] Continent for this location.
+   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
+   * - ASIA_PAC  - EUROPE  - NORTH_AMERICA  - SOUTH_AMERICA
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,9 +138,10 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The status of this InterconnectLocation. If the status is AVAILABLE, new
-   * Interconnects may be provisioned in this InterconnectLocation. Otherwise, no new Interconnects
-   * may be provisioned.
+   * [Output Only] The status of this InterconnectLocation, which can take one of the following
+   * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
+   * Interconnects.  - AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +207,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Continent for this location.
+   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
+   * - ASIA_PAC  - EUROPE  - NORTH_AMERICA  - SOUTH_AMERICA
    * @return value or {@code null} for none
    */
   public java.lang.String getContinent() {
@@ -213,7 +216,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Continent for this location.
+   * [Output Only] Continent for this location, which can take one of the following values: - AFRICA
+   * - ASIA_PAC  - EUROPE  - NORTH_AMERICA  - SOUTH_AMERICA
    * @param continent continent or {@code null} for none
    */
   public InterconnectLocation setContinent(java.lang.String continent) {
@@ -398,9 +402,10 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The status of this InterconnectLocation. If the status is AVAILABLE, new
-   * Interconnects may be provisioned in this InterconnectLocation. Otherwise, no new Interconnects
-   * may be provisioned.
+   * [Output Only] The status of this InterconnectLocation, which can take one of the following
+   * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
+   * Interconnects.  - AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -408,9 +413,10 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The status of this InterconnectLocation. If the status is AVAILABLE, new
-   * Interconnects may be provisioned in this InterconnectLocation. Otherwise, no new Interconnects
-   * may be provisioned.
+   * [Output Only] The status of this InterconnectLocation, which can take one of the following
+   * values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new
+   * Interconnects.  - AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects.
    * @param status status or {@code null} for none
    */
   public InterconnectLocation setStatus(java.lang.String status) {

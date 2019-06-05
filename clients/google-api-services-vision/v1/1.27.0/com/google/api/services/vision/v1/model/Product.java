@@ -57,7 +57,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The category for the product identified by the reference image. This should be either
-   * "homegoods", "apparel", or "toys".
+   * "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods", "apparel", and
+   * "toys" are still supported, but these should not be used for new products.
    *
    * This field is immutable.
    * The value may be {@code null}.
@@ -147,7 +148,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The category for the product identified by the reference image. This should be either
-   * "homegoods", "apparel", or "toys".
+   * "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods", "apparel", and
+   * "toys" are still supported, but these should not be used for new products.
    *
    * This field is immutable.
    * @return value or {@code null} for none
@@ -158,7 +160,8 @@ public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
    * The category for the product identified by the reference image. This should be either
-   * "homegoods", "apparel", or "toys".
+   * "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories "homegoods", "apparel", and
+   * "toys" are still supported, but these should not be used for new products.
    *
    * This field is immutable.
    * @param productCategory productCategory or {@code null} for none

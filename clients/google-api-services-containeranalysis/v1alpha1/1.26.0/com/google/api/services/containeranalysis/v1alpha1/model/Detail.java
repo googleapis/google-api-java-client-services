@@ -62,8 +62,9 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isObsolete;
 
   /**
-   * The max version of the package in which the vulnerability exists. This field can be used as a
-   * filter in list requests.
+   * Deprecated, do not use. Use fixed_location instead.
+   *
+   * The max version of the package in which the vulnerability exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,8 +172,9 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The max version of the package in which the vulnerability exists. This field can be used as a
-   * filter in list requests.
+   * Deprecated, do not use. Use fixed_location instead.
+   *
+   * The max version of the package in which the vulnerability exists.
    * @return value or {@code null} for none
    */
   public Version getMaxAffectedVersion() {
@@ -180,8 +182,9 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The max version of the package in which the vulnerability exists. This field can be used as a
-   * filter in list requests.
+   * Deprecated, do not use. Use fixed_location instead.
+   *
+   * The max version of the package in which the vulnerability exists.
    * @param maxAffectedVersion maxAffectedVersion or {@code null} for none
    */
   public Detail setMaxAffectedVersion(Version maxAffectedVersion) {

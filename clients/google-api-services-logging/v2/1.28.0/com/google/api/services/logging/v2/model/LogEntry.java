@@ -103,7 +103,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
    * The log entry payload, represented as a protocol buffer. Some Google Cloud Platform services
-   * use this field for their log entry payloads.
+   * use this field for their log entry payloads.The following protocol buffer types are supported;
+   * user-defined types are not supported:"type.googleapis.com/google.cloud.audit.AuditLog"
+   * "type.googleapis.com/google.appengine.logging.v1.RequestLog"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,7 +356,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
    * The log entry payload, represented as a protocol buffer. Some Google Cloud Platform services
-   * use this field for their log entry payloads.
+   * use this field for their log entry payloads.The following protocol buffer types are supported;
+   * user-defined types are not supported:"type.googleapis.com/google.cloud.audit.AuditLog"
+   * "type.googleapis.com/google.appengine.logging.v1.RequestLog"
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getProtoPayload() {
@@ -363,7 +367,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
    * The log entry payload, represented as a protocol buffer. Some Google Cloud Platform services
-   * use this field for their log entry payloads.
+   * use this field for their log entry payloads.The following protocol buffer types are supported;
+   * user-defined types are not supported:"type.googleapis.com/google.cloud.audit.AuditLog"
+   * "type.googleapis.com/google.appengine.logging.v1.RequestLog"
    * @param protoPayload protoPayload or {@code null} for none
    */
   public LogEntry setProtoPayload(java.util.Map<String, java.lang.Object> protoPayload) {

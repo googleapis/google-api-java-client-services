@@ -48,8 +48,8 @@ public final class GoogleCloudVisionV1p5beta1InputConfig extends com.google.api.
   private GoogleCloudVisionV1p5beta1GcsSource gcsSource;
 
   /**
-   * The type of the file. Currently only "application/pdf" and "image/tiff" are supported.
-   * Wildcards are not supported.
+   * The type of the file. Currently only "application/pdf", "image/tiff" and "image/gif" are
+   * supported. Wildcards are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class GoogleCloudVisionV1p5beta1InputConfig extends com.google.api.
   }
 
   /**
-   * The type of the file. Currently only "application/pdf" and "image/tiff" are supported.
-   * Wildcards are not supported.
+   * The type of the file. Currently only "application/pdf", "image/tiff" and "image/gif" are
+   * supported. Wildcards are not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -143,8 +143,8 @@ public final class GoogleCloudVisionV1p5beta1InputConfig extends com.google.api.
   }
 
   /**
-   * The type of the file. Currently only "application/pdf" and "image/tiff" are supported.
-   * Wildcards are not supported.
+   * The type of the file. Currently only "application/pdf", "image/tiff" and "image/gif" are
+   * supported. Wildcards are not supported.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudVisionV1p5beta1InputConfig setMimeType(java.lang.String mimeType) {

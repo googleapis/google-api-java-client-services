@@ -54,9 +54,11 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   private java.lang.String modelVariant;
 
   /**
-   * Optional. The collection of phrase hints which are used to boost accuracy of speech
-   * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details.
+   * Optional. A list of strings containing words and phrases that the speech recognizer should
+   * recognize with higher likelihood.
+   *
+   * See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics
+   * #phrase-hints) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +130,11 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Optional. The collection of phrase hints which are used to boost accuracy of speech
-   * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details.
+   * Optional. A list of strings containing words and phrases that the speech recognizer should
+   * recognize with higher likelihood.
+   *
+   * See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics
+   * #phrase-hints) for more details.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseHints() {
@@ -138,9 +142,11 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Optional. The collection of phrase hints which are used to boost accuracy of speech
-   * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details.
+   * Optional. A list of strings containing words and phrases that the speech recognizer should
+   * recognize with higher likelihood.
+   *
+   * See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics
+   * #phrase-hints) for more details.
    * @param phraseHints phraseHints or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {

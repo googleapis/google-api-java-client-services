@@ -32,7 +32,9 @@ package com.google.api.services.docs.v1.model;
 public final class TableCellBorder extends com.google.api.client.json.GenericJson {
 
   /**
-   * The color of the border. This color cannot be transparent.
+   * The color of the border.
+   *
+   * This color cannot be transparent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,9 @@ public final class TableCellBorder extends com.google.api.client.json.GenericJso
   private Dimension width;
 
   /**
-   * The color of the border. This color cannot be transparent.
+   * The color of the border.
+   *
+   * This color cannot be transparent.
    * @return value or {@code null} for none
    */
   public OptionalColor getColor() {
@@ -61,7 +65,9 @@ public final class TableCellBorder extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The color of the border. This color cannot be transparent.
+   * The color of the border.
+   *
+   * This color cannot be transparent.
    * @param color color or {@code null} for none
    */
   public TableCellBorder setColor(OptionalColor color) {

@@ -46,6 +46,13 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String adChoicesDestinationUrl;
 
   /**
+   * Output only. The detected ad technology providers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdTechnologyProviders adTechnologyProviders;
+
+  /**
    * The name of the company being advertised in the creative.
    * The value may be {@code null}.
    */
@@ -263,6 +270,23 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setAdChoicesDestinationUrl(java.lang.String adChoicesDestinationUrl) {
     this.adChoicesDestinationUrl = adChoicesDestinationUrl;
+    return this;
+  }
+
+  /**
+   * Output only. The detected ad technology providers.
+   * @return value or {@code null} for none
+   */
+  public AdTechnologyProviders getAdTechnologyProviders() {
+    return adTechnologyProviders;
+  }
+
+  /**
+   * Output only. The detected ad technology providers.
+   * @param adTechnologyProviders adTechnologyProviders or {@code null} for none
+   */
+  public Creative setAdTechnologyProviders(AdTechnologyProviders adTechnologyProviders) {
+    this.adTechnologyProviders = adTechnologyProviders;
     return this;
   }
 

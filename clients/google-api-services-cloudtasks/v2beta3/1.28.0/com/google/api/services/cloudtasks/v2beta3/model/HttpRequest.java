@@ -19,10 +19,6 @@ package com.google.api.services.cloudtasks.v2beta3.model;
 /**
  * HTTP request.
  *
- * Warning: This is an [alpha](https://cloud.google.com/terms/launch-stages) feature. If you haven't
- * already joined, you can [use this form to sign up](https://docs.google.com/forms/d/e
- * /1FAIpQLSfc4uEy9CBHKYUSdnY1hdhKDCX7julVZHy3imOiR-XrU7bUNQ/viewform).
- *
  * The task will be pushed to the worker as an HTTP request. If the worker or the redirected worker
  * acknowledges the task by returning a successful HTTP response code ([`200` - `299`]), the task
  * will removed from the queue. If any other HTTP response code is returned or no response is

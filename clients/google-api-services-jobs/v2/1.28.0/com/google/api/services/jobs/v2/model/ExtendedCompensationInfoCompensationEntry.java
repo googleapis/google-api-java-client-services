@@ -89,7 +89,7 @@ public final class ExtendedCompensationInfoCompensationEntry extends com.google.
    *
    * Frequency of the specified amount.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_UNIT.
+   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,7 +218,7 @@ public final class ExtendedCompensationInfoCompensationEntry extends com.google.
    *
    * Frequency of the specified amount.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_UNIT.
+   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -230,7 +230,7 @@ public final class ExtendedCompensationInfoCompensationEntry extends com.google.
    *
    * Frequency of the specified amount.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_UNIT.
+   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @param unit unit or {@code null} for none
    */
   public ExtendedCompensationInfoCompensationEntry setUnit(java.lang.String unit) {

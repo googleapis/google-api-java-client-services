@@ -35,7 +35,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   /**
    * Optional.
    *
-   * Whether to include jobs whose compensation range is unspecified.
+   * If set to true, jobs with unspecified compensation range fields are included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   /**
    * Optional.
    *
-   * Whether to include jobs whose compensation range is unspecified.
+   * If set to true, jobs with unspecified compensation range fields are included.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeJobsWithUnspecifiedCompensationRange() {
@@ -81,7 +81,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   /**
    * Optional.
    *
-   * Whether to include jobs whose compensation range is unspecified.
+   * If set to true, jobs with unspecified compensation range fields are included.
    * @param includeJobsWithUnspecifiedCompensationRange includeJobsWithUnspecifiedCompensationRange or {@code null} for none
    */
   public CompensationFilter setIncludeJobsWithUnspecifiedCompensationRange(java.lang.Boolean includeJobsWithUnspecifiedCompensationRange) {

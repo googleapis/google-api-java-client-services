@@ -79,7 +79,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
    *
    * Compensation type.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_TYPE.
+   * Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
    *
    * Frequency of the specified amount.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_UNIT.
+   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
    *
    * Compensation type.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_TYPE.
+   * Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -203,7 +203,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
    *
    * Compensation type.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_TYPE.
+   * Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
    * @param type type or {@code null} for none
    */
   public CompensationEntry setType(java.lang.String type) {
@@ -216,7 +216,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
    *
    * Frequency of the specified amount.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_UNIT.
+   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -228,7 +228,7 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
    *
    * Frequency of the specified amount.
    *
-   * Default is CompensationUnit.OTHER_COMPENSATION_UNIT.
+   * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @param unit unit or {@code null} for none
    */
   public CompensationEntry setUnit(java.lang.String unit) {

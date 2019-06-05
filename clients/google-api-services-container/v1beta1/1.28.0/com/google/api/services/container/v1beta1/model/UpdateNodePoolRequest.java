@@ -46,6 +46,16 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String imageType;
 
   /**
+   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * node pool's nodes should be located. Changing the locations for a node pool will result in
+   * nodes being either created or removed from the node pool, depending on whether locations are
+   * being added or removed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> locations;
+
+  /**
    * The name (project, location, cluster, node pool) of the node pool to update. Specified in the
    * format 'projects/locations/clusters/nodePools'.
    * The value may be {@code null}.
@@ -133,6 +143,29 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setImageType(java.lang.String imageType) {
     this.imageType = imageType;
+    return this;
+  }
+
+  /**
+   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * node pool's nodes should be located. Changing the locations for a node pool will result in
+   * nodes being either created or removed from the node pool, depending on whether locations are
+   * being added or removed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocations() {
+    return locations;
+  }
+
+  /**
+   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * node pool's nodes should be located. Changing the locations for a node pool will result in
+   * nodes being either created or removed from the node pool, depending on whether locations are
+   * being added or removed.
+   * @param locations locations or {@code null} for none
+   */
+  public UpdateNodePoolRequest setLocations(java.util.List<java.lang.String> locations) {
+    this.locations = locations;
     return this;
   }
 

@@ -74,6 +74,14 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> instanceGroupUrls;
 
   /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> locations;
+
+  /**
    * NodeManagement configuration for this NodePool.
    * The value may be {@code null}.
    */
@@ -221,6 +229,25 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
     this.instanceGroupUrls = instanceGroupUrls;
+    return this;
+  }
+
+  /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocations() {
+    return locations;
+  }
+
+  /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes should be located.
+   * @param locations locations or {@code null} for none
+   */
+  public NodePool setLocations(java.util.List<java.lang.String> locations) {
+    this.locations = locations;
     return this;
   }
 

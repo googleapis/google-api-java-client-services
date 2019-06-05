@@ -31,6 +31,8 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Deprecated, do not use. Use uri instead.
+   *
    * The hash of the resource content. For example, the Docker digest.
    * The value may be {@code null}.
    */
@@ -38,6 +40,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private Hash contentHash;
 
   /**
+   * Deprecated, do not use. Use uri instead.
+   *
    * The name of the resource. For example, the name of a Docker image - "Debian".
    * The value may be {@code null}.
    */
@@ -53,6 +57,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String uri;
 
   /**
+   * Deprecated, do not use. Use uri instead.
+   *
    * The hash of the resource content. For example, the Docker digest.
    * @return value or {@code null} for none
    */
@@ -61,6 +67,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated, do not use. Use uri instead.
+   *
    * The hash of the resource content. For example, the Docker digest.
    * @param contentHash contentHash or {@code null} for none
    */
@@ -70,6 +78,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated, do not use. Use uri instead.
+   *
    * The name of the resource. For example, the name of a Docker image - "Debian".
    * @return value or {@code null} for none
    */
@@ -78,6 +88,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated, do not use. Use uri instead.
+   *
    * The name of the resource. For example, the name of a Docker image - "Debian".
    * @param name name or {@code null} for none
    */

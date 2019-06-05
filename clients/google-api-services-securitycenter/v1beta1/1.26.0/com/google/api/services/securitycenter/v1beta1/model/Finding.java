@@ -51,7 +51,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which the event took place. For example, if the finding represents an open firewall
-   * it would capture the time the open firewall was detected.
+   * it would capture the time the detector believes the firewall became open. The accuracy is
+   * determined by the detector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +156,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which the event took place. For example, if the finding represents an open firewall
-   * it would capture the time the open firewall was detected.
+   * it would capture the time the detector believes the firewall became open. The accuracy is
+   * determined by the detector.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -164,7 +166,8 @@ public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which the event took place. For example, if the finding represents an open firewall
-   * it would capture the time the open firewall was detected.
+   * it would capture the time the detector believes the firewall became open. The accuracy is
+   * determined by the detector.
    * @param eventTime eventTime or {@code null} for none
    */
   public Finding setEventTime(String eventTime) {

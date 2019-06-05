@@ -52,7 +52,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   private OrderCustomer customer;
 
   /**
-   * The details for the delivery.
+   * Delivery details for shipments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +223,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details for the delivery.
+   * Delivery details for shipments.
    * @return value or {@code null} for none
    */
   public OrderDeliveryDetails getDeliveryDetails() {
@@ -231,7 +231,7 @@ public final class Order extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details for the delivery.
+   * Delivery details for shipments.
    * @param deliveryDetails deliveryDetails or {@code null} for none
    */
   public Order setDeliveryDetails(OrderDeliveryDetails deliveryDetails) {

@@ -55,9 +55,9 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   private java.lang.String goal;
 
   /**
-   * Optional. The Tensorflow summary tag name to use for optimizing trials. For current versions of
-   * Tensorflow, this tag name should exactly match what is shown in Tensorboard, including all
-   * scopes.  For versions of Tensorflow prior to 0.12, this should be only the tag passed to
+   * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of
+   * TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all
+   * scopes.  For versions of TensorFlow prior to 0.12, this should be only the tag passed to
    * tf.Summary. By default, "training/hptuning/metric" will be used.
    * The value may be {@code null}.
    */
@@ -173,9 +173,9 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   }
 
   /**
-   * Optional. The Tensorflow summary tag name to use for optimizing trials. For current versions of
-   * Tensorflow, this tag name should exactly match what is shown in Tensorboard, including all
-   * scopes.  For versions of Tensorflow prior to 0.12, this should be only the tag passed to
+   * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of
+   * TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all
+   * scopes.  For versions of TensorFlow prior to 0.12, this should be only the tag passed to
    * tf.Summary. By default, "training/hptuning/metric" will be used.
    * @return value or {@code null} for none
    */
@@ -184,9 +184,9 @@ public final class GoogleCloudMlV1HyperparameterSpec extends com.google.api.clie
   }
 
   /**
-   * Optional. The Tensorflow summary tag name to use for optimizing trials. For current versions of
-   * Tensorflow, this tag name should exactly match what is shown in Tensorboard, including all
-   * scopes.  For versions of Tensorflow prior to 0.12, this should be only the tag passed to
+   * Optional. The TensorFlow summary tag name to use for optimizing trials. For current versions of
+   * TensorFlow, this tag name should exactly match what is shown in TensorBoard, including all
+   * scopes.  For versions of TensorFlow prior to 0.12, this should be only the tag passed to
    * tf.Summary. By default, "training/hptuning/metric" will be used.
    * @param hyperparameterMetricTag hyperparameterMetricTag or {@code null} for none
    */

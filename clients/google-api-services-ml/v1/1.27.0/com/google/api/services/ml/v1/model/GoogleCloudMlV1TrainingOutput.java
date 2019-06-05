@@ -53,6 +53,15 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
   private java.lang.Double consumedMLUnits;
 
   /**
+   * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`Hyperpa
+   * rameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for
+   * more information. Only set for hyperparameter tuning jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hyperparameterMetricTag;
+
+  /**
    * Whether this job is a built-in Algorithm job.
    * The value may be {@code null}.
    */
@@ -129,6 +138,27 @@ public final class GoogleCloudMlV1TrainingOutput extends com.google.api.client.j
    */
   public GoogleCloudMlV1TrainingOutput setConsumedMLUnits(java.lang.Double consumedMLUnits) {
     this.consumedMLUnits = consumedMLUnits;
+    return this;
+  }
+
+  /**
+   * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`Hyperpa
+   * rameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for
+   * more information. Only set for hyperparameter tuning jobs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHyperparameterMetricTag() {
+    return hyperparameterMetricTag;
+  }
+
+  /**
+   * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`Hyperpa
+   * rameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for
+   * more information. Only set for hyperparameter tuning jobs.
+   * @param hyperparameterMetricTag hyperparameterMetricTag or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingOutput setHyperparameterMetricTag(java.lang.String hyperparameterMetricTag) {
+    this.hyperparameterMetricTag = hyperparameterMetricTag;
     return this;
   }
 

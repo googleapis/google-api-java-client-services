@@ -243,6 +243,13 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   private java.lang.String runtimeVersion;
 
   /**
+   * Optional. Specifies the service account for resource access control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Output only. The state of a version.
    * The value may be {@code null}.
    */
@@ -749,6 +756,23 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setRuntimeVersion(java.lang.String runtimeVersion) {
     this.runtimeVersion = runtimeVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the service account for resource access control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. Specifies the service account for resource access control.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

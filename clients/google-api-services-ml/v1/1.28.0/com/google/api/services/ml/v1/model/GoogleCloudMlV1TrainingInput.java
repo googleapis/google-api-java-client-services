@@ -118,6 +118,13 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
   private java.lang.String masterType;
 
   /**
+   * Optional. The maximum job running time. The default is 7 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxRunningTime;
+
+  /**
    * Required. The Google Cloud Storage location of the packages with the training program and any
    * additional dependencies. The maximum number of package URIs is 100.
    * The value may be {@code null}.
@@ -440,6 +447,23 @@ public final class GoogleCloudMlV1TrainingInput extends com.google.api.client.js
    */
   public GoogleCloudMlV1TrainingInput setMasterType(java.lang.String masterType) {
     this.masterType = masterType;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum job running time. The default is 7 days.
+   * @return value or {@code null} for none
+   */
+  public String getMaxRunningTime() {
+    return maxRunningTime;
+  }
+
+  /**
+   * Optional. The maximum job running time. The default is 7 days.
+   * @param maxRunningTime maxRunningTime or {@code null} for none
+   */
+  public GoogleCloudMlV1TrainingInput setMaxRunningTime(String maxRunningTime) {
+    this.maxRunningTime = maxRunningTime;
     return this;
   }
 

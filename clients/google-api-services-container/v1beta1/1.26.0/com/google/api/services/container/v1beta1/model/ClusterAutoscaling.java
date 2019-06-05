@@ -33,6 +33,14 @@ package com.google.api.services.container.v1beta1.model;
 public final class ClusterAutoscaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes can be created by NAP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> autoprovisioningLocations;
+
+  /**
    * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
    * The value may be {@code null}.
    */
@@ -52,6 +60,25 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceLimit> resourceLimits;
+
+  /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes can be created by NAP.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAutoprovisioningLocations() {
+    return autoprovisioningLocations;
+  }
+
+  /**
+   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
+   * NodePool's nodes can be created by NAP.
+   * @param autoprovisioningLocations autoprovisioningLocations or {@code null} for none
+   */
+  public ClusterAutoscaling setAutoprovisioningLocations(java.util.List<java.lang.String> autoprovisioningLocations) {
+    this.autoprovisioningLocations = autoprovisioningLocations;
+    return this;
+  }
 
   /**
    * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.

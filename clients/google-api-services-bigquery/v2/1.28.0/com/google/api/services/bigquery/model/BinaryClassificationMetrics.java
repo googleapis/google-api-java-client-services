@@ -44,6 +44,20 @@ public final class BinaryClassificationMetrics extends com.google.api.client.jso
   private java.util.List<BinaryConfusionMatrix> binaryConfusionMatrixList;
 
   /**
+   * Label representing the negative class.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String negativeLabel;
+
+  /**
+   * Label representing the positive class.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String positiveLabel;
+
+  /**
    * Aggregate classification metrics.
    * @return value or {@code null} for none
    */
@@ -74,6 +88,40 @@ public final class BinaryClassificationMetrics extends com.google.api.client.jso
    */
   public BinaryClassificationMetrics setBinaryConfusionMatrixList(java.util.List<BinaryConfusionMatrix> binaryConfusionMatrixList) {
     this.binaryConfusionMatrixList = binaryConfusionMatrixList;
+    return this;
+  }
+
+  /**
+   * Label representing the negative class.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNegativeLabel() {
+    return negativeLabel;
+  }
+
+  /**
+   * Label representing the negative class.
+   * @param negativeLabel negativeLabel or {@code null} for none
+   */
+  public BinaryClassificationMetrics setNegativeLabel(java.lang.String negativeLabel) {
+    this.negativeLabel = negativeLabel;
+    return this;
+  }
+
+  /**
+   * Label representing the positive class.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPositiveLabel() {
+    return positiveLabel;
+  }
+
+  /**
+   * Label representing the positive class.
+   * @param positiveLabel positiveLabel or {@code null} for none
+   */
+  public BinaryClassificationMetrics setPositiveLabel(java.lang.String positiveLabel) {
+    this.positiveLabel = positiveLabel;
     return this;
   }
 

@@ -30,7 +30,8 @@ package com.google.api.services.healthcare.v1alpha2.model;
 public final class ImportResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The content structure in the source location. The default is BUNDLE.
+   * The content structure in the source location. If not specified, the server treats the input
+   * source files as BUNDLE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,19 +54,16 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
    *
    * The Cloud Storage location requires the `roles/storage.objectViewer` Cloud IAM role.
    *
-   * Each Cloud Storage object should be a text file that contains newline delimited JSON structures
-   * conforming to FHIR standard.
-   *
-   * To improve performance, use multiple Cloud Storage objects where each object contains a subset
-   * of all of the newline-delimited JSON structures. You can select all of the objects using the
-   * uri as the prefix. The maximum number of objects is 1,000.
+   * Each Cloud Storage object should be a text file that contains the format specified in
+   * ContentStructu.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudHealthcareV1alpha2FhirRestGcsSource gcsSource;
 
   /**
-   * The content structure in the source location. The default is BUNDLE.
+   * The content structure in the source location. If not specified, the server treats the input
+   * source files as BUNDLE.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentStructure() {
@@ -73,7 +71,8 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The content structure in the source location. The default is BUNDLE.
+   * The content structure in the source location. If not specified, the server treats the input
+   * source files as BUNDLE.
    * @param contentStructure contentStructure or {@code null} for none
    */
   public ImportResourcesRequest setContentStructure(java.lang.String contentStructure) {
@@ -113,12 +112,8 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
    *
    * The Cloud Storage location requires the `roles/storage.objectViewer` Cloud IAM role.
    *
-   * Each Cloud Storage object should be a text file that contains newline delimited JSON structures
-   * conforming to FHIR standard.
-   *
-   * To improve performance, use multiple Cloud Storage objects where each object contains a subset
-   * of all of the newline-delimited JSON structures. You can select all of the objects using the
-   * uri as the prefix. The maximum number of objects is 1,000.
+   * Each Cloud Storage object should be a text file that contains the format specified in
+   * ContentStructu.
    * @return value or {@code null} for none
    */
   public GoogleCloudHealthcareV1alpha2FhirRestGcsSource getGcsSource() {
@@ -130,12 +125,8 @@ public final class ImportResourcesRequest extends com.google.api.client.json.Gen
    *
    * The Cloud Storage location requires the `roles/storage.objectViewer` Cloud IAM role.
    *
-   * Each Cloud Storage object should be a text file that contains newline delimited JSON structures
-   * conforming to FHIR standard.
-   *
-   * To improve performance, use multiple Cloud Storage objects where each object contains a subset
-   * of all of the newline-delimited JSON structures. You can select all of the objects using the
-   * uri as the prefix. The maximum number of objects is 1,000.
+   * Each Cloud Storage object should be a text file that contains the format specified in
+   * ContentStructu.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public ImportResourcesRequest setGcsSource(GoogleCloudHealthcareV1alpha2FhirRestGcsSource gcsSource) {

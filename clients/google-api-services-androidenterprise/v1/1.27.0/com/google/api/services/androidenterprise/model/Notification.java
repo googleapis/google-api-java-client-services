@@ -44,6 +44,13 @@ public final class Notification extends com.google.api.client.json.GenericJson {
   private AppUpdateEvent appUpdateEvent;
 
   /**
+   * Notifications about device report updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceReportUpdateEvent deviceReportUpdateEvent;
+
+  /**
    * The ID of the enterprise for which the notification is sent. This will always be present.
    * The value may be {@code null}.
    */
@@ -131,6 +138,23 @@ public final class Notification extends com.google.api.client.json.GenericJson {
    */
   public Notification setAppUpdateEvent(AppUpdateEvent appUpdateEvent) {
     this.appUpdateEvent = appUpdateEvent;
+    return this;
+  }
+
+  /**
+   * Notifications about device report updates.
+   * @return value or {@code null} for none
+   */
+  public DeviceReportUpdateEvent getDeviceReportUpdateEvent() {
+    return deviceReportUpdateEvent;
+  }
+
+  /**
+   * Notifications about device report updates.
+   * @param deviceReportUpdateEvent deviceReportUpdateEvent or {@code null} for none
+   */
+  public Notification setDeviceReportUpdateEvent(DeviceReportUpdateEvent deviceReportUpdateEvent) {
+    this.deviceReportUpdateEvent = deviceReportUpdateEvent;
     return this;
   }
 

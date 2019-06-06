@@ -143,6 +143,143 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
   public class Devices {
 
     /**
+     * Uploads a report containing any changes in app states on the device since the last report was
+     * generated. You can call this method up to 3 times every 24 hours for a given device.
+     *
+     * Create a request for the method "devices.forceReportUpload".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link ForceReportUpload#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param enterpriseId The ID of the enterprise.
+     * @param userId The ID of the user.
+     * @param deviceId The ID of the device.
+     * @return the request
+     */
+    public ForceReportUpload forceReportUpload(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId) throws java.io.IOException {
+      ForceReportUpload result = new ForceReportUpload(enterpriseId, userId, deviceId);
+      initialize(result);
+      return result;
+    }
+
+    public class ForceReportUpload extends AndroidEnterpriseRequest<Void> {
+
+      private static final String REST_PATH = "enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/forceReportUpload";
+
+      /**
+       * Uploads a report containing any changes in app states on the device since the last report was
+       * generated. You can call this method up to 3 times every 24 hours for a given device.
+       *
+       * Create a request for the method "devices.forceReportUpload".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link ForceReportUpload#execute()} method to invoke the
+       * remote operation. <p> {@link ForceReportUpload#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param enterpriseId The ID of the enterprise.
+       * @param userId The ID of the user.
+       * @param deviceId The ID of the device.
+       * @since 1.13
+       */
+      protected ForceReportUpload(java.lang.String enterpriseId, java.lang.String userId, java.lang.String deviceId) {
+        super(AndroidEnterprise.this, "POST", REST_PATH, null, Void.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
+        this.deviceId = com.google.api.client.util.Preconditions.checkNotNull(deviceId, "Required parameter deviceId must be specified.");
+      }
+
+      @Override
+      public ForceReportUpload setAlt(java.lang.String alt) {
+        return (ForceReportUpload) super.setAlt(alt);
+      }
+
+      @Override
+      public ForceReportUpload setFields(java.lang.String fields) {
+        return (ForceReportUpload) super.setFields(fields);
+      }
+
+      @Override
+      public ForceReportUpload setKey(java.lang.String key) {
+        return (ForceReportUpload) super.setKey(key);
+      }
+
+      @Override
+      public ForceReportUpload setOauthToken(java.lang.String oauthToken) {
+        return (ForceReportUpload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ForceReportUpload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ForceReportUpload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ForceReportUpload setQuotaUser(java.lang.String quotaUser) {
+        return (ForceReportUpload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ForceReportUpload setUserIp(java.lang.String userIp) {
+        return (ForceReportUpload) super.setUserIp(userIp);
+      }
+
+      /** The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** The ID of the enterprise. */
+      public ForceReportUpload setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /** The ID of the user. */
+      @com.google.api.client.util.Key
+      private java.lang.String userId;
+
+      /** The ID of the user.
+       */
+      public java.lang.String getUserId() {
+        return userId;
+      }
+
+      /** The ID of the user. */
+      public ForceReportUpload setUserId(java.lang.String userId) {
+        this.userId = userId;
+        return this;
+      }
+
+      /** The ID of the device. */
+      @com.google.api.client.util.Key
+      private java.lang.String deviceId;
+
+      /** The ID of the device.
+       */
+      public java.lang.String getDeviceId() {
+        return deviceId;
+      }
+
+      /** The ID of the device. */
+      public ForceReportUpload setDeviceId(java.lang.String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+      }
+
+      @Override
+      public ForceReportUpload set(String parameterName, Object value) {
+        return (ForceReportUpload) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves the details of a device.
      *
      * Create a request for the method "devices.get".

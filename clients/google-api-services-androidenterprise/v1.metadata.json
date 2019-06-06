@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-androidenterprise",
-    "version": "v1-rev20190401-1.28.0"
+    "version": "v1-rev20190530-1.28.0"
   }
 }

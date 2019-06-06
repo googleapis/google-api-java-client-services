@@ -68,6 +68,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private Policy policy;
 
   /**
+   * The device report updated with the latest app states.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceReport report;
+
+  /**
    * The Google Play Services Android ID for the device encoded as a lowercase hex string. For
    * example, "123456789abcdef0".
    * @return value or {@code null} for none
@@ -150,6 +157,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setPolicy(Policy policy) {
     this.policy = policy;
+    return this;
+  }
+
+  /**
+   * The device report updated with the latest app states.
+   * @return value or {@code null} for none
+   */
+  public DeviceReport getReport() {
+    return report;
+  }
+
+  /**
+   * The device report updated with the latest app states.
+   * @param report report or {@code null} for none
+   */
+  public Device setReport(DeviceReport report) {
+    this.report = report;
     return this;
   }
 

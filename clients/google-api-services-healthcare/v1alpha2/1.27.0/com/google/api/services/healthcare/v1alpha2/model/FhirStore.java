@@ -111,6 +111,21 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * A list of streaming configs that configure the destinations of streaming export for every
+   * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
+   * After a new config is added, the next resource mutation will be streamed to the new location in
+   * addition to the existing ones. When a location is removed from the list, the server will simply
+   * stop streaming to that location. Before adding a new config, you must add the required
+   * [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-
+   * control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service
+   * account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order
+   * of dozens of seconds) is expected before the results show up in the streaming destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StreamConfig> streamConfigs;
+
+  /**
    * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
    * store creation. The default value is false, meaning that the API will enforce referential
    * integrity and fail the requests that will result in inconsistent state in the FHIR store. When
@@ -290,6 +305,39 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * A list of streaming configs that configure the destinations of streaming export for every
+   * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
+   * After a new config is added, the next resource mutation will be streamed to the new location in
+   * addition to the existing ones. When a location is removed from the list, the server will simply
+   * stop streaming to that location. Before adding a new config, you must add the required
+   * [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-
+   * control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service
+   * account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order
+   * of dozens of seconds) is expected before the results show up in the streaming destination.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StreamConfig> getStreamConfigs() {
+    return streamConfigs;
+  }
+
+  /**
+   * A list of streaming configs that configure the destinations of streaming export for every
+   * resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs.
+   * After a new config is added, the next resource mutation will be streamed to the new location in
+   * addition to the existing ones. When a location is removed from the list, the server will simply
+   * stop streaming to that location. Before adding a new config, you must add the required
+   * [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-
+   * control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service
+   * account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order
+   * of dozens of seconds) is expected before the results show up in the streaming destination.
+   * @param streamConfigs streamConfigs or {@code null} for none
+   */
+  public FhirStore setStreamConfigs(java.util.List<StreamConfig> streamConfigs) {
+    this.streamConfigs = streamConfigs;
     return this;
   }
 

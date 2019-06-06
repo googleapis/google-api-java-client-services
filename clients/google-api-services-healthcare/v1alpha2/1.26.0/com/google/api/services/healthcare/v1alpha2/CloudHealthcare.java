@@ -510,7 +510,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         /**
          * Creates a new health dataset. Results are returned through the Operation interface which returns
          * either an `Operation.response` which contains a Dataset or `Operation.error`. The metadata field
-         * type is OperationMetadata.
+         * type is OperationMetadata. A Google Cloud Platform project can contain up to 500 datasets across
+         * all regions.
          *
          * Create a request for the method "datasets.create".
          *
@@ -538,7 +539,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Creates a new health dataset. Results are returned through the Operation interface which
            * returns either an `Operation.response` which contains a Dataset or `Operation.error`. The
-           * metadata field type is OperationMetadata.
+           * metadata field type is OperationMetadata. A Google Cloud Platform project can contain up to 500
+           * datasets across all regions.
            *
            * Create a request for the method "datasets.create".
            *

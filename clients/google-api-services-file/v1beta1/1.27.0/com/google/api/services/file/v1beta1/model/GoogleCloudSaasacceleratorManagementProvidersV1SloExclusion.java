@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * A temporal SLO exclusion specification.
+ * SloExclusion represents an excusion in SLI calculation applies to all SLOs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -59,12 +59,12 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
   private java.lang.String reason;
 
   /**
-   * Name of an SLI/SLO that this exclusion applies to. Can be left empty, signaling that the
-   * instance should be excluded from all SLI/SLOs defined in the service SLO configuration.
+   * Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance
+   * should be excluded from all SLIs defined in the service SLO configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sloName;
+  private java.lang.String sliName;
 
   /**
    * Exclusion duration. No restrictions on the possible values.
@@ -134,21 +134,21 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion e
   }
 
   /**
-   * Name of an SLI/SLO that this exclusion applies to. Can be left empty, signaling that the
-   * instance should be excluded from all SLI/SLOs defined in the service SLO configuration.
+   * Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance
+   * should be excluded from all SLIs defined in the service SLO configuration.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSloName() {
-    return sloName;
+  public java.lang.String getSliName() {
+    return sliName;
   }
 
   /**
-   * Name of an SLI/SLO that this exclusion applies to. Can be left empty, signaling that the
-   * instance should be excluded from all SLI/SLOs defined in the service SLO configuration.
-   * @param sloName sloName or {@code null} for none
+   * Name of an SLI that this exclusion applies to. Can be left empty, signaling that the instance
+   * should be excluded from all SLIs defined in the service SLO configuration.
+   * @param sliName sliName or {@code null} for none
    */
-  public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setSloName(java.lang.String sloName) {
-    this.sloName = sloName;
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion setSliName(java.lang.String sliName) {
+    this.sliName = sliName;
     return this;
   }
 

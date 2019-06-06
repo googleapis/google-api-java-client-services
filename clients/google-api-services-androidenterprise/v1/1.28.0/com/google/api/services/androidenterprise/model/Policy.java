@@ -39,6 +39,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String autoUpdatePolicy;
 
   /**
+   * Whether the device reports app states to the EMM. The default value is "deviceReportDisabled".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceReportPolicy;
+
+  /**
    * The maintenance window defining when apps running in the foreground should be updated.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setAutoUpdatePolicy(java.lang.String autoUpdatePolicy) {
     this.autoUpdatePolicy = autoUpdatePolicy;
+    return this;
+  }
+
+  /**
+   * Whether the device reports app states to the EMM. The default value is "deviceReportDisabled".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceReportPolicy() {
+    return deviceReportPolicy;
+  }
+
+  /**
+   * Whether the device reports app states to the EMM. The default value is "deviceReportDisabled".
+   * @param deviceReportPolicy deviceReportPolicy or {@code null} for none
+   */
+  public Policy setDeviceReportPolicy(java.lang.String deviceReportPolicy) {
+    this.deviceReportPolicy = deviceReportPolicy;
     return this;
   }
 

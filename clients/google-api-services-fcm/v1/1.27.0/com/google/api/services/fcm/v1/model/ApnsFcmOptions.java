@@ -30,6 +30,30 @@ package com.google.api.services.fcm.v1.model;
 @SuppressWarnings("javadoc")
 public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Label that the message's analytics data will be associated with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String analyticsLabel;
+
+  /**
+   * Label that the message's analytics data will be associated with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnalyticsLabel() {
+    return analyticsLabel;
+  }
+
+  /**
+   * Label that the message's analytics data will be associated with.
+   * @param analyticsLabel analyticsLabel or {@code null} for none
+   */
+  public ApnsFcmOptions setAnalyticsLabel(java.lang.String analyticsLabel) {
+    this.analyticsLabel = analyticsLabel;
+    return this;
+  }
+
   @Override
   public ApnsFcmOptions set(String fieldName, Object value) {
     return (ApnsFcmOptions) super.set(fieldName, value);

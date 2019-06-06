@@ -60,6 +60,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> data;
 
   /**
+   * Input only. Template for FCM SDK feature options to use across all platforms.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FcmOptions fcmOptions;
+
+  /**
    * Output Only. The identifier of the message sent, in the format of
    * `projects/messages/{message_id}`.
    * The value may be {@code null}.
@@ -163,6 +170,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setData(java.util.Map<String, java.lang.String> data) {
     this.data = data;
+    return this;
+  }
+
+  /**
+   * Input only. Template for FCM SDK feature options to use across all platforms.
+   * @return value or {@code null} for none
+   */
+  public FcmOptions getFcmOptions() {
+    return fcmOptions;
+  }
+
+  /**
+   * Input only. Template for FCM SDK feature options to use across all platforms.
+   * @param fcmOptions fcmOptions or {@code null} for none
+   */
+  public Message setFcmOptions(FcmOptions fcmOptions) {
+    this.fcmOptions = fcmOptions;
     return this;
   }
 

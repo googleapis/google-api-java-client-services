@@ -17,7 +17,7 @@
 package com.google.api.services.fcm.v1.model;
 
 /**
- * Options for features provided by the FCM SDK for iOS.
+ * Options for features provided by the FCM SDK for Android.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Cloud Messaging API. For a detailed
@@ -28,7 +28,7 @@ package com.google.api.services.fcm.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson {
+public final class AndroidFcmOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Label that the message's analytics data will be associated with.
@@ -49,19 +49,19 @@ public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson
    * Label that the message's analytics data will be associated with.
    * @param analyticsLabel analyticsLabel or {@code null} for none
    */
-  public ApnsFcmOptions setAnalyticsLabel(java.lang.String analyticsLabel) {
+  public AndroidFcmOptions setAnalyticsLabel(java.lang.String analyticsLabel) {
     this.analyticsLabel = analyticsLabel;
     return this;
   }
 
   @Override
-  public ApnsFcmOptions set(String fieldName, Object value) {
-    return (ApnsFcmOptions) super.set(fieldName, value);
+  public AndroidFcmOptions set(String fieldName, Object value) {
+    return (AndroidFcmOptions) super.set(fieldName, value);
   }
 
   @Override
-  public ApnsFcmOptions clone() {
-    return (ApnsFcmOptions) super.clone();
+  public AndroidFcmOptions clone() {
+    return (AndroidFcmOptions) super.clone();
   }
 
 }

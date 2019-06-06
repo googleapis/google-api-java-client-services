@@ -48,6 +48,13 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> data;
 
   /**
+   * Options for features provided by the FCM SDK for Android.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AndroidFcmOptions fcmOptions;
+
+  /**
    * Notification to send to android devices.
    * The value may be {@code null}.
    */
@@ -119,6 +126,23 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
    */
   public AndroidConfig setData(java.util.Map<String, java.lang.String> data) {
     this.data = data;
+    return this;
+  }
+
+  /**
+   * Options for features provided by the FCM SDK for Android.
+   * @return value or {@code null} for none
+   */
+  public AndroidFcmOptions getFcmOptions() {
+    return fcmOptions;
+  }
+
+  /**
+   * Options for features provided by the FCM SDK for Android.
+   * @param fcmOptions fcmOptions or {@code null} for none
+   */
+  public AndroidConfig setFcmOptions(AndroidFcmOptions fcmOptions) {
+    this.fcmOptions = fcmOptions;
     return this;
   }
 

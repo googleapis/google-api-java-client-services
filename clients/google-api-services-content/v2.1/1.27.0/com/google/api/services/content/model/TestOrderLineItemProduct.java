@@ -52,6 +52,19 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
   private java.lang.String contentLanguage;
 
   /**
+   * Fees for the item. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OrderLineItemProductFee> fees;
+
+  static {
+    // hack to force ProGuard to consider OrderLineItemProductFee used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(OrderLineItemProductFee.class);
+  }
+
+  /**
    * Global Trade Item Number (GTIN) of the item. Optional.
    * The value may be {@code null}.
    */
@@ -169,6 +182,23 @@ public final class TestOrderLineItemProduct extends com.google.api.client.json.G
    */
   public TestOrderLineItemProduct setContentLanguage(java.lang.String contentLanguage) {
     this.contentLanguage = contentLanguage;
+    return this;
+  }
+
+  /**
+   * Fees for the item. Optional.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OrderLineItemProductFee> getFees() {
+    return fees;
+  }
+
+  /**
+   * Fees for the item. Optional.
+   * @param fees fees or {@code null} for none
+   */
+  public TestOrderLineItemProduct setFees(java.util.List<OrderLineItemProductFee> fees) {
+    this.fees = fees;
     return this;
   }
 

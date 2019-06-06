@@ -31,6 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class SubscriptionPurchase extends com.google.api.client.json.GenericJson {
 
   /**
+   * The acknowledgement state of the subscription product. Possible values are: - Yet to be
+   * acknowledged  - Acknowledged
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer acknowledgementState;
+
+  /**
    * Whether the subscription will automatically be renewed when it reaches its current expiry time.
    * The value may be {@code null}.
    */
@@ -212,6 +220,25 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userCancellationTimeMillis;
+
+  /**
+   * The acknowledgement state of the subscription product. Possible values are: - Yet to be
+   * acknowledged  - Acknowledged
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAcknowledgementState() {
+    return acknowledgementState;
+  }
+
+  /**
+   * The acknowledgement state of the subscription product. Possible values are: - Yet to be
+   * acknowledged  - Acknowledged
+   * @param acknowledgementState acknowledgementState or {@code null} for none
+   */
+  public SubscriptionPurchase setAcknowledgementState(java.lang.Integer acknowledgementState) {
+    this.acknowledgementState = acknowledgementState;
+    return this;
+  }
 
   /**
    * Whether the subscription will automatically be renewed when it reaches its current expiry time.

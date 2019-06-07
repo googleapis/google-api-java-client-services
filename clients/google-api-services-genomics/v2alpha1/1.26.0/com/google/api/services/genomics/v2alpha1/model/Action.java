@@ -121,7 +121,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * An optional name for the container. The container hostname will be set to this name, making it
    * useful for inter-container communication. The name must contain only upper and lowercase
-   * alphanumeric characters and hypens and cannot start with a hypen.
+   * alphanumeric characters and hypens and cannot start with a hyphen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +363,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * An optional name for the container. The container hostname will be set to this name, making it
    * useful for inter-container communication. The name must contain only upper and lowercase
-   * alphanumeric characters and hypens and cannot start with a hypen.
+   * alphanumeric characters and hypens and cannot start with a hyphen.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -373,7 +373,7 @@ public final class Action extends com.google.api.client.json.GenericJson {
   /**
    * An optional name for the container. The container hostname will be set to this name, making it
    * useful for inter-container communication. The name must contain only upper and lowercase
-   * alphanumeric characters and hypens and cannot start with a hypen.
+   * alphanumeric characters and hypens and cannot start with a hyphen.
    * @param name name or {@code null} for none
    */
   public Action setName(java.lang.String name) {

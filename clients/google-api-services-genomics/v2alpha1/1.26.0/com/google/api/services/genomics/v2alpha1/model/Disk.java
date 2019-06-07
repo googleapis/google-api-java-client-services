@@ -35,7 +35,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * A user-supplied name for the disk. Used when mounting the disk into actions. The name must
    * contain only upper and lowercase alphanumeric characters and hypens and cannot start with a
-   * hypen.
+   * hyphen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * A user-supplied name for the disk. Used when mounting the disk into actions. The name must
    * contain only upper and lowercase alphanumeric characters and hypens and cannot start with a
-   * hypen.
+   * hyphen.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +80,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * A user-supplied name for the disk. Used when mounting the disk into actions. The name must
    * contain only upper and lowercase alphanumeric characters and hypens and cannot start with a
-   * hypen.
+   * hyphen.
    * @param name name or {@code null} for none
    */
   public Disk setName(java.lang.String name) {

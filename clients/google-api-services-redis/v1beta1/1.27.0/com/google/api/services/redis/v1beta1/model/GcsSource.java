@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * The GCS location for the input content
+ * The Cloud Storage location for the input content
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a

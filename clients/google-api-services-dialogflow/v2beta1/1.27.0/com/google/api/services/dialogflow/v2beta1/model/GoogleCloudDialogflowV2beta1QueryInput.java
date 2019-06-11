@@ -21,7 +21,7 @@ package com.google.api.services.dialogflow.v2beta1.model;
  *
  * 1.  An audio config which     instructs the speech recognizer how to process the speech audio.
  *
- * 2.  A conversational query in the form of text,.
+ * 2.  A conversational query in the form of text.
  *
  * 3.  An event that specifies which intent to trigger.
  *

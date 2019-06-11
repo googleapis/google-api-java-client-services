@@ -37,6 +37,15 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
   private java.lang.String audioEncoding;
 
   /**
+   * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
+   * information about the recognized speech words, e.g. start and end time offsets. If false or
+   * unspecified, Speech doesn't return any word-level information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableWordInfo;
+
+  /**
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
    * [Language Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for
    * a list of the currently supported language codes. Note that queries in the same session do not
@@ -67,9 +76,11 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
   private java.lang.String modelVariant;
 
   /**
-   * Optional. The collection of phrase hints which are used to boost accuracy of speech
-   * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details.
+   * Optional. A list of strings containing words and phrases that the speech recognizer should
+   * recognize with higher likelihood.
+   *
+   * See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics
+   * #phrase-hints) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +108,27 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
     this.audioEncoding = audioEncoding;
+    return this;
+  }
+
+  /**
+   * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
+   * information about the recognized speech words, e.g. start and end time offsets. If false or
+   * unspecified, Speech doesn't return any word-level information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableWordInfo() {
+    return enableWordInfo;
+  }
+
+  /**
+   * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
+   * information about the recognized speech words, e.g. start and end time offsets. If false or
+   * unspecified, Speech doesn't return any word-level information.
+   * @param enableWordInfo enableWordInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setEnableWordInfo(java.lang.Boolean enableWordInfo) {
+    this.enableWordInfo = enableWordInfo;
     return this;
   }
 
@@ -170,9 +202,11 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
   }
 
   /**
-   * Optional. The collection of phrase hints which are used to boost accuracy of speech
-   * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details.
+   * Optional. A list of strings containing words and phrases that the speech recognizer should
+   * recognize with higher likelihood.
+   *
+   * See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics
+   * #phrase-hints) for more details.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseHints() {
@@ -180,9 +214,11 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
   }
 
   /**
-   * Optional. The collection of phrase hints which are used to boost accuracy of speech
-   * recognition. Refer to [Cloud Speech API documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details.
+   * Optional. A list of strings containing words and phrases that the speech recognizer should
+   * recognize with higher likelihood.
+   *
+   * See [the Cloud Speech documentation](https://cloud.google.com/speech-to-text/docs/basics
+   * #phrase-hints) for more details.
    * @param phraseHints phraseHints or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {

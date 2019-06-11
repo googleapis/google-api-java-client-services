@@ -30,6 +30,13 @@ package com.google.api.services.vault.v1.model;
 public final class DriveOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Set to true to include shared drive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeSharedDrives;
+
+  /**
    * Set to true to include Team Drive.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String versionDate;
+
+  /**
+   * Set to true to include shared drive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeSharedDrives() {
+    return includeSharedDrives;
+  }
+
+  /**
+   * Set to true to include shared drive.
+   * @param includeSharedDrives includeSharedDrives or {@code null} for none
+   */
+  public DriveOptions setIncludeSharedDrives(java.lang.Boolean includeSharedDrives) {
+    this.includeSharedDrives = includeSharedDrives;
+    return this;
+  }
 
   /**
    * Set to true to include Team Drive.

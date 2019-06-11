@@ -87,6 +87,15 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private MailOptions mailOptions;
 
   /**
+   * The search method to use. This field is similar to the search_method field but is introduced to
+   * support shared drives. It supports all search method types. In case the search_method is
+   * TEAM_DRIVE the response of this field will be SHARED_DRIVE only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String method;
+
+  /**
    * When 'ORG_UNIT' is chosen as as search method, org_unit_info needs to be specified.
    * The value may be {@code null}.
    */
@@ -99,6 +108,13 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String searchMethod;
+
+  /**
+   * When 'SHARED_DRIVE' is chosen as search method, shared_drive_info needs to be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SharedDriveInfo sharedDriveInfo;
 
   /**
    * The start time range for the search query. These timestamps are in GMT and rounded down to the
@@ -269,6 +285,27 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The search method to use. This field is similar to the search_method field but is introduced to
+   * support shared drives. It supports all search method types. In case the search_method is
+   * TEAM_DRIVE the response of this field will be SHARED_DRIVE only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMethod() {
+    return method;
+  }
+
+  /**
+   * The search method to use. This field is similar to the search_method field but is introduced to
+   * support shared drives. It supports all search method types. In case the search_method is
+   * TEAM_DRIVE the response of this field will be SHARED_DRIVE only.
+   * @param method method or {@code null} for none
+   */
+  public Query setMethod(java.lang.String method) {
+    this.method = method;
+    return this;
+  }
+
+  /**
    * When 'ORG_UNIT' is chosen as as search method, org_unit_info needs to be specified.
    * @return value or {@code null} for none
    */
@@ -299,6 +336,23 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setSearchMethod(java.lang.String searchMethod) {
     this.searchMethod = searchMethod;
+    return this;
+  }
+
+  /**
+   * When 'SHARED_DRIVE' is chosen as search method, shared_drive_info needs to be specified.
+   * @return value or {@code null} for none
+   */
+  public SharedDriveInfo getSharedDriveInfo() {
+    return sharedDriveInfo;
+  }
+
+  /**
+   * When 'SHARED_DRIVE' is chosen as search method, shared_drive_info needs to be specified.
+   * @param sharedDriveInfo sharedDriveInfo or {@code null} for none
+   */
+  public Query setSharedDriveInfo(SharedDriveInfo sharedDriveInfo) {
+    this.sharedDriveInfo = sharedDriveInfo;
     return this;
   }
 

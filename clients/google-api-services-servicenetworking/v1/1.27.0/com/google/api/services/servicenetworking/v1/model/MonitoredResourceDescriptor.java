@@ -25,8 +25,6 @@ package com.google.api.services.servicenetworking.v1.model;
  * Different APIs can support different monitored resource types. APIs generally provide a `list`
  * method that returns the monitored resource descriptors used by the API.
  *
- * Next ID: 10
- *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation
  * see:

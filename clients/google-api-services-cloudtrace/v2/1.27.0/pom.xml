@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudtrace</artifactId>
-  <version>v2-rev20190312-1.27.0</version>
-  <name>Stackdriver Trace API v2-rev20190312-1.27.0</name>
+  <version>v2-rev20190605-1.27.0</version>
+  <name>Stackdriver Trace API v2-rev20190605-1.27.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

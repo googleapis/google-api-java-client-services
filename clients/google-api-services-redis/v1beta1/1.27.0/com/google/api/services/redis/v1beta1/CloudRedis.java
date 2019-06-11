@@ -852,7 +852,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Export Redis instance data into a Redis RDB format file in GCS.
+         * Export Redis instance data into a Redis RDB format file in Cloud Storage.
          *
          * Redis will continue serving during this operation.
          *
@@ -885,7 +885,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Export Redis instance data into a Redis RDB format file in GCS.
+           * Export Redis instance data into a Redis RDB format file in Cloud Storage.
            *
            * Redis will continue serving during this operation.
            *
@@ -1162,7 +1162,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Import a Redis RDB snapshot file from GCS into a Redis instance.
+         * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
          *
          * Redis may stop serving during this operation. Instance state will be IMPORTING for entire
          * operation. When complete, the instance will contain only data from the imported file.
@@ -1196,7 +1196,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Import a Redis RDB snapshot file from GCS into a Redis instance.
+           * Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
            *
            * Redis may stop serving during this operation. Instance state will be IMPORTING for entire
            * operation. When complete, the instance will contain only data from the imported file.

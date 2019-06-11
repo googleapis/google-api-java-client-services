@@ -63,8 +63,6 @@ public final class ImageProperties extends com.google.api.client.json.GenericJso
 
   /**
    * The crop properties of the image.
-   *
-   * After cropping, the image will be stretched to fit in its container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +161,6 @@ public final class ImageProperties extends com.google.api.client.json.GenericJso
 
   /**
    * The crop properties of the image.
-   *
-   * After cropping, the image will be stretched to fit in its container.
    * @return value or {@code null} for none
    */
   public CropProperties getCropProperties() {
@@ -173,8 +169,6 @@ public final class ImageProperties extends com.google.api.client.json.GenericJso
 
   /**
    * The crop properties of the image.
-   *
-   * After cropping, the image will be stretched to fit in its container.
    * @param cropProperties cropProperties or {@code null} for none
    */
   public ImageProperties setCropProperties(CropProperties cropProperties) {

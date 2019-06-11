@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-docs</artifactId>
-  <version>v1-rev20190530-1.26.0</version>
-  <name>Google Docs API v1-rev20190530-1.26.0</name>
+  <version>v1-rev20190604-1.26.0</version>
+  <name>Google Docs API v1-rev20190604-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -45,9 +45,10 @@ public final class IpMapping extends com.google.api.client.json.GenericJson {
   private com.google.api.client.util.DateTime timeToRetire;
 
   /**
-   * The type of this IP address. A PRIMARY address is an address that can accept incoming
-   * connections. An OUTGOING address is the source address of connections originating from the
-   * instance, if supported.
+   * The type of this IP address. A PRIMARY address is a public address that can accept incoming
+   * connections. A PRIVATE address is a private address that can accept incoming connections. An
+   * OUTGOING address is the source address of connections originating from the instance, if
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +91,10 @@ public final class IpMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this IP address. A PRIMARY address is an address that can accept incoming
-   * connections. An OUTGOING address is the source address of connections originating from the
-   * instance, if supported.
+   * The type of this IP address. A PRIMARY address is a public address that can accept incoming
+   * connections. A PRIVATE address is a private address that can accept incoming connections. An
+   * OUTGOING address is the source address of connections originating from the instance, if
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -100,9 +102,10 @@ public final class IpMapping extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this IP address. A PRIMARY address is an address that can accept incoming
-   * connections. An OUTGOING address is the source address of connections originating from the
-   * instance, if supported.
+   * The type of this IP address. A PRIMARY address is a public address that can accept incoming
+   * connections. A PRIVATE address is a private address that can accept incoming connections. An
+   * OUTGOING address is the source address of connections originating from the instance, if
+   * supported.
    * @param type type or {@code null} for none
    */
   public IpMapping setType(java.lang.String type) {

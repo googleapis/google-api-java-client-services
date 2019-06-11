@@ -17,8 +17,9 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Rule for modifying a CustomInfoType to alter behavior under certain circumstances, depending on
- * the specific details of the rule. Not supported for the `surrogate_type` custom info type.
+ * Deprecated; use `InspectionRuleSet` instead. Rule for modifying a `CustomInfoType` to alter
+ * behavior under certain circumstances, depending on the specific details of the rule. Not
+ * supported for the `surrogate_type` custom infoType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Data Loss Prevention (DLP) API. For a detailed

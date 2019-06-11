@@ -97,7 +97,7 @@ public final class EmbeddedObject extends com.google.api.client.json.GenericJson
   private Dimension marginTop;
 
   /**
-   * The size of the embedded object.
+   * The visible size of the image after cropping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,7 +273,7 @@ public final class EmbeddedObject extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The size of the embedded object.
+   * The visible size of the image after cropping.
    * @return value or {@code null} for none
    */
   public Size getSize() {
@@ -281,7 +281,7 @@ public final class EmbeddedObject extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The size of the embedded object.
+   * The visible size of the image after cropping.
    * @param size size or {@code null} for none
    */
   public EmbeddedObject setSize(Size size) {

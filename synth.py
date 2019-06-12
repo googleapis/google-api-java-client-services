@@ -34,6 +34,7 @@ TEMPLATE_VERSIONS = [
     "1.26.0",
     "1.27.0",
     "1.28.0",
+    "1.29.2",
 ]
 discovery_url = "https://github.com/googleapis/discovery-artifact-manager.git"
 

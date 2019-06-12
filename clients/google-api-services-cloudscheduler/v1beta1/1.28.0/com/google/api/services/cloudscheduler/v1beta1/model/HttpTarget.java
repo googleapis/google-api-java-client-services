@@ -68,7 +68,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
    * generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to a GCP endpoint.
+   * This type of authorization should generally only be used when calling Google APIs hosted on
+   * *.googleapis.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +79,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
    * will be generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to third party endpoints or
-   * Cloud Run.
+   * This type of authorization can be used for many scenarios, including calling Cloud Run, or
+   * endpoints where you intend to validate the token yourself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +203,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
    * generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to a GCP endpoint.
+   * This type of authorization should generally only be used when calling Google APIs hosted on
+   * *.googleapis.com.
    * @return value or {@code null} for none
    */
   public OAuthToken getOauthToken() {
@@ -213,7 +215,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be
    * generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to a GCP endpoint.
+   * This type of authorization should generally only be used when calling Google APIs hosted on
+   * *.googleapis.com.
    * @param oauthToken oauthToken or {@code null} for none
    */
   public HttpTarget setOauthToken(OAuthToken oauthToken) {
@@ -225,8 +228,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
    * will be generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to third party endpoints or
-   * Cloud Run.
+   * This type of authorization can be used for many scenarios, including calling Cloud Run, or
+   * endpoints where you intend to validate the token yourself.
    * @return value or {@code null} for none
    */
   public OidcToken getOidcToken() {
@@ -237,8 +240,8 @@ public final class HttpTarget extends com.google.api.client.json.GenericJson {
    * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token
    * will be generated and attached as an `Authorization` header in the HTTP request.
    *
-   * This type of authorization should be used when sending requests to third party endpoints or
-   * Cloud Run.
+   * This type of authorization can be used for many scenarios, including calling Cloud Run, or
+   * endpoints where you intend to validate the token yourself.
    * @param oidcToken oidcToken or {@code null} for none
    */
   public HttpTarget setOidcToken(OidcToken oidcToken) {

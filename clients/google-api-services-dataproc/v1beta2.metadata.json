@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-dataproc",
-    "version": "v1beta2-rev20190511-1.28.0"
+    "version": "v1beta2-rev20190523-1.29.2"
   }
 }

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-doubleclicksearch",
-    "version": "v2-rev20181030-1.28.0"
+    "version": "v2-rev20181030-1.29.2"
   }
 }

@@ -24,9 +24,9 @@
   },
   "javadoc_links": [ 
     "http://docs.oracle.com/javase/6/docs/api",
-    "https://google.github.io/google-http-java-client/releases/${httpClientLibrary}/javadoc/index.html",
-    "https://google.github.io/google-oauth-java-client/releases/${oauthClientLibrary}/javadoc/index.html",
-    "https://google.github.io/google-api-java-client/releases/${baseClientLibrary}/javadoc/index.html"
+    "https://googleapis.dev/java/google-http-client/${httpClientLibrary}/index.html",
+    "https://googleapis.dev/java/google-oauth-client/${oauthClientLibrary}/index.html",
+    "https://googleapis.dev/java/google-api-client/${baseClientLibrary}/index.html"
   ],
   "requires": [
     {

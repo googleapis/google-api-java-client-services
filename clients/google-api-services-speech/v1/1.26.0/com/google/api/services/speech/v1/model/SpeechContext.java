@@ -36,6 +36,11 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    * specific words and phrases, for example, if specific commands are typically spoken by the user.
    * This can also be used to add additional words to the vocabulary of the recognizer. See [usage
    * limits](/speech-to-text/quotas#content).
+   *
+   * List items can also be set to classes for groups of words that represent common concepts that
+   * occur in natural language. For example, rather than providing phrase hints for every month of
+   * the year, using the $MONTH class improves the likelihood of correctly transcribing audio that
+   * includes months.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,6 +52,11 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    * specific words and phrases, for example, if specific commands are typically spoken by the user.
    * This can also be used to add additional words to the vocabulary of the recognizer. See [usage
    * limits](/speech-to-text/quotas#content).
+   *
+   * List items can also be set to classes for groups of words that represent common concepts that
+   * occur in natural language. For example, rather than providing phrase hints for every month of
+   * the year, using the $MONTH class improves the likelihood of correctly transcribing audio that
+   * includes months.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhrases() {
@@ -59,6 +69,11 @@ public final class SpeechContext extends com.google.api.client.json.GenericJson 
    * specific words and phrases, for example, if specific commands are typically spoken by the user.
    * This can also be used to add additional words to the vocabulary of the recognizer. See [usage
    * limits](/speech-to-text/quotas#content).
+   *
+   * List items can also be set to classes for groups of words that represent common concepts that
+   * occur in natural language. For example, rather than providing phrase hints for every month of
+   * the year, using the $MONTH class improves the likelihood of correctly transcribing audio that
+   * includes months.
    * @param phrases phrases or {@code null} for none
    */
   public SpeechContext setPhrases(java.util.List<java.lang.String> phrases) {

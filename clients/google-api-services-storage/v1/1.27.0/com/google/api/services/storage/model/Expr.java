@@ -48,14 +48,6 @@ public final class Expr extends com.google.api.client.json.GenericJson {
   private java.lang.String expression;
 
   /**
-   * The kind of item this is. For storage, this is always storage#expr. This field is ignored on
-   * input.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String kind;
-
-  /**
    * An optional string indicating the location of the expression for error reporting, e.g. a file
    * name and a position in the file.
    * The value may be {@code null}.
@@ -106,25 +98,6 @@ public final class Expr extends com.google.api.client.json.GenericJson {
    */
   public Expr setExpression(java.lang.String expression) {
     this.expression = expression;
-    return this;
-  }
-
-  /**
-   * The kind of item this is. For storage, this is always storage#expr. This field is ignored on
-   * input.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getKind() {
-    return kind;
-  }
-
-  /**
-   * The kind of item this is. For storage, this is always storage#expr. This field is ignored on
-   * input.
-   * @param kind kind or {@code null} for none
-   */
-  public Expr setKind(java.lang.String kind) {
-    this.kind = kind;
     return this;
   }
 

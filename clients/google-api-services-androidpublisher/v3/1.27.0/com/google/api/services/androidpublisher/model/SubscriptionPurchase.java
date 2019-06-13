@@ -182,8 +182,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.String priceCurrencyCode;
 
   /**
-   * The profile id of the user when the subscription was purchased. Only present for purchases made
-   * with 'Subscribe with Google'.
+   * The Google profile id of the user when the subscription was purchased. Only present for
+   * purchases made with 'Subscribe with Google'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -578,8 +578,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The profile id of the user when the subscription was purchased. Only present for purchases made
-   * with 'Subscribe with Google'.
+   * The Google profile id of the user when the subscription was purchased. Only present for
+   * purchases made with 'Subscribe with Google'.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileId() {
@@ -587,8 +587,8 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   }
 
   /**
-   * The profile id of the user when the subscription was purchased. Only present for purchases made
-   * with 'Subscribe with Google'.
+   * The Google profile id of the user when the subscription was purchased. Only present for
+   * purchases made with 'Subscribe with Google'.
    * @param profileId profileId or {@code null} for none
    */
   public SubscriptionPurchase setProfileId(java.lang.String profileId) {

@@ -921,17 +921,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The maximum number of results to return in each response. */
+          /**
+           * Optional. The maximum number of results to return in each response. Must be less than
+           * or equal to 1000. Defaults to 100.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of results to return in each response.
+          /** Optional. The maximum number of results to return in each response. Must be less than or equal to
+         1000. Defaults to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. The maximum number of results to return in each response. */
+          /**
+           * Optional. The maximum number of results to return in each response. Must be less than
+           * or equal to 1000. Defaults to 100.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -3823,17 +3830,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The maximum number of results to return in each response. */
+          /**
+           * Optional. The maximum number of results to return in each response. Must be less than
+           * or equal to 1000. Defaults to 100.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of results to return in each response.
+          /** Optional. The maximum number of results to return in each response. Must be less than or equal to
+         1000. Defaults to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. The maximum number of results to return in each response. */
+          /**
+           * Optional. The maximum number of results to return in each response. Must be less than
+           * or equal to 1000. Defaults to 100.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

@@ -113,11 +113,10 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
    * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-update-strategy"  "instance-template"  "kube-
    * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"
-   *
-   * Values are free-form strings, and only have meaning as interpreted by the image running in the
-   * instance. The only restriction placed on them is that each value's size must be less than or
-   * equal to 32 KB.
+   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
+   * logging-enable" Values are free-form strings, and only have meaning as interpreted by the image
+   * running in the instance. The only restriction placed on them is that each value's size must be
+   * less than or equal to 32 KB.
    *
    * The total size of all keys and values must be less than 512 KB.
    * The value may be {@code null}.
@@ -176,6 +175,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * Shielded Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
    * The list of instance tags applied to all nodes. Tags are used to identify valid sources or
@@ -369,11 +375,10 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
    * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-update-strategy"  "instance-template"  "kube-
    * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"
-   *
-   * Values are free-form strings, and only have meaning as interpreted by the image running in the
-   * instance. The only restriction placed on them is that each value's size must be less than or
-   * equal to 32 KB.
+   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
+   * logging-enable" Values are free-form strings, and only have meaning as interpreted by the image
+   * running in the instance. The only restriction placed on them is that each value's size must be
+   * less than or equal to 32 KB.
    *
    * The total size of all keys and values must be less than 512 KB.
    * @return value or {@code null} for none
@@ -391,11 +396,10 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
    * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-update-strategy"  "instance-template"  "kube-
    * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"
-   *
-   * Values are free-form strings, and only have meaning as interpreted by the image running in the
-   * instance. The only restriction placed on them is that each value's size must be less than or
-   * equal to 32 KB.
+   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
+   * logging-enable" Values are free-form strings, and only have meaning as interpreted by the image
+   * running in the instance. The only restriction placed on them is that each value's size must be
+   * less than or equal to 32 KB.
    *
    * The total size of all keys and values must be less than 512 KB.
    * @param metadata metadata or {@code null} for none
@@ -521,6 +525,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Shielded Instance options.
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public NodeConfig setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

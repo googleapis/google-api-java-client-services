@@ -58,6 +58,17 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> desiredLocations;
 
   /**
+   * The logging service the cluster should use to write logs. Currently available options:
+   *
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
+   * resource model in Stackdriver * "logging.googleapis.com" - the Google Cloud Logging service *
+   * "none" - no logs will be exported from the cluster
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredLoggingService;
+
+  /**
    * The desired configuration options for master authorized networks feature.
    * The value may be {@code null}.
    */
@@ -82,8 +93,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will
-   * be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
+   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
+   * Monitoring service * "none" - no metrics will be exported from the cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,6 +133,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredNodeVersion;
+
+  /**
+   * The desired configuration for exporting resource usage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceUsageExportConfig desiredResourceUsageExportConfig;
 
   /**
    * Configurations for the various addons available to run in the cluster.
@@ -184,6 +203,31 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The logging service the cluster should use to write logs. Currently available options:
+   *
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
+   * resource model in Stackdriver * "logging.googleapis.com" - the Google Cloud Logging service *
+   * "none" - no logs will be exported from the cluster
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredLoggingService() {
+    return desiredLoggingService;
+  }
+
+  /**
+   * The logging service the cluster should use to write logs. Currently available options:
+   *
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
+   * resource model in Stackdriver * "logging.googleapis.com" - the Google Cloud Logging service *
+   * "none" - no logs will be exported from the cluster
+   * @param desiredLoggingService desiredLoggingService or {@code null} for none
+   */
+  public ClusterUpdate setDesiredLoggingService(java.lang.String desiredLoggingService) {
+    this.desiredLoggingService = desiredLoggingService;
+    return this;
+  }
+
+  /**
    * The desired configuration options for master authorized networks feature.
    * @return value or {@code null} for none
    */
@@ -236,8 +280,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will
-   * be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
+   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
+   * Monitoring service * "none" - no metrics will be exported from the cluster
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredMonitoringService() {
@@ -247,8 +292,9 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options:
    *
-   * * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will
-   * be exported from the cluster
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring service with Kubernetes-
+   * native resource model in Stackdriver * "monitoring.googleapis.com" - the Google Cloud
+   * Monitoring service * "none" - no metrics will be exported from the cluster
    * @param desiredMonitoringService desiredMonitoringService or {@code null} for none
    */
   public ClusterUpdate setDesiredMonitoringService(java.lang.String desiredMonitoringService) {
@@ -328,6 +374,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNodeVersion(java.lang.String desiredNodeVersion) {
     this.desiredNodeVersion = desiredNodeVersion;
+    return this;
+  }
+
+  /**
+   * The desired configuration for exporting resource usage.
+   * @return value or {@code null} for none
+   */
+  public ResourceUsageExportConfig getDesiredResourceUsageExportConfig() {
+    return desiredResourceUsageExportConfig;
+  }
+
+  /**
+   * The desired configuration for exporting resource usage.
+   * @param desiredResourceUsageExportConfig desiredResourceUsageExportConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
+    this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
     return this;
   }
 

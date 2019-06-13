@@ -81,6 +81,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private InstanceGroupConfig secondaryWorkerConfig;
 
   /**
+   * Optional. Security settings for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityConfig securityConfig;
+
+  /**
    * Optional. The config settings for software inside the cluster.
    * The value may be {@code null}.
    */
@@ -211,6 +218,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setSecondaryWorkerConfig(InstanceGroupConfig secondaryWorkerConfig) {
     this.secondaryWorkerConfig = secondaryWorkerConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Security settings for the cluster.
+   * @return value or {@code null} for none
+   */
+  public SecurityConfig getSecurityConfig() {
+    return securityConfig;
+  }
+
+  /**
+   * Optional. Security settings for the cluster.
+   * @param securityConfig securityConfig or {@code null} for none
+   */
+  public ClusterConfig setSecurityConfig(SecurityConfig securityConfig) {
+    this.securityConfig = securityConfig;
     return this;
   }
 

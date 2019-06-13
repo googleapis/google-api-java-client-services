@@ -5555,9 +5555,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-             * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `instances`).
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (e.g.,
+            `instances` or
+             *        `series/{series_uid}/instances` or
+            `studies/{study_uid}/instances`).
              * @return the request
              */
             public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5591,9 +5592,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `instances`).
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (e.g.,
+            `instances` or
+             *        `series/{series_uid}/instances` or
+            `studies/{study_uid}/instances`).
                * @since 1.13
                */
               protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5706,22 +5708,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `instances`).
+               * The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+               * `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-             `instances`).
+              /** The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+             `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `instances`).
+               * The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+               * `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                */
               public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -5750,9 +5752,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-             * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `series`).
+             * @param dicomWebPath The path of the SearchForSeries DICOMweb request(e.g., `series` or
+            `studies/{study_uid}/series`).
              * @return the request
              */
             public SearchForSeries searchForSeries(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5786,9 +5787,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `series`).
+               * @param dicomWebPath The path of the SearchForSeries DICOMweb request(e.g., `series` or
+            `studies/{study_uid}/series`).
                * @since 1.13
                */
               protected SearchForSeries(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5901,22 +5901,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `series`).
+               * The path of the SearchForSeries DICOMweb request(e.g., `series` or
+               * `studies/{study_uid}/series`).
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-             `series`).
+              /** The path of the SearchForSeries DICOMweb request(e.g., `series` or `studies/{study_uid}/series`).
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `series`).
+               * The path of the SearchForSeries DICOMweb request(e.g., `series` or
+               * `studies/{study_uid}/series`).
                */
               public SearchForSeries setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -5945,9 +5944,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-             * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `studies`).
+             * @param dicomWebPath The path of the SearchForStudies DICOMweb request (e.g., `studies`).
              * @return the request
              */
             public SearchForStudies searchForStudies(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5981,9 +5978,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `studies`).
+               * @param dicomWebPath The path of the SearchForStudies DICOMweb request (e.g., `studies`).
                * @since 1.13
                */
               protected SearchForStudies(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6095,24 +6090,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
-              /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `studies`).
-               */
+              /** The path of the SearchForStudies DICOMweb request (e.g., `studies`). */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-             `studies`).
+              /** The path of the SearchForStudies DICOMweb request (e.g., `studies`).
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
-              /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `studies`).
-               */
+              /** The path of the SearchForStudies DICOMweb request (e.g., `studies`). */
               public SearchForStudies setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
@@ -6140,9 +6128,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-             * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `studies/{study_id}`).
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request (e.g.,
+            `studies/[{study_id}]`). Note that the
+             *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
              * @return the request
              */
@@ -6177,9 +6165,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-            QIDO-RS standard (e.g.,
-             *        `studies/{study_id}`).
+               * @param dicomWebPath The path of the StoreInstances DICOMweb request (e.g.,
+            `studies/[{study_id}]`). Note that the
+             *        `study_uid` is optional.
                * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
                * @since 1.13
                */
@@ -6283,22 +6271,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `studies/{study_id}`).
+               * The path of the StoreInstances DICOMweb request (e.g., `studies/[{study_id}]`).
+               * Note that the `study_uid` is optional.
                */
               @com.google.api.client.util.Key
               private java.lang.String dicomWebPath;
 
-              /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-             `studies/{study_id}`).
+              /** The path of the StoreInstances DICOMweb request (e.g., `studies/[{study_id}]`). Note that the
+             `study_uid` is optional.
                */
               public java.lang.String getDicomWebPath() {
                 return dicomWebPath;
               }
 
               /**
-               * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS
-               * standard (e.g., `studies/{study_id}`).
+               * The path of the StoreInstances DICOMweb request (e.g., `studies/[{study_id}]`).
+               * Note that the `study_uid` is optional.
                */
               public StoreInstances setDicomWebPath(java.lang.String dicomWebPath) {
                 if (!getSuppressPatternChecks()) {
@@ -6348,9 +6336,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}`).
+               * @param dicomWebPath The path of the DeleteStudy request (e.g., `studies/{study_id}`).
                * @return the request
                */
               public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6384,9 +6370,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}`).
+                 * @param dicomWebPath The path of the DeleteStudy request (e.g., `studies/{study_id}`).
                  * @since 1.13
                  */
                 protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6488,24 +6472,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   return this;
                 }
 
-                /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}`).
-                 */
+                /** The path of the DeleteStudy request (e.g., `studies/{study_id}`). */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-               `studies/{study_id}`).
+                /** The path of the DeleteStudy request (e.g., `studies/{study_id}`).
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
-                /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}`).
-                 */
+                /** The path of the DeleteStudy request (e.g., `studies/{study_id}`). */
                 public Delete setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(DICOM_WEB_PATH_PATTERN.matcher(dicomWebPath).matches(),
@@ -6534,9 +6511,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}/metadata`.
+               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request (e.g.,
+              `studies/{study_id}/metadata`).
                * @return the request
                */
               public Metadata metadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6571,9 +6547,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}/metadata`.
+                 * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request (e.g.,
+              `studies/{study_id}/metadata`).
                  * @since 1.13
                  */
                 protected Metadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6686,22 +6661,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}/metadata`.
+                 * The path of the RetrieveStudyMetadata DICOMweb request (e.g.,
+                 * `studies/{study_id}/metadata`).
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-               `studies/{study_id}/metadata`.
+                /** The path of the RetrieveStudyMetadata DICOMweb request (e.g., `studies/{study_id}/metadata`).
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}/metadata`.
+                 * The path of the RetrieveStudyMetadata DICOMweb request (e.g.,
+                 * `studies/{study_id}/metadata`).
                  */
                 public Metadata setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -6730,9 +6704,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}`).
+               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request (e.g.,
+              `studies/{study_id}`).
                * @return the request
                */
               public RetrieveStudy retrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6766,9 +6739,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}`).
+                 * @param dicomWebPath The path of the RetrieveStudy DICOMweb request (e.g.,
+              `studies/{study_id}`).
                  * @since 1.13
                  */
                 protected RetrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6881,22 +6853,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}`).
+                 * The path of the RetrieveStudy DICOMweb request (e.g., `studies/{study_id}`).
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-               `studies/{study_id}`).
+                /** The path of the RetrieveStudy DICOMweb request (e.g., `studies/{study_id}`).
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}`).
+                 * The path of the RetrieveStudy DICOMweb request (e.g., `studies/{study_id}`).
                  */
                 public RetrieveStudy setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -6925,9 +6894,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `instances`).
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (e.g.,
+              `instances` or
+               *        `series/{series_uid}/instances` or
+              `studies/{study_uid}/instances`).
                * @return the request
                */
               public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6961,9 +6931,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `instances`).
+                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (e.g.,
+              `instances` or
+               *        `series/{series_uid}/instances` or
+              `studies/{study_uid}/instances`).
                  * @since 1.13
                  */
                 protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7076,22 +7047,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `instances`).
+                 * The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+                 * `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-               `instances`).
+                /** The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+               `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `instances`).
+                 * The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+                 * `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                  */
                 public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -7120,9 +7091,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `series`).
+               * @param dicomWebPath The path of the SearchForSeries DICOMweb request(e.g., `series` or
+              `studies/{study_uid}/series`).
                * @return the request
                */
               public SearchForSeries searchForSeries(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7156,9 +7126,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `series`).
+                 * @param dicomWebPath The path of the SearchForSeries DICOMweb request(e.g., `series` or
+              `studies/{study_uid}/series`).
                  * @since 1.13
                  */
                 protected SearchForSeries(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7271,22 +7240,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `series`).
+                 * The path of the SearchForSeries DICOMweb request(e.g., `series` or
+                 * `studies/{study_uid}/series`).
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-               `series`).
+                /** The path of the SearchForSeries DICOMweb request(e.g., `series` or `studies/{study_uid}/series`).
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `series`).
+                 * The path of the SearchForSeries DICOMweb request(e.g., `series` or
+                 * `studies/{study_uid}/series`).
                  */
                 public SearchForSeries setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -7315,9 +7283,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-               * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}`).
+               * @param dicomWebPath The path of the StoreInstances DICOMweb request (e.g.,
+              `studies/[{study_id}]`). Note that the
+               *        `study_uid` is optional.
                * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
                * @return the request
                */
@@ -7352,9 +7320,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-              QIDO-RS standard (e.g.,
-               *        `studies/{study_id}`).
+                 * @param dicomWebPath The path of the StoreInstances DICOMweb request (e.g.,
+              `studies/[{study_id}]`). Note that the
+               *        `study_uid` is optional.
                  * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.HttpBody}
                  * @since 1.13
                  */
@@ -7458,22 +7426,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}`).
+                 * The path of the StoreInstances DICOMweb request (e.g., `studies/[{study_id}]`).
+                 * Note that the `study_uid` is optional.
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String dicomWebPath;
 
-                /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-               `studies/{study_id}`).
+                /** The path of the StoreInstances DICOMweb request (e.g., `studies/[{study_id}]`). Note that the
+               `study_uid` is optional.
                  */
                 public java.lang.String getDicomWebPath() {
                   return dicomWebPath;
                 }
 
                 /**
-                 * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-
-                 * RS standard (e.g., `studies/{study_id}`).
+                 * The path of the StoreInstances DICOMweb request (e.g., `studies/[{study_id}]`).
+                 * Note that the `study_uid` is optional.
                  */
                 public StoreInstances setDicomWebPath(java.lang.String dicomWebPath) {
                   if (!getSuppressPatternChecks()) {
@@ -7523,9 +7491,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}`).
+                 * @param dicomWebPath The path of the DeleteSeries request (e.g.,
+                `studies/{study_id}/series/{series_id}`).
                  * @return the request
                  */
                 public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7559,9 +7526,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}`).
+                   * @param dicomWebPath The path of the DeleteSeries request (e.g.,
+                `studies/{study_id}/series/{series_id}`).
                    * @since 1.13
                    */
                   protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7664,22 +7630,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}`).
+                   * The path of the DeleteSeries request (e.g.,
+                   * `studies/{study_id}/series/{series_id}`).
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                 `studies/{study_id}/series/{series_id}`).
+                  /** The path of the DeleteSeries request (e.g., `studies/{study_id}/series/{series_id}`).
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}`).
+                   * The path of the DeleteSeries request (e.g.,
+                   * `studies/{study_id}/series/{series_id}`).
                    */
                   public Delete setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -7709,9 +7674,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}/metadata`.
+                 * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request (e.g.,
+                 *        `studies/{study_id}/series/{series_id}/metadata`).
                  * @return the request
                  */
                 public Metadata metadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7746,9 +7710,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}/metadata`.
+                   * @param dicomWebPath The path of the RetrieveSeriesMetadata DICOMweb request (e.g.,
+                 *        `studies/{study_id}/series/{series_id}/metadata`).
                    * @since 1.13
                    */
                   protected Metadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -7861,22 +7824,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/metadata`.
+                   * The path of the RetrieveSeriesMetadata DICOMweb request (e.g.,
+                   * `studies/{study_id}/series/{series_id}/metadata`).
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                 `studies/{study_id}/series/{series_id}/metadata`.
+                  /** The path of the RetrieveSeriesMetadata DICOMweb request (e.g.,
+                 `studies/{study_id}/series/{series_id}/metadata`).
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/metadata`.
+                   * The path of the RetrieveSeriesMetadata DICOMweb request (e.g.,
+                   * `studies/{study_id}/series/{series_id}/metadata`).
                    */
                   public Metadata setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -7905,9 +7868,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}`).
+                 * @param dicomWebPath The path of the RetrieveSeries DICOMweb request (e.g.,
+                `studies/{study_id}/series/{series_id}`).
                  * @return the request
                  */
                 public RetrieveSeries retrieveSeries(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -7941,9 +7903,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `studies/{study_id}/series/{series_id}`).
+                   * @param dicomWebPath The path of the RetrieveSeries DICOMweb request (e.g.,
+                `studies/{study_id}/series/{series_id}`).
                    * @since 1.13
                    */
                   protected RetrieveSeries(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -8056,22 +8017,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}`).
+                   * The path of the RetrieveSeries DICOMweb request (e.g.,
+                   * `studies/{study_id}/series/{series_id}`).
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                 `studies/{study_id}/series/{series_id}`).
+                  /** The path of the RetrieveSeries DICOMweb request (e.g., `studies/{study_id}/series/{series_id}`).
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}`).
+                   * The path of the RetrieveSeries DICOMweb request (e.g.,
+                   * `studies/{study_id}/series/{series_id}`).
                    */
                   public RetrieveSeries setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -8100,9 +8060,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                 * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `instances`).
+                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (e.g.,
+                `instances` or
+                 *        `series/{series_uid}/instances` or
+                `studies/{study_uid}/instances`).
                  * @return the request
                  */
                 public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -8136,9 +8097,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                  *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                  *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                QIDO-RS standard (e.g.,
-                 *        `instances`).
+                   * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request (e.g.,
+                `instances` or
+                 *        `series/{series_uid}/instances` or
+                `studies/{study_uid}/instances`).
                    * @since 1.13
                    */
                   protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -8251,22 +8213,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `instances`).
+                   * The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances`
+                   * or `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                    */
                   @com.google.api.client.util.Key
                   private java.lang.String dicomWebPath;
 
-                  /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
-                 `instances`).
+                  /** The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances` or
+                 `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                    */
                   public java.lang.String getDicomWebPath() {
                     return dicomWebPath;
                   }
 
                   /**
-                   * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                   * QIDO-RS standard (e.g., `instances`).
+                   * The path of the SearchForInstancesRequest DICOMweb request (e.g., `instances`
+                   * or `series/{series_uid}/instances` or `studies/{study_uid}/instances`).
                    */
                   public SearchForInstances setDicomWebPath(java.lang.String dicomWebPath) {
                     if (!getSuppressPatternChecks()) {
@@ -8316,8 +8278,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                   * @param dicomWebPath The path of the DeleteInstance request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                    * @return the request
                    */
@@ -8352,8 +8313,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                     * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                     * @param dicomWebPath The path of the DeleteInstance request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      * @since 1.13
                      */
@@ -8459,14 +8419,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the DeleteInstance request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
+                    /** The path of the DeleteInstance request (e.g.,
                    `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      */
                     public java.lang.String getDicomWebPath() {
@@ -8474,8 +8433,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the DeleteInstance request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      */
                     public Delete setDicomWebPath(java.lang.String dicomWebPath) {
@@ -8506,8 +8464,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                   * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/metadata`).
                    * @return the request
                    */
@@ -8543,8 +8500,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                     * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                     * @param dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/metadata`).
                      * @since 1.13
                      */
@@ -8660,14 +8616,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the RetrieveInstanceMetadata DICOMweb request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}/metadata`).
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
+                    /** The path of the RetrieveInstanceMetadata DICOMweb request (e.g.,
                    `studies/{study_id}/series/{series_id}/instances/{instance_id}/metadata`).
                      */
                     public java.lang.String getDicomWebPath() {
@@ -8675,8 +8630,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the RetrieveInstanceMetadata DICOMweb request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}/metadata`).
                      */
                     public Metadata setDicomWebPath(java.lang.String dicomWebPath) {
@@ -8707,8 +8661,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                   * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                    * @return the request
                    */
@@ -8744,8 +8697,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                     * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                     * @param dicomWebPath The path of the RetrieveRenderedInstance DICOMweb request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                      * @since 1.13
                      */
@@ -8861,14 +8813,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the RetrieveRenderedInstance DICOMweb request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
+                    /** The path of the RetrieveRenderedInstance DICOMweb request (e.g.,
                    `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                      */
                     public java.lang.String getDicomWebPath() {
@@ -8876,8 +8827,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the RetrieveRenderedInstance DICOMweb request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}/rendered`).
                      */
                     public Rendered setDicomWebPath(java.lang.String dicomWebPath) {
@@ -8907,8 +8857,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                    * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                   * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                   * @param dicomWebPath The path of the RetrieveInstance DICOMweb request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                    * @return the request
                    */
@@ -8943,8 +8892,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * @param parent The name of the DICOM store that is being accessed (e.g.,
                    *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                    *        ore_id}`).
-                     * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                  QIDO-RS standard (e.g.,
+                     * @param dicomWebPath The path of the RetrieveInstance DICOMweb request (e.g.,
                    *        `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      * @since 1.13
                      */
@@ -9060,14 +9008,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the RetrieveInstance DICOMweb request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      */
                     @com.google.api.client.util.Key
                     private java.lang.String dicomWebPath;
 
-                    /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
+                    /** The path of the RetrieveInstance DICOMweb request (e.g.,
                    `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      */
                     public java.lang.String getDicomWebPath() {
@@ -9075,8 +9022,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     }
 
                     /**
-                     * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                     * QIDO-RS standard (e.g.,
+                     * The path of the RetrieveInstance DICOMweb request (e.g.,
                      * `studies/{study_id}/series/{series_id}/instances/{instance_id}`).
                      */
                     public RetrieveInstance setDicomWebPath(java.lang.String dicomWebPath) {
@@ -9128,8 +9074,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * @param parent The name of the DICOM store that is being accessed (e.g.,
                      *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                      *        ore_id}`).
-                     * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                    QIDO-RS standard (e.g.,
+                     * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request (e.g.,
                      *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rendere
                      *        d`).
                      * @return the request
@@ -9166,8 +9111,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                        * @param parent The name of the DICOM store that is being accessed (e.g.,
                      *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                      *        ore_id}`).
-                       * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                    QIDO-RS standard (e.g.,
+                       * @param dicomWebPath The path of the RetrieveRenderedFrames DICOMweb request (e.g.,
                      *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rendere
                      *        d`).
                        * @since 1.13
@@ -9284,14 +9228,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                       }
 
                       /**
-                       * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                       * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{i
-                       * nstance_id}/frames/{frame_list}/rendered`).
+                       * The path of the RetrieveRenderedFrames DICOMweb request (e.g., `studies/{st
+                       * udy_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rend
+                       * ered`).
                        */
                       @com.google.api.client.util.Key
                       private java.lang.String dicomWebPath;
 
-                      /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
+                      /** The path of the RetrieveRenderedFrames DICOMweb request (e.g.,
                      `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rendered`).
                        */
                       public java.lang.String getDicomWebPath() {
@@ -9299,9 +9243,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                       }
 
                       /**
-                       * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                       * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{i
-                       * nstance_id}/frames/{frame_list}/rendered`).
+                       * The path of the RetrieveRenderedFrames DICOMweb request (e.g., `studies/{st
+                       * udy_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}/rend
+                       * ered`).
                        */
                       public Rendered setDicomWebPath(java.lang.String dicomWebPath) {
                         if (!getSuppressPatternChecks()) {
@@ -9330,8 +9274,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                      * @param parent The name of the DICOM store that is being accessed (e.g.,
                      *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                      *        ore_id}`).
-                     * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                    QIDO-RS standard (e.g.,
+                     * @param dicomWebPath The path of the RetrieveFrames DICOMweb request (e.g.,
                      *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                      * @return the request
                      */
@@ -9367,8 +9310,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                        * @param parent The name of the DICOM store that is being accessed (e.g.,
                      *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                      *        ore_id}`).
-                       * @param dicomWebPath The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                    QIDO-RS standard (e.g.,
+                       * @param dicomWebPath The path of the RetrieveFrames DICOMweb request (e.g.,
                      *        `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                        * @since 1.13
                        */
@@ -9484,14 +9426,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                       }
 
                       /**
-                       * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                       * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{i
-                       * nstance_id}/frames/{frame_list}`).
+                       * The path of the RetrieveFrames DICOMweb request (e.g., `studies/{study_id}/
+                       * series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                        */
                       @com.google.api.client.util.Key
                       private java.lang.String dicomWebPath;
 
-                      /** The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or QIDO-RS standard (e.g.,
+                      /** The path of the RetrieveFrames DICOMweb request (e.g.,
                      `studies/{study_id}/series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                        */
                       public java.lang.String getDicomWebPath() {
@@ -9499,9 +9440,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                       }
 
                       /**
-                       * The path of the DICOMweb request, as specified in the STOW-RS, WADO-RS, or
-                       * QIDO-RS standard (e.g., `studies/{study_id}/series/{series_id}/instances/{i
-                       * nstance_id}/frames/{frame_list}`).
+                       * The path of the RetrieveFrames DICOMweb request (e.g., `studies/{study_id}/
+                       * series/{series_id}/instances/{instance_id}/frames/{frame_list}`).
                        */
                       public RetrieveFrames setDicomWebPath(java.lang.String dicomWebPath) {
                         if (!getSuppressPatternChecks()) {
@@ -13764,18 +13704,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
              * returned instead.
              *
-             * # Search Parameters
-             *
              * The server's capability statement, retrieved through capabilities, indicates what search
              * parameters are supported on each FHIR resource. A list of all search parameters defined by the
              * specification can be found in the [FHIR Search Parameter
              * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
              *
-             * # Search Modifiers
-             *
-             * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains` |
-             * Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
-             * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
+             * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
+             * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
              *
              * Create a request for the method "fhir.search".
              *
@@ -13824,18 +13759,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
                * be returned instead.
                *
-               * # Search Parameters
-               *
                * The server's capability statement, retrieved through capabilities, indicates what search
                * parameters are supported on each FHIR resource. A list of all search parameters defined by the
                * specification can be found in the [FHIR Search Parameter
                * Registry](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html).
                *
-               * # Search Modifiers
-               *
-               * Modifier   | Supported ----------- | --------- `:missing`  | Yes `:exact`    | Yes `:contains`
-               * | Yes `:text`     | Yes `:in`       | Yes `:not-in`   | Yes `:above`    | Yes `:below`    | Yes
-               * `:[type]`   | Yes `:not`      | Yes `:recurse`  | No
+               * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
+               * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
                *
                * Create a request for the method "fhir.search".
                *

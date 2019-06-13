@@ -32,7 +32,7 @@ package com.google.api.services.compute.model;
 public final class NetworkPeering extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field will be deprecated soon. Prefer using exchange_subnet_routes instead. Indicates
+   * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
    * whether full mesh connectivity is created and managed automatically. When it is set to true,
    * Google Compute Engine will automatically create and manage the routes between two networks when
    * the state is ACTIVE. Otherwise, user needs to create routes manually to route packets to peer
@@ -55,9 +55,9 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
    * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all the following characters must be a dash, lowercase letter, or digit, except the last
-   * character, which cannot be a dash.
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
+   * following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
-   * [Output Only] State for the peering.
+   * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
+   * when there's a matching configuration in the peer network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String stateDetails;
 
   /**
-   * This field will be deprecated soon. Prefer using exchange_subnet_routes instead. Indicates
+   * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
    * whether full mesh connectivity is created and managed automatically. When it is set to true,
    * Google Compute Engine will automatically create and manage the routes between two networks when
    * the state is ACTIVE. Otherwise, user needs to create routes manually to route packets to peer
@@ -99,7 +100,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * This field will be deprecated soon. Prefer using exchange_subnet_routes instead. Indicates
+   * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
    * whether full mesh connectivity is created and managed automatically. When it is set to true,
    * Google Compute Engine will automatically create and manage the routes between two networks when
    * the state is ACTIVE. Otherwise, user needs to create routes manually to route packets to peer
@@ -137,9 +138,9 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
    * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all the following characters must be a dash, lowercase letter, or digit, except the last
-   * character, which cannot be a dash.
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
+   * following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -149,9 +150,9 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
    * with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression
-   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and
-   * all the following characters must be a dash, lowercase letter, or digit, except the last
-   * character, which cannot be a dash.
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the
+   * following characters must be a dash, lowercase letter, or digit, except the last character,
+   * which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public NetworkPeering setName(java.lang.String name) {
@@ -181,7 +182,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] State for the peering.
+   * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
+   * when there's a matching configuration in the peer network.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -189,7 +191,8 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] State for the peering.
+   * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
+   * when there's a matching configuration in the peer network.
    * @param state state or {@code null} for none
    */
   public NetworkPeering setState(java.lang.String state) {

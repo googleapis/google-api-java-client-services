@@ -17,7 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * An Image resource. (== resource_for beta.images ==) (== resource_for v1.images ==)
+ * Represents an Image resource.
+ *
+ * You can use images to create boot disks for your VM instances. For more information, read Images.
+ * (== resource_for beta.images ==) (== resource_for v1.images ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

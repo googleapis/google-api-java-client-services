@@ -17,8 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * An Instance Template resource. (== resource_for beta.instanceTemplates ==) (== resource_for
- * v1.instanceTemplates ==)
+ * Represents an Instance Template resource.
+ *
+ * You can use instance templates to create VM instances and managed instance groups. For more
+ * information, read Instance Templates. (== resource_for beta.instanceTemplates ==) (==
+ * resource_for v1.instanceTemplates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

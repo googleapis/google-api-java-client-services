@@ -17,7 +17,18 @@
 package com.google.api.services.compute.model;
 
 /**
- * A Disk resource. (== resource_for beta.disks ==) (== resource_for v1.disks ==)
+ * Represents a Persistent Disk resource.
+ *
+ * Persistent disks are required for running your VM instances. Create both boot and non-boot (data)
+ * persistent disks. For more information, read Persistent Disks. For more storage options, read
+ * Storage options.
+ *
+ * The disks resource represents a zonal persistent disk. For more information, read Zonal
+ * persistent disks.
+ *
+ * The regionDisks resource represents a regional persistent disk. For more information, read
+ * Regional resources. (== resource_for beta.disks ==) (== resource_for v1.disks ==) (==
+ * resource_for v1.regionDisks ==) (== resource_for beta.regionDisks ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -174,6 +185,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> replicaZones;
+
+  /**
+   * Resource policies applied to this disk for automatic snapshot creations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
 
   /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
@@ -675,6 +693,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setReplicaZones(java.util.List<java.lang.String> replicaZones) {
     this.replicaZones = replicaZones;
+    return this;
+  }
+
+  /**
+   * Resource policies applied to this disk for automatic snapshot creations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies applied to this disk for automatic snapshot creations.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public Disk setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

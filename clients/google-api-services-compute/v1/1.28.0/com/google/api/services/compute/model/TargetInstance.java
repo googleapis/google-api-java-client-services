@@ -17,9 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * A TargetInstance resource. This resource defines an endpoint instance that terminates traffic of
- * certain protocols. (== resource_for beta.targetInstances ==) (== resource_for v1.targetInstances
- * ==)
+ * Represents a Target Instance resource.
+ *
+ * You can use a target instance to handle traffic for one or more forwarding rules, which is ideal
+ * for forwarding protocol traffic that is managed by a single source. For example, ESP, AH, TCP, or
+ * UDP. For more information, read Target instances. (== resource_for beta.targetInstances ==) (==
+ * resource_for v1.targetInstances ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -17,9 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an InterconnectLocations resource. The InterconnectLocations resource describes the
- * locations where you can connect to Google's networks. For more information, see  Colocation
- * Facilities.
+ * Represents an Interconnect Attachment (VLAN) Location resource.
+ *
+ * You can use this resource to find location details about an Interconnect attachment (VLAN). For
+ * more information about interconnect attachments, read  Creating VLAN Attachments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

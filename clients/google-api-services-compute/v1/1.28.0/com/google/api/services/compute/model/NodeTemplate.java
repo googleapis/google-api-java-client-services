@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * A Node Template resource. To learn more about node templates and sole-tenant nodes, read the
- * Sole-tenant nodes documentation. (== resource_for beta.nodeTemplates ==) (== resource_for
- * v1.nodeTemplates ==)
+ * Represent a sole-tenant Node Template resource.
+ *
+ * You can use a template to define properties for nodes in a node group. For more information, read
+ * Creating node groups and instances. (== resource_for beta.nodeTemplates ==) (== resource_for
+ * v1.nodeTemplates ==) NextID: 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -108,6 +110,13 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Binding properties for the physical server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServerBinding serverBinding;
 
   /**
    * [Output Only] The status of the node template. One of the following values: CREATING, READY,
@@ -307,6 +316,23 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   public NodeTemplate setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Binding properties for the physical server.
+   * @return value or {@code null} for none
+   */
+  public ServerBinding getServerBinding() {
+    return serverBinding;
+  }
+
+  /**
+   * Binding properties for the physical server.
+   * @param serverBinding serverBinding or {@code null} for none
+   */
+  public NodeTemplate setServerBinding(ServerBinding serverBinding) {
+    this.serverBinding = serverBinding;
     return this;
   }
 

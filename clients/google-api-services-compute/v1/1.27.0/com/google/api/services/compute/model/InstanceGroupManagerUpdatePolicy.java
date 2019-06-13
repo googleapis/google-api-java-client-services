@@ -72,6 +72,10 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   private java.lang.String minimalAction;
 
   /**
+   * The type of update process. You can specify either PROACTIVE so that the instance group manager
+   * proactively executes actions in order to bring instances to their target versions or
+   * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
+   * part of other actions (for example, resizes or recreateInstances calls).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,6 +175,10 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   }
 
   /**
+   * The type of update process. You can specify either PROACTIVE so that the instance group manager
+   * proactively executes actions in order to bring instances to their target versions or
+   * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
+   * part of other actions (for example, resizes or recreateInstances calls).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -178,6 +186,10 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   }
 
   /**
+   * The type of update process. You can specify either PROACTIVE so that the instance group manager
+   * proactively executes actions in order to bring instances to their target versions or
+   * OPPORTUNISTIC so that no action is proactively executed but the update will be performed as
+   * part of other actions (for example, resizes or recreateInstances calls).
    * @param type type or {@code null} for none
    */
   public InstanceGroupManagerUpdatePolicy setType(java.lang.String type) {

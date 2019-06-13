@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * A persistent disk snapshot resource. (== resource_for beta.snapshots ==) (== resource_for
- * v1.snapshots ==)
+ * Represents a Persistent Disk Snapshot resource.
+ *
+ * You can use snapshots to back up data on a regular interval. For more information, read  Creating
+ * persistent disk snapshots. (== resource_for beta.snapshots ==) (== resource_for v1.snapshots ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -29,6 +31,14 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class Snapshot extends com.google.api.client.json.GenericJson {
+
+  /**
+   * [Output Only] Set to true if snapshots are automatically by applying resource policy on the
+   * target disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoCreated;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -192,6 +202,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> storageLocations;
+
+  /**
+   * [Output Only] Set to true if snapshots are automatically by applying resource policy on the
+   * target disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoCreated() {
+    return autoCreated;
+  }
+
+  /**
+   * [Output Only] Set to true if snapshots are automatically by applying resource policy on the
+   * target disk.
+   * @param autoCreated autoCreated or {@code null} for none
+   */
+  public Snapshot setAutoCreated(java.lang.Boolean autoCreated) {
+    this.autoCreated = autoCreated;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

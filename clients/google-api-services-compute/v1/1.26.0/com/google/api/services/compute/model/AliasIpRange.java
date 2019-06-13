@@ -30,29 +30,28 @@ package com.google.api.services.compute.model;
 public final class AliasIpRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the
+   * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the
    * specified subnetwork and cannot contain IP addresses reserved by system or used by other
-   * network interfaces. This range may be a single IP address (e.g. 10.2.3.4), a netmask (e.g. /24)
-   * or a CIDR format string (e.g. 10.1.2.0/24).
+   * network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such
+   * as /24) or a CIDR-formatted string (such as 10.1.2.0/24).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipCidrRange;
 
   /**
-   * Optional subnetwork secondary range name specifying the secondary range from which to allocate
-   * the IP CIDR range for this alias IP range. If left unspecified, the primary range of the
-   * subnetwork will be used.
+   * The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not
+   * specified, the primary range of the subnetwork is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetworkRangeName;
 
   /**
-   * The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the
+   * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the
    * specified subnetwork and cannot contain IP addresses reserved by system or used by other
-   * network interfaces. This range may be a single IP address (e.g. 10.2.3.4), a netmask (e.g. /24)
-   * or a CIDR format string (e.g. 10.1.2.0/24).
+   * network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such
+   * as /24) or a CIDR-formatted string (such as 10.1.2.0/24).
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -60,10 +59,10 @@ public final class AliasIpRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP CIDR range represented by this alias IP range. This IP CIDR range must belong to the
+   * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the
    * specified subnetwork and cannot contain IP addresses reserved by system or used by other
-   * network interfaces. This range may be a single IP address (e.g. 10.2.3.4), a netmask (e.g. /24)
-   * or a CIDR format string (e.g. 10.1.2.0/24).
+   * network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such
+   * as /24) or a CIDR-formatted string (such as 10.1.2.0/24).
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public AliasIpRange setIpCidrRange(java.lang.String ipCidrRange) {
@@ -72,9 +71,8 @@ public final class AliasIpRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional subnetwork secondary range name specifying the secondary range from which to allocate
-   * the IP CIDR range for this alias IP range. If left unspecified, the primary range of the
-   * subnetwork will be used.
+   * The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not
+   * specified, the primary range of the subnetwork is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetworkRangeName() {
@@ -82,9 +80,8 @@ public final class AliasIpRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional subnetwork secondary range name specifying the secondary range from which to allocate
-   * the IP CIDR range for this alias IP range. If left unspecified, the primary range of the
-   * subnetwork will be used.
+   * The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not
+   * specified, the primary range of the subnetwork is used.
    * @param subnetworkRangeName subnetworkRangeName or {@code null} for none
    */
   public AliasIpRange setSubnetworkRangeName(java.lang.String subnetworkRangeName) {

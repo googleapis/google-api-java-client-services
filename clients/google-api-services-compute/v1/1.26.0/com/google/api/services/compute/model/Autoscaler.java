@@ -17,11 +17,16 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an Autoscaler resource. Autoscalers allow you to automatically scale virtual machine
- * instances in managed instance groups according to an autoscaling policy that you define. For more
- * information, read Autoscaling Groups of Instances. (== resource_for beta.autoscalers ==) (==
- * resource_for v1.autoscalers ==) (== resource_for beta.regionAutoscalers ==) (== resource_for
- * v1.regionAutoscalers ==)
+ * Represents an Autoscaler resource.
+ *
+ * Use autoscalers to automatically add or delete instances from a managed instance group according
+ * to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances.
+ *
+ * For zonal managed instance groups resource, use the autoscaler resource.
+ *
+ * For regional managed instance groups, use the regionAutoscalers resource. (== resource_for
+ * beta.autoscalers ==) (== resource_for v1.autoscalers ==) (== resource_for beta.regionAutoscalers
+ * ==) (== resource_for v1.regionAutoscalers ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

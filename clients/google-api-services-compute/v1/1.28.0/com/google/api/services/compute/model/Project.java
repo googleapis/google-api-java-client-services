@@ -17,8 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * A Project resource. For an overview of projects, see  Cloud Platform Resource Hierarchy. (==
- * resource_for v1.projects ==) (== resource_for beta.projects ==)
+ * Represents a Project resource.
+ *
+ * A project is used to organize resources in a Google Cloud Platform environment. For more
+ * information, read about the  Resource Hierarchy. (== resource_for v1.projects ==) (==
+ * resource_for beta.projects ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

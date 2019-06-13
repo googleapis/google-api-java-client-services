@@ -17,7 +17,16 @@
 package com.google.api.services.compute.model;
 
 /**
- * An Operation resource, used to manage asynchronous API requests. (== resource_for
+ * Represents an Operation resource.
+ *
+ * You can use an operation resource to manage asynchronous API requests. For more information, read
+ * Handling API responses.
+ *
+ * Operations can be global, regional or zonal.   - For global operations, use the globalOperations
+ * resource.  - For regional operations, use the regionOperations resource.  - For zonal operations,
+ * use the zonalOperations resource.
+ *
+ * For more information, read  Global, Regional, and Zonal Resources. (== resource_for
  * v1.globalOperations ==) (== resource_for beta.globalOperations ==) (== resource_for
  * v1.regionOperations ==) (== resource_for beta.regionOperations ==) (== resource_for
  * v1.zoneOperations ==) (== resource_for beta.zoneOperations ==)
@@ -132,9 +141,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.Integer progress;
 
   /**
-   * [Output Only] The URL of the region where the operation resides. Only available when performing
-   * regional operations. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * [Output Only] The URL of the region where the operation resides. Only applicable when
+   * performing regional operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,9 +216,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the zone where the operation resides. Only available when performing
-   * per-zone operations. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * [Output Only] The URL of the zone where the operation resides. Only applicable when performing
+   * per-zone operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -454,9 +461,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the region where the operation resides. Only available when performing
-   * regional operations. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * [Output Only] The URL of the region where the operation resides. Only applicable when
+   * performing regional operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -464,9 +470,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the region where the operation resides. Only available when performing
-   * regional operations. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * [Output Only] The URL of the region where the operation resides. Only applicable when
+   * performing regional operations.
    * @param region region or {@code null} for none
    */
   public Operation setRegion(java.lang.String region) {
@@ -621,9 +626,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the zone where the operation resides. Only available when performing
-   * per-zone operations. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * [Output Only] The URL of the zone where the operation resides. Only applicable when performing
+   * per-zone operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -631,9 +635,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the zone where the operation resides. Only available when performing
-   * per-zone operations. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * [Output Only] The URL of the zone where the operation resides. Only applicable when performing
+   * per-zone operations.
    * @param zone zone or {@code null} for none
    */
   public Operation setZone(java.lang.String zone) {

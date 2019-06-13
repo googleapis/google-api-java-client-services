@@ -17,7 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Firewall resource.
+ * Represents a Firewall Rule resource.
+ *
+ * Firewall rules allow or deny ingress traffic to, and egress traffic from your instances. For more
+ * information, read Firewall rules.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -65,14 +68,14 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * If destination ranges are specified, the firewall will apply only to traffic that has
+   * If destination ranges are specified, the firewall rule applies only to traffic that has
    * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
    * IPv4 is supported.
    * The value may be {@code null}.
@@ -81,18 +84,18 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> destinationRanges;
 
   /**
-   * Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS
-   * traffic, it is NOT supported to specify destinationRanges; For EGRESS traffic, it is NOT
-   * supported to specify sourceRanges OR sourceTags.
+   * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default
+   * is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for
+   * `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String direction;
 
   /**
-   * Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated
-   * with. When set to true, the firewall rule is not enforced and the network behaves as if it did
-   * not exist. If this is unspecified, the firewall rule will be enabled.
+   * Denotes whether the firewall rule is disabled. When set to true, the firewall rule is not
+   * enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
+   * rule will be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,9 +126,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,21 +136,22 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the network resource for this firewall rule. If not specified when creating a firewall
-   * rule, the default network is used: global/networks/default If you choose to specify this
-   * property, you can specify the network as a full or partial URL. For example, the following are
-   * all valid URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks
-   * /my-network  - projects/myproject/global/networks/my-network  - global/networks/default
+   * rule, the default network is used: global/networks/default If you choose to specify this field,
+   * you can specify the network as a full or partial URL. For example, the following are all valid
+   * URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network
+   * - projects/myproject/global/networks/my-network  - global/networks/default
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not
-   * specified, the value assumed is 1000. Relative priorities determine precedence of conflicting
-   * rules. Lower value of priority implies higher precedence (eg, a rule with priority 0 has higher
-   * precedence than a rule with priority 1). DENY rules take precedence over ALLOW rules having
-   * equal priority.
+   * Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default
+   * value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply.
+   * Lower values indicate higher priority. For example, a rule with priority `0` has higher
+   * precedence than a rule with priority `1`. DENY rules take precedence over ALLOW rules if they
+   * have equal priority. Note that VPC networks have implied rules with a priority of `65535`. To
+   * avoid conflicts with the implied rules, use a priority number less than `65535`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,26 +165,27 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * If source ranges are specified, the firewall will apply only to traffic that has source IP
+   * If source ranges are specified, the firewall rule applies only to traffic that has a source IP
    * address in these ranges. These ranges must be expressed in CIDR format. One or both of
-   * sourceRanges and sourceTags may be set. If both properties are set, the firewall will apply to
-   * traffic that has source IP address within sourceRanges OR the source IP that belongs to a tag
-   * listed in the sourceTags property. The connection does not need to match both properties for
-   * the firewall to apply. Only IPv4 is supported.
+   * sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic
+   * that has a source IP address within sourceRanges OR a source IP from a resource with a matching
+   * tag listed in the sourceTags field. The connection does not need to match both fields for the
+   * rule to apply. Only IPv4 is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sourceRanges;
 
   /**
-   * If source service accounts are specified, the firewall will apply only to traffic originating
+   * If source service accounts are specified, the firewall rules apply only to traffic originating
    * from an instance with a service account in this list. Source service accounts cannot be used to
    * control traffic to an instance's external IP address because service accounts are associated
    * with an instance, not an IP address. sourceRanges can be set at the same time as
-   * sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP
-   * address within sourceRanges OR the source IP belongs to an instance with service account listed
-   * in sourceServiceAccount. The connection does not need to match both properties for the firewall
-   * to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+   * sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP
+   * address within the sourceRanges OR a source IP that belongs to an instance with service account
+   * listed in sourceServiceAccount. The connection does not need to match both fields for the
+   * firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or
+   * targetTags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,9 +197,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * network. Source tags cannot be used to control traffic to an instance's external IP address, it
    * only applies to traffic between instances in the same virtual network. Because tags are
    * associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be
-   * set. If both properties are set, the firewall will apply to traffic that has source IP address
-   * within sourceRanges OR the source IP that belongs to a tag listed in the sourceTags property.
-   * The connection does not need to match both properties for the firewall to apply.
+   * set. If both fields are set, the firewall applies to traffic that has a source IP address
+   * within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags
+   * field. The connection does not need to match both fields for the firewall to apply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,7 +281,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -284,7 +289,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @param description description or {@code null} for none
    */
   public Firewall setDescription(java.lang.String description) {
@@ -293,7 +298,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If destination ranges are specified, the firewall will apply only to traffic that has
+   * If destination ranges are specified, the firewall rule applies only to traffic that has
    * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
    * IPv4 is supported.
    * @return value or {@code null} for none
@@ -303,7 +308,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If destination ranges are specified, the firewall will apply only to traffic that has
+   * If destination ranges are specified, the firewall rule applies only to traffic that has
    * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
    * IPv4 is supported.
    * @param destinationRanges destinationRanges or {@code null} for none
@@ -314,9 +319,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS
-   * traffic, it is NOT supported to specify destinationRanges; For EGRESS traffic, it is NOT
-   * supported to specify sourceRanges OR sourceTags.
+   * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default
+   * is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for
+   * `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -324,9 +329,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Direction of traffic to which this firewall applies; default is INGRESS. Note: For INGRESS
-   * traffic, it is NOT supported to specify destinationRanges; For EGRESS traffic, it is NOT
-   * supported to specify sourceRanges OR sourceTags.
+   * Direction of traffic to which this firewall applies, either `INGRESS` or `EGRESS`. The default
+   * is `INGRESS`. For `INGRESS` traffic, you cannot specify the destinationRanges field, and for
+   * `EGRESS` traffic, you cannot specify the sourceRanges or sourceTags fields.
    * @param direction direction or {@code null} for none
    */
   public Firewall setDirection(java.lang.String direction) {
@@ -335,9 +340,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated
-   * with. When set to true, the firewall rule is not enforced and the network behaves as if it did
-   * not exist. If this is unspecified, the firewall rule will be enabled.
+   * Denotes whether the firewall rule is disabled. When set to true, the firewall rule is not
+   * enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
+   * rule will be enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -345,9 +350,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Denotes whether the firewall rule is disabled, i.e not applied to the network it is associated
-   * with. When set to true, the firewall rule is not enforced and the network behaves as if it did
-   * not exist. If this is unspecified, the firewall rule will be enabled.
+   * Denotes whether the firewall rule is disabled. When set to true, the firewall rule is not
+   * enforced and the network behaves as if it did not exist. If this is unspecified, the firewall
+   * rule will be enabled.
    * @param disabled disabled or {@code null} for none
    */
   public Firewall setDisabled(java.lang.Boolean disabled) {
@@ -411,9 +416,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -423,9 +428,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @param name name or {@code null} for none
    */
   public Firewall setName(java.lang.String name) {
@@ -435,10 +440,10 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the network resource for this firewall rule. If not specified when creating a firewall
-   * rule, the default network is used: global/networks/default If you choose to specify this
-   * property, you can specify the network as a full or partial URL. For example, the following are
-   * all valid URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks
-   * /my-network  - projects/myproject/global/networks/my-network  - global/networks/default
+   * rule, the default network is used: global/networks/default If you choose to specify this field,
+   * you can specify the network as a full or partial URL. For example, the following are all valid
+   * URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network
+   * - projects/myproject/global/networks/my-network  - global/networks/default
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -447,10 +452,10 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
 
   /**
    * URL of the network resource for this firewall rule. If not specified when creating a firewall
-   * rule, the default network is used: global/networks/default If you choose to specify this
-   * property, you can specify the network as a full or partial URL. For example, the following are
-   * all valid URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks
-   * /my-network  - projects/myproject/global/networks/my-network  - global/networks/default
+   * rule, the default network is used: global/networks/default If you choose to specify this field,
+   * you can specify the network as a full or partial URL. For example, the following are all valid
+   * URLs:   - https://www.googleapis.com/compute/v1/projects/myproject/global/networks/my-network
+   * - projects/myproject/global/networks/my-network  - global/networks/default
    * @param network network or {@code null} for none
    */
   public Firewall setNetwork(java.lang.String network) {
@@ -459,11 +464,12 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not
-   * specified, the value assumed is 1000. Relative priorities determine precedence of conflicting
-   * rules. Lower value of priority implies higher precedence (eg, a rule with priority 0 has higher
-   * precedence than a rule with priority 1). DENY rules take precedence over ALLOW rules having
-   * equal priority.
+   * Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default
+   * value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply.
+   * Lower values indicate higher priority. For example, a rule with priority `0` has higher
+   * precedence than a rule with priority `1`. DENY rules take precedence over ALLOW rules if they
+   * have equal priority. Note that VPC networks have implied rules with a priority of `65535`. To
+   * avoid conflicts with the implied rules, use a priority number less than `65535`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -471,11 +477,12 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Priority for this rule. This is an integer between 0 and 65535, both inclusive. When not
-   * specified, the value assumed is 1000. Relative priorities determine precedence of conflicting
-   * rules. Lower value of priority implies higher precedence (eg, a rule with priority 0 has higher
-   * precedence than a rule with priority 1). DENY rules take precedence over ALLOW rules having
-   * equal priority.
+   * Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default
+   * value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply.
+   * Lower values indicate higher priority. For example, a rule with priority `0` has higher
+   * precedence than a rule with priority `1`. DENY rules take precedence over ALLOW rules if they
+   * have equal priority. Note that VPC networks have implied rules with a priority of `65535`. To
+   * avoid conflicts with the implied rules, use a priority number less than `65535`.
    * @param priority priority or {@code null} for none
    */
   public Firewall setPriority(java.lang.Integer priority) {
@@ -501,12 +508,12 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If source ranges are specified, the firewall will apply only to traffic that has source IP
+   * If source ranges are specified, the firewall rule applies only to traffic that has a source IP
    * address in these ranges. These ranges must be expressed in CIDR format. One or both of
-   * sourceRanges and sourceTags may be set. If both properties are set, the firewall will apply to
-   * traffic that has source IP address within sourceRanges OR the source IP that belongs to a tag
-   * listed in the sourceTags property. The connection does not need to match both properties for
-   * the firewall to apply. Only IPv4 is supported.
+   * sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic
+   * that has a source IP address within sourceRanges OR a source IP from a resource with a matching
+   * tag listed in the sourceTags field. The connection does not need to match both fields for the
+   * rule to apply. Only IPv4 is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceRanges() {
@@ -514,12 +521,12 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If source ranges are specified, the firewall will apply only to traffic that has source IP
+   * If source ranges are specified, the firewall rule applies only to traffic that has a source IP
    * address in these ranges. These ranges must be expressed in CIDR format. One or both of
-   * sourceRanges and sourceTags may be set. If both properties are set, the firewall will apply to
-   * traffic that has source IP address within sourceRanges OR the source IP that belongs to a tag
-   * listed in the sourceTags property. The connection does not need to match both properties for
-   * the firewall to apply. Only IPv4 is supported.
+   * sourceRanges and sourceTags may be set. If both fields are set, the rule applies to traffic
+   * that has a source IP address within sourceRanges OR a source IP from a resource with a matching
+   * tag listed in the sourceTags field. The connection does not need to match both fields for the
+   * rule to apply. Only IPv4 is supported.
    * @param sourceRanges sourceRanges or {@code null} for none
    */
   public Firewall setSourceRanges(java.util.List<java.lang.String> sourceRanges) {
@@ -528,14 +535,15 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If source service accounts are specified, the firewall will apply only to traffic originating
+   * If source service accounts are specified, the firewall rules apply only to traffic originating
    * from an instance with a service account in this list. Source service accounts cannot be used to
    * control traffic to an instance's external IP address because service accounts are associated
    * with an instance, not an IP address. sourceRanges can be set at the same time as
-   * sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP
-   * address within sourceRanges OR the source IP belongs to an instance with service account listed
-   * in sourceServiceAccount. The connection does not need to match both properties for the firewall
-   * to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+   * sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP
+   * address within the sourceRanges OR a source IP that belongs to an instance with service account
+   * listed in sourceServiceAccount. The connection does not need to match both fields for the
+   * firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or
+   * targetTags.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceServiceAccounts() {
@@ -543,14 +551,15 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If source service accounts are specified, the firewall will apply only to traffic originating
+   * If source service accounts are specified, the firewall rules apply only to traffic originating
    * from an instance with a service account in this list. Source service accounts cannot be used to
    * control traffic to an instance's external IP address because service accounts are associated
    * with an instance, not an IP address. sourceRanges can be set at the same time as
-   * sourceServiceAccounts. If both are set, the firewall will apply to traffic that has source IP
-   * address within sourceRanges OR the source IP belongs to an instance with service account listed
-   * in sourceServiceAccount. The connection does not need to match both properties for the firewall
-   * to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or targetTags.
+   * sourceServiceAccounts. If both are set, the firewall applies to traffic that has a source IP
+   * address within the sourceRanges OR a source IP that belongs to an instance with service account
+   * listed in sourceServiceAccount. The connection does not need to match both fields for the
+   * firewall to apply. sourceServiceAccounts cannot be used at the same time as sourceTags or
+   * targetTags.
    * @param sourceServiceAccounts sourceServiceAccounts or {@code null} for none
    */
   public Firewall setSourceServiceAccounts(java.util.List<java.lang.String> sourceServiceAccounts) {
@@ -564,9 +573,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * network. Source tags cannot be used to control traffic to an instance's external IP address, it
    * only applies to traffic between instances in the same virtual network. Because tags are
    * associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be
-   * set. If both properties are set, the firewall will apply to traffic that has source IP address
-   * within sourceRanges OR the source IP that belongs to a tag listed in the sourceTags property.
-   * The connection does not need to match both properties for the firewall to apply.
+   * set. If both fields are set, the firewall applies to traffic that has a source IP address
+   * within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags
+   * field. The connection does not need to match both fields for the firewall to apply.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceTags() {
@@ -579,9 +588,9 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    * network. Source tags cannot be used to control traffic to an instance's external IP address, it
    * only applies to traffic between instances in the same virtual network. Because tags are
    * associated with instances, not IP addresses. One or both of sourceRanges and sourceTags may be
-   * set. If both properties are set, the firewall will apply to traffic that has source IP address
-   * within sourceRanges OR the source IP that belongs to a tag listed in the sourceTags property.
-   * The connection does not need to match both properties for the firewall to apply.
+   * set. If both fields are set, the firewall applies to traffic that has a source IP address
+   * within sourceRanges OR a source IP from a resource with a matching tag listed in the sourceTags
+   * field. The connection does not need to match both fields for the firewall to apply.
    * @param sourceTags sourceTags or {@code null} for none
    */
   public Firewall setSourceTags(java.util.List<java.lang.String> sourceTags) {
@@ -653,15 +662,15 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a
      * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-     * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * udp, icmp, esp, ah, ipip, sctp) or the IP protocol number.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key("IPProtocol")
     private java.lang.String iPProtocol;
 
     /**
-     * An optional list of ports to which this rule applies. This field is only applicable for UDP or
-     * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
+     * An optional list of ports to which this rule applies. This field is only applicable for the UDP
+     * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
      * applies to connections through any port.
      *
      * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
@@ -673,7 +682,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a
      * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-     * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * udp, icmp, esp, ah, ipip, sctp) or the IP protocol number.
      * @return value or {@code null} for none
      */
     public java.lang.String getIPProtocol() {
@@ -683,7 +692,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a
      * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-     * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * udp, icmp, esp, ah, ipip, sctp) or the IP protocol number.
      * @param iPProtocol iPProtocol or {@code null} for none
      */
     public Allowed setIPProtocol(java.lang.String iPProtocol) {
@@ -692,8 +701,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional list of ports to which this rule applies. This field is only applicable for UDP or
-     * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
+     * An optional list of ports to which this rule applies. This field is only applicable for the UDP
+     * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
      * applies to connections through any port.
      *
      * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
@@ -704,8 +713,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional list of ports to which this rule applies. This field is only applicable for UDP or
-     * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
+     * An optional list of ports to which this rule applies. This field is only applicable for the UDP
+     * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
      * applies to connections through any port.
      *
      * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
@@ -736,15 +745,15 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a
      * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-     * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * udp, icmp, esp, ah, ipip, sctp) or the IP protocol number.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key("IPProtocol")
     private java.lang.String iPProtocol;
 
     /**
-     * An optional list of ports to which this rule applies. This field is only applicable for UDP or
-     * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
+     * An optional list of ports to which this rule applies. This field is only applicable for the UDP
+     * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
      * applies to connections through any port.
      *
      * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
@@ -756,7 +765,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a
      * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-     * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * udp, icmp, esp, ah, ipip, sctp) or the IP protocol number.
      * @return value or {@code null} for none
      */
     public java.lang.String getIPProtocol() {
@@ -766,7 +775,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a
      * firewall rule. This value can either be one of the following well known protocol strings (tcp,
-     * udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
+     * udp, icmp, esp, ah, ipip, sctp) or the IP protocol number.
      * @param iPProtocol iPProtocol or {@code null} for none
      */
     public Denied setIPProtocol(java.lang.String iPProtocol) {
@@ -775,8 +784,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional list of ports to which this rule applies. This field is only applicable for UDP or
-     * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
+     * An optional list of ports to which this rule applies. This field is only applicable for the UDP
+     * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
      * applies to connections through any port.
      *
      * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].
@@ -787,8 +796,8 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * An optional list of ports to which this rule applies. This field is only applicable for UDP or
-     * TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
+     * An optional list of ports to which this rule applies. This field is only applicable for the UDP
+     * or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule
      * applies to connections through any port.
      *
      * Example inputs include: ["22"], ["80","443"], and ["12345-12349"].

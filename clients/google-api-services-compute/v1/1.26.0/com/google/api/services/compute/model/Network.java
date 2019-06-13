@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Network resource. Read Virtual Private Cloud (VPC) Network Overview for more
- * information. (== resource_for v1.networks ==) (== resource_for beta.networks ==)
+ * Represents a VPC Network resource.
+ *
+ * Networks connect resources to each other and to the internet. For more information, read Virtual
+ * Private Cloud (VPC) Network. (== resource_for v1.networks ==) (== resource_for beta.networks ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -58,15 +60,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Output Only] The gateway address for default routing out of the network. This value is read
-   * only and is selected by GCP.
+   * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +90,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +191,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -198,7 +199,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @param description description or {@code null} for none
    */
   public Network setDescription(java.lang.String description) {
@@ -207,8 +208,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The gateway address for default routing out of the network. This value is read
-   * only and is selected by GCP.
+   * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayIPv4() {
@@ -216,8 +216,7 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The gateway address for default routing out of the network. This value is read
-   * only and is selected by GCP.
+   * [Output Only] The gateway address for default routing out of the network, selected by GCP.
    * @param gatewayIPv4 gatewayIPv4 or {@code null} for none
    */
   public Network setGatewayIPv4(java.lang.String gatewayIPv4) {
@@ -262,9 +261,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -274,9 +273,9 @@ public final class Network extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @param name name or {@code null} for none
    */
   public Network setName(java.lang.String name) {

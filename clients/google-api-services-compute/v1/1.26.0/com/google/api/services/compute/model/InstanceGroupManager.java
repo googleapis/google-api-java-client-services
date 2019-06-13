@@ -17,9 +17,17 @@
 package com.google.api.services.compute.model;
 
 /**
- * An Instance Group Manager resource. (== resource_for beta.instanceGroupManagers ==) (==
- * resource_for v1.instanceGroupManagers ==) (== resource_for beta.regionInstanceGroupManagers ==)
- * (== resource_for v1.regionInstanceGroupManagers ==)
+ * Represents a Managed Instance Group resource.
+ *
+ * An instance group is a collection of VM instances that you can manage as a single entity. For
+ * more information, read Instance groups.
+ *
+ * For zonal Managed Instance Group, use the instanceGroupManagers resource.
+ *
+ * For regional Managed Instance Group, use the regionInstanceGroupManagers resource. (==
+ * resource_for beta.instanceGroupManagers ==) (== resource_for v1.instanceGroupManagers ==) (==
+ * resource_for beta.regionInstanceGroupManagers ==) (== resource_for v1.regionInstanceGroupManagers
+ * ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

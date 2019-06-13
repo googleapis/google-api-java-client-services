@@ -38,8 +38,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The name of this access configuration. The default and recommended name is External NAT but you
-   * can use any arbitrary string you would like. For example, My external IP or Network Access.
+   * The name of this access configuration. The default and recommended name is External NAT, but
+   * you can use any arbitrary string, such as My external IP or Network Access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,15 +70,15 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String networkTier;
 
   /**
-   * The DNS domain name for the public PTR record. This field can only be set when the
-   * set_public_ptr field is enabled.
+   * The DNS domain name for the public PTR record. You can set this field only if the
+   * `setPublicPtr` field is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicPtrDomainName;
 
   /**
-   * Specifies whether a public DNS ?PTR? record should be created to map the external IP address of
+   * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
    * the instance to a DNS domain name.
    * The value may be {@code null}.
    */
@@ -110,8 +110,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of this access configuration. The default and recommended name is External NAT but you
-   * can use any arbitrary string you would like. For example, My external IP or Network Access.
+   * The name of this access configuration. The default and recommended name is External NAT, but
+   * you can use any arbitrary string, such as My external IP or Network Access.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -119,8 +119,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of this access configuration. The default and recommended name is External NAT but you
-   * can use any arbitrary string you would like. For example, My external IP or Network Access.
+   * The name of this access configuration. The default and recommended name is External NAT, but
+   * you can use any arbitrary string, such as My external IP or Network Access.
    * @param name name or {@code null} for none
    */
   public AccessConfig setName(java.lang.String name) {
@@ -183,8 +183,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS domain name for the public PTR record. This field can only be set when the
-   * set_public_ptr field is enabled.
+   * The DNS domain name for the public PTR record. You can set this field only if the
+   * `setPublicPtr` field is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicPtrDomainName() {
@@ -192,8 +192,8 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DNS domain name for the public PTR record. This field can only be set when the
-   * set_public_ptr field is enabled.
+   * The DNS domain name for the public PTR record. You can set this field only if the
+   * `setPublicPtr` field is enabled.
    * @param publicPtrDomainName publicPtrDomainName or {@code null} for none
    */
   public AccessConfig setPublicPtrDomainName(java.lang.String publicPtrDomainName) {
@@ -202,7 +202,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether a public DNS ?PTR? record should be created to map the external IP address of
+   * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
    * the instance to a DNS domain name.
    * @return value or {@code null} for none
    */
@@ -211,7 +211,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether a public DNS ?PTR? record should be created to map the external IP address of
+   * Specifies whether a public DNS 'PTR' record should be created to map the external IP address of
    * the instance to a DNS domain name.
    * @param setPublicPtr setPublicPtr or {@code null} for none
    */

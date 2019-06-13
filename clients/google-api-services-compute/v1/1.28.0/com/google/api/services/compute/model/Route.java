@@ -17,20 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Route resource. A route specifies how certain packets should be handled by the
- * network. Routes are associated with instances by tags and the set of routes for a particular
- * instance is called its routing table.
+ * Represents a Route resource.
  *
- * For each packet leaving an instance, the system searches that instance's routing table for a
- * single best matching route. Routes match packets by destination IP address, preferring smaller or
- * more specific ranges over larger ones. If there is a tie, the system selects the route with the
- * smallest priority value. If there is still a tie, it uses the layer three and four packet headers
- * to select just one of the remaining matching routes. The packet is then forwarded as specified by
- * the nextHop field of the winning route - either to another instance destination, an instance
- * gateway, or a Google Compute Engine-operated gateway.
- *
- * Packets that do not match any route in the sending instance's routing table are dropped. (==
- * resource_for beta.routes ==) (== resource_for v1.routes ==)
+ * A route defines a path from VM instances in the VPC network to a specific destination. This
+ * destination can be inside or outside the VPC network. For more information, read the Routes
+ * overview. (== resource_for beta.routes ==) (== resource_for v1.routes ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -50,7 +41,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +71,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +88,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL:  projects//global/gateways/default-internet-gateway
+   * gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-
+   * gateway
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +136,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The priority of this route. Priority is used to break ties in cases where there is more than
-   * one matching route of equal prefix length. In the case of two routes with equal prefix length,
-   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
-   * through 65535.
+   * one matching route of equal prefix length. In cases where multiple routes have equal prefix
+   * length, the one with the lowest-numbered priority value wins. The default value is `1000`. The
+   * priority value must be from `0` to `65535`, inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +190,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -206,7 +198,7 @@ public final class Route extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @param description description or {@code null} for none
    */
   public Route setDescription(java.lang.String description) {
@@ -268,9 +260,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -280,9 +272,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @param name name or {@code null} for none
    */
   public Route setName(java.lang.String name) {
@@ -309,7 +301,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL:  projects//global/gateways/default-internet-gateway
+   * gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-
+   * gateway
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopGateway() {
@@ -318,7 +311,8 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL to a gateway that should handle matching packets. You can only specify the internet
-   * gateway using a full or partial valid URL:  projects//global/gateways/default-internet-gateway
+   * gateway using a full or partial valid URL:  projects/project/global/gateways/default-internet-
+   * gateway
    * @param nextHopGateway nextHopGateway or {@code null} for none
    */
   public Route setNextHopGateway(java.lang.String nextHopGateway) {
@@ -421,9 +415,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The priority of this route. Priority is used to break ties in cases where there is more than
-   * one matching route of equal prefix length. In the case of two routes with equal prefix length,
-   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
-   * through 65535.
+   * one matching route of equal prefix length. In cases where multiple routes have equal prefix
+   * length, the one with the lowest-numbered priority value wins. The default value is `1000`. The
+   * priority value must be from `0` to `65535`, inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -432,9 +426,9 @@ public final class Route extends com.google.api.client.json.GenericJson {
 
   /**
    * The priority of this route. Priority is used to break ties in cases where there is more than
-   * one matching route of equal prefix length. In the case of two routes with equal prefix length,
-   * the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0
-   * through 65535.
+   * one matching route of equal prefix length. In cases where multiple routes have equal prefix
+   * length, the one with the lowest-numbered priority value wins. The default value is `1000`. The
+   * priority value must be from `0` to `65535`, inclusive.
    * @param priority priority or {@code null} for none
    */
   public Route setPriority(java.lang.Long priority) {

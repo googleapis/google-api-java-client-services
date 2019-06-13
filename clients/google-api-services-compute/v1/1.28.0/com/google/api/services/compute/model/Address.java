@@ -17,8 +17,20 @@
 package com.google.api.services.compute.model;
 
 /**
- * A reserved address resource. (== resource_for beta.addresses ==) (== resource_for v1.addresses
- * ==) (== resource_for beta.globalAddresses ==) (== resource_for v1.globalAddresses ==)
+ * Represents an IP Address resource.
+ *
+ * An address resource represents a regional internal IP address. Regional internal IP addresses are
+ * RFC 1918 addresses that come from either a primary or secondary IP range of a subnet in a VPC
+ * network. Regional external IP addresses can be assigned to GCP VM instances, Cloud VPN gateways,
+ * regional external forwarding rules for network load balancers (in either Standard or Premium
+ * Tier), and regional external forwarding rules for HTTP(S), SSL Proxy, and TCP Proxy load
+ * balancers in Standard Tier. For more information, read IP addresses.
+ *
+ * A globalAddresses resource represent a global external IP address. Global external IP addresses
+ * are IPv4 or IPv6 addresses. They can only be assigned to global forwarding rules for HTTP(S), SSL
+ * Proxy, or TCP Proxy load balancers in Premium Tier. For more information, read Global resources.
+ * (== resource_for beta.addresses ==) (== resource_for v1.addresses ==) (== resource_for
+ * beta.globalAddresses ==) (== resource_for v1.globalAddresses ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -53,7 +65,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +79,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * The IP Version that will be used by this address. Valid options are IPV4 or IPV6. This can only
+   * The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only
    * be specified for a global address.
    * The value may be {@code null}.
    */
@@ -84,9 +96,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,18 +106,18 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the network in which to reserve the address. This field can only be used with
-   * INTERNAL type with VPC_PEERING purpose.
+   * INTERNAL type with the VPC_PEERING purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * This signifies the networking tier used for configuring this Address and can only take the
-   * following values: PREMIUM, STANDARD. Global forwarding rules can only be Premium Tier. Regional
-   * forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to
-   * regional forwarding rules can be used with any external load balancer. Regional forwarding
-   * rules in Premium Tier can only be used with a Network load balancer.
+   * This signifies the networking tier used for configuring this address and can only take the
+   * following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier.
+   * Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses
+   * applied to regional forwarding rules can be used with any external load balancer. Regional
+   * forwarding rules in Premium Tier can only be used with a network load balancer.
    *
    * If this field is not specified, it is assumed to be PREMIUM.
    * The value may be {@code null}.
@@ -121,16 +133,19 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.Integer prefixLength;
 
   /**
-   * The purpose of resource, only used with INTERNAL type.
+   * The purpose of this resource, which can be one of the following values: - `GCE_ENDPOINT` for
+   * addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar
+   * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
+   * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
+   * external IP addresses automatically reserved for Cloud NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String purpose;
 
   /**
-   * [Output Only] URL of the region where the regional address resides. This field is not
+   * [Output Only] The URL of the region where the regional address resides. This field is not
    * applicable to global addresses. You must specify this field as part of the HTTP request URL.
-   * You cannot set this field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +170,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the subnetwork in which to reserve the address. If an IP address is specified, it
-   * must be within the subnetwork's IP range. This field can only be used with INTERNAL type with
-   * GCE_ENDPOINT/DNS_RESOLVER purposes.
+   * must be within the subnetwork's IP range. This field can only be used with INTERNAL type with a
+   * GCE_ENDPOINT or DNS_RESOLVER purpose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +238,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -231,7 +246,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of this resource. Provide this field when you create the resource.
    * @param description description or {@code null} for none
    */
   public Address setDescription(java.lang.String description) {
@@ -257,7 +272,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP Version that will be used by this address. Valid options are IPV4 or IPV6. This can only
+   * The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only
    * be specified for a global address.
    * @return value or {@code null} for none
    */
@@ -266,7 +281,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP Version that will be used by this address. Valid options are IPV4 or IPV6. This can only
+   * The IP version that will be used by this address. Valid options are IPV4 or IPV6. This can only
    * be specified for a global address.
    * @param ipVersion ipVersion or {@code null} for none
    */
@@ -295,9 +310,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -307,9 +322,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be
+   * a lowercase letter, and all following characters (except for the last character) must be a
+   * dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
    * @param name name or {@code null} for none
    */
   public Address setName(java.lang.String name) {
@@ -319,7 +334,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the network in which to reserve the address. This field can only be used with
-   * INTERNAL type with VPC_PEERING purpose.
+   * INTERNAL type with the VPC_PEERING purpose.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -328,7 +343,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the network in which to reserve the address. This field can only be used with
-   * INTERNAL type with VPC_PEERING purpose.
+   * INTERNAL type with the VPC_PEERING purpose.
    * @param network network or {@code null} for none
    */
   public Address setNetwork(java.lang.String network) {
@@ -337,11 +352,11 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This signifies the networking tier used for configuring this Address and can only take the
-   * following values: PREMIUM, STANDARD. Global forwarding rules can only be Premium Tier. Regional
-   * forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to
-   * regional forwarding rules can be used with any external load balancer. Regional forwarding
-   * rules in Premium Tier can only be used with a Network load balancer.
+   * This signifies the networking tier used for configuring this address and can only take the
+   * following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier.
+   * Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses
+   * applied to regional forwarding rules can be used with any external load balancer. Regional
+   * forwarding rules in Premium Tier can only be used with a network load balancer.
    *
    * If this field is not specified, it is assumed to be PREMIUM.
    * @return value or {@code null} for none
@@ -351,11 +366,11 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This signifies the networking tier used for configuring this Address and can only take the
-   * following values: PREMIUM, STANDARD. Global forwarding rules can only be Premium Tier. Regional
-   * forwarding rules can be either Premium or Standard Tier. Standard Tier addresses applied to
-   * regional forwarding rules can be used with any external load balancer. Regional forwarding
-   * rules in Premium Tier can only be used with a Network load balancer.
+   * This signifies the networking tier used for configuring this address and can only take the
+   * following values: PREMIUM or STANDARD. Global forwarding rules can only be Premium Tier.
+   * Regional forwarding rules can be either Premium or Standard Tier. Standard Tier addresses
+   * applied to regional forwarding rules can be used with any external load balancer. Regional
+   * forwarding rules in Premium Tier can only be used with a network load balancer.
    *
    * If this field is not specified, it is assumed to be PREMIUM.
    * @param networkTier networkTier or {@code null} for none
@@ -383,7 +398,11 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The purpose of resource, only used with INTERNAL type.
+   * The purpose of this resource, which can be one of the following values: - `GCE_ENDPOINT` for
+   * addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar
+   * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
+   * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
+   * external IP addresses automatically reserved for Cloud NAT.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -391,7 +410,11 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The purpose of resource, only used with INTERNAL type.
+   * The purpose of this resource, which can be one of the following values: - `GCE_ENDPOINT` for
+   * addresses that are used by VM instances, alias IP ranges, internal load balancers, and similar
+   * resources.  - `DNS_RESOLVER` for a DNS resolver address in a subnetwork  - `VPC_PEERING` for
+   * addresses that are reserved for VPC peer networks.  - `NAT_AUTO` for addresses that are
+   * external IP addresses automatically reserved for Cloud NAT.
    * @param purpose purpose or {@code null} for none
    */
   public Address setPurpose(java.lang.String purpose) {
@@ -400,9 +423,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the regional address resides. This field is not
+   * [Output Only] The URL of the region where the regional address resides. This field is not
    * applicable to global addresses. You must specify this field as part of the HTTP request URL.
-   * You cannot set this field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -410,9 +432,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the regional address resides. This field is not
+   * [Output Only] The URL of the region where the regional address resides. This field is not
    * applicable to global addresses. You must specify this field as part of the HTTP request URL.
-   * You cannot set this field in the request body.
    * @param region region or {@code null} for none
    */
   public Address setRegion(java.lang.String region) {
@@ -462,8 +483,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the subnetwork in which to reserve the address. If an IP address is specified, it
-   * must be within the subnetwork's IP range. This field can only be used with INTERNAL type with
-   * GCE_ENDPOINT/DNS_RESOLVER purposes.
+   * must be within the subnetwork's IP range. This field can only be used with INTERNAL type with a
+   * GCE_ENDPOINT or DNS_RESOLVER purpose.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -472,8 +493,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the subnetwork in which to reserve the address. If an IP address is specified, it
-   * must be within the subnetwork's IP range. This field can only be used with INTERNAL type with
-   * GCE_ENDPOINT/DNS_RESOLVER purposes.
+   * must be within the subnetwork's IP range. This field can only be used with INTERNAL type with a
+   * GCE_ENDPOINT or DNS_RESOLVER purpose.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public Address setSubnetwork(java.lang.String subnetwork) {

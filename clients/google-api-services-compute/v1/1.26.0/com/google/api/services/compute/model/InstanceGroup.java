@@ -17,8 +17,17 @@
 package com.google.api.services.compute.model;
 
 /**
- * InstanceGroups (== resource_for beta.instanceGroups ==) (== resource_for v1.instanceGroups ==)
- * (== resource_for beta.regionInstanceGroups ==) (== resource_for v1.regionInstanceGroups ==)
+ * Represents an unmanaged Instance Group resource.
+ *
+ * Use unmanaged instance groups if you need to apply load balancing to groups of heterogeneous
+ * instances or if you need to manage the instances yourself. For more information, read  Instance
+ * groups.
+ *
+ * For zonal unmanaged Instance Group, use instanceGroups resource.
+ *
+ * For regional unmanaged Instance Group, use regionInstanceGroups resource. (== resource_for
+ * beta.instanceGroups ==) (== resource_for v1.instanceGroups ==) (== resource_for
+ * beta.regionInstanceGroups ==) (== resource_for v1.regionInstanceGroups ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

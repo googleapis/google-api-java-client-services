@@ -17,7 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * An Instance resource. (== resource_for beta.instances ==) (== resource_for v1.instances ==)
+ * Represents an Instance resource.
+ *
+ * An instance is a virtual machine that is hosted on Google Cloud Platform. For more information,
+ * read Virtual Machine Instances. (== resource_for beta.instances ==) (== resource_for v1.instances
+ * ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -17,15 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Commitment resource. Creating a Commitment resource means that you are purchasing a
- * committed use contract with an explicit start and end time. You can create commitments based on
- * vCPUs and memory usage and receive discounted rates. For full details, read Signing Up for
- * Committed Use Discounts.
+ * Represents a regional Commitment resource.
  *
- * Committed use discounts are subject to Google Cloud Platform's Service Specific Terms. By
- * purchasing a committed use discount, you agree to these terms. Committed use discounts will not
- * renew, so you must purchase a new commitment to continue receiving discounts. (== resource_for
- * beta.commitments ==) (== resource_for v1.commitments ==)
+ * Creating a commitment resource means that you are purchasing a committed use contract with an
+ * explicit start and end time. You can create commitments based on vCPUs and memory usage and
+ * receive discounted rates. For full details, read Signing Up for Committed Use Discounts. (==
+ * resource_for beta.regionCommitments ==) (== resource_for v1.regionCommitments ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -81,6 +81,14 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Resource policies applied to this disk for automatic snapshot creations. Specified using the
+   * full or partial URL. For instance template, specify only the resource policy name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> resourcePolicies;
+
+  /**
    * The source image to create this disk. When creating a new instance, one of
    * initializeParams.sourceImage or disks.source is required except for local SSD.
    *
@@ -240,6 +248,25 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Resource policies applied to this disk for automatic snapshot creations. Specified using the
+   * full or partial URL. For instance template, specify only the resource policy name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getResourcePolicies() {
+    return resourcePolicies;
+  }
+
+  /**
+   * Resource policies applied to this disk for automatic snapshot creations. Specified using the
+   * full or partial URL. For instance template, specify only the resource policy name.
+   * @param resourcePolicies resourcePolicies or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
+    this.resourcePolicies = resourcePolicies;
     return this;
   }
 

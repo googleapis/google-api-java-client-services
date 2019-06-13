@@ -1634,7 +1634,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Creates an address resource in the specified project using the data included in the request.
+     * Creates an address resource in the specified project by using the data included in the request.
      *
      * Create a request for the method "addresses.insert".
      *
@@ -1663,7 +1663,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Creates an address resource in the specified project using the data included in the request.
+       * Creates an address resource in the specified project by using the data included in the request.
        *
        * Create a request for the method "addresses.insert".
        *
@@ -8411,6 +8411,232 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   public class Disks {
 
     /**
+     * Adds existing resource policies to a disk. You can only add one policy which will be applied to
+     * this disk for scheduling snapshot creation.
+     *
+     * Create a request for the method "disks.addResourcePolicies".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link AddResourcePolicies#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param disk The disk name for this request.
+     * @param content the {@link com.google.api.services.compute.model.DisksAddResourcePoliciesRequest}
+     * @return the request
+     */
+    public AddResourcePolicies addResourcePolicies(java.lang.String project, java.lang.String zone, java.lang.String disk, com.google.api.services.compute.model.DisksAddResourcePoliciesRequest content) throws java.io.IOException {
+      AddResourcePolicies result = new AddResourcePolicies(project, zone, disk, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AddResourcePolicies extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/disks/{disk}/addResourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern DISK_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Adds existing resource policies to a disk. You can only add one policy which will be applied to
+       * this disk for scheduling snapshot creation.
+       *
+       * Create a request for the method "disks.addResourcePolicies".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link AddResourcePolicies#execute()} method to invoke the remote
+       * operation. <p> {@link AddResourcePolicies#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param disk The disk name for this request.
+       * @param content the {@link com.google.api.services.compute.model.DisksAddResourcePoliciesRequest}
+       * @since 1.13
+       */
+      protected AddResourcePolicies(java.lang.String project, java.lang.String zone, java.lang.String disk, com.google.api.services.compute.model.DisksAddResourcePoliciesRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.disk = com.google.api.client.util.Preconditions.checkNotNull(disk, "Required parameter disk must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public AddResourcePolicies setAlt(java.lang.String alt) {
+        return (AddResourcePolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public AddResourcePolicies setFields(java.lang.String fields) {
+        return (AddResourcePolicies) super.setFields(fields);
+      }
+
+      @Override
+      public AddResourcePolicies setKey(java.lang.String key) {
+        return (AddResourcePolicies) super.setKey(key);
+      }
+
+      @Override
+      public AddResourcePolicies setOauthToken(java.lang.String oauthToken) {
+        return (AddResourcePolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AddResourcePolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AddResourcePolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AddResourcePolicies setQuotaUser(java.lang.String quotaUser) {
+        return (AddResourcePolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AddResourcePolicies setUserIp(java.lang.String userIp) {
+        return (AddResourcePolicies) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public AddResourcePolicies setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public AddResourcePolicies setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** The disk name for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String disk;
+
+      /** The disk name for this request.
+       */
+      public java.lang.String getDisk() {
+        return disk;
+      }
+
+      /** The disk name for this request. */
+      public AddResourcePolicies setDisk(java.lang.String disk) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.disk = disk;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public AddResourcePolicies setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public AddResourcePolicies set(String parameterName, Object value) {
+        return (AddResourcePolicies) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves an aggregated list of persistent disks.
      *
      * Create a request for the method "disks.aggregatedList".
@@ -10052,6 +10278,231 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Removes resource policies from a disk.
+     *
+     * Create a request for the method "disks.removeResourcePolicies".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link RemoveResourcePolicies#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param disk The disk name for this request.
+     * @param content the {@link com.google.api.services.compute.model.DisksRemoveResourcePoliciesRequest}
+     * @return the request
+     */
+    public RemoveResourcePolicies removeResourcePolicies(java.lang.String project, java.lang.String zone, java.lang.String disk, com.google.api.services.compute.model.DisksRemoveResourcePoliciesRequest content) throws java.io.IOException {
+      RemoveResourcePolicies result = new RemoveResourcePolicies(project, zone, disk, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RemoveResourcePolicies extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/disks/{disk}/removeResourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern DISK_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Removes resource policies from a disk.
+       *
+       * Create a request for the method "disks.removeResourcePolicies".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link RemoveResourcePolicies#execute()} method to invoke the remote
+       * operation. <p> {@link RemoveResourcePolicies#initialize(com.google.api.client.googleapis.servic
+       * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param disk The disk name for this request.
+       * @param content the {@link com.google.api.services.compute.model.DisksRemoveResourcePoliciesRequest}
+       * @since 1.13
+       */
+      protected RemoveResourcePolicies(java.lang.String project, java.lang.String zone, java.lang.String disk, com.google.api.services.compute.model.DisksRemoveResourcePoliciesRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.disk = com.google.api.client.util.Preconditions.checkNotNull(disk, "Required parameter disk must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public RemoveResourcePolicies setAlt(java.lang.String alt) {
+        return (RemoveResourcePolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public RemoveResourcePolicies setFields(java.lang.String fields) {
+        return (RemoveResourcePolicies) super.setFields(fields);
+      }
+
+      @Override
+      public RemoveResourcePolicies setKey(java.lang.String key) {
+        return (RemoveResourcePolicies) super.setKey(key);
+      }
+
+      @Override
+      public RemoveResourcePolicies setOauthToken(java.lang.String oauthToken) {
+        return (RemoveResourcePolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RemoveResourcePolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RemoveResourcePolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RemoveResourcePolicies setQuotaUser(java.lang.String quotaUser) {
+        return (RemoveResourcePolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RemoveResourcePolicies setUserIp(java.lang.String userIp) {
+        return (RemoveResourcePolicies) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public RemoveResourcePolicies setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public RemoveResourcePolicies setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** The disk name for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String disk;
+
+      /** The disk name for this request.
+       */
+      public java.lang.String getDisk() {
+        return disk;
+      }
+
+      /** The disk name for this request. */
+      public RemoveResourcePolicies setDisk(java.lang.String disk) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.disk = disk;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public RemoveResourcePolicies setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public RemoveResourcePolicies set(String parameterName, Object value) {
+        return (RemoveResourcePolicies) super.set(parameterName, value);
       }
     }
     /**
@@ -13853,7 +14304,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Creates an address resource in the specified project using the data included in the request.
+     * Creates an address resource in the specified project by using the data included in the request.
      *
      * Create a request for the method "globalAddresses.insert".
      *
@@ -13878,7 +14329,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Creates an address resource in the specified project using the data included in the request.
+       * Creates an address resource in the specified project by using the data included in the request.
        *
        * Create a request for the method "globalAddresses.insert".
        *
@@ -29562,6 +30013,221 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the specified guest attributes entry.
+     *
+     * Create a request for the method "instances.getGuestAttributes".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetGuestAttributes#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param instance Name of the instance scoping this request.
+     * @return the request
+     */
+    public GetGuestAttributes getGuestAttributes(java.lang.String project, java.lang.String zone, java.lang.String instance) throws java.io.IOException {
+      GetGuestAttributes result = new GetGuestAttributes(project, zone, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class GetGuestAttributes extends ComputeRequest<com.google.api.services.compute.model.GuestAttributes> {
+
+      private static final String REST_PATH = "{project}/zones/{zone}/instances/{instance}/getGuestAttributes";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern INSTANCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns the specified guest attributes entry.
+       *
+       * Create a request for the method "instances.getGuestAttributes".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetGuestAttributes#execute()} method to invoke the remote
+       * operation. <p> {@link GetGuestAttributes#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param instance Name of the instance scoping this request.
+       * @since 1.13
+       */
+      protected GetGuestAttributes(java.lang.String project, java.lang.String zone, java.lang.String instance) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.GuestAttributes.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetGuestAttributes setAlt(java.lang.String alt) {
+        return (GetGuestAttributes) super.setAlt(alt);
+      }
+
+      @Override
+      public GetGuestAttributes setFields(java.lang.String fields) {
+        return (GetGuestAttributes) super.setFields(fields);
+      }
+
+      @Override
+      public GetGuestAttributes setKey(java.lang.String key) {
+        return (GetGuestAttributes) super.setKey(key);
+      }
+
+      @Override
+      public GetGuestAttributes setOauthToken(java.lang.String oauthToken) {
+        return (GetGuestAttributes) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetGuestAttributes setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetGuestAttributes) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetGuestAttributes setQuotaUser(java.lang.String quotaUser) {
+        return (GetGuestAttributes) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetGuestAttributes setUserIp(java.lang.String userIp) {
+        return (GetGuestAttributes) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetGuestAttributes setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public GetGuestAttributes setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name of the instance scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Name of the instance scoping this request.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Name of the instance scoping this request. */
+      public GetGuestAttributes setInstance(java.lang.String instance) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.instance = instance;
+        return this;
+      }
+
+      /** Specifies the guest attributes path to be queried. */
+      @com.google.api.client.util.Key
+      private java.lang.String queryPath;
+
+      /** Specifies the guest attributes path to be queried.
+       */
+      public java.lang.String getQueryPath() {
+        return queryPath;
+      }
+
+      /** Specifies the guest attributes path to be queried. */
+      public GetGuestAttributes setQueryPath(java.lang.String queryPath) {
+        this.queryPath = queryPath;
+        return this;
+      }
+
+      /** Specifies the key for the guest attributes entry. */
+      @com.google.api.client.util.Key
+      private java.lang.String variableKey;
+
+      /** Specifies the key for the guest attributes entry.
+       */
+      public java.lang.String getVariableKey() {
+        return variableKey;
+      }
+
+      /** Specifies the key for the guest attributes entry. */
+      public GetGuestAttributes setVariableKey(java.lang.String variableKey) {
+        this.variableKey = variableKey;
+        return this;
+      }
+
+      @Override
+      public GetGuestAttributes set(String parameterName, Object value) {
+        return (GetGuestAttributes) super.set(parameterName, value);
       }
     }
     /**
@@ -50411,7 +51077,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Disable a serivce resource (a.k.a service project) associated with this host project.
+     * Disable a service resource (also known as service project) associated with this host project.
      *
      * Create a request for the method "projects.disableXpnResource".
      *
@@ -50436,7 +51102,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
       /**
-       * Disable a serivce resource (a.k.a service project) associated with this host project.
+       * Disable a service resource (also known as service project) associated with this host project.
        *
        * Create a request for the method "projects.disableXpnResource".
        *
@@ -56971,6 +57637,232 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   public class RegionDisks {
 
     /**
+     * Adds existing resource policies to a regional disk. You can only add one policy which will be
+     * applied to this disk for scheduling snapshot creation.
+     *
+     * Create a request for the method "regionDisks.addResourcePolicies".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link AddResourcePolicies#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param disk The disk name for this request.
+     * @param content the {@link com.google.api.services.compute.model.RegionDisksAddResourcePoliciesRequest}
+     * @return the request
+     */
+    public AddResourcePolicies addResourcePolicies(java.lang.String project, java.lang.String region, java.lang.String disk, com.google.api.services.compute.model.RegionDisksAddResourcePoliciesRequest content) throws java.io.IOException {
+      AddResourcePolicies result = new AddResourcePolicies(project, region, disk, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AddResourcePolicies extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/disks/{disk}/addResourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern DISK_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Adds existing resource policies to a regional disk. You can only add one policy which will be
+       * applied to this disk for scheduling snapshot creation.
+       *
+       * Create a request for the method "regionDisks.addResourcePolicies".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link AddResourcePolicies#execute()} method to invoke the remote
+       * operation. <p> {@link AddResourcePolicies#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param disk The disk name for this request.
+       * @param content the {@link com.google.api.services.compute.model.RegionDisksAddResourcePoliciesRequest}
+       * @since 1.13
+       */
+      protected AddResourcePolicies(java.lang.String project, java.lang.String region, java.lang.String disk, com.google.api.services.compute.model.RegionDisksAddResourcePoliciesRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.disk = com.google.api.client.util.Preconditions.checkNotNull(disk, "Required parameter disk must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public AddResourcePolicies setAlt(java.lang.String alt) {
+        return (AddResourcePolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public AddResourcePolicies setFields(java.lang.String fields) {
+        return (AddResourcePolicies) super.setFields(fields);
+      }
+
+      @Override
+      public AddResourcePolicies setKey(java.lang.String key) {
+        return (AddResourcePolicies) super.setKey(key);
+      }
+
+      @Override
+      public AddResourcePolicies setOauthToken(java.lang.String oauthToken) {
+        return (AddResourcePolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AddResourcePolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AddResourcePolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AddResourcePolicies setQuotaUser(java.lang.String quotaUser) {
+        return (AddResourcePolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AddResourcePolicies setUserIp(java.lang.String userIp) {
+        return (AddResourcePolicies) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public AddResourcePolicies setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public AddResourcePolicies setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** The disk name for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String disk;
+
+      /** The disk name for this request.
+       */
+      public java.lang.String getDisk() {
+        return disk;
+      }
+
+      /** The disk name for this request. */
+      public AddResourcePolicies setDisk(java.lang.String disk) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.disk = disk;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public AddResourcePolicies setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public AddResourcePolicies set(String parameterName, Object value) {
+        return (AddResourcePolicies) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a snapshot of this regional disk.
      *
      * Create a request for the method "regionDisks.createSnapshot".
@@ -58110,6 +59002,231 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Removes resource policies from a regional disk.
+     *
+     * Create a request for the method "regionDisks.removeResourcePolicies".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link RemoveResourcePolicies#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param disk The disk name for this request.
+     * @param content the {@link com.google.api.services.compute.model.RegionDisksRemoveResourcePoliciesRequest}
+     * @return the request
+     */
+    public RemoveResourcePolicies removeResourcePolicies(java.lang.String project, java.lang.String region, java.lang.String disk, com.google.api.services.compute.model.RegionDisksRemoveResourcePoliciesRequest content) throws java.io.IOException {
+      RemoveResourcePolicies result = new RemoveResourcePolicies(project, region, disk, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RemoveResourcePolicies extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/disks/{disk}/removeResourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern DISK_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Removes resource policies from a regional disk.
+       *
+       * Create a request for the method "regionDisks.removeResourcePolicies".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link RemoveResourcePolicies#execute()} method to invoke the remote
+       * operation. <p> {@link RemoveResourcePolicies#initialize(com.google.api.client.googleapis.servic
+       * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param disk The disk name for this request.
+       * @param content the {@link com.google.api.services.compute.model.RegionDisksRemoveResourcePoliciesRequest}
+       * @since 1.13
+       */
+      protected RemoveResourcePolicies(java.lang.String project, java.lang.String region, java.lang.String disk, com.google.api.services.compute.model.RegionDisksRemoveResourcePoliciesRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.disk = com.google.api.client.util.Preconditions.checkNotNull(disk, "Required parameter disk must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public RemoveResourcePolicies setAlt(java.lang.String alt) {
+        return (RemoveResourcePolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public RemoveResourcePolicies setFields(java.lang.String fields) {
+        return (RemoveResourcePolicies) super.setFields(fields);
+      }
+
+      @Override
+      public RemoveResourcePolicies setKey(java.lang.String key) {
+        return (RemoveResourcePolicies) super.setKey(key);
+      }
+
+      @Override
+      public RemoveResourcePolicies setOauthToken(java.lang.String oauthToken) {
+        return (RemoveResourcePolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RemoveResourcePolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RemoveResourcePolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RemoveResourcePolicies setQuotaUser(java.lang.String quotaUser) {
+        return (RemoveResourcePolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RemoveResourcePolicies setUserIp(java.lang.String userIp) {
+        return (RemoveResourcePolicies) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public RemoveResourcePolicies setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public RemoveResourcePolicies setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** The disk name for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String disk;
+
+      /** The disk name for this request.
+       */
+      public java.lang.String getDisk() {
+        return disk;
+      }
+
+      /** The disk name for this request. */
+      public RemoveResourcePolicies setDisk(java.lang.String disk) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DISK_PATTERN.matcher(disk).matches(),
+              "Parameter disk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.disk = disk;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public RemoveResourcePolicies setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public RemoveResourcePolicies set(String parameterName, Object value) {
+        return (RemoveResourcePolicies) super.set(parameterName, value);
       }
     }
     /**
@@ -63563,6 +64680,1399 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the ResourcePolicies collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.ResourcePolicies.List request = compute.resourcePolicies().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ResourcePolicies resourcePolicies() {
+    return new ResourcePolicies();
+  }
+
+  /**
+   * The "resourcePolicies" collection of methods.
+   */
+  public class ResourcePolicies {
+
+    /**
+     * Retrieves an aggregated list of resource policies.
+     *
+     * Create a request for the method "resourcePolicies.aggregatedList".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link AggregatedList#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @return the request
+     */
+    public AggregatedList aggregatedList(java.lang.String project) throws java.io.IOException {
+      AggregatedList result = new AggregatedList(project);
+      initialize(result);
+      return result;
+    }
+
+    public class AggregatedList extends ComputeRequest<com.google.api.services.compute.model.ResourcePolicyAggregatedList> {
+
+      private static final String REST_PATH = "{project}/aggregated/resourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Retrieves an aggregated list of resource policies.
+       *
+       * Create a request for the method "resourcePolicies.aggregatedList".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link AggregatedList#execute()} method to invoke the remote operation.
+       * <p> {@link AggregatedList#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @since 1.13
+       */
+      protected AggregatedList(java.lang.String project) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ResourcePolicyAggregatedList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AggregatedList setAlt(java.lang.String alt) {
+        return (AggregatedList) super.setAlt(alt);
+      }
+
+      @Override
+      public AggregatedList setFields(java.lang.String fields) {
+        return (AggregatedList) super.setFields(fields);
+      }
+
+      @Override
+      public AggregatedList setKey(java.lang.String key) {
+        return (AggregatedList) super.setKey(key);
+      }
+
+      @Override
+      public AggregatedList setOauthToken(java.lang.String oauthToken) {
+        return (AggregatedList) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AggregatedList setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AggregatedList) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AggregatedList setQuotaUser(java.lang.String quotaUser) {
+        return (AggregatedList) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AggregatedList setUserIp(java.lang.String userIp) {
+        return (AggregatedList) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public AggregatedList setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. The expression must specify the
+     field name, a comparison operator, and the value that you want to use for filtering. The value must
+     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     example-instance by specifying name != example-instance.
+
+     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
+     false to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based on resource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
+     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
+     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+     (scheduling.automaticRestart = true).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      public AggregatedList setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
+     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+     500) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      public AggregatedList setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public AggregatedList setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      public AggregatedList setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public AggregatedList set(String parameterName, Object value) {
+        return (AggregatedList) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the specified resource policy.
+     *
+     * Create a request for the method "resourcePolicies.delete".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param resourcePolicy Name of the resource policy to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String project, java.lang.String region, java.lang.String resourcePolicy) throws java.io.IOException {
+      Delete result = new Delete(project, region, resourcePolicy);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/resourcePolicies/{resourcePolicy}";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_POLICY_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Deletes the specified resource policy.
+       *
+       * Create a request for the method "resourcePolicies.delete".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param resourcePolicy Name of the resource policy to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String project, java.lang.String region, java.lang.String resourcePolicy) {
+        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resourcePolicy = com.google.api.client.util.Preconditions.checkNotNull(resourcePolicy, "Required parameter resourcePolicy must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_POLICY_PATTERN.matcher(resourcePolicy).matches(),
+              "Parameter resourcePolicy must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Delete setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public Delete setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name of the resource policy to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourcePolicy;
+
+      /** Name of the resource policy to delete.
+       */
+      public java.lang.String getResourcePolicy() {
+        return resourcePolicy;
+      }
+
+      /** Name of the resource policy to delete. */
+      public Delete setResourcePolicy(java.lang.String resourcePolicy) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_POLICY_PATTERN.matcher(resourcePolicy).matches(),
+              "Parameter resourcePolicy must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resourcePolicy = resourcePolicy;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves all information of the specified resource policy.
+     *
+     * Create a request for the method "resourcePolicies.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param resourcePolicy Name of the resource policy to retrieve.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String region, java.lang.String resourcePolicy) throws java.io.IOException {
+      Get result = new Get(project, region, resourcePolicy);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.ResourcePolicy> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/resourcePolicies/{resourcePolicy}";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_POLICY_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Retrieves all information of the specified resource policy.
+       *
+       * Create a request for the method "resourcePolicies.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param resourcePolicy Name of the resource policy to retrieve.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String region, java.lang.String resourcePolicy) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ResourcePolicy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resourcePolicy = com.google.api.client.util.Preconditions.checkNotNull(resourcePolicy, "Required parameter resourcePolicy must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_POLICY_PATTERN.matcher(resourcePolicy).matches(),
+              "Parameter resourcePolicy must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Get setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public Get setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name of the resource policy to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourcePolicy;
+
+      /** Name of the resource policy to retrieve.
+       */
+      public java.lang.String getResourcePolicy() {
+        return resourcePolicy;
+      }
+
+      /** Name of the resource policy to retrieve. */
+      public Get setResourcePolicy(java.lang.String resourcePolicy) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_POLICY_PATTERN.matcher(resourcePolicy).matches(),
+              "Parameter resourcePolicy must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resourcePolicy = resourcePolicy;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new resource policy.
+     *
+     * Create a request for the method "resourcePolicies.insert".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param content the {@link com.google.api.services.compute.model.ResourcePolicy}
+     * @return the request
+     */
+    public Insert insert(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.ResourcePolicy content) throws java.io.IOException {
+      Insert result = new Insert(project, region, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/resourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Creates a new resource policy.
+       *
+       * Create a request for the method "resourcePolicies.insert".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param content the {@link com.google.api.services.compute.model.ResourcePolicy}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.ResourcePolicy content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Insert setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public Insert setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Insert setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * A list all the resource policies that have been configured for the specified project in specified
+     * region.
+     *
+     * Create a request for the method "resourcePolicies.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String region) throws java.io.IOException {
+      List result = new List(project, region);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.ResourcePolicyList> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/resourcePolicies";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * A list all the resource policies that have been configured for the specified project in
+       * specified region.
+       *
+       * Create a request for the method "resourcePolicies.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String region) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ResourcePolicyList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public List setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public List setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. The expression must specify the
+     field name, a comparison operator, and the value that you want to use for filtering. The value must
+     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     example-instance by specifying name != example-instance.
+
+     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
+     false to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based on resource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
+     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
+     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
+     (scheduling.automaticRestart = true).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. The expression must
+       * specify the field name, a comparison operator, and the value that you want to use for
+       * filtering. The value must be a string, a number, or a boolean. The comparison operator must
+       * be either =, !=, >, or <.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * example-instance by specifying name != example-instance.
+       *
+       * You can also filter nested fields. For example, you could specify
+       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
+       * automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
+       * each expression is an AND expression. However, you can include AND and OR expressions
+       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+       * Broadwell") AND (scheduling.automaticRestart = true).
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
+     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+     500) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
+       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
+       * 500, inclusive. (Default: 500)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
+       * in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by name or creationTimestamp desc is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
+       * list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified resource.
+     *
+     * Create a request for the method "resourcePolicies.testIamPermissions".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(project, region, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends ComputeRequest<com.google.api.services.compute.model.TestPermissionsResponse> {
+
+      private static final String REST_PATH = "{project}/regions/{region}/resourcePolicies/{resource}/testIamPermissions";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns permissions that a caller has on the specified resource.
+       *
+       * Create a request for the method "resourcePolicies.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.TestPermissionsResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUserIp(java.lang.String userIp) {
+        return (TestIamPermissions) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public TestIamPermissions setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public TestIamPermissions setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
       }
     }
 

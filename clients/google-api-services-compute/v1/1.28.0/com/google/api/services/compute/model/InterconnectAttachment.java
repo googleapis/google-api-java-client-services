@@ -17,8 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents an InterconnectAttachment (VLAN attachment) resource. For more information, see
- * Creating VLAN Attachments. (== resource_for beta.interconnectAttachments ==) (== resource_for
+ * Represents an Interconnect Attachment (VLAN) resource.
+ *
+ * You can use Interconnect attachments (VLANS) to connect your Virtual Private Cloud networks to
+ * your on-premises networks through an Interconnect. For more information, read  Creating VLAN
+ * Attachments. (== resource_for beta.interconnectAttachments ==) (== resource_for
  * v1.interconnectAttachments ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -107,7 +110,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output Only] Google reference ID, to be used when raising support tickets with Google or
-   * otherwise to debug backend connectivity issues.
+   * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -426,7 +429,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output Only] Google reference ID, to be used when raising support tickets with Google or
-   * otherwise to debug backend connectivity issues.
+   * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleReferenceId() {
@@ -435,7 +438,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * [Output Only] Google reference ID, to be used when raising support tickets with Google or
-   * otherwise to debug backend connectivity issues.
+   * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * @param googleReferenceId googleReferenceId or {@code null} for none
    */
   public InterconnectAttachment setGoogleReferenceId(java.lang.String googleReferenceId) {

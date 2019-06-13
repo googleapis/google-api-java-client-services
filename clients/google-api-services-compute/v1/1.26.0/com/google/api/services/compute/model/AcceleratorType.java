@@ -17,8 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * An Accelerator Type resource. (== resource_for beta.acceleratorTypes ==) (== resource_for
- * v1.acceleratorTypes ==)
+ * Represents an Accelerator Type resource.
+ *
+ * Google Cloud Platform provides graphics processing units (accelerators) that you can add to VM
+ * instances to improve or accelerate performance when working with intensive workloads. For more
+ * information, read GPUs on Compute Engine. (== resource_for beta.acceleratorTypes ==) (==
+ * resource_for v1.acceleratorTypes ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

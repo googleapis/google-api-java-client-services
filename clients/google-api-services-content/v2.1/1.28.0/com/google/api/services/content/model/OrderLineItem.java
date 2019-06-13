@@ -31,6 +31,13 @@ package com.google.api.services.content.model;
 public final class OrderLineItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * Price and tax adjustments applied on the line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<OrderLineItemAdjustment> adjustments;
+
+  /**
    * Annotations that are attached to the line item.
    * The value may be {@code null}.
    */
@@ -144,6 +151,23 @@ public final class OrderLineItem extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private Price tax;
+
+  /**
+   * Price and tax adjustments applied on the line item.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<OrderLineItemAdjustment> getAdjustments() {
+    return adjustments;
+  }
+
+  /**
+   * Price and tax adjustments applied on the line item.
+   * @param adjustments adjustments or {@code null} for none
+   */
+  public OrderLineItem setAdjustments(java.util.List<OrderLineItemAdjustment> adjustments) {
+    this.adjustments = adjustments;
+    return this;
+  }
 
   /**
    * Annotations that are attached to the line item.

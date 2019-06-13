@@ -143,6 +143,294 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
   public class Projects {
 
     /**
+     * Creates/updates the specified agent.
+     *
+     * Create a request for the method "projects.agent".
+     *
+     * This request holds the parameters needed by the dialogflow server.  After setting any optional
+     * parameters, call the {@link Agent#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The project of this agent.
+    Format: `projects/`.
+     * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent}
+     * @return the request
+     */
+    public Agent agent(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent content) throws java.io.IOException {
+      Agent result = new Agent(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Agent extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent> {
+
+      private static final String REST_PATH = "v2beta1/{+parent}/agent";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Creates/updates the specified agent.
+       *
+       * Create a request for the method "projects.agent".
+       *
+       * This request holds the parameters needed by the the dialogflow server.  After setting any
+       * optional parameters, call the {@link Agent#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Agent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The project of this agent.
+    Format: `projects/`.
+       * @param content the {@link com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent}
+       * @since 1.13
+       */
+      protected Agent(java.lang.String parent, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent content) {
+        super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2beta1.model.GoogleCloudDialogflowV2beta1Agent.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public Agent set$Xgafv(java.lang.String $Xgafv) {
+        return (Agent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Agent setAccessToken(java.lang.String accessToken) {
+        return (Agent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Agent setAlt(java.lang.String alt) {
+        return (Agent) super.setAlt(alt);
+      }
+
+      @Override
+      public Agent setCallback(java.lang.String callback) {
+        return (Agent) super.setCallback(callback);
+      }
+
+      @Override
+      public Agent setFields(java.lang.String fields) {
+        return (Agent) super.setFields(fields);
+      }
+
+      @Override
+      public Agent setKey(java.lang.String key) {
+        return (Agent) super.setKey(key);
+      }
+
+      @Override
+      public Agent setOauthToken(java.lang.String oauthToken) {
+        return (Agent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Agent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Agent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Agent setQuotaUser(java.lang.String quotaUser) {
+        return (Agent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Agent setUploadType(java.lang.String uploadType) {
+        return (Agent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Agent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Agent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The project of this agent. Format: `projects/`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The project of this agent. Format: `projects/`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The project of this agent. Format: `projects/`.
+       */
+      public Agent setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /** Optional. The mask to control which fields get updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The mask to control which fields get updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The mask to control which fields get updated. */
+      public Agent setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Agent set(String parameterName, Object value) {
+        return (Agent) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the specified agent.
+     *
+     * Create a request for the method "projects.deleteAgent".
+     *
+     * This request holds the parameters needed by the dialogflow server.  After setting any optional
+     * parameters, call the {@link DeleteAgent#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The project that the agent to delete is associated with.
+    Format: `projects/`.
+     * @return the request
+     */
+    public DeleteAgent deleteAgent(java.lang.String parent) throws java.io.IOException {
+      DeleteAgent result = new DeleteAgent(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteAgent extends DialogflowRequest<com.google.api.services.dialogflow.v2beta1.model.GoogleProtobufEmpty> {
+
+      private static final String REST_PATH = "v2beta1/{+parent}/agent";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Deletes the specified agent.
+       *
+       * Create a request for the method "projects.deleteAgent".
+       *
+       * This request holds the parameters needed by the the dialogflow server.  After setting any
+       * optional parameters, call the {@link DeleteAgent#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * DeleteAgent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The project that the agent to delete is associated with.
+    Format: `projects/`.
+       * @since 1.13
+       */
+      protected DeleteAgent(java.lang.String parent) {
+        super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v2beta1.model.GoogleProtobufEmpty.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public DeleteAgent set$Xgafv(java.lang.String $Xgafv) {
+        return (DeleteAgent) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DeleteAgent setAccessToken(java.lang.String accessToken) {
+        return (DeleteAgent) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DeleteAgent setAlt(java.lang.String alt) {
+        return (DeleteAgent) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteAgent setCallback(java.lang.String callback) {
+        return (DeleteAgent) super.setCallback(callback);
+      }
+
+      @Override
+      public DeleteAgent setFields(java.lang.String fields) {
+        return (DeleteAgent) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteAgent setKey(java.lang.String key) {
+        return (DeleteAgent) super.setKey(key);
+      }
+
+      @Override
+      public DeleteAgent setOauthToken(java.lang.String oauthToken) {
+        return (DeleteAgent) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteAgent setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteAgent) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteAgent setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteAgent) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteAgent setUploadType(java.lang.String uploadType) {
+        return (DeleteAgent) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteAgent setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DeleteAgent) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The project that the agent to delete is associated with. Format: `projects/`.
+       */
+      public DeleteAgent setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public DeleteAgent set(String parameterName, Object value) {
+        return (DeleteAgent) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves the specified agent.
      *
      * Create a request for the method "projects.getAgent".

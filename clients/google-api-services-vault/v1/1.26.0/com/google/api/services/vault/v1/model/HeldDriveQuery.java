@@ -30,11 +30,35 @@ package com.google.api.services.vault.v1.model;
 public final class HeldDriveQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, include files in shared drives in the hold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeSharedDriveFiles;
+
+  /**
    * If true, include files in Team Drives in the hold.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeTeamDriveFiles;
+
+  /**
+   * If true, include files in shared drives in the hold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeSharedDriveFiles() {
+    return includeSharedDriveFiles;
+  }
+
+  /**
+   * If true, include files in shared drives in the hold.
+   * @param includeSharedDriveFiles includeSharedDriveFiles or {@code null} for none
+   */
+  public HeldDriveQuery setIncludeSharedDriveFiles(java.lang.Boolean includeSharedDriveFiles) {
+    this.includeSharedDriveFiles = includeSharedDriveFiles;
+    return this;
+  }
 
   /**
    * If true, include files in Team Drives in the hold.

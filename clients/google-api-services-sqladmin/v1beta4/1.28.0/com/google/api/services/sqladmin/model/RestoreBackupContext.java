@@ -51,6 +51,13 @@ public final class RestoreBackupContext extends com.google.api.client.json.Gener
   private java.lang.String kind;
 
   /**
+   * The full project ID of the source instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String project;
+
+  /**
    * The ID of the backup run to restore from.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class RestoreBackupContext extends com.google.api.client.json.Gener
    */
   public RestoreBackupContext setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The full project ID of the source instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProject() {
+    return project;
+  }
+
+  /**
+   * The full project ID of the source instance.
+   * @param project project or {@code null} for none
+   */
+  public RestoreBackupContext setProject(java.lang.String project) {
+    this.project = project;
     return this;
   }
 

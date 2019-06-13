@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/XCj5XS8gg6RZpfYMWcRBa-b3UUE\"",
+ "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/2JoGWl2Lc6WcpIEeif5Y8E05oy0\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v3",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v3",
- "revision": "20190604",
+ "revision": "20190611",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -1027,7 +1027,7 @@
     },
     "profileId": {
      "type": "string",
-     "description": "The profile id of the user when the subscription was purchased. Only present for purchases made with 'Subscribe with Google'."
+     "description": "The Google profile id of the user when the subscription was purchased. Only present for purchases made with 'Subscribe with Google'."
     },
     "profileName": {
      "type": "string",

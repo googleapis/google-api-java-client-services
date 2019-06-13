@@ -5268,7 +5268,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a filters to which the user has access.
+       * Returns filters to which the user has access.
        *
        * Create a request for the method "filters.get".
        *
@@ -5290,7 +5290,7 @@ public class Analytics extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "management/accounts/{accountId}/filters/{filterId}";
 
         /**
-         * Returns a filters to which the user has access.
+         * Returns filters to which the user has access.
          *
          * Create a request for the method "filters.get".
          *

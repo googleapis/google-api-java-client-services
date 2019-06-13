@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudfunctions</artifactId>
-  <version>v1-rev20190508-1.26.0</version>
-  <name>Cloud Functions API v1-rev20190508-1.26.0</name>
+  <version>v1-rev20190529-1.26.0</version>
+  <name>Cloud Functions API v1-rev20190529-1.26.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -63,7 +63,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
@@ -73,13 +73,14 @@
           </execution>
         </executions>
         <configuration>
+          <doclint>none</doclint>
           <doctitle>Cloud Functions API ${project.version}</doctitle>
           <windowtitle>Cloud Functions API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/6/docs/api</link>
-            <link>https://google.github.io/google-http-java-client/releases/1.26.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-oauth-java-client/releases/1.26.0/javadoc/index.html</link>
-            <link>https://google.github.io/google-api-java-client/releases/1.26.0/javadoc/index.html</link>
+            <link>https://googleapis.dev/java/google-http-client/1.26.0/index.html</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.26.0/index.html</link>
+            <link>https://googleapis.dev/java/google-api-client/1.26.0/index.html</link>
           </links>
         </configuration>
       </plugin>

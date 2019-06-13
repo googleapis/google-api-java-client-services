@@ -66,6 +66,19 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   private java.lang.String inputUri;
 
   /**
+   * Annotations for list of logos detected, tracked and recognized in video.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation> logoRecognitionAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation.class);
+  }
+
+  /**
    * Annotations for list of objects detected and tracked in video.
    * The value may be {@code null}.
    */
@@ -206,6 +219,23 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
    */
   public GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults setInputUri(java.lang.String inputUri) {
     this.inputUri = inputUri;
+    return this;
+  }
+
+  /**
+   * Annotations for list of logos detected, tracked and recognized in video.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation> getLogoRecognitionAnnotations() {
+    return logoRecognitionAnnotations;
+  }
+
+  /**
+   * Annotations for list of logos detected, tracked and recognized in video.
+   * @param logoRecognitionAnnotations logoRecognitionAnnotations or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults setLogoRecognitionAnnotations(java.util.List<GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation> logoRecognitionAnnotations) {
+    this.logoRecognitionAnnotations = logoRecognitionAnnotations;
     return this;
   }
 

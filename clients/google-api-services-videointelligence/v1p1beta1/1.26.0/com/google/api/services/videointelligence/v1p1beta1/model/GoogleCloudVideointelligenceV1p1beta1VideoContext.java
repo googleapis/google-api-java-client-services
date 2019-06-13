@@ -45,6 +45,13 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoContext extends com
   private GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfig labelDetectionConfig;
 
   /**
+   * Config for OBJECT_TRACKING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVideointelligenceV1p1beta1ObjectTrackingConfig objectTrackingConfig;
+
+  /**
    * Video segments to annotate. The segments may overlap and are not required to be contiguous or
    * span the whole video. If unspecified, each video is treated as a single segment.
    * The value may be {@code null}.
@@ -104,6 +111,23 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoContext extends com
    */
   public GoogleCloudVideointelligenceV1p1beta1VideoContext setLabelDetectionConfig(GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfig labelDetectionConfig) {
     this.labelDetectionConfig = labelDetectionConfig;
+    return this;
+  }
+
+  /**
+   * Config for OBJECT_TRACKING.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1ObjectTrackingConfig getObjectTrackingConfig() {
+    return objectTrackingConfig;
+  }
+
+  /**
+   * Config for OBJECT_TRACKING.
+   * @param objectTrackingConfig objectTrackingConfig or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1VideoContext setObjectTrackingConfig(GoogleCloudVideointelligenceV1p1beta1ObjectTrackingConfig objectTrackingConfig) {
+    this.objectTrackingConfig = objectTrackingConfig;
     return this;
   }
 

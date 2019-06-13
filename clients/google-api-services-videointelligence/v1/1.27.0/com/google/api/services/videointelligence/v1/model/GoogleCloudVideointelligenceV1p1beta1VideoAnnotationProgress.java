@@ -31,6 +31,13 @@ package com.google.api.services.videointelligence.v1.model;
 public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies which feature is being tracked if the request contains more than one features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String feature;
+
+  /**
    * Video file location in [Google Cloud Storage](https://cloud.google.com/storage/).
    * The value may be {@code null}.
    */
@@ -45,6 +52,13 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress 
   private java.lang.Integer progressPercent;
 
   /**
+   * Specifies which segment is being tracked if the request contains more than one segments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVideointelligenceV1p1beta1VideoSegment segment;
+
+  /**
    * Time when the request was received.
    * The value may be {@code null}.
    */
@@ -57,6 +71,23 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress 
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Specifies which feature is being tracked if the request contains more than one features.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeature() {
+    return feature;
+  }
+
+  /**
+   * Specifies which feature is being tracked if the request contains more than one features.
+   * @param feature feature or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress setFeature(java.lang.String feature) {
+    this.feature = feature;
+    return this;
+  }
 
   /**
    * Video file location in [Google Cloud Storage](https://cloud.google.com/storage/).
@@ -89,6 +120,23 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress 
    */
   public GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress setProgressPercent(java.lang.Integer progressPercent) {
     this.progressPercent = progressPercent;
+    return this;
+  }
+
+  /**
+   * Specifies which segment is being tracked if the request contains more than one segments.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1VideoSegment getSegment() {
+    return segment;
+  }
+
+  /**
+   * Specifies which segment is being tracked if the request contains more than one segments.
+   * @param segment segment or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress setSegment(GoogleCloudVideointelligenceV1p1beta1VideoSegment segment) {
+    this.segment = segment;
     return this;
   }
 

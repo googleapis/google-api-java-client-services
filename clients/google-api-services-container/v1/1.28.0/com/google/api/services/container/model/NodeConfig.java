@@ -113,7 +113,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
    * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
    * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"
+   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
+   * logging-enable"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -355,7 +356,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
    * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
    * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"
+   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
+   * logging-enable"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or
@@ -377,7 +379,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
    * "enable-os-login"  "gci-update-strategy"  "gci-ensure-gke-docker"  "instance-template"  "kube-
    * env"  "startup-script"  "user-data"  "disable-address-manager"  "windows-startup-script-ps1"
-   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"
+   * "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-profile-psm1"  "serial-port-
+   * logging-enable"
    *
    * Values are free-form strings, and only have meaning as interpreted by the image running in the
    * instance. The only restriction placed on them is that each value's size must be less than or

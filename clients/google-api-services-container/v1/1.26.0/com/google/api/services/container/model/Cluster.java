@@ -216,8 +216,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be
-   * exported from the cluster. * if left as an empty string,`logging.googleapis.com` will be used.
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
+   * resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. *
+   * `none` - no logs will be exported from the cluster. * if left as an empty
+   * string,`logging.googleapis.com` will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -335,6 +337,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> resourceLabels;
+
+  /**
+   * Configuration for exporting resource usages. Resource usage export is disabled when this config
+   * is unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceUsageExportConfig resourceUsageExportConfig;
 
   /**
    * [Output only] Server-defined URL for the resource.
@@ -823,8 +833,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be
-   * exported from the cluster. * if left as an empty string,`logging.googleapis.com` will be used.
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
+   * resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. *
+   * `none` - no logs will be exported from the cluster. * if left as an empty
+   * string,`logging.googleapis.com` will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoggingService() {
@@ -834,8 +846,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * The logging service the cluster should use to write logs. Currently available options:
    *
-   * * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be
-   * exported from the cluster. * if left as an empty string,`logging.googleapis.com` will be used.
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging service with Kubernetes-native
+   * resource model in Stackdriver * `logging.googleapis.com` - the Google Cloud Logging service. *
+   * `none` - no logs will be exported from the cluster. * if left as an empty
+   * string,`logging.googleapis.com` will be used.
    * @param loggingService loggingService or {@code null} for none
    */
   public Cluster setLoggingService(java.lang.String loggingService) {
@@ -1105,6 +1119,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setResourceLabels(java.util.Map<String, java.lang.String> resourceLabels) {
     this.resourceLabels = resourceLabels;
+    return this;
+  }
+
+  /**
+   * Configuration for exporting resource usages. Resource usage export is disabled when this config
+   * is unspecified.
+   * @return value or {@code null} for none
+   */
+  public ResourceUsageExportConfig getResourceUsageExportConfig() {
+    return resourceUsageExportConfig;
+  }
+
+  /**
+   * Configuration for exporting resource usages. Resource usage export is disabled when this config
+   * is unspecified.
+   * @param resourceUsageExportConfig resourceUsageExportConfig or {@code null} for none
+   */
+  public Cluster setResourceUsageExportConfig(ResourceUsageExportConfig resourceUsageExportConfig) {
+    this.resourceUsageExportConfig = resourceUsageExportConfig;
     return this;
   }
 

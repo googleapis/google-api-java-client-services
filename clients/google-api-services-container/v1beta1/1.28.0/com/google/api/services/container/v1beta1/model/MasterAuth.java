@@ -56,7 +56,6 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   private java.lang.String clientKey;
 
   /**
-   * [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +137,6 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterCaCertificate() {
@@ -146,7 +144,6 @@ public final class MasterAuth extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
    * @param clusterCaCertificate clusterCaCertificate or {@code null} for none
    */
   public MasterAuth setClusterCaCertificate(java.lang.String clusterCaCertificate) {

@@ -53,7 +53,7 @@ public final class Webproperty extends com.google.api.client.json.GenericJson {
   /**
    * Set to true to reset the retention period of the user identifier with each new event from that
    * user (thus setting the expiration date to current time plus retention period). Set to false to
-   * delete data associated with the user identifer automatically after the rentention period. This
+   * delete data associated with the user identifier automatically after the rentention period. This
    * property cannot be set on insert.
    * The value may be {@code null}.
    */
@@ -220,7 +220,7 @@ public final class Webproperty extends com.google.api.client.json.GenericJson {
   /**
    * Set to true to reset the retention period of the user identifier with each new event from that
    * user (thus setting the expiration date to current time plus retention period). Set to false to
-   * delete data associated with the user identifer automatically after the rentention period. This
+   * delete data associated with the user identifier automatically after the rentention period. This
    * property cannot be set on insert.
    * @return value or {@code null} for none
    */
@@ -231,7 +231,7 @@ public final class Webproperty extends com.google.api.client.json.GenericJson {
   /**
    * Set to true to reset the retention period of the user identifier with each new event from that
    * user (thus setting the expiration date to current time plus retention period). Set to false to
-   * delete data associated with the user identifer automatically after the rentention period. This
+   * delete data associated with the user identifier automatically after the rentention period. This
    * property cannot be set on insert.
    * @param dataRetentionResetOnNewActivity dataRetentionResetOnNewActivity or {@code null} for none
    */

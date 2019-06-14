@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"VPK3KBfpaEgZ16pozGOoMYfKc0U/D1kpy6V2bNC4HmE-V-WpuRbfTmY\"",
+ "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/6fKDM5TI8NF4Ddq0hyynGLubW4E\"",
  "discoveryVersion": "v1",
  "id": "toolresults:v1beta3",
  "name": "toolresults",
  "canonicalName": "Tool Results",
  "version": "v1beta3",
- "revision": "20190529",
+ "revision": "20190612",
  "title": "Cloud Tool Results API",
  "description": "Reads and publishes results from Firebase Test Lab.",
  "ownerDomain": "google.com",
@@ -1261,10 +1261,12 @@
      "enum": [
       "error",
       "failed",
+      "flaky",
       "passed",
       "skipped"
      ],
      "enumDescriptions": [
+      "",
       "",
       "",
       "",

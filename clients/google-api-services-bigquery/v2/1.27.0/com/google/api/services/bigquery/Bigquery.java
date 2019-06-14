@@ -2958,6 +2958,913 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Routines collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Bigquery bigquery = new Bigquery(...);}
+   *   {@code Bigquery.Routines.List request = bigquery.routines().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Routines routines() {
+    return new Routines();
+  }
+
+  /**
+   * The "routines" collection of methods.
+   */
+  public class Routines {
+
+    /**
+     * Deletes the routine specified by routineId from the dataset.
+     *
+     * Create a request for the method "routines.delete".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the routine to delete
+     * @param datasetId Dataset ID of the routine to delete
+     * @param routineId Routine ID of the routine to delete
+     * @return the request
+     */
+    public Delete delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) throws java.io.IOException {
+      Delete result = new Delete(projectId, datasetId, routineId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends BigqueryRequest<Void> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/routines/{+routineId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ROUTINE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Deletes the routine specified by routineId from the dataset.
+       *
+       * Create a request for the method "routines.delete".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the routine to delete
+       * @param datasetId Dataset ID of the routine to delete
+       * @param routineId Routine ID of the routine to delete
+       * @since 1.13
+       */
+      protected Delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) {
+        super(Bigquery.this, "DELETE", REST_PATH, null, Void.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.routineId = com.google.api.client.util.Preconditions.checkNotNull(routineId, "Required parameter routineId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
+              "Parameter routineId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the routine to delete */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the routine to delete
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the routine to delete */
+      public Delete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the routine to delete */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the routine to delete
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the routine to delete */
+      public Delete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Routine ID of the routine to delete */
+      @com.google.api.client.util.Key
+      private java.lang.String routineId;
+
+      /** Routine ID of the routine to delete
+       */
+      public java.lang.String getRoutineId() {
+        return routineId;
+      }
+
+      /** Routine ID of the routine to delete */
+      public Delete setRoutineId(java.lang.String routineId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
+              "Parameter routineId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.routineId = routineId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the specified routine resource by routine ID.
+     *
+     * Create a request for the method "routines.get".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the requested routine
+     * @param datasetId Dataset ID of the requested routine
+     * @param routineId Routine ID of the requested routine
+     * @return the request
+     */
+    public Get get(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) throws java.io.IOException {
+      Get result = new Get(projectId, datasetId, routineId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends BigqueryRequest<com.google.api.services.bigquery.model.Routine> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/routines/{+routineId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ROUTINE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets the specified routine resource by routine ID.
+       *
+       * Create a request for the method "routines.get".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the requested routine
+       * @param datasetId Dataset ID of the requested routine
+       * @param routineId Routine ID of the requested routine
+       * @since 1.13
+       */
+      protected Get(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId) {
+        super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.Routine.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.routineId = com.google.api.client.util.Preconditions.checkNotNull(routineId, "Required parameter routineId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
+              "Parameter routineId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the requested routine */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the requested routine
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the requested routine */
+      public Get setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the requested routine */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the requested routine
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the requested routine */
+      public Get setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Routine ID of the requested routine */
+      @com.google.api.client.util.Key
+      private java.lang.String routineId;
+
+      /** Routine ID of the requested routine
+       */
+      public java.lang.String getRoutineId() {
+        return routineId;
+      }
+
+      /** Routine ID of the requested routine */
+      public Get setRoutineId(java.lang.String routineId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
+              "Parameter routineId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.routineId = routineId;
+        return this;
+      }
+
+      /**
+       * If set, only the Routine fields in the field mask are returned in the response. If unset,
+       * all Routine fields are returned.
+       */
+      @com.google.api.client.util.Key
+      private String fieldMask;
+
+      /** If set, only the Routine fields in the field mask are returned in the response. If unset, all
+     Routine fields are returned.
+       */
+      public String getFieldMask() {
+        return fieldMask;
+      }
+
+      /**
+       * If set, only the Routine fields in the field mask are returned in the response. If unset,
+       * all Routine fields are returned.
+       */
+      public Get setFieldMask(String fieldMask) {
+        this.fieldMask = fieldMask;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new routine in the dataset.
+     *
+     * Create a request for the method "routines.insert".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the new routine
+     * @param datasetId Dataset ID of the new routine
+     * @param content the {@link com.google.api.services.bigquery.model.Routine}
+     * @return the request
+     */
+    public Insert insert(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.Routine content) throws java.io.IOException {
+      Insert result = new Insert(projectId, datasetId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends BigqueryRequest<com.google.api.services.bigquery.model.Routine> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/routines";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Creates a new routine in the dataset.
+       *
+       * Create a request for the method "routines.insert".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the new routine
+       * @param datasetId Dataset ID of the new routine
+       * @param content the {@link com.google.api.services.bigquery.model.Routine}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String projectId, java.lang.String datasetId, com.google.api.services.bigquery.model.Routine content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Routine.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the new routine */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the new routine
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the new routine */
+      public Insert setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the new routine */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the new routine
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the new routine */
+      public Insert setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists all routines in the specified dataset. Requires the READER dataset role.
+     *
+     * Create a request for the method "routines.list".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the routines to list
+     * @param datasetId Dataset ID of the routines to list
+     * @return the request
+     */
+    public List list(java.lang.String projectId, java.lang.String datasetId) throws java.io.IOException {
+      List result = new List(projectId, datasetId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends BigqueryRequest<com.google.api.services.bigquery.model.ListRoutinesResponse> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/routines";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Lists all routines in the specified dataset. Requires the READER dataset role.
+       *
+       * Create a request for the method "routines.list".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the routines to list
+       * @param datasetId Dataset ID of the routines to list
+       * @since 1.13
+       */
+      protected List(java.lang.String projectId, java.lang.String datasetId) {
+        super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.ListRoutinesResponse.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the routines to list */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the routines to list
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the routines to list */
+      public List setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the routines to list */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the routines to list
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the routines to list */
+      public List setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** The maximum number of results per page. */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page.
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /** The maximum number of results per page. */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Page token, returned by a previous call, to request the next page of results
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Page token, returned by a previous call, to request the next page of results
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Page token, returned by a previous call, to request the next page of results
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates information in an existing routine. The update method replaces the entire Routine
+     * resource.
+     *
+     * Create a request for the method "routines.update".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Project ID of the routine to update
+     * @param datasetId Dataset ID of the routine to update
+     * @param routineId Routine ID of the routine to update
+     * @param content the {@link com.google.api.services.bigquery.model.Routine}
+     * @return the request
+     */
+    public Update update(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId, com.google.api.services.bigquery.model.Routine content) throws java.io.IOException {
+      Update result = new Update(projectId, datasetId, routineId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends BigqueryRequest<com.google.api.services.bigquery.model.Routine> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/routines/{+routineId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern ROUTINE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates information in an existing routine. The update method replaces the entire Routine
+       * resource.
+       *
+       * Create a request for the method "routines.update".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Project ID of the routine to update
+       * @param datasetId Dataset ID of the routine to update
+       * @param routineId Routine ID of the routine to update
+       * @param content the {@link com.google.api.services.bigquery.model.Routine}
+       * @since 1.13
+       */
+      protected Update(java.lang.String projectId, java.lang.String datasetId, java.lang.String routineId, com.google.api.services.bigquery.model.Routine content) {
+        super(Bigquery.this, "PUT", REST_PATH, content, com.google.api.services.bigquery.model.Routine.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.routineId = com.google.api.client.util.Preconditions.checkNotNull(routineId, "Required parameter routineId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
+              "Parameter routineId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** Project ID of the routine to update */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Project ID of the routine to update
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Project ID of the routine to update */
+      public Update setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Dataset ID of the routine to update */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Dataset ID of the routine to update
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Dataset ID of the routine to update */
+      public Update setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Routine ID of the routine to update */
+      @com.google.api.client.util.Key
+      private java.lang.String routineId;
+
+      /** Routine ID of the routine to update
+       */
+      public java.lang.String getRoutineId() {
+        return routineId;
+      }
+
+      /** Routine ID of the routine to update */
+      public Update setRoutineId(java.lang.String routineId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROUTINE_ID_PATTERN.matcher(routineId).matches(),
+              "Parameter routineId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.routineId = routineId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Tabledata collection.
    *
    * <p>The typical use is:</p>

@@ -63,7 +63,8 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * name: "foo",         digest: {           hash: "4cf2eda940...",           size: 43         }
    * }     ]   }   children : {     // (Directory proto with hash "4cf2eda940..." and size 43)
    * files: [       {         name: "baz",         digest: {           hash: "b2c941073e...",
-   * size: 1294,         },         is_executable: true       }     ]   } } ```
+   * size: 1294,         },         is_executable: true       }     ]   } } ``` If an output of the
+   * same name was found, but was not a directory, the server will return a FAILED_PRECONDITION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,13 +74,14 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * The output directories of the action that are symbolic links to other directories. Those may be
    * links to other output directories, or input directories, or even absolute paths outside of the
    * working directory, if the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output
-   * directory requested in the `output_directories` field of the Action, if the directory file
-   * existed after the action completed, a single entry will be present either in this field, or in
-   * the `output_directories` field, if the directory was not a symbolic link.
+   * directory requested in the `output_directories` field of the Action, if the directory existed
+   * after the action completed, a single entry will be present either in this field, or in the
+   * `output_directories` field, if the directory was not a symbolic link.
    *
-   * If the action does not produce the requested output, or produces a file where a directory is
-   * expected or vice versa, then that output will be omitted from the list. The server is free to
-   * arrange the output list as desired; clients MUST NOT assume that the output list is sorted.
+   * If an output of the same name was found, but was a symbolic link to a file instead of a
+   * directory, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,10 +95,10 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * completed, a single entry will be present either in this field, or in the `output_files` field,
    * if the file was not a symbolic link.
    *
-   * If the action does not produce the requested output, or produces a directory where a regular
-   * file is expected or vice versa, then that output will be omitted from the list. The server is
-   * free to arrange the output list as desired; clients MUST NOT assume that the output list is
-   * sorted.
+   * If an output symbolic link of the same name was found, but its target type was not a regular
+   * file, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,13 +107,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   /**
    * The output files of the action. For each output file requested in the `output_files` field of
    * the Action, if the corresponding file existed after the action completed, a single entry will
-   * be present either in this field, or in the output_file_symlinks field, if the file was a
-   * symbolic link to another file.
+   * be present either in this field, or the `output_file_symlinks` field if the file was a symbolic
+   * link to another file.
    *
-   * If the action does not produce the requested output, or produces a directory where a regular
-   * file is expected or vice versa, then that output will be omitted from the list. The server is
-   * free to arrange the output list as desired; clients MUST NOT assume that the output list is
-   * sorted.
+   * If an output of the same name was found, but was a directory rather than a regular file, the
+   * server will return a FAILED_PRECONDITION. If the action does not produce the requested output,
+   * then that output will be omitted from the list. The server is free to arrange the output list
+   * as desired; clients MUST NOT assume that the output list is sorted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,18 +121,16 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
 
   /**
    * The digest for a blob containing the standard error of the action, which can be retrieved from
-   * the ContentAddressableStorage. See `stderr_raw` for when this will be set.
+   * the ContentAddressableStorage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BuildBazelRemoteExecutionV2Digest stderrDigest;
 
   /**
-   * The standard error buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stderr_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard error buffer of the action. The server SHOULD NOT inline stderr unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,18 +138,16 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
 
   /**
    * The digest for a blob containing the standard output of the action, which can be retrieved from
-   * the ContentAddressableStorage. See `stdout_raw` for when this will be set.
+   * the ContentAddressableStorage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BuildBazelRemoteExecutionV2Digest stdoutDigest;
 
   /**
-   * The standard output buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stdout_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard output buffer of the action. The server SHOULD NOT inline stdout unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +206,8 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * name: "foo",         digest: {           hash: "4cf2eda940...",           size: 43         }
    * }     ]   }   children : {     // (Directory proto with hash "4cf2eda940..." and size 43)
    * files: [       {         name: "baz",         digest: {           hash: "b2c941073e...",
-   * size: 1294,         },         is_executable: true       }     ]   } } ```
+   * size: 1294,         },         is_executable: true       }     ]   } } ``` If an output of the
+   * same name was found, but was not a directory, the server will return a FAILED_PRECONDITION.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputDirectory> getOutputDirectories() {
@@ -234,7 +233,8 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * name: "foo",         digest: {           hash: "4cf2eda940...",           size: 43         }
    * }     ]   }   children : {     // (Directory proto with hash "4cf2eda940..." and size 43)
    * files: [       {         name: "baz",         digest: {           hash: "b2c941073e...",
-   * size: 1294,         },         is_executable: true       }     ]   } } ```
+   * size: 1294,         },         is_executable: true       }     ]   } } ``` If an output of the
+   * same name was found, but was not a directory, the server will return a FAILED_PRECONDITION.
    * @param outputDirectories outputDirectories or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputDirectories(java.util.List<BuildBazelRemoteExecutionV2OutputDirectory> outputDirectories) {
@@ -246,13 +246,14 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * The output directories of the action that are symbolic links to other directories. Those may be
    * links to other output directories, or input directories, or even absolute paths outside of the
    * working directory, if the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output
-   * directory requested in the `output_directories` field of the Action, if the directory file
-   * existed after the action completed, a single entry will be present either in this field, or in
-   * the `output_directories` field, if the directory was not a symbolic link.
+   * directory requested in the `output_directories` field of the Action, if the directory existed
+   * after the action completed, a single entry will be present either in this field, or in the
+   * `output_directories` field, if the directory was not a symbolic link.
    *
-   * If the action does not produce the requested output, or produces a file where a directory is
-   * expected or vice versa, then that output will be omitted from the list. The server is free to
-   * arrange the output list as desired; clients MUST NOT assume that the output list is sorted.
+   * If an output of the same name was found, but was a symbolic link to a file instead of a
+   * directory, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> getOutputDirectorySymlinks() {
@@ -263,13 +264,14 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * The output directories of the action that are symbolic links to other directories. Those may be
    * links to other output directories, or input directories, or even absolute paths outside of the
    * working directory, if the server supports SymlinkAbsolutePathStrategy.ALLOWED. For each output
-   * directory requested in the `output_directories` field of the Action, if the directory file
-   * existed after the action completed, a single entry will be present either in this field, or in
-   * the `output_directories` field, if the directory was not a symbolic link.
+   * directory requested in the `output_directories` field of the Action, if the directory existed
+   * after the action completed, a single entry will be present either in this field, or in the
+   * `output_directories` field, if the directory was not a symbolic link.
    *
-   * If the action does not produce the requested output, or produces a file where a directory is
-   * expected or vice versa, then that output will be omitted from the list. The server is free to
-   * arrange the output list as desired; clients MUST NOT assume that the output list is sorted.
+   * If an output of the same name was found, but was a symbolic link to a file instead of a
+   * directory, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted.
    * @param outputDirectorySymlinks outputDirectorySymlinks or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputDirectorySymlinks(java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> outputDirectorySymlinks) {
@@ -285,10 +287,10 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * completed, a single entry will be present either in this field, or in the `output_files` field,
    * if the file was not a symbolic link.
    *
-   * If the action does not produce the requested output, or produces a directory where a regular
-   * file is expected or vice versa, then that output will be omitted from the list. The server is
-   * free to arrange the output list as desired; clients MUST NOT assume that the output list is
-   * sorted.
+   * If an output symbolic link of the same name was found, but its target type was not a regular
+   * file, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> getOutputFileSymlinks() {
@@ -303,10 +305,10 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
    * completed, a single entry will be present either in this field, or in the `output_files` field,
    * if the file was not a symbolic link.
    *
-   * If the action does not produce the requested output, or produces a directory where a regular
-   * file is expected or vice versa, then that output will be omitted from the list. The server is
-   * free to arrange the output list as desired; clients MUST NOT assume that the output list is
-   * sorted.
+   * If an output symbolic link of the same name was found, but its target type was not a regular
+   * file, the server will return a FAILED_PRECONDITION. If the action does not produce the
+   * requested output, then that output will be omitted from the list. The server is free to arrange
+   * the output list as desired; clients MUST NOT assume that the output list is sorted.
    * @param outputFileSymlinks outputFileSymlinks or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputFileSymlinks(java.util.List<BuildBazelRemoteExecutionV2OutputSymlink> outputFileSymlinks) {
@@ -317,13 +319,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   /**
    * The output files of the action. For each output file requested in the `output_files` field of
    * the Action, if the corresponding file existed after the action completed, a single entry will
-   * be present either in this field, or in the output_file_symlinks field, if the file was a
-   * symbolic link to another file.
+   * be present either in this field, or the `output_file_symlinks` field if the file was a symbolic
+   * link to another file.
    *
-   * If the action does not produce the requested output, or produces a directory where a regular
-   * file is expected or vice versa, then that output will be omitted from the list. The server is
-   * free to arrange the output list as desired; clients MUST NOT assume that the output list is
-   * sorted.
+   * If an output of the same name was found, but was a directory rather than a regular file, the
+   * server will return a FAILED_PRECONDITION. If the action does not produce the requested output,
+   * then that output will be omitted from the list. The server is free to arrange the output list
+   * as desired; clients MUST NOT assume that the output list is sorted.
    * @return value or {@code null} for none
    */
   public java.util.List<BuildBazelRemoteExecutionV2OutputFile> getOutputFiles() {
@@ -333,13 +335,13 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   /**
    * The output files of the action. For each output file requested in the `output_files` field of
    * the Action, if the corresponding file existed after the action completed, a single entry will
-   * be present either in this field, or in the output_file_symlinks field, if the file was a
-   * symbolic link to another file.
+   * be present either in this field, or the `output_file_symlinks` field if the file was a symbolic
+   * link to another file.
    *
-   * If the action does not produce the requested output, or produces a directory where a regular
-   * file is expected or vice versa, then that output will be omitted from the list. The server is
-   * free to arrange the output list as desired; clients MUST NOT assume that the output list is
-   * sorted.
+   * If an output of the same name was found, but was a directory rather than a regular file, the
+   * server will return a FAILED_PRECONDITION. If the action does not produce the requested output,
+   * then that output will be omitted from the list. The server is free to arrange the output list
+   * as desired; clients MUST NOT assume that the output list is sorted.
    * @param outputFiles outputFiles or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setOutputFiles(java.util.List<BuildBazelRemoteExecutionV2OutputFile> outputFiles) {
@@ -349,7 +351,7 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
 
   /**
    * The digest for a blob containing the standard error of the action, which can be retrieved from
-   * the ContentAddressableStorage. See `stderr_raw` for when this will be set.
+   * the ContentAddressableStorage.
    * @return value or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Digest getStderrDigest() {
@@ -358,7 +360,7 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
 
   /**
    * The digest for a blob containing the standard error of the action, which can be retrieved from
-   * the ContentAddressableStorage. See `stderr_raw` for when this will be set.
+   * the ContentAddressableStorage.
    * @param stderrDigest stderrDigest or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setStderrDigest(BuildBazelRemoteExecutionV2Digest stderrDigest) {
@@ -367,11 +369,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard error buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stderr_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard error buffer of the action. The server SHOULD NOT inline stderr unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #decodeStderrRaw()
    * @return value or {@code null} for none
    */
@@ -380,11 +380,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard error buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stderr_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard error buffer of the action. The server SHOULD NOT inline stderr unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #getStderrRaw()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -395,11 +393,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard error buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stderr_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard error buffer of the action. The server SHOULD NOT inline stderr unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #encodeStderrRaw()
    * @param stderrRaw stderrRaw or {@code null} for none
    */
@@ -409,11 +405,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard error buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stderr_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard error buffer of the action. The server SHOULD NOT inline stderr unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #setStderrRaw()
    *
    * <p>
@@ -429,7 +423,7 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
 
   /**
    * The digest for a blob containing the standard output of the action, which can be retrieved from
-   * the ContentAddressableStorage. See `stdout_raw` for when this will be set.
+   * the ContentAddressableStorage.
    * @return value or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Digest getStdoutDigest() {
@@ -438,7 +432,7 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
 
   /**
    * The digest for a blob containing the standard output of the action, which can be retrieved from
-   * the ContentAddressableStorage. See `stdout_raw` for when this will be set.
+   * the ContentAddressableStorage.
    * @param stdoutDigest stdoutDigest or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ActionResult setStdoutDigest(BuildBazelRemoteExecutionV2Digest stdoutDigest) {
@@ -447,11 +441,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard output buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stdout_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard output buffer of the action. The server SHOULD NOT inline stdout unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #decodeStdoutRaw()
    * @return value or {@code null} for none
    */
@@ -460,11 +452,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard output buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stdout_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard output buffer of the action. The server SHOULD NOT inline stdout unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #getStdoutRaw()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -475,11 +465,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard output buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stdout_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard output buffer of the action. The server SHOULD NOT inline stdout unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #encodeStdoutRaw()
    * @param stdoutRaw stdoutRaw or {@code null} for none
    */
@@ -489,11 +477,9 @@ public final class BuildBazelRemoteExecutionV2ActionResult extends com.google.ap
   }
 
   /**
-   * The standard output buffer of the action. The server will determine, based on the size of the
-   * buffer, whether to return it in raw form or to return a digest in `stdout_digest` that points
-   * to the buffer. If neither is set, then the buffer is empty. The client SHOULD NOT assume it
-   * will get one of the raw buffer or a digest on any given request and should be prepared to
-   * handle either.
+   * The standard output buffer of the action. The server SHOULD NOT inline stdout unless requested
+   * by the client in the GetActionResultRequest message. The server MAY omit inlining, even if
+   * requested, and MUST do so if inlining would cause the response to exceed message size limits.
    * @see #setStdoutRaw()
    *
    * <p>

@@ -1335,6 +1335,67 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
             return this;
           }
 
+          /**
+           * Optional. A filter to constrain the pools returned. Filters have the form:
+           *
+           * [[AND|OR]   ]...
+           *
+           * is the path for a field or map key in the Pool proto message. e.g.
+           * "configuration.disk_size_gb" or "configuration.labels.key". can be one of "<", "<=",
+           * ">=", ">", "=", "!=", ":". ":" is a HAS operation for strings and repeated primitive
+           * fields. is the value to test, case-insensitive for strings. "*" stands for any value
+           * and can be used to test for key presence. Parenthesis determine AND/OR precedence. In
+           * space separated restrictions, AND is implicit, e.g. "a = b x = y" is equivalent to "a =
+           * b AND x = y".
+           *
+           * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
+           *
+           * This field is currently ignored in all requests.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter to constrain the pools returned. Filters have the form:
+
+         [[AND|OR]   ]...
+
+         is the path for a field or map key in the Pool proto message. e.g. "configuration.disk_size_gb" or
+         "configuration.labels.key". can be one of "<", "<=", ">=", ">", "=", "!=", ":". ":" is a HAS
+         operation for strings and repeated primitive fields. is the value to test, case-insensitive for
+         strings. "*" stands for any value and can be used to test for key presence. Parenthesis determine
+         AND/OR precedence. In space separated restrictions, AND is implicit, e.g. "a = b x = y" is
+         equivalent to "a = b AND x = y".
+
+         Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
+
+         This field is currently ignored in all requests.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter to constrain the pools returned. Filters have the form:
+           *
+           * [[AND|OR]   ]...
+           *
+           * is the path for a field or map key in the Pool proto message. e.g.
+           * "configuration.disk_size_gb" or "configuration.labels.key". can be one of "<", "<=",
+           * ">=", ">", "=", "!=", ":". ":" is a HAS operation for strings and repeated primitive
+           * fields. is the value to test, case-insensitive for strings. "*" stands for any value
+           * and can be used to test for key presence. Parenthesis determine AND/OR precedence. In
+           * space separated restrictions, AND is implicit, e.g. "a = b x = y" is equivalent to "a =
+           * b AND x = y".
+           *
+           * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
+           *
+           * This field is currently ignored in all requests.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);

@@ -50,7 +50,8 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   private BuildBazelRemoteExecutionV2Digest commandDigest;
 
   /**
-   * If true, then the `Action`'s result cannot be cached.
+   * If true, then the `Action`'s result cannot be cached, and in-flight requests for the same
+   * `Action` may not be merged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +102,8 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   }
 
   /**
-   * If true, then the `Action`'s result cannot be cached.
+   * If true, then the `Action`'s result cannot be cached, and in-flight requests for the same
+   * `Action` may not be merged.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDoNotCache() {
@@ -109,7 +111,8 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   }
 
   /**
-   * If true, then the `Action`'s result cannot be cached.
+   * If true, then the `Action`'s result cannot be cached, and in-flight requests for the same
+   * `Action` may not be merged.
    * @param doNotCache doNotCache or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Action setDoNotCache(java.lang.Boolean doNotCache) {

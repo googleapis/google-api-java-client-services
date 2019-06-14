@@ -119,9 +119,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private String receiveTimestamp;
 
   /**
-   * Required. The primary monitored resource associated with this log entry.Example: a log entry
-   * that reports a database error would be associated with the monitored resource designating the
-   * particular database that reported the error.
+   * Required. The monitored resource that produced this log entry.Example: a log entry that reports
+   * a database error would be associated with the monitored resource designating the particular
+   * database that reported the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -395,9 +395,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The primary monitored resource associated with this log entry.Example: a log entry
-   * that reports a database error would be associated with the monitored resource designating the
-   * particular database that reported the error.
+   * Required. The monitored resource that produced this log entry.Example: a log entry that reports
+   * a database error would be associated with the monitored resource designating the particular
+   * database that reported the error.
    * @return value or {@code null} for none
    */
   public MonitoredResource getResource() {
@@ -405,9 +405,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The primary monitored resource associated with this log entry.Example: a log entry
-   * that reports a database error would be associated with the monitored resource designating the
-   * particular database that reported the error.
+   * Required. The monitored resource that produced this log entry.Example: a log entry that reports
+   * a database error would be associated with the monitored resource designating the particular
+   * database that reported the error.
    * @param resource resource or {@code null} for none
    */
   public LogEntry setResource(MonitoredResource resource) {

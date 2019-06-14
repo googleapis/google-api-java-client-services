@@ -30,11 +30,32 @@ package com.google.api.services.pubsub.model;
 public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
+   * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
+   * on this topic.
+   *
+   * The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * See  Creating and managing labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Policy constraining how messages published to the topic may be stored. It is determined when
+   * the topic is created based on the policy configured at the project level. It must not be set by
+   * the caller in the request to CreateTopic or to UpdateTopic. This field will be populated in the
+   * responses for GetTopic, CreateTopic, and UpdateTopic: if not present in the response, then no
+   * constraints are in effect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MessageStoragePolicy messageStoragePolicy;
 
   /**
    * The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}`
@@ -45,6 +66,29 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
+   * on this topic.
+   *
+   * The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
+   * on this topic.
+   *
+   * The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public Topic setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
+    return this;
+  }
 
   /**
    * See  Creating and managing labels.
@@ -60,6 +104,31 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   public Topic setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Policy constraining how messages published to the topic may be stored. It is determined when
+   * the topic is created based on the policy configured at the project level. It must not be set by
+   * the caller in the request to CreateTopic or to UpdateTopic. This field will be populated in the
+   * responses for GetTopic, CreateTopic, and UpdateTopic: if not present in the response, then no
+   * constraints are in effect.
+   * @return value or {@code null} for none
+   */
+  public MessageStoragePolicy getMessageStoragePolicy() {
+    return messageStoragePolicy;
+  }
+
+  /**
+   * Policy constraining how messages published to the topic may be stored. It is determined when
+   * the topic is created based on the policy configured at the project level. It must not be set by
+   * the caller in the request to CreateTopic or to UpdateTopic. This field will be populated in the
+   * responses for GetTopic, CreateTopic, and UpdateTopic: if not present in the response, then no
+   * constraints are in effect.
+   * @param messageStoragePolicy messageStoragePolicy or {@code null} for none
+   */
+  public Topic setMessageStoragePolicy(MessageStoragePolicy messageStoragePolicy) {
+    this.messageStoragePolicy = messageStoragePolicy;
     return this;
   }
 

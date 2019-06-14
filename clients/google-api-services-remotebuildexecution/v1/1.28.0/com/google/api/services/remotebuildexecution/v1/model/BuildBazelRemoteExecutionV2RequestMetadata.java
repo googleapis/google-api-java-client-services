@@ -22,7 +22,10 @@ package com.google.api.services.remotebuildexecution.v1.model;
  * attaches the header to the call using the canonical proto serialization:
  *
  * * name: `build.bazel.remote.execution.v2.requestmetadata-bin` * contents: the base64 encoded
- * binary `RequestMetadata` message.
+ * binary `RequestMetadata` message. Note: the gRPC library serializes binary headers encoded in
+ * base 64 by default (https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md#requests).
+ * Therefore, if the gRPC library is used to pass/retrieve this metadata, the user may ignore the
+ * base64 encoding and assume it is simply serialized as a binary message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed

@@ -27,9 +27,12 @@ package com.google.api.services.remotebuildexecution.v2.model;
  *
  * * Every child in the directory must have a path of exactly one segment.   Multiple levels of
  * directory hierarchy may not be collapsed. * Each child in the directory must have a unique path
- * segment (file name). * The files, directories and symlinks in the directory must each be sorted
- * in lexicographical order by path. The path strings must be sorted by code   point, equivalently,
- * by UTF-8 bytes.
+ * segment (file name).   Note that while the API itself is case-sensitive, the environment where
+ * the Action is executed may or may not be case-sensitive. That is, it is   legal to call the API
+ * with a Directory that has both "Foo" and "foo" as   children, but the Action may be rejected by
+ * the remote system upon   execution. * The files, directories and symlinks in the directory must
+ * each be sorted   in lexicographical order by path. The path strings must be sorted by code
+ * point, equivalently, by UTF-8 bytes.
  *
  * A `Directory` that obeys the restrictions is said to be in canonical form.
  *

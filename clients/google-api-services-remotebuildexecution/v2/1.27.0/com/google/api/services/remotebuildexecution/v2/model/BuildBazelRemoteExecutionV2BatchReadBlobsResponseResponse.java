@@ -17,7 +17,7 @@
 package com.google.api.services.remotebuildexecution.v2.model;
 
 /**
- * A response corresponding to a single blob that the client tried to upload.
+ * A response corresponding to a single blob that the client tried to download.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed

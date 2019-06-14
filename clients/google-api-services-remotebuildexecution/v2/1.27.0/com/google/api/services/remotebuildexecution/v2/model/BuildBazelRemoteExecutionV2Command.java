@@ -74,7 +74,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
    * An output directory cannot be duplicated or have the same path as any of the listed output
-   * files.
+   * files. An output directory is allowed to be a parent of another output directory.
    *
    * Directories leading up to the output directories (but not the output directories themselves)
    * are created by the worker prior to execution, even if they are not explicitly part of the input
@@ -110,7 +110,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * The platform requirements for the execution environment. The server MAY choose to execute the
    * action on any worker satisfying the requirements, so the client SHOULD ensure that running the
-   * action on any such worker will have the same result.
+   * action on any such worker will have the same result. A detailed lexicon for this can be found
+   * in the accompanying platform.md.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +193,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
    * An output directory cannot be duplicated or have the same path as any of the listed output
-   * files.
+   * files. An output directory is allowed to be a parent of another output directory.
    *
    * Directories leading up to the output directories (but not the output directories themselves)
    * are created by the worker prior to execution, even if they are not explicitly part of the input
@@ -220,7 +221,7 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * lexicographically by code point (or, equivalently, by UTF-8 bytes).
    *
    * An output directory cannot be duplicated or have the same path as any of the listed output
-   * files.
+   * files. An output directory is allowed to be a parent of another output directory.
    *
    * Directories leading up to the output directories (but not the output directories themselves)
    * are created by the worker prior to execution, even if they are not explicitly part of the input
@@ -284,7 +285,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * The platform requirements for the execution environment. The server MAY choose to execute the
    * action on any worker satisfying the requirements, so the client SHOULD ensure that running the
-   * action on any such worker will have the same result.
+   * action on any such worker will have the same result. A detailed lexicon for this can be found
+   * in the accompanying platform.md.
    * @return value or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Platform getPlatform() {
@@ -294,7 +296,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   /**
    * The platform requirements for the execution environment. The server MAY choose to execute the
    * action on any worker satisfying the requirements, so the client SHOULD ensure that running the
-   * action on any such worker will have the same result.
+   * action on any such worker will have the same result. A detailed lexicon for this can be found
+   * in the accompanying platform.md.
    * @param platform platform or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setPlatform(BuildBazelRemoteExecutionV2Platform platform) {

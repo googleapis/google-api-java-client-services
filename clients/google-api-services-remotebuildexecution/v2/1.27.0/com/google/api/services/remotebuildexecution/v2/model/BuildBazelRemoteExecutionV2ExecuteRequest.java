@@ -55,8 +55,15 @@ public final class BuildBazelRemoteExecutionV2ExecuteRequest extends com.google.
   private BuildBazelRemoteExecutionV2ResultsCachePolicy resultsCachePolicy;
 
   /**
-   * If true, the action will be executed anew even if its result was already present in the cache.
-   * If false, the result may be served from the ActionCache.
+   * If true, the action will be executed even if its result is already present in the ActionCache.
+   * The execution is still allowed to be merged with other in-flight executions of the same action,
+   * however - semantically, the service MUST only guarantee that the results of an execution with
+   * this field set were not visible before the corresponding execution request was sent. Note that
+   * actions from execution requests setting this field set are still eligible to be entered into
+   * the action cache upon completion, and services SHOULD overwrite any existing entries that may
+   * exist. This allows skip_cache_lookup requests to be used as a mechanism for replacing action
+   * cache entries that reference outputs no longer available or that are poisoned in any way. If
+   * false, the result may be served from the action cache.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,8 +127,15 @@ public final class BuildBazelRemoteExecutionV2ExecuteRequest extends com.google.
   }
 
   /**
-   * If true, the action will be executed anew even if its result was already present in the cache.
-   * If false, the result may be served from the ActionCache.
+   * If true, the action will be executed even if its result is already present in the ActionCache.
+   * The execution is still allowed to be merged with other in-flight executions of the same action,
+   * however - semantically, the service MUST only guarantee that the results of an execution with
+   * this field set were not visible before the corresponding execution request was sent. Note that
+   * actions from execution requests setting this field set are still eligible to be entered into
+   * the action cache upon completion, and services SHOULD overwrite any existing entries that may
+   * exist. This allows skip_cache_lookup requests to be used as a mechanism for replacing action
+   * cache entries that reference outputs no longer available or that are poisoned in any way. If
+   * false, the result may be served from the action cache.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipCacheLookup() {
@@ -129,8 +143,15 @@ public final class BuildBazelRemoteExecutionV2ExecuteRequest extends com.google.
   }
 
   /**
-   * If true, the action will be executed anew even if its result was already present in the cache.
-   * If false, the result may be served from the ActionCache.
+   * If true, the action will be executed even if its result is already present in the ActionCache.
+   * The execution is still allowed to be merged with other in-flight executions of the same action,
+   * however - semantically, the service MUST only guarantee that the results of an execution with
+   * this field set were not visible before the corresponding execution request was sent. Note that
+   * actions from execution requests setting this field set are still eligible to be entered into
+   * the action cache upon completion, and services SHOULD overwrite any existing entries that may
+   * exist. This allows skip_cache_lookup requests to be used as a mechanism for replacing action
+   * cache entries that reference outputs no longer available or that are poisoned in any way. If
+   * false, the result may be served from the action cache.
    * @param skipCacheLookup skipCacheLookup or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ExecuteRequest setSkipCacheLookup(java.lang.Boolean skipCacheLookup) {

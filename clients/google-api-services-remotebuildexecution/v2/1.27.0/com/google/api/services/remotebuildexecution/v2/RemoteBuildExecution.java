@@ -145,6 +145,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * Retrieve a cached execution result.
      *
+     * Implementations SHOULD ensure that any blobs referenced from the ContentAddressableStorage are
+     * available at the time of returning the ActionResult and will be for some period of time
+     * afterwards. The TTLs of the referenced blobs SHOULD be increased if necessary and applicable.
+     *
      * Errors:
      *
      * * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
@@ -183,6 +187,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /**
        * Retrieve a cached execution result.
+       *
+       * Implementations SHOULD ensure that any blobs referenced from the ContentAddressableStorage are
+       * available at the time of returning the ActionResult and will be for some period of time
+       * afterwards. The TTLs of the referenced blobs SHOULD be increased if necessary and applicable.
        *
        * Errors:
        *
@@ -357,6 +365,69 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       /** The size of the blob, in bytes. */
       public Get setSizeBytes(java.lang.Long sizeBytes) {
         this.sizeBytes = sizeBytes;
+        return this;
+      }
+
+      /**
+       * A hint to the server to inline the contents of the listed output files. Each path needs to
+       * exactly match one path in `output_files` in the Command message.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> inlineOutputFiles;
+
+      /** A hint to the server to inline the contents of the listed output files. Each path needs to exactly
+     match one path in `output_files` in the Command message.
+       */
+      public java.util.List<java.lang.String> getInlineOutputFiles() {
+        return inlineOutputFiles;
+      }
+
+      /**
+       * A hint to the server to inline the contents of the listed output files. Each path needs to
+       * exactly match one path in `output_files` in the Command message.
+       */
+      public Get setInlineOutputFiles(java.util.List<java.lang.String> inlineOutputFiles) {
+        this.inlineOutputFiles = inlineOutputFiles;
+        return this;
+      }
+
+      /**
+       * A hint to the server to request inlining stderr in the ActionResult message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean inlineStderr;
+
+      /** A hint to the server to request inlining stderr in the ActionResult message.
+       */
+      public java.lang.Boolean getInlineStderr() {
+        return inlineStderr;
+      }
+
+      /**
+       * A hint to the server to request inlining stderr in the ActionResult message.
+       */
+      public Get setInlineStderr(java.lang.Boolean inlineStderr) {
+        this.inlineStderr = inlineStderr;
+        return this;
+      }
+
+      /**
+       * A hint to the server to request inlining stdout in the ActionResult message.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean inlineStdout;
+
+      /** A hint to the server to request inlining stdout in the ActionResult message.
+       */
+      public java.lang.Boolean getInlineStdout() {
+        return inlineStdout;
+      }
+
+      /**
+       * A hint to the server to request inlining stdout in the ActionResult message.
+       */
+      public Get setInlineStdout(java.lang.Boolean inlineStdout) {
+        this.inlineStdout = inlineStdout;
         return this;
       }
 
@@ -1955,7 +2026,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
   public class V2 {
 
     /**
-     * GetCapabilities returns the server capabilities configuration.
+     * GetCapabilities returns the server capabilities configuration of the remote endpoint. Only the
+     * capabilities of the services supported by the endpoint will be returned: * Execution + CAS +
+     * Action Cache endpoints should return both   CacheCapabilities and ExecutionCapabilities. *
+     * Execution only endpoints should return ExecutionCapabilities. * CAS + Action Cache only endpoints
+     * should return CacheCapabilities.
      *
      * Create a request for the method "v2.getCapabilities".
      *
@@ -1987,7 +2062,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.+$");
 
       /**
-       * GetCapabilities returns the server capabilities configuration.
+       * GetCapabilities returns the server capabilities configuration of the remote endpoint. Only the
+       * capabilities of the services supported by the endpoint will be returned: * Execution + CAS +
+       * Action Cache endpoints should return both   CacheCapabilities and ExecutionCapabilities. *
+       * Execution only endpoints should return ExecutionCapabilities. * CAS + Action Cache only
+       * endpoints should return CacheCapabilities.
        *
        * Create a request for the method "v2.getCapabilities".
        *

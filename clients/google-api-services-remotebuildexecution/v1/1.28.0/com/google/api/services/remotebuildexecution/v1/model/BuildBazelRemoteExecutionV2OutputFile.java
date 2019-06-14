@@ -20,8 +20,6 @@ package com.google.api.services.remotebuildexecution.v1.model;
  * An `OutputFile` is similar to a FileNode, but it is used as an output in an `ActionResult`. It
  * allows a full file path rather than only a name.
  *
- * `OutputFile` is binary-compatible with `FileNode`.
- *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed
  * explanation see:
@@ -32,6 +30,16 @@ package com.google.api.services.remotebuildexecution.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class BuildBazelRemoteExecutionV2OutputFile extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The contents of the file if inlining was requested. The server SHOULD NOT inline file contents
+   * unless requested by the client in the GetActionResultRequest message. The server MAY omit
+   * inlining, even if requested, and MUST do so if inlining would cause the response to exceed
+   * message size limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contents;
 
   /**
    * The digest of the file's content.
@@ -55,6 +63,63 @@ public final class BuildBazelRemoteExecutionV2OutputFile extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
+
+  /**
+   * The contents of the file if inlining was requested. The server SHOULD NOT inline file contents
+   * unless requested by the client in the GetActionResultRequest message. The server MAY omit
+   * inlining, even if requested, and MUST do so if inlining would cause the response to exceed
+   * message size limits.
+   * @see #decodeContents()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContents() {
+    return contents;
+  }
+
+  /**
+   * The contents of the file if inlining was requested. The server SHOULD NOT inline file contents
+   * unless requested by the client in the GetActionResultRequest message. The server MAY omit
+   * inlining, even if requested, and MUST do so if inlining would cause the response to exceed
+   * message size limits.
+   * @see #getContents()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContents() {
+    return com.google.api.client.util.Base64.decodeBase64(contents);
+  }
+
+  /**
+   * The contents of the file if inlining was requested. The server SHOULD NOT inline file contents
+   * unless requested by the client in the GetActionResultRequest message. The server MAY omit
+   * inlining, even if requested, and MUST do so if inlining would cause the response to exceed
+   * message size limits.
+   * @see #encodeContents()
+   * @param contents contents or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2OutputFile setContents(java.lang.String contents) {
+    this.contents = contents;
+    return this;
+  }
+
+  /**
+   * The contents of the file if inlining was requested. The server SHOULD NOT inline file contents
+   * unless requested by the client in the GetActionResultRequest message. The server MAY omit
+   * inlining, even if requested, and MUST do so if inlining would cause the response to exceed
+   * message size limits.
+   * @see #setContents()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public BuildBazelRemoteExecutionV2OutputFile encodeContents(byte[] contents) {
+    this.contents = com.google.api.client.util.Base64.encodeBase64URLSafeString(contents);
+    return this;
+  }
 
   /**
    * The digest of the file's content.

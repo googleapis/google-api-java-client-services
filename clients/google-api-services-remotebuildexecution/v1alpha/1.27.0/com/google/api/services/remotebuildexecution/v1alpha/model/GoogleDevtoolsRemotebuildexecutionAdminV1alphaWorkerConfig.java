@@ -48,6 +48,16 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String diskType;
 
   /**
+   * Labels associated with the workers. Label keys and values can be no longer than 63 characters,
+   * can only contain lowercase letters, numeric characters, underscores and dashes. International
+   * letters are permitted. Keys must start with a letter but values are optional. This field is
+   * currently ignored in all requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Required. Machine type of the worker, such as `n1-standard-2`. See
    * https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note
    * that `f1-micro` and `g1-small` are not yet supported.
@@ -110,6 +120,29 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Labels associated with the workers. Label keys and values can be no longer than 63 characters,
+   * can only contain lowercase letters, numeric characters, underscores and dashes. International
+   * letters are permitted. Keys must start with a letter but values are optional. This field is
+   * currently ignored in all requests.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels associated with the workers. Label keys and values can be no longer than 63 characters,
+   * can only contain lowercase letters, numeric characters, underscores and dashes. International
+   * letters are permitted. Keys must start with a letter but values are optional. This field is
+   * currently ignored in all requests.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

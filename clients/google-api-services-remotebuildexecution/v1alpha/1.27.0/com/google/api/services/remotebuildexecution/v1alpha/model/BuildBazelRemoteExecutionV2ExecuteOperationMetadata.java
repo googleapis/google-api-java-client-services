@@ -39,6 +39,7 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   private BuildBazelRemoteExecutionV2Digest actionDigest;
 
   /**
+   * The current stage of execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,6 +77,7 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   }
 
   /**
+   * The current stage of execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getStage() {
@@ -83,6 +85,7 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   }
 
   /**
+   * The current stage of execution.
    * @param stage stage or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ExecuteOperationMetadata setStage(java.lang.String stage) {

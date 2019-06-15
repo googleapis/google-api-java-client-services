@@ -21,8 +21,7 @@ package com.google.api.services.monitoring.v3.model;
  * labels. For example, the monitored resource descriptor for Google Compute Engine VM instances has
  * a type of "gce_instance" and specifies the use of the labels "instance_id" and "zone" to identify
  * particular VM instances.Different APIs can support different monitored resource types. APIs
- * generally provide a list method that returns the monitored resource descriptors used by the
- * API.Next ID: 10
+ * generally provide a list method that returns the monitored resource descriptors used by the API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Stackdriver Monitoring API. For a detailed

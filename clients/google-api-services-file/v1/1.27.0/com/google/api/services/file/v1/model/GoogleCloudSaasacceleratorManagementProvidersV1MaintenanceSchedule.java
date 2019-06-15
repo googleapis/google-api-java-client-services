@@ -31,6 +31,14 @@ package com.google.api.services.file.v1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly
+   * check whether it's set, if it's set as false explicitly, it's false
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canReschedule;
+
+  /**
    * The scheduled end time for the maintenance.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
    */
   @com.google.api.client.util.Key
   private String startTime;
+
+  /**
+   * Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly
+   * check whether it's set, if it's set as false explicitly, it's false
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanReschedule() {
+    return canReschedule;
+  }
+
+  /**
+   * Can this scheduled update be rescheduled? By default, it's true and API needs to do explicitly
+   * check whether it's set, if it's set as false explicitly, it's false
+   * @param canReschedule canReschedule or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setCanReschedule(java.lang.Boolean canReschedule) {
+    this.canReschedule = canReschedule;
+    return this;
+  }
 
   /**
    * The scheduled end time for the maintenance.

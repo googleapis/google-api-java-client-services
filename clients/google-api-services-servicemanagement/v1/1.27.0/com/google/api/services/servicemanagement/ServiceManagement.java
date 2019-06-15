@@ -3548,6 +3548,46 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
+        /**
+         * Unimplemented. Do not use this feature until this comment is removed.
+         *
+         * The rollout id that rollout to be created based on.
+         *
+         * Rollout should be constructed based on current successful rollout, this field indicates
+         * the current successful rollout id that new rollout based on to construct, if current
+         * successful rollout changed when server receives the request, request will be rejected for
+         * safety.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String baseRolloutId;
+
+        /** Unimplemented. Do not use this feature until this comment is removed.
+
+       The rollout id that rollout to be created based on.
+
+       Rollout should be constructed based on current successful rollout, this field indicates the current
+       successful rollout id that new rollout based on to construct, if current successful rollout changed
+       when server receives the request, request will be rejected for safety.
+         */
+        public java.lang.String getBaseRolloutId() {
+          return baseRolloutId;
+        }
+
+        /**
+         * Unimplemented. Do not use this feature until this comment is removed.
+         *
+         * The rollout id that rollout to be created based on.
+         *
+         * Rollout should be constructed based on current successful rollout, this field indicates
+         * the current successful rollout id that new rollout based on to construct, if current
+         * successful rollout changed when server receives the request, request will be rejected for
+         * safety.
+         */
+        public Create setBaseRolloutId(java.lang.String baseRolloutId) {
+          this.baseRolloutId = baseRolloutId;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);

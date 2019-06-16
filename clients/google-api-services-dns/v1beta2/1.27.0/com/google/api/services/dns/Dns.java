@@ -55,7 +55,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://dns.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is

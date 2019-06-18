@@ -31,15 +31,16 @@ package com.google.api.services.texttospeech.v1beta1.model;
 public final class AudioConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The format of the requested audio byte stream.
+   * Required. The format of the audio byte stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
-   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized)
-   * text to speech. Effects are applied on top of each other in the order they are given. See
+   * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
+   * (post synthesized) text to speech. Effects are applied on top of each other in the order they
+   * are given. See
    *
    * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
    * supported profile ids.
@@ -49,38 +50,40 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> effectsProfileId;
 
   /**
-   * Optional speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
-   * original pitch. -20 means decrease 20 semitones from the original pitch.
+   * Input only. Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
+   * semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double pitch;
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. Optional.  If this is different from the
-   * voice's natural sample rate, then the synthesizer will honor this request by converting to the
-   * desired sample rate (which might result in worse audio quality), unless the specified sample
-   * rate is not supported for the encoding chosen, in which case it will fail the request and
-   * return google.rpc.Code.INVALID_ARGUMENT.
+   * The synthesis sample rate (in hertz) for this audio. Optional. When this is specified in
+   * SynthesizeSpeechRequest, if this is different from the voice's natural sample rate, then the
+   * synthesizer will honor this request by converting to the desired sample rate (which might
+   * result in worse audio quality), unless the specified sample rate is not supported for the
+   * encoding chosen, in which case it will fail the request and return
+   * google.rpc.Code.INVALID_ARGUMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Optional speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
-   * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
-   * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
+   * Input only. Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
+   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
+   * error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double speakingRate;
 
   /**
-   * Optional volume gain (in dB) of the normal native volume supported by the specific voice, in
-   * the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal native
-   * signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of the
-   * normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
+   * Input only. Optional. Volume gain (in dB) of the normal native volume supported by the specific
+   * voice, in the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal
+   * native signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of
+   * the normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
    * amplitude of the normal native signal amplitude. Strongly recommend not to exceed +10 (dB) as
    * there's usually no effective increase in loudness for any value greater than that.
    * The value may be {@code null}.
@@ -89,7 +92,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Double volumeGainDb;
 
   /**
-   * Required. The format of the requested audio byte stream.
+   * Required. The format of the audio byte stream.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioEncoding() {
@@ -97,7 +100,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The format of the requested audio byte stream.
+   * Required. The format of the audio byte stream.
    * @param audioEncoding audioEncoding or {@code null} for none
    */
   public AudioConfig setAudioEncoding(java.lang.String audioEncoding) {
@@ -106,8 +109,9 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized)
-   * text to speech. Effects are applied on top of each other in the order they are given. See
+   * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
+   * (post synthesized) text to speech. Effects are applied on top of each other in the order they
+   * are given. See
    *
    * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
    * supported profile ids.
@@ -118,8 +122,9 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier which selects 'audio effects' profiles that are applied on (post synthesized)
-   * text to speech. Effects are applied on top of each other in the order they are given. See
+   * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
+   * (post synthesized) text to speech. Effects are applied on top of each other in the order they
+   * are given. See
    *
    * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
    * supported profile ids.
@@ -131,8 +136,8 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
-   * original pitch. -20 means decrease 20 semitones from the original pitch.
+   * Input only. Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
+   * semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPitch() {
@@ -140,8 +145,8 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
-   * original pitch. -20 means decrease 20 semitones from the original pitch.
+   * Input only. Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
+   * semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
    * @param pitch pitch or {@code null} for none
    */
   public AudioConfig setPitch(java.lang.Double pitch) {
@@ -150,11 +155,12 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. Optional.  If this is different from the
-   * voice's natural sample rate, then the synthesizer will honor this request by converting to the
-   * desired sample rate (which might result in worse audio quality), unless the specified sample
-   * rate is not supported for the encoding chosen, in which case it will fail the request and
-   * return google.rpc.Code.INVALID_ARGUMENT.
+   * The synthesis sample rate (in hertz) for this audio. Optional. When this is specified in
+   * SynthesizeSpeechRequest, if this is different from the voice's natural sample rate, then the
+   * synthesizer will honor this request by converting to the desired sample rate (which might
+   * result in worse audio quality), unless the specified sample rate is not supported for the
+   * encoding chosen, in which case it will fail the request and return
+   * google.rpc.Code.INVALID_ARGUMENT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -162,11 +168,12 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. Optional.  If this is different from the
-   * voice's natural sample rate, then the synthesizer will honor this request by converting to the
-   * desired sample rate (which might result in worse audio quality), unless the specified sample
-   * rate is not supported for the encoding chosen, in which case it will fail the request and
-   * return google.rpc.Code.INVALID_ARGUMENT.
+   * The synthesis sample rate (in hertz) for this audio. Optional. When this is specified in
+   * SynthesizeSpeechRequest, if this is different from the voice's natural sample rate, then the
+   * synthesizer will honor this request by converting to the desired sample rate (which might
+   * result in worse audio quality), unless the specified sample rate is not supported for the
+   * encoding chosen, in which case it will fail the request and return
+   * google.rpc.Code.INVALID_ARGUMENT.
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public AudioConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -175,9 +182,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
-   * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
-   * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
+   * Input only. Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
+   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
+   * error.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSpeakingRate() {
@@ -185,9 +193,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
-   * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
-   * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
+   * Input only. Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
+   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
+   * error.
    * @param speakingRate speakingRate or {@code null} for none
    */
   public AudioConfig setSpeakingRate(java.lang.Double speakingRate) {
@@ -196,10 +205,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional volume gain (in dB) of the normal native volume supported by the specific voice, in
-   * the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal native
-   * signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of the
-   * normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
+   * Input only. Optional. Volume gain (in dB) of the normal native volume supported by the specific
+   * voice, in the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal
+   * native signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of
+   * the normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
    * amplitude of the normal native signal amplitude. Strongly recommend not to exceed +10 (dB) as
    * there's usually no effective increase in loudness for any value greater than that.
    * @return value or {@code null} for none
@@ -209,10 +218,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional volume gain (in dB) of the normal native volume supported by the specific voice, in
-   * the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal native
-   * signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of the
-   * normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
+   * Input only. Optional. Volume gain (in dB) of the normal native volume supported by the specific
+   * voice, in the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal
+   * native signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of
+   * the normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
    * amplitude of the normal native signal amplitude. Strongly recommend not to exceed +10 (dB) as
    * there's usually no effective increase in loudness for any value greater than that.
    * @param volumeGainDb volumeGainDb or {@code null} for none

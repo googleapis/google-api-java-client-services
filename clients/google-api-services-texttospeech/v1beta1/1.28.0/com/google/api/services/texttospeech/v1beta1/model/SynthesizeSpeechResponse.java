@@ -31,18 +31,20 @@ package com.google.api.services.texttospeech.v1beta1.model;
 public final class SynthesizeSpeechResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The audio data bytes encoded as specified in the request, including the header (For LINEAR16
-   * audio, we include the WAV header). Note: as with all bytes fields, protobuffers use a pure
-   * binary representation, whereas JSON representations use base64.
+   * The audio data bytes encoded as specified in the request, including the header for encodings
+   * that are wrapped in containers (e.g. MP3, OGG_OPUS). For LINEAR16 audio, we include the WAV
+   * header. Note: as with all bytes fields, protobuffers use a pure binary representation, whereas
+   * JSON representations use base64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioContent;
 
   /**
-   * The audio data bytes encoded as specified in the request, including the header (For LINEAR16
-   * audio, we include the WAV header). Note: as with all bytes fields, protobuffers use a pure
-   * binary representation, whereas JSON representations use base64.
+   * The audio data bytes encoded as specified in the request, including the header for encodings
+   * that are wrapped in containers (e.g. MP3, OGG_OPUS). For LINEAR16 audio, we include the WAV
+   * header. Note: as with all bytes fields, protobuffers use a pure binary representation, whereas
+   * JSON representations use base64.
    * @see #decodeAudioContent()
    * @return value or {@code null} for none
    */
@@ -51,9 +53,10 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The audio data bytes encoded as specified in the request, including the header (For LINEAR16
-   * audio, we include the WAV header). Note: as with all bytes fields, protobuffers use a pure
-   * binary representation, whereas JSON representations use base64.
+   * The audio data bytes encoded as specified in the request, including the header for encodings
+   * that are wrapped in containers (e.g. MP3, OGG_OPUS). For LINEAR16 audio, we include the WAV
+   * header. Note: as with all bytes fields, protobuffers use a pure binary representation, whereas
+   * JSON representations use base64.
    * @see #getAudioContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -64,9 +67,10 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The audio data bytes encoded as specified in the request, including the header (For LINEAR16
-   * audio, we include the WAV header). Note: as with all bytes fields, protobuffers use a pure
-   * binary representation, whereas JSON representations use base64.
+   * The audio data bytes encoded as specified in the request, including the header for encodings
+   * that are wrapped in containers (e.g. MP3, OGG_OPUS). For LINEAR16 audio, we include the WAV
+   * header. Note: as with all bytes fields, protobuffers use a pure binary representation, whereas
+   * JSON representations use base64.
    * @see #encodeAudioContent()
    * @param audioContent audioContent or {@code null} for none
    */
@@ -76,9 +80,10 @@ public final class SynthesizeSpeechResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The audio data bytes encoded as specified in the request, including the header (For LINEAR16
-   * audio, we include the WAV header). Note: as with all bytes fields, protobuffers use a pure
-   * binary representation, whereas JSON representations use base64.
+   * The audio data bytes encoded as specified in the request, including the header for encodings
+   * that are wrapped in containers (e.g. MP3, OGG_OPUS). For LINEAR16 audio, we include the WAV
+   * header. Note: as with all bytes fields, protobuffers use a pure binary representation, whereas
+   * JSON representations use base64.
    * @see #setAudioContent()
    *
    * <p>

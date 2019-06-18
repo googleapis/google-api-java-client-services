@@ -53,6 +53,12 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String adChoicesDestinationUrl;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdTechnologyProviders adTechnologyProviders;
+
+  /**
    * Detected advertiser id, if any. Read-only. This field should not be set in requests.
    * The value may be {@code null}.
    */
@@ -329,6 +335,21 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setAdChoicesDestinationUrl(java.lang.String adChoicesDestinationUrl) {
     this.adChoicesDestinationUrl = adChoicesDestinationUrl;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AdTechnologyProviders getAdTechnologyProviders() {
+    return adTechnologyProviders;
+  }
+
+  /**
+   * @param adTechnologyProviders adTechnologyProviders or {@code null} for none
+   */
+  public Creative setAdTechnologyProviders(AdTechnologyProviders adTechnologyProviders) {
+    this.adTechnologyProviders = adTechnologyProviders;
     return this;
   }
 
@@ -854,6 +875,65 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Model definition for CreativeAdTechnologyProviders.
+   */
+  public static final class AdTechnologyProviders extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+    private java.util.List<java.lang.Long> detectedProviderIds;
+
+    /**
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean hasUnidentifiedProvider;
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.Long> getDetectedProviderIds() {
+      return detectedProviderIds;
+    }
+
+    /**
+     * @param detectedProviderIds detectedProviderIds or {@code null} for none
+     */
+    public AdTechnologyProviders setDetectedProviderIds(java.util.List<java.lang.Long> detectedProviderIds) {
+      this.detectedProviderIds = detectedProviderIds;
+      return this;
+    }
+
+    /**
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getHasUnidentifiedProvider() {
+      return hasUnidentifiedProvider;
+    }
+
+    /**
+     * @param hasUnidentifiedProvider hasUnidentifiedProvider or {@code null} for none
+     */
+    public AdTechnologyProviders setHasUnidentifiedProvider(java.lang.Boolean hasUnidentifiedProvider) {
+      this.hasUnidentifiedProvider = hasUnidentifiedProvider;
+      return this;
+    }
+
+    @Override
+    public AdTechnologyProviders set(String fieldName, Object value) {
+      return (AdTechnologyProviders) super.set(fieldName, value);
+    }
+
+    @Override
+    public AdTechnologyProviders clone() {
+      return (AdTechnologyProviders) super.clone();
+    }
+
+  }
+
+  /**
    * Model definition for CreativeCorrections.
    */
   public static final class Corrections extends com.google.api.client.json.GenericJson {
@@ -1294,13 +1374,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
     private java.lang.Double starRating;
 
     /**
-     * The URL to the app store to purchase/download the promoted app.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.String store;
-
-    /**
      * The URL of the XML VAST for a native ad. Note this is a separate field from resource.video_url.
      * The value may be {@code null}.
      */
@@ -1506,23 +1579,6 @@ public final class Creative extends com.google.api.client.json.GenericJson {
      */
     public NativeAd setStarRating(java.lang.Double starRating) {
       this.starRating = starRating;
-      return this;
-    }
-
-    /**
-     * The URL to the app store to purchase/download the promoted app.
-     * @return value or {@code null} for none
-     */
-    public java.lang.String getStore() {
-      return store;
-    }
-
-    /**
-     * The URL to the app store to purchase/download the promoted app.
-     * @param store store or {@code null} for none
-     */
-    public NativeAd setStore(java.lang.String store) {
-      this.store = store;
       return this;
     }
 

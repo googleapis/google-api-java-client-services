@@ -31,18 +31,21 @@ package com.google.api.services.androidpublisher.model;
 public final class Testers extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of all Google Groups, as email addresses, that define testers for this track.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> googleGroups;
 
   /**
+   * A list of all Google+ Communities, as URLs, that define testers for this track.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> googlePlusCommunities;
 
   /**
+   * A list of all Google Groups, as email addresses, that define testers for this track.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGoogleGroups() {
@@ -50,6 +53,7 @@ public final class Testers extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of all Google Groups, as email addresses, that define testers for this track.
    * @param googleGroups googleGroups or {@code null} for none
    */
   public Testers setGoogleGroups(java.util.List<java.lang.String> googleGroups) {
@@ -58,6 +62,7 @@ public final class Testers extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of all Google+ Communities, as URLs, that define testers for this track.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGooglePlusCommunities() {
@@ -65,6 +70,7 @@ public final class Testers extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A list of all Google+ Communities, as URLs, that define testers for this track.
    * @param googlePlusCommunities googlePlusCommunities or {@code null} for none
    */
   public Testers setGooglePlusCommunities(java.util.List<java.lang.String> googlePlusCommunities) {

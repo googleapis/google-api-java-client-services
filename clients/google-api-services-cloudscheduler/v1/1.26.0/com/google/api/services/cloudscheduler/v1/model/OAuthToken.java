@@ -19,7 +19,7 @@ package com.google.api.services.cloudscheduler.v1.model;
 /**
  * Contains information needed for generating an [OAuth
  * token](https://developers.google.com/identity/protocols/OAuth2). This type of authorization
- * should be used when sending requests to a GCP endpoint.
+ * should generally only be used when calling Google APIs hosted on *.googleapis.com.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Scheduler API. For a detailed explanation see:

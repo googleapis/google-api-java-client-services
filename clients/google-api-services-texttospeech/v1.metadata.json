@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-texttospeech",
-    "version": "v1-rev20190329-1.28.0"
+    "version": "v1-rev20190614-1.28.0"
   }
 }

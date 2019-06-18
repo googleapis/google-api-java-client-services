@@ -577,10 +577,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the
        * domain is a G Suite domain, for example:
        *
-       * |Filter|Description| |------|-----------|
-       * |owner.directorycustomerid:123456789|Organizations with `owner.directory_customer_id` equal
-       * to `123456789`.| |domain:google.com|Organizations corresponding to the domain
-       * `google.com`.|
+       * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+       * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
+       * Organization resources corresponding to the domain `google.com`.
        *
        * This field is optional.
        */
@@ -593,9 +592,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain is a
      G Suite domain, for example:
 
-     |Filter|Description| |------|-----------| |owner.directorycustomerid:123456789|Organizations with
-     `owner.directory_customer_id` equal to `123456789`.| |domain:google.com|Organizations corresponding
-     to the domain `google.com`.|
+     * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+     `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
+     Organization resources corresponding to the domain `google.com`.
 
      This field is optional.
        */
@@ -610,10 +609,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the
        * domain is a G Suite domain, for example:
        *
-       * |Filter|Description| |------|-----------|
-       * |owner.directorycustomerid:123456789|Organizations with `owner.directory_customer_id` equal
-       * to `123456789`.| |domain:google.com|Organizations corresponding to the domain
-       * `google.com`.|
+       * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+       * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
+       * Organization resources corresponding to the domain `google.com`.
        *
        * This field is optional.
        */

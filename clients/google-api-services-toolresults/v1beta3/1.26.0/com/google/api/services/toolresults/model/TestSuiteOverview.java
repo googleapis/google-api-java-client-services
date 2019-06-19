@@ -34,6 +34,13 @@ package com.google.api.services.toolresults.model;
 public final class TestSuiteOverview extends com.google.api.client.json.GenericJson {
 
   /**
+   * Elapsed time of test suite.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration elapsedTime;
+
+  /**
    * Number of test cases in error, typically set by the service by parsing the xml_source.
    *
    * - In create/response: always set - In update request: never
@@ -91,6 +98,23 @@ public final class TestSuiteOverview extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private FileReference xmlSource;
+
+  /**
+   * Elapsed time of test suite.
+   * @return value or {@code null} for none
+   */
+  public Duration getElapsedTime() {
+    return elapsedTime;
+  }
+
+  /**
+   * Elapsed time of test suite.
+   * @param elapsedTime elapsedTime or {@code null} for none
+   */
+  public TestSuiteOverview setElapsedTime(Duration elapsedTime) {
+    this.elapsedTime = elapsedTime;
+    return this;
+  }
 
   /**
    * Number of test cases in error, typically set by the service by parsing the xml_source.

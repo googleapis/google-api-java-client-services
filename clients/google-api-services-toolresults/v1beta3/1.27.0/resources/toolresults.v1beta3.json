@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/6fKDM5TI8NF4Ddq0hyynGLubW4E\"",
+ "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/9P5a44E04DCY9WILveLHDY11kG0\"",
  "discoveryVersion": "v1",
  "id": "toolresults:v1beta3",
  "name": "toolresults",
  "canonicalName": "Tool Results",
  "version": "v1beta3",
- "revision": "20190612",
+ "revision": "20190617",
  "title": "Cloud Tool Results API",
  "description": "Reads and publishes results from Firebase Test Lab.",
  "ownerDomain": "google.com",
@@ -1450,6 +1450,10 @@
    "type": "object",
    "description": "A summary of a test suite result either parsed from XML or uploaded directly by a user.\n\nNote: the API related comments are for StepService only. This message is also being used in ExecutionService in a read only mode for the corresponding step.",
    "properties": {
+    "elapsedTime": {
+     "$ref": "Duration",
+     "description": "Elapsed time of test suite."
+    },
     "errorCount": {
      "type": "integer",
      "description": "Number of test cases in error, typically set by the service by parsing the xml_source.\n\n- In create/response: always set - In update request: never",

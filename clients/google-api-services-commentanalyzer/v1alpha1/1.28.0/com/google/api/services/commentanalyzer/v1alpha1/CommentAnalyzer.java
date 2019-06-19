@@ -25,7 +25,7 @@ package com.google.api.services.commentanalyzer.v1alpha1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://conversationai.github.io/" target="_blank">API Documentation</a>
+ * <a href="https://github.com/conversationai/perspectiveapi/blob/master/README.md" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

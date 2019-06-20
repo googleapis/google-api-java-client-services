@@ -41,6 +41,13 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> allowedValues;
 
   /**
+   * If true, it should not be used in new transfers, and it should not be visible to users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deprecated;
+
+  /**
    * Parameter description.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
    */
   public DataSourceParameter setAllowedValues(java.util.List<java.lang.String> allowedValues) {
     this.allowedValues = allowedValues;
+    return this;
+  }
+
+  /**
+   * If true, it should not be used in new transfers, and it should not be visible to users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeprecated() {
+    return deprecated;
+  }
+
+  /**
+   * If true, it should not be used in new transfers, and it should not be visible to users.
+   * @param deprecated deprecated or {@code null} for none
+   */
+  public DataSourceParameter setDeprecated(java.lang.Boolean deprecated) {
+    this.deprecated = deprecated;
     return this;
   }
 

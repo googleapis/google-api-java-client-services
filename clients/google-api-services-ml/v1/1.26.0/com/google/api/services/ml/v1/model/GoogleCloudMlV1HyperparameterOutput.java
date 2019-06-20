@@ -55,6 +55,13 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
   private GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput;
 
   /**
+   * Output only. End time for the trial.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * The final objective metric seen for this trial.
    * The value may be {@code null}.
    */
@@ -74,6 +81,20 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isTrialStoppedEarly;
+
+  /**
+   * Output only. Start time for the trial.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
+   * Output only. The detailed state of the trial.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * The trial id for these results.
@@ -115,6 +136,23 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
    */
   public GoogleCloudMlV1HyperparameterOutput setBuiltInAlgorithmOutput(GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput) {
     this.builtInAlgorithmOutput = builtInAlgorithmOutput;
+    return this;
+  }
+
+  /**
+   * Output only. End time for the trial.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. End time for the trial.
+   * @param endTime endTime or {@code null} for none
+   */
+  public GoogleCloudMlV1HyperparameterOutput setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 
@@ -166,6 +204,40 @@ public final class GoogleCloudMlV1HyperparameterOutput extends com.google.api.cl
    */
   public GoogleCloudMlV1HyperparameterOutput setIsTrialStoppedEarly(java.lang.Boolean isTrialStoppedEarly) {
     this.isTrialStoppedEarly = isTrialStoppedEarly;
+    return this;
+  }
+
+  /**
+   * Output only. Start time for the trial.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. Start time for the trial.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleCloudMlV1HyperparameterOutput setStartTime(String startTime) {
+    this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Output only. The detailed state of the trial.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The detailed state of the trial.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudMlV1HyperparameterOutput setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -60,7 +60,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   private java.lang.String orderId;
 
   /**
-   * The purchase state of the order. Possible values are: - Purchased  - Canceled
+   * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The purchase state of the order. Possible values are: - Purchased  - Canceled
+   * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPurchaseState() {
@@ -162,7 +162,7 @@ public final class ProductPurchase extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The purchase state of the order. Possible values are: - Purchased  - Canceled
+   * The purchase state of the order. Possible values are: - Purchased  - Canceled  - Pending
    * @param purchaseState purchaseState or {@code null} for none
    */
   public ProductPurchase setPurchaseState(java.lang.Integer purchaseState) {

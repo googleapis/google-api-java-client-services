@@ -13712,6 +13712,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
              * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
              *
+             * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
+             * `_summary=text`, `_summary=data`, and `_elements`.
+             *
+             * The maximum number of search results returned defaults to 100, which can be overridden by the
+             * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
+             * `Bundle` will contain pagination links.
+             *
              * Create a request for the method "fhir.search".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13766,6 +13773,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
                * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
+               *
+               * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
+               * `_summary=text`, `_summary=data`, and `_elements`.
+               *
+               * The maximum number of search results returned defaults to 100, which can be overridden by the
+               * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
+               * `Bundle` will contain pagination links.
                *
                * Create a request for the method "fhir.search".
                *

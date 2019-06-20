@@ -43,8 +43,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPools
    * is implicit, e.g. "a = b x = y" is equivalent to "a = b AND x = y".
    *
    * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
-   *
-   * This field is currently ignored in all requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +68,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPools
    * is implicit, e.g. "a = b x = y" is equivalent to "a = b AND x = y".
    *
    * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
-   *
-   * This field is currently ignored in all requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -91,8 +87,6 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPools
    * is implicit, e.g. "a = b x = y" is equivalent to "a = b AND x = y".
    *
    * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
-   *
-   * This field is currently ignored in all requests.
    * @param filter filter or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsRequest setFilter(java.lang.String filter) {

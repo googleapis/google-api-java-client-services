@@ -1,12 +1,12 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/SlWD_44AAZzh33wX5EZhE-9oiU0\"",
+ "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/LNVDXWhUWjL42z9rVSE1bNdVBAQ\"",
  "discoveryVersion": "v1",
  "id": "androidpublisher:v1.1",
  "name": "androidpublisher",
  "canonicalName": "Android Publisher",
  "version": "v1.1",
- "revision": "20190120",
+ "revision": "20190618",
  "title": "Google Play Developer API",
  "description": "Accesses Android application developers' Google Play accounts.",
  "ownerDomain": "google.com",
@@ -102,7 +102,7 @@
     },
     "purchaseState": {
      "type": "integer",
-     "description": "The purchase state of the order. Possible values are:  \n- Purchased \n- Canceled",
+     "description": "The purchase state of the order. Possible values are:  \n- Purchased \n- Canceled \n- Pending",
      "format": "int32"
     },
     "purchaseTime": {

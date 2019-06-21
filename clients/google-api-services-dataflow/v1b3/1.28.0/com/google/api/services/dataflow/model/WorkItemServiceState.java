@@ -37,6 +37,15 @@ public final class WorkItemServiceState extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.Object> harnessData;
 
   /**
+   * A hot key is a symptom of poor data distribution in which there are enough elements mapped to a
+   * single key to impact pipeline performance. When present, this field includes metadata
+   * associated with any hot key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HotKeyDetection hotKeyDetection;
+
+  /**
    * Time at which the current lease will expire.
    * The value may be {@code null}.
    */
@@ -110,6 +119,27 @@ public final class WorkItemServiceState extends com.google.api.client.json.Gener
    */
   public WorkItemServiceState setHarnessData(java.util.Map<String, java.lang.Object> harnessData) {
     this.harnessData = harnessData;
+    return this;
+  }
+
+  /**
+   * A hot key is a symptom of poor data distribution in which there are enough elements mapped to a
+   * single key to impact pipeline performance. When present, this field includes metadata
+   * associated with any hot key.
+   * @return value or {@code null} for none
+   */
+  public HotKeyDetection getHotKeyDetection() {
+    return hotKeyDetection;
+  }
+
+  /**
+   * A hot key is a symptom of poor data distribution in which there are enough elements mapped to a
+   * single key to impact pipeline performance. When present, this field includes metadata
+   * associated with any hot key.
+   * @param hotKeyDetection hotKeyDetection or {@code null} for none
+   */
+  public WorkItemServiceState setHotKeyDetection(HotKeyDetection hotKeyDetection) {
+    this.hotKeyDetection = hotKeyDetection;
     return this;
   }
 

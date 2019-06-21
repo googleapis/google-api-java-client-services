@@ -50,8 +50,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   /**
    * Labels associated with the workers. Label keys and values can be no longer than 63 characters,
    * can only contain lowercase letters, numeric characters, underscores and dashes. International
-   * letters are permitted. Keys must start with a letter but values are optional. This field is
-   * currently ignored in all requests.
+   * letters are permitted. Keys must start with a letter but values are optional. There can not be
+   * more than 64 labels per resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +126,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   /**
    * Labels associated with the workers. Label keys and values can be no longer than 63 characters,
    * can only contain lowercase letters, numeric characters, underscores and dashes. International
-   * letters are permitted. Keys must start with a letter but values are optional. This field is
-   * currently ignored in all requests.
+   * letters are permitted. Keys must start with a letter but values are optional. There can not be
+   * more than 64 labels per resource.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -137,8 +137,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   /**
    * Labels associated with the workers. Label keys and values can be no longer than 63 characters,
    * can only contain lowercase letters, numeric characters, underscores and dashes. International
-   * letters are permitted. Keys must start with a letter but values are optional. This field is
-   * currently ignored in all requests.
+   * letters are permitted. Keys must start with a letter but values are optional. There can not be
+   * more than 64 labels per resource.
    * @param labels labels or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setLabels(java.util.Map<String, java.lang.String> labels) {

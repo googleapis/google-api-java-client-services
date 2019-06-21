@@ -1349,8 +1349,6 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * b AND x = y".
            *
            * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
-           *
-           * This field is currently ignored in all requests.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1367,8 +1365,6 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          equivalent to "a = b AND x = y".
 
          Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
-
-         This field is currently ignored in all requests.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1388,8 +1384,6 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * b AND x = y".
            *
            * Example filter: configuration.labels.key1 = * AND (state = RUNNING OR state = UPDATING)
-           *
-           * This field is currently ignored in all requests.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

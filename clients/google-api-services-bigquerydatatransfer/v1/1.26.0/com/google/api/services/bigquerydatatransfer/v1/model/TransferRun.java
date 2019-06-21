@@ -75,7 +75,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> params;
 
   /**
-   * For batch transfer runs, specifies the date and time that data should be ingested.
+   * For batch transfer runs, specifies the date and time of the data should be ingested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,7 +234,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For batch transfer runs, specifies the date and time that data should be ingested.
+   * For batch transfer runs, specifies the date and time of the data should be ingested.
    * @return value or {@code null} for none
    */
   public String getRunTime() {
@@ -242,7 +242,7 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For batch transfer runs, specifies the date and time that data should be ingested.
+   * For batch transfer runs, specifies the date and time of the data should be ingested.
    * @param runTime runTime or {@code null} for none
    */
   public TransferRun setRunTime(String runTime) {

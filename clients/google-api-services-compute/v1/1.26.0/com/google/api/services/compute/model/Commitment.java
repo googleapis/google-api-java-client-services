@@ -96,6 +96,13 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * List of reservations for this commitment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Reservation> reservations;
+
+  /**
    * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource
    * commitments must occur together.
    * The value may be {@code null}.
@@ -275,6 +282,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * List of reservations for this commitment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Reservation> getReservations() {
+    return reservations;
+  }
+
+  /**
+   * List of reservations for this commitment.
+   * @param reservations reservations or {@code null} for none
+   */
+  public Commitment setReservations(java.util.List<Reservation> reservations) {
+    this.reservations = reservations;
     return this;
   }
 

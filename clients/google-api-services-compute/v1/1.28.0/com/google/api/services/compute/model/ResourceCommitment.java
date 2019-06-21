@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ResourceCommitment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String acceleratorType;
+
+  /**
    * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this
    * can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of
    * 256 MB, with up to 6.5GB of memory per every vCPU.
@@ -44,6 +51,23 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcceleratorType() {
+    return acceleratorType;
+  }
+
+  /**
+   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+   * @param acceleratorType acceleratorType or {@code null} for none
+   */
+  public ResourceCommitment setAcceleratorType(java.lang.String acceleratorType) {
+    this.acceleratorType = acceleratorType;
+    return this;
+  }
 
   /**
    * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this

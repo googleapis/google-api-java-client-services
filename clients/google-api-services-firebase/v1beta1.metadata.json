@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-firebase",
+    "version": "v1beta1-rev20190618-1.28.0"
+  }
+}

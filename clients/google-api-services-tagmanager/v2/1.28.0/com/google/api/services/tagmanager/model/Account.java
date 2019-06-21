@@ -45,7 +45,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Account display name.
+   * Account display name. @mutable tagmanager.accounts.create @mutable tagmanager.accounts.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * Whether the account shares data anonymously with Google and others. This flag enables
    * benchmarking by sharing your data in an anonymous form. Google will remove all identifiable
    * information about your website, combine the data with hundreds of other anonymous sites and
-   * report aggregate trends in the benchmarking service.
+   * report aggregate trends in the benchmarking service. @mutable tagmanager.accounts.create
+   * @mutable tagmanager.accounts.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Account display name.
+   * Account display name. @mutable tagmanager.accounts.create @mutable tagmanager.accounts.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -120,7 +121,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Account display name.
+   * Account display name. @mutable tagmanager.accounts.create @mutable tagmanager.accounts.update
    * @param name name or {@code null} for none
    */
   public Account setName(java.lang.String name) {
@@ -149,7 +150,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * Whether the account shares data anonymously with Google and others. This flag enables
    * benchmarking by sharing your data in an anonymous form. Google will remove all identifiable
    * information about your website, combine the data with hundreds of other anonymous sites and
-   * report aggregate trends in the benchmarking service.
+   * report aggregate trends in the benchmarking service. @mutable tagmanager.accounts.create
+   * @mutable tagmanager.accounts.update
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShareData() {
@@ -160,7 +162,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * Whether the account shares data anonymously with Google and others. This flag enables
    * benchmarking by sharing your data in an anonymous form. Google will remove all identifiable
    * information about your website, combine the data with hundreds of other anonymous sites and
-   * report aggregate trends in the benchmarking service.
+   * report aggregate trends in the benchmarking service. @mutable tagmanager.accounts.create
+   * @mutable tagmanager.accounts.update
    * @param shareData shareData or {@code null} for none
    */
   public Account setShareData(java.lang.Boolean shareData) {

@@ -46,7 +46,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of trigger IDs for disabling conditional variables; the
    * variable is enabled if one of the enabling trigger is true while all the disabling trigger are
-   * false. Treated as an unordered set.
+   * false. Treated as an unordered set. @mutable tagmanager.accounts.containers.variables.create
+   * @mutable tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +56,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of trigger IDs for enabling conditional variables; the
    * variable is enabled if one of the enabling triggers is true while all the disabling triggers
-   * are false. Treated as an unordered set.
+   * are false. Treated as an unordered set. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,21 +73,25 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Variable display name.
+   * Variable display name. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this variable in the container.
+   * User notes on how to apply this variable in the container. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * The variable's parameters.
+   * The variable's parameters. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,21 +111,26 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   private java.lang.String parentFolderId;
 
   /**
-   * The end timestamp in milliseconds to schedule a variable.
+   * The end timestamp in milliseconds to schedule a variable. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long scheduleEndMs;
 
   /**
-   * The start timestamp in milliseconds to schedule a variable.
+   * The start timestamp in milliseconds to schedule a variable. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long scheduleStartMs;
 
   /**
-   * GTM Variable Type.
+   * GTM Variable Type. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +180,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of trigger IDs for disabling conditional variables; the
    * variable is enabled if one of the enabling trigger is true while all the disabling trigger are
-   * false. Treated as an unordered set.
+   * false. Treated as an unordered set. @mutable tagmanager.accounts.containers.variables.create
+   * @mutable tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDisablingTriggerId() {
@@ -178,7 +191,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of trigger IDs for disabling conditional variables; the
    * variable is enabled if one of the enabling trigger is true while all the disabling trigger are
-   * false. Treated as an unordered set.
+   * false. Treated as an unordered set. @mutable tagmanager.accounts.containers.variables.create
+   * @mutable tagmanager.accounts.containers.variables.update
    * @param disablingTriggerId disablingTriggerId or {@code null} for none
    */
   public Variable setDisablingTriggerId(java.util.List<java.lang.String> disablingTriggerId) {
@@ -189,7 +203,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of trigger IDs for enabling conditional variables; the
    * variable is enabled if one of the enabling triggers is true while all the disabling triggers
-   * are false. Treated as an unordered set.
+   * are false. Treated as an unordered set. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnablingTriggerId() {
@@ -199,7 +215,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of trigger IDs for enabling conditional variables; the
    * variable is enabled if one of the enabling triggers is true while all the disabling triggers
-   * are false. Treated as an unordered set.
+   * are false. Treated as an unordered set. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param enablingTriggerId enablingTriggerId or {@code null} for none
    */
   public Variable setEnablingTriggerId(java.util.List<java.lang.String> enablingTriggerId) {
@@ -227,7 +245,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Variable display name.
+   * Variable display name. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -235,7 +254,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Variable display name.
+   * Variable display name. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param name name or {@code null} for none
    */
   public Variable setName(java.lang.String name) {
@@ -244,7 +264,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this variable in the container.
+   * User notes on how to apply this variable in the container. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -252,7 +274,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this variable in the container.
+   * User notes on how to apply this variable in the container. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param notes notes or {@code null} for none
    */
   public Variable setNotes(java.lang.String notes) {
@@ -261,7 +285,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The variable's parameters.
+   * The variable's parameters. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -269,7 +294,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The variable's parameters.
+   * The variable's parameters. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param parameter parameter or {@code null} for none
    */
   public Variable setParameter(java.util.List<Parameter> parameter) {
@@ -295,7 +321,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end timestamp in milliseconds to schedule a variable.
+   * The end timestamp in milliseconds to schedule a variable. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.lang.Long getScheduleEndMs() {
@@ -303,7 +331,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end timestamp in milliseconds to schedule a variable.
+   * The end timestamp in milliseconds to schedule a variable. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param scheduleEndMs scheduleEndMs or {@code null} for none
    */
   public Variable setScheduleEndMs(java.lang.Long scheduleEndMs) {
@@ -312,7 +342,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start timestamp in milliseconds to schedule a variable.
+   * The start timestamp in milliseconds to schedule a variable. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.lang.Long getScheduleStartMs() {
@@ -320,7 +352,9 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start timestamp in milliseconds to schedule a variable.
+   * The start timestamp in milliseconds to schedule a variable. @mutable
+   * tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param scheduleStartMs scheduleStartMs or {@code null} for none
    */
   public Variable setScheduleStartMs(java.lang.Long scheduleStartMs) {
@@ -329,7 +363,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GTM Variable Type.
+   * GTM Variable Type. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -337,7 +372,8 @@ public final class Variable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GTM Variable Type.
+   * GTM Variable Type. @mutable tagmanager.accounts.containers.variables.create @mutable
+   * tagmanager.accounts.containers.variables.update
    * @param type type or {@code null} for none
    */
   public Variable setType(java.lang.String type) {

@@ -30,14 +30,16 @@ package com.google.api.services.tagmanager.model;
 public final class AccountAccess extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the user has no access, user access, or admin access to an account.
+   * Whether the user has no access, user access, or admin access to an account. @mutable
+   * tagmanager.accounts.permissions.create @mutable tagmanager.accounts.permissions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String permission;
 
   /**
-   * Whether the user has no access, user access, or admin access to an account.
+   * Whether the user has no access, user access, or admin access to an account. @mutable
+   * tagmanager.accounts.permissions.create @mutable tagmanager.accounts.permissions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getPermission() {
@@ -45,7 +47,8 @@ public final class AccountAccess extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the user has no access, user access, or admin access to an account.
+   * Whether the user has no access, user access, or admin access to an account. @mutable
+   * tagmanager.accounts.permissions.create @mutable tagmanager.accounts.permissions.update
    * @param permission permission or {@code null} for none
    */
   public AccountAccess setPermission(java.lang.String permission) {

@@ -30,21 +30,24 @@ package com.google.api.services.tagmanager.model;
 public final class ContainerAccess extends com.google.api.client.json.GenericJson {
 
   /**
-   * GTM Container ID.
+   * GTM Container ID. @mutable tagmanager.accounts.permissions.create @mutable
+   * tagmanager.accounts.permissions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String containerId;
 
   /**
-   * List of Container permissions.
+   * List of Container permissions. @mutable tagmanager.accounts.permissions.create @mutable
+   * tagmanager.accounts.permissions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String permission;
 
   /**
-   * GTM Container ID.
+   * GTM Container ID. @mutable tagmanager.accounts.permissions.create @mutable
+   * tagmanager.accounts.permissions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerId() {
@@ -52,7 +55,8 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * GTM Container ID.
+   * GTM Container ID. @mutable tagmanager.accounts.permissions.create @mutable
+   * tagmanager.accounts.permissions.update
    * @param containerId containerId or {@code null} for none
    */
   public ContainerAccess setContainerId(java.lang.String containerId) {
@@ -61,7 +65,8 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * List of Container permissions.
+   * List of Container permissions. @mutable tagmanager.accounts.permissions.create @mutable
+   * tagmanager.accounts.permissions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getPermission() {
@@ -69,7 +74,8 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * List of Container permissions.
+   * List of Container permissions. @mutable tagmanager.accounts.permissions.create @mutable
+   * tagmanager.accounts.permissions.update
    * @param permission permission or {@code null} for none
    */
   public ContainerAccess setPermission(java.lang.String permission) {

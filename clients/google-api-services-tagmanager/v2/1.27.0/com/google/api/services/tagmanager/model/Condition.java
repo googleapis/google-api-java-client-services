@@ -30,33 +30,41 @@ package com.google.api.services.tagmanager.model;
 public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of named parameters (key/value), depending on the condition's type. Notes: - For binary
-   * operators, include parameters named arg0 and arg1 for specifying the left and right operands,
-   * respectively.  - At this time, the left operand (arg0) must be a reference to a variable.  -
-   * For case-insensitive Regex matching, include a boolean parameter named ignore_case that is set
-   * to true. If not specified or set to any other value, the matching will be case sensitive.  - To
-   * negate an operator, include a boolean parameter named negate boolean parameter that is set to
-   * true.
+   * A list of named parameters (key/value), depending on the condition's type. Notes: For binary
+   * operators, include parameters named arg0 and    arg1 for specifying the left and right
+   * operands,    respectively. At this time, the left operand (arg0) must be a reference     to a
+   * variable. For case-insensitive Regex matching, include a boolean parameter named
+   * ignore_case that is set to true.     If not specified or set to any other value, the matching
+   * will be case     sensitive. To negate an operator, include a boolean parameter named     negate
+   * boolean parameter that is set to true.
+   *
+   * @mutable tagmanager.accounts.containers.workspaces.triggers.create @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Parameter> parameter;
 
   /**
-   * The type of operator for this condition.
+   * The type of operator for this condition. @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * A list of named parameters (key/value), depending on the condition's type. Notes: - For binary
-   * operators, include parameters named arg0 and arg1 for specifying the left and right operands,
-   * respectively.  - At this time, the left operand (arg0) must be a reference to a variable.  -
-   * For case-insensitive Regex matching, include a boolean parameter named ignore_case that is set
-   * to true. If not specified or set to any other value, the matching will be case sensitive.  - To
-   * negate an operator, include a boolean parameter named negate boolean parameter that is set to
-   * true.
+   * A list of named parameters (key/value), depending on the condition's type. Notes: For binary
+   * operators, include parameters named arg0 and    arg1 for specifying the left and right
+   * operands,    respectively. At this time, the left operand (arg0) must be a reference     to a
+   * variable. For case-insensitive Regex matching, include a boolean parameter named
+   * ignore_case that is set to true.     If not specified or set to any other value, the matching
+   * will be case     sensitive. To negate an operator, include a boolean parameter named     negate
+   * boolean parameter that is set to true.
+   *
+   * @mutable tagmanager.accounts.containers.workspaces.triggers.create @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.update
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -64,13 +72,16 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of named parameters (key/value), depending on the condition's type. Notes: - For binary
-   * operators, include parameters named arg0 and arg1 for specifying the left and right operands,
-   * respectively.  - At this time, the left operand (arg0) must be a reference to a variable.  -
-   * For case-insensitive Regex matching, include a boolean parameter named ignore_case that is set
-   * to true. If not specified or set to any other value, the matching will be case sensitive.  - To
-   * negate an operator, include a boolean parameter named negate boolean parameter that is set to
-   * true.
+   * A list of named parameters (key/value), depending on the condition's type. Notes: For binary
+   * operators, include parameters named arg0 and    arg1 for specifying the left and right
+   * operands,    respectively. At this time, the left operand (arg0) must be a reference     to a
+   * variable. For case-insensitive Regex matching, include a boolean parameter named
+   * ignore_case that is set to true.     If not specified or set to any other value, the matching
+   * will be case     sensitive. To negate an operator, include a boolean parameter named     negate
+   * boolean parameter that is set to true.
+   *
+   * @mutable tagmanager.accounts.containers.workspaces.triggers.create @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.update
    * @param parameter parameter or {@code null} for none
    */
   public Condition setParameter(java.util.List<Parameter> parameter) {
@@ -79,7 +90,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of operator for this condition.
+   * The type of operator for this condition. @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.update
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -87,7 +100,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of operator for this condition.
+   * The type of operator for this condition. @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
+   * tagmanager.accounts.containers.workspaces.triggers.update
    * @param type type or {@code null} for none
    */
   public Condition setType(java.lang.String type) {

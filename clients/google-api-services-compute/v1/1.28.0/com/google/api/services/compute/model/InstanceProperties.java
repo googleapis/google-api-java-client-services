@@ -115,6 +115,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * The configuration of desired reservations which this Instance could consume capacity from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
+
+  /**
    * Specifies the scheduling options for the instances that are created from this template.
    * The value may be {@code null}.
    */
@@ -315,6 +322,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * The configuration of desired reservations which this Instance could consume capacity from.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * The configuration of desired reservations which this Instance could consume capacity from.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public InstanceProperties setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

@@ -20,12 +20,13 @@ package com.google.api.services.tagmanager;
  * Service definition for TagManager (v1).
  *
  * <p>
- * Accesses Tag Manager accounts and containers.
+ * This API allows clients to access and modify container and tag
+     configuration.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/tag-manager/api/v1/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/tag-manager" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -63,7 +64,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "tagmanager/v1/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +72,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/tagmanager/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -161,7 +162,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
     public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Account> {
 
-      private static final String REST_PATH = "accounts/{accountId}";
+      private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}";
 
       /**
        * Gets a GTM Account.
@@ -192,8 +193,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -222,8 +238,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The GTM Account ID. */
@@ -265,7 +286,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
     public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListAccountsResponse> {
 
-      private static final String REST_PATH = "accounts";
+      private static final String REST_PATH = "tagmanager/v1/accounts";
 
       /**
        * Lists all GTM Accounts that a user has access to.
@@ -294,8 +315,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -324,8 +360,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -353,7 +394,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
     public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Account> {
 
-      private static final String REST_PATH = "accounts/{accountId}";
+      private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}";
 
       /**
        * Updates a GTM Account.
@@ -376,8 +417,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -406,8 +462,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The GTM Account ID. */
@@ -426,7 +487,9 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /** When provided, this fingerprint must match the fingerprint of the account in storage. */
+      /**
+       * When provided, this fingerprint must match the fingerprint of the account in storage.
+       */
       @com.google.api.client.util.Key
       private java.lang.String fingerprint;
 
@@ -436,7 +499,9 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return fingerprint;
       }
 
-      /** When provided, this fingerprint must match the fingerprint of the account in storage. */
+      /**
+       * When provided, this fingerprint must match the fingerprint of the account in storage.
+       */
       public Update setFingerprint(java.lang.String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -488,7 +553,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
 
-        private static final String REST_PATH = "accounts/{accountId}/containers";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers";
 
         /**
          * Creates a Container.
@@ -517,8 +582,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
         }
 
         @Override
@@ -547,8 +627,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -592,7 +677,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Delete extends TagManagerRequest<Void> {
 
-        private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}";
 
         /**
          * Deletes a Container.
@@ -616,8 +701,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -646,8 +746,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -707,7 +812,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
 
-        private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}";
 
         /**
          * Gets a Container.
@@ -740,8 +845,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -770,8 +890,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -830,7 +955,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListContainersResponse> {
 
-        private static final String REST_PATH = "accounts/{accountId}/containers";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers";
 
         /**
          * Lists all Containers that belongs to a GTM Account.
@@ -861,8 +986,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -891,8 +1031,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -937,7 +1082,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
 
-        private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}";
 
         /**
          * Updates a Container.
@@ -962,8 +1107,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -992,8 +1152,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -1095,7 +1260,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/environments";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments";
 
           /**
            * Creates a GTM Environment.
@@ -1122,8 +1287,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -1152,8 +1332,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -1214,7 +1399,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/environments/{environmentId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}";
 
           /**
            * Deletes a GTM Environment.
@@ -1240,8 +1425,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -1270,8 +1470,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -1348,7 +1553,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/environments/{environmentId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}";
 
           /**
            * Gets a GTM Environment.
@@ -1383,8 +1588,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -1413,8 +1633,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -1490,7 +1715,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListEnvironmentsResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/environments";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments";
 
           /**
            * Lists all GTM Environments of a GTM Container.
@@ -1523,8 +1748,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -1553,8 +1793,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -1616,7 +1861,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/environments/{environmentId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}";
 
           /**
            * Updates a GTM Environment.
@@ -1645,8 +1890,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -1675,8 +1935,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -1797,7 +2062,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Folder> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/folders";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders";
 
           /**
            * Creates a GTM Folder.
@@ -1824,8 +2089,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -1854,8 +2134,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -1916,7 +2201,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/folders/{folderId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}";
 
           /**
            * Deletes a GTM Folder.
@@ -1942,8 +2227,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -1972,8 +2272,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -2050,7 +2355,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Folder> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/folders/{folderId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}";
 
           /**
            * Gets a GTM Folder.
@@ -2085,8 +2390,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -2115,8 +2435,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -2192,7 +2517,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListFoldersResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/folders";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders";
 
           /**
            * Lists all GTM Folders of a Container.
@@ -2225,8 +2550,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -2255,8 +2595,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -2318,7 +2663,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Folder> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/folders/{folderId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}";
 
           /**
            * Updates a GTM Folder.
@@ -2347,8 +2692,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -2377,8 +2737,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -2496,7 +2861,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.FolderEntities> {
 
-            private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities";
+            private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities";
 
             /**
              * List all entities in a GTM Folder.
@@ -2531,8 +2896,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -2561,8 +2941,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /** The GTM Account ID. */
@@ -2663,7 +3048,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/move_folders/{folderId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/move_folders/{folderId}";
 
           /**
            * Moves entities to a GTM Folder.
@@ -2690,8 +3075,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -2720,8 +3120,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -2869,7 +3274,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}";
 
           /**
            * Re-generates the authorization code for a GTM Environment.
@@ -2896,8 +3301,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -2926,8 +3346,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3026,7 +3451,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Tag> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/tags";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags";
 
           /**
            * Creates a GTM Tag.
@@ -3055,8 +3480,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -3085,8 +3525,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3147,7 +3592,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/tags/{tagId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}";
 
           /**
            * Deletes a GTM Tag.
@@ -3173,8 +3618,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -3203,8 +3663,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3281,7 +3746,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Tag> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/tags/{tagId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}";
 
           /**
            * Gets a GTM Tag.
@@ -3316,8 +3781,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -3346,8 +3826,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3423,7 +3908,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListTagsResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/tags";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags";
 
           /**
            * Lists all GTM Tags of a Container.
@@ -3456,8 +3941,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -3486,8 +3986,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3549,7 +4054,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Tag> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/tags/{tagId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}";
 
           /**
            * Updates a GTM Tag.
@@ -3578,8 +4083,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -3608,8 +4128,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3660,7 +4185,9 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** When provided, this fingerprint must match the fingerprint of the tag in storage. */
+          /**
+           * When provided, this fingerprint must match the fingerprint of the tag in storage.
+           */
           @com.google.api.client.util.Key
           private java.lang.String fingerprint;
 
@@ -3670,7 +4197,9 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return fingerprint;
           }
 
-          /** When provided, this fingerprint must match the fingerprint of the tag in storage. */
+          /**
+           * When provided, this fingerprint must match the fingerprint of the tag in storage.
+           */
           public Update setFingerprint(java.lang.String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
@@ -3724,7 +4253,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Trigger> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/triggers";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers";
 
           /**
            * Creates a GTM Trigger.
@@ -3753,8 +4282,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -3783,8 +4327,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3845,7 +4394,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/triggers/{triggerId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}";
 
           /**
            * Deletes a GTM Trigger.
@@ -3871,8 +4420,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -3901,8 +4465,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -3979,7 +4548,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Trigger> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/triggers/{triggerId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}";
 
           /**
            * Gets a GTM Trigger.
@@ -4014,8 +4583,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -4044,8 +4628,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4121,7 +4710,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListTriggersResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/triggers";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers";
 
           /**
            * Lists all GTM Triggers of a Container.
@@ -4154,8 +4743,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -4184,8 +4788,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4247,7 +4856,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Trigger> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/triggers/{triggerId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}";
 
           /**
            * Updates a GTM Trigger.
@@ -4276,8 +4885,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -4306,8 +4930,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4426,7 +5055,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Variable> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/variables";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables";
 
           /**
            * Creates a GTM Variable.
@@ -4455,8 +5084,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -4485,8 +5129,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4547,7 +5196,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/variables/{variableId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}";
 
           /**
            * Deletes a GTM Variable.
@@ -4573,8 +5222,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -4603,8 +5267,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4681,7 +5350,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Variable> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/variables/{variableId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}";
 
           /**
            * Gets a GTM Variable.
@@ -4716,8 +5385,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -4746,8 +5430,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4823,7 +5512,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListVariablesResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/variables";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables";
 
           /**
            * Lists all GTM Variables of a Container.
@@ -4856,8 +5545,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -4886,8 +5590,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -4949,7 +5658,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Variable> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/variables/{variableId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}";
 
           /**
            * Updates a GTM Variable.
@@ -4980,8 +5689,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -5010,8 +5734,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -5130,7 +5859,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.CreateContainerVersionResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions";
 
           /**
            * Creates a Container Version.
@@ -5155,8 +5884,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -5185,8 +5929,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -5247,7 +5996,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}";
 
           /**
            * Deletes a Container Version.
@@ -5273,8 +6022,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -5303,8 +6067,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -5370,7 +6139,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          *
          * @param accountId The GTM Account ID.
          * @param containerId The GTM Container ID.
-         * @param containerVersionId The GTM Container Version ID. Specify published to retrieve the currently published version.
+         * @param containerVersionId The GTM Container Version ID. Specify published to retrieve
+        the currently published version.
          * @return the request
          */
         public Get get(java.lang.String accountId, java.lang.String containerId, java.lang.String containerVersionId) throws java.io.IOException {
@@ -5381,7 +6151,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}";
 
           /**
            * Gets a Container Version.
@@ -5395,7 +6165,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            *
            * @param accountId The GTM Account ID.
            * @param containerId The GTM Container ID.
-           * @param containerVersionId The GTM Container Version ID. Specify published to retrieve the currently published version.
+           * @param containerVersionId The GTM Container Version ID. Specify published to retrieve
+        the currently published version.
            * @since 1.13
            */
           protected Get(java.lang.String accountId, java.lang.String containerId, java.lang.String containerVersionId) {
@@ -5416,8 +6187,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -5446,8 +6232,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -5529,7 +6320,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListContainerVersionsResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions";
 
           /**
            * Lists all Container Versions of a GTM Container.
@@ -5562,8 +6353,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -5592,8 +6398,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -5740,7 +6551,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Publish extends TagManagerRequest<com.google.api.services.tagmanager.model.PublishContainerVersionResponse> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish";
 
           /**
            * Publishes a Container Version.
@@ -5766,8 +6577,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Publish set$Xgafv(java.lang.String $Xgafv) {
+            return (Publish) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Publish setAccessToken(java.lang.String accessToken) {
+            return (Publish) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Publish setAlt(java.lang.String alt) {
             return (Publish) super.setAlt(alt);
+          }
+
+          @Override
+          public Publish setCallback(java.lang.String callback) {
+            return (Publish) super.setCallback(callback);
           }
 
           @Override
@@ -5796,8 +6622,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Publish setUserIp(java.lang.String userIp) {
-            return (Publish) super.setUserIp(userIp);
+          public Publish setUploadType(java.lang.String uploadType) {
+            return (Publish) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Publish setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Publish) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -5898,7 +6729,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Restore extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore";
 
           /**
            * Restores a Container Version. This will overwrite the container's current configuration
@@ -5926,8 +6757,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Restore set$Xgafv(java.lang.String $Xgafv) {
+            return (Restore) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Restore setAccessToken(java.lang.String accessToken) {
+            return (Restore) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Restore setAlt(java.lang.String alt) {
             return (Restore) super.setAlt(alt);
+          }
+
+          @Override
+          public Restore setCallback(java.lang.String callback) {
+            return (Restore) super.setCallback(callback);
           }
 
           @Override
@@ -5956,8 +6802,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Restore setUserIp(java.lang.String userIp) {
-            return (Restore) super.setUserIp(userIp);
+          public Restore setUploadType(java.lang.String uploadType) {
+            return (Restore) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Restore) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -6034,7 +6885,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Undelete extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete";
 
           /**
            * Undeletes a Container Version.
@@ -6060,8 +6911,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Undelete set$Xgafv(java.lang.String $Xgafv) {
+            return (Undelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undelete setAccessToken(java.lang.String accessToken) {
+            return (Undelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Undelete setAlt(java.lang.String alt) {
             return (Undelete) super.setAlt(alt);
+          }
+
+          @Override
+          public Undelete setCallback(java.lang.String callback) {
+            return (Undelete) super.setCallback(callback);
           }
 
           @Override
@@ -6090,8 +6956,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Undelete setUserIp(java.lang.String userIp) {
-            return (Undelete) super.setUserIp(userIp);
+          public Undelete setUploadType(java.lang.String uploadType) {
+            return (Undelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undelete) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -6169,7 +7040,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}";
+          private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}";
 
           /**
            * Updates a Container Version.
@@ -6196,8 +7067,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -6226,8 +7112,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The GTM Account ID. */
@@ -6348,7 +7239,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.UserAccess> {
 
-        private static final String REST_PATH = "accounts/{accountId}/permissions";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/permissions";
 
         /**
          * Creates a user's Account & Container Permissions.
@@ -6373,8 +7264,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
         }
 
         @Override
@@ -6403,8 +7309,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -6448,7 +7359,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Delete extends TagManagerRequest<Void> {
 
-        private static final String REST_PATH = "accounts/{accountId}/permissions/{permissionId}";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/permissions/{permissionId}";
 
         /**
          * Removes a user from the account, revoking access to it and all of its containers.
@@ -6472,8 +7383,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -6502,8 +7428,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -6563,7 +7494,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.UserAccess> {
 
-        private static final String REST_PATH = "accounts/{accountId}/permissions/{permissionId}";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/permissions/{permissionId}";
 
         /**
          * Gets a user's Account & Container Permissions.
@@ -6596,8 +7527,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -6626,8 +7572,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */
@@ -6676,7 +7627,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param accountId The GTM Account ID. @required tagmanager.accounts.permissions.list
+       * @param accountId The GTM Account ID.
        * @return the request
        */
       public List list(java.lang.String accountId) throws java.io.IOException {
@@ -6687,7 +7638,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListAccountUsersResponse> {
 
-        private static final String REST_PATH = "accounts/{accountId}/permissions";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/permissions";
 
         /**
          * List all users that have access to the account along with Account and Container Permissions
@@ -6700,7 +7651,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param accountId The GTM Account ID. @required tagmanager.accounts.permissions.list
+         * @param accountId The GTM Account ID.
          * @since 1.13
          */
         protected List(java.lang.String accountId) {
@@ -6719,8 +7670,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -6749,21 +7715,26 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /** The GTM Account ID. @required tagmanager.accounts.permissions.list */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The GTM Account ID. */
         @com.google.api.client.util.Key
         private java.lang.String accountId;
 
-        /** The GTM Account ID. @required tagmanager.accounts.permissions.list
+        /** The GTM Account ID.
          */
         public java.lang.String getAccountId() {
           return accountId;
         }
 
-        /** The GTM Account ID. @required tagmanager.accounts.permissions.list */
+        /** The GTM Account ID. */
         public List setAccountId(java.lang.String accountId) {
           this.accountId = accountId;
           return this;
@@ -6795,7 +7766,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.UserAccess> {
 
-        private static final String REST_PATH = "accounts/{accountId}/permissions/{permissionId}";
+        private static final String REST_PATH = "tagmanager/v1/accounts/{accountId}/permissions/{permissionId}";
 
         /**
          * Updates a user's Account & Container Permissions.
@@ -6820,8 +7791,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -6850,8 +7836,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /** The GTM Account ID. */

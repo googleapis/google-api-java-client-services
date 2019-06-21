@@ -45,14 +45,15 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String containerId;
 
   /**
-   * List of domain names associated with the Container.
+   * List of domain names associated with the Container. @mutable
+   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> domainName;
 
   /**
-   * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
+   * The fingerprint of the GTM Container as computed at storage time.  This value is recomputed
    * whenever the account is modified.
    * The value may be {@code null}.
    */
@@ -60,14 +61,16 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Container display name.
+   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Container Notes.
+   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +98,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String tagManagerUrl;
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, or ios.
+   * List of Usage Contexts for the Container. Valid values include: web, android, or ios. @mutable
+   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +140,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain names associated with the Container.
+   * List of domain names associated with the Container. @mutable
+   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomainName() {
@@ -144,7 +149,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain names associated with the Container.
+   * List of domain names associated with the Container. @mutable
+   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
    * @param domainName domainName or {@code null} for none
    */
   public Container setDomainName(java.util.List<java.lang.String> domainName) {
@@ -153,7 +159,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
+   * The fingerprint of the GTM Container as computed at storage time.  This value is recomputed
    * whenever the account is modified.
    * @return value or {@code null} for none
    */
@@ -162,7 +168,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fingerprint of the GTM Container as computed at storage time. This value is recomputed
+   * The fingerprint of the GTM Container as computed at storage time.  This value is recomputed
    * whenever the account is modified.
    * @param fingerprint fingerprint or {@code null} for none
    */
@@ -172,7 +178,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container display name.
+   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -180,7 +187,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container display name.
+   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -189,7 +197,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Notes.
+   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -197,7 +206,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Notes.
+   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
+   * tagmanager.accounts.containers.update
    * @param notes notes or {@code null} for none
    */
   public Container setNotes(java.lang.String notes) {
@@ -257,7 +267,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, or ios.
+   * List of Usage Contexts for the Container. Valid values include: web, android, or ios. @mutable
+   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsageContext() {
@@ -265,7 +276,8 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, or ios.
+   * List of Usage Contexts for the Container. Valid values include: web, android, or ios. @mutable
+   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
    * @param usageContext usageContext or {@code null} for none
    */
   public Container setUsageContext(java.util.List<java.lang.String> usageContext) {

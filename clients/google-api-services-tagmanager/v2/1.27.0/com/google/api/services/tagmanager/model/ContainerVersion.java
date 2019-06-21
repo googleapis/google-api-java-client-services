@@ -85,7 +85,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.lang.Boolean deleted;
 
   /**
-   * Container version description.
+   * Container version description. @mutable tagmanager.accounts.containers.versions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.util.List<Folder> folder;
 
   /**
-   * Container version display name.
+   * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Container version description.
+   * Container version description. @mutable tagmanager.accounts.containers.versions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -283,7 +283,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Container version description.
+   * Container version description. @mutable tagmanager.accounts.containers.versions.update
    * @param description description or {@code null} for none
    */
   public ContainerVersion setDescription(java.lang.String description) {
@@ -328,7 +328,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Container version display name.
+   * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -336,7 +336,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Container version display name.
+   * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * @param name name or {@code null} for none
    */
   public ContainerVersion setName(java.lang.String name) {

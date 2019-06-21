@@ -20,12 +20,13 @@ package com.google.api.services.tagmanager;
  * Service definition for TagManager (v2).
  *
  * <p>
- * Accesses Tag Manager accounts and containers.
+ * This API allows clients to access and modify container and tag
+     configuration.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/tag-manager/api/v2/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/tag-manager" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -63,7 +64,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "tagmanager/v2/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +72,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/tagmanager/v2";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -150,7 +151,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the tagmanager server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+     * @param path GTM Accounts's API relative path.
+    Example: accounts/{account_id}
      * @return the request
      */
     public Get get(java.lang.String path) throws java.io.IOException {
@@ -161,7 +163,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
     public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Account> {
 
-      private static final String REST_PATH = "{+path}";
+      private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+      private final java.util.regex.Pattern PATH_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
       /**
        * Gets a GTM Account.
@@ -173,12 +178,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+       * @param path GTM Accounts's API relative path.
+    Example: accounts/{account_id}
        * @since 1.13
        */
       protected Get(java.lang.String path) {
         super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Account.class);
         this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+              "Parameter path must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
       }
 
       @Override
@@ -192,8 +203,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -222,11 +248,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * GTM Accounts's API relative path. Example: accounts/{account_id}
+       */
       @com.google.api.client.util.Key
       private java.lang.String path;
 
@@ -236,8 +269,15 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return path;
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      /**
+       * GTM Accounts's API relative path. Example: accounts/{account_id}
+       */
       public Get setPath(java.lang.String path) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+              "Parameter path must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
         this.path = path;
         return this;
       }
@@ -265,7 +305,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
     public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListAccountsResponse> {
 
-      private static final String REST_PATH = "accounts";
+      private static final String REST_PATH = "tagmanager/v2/accounts";
 
       /**
        * Lists all GTM Accounts that a user has access to.
@@ -294,8 +334,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -324,8 +379,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Continuation token for fetching the next page of results. */
@@ -357,7 +417,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the tagmanager server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+     * @param path GTM Accounts's API relative path.
+    Example: accounts/{account_id}
      * @param content the {@link com.google.api.services.tagmanager.model.Account}
      * @return the request
      */
@@ -369,7 +430,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
     public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Account> {
 
-      private static final String REST_PATH = "{+path}";
+      private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+      private final java.util.regex.Pattern PATH_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
       /**
        * Updates a GTM Account.
@@ -382,18 +446,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param path GTM Accounts's API relative path. Example: accounts/{account_id}
+       * @param path GTM Accounts's API relative path.
+    Example: accounts/{account_id}
        * @param content the {@link com.google.api.services.tagmanager.model.Account}
        * @since 1.13
        */
       protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Account content) {
         super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Account.class);
         this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+              "Parameter path must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -422,11 +507,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * GTM Accounts's API relative path. Example: accounts/{account_id}
+       */
       @com.google.api.client.util.Key
       private java.lang.String path;
 
@@ -436,13 +528,22 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return path;
       }
 
-      /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+      /**
+       * GTM Accounts's API relative path. Example: accounts/{account_id}
+       */
       public Update setPath(java.lang.String path) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+              "Parameter path must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
         this.path = path;
         return this;
       }
 
-      /** When provided, this fingerprint must match the fingerprint of the account in storage. */
+      /**
+       * When provided, this fingerprint must match the fingerprint of the account in storage.
+       */
       @com.google.api.client.util.Key
       private java.lang.String fingerprint;
 
@@ -452,7 +553,9 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return fingerprint;
       }
 
-      /** When provided, this fingerprint must match the fingerprint of the account in storage. */
+      /**
+       * When provided, this fingerprint must match the fingerprint of the account in storage.
+       */
       public Update setFingerprint(java.lang.String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -492,7 +595,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
+       * @param parent GTM Account's API relative path.
+      Example: accounts/{account_id}.
        * @param content the {@link com.google.api.services.tagmanager.model.Container}
        * @return the request
        */
@@ -504,7 +608,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
 
-        private static final String REST_PATH = "{+parent}/containers";
+        private static final String REST_PATH = "tagmanager/v2/{+parent}/containers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
          * Creates a Container.
@@ -517,20 +624,41 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
+         * @param parent GTM Account's API relative path.
+      Example: accounts/{account_id}.
          * @param content the {@link com.google.api.services.tagmanager.model.Container}
          * @since 1.13
          */
         protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Container content) {
           super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Container.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
           checkRequiredParameter(content, "content");
           checkRequiredParameter(content.getName(), "Container.getName()");
         }
 
         @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
         }
 
         @Override
@@ -559,11 +687,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}. */
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * GTM Account's API relative path. Example: accounts/{account_id}.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -573,8 +708,15 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return parent;
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}. */
+        /**
+         * GTM Account's API relative path. Example: accounts/{account_id}.
+         */
         public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
           this.parent = parent;
           return this;
         }
@@ -592,7 +734,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
+      Example: accounts/{account_id}/containers/{container_id}
        * @return the request
        */
       public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -603,7 +746,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Delete extends TagManagerRequest<Void> {
 
-        private static final String REST_PATH = "{+path}";
+        private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
         /**
          * Deletes a Container.
@@ -616,17 +762,38 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
+      Example: accounts/{account_id}/containers/{container_id}
          * @since 1.13
          */
         protected Delete(java.lang.String path) {
           super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
         }
 
         @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -655,8 +822,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -677,6 +849,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * accounts/{account_id}/containers/{container_id}
          */
         public Delete setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
           this.path = path;
           return this;
         }
@@ -694,7 +871,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
+      Example: accounts/{account_id}/containers/{container_id}
        * @return the request
        */
       public Get get(java.lang.String path) throws java.io.IOException {
@@ -705,7 +883,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
 
-        private static final String REST_PATH = "{+path}";
+        private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
         /**
          * Gets a Container.
@@ -717,12 +898,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
+      Example: accounts/{account_id}/containers/{container_id}
          * @since 1.13
          */
         protected Get(java.lang.String path) {
           super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Container.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
         }
 
         @Override
@@ -736,8 +923,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -766,8 +968,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -788,6 +995,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * accounts/{account_id}/containers/{container_id}
          */
         public Get setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
           this.path = path;
           return this;
         }
@@ -805,7 +1017,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}.
+       * @param parent GTM Accounts's API relative path.
+      Example: accounts/{account_id}.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -816,7 +1029,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListContainersResponse> {
 
-        private static final String REST_PATH = "{+parent}/containers";
+        private static final String REST_PATH = "tagmanager/v2/{+parent}/containers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
          * Lists all Containers that belongs to a GTM Account.
@@ -828,12 +1044,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}.
+         * @param parent GTM Accounts's API relative path.
+      Example: accounts/{account_id}.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
           super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListContainersResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
         }
 
         @Override
@@ -847,8 +1069,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -877,11 +1114,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id}. */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * GTM Accounts's API relative path. Example: accounts/{account_id}.
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -891,8 +1135,15 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return parent;
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id}. */
+        /**
+         * GTM Accounts's API relative path. Example: accounts/{account_id}.
+         */
         public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
           this.parent = parent;
           return this;
         }
@@ -926,7 +1177,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
+      Example: accounts/{account_id}/containers/{container_id}
        * @param content the {@link com.google.api.services.tagmanager.model.Container}
        * @return the request
        */
@@ -938,7 +1190,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Container> {
 
-        private static final String REST_PATH = "{+path}";
+        private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
         /**
          * Updates a Container.
@@ -951,18 +1206,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
+      Example: accounts/{account_id}/containers/{container_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Container}
          * @since 1.13
          */
         protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Container content) {
           super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Container.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
         }
 
         @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -991,8 +1267,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -1013,6 +1294,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * accounts/{account_id}/containers/{container_id}
          */
         public Update setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/containers/[^/]+$");
+          }
           this.path = path;
           return this;
         }
@@ -1071,7 +1357,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Environment}
          * @return the request
          */
@@ -1083,7 +1370,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "{+parent}/environments";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/environments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Creates a GTM Environment.
@@ -1096,20 +1386,41 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Environment}
            * @since 1.13
            */
           protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Environment content) {
             super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Environment.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             checkRequiredParameter(content, "content");
             checkRequiredParameter(content.getName(), "Environment.getName()");
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -1138,8 +1449,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1160,6 +1476,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -1177,7 +1498,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
+         * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
          * @return the request
          */
@@ -1189,7 +1511,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
 
           /**
            * Deletes a GTM Environment.
@@ -1202,18 +1527,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
+           * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            * @since 1.13
            */
           protected Delete(java.lang.String path) {
             super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
           }
 
           @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -1242,8 +1588,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1265,6 +1616,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            */
           public Delete setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -1282,7 +1638,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
+         * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
          * @return the request
          */
@@ -1294,7 +1651,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
 
           /**
            * Gets a GTM Environment.
@@ -1306,13 +1666,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
+           * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            * @since 1.13
            */
           protected Get(java.lang.String path) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Environment.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
           }
 
           @Override
@@ -1326,8 +1692,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -1356,8 +1737,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1379,6 +1765,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            */
           public Get setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -1396,7 +1787,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1407,7 +1799,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListEnvironmentsResponse> {
 
-          private static final String REST_PATH = "{+parent}/environments";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/environments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Lists all GTM Environments of a GTM Container.
@@ -1419,12 +1814,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListEnvironmentsResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
           }
 
           @Override
@@ -1438,8 +1839,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -1468,8 +1884,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1490,6 +1911,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -1523,7 +1949,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Reauthorize#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
+         * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Environment}
          * @return the request
@@ -1536,7 +1963,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Reauthorize extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "{+path}:reauthorize";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:reauthorize";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
 
           /**
            * Re-generates the authorization code for a GTM Environment.
@@ -1549,7 +1979,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Reauthorize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
+           * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Environment}
            * @since 1.13
@@ -1557,11 +1988,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           protected Reauthorize(java.lang.String path, com.google.api.services.tagmanager.model.Environment content) {
             super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Environment.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reauthorize set$Xgafv(java.lang.String $Xgafv) {
+            return (Reauthorize) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reauthorize setAccessToken(java.lang.String accessToken) {
+            return (Reauthorize) super.setAccessToken(accessToken);
           }
 
           @Override
           public Reauthorize setAlt(java.lang.String alt) {
             return (Reauthorize) super.setAlt(alt);
+          }
+
+          @Override
+          public Reauthorize setCallback(java.lang.String callback) {
+            return (Reauthorize) super.setCallback(callback);
           }
 
           @Override
@@ -1590,8 +2041,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Reauthorize setUserIp(java.lang.String userIp) {
-            return (Reauthorize) super.setUserIp(userIp);
+          public Reauthorize setUploadType(java.lang.String uploadType) {
+            return (Reauthorize) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reauthorize setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reauthorize) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1613,6 +2069,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            */
           public Reauthorize setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -1630,7 +2091,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
+         * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Environment}
          * @return the request
@@ -1643,7 +2105,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Environment> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
 
           /**
            * Updates a GTM Environment.
@@ -1656,7 +2121,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
+           * @param path GTM Environment's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Environment}
            * @since 1.13
@@ -1664,13 +2130,33 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Environment content) {
             super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Environment.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
             checkRequiredParameter(content, "content");
             checkRequiredParameter(content.getName(), "Environment.getName()");
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -1699,8 +2185,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1722,6 +2213,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
            */
           public Update setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -1783,7 +2279,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Latest#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @return the request
          */
         public Latest latest(java.lang.String parent) throws java.io.IOException {
@@ -1794,7 +2291,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Latest extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersionHeader> {
 
-          private static final String REST_PATH = "{+parent}/version_headers:latest";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/version_headers:latest";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Gets the latest container version header
@@ -1807,12 +2307,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Latest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @since 1.13
            */
           protected Latest(java.lang.String parent) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ContainerVersionHeader.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
           }
 
           @Override
@@ -1826,8 +2332,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Latest set$Xgafv(java.lang.String $Xgafv) {
+            return (Latest) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Latest setAccessToken(java.lang.String accessToken) {
+            return (Latest) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Latest setAlt(java.lang.String alt) {
             return (Latest) super.setAlt(alt);
+          }
+
+          @Override
+          public Latest setCallback(java.lang.String callback) {
+            return (Latest) super.setCallback(callback);
           }
 
           @Override
@@ -1856,8 +2377,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Latest setUserIp(java.lang.String userIp) {
-            return (Latest) super.setUserIp(userIp);
+          public Latest setUploadType(java.lang.String uploadType) {
+            return (Latest) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Latest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Latest) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1878,6 +2404,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public Latest setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -1895,7 +2426,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1906,7 +2438,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListContainerVersionsResponse> {
 
-          private static final String REST_PATH = "{+parent}/version_headers";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/version_headers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Lists all Container Versions of a GTM Container.
@@ -1918,12 +2453,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListContainerVersionsResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
           }
 
           @Override
@@ -1937,8 +2478,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -1967,8 +2523,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -1989,6 +2550,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -2060,7 +2626,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
+         * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
          * @return the request
          */
@@ -2072,7 +2639,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
 
           /**
            * Deletes a Container Version.
@@ -2085,18 +2655,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
+           * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
            * @since 1.13
            */
           protected Delete(java.lang.String path) {
             super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
           }
 
           @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -2125,8 +2716,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2148,6 +2744,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/versions/{version_id}
            */
           public Delete setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -2165,7 +2766,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
+         * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
          * @return the request
          */
@@ -2177,7 +2779,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
 
           /**
            * Gets a Container Version.
@@ -2189,13 +2794,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
+           * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
            * @since 1.13
            */
           protected Get(java.lang.String path) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ContainerVersion.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
           }
 
           @Override
@@ -2209,8 +2820,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -2239,8 +2865,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2262,6 +2893,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/versions/{version_id}
            */
           public Get setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -2301,7 +2937,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Live#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @return the request
          */
         public Live live(java.lang.String parent) throws java.io.IOException {
@@ -2312,7 +2949,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Live extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "{+parent}/versions:live";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/versions:live";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Gets the live (i.e. published) container version
@@ -2324,12 +2964,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Live#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @since 1.13
            */
           protected Live(java.lang.String parent) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ContainerVersion.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
           }
 
           @Override
@@ -2343,8 +2989,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Live set$Xgafv(java.lang.String $Xgafv) {
+            return (Live) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Live setAccessToken(java.lang.String accessToken) {
+            return (Live) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Live setAlt(java.lang.String alt) {
             return (Live) super.setAlt(alt);
+          }
+
+          @Override
+          public Live setCallback(java.lang.String callback) {
+            return (Live) super.setCallback(callback);
           }
 
           @Override
@@ -2373,8 +3034,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Live setUserIp(java.lang.String userIp) {
-            return (Live) super.setUserIp(userIp);
+          public Live setUploadType(java.lang.String uploadType) {
+            return (Live) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Live setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Live) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2395,6 +3061,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public Live setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -2412,7 +3083,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
+         * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
          * @return the request
          */
@@ -2424,7 +3096,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Publish extends TagManagerRequest<com.google.api.services.tagmanager.model.PublishContainerVersionResponse> {
 
-          private static final String REST_PATH = "{+path}:publish";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:publish";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
 
           /**
            * Publishes a Container Version.
@@ -2437,18 +3112,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Publish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
+           * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
            * @since 1.13
            */
           protected Publish(java.lang.String path) {
             super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.PublishContainerVersionResponse.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Publish set$Xgafv(java.lang.String $Xgafv) {
+            return (Publish) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Publish setAccessToken(java.lang.String accessToken) {
+            return (Publish) super.setAccessToken(accessToken);
           }
 
           @Override
           public Publish setAlt(java.lang.String alt) {
             return (Publish) super.setAlt(alt);
+          }
+
+          @Override
+          public Publish setCallback(java.lang.String callback) {
+            return (Publish) super.setCallback(callback);
           }
 
           @Override
@@ -2477,8 +3173,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Publish setUserIp(java.lang.String userIp) {
-            return (Publish) super.setUserIp(userIp);
+          public Publish setUploadType(java.lang.String uploadType) {
+            return (Publish) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Publish setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Publish) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2500,6 +3201,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/versions/{version_id}
            */
           public Publish setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -2540,7 +3246,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link SetLatest#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
+         * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
          * @return the request
          */
@@ -2552,7 +3259,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class SetLatest extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "{+path}:set_latest";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:set_latest";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
 
           /**
            * Sets the latest version used for synchronization of workspaces when detecting conflicts and
@@ -2566,18 +3276,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * SetLatest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
+           * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
            * @since 1.13
            */
           protected SetLatest(java.lang.String path) {
             super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.ContainerVersion.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetLatest set$Xgafv(java.lang.String $Xgafv) {
+            return (SetLatest) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetLatest setAccessToken(java.lang.String accessToken) {
+            return (SetLatest) super.setAccessToken(accessToken);
           }
 
           @Override
           public SetLatest setAlt(java.lang.String alt) {
             return (SetLatest) super.setAlt(alt);
+          }
+
+          @Override
+          public SetLatest setCallback(java.lang.String callback) {
+            return (SetLatest) super.setCallback(callback);
           }
 
           @Override
@@ -2606,8 +3337,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public SetLatest setUserIp(java.lang.String userIp) {
-            return (SetLatest) super.setUserIp(userIp);
+          public SetLatest setUploadType(java.lang.String uploadType) {
+            return (SetLatest) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetLatest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetLatest) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2629,6 +3365,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/versions/{version_id}
            */
           public SetLatest setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -2646,7 +3387,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
+         * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
          * @return the request
          */
@@ -2658,7 +3400,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Undelete extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "{+path}:undelete";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:undelete";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
 
           /**
            * Undeletes a Container Version.
@@ -2671,18 +3416,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
+           * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
            * @since 1.13
            */
           protected Undelete(java.lang.String path) {
             super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.ContainerVersion.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Undelete set$Xgafv(java.lang.String $Xgafv) {
+            return (Undelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undelete setAccessToken(java.lang.String accessToken) {
+            return (Undelete) super.setAccessToken(accessToken);
           }
 
           @Override
           public Undelete setAlt(java.lang.String alt) {
             return (Undelete) super.setAlt(alt);
+          }
+
+          @Override
+          public Undelete setCallback(java.lang.String callback) {
+            return (Undelete) super.setCallback(callback);
           }
 
           @Override
@@ -2711,8 +3477,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Undelete setUserIp(java.lang.String userIp) {
-            return (Undelete) super.setUserIp(userIp);
+          public Undelete setUploadType(java.lang.String uploadType) {
+            return (Undelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undelete) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2734,6 +3505,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/versions/{version_id}
            */
           public Undelete setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -2751,7 +3527,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
+         * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
          * @param content the {@link com.google.api.services.tagmanager.model.ContainerVersion}
          * @return the request
@@ -2764,7 +3541,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.ContainerVersion> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
 
           /**
            * Updates a Container Version.
@@ -2777,7 +3557,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
+           * @param path GTM ContainerVersion's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
            * @param content the {@link com.google.api.services.tagmanager.model.ContainerVersion}
            * @since 1.13
@@ -2785,11 +3566,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           protected Update(java.lang.String path, com.google.api.services.tagmanager.model.ContainerVersion content) {
             super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.ContainerVersion.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
           }
 
           @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -2818,8 +3619,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2841,6 +3647,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/versions/{version_id}
            */
           public Update setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/versions/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -2902,7 +3713,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM parent Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
          * @return the request
          */
@@ -2914,7 +3726,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Workspace> {
 
-          private static final String REST_PATH = "{+parent}/workspaces";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/workspaces";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Creates a Workspace.
@@ -2927,20 +3742,41 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM parent Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
            * @since 1.13
            */
           protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Workspace content) {
             super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Workspace.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             checkRequiredParameter(content, "content");
             checkRequiredParameter(content.getName(), "Workspace.getName()");
           }
 
           @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Create setAlt(java.lang.String alt) {
             return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
           }
 
           @Override
@@ -2969,8 +3805,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Create setUserIp(java.lang.String userIp) {
-            return (Create) super.setUserIp(userIp);
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -2991,6 +3832,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -3009,7 +3855,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link CreateVersion#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @param content the {@link com.google.api.services.tagmanager.model.CreateContainerVersionRequestVersionOptions}
          * @return the request
@@ -3022,7 +3869,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class CreateVersion extends TagManagerRequest<com.google.api.services.tagmanager.model.CreateContainerVersionResponse> {
 
-          private static final String REST_PATH = "{+path}:create_version";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:create_version";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Creates a Container Version from the entities present in the workspace, deletes the workspace,
@@ -3036,7 +3886,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.CreateContainerVersionRequestVersionOptions}
            * @since 1.13
@@ -3044,11 +3895,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           protected CreateVersion(java.lang.String path, com.google.api.services.tagmanager.model.CreateContainerVersionRequestVersionOptions content) {
             super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.CreateContainerVersionResponse.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public CreateVersion set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateVersion) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateVersion setAccessToken(java.lang.String accessToken) {
+            return (CreateVersion) super.setAccessToken(accessToken);
           }
 
           @Override
           public CreateVersion setAlt(java.lang.String alt) {
             return (CreateVersion) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateVersion setCallback(java.lang.String callback) {
+            return (CreateVersion) super.setCallback(callback);
           }
 
           @Override
@@ -3077,8 +3948,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public CreateVersion setUserIp(java.lang.String userIp) {
-            return (CreateVersion) super.setUserIp(userIp);
+          public CreateVersion setUploadType(java.lang.String uploadType) {
+            return (CreateVersion) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateVersion setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateVersion) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3100,6 +3976,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public CreateVersion setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3117,7 +3998,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @return the request
          */
@@ -3129,7 +4011,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Delete extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Deletes a Workspace.
@@ -3142,18 +4027,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @since 1.13
            */
           protected Delete(java.lang.String path) {
             super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
           }
 
           @Override
           public Delete setAlt(java.lang.String alt) {
             return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
           }
 
           @Override
@@ -3182,8 +4088,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Delete setUserIp(java.lang.String userIp) {
-            return (Delete) super.setUserIp(userIp);
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3205,6 +4116,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public Delete setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3222,7 +4138,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @return the request
          */
@@ -3234,7 +4151,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Workspace> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Gets a Workspace.
@@ -3246,13 +4166,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @since 1.13
            */
           protected Get(java.lang.String path) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Workspace.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
           }
 
           @Override
@@ -3266,8 +4192,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Get setAlt(java.lang.String alt) {
             return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
           }
 
           @Override
@@ -3296,8 +4237,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Get setUserIp(java.lang.String userIp) {
-            return (Get) super.setUserIp(userIp);
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3319,6 +4265,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public Get setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3336,7 +4287,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link GetStatus#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @return the request
          */
@@ -3348,7 +4300,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class GetStatus extends TagManagerRequest<com.google.api.services.tagmanager.model.GetWorkspaceStatusResponse> {
 
-          private static final String REST_PATH = "{+path}/status";
+          private static final String REST_PATH = "tagmanager/v2/{+path}/status";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Finds conflicting and modified entities in the workspace.
@@ -3361,13 +4316,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * GetStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @since 1.13
            */
           protected GetStatus(java.lang.String path) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.GetWorkspaceStatusResponse.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
           }
 
           @Override
@@ -3381,8 +4342,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public GetStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (GetStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetStatus setAccessToken(java.lang.String accessToken) {
+            return (GetStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public GetStatus setAlt(java.lang.String alt) {
             return (GetStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public GetStatus setCallback(java.lang.String callback) {
+            return (GetStatus) super.setCallback(callback);
           }
 
           @Override
@@ -3411,8 +4387,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public GetStatus setUserIp(java.lang.String userIp) {
-            return (GetStatus) super.setUserIp(userIp);
+          public GetStatus setUploadType(java.lang.String uploadType) {
+            return (GetStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetStatus) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3434,6 +4415,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public GetStatus setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3451,7 +4437,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM parent Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3462,7 +4449,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListWorkspacesResponse> {
 
-          private static final String REST_PATH = "{+parent}/workspaces";
+          private static final String REST_PATH = "tagmanager/v2/{+parent}/workspaces";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+$");
 
           /**
            * Lists all Workspaces that belong to a GTM Container.
@@ -3474,12 +4464,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM parent Container's API relative path.
+        Example: accounts/{account_id}/containers/{container_id}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
             super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListWorkspacesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
           }
 
           @Override
@@ -3493,8 +4489,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public List setAlt(java.lang.String alt) {
             return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
@@ -3523,8 +4534,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public List setUserIp(java.lang.String userIp) {
-            return (List) super.setUserIp(userIp);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3545,6 +4561,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}
            */
           public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+$");
+            }
             this.parent = parent;
             return this;
           }
@@ -3579,7 +4600,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link QuickPreview#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @return the request
          */
@@ -3591,7 +4613,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class QuickPreview extends TagManagerRequest<com.google.api.services.tagmanager.model.QuickPreviewResponse> {
 
-          private static final String REST_PATH = "{+path}:quick_preview";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:quick_preview";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Quick previews a workspace by creating a fake container version from all entities in the
@@ -3605,18 +4630,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * QuickPreview#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @since 1.13
            */
           protected QuickPreview(java.lang.String path) {
             super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.QuickPreviewResponse.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public QuickPreview set$Xgafv(java.lang.String $Xgafv) {
+            return (QuickPreview) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QuickPreview setAccessToken(java.lang.String accessToken) {
+            return (QuickPreview) super.setAccessToken(accessToken);
           }
 
           @Override
           public QuickPreview setAlt(java.lang.String alt) {
             return (QuickPreview) super.setAlt(alt);
+          }
+
+          @Override
+          public QuickPreview setCallback(java.lang.String callback) {
+            return (QuickPreview) super.setCallback(callback);
           }
 
           @Override
@@ -3645,8 +4691,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public QuickPreview setUserIp(java.lang.String userIp) {
-            return (QuickPreview) super.setUserIp(userIp);
+          public QuickPreview setUploadType(java.lang.String uploadType) {
+            return (QuickPreview) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QuickPreview setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QuickPreview) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3668,6 +4719,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public QuickPreview setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3686,7 +4742,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link ResolveConflict#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Entity}
          * @return the request
@@ -3699,7 +4756,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class ResolveConflict extends TagManagerRequest<Void> {
 
-          private static final String REST_PATH = "{+path}:resolve_conflict";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:resolve_conflict";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Resolves a merge conflict for a workspace entity by updating it to the resolved entity passed
@@ -3713,7 +4773,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Entity}
            * @since 1.13
@@ -3721,11 +4782,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           protected ResolveConflict(java.lang.String path, com.google.api.services.tagmanager.model.Entity content) {
             super(TagManager.this, "POST", REST_PATH, content, Void.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public ResolveConflict set$Xgafv(java.lang.String $Xgafv) {
+            return (ResolveConflict) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ResolveConflict setAccessToken(java.lang.String accessToken) {
+            return (ResolveConflict) super.setAccessToken(accessToken);
           }
 
           @Override
           public ResolveConflict setAlt(java.lang.String alt) {
             return (ResolveConflict) super.setAlt(alt);
+          }
+
+          @Override
+          public ResolveConflict setCallback(java.lang.String callback) {
+            return (ResolveConflict) super.setCallback(callback);
           }
 
           @Override
@@ -3754,8 +4835,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public ResolveConflict setUserIp(java.lang.String userIp) {
-            return (ResolveConflict) super.setUserIp(userIp);
+          public ResolveConflict setUploadType(java.lang.String uploadType) {
+            return (ResolveConflict) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ResolveConflict setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ResolveConflict) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3777,6 +4863,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public ResolveConflict setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3818,7 +4909,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @return the request
          */
@@ -3830,7 +4922,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Sync extends TagManagerRequest<com.google.api.services.tagmanager.model.SyncWorkspaceResponse> {
 
-          private static final String REST_PATH = "{+path}:sync";
+          private static final String REST_PATH = "tagmanager/v2/{+path}:sync";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Syncs a workspace to the latest container version by updating all unmodified workspace entities
@@ -3843,18 +4938,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @since 1.13
            */
           protected Sync(java.lang.String path) {
             super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.SyncWorkspaceResponse.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public Sync set$Xgafv(java.lang.String $Xgafv) {
+            return (Sync) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Sync setAccessToken(java.lang.String accessToken) {
+            return (Sync) super.setAccessToken(accessToken);
           }
 
           @Override
           public Sync setAlt(java.lang.String alt) {
             return (Sync) super.setAlt(alt);
+          }
+
+          @Override
+          public Sync setCallback(java.lang.String callback) {
+            return (Sync) super.setCallback(callback);
           }
 
           @Override
@@ -3883,8 +4999,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Sync setUserIp(java.lang.String userIp) {
-            return (Sync) super.setUserIp(userIp);
+          public Sync setUploadType(java.lang.String uploadType) {
+            return (Sync) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Sync setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Sync) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -3906,6 +5027,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public Sync setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -3923,7 +5049,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
+         * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
          * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
          * @return the request
@@ -3936,7 +5063,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
         public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Workspace> {
 
-          private static final String REST_PATH = "{+path}";
+          private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+          private final java.util.regex.Pattern PATH_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
           /**
            * Updates a Workspace.
@@ -3949,7 +5079,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
+           * @param path GTM Workspace's API relative path.
+        Example:
          *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
            * @since 1.13
@@ -3957,13 +5088,33 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Workspace content) {
             super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Workspace.class);
             this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             checkRequiredParameter(content, "content");
             checkRequiredParameter(content.getName(), "Workspace.getName()");
           }
 
           @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
           public Update setAlt(java.lang.String alt) {
             return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
           }
 
           @Override
@@ -3992,8 +5143,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           }
 
           @Override
-          public Update setUserIp(java.lang.String userIp) {
-            return (Update) super.setUserIp(userIp);
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
           /**
@@ -4015,6 +5171,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            */
           public Update setPath(java.lang.String path) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                  "Parameter path must conform to the pattern " +
+                  "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+            }
             this.path = path;
             return this;
           }
@@ -4073,7 +5234,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -4085,7 +5247,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.CreateBuiltInVariableResponse> {
 
-            private static final String REST_PATH = "{+parent}/built_in_variables";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/built_in_variables";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates one or more GTM Built-In Variables.
@@ -4098,18 +5263,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected Create(java.lang.String parent) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.CreateBuiltInVariableResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
             }
 
             @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -4138,8 +5324,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4161,6 +5352,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -4194,7 +5390,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM BuiltInVariable's API relative path. Example:
+           * @param path GTM BuiltInVariable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
            *        es
            * @return the request
@@ -4207,7 +5404,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/built_in_variables$");
 
             /**
              * Deletes one or more GTM Built-In Variables.
@@ -4220,7 +5420,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM BuiltInVariable's API relative path. Example:
+             * @param path GTM BuiltInVariable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
            *        es
              * @since 1.13
@@ -4228,11 +5429,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/built_in_variables$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -4261,8 +5482,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4284,6 +5510,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ontainer_id}/workspaces/{workspace_id}/built_in_variables
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/built_in_variables$");
+              }
               this.path = path;
               return this;
             }
@@ -4317,7 +5548,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -4329,7 +5561,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListEnabledBuiltInVariablesResponse> {
 
-            private static final String REST_PATH = "{+parent}/built_in_variables";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/built_in_variables";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all the enabled Built-In Variables of a GTM Container.
@@ -4341,13 +5576,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListEnabledBuiltInVariablesResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -4361,8 +5602,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -4391,8 +5647,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4414,6 +5675,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -4447,7 +5713,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM BuiltInVariable's API relative path. Example:
+           * @param path GTM BuiltInVariable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
            *        es
            * @return the request
@@ -4460,7 +5727,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertBuiltInVariableResponse> {
 
-            private static final String REST_PATH = "{+path}/built_in_variables:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}/built_in_variables:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Reverts changes to a GTM Built-In Variables in a GTM Workspace.
@@ -4473,7 +5743,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM BuiltInVariable's API relative path. Example:
+             * @param path GTM BuiltInVariable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
            *        es
              * @since 1.13
@@ -4481,11 +5752,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertBuiltInVariableResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -4514,8 +5805,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4537,6 +5833,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ontainer_id}/workspaces/{workspace_id}/built_in_variables
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -4592,7 +5893,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Folder}
            * @return the request
@@ -4605,7 +5907,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Folder> {
 
-            private static final String REST_PATH = "{+parent}/folders";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/folders";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates a GTM Folder.
@@ -4618,7 +5923,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Folder}
              * @since 1.13
@@ -4626,13 +5932,33 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Folder content) {
               super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Folder.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Folder.getName()");
             }
 
             @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -4661,8 +5987,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4684,6 +6015,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -4701,7 +6037,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
+           * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
            * @return the request
@@ -4714,7 +6051,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
              * Deletes a GTM Folder.
@@ -4727,7 +6067,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
+             * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
              * @since 1.13
@@ -4735,11 +6076,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -4768,8 +6129,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4791,6 +6157,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * id}/workspaces/{workspace_id}/folders/{folder_id}
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -4808,7 +6179,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Entities#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
+           * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
            * @return the request
@@ -4821,7 +6193,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Entities extends TagManagerRequest<com.google.api.services.tagmanager.model.FolderEntities> {
 
-            private static final String REST_PATH = "{+path}:entities";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:entities";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
              * List all entities in a GTM Folder.
@@ -4834,7 +6209,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Entities#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
+             * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
              * @since 1.13
@@ -4842,11 +6218,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Entities(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.FolderEntities.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
+            }
+
+            @Override
+            public Entities set$Xgafv(java.lang.String $Xgafv) {
+              return (Entities) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Entities setAccessToken(java.lang.String accessToken) {
+              return (Entities) super.setAccessToken(accessToken);
             }
 
             @Override
             public Entities setAlt(java.lang.String alt) {
               return (Entities) super.setAlt(alt);
+            }
+
+            @Override
+            public Entities setCallback(java.lang.String callback) {
+              return (Entities) super.setCallback(callback);
             }
 
             @Override
@@ -4875,8 +6271,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Entities setUserIp(java.lang.String userIp) {
-              return (Entities) super.setUserIp(userIp);
+            public Entities setUploadType(java.lang.String uploadType) {
+              return (Entities) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Entities setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Entities) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -4898,6 +6299,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * id}/workspaces/{workspace_id}/folders/{folder_id}
              */
             public Entities setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -4931,7 +6337,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
+           * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
            * @return the request
@@ -4944,7 +6351,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Folder> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
              * Gets a GTM Folder.
@@ -4956,7 +6366,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
+             * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
              * @since 1.13
@@ -4964,6 +6375,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Get(java.lang.String path) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Folder.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
             }
 
             @Override
@@ -4977,8 +6393,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
             }
 
             @Override
@@ -5007,8 +6438,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Get setUserIp(java.lang.String userIp) {
-              return (Get) super.setUserIp(userIp);
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5030,6 +6466,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * id}/workspaces/{workspace_id}/folders/{folder_id}
              */
             public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -5047,7 +6488,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -5059,7 +6501,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListFoldersResponse> {
 
-            private static final String REST_PATH = "{+parent}/folders";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/folders";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all GTM Folders of a Container.
@@ -5071,13 +6516,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListFoldersResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -5091,8 +6542,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -5121,8 +6587,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5144,6 +6615,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -5178,7 +6654,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * parameters, call the {@link MoveEntitiesToFolder#execute()} method to invoke the remote
            * operation.
            *
-           * @param path GTM Folder's API relative path. Example:
+           * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
            * @param content the {@link com.google.api.services.tagmanager.model.Folder}
@@ -5192,7 +6669,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class MoveEntitiesToFolder extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}:move_entities_to_folder";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:move_entities_to_folder";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
              * Moves entities to a GTM Folder.
@@ -5205,7 +6685,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
+             * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
              * @param content the {@link com.google.api.services.tagmanager.model.Folder}
@@ -5214,11 +6695,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected MoveEntitiesToFolder(java.lang.String path, com.google.api.services.tagmanager.model.Folder content) {
               super(TagManager.this, "POST", REST_PATH, content, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
+            }
+
+            @Override
+            public MoveEntitiesToFolder set$Xgafv(java.lang.String $Xgafv) {
+              return (MoveEntitiesToFolder) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public MoveEntitiesToFolder setAccessToken(java.lang.String accessToken) {
+              return (MoveEntitiesToFolder) super.setAccessToken(accessToken);
             }
 
             @Override
             public MoveEntitiesToFolder setAlt(java.lang.String alt) {
               return (MoveEntitiesToFolder) super.setAlt(alt);
+            }
+
+            @Override
+            public MoveEntitiesToFolder setCallback(java.lang.String callback) {
+              return (MoveEntitiesToFolder) super.setCallback(callback);
             }
 
             @Override
@@ -5247,8 +6748,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public MoveEntitiesToFolder setUserIp(java.lang.String userIp) {
-              return (MoveEntitiesToFolder) super.setUserIp(userIp);
+            public MoveEntitiesToFolder setUploadType(java.lang.String uploadType) {
+              return (MoveEntitiesToFolder) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public MoveEntitiesToFolder setUploadProtocol(java.lang.String uploadProtocol) {
+              return (MoveEntitiesToFolder) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5270,6 +6776,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * id}/workspaces/{workspace_id}/folders/{folder_id}
              */
             public MoveEntitiesToFolder setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -5335,7 +6846,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
+           * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
            * @return the request
@@ -5348,7 +6860,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertFolderResponse> {
 
-            private static final String REST_PATH = "{+path}:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
              * Reverts changes to a GTM Folder in a GTM Workspace.
@@ -5361,7 +6876,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
+             * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
              * @since 1.13
@@ -5369,11 +6885,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertFolderResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -5402,8 +6938,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5425,6 +6966,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * id}/workspaces/{workspace_id}/folders/{folder_id}
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -5462,7 +7008,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
+           * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
            * @param content the {@link com.google.api.services.tagmanager.model.Folder}
@@ -5476,7 +7023,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Folder> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
 
             /**
              * Updates a GTM Folder.
@@ -5489,7 +7039,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
+             * @param path GTM Folder's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
            *        id}
              * @param content the {@link com.google.api.services.tagmanager.model.Folder}
@@ -5498,13 +7049,33 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Folder content) {
               super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Folder.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Folder.getName()");
             }
 
             @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Update setAlt(java.lang.String alt) {
               return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
             }
 
             @Override
@@ -5533,8 +7104,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Update setUserIp(java.lang.String userIp) {
-              return (Update) super.setUserIp(userIp);
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5556,6 +7132,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * id}/workspaces/{workspace_id}/folders/{folder_id}
              */
             public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -5615,7 +7196,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Tag}
            * @return the request
@@ -5628,7 +7210,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Tag> {
 
-            private static final String REST_PATH = "{+parent}/tags";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/tags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates a GTM Tag.
@@ -5641,7 +7226,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Tag}
              * @since 1.13
@@ -5649,6 +7235,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Tag content) {
               super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Tag.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Tag.getName()");
               checkRequiredParameter(content, "content");
@@ -5656,8 +7247,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -5686,8 +7292,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5709,6 +7320,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -5726,7 +7342,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
+           * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
            * @return the request
            */
@@ -5738,7 +7355,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
 
             /**
              * Deletes a GTM Tag.
@@ -5751,18 +7371,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
+             * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -5791,8 +7432,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5814,6 +7460,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * /workspaces/{workspace_id}/tags/{tag_id}
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -5831,7 +7482,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
+           * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
            * @return the request
            */
@@ -5843,7 +7495,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Tag> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
 
             /**
              * Gets a GTM Tag.
@@ -5855,13 +7510,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
+             * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
              * @since 1.13
              */
             protected Get(java.lang.String path) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Tag.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
             }
 
             @Override
@@ -5875,8 +7536,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
             }
 
             @Override
@@ -5905,8 +7581,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Get setUserIp(java.lang.String userIp) {
-              return (Get) super.setUserIp(userIp);
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -5928,6 +7609,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * /workspaces/{workspace_id}/tags/{tag_id}
              */
             public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -5945,7 +7631,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -5957,7 +7644,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListTagsResponse> {
 
-            private static final String REST_PATH = "{+parent}/tags";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/tags";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all GTM Tags of a Container.
@@ -5969,13 +7659,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListTagsResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -5989,8 +7685,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -6019,8 +7730,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6042,6 +7758,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -6075,7 +7796,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
+           * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
            * @return the request
            */
@@ -6087,7 +7809,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertTagResponse> {
 
-            private static final String REST_PATH = "{+path}:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
 
             /**
              * Reverts changes to a GTM Tag in a GTM Workspace.
@@ -6100,18 +7825,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
+             * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertTagResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -6140,8 +7886,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6163,11 +7914,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * /workspaces/{workspace_id}/tags/{tag_id}
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
               this.path = path;
               return this;
             }
 
-            /** When provided, this fingerprint must match the fingerprint of thetag in storage. */
+            /**
+             * When provided, this fingerprint must match the fingerprint of thetag in storage.
+             */
             @com.google.api.client.util.Key
             private java.lang.String fingerprint;
 
@@ -6177,7 +7935,9 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return fingerprint;
             }
 
-            /** When provided, this fingerprint must match the fingerprint of thetag in storage. */
+            /**
+             * When provided, this fingerprint must match the fingerprint of thetag in storage.
+             */
             public Revert setFingerprint(java.lang.String fingerprint) {
               this.fingerprint = fingerprint;
               return this;
@@ -6196,7 +7956,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
+           * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Tag}
            * @return the request
@@ -6209,7 +7970,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Tag> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
 
             /**
              * Updates a GTM Tag.
@@ -6222,7 +7986,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
+             * @param path GTM Tag's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Tag}
              * @since 1.13
@@ -6230,6 +7995,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Tag content) {
               super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Tag.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Tag.getName()");
               checkRequiredParameter(content, "content");
@@ -6237,8 +8007,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Update setAlt(java.lang.String alt) {
               return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
             }
 
             @Override
@@ -6267,8 +8052,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Update setUserIp(java.lang.String userIp) {
-              return (Update) super.setUserIp(userIp);
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6290,6 +8080,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * /workspaces/{workspace_id}/tags/{tag_id}
              */
             public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -6349,7 +8144,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
            * @return the request
@@ -6362,7 +8158,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
 
-            private static final String REST_PATH = "{+parent}/templates";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/templates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates a GTM Custom Template.
@@ -6375,7 +8174,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
              * @since 1.13
@@ -6383,11 +8183,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.CustomTemplate content) {
               super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.CustomTemplate.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
             }
 
             @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -6416,8 +8236,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6439,6 +8264,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -6456,7 +8286,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
+           * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
            * @return the request
@@ -6469,7 +8300,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
 
             /**
              * Deletes a GTM Template.
@@ -6482,7 +8316,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
+             * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
              * @since 1.13
@@ -6490,11 +8325,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -6523,8 +8378,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6546,6 +8406,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -6563,7 +8428,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
+           * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
            * @return the request
@@ -6576,7 +8442,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
 
             /**
              * Gets a GTM Template.
@@ -6588,7 +8457,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
+             * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
              * @since 1.13
@@ -6596,6 +8466,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Get(java.lang.String path) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.CustomTemplate.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
             }
 
             @Override
@@ -6609,8 +8484,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
             }
 
             @Override
@@ -6639,8 +8529,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Get setUserIp(java.lang.String userIp) {
-              return (Get) super.setUserIp(userIp);
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6662,6 +8557,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
              */
             public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -6679,7 +8579,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -6691,7 +8592,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListTemplatesResponse> {
 
-            private static final String REST_PATH = "{+parent}/templates";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/templates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all GTM Templates of a GTM container workspace.
@@ -6703,13 +8607,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListTemplatesResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -6723,8 +8633,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -6753,8 +8678,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6776,6 +8706,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -6809,7 +8744,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
+           * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
            * @return the request
@@ -6822,7 +8758,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertTemplateResponse> {
 
-            private static final String REST_PATH = "{+path}:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
 
             /**
              * Reverts changes to a GTM Template in a GTM Workspace.
@@ -6835,7 +8774,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
+             * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
              * @since 1.13
@@ -6843,11 +8783,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertTemplateResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -6876,8 +8836,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -6899,6 +8864,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -6938,7 +8908,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
+           * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
            * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
@@ -6952,7 +8923,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
 
             /**
              * Updates a GTM Template.
@@ -6965,7 +8939,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
+             * @param path GTM Custom Template's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
            *        ate_id}
              * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
@@ -6974,11 +8949,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Update(java.lang.String path, com.google.api.services.tagmanager.model.CustomTemplate content) {
               super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.CustomTemplate.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
             }
 
             @Override
             public Update setAlt(java.lang.String alt) {
               return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
             }
 
             @Override
@@ -7007,8 +9002,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Update setUserIp(java.lang.String userIp) {
-              return (Update) super.setUserIp(userIp);
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7030,6 +9030,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
              */
             public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/templates/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -7091,7 +9096,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspaces's API relative path. Example:
+           * @param parent GTM Workspaces's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
            * @return the request
@@ -7104,7 +9110,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Trigger> {
 
-            private static final String REST_PATH = "{+parent}/triggers";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/triggers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates a GTM Trigger.
@@ -7117,7 +9126,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspaces's API relative path. Example:
+             * @param parent GTM Workspaces's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
              * @since 1.13
@@ -7125,6 +9135,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Trigger content) {
               super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Trigger.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Trigger.getName()");
               checkRequiredParameter(content, "content");
@@ -7132,8 +9147,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -7162,8 +9192,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7185,6 +9220,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -7202,7 +9242,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
+           * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
            * @return the request
@@ -7215,7 +9256,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
 
             /**
              * Deletes a GTM Trigger.
@@ -7228,7 +9272,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
+             * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
              * @since 1.13
@@ -7236,11 +9281,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -7269,8 +9334,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7292,6 +9362,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -7309,7 +9384,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
+           * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
            * @return the request
@@ -7322,7 +9398,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Trigger> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
 
             /**
              * Gets a GTM Trigger.
@@ -7334,7 +9413,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
+             * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
              * @since 1.13
@@ -7342,6 +9422,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Get(java.lang.String path) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Trigger.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
             }
 
             @Override
@@ -7355,8 +9440,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
             }
 
             @Override
@@ -7385,8 +9485,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Get setUserIp(java.lang.String userIp) {
-              return (Get) super.setUserIp(userIp);
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7408,6 +9513,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
              */
             public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -7425,7 +9535,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspaces's API relative path. Example:
+           * @param parent GTM Workspaces's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -7437,7 +9548,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListTriggersResponse> {
 
-            private static final String REST_PATH = "{+parent}/triggers";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/triggers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all GTM Triggers of a Container.
@@ -7449,13 +9563,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspaces's API relative path. Example:
+             * @param parent GTM Workspaces's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListTriggersResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -7469,8 +9589,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -7499,8 +9634,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7522,6 +9662,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -7555,7 +9700,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
+           * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
            * @return the request
@@ -7568,7 +9714,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertTriggerResponse> {
 
-            private static final String REST_PATH = "{+path}:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
 
             /**
              * Reverts changes to a GTM Trigger in a GTM Workspace.
@@ -7581,7 +9730,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
+             * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
              * @since 1.13
@@ -7589,11 +9739,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertTriggerResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -7622,8 +9792,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7645,6 +9820,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -7682,7 +9862,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
+           * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
@@ -7696,7 +9877,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Trigger> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
 
             /**
              * Updates a GTM Trigger.
@@ -7709,7 +9893,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
+             * @param path GTM Trigger's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
            *        r_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
@@ -7718,13 +9903,33 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Trigger content) {
               super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Trigger.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Trigger.getName()");
             }
 
             @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Update setAlt(java.lang.String alt) {
               return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
             }
 
             @Override
@@ -7753,8 +9958,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Update setUserIp(java.lang.String userIp) {
-              return (Update) super.setUserIp(userIp);
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7776,6 +9986,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
              */
             public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -7835,7 +10050,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Variable}
            * @return the request
@@ -7848,7 +10064,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Variable> {
 
-            private static final String REST_PATH = "{+parent}/variables";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/variables";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates a GTM Variable.
@@ -7861,7 +10080,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Variable}
              * @since 1.13
@@ -7869,6 +10089,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Variable content) {
               super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Variable.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Variable.getName()");
               checkRequiredParameter(content, "content");
@@ -7876,8 +10101,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -7906,8 +10146,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -7929,6 +10174,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -7946,7 +10196,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
+           * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
            * @return the request
@@ -7959,7 +10210,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
 
             /**
              * Deletes a GTM Variable.
@@ -7972,7 +10226,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
+             * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
              * @since 1.13
@@ -7980,11 +10235,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -8013,8 +10288,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8036,6 +10316,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * r_id}/workspaces/{workspace_id}/variables/{variable_id}
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -8053,7 +10338,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
+           * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
            * @return the request
@@ -8066,7 +10352,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Variable> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
 
             /**
              * Gets a GTM Variable.
@@ -8078,7 +10367,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
+             * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
              * @since 1.13
@@ -8086,6 +10376,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Get(java.lang.String path) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Variable.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
             }
 
             @Override
@@ -8099,8 +10394,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
             }
 
             @Override
@@ -8129,8 +10439,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Get setUserIp(java.lang.String userIp) {
-              return (Get) super.setUserIp(userIp);
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8152,6 +10467,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * r_id}/workspaces/{workspace_id}/variables/{variable_id}
              */
             public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -8169,7 +10489,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -8181,7 +10502,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListVariablesResponse> {
 
-            private static final String REST_PATH = "{+parent}/variables";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/variables";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all GTM Variables of a Container.
@@ -8193,13 +10517,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListVariablesResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -8213,8 +10543,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -8243,8 +10588,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8266,6 +10616,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -8299,7 +10654,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
+           * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
            * @return the request
@@ -8312,7 +10668,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertVariableResponse> {
 
-            private static final String REST_PATH = "{+path}:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
 
             /**
              * Reverts changes to a GTM Variable in a GTM Workspace.
@@ -8325,7 +10684,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
+             * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
              * @since 1.13
@@ -8333,11 +10693,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertVariableResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -8366,8 +10746,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8389,6 +10774,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * r_id}/workspaces/{workspace_id}/variables/{variable_id}
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -8428,7 +10818,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
+           * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Variable}
@@ -8442,7 +10833,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Variable> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
 
             /**
              * Updates a GTM Variable.
@@ -8455,7 +10849,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
+             * @param path GTM Variable's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
            *        ble_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Variable}
@@ -8464,6 +10859,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Variable content) {
               super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Variable.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
               checkRequiredParameter(content, "content");
               checkRequiredParameter(content.getName(), "Variable.getName()");
               checkRequiredParameter(content, "content");
@@ -8471,8 +10871,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Update setAlt(java.lang.String alt) {
               return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
             }
 
             @Override
@@ -8501,8 +10916,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Update setUserIp(java.lang.String userIp) {
-              return (Update) super.setUserIp(userIp);
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8524,6 +10944,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * r_id}/workspaces/{workspace_id}/variables/{variable_id}
              */
             public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -8585,7 +11010,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Zone}
            * @return the request
@@ -8598,7 +11024,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.Zone> {
 
-            private static final String REST_PATH = "{+parent}/zones";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/zones";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Creates a GTM Zone.
@@ -8611,7 +11040,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Zone}
              * @since 1.13
@@ -8619,11 +11049,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.Zone content) {
               super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.Zone.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
             }
 
             @Override
             public Create setAlt(java.lang.String alt) {
               return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
             }
 
             @Override
@@ -8652,8 +11102,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Create setUserIp(java.lang.String userIp) {
-              return (Create) super.setUserIp(userIp);
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8675,6 +11130,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -8692,7 +11152,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
+           * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
            * @return the request
            */
@@ -8704,7 +11165,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Delete extends TagManagerRequest<Void> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
 
             /**
              * Deletes a GTM Zone.
@@ -8717,18 +11181,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
+             * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
               super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
             }
 
             @Override
             public Delete setAlt(java.lang.String alt) {
               return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
             }
 
             @Override
@@ -8757,8 +11242,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Delete setUserIp(java.lang.String userIp) {
-              return (Delete) super.setUserIp(userIp);
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8780,6 +11270,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * }/workspaces/{workspace_id}/zones/{zone_id}
              */
             public Delete setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -8797,7 +11292,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
+           * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
            * @return the request
            */
@@ -8809,7 +11305,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.Zone> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
 
             /**
              * Gets a GTM Zone.
@@ -8821,13 +11320,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
+             * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
              * @since 1.13
              */
             protected Get(java.lang.String path) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.Zone.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
             }
 
             @Override
@@ -8841,8 +11346,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public Get setAlt(java.lang.String alt) {
               return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
             }
 
             @Override
@@ -8871,8 +11391,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Get setUserIp(java.lang.String userIp) {
-              return (Get) super.setUserIp(userIp);
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -8894,6 +11419,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * }/workspaces/{workspace_id}/zones/{zone_id}
              */
             public Get setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -8911,7 +11441,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
+           * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
            * @return the request
            */
@@ -8923,7 +11454,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListZonesResponse> {
 
-            private static final String REST_PATH = "{+parent}/zones";
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/zones";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
 
             /**
              * Lists all GTM Zones of a GTM container workspace.
@@ -8935,13 +11469,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
+             * @param parent GTM Workspace's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
               super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListZonesResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
             }
 
             @Override
@@ -8955,8 +11495,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
             public List setAlt(java.lang.String alt) {
               return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
             }
 
             @Override
@@ -8985,8 +11540,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public List setUserIp(java.lang.String userIp) {
-              return (List) super.setUserIp(userIp);
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -9008,6 +11568,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
              */
             public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
               this.parent = parent;
               return this;
             }
@@ -9041,7 +11606,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
+           * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
            * @return the request
            */
@@ -9053,7 +11619,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Revert extends TagManagerRequest<com.google.api.services.tagmanager.model.RevertZoneResponse> {
 
-            private static final String REST_PATH = "{+path}:revert";
+            private static final String REST_PATH = "tagmanager/v2/{+path}:revert";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
 
             /**
              * Reverts changes to a GTM Zone in a GTM Workspace.
@@ -9066,18 +11635,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
+             * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
               super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.RevertZoneResponse.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
+            }
+
+            @Override
+            public Revert set$Xgafv(java.lang.String $Xgafv) {
+              return (Revert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Revert setAccessToken(java.lang.String accessToken) {
+              return (Revert) super.setAccessToken(accessToken);
             }
 
             @Override
             public Revert setAlt(java.lang.String alt) {
               return (Revert) super.setAlt(alt);
+            }
+
+            @Override
+            public Revert setCallback(java.lang.String callback) {
+              return (Revert) super.setCallback(callback);
             }
 
             @Override
@@ -9106,8 +11696,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Revert setUserIp(java.lang.String userIp) {
-              return (Revert) super.setUserIp(userIp);
+            public Revert setUploadType(java.lang.String uploadType) {
+              return (Revert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Revert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -9129,6 +11724,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * }/workspaces/{workspace_id}/zones/{zone_id}
              */
             public Revert setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -9166,7 +11766,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
+           * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
            * @param content the {@link com.google.api.services.tagmanager.model.Zone}
            * @return the request
@@ -9179,7 +11780,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
           public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.Zone> {
 
-            private static final String REST_PATH = "{+path}";
+            private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+            private final java.util.regex.Pattern PATH_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
 
             /**
              * Updates a GTM Zone.
@@ -9192,7 +11796,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
+             * @param path GTM Zone's API relative path.
+          Example:
            *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
              * @param content the {@link com.google.api.services.tagmanager.model.Zone}
              * @since 1.13
@@ -9200,11 +11805,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             protected Update(java.lang.String path, com.google.api.services.tagmanager.model.Zone content) {
               super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.Zone.class);
               this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
             }
 
             @Override
             public Update setAlt(java.lang.String alt) {
               return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
             }
 
             @Override
@@ -9233,8 +11858,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Update setUserIp(java.lang.String userIp) {
-              return (Update) super.setUserIp(userIp);
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -9256,6 +11886,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * }/workspaces/{workspace_id}/zones/{zone_id}
              */
             public Update setPath(java.lang.String path) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                    "Parameter path must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/zones/[^/]+$");
+              }
               this.path = path;
               return this;
             }
@@ -9317,7 +11952,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Account's API relative path. Example: accounts/{account_id}
+       * @param parent GTM Account's API relative path.
+      Example: accounts/{account_id}
        * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
        * @return the request
        */
@@ -9329,7 +11965,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Create extends TagManagerRequest<com.google.api.services.tagmanager.model.UserPermission> {
 
-        private static final String REST_PATH = "{+parent}/user_permissions";
+        private static final String REST_PATH = "tagmanager/v2/{+parent}/user_permissions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
          * Creates a user's Account & Container access.
@@ -9342,18 +11981,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Account's API relative path. Example: accounts/{account_id}
+         * @param parent GTM Account's API relative path.
+      Example: accounts/{account_id}
          * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
          * @since 1.13
          */
         protected Create(java.lang.String parent, com.google.api.services.tagmanager.model.UserPermission content) {
           super(TagManager.this, "POST", REST_PATH, content, com.google.api.services.tagmanager.model.UserPermission.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
         }
 
         @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
         }
 
         @Override
@@ -9382,11 +12042,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id} */
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * GTM Account's API relative path. Example: accounts/{account_id}
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -9396,8 +12063,15 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return parent;
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id} */
+        /**
+         * GTM Account's API relative path. Example: accounts/{account_id}
+         */
         public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
           this.parent = parent;
           return this;
         }
@@ -9415,7 +12089,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param path GTM UserPermission's API relative path. Example:
+       * @param path GTM UserPermission's API relative path.
+      Example:
        *        accounts/{account_id}/user_permissions/{user_permission_id}
        * @return the request
        */
@@ -9427,7 +12102,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Delete extends TagManagerRequest<Void> {
 
-        private static final String REST_PATH = "{+path}";
+        private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/user_permissions/[^/]+$");
 
         /**
          * Removes a user from the account, revoking access to it and all of its containers.
@@ -9440,18 +12118,39 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM UserPermission's API relative path. Example:
+         * @param path GTM UserPermission's API relative path.
+      Example:
        *        accounts/{account_id}/user_permissions/{user_permission_id}
          * @since 1.13
          */
         protected Delete(java.lang.String path) {
           super(TagManager.this, "DELETE", REST_PATH, null, Void.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/user_permissions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
         }
 
         @Override
         public Delete setAlt(java.lang.String alt) {
           return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
         }
 
         @Override
@@ -9480,8 +12179,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Delete setUserIp(java.lang.String userIp) {
-          return (Delete) super.setUserIp(userIp);
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -9503,6 +12207,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * accounts/{account_id}/user_permissions/{user_permission_id}
          */
         public Delete setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/user_permissions/[^/]+$");
+          }
           this.path = path;
           return this;
         }
@@ -9520,7 +12229,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param path GTM UserPermission's API relative path. Example:
+       * @param path GTM UserPermission's API relative path.
+      Example:
        *        accounts/{account_id}/user_permissions/{user_permission_id}
        * @return the request
        */
@@ -9532,7 +12242,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Get extends TagManagerRequest<com.google.api.services.tagmanager.model.UserPermission> {
 
-        private static final String REST_PATH = "{+path}";
+        private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/user_permissions/[^/]+$");
 
         /**
          * Gets a user's Account & Container access.
@@ -9544,13 +12257,19 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM UserPermission's API relative path. Example:
+         * @param path GTM UserPermission's API relative path.
+      Example:
        *        accounts/{account_id}/user_permissions/{user_permission_id}
          * @since 1.13
          */
         protected Get(java.lang.String path) {
           super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.UserPermission.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/user_permissions/[^/]+$");
+          }
         }
 
         @Override
@@ -9564,8 +12283,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Get setAlt(java.lang.String alt) {
           return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
@@ -9594,8 +12328,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Get setUserIp(java.lang.String userIp) {
-          return (Get) super.setUserIp(userIp);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -9617,6 +12356,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * accounts/{account_id}/user_permissions/{user_permission_id}
          */
         public Get setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/user_permissions/[^/]+$");
+          }
           this.path = path;
           return this;
         }
@@ -9635,7 +12379,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}
+       * @param parent GTM Accounts's API relative path.
+      Example: accounts/{account_id}
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -9646,7 +12391,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class List extends TagManagerRequest<com.google.api.services.tagmanager.model.ListUserPermissionsResponse> {
 
-        private static final String REST_PATH = "{+parent}/user_permissions";
+        private static final String REST_PATH = "tagmanager/v2/{+parent}/user_permissions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
          * List all users that have access to the account along with Account and Container user access
@@ -9659,12 +12407,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Accounts's API relative path. Example: accounts/{account_id}
+         * @param parent GTM Accounts's API relative path.
+      Example: accounts/{account_id}
          * @since 1.13
          */
         protected List(java.lang.String parent) {
           super(TagManager.this, "GET", REST_PATH, null, com.google.api.services.tagmanager.model.ListUserPermissionsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
         }
 
         @Override
@@ -9678,8 +12432,23 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public List setAlt(java.lang.String alt) {
           return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
         }
 
         @Override
@@ -9708,11 +12477,18 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * GTM Accounts's API relative path. Example: accounts/{account_id}
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -9722,8 +12498,15 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return parent;
         }
 
-        /** GTM Accounts's API relative path. Example: accounts/{account_id} */
+        /**
+         * GTM Accounts's API relative path. Example: accounts/{account_id}
+         */
         public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
           this.parent = parent;
           return this;
         }
@@ -9757,7 +12540,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param path GTM UserPermission's API relative path. Example:
+       * @param path GTM UserPermission's API relative path.
+      Example:
        *        accounts/{account_id}/user_permissions/{user_permission_id}
        * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
        * @return the request
@@ -9770,7 +12554,10 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
 
       public class Update extends TagManagerRequest<com.google.api.services.tagmanager.model.UserPermission> {
 
-        private static final String REST_PATH = "{+path}";
+        private static final String REST_PATH = "tagmanager/v2/{+path}";
+
+        private final java.util.regex.Pattern PATH_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/user_permissions/[^/]+$");
 
         /**
          * Updates a user's Account & Container access.
@@ -9783,7 +12570,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM UserPermission's API relative path. Example:
+         * @param path GTM UserPermission's API relative path.
+      Example:
        *        accounts/{account_id}/user_permissions/{user_permission_id}
          * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
          * @since 1.13
@@ -9791,11 +12579,31 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         protected Update(java.lang.String path, com.google.api.services.tagmanager.model.UserPermission content) {
           super(TagManager.this, "PUT", REST_PATH, content, com.google.api.services.tagmanager.model.UserPermission.class);
           this.path = com.google.api.client.util.Preconditions.checkNotNull(path, "Required parameter path must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/user_permissions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
         }
 
         @Override
         public Update setAlt(java.lang.String alt) {
           return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
@@ -9824,8 +12632,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         @Override
-        public Update setUserIp(java.lang.String userIp) {
-          return (Update) super.setUserIp(userIp);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -9847,6 +12660,11 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * accounts/{account_id}/user_permissions/{user_permission_id}
          */
         public Update setPath(java.lang.String path) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
+                "Parameter path must conform to the pattern " +
+                "^accounts/[^/]+/user_permissions/[^/]+$");
+          }
           this.path = path;
           return this;
         }

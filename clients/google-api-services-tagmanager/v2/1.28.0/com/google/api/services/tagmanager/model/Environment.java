@@ -50,7 +50,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Timestamp authorizationTimestamp;
+  private String authorizationTimestamp;
 
   /**
    * GTM Container ID.
@@ -67,14 +67,18 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String containerVersionId;
 
   /**
-   * The environment description. Can be set or changed only on USER type environments.
+   * The environment description. Can be set or changed only on USER type environments. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Whether or not to enable debug by default for the environment.
+   * Whether or not to enable debug by default for the environment. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +100,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * The environment display name. Can be set or changed only on USER type environments.
+   * The environment display name. Can be set or changed only on USER type environments. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +130,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Default preview page url for the environment.
+   * Default preview page url for the environment. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +183,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    * The last update time-stamp for the authorization code.
    * @return value or {@code null} for none
    */
-  public Timestamp getAuthorizationTimestamp() {
+  public String getAuthorizationTimestamp() {
     return authorizationTimestamp;
   }
 
@@ -183,7 +191,7 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    * The last update time-stamp for the authorization code.
    * @param authorizationTimestamp authorizationTimestamp or {@code null} for none
    */
-  public Environment setAuthorizationTimestamp(Timestamp authorizationTimestamp) {
+  public Environment setAuthorizationTimestamp(String authorizationTimestamp) {
     this.authorizationTimestamp = authorizationTimestamp;
     return this;
   }
@@ -223,7 +231,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment description. Can be set or changed only on USER type environments.
+   * The environment description. Can be set or changed only on USER type environments. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -231,7 +241,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment description. Can be set or changed only on USER type environments.
+   * The environment description. Can be set or changed only on USER type environments. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @param description description or {@code null} for none
    */
   public Environment setDescription(java.lang.String description) {
@@ -240,7 +252,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not to enable debug by default for the environment.
+   * Whether or not to enable debug by default for the environment. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableDebug() {
@@ -248,7 +262,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not to enable debug by default for the environment.
+   * Whether or not to enable debug by default for the environment. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @param enableDebug enableDebug or {@code null} for none
    */
   public Environment setEnableDebug(java.lang.Boolean enableDebug) {
@@ -293,7 +309,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment display name. Can be set or changed only on USER type environments.
+   * The environment display name. Can be set or changed only on USER type environments. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -301,7 +319,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment display name. Can be set or changed only on USER type environments.
+   * The environment display name. Can be set or changed only on USER type environments. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @param name name or {@code null} for none
    */
   public Environment setName(java.lang.String name) {
@@ -361,7 +381,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default preview page url for the environment.
+   * Default preview page url for the environment. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -369,7 +391,9 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default preview page url for the environment.
+   * Default preview page url for the environment. @mutable
+   * tagmanager.accounts.containers.environments.create @mutable
+   * tagmanager.accounts.containers.environments.update
    * @param url url or {@code null} for none
    */
   public Environment setUrl(java.lang.String url) {

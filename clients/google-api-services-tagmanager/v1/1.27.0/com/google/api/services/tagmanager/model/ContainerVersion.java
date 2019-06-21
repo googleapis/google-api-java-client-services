@@ -87,14 +87,15 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.util.List<Macro> macro;
 
   /**
-   * Container version display name.
+   * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this container version in the container.
+   * User notes on how to apply this container version in the container. @mutable
+   * tagmanager.accounts.containers.versions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +268,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Container version display name.
+   * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -275,7 +276,7 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Container version display name.
+   * Container version display name. @mutable tagmanager.accounts.containers.versions.update
    * @param name name or {@code null} for none
    */
   public ContainerVersion setName(java.lang.String name) {
@@ -284,7 +285,8 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * User notes on how to apply this container version in the container.
+   * User notes on how to apply this container version in the container. @mutable
+   * tagmanager.accounts.containers.versions.update
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -292,7 +294,8 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * User notes on how to apply this container version in the container.
+   * User notes on how to apply this container version in the container. @mutable
+   * tagmanager.accounts.containers.versions.update
    * @param notes notes or {@code null} for none
    */
   public ContainerVersion setNotes(java.lang.String notes) {

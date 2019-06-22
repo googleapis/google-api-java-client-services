@@ -68,14 +68,22 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private GoogleSheetsOptions googleSheetsOptions;
 
   /**
-   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
    * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
    * infer partition key name(s). All types are strings. Not all storage formats support hive
    * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * Note: this setting is in the process of being deprecated in favor of hivePartitioningOptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hivePartitioningMode;
+
+  /**
+   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HivePartitioningOptions hivePartitioningOptions;
 
   /**
    * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
@@ -223,10 +231,11 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
    * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
    * infer partition key name(s). All types are strings. Not all storage formats support hive
    * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * Note: this setting is in the process of being deprecated in favor of hivePartitioningOptions.
    * @return value or {@code null} for none
    */
   public java.lang.String getHivePartitioningMode() {
@@ -234,14 +243,32 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
    * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
    * infer partition key name(s). All types are strings. Not all storage formats support hive
    * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
+   * Note: this setting is in the process of being deprecated in favor of hivePartitioningOptions.
    * @param hivePartitioningMode hivePartitioningMode or {@code null} for none
    */
   public ExternalDataConfiguration setHivePartitioningMode(java.lang.String hivePartitioningMode) {
     this.hivePartitioningMode = hivePartitioningMode;
+    return this;
+  }
+
+  /**
+   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * @return value or {@code null} for none
+   */
+  public HivePartitioningOptions getHivePartitioningOptions() {
+    return hivePartitioningOptions;
+  }
+
+  /**
+   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * @param hivePartitioningOptions hivePartitioningOptions or {@code null} for none
+   */
+  public ExternalDataConfiguration setHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
+    this.hivePartitioningOptions = hivePartitioningOptions;
     return this;
   }
 

@@ -31,11 +31,11 @@ package com.google.api.services.videointelligence.v1p2beta1.model;
 public final class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
-   * likelihood that the recognized words are correct. This field is typically provided only for the
-   * top hypothesis, and only for `is_final=true` results. Clients should not rely on the
-   * `confidence` field as it is not guaranteed to be accurate or consistent. The default of 0.0 is
-   * a sentinel value indicating `confidence` was not set.
+   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
+   * estimated greater likelihood that the recognized words are correct. This field is set only for
+   * the top alternative. This field is not guaranteed to be accurate and users should not rely on
+   * it to be always provided. The default of 0.0 is a sentinel value indicating `confidence` was
+   * not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,18 +49,20 @@ public final class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternati
   private java.lang.String transcript;
 
   /**
-   * A list of word-specific information for each recognized word.
+   * Output only. A list of word-specific information for each recognized word. Note: When
+   * `enable_speaker_diarization` is true, you will see all the words from the beginning of the
+   * audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudVideointelligenceV1beta2WordInfo> words;
 
   /**
-   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
-   * likelihood that the recognized words are correct. This field is typically provided only for the
-   * top hypothesis, and only for `is_final=true` results. Clients should not rely on the
-   * `confidence` field as it is not guaranteed to be accurate or consistent. The default of 0.0 is
-   * a sentinel value indicating `confidence` was not set.
+   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
+   * estimated greater likelihood that the recognized words are correct. This field is set only for
+   * the top alternative. This field is not guaranteed to be accurate and users should not rely on
+   * it to be always provided. The default of 0.0 is a sentinel value indicating `confidence` was
+   * not set.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -68,11 +70,11 @@ public final class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternati
   }
 
   /**
-   * The confidence estimate between 0.0 and 1.0. A higher number indicates an estimated greater
-   * likelihood that the recognized words are correct. This field is typically provided only for the
-   * top hypothesis, and only for `is_final=true` results. Clients should not rely on the
-   * `confidence` field as it is not guaranteed to be accurate or consistent. The default of 0.0 is
-   * a sentinel value indicating `confidence` was not set.
+   * Output only. The confidence estimate between 0.0 and 1.0. A higher number indicates an
+   * estimated greater likelihood that the recognized words are correct. This field is set only for
+   * the top alternative. This field is not guaranteed to be accurate and users should not rely on
+   * it to be always provided. The default of 0.0 is a sentinel value indicating `confidence` was
+   * not set.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative setConfidence(java.lang.Float confidence) {
@@ -98,7 +100,9 @@ public final class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternati
   }
 
   /**
-   * A list of word-specific information for each recognized word.
+   * Output only. A list of word-specific information for each recognized word. Note: When
+   * `enable_speaker_diarization` is true, you will see all the words from the beginning of the
+   * audio.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVideointelligenceV1beta2WordInfo> getWords() {
@@ -106,7 +110,9 @@ public final class GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternati
   }
 
   /**
-   * A list of word-specific information for each recognized word.
+   * Output only. A list of word-specific information for each recognized word. Note: When
+   * `enable_speaker_diarization` is true, you will see all the words from the beginning of the
+   * audio.
    * @param words words or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative setWords(java.util.List<GoogleCloudVideointelligenceV1beta2WordInfo> words) {

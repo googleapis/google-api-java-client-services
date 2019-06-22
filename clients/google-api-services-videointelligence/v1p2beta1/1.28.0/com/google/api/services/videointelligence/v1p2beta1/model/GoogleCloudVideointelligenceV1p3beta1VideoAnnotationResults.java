@@ -66,6 +66,19 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   private java.lang.String inputUri;
 
   /**
+   * Annotations for list of logos detected, tracked and recognized in video.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation> logoRecognitionAnnotations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation.class);
+  }
+
+  /**
    * Annotations for list of objects detected and tracked in video.
    * The value may be {@code null}.
    */
@@ -79,8 +92,8 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on video level or user specified segment level. There is exactly one element
-   * for each unique label.
+   * Topical label annotations on video level or user specified segment level. There is exactly one
+   * element for each unique label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +113,7 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   private java.util.List<GoogleCloudVideointelligenceV1p3beta1VideoSegment> shotAnnotations;
 
   /**
-   * Label annotations on shot level. There is exactly one element for each unique label.
+   * Topical label annotations on shot level. There is exactly one element for each unique label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,6 +223,23 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   }
 
   /**
+   * Annotations for list of logos detected, tracked and recognized in video.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation> getLogoRecognitionAnnotations() {
+    return logoRecognitionAnnotations;
+  }
+
+  /**
+   * Annotations for list of logos detected, tracked and recognized in video.
+   * @param logoRecognitionAnnotations logoRecognitionAnnotations or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults setLogoRecognitionAnnotations(java.util.List<GoogleCloudVideointelligenceV1p3beta1LogoRecognitionAnnotation> logoRecognitionAnnotations) {
+    this.logoRecognitionAnnotations = logoRecognitionAnnotations;
+    return this;
+  }
+
+  /**
    * Annotations for list of objects detected and tracked in video.
    * @return value or {@code null} for none
    */
@@ -227,8 +257,8 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on video level or user specified segment level. There is exactly one element
-   * for each unique label.
+   * Topical label annotations on video level or user specified segment level. There is exactly one
+   * element for each unique label.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVideointelligenceV1p3beta1LabelAnnotation> getSegmentLabelAnnotations() {
@@ -236,8 +266,8 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on video level or user specified segment level. There is exactly one element
-   * for each unique label.
+   * Topical label annotations on video level or user specified segment level. There is exactly one
+   * element for each unique label.
    * @param segmentLabelAnnotations segmentLabelAnnotations or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults setSegmentLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1p3beta1LabelAnnotation> segmentLabelAnnotations) {
@@ -263,7 +293,7 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on shot level. There is exactly one element for each unique label.
+   * Topical label annotations on shot level. There is exactly one element for each unique label.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVideointelligenceV1p3beta1LabelAnnotation> getShotLabelAnnotations() {
@@ -271,7 +301,7 @@ public final class GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on shot level. There is exactly one element for each unique label.
+   * Topical label annotations on shot level. There is exactly one element for each unique label.
    * @param shotLabelAnnotations shotLabelAnnotations or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p3beta1VideoAnnotationResults setShotLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1p3beta1LabelAnnotation> shotLabelAnnotations) {

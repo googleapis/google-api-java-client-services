@@ -79,8 +79,8 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on video level or user specified segment level. There is exactly one element
-   * for each unique label.
+   * Topical label annotations on video level or user specified segment level. There is exactly one
+   * element for each unique label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   private java.util.List<GoogleCloudVideointelligenceV1p2beta1VideoSegment> shotAnnotations;
 
   /**
-   * Label annotations on shot level. There is exactly one element for each unique label.
+   * Topical label annotations on shot level. There is exactly one element for each unique label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,8 +227,8 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on video level or user specified segment level. There is exactly one element
-   * for each unique label.
+   * Topical label annotations on video level or user specified segment level. There is exactly one
+   * element for each unique label.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelAnnotation> getSegmentLabelAnnotations() {
@@ -236,8 +236,8 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on video level or user specified segment level. There is exactly one element
-   * for each unique label.
+   * Topical label annotations on video level or user specified segment level. There is exactly one
+   * element for each unique label.
    * @param segmentLabelAnnotations segmentLabelAnnotations or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults setSegmentLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelAnnotation> segmentLabelAnnotations) {
@@ -263,7 +263,7 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on shot level. There is exactly one element for each unique label.
+   * Topical label annotations on shot level. There is exactly one element for each unique label.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelAnnotation> getShotLabelAnnotations() {
@@ -271,7 +271,7 @@ public final class GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults e
   }
 
   /**
-   * Label annotations on shot level. There is exactly one element for each unique label.
+   * Topical label annotations on shot level. There is exactly one element for each unique label.
    * @param shotLabelAnnotations shotLabelAnnotations or {@code null} for none
    */
   public GoogleCloudVideointelligenceV1p2beta1VideoAnnotationResults setShotLabelAnnotations(java.util.List<GoogleCloudVideointelligenceV1p2beta1LabelAnnotation> shotLabelAnnotations) {

@@ -41,6 +41,14 @@ public final class GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig exte
   private java.util.List<java.lang.String> languageHints;
 
   /**
+   * Model to use for text detection. Supported values: "builtin/stable" (the default if unset) and
+   * "builtin/latest".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * Language hint can be specified if the language to be detected is known a priori. It can
    * increase the accuracy of the detection. Language hint must be language code in BCP-47 format.
    *
@@ -60,6 +68,25 @@ public final class GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig exte
    */
   public GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig setLanguageHints(java.util.List<java.lang.String> languageHints) {
     this.languageHints = languageHints;
+    return this;
+  }
+
+  /**
+   * Model to use for text detection. Supported values: "builtin/stable" (the default if unset) and
+   * "builtin/latest".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Model to use for text detection. Supported values: "builtin/stable" (the default if unset) and
+   * "builtin/latest".
+   * @param model model or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p3beta1TextDetectionConfig setModel(java.lang.String model) {
+    this.model = model;
     return this;
   }
 

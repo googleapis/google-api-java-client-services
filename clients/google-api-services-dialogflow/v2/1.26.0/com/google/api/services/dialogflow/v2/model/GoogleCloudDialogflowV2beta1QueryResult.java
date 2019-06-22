@@ -103,8 +103,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
 
   /**
    * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -339,8 +339,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
 
   /**
    * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -349,8 +349,8 @@ public final class GoogleCloudDialogflowV2beta1QueryResult extends com.google.ap
 
   /**
    * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult setLanguageCode(java.lang.String languageCode) {

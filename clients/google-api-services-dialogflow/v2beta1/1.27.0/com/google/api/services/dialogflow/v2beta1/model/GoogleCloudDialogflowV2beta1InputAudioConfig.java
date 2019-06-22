@@ -47,8 +47,8 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
 
   /**
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
-   * [Language Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for
-   * a list of the currently supported language codes. Note that queries in the same session do not
+   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
+   * the currently supported language codes. Note that queries in the same session do not
    * necessarily need to specify the same language.
    * The value may be {@code null}.
    */
@@ -134,8 +134,8 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
 
   /**
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
-   * [Language Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for
-   * a list of the currently supported language codes. Note that queries in the same session do not
+   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
+   * the currently supported language codes. Note that queries in the same session do not
    * necessarily need to specify the same language.
    * @return value or {@code null} for none
    */
@@ -145,8 +145,8 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
 
   /**
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
-   * [Language Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for
-   * a list of the currently supported language codes. Note that queries in the same session do not
+   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
+   * the currently supported language codes. Note that queries in the same session do not
    * necessarily need to specify the same language.
    * @param languageCode languageCode or {@code null} for none
    */

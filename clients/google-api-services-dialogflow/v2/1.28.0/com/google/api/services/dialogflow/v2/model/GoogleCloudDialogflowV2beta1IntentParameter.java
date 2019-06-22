@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameter extends com.googl
 
   /**
    * Optional. The collection of prompts that the agent can present to the user in order to collect
-   * value for the parameter.
+   * a value for the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +202,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameter extends com.googl
 
   /**
    * Optional. The collection of prompts that the agent can present to the user in order to collect
-   * value for the parameter.
+   * a value for the parameter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPrompts() {
@@ -211,7 +211,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameter extends com.googl
 
   /**
    * Optional. The collection of prompts that the agent can present to the user in order to collect
-   * value for the parameter.
+   * a value for the parameter.
    * @param prompts prompts or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentParameter setPrompts(java.util.List<java.lang.String> prompts) {

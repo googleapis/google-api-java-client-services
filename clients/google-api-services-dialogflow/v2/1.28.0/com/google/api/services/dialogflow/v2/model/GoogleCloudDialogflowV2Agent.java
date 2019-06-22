@@ -30,9 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. API version displayed in Dialogflow console. If not specified, V2 API is assumed.
+   * Clients are free to query different service endpoints for different API versions. However, bots
+   * connectors and webhook calls will follow the specified API version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiVersion;
+
+  /**
    * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations
-   * /web-demo) integration.
+   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
+   * integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +61,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes. This field cannot be set by the `Update` method.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes. This field cannot be set by the `Update` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,6 +113,13 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
   private java.util.List<java.lang.String> supportedLanguageCodes;
 
   /**
+   * Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tier;
+
+  /**
    * Required. The time zone of this agent from the [time zone database](https://www.iana.org/time-
    * zones), e.g., America/New_York, Europe/Paris.
    * The value may be {@code null}.
@@ -112,9 +128,30 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
   private java.lang.String timeZone;
 
   /**
+   * Optional. API version displayed in Dialogflow console. If not specified, V2 API is assumed.
+   * Clients are free to query different service endpoints for different API versions. However, bots
+   * connectors and webhook calls will follow the specified API version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiVersion() {
+    return apiVersion;
+  }
+
+  /**
+   * Optional. API version displayed in Dialogflow console. If not specified, V2 API is assumed.
+   * Clients are free to query different service endpoints for different API versions. However, bots
+   * connectors and webhook calls will follow the specified API version.
+   * @param apiVersion apiVersion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Agent setApiVersion(java.lang.String apiVersion) {
+    this.apiVersion = apiVersion;
+    return this;
+  }
+
+  /**
    * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations
-   * /web-demo) integration.
+   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
+   * integration.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvatarUri() {
@@ -123,8 +160,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow-enterprise/docs/integrations
-   * /web-demo) integration.
+   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
+   * integration.
    * @param avatarUri avatarUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2Agent setAvatarUri(java.lang.String avatarUri) {
@@ -161,8 +198,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes. This field cannot be set by the `Update` method.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes. This field cannot be set by the `Update` method.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultLanguageCode() {
@@ -171,8 +208,8 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
 
   /**
    * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes. This field cannot be set by the `Update` method.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes. This field cannot be set by the `Update` method.
    * @param defaultLanguageCode defaultLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2Agent setDefaultLanguageCode(java.lang.String defaultLanguageCode) {
@@ -283,6 +320,23 @@ public final class GoogleCloudDialogflowV2Agent extends com.google.api.client.js
    */
   public GoogleCloudDialogflowV2Agent setSupportedLanguageCodes(java.util.List<java.lang.String> supportedLanguageCodes) {
     this.supportedLanguageCodes = supportedLanguageCodes;
+    return this;
+  }
+
+  /**
+   * Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTier() {
+    return tier;
+  }
+
+  /**
+   * Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
+   * @param tier tier or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Agent setTier(java.lang.String tier) {
+    this.tier = tier;
     return this;
   }
 

@@ -31,9 +31,9 @@ public final class GoogleCloudDialogflowV2TextInput extends com.google.api.clien
 
   /**
    * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes. Note that queries in the same session do not necessarily
+   * need to specify the same language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +49,9 @@ public final class GoogleCloudDialogflowV2TextInput extends com.google.api.clien
 
   /**
    * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes. Note that queries in the same session do not necessarily
+   * need to specify the same language.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -60,9 +60,9 @@ public final class GoogleCloudDialogflowV2TextInput extends com.google.api.clien
 
   /**
    * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow-enterprise/docs/reference/language) for a list of
-   * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language.
+   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
+   * currently supported language codes. Note that queries in the same session do not necessarily
+   * need to specify the same language.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput setLanguageCode(java.lang.String languageCode) {

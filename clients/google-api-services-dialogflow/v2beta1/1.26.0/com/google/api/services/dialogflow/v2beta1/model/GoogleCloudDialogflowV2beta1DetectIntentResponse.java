@@ -53,8 +53,7 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   private java.lang.String outputAudio;
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio. This field is populated from
-   * the agent-level speech synthesizer configuration, if enabled.
+   * The config used by the speech synthesizer to generate the output audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +171,7 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio. This field is populated from
-   * the agent-level speech synthesizer configuration, if enabled.
+   * The config used by the speech synthesizer to generate the output audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1OutputAudioConfig getOutputAudioConfig() {
@@ -181,8 +179,7 @@ public final class GoogleCloudDialogflowV2beta1DetectIntentResponse extends com.
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio. This field is populated from
-   * the agent-level speech synthesizer configuration, if enabled.
+   * The config used by the speech synthesizer to generate the output audio.
    * @param outputAudioConfig outputAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1DetectIntentResponse setOutputAudioConfig(GoogleCloudDialogflowV2beta1OutputAudioConfig outputAudioConfig) {

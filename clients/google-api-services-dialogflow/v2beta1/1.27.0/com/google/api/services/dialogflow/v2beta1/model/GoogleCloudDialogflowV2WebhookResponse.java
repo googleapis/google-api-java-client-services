@@ -31,7 +31,8 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
 
   /**
    * Optional. Makes the platform immediately invoke another `DetectIntent` call internally with the
-   * specified event as input.
+   * specified event as input. When this field is set, Dialogflow ignores the `fulfillment_text`,
+   * `fulfillment_messages`, and `payload` fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +98,8 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
 
   /**
    * Optional. Makes the platform immediately invoke another `DetectIntent` call internally with the
-   * specified event as input.
+   * specified event as input. When this field is set, Dialogflow ignores the `fulfillment_text`,
+   * `fulfillment_messages`, and `payload` fields.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput getFollowupEventInput() {
@@ -106,7 +108,8 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
 
   /**
    * Optional. Makes the platform immediately invoke another `DetectIntent` call internally with the
-   * specified event as input.
+   * specified event as input. When this field is set, Dialogflow ignores the `fulfillment_text`,
+   * `fulfillment_messages`, and `payload` fields.
    * @param followupEventInput followupEventInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setFollowupEventInput(GoogleCloudDialogflowV2EventInput followupEventInput) {

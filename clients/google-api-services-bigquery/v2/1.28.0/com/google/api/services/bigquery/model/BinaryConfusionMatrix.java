@@ -30,6 +30,20 @@ package com.google.api.services.bigquery.model;
 public final class BinaryConfusionMatrix extends com.google.api.client.json.GenericJson {
 
   /**
+   * The fraction of predictions given the correct label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double accuracy;
+
+  /**
+   * The equally weighted average of recall and precision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double f1Score;
+
+  /**
    * Number of false samples predicted as false.
    * The value may be {@code null}.
    */
@@ -51,14 +65,14 @@ public final class BinaryConfusionMatrix extends com.google.api.client.json.Gene
   private java.lang.Double positiveClassThreshold;
 
   /**
-   * Aggregate precision.
+   * The fraction of actual positive predictions that had positive actual labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double precision;
 
   /**
-   * Aggregate recall.
+   * The fraction of actual positive labels that were given a positive prediction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,6 +91,40 @@ public final class BinaryConfusionMatrix extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long truePositives;
+
+  /**
+   * The fraction of predictions given the correct label.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAccuracy() {
+    return accuracy;
+  }
+
+  /**
+   * The fraction of predictions given the correct label.
+   * @param accuracy accuracy or {@code null} for none
+   */
+  public BinaryConfusionMatrix setAccuracy(java.lang.Double accuracy) {
+    this.accuracy = accuracy;
+    return this;
+  }
+
+  /**
+   * The equally weighted average of recall and precision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getF1Score() {
+    return f1Score;
+  }
+
+  /**
+   * The equally weighted average of recall and precision.
+   * @param f1Score f1Score or {@code null} for none
+   */
+  public BinaryConfusionMatrix setF1Score(java.lang.Double f1Score) {
+    this.f1Score = f1Score;
+    return this;
+  }
 
   /**
    * Number of false samples predicted as false.
@@ -130,7 +178,7 @@ public final class BinaryConfusionMatrix extends com.google.api.client.json.Gene
   }
 
   /**
-   * Aggregate precision.
+   * The fraction of actual positive predictions that had positive actual labels.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPrecision() {
@@ -138,7 +186,7 @@ public final class BinaryConfusionMatrix extends com.google.api.client.json.Gene
   }
 
   /**
-   * Aggregate precision.
+   * The fraction of actual positive predictions that had positive actual labels.
    * @param precision precision or {@code null} for none
    */
   public BinaryConfusionMatrix setPrecision(java.lang.Double precision) {
@@ -147,7 +195,7 @@ public final class BinaryConfusionMatrix extends com.google.api.client.json.Gene
   }
 
   /**
-   * Aggregate recall.
+   * The fraction of actual positive labels that were given a positive prediction.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRecall() {
@@ -155,7 +203,7 @@ public final class BinaryConfusionMatrix extends com.google.api.client.json.Gene
   }
 
   /**
-   * Aggregate recall.
+   * The fraction of actual positive labels that were given a positive prediction.
    * @param recall recall or {@code null} for none
    */
   public BinaryConfusionMatrix setRecall(java.lang.Double recall) {

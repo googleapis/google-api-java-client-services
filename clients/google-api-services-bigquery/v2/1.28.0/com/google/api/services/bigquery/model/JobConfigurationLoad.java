@@ -116,7 +116,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
    * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
    * infer partition key name(s). All types are strings. Not all storage formats support hive
    * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
@@ -124,6 +124,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String hivePartitioningMode;
+
+  /**
+   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HivePartitioningOptions hivePartitioningOptions;
 
   /**
    * [Optional] Indicates if BigQuery should allow extra values that are not represented in the
@@ -489,7 +496,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
    * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
    * infer partition key name(s). All types are strings. Not all storage formats support hive
    * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
@@ -500,7 +507,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional, Experimental] If hive partitioning is enabled, which mode to use. Two modes are
+   * [Optional, Trusted Tester] If hive partitioning is enabled, which mode to use. Two modes are
    * supported: - AUTO: automatically infer partition key name(s) and type(s). - STRINGS: automatic
    * infer partition key name(s). All types are strings. Not all storage formats support hive
    * partitioning -- requesting hive partitioning on an unsupported format will lead to an error.
@@ -508,6 +515,23 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setHivePartitioningMode(java.lang.String hivePartitioningMode) {
     this.hivePartitioningMode = hivePartitioningMode;
+    return this;
+  }
+
+  /**
+   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * @return value or {@code null} for none
+   */
+  public HivePartitioningOptions getHivePartitioningOptions() {
+    return hivePartitioningOptions;
+  }
+
+  /**
+   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * @param hivePartitioningOptions hivePartitioningOptions or {@code null} for none
+   */
+  public JobConfigurationLoad setHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
+    this.hivePartitioningOptions = hivePartitioningOptions;
     return this;
   }
 

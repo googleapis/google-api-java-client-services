@@ -57,6 +57,13 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
   private java.lang.Long count;
 
   /**
+   * Example points. Must be in increasing order of `value` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Exemplar> exemplars;
+
+  /**
    * Buckets with arbitrary user-provided width.
    * The value may be {@code null}.
    */
@@ -155,6 +162,23 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
    */
   public Distribution setCount(java.lang.Long count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * Example points. Must be in increasing order of `value` field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Exemplar> getExemplars() {
+    return exemplars;
+  }
+
+  /**
+   * Example points. Must be in increasing order of `value` field.
+   * @param exemplars exemplars or {@code null} for none
+   */
+  public Distribution setExemplars(java.util.List<Exemplar> exemplars) {
+    this.exemplars = exemplars;
     return this;
   }
 

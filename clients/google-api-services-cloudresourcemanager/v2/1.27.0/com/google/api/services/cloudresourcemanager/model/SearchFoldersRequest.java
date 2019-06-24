@@ -58,11 +58,12 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
    *
    * Some example queries are:
    *
-   * |Query | Description| |----- | -----------| |displayName=Test* | Folders whose display name
-   * starts with "Test".| |lifecycleState=ACTIVE | Folders whose lifecycleState is ACTIVE.|
-   * |parent=folders/123 | Folders whose parent is "folders/123".| |parent=folders/123 AND
-   * lifecycleState=ACTIVE | Active folders whose parent is "folders/123".| |displayName=\\"Test
-   * String\\"|Folders whose display name includes both "Test" and "String".|
+   * * Query `displayName=Test*` returns Folder resources whose display name starts with "Test". *
+   * Query `lifecycleState=ACTIVE` returns Folder resources with `lifecycleState` set to `ACTIVE`. *
+   * Query `parent=folders/123` returns Folder resources that have `folders/123` as a parent
+   * resource. * Query `parent=folders/123 AND lifecycleState=ACTIVE` returns active Folder
+   * resources that have `folders/123` as a parent resource. * Query `displayName=\\"Test String\\"`
+   * returns Folder resources with display names that include both "Test" and "String".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,11 +118,12 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
    *
    * Some example queries are:
    *
-   * |Query | Description| |----- | -----------| |displayName=Test* | Folders whose display name
-   * starts with "Test".| |lifecycleState=ACTIVE | Folders whose lifecycleState is ACTIVE.|
-   * |parent=folders/123 | Folders whose parent is "folders/123".| |parent=folders/123 AND
-   * lifecycleState=ACTIVE | Active folders whose parent is "folders/123".| |displayName=\\"Test
-   * String\\"|Folders whose display name includes both "Test" and "String".|
+   * * Query `displayName=Test*` returns Folder resources whose display name starts with "Test". *
+   * Query `lifecycleState=ACTIVE` returns Folder resources with `lifecycleState` set to `ACTIVE`. *
+   * Query `parent=folders/123` returns Folder resources that have `folders/123` as a parent
+   * resource. * Query `parent=folders/123 AND lifecycleState=ACTIVE` returns active Folder
+   * resources that have `folders/123` as a parent resource. * Query `displayName=\\"Test String\\"`
+   * returns Folder resources with display names that include both "Test" and "String".
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -141,11 +143,12 @@ public final class SearchFoldersRequest extends com.google.api.client.json.Gener
    *
    * Some example queries are:
    *
-   * |Query | Description| |----- | -----------| |displayName=Test* | Folders whose display name
-   * starts with "Test".| |lifecycleState=ACTIVE | Folders whose lifecycleState is ACTIVE.|
-   * |parent=folders/123 | Folders whose parent is "folders/123".| |parent=folders/123 AND
-   * lifecycleState=ACTIVE | Active folders whose parent is "folders/123".| |displayName=\\"Test
-   * String\\"|Folders whose display name includes both "Test" and "String".|
+   * * Query `displayName=Test*` returns Folder resources whose display name starts with "Test". *
+   * Query `lifecycleState=ACTIVE` returns Folder resources with `lifecycleState` set to `ACTIVE`. *
+   * Query `parent=folders/123` returns Folder resources that have `folders/123` as a parent
+   * resource. * Query `parent=folders/123 AND lifecycleState=ACTIVE` returns active Folder
+   * resources that have `folders/123` as a parent resource. * Query `displayName=\\"Test String\\"`
+   * returns Folder resources with display names that include both "Test" and "String".
    * @param query query or {@code null} for none
    */
   public SearchFoldersRequest setQuery(java.lang.String query) {

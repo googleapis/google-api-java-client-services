@@ -60,6 +60,14 @@ public final class LeaseTasksRequest extends com.google.api.client.json.GenericJ
   private java.lang.String filter;
 
   /**
+   * Required.
+   *
+   * The duration of the lease.
+   *
+   * Each task returned in the response will have its schedule_time set to the current time plus the
+   * `lease_duration`. The task is leased until its schedule_time; thus, the task will not be
+   * returned to another LeaseTasks call before its schedule_time.
+   *
    * After the worker has successfully finished the work associated with the task, the worker must
    * call via AcknowledgeTask before the schedule_time. Otherwise the task will be returned to a
    * later LeaseTasks call so that another worker can retry it.
@@ -162,6 +170,14 @@ public final class LeaseTasksRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Required.
+   *
+   * The duration of the lease.
+   *
+   * Each task returned in the response will have its schedule_time set to the current time plus the
+   * `lease_duration`. The task is leased until its schedule_time; thus, the task will not be
+   * returned to another LeaseTasks call before its schedule_time.
+   *
    * After the worker has successfully finished the work associated with the task, the worker must
    * call via AcknowledgeTask before the schedule_time. Otherwise the task will be returned to a
    * later LeaseTasks call so that another worker can retry it.
@@ -174,6 +190,14 @@ public final class LeaseTasksRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Required.
+   *
+   * The duration of the lease.
+   *
+   * Each task returned in the response will have its schedule_time set to the current time plus the
+   * `lease_duration`. The task is leased until its schedule_time; thus, the task will not be
+   * returned to another LeaseTasks call before its schedule_time.
+   *
    * After the worker has successfully finished the work associated with the task, the worker must
    * call via AcknowledgeTask before the schedule_time. Otherwise the task will be returned to a
    * later LeaseTasks call so that another worker can retry it.

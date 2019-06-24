@@ -49,7 +49,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only.  The lifecycle state of the folder. Updates to the lifecycle_state must be
+   * Output only. The lifecycle state of the folder. Updates to the lifecycle_state must be
    * performed via DeleteFolder and UndeleteFolder.
    * The value may be {@code null}.
    */
@@ -115,7 +115,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.  The lifecycle state of the folder. Updates to the lifecycle_state must be
+   * Output only. The lifecycle state of the folder. Updates to the lifecycle_state must be
    * performed via DeleteFolder and UndeleteFolder.
    * @return value or {@code null} for none
    */
@@ -124,7 +124,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.  The lifecycle state of the folder. Updates to the lifecycle_state must be
+   * Output only. The lifecycle state of the folder. Updates to the lifecycle_state must be
    * performed via DeleteFolder and UndeleteFolder.
    * @param lifecycleState lifecycleState or {@code null} for none
    */

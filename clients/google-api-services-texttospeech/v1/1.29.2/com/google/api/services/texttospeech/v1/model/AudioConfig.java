@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.texttospeech.v1beta1.model;
+package com.google.api.services.texttospeech.v1.model;
 
 /**
  * Description of audio data to be synthesized.
@@ -40,8 +40,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   /**
    * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
    * (post synthesized) text to speech. Effects are applied on top of each other in the order they
-   * are given. See [audio profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles)
-   * for current supported profile ids.
+   * are given. See
+   *
+   * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
+   * supported profile ids.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +111,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   /**
    * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
    * (post synthesized) text to speech. Effects are applied on top of each other in the order they
-   * are given. See [audio profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles)
-   * for current supported profile ids.
+   * are given. See
+   *
+   * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
+   * supported profile ids.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEffectsProfileId() {
@@ -120,8 +124,10 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   /**
    * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
    * (post synthesized) text to speech. Effects are applied on top of each other in the order they
-   * are given. See [audio profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles)
-   * for current supported profile ids.
+   * are given. See
+   *
+   * [audio-profiles](https: //cloud.google.com/text-to-speech/docs/audio-profiles) for current
+   * supported profile ids.
    * @param effectsProfileId effectsProfileId or {@code null} for none
    */
   public AudioConfig setEffectsProfileId(java.util.List<java.lang.String> effectsProfileId) {

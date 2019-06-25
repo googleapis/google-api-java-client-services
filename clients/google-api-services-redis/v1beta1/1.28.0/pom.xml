@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-redis</artifactId>
-  <version>v1beta1-rev20190607-1.28.0</version>
-  <name>Google Cloud Memorystore for Redis API v1beta1-rev20190607-1.28.0</name>
+  <version>v1beta1-rev20190620-1.28.0</version>
+  <name>Google Cloud Memorystore for Redis API v1beta1-rev20190620-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -62,6 +62,18 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Automatic-Module-Name>com.google.api.services.redis</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.1.0</version>
         <executions>
@@ -78,9 +90,9 @@
           <windowtitle>Google Cloud Memorystore for Redis API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.28.0/index.html</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/index.html</link>
-            <link>https://googleapis.dev/java/google-api-client/1.28.0/index.html</link>
+            <link>https://googleapis.dev/java/google-http-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.28.0/</link>
           </links>
         </configuration>
       </plugin>

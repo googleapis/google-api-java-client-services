@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudbuild</artifactId>
-  <version>v1-rev20190531-1.28.0</version>
-  <name>Cloud Build API v1-rev20190531-1.28.0</name>
+  <version>v1-rev20190622-1.28.0</version>
+  <name>Cloud Build API v1-rev20190622-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -59,6 +59,19 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <version>2.2.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <archive>
+            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+            <manifestEntries>
+              <Automatic-Module-Name>com.google.api.services.cloudbuild</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

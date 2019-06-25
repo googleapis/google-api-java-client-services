@@ -7,9 +7,9 @@
   </parent>
 
   <groupId>com.google.apis</groupId>
-  <artifactId>google-api-services-iam</artifactId>
-  <version>v1-rev20190607-1.28.0</version>
-  <name>Identity and Access Management (IAM) API v1-rev20190607-1.28.0</name>
+  <artifactId>google-api-services-iamcredentials</artifactId>
+  <version>v1-rev20190222-1.29.2</version>
+  <name>IAM Service Account Credentials API v1-rev20190222-1.29.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -68,7 +68,7 @@
           <archive>
             <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
             <manifestEntries>
-              <Automatic-Module-Name>com.google.api.services.iam</Automatic-Module-Name>
+              <Automatic-Module-Name>com.google.api.services.iamcredentials</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>
@@ -87,13 +87,13 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Identity and Access Management (IAM) API ${project.version}</doctitle>
-          <windowtitle>Identity and Access Management (IAM) API ${project.version}</windowtitle>
+          <doctitle>IAM Service Account Credentials API ${project.version}</doctitle>
+          <windowtitle>IAM Service Account Credentials API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.28.0/index.html</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/index.html</link>
-            <link>https://googleapis.dev/java/google-api-client/1.28.0/index.html</link>
+            <link>https://googleapis.dev/java/google-http-client/1.29.2</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.29.2</link>
+            <link>https://googleapis.dev/java/google-api-client/1.29.2</link>
           </links>
         </configuration>
       </plugin>
@@ -110,7 +110,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.28.0</version>
+      <version>1.29.2</version>
     </dependency>
   </dependencies>
 

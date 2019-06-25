@@ -62,6 +62,18 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Automatic-Module-Name>com.google.api.services.analyticsreporting</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.1.0</version>
         <executions>
@@ -78,9 +90,9 @@
           <windowtitle>Analytics Reporting API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.28.0/index.html</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/index.html</link>
-            <link>https://googleapis.dev/java/google-api-client/1.28.0/index.html</link>
+            <link>https://googleapis.dev/java/google-http-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.28.0/</link>
           </links>
         </configuration>
       </plugin>

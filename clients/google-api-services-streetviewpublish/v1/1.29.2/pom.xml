@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-streetviewpublish</artifactId>
-  <version>v1-rev20190529-1.28.0</version>
-  <name>Street View Publish API v1-rev20190529-1.28.0</name>
+  <version>v1-rev20190529-1.29.2</version>
+  <name>Street View Publish API v1-rev20190529-1.29.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -90,9 +90,9 @@
           <windowtitle>Street View Publish API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.28.0/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.28.0/</link>
-            <link>https://googleapis.dev/java/google-api-client/1.28.0/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.29.2/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.29.2/</link>
+            <link>https://googleapis.dev/java/google-api-client/1.29.2/</link>
           </links>
         </configuration>
       </plugin>
@@ -109,7 +109,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>1.28.0</version>
+      <version>1.29.2</version>
     </dependency>
   </dependencies>
 

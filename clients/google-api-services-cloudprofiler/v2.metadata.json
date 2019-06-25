@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-cloudprofiler",
-    "version": "v2-rev20180730-1.28.0"
+    "version": "v2-rev20180730-1.30.1"
   }
 }

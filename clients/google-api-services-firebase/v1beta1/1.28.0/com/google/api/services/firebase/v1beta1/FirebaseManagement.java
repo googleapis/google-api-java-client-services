@@ -2896,6 +2896,496 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
+     * An accessor for creating requests from the AvailableLocations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code FirebaseManagement firebase = new FirebaseManagement(...);}
+     *   {@code FirebaseManagement.AvailableLocations.List request = firebase.availableLocations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AvailableLocations availableLocations() {
+      return new AvailableLocations();
+    }
+
+    /**
+     * The "availableLocations" collection of methods.
+     */
+    public class AvailableLocations {
+
+      /**
+       * Returns a list of valid Google Cloud Platform (GCP) resource locations for the specified Project
+       * (including a FirebaseProject).
+       *
+       * The default GCP resource location of a project defines the geographical location where project
+       * resources, such as Cloud Firestore, will be provisioned by default.
+       *
+       * The returned list are the available [GCP resource
+       * locations](https://firebase.google.com/docs/projects/locations).  This call checks for any
+       * location restrictions for the specified Project and, thus, might return a subset of all possible
+       * GCP resource locations. To list all GCP resource locations (regardless of any restrictions), call
+       * the endpoint without specifying a `projectId` (that is,
+       * `/v1beta1/{parent=projects/-}/listAvailableLocations`).
+       *
+       * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
+       * of the project. Calls without a specified project do not require any specific project
+       * permissions.
+       *
+       * Create a request for the method "availableLocations.list".
+       *
+       * This request holds the parameters needed by the firebase server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent The Project for which to list GCP resource locations, in the format:
+      projects/projectId
+      If no
+       *        project is specified (that is, `projects/-`), the returned list
+      does not take into account
+       *        org-specific or project-specific location
+      restrictions.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.ListAvailableLocationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/availableLocations";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns a list of valid Google Cloud Platform (GCP) resource locations for the specified
+         * Project (including a FirebaseProject).
+         *
+         * The default GCP resource location of a project defines the geographical location where project
+         * resources, such as Cloud Firestore, will be provisioned by default.
+         *
+         * The returned list are the available [GCP resource
+         * locations](https://firebase.google.com/docs/projects/locations).  This call checks for any
+         * location restrictions for the specified Project and, thus, might return a subset of all
+         * possible GCP resource locations. To list all GCP resource locations (regardless of any
+         * restrictions), call the endpoint without specifying a `projectId` (that is,
+         * `/v1beta1/{parent=projects/-}/listAvailableLocations`).
+         *
+         * To call `ListAvailableLocations` with a specified project, a member must be at minimum a Viewer
+         * of the project. Calls without a specified project do not require any specific project
+         * permissions.
+         *
+         * Create a request for the method "availableLocations.list".
+         *
+         * This request holds the parameters needed by the the firebase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The Project for which to list GCP resource locations, in the format:
+      projects/projectId
+      If no
+       *        project is specified (that is, `projects/-`), the returned list
+      does not take into account
+       *        org-specific or project-specific location
+      restrictions.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(FirebaseManagement.this, "GET", REST_PATH, null, com.google.api.services.firebase.v1beta1.model.ListAvailableLocationsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The Project for which to list GCP resource locations, in the format: projects/projectId
+         * If no project is specified (that is, `projects/-`), the returned list does not take into
+         * account org-specific or project-specific location restrictions.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The Project for which to list GCP resource locations, in the format: projects/projectId If no
+       project is specified (that is, `projects/-`), the returned list does not take into account org-
+       specific or project-specific location restrictions.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The Project for which to list GCP resource locations, in the format: projects/projectId
+         * If no project is specified (that is, `projects/-`), the returned list does not take into
+         * account org-specific or project-specific location restrictions.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of locations to return in the response.
+         *
+         * The server may return fewer than this value at its discretion. If no value is specified
+         * (or too large a value is specified), then the server will impose its own limit.
+         *
+         * This value cannot be negative.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of locations to return in the response.
+
+       The server may return fewer than this value at its discretion. If no value is specified (or too
+       large a value is specified), then the server will impose its own limit.
+
+       This value cannot be negative.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of locations to return in the response.
+         *
+         * The server may return fewer than this value at its discretion. If no value is specified
+         * (or too large a value is specified), then the server will impose its own limit.
+         *
+         * This value cannot be negative.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Token returned from a previous call to `ListAvailableLocations` indicating where in the
+         * list of locations to resume listing.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Token returned from a previous call to `ListAvailableLocations` indicating where in the list of
+       locations to resume listing.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Token returned from a previous call to `ListAvailableLocations` indicating where in the
+         * list of locations to resume listing.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the DefaultLocation collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code FirebaseManagement firebase = new FirebaseManagement(...);}
+     *   {@code FirebaseManagement.DefaultLocation.List request = firebase.defaultLocation().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DefaultLocation defaultLocation() {
+      return new DefaultLocation();
+    }
+
+    /**
+     * The "defaultLocation" collection of methods.
+     */
+    public class DefaultLocation {
+
+      /**
+       * Sets the default Google Cloud Platform (GCP) resource location for the specified FirebaseProject.
+       *
+       * This method creates an App Engine application with a [default Cloud Storage
+       * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient/setting-
+       * up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
+       * [`location_id`](#body.request_body.FIELDS.location_id). This location must be one of the
+       * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).  After
+       * the default GCP resource location is finalized, or if it was already set, it cannot be changed.
+       * The default GCP resource location for the specified FirebaseProject might already be set because
+       * either the GCP `Project` already has an App Engine application or `FinalizeDefaultLocation` was
+       * previously called with a specified `location_id`. Any new calls to `FinalizeDefaultLocation` with
+       * a different specified `location_id` will return a 409 error.
+       *
+       * The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to track
+       * the provisioning process. The [`response`](../../v1beta1/operations#Operation.FIELDS.response)
+       * type of the `Operation` is google.protobuf.Empty.
+       *
+       * The `Operation` can be polled by its `name` using GetOperation until `done` is true. When `done`
+       * is true, the `Operation` has either succeeded or failed. If the `Operation` has succeeded, its
+       * [`response`](../../v1beta1/operations#Operation.FIELDS.response) will be set to a
+       * google.protobuf.Empty; if the `Operation` has failed, its `error` will be set to a
+       * google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no need
+       * to call DeleteOperation.
+       *
+       * All fields listed in the [request body](#request-body) are required.
+       *
+       * To call `FinalizeDefaultLocation`, a member must be an Owner of the project.
+       *
+       * Create a request for the method "defaultLocation.finalize".
+       *
+       * This request holds the parameters needed by the firebase server.  After setting any optional
+       * parameters, call the {@link Finalize#execute()} method to invoke the remote operation.
+       *
+       * @param parent The resource name of the Project for which the default GCP resource
+      location will be set, in the
+       *        format:
+      projects/projectId
+       * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
+       * @return the request
+       */
+      public Finalize finalize(java.lang.String parent, com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest content) throws java.io.IOException {
+        Finalize result = new Finalize(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Finalize extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/defaultLocation:finalize";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Sets the default Google Cloud Platform (GCP) resource location for the specified
+         * FirebaseProject.
+         *
+         * This method creates an App Engine application with a [default Cloud Storage
+         * bucket](https://cloud.google.com/appengine/docs/standard/python/googlecloudstorageclient
+         * /setting-up-cloud-storage#activating_a_cloud_storage_bucket), located in the specified
+         * [`location_id`](#body.request_body.FIELDS.location_id). This location must be one of the
+         * available [GCP resource locations](https://firebase.google.com/docs/projects/locations).  After
+         * the default GCP resource location is finalized, or if it was already set, it cannot be changed.
+         * The default GCP resource location for the specified FirebaseProject might already be set
+         * because either the GCP `Project` already has an App Engine application or
+         * `FinalizeDefaultLocation` was previously called with a specified `location_id`. Any new calls
+         * to `FinalizeDefaultLocation` with a different specified `location_id` will return a 409 error.
+         *
+         * The result of this call is an [`Operation`](../../v1beta1/operations), which can be used to
+         * track the provisioning process. The
+         * [`response`](../../v1beta1/operations#Operation.FIELDS.response) type of the `Operation` is
+         * google.protobuf.Empty.
+         *
+         * The `Operation` can be polled by its `name` using GetOperation until `done` is true. When
+         * `done` is true, the `Operation` has either succeeded or failed. If the `Operation` has
+         * succeeded, its [`response`](../../v1beta1/operations#Operation.FIELDS.response) will be set to
+         * a google.protobuf.Empty; if the `Operation` has failed, its `error` will be set to a
+         * google.rpc.Status. The `Operation` is automatically deleted after completion, so there is no
+         * need to call DeleteOperation.
+         *
+         * All fields listed in the [request body](#request-body) are required.
+         *
+         * To call `FinalizeDefaultLocation`, a member must be an Owner of the project.
+         *
+         * Create a request for the method "defaultLocation.finalize".
+         *
+         * This request holds the parameters needed by the the firebase server.  After setting any
+         * optional parameters, call the {@link Finalize#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Finalize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent The resource name of the Project for which the default GCP resource
+      location will be set, in the
+       *        format:
+      projects/projectId
+         * @param content the {@link com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest}
+         * @since 1.13
+         */
+        protected Finalize(java.lang.String parent, com.google.api.services.firebase.v1beta1.model.FinalizeDefaultLocationRequest content) {
+          super(FirebaseManagement.this, "POST", REST_PATH, content, com.google.api.services.firebase.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Finalize set$Xgafv(java.lang.String $Xgafv) {
+          return (Finalize) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Finalize setAccessToken(java.lang.String accessToken) {
+          return (Finalize) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Finalize setAlt(java.lang.String alt) {
+          return (Finalize) super.setAlt(alt);
+        }
+
+        @Override
+        public Finalize setCallback(java.lang.String callback) {
+          return (Finalize) super.setCallback(callback);
+        }
+
+        @Override
+        public Finalize setFields(java.lang.String fields) {
+          return (Finalize) super.setFields(fields);
+        }
+
+        @Override
+        public Finalize setKey(java.lang.String key) {
+          return (Finalize) super.setKey(key);
+        }
+
+        @Override
+        public Finalize setOauthToken(java.lang.String oauthToken) {
+          return (Finalize) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Finalize setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Finalize) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Finalize setQuotaUser(java.lang.String quotaUser) {
+          return (Finalize) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Finalize setUploadType(java.lang.String uploadType) {
+          return (Finalize) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Finalize setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Finalize) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the Project for which the default GCP resource location will be set,
+         * in the format: projects/projectId
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource name of the Project for which the default GCP resource location will be set, in the
+       format: projects/projectId
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The resource name of the Project for which the default GCP resource location will be set,
+         * in the format: projects/projectId
+         */
+        public Finalize setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Finalize set(String parameterName, Object value) {
+          return (Finalize) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the IosApps collection.
      *
      * <p>The typical use is:</p>

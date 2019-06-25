@@ -25,7 +25,7 @@ package com.google.api.services.cloudsearch.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://gsuite.google.com/products/cloud-search/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/cloud-search/docs/guides/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

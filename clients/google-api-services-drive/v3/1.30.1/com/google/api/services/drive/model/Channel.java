@@ -52,8 +52,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Identifies this as a notification channel used to watch for changes to a resource, which is
-   * "api#channel".
+   * Identifies this as a notification channel used to watch for changes to a resource. Value: the
+   * fixed string "api#channel".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,8 +157,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies this as a notification channel used to watch for changes to a resource, which is
-   * "api#channel".
+   * Identifies this as a notification channel used to watch for changes to a resource. Value: the
+   * fixed string "api#channel".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -166,8 +166,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies this as a notification channel used to watch for changes to a resource, which is
-   * "api#channel".
+   * Identifies this as a notification channel used to watch for changes to a resource. Value: the
+   * fixed string "api#channel".
    * @param kind kind or {@code null} for none
    */
   public Channel setKind(java.lang.String kind) {

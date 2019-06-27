@@ -5581,7 +5581,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Generates a set of file IDs which can be provided in insert requests.
+     * Generates a set of file IDs which can be provided in insert or copy requests.
      *
      * Create a request for the method "files.generateIds".
      *
@@ -5601,7 +5601,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/generateIds";
 
       /**
-       * Generates a set of file IDs which can be provided in insert requests.
+       * Generates a set of file IDs which can be provided in insert or copy requests.
        *
        * Create a request for the method "files.generateIds".
        *

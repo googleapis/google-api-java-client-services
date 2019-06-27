@@ -51,15 +51,15 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain holds the top-level domain that will distribute traffic over the provided targets. It
-   * generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+   * Deprecated - use url instead. Domain holds the top-level domain that will distribute traffic
+   * over the provided targets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * For Cloud Run, identifical to domain.
+   * Deprecated - use address instead. For Cloud Run, identifical to domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain holds the top-level domain that will distribute traffic over the provided targets. It
-   * generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+   * Deprecated - use url instead. Domain holds the top-level domain that will distribute traffic
+   * over the provided targets.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -143,8 +143,8 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain holds the top-level domain that will distribute traffic over the provided targets. It
-   * generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+   * Deprecated - use url instead. Domain holds the top-level domain that will distribute traffic
+   * over the provided targets.
    * @param domain domain or {@code null} for none
    */
   public RouteStatus setDomain(java.lang.String domain) {
@@ -153,7 +153,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Cloud Run, identifical to domain.
+   * Deprecated - use address instead. For Cloud Run, identifical to domain.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomainInternal() {
@@ -161,7 +161,7 @@ public final class RouteStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For Cloud Run, identifical to domain.
+   * Deprecated - use address instead. For Cloud Run, identifical to domain.
    * @param domainInternal domainInternal or {@code null} for none
    */
   public RouteStatus setDomainInternal(java.lang.String domainInternal) {

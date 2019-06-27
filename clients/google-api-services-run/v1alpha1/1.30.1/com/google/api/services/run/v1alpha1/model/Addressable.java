@@ -30,6 +30,7 @@ package com.google.api.services.run.v1alpha1.model;
 public final class Addressable extends com.google.api.client.json.GenericJson {
 
   /**
+   * Deprecated - use url instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +43,7 @@ public final class Addressable extends com.google.api.client.json.GenericJson {
   private java.lang.String url;
 
   /**
+   * Deprecated - use url instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHostname() {
@@ -49,6 +51,7 @@ public final class Addressable extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated - use url instead.
    * @param hostname hostname or {@code null} for none
    */
   public Addressable setHostname(java.lang.String hostname) {

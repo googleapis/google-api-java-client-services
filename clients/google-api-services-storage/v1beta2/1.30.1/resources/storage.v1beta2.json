@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"J3WqvAcMk4eQjJXvfSI4Yr8VouA/IGI-eBwDd7fi4jdIKOTuY8L_lfo\"",
+ "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/-WWif5RBe4HQRhxzfZ4pnKUxpMk\"",
  "discoveryVersion": "v1",
  "id": "storage:v1beta2",
  "name": "storage",
  "version": "v1beta2",
- "revision": "20180905",
+ "revision": "20190620",
  "title": "Cloud Storage JSON API",
  "description": "Lets you store and retrieve potentially-large, immutable data objects.",
  "ownerDomain": "google.com",
@@ -412,7 +412,7 @@
     },
     "kind": {
      "type": "string",
-     "description": "Identifies this as a notification channel used to watch for changes to a resource. Value: the fixed string \"api#channel\".",
+     "description": "Identifies this as a notification channel used to watch for changes to a resource, which is \"api#channel\".",
      "default": "api#channel"
     },
     "params": {

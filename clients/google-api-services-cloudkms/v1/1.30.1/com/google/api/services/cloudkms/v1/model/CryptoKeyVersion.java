@@ -83,6 +83,28 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   private String generateTime;
 
   /**
+   * Output only. The root cause of an import failure. Only present if state is IMPORT_FAILED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String importFailureReason;
+
+  /**
+   * Output only. The name of the ImportJob used to import this CryptoKeyVersion. Only present if
+   * the underlying key material was imported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String importJob;
+
+  /**
+   * Output only. The time at which this CryptoKeyVersion's key material was imported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String importTime;
+
+  /**
    * Output only. The resource name for this CryptoKeyVersion in the format
    * `projects/locations/keyRings/cryptoKeys/cryptoKeyVersions`.
    * The value may be {@code null}.
@@ -212,6 +234,59 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
    */
   public CryptoKeyVersion setGenerateTime(String generateTime) {
     this.generateTime = generateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The root cause of an import failure. Only present if state is IMPORT_FAILED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImportFailureReason() {
+    return importFailureReason;
+  }
+
+  /**
+   * Output only. The root cause of an import failure. Only present if state is IMPORT_FAILED.
+   * @param importFailureReason importFailureReason or {@code null} for none
+   */
+  public CryptoKeyVersion setImportFailureReason(java.lang.String importFailureReason) {
+    this.importFailureReason = importFailureReason;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the ImportJob used to import this CryptoKeyVersion. Only present if
+   * the underlying key material was imported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImportJob() {
+    return importJob;
+  }
+
+  /**
+   * Output only. The name of the ImportJob used to import this CryptoKeyVersion. Only present if
+   * the underlying key material was imported.
+   * @param importJob importJob or {@code null} for none
+   */
+  public CryptoKeyVersion setImportJob(java.lang.String importJob) {
+    this.importJob = importJob;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which this CryptoKeyVersion's key material was imported.
+   * @return value or {@code null} for none
+   */
+  public String getImportTime() {
+    return importTime;
+  }
+
+  /**
+   * Output only. The time at which this CryptoKeyVersion's key material was imported.
+   * @param importTime importTime or {@code null} for none
+   */
+  public CryptoKeyVersion setImportTime(String importTime) {
+    this.importTime = importTime;
     return this;
   }
 

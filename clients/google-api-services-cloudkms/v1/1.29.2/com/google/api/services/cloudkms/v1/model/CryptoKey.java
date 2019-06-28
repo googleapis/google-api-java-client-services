@@ -93,7 +93,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * next_rotation_time will be advanced by this period when the service automatically rotates a
-   * key. Must be at least one day.
+   * key. Must be at least 24 hours and at most 876,000 hours.
    *
    * If rotation_period is set, next_rotation_time must also be set.
    *
@@ -249,7 +249,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * next_rotation_time will be advanced by this period when the service automatically rotates a
-   * key. Must be at least one day.
+   * key. Must be at least 24 hours and at most 876,000 hours.
    *
    * If rotation_period is set, next_rotation_time must also be set.
    *
@@ -263,7 +263,7 @@ public final class CryptoKey extends com.google.api.client.json.GenericJson {
 
   /**
    * next_rotation_time will be advanced by this period when the service automatically rotates a
-   * key. Must be at least one day.
+   * key. Must be at least 24 hours and at most 876,000 hours.
    *
    * If rotation_period is set, next_rotation_time must also be set.
    *

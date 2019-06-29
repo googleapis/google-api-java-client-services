@@ -17,7 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * Reservation resource NextID: 13
+ * Represents a reservation resource. A reservation ensures that capacity is held in a specific zone
+ * even if the reserved VMs are not running. For more information, read  Reserving zonal resources.
+ * (== resource_for beta.reservations ==) (== resource_for v1.reservations ==) (== NextID: 13 ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -91,9 +93,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private AllocationSpecificSKUReservation specificReservation;
 
   /**
-   * Indicates whether the reservation can be consumed by VMs with "any reservation" defined. If the
-   * field is set, then only VMs that target the reservation by name using --reservation-affinity
-   * can consume this reservation.
+   * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation.
+   * If the field is set, then only VMs that target the reservation by name can consume from this
+   * reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,9 +263,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the reservation can be consumed by VMs with "any reservation" defined. If the
-   * field is set, then only VMs that target the reservation by name using --reservation-affinity
-   * can consume this reservation.
+   * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation.
+   * If the field is set, then only VMs that target the reservation by name can consume from this
+   * reservation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSpecificReservationRequired() {
@@ -271,9 +273,9 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the reservation can be consumed by VMs with "any reservation" defined. If the
-   * field is set, then only VMs that target the reservation by name using --reservation-affinity
-   * can consume this reservation.
+   * Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation.
+   * If the field is set, then only VMs that target the reservation by name can consume from this
+   * reservation.
    * @param specificReservationRequired specificReservationRequired or {@code null} for none
    */
   public Reservation setSpecificReservationRequired(java.lang.Boolean specificReservationRequired) {

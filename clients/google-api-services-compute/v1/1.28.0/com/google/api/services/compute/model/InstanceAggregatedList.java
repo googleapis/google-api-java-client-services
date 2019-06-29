@@ -37,7 +37,7 @@ public final class InstanceAggregatedList extends com.google.api.client.json.Gen
   private java.lang.String id;
 
   /**
-   * A list of InstancesScopedList resources.
+   * An object that contains a list of instances scoped by zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class InstanceAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of InstancesScopedList resources.
+   * An object that contains a list of instances scoped by zone.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InstancesScopedList> getItems() {
@@ -101,7 +101,7 @@ public final class InstanceAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of InstancesScopedList resources.
+   * An object that contains a list of instances scoped by zone.
    * @param items items or {@code null} for none
    */
   public InstanceAggregatedList setItems(java.util.Map<String, InstancesScopedList> items) {

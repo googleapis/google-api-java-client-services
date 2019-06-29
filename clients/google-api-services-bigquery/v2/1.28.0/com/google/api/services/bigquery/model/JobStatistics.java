@@ -108,6 +108,15 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * [Output-only] Name of the primary reservation assigned to this job. Note that this could be
+   * different than reservations reported in the reservation usage field if parent reservations were
+   * used to execute this job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("reservation_id")
+  private java.lang.String reservationId;
+
+  /**
    * [Output-only] Start time of this job, in milliseconds since the epoch. This field will be
    * present when the job transitions from the PENDING state to either RUNNING or DONE.
    * The value may be {@code null}.
@@ -300,6 +309,27 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setReservationUsage(java.util.List<ReservationUsage> reservationUsage) {
     this.reservationUsage = reservationUsage;
+    return this;
+  }
+
+  /**
+   * [Output-only] Name of the primary reservation assigned to this job. Note that this could be
+   * different than reservations reported in the reservation usage field if parent reservations were
+   * used to execute this job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationId() {
+    return reservationId;
+  }
+
+  /**
+   * [Output-only] Name of the primary reservation assigned to this job. Note that this could be
+   * different than reservations reported in the reservation usage field if parent reservations were
+   * used to execute this job.
+   * @param reservationId reservationId or {@code null} for none
+   */
+  public JobStatistics setReservationId(java.lang.String reservationId) {
+    this.reservationId = reservationId;
     return this;
   }
 

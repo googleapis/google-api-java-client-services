@@ -62,6 +62,12 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private DatasetReference datasetReference;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfiguration defaultEncryptionConfiguration;
+
+  /**
    * [Optional] The default partition expiration for all partitioned tables in the dataset, in
    * milliseconds. Once this property is set, all newly-created partitioned tables in the dataset
    * will have an expirationMs property in the timePartitioning settings set to this value, and
@@ -219,6 +225,21 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setDatasetReference(DatasetReference datasetReference) {
     this.datasetReference = datasetReference;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfiguration getDefaultEncryptionConfiguration() {
+    return defaultEncryptionConfiguration;
+  }
+
+  /**
+   * @param defaultEncryptionConfiguration defaultEncryptionConfiguration or {@code null} for none
+   */
+  public Dataset setDefaultEncryptionConfiguration(EncryptionConfiguration defaultEncryptionConfiguration) {
+    this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
     return this;
   }
 

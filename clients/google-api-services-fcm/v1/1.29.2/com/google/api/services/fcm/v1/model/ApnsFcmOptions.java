@@ -31,14 +31,14 @@ package com.google.api.services.fcm.v1.model;
 public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Label that the message's analytics data will be associated with.
+   * Label associated with the message's analytics data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String analyticsLabel;
 
   /**
-   * Label that the message's analytics data will be associated with.
+   * Label associated with the message's analytics data.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnalyticsLabel() {
@@ -46,7 +46,7 @@ public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Label that the message's analytics data will be associated with.
+   * Label associated with the message's analytics data.
    * @param analyticsLabel analyticsLabel or {@code null} for none
    */
   public ApnsFcmOptions setAnalyticsLabel(java.lang.String analyticsLabel) {

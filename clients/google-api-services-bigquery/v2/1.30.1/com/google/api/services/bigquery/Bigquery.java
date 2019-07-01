@@ -2489,17 +2489,24 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The maximum number of results per page. */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of results per page.
+      /** The maximum number of results to return in a single response page. Leverage the page tokens to
+     iterate through the entire collection.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of results per page. */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -3643,17 +3650,24 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** The maximum number of results per page. */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The maximum number of results per page.
+      /** The maximum number of results to return in a single response page. Leverage the page tokens to
+     iterate through the entire collection.
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** The maximum number of results per page. */
+      /**
+       * The maximum number of results to return in a single response page. Leverage the page tokens
+       * to iterate through the entire collection.
+       */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;

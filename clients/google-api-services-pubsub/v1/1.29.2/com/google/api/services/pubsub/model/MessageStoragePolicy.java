@@ -30,22 +30,20 @@ package com.google.api.services.pubsub.model;
 public final class MessageStoragePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of GCP region IDs where messages that are published to the topic may be persisted in
+   * A list of IDs of GCP regions where messages that are published to the topic may be persisted in
    * storage. Messages published by publishers running in non-allowed GCP regions (or running
    * outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty
-   * list indicates a misconfiguration at the project or organization level, which will result in
-   * all Publish operations failing.
+   * list means that no regions are allowed, and is not a valid configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedPersistenceRegions;
 
   /**
-   * The list of GCP region IDs where messages that are published to the topic may be persisted in
+   * A list of IDs of GCP regions where messages that are published to the topic may be persisted in
    * storage. Messages published by publishers running in non-allowed GCP regions (or running
    * outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty
-   * list indicates a misconfiguration at the project or organization level, which will result in
-   * all Publish operations failing.
+   * list means that no regions are allowed, and is not a valid configuration.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedPersistenceRegions() {
@@ -53,11 +51,10 @@ public final class MessageStoragePolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * The list of GCP region IDs where messages that are published to the topic may be persisted in
+   * A list of IDs of GCP regions where messages that are published to the topic may be persisted in
    * storage. Messages published by publishers running in non-allowed GCP regions (or running
    * outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty
-   * list indicates a misconfiguration at the project or organization level, which will result in
-   * all Publish operations failing.
+   * list means that no regions are allowed, and is not a valid configuration.
    * @param allowedPersistenceRegions allowedPersistenceRegions or {@code null} for none
    */
   public MessageStoragePolicy setAllowedPersistenceRegions(java.util.List<java.lang.String> allowedPersistenceRegions) {

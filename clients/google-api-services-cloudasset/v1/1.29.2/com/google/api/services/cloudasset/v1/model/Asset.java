@@ -56,6 +56,14 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Representation of the Cloud Organization Policy set on an asset. For each asset, there could be
+   * multiple Organization policies with different constraints.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy;
+
+  /**
    * Representation of the resource.
    * The value may be {@code null}.
    */
@@ -118,6 +126,25 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Representation of the Cloud Organization Policy set on an asset. For each asset, there could be
+   * multiple Organization policies with different constraints.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudOrgpolicyV1Policy> getOrgPolicy() {
+    return orgPolicy;
+  }
+
+  /**
+   * Representation of the Cloud Organization Policy set on an asset. For each asset, there could be
+   * multiple Organization policies with different constraints.
+   * @param orgPolicy orgPolicy or {@code null} for none
+   */
+  public Asset setOrgPolicy(java.util.List<GoogleCloudOrgpolicyV1Policy> orgPolicy) {
+    this.orgPolicy = orgPolicy;
     return this;
   }
 

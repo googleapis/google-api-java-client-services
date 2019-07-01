@@ -133,20 +133,20 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * Supported options are:
    *
-   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
-   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
-   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized`_`base`_`compensation": By job's
+   * * `"relevance desc"`: By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * `"posting_publish_time
+   * desc"`: By Job.posting_publish_time descending. * `"posting_update_time desc"`: By
+   * Job.posting_update_time descending. * `"title"`: By Job.title ascending. * `"title desc"`: By
+   * Job.title descending. * `"annualized_base_compensation"`: By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`base`_`compensation desc": By job's
+   * `"annualized_base_compensation desc"`: By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation": By job's
+   * `"annualized_total_compensation"`: By job's
    * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation desc": By job's
+   * `"annualized_total_compensation desc"`: By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results.
    * The value may be {@code null}.
@@ -179,8 +179,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Required.
    *
    * The meta information collected about the job searcher, used to improve the search quality of
-   * the service.. The identifiers, (such as `user_id`) are provided by users, and must be unique
-   * and consistent.
+   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
+   * consistent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,20 +429,20 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * Supported options are:
    *
-   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
-   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
-   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized`_`base`_`compensation": By job's
+   * * `"relevance desc"`: By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * `"posting_publish_time
+   * desc"`: By Job.posting_publish_time descending. * `"posting_update_time desc"`: By
+   * Job.posting_update_time descending. * `"title"`: By Job.title ascending. * `"title desc"`: By
+   * Job.title descending. * `"annualized_base_compensation"`: By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`base`_`compensation desc": By job's
+   * `"annualized_base_compensation desc"`: By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation": By job's
+   * `"annualized_total_compensation"`: By job's
    * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation desc": By job's
+   * `"annualized_total_compensation desc"`: By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results.
    * @return value or {@code null} for none
@@ -458,20 +458,20 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * Supported options are:
    *
-   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
-   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
-   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized`_`base`_`compensation": By job's
+   * * `"relevance desc"`: By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * `"posting_publish_time
+   * desc"`: By Job.posting_publish_time descending. * `"posting_update_time desc"`: By
+   * Job.posting_update_time descending. * `"title"`: By Job.title ascending. * `"title desc"`: By
+   * Job.title descending. * `"annualized_base_compensation"`: By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`base`_`compensation desc": By job's
+   * `"annualized_base_compensation desc"`: By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation": By job's
+   * `"annualized_total_compensation"`: By job's
    * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation desc": By job's
+   * `"annualized_total_compensation desc"`: By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results.
    * @param orderBy orderBy or {@code null} for none
@@ -533,8 +533,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Required.
    *
    * The meta information collected about the job searcher, used to improve the search quality of
-   * the service.. The identifiers, (such as `user_id`) are provided by users, and must be unique
-   * and consistent.
+   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
+   * consistent.
    * @return value or {@code null} for none
    */
   public RequestMetadata getRequestMetadata() {
@@ -545,8 +545,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Required.
    *
    * The meta information collected about the job searcher, used to improve the search quality of
-   * the service.. The identifiers, (such as `user_id`) are provided by users, and must be unique
-   * and consistent.
+   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
+   * consistent.
    * @param requestMetadata requestMetadata or {@code null} for none
    */
   public SearchJobsRequest setRequestMetadata(RequestMetadata requestMetadata) {

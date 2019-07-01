@@ -82,7 +82,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * Optional.
    *
    * Allows the client to return jobs without a set location, specifically, telecommuting jobs
-   * (telecomuting is considered by the service as a special location. Job.posting_region indicates
+   * (telecommuting is considered by the service as a special location. Job.posting_region indicates
    * if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
@@ -206,7 +206,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * Optional.
    *
    * Allows the client to return jobs without a set location, specifically, telecommuting jobs
-   * (telecomuting is considered by the service as a special location. Job.posting_region indicates
+   * (telecommuting is considered by the service as a special location. Job.posting_region indicates
    * if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
@@ -227,7 +227,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
    * Optional.
    *
    * Allows the client to return jobs without a set location, specifically, telecommuting jobs
-   * (telecomuting is considered by the service as a special location. Job.posting_region indicates
+   * (telecommuting is considered by the service as a special location. Job.posting_region indicates
    * if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,

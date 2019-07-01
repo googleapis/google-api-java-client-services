@@ -158,33 +158,34 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * Supported options are:
    *
-   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
-   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
-   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized`_`base`_`compensation": By job's
+   * * `"relevance desc"`: By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * `"posting_publish_time
+   * desc"`: By Job.posting_publish_time descending. * `"posting_update_time desc"`: By
+   * Job.posting_update_time descending. * `"title"`: By Job.title ascending. * `"title desc"`: By
+   * Job.title descending. * `"annualized_base_compensation"`: By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`base`_`compensation desc": By job's
+   * `"annualized_base_compensation desc"`: By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation": By job's
+   * `"annualized_total_compensation"`: By job's
    * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation desc": By job's
+   * `"annualized_total_compensation desc"`: By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
-   * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
+   * compensation is unspecified are put at the end of search results. * `"custom_ranking desc"`: By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
-   * descending order. * "location`_`distance": By the distance between the location on jobs and
-   * locations specified in the SearchJobsRequest.job_query.location_filters. When this order is
-   * selected, the SearchJobsRequest.job_query.location_filters must not be empty. When a job has
-   * multiple locations, the location closest to one of the locations specified in the location
-   * filter will be used to calculate location distance. Distance is calculated by the distance
-   * between two lat/long coordinates, with a precision of 10e-4 degrees (11.3 meters). Jobs that
-   * don't have locations specified will be ranked below jobs having locations. Diversification
-   * strategy is still applied unless explicitly disabled in
-   * SearchJobsRequest.diversification_level.
+   * descending order. * Location sorting: Use the special syntax to order jobs by distance:
+   * "`distance_from('Hawaii')`": Order by distance from Hawaii. "`distance_from(19.89, 155.5)`":
+   * Order by distance from a coordinate. "`distance_from('Hawaii'), distance_from('Puerto Rico')`":
+   * Order by multiple locations. See details below. "`distance_from('Hawaii'), distance_from(19.89,
+   * 155.5)`": Order by multiple locations. See details below. The string can have a maximum of 256
+   * characters. When multiple distance centers are provided, a job that is close to any of the
+   * distance centers would have a high rank. When a job has multiple locations, the job location
+   * closest to one of the distance centers will be used. Jobs that don't have locations will be
+   * ranked at the bottom. Distance is calculated with a precision of 11.3 meters (37.4 feet).
+   * Diversification strategy is still applied unless explicitly disabled in diversification_level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,8 +216,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Required.
    *
    * The meta information collected about the job searcher, used to improve the search quality of
-   * the service.. The identifiers, (such as `user_id`) are provided by users, and must be unique
-   * and consistent.
+   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
+   * consistent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -509,33 +510,34 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * Supported options are:
    *
-   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
-   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
-   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized`_`base`_`compensation": By job's
+   * * `"relevance desc"`: By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * `"posting_publish_time
+   * desc"`: By Job.posting_publish_time descending. * `"posting_update_time desc"`: By
+   * Job.posting_update_time descending. * `"title"`: By Job.title ascending. * `"title desc"`: By
+   * Job.title descending. * `"annualized_base_compensation"`: By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`base`_`compensation desc": By job's
+   * `"annualized_base_compensation desc"`: By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation": By job's
+   * `"annualized_total_compensation"`: By job's
    * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation desc": By job's
+   * `"annualized_total_compensation desc"`: By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
-   * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
+   * compensation is unspecified are put at the end of search results. * `"custom_ranking desc"`: By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
-   * descending order. * "location`_`distance": By the distance between the location on jobs and
-   * locations specified in the SearchJobsRequest.job_query.location_filters. When this order is
-   * selected, the SearchJobsRequest.job_query.location_filters must not be empty. When a job has
-   * multiple locations, the location closest to one of the locations specified in the location
-   * filter will be used to calculate location distance. Distance is calculated by the distance
-   * between two lat/long coordinates, with a precision of 10e-4 degrees (11.3 meters). Jobs that
-   * don't have locations specified will be ranked below jobs having locations. Diversification
-   * strategy is still applied unless explicitly disabled in
-   * SearchJobsRequest.diversification_level.
+   * descending order. * Location sorting: Use the special syntax to order jobs by distance:
+   * "`distance_from('Hawaii')`": Order by distance from Hawaii. "`distance_from(19.89, 155.5)`":
+   * Order by distance from a coordinate. "`distance_from('Hawaii'), distance_from('Puerto Rico')`":
+   * Order by multiple locations. See details below. "`distance_from('Hawaii'), distance_from(19.89,
+   * 155.5)`": Order by multiple locations. See details below. The string can have a maximum of 256
+   * characters. When multiple distance centers are provided, a job that is close to any of the
+   * distance centers would have a high rank. When a job has multiple locations, the job location
+   * closest to one of the distance centers will be used. Jobs that don't have locations will be
+   * ranked at the bottom. Distance is calculated with a precision of 11.3 meters (37.4 feet).
+   * Diversification strategy is still applied unless explicitly disabled in diversification_level.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -549,33 +551,34 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    *
    * Supported options are:
    *
-   * * "relevance desc": By relevance descending, as determined by the API algorithms. Relevance
-   * thresholding of query results is only available with this ordering. * "posting`_`publish`_`time
-   * desc": By Job.posting_publish_time descending. * "posting`_`update`_`time desc": By
-   * Job.posting_update_time descending. * "title": By Job.title ascending. * "title desc": By
-   * Job.title descending. * "annualized`_`base`_`compensation": By job's
+   * * `"relevance desc"`: By relevance descending, as determined by the API algorithms. Relevance
+   * thresholding of query results is only available with this ordering. * `"posting_publish_time
+   * desc"`: By Job.posting_publish_time descending. * `"posting_update_time desc"`: By
+   * Job.posting_update_time descending. * `"title"`: By Job.title ascending. * `"title desc"`: By
+   * Job.title descending. * `"annualized_base_compensation"`: By job's
    * CompensationInfo.annualized_base_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`base`_`compensation desc": By job's
+   * `"annualized_base_compensation desc"`: By job's
    * CompensationInfo.annualized_base_compensation_range descending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation": By job's
+   * `"annualized_total_compensation"`: By job's
    * CompensationInfo.annualized_total_compensation_range ascending. Jobs whose annualized base
    * compensation is unspecified are put at the end of search results. *
-   * "annualized`_`total`_`compensation desc": By job's
+   * `"annualized_total_compensation desc"`: By job's
    * CompensationInfo.annualized_total_compensation_range descending. Jobs whose annualized base
-   * compensation is unspecified are put at the end of search results. * "custom`_`ranking desc": By
+   * compensation is unspecified are put at the end of search results. * `"custom_ranking desc"`: By
    * the relevance score adjusted to the SearchJobsRequest.custom_ranking_info.ranking_expression
    * with weight factor assigned by SearchJobsRequest.custom_ranking_info.importance_level in
-   * descending order. * "location`_`distance": By the distance between the location on jobs and
-   * locations specified in the SearchJobsRequest.job_query.location_filters. When this order is
-   * selected, the SearchJobsRequest.job_query.location_filters must not be empty. When a job has
-   * multiple locations, the location closest to one of the locations specified in the location
-   * filter will be used to calculate location distance. Distance is calculated by the distance
-   * between two lat/long coordinates, with a precision of 10e-4 degrees (11.3 meters). Jobs that
-   * don't have locations specified will be ranked below jobs having locations. Diversification
-   * strategy is still applied unless explicitly disabled in
-   * SearchJobsRequest.diversification_level.
+   * descending order. * Location sorting: Use the special syntax to order jobs by distance:
+   * "`distance_from('Hawaii')`": Order by distance from Hawaii. "`distance_from(19.89, 155.5)`":
+   * Order by distance from a coordinate. "`distance_from('Hawaii'), distance_from('Puerto Rico')`":
+   * Order by multiple locations. See details below. "`distance_from('Hawaii'), distance_from(19.89,
+   * 155.5)`": Order by multiple locations. See details below. The string can have a maximum of 256
+   * characters. When multiple distance centers are provided, a job that is close to any of the
+   * distance centers would have a high rank. When a job has multiple locations, the job location
+   * closest to one of the distance centers will be used. Jobs that don't have locations will be
+   * ranked at the bottom. Distance is calculated with a precision of 11.3 meters (37.4 feet).
+   * Diversification strategy is still applied unless explicitly disabled in diversification_level.
    * @param orderBy orderBy or {@code null} for none
    */
   public SearchJobsRequest setOrderBy(java.lang.String orderBy) {
@@ -635,8 +638,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Required.
    *
    * The meta information collected about the job searcher, used to improve the search quality of
-   * the service.. The identifiers, (such as `user_id`) are provided by users, and must be unique
-   * and consistent.
+   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
+   * consistent.
    * @return value or {@code null} for none
    */
   public RequestMetadata getRequestMetadata() {
@@ -647,8 +650,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
    * Required.
    *
    * The meta information collected about the job searcher, used to improve the search quality of
-   * the service.. The identifiers, (such as `user_id`) are provided by users, and must be unique
-   * and consistent.
+   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
+   * consistent.
    * @param requestMetadata requestMetadata or {@code null} for none
    */
   public SearchJobsRequest setRequestMetadata(RequestMetadata requestMetadata) {

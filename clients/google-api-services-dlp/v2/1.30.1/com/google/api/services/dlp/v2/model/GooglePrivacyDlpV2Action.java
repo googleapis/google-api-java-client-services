@@ -46,6 +46,13 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
   private GooglePrivacyDlpV2PublishToPubSub pubSub;
 
   /**
+   * Publish findings to Cloud Datahub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog;
+
+  /**
    * Publish summary to Cloud Security Command Center (Alpha).
    * The value may be {@code null}.
    */
@@ -90,6 +97,23 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
    */
   public GooglePrivacyDlpV2Action setPubSub(GooglePrivacyDlpV2PublishToPubSub pubSub) {
     this.pubSub = pubSub;
+    return this;
+  }
+
+  /**
+   * Publish findings to Cloud Datahub.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog getPublishFindingsToCloudDataCatalog() {
+    return publishFindingsToCloudDataCatalog;
+  }
+
+  /**
+   * Publish findings to Cloud Datahub.
+   * @param publishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Action setPublishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog publishFindingsToCloudDataCatalog) {
+    this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
     return this;
   }
 

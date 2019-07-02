@@ -7160,6 +7160,216 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DLP dlp = new DLP(...);}
+     *   {@code DLP.Locations.List request = dlp.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Content collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.Content.List request = dlp.content().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Content content() {
+        return new Content();
+      }
+
+      /**
+       * The "content" collection of methods.
+       */
+      public class Content {
+
+        /**
+         * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
+         * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
+         *
+         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
+         * choose what detectors to run. By default this may be all types, but may change over time as
+         * detectors are updated.
+         *
+         * Create a request for the method "content.deidentify".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param location The geographic location to process de-identification. Reserved for future
+        extensions.
+         * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
+         * @return the request
+         */
+        public Deidentify deidentify(java.lang.String parent, java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) throws java.io.IOException {
+          Deidentify result = new Deidentify(parent, location, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Deidentify extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/locations/{location}/content:deidentify";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+          /**
+           * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
+           * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
+           * more.
+           *
+           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
+           * automatically choose what detectors to run. By default this may be all types, but may change
+           * over time as detectors are updated.
+           *
+           * Create a request for the method "content.deidentify".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name, for example projects/my-project-id.
+           * @param location The geographic location to process de-identification. Reserved for future
+        extensions.
+           * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
+           * @since 1.13
+           */
+          protected Deidentify(java.lang.String parent, java.lang.String location, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) {
+            super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          }
+
+          @Override
+          public Deidentify set$Xgafv(java.lang.String $Xgafv) {
+            return (Deidentify) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Deidentify setAccessToken(java.lang.String accessToken) {
+            return (Deidentify) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Deidentify setAlt(java.lang.String alt) {
+            return (Deidentify) super.setAlt(alt);
+          }
+
+          @Override
+          public Deidentify setCallback(java.lang.String callback) {
+            return (Deidentify) super.setCallback(callback);
+          }
+
+          @Override
+          public Deidentify setFields(java.lang.String fields) {
+            return (Deidentify) super.setFields(fields);
+          }
+
+          @Override
+          public Deidentify setKey(java.lang.String key) {
+            return (Deidentify) super.setKey(key);
+          }
+
+          @Override
+          public Deidentify setOauthToken(java.lang.String oauthToken) {
+            return (Deidentify) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Deidentify setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Deidentify) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Deidentify setQuotaUser(java.lang.String quotaUser) {
+            return (Deidentify) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Deidentify setUploadType(java.lang.String uploadType) {
+            return (Deidentify) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Deidentify setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Deidentify) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The parent resource name, for example projects/my-project-id. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name, for example projects/my-project-id.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** The parent resource name, for example projects/my-project-id. */
+          public Deidentify setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The geographic location to process de-identification. Reserved for future extensions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The geographic location to process de-identification. Reserved for future extensions.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * The geographic location to process de-identification. Reserved for future extensions.
+           */
+          public Deidentify setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          @Override
+          public Deidentify set(String parameterName, Object value) {
+            return (Deidentify) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the StoredInfoTypes collection.
      *
      * <p>The typical use is:</p>

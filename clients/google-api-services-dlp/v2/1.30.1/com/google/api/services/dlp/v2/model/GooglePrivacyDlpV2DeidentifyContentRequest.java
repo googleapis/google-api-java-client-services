@@ -74,6 +74,13 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
   private GooglePrivacyDlpV2ContentItem item;
 
   /**
+   * The geographic location to process de-identification. Reserved for future extensions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Configuration for the de-identification of the content item. Items specified here will override
    * the template referenced by the deidentify_template_name argument.
    * @return value or {@code null} for none
@@ -171,6 +178,23 @@ public final class GooglePrivacyDlpV2DeidentifyContentRequest extends com.google
    */
   public GooglePrivacyDlpV2DeidentifyContentRequest setItem(GooglePrivacyDlpV2ContentItem item) {
     this.item = item;
+    return this;
+  }
+
+  /**
+   * The geographic location to process de-identification. Reserved for future extensions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The geographic location to process de-identification. Reserved for future extensions.
+   * @param location location or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DeidentifyContentRequest setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

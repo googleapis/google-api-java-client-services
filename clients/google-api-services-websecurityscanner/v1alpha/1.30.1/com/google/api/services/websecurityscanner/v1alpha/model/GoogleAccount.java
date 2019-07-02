@@ -31,7 +31,7 @@ package com.google.api.services.websecurityscanner.v1alpha.model;
 public final class GoogleAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. Required. The password of the Google account. The credential is stored encrypted
+   * Required. Input only. The password of the Google account. The credential is stored encrypted
    * and not returned in any response nor included in audit logs.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleAccount extends com.google.api.client.json.GenericJson 
   private java.lang.String username;
 
   /**
-   * Input only. Required. The password of the Google account. The credential is stored encrypted
+   * Required. Input only. The password of the Google account. The credential is stored encrypted
    * and not returned in any response nor included in audit logs.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class GoogleAccount extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Input only. Required. The password of the Google account. The credential is stored encrypted
+   * Required. Input only. The password of the Google account. The credential is stored encrypted
    * and not returned in any response nor included in audit logs.
    * @param password password or {@code null} for none
    */

@@ -38,7 +38,7 @@ public final class CustomAccount extends com.google.api.client.json.GenericJson 
   private java.lang.String loginUrl;
 
   /**
-   * Input only. Required. The password of the custom account. The credential is stored encrypted
+   * Required. Input only. The password of the custom account. The credential is stored encrypted
    * and not returned in any response nor included in audit logs.
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class CustomAccount extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Input only. Required. The password of the custom account. The credential is stored encrypted
+   * Required. Input only. The password of the custom account. The credential is stored encrypted
    * and not returned in any response nor included in audit logs.
    * @return value or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class CustomAccount extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Input only. Required. The password of the custom account. The credential is stored encrypted
+   * Required. Input only. The password of the custom account. The credential is stored encrypted
    * and not returned in any response nor included in audit logs.
    * @param password password or {@code null} for none
    */

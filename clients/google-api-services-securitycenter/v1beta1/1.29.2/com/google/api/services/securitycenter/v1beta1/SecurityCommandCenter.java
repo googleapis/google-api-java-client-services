@@ -828,28 +828,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
 
         /**
-         * Optional.
-         *
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
+         * Optional. A field mask to specify the ListAssetsResult fields to be listed in the
+         * response. An empty field mask will list all fields.
          */
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /** Optional.
-
-       A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
-       mask will list all fields.
+        /** Optional. A field mask to specify the ListAssetsResult fields to be listed in the response. An
+       empty field mask will list all fields.
          */
         public String getFieldMask() {
           return fieldMask;
         }
 
         /**
-         * Optional.
-         *
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
+         * Optional. A field mask to specify the ListAssetsResult fields to be listed in the
+         * response. An empty field mask will list all fields.
          */
         public List setFieldMask(String fieldMask) {
           this.fieldMask = fieldMask;
@@ -3616,28 +3610,22 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
 
           /**
-           * Optional.
-           *
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
+           * Optional. A field mask to specify the Finding fields to be listed in the response. An
+           * empty field mask will list all fields.
            */
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /** Optional.
-
-         A field mask to specify the Finding fields to be listed in the response. An empty field mask will
-         list all fields.
+          /** Optional. A field mask to specify the Finding fields to be listed in the response. An empty field
+         mask will list all fields.
            */
           public String getFieldMask() {
             return fieldMask;
           }
 
           /**
-           * Optional.
-           *
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
+           * Optional. A field mask to specify the Finding fields to be listed in the response. An
+           * empty field mask will list all fields.
            */
           public List setFieldMask(String fieldMask) {
             this.fieldMask = fieldMask;

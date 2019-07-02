@@ -34,8 +34,10 @@ public final class PageProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The color scheme of the page. If unset, the color scheme is inherited from a parent page. If
-   * the page has no parent, the color scheme uses a default Slides color scheme. This field is
-   * read-only.
+   * the page has no parent, the color scheme uses a default Slides color scheme, matching the
+   * defaults in the Slides editor. Only the concrete colors of the first 12 ThemeColorTypes are
+   * editable. To update the field, a color scheme containing mappings from all the first 12
+   * ThemeColorTypes to their concrete colors must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +54,10 @@ public final class PageProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The color scheme of the page. If unset, the color scheme is inherited from a parent page. If
-   * the page has no parent, the color scheme uses a default Slides color scheme. This field is
-   * read-only.
+   * the page has no parent, the color scheme uses a default Slides color scheme, matching the
+   * defaults in the Slides editor. Only the concrete colors of the first 12 ThemeColorTypes are
+   * editable. To update the field, a color scheme containing mappings from all the first 12
+   * ThemeColorTypes to their concrete colors must be provided.
    * @return value or {@code null} for none
    */
   public ColorScheme getColorScheme() {
@@ -62,8 +66,10 @@ public final class PageProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The color scheme of the page. If unset, the color scheme is inherited from a parent page. If
-   * the page has no parent, the color scheme uses a default Slides color scheme. This field is
-   * read-only.
+   * the page has no parent, the color scheme uses a default Slides color scheme, matching the
+   * defaults in the Slides editor. Only the concrete colors of the first 12 ThemeColorTypes are
+   * editable. To update the field, a color scheme containing mappings from all the first 12
+   * ThemeColorTypes to their concrete colors must be provided.
    * @param colorScheme colorScheme or {@code null} for none
    */
   public PageProperties setColorScheme(ColorScheme colorScheme) {

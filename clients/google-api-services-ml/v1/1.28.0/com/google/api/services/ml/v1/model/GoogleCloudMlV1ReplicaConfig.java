@@ -48,6 +48,14 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
   private java.lang.String imageUri;
 
   /**
+   * TensorFlow version used in the custom container. This field is required if the replica is a TPU
+   * worker that uses a custom container. Otherwise, do not specify this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tpuTfVersion;
+
+  /**
    * Represents the type and number of accelerators used by the replica. [Learn about restrictions
    * on accelerator configurations for training.](/ml-engine/docs/tensorflow/using-gpus#compute-
    * engine-machine-types-with-gpu)
@@ -84,6 +92,25 @@ public final class GoogleCloudMlV1ReplicaConfig extends com.google.api.client.js
    */
   public GoogleCloudMlV1ReplicaConfig setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * TensorFlow version used in the custom container. This field is required if the replica is a TPU
+   * worker that uses a custom container. Otherwise, do not specify this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTpuTfVersion() {
+    return tpuTfVersion;
+  }
+
+  /**
+   * TensorFlow version used in the custom container. This field is required if the replica is a TPU
+   * worker that uses a custom container. Otherwise, do not specify this field.
+   * @param tpuTfVersion tpuTfVersion or {@code null} for none
+   */
+  public GoogleCloudMlV1ReplicaConfig setTpuTfVersion(java.lang.String tpuTfVersion) {
+    this.tpuTfVersion = tpuTfVersion;
     return this;
   }
 

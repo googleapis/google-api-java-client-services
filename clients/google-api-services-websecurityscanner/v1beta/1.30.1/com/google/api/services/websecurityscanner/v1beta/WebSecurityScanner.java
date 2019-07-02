@@ -170,8 +170,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the websecurityscanner server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required.
-      The parent resource name where the scan is created, which should be a
+       * @param parent Required. The parent resource name where the scan is created, which should be a
       project resource
        *        name in the format 'projects/{projectId}'.
        * @param content the {@link com.google.api.services.websecurityscanner.v1beta.model.ScanConfig}
@@ -201,8 +200,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required.
-      The parent resource name where the scan is created, which should be a
+         * @param parent Required. The parent resource name where the scan is created, which should be a
       project resource
        *        name in the format 'projects/{projectId}'.
          * @param content the {@link com.google.api.services.websecurityscanner.v1beta.model.ScanConfig}
@@ -314,8 +312,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the websecurityscanner server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required.
-      The resource name of the ScanConfig to be deleted. The name follows the
+       * @param name Required. The resource name of the ScanConfig to be deleted. The name follows the
       format of
        *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
        * @return the request
@@ -344,8 +341,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required.
-      The resource name of the ScanConfig to be deleted. The name follows the
+         * @param name Required. The resource name of the ScanConfig to be deleted. The name follows the
       format of
        *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
          * @since 1.13
@@ -456,8 +452,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the websecurityscanner server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required.
-      The resource name of the ScanConfig to be returned. The name follows the
+       * @param name Required. The resource name of the ScanConfig to be returned. The name follows the
       format of
        *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
        * @return the request
@@ -486,8 +481,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required.
-      The resource name of the ScanConfig to be returned. The name follows the
+         * @param name Required. The resource name of the ScanConfig to be returned. The name follows the
       format of
        *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
          * @since 1.13
@@ -608,8 +602,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the websecurityscanner server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required.
-      The parent resource name, which should be a project resource name in the
+       * @param parent Required. The parent resource name, which should be a project resource name in the
       format
        *        'projects/{projectId}'.
        * @return the request
@@ -638,8 +631,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required.
-      The parent resource name, which should be a project resource name in the
+         * @param parent Required. The parent resource name, which should be a project resource name in the
       format
        *        'projects/{projectId}'.
          * @since 1.13
@@ -977,8 +969,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the websecurityscanner server.  After setting any
        * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
        *
-       * @param name Required.
-      The resource name of the ScanConfig to be used. The name follows the
+       * @param name Required. The resource name of the ScanConfig to be used. The name follows the
       format of
        *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
        * @param content the {@link com.google.api.services.websecurityscanner.v1beta.model.StartScanRunRequest}
@@ -1008,8 +999,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required.
-      The resource name of the ScanConfig to be used. The name follows the
+         * @param name Required. The resource name of the ScanConfig to be used. The name follows the
       format of
        *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
          * @param content the {@link com.google.api.services.websecurityscanner.v1beta.model.StartScanRunRequest}
@@ -1142,8 +1132,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the websecurityscanner server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The resource name of the ScanRun to be returned. The name follows the
+         * @param name Required. The resource name of the ScanRun to be returned. The name follows the
         format of
          *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
          * @return the request
@@ -1172,8 +1161,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The resource name of the ScanRun to be returned. The name follows the
+           * @param name Required. The resource name of the ScanRun to be returned. The name follows the
         format of
          *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
            * @since 1.13
@@ -1294,8 +1282,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the websecurityscanner server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required.
-        The parent resource name, which should be a scan resource name in the
+         * @param parent Required. The parent resource name, which should be a scan resource name in the
         format
          *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
          * @return the request
@@ -1324,8 +1311,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required.
-        The parent resource name, which should be a scan resource name in the
+           * @param parent Required. The parent resource name, which should be a scan resource name in the
         format
          *        'projects/{projectId}/scanConfigs/{scanConfigId}'.
            * @since 1.13
@@ -1494,8 +1480,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the websecurityscanner server.  After setting any
          * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation.
          *
-         * @param name Required.
-        The resource name of the ScanRun to be stopped. The name follows the
+         * @param name Required. The resource name of the ScanRun to be stopped. The name follows the
         format of
          *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
          * @param content the {@link com.google.api.services.websecurityscanner.v1beta.model.StopScanRunRequest}
@@ -1525,8 +1510,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required.
-        The resource name of the ScanRun to be stopped. The name follows the
+           * @param name Required. The resource name of the ScanRun to be stopped. The name follows the
         format of
          *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
            * @param content the {@link com.google.api.services.websecurityscanner.v1beta.model.StopScanRunRequest}
@@ -1659,8 +1643,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the websecurityscanner server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required.
-          The parent resource name, which should be a scan run resource name in the
+           * @param parent Required. The parent resource name, which should be a scan run resource name in the
           format
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
            * @return the request
@@ -1689,8 +1672,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required.
-          The parent resource name, which should be a scan run resource name in the
+             * @param parent Required. The parent resource name, which should be a scan run resource name in the
           format
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
              * @since 1.13
@@ -1881,8 +1863,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the websecurityscanner server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required.
-          The parent resource name, which should be a scan run resource name in the
+           * @param parent Required. The parent resource name, which should be a scan run resource name in the
           format
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
            * @return the request
@@ -1911,8 +1892,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required.
-          The parent resource name, which should be a scan run resource name in the
+             * @param parent Required. The parent resource name, which should be a scan run resource name in the
           format
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
              * @since 1.13
@@ -2055,8 +2035,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the websecurityscanner server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required.
-          The resource name of the Finding to be returned. The name follows the
+           * @param name Required. The resource name of the Finding to be returned. The name follows the
           format of
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}
            *        '.
@@ -2086,8 +2065,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required.
-          The resource name of the Finding to be returned. The name follows the
+             * @param name Required. The resource name of the Finding to be returned. The name follows the
           format of
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}/findings/{findingId}
            *        '.
@@ -2211,8 +2189,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the websecurityscanner server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required.
-          The parent resource name, which should be a scan run resource name in the
+           * @param parent Required. The parent resource name, which should be a scan run resource name in the
           format
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
            * @return the request
@@ -2241,8 +2218,7 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required.
-          The parent resource name, which should be a scan run resource name in the
+             * @param parent Required. The parent resource name, which should be a scan run resource name in the
           format
            *        'projects/{projectId}/scanConfigs/{scanConfigId}/scanRuns/{scanRunId}'.
              * @since 1.13

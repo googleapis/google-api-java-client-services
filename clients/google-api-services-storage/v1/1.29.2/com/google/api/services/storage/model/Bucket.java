@@ -959,6 +959,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     private BucketPolicyOnly bucketPolicyOnly;
 
     /**
+     * The bucket's uniform bucket-level access configuration.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private UniformBucketLevelAccess uniformBucketLevelAccess;
+
+    /**
      * The bucket's Bucket Policy Only configuration.
      * @return value or {@code null} for none
      */
@@ -972,6 +979,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
      */
     public IamConfiguration setBucketPolicyOnly(BucketPolicyOnly bucketPolicyOnly) {
       this.bucketPolicyOnly = bucketPolicyOnly;
+      return this;
+    }
+
+    /**
+     * The bucket's uniform bucket-level access configuration.
+     * @return value or {@code null} for none
+     */
+    public UniformBucketLevelAccess getUniformBucketLevelAccess() {
+      return uniformBucketLevelAccess;
+    }
+
+    /**
+     * The bucket's uniform bucket-level access configuration.
+     * @param uniformBucketLevelAccess uniformBucketLevelAccess or {@code null} for none
+     */
+    public IamConfiguration setUniformBucketLevelAccess(UniformBucketLevelAccess uniformBucketLevelAccess) {
+      this.uniformBucketLevelAccess = uniformBucketLevelAccess;
       return this;
     }
 
@@ -991,23 +1015,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     public static final class BucketPolicyOnly extends com.google.api.client.json.GenericJson {
 
       /**
-       * If set, access checks only use bucket-level IAM policies or above.
+       * If set, access is controlled only by bucket-level or above IAM policies.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean enabled;
 
       /**
-       * The deadline time for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in
-       * RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false
-       * until the locked time, after which the field is immutable.
+       * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC
+       * 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until
+       * the locked time, after which the field is immutable.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
       private com.google.api.client.util.DateTime lockedTime;
 
       /**
-       * If set, access checks only use bucket-level IAM policies or above.
+       * If set, access is controlled only by bucket-level or above IAM policies.
        * @return value or {@code null} for none
        */
       public java.lang.Boolean getEnabled() {
@@ -1015,7 +1039,7 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * If set, access checks only use bucket-level IAM policies or above.
+       * If set, access is controlled only by bucket-level or above IAM policies.
        * @param enabled enabled or {@code null} for none
        */
       public BucketPolicyOnly setEnabled(java.lang.Boolean enabled) {
@@ -1024,9 +1048,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The deadline time for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in
-       * RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false
-       * until the locked time, after which the field is immutable.
+       * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC
+       * 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until
+       * the locked time, after which the field is immutable.
        * @return value or {@code null} for none
        */
       public com.google.api.client.util.DateTime getLockedTime() {
@@ -1034,9 +1058,9 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * The deadline time for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in
-       * RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false
-       * until the locked time, after which the field is immutable.
+       * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC
+       * 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until
+       * the locked time, after which the field is immutable.
        * @param lockedTime lockedTime or {@code null} for none
        */
       public BucketPolicyOnly setLockedTime(com.google.api.client.util.DateTime lockedTime) {
@@ -1052,6 +1076,76 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       @Override
       public BucketPolicyOnly clone() {
         return (BucketPolicyOnly) super.clone();
+      }
+
+    }
+    /**
+     * The bucket's uniform bucket-level access configuration.
+     */
+    public static final class UniformBucketLevelAccess extends com.google.api.client.json.GenericJson {
+
+      /**
+       * If set, access is controlled only by bucket-level or above IAM policies.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enabled;
+
+      /**
+       * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false
+       * in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true
+       * to false until the locked time, after which the field is immutable.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private com.google.api.client.util.DateTime lockedTime;
+
+      /**
+       * If set, access is controlled only by bucket-level or above IAM policies.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getEnabled() {
+        return enabled;
+      }
+
+      /**
+       * If set, access is controlled only by bucket-level or above IAM policies.
+       * @param enabled enabled or {@code null} for none
+       */
+      public UniformBucketLevelAccess setEnabled(java.lang.Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+      }
+
+      /**
+       * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false
+       * in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true
+       * to false until the locked time, after which the field is immutable.
+       * @return value or {@code null} for none
+       */
+      public com.google.api.client.util.DateTime getLockedTime() {
+        return lockedTime;
+      }
+
+      /**
+       * The deadline for changing iamConfiguration.uniformBucketLevelAccess.enabled from true to false
+       * in RFC 3339  format. iamConfiguration.uniformBucketLevelAccess.enabled may be changed from true
+       * to false until the locked time, after which the field is immutable.
+       * @param lockedTime lockedTime or {@code null} for none
+       */
+      public UniformBucketLevelAccess setLockedTime(com.google.api.client.util.DateTime lockedTime) {
+        this.lockedTime = lockedTime;
+        return this;
+      }
+
+      @Override
+      public UniformBucketLevelAccess set(String fieldName, Object value) {
+        return (UniformBucketLevelAccess) super.set(fieldName, value);
+      }
+
+      @Override
+      public UniformBucketLevelAccess clone() {
+        return (UniformBucketLevelAccess) super.clone();
       }
 
     }

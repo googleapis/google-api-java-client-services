@@ -42,6 +42,13 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadat
   private java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions;
 
   /**
+   * The location of the node, if different from instance location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The id of the node. This should be equal to SaasInstanceNode.node_id.
    * The value may be {@code null}.
    */
@@ -68,6 +75,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadat
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata setExclusions(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1SloExclusion> exclusions) {
     this.exclusions = exclusions;
+    return this;
+  }
+
+  /**
+   * The location of the node, if different from instance location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The location of the node, if different from instance location.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

@@ -1201,8 +1201,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the file server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only.
-        The resource name of the instance, in the format
+         * @param name Output only. The resource name of the instance, in the format
          *        projects/{project_id}/locations/{location_id}/instances/{instance_id}.
          * @param content the {@link com.google.api.services.file.v1.model.Instance}
          * @return the request
@@ -1230,8 +1229,7 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only.
-        The resource name of the instance, in the format
+           * @param name Output only. The resource name of the instance, in the format
          *        projects/{project_id}/locations/{location_id}/instances/{instance_id}.
            * @param content the {@link com.google.api.services.file.v1.model.Instance}
            * @since 1.13

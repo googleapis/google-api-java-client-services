@@ -89,8 +89,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
   private java.lang.Long endTimeMillis;
 
   /**
-   * DO NOT POPULATE THIS FIELD. As data quality standards are deprecated, filling it in will result
-   * in no data sources being returned. It will be removed in a future version entirely.
+   * DO NOT POPULATE THIS FIELD. It is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +228,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * DO NOT POPULATE THIS FIELD. As data quality standards are deprecated, filling it in will result
-   * in no data sources being returned. It will be removed in a future version entirely.
+   * DO NOT POPULATE THIS FIELD. It is ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFilteredDataQualityStandard() {
@@ -238,8 +236,7 @@ public final class AggregateRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * DO NOT POPULATE THIS FIELD. As data quality standards are deprecated, filling it in will result
-   * in no data sources being returned. It will be removed in a future version entirely.
+   * DO NOT POPULATE THIS FIELD. It is ignored.
    * @param filteredDataQualityStandard filteredDataQualityStandard or {@code null} for none
    */
   public AggregateRequest setFilteredDataQualityStandard(java.util.List<java.lang.String> filteredDataQualityStandard) {

@@ -126,6 +126,20 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
   private java.util.List<StreamConfig> streamConfigs;
 
   /**
+   * Configuration of FHIR Subscription: https://www.hl7.org/fhir/subscription.html.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubscriptionConfig subscriptionConfig;
+
+  /**
+   * Configuration for how incoming FHIR resources will be validated against configured profiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ValidationConfig validationConfig;
+
+  /**
    * Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR
    * store creation. The default value is false, meaning that the API will enforce referential
    * integrity and fail the requests that will result in inconsistent state in the FHIR store. When
@@ -338,6 +352,40 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   public FhirStore setStreamConfigs(java.util.List<StreamConfig> streamConfigs) {
     this.streamConfigs = streamConfigs;
+    return this;
+  }
+
+  /**
+   * Configuration of FHIR Subscription: https://www.hl7.org/fhir/subscription.html.
+   * @return value or {@code null} for none
+   */
+  public SubscriptionConfig getSubscriptionConfig() {
+    return subscriptionConfig;
+  }
+
+  /**
+   * Configuration of FHIR Subscription: https://www.hl7.org/fhir/subscription.html.
+   * @param subscriptionConfig subscriptionConfig or {@code null} for none
+   */
+  public FhirStore setSubscriptionConfig(SubscriptionConfig subscriptionConfig) {
+    this.subscriptionConfig = subscriptionConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for how incoming FHIR resources will be validated against configured profiles.
+   * @return value or {@code null} for none
+   */
+  public ValidationConfig getValidationConfig() {
+    return validationConfig;
+  }
+
+  /**
+   * Configuration for how incoming FHIR resources will be validated against configured profiles.
+   * @param validationConfig validationConfig or {@code null} for none
+   */
+  public FhirStore setValidationConfig(ValidationConfig validationConfig) {
+    this.validationConfig = validationConfig;
     return this;
   }
 

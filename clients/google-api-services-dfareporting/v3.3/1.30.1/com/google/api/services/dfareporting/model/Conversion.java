@@ -47,8 +47,9 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The alphanumeric encrypted user ID. When set, encryptionInfo should also be specified. This
-   * field is mutually exclusive with encryptedUserIdCandidates[], mobileDeviceId and gclid. This or
-   * encryptedUserIdCandidates[] or mobileDeviceId or gclid is a required field.
+   * field is mutually exclusive with encryptedUserIdCandidates[], matchId, mobileDeviceId and
+   * gclid. This or encryptedUserIdCandidates[] or matchId or mobileDeviceId or gclid is a required
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +60,9 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * conversion timestamp will be used in the inserted conversion. If no such user ID is found then
    * the conversion will be rejected with NO_COOKIE_MATCH_FOUND error. When set, encryptionInfo
    * should also be specified. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, mobileDeviceId
-   * and gclid. This or encryptedUserId or mobileDeviceId or gclid is a required field.
+   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId,
+   * mobileDeviceId and gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a
+   * required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +84,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google click ID. This field is mutually exclusive with encryptedUserId,
-   * encryptedUserIdCandidates[] and mobileDeviceId. This or encryptedUserId or
-   * encryptedUserIdCandidates[] or mobileDeviceId is a required field.
+   * encryptedUserIdCandidates[], matchId and mobileDeviceId. This or encryptedUserId or
+   * encryptedUserIdCandidates[] or matchId or mobileDeviceId is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +107,19 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean limitAdTracking;
 
   /**
+   * The match ID field. A match ID is your own first-party identifier that has been synced with
+   * Google using the match ID feature in Floodlight. This field is mutually exclusive with
+   * encryptedUserId, encryptedUserIdCandidates[],mobileDeviceId and gclid. This or encryptedUserId
+   * or encryptedUserIdCandidates[] or mobileDeviceId or gclid is a required field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matchId;
+
+  /**
    * The mobile device ID. This field is mutually exclusive with encryptedUserId,
-   * encryptedUserIdCandidates[] and gclid. This or encryptedUserId or encryptedUserIdCandidates[]
-   * or gclid is a required field.
+   * encryptedUserIdCandidates[], matchId and gclid. This or encryptedUserId or
+   * encryptedUserIdCandidates[] or matchId or gclid is a required field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,8 +207,9 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The alphanumeric encrypted user ID. When set, encryptionInfo should also be specified. This
-   * field is mutually exclusive with encryptedUserIdCandidates[], mobileDeviceId and gclid. This or
-   * encryptedUserIdCandidates[] or mobileDeviceId or gclid is a required field.
+   * field is mutually exclusive with encryptedUserIdCandidates[], matchId, mobileDeviceId and
+   * gclid. This or encryptedUserIdCandidates[] or matchId or mobileDeviceId or gclid is a required
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryptedUserId() {
@@ -205,8 +218,9 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The alphanumeric encrypted user ID. When set, encryptionInfo should also be specified. This
-   * field is mutually exclusive with encryptedUserIdCandidates[], mobileDeviceId and gclid. This or
-   * encryptedUserIdCandidates[] or mobileDeviceId or gclid is a required field.
+   * field is mutually exclusive with encryptedUserIdCandidates[], matchId, mobileDeviceId and
+   * gclid. This or encryptedUserIdCandidates[] or matchId or mobileDeviceId or gclid is a required
+   * field.
    * @param encryptedUserId encryptedUserId or {@code null} for none
    */
   public Conversion setEncryptedUserId(java.lang.String encryptedUserId) {
@@ -219,8 +233,9 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * conversion timestamp will be used in the inserted conversion. If no such user ID is found then
    * the conversion will be rejected with NO_COOKIE_MATCH_FOUND error. When set, encryptionInfo
    * should also be specified. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, mobileDeviceId
-   * and gclid. This or encryptedUserId or mobileDeviceId or gclid is a required field.
+   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId,
+   * mobileDeviceId and gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a
+   * required field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEncryptedUserIdCandidates() {
@@ -232,8 +247,9 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
    * conversion timestamp will be used in the inserted conversion. If no such user ID is found then
    * the conversion will be rejected with NO_COOKIE_MATCH_FOUND error. When set, encryptionInfo
    * should also be specified. This field may only be used when calling batchinsert; it is not
-   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, mobileDeviceId
-   * and gclid. This or encryptedUserId or mobileDeviceId or gclid is a required field.
+   * supported by batchupdate. This field is mutually exclusive with encryptedUserId, matchId,
+   * mobileDeviceId and gclid. This or encryptedUserId or matchId or mobileDeviceId or gclid is a
+   * required field.
    * @param encryptedUserIdCandidates encryptedUserIdCandidates or {@code null} for none
    */
   public Conversion setEncryptedUserIdCandidates(java.util.List<java.lang.String> encryptedUserIdCandidates) {
@@ -277,8 +293,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google click ID. This field is mutually exclusive with encryptedUserId,
-   * encryptedUserIdCandidates[] and mobileDeviceId. This or encryptedUserId or
-   * encryptedUserIdCandidates[] or mobileDeviceId is a required field.
+   * encryptedUserIdCandidates[], matchId and mobileDeviceId. This or encryptedUserId or
+   * encryptedUserIdCandidates[] or matchId or mobileDeviceId is a required field.
    * @return value or {@code null} for none
    */
   public java.lang.String getGclid() {
@@ -287,8 +303,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The Google click ID. This field is mutually exclusive with encryptedUserId,
-   * encryptedUserIdCandidates[] and mobileDeviceId. This or encryptedUserId or
-   * encryptedUserIdCandidates[] or mobileDeviceId is a required field.
+   * encryptedUserIdCandidates[], matchId and mobileDeviceId. This or encryptedUserId or
+   * encryptedUserIdCandidates[] or matchId or mobileDeviceId is a required field.
    * @param gclid gclid or {@code null} for none
    */
   public Conversion setGclid(java.lang.String gclid) {
@@ -333,9 +349,32 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The match ID field. A match ID is your own first-party identifier that has been synced with
+   * Google using the match ID feature in Floodlight. This field is mutually exclusive with
+   * encryptedUserId, encryptedUserIdCandidates[],mobileDeviceId and gclid. This or encryptedUserId
+   * or encryptedUserIdCandidates[] or mobileDeviceId or gclid is a required field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatchId() {
+    return matchId;
+  }
+
+  /**
+   * The match ID field. A match ID is your own first-party identifier that has been synced with
+   * Google using the match ID feature in Floodlight. This field is mutually exclusive with
+   * encryptedUserId, encryptedUserIdCandidates[],mobileDeviceId and gclid. This or encryptedUserId
+   * or encryptedUserIdCandidates[] or mobileDeviceId or gclid is a required field.
+   * @param matchId matchId or {@code null} for none
+   */
+  public Conversion setMatchId(java.lang.String matchId) {
+    this.matchId = matchId;
+    return this;
+  }
+
+  /**
    * The mobile device ID. This field is mutually exclusive with encryptedUserId,
-   * encryptedUserIdCandidates[] and gclid. This or encryptedUserId or encryptedUserIdCandidates[]
-   * or gclid is a required field.
+   * encryptedUserIdCandidates[], matchId and gclid. This or encryptedUserId or
+   * encryptedUserIdCandidates[] or matchId or gclid is a required field.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileDeviceId() {
@@ -344,8 +383,8 @@ public final class Conversion extends com.google.api.client.json.GenericJson {
 
   /**
    * The mobile device ID. This field is mutually exclusive with encryptedUserId,
-   * encryptedUserIdCandidates[] and gclid. This or encryptedUserId or encryptedUserIdCandidates[]
-   * or gclid is a required field.
+   * encryptedUserIdCandidates[], matchId and gclid. This or encryptedUserId or
+   * encryptedUserIdCandidates[] or matchId or gclid is a required field.
    * @param mobileDeviceId mobileDeviceId or {@code null} for none
    */
   public Conversion setMobileDeviceId(java.lang.String mobileDeviceId) {

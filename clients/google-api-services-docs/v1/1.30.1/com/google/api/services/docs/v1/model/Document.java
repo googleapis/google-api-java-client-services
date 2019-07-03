@@ -30,86 +30,87 @@ package com.google.api.services.docs.v1.model;
 public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * The main body of the document.
+   * Output only. The main body of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Body body;
 
   /**
-   * The ID of the document.
+   * Output only. The ID of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentId;
 
   /**
-   * The style of the document.
+   * Output only. The style of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DocumentStyle documentStyle;
 
   /**
-   * The footers in the document, keyed by footer ID.
+   * Output only. The footers in the document, keyed by footer ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Footer> footers;
 
   /**
-   * The footnotes in the document, keyed by footnote ID.
+   * Output only. The footnotes in the document, keyed by footnote ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Footnote> footnotes;
 
   /**
-   * The headers in the document, keyed by header ID.
+   * Output only. The headers in the document, keyed by header ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Header> headers;
 
   /**
-   * The inline objects in the document, keyed by object ID.
+   * Output only. The inline objects in the document, keyed by object ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, InlineObject> inlineObjects;
 
   /**
-   * The lists in the document, keyed by list ID.
+   * Output only. The lists in the document, keyed by list ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, List> lists;
 
   /**
-   * The named ranges in the document, keyed by name.
+   * Output only. The named ranges in the document, keyed by name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, NamedRanges> namedRanges;
 
   /**
-   * The named styles of the document.
+   * Output only. The named styles of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NamedStyles namedStyles;
 
   /**
-   * The positioned objects in the document, keyed by object ID.
+   * Output only. The positioned objects in the document, keyed by object ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, PositionedObject> positionedObjects;
 
   /**
-   * The revision ID of the document. Can be used in update requests to specify which revision of a
-   * document to apply updates to and how the request should behave if the document has been edited
-   * since that revision. Only populated if the user has edit access to the document.
+   * Output only. The revision ID of the document. Can be used in update requests to specify which
+   * revision of a document to apply updates to and how the request should behave if the document
+   * has been edited since that revision. Only populated if the user has edit access to the
+   * document.
    *
    * The format of the revision ID may change over time, so it should be treated opaquely. A
    * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
@@ -123,21 +124,21 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String revisionId;
 
   /**
-   * The suggested changes to the style of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the style of the document, keyed by suggestion ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, SuggestedDocumentStyle> suggestedDocumentStyleChanges;
 
   /**
-   * The suggested changes to the named styles of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the named styles of the document, keyed by suggestion ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges;
 
   /**
-   * The suggestions view mode applied to the document.
+   * Output only. The suggestions view mode applied to the document.
    *
    * Note: When editing a document, changes must be based on a document with SUGGESTIONS_INLINE.
    * The value may be {@code null}.
@@ -153,7 +154,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The main body of the document.
+   * Output only. The main body of the document.
    * @return value or {@code null} for none
    */
   public Body getBody() {
@@ -161,7 +162,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The main body of the document.
+   * Output only. The main body of the document.
    * @param body body or {@code null} for none
    */
   public Document setBody(Body body) {
@@ -170,7 +171,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the document.
+   * Output only. The ID of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentId() {
@@ -178,7 +179,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the document.
+   * Output only. The ID of the document.
    * @param documentId documentId or {@code null} for none
    */
   public Document setDocumentId(java.lang.String documentId) {
@@ -187,7 +188,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of the document.
+   * Output only. The style of the document.
    * @return value or {@code null} for none
    */
   public DocumentStyle getDocumentStyle() {
@@ -195,7 +196,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The style of the document.
+   * Output only. The style of the document.
    * @param documentStyle documentStyle or {@code null} for none
    */
   public Document setDocumentStyle(DocumentStyle documentStyle) {
@@ -204,7 +205,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The footers in the document, keyed by footer ID.
+   * Output only. The footers in the document, keyed by footer ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Footer> getFooters() {
@@ -212,7 +213,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The footers in the document, keyed by footer ID.
+   * Output only. The footers in the document, keyed by footer ID.
    * @param footers footers or {@code null} for none
    */
   public Document setFooters(java.util.Map<String, Footer> footers) {
@@ -221,7 +222,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The footnotes in the document, keyed by footnote ID.
+   * Output only. The footnotes in the document, keyed by footnote ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Footnote> getFootnotes() {
@@ -229,7 +230,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The footnotes in the document, keyed by footnote ID.
+   * Output only. The footnotes in the document, keyed by footnote ID.
    * @param footnotes footnotes or {@code null} for none
    */
   public Document setFootnotes(java.util.Map<String, Footnote> footnotes) {
@@ -238,7 +239,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The headers in the document, keyed by header ID.
+   * Output only. The headers in the document, keyed by header ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Header> getHeaders() {
@@ -246,7 +247,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The headers in the document, keyed by header ID.
+   * Output only. The headers in the document, keyed by header ID.
    * @param headers headers or {@code null} for none
    */
   public Document setHeaders(java.util.Map<String, Header> headers) {
@@ -255,7 +256,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The inline objects in the document, keyed by object ID.
+   * Output only. The inline objects in the document, keyed by object ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, InlineObject> getInlineObjects() {
@@ -263,7 +264,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The inline objects in the document, keyed by object ID.
+   * Output only. The inline objects in the document, keyed by object ID.
    * @param inlineObjects inlineObjects or {@code null} for none
    */
   public Document setInlineObjects(java.util.Map<String, InlineObject> inlineObjects) {
@@ -272,7 +273,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The lists in the document, keyed by list ID.
+   * Output only. The lists in the document, keyed by list ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, List> getLists() {
@@ -280,7 +281,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The lists in the document, keyed by list ID.
+   * Output only. The lists in the document, keyed by list ID.
    * @param lists lists or {@code null} for none
    */
   public Document setLists(java.util.Map<String, List> lists) {
@@ -289,7 +290,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named ranges in the document, keyed by name.
+   * Output only. The named ranges in the document, keyed by name.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, NamedRanges> getNamedRanges() {
@@ -297,7 +298,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named ranges in the document, keyed by name.
+   * Output only. The named ranges in the document, keyed by name.
    * @param namedRanges namedRanges or {@code null} for none
    */
   public Document setNamedRanges(java.util.Map<String, NamedRanges> namedRanges) {
@@ -306,7 +307,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named styles of the document.
+   * Output only. The named styles of the document.
    * @return value or {@code null} for none
    */
   public NamedStyles getNamedStyles() {
@@ -314,7 +315,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named styles of the document.
+   * Output only. The named styles of the document.
    * @param namedStyles namedStyles or {@code null} for none
    */
   public Document setNamedStyles(NamedStyles namedStyles) {
@@ -323,7 +324,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The positioned objects in the document, keyed by object ID.
+   * Output only. The positioned objects in the document, keyed by object ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, PositionedObject> getPositionedObjects() {
@@ -331,7 +332,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The positioned objects in the document, keyed by object ID.
+   * Output only. The positioned objects in the document, keyed by object ID.
    * @param positionedObjects positionedObjects or {@code null} for none
    */
   public Document setPositionedObjects(java.util.Map<String, PositionedObject> positionedObjects) {
@@ -340,9 +341,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision ID of the document. Can be used in update requests to specify which revision of a
-   * document to apply updates to and how the request should behave if the document has been edited
-   * since that revision. Only populated if the user has edit access to the document.
+   * Output only. The revision ID of the document. Can be used in update requests to specify which
+   * revision of a document to apply updates to and how the request should behave if the document
+   * has been edited since that revision. Only populated if the user has edit access to the
+   * document.
    *
    * The format of the revision ID may change over time, so it should be treated opaquely. A
    * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
@@ -357,9 +359,10 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The revision ID of the document. Can be used in update requests to specify which revision of a
-   * document to apply updates to and how the request should behave if the document has been edited
-   * since that revision. Only populated if the user has edit access to the document.
+   * Output only. The revision ID of the document. Can be used in update requests to specify which
+   * revision of a document to apply updates to and how the request should behave if the document
+   * has been edited since that revision. Only populated if the user has edit access to the
+   * document.
    *
    * The format of the revision ID may change over time, so it should be treated opaquely. A
    * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
@@ -375,7 +378,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested changes to the style of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the style of the document, keyed by suggestion ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, SuggestedDocumentStyle> getSuggestedDocumentStyleChanges() {
@@ -383,7 +386,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested changes to the style of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the style of the document, keyed by suggestion ID.
    * @param suggestedDocumentStyleChanges suggestedDocumentStyleChanges or {@code null} for none
    */
   public Document setSuggestedDocumentStyleChanges(java.util.Map<String, SuggestedDocumentStyle> suggestedDocumentStyleChanges) {
@@ -392,7 +395,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested changes to the named styles of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the named styles of the document, keyed by suggestion ID.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, SuggestedNamedStyles> getSuggestedNamedStylesChanges() {
@@ -400,7 +403,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggested changes to the named styles of the document, keyed by suggestion ID.
+   * Output only. The suggested changes to the named styles of the document, keyed by suggestion ID.
    * @param suggestedNamedStylesChanges suggestedNamedStylesChanges or {@code null} for none
    */
   public Document setSuggestedNamedStylesChanges(java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges) {
@@ -409,7 +412,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggestions view mode applied to the document.
+   * Output only. The suggestions view mode applied to the document.
    *
    * Note: When editing a document, changes must be based on a document with SUGGESTIONS_INLINE.
    * @return value or {@code null} for none
@@ -419,7 +422,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The suggestions view mode applied to the document.
+   * Output only. The suggestions view mode applied to the document.
    *
    * Note: When editing a document, changes must be based on a document with SUGGESTIONS_INLINE.
    * @param suggestionsViewMode suggestionsViewMode or {@code null} for none

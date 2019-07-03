@@ -38,7 +38,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String audioEncoding;
 
   /**
-   * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
+   * Optional. Input only. An identifier which selects 'audio effects' profiles that are applied on
    * (post synthesized) text to speech. Effects are applied on top of each other in the order they
    * are given. See [audio profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles)
    * for current supported profile ids.
@@ -48,7 +48,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> effectsProfileId;
 
   /**
-   * Input only. Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
+   * Optional. Input only. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
    * semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
    * The value may be {@code null}.
    */
@@ -68,7 +68,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Input only. Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
    * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
    * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
    * error.
@@ -78,7 +78,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Double speakingRate;
 
   /**
-   * Input only. Optional. Volume gain (in dB) of the normal native volume supported by the specific
+   * Optional. Input only. Volume gain (in dB) of the normal native volume supported by the specific
    * voice, in the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal
    * native signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of
    * the normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
@@ -107,7 +107,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
+   * Optional. Input only. An identifier which selects 'audio effects' profiles that are applied on
    * (post synthesized) text to speech. Effects are applied on top of each other in the order they
    * are given. See [audio profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles)
    * for current supported profile ids.
@@ -118,7 +118,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. An identifier which selects 'audio effects' profiles that are applied on
+   * Optional. Input only. An identifier which selects 'audio effects' profiles that are applied on
    * (post synthesized) text to speech. Effects are applied on top of each other in the order they
    * are given. See [audio profiles](https://cloud.google.com/text-to-speech/docs/audio-profiles)
    * for current supported profile ids.
@@ -130,7 +130,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
+   * Optional. Input only. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
    * semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
    * @return value or {@code null} for none
    */
@@ -139,7 +139,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
+   * Optional. Input only. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20
    * semitones from the original pitch. -20 means decrease 20 semitones from the original pitch.
    * @param pitch pitch or {@code null} for none
    */
@@ -176,7 +176,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
    * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
    * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
    * error.
@@ -187,7 +187,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
    * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
    * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
    * error.
@@ -199,7 +199,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Volume gain (in dB) of the normal native volume supported by the specific
+   * Optional. Input only. Volume gain (in dB) of the normal native volume supported by the specific
    * voice, in the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal
    * native signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of
    * the normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
@@ -212,7 +212,7 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Volume gain (in dB) of the normal native volume supported by the specific
+   * Optional. Input only. Volume gain (in dB) of the normal native volume supported by the specific
    * voice, in the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal
    * native signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of
    * the normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the

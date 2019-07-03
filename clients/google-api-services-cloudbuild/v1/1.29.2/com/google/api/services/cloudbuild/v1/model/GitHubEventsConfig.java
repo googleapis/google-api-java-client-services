@@ -40,14 +40,16 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   private java.lang.Long installationId;
 
   /**
-   * Name of the repository.
+   * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-
+   * builders is "cloud-builders".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Owner of the repository.
+   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
+   * /cloud-builders is "googlecloudplatform".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the repository.
+   * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-
+   * builders is "cloud-builders".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,7 +96,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the repository.
+   * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-
+   * builders is "cloud-builders".
    * @param name name or {@code null} for none
    */
   public GitHubEventsConfig setName(java.lang.String name) {
@@ -102,7 +106,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Owner of the repository.
+   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
+   * /cloud-builders is "googlecloudplatform".
    * @return value or {@code null} for none
    */
   public java.lang.String getOwner() {
@@ -110,7 +115,8 @@ public final class GitHubEventsConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Owner of the repository.
+   * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform
+   * /cloud-builders is "googlecloudplatform".
    * @param owner owner or {@code null} for none
    */
   public GitHubEventsConfig setOwner(java.lang.String owner) {

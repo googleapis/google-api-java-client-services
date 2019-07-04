@@ -17,7 +17,7 @@
 package com.google.api.services.cloudresourcemanager.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * Encapsulates settings provided to GetIamPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed
@@ -28,43 +28,43 @@ package com.google.api.services.cloudresourcemanager.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
+public final class GetPolicyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value
+   * is 0, or the field is omitted, policy format version 1 will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GetPolicyOptions options;
+  private java.lang.Integer requestedPolicyVersion;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
+   * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value
+   * is 0, or the field is omitted, policy format version 1 will be returned.
    * @return value or {@code null} for none
    */
-  public GetPolicyOptions getOptions() {
-    return options;
+  public java.lang.Integer getRequestedPolicyVersion() {
+    return requestedPolicyVersion;
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`. This field is
-   * only used by Cloud IAM.
-   * @param options options or {@code null} for none
+   * Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value
+   * is 0, or the field is omitted, policy format version 1 will be returned.
+   * @param requestedPolicyVersion requestedPolicyVersion or {@code null} for none
    */
-  public GetIamPolicyRequest setOptions(GetPolicyOptions options) {
-    this.options = options;
+  public GetPolicyOptions setRequestedPolicyVersion(java.lang.Integer requestedPolicyVersion) {
+    this.requestedPolicyVersion = requestedPolicyVersion;
     return this;
   }
 
   @Override
-  public GetIamPolicyRequest set(String fieldName, Object value) {
-    return (GetIamPolicyRequest) super.set(fieldName, value);
+  public GetPolicyOptions set(String fieldName, Object value) {
+    return (GetPolicyOptions) super.set(fieldName, value);
   }
 
   @Override
-  public GetIamPolicyRequest clone() {
-    return (GetIamPolicyRequest) super.clone();
+  public GetPolicyOptions clone() {
+    return (GetPolicyOptions) super.clone();
   }
 
 }

@@ -7465,27 +7465,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Multiple values can be specified
-       * with comma separation. Additionally, please note that active is a shortcut for
-       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
+       * Obtains orders that match any of the specified statuses. Please note that active is a
+       * shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
        * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> statuses;
 
-      /** Obtains orders that match any of the specified statuses. Multiple values can be specified with
-     comma separation. Additionally, please note that active is a shortcut for pendingShipment and
-     partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered, delivered,
-     partiallyReturned, returned, and canceled.
+      /** Obtains orders that match any of the specified statuses. Please note that active is a shortcut for
+     pendingShipment and partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered,
+     delivered, partiallyReturned, returned, and canceled.
        */
       public java.util.List<java.lang.String> getStatuses() {
         return statuses;
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Multiple values can be specified
-       * with comma separation. Additionally, please note that active is a shortcut for
-       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
+       * Obtains orders that match any of the specified statuses. Please note that active is a
+       * shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
        * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
        */
       public List setStatuses(java.util.List<java.lang.String> statuses) {
@@ -9425,6 +9422,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /** The Content API Supplemental Feed ID. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger feedId;
+
+      /** The Content API Supplemental Feed ID.
+       */
+      public java.math.BigInteger getFeedId() {
+        return feedId;
+      }
+
+      /** The Content API Supplemental Feed ID. */
+      public Delete setFeedId(java.math.BigInteger feedId) {
+        this.feedId = feedId;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -9665,6 +9678,22 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
        */
       public Insert setMerchantId(java.math.BigInteger merchantId) {
         this.merchantId = merchantId;
+        return this;
+      }
+
+      /** The Content API Supplemental Feed ID. */
+      @com.google.api.client.util.Key
+      private java.math.BigInteger feedId;
+
+      /** The Content API Supplemental Feed ID.
+       */
+      public java.math.BigInteger getFeedId() {
+        return feedId;
+      }
+
+      /** The Content API Supplemental Feed ID. */
+      public Insert setFeedId(java.math.BigInteger feedId) {
+        this.feedId = feedId;
         return this;
       }
 

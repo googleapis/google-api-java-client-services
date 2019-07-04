@@ -40,6 +40,13 @@ public final class InconclusiveDetail extends com.google.api.client.json.Generic
   private java.lang.Boolean abortedByUser;
 
   /**
+   * If results are being provided to the user in certain cases of infrastructure failures
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasErrorLogs;
+
+  /**
    * If the test runner could not determine success or failure because the test depends on a
    * component other than the system under test which failed.
    *
@@ -68,6 +75,23 @@ public final class InconclusiveDetail extends com.google.api.client.json.Generic
    */
   public InconclusiveDetail setAbortedByUser(java.lang.Boolean abortedByUser) {
     this.abortedByUser = abortedByUser;
+    return this;
+  }
+
+  /**
+   * If results are being provided to the user in certain cases of infrastructure failures
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasErrorLogs() {
+    return hasErrorLogs;
+  }
+
+  /**
+   * If results are being provided to the user in certain cases of infrastructure failures
+   * @param hasErrorLogs hasErrorLogs or {@code null} for none
+   */
+  public InconclusiveDetail setHasErrorLogs(java.lang.Boolean hasErrorLogs) {
+    this.hasErrorLogs = hasErrorLogs;
     return this;
   }
 

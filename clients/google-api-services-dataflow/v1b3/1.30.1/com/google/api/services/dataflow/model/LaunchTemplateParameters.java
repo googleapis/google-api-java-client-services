@@ -51,6 +51,22 @@ public final class LaunchTemplateParameters extends com.google.api.client.json.G
   private java.util.Map<String, java.lang.String> parameters;
 
   /**
+   * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be
+   * replaced to the corresponding name prefixes of the new job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> transformNameMapping;
+
+  /**
+   * If set, replace the existing pipeline with the name specified by jobName with this pipeline,
+   * preserving state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean update;
+
+  /**
    * The runtime environment for the job.
    * @return value or {@code null} for none
    */
@@ -98,6 +114,44 @@ public final class LaunchTemplateParameters extends com.google.api.client.json.G
    */
   public LaunchTemplateParameters setParameters(java.util.Map<String, java.lang.String> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be
+   * replaced to the corresponding name prefixes of the new job.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTransformNameMapping() {
+    return transformNameMapping;
+  }
+
+  /**
+   * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be
+   * replaced to the corresponding name prefixes of the new job.
+   * @param transformNameMapping transformNameMapping or {@code null} for none
+   */
+  public LaunchTemplateParameters setTransformNameMapping(java.util.Map<String, java.lang.String> transformNameMapping) {
+    this.transformNameMapping = transformNameMapping;
+    return this;
+  }
+
+  /**
+   * If set, replace the existing pipeline with the name specified by jobName with this pipeline,
+   * preserving state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpdate() {
+    return update;
+  }
+
+  /**
+   * If set, replace the existing pipeline with the name specified by jobName with this pipeline,
+   * preserving state.
+   * @param update update or {@code null} for none
+   */
+  public LaunchTemplateParameters setUpdate(java.lang.Boolean update) {
+    this.update = update;
     return this;
   }
 

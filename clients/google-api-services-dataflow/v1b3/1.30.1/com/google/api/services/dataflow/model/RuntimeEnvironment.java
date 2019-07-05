@@ -53,6 +53,14 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.lang.Boolean bypassTempDirValidation;
 
   /**
+   * Optional. Name for the Cloud KMS key for the job. Key format is:
+   * projects//locations//keyRings//cryptoKeys/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKeyName;
+
+  /**
    * The machine type to use for the job. Defaults to the value from the template if not specified.
    * The value may be {@code null}.
    */
@@ -165,6 +173,25 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setBypassTempDirValidation(java.lang.Boolean bypassTempDirValidation) {
     this.bypassTempDirValidation = bypassTempDirValidation;
+    return this;
+  }
+
+  /**
+   * Optional. Name for the Cloud KMS key for the job. Key format is:
+   * projects//locations//keyRings//cryptoKeys/
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKeyName() {
+    return kmsKeyName;
+  }
+
+  /**
+   * Optional. Name for the Cloud KMS key for the job. Key format is:
+   * projects//locations//keyRings//cryptoKeys/
+   * @param kmsKeyName kmsKeyName or {@code null} for none
+   */
+  public RuntimeEnvironment setKmsKeyName(java.lang.String kmsKeyName) {
+    this.kmsKeyName = kmsKeyName;
     return this;
   }
 

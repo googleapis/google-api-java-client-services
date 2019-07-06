@@ -55,7 +55,7 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://bigquery.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is

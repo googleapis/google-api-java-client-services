@@ -39,7 +39,7 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * The fully qualified resource name of the `sha-key`, in the format:
-   * projects/projectId/androidApps/appId/sha/shaHash
+   * projects/projectId/androidApps/appId/sha/shaId
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * The fully qualified resource name of the `sha-key`, in the format:
-   * projects/projectId/androidApps/appId/sha/shaHash
+   * projects/projectId/androidApps/appId/sha/shaId
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +80,7 @@ public final class ShaCertificate extends com.google.api.client.json.GenericJson
 
   /**
    * The fully qualified resource name of the `sha-key`, in the format:
-   * projects/projectId/androidApps/appId/sha/shaHash
+   * projects/projectId/androidApps/appId/sha/shaId
    * @param name name or {@code null} for none
    */
   public ShaCertificate setName(java.lang.String name) {

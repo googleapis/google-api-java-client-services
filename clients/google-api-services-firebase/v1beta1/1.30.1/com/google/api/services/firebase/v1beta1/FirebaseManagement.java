@@ -2603,7 +2603,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name The fully qualified resource name of the `sha-key`, in the format:
-         *        projects/projectId/androidApps/appId/sha/shaHash
+         *        projects/projectId/androidApps/appId/sha/shaId
+        You can obtain the full name from the
+         *        response of
+        [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+         *        [`CreateShaCertificate`](../projects.androidApps.sha/create).
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2631,7 +2635,11 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The fully qualified resource name of the `sha-key`, in the format:
-         *        projects/projectId/androidApps/appId/sha/shaHash
+         *        projects/projectId/androidApps/appId/sha/shaId
+        You can obtain the full name from the
+         *        response of
+        [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+         *        [`CreateShaCertificate`](../projects.androidApps.sha/create).
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2701,13 +2709,17 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The fully qualified resource name of the `sha-key`, in the format:
-           * projects/projectId/androidApps/appId/sha/shaHash
+           * projects/projectId/androidApps/appId/sha/shaId You can obtain the full name from the
+           * response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+           * [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The fully qualified resource name of the `sha-key`, in the format:
-         projects/projectId/androidApps/appId/sha/shaHash
+         projects/projectId/androidApps/appId/sha/shaId You can obtain the full name from the response of
+         [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+         [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           public java.lang.String getName() {
             return name;
@@ -2715,7 +2727,9 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
 
           /**
            * The fully qualified resource name of the `sha-key`, in the format:
-           * projects/projectId/androidApps/appId/sha/shaHash
+           * projects/projectId/androidApps/appId/sha/shaId You can obtain the full name from the
+           * response of [`ListShaCertificates`](../projects.androidApps.sha/list) or the original
+           * [`CreateShaCertificate`](../projects.androidApps.sha/create).
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

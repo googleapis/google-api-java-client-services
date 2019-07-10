@@ -38,7 +38,7 @@ public final class CreateRoleRequest extends com.google.api.client.json.GenericJ
   private Role role;
 
   /**
-   * The role id to use for this role.
+   * The role ID to use for this role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class CreateRoleRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The role id to use for this role.
+   * The role ID to use for this role.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoleId() {
@@ -70,7 +70,7 @@ public final class CreateRoleRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The role id to use for this role.
+   * The role ID to use for this role.
    * @param roleId roleId or {@code null} for none
    */
   public CreateRoleRequest setRoleId(java.lang.String roleId) {

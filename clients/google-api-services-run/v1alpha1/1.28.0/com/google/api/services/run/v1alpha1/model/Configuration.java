@@ -34,7 +34,7 @@ package com.google.api.services.run.v1alpha1.model;
 public final class Configuration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "v1alpha1".
+   * The API version for this call such as "serving.knative.dev/v1alpha1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
   private ConfigurationStatus status;
 
   /**
-   * The API version for this call such as "v1alpha1".
+   * The API version for this call such as "serving.knative.dev/v1alpha1".
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -78,7 +78,7 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The API version for this call such as "v1alpha1".
+   * The API version for this call such as "serving.knative.dev/v1alpha1".
    * @param apiVersion apiVersion or {@code null} for none
    */
   public Configuration setApiVersion(java.lang.String apiVersion) {

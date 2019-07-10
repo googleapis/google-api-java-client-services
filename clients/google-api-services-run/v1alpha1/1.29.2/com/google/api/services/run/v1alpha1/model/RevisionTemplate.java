@@ -32,7 +32,11 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
-   * by the Configuration.
+   * by the Configuration. To set minimum instances for this revision, use the
+   * "autoscaling.knative.dev/minScale" annotation key. (Cloud Run on GKE only). To set maximum
+   * instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set
+   * Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances"
+   * annotation key. Values should be comma separated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +51,11 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
-   * by the Configuration.
+   * by the Configuration. To set minimum instances for this revision, use the
+   * "autoscaling.knative.dev/minScale" annotation key. (Cloud Run on GKE only). To set maximum
+   * instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set
+   * Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances"
+   * annotation key. Values should be comma separated.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -56,7 +64,11 @@ public final class RevisionTemplate extends com.google.api.client.json.GenericJs
 
   /**
    * Optional metadata for this Revision, including labels and annotations. Name will be generated
-   * by the Configuration.
+   * by the Configuration. To set minimum instances for this revision, use the
+   * "autoscaling.knative.dev/minScale" annotation key. (Cloud Run on GKE only). To set maximum
+   * instances for this revision, use the "autoscaling.knative.dev/maxScale" annotation key. To set
+   * Cloud SQL connections for the revision, use the "run.googleapis.com/cloudsql-instances"
+   * annotation key. Values should be comma separated.
    * @param metadata metadata or {@code null} for none
    */
   public RevisionTemplate setMetadata(ObjectMeta metadata) {

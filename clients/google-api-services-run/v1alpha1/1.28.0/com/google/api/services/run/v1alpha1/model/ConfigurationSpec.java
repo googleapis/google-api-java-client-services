@@ -55,8 +55,7 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   private RevisionTemplate revisionTemplate;
 
   /**
-   * Template holds the latest specification for the Revision to be stamped out. Not currently
-   * supported by Cloud Run.
+   * Template holds the latest specification for the Revision to be stamped out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +118,7 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Template holds the latest specification for the Revision to be stamped out. Not currently
-   * supported by Cloud Run.
+   * Template holds the latest specification for the Revision to be stamped out.
    * @return value or {@code null} for none
    */
   public RevisionTemplate getTemplate() {
@@ -128,8 +126,7 @@ public final class ConfigurationSpec extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Template holds the latest specification for the Revision to be stamped out. Not currently
-   * supported by Cloud Run.
+   * Template holds the latest specification for the Revision to be stamped out.
    * @param template template or {@code null} for none
    */
   public ConfigurationSpec setTemplate(RevisionTemplate template) {

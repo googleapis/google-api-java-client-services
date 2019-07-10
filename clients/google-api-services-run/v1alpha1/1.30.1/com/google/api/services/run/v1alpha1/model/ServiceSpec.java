@@ -79,8 +79,6 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Template holds the latest specification for the Revision to be stamped out.
-   *
-   * Not currently supported by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,10 +86,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
-   * Configurations. This will replace existing service specs (ServiceSpecRunLatest,
-   * ServiceSpecPinnedType, ServiceSpecReleaseType, and ServiceSpecManualType).
-   *
-   * Not currently supported by Cloud Run.
+   * Configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,8 +203,6 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Template holds the latest specification for the Revision to be stamped out.
-   *
-   * Not currently supported by Cloud Run.
    * @return value or {@code null} for none
    */
   public RevisionTemplate getTemplate() {
@@ -218,8 +211,6 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Template holds the latest specification for the Revision to be stamped out.
-   *
-   * Not currently supported by Cloud Run.
    * @param template template or {@code null} for none
    */
   public ServiceSpec setTemplate(RevisionTemplate template) {
@@ -229,10 +220,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
-   * Configurations. This will replace existing service specs (ServiceSpecRunLatest,
-   * ServiceSpecPinnedType, ServiceSpecReleaseType, and ServiceSpecManualType).
-   *
-   * Not currently supported by Cloud Run.
+   * Configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<TrafficTarget> getTraffic() {
@@ -241,10 +229,7 @@ public final class ServiceSpec extends com.google.api.client.json.GenericJson {
 
   /**
    * Traffic specifies how to distribute traffic over a collection of Knative Revisions and
-   * Configurations. This will replace existing service specs (ServiceSpecRunLatest,
-   * ServiceSpecPinnedType, ServiceSpecReleaseType, and ServiceSpecManualType).
-   *
-   * Not currently supported by Cloud Run.
+   * Configurations.
    * @param traffic traffic or {@code null} for none
    */
   public ServiceSpec setTraffic(java.util.List<TrafficTarget> traffic) {

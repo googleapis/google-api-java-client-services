@@ -39,6 +39,14 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   private CutoffTime cutoffTime;
 
   /**
+   * The business days during which orders can be handled. If not provided, Monday to Friday
+   * business days will be assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BusinessDayConfig handlingBusinessDayConfig;
+
+  /**
    * Holiday cutoff definitions. If configured, they specify order cutoff times for holiday-specific
    * shipping.
    * The value may be {@code null}.
@@ -72,7 +80,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not
+   * next day delivery. Either {min,max}TransitTimeInDays or transitTimeTable must be set, but not
    * both.
    * The value may be {@code null}.
    */
@@ -80,8 +88,16 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   private java.lang.Long minTransitTimeInDays;
 
   /**
+   * The business days during which orders can be in-transit. If not provided, Monday to Friday
+   * business days will be assumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BusinessDayConfig transitBusinessDayConfig;
+
+  /**
    * Transit time table, number of business days spent in transit based on row and column
-   * dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both.
+   * dimensions. Either {min,max}TransitTimeInDays or transitTimeTable can be set, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,6 +119,25 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
    */
   public DeliveryTime setCutoffTime(CutoffTime cutoffTime) {
     this.cutoffTime = cutoffTime;
+    return this;
+  }
+
+  /**
+   * The business days during which orders can be handled. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @return value or {@code null} for none
+   */
+  public BusinessDayConfig getHandlingBusinessDayConfig() {
+    return handlingBusinessDayConfig;
+  }
+
+  /**
+   * The business days during which orders can be handled. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @param handlingBusinessDayConfig handlingBusinessDayConfig or {@code null} for none
+   */
+  public DeliveryTime setHandlingBusinessDayConfig(BusinessDayConfig handlingBusinessDayConfig) {
+    this.handlingBusinessDayConfig = handlingBusinessDayConfig;
     return this;
   }
 
@@ -184,7 +219,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not
+   * next day delivery. Either {min,max}TransitTimeInDays or transitTimeTable must be set, but not
    * both.
    * @return value or {@code null} for none
    */
@@ -194,7 +229,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Either {min,max}transitTimeInDays or transitTimeTable must be set, but not
+   * next day delivery. Either {min,max}TransitTimeInDays or transitTimeTable must be set, but not
    * both.
    * @param minTransitTimeInDays minTransitTimeInDays or {@code null} for none
    */
@@ -204,8 +239,27 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The business days during which orders can be in-transit. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @return value or {@code null} for none
+   */
+  public BusinessDayConfig getTransitBusinessDayConfig() {
+    return transitBusinessDayConfig;
+  }
+
+  /**
+   * The business days during which orders can be in-transit. If not provided, Monday to Friday
+   * business days will be assumed.
+   * @param transitBusinessDayConfig transitBusinessDayConfig or {@code null} for none
+   */
+  public DeliveryTime setTransitBusinessDayConfig(BusinessDayConfig transitBusinessDayConfig) {
+    this.transitBusinessDayConfig = transitBusinessDayConfig;
+    return this;
+  }
+
+  /**
    * Transit time table, number of business days spent in transit based on row and column
-   * dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both.
+   * dimensions. Either {min,max}TransitTimeInDays or transitTimeTable can be set, but not both.
    * @return value or {@code null} for none
    */
   public TransitTable getTransitTimeTable() {
@@ -214,7 +268,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Transit time table, number of business days spent in transit based on row and column
-   * dimensions. Either {min,max}transitTimeInDays or transitTimeTable can be set, but not both.
+   * dimensions. Either {min,max}TransitTimeInDays or transitTimeTable can be set, but not both.
    * @param transitTimeTable transitTimeTable or {@code null} for none
    */
   public DeliveryTime setTransitTimeTable(TransitTable transitTimeTable) {

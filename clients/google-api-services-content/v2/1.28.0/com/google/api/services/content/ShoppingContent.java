@@ -9237,27 +9237,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Multiple values can be specified
-       * with comma separation. Additionally, please note that active is a shortcut for
-       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
+       * Obtains orders that match any of the specified statuses. Please note that active is a
+       * shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
        * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> statuses;
 
-      /** Obtains orders that match any of the specified statuses. Multiple values can be specified with
-     comma separation. Additionally, please note that active is a shortcut for pendingShipment and
-     partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered, delivered,
-     partiallyReturned, returned, and canceled.
+      /** Obtains orders that match any of the specified statuses. Please note that active is a shortcut for
+     pendingShipment and partiallyShipped, and completed is a shortcut for shipped, partiallyDelivered,
+     delivered, partiallyReturned, returned, and canceled.
        */
       public java.util.List<java.lang.String> getStatuses() {
         return statuses;
       }
 
       /**
-       * Obtains orders that match any of the specified statuses. Multiple values can be specified
-       * with comma separation. Additionally, please note that active is a shortcut for
-       * pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
+       * Obtains orders that match any of the specified statuses. Please note that active is a
+       * shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped,
        * partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
        */
       public List setStatuses(java.util.List<java.lang.String> statuses) {

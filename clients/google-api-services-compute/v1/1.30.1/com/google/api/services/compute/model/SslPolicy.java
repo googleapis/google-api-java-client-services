@@ -17,10 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * A SSL policy specifies the server-side support for SSL features. This can be attached to a
- * TargetHttpsProxy or a TargetSslProxy. This affects connections between clients and the HTTPS or
- * SSL proxy load balancer. They do not affect the connection between the load balancers and the
- * backends.
+ * Represents a Cloud Armor Security Policy resource.
+ *
+ * Only external backend services used by HTTP or HTTPS load balancers can reference a Security
+ * Policy. For more information, read read  Cloud Armor Security Policy Concepts. (== resource_for
+ * beta.sslPolicies ==) (== resource_for v1.sslPolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

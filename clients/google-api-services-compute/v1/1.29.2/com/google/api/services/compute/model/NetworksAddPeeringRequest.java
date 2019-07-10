@@ -31,7 +31,10 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
 
   /**
    * This field will be deprecated soon. Use exchange_subnet_routes in network_peering instead.
-   * Whether Google Compute Engine manages the routes automatically.
+   * Indicates whether full mesh connectivity is created and managed automatically between peered
+   * networks. Currently this field should always be true since Google Compute Engine will
+   * automatically create and manage subnetwork routes between two networks when peering state is
+   * ACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +68,10 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
 
   /**
    * This field will be deprecated soon. Use exchange_subnet_routes in network_peering instead.
-   * Whether Google Compute Engine manages the routes automatically.
+   * Indicates whether full mesh connectivity is created and managed automatically between peered
+   * networks. Currently this field should always be true since Google Compute Engine will
+   * automatically create and manage subnetwork routes between two networks when peering state is
+   * ACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateRoutes() {
@@ -74,7 +80,10 @@ public final class NetworksAddPeeringRequest extends com.google.api.client.json.
 
   /**
    * This field will be deprecated soon. Use exchange_subnet_routes in network_peering instead.
-   * Whether Google Compute Engine manages the routes automatically.
+   * Indicates whether full mesh connectivity is created and managed automatically between peered
+   * networks. Currently this field should always be true since Google Compute Engine will
+   * automatically create and manage subnetwork routes between two networks when peering state is
+   * ACTIVE.
    * @param autoCreateRoutes autoCreateRoutes or {@code null} for none
    */
   public NetworksAddPeeringRequest setAutoCreateRoutes(java.lang.Boolean autoCreateRoutes) {

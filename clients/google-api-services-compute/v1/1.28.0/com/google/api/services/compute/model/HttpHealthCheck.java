@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * An HttpHealthCheck resource. This resource defines a template for how individual instances should
- * be checked for health, via HTTP.
+ * Represents a legacy HTTP Health Check resource.
+ *
+ * Legacy health checks are required by network load balancers. For more information, read Health
+ * Check Concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -100,7 +102,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   private java.lang.Integer port;
 
   /**
-   * The request path of the HTTP health check request. The default value is /.
+   * The request path of the HTTP health check request. The default value is /. This field does not
+   * support query parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +298,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The request path of the HTTP health check request. The default value is /.
+   * The request path of the HTTP health check request. The default value is /. This field does not
+   * support query parameters.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestPath() {
@@ -303,7 +307,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The request path of the HTTP health check request. The default value is /.
+   * The request path of the HTTP health check request. The default value is /. This field does not
+   * support query parameters.
    * @param requestPath requestPath or {@code null} for none
    */
   public HttpHealthCheck setRequestPath(java.lang.String requestPath) {

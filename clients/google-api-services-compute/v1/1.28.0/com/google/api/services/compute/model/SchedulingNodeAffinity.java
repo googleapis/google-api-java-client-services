@@ -37,7 +37,8 @@ public final class SchedulingNodeAffinity extends com.google.api.client.json.Gen
   private java.lang.String key;
 
   /**
-   * Defines the operation of node selection.
+   * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for
+   * anti-affinity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class SchedulingNodeAffinity extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines the operation of node selection.
+   * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for
+   * anti-affinity.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperator() {
@@ -76,7 +78,8 @@ public final class SchedulingNodeAffinity extends com.google.api.client.json.Gen
   }
 
   /**
-   * Defines the operation of node selection.
+   * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for
+   * anti-affinity.
    * @param operator operator or {@code null} for none
    */
   public SchedulingNodeAffinity setOperator(java.lang.String operator) {

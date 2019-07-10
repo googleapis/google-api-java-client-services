@@ -42,7 +42,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean automaticRestart;
 
   /**
-   * A set of node affinity and anti-affinity.
+   * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
+   * more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +94,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of node affinity and anti-affinity.
+   * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
+   * more information.
    * @return value or {@code null} for none
    */
   public java.util.List<SchedulingNodeAffinity> getNodeAffinities() {
@@ -101,7 +103,8 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of node affinity and anti-affinity.
+   * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for
+   * more information.
    * @param nodeAffinities nodeAffinities or {@code null} for none
    */
   public Scheduling setNodeAffinities(java.util.List<SchedulingNodeAffinity> nodeAffinities) {

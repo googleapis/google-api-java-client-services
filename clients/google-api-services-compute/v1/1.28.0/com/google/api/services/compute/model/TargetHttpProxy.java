@@ -17,8 +17,12 @@
 package com.google.api.services.compute.model;
 
 /**
- * A TargetHttpProxy resource. This resource defines an HTTP proxy. (== resource_for
- * beta.targetHttpProxies ==) (== resource_for v1.targetHttpProxies ==)
+ * Represents a Target HTTP Proxy resource.
+ *
+ * A target HTTP proxy is a component of certain types of load balancers. Global forwarding rules
+ * reference a target HTTP proxy, and the target proxy then references a URL map. For more
+ * information, read Using Target Proxies. (== resource_for beta.targetHttpProxies ==) (==
+ * resource_for v1.targetHttpProxies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

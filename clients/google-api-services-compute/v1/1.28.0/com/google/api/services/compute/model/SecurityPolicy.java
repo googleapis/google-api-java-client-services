@@ -17,8 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * A security policy is comprised of one or more rules. It can also be associated with one or more
- * 'targets'. (== resource_for v1.securityPolicies ==) (== resource_for beta.securityPolicies ==)
+ * Represents a Cloud Armor Security Policy resource.
+ *
+ * Only external backend services that use load balancers can reference a Security Policy. For more
+ * information, read  Cloud Armor Security Policy Concepts. (== resource_for v1.securityPolicies ==)
+ * (== resource_for beta.securityPolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

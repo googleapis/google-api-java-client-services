@@ -17,8 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
- * A UrlMap resource. This resource defines the mapping from URL to the BackendService resource,
- * based on the "longest-match" of the URL's host and path.
+ * Represents a URL Map resource.
+ *
+ * A URL map resource is a component of certain types of load balancers. This resource defines
+ * mappings from host names and URL paths to either a backend service or a backend bucket.
+ *
+ * To use this resource, the backend service must have a loadBalancingScheme of either EXTERNAL,
+ * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED For more information, read URL Map Concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

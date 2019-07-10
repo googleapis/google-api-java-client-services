@@ -118,6 +118,16 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
   private java.lang.String givenName;
 
   /**
+   * Introductory price information of the subscription. This is only present when the subscription
+   * was purchased with an introductory price.
+   *
+   * This field does not indicate the subscription is currently in introductory price period.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IntroductoryPriceInfo introductoryPriceInfo;
+
+  /**
    * This kind represents a subscriptionPurchase object in the androidpublisher service.
    * The value may be {@code null}.
    */
@@ -425,6 +435,29 @@ public final class SubscriptionPurchase extends com.google.api.client.json.Gener
    */
   public SubscriptionPurchase setGivenName(java.lang.String givenName) {
     this.givenName = givenName;
+    return this;
+  }
+
+  /**
+   * Introductory price information of the subscription. This is only present when the subscription
+   * was purchased with an introductory price.
+   *
+   * This field does not indicate the subscription is currently in introductory price period.
+   * @return value or {@code null} for none
+   */
+  public IntroductoryPriceInfo getIntroductoryPriceInfo() {
+    return introductoryPriceInfo;
+  }
+
+  /**
+   * Introductory price information of the subscription. This is only present when the subscription
+   * was purchased with an introductory price.
+   *
+   * This field does not indicate the subscription is currently in introductory price period.
+   * @param introductoryPriceInfo introductoryPriceInfo or {@code null} for none
+   */
+  public SubscriptionPurchase setIntroductoryPriceInfo(IntroductoryPriceInfo introductoryPriceInfo) {
+    this.introductoryPriceInfo = introductoryPriceInfo;
     return this;
   }
 

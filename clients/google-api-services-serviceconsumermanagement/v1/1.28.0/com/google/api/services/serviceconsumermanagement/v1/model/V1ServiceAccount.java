@@ -38,8 +38,7 @@ public final class V1ServiceAccount extends com.google.api.client.json.GenericJs
   private java.lang.String email;
 
   /**
-   * The IAM resource name of the service account in the following format:
-   * projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}.
+   * Deprecated. See b/136209818.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +87,7 @@ public final class V1ServiceAccount extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The IAM resource name of the service account in the following format:
-   * projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}.
+   * Deprecated. See b/136209818.
    * @return value or {@code null} for none
    */
   public java.lang.String getIamAccountName() {
@@ -97,8 +95,7 @@ public final class V1ServiceAccount extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The IAM resource name of the service account in the following format:
-   * projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}.
+   * Deprecated. See b/136209818.
    * @param iamAccountName iamAccountName or {@code null} for none
    */
   public V1ServiceAccount setIamAccountName(java.lang.String iamAccountName) {

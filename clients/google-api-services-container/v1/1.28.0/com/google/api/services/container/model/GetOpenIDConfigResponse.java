@@ -32,6 +32,13 @@ package com.google.api.services.container.model;
 public final class GetOpenIDConfigResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpCacheControlResponseHeader cacheHeader;
+
+  /**
    * Supported claims.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class GetOpenIDConfigResponse extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key("subject_types_supported")
   private java.util.List<java.lang.String> subjectTypesSupported;
+
+  /**
+   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * @return value or {@code null} for none
+   */
+  public HttpCacheControlResponseHeader getCacheHeader() {
+    return cacheHeader;
+  }
+
+  /**
+   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * @param cacheHeader cacheHeader or {@code null} for none
+   */
+  public GetOpenIDConfigResponse setCacheHeader(HttpCacheControlResponseHeader cacheHeader) {
+    this.cacheHeader = cacheHeader;
+    return this;
+  }
 
   /**
    * Supported claims.

@@ -1738,17 +1738,17 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** Required.  Mask to control which fields get updated. Must be non-empty. */
+        /** Required. Mask to control which fields get updated. Must be non-empty. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required.  Mask to control which fields get updated. Must be non-empty.
+        /** Required. Mask to control which fields get updated. Must be non-empty.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** Required.  Mask to control which fields get updated. Must be non-empty. */
+        /** Required. Mask to control which fields get updated. Must be non-empty. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

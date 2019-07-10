@@ -33,20 +33,19 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
-   * whether full mesh connectivity is created and managed automatically. When it is set to true,
-   * Google Compute Engine will automatically create and manage the routes between two networks when
-   * the state is ACTIVE. Otherwise, user needs to create routes manually to route packets to peer
-   * network.
+   * whether full mesh connectivity is created and managed automatically between peered networks.
+   * Currently this field should always be true since Google Compute Engine will automatically
+   * create and manage subnetwork routes between two networks when peering state is ACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoCreateRoutes;
 
   /**
-   * Whether full mesh connectivity is created and managed automatically. When it is set to true,
-   * Google Compute Engine will automatically create and manage the routes between two networks when
-   * the peering state is ACTIVE. Otherwise, user needs to create routes manually to route packets
-   * to peer network.
+   * Indicates whether full mesh connectivity is created and managed automatically between peered
+   * networks. Currently this field should always be true since Google Compute Engine will
+   * automatically create and manage subnetwork routes between two networks when peering state is
+   * ACTIVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,10 +88,9 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
-   * whether full mesh connectivity is created and managed automatically. When it is set to true,
-   * Google Compute Engine will automatically create and manage the routes between two networks when
-   * the state is ACTIVE. Otherwise, user needs to create routes manually to route packets to peer
-   * network.
+   * whether full mesh connectivity is created and managed automatically between peered networks.
+   * Currently this field should always be true since Google Compute Engine will automatically
+   * create and manage subnetwork routes between two networks when peering state is ACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateRoutes() {
@@ -101,10 +99,9 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
 
   /**
    * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates
-   * whether full mesh connectivity is created and managed automatically. When it is set to true,
-   * Google Compute Engine will automatically create and manage the routes between two networks when
-   * the state is ACTIVE. Otherwise, user needs to create routes manually to route packets to peer
-   * network.
+   * whether full mesh connectivity is created and managed automatically between peered networks.
+   * Currently this field should always be true since Google Compute Engine will automatically
+   * create and manage subnetwork routes between two networks when peering state is ACTIVE.
    * @param autoCreateRoutes autoCreateRoutes or {@code null} for none
    */
   public NetworkPeering setAutoCreateRoutes(java.lang.Boolean autoCreateRoutes) {
@@ -113,10 +110,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether full mesh connectivity is created and managed automatically. When it is set to true,
-   * Google Compute Engine will automatically create and manage the routes between two networks when
-   * the peering state is ACTIVE. Otherwise, user needs to create routes manually to route packets
-   * to peer network.
+   * Indicates whether full mesh connectivity is created and managed automatically between peered
+   * networks. Currently this field should always be true since Google Compute Engine will
+   * automatically create and manage subnetwork routes between two networks when peering state is
+   * ACTIVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExchangeSubnetRoutes() {
@@ -124,10 +121,10 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether full mesh connectivity is created and managed automatically. When it is set to true,
-   * Google Compute Engine will automatically create and manage the routes between two networks when
-   * the peering state is ACTIVE. Otherwise, user needs to create routes manually to route packets
-   * to peer network.
+   * Indicates whether full mesh connectivity is created and managed automatically between peered
+   * networks. Currently this field should always be true since Google Compute Engine will
+   * automatically create and manage subnetwork routes between two networks when peering state is
+   * ACTIVE.
    * @param exchangeSubnetRoutes exchangeSubnetRoutes or {@code null} for none
    */
   public NetworkPeering setExchangeSubnetRoutes(java.lang.Boolean exchangeSubnetRoutes) {

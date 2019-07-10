@@ -17,8 +17,13 @@
 package com.google.api.services.compute.model;
 
 /**
- * An HealthCheck resource. This resource defines a template for how individual virtual machines
- * should be checked for health, via one of the supported protocols.
+ * Represents a Health Check resource.
+ *
+ * Health checks are used for most GCP load balancers and managed instance group auto-healing. For
+ * more information, read Health Check Concepts.
+ *
+ * To perform health checks on network load balancers, you must use either httpHealthChecks or
+ * httpsHealthChecks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

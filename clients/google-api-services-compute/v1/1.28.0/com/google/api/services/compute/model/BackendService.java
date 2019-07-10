@@ -17,8 +17,17 @@
 package com.google.api.services.compute.model;
 
 /**
- * A BackendService resource. This resource defines a group of backend virtual machines and their
- * serving capacity. (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)
+ * Represents a Backend Service resource.
+ *
+ * Backend services must have an associated health check. Backend services also store information
+ * about session affinity. For more information, read Backend Services.
+ *
+ * A backendServices resource represents a global backend service. Global backend services are used
+ * for HTTP(S), SSL Proxy, TCP Proxy load balancing and Traffic Director.
+ *
+ * A regionBackendServices resource represents a regional backend service. Regional backend services
+ * are used for internal TCP/UDP load balancing. For more information, read Internal TCP/UDP Load
+ * balancing. (== resource_for v1.backendService ==) (== resource_for beta.backendService ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,11 +40,8 @@ package com.google.api.services.compute.model;
 public final class BackendService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie
-   * is non-persistent and lasts only until the end of the browser session (or equivalent). The
-   * maximum allowed value for TTL is one day.
-   *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
+   * (or equivalent). The maximum allowed value is one day (86,400).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +95,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * If true, enable Cloud CDN for this BackendService.
-   *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme
+   * is EXTERNAL and the protocol is HTTP or HTTPS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,17 +170,19 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80.
    *
-   * This cannot be used for internal load balancing.
+   * This cannot be used if the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * Name of backend port. The same name should appear in the instance groups referenced by this
-   * service. Required when the load balancing scheme is EXTERNAL.
+   * A named port on a backend instance group representing the port for communication to the backend
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL and the backends are
+   * instance groups. The named port must be defined on each backend instance group. This parameter
+   * has no meaning if the backends are NEGs.
    *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,9 +191,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, TCP, and SSL. The default is HTTP.
-   *
-   * For internal load balancing, the possible values are TCP and UDP, and the default is TCP.
+   * Possible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or
+   * Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic
+   * director for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,33 +223,33 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * Type of session affinity to use. The default is NONE.
+   * Type of session affinity to use. The default is NONE. Session affinity is not applicable if the
+   * --protocol is UDP.
    *
-   * When the load balancing scheme is EXTERNAL, can be NONE, CLIENT_IP, or GENERATED_COOKIE.
+   * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
+   * GENERATED_COOKIE. GENERATED_COOKIE is only available if the protocol is HTTP or HTTPS.
    *
-   * When the load balancing scheme is INTERNAL, can be NONE, CLIENT_IP, CLIENT_IP_PROTO, or
-   * CLIENT_IP_PORT_PROTO.
+   * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
+   * or CLIENT_IP_PORT_PROTO.
    *
-   * When the protocol is UDP, this field is not used.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
+   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionAffinity;
 
   /**
-   * How many seconds to wait for the backend before considering it a failed request. Default is 30
-   * seconds.
+   * The backend service timeout has a different meaning depending on the type of load balancer. For
+   * more information read,  Backend service settings The default is 30 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSec;
 
   /**
-   * Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie
-   * is non-persistent and lasts only until the end of the browser session (or equivalent). The
-   * maximum allowed value for TTL is one day.
-   *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
+   * (or equivalent). The maximum allowed value is one day (86,400).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAffinityCookieTtlSec() {
@@ -250,11 +257,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie
-   * is non-persistent and lasts only until the end of the browser session (or equivalent). The
-   * maximum allowed value for TTL is one day.
-   *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
+   * (or equivalent). The maximum allowed value is one day (86,400).
    * @param affinityCookieTtlSec affinityCookieTtlSec or {@code null} for none
    */
   public BackendService setAffinityCookieTtlSec(java.lang.Integer affinityCookieTtlSec) {
@@ -363,9 +367,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, enable Cloud CDN for this BackendService.
-   *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme
+   * is EXTERNAL and the protocol is HTTP or HTTPS.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableCDN() {
@@ -373,9 +376,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If true, enable Cloud CDN for this BackendService.
-   *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * If true, enables Cloud CDN for the backend service. Only applicable if the loadBalancingScheme
+   * is EXTERNAL and the protocol is HTTP or HTTPS.
    * @param enableCDN enableCDN or {@code null} for none
    */
   public BackendService setEnableCDN(java.lang.Boolean enableCDN) {
@@ -574,7 +576,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80.
    *
-   * This cannot be used for internal load balancing.
+   * This cannot be used if the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -585,7 +587,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80.
    *
-   * This cannot be used for internal load balancing.
+   * This cannot be used if the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * @param port port or {@code null} for none
    */
   public BackendService setPort(java.lang.Integer port) {
@@ -594,10 +596,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Name of backend port. The same name should appear in the instance groups referenced by this
-   * service. Required when the load balancing scheme is EXTERNAL.
+   * A named port on a backend instance group representing the port for communication to the backend
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL and the backends are
+   * instance groups. The named port must be defined on each backend instance group. This parameter
+   * has no meaning if the backends are NEGs.
    *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
    * @return value or {@code null} for none
    */
   public java.lang.String getPortName() {
@@ -605,10 +609,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Name of backend port. The same name should appear in the instance groups referenced by this
-   * service. Required when the load balancing scheme is EXTERNAL.
+   * A named port on a backend instance group representing the port for communication to the backend
+   * VMs in that group. Required when the loadBalancingScheme is EXTERNAL and the backends are
+   * instance groups. The named port must be defined on each backend instance group. This parameter
+   * has no meaning if the backends are NEGs.
    *
-   * When the load balancing scheme is INTERNAL, this field is not used.
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
    * @param portName portName or {@code null} for none
    */
   public BackendService setPortName(java.lang.String portName) {
@@ -619,9 +625,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, TCP, and SSL. The default is HTTP.
-   *
-   * For internal load balancing, the possible values are TCP and UDP, and the default is TCP.
+   * Possible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or
+   * Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic
+   * director for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -631,9 +637,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, TCP, and SSL. The default is HTTP.
-   *
-   * For internal load balancing, the possible values are TCP and UDP, and the default is TCP.
+   * Possible values are HTTP, HTTPS, TCP, SSL, or UDP, depending on the chosen load balancer or
+   * Traffic Director configuration. Refer to the documentation for the load balancer or for Traffic
+   * director for more information.
    * @param protocol protocol or {@code null} for none
    */
   public BackendService setProtocol(java.lang.String protocol) {
@@ -697,14 +703,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE.
+   * Type of session affinity to use. The default is NONE. Session affinity is not applicable if the
+   * --protocol is UDP.
    *
-   * When the load balancing scheme is EXTERNAL, can be NONE, CLIENT_IP, or GENERATED_COOKIE.
+   * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
+   * GENERATED_COOKIE. GENERATED_COOKIE is only available if the protocol is HTTP or HTTPS.
    *
-   * When the load balancing scheme is INTERNAL, can be NONE, CLIENT_IP, CLIENT_IP_PROTO, or
-   * CLIENT_IP_PORT_PROTO.
+   * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
+   * or CLIENT_IP_PORT_PROTO.
    *
-   * When the protocol is UDP, this field is not used.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
+   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAffinity() {
@@ -712,14 +721,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of session affinity to use. The default is NONE.
+   * Type of session affinity to use. The default is NONE. Session affinity is not applicable if the
+   * --protocol is UDP.
    *
-   * When the load balancing scheme is EXTERNAL, can be NONE, CLIENT_IP, or GENERATED_COOKIE.
+   * When the loadBalancingScheme is EXTERNAL, possible values are NONE, CLIENT_IP, or
+   * GENERATED_COOKIE. GENERATED_COOKIE is only available if the protocol is HTTP or HTTPS.
    *
-   * When the load balancing scheme is INTERNAL, can be NONE, CLIENT_IP, CLIENT_IP_PROTO, or
-   * CLIENT_IP_PORT_PROTO.
+   * When the loadBalancingScheme is INTERNAL, possible values are NONE, CLIENT_IP, CLIENT_IP_PROTO,
+   * or CLIENT_IP_PORT_PROTO.
    *
-   * When the protocol is UDP, this field is not used.
+   * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, possible values are NONE, CLIENT_IP,
+   * GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public BackendService setSessionAffinity(java.lang.String sessionAffinity) {
@@ -728,8 +740,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How many seconds to wait for the backend before considering it a failed request. Default is 30
-   * seconds.
+   * The backend service timeout has a different meaning depending on the type of load balancer. For
+   * more information read,  Backend service settings The default is 30 seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSec() {
@@ -737,8 +749,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How many seconds to wait for the backend before considering it a failed request. Default is 30
-   * seconds.
+   * The backend service timeout has a different meaning depending on the type of load balancer. For
+   * more information read,  Backend service settings The default is 30 seconds.
    * @param timeoutSec timeoutSec or {@code null} for none
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {

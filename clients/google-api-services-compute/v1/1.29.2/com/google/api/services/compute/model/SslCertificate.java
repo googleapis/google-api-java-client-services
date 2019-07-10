@@ -17,9 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * An SslCertificate resource. This resource provides a mechanism to upload an SSL key and
- * certificate to the load balancer to serve secure connections from the user. (== resource_for
- * beta.sslCertificates ==) (== resource_for v1.sslCertificates ==)
+ * Represents an SSL Certificate resource.
+ *
+ * This SSL certificate resource also contains a private key. You can use SSL keys and certificates
+ * to secure connections to a load balancer. For more information, read  Creating and Using SSL
+ * Certificates. (== resource_for beta.sslCertificates ==) (== resource_for v1.sslCertificates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -17,8 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * An HttpsHealthCheck resource. This resource defines a template for how individual instances
- * should be checked for health, via HTTPS.
+ * Represents a legacy HTTPS Health Check resource.
+ *
+ * Legacy health checks are required by network load balancers. For more information, read Health
+ * Check Concepts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

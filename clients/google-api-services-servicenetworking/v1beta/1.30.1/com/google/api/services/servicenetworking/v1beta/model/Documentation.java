@@ -97,6 +97,15 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   private java.util.List<DocumentationRule> rules;
 
   /**
+   * Specifies the service root url if the default one (the service name from the yaml file) is not
+   * suitable. This can be seen in any fully specified service urls as well as sections that show a
+   * base that other urls are relative to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceRootUrl;
+
+  /**
    * A short summary of what the service does. Can only be provided by plain text.
    * The value may be {@code null}.
    */
@@ -184,6 +193,27 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
    */
   public Documentation setRules(java.util.List<DocumentationRule> rules) {
     this.rules = rules;
+    return this;
+  }
+
+  /**
+   * Specifies the service root url if the default one (the service name from the yaml file) is not
+   * suitable. This can be seen in any fully specified service urls as well as sections that show a
+   * base that other urls are relative to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceRootUrl() {
+    return serviceRootUrl;
+  }
+
+  /**
+   * Specifies the service root url if the default one (the service name from the yaml file) is not
+   * suitable. This can be seen in any fully specified service urls as well as sections that show a
+   * base that other urls are relative to.
+   * @param serviceRootUrl serviceRootUrl or {@code null} for none
+   */
+  public Documentation setServiceRootUrl(java.lang.String serviceRootUrl) {
+    this.serviceRootUrl = serviceRootUrl;
     return this;
   }
 

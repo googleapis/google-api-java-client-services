@@ -31,7 +31,7 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class Company extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. Optional. Email address of customer's users in the admin role. Each email address
+   * Optional. Input only. Email address of customer's users in the admin role. Each email address
    * must be associated with a Google Account.
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String termsStatus;
 
   /**
-   * Input only. Optional. Email address of customer's users in the admin role. Each email address
+   * Optional. Input only. Email address of customer's users in the admin role. Each email address
    * must be associated with a Google Account.
    * @return value or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Optional. Email address of customer's users in the admin role. Each email address
+   * Optional. Input only. Email address of customer's users in the admin role. Each email address
    * must be associated with a Google Account.
    * @param adminEmails adminEmails or {@code null} for none
    */

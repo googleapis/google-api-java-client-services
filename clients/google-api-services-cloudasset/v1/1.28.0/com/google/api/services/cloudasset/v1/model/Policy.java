@@ -84,8 +84,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
    * to the same version of the policy.
    *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is
+   * overwritten.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
    * to the same version of the policy.
    *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is
+   * overwritten.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -157,8 +157,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
    * to the same version of the policy.
    *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is
+   * overwritten.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -176,8 +176,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
    * to the same version of the policy.
    *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is
+   * overwritten.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -194,8 +194,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
    * to the same version of the policy.
    *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is
+   * overwritten.
    * @see #setEtag()
    *
    * <p>

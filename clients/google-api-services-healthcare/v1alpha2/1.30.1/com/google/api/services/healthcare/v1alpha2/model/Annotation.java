@@ -60,7 +60,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private ResourceAnnotation resourceAnnotation;
 
   /**
-   * Annotations for sentitive texts, e.g., range of such texts.
+   * Annotations for sensitive texts, e.g., range of such texts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotations for sentitive texts, e.g., range of such texts.
+   * Annotations for sensitive texts, e.g., range of such texts.
    * @return value or {@code null} for none
    */
   public SensitiveTextAnnotation getTextAnnotation() {
@@ -147,7 +147,7 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Annotations for sentitive texts, e.g., range of such texts.
+   * Annotations for sensitive texts, e.g., range of such texts.
    * @param textAnnotation textAnnotation or {@code null} for none
    */
   public Annotation setTextAnnotation(SensitiveTextAnnotation textAnnotation) {

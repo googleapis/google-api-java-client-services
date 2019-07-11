@@ -2890,7 +2890,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * POLICIES Sets the access control policy for a resource. Replaces any existing policy.
            *
-           * Authorization requires the Google IAM permission 'healthcare.annotationStores.setIamPolicy' on
+           * Authorization requires the Google IAM permission `healthcare.annotationStores.setIamPolicy` on
            * the specified resource
            *
            * Create a request for the method "annotationStores.setIamPolicy".
@@ -2920,7 +2920,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * POLICIES Sets the access control policy for a resource. Replaces any existing policy.
              *
-             * Authorization requires the Google IAM permission 'healthcare.annotationStores.setIamPolicy' on
+             * Authorization requires the Google IAM permission `healthcare.annotationStores.setIamPolicy` on
              * the specified resource
              *
              * Create a request for the method "annotationStores.setIamPolicy".
@@ -10272,8 +10272,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
            * but does not have a policy set.
            *
-           * Authorization requires the Google IAM permission 'healthcare.fhirStores.getIamPolicy' for a FHIR
-           * store or 'healthcare.securityLabels.getIamPolicy' for a security label
+           * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a FHIR
+           * store or `healthcare.securityLabels.getIamPolicy` for a security label
            *
            * Create a request for the method "fhirStores.getIamPolicy".
            *
@@ -10303,8 +10303,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
              * but does not have a policy set.
              *
-             * Authorization requires the Google IAM permission 'healthcare.fhirStores.getIamPolicy' for a
-             * FHIR store or 'healthcare.securityLabels.getIamPolicy' for a security label
+             * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a
+             * FHIR store or `healthcare.securityLabels.getIamPolicy` for a security label
              *
              * Create a request for the method "fhirStores.getIamPolicy".
              *
@@ -11004,8 +11004,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
            * any existing policy.
            *
-           * Authorization requires the Google IAM permission 'healthcare.fhirStores.setIamPolicy' for a FHIR
-           * store or 'healthcare.securityLabels.setIamPolicy' for a security label
+           * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a FHIR
+           * store or `healthcare.securityLabels.setIamPolicy` for a security label
            *
            * Create a request for the method "fhirStores.setIamPolicy".
            *
@@ -11035,8 +11035,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
              * any existing policy.
              *
-             * Authorization requires the Google IAM permission 'healthcare.fhirStores.setIamPolicy' for a
-             * FHIR store or 'healthcare.securityLabels.setIamPolicy' for a security label
+             * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a
+             * FHIR store or `healthcare.securityLabels.setIamPolicy` for a security label
              *
              * Create a request for the method "fhirStores.setIamPolicy".
              *
@@ -14297,8 +14297,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
              * but does not have a policy set.
              *
-             * Authorization requires the Google IAM permission 'healthcare.fhirStores.getIamPolicy' for a FHIR
-             * store or 'healthcare.securityLabels.getIamPolicy' for a security label
+             * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a FHIR
+             * store or `healthcare.securityLabels.getIamPolicy` for a security label
              *
              * Create a request for the method "securityLabels.getIamPolicy".
              *
@@ -14328,8 +14328,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
                * but does not have a policy set.
                *
-               * Authorization requires the Google IAM permission 'healthcare.fhirStores.getIamPolicy' for a
-               * FHIR store or 'healthcare.securityLabels.getIamPolicy' for a security label
+               * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a
+               * FHIR store or `healthcare.securityLabels.getIamPolicy` for a security label
                *
                * Create a request for the method "securityLabels.getIamPolicy".
                *
@@ -14481,8 +14481,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
              * any existing policy.
              *
-             * Authorization requires the Google IAM permission 'healthcare.fhirStores.setIamPolicy' for a FHIR
-             * store or 'healthcare.securityLabels.setIamPolicy' for a security label
+             * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a FHIR
+             * store or `healthcare.securityLabels.setIamPolicy` for a security label
              *
              * Create a request for the method "securityLabels.setIamPolicy".
              *
@@ -14512,8 +14512,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
                * any existing policy.
                *
-               * Authorization requires the Google IAM permission 'healthcare.fhirStores.setIamPolicy' for a
-               * FHIR store or 'healthcare.securityLabels.setIamPolicy' for a security label
+               * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a
+               * FHIR store or `healthcare.securityLabels.setIamPolicy` for a security label
                *
                * Create a request for the method "securityLabels.setIamPolicy".
                *

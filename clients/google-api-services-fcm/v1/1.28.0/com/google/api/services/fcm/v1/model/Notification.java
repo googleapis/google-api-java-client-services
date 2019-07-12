@@ -38,6 +38,17 @@ public final class Notification extends com.google.api.client.json.GenericJson {
   private java.lang.String body;
 
   /**
+   * Contains the URL of an image that is going to be downloaded on the device and displayed in a
+   * notification. JPEG, PNG, BMP have full support across platforms. Animated GIF and video only
+   * work on iOS. WebP and HEIF have varying levels of support across platforms and platform
+   * versions. Android has 1MB image size limit. Quota usage and implications/costs for hosting
+   * image on Firebase Storage: https://firebase.google.com/pricing
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String image;
+
+  /**
    * The notification's title.
    * The value may be {@code null}.
    */
@@ -58,6 +69,31 @@ public final class Notification extends com.google.api.client.json.GenericJson {
    */
   public Notification setBody(java.lang.String body) {
     this.body = body;
+    return this;
+  }
+
+  /**
+   * Contains the URL of an image that is going to be downloaded on the device and displayed in a
+   * notification. JPEG, PNG, BMP have full support across platforms. Animated GIF and video only
+   * work on iOS. WebP and HEIF have varying levels of support across platforms and platform
+   * versions. Android has 1MB image size limit. Quota usage and implications/costs for hosting
+   * image on Firebase Storage: https://firebase.google.com/pricing
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImage() {
+    return image;
+  }
+
+  /**
+   * Contains the URL of an image that is going to be downloaded on the device and displayed in a
+   * notification. JPEG, PNG, BMP have full support across platforms. Animated GIF and video only
+   * work on iOS. WebP and HEIF have varying levels of support across platforms and platform
+   * versions. Android has 1MB image size limit. Quota usage and implications/costs for hosting
+   * image on Firebase Storage: https://firebase.google.com/pricing
+   * @param image image or {@code null} for none
+   */
+  public Notification setImage(java.lang.String image) {
+    this.image = image;
     return this;
   }
 

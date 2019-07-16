@@ -49,7 +49,7 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * with a Google account or a service account.
    *
    * * `user:{emailid}`: An email address that represents a specific Google    account. For example,
-   * `alice@gmail.com` .
+   * `alice@example.com` .
    *
    * * `serviceAccount:{emailid}`: An email address that represents a service    account. For
    * example, `my-other-app@appspot.gserviceaccount.com`.
@@ -104,7 +104,7 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * with a Google account or a service account.
    *
    * * `user:{emailid}`: An email address that represents a specific Google    account. For example,
-   * `alice@gmail.com` .
+   * `alice@example.com` .
    *
    * * `serviceAccount:{emailid}`: An email address that represents a service    account. For
    * example, `my-other-app@appspot.gserviceaccount.com`.
@@ -131,7 +131,7 @@ public final class GoogleIamV1Binding extends com.google.api.client.json.Generic
    * with a Google account or a service account.
    *
    * * `user:{emailid}`: An email address that represents a specific Google    account. For example,
-   * `alice@gmail.com` .
+   * `alice@example.com` .
    *
    * * `serviceAccount:{emailid}`: An email address that represents a service    account. For
    * example, `my-other-app@appspot.gserviceaccount.com`.

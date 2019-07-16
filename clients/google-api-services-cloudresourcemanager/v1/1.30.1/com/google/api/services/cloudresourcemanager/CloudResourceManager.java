@@ -3407,12 +3407,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Request that a new Project be created. The result is an Operation which can be used to track the
-     * creation process. It is automatically deleted after a few hours, so there is no need to call
+     * creation process. This process usually takes a few seconds, but can sometimes take much longer.
+     * The tracking Operation is automatically deleted after a few hours, so there is no need to call
      * DeleteOperation.
-     *
-     * Our SLO permits Project creation to take up to 30 seconds at the 90th percentile. As of
-     * 2016-08-29, we are observing 6 seconds 50th percentile latency. 95th percentile latency is around
-     * 11 seconds. We recommend polling at the 5th second with an exponential backoff.
      *
      * Authorization requires the Google IAM permission `resourcemanager.projects.create` on the
      * specified parent for the new project. The parent is identified by a specified ResourceId, which
@@ -3442,12 +3439,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Request that a new Project be created. The result is an Operation which can be used to track
-       * the creation process. It is automatically deleted after a few hours, so there is no need to
-       * call DeleteOperation.
-       *
-       * Our SLO permits Project creation to take up to 30 seconds at the 90th percentile. As of
-       * 2016-08-29, we are observing 6 seconds 50th percentile latency. 95th percentile latency is
-       * around 11 seconds. We recommend polling at the 5th second with an exponential backoff.
+       * the creation process. This process usually takes a few seconds, but can sometimes take much
+       * longer. The tracking Operation is automatically deleted after a few hours, so there is no need
+       * to call DeleteOperation.
        *
        * Authorization requires the Google IAM permission `resourcemanager.projects.create` on the
        * specified parent for the new project. The parent is identified by a specified ResourceId, which

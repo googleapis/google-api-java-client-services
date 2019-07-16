@@ -38,13 +38,6 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
   private java.lang.Long batchId;
 
   /**
-   * The ContentAPI feed id.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.math.BigInteger feedId;
-
-  /**
    * The ID of the managing account.
    * The value may be {@code null}.
    */
@@ -85,23 +78,6 @@ public final class ProductsCustomBatchRequestEntry extends com.google.api.client
    */
   public ProductsCustomBatchRequestEntry setBatchId(java.lang.Long batchId) {
     this.batchId = batchId;
-    return this;
-  }
-
-  /**
-   * The ContentAPI feed id.
-   * @return value or {@code null} for none
-   */
-  public java.math.BigInteger getFeedId() {
-    return feedId;
-  }
-
-  /**
-   * The ContentAPI feed id.
-   * @param feedId feedId or {@code null} for none
-   */
-  public ProductsCustomBatchRequestEntry setFeedId(java.math.BigInteger feedId) {
-    this.feedId = feedId;
     return this;
   }
 

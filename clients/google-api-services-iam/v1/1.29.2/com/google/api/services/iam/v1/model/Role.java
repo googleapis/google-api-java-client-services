@@ -39,7 +39,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deleted;
 
   /**
-   * Optional.  A human-readable description for the role.
+   * Optional. A human-readable description for the role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   private java.lang.String stage;
 
   /**
-   * Optional.  A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
+   * Optional. A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +107,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.  A human-readable description for the role.
+   * Optional. A human-readable description for the role.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -115,7 +115,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.  A human-readable description for the role.
+   * Optional. A human-readable description for the role.
    * @param description description or {@code null} for none
    */
   public Role setDescription(java.lang.String description) {
@@ -234,7 +234,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.  A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
+   * Optional. A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -242,7 +242,7 @@ public final class Role extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.  A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
+   * Optional. A human-readable title for the role.  Typically this is limited to 100 UTF-8 bytes.
    * @param title title or {@code null} for none
    */
   public Role setTitle(java.lang.String title) {

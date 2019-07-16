@@ -48,7 +48,7 @@ public final class WebToken extends com.google.api.client.json.GenericJson {
 
   /**
    * Permissions available to an admin in the embedded UI. An admin must have all of these
-   * permissions in order to view the UI.
+   * permissions in order to view the UI. This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class WebToken extends com.google.api.client.json.GenericJson {
 
   /**
    * Permissions available to an admin in the embedded UI. An admin must have all of these
-   * permissions in order to view the UI.
+   * permissions in order to view the UI. This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermissions() {
@@ -111,7 +111,7 @@ public final class WebToken extends com.google.api.client.json.GenericJson {
 
   /**
    * Permissions available to an admin in the embedded UI. An admin must have all of these
-   * permissions in order to view the UI.
+   * permissions in order to view the UI. This field is deprecated.
    * @param permissions permissions or {@code null} for none
    */
   public WebToken setPermissions(java.util.List<java.lang.String> permissions) {

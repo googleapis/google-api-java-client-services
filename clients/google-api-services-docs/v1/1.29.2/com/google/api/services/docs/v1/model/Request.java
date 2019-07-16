@@ -142,6 +142,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateParagraphStyleRequest updateParagraphStyle;
 
   /**
+   * Updates the style of table cells.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateTableCellStyleRequest updateTableCellStyle;
+
+  /**
    * Updates the properties of columns in a table.
    * The value may be {@code null}.
    */
@@ -431,6 +438,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateParagraphStyle(UpdateParagraphStyleRequest updateParagraphStyle) {
     this.updateParagraphStyle = updateParagraphStyle;
+    return this;
+  }
+
+  /**
+   * Updates the style of table cells.
+   * @return value or {@code null} for none
+   */
+  public UpdateTableCellStyleRequest getUpdateTableCellStyle() {
+    return updateTableCellStyle;
+  }
+
+  /**
+   * Updates the style of table cells.
+   * @param updateTableCellStyle updateTableCellStyle or {@code null} for none
+   */
+  public Request setUpdateTableCellStyle(UpdateTableCellStyleRequest updateTableCellStyle) {
+    this.updateTableCellStyle = updateTableCellStyle;
     return this;
   }
 

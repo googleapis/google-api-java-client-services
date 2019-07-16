@@ -38,7 +38,7 @@ public final class PageProperties extends com.google.api.client.json.GenericJson
    * defaults in the Slides editor.
    *
    * Only the concrete colors of the first 12 ThemeColorTypes are editable. In addition, only the
-   * color scheme on Master pages can be updated. To update the field, a color scheme containing
+   * color scheme on `Master` pages can be updated. To update the field, a color scheme containing
    * mappings from all the first 12 ThemeColorTypes to their concrete colors must be provided.
    * Colors for the remaining ThemeColorTypes will be ignored.
    * The value may be {@code null}.
@@ -61,7 +61,7 @@ public final class PageProperties extends com.google.api.client.json.GenericJson
    * defaults in the Slides editor.
    *
    * Only the concrete colors of the first 12 ThemeColorTypes are editable. In addition, only the
-   * color scheme on Master pages can be updated. To update the field, a color scheme containing
+   * color scheme on `Master` pages can be updated. To update the field, a color scheme containing
    * mappings from all the first 12 ThemeColorTypes to their concrete colors must be provided.
    * Colors for the remaining ThemeColorTypes will be ignored.
    * @return value or {@code null} for none
@@ -76,7 +76,7 @@ public final class PageProperties extends com.google.api.client.json.GenericJson
    * defaults in the Slides editor.
    *
    * Only the concrete colors of the first 12 ThemeColorTypes are editable. In addition, only the
-   * color scheme on Master pages can be updated. To update the field, a color scheme containing
+   * color scheme on `Master` pages can be updated. To update the field, a color scheme containing
    * mappings from all the first 12 ThemeColorTypes to their concrete colors must be provided.
    * Colors for the remaining ThemeColorTypes will be ignored.
    * @param colorScheme colorScheme or {@code null} for none

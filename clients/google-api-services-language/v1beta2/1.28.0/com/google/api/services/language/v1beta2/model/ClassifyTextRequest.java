@@ -31,14 +31,14 @@ package com.google.api.services.language.v1beta2.model;
 public final class ClassifyTextRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input document.
+   * Required. Input document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Document document;
 
   /**
-   * Input document.
+   * Required. Input document.
    * @return value or {@code null} for none
    */
   public Document getDocument() {
@@ -46,7 +46,7 @@ public final class ClassifyTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Input document.
+   * Required. Input document.
    * @param document document or {@code null} for none
    */
   public ClassifyTextRequest setDocument(Document document) {

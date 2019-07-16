@@ -31,7 +31,7 @@ package com.google.api.services.language.v1beta2.model;
 public final class AnalyzeSentimentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input document.
+   * Required. Input document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class AnalyzeSentimentRequest extends com.google.api.client.json.Ge
   private java.lang.String encodingType;
 
   /**
-   * Input document.
+   * Required. Input document.
    * @return value or {@code null} for none
    */
   public Document getDocument() {
@@ -53,7 +53,7 @@ public final class AnalyzeSentimentRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Input document.
+   * Required. Input document.
    * @param document document or {@code null} for none
    */
   public AnalyzeSentimentRequest setDocument(Document document) {

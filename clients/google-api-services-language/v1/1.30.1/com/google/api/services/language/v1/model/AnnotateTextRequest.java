@@ -32,7 +32,7 @@ package com.google.api.services.language.v1.model;
 public final class AnnotateTextRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input document.
+   * Required. Input document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,14 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
   private java.lang.String encodingType;
 
   /**
-   * The enabled features.
+   * Required. The enabled features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Features features;
 
   /**
-   * Input document.
+   * Required. Input document.
    * @return value or {@code null} for none
    */
   public Document getDocument() {
@@ -61,7 +61,7 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Input document.
+   * Required. Input document.
    * @param document document or {@code null} for none
    */
   public AnnotateTextRequest setDocument(Document document) {
@@ -87,7 +87,7 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The enabled features.
+   * Required. The enabled features.
    * @return value or {@code null} for none
    */
   public Features getFeatures() {
@@ -95,7 +95,7 @@ public final class AnnotateTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * The enabled features.
+   * Required. The enabled features.
    * @param features features or {@code null} for none
    */
   public AnnotateTextRequest setFeatures(Features features) {

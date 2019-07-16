@@ -38,6 +38,14 @@ public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson
   private java.lang.String analyticsLabel;
 
   /**
+   * Contains the URL of an image that is going to be displayed in a notification. If present, it
+   * will override google.firebase.fcm.v1.Notification.image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String image;
+
+  /**
    * Label associated with the message's analytics data.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class ApnsFcmOptions extends com.google.api.client.json.GenericJson
    */
   public ApnsFcmOptions setAnalyticsLabel(java.lang.String analyticsLabel) {
     this.analyticsLabel = analyticsLabel;
+    return this;
+  }
+
+  /**
+   * Contains the URL of an image that is going to be displayed in a notification. If present, it
+   * will override google.firebase.fcm.v1.Notification.image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImage() {
+    return image;
+  }
+
+  /**
+   * Contains the URL of an image that is going to be displayed in a notification. If present, it
+   * will override google.firebase.fcm.v1.Notification.image.
+   * @param image image or {@code null} for none
+   */
+  public ApnsFcmOptions setImage(java.lang.String image) {
+    this.image = image;
     return this;
   }
 

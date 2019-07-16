@@ -93,6 +93,14 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   private java.lang.String icon;
 
   /**
+   * Contains the URL of an image that is going to be displayed in a notification. If present, it
+   * will override google.firebase.fcm.v1.Notification.image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String image;
+
+  /**
    * The sound to play when the device receives the notification. Supports "default" or the filename
    * of a sound resource bundled in the app. Sound files must reside in /res/raw/.
    * The value may be {@code null}.
@@ -277,6 +285,25 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setIcon(java.lang.String icon) {
     this.icon = icon;
+    return this;
+  }
+
+  /**
+   * Contains the URL of an image that is going to be displayed in a notification. If present, it
+   * will override google.firebase.fcm.v1.Notification.image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImage() {
+    return image;
+  }
+
+  /**
+   * Contains the URL of an image that is going to be displayed in a notification. If present, it
+   * will override google.firebase.fcm.v1.Notification.image.
+   * @param image image or {@code null} for none
+   */
+  public AndroidNotification setImage(java.lang.String image) {
+    this.image = image;
     return this;
   }
 

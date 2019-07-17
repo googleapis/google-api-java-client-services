@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-translate</artifactId>
-  <version>v3beta1-rev20190704-1.28.0</version>
-  <name>Cloud Translation API v3beta1-rev20190704-1.28.0</name>
+  <version>v3beta1-rev20190713-1.28.0</version>
+  <name>Cloud Translation API v3beta1-rev20190713-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

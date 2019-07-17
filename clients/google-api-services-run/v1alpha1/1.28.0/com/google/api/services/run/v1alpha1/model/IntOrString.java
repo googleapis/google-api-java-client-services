@@ -49,8 +49,8 @@ public final class IntOrString extends com.google.api.client.json.GenericJson {
    * The type of the value.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long type;
+  @com.google.api.client.util.Key
+  private java.lang.Integer type;
 
   /**
    * The int value.
@@ -90,7 +90,7 @@ public final class IntOrString extends com.google.api.client.json.GenericJson {
    * The type of the value.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getType() {
+  public java.lang.Integer getType() {
     return type;
   }
 
@@ -98,7 +98,7 @@ public final class IntOrString extends com.google.api.client.json.GenericJson {
    * The type of the value.
    * @param type type or {@code null} for none
    */
-  public IntOrString setType(java.lang.Long type) {
+  public IntOrString setType(java.lang.Integer type) {
     this.type = type;
     return this;
   }

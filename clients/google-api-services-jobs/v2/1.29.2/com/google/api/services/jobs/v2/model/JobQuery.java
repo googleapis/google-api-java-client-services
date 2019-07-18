@@ -33,10 +33,8 @@ package com.google.api.services.jobs.v2.model;
 public final class JobQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * The category filter specifies the categories of jobs to search against. See Category for more
-   * information.
+   * Optional. The category filter specifies the categories of jobs to search against. See Category
+   * for more information.
    *
    * If a value is not specified, jobs from any category are searched against.
    *
@@ -48,10 +46,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> categories;
 
   /**
-   * Optional.
-   *
-   *  Allows filtering jobs by commute time with different travel methods (for  example, driving or
-   * public transit). Note: This only works with COMMUTE  MODE. When specified,
+   * Optional. Allows filtering jobs by commute time with different travel methods (for  example,
+   * driving or public transit). Note: This only works with COMMUTE  MODE. When specified,
    * [JobQuery.location_filters] is  ignored.
    *
    *  Currently we don't support sorting by commute time.
@@ -61,9 +57,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private CommutePreference commuteFilter;
 
   /**
-   * Optional.
-   *
-   * This filter specifies the exact company display name of the jobs to search against.
+   * Optional. This filter specifies the exact company display name of the jobs to search against.
    *
    * If a value isn't specified, jobs within the search results are associated with any company.
    *
@@ -77,9 +71,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> companyDisplayNames;
 
   /**
-   * Optional.
-   *
-   * This filter specifies the company entities to search against.
+   * Optional. This filter specifies the company entities to search against.
    *
    * If a value isn't specified, jobs are searched for against all companies.
    *
@@ -92,21 +84,17 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> companyNames;
 
   /**
-   * Optional.
-   *
-   * This search filter is applied only to Job.compensation_info. For example, if the filter is
-   * specified as "Hourly job with per-hour compensation > $15", only jobs meeting these criteria
-   * are searched. If a filter isn't defined, all open jobs are searched.
+   * Optional. This search filter is applied only to Job.compensation_info. For example, if the
+   * filter is specified as "Hourly job with per-hour compensation > $15", only jobs meeting these
+   * criteria are searched. If a filter isn't defined, all open jobs are searched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompensationFilter compensationFilter;
 
   /**
-   * Optional.
-   *
-   * This filter specifies a structured syntax to match against the Job.custom_attributes marked as
-   * `filterable`.
+   * Optional. This filter specifies a structured syntax to match against the Job.custom_attributes
+   * marked as `filterable`.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -127,10 +115,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.lang.String customAttributeFilter;
 
   /**
-   * Optional.
-   *
-   * This flag controls the spell-check feature. If false, the service attempts to correct a
-   * misspelled query, for example, "enginee" is corrected to "engineer".
+   * Optional. This flag controls the spell-check feature. If false, the service attempts to correct
+   * a misspelled query, for example, "enginee" is corrected to "engineer".
    *
    * Defaults to false: a spell check is performed.
    * The value may be {@code null}.
@@ -139,10 +125,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableSpellCheck;
 
   /**
-   * Optional.
-   *
-   * The employment type filter specifies the employment type of jobs to search against, such as
-   * EmploymentType.FULL_TIME.
+   * Optional. The employment type filter specifies the employment type of jobs to search against,
+   * such as EmploymentType.FULL_TIME.
    *
    * If a value is not specified, jobs in the search results include any employment type.
    *
@@ -154,9 +138,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> employmentTypes;
 
   /**
-   * Optional.
-   *
-   * This filter specifies the locale of jobs to search against, for example, "en-US".
+   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US".
    *
    * If a value isn't specified, the search results can contain jobs in any locale.
    *
@@ -170,9 +152,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> languageCodes;
 
   /**
-   * Optional.
-   *
-   * The location filter specifies geo-regions containing the jobs to search against. See
+   * Optional. The location filter specifies geo-regions containing the jobs to search against. See
    * LocationFilter for more information.
    *
    * If a location value isn't specified, jobs fitting the other search criteria are retrieved
@@ -189,20 +169,17 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.util.List<LocationFilter> locationFilters;
 
   /**
-   * Optional.
-   *
-   * Jobs published within a range specified by this filter are searched against, for example,
-   * DateRange.PAST_MONTH. If a value isn't specified, all open jobs are searched against regardless
-   * of their published date.
+   * Optional. Jobs published within a range specified by this filter are searched against, for
+   * example, DateRange.PAST_MONTH. If a value isn't specified, all open jobs are searched against
+   * regardless of their published date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publishDateRange;
 
   /**
-   * Optional.
-   *
-   * The query string that matches against the job title, description, and location fields.
+   * Optional. The query string that matches against the job title, description, and location
+   * fields.
    *
    * The maximum query size is 255 bytes.
    * The value may be {@code null}.
@@ -211,10 +188,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   private java.lang.String query;
 
   /**
-   * Optional.
-   *
-   * The category filter specifies the categories of jobs to search against. See Category for more
-   * information.
+   * Optional. The category filter specifies the categories of jobs to search against. See Category
+   * for more information.
    *
    * If a value is not specified, jobs from any category are searched against.
    *
@@ -227,10 +202,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The category filter specifies the categories of jobs to search against. See Category for more
-   * information.
+   * Optional. The category filter specifies the categories of jobs to search against. See Category
+   * for more information.
    *
    * If a value is not specified, jobs from any category are searched against.
    *
@@ -244,10 +217,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   *  Allows filtering jobs by commute time with different travel methods (for  example, driving or
-   * public transit). Note: This only works with COMMUTE  MODE. When specified,
+   * Optional. Allows filtering jobs by commute time with different travel methods (for  example,
+   * driving or public transit). Note: This only works with COMMUTE  MODE. When specified,
    * [JobQuery.location_filters] is  ignored.
    *
    *  Currently we don't support sorting by commute time.
@@ -258,10 +229,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   *  Allows filtering jobs by commute time with different travel methods (for  example, driving or
-   * public transit). Note: This only works with COMMUTE  MODE. When specified,
+   * Optional. Allows filtering jobs by commute time with different travel methods (for  example,
+   * driving or public transit). Note: This only works with COMMUTE  MODE. When specified,
    * [JobQuery.location_filters] is  ignored.
    *
    *  Currently we don't support sorting by commute time.
@@ -273,9 +242,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies the exact company display name of the jobs to search against.
+   * Optional. This filter specifies the exact company display name of the jobs to search against.
    *
    * If a value isn't specified, jobs within the search results are associated with any company.
    *
@@ -290,9 +257,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies the exact company display name of the jobs to search against.
+   * Optional. This filter specifies the exact company display name of the jobs to search against.
    *
    * If a value isn't specified, jobs within the search results are associated with any company.
    *
@@ -308,9 +273,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies the company entities to search against.
+   * Optional. This filter specifies the company entities to search against.
    *
    * If a value isn't specified, jobs are searched for against all companies.
    *
@@ -324,9 +287,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies the company entities to search against.
+   * Optional. This filter specifies the company entities to search against.
    *
    * If a value isn't specified, jobs are searched for against all companies.
    *
@@ -341,11 +302,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This search filter is applied only to Job.compensation_info. For example, if the filter is
-   * specified as "Hourly job with per-hour compensation > $15", only jobs meeting these criteria
-   * are searched. If a filter isn't defined, all open jobs are searched.
+   * Optional. This search filter is applied only to Job.compensation_info. For example, if the
+   * filter is specified as "Hourly job with per-hour compensation > $15", only jobs meeting these
+   * criteria are searched. If a filter isn't defined, all open jobs are searched.
    * @return value or {@code null} for none
    */
   public CompensationFilter getCompensationFilter() {
@@ -353,11 +312,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This search filter is applied only to Job.compensation_info. For example, if the filter is
-   * specified as "Hourly job with per-hour compensation > $15", only jobs meeting these criteria
-   * are searched. If a filter isn't defined, all open jobs are searched.
+   * Optional. This search filter is applied only to Job.compensation_info. For example, if the
+   * filter is specified as "Hourly job with per-hour compensation > $15", only jobs meeting these
+   * criteria are searched. If a filter isn't defined, all open jobs are searched.
    * @param compensationFilter compensationFilter or {@code null} for none
    */
   public JobQuery setCompensationFilter(CompensationFilter compensationFilter) {
@@ -366,10 +323,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies a structured syntax to match against the Job.custom_attributes marked as
-   * `filterable`.
+   * Optional. This filter specifies a structured syntax to match against the Job.custom_attributes
+   * marked as `filterable`.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -391,10 +346,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies a structured syntax to match against the Job.custom_attributes marked as
-   * `filterable`.
+   * Optional. This filter specifies a structured syntax to match against the Job.custom_attributes
+   * marked as `filterable`.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -417,10 +370,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This flag controls the spell-check feature. If false, the service attempts to correct a
-   * misspelled query, for example, "enginee" is corrected to "engineer".
+   * Optional. This flag controls the spell-check feature. If false, the service attempts to correct
+   * a misspelled query, for example, "enginee" is corrected to "engineer".
    *
    * Defaults to false: a spell check is performed.
    * @return value or {@code null} for none
@@ -430,10 +381,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This flag controls the spell-check feature. If false, the service attempts to correct a
-   * misspelled query, for example, "enginee" is corrected to "engineer".
+   * Optional. This flag controls the spell-check feature. If false, the service attempts to correct
+   * a misspelled query, for example, "enginee" is corrected to "engineer".
    *
    * Defaults to false: a spell check is performed.
    * @param disableSpellCheck disableSpellCheck or {@code null} for none
@@ -444,10 +393,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The employment type filter specifies the employment type of jobs to search against, such as
-   * EmploymentType.FULL_TIME.
+   * Optional. The employment type filter specifies the employment type of jobs to search against,
+   * such as EmploymentType.FULL_TIME.
    *
    * If a value is not specified, jobs in the search results include any employment type.
    *
@@ -460,10 +407,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The employment type filter specifies the employment type of jobs to search against, such as
-   * EmploymentType.FULL_TIME.
+   * Optional. The employment type filter specifies the employment type of jobs to search against,
+   * such as EmploymentType.FULL_TIME.
    *
    * If a value is not specified, jobs in the search results include any employment type.
    *
@@ -477,9 +422,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies the locale of jobs to search against, for example, "en-US".
+   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US".
    *
    * If a value isn't specified, the search results can contain jobs in any locale.
    *
@@ -494,9 +437,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * This filter specifies the locale of jobs to search against, for example, "en-US".
+   * Optional. This filter specifies the locale of jobs to search against, for example, "en-US".
    *
    * If a value isn't specified, the search results can contain jobs in any locale.
    *
@@ -512,9 +453,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The location filter specifies geo-regions containing the jobs to search against. See
+   * Optional. The location filter specifies geo-regions containing the jobs to search against. See
    * LocationFilter for more information.
    *
    * If a location value isn't specified, jobs fitting the other search criteria are retrieved
@@ -532,9 +471,7 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The location filter specifies geo-regions containing the jobs to search against. See
+   * Optional. The location filter specifies geo-regions containing the jobs to search against. See
    * LocationFilter for more information.
    *
    * If a location value isn't specified, jobs fitting the other search criteria are retrieved
@@ -553,11 +490,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Jobs published within a range specified by this filter are searched against, for example,
-   * DateRange.PAST_MONTH. If a value isn't specified, all open jobs are searched against regardless
-   * of their published date.
+   * Optional. Jobs published within a range specified by this filter are searched against, for
+   * example, DateRange.PAST_MONTH. If a value isn't specified, all open jobs are searched against
+   * regardless of their published date.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishDateRange() {
@@ -565,11 +500,9 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Jobs published within a range specified by this filter are searched against, for example,
-   * DateRange.PAST_MONTH. If a value isn't specified, all open jobs are searched against regardless
-   * of their published date.
+   * Optional. Jobs published within a range specified by this filter are searched against, for
+   * example, DateRange.PAST_MONTH. If a value isn't specified, all open jobs are searched against
+   * regardless of their published date.
    * @param publishDateRange publishDateRange or {@code null} for none
    */
   public JobQuery setPublishDateRange(java.lang.String publishDateRange) {
@@ -578,9 +511,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The query string that matches against the job title, description, and location fields.
+   * Optional. The query string that matches against the job title, description, and location
+   * fields.
    *
    * The maximum query size is 255 bytes.
    * @return value or {@code null} for none
@@ -590,9 +522,8 @@ public final class JobQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The query string that matches against the job title, description, and location fields.
+   * Optional. The query string that matches against the job title, description, and location
+   * fields.
    *
    * The maximum query size is 255 bytes.
    * @param query query or {@code null} for none

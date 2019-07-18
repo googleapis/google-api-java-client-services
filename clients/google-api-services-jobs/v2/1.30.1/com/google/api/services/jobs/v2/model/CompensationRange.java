@@ -31,30 +31,24 @@ package com.google.api.services.jobs.v2.model;
 public final class CompensationRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * The maximum amount of compensation. If left empty, the value is set to a maximal compensation
-   * value and the currency code is set to match the currency code of min_compensation.
+   * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal
+   * compensation value and the currency code is set to match the currency code of min_compensation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money max;
 
   /**
-   * Optional.
-   *
-   * The minimum amount of compensation. If left empty, the value is set to zero and the currency
-   * code is set to match the currency code of max_compensation.
+   * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the
+   * currency code is set to match the currency code of max_compensation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money min;
 
   /**
-   * Optional.
-   *
-   * The maximum amount of compensation. If left empty, the value is set to a maximal compensation
-   * value and the currency code is set to match the currency code of min_compensation.
+   * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal
+   * compensation value and the currency code is set to match the currency code of min_compensation.
    * @return value or {@code null} for none
    */
   public Money getMax() {
@@ -62,10 +56,8 @@ public final class CompensationRange extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The maximum amount of compensation. If left empty, the value is set to a maximal compensation
-   * value and the currency code is set to match the currency code of min_compensation.
+   * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal
+   * compensation value and the currency code is set to match the currency code of min_compensation.
    * @param max max or {@code null} for none
    */
   public CompensationRange setMax(Money max) {
@@ -74,10 +66,8 @@ public final class CompensationRange extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The minimum amount of compensation. If left empty, the value is set to zero and the currency
-   * code is set to match the currency code of max_compensation.
+   * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the
+   * currency code is set to match the currency code of max_compensation.
    * @return value or {@code null} for none
    */
   public Money getMin() {
@@ -85,10 +75,8 @@ public final class CompensationRange extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The minimum amount of compensation. If left empty, the value is set to zero and the currency
-   * code is set to match the currency code of max_compensation.
+   * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the
+   * currency code is set to match the currency code of max_compensation.
    * @param min min or {@code null} for none
    */
   public CompensationRange setMin(Money min) {

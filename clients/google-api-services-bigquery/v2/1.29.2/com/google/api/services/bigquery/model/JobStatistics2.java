@@ -119,6 +119,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output-only] Referenced routines (persistent user-defined functions and stored procedures) for
+   * the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RoutineReference> referencedRoutines;
+
+  /**
    * [Output-only] Referenced tables for the job. Queries that reference more than 50 tables will
    * not have a complete list.
    * The value may be {@code null}.
@@ -416,6 +424,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setQueryPlan(java.util.List<ExplainQueryStage> queryPlan) {
     this.queryPlan = queryPlan;
+    return this;
+  }
+
+  /**
+   * [Output-only] Referenced routines (persistent user-defined functions and stored procedures) for
+   * the job.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RoutineReference> getReferencedRoutines() {
+    return referencedRoutines;
+  }
+
+  /**
+   * [Output-only] Referenced routines (persistent user-defined functions and stored procedures) for
+   * the job.
+   * @param referencedRoutines referencedRoutines or {@code null} for none
+   */
+  public JobStatistics2 setReferencedRoutines(java.util.List<RoutineReference> referencedRoutines) {
+    this.referencedRoutines = referencedRoutines;
     return this;
   }
 

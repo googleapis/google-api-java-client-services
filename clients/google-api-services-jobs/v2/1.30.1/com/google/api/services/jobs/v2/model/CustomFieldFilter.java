@@ -33,21 +33,27 @@ package com.google.api.services.jobs.v2.model;
 public final class CustomFieldFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The query strings for the filter.
+   * Required.
+   *
+   * The query strings for the filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> queries;
 
   /**
-   * Optional. The type of filter. Defaults to FilterType.OR.
+   * Optional.
+   *
+   * The type of filter. Defaults to FilterType.OR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required. The query strings for the filter.
+   * Required.
+   *
+   * The query strings for the filter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getQueries() {
@@ -55,7 +61,9 @@ public final class CustomFieldFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The query strings for the filter.
+   * Required.
+   *
+   * The query strings for the filter.
    * @param queries queries or {@code null} for none
    */
   public CustomFieldFilter setQueries(java.util.List<java.lang.String> queries) {
@@ -64,7 +72,9 @@ public final class CustomFieldFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The type of filter. Defaults to FilterType.OR.
+   * Optional.
+   *
+   * The type of filter. Defaults to FilterType.OR.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,7 +82,9 @@ public final class CustomFieldFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The type of filter. Defaults to FilterType.OR.
+   * Optional.
+   *
+   * The type of filter. Defaults to FilterType.OR.
    * @param type type or {@code null} for none
    */
   public CustomFieldFilter setType(java.lang.String type) {

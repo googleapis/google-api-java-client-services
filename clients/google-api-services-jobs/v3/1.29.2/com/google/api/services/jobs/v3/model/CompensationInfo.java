@@ -51,9 +51,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   private CompensationRange annualizedTotalCompensationRange;
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
    * ** base compensation entry ** for the job.
@@ -115,9 +113,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
    * ** base compensation entry ** for the job.
@@ -128,9 +124,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
    * ** base compensation entry ** for the job.

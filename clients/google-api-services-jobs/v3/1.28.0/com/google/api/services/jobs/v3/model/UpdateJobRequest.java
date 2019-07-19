@@ -33,9 +33,7 @@ package com.google.api.services.jobs.v3.model;
 public final class UpdateJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The Job to be updated.
+   * Required. The Job to be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +53,7 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   private String updateMask;
 
   /**
-   * Required.
-   *
-   * The Job to be updated.
+   * Required. The Job to be updated.
    * @return value or {@code null} for none
    */
   public Job getJob() {
@@ -65,9 +61,7 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required.
-   *
-   * The Job to be updated.
+   * Required. The Job to be updated.
    * @param job job or {@code null} for none
    */
   public UpdateJobRequest setJob(Job job) {

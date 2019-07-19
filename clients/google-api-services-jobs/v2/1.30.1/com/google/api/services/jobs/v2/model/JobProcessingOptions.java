@@ -33,15 +33,18 @@ package com.google.api.services.jobs.v2.model;
 public final class JobProcessingOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If set to `true`, the service does not attempt to resolve a more precise address for
-   * the job.
+   * Optional.
+   *
+   * If set to `true`, the service does not attempt to resolve a more precise address for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableStreetAddressResolution;
 
   /**
-   * Optional. Option for job HTML content sanitization. Applied fields are:
+   * Optional.
+   *
+   * Option for job HTML content sanitization. Applied fields are:
    *
    * * description * applicationInstruction * incentives * qualifications * responsibilities
    *
@@ -54,8 +57,9 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   private java.lang.String htmlSanitization;
 
   /**
-   * Optional. If set to `true`, the service does not attempt to resolve a more precise address for
-   * the job.
+   * Optional.
+   *
+   * If set to `true`, the service does not attempt to resolve a more precise address for the job.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableStreetAddressResolution() {
@@ -63,8 +67,9 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. If set to `true`, the service does not attempt to resolve a more precise address for
-   * the job.
+   * Optional.
+   *
+   * If set to `true`, the service does not attempt to resolve a more precise address for the job.
    * @param disableStreetAddressResolution disableStreetAddressResolution or {@code null} for none
    */
   public JobProcessingOptions setDisableStreetAddressResolution(java.lang.Boolean disableStreetAddressResolution) {
@@ -73,7 +78,9 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Option for job HTML content sanitization. Applied fields are:
+   * Optional.
+   *
+   * Option for job HTML content sanitization. Applied fields are:
    *
    * * description * applicationInstruction * incentives * qualifications * responsibilities
    *
@@ -87,7 +94,9 @@ public final class JobProcessingOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Option for job HTML content sanitization. Applied fields are:
+   * Optional.
+   *
+   * Option for job HTML content sanitization. Applied fields are:
    *
    * * description * applicationInstruction * incentives * qualifications * responsibilities
    *

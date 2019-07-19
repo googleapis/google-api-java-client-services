@@ -33,19 +33,15 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class SearchJobsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * Controls over how job documents get ranked on top of existing relevance score (determined by
-   * API algorithm).
+   * Optional. Controls over how job documents get ranked on top of existing relevance score
+   * (determined by API algorithm).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomRankingInfo customRankingInfo;
 
   /**
-   * Optional.
-   *
-   * Controls whether to disable exact keyword match on Job.job_title, Job.description,
+   * Optional. Controls whether to disable exact keyword match on Job.job_title, Job.description,
    * Job.company_display_name, Job.locations, Job.qualifications. When disable keyword match is
    * turned off, a keyword match returns jobs that do not match given category filters when there
    * are matching keywords. For example, the query "program manager," a result is returned even if
@@ -67,13 +63,11 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.Boolean disableKeywordMatch;
 
   /**
-   * Optional.
-   *
-   * Controls whether highly similar jobs are returned next to each other in the search results.
-   * Jobs are identified as highly similar based on their titles, job categories, and locations.
-   * Highly similar results are clustered so that only one representative job of the cluster is
-   * displayed to the job seeker higher up in the results, with the other jobs being displayed lower
-   * down in the results.
+   * Optional. Controls whether highly similar jobs are returned next to each other in the search
+   * results. Jobs are identified as highly similar based on their titles, job categories, and
+   * locations. Highly similar results are clustered so that only one representative job of the
+   * cluster is displayed to the job seeker higher up in the results, with the other jobs being
+   * displayed lower down in the results.
    *
    * Defaults to DiversificationLevel.SIMPLE if no value is specified.
    * The value may be {@code null}.
@@ -82,10 +76,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String diversificationLevel;
 
   /**
-   * Optional.
-   *
-   * Controls whether to broaden the search when it produces sparse results. Broadened queries
-   * append results to the end of the matching results list.
+   * Optional. Controls whether to broaden the search when it produces sparse results. Broadened
+   * queries append results to the end of the matching results list.
    *
    * Defaults to false.
    * The value may be {@code null}.
@@ -94,18 +86,14 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableBroadening;
 
   /**
-   * Optional.
-   *
-   * Histogram requests for jobs matching JobQuery.
+   * Optional. Histogram requests for jobs matching JobQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HistogramFacets histogramFacets;
 
   /**
-   * Optional.
-   *
-   * Expression based histogram requests for jobs matching JobQuery.
+   * Optional. Expression based histogram requests for jobs matching JobQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,30 +106,24 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Query used to search against jobs, such as keyword, location filters, etc.
+   * Optional. Query used to search against jobs, such as keyword, location filters, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private JobQuery jobQuery;
 
   /**
-   * Optional.
-   *
-   * The desired job attributes returned for jobs in the search response. Defaults to JobView.SMALL
-   * if no value is specified.
+   * Optional. The desired job attributes returned for jobs in the search response. Defaults to
+   * JobView.SMALL if no value is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jobView;
 
   /**
-   * Optional.
-   *
-   * An integer that specifies the current offset (that is, starting result location, amongst the
-   * jobs deemed by the API as relevant) in search results. This field is only considered if
-   * page_token is unset.
+   * Optional. An integer that specifies the current offset (that is, starting result location,
+   * amongst the jobs deemed by the API as relevant) in search results. This field is only
+   * considered if page_token is unset.
    *
    * For example, 0 means to  return results starting from the first matching job, and 10 means to
    * return from the 11th job. This can be used for pagination, (for example, pageSize = 10 and
@@ -152,9 +134,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.Integer offset;
 
   /**
-   * Optional.
-   *
-   * The criteria determining how search results are sorted. Default is "relevance desc".
+   * Optional. The criteria determining how search results are sorted. Default is "relevance desc".
    *
    * Supported options are:
    *
@@ -192,19 +172,16 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String orderBy;
 
   /**
-   * Optional.
-   *
-   * A limit on the number of jobs returned in the search results. Increasing this value above the
-   * default value of 10 can increase search response time. The value can be between 1 and 100.
+   * Optional. A limit on the number of jobs returned in the search results. Increasing this value
+   * above the default value of 10 can increase search response time. The value can be between 1 and
+   * 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * Optional.
-   *
-   * The token specifying the current offset within search results. See
+   * Optional. The token specifying the current offset within search results. See
    * SearchJobsResponse.next_page_token for an explanation of how to obtain the next set of query
    * results.
    * The value may be {@code null}.
@@ -213,23 +190,19 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String pageToken;
 
   /**
-   * Required.
-   *
-   * The meta information collected about the job searcher, used to improve the search quality of
-   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
-   * consistent.
+   * Required. The meta information collected about the job searcher, used to improve the search
+   * quality of the service. The identifiers (such as `user_id`) are provided by users, and must be
+   * unique and consistent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RequestMetadata requestMetadata;
 
   /**
-   * Optional.
-   *
-   * Controls if the search job request requires the return of a precise count of the first 300
-   * results. Setting this to `true` ensures consistency in the number of results per page. Best
-   * practice is to set this value to true if a client allows users to jump directly to a non-
-   * sequential search results page.
+   * Optional. Controls if the search job request requires the return of a precise count of the
+   * first 300 results. Setting this to `true` ensures consistency in the number of results per
+   * page. Best practice is to set this value to true if a client allows users to jump directly to a
+   * non-sequential search results page.
    *
    * Enabling this flag may adversely impact performance.
    *
@@ -240,9 +213,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.Boolean requirePreciseResultSize;
 
   /**
-   * Optional.
-   *
-   * Mode of a search.
+   * Optional. Mode of a search.
    *
    * Defaults to SearchMode.JOB_SEARCH.
    * The value may be {@code null}.
@@ -251,10 +222,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   private java.lang.String searchMode;
 
   /**
-   * Optional.
-   *
-   * Controls over how job documents get ranked on top of existing relevance score (determined by
-   * API algorithm).
+   * Optional. Controls over how job documents get ranked on top of existing relevance score
+   * (determined by API algorithm).
    * @return value or {@code null} for none
    */
   public CustomRankingInfo getCustomRankingInfo() {
@@ -262,10 +231,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls over how job documents get ranked on top of existing relevance score (determined by
-   * API algorithm).
+   * Optional. Controls over how job documents get ranked on top of existing relevance score
+   * (determined by API algorithm).
    * @param customRankingInfo customRankingInfo or {@code null} for none
    */
   public SearchJobsRequest setCustomRankingInfo(CustomRankingInfo customRankingInfo) {
@@ -274,9 +241,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls whether to disable exact keyword match on Job.job_title, Job.description,
+   * Optional. Controls whether to disable exact keyword match on Job.job_title, Job.description,
    * Job.company_display_name, Job.locations, Job.qualifications. When disable keyword match is
    * turned off, a keyword match returns jobs that do not match given category filters when there
    * are matching keywords. For example, the query "program manager," a result is returned even if
@@ -299,9 +264,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls whether to disable exact keyword match on Job.job_title, Job.description,
+   * Optional. Controls whether to disable exact keyword match on Job.job_title, Job.description,
    * Job.company_display_name, Job.locations, Job.qualifications. When disable keyword match is
    * turned off, a keyword match returns jobs that do not match given category filters when there
    * are matching keywords. For example, the query "program manager," a result is returned even if
@@ -325,13 +288,11 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls whether highly similar jobs are returned next to each other in the search results.
-   * Jobs are identified as highly similar based on their titles, job categories, and locations.
-   * Highly similar results are clustered so that only one representative job of the cluster is
-   * displayed to the job seeker higher up in the results, with the other jobs being displayed lower
-   * down in the results.
+   * Optional. Controls whether highly similar jobs are returned next to each other in the search
+   * results. Jobs are identified as highly similar based on their titles, job categories, and
+   * locations. Highly similar results are clustered so that only one representative job of the
+   * cluster is displayed to the job seeker higher up in the results, with the other jobs being
+   * displayed lower down in the results.
    *
    * Defaults to DiversificationLevel.SIMPLE if no value is specified.
    * @return value or {@code null} for none
@@ -341,13 +302,11 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls whether highly similar jobs are returned next to each other in the search results.
-   * Jobs are identified as highly similar based on their titles, job categories, and locations.
-   * Highly similar results are clustered so that only one representative job of the cluster is
-   * displayed to the job seeker higher up in the results, with the other jobs being displayed lower
-   * down in the results.
+   * Optional. Controls whether highly similar jobs are returned next to each other in the search
+   * results. Jobs are identified as highly similar based on their titles, job categories, and
+   * locations. Highly similar results are clustered so that only one representative job of the
+   * cluster is displayed to the job seeker higher up in the results, with the other jobs being
+   * displayed lower down in the results.
    *
    * Defaults to DiversificationLevel.SIMPLE if no value is specified.
    * @param diversificationLevel diversificationLevel or {@code null} for none
@@ -358,10 +317,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls whether to broaden the search when it produces sparse results. Broadened queries
-   * append results to the end of the matching results list.
+   * Optional. Controls whether to broaden the search when it produces sparse results. Broadened
+   * queries append results to the end of the matching results list.
    *
    * Defaults to false.
    * @return value or {@code null} for none
@@ -371,10 +328,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls whether to broaden the search when it produces sparse results. Broadened queries
-   * append results to the end of the matching results list.
+   * Optional. Controls whether to broaden the search when it produces sparse results. Broadened
+   * queries append results to the end of the matching results list.
    *
    * Defaults to false.
    * @param enableBroadening enableBroadening or {@code null} for none
@@ -385,9 +340,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Histogram requests for jobs matching JobQuery.
+   * Optional. Histogram requests for jobs matching JobQuery.
    * @return value or {@code null} for none
    */
   public HistogramFacets getHistogramFacets() {
@@ -395,9 +348,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Histogram requests for jobs matching JobQuery.
+   * Optional. Histogram requests for jobs matching JobQuery.
    * @param histogramFacets histogramFacets or {@code null} for none
    */
   public SearchJobsRequest setHistogramFacets(HistogramFacets histogramFacets) {
@@ -406,9 +357,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Expression based histogram requests for jobs matching JobQuery.
+   * Optional. Expression based histogram requests for jobs matching JobQuery.
    * @return value or {@code null} for none
    */
   public java.util.List<HistogramQuery> getHistogramQueries() {
@@ -416,9 +365,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Expression based histogram requests for jobs matching JobQuery.
+   * Optional. Expression based histogram requests for jobs matching JobQuery.
    * @param histogramQueries histogramQueries or {@code null} for none
    */
   public SearchJobsRequest setHistogramQueries(java.util.List<HistogramQuery> histogramQueries) {
@@ -427,9 +374,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Query used to search against jobs, such as keyword, location filters, etc.
+   * Optional. Query used to search against jobs, such as keyword, location filters, etc.
    * @return value or {@code null} for none
    */
   public JobQuery getJobQuery() {
@@ -437,9 +382,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Query used to search against jobs, such as keyword, location filters, etc.
+   * Optional. Query used to search against jobs, such as keyword, location filters, etc.
    * @param jobQuery jobQuery or {@code null} for none
    */
   public SearchJobsRequest setJobQuery(JobQuery jobQuery) {
@@ -448,10 +391,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The desired job attributes returned for jobs in the search response. Defaults to JobView.SMALL
-   * if no value is specified.
+   * Optional. The desired job attributes returned for jobs in the search response. Defaults to
+   * JobView.SMALL if no value is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobView() {
@@ -459,10 +400,8 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The desired job attributes returned for jobs in the search response. Defaults to JobView.SMALL
-   * if no value is specified.
+   * Optional. The desired job attributes returned for jobs in the search response. Defaults to
+   * JobView.SMALL if no value is specified.
    * @param jobView jobView or {@code null} for none
    */
   public SearchJobsRequest setJobView(java.lang.String jobView) {
@@ -471,11 +410,9 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * An integer that specifies the current offset (that is, starting result location, amongst the
-   * jobs deemed by the API as relevant) in search results. This field is only considered if
-   * page_token is unset.
+   * Optional. An integer that specifies the current offset (that is, starting result location,
+   * amongst the jobs deemed by the API as relevant) in search results. This field is only
+   * considered if page_token is unset.
    *
    * For example, 0 means to  return results starting from the first matching job, and 10 means to
    * return from the 11th job. This can be used for pagination, (for example, pageSize = 10 and
@@ -487,11 +424,9 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * An integer that specifies the current offset (that is, starting result location, amongst the
-   * jobs deemed by the API as relevant) in search results. This field is only considered if
-   * page_token is unset.
+   * Optional. An integer that specifies the current offset (that is, starting result location,
+   * amongst the jobs deemed by the API as relevant) in search results. This field is only
+   * considered if page_token is unset.
    *
    * For example, 0 means to  return results starting from the first matching job, and 10 means to
    * return from the 11th job. This can be used for pagination, (for example, pageSize = 10 and
@@ -504,9 +439,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The criteria determining how search results are sorted. Default is "relevance desc".
+   * Optional. The criteria determining how search results are sorted. Default is "relevance desc".
    *
    * Supported options are:
    *
@@ -545,9 +478,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The criteria determining how search results are sorted. Default is "relevance desc".
+   * Optional. The criteria determining how search results are sorted. Default is "relevance desc".
    *
    * Supported options are:
    *
@@ -587,10 +518,9 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * A limit on the number of jobs returned in the search results. Increasing this value above the
-   * default value of 10 can increase search response time. The value can be between 1 and 100.
+   * Optional. A limit on the number of jobs returned in the search results. Increasing this value
+   * above the default value of 10 can increase search response time. The value can be between 1 and
+   * 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -598,10 +528,9 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * A limit on the number of jobs returned in the search results. Increasing this value above the
-   * default value of 10 can increase search response time. The value can be between 1 and 100.
+   * Optional. A limit on the number of jobs returned in the search results. Increasing this value
+   * above the default value of 10 can increase search response time. The value can be between 1 and
+   * 100.
    * @param pageSize pageSize or {@code null} for none
    */
   public SearchJobsRequest setPageSize(java.lang.Integer pageSize) {
@@ -610,9 +539,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The token specifying the current offset within search results. See
+   * Optional. The token specifying the current offset within search results. See
    * SearchJobsResponse.next_page_token for an explanation of how to obtain the next set of query
    * results.
    * @return value or {@code null} for none
@@ -622,9 +549,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * The token specifying the current offset within search results. See
+   * Optional. The token specifying the current offset within search results. See
    * SearchJobsResponse.next_page_token for an explanation of how to obtain the next set of query
    * results.
    * @param pageToken pageToken or {@code null} for none
@@ -635,11 +560,9 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The meta information collected about the job searcher, used to improve the search quality of
-   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
-   * consistent.
+   * Required. The meta information collected about the job searcher, used to improve the search
+   * quality of the service. The identifiers (such as `user_id`) are provided by users, and must be
+   * unique and consistent.
    * @return value or {@code null} for none
    */
   public RequestMetadata getRequestMetadata() {
@@ -647,11 +570,9 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * The meta information collected about the job searcher, used to improve the search quality of
-   * the service. The identifiers (such as `user_id`) are provided by users, and must be unique and
-   * consistent.
+   * Required. The meta information collected about the job searcher, used to improve the search
+   * quality of the service. The identifiers (such as `user_id`) are provided by users, and must be
+   * unique and consistent.
    * @param requestMetadata requestMetadata or {@code null} for none
    */
   public SearchJobsRequest setRequestMetadata(RequestMetadata requestMetadata) {
@@ -660,12 +581,10 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls if the search job request requires the return of a precise count of the first 300
-   * results. Setting this to `true` ensures consistency in the number of results per page. Best
-   * practice is to set this value to true if a client allows users to jump directly to a non-
-   * sequential search results page.
+   * Optional. Controls if the search job request requires the return of a precise count of the
+   * first 300 results. Setting this to `true` ensures consistency in the number of results per
+   * page. Best practice is to set this value to true if a client allows users to jump directly to a
+   * non-sequential search results page.
    *
    * Enabling this flag may adversely impact performance.
    *
@@ -677,12 +596,10 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Controls if the search job request requires the return of a precise count of the first 300
-   * results. Setting this to `true` ensures consistency in the number of results per page. Best
-   * practice is to set this value to true if a client allows users to jump directly to a non-
-   * sequential search results page.
+   * Optional. Controls if the search job request requires the return of a precise count of the
+   * first 300 results. Setting this to `true` ensures consistency in the number of results per
+   * page. Best practice is to set this value to true if a client allows users to jump directly to a
+   * non-sequential search results page.
    *
    * Enabling this flag may adversely impact performance.
    *
@@ -695,9 +612,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Mode of a search.
+   * Optional. Mode of a search.
    *
    * Defaults to SearchMode.JOB_SEARCH.
    * @return value or {@code null} for none
@@ -707,9 +622,7 @@ public final class SearchJobsRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional.
-   *
-   * Mode of a search.
+   * Optional. Mode of a search.
    *
    * Defaults to SearchMode.JOB_SEARCH.
    * @param searchMode searchMode or {@code null} for none

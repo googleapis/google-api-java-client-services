@@ -35,44 +35,55 @@ package com.google.api.services.jobs.v2.model;
 public final class ExtendedCompensationFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Compensation range.
+   * Optional.
+   *
+   * Compensation range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExtendedCompensationInfoCompensationRange compensationRange;
 
   /**
-   * Required. Specify desired `base compensation entry's`
-   * ExtendedCompensationInfo.CompensationUnit.
+   * Required.
+   *
+   * Specify desired `base compensation entry's` ExtendedCompensationInfo.CompensationUnit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> compensationUnits;
 
   /**
-   * Optional. Specify currency in 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-
-   * codes.html) format. If unspecified, jobs are returned regardless of currency.
+   * Optional.
+   *
+   * Specify currency in 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html)
+   * format. If unspecified, jobs are returned regardless of currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currency;
 
   /**
-   * Optional. Whether to include jobs whose compensation range is unspecified.
+   * Optional.
+   *
+   * Whether to include jobs whose compensation range is unspecified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeJobWithUnspecifiedCompensationRange;
 
   /**
-   * Required. Type of filter.
+   * Required.
+   *
+   * Type of filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Compensation range.
+   * Optional.
+   *
+   * Compensation range.
    * @return value or {@code null} for none
    */
   public ExtendedCompensationInfoCompensationRange getCompensationRange() {
@@ -80,7 +91,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Optional. Compensation range.
+   * Optional.
+   *
+   * Compensation range.
    * @param compensationRange compensationRange or {@code null} for none
    */
   public ExtendedCompensationFilter setCompensationRange(ExtendedCompensationInfoCompensationRange compensationRange) {
@@ -89,8 +102,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Required. Specify desired `base compensation entry's`
-   * ExtendedCompensationInfo.CompensationUnit.
+   * Required.
+   *
+   * Specify desired `base compensation entry's` ExtendedCompensationInfo.CompensationUnit.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCompensationUnits() {
@@ -98,8 +112,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Required. Specify desired `base compensation entry's`
-   * ExtendedCompensationInfo.CompensationUnit.
+   * Required.
+   *
+   * Specify desired `base compensation entry's` ExtendedCompensationInfo.CompensationUnit.
    * @param compensationUnits compensationUnits or {@code null} for none
    */
   public ExtendedCompensationFilter setCompensationUnits(java.util.List<java.lang.String> compensationUnits) {
@@ -108,8 +123,10 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Optional. Specify currency in 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-
-   * codes.html) format. If unspecified, jobs are returned regardless of currency.
+   * Optional.
+   *
+   * Specify currency in 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html)
+   * format. If unspecified, jobs are returned regardless of currency.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrency() {
@@ -117,8 +134,10 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Optional. Specify currency in 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-
-   * codes.html) format. If unspecified, jobs are returned regardless of currency.
+   * Optional.
+   *
+   * Specify currency in 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html)
+   * format. If unspecified, jobs are returned regardless of currency.
    * @param currency currency or {@code null} for none
    */
   public ExtendedCompensationFilter setCurrency(java.lang.String currency) {
@@ -127,7 +146,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Optional. Whether to include jobs whose compensation range is unspecified.
+   * Optional.
+   *
+   * Whether to include jobs whose compensation range is unspecified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeJobWithUnspecifiedCompensationRange() {
@@ -135,7 +156,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Optional. Whether to include jobs whose compensation range is unspecified.
+   * Optional.
+   *
+   * Whether to include jobs whose compensation range is unspecified.
    * @param includeJobWithUnspecifiedCompensationRange includeJobWithUnspecifiedCompensationRange or {@code null} for none
    */
   public ExtendedCompensationFilter setIncludeJobWithUnspecifiedCompensationRange(java.lang.Boolean includeJobWithUnspecifiedCompensationRange) {
@@ -144,7 +167,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Required. Type of filter.
+   * Required.
+   *
+   * Type of filter.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -152,7 +177,9 @@ public final class ExtendedCompensationFilter extends com.google.api.client.json
   }
 
   /**
-   * Required. Type of filter.
+   * Required.
+   *
+   * Type of filter.
    * @param type type or {@code null} for none
    */
   public ExtendedCompensationFilter setType(java.lang.String type) {

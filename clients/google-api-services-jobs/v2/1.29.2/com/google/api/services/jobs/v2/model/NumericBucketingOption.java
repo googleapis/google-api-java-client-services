@@ -33,26 +33,31 @@ package com.google.api.services.jobs.v2.model;
 public final class NumericBucketingOption extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Two adjacent values form a histogram bucket. Values should be in ascending order. For
-   * example, if [5, 10, 15] are provided, four buckets are created: (-inf, 5), 5, 10), [10, 15),
-   * [15, inf). At most 20 [buckets_bound is supported.
+   * Required.
+   *
+   * Two adjacent values form a histogram bucket. Values should be in ascending order. For example,
+   * if [5, 10, 15] are provided, four buckets are created: (-inf, 5), 5, 10), [10, 15), [15, inf).
+   * At most 20 [buckets_bound is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Double> bucketBounds;
 
   /**
-   * Optional. If set to true, the histogram result includes minimum/maximum value of the numeric
-   * field.
+   * Optional.
+   *
+   * If set to true, the histogram result includes minimum/maximum value of the numeric field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requiresMinMax;
 
   /**
-   * Required. Two adjacent values form a histogram bucket. Values should be in ascending order. For
-   * example, if [5, 10, 15] are provided, four buckets are created: (-inf, 5), 5, 10), [10, 15),
-   * [15, inf). At most 20 [buckets_bound is supported.
+   * Required.
+   *
+   * Two adjacent values form a histogram bucket. Values should be in ascending order. For example,
+   * if [5, 10, 15] are provided, four buckets are created: (-inf, 5), 5, 10), [10, 15), [15, inf).
+   * At most 20 [buckets_bound is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Double> getBucketBounds() {
@@ -60,9 +65,11 @@ public final class NumericBucketingOption extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Two adjacent values form a histogram bucket. Values should be in ascending order. For
-   * example, if [5, 10, 15] are provided, four buckets are created: (-inf, 5), 5, 10), [10, 15),
-   * [15, inf). At most 20 [buckets_bound is supported.
+   * Required.
+   *
+   * Two adjacent values form a histogram bucket. Values should be in ascending order. For example,
+   * if [5, 10, 15] are provided, four buckets are created: (-inf, 5), 5, 10), [10, 15), [15, inf).
+   * At most 20 [buckets_bound is supported.
    * @param bucketBounds bucketBounds or {@code null} for none
    */
   public NumericBucketingOption setBucketBounds(java.util.List<java.lang.Double> bucketBounds) {
@@ -71,8 +78,9 @@ public final class NumericBucketingOption extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. If set to true, the histogram result includes minimum/maximum value of the numeric
-   * field.
+   * Optional.
+   *
+   * If set to true, the histogram result includes minimum/maximum value of the numeric field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequiresMinMax() {
@@ -80,8 +88,9 @@ public final class NumericBucketingOption extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. If set to true, the histogram result includes minimum/maximum value of the numeric
-   * field.
+   * Optional.
+   *
+   * If set to true, the histogram result includes minimum/maximum value of the numeric field.
    * @param requiresMinMax requiresMinMax or {@code null} for none
    */
   public NumericBucketingOption setRequiresMinMax(java.lang.Boolean requiresMinMax) {

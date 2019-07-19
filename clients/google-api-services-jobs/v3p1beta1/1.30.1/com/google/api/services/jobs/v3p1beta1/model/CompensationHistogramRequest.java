@@ -33,28 +33,23 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class CompensationHistogramRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * Numeric histogram options, like buckets, whether include min or max value.
+   * Required. Numeric histogram options, like buckets, whether include min or max value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NumericBucketingOption bucketingOption;
 
   /**
-   * Required.
-   *
-   * Type of the request, representing which field the histogramming should be performed over. A
-   * single request can only specify one histogram of each `CompensationHistogramRequestType`.
+   * Required. Type of the request, representing which field the histogramming should be performed
+   * over. A single request can only specify one histogram of each
+   * `CompensationHistogramRequestType`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required.
-   *
-   * Numeric histogram options, like buckets, whether include min or max value.
+   * Required. Numeric histogram options, like buckets, whether include min or max value.
    * @return value or {@code null} for none
    */
   public NumericBucketingOption getBucketingOption() {
@@ -62,9 +57,7 @@ public final class CompensationHistogramRequest extends com.google.api.client.js
   }
 
   /**
-   * Required.
-   *
-   * Numeric histogram options, like buckets, whether include min or max value.
+   * Required. Numeric histogram options, like buckets, whether include min or max value.
    * @param bucketingOption bucketingOption or {@code null} for none
    */
   public CompensationHistogramRequest setBucketingOption(NumericBucketingOption bucketingOption) {
@@ -73,10 +66,9 @@ public final class CompensationHistogramRequest extends com.google.api.client.js
   }
 
   /**
-   * Required.
-   *
-   * Type of the request, representing which field the histogramming should be performed over. A
-   * single request can only specify one histogram of each `CompensationHistogramRequestType`.
+   * Required. Type of the request, representing which field the histogramming should be performed
+   * over. A single request can only specify one histogram of each
+   * `CompensationHistogramRequestType`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -84,10 +76,9 @@ public final class CompensationHistogramRequest extends com.google.api.client.js
   }
 
   /**
-   * Required.
-   *
-   * Type of the request, representing which field the histogramming should be performed over. A
-   * single request can only specify one histogram of each `CompensationHistogramRequestType`.
+   * Required. Type of the request, representing which field the histogramming should be performed
+   * over. A single request can only specify one histogram of each
+   * `CompensationHistogramRequestType`.
    * @param type type or {@code null} for none
    */
   public CompensationHistogramRequest setType(java.lang.String type) {

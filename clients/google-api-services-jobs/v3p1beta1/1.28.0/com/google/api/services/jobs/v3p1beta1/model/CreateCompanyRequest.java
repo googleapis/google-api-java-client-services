@@ -33,18 +33,14 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class CreateCompanyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The company to be created.
+   * Required. The company to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Company company;
 
   /**
-   * Required.
-   *
-   * The company to be created.
+   * Required. The company to be created.
    * @return value or {@code null} for none
    */
   public Company getCompany() {
@@ -52,9 +48,7 @@ public final class CreateCompanyRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required.
-   *
-   * The company to be created.
+   * Required. The company to be created.
    * @param company company or {@code null} for none
    */
   public CreateCompanyRequest setCompany(Company company) {

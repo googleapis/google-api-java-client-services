@@ -33,18 +33,14 @@ package com.google.api.services.jobs.v3.model;
 public final class CreateJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The Job to be created.
+   * Required. The Job to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Job job;
 
   /**
-   * Required.
-   *
-   * The Job to be created.
+   * Required. The Job to be created.
    * @return value or {@code null} for none
    */
   public Job getJob() {
@@ -52,9 +48,7 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required.
-   *
-   * The Job to be created.
+   * Required. The Job to be created.
    * @param job job or {@code null} for none
    */
   public CreateJobRequest setJob(Job job) {

@@ -36,23 +36,29 @@ package com.google.api.services.jobs.v2.model;
 public final class CompensationEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Compensation amount.
+   * Optional.
+   *
+   * Compensation amount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money amount;
 
   /**
-   * Optional. Compensation description.  For example, could indicate equity terms or provide
-   * additional context to an estimated bonus.
+   * Optional.
+   *
+   * Compensation description.  For example, could indicate equity terms or provide additional
+   * context to an estimated bonus.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Expected number of units paid each year. If not specified, when Job.employment_types
-   * is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY:
+   * Optional.
+   *
+   * Expected number of units paid each year. If not specified, when Job.employment_types is
+   * FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY:
    * 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
    * The value may be {@code null}.
    */
@@ -60,21 +66,27 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   private java.lang.Double expectedUnitsPerYear;
 
   /**
-   * Optional. Compensation range.
+   * Optional.
+   *
+   * Compensation range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompensationRange range;
 
   /**
-   * Required. Compensation type.
+   * Required.
+   *
+   * Compensation type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Frequency of the specified amount.
+   * Optional.
+   *
+   * Frequency of the specified amount.
    *
    * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * The value may be {@code null}.
@@ -83,7 +95,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   private java.lang.String unit;
 
   /**
-   * Optional. Compensation amount.
+   * Optional.
+   *
+   * Compensation amount.
    * @return value or {@code null} for none
    */
   public Money getAmount() {
@@ -91,7 +105,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation amount.
+   * Optional.
+   *
+   * Compensation amount.
    * @param amount amount or {@code null} for none
    */
   public CompensationEntry setAmount(Money amount) {
@@ -100,8 +116,10 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation description.  For example, could indicate equity terms or provide
-   * additional context to an estimated bonus.
+   * Optional.
+   *
+   * Compensation description.  For example, could indicate equity terms or provide additional
+   * context to an estimated bonus.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -109,8 +127,10 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation description.  For example, could indicate equity terms or provide
-   * additional context to an estimated bonus.
+   * Optional.
+   *
+   * Compensation description.  For example, could indicate equity terms or provide additional
+   * context to an estimated bonus.
    * @param description description or {@code null} for none
    */
   public CompensationEntry setDescription(java.lang.String description) {
@@ -119,8 +139,10 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Expected number of units paid each year. If not specified, when Job.employment_types
-   * is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY:
+   * Optional.
+   *
+   * Expected number of units paid each year. If not specified, when Job.employment_types is
+   * FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY:
    * 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
    * @return value or {@code null} for none
    */
@@ -129,8 +151,10 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Expected number of units paid each year. If not specified, when Job.employment_types
-   * is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY:
+   * Optional.
+   *
+   * Expected number of units paid each year. If not specified, when Job.employment_types is
+   * FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY:
    * 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
    * @param expectedUnitsPerYear expectedUnitsPerYear or {@code null} for none
    */
@@ -140,7 +164,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation range.
+   * Optional.
+   *
+   * Compensation range.
    * @return value or {@code null} for none
    */
   public CompensationRange getRange() {
@@ -148,7 +174,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Compensation range.
+   * Optional.
+   *
+   * Compensation range.
    * @param range range or {@code null} for none
    */
   public CompensationEntry setRange(CompensationRange range) {
@@ -157,7 +185,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Compensation type.
+   * Required.
+   *
+   * Compensation type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -165,7 +195,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Compensation type.
+   * Required.
+   *
+   * Compensation type.
    * @param type type or {@code null} for none
    */
   public CompensationEntry setType(java.lang.String type) {
@@ -174,7 +206,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Frequency of the specified amount.
+   * Optional.
+   *
+   * Frequency of the specified amount.
    *
    * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @return value or {@code null} for none
@@ -184,7 +218,9 @@ public final class CompensationEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Frequency of the specified amount.
+   * Optional.
+   *
+   * Frequency of the specified amount.
    *
    * Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
    * @param unit unit or {@code null} for none

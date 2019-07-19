@@ -32,7 +32,9 @@ package com.google.api.services.jobs.v2.model;
 public final class CustomAttributeHistogramRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Specifies the custom field key to perform a histogram on. If specified without
+   * Required.
+   *
+   * Specifies the custom field key to perform a histogram on. If specified without
    * `long_value_histogram_bucketing_option`, histogram on string values of the given `key` is
    * triggered, otherwise histogram is performed on long values.
    * The value may be {@code null}.
@@ -41,8 +43,10 @@ public final class CustomAttributeHistogramRequest extends com.google.api.client
   private java.lang.String key;
 
   /**
-   * Optional. Specifies buckets used to perform a range histogram on Job's filterable long custom
-   * field values, or min/max value requirements.
+   * Optional.
+   *
+   * Specifies buckets used to perform a range histogram on Job's filterable long custom field
+   * values, or min/max value requirements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +61,9 @@ public final class CustomAttributeHistogramRequest extends com.google.api.client
   private java.lang.Boolean stringValueHistogram;
 
   /**
-   * Required. Specifies the custom field key to perform a histogram on. If specified without
+   * Required.
+   *
+   * Specifies the custom field key to perform a histogram on. If specified without
    * `long_value_histogram_bucketing_option`, histogram on string values of the given `key` is
    * triggered, otherwise histogram is performed on long values.
    * @return value or {@code null} for none
@@ -67,7 +73,9 @@ public final class CustomAttributeHistogramRequest extends com.google.api.client
   }
 
   /**
-   * Required. Specifies the custom field key to perform a histogram on. If specified without
+   * Required.
+   *
+   * Specifies the custom field key to perform a histogram on. If specified without
    * `long_value_histogram_bucketing_option`, histogram on string values of the given `key` is
    * triggered, otherwise histogram is performed on long values.
    * @param key key or {@code null} for none
@@ -78,8 +86,10 @@ public final class CustomAttributeHistogramRequest extends com.google.api.client
   }
 
   /**
-   * Optional. Specifies buckets used to perform a range histogram on Job's filterable long custom
-   * field values, or min/max value requirements.
+   * Optional.
+   *
+   * Specifies buckets used to perform a range histogram on Job's filterable long custom field
+   * values, or min/max value requirements.
    * @return value or {@code null} for none
    */
   public NumericBucketingOption getLongValueHistogramBucketingOption() {
@@ -87,8 +97,10 @@ public final class CustomAttributeHistogramRequest extends com.google.api.client
   }
 
   /**
-   * Optional. Specifies buckets used to perform a range histogram on Job's filterable long custom
-   * field values, or min/max value requirements.
+   * Optional.
+   *
+   * Specifies buckets used to perform a range histogram on Job's filterable long custom field
+   * values, or min/max value requirements.
    * @param longValueHistogramBucketingOption longValueHistogramBucketingOption or {@code null} for none
    */
   public CustomAttributeHistogramRequest setLongValueHistogramBucketingOption(NumericBucketingOption longValueHistogramBucketingOption) {

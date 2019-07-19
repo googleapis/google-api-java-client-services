@@ -32,31 +32,25 @@ package com.google.api.services.jobs.v3.model;
 public final class JobEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The job name(s) associated with this event. For example, if this is an impression event, this
-   * field contains the identifiers of all jobs shown to the job seeker. If this was a view event,
-   * this field contains the identifier of the viewed job.
+   * Required. The job name(s) associated with this event. For example, if this is an impression
+   * event, this field contains the identifiers of all jobs shown to the job seeker. If this was a
+   * view event, this field contains the identifier of the viewed job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> jobs;
 
   /**
-   * Required.
-   *
-   * The type of the event (see JobEventType).
+   * Required. The type of the event (see JobEventType).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required.
-   *
-   * The job name(s) associated with this event. For example, if this is an impression event, this
-   * field contains the identifiers of all jobs shown to the job seeker. If this was a view event,
-   * this field contains the identifier of the viewed job.
+   * Required. The job name(s) associated with this event. For example, if this is an impression
+   * event, this field contains the identifiers of all jobs shown to the job seeker. If this was a
+   * view event, this field contains the identifier of the viewed job.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getJobs() {
@@ -64,11 +58,9 @@ public final class JobEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The job name(s) associated with this event. For example, if this is an impression event, this
-   * field contains the identifiers of all jobs shown to the job seeker. If this was a view event,
-   * this field contains the identifier of the viewed job.
+   * Required. The job name(s) associated with this event. For example, if this is an impression
+   * event, this field contains the identifiers of all jobs shown to the job seeker. If this was a
+   * view event, this field contains the identifier of the viewed job.
    * @param jobs jobs or {@code null} for none
    */
   public JobEvent setJobs(java.util.List<java.lang.String> jobs) {
@@ -77,9 +69,7 @@ public final class JobEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The type of the event (see JobEventType).
+   * Required. The type of the event (see JobEventType).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -87,9 +77,7 @@ public final class JobEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The type of the event (see JobEventType).
+   * Required. The type of the event (see JobEventType).
    * @param type type or {@code null} for none
    */
   public JobEvent setType(java.lang.String type) {

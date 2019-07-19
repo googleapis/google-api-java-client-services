@@ -48,19 +48,15 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean allowImpreciseAddresses;
 
   /**
-   * Required.
-   *
-   * The method of transportation for which to calculate the commute time.
+   * Required. The method of transportation for which to calculate the commute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commuteMethod;
 
   /**
-   * Optional.
-   *
-   * The departure time used to calculate traffic impact, represented as google.type.TimeOfDay in
-   * local time zone.
+   * Optional. The departure time used to calculate traffic impact, represented as
+   * google.type.TimeOfDay in local time zone.
    *
    * Currently traffic model is restricted to hour level resolution.
    * The value may be {@code null}.
@@ -69,28 +65,22 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   private TimeOfDay departureTime;
 
   /**
-   * Optional.
-   *
-   * Specifies the traffic density to use when calculating commute time.
+   * Optional. Specifies the traffic density to use when calculating commute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String roadTraffic;
 
   /**
-   * Required.
-   *
-   * The latitude and longitude of the location from which to calculate the commute time.
+   * Required. The latitude and longitude of the location from which to calculate the commute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LatLng startCoordinates;
 
   /**
-   * Required.
-   *
-   * The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour). Format is
-   * `123s`.
+   * Required. The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour).
+   * Format is `123s`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,9 +120,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required.
-   *
-   * The method of transportation for which to calculate the commute time.
+   * Required. The method of transportation for which to calculate the commute time.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommuteMethod() {
@@ -140,9 +128,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required.
-   *
-   * The method of transportation for which to calculate the commute time.
+   * Required. The method of transportation for which to calculate the commute time.
    * @param commuteMethod commuteMethod or {@code null} for none
    */
   public CommuteFilter setCommuteMethod(java.lang.String commuteMethod) {
@@ -151,10 +137,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional.
-   *
-   * The departure time used to calculate traffic impact, represented as google.type.TimeOfDay in
-   * local time zone.
+   * Optional. The departure time used to calculate traffic impact, represented as
+   * google.type.TimeOfDay in local time zone.
    *
    * Currently traffic model is restricted to hour level resolution.
    * @return value or {@code null} for none
@@ -164,10 +148,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional.
-   *
-   * The departure time used to calculate traffic impact, represented as google.type.TimeOfDay in
-   * local time zone.
+   * Optional. The departure time used to calculate traffic impact, represented as
+   * google.type.TimeOfDay in local time zone.
    *
    * Currently traffic model is restricted to hour level resolution.
    * @param departureTime departureTime or {@code null} for none
@@ -178,9 +160,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the traffic density to use when calculating commute time.
+   * Optional. Specifies the traffic density to use when calculating commute time.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoadTraffic() {
@@ -188,9 +168,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the traffic density to use when calculating commute time.
+   * Optional. Specifies the traffic density to use when calculating commute time.
    * @param roadTraffic roadTraffic or {@code null} for none
    */
   public CommuteFilter setRoadTraffic(java.lang.String roadTraffic) {
@@ -199,9 +177,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required.
-   *
-   * The latitude and longitude of the location from which to calculate the commute time.
+   * Required. The latitude and longitude of the location from which to calculate the commute time.
    * @return value or {@code null} for none
    */
   public LatLng getStartCoordinates() {
@@ -209,9 +185,7 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required.
-   *
-   * The latitude and longitude of the location from which to calculate the commute time.
+   * Required. The latitude and longitude of the location from which to calculate the commute time.
    * @param startCoordinates startCoordinates or {@code null} for none
    */
   public CommuteFilter setStartCoordinates(LatLng startCoordinates) {
@@ -220,10 +194,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required.
-   *
-   * The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour). Format is
-   * `123s`.
+   * Required. The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour).
+   * Format is `123s`.
    * @return value or {@code null} for none
    */
   public String getTravelDuration() {
@@ -231,10 +203,8 @@ public final class CommuteFilter extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required.
-   *
-   * The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour). Format is
-   * `123s`.
+   * Required. The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour).
+   * Format is `123s`.
    * @param travelDuration travelDuration or {@code null} for none
    */
   public CommuteFilter setTravelDuration(String travelDuration) {

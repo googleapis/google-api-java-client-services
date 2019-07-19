@@ -33,10 +33,8 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class CustomRankingInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * Controls over how important the score of CustomRankingInfo.ranking_expression gets applied to
-   * job's final ranking position.
+   * Required. Controls over how important the score of CustomRankingInfo.ranking_expression gets
+   * applied to job's final ranking position.
    *
    * An error is thrown if not specified.
    * The value may be {@code null}.
@@ -45,11 +43,9 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
   private java.lang.String importanceLevel;
 
   /**
-   * Required.
-   *
-   * Controls over how job documents get ranked on top of existing relevance score (determined by
-   * API algorithm). The product of ranking expression and relevance score is used to determine
-   * job's final ranking position.
+   * Required. Controls over how job documents get ranked on top of existing relevance score
+   * (determined by API algorithm). The product of ranking expression and relevance score is used to
+   * determine job's final ranking position.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -67,10 +63,8 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
   private java.lang.String rankingExpression;
 
   /**
-   * Required.
-   *
-   * Controls over how important the score of CustomRankingInfo.ranking_expression gets applied to
-   * job's final ranking position.
+   * Required. Controls over how important the score of CustomRankingInfo.ranking_expression gets
+   * applied to job's final ranking position.
    *
    * An error is thrown if not specified.
    * @return value or {@code null} for none
@@ -80,10 +74,8 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * Controls over how important the score of CustomRankingInfo.ranking_expression gets applied to
-   * job's final ranking position.
+   * Required. Controls over how important the score of CustomRankingInfo.ranking_expression gets
+   * applied to job's final ranking position.
    *
    * An error is thrown if not specified.
    * @param importanceLevel importanceLevel or {@code null} for none
@@ -94,11 +86,9 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * Controls over how job documents get ranked on top of existing relevance score (determined by
-   * API algorithm). The product of ranking expression and relevance score is used to determine
-   * job's final ranking position.
+   * Required. Controls over how job documents get ranked on top of existing relevance score
+   * (determined by API algorithm). The product of ranking expression and relevance score is used to
+   * determine job's final ranking position.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *
@@ -117,11 +107,9 @@ public final class CustomRankingInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required.
-   *
-   * Controls over how job documents get ranked on top of existing relevance score (determined by
-   * API algorithm). The product of ranking expression and relevance score is used to determine
-   * job's final ranking position.
+   * Required. Controls over how job documents get ranked on top of existing relevance score
+   * (determined by API algorithm). The product of ranking expression and relevance score is used to
+   * determine job's final ranking position.
    *
    * The syntax for this expression is a subset of Google SQL syntax.
    *

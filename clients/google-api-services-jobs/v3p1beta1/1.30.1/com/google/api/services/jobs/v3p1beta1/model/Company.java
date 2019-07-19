@@ -32,10 +32,8 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class Company extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * The URI to employer's career site or careers page on the employer's web site, for example,
-   * "https://careers.google.com".
+   * Optional. The URI to employer's career site or careers page on the employer's web site, for
+   * example, "https://careers.google.com".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,19 +47,15 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private CompanyDerivedInfo derivedInfo;
 
   /**
-   * Required.
-   *
-   * The display name of the company, for example, "Google, LLC".
+   * Required. The display name of the company, for example, "Google LLC".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional.
-   *
-   * Equal Employment Opportunity legal disclaimer text to be associated with all jobs, and
-   * typically to be displayed in all roles.
+   * Optional. Equal Employment Opportunity legal disclaimer text to be associated with all jobs,
+   * and typically to be displayed in all roles.
    *
    * The maximum number of allowed characters is 500.
    * The value may be {@code null}.
@@ -70,9 +64,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String eeoText;
 
   /**
-   * Required.
-   *
-   * Client side company identifier, used to uniquely identify the company.
+   * Required. Client side company identifier, used to uniquely identify the company.
    *
    * The maximum number of allowed characters is 255.
    * The value may be {@code null}.
@@ -81,20 +73,16 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String externalId;
 
   /**
-   * Optional.
-   *
-   * The street address of the company's main headquarters, which may be different from the job
-   * location. The service attempts to geolocate the provided address, and populates a more specific
-   * location wherever possible in DerivedInfo.headquarters_location.
+   * Optional. The street address of the company's main headquarters, which may be different from
+   * the job location. The service attempts to geolocate the provided address, and populates a more
+   * specific location wherever possible in DerivedInfo.headquarters_location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String headquartersAddress;
 
   /**
-   * Optional.
-   *
-   * Set to true if it is the hiring agency that post jobs for other employers.
+   * Optional. Set to true if it is the hiring agency that post jobs for other employers.
    *
    * Defaults to false if not provided.
    * The value may be {@code null}.
@@ -103,22 +91,18 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hiringAgency;
 
   /**
-   * Optional.
-   *
-   * A URI that hosts the employer's company logo.
+   * Optional. A URI that hosts the employer's company logo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
-   * Optional.
-   *
-   * A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are
-   * used in keyword search. Jobs with `string_values` under these specified field keys are returned
-   * if any of the values matches the search keyword. Custom field values with parenthesis, brackets
-   * and special symbols won't be properly searchable, and those keyword queries need to be
-   * surrounded by quotes.
+   * Optional. A list of keys of filterable Job.custom_attributes, whose corresponding
+   * `string_values` are used in keyword search. Jobs with `string_values` under these specified
+   * field keys are returned if any of the values matches the search keyword. Custom field values
+   * with parenthesis, brackets and special symbols won't be properly searchable, and those keyword
+   * queries need to be surrounded by quotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,9 +121,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional.
-   *
-   * The employer's company size.
+   * Optional. The employer's company size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,9 +136,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean suspended;
 
   /**
-   * Optional.
-   *
-   * The URI representing the company's primary web site or home page, for example,
+   * Optional. The URI representing the company's primary web site or home page, for example,
    * "https://www.google.com".
    *
    * The maximum number of allowed characters is 255.
@@ -166,10 +146,8 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.lang.String websiteUri;
 
   /**
-   * Optional.
-   *
-   * The URI to employer's career site or careers page on the employer's web site, for example,
-   * "https://careers.google.com".
+   * Optional. The URI to employer's career site or careers page on the employer's web site, for
+   * example, "https://careers.google.com".
    * @return value or {@code null} for none
    */
   public java.lang.String getCareerSiteUri() {
@@ -177,10 +155,8 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The URI to employer's career site or careers page on the employer's web site, for example,
-   * "https://careers.google.com".
+   * Optional. The URI to employer's career site or careers page on the employer's web site, for
+   * example, "https://careers.google.com".
    * @param careerSiteUri careerSiteUri or {@code null} for none
    */
   public Company setCareerSiteUri(java.lang.String careerSiteUri) {
@@ -206,9 +182,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The display name of the company, for example, "Google, LLC".
+   * Required. The display name of the company, for example, "Google LLC".
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -216,9 +190,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The display name of the company, for example, "Google, LLC".
+   * Required. The display name of the company, for example, "Google LLC".
    * @param displayName displayName or {@code null} for none
    */
   public Company setDisplayName(java.lang.String displayName) {
@@ -227,10 +199,8 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Equal Employment Opportunity legal disclaimer text to be associated with all jobs, and
-   * typically to be displayed in all roles.
+   * Optional. Equal Employment Opportunity legal disclaimer text to be associated with all jobs,
+   * and typically to be displayed in all roles.
    *
    * The maximum number of allowed characters is 500.
    * @return value or {@code null} for none
@@ -240,10 +210,8 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Equal Employment Opportunity legal disclaimer text to be associated with all jobs, and
-   * typically to be displayed in all roles.
+   * Optional. Equal Employment Opportunity legal disclaimer text to be associated with all jobs,
+   * and typically to be displayed in all roles.
    *
    * The maximum number of allowed characters is 500.
    * @param eeoText eeoText or {@code null} for none
@@ -254,9 +222,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * Client side company identifier, used to uniquely identify the company.
+   * Required. Client side company identifier, used to uniquely identify the company.
    *
    * The maximum number of allowed characters is 255.
    * @return value or {@code null} for none
@@ -266,9 +232,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * Client side company identifier, used to uniquely identify the company.
+   * Required. Client side company identifier, used to uniquely identify the company.
    *
    * The maximum number of allowed characters is 255.
    * @param externalId externalId or {@code null} for none
@@ -279,11 +243,9 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The street address of the company's main headquarters, which may be different from the job
-   * location. The service attempts to geolocate the provided address, and populates a more specific
-   * location wherever possible in DerivedInfo.headquarters_location.
+   * Optional. The street address of the company's main headquarters, which may be different from
+   * the job location. The service attempts to geolocate the provided address, and populates a more
+   * specific location wherever possible in DerivedInfo.headquarters_location.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadquartersAddress() {
@@ -291,11 +253,9 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The street address of the company's main headquarters, which may be different from the job
-   * location. The service attempts to geolocate the provided address, and populates a more specific
-   * location wherever possible in DerivedInfo.headquarters_location.
+   * Optional. The street address of the company's main headquarters, which may be different from
+   * the job location. The service attempts to geolocate the provided address, and populates a more
+   * specific location wherever possible in DerivedInfo.headquarters_location.
    * @param headquartersAddress headquartersAddress or {@code null} for none
    */
   public Company setHeadquartersAddress(java.lang.String headquartersAddress) {
@@ -304,9 +264,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Set to true if it is the hiring agency that post jobs for other employers.
+   * Optional. Set to true if it is the hiring agency that post jobs for other employers.
    *
    * Defaults to false if not provided.
    * @return value or {@code null} for none
@@ -316,9 +274,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Set to true if it is the hiring agency that post jobs for other employers.
+   * Optional. Set to true if it is the hiring agency that post jobs for other employers.
    *
    * Defaults to false if not provided.
    * @param hiringAgency hiringAgency or {@code null} for none
@@ -329,9 +285,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A URI that hosts the employer's company logo.
+   * Optional. A URI that hosts the employer's company logo.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -339,9 +293,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A URI that hosts the employer's company logo.
+   * Optional. A URI that hosts the employer's company logo.
    * @param imageUri imageUri or {@code null} for none
    */
   public Company setImageUri(java.lang.String imageUri) {
@@ -350,13 +302,11 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are
-   * used in keyword search. Jobs with `string_values` under these specified field keys are returned
-   * if any of the values matches the search keyword. Custom field values with parenthesis, brackets
-   * and special symbols won't be properly searchable, and those keyword queries need to be
-   * surrounded by quotes.
+   * Optional. A list of keys of filterable Job.custom_attributes, whose corresponding
+   * `string_values` are used in keyword search. Jobs with `string_values` under these specified
+   * field keys are returned if any of the values matches the search keyword. Custom field values
+   * with parenthesis, brackets and special symbols won't be properly searchable, and those keyword
+   * queries need to be surrounded by quotes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKeywordSearchableJobCustomAttributes() {
@@ -364,13 +314,11 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A list of keys of filterable Job.custom_attributes, whose corresponding `string_values` are
-   * used in keyword search. Jobs with `string_values` under these specified field keys are returned
-   * if any of the values matches the search keyword. Custom field values with parenthesis, brackets
-   * and special symbols won't be properly searchable, and those keyword queries need to be
-   * surrounded by quotes.
+   * Optional. A list of keys of filterable Job.custom_attributes, whose corresponding
+   * `string_values` are used in keyword search. Jobs with `string_values` under these specified
+   * field keys are returned if any of the values matches the search keyword. Custom field values
+   * with parenthesis, brackets and special symbols won't be properly searchable, and those keyword
+   * queries need to be surrounded by quotes.
    * @param keywordSearchableJobCustomAttributes keywordSearchableJobCustomAttributes or {@code null} for none
    */
   public Company setKeywordSearchableJobCustomAttributes(java.util.List<java.lang.String> keywordSearchableJobCustomAttributes) {
@@ -406,9 +354,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The employer's company size.
+   * Optional. The employer's company size.
    * @return value or {@code null} for none
    */
   public java.lang.String getSize() {
@@ -416,9 +362,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The employer's company size.
+   * Optional. The employer's company size.
    * @param size size or {@code null} for none
    */
   public Company setSize(java.lang.String size) {
@@ -446,9 +390,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The URI representing the company's primary web site or home page, for example,
+   * Optional. The URI representing the company's primary web site or home page, for example,
    * "https://www.google.com".
    *
    * The maximum number of allowed characters is 255.
@@ -459,9 +401,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The URI representing the company's primary web site or home page, for example,
+   * Optional. The URI representing the company's primary web site or home page, for example,
    * "https://www.google.com".
    *
    * The maximum number of allowed characters is 255.

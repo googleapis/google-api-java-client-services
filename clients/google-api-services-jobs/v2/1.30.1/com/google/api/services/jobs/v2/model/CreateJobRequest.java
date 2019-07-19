@@ -44,14 +44,18 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableStreetAddressResolution;
 
   /**
-   * Required. The Job to be created.
+   * Required.
+   *
+   * The Job to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Job job;
 
   /**
-   * Optional. Options for job processing.
+   * Optional.
+   *
+   * Options for job processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +87,9 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The Job to be created.
+   * Required.
+   *
+   * The Job to be created.
    * @return value or {@code null} for none
    */
   public Job getJob() {
@@ -91,7 +97,9 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The Job to be created.
+   * Required.
+   *
+   * The Job to be created.
    * @param job job or {@code null} for none
    */
   public CreateJobRequest setJob(Job job) {
@@ -100,7 +108,9 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Options for job processing.
+   * Optional.
+   *
+   * Options for job processing.
    * @return value or {@code null} for none
    */
   public JobProcessingOptions getProcessingOptions() {
@@ -108,7 +118,9 @@ public final class CreateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Options for job processing.
+   * Optional.
+   *
+   * Options for job processing.
    * @param processingOptions processingOptions or {@code null} for none
    */
   public CreateJobRequest setProcessingOptions(JobProcessingOptions processingOptions) {

@@ -33,45 +33,35 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class CompensationFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * If set to true, jobs with unspecified compensation range fields are included.
+   * Optional. If set to true, jobs with unspecified compensation range fields are included.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeJobsWithUnspecifiedCompensationRange;
 
   /**
-   * Optional.
-   *
-   * Compensation range.
+   * Optional. Compensation range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompensationRange range;
 
   /**
-   * Required.
-   *
-   * Type of filter.
+   * Required. Type of filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required.
-   *
-   * Specify desired `base compensation entry's` CompensationInfo.CompensationUnit.
+   * Required. Specify desired `base compensation entry's` CompensationInfo.CompensationUnit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> units;
 
   /**
-   * Optional.
-   *
-   * If set to true, jobs with unspecified compensation range fields are included.
+   * Optional. If set to true, jobs with unspecified compensation range fields are included.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeJobsWithUnspecifiedCompensationRange() {
@@ -79,9 +69,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional.
-   *
-   * If set to true, jobs with unspecified compensation range fields are included.
+   * Optional. If set to true, jobs with unspecified compensation range fields are included.
    * @param includeJobsWithUnspecifiedCompensationRange includeJobsWithUnspecifiedCompensationRange or {@code null} for none
    */
   public CompensationFilter setIncludeJobsWithUnspecifiedCompensationRange(java.lang.Boolean includeJobsWithUnspecifiedCompensationRange) {
@@ -90,9 +78,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional.
-   *
-   * Compensation range.
+   * Optional. Compensation range.
    * @return value or {@code null} for none
    */
   public CompensationRange getRange() {
@@ -100,9 +86,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional.
-   *
-   * Compensation range.
+   * Optional. Compensation range.
    * @param range range or {@code null} for none
    */
   public CompensationFilter setRange(CompensationRange range) {
@@ -111,9 +95,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required.
-   *
-   * Type of filter.
+   * Required. Type of filter.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -121,9 +103,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required.
-   *
-   * Type of filter.
+   * Required. Type of filter.
    * @param type type or {@code null} for none
    */
   public CompensationFilter setType(java.lang.String type) {
@@ -132,9 +112,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required.
-   *
-   * Specify desired `base compensation entry's` CompensationInfo.CompensationUnit.
+   * Required. Specify desired `base compensation entry's` CompensationInfo.CompensationUnit.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnits() {
@@ -142,9 +120,7 @@ public final class CompensationFilter extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required.
-   *
-   * Specify desired `base compensation entry's` CompensationInfo.CompensationUnit.
+   * Required. Specify desired `base compensation entry's` CompensationInfo.CompensationUnit.
    * @param units units or {@code null} for none
    */
   public CompensationFilter setUnits(java.util.List<java.lang.String> units) {

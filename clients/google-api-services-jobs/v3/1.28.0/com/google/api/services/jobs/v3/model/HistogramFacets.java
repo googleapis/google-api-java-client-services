@@ -33,9 +33,7 @@ package com.google.api.services.jobs.v3.model;
 public final class HistogramFacets extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * Specifies compensation field-based histogram requests. Duplicate values of
+   * Optional. Specifies compensation field-based histogram requests. Duplicate values of
    * CompensationHistogramRequest.type are not allowed.
    * The value may be {@code null}.
    */
@@ -49,9 +47,7 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the custom attributes histogram requests. Duplicate values of
+   * Optional. Specifies the custom attributes histogram requests. Duplicate values of
    * CustomAttributeHistogramRequest.key are not allowed.
    * The value may be {@code null}.
    */
@@ -65,19 +61,15 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`, `EMPLOYMENT_TYPE`
-   * etc.
+   * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
+   * `EMPLOYMENT_TYPE` etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> simpleHistogramFacets;
 
   /**
-   * Optional.
-   *
-   * Specifies compensation field-based histogram requests. Duplicate values of
+   * Optional. Specifies compensation field-based histogram requests. Duplicate values of
    * CompensationHistogramRequest.type are not allowed.
    * @return value or {@code null} for none
    */
@@ -86,9 +78,7 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies compensation field-based histogram requests. Duplicate values of
+   * Optional. Specifies compensation field-based histogram requests. Duplicate values of
    * CompensationHistogramRequest.type are not allowed.
    * @param compensationHistogramFacets compensationHistogramFacets or {@code null} for none
    */
@@ -98,9 +88,7 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the custom attributes histogram requests. Duplicate values of
+   * Optional. Specifies the custom attributes histogram requests. Duplicate values of
    * CustomAttributeHistogramRequest.key are not allowed.
    * @return value or {@code null} for none
    */
@@ -109,9 +97,7 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the custom attributes histogram requests. Duplicate values of
+   * Optional. Specifies the custom attributes histogram requests. Duplicate values of
    * CustomAttributeHistogramRequest.key are not allowed.
    * @param customAttributeHistogramFacets customAttributeHistogramFacets or {@code null} for none
    */
@@ -121,10 +107,8 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`, `EMPLOYMENT_TYPE`
-   * etc.
+   * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
+   * `EMPLOYMENT_TYPE` etc.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSimpleHistogramFacets() {
@@ -132,10 +116,8 @@ public final class HistogramFacets extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`, `EMPLOYMENT_TYPE`
-   * etc.
+   * Optional. Specifies the simple type of histogram facets, for example, `COMPANY_SIZE`,
+   * `EMPLOYMENT_TYPE` etc.
    * @param simpleHistogramFacets simpleHistogramFacets or {@code null} for none
    */
   public HistogramFacets setSimpleHistogramFacets(java.util.List<java.lang.String> simpleHistogramFacets) {

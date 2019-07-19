@@ -36,9 +36,11 @@ package com.google.api.services.jobs.v2.model;
 public final class GetHistogramRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Controls whether to broaden the search to avoid too few results for a given query in
-   * instances where a search has sparse results. Results from a broadened query is a superset of
-   * the results from the original query.
+   * Optional.
+   *
+   * Controls whether to broaden the search to avoid too few results for a given query in instances
+   * where a search has sparse results. Results from a broadened query is a superset of the results
+   * from the original query.
    *
    * Defaults to false.
    * The value may be {@code null}.
@@ -58,7 +60,9 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   private JobFilters filters;
 
   /**
-   * Optional. Query used to search against jobs, such as keyword, location filters, etc.
+   * Optional.
+   *
+   * Query used to search against jobs, such as keyword, location filters, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +78,9 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   private RequestMetadata requestMetadata;
 
   /**
-   * Required. A list of facets that specify the histogram data to be calculated against and
-   * returned.
+   * Required.
+   *
+   * A list of facets that specify the histogram data to be calculated against and returned.
    *
    * Histogram response times can be slow, and counts can be approximations. This call may be
    * temporarily or permanently removed prior to the production release of Cloud Talent Solution.
@@ -85,9 +90,11 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> searchTypes;
 
   /**
-   * Optional. Controls whether to broaden the search to avoid too few results for a given query in
-   * instances where a search has sparse results. Results from a broadened query is a superset of
-   * the results from the original query.
+   * Optional.
+   *
+   * Controls whether to broaden the search to avoid too few results for a given query in instances
+   * where a search has sparse results. Results from a broadened query is a superset of the results
+   * from the original query.
    *
    * Defaults to false.
    * @return value or {@code null} for none
@@ -97,9 +104,11 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Controls whether to broaden the search to avoid too few results for a given query in
-   * instances where a search has sparse results. Results from a broadened query is a superset of
-   * the results from the original query.
+   * Optional.
+   *
+   * Controls whether to broaden the search to avoid too few results for a given query in instances
+   * where a search has sparse results. Results from a broadened query is a superset of the results
+   * from the original query.
    *
    * Defaults to false.
    * @param allowBroadening allowBroadening or {@code null} for none
@@ -135,7 +144,9 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Query used to search against jobs, such as keyword, location filters, etc.
+   * Optional.
+   *
+   * Query used to search against jobs, such as keyword, location filters, etc.
    * @return value or {@code null} for none
    */
   public JobQuery getQuery() {
@@ -143,7 +154,9 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Query used to search against jobs, such as keyword, location filters, etc.
+   * Optional.
+   *
+   * Query used to search against jobs, such as keyword, location filters, etc.
    * @param query query or {@code null} for none
    */
   public GetHistogramRequest setQuery(JobQuery query) {
@@ -173,8 +186,9 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. A list of facets that specify the histogram data to be calculated against and
-   * returned.
+   * Required.
+   *
+   * A list of facets that specify the histogram data to be calculated against and returned.
    *
    * Histogram response times can be slow, and counts can be approximations. This call may be
    * temporarily or permanently removed prior to the production release of Cloud Talent Solution.
@@ -185,8 +199,9 @@ public final class GetHistogramRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. A list of facets that specify the histogram data to be calculated against and
-   * returned.
+   * Required.
+   *
+   * A list of facets that specify the histogram data to be calculated against and returned.
    *
    * Histogram response times can be slow, and counts can be approximations. This call may be
    * temporarily or permanently removed prior to the production release of Cloud Talent Solution.

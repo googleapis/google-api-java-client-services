@@ -37,25 +37,31 @@ package com.google.api.services.jobs.v2.model;
 public final class DeleteJobsByFilterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If set to true, this call waits for all processing steps to complete before the job
-   * is cleaned up. Otherwise, the call returns while some steps are still taking place
-   * asynchronously, hence faster.
+   * Optional.
+   *
+   * If set to true, this call waits for all processing steps to complete before the job is cleaned
+   * up. Otherwise, the call returns while some steps are still taking place asynchronously, hence
+   * faster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableFastProcess;
 
   /**
-   * Required. Restrictions on the scope of the delete request.
+   * Required.
+   *
+   * Restrictions on the scope of the delete request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Filter filter;
 
   /**
-   * Optional. If set to true, this call waits for all processing steps to complete before the job
-   * is cleaned up. Otherwise, the call returns while some steps are still taking place
-   * asynchronously, hence faster.
+   * Optional.
+   *
+   * If set to true, this call waits for all processing steps to complete before the job is cleaned
+   * up. Otherwise, the call returns while some steps are still taking place asynchronously, hence
+   * faster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableFastProcess() {
@@ -63,9 +69,11 @@ public final class DeleteJobsByFilterRequest extends com.google.api.client.json.
   }
 
   /**
-   * Optional. If set to true, this call waits for all processing steps to complete before the job
-   * is cleaned up. Otherwise, the call returns while some steps are still taking place
-   * asynchronously, hence faster.
+   * Optional.
+   *
+   * If set to true, this call waits for all processing steps to complete before the job is cleaned
+   * up. Otherwise, the call returns while some steps are still taking place asynchronously, hence
+   * faster.
    * @param disableFastProcess disableFastProcess or {@code null} for none
    */
   public DeleteJobsByFilterRequest setDisableFastProcess(java.lang.Boolean disableFastProcess) {
@@ -74,7 +82,9 @@ public final class DeleteJobsByFilterRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Restrictions on the scope of the delete request.
+   * Required.
+   *
+   * Restrictions on the scope of the delete request.
    * @return value or {@code null} for none
    */
   public Filter getFilter() {
@@ -82,7 +92,9 @@ public final class DeleteJobsByFilterRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Restrictions on the scope of the delete request.
+   * Required.
+   *
+   * Restrictions on the scope of the delete request.
    * @param filter filter or {@code null} for none
    */
   public DeleteJobsByFilterRequest setFilter(Filter filter) {

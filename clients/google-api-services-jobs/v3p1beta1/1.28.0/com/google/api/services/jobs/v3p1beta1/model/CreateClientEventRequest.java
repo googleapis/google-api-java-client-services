@@ -31,20 +31,16 @@ package com.google.api.services.jobs.v3p1beta1.model;
 public final class CreateClientEventRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * Events issued when end user interacts with customer's application that uses Cloud Talent
-   * Solution.
+   * Required. Events issued when end user interacts with customer's application that uses Cloud
+   * Talent Solution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ClientEvent clientEvent;
 
   /**
-   * Required.
-   *
-   * Events issued when end user interacts with customer's application that uses Cloud Talent
-   * Solution.
+   * Required. Events issued when end user interacts with customer's application that uses Cloud
+   * Talent Solution.
    * @return value or {@code null} for none
    */
   public ClientEvent getClientEvent() {
@@ -52,10 +48,8 @@ public final class CreateClientEventRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Required.
-   *
-   * Events issued when end user interacts with customer's application that uses Cloud Talent
-   * Solution.
+   * Required. Events issued when end user interacts with customer's application that uses Cloud
+   * Talent Solution.
    * @param clientEvent clientEvent or {@code null} for none
    */
   public CreateClientEventRequest setClientEvent(ClientEvent clientEvent) {

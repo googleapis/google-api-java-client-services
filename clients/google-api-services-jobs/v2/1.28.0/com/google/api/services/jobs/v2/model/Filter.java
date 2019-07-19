@@ -35,18 +35,22 @@ package com.google.api.services.jobs.v2.model;
 public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The requisition ID (or posting ID) assigned by the client to identify a job. This is
-   * intended for client identification and tracking of listings. name takes precedence over this
-   * field The maximum number of allowed characters is 225.
+   * Required.
+   *
+   * The requisition ID (or posting ID) assigned by the client to identify a job. This is intended
+   * for client identification and tracking of listings. name takes precedence over this field The
+   * maximum number of allowed characters is 225.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requisitionId;
 
   /**
-   * Required. The requisition ID (or posting ID) assigned by the client to identify a job. This is
-   * intended for client identification and tracking of listings. name takes precedence over this
-   * field The maximum number of allowed characters is 225.
+   * Required.
+   *
+   * The requisition ID (or posting ID) assigned by the client to identify a job. This is intended
+   * for client identification and tracking of listings. name takes precedence over this field The
+   * maximum number of allowed characters is 225.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequisitionId() {
@@ -54,9 +58,11 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The requisition ID (or posting ID) assigned by the client to identify a job. This is
-   * intended for client identification and tracking of listings. name takes precedence over this
-   * field The maximum number of allowed characters is 225.
+   * Required.
+   *
+   * The requisition ID (or posting ID) assigned by the client to identify a job. This is intended
+   * for client identification and tracking of listings. name takes precedence over this field The
+   * maximum number of allowed characters is 225.
    * @param requisitionId requisitionId or {@code null} for none
    */
   public Filter setRequisitionId(java.lang.String requisitionId) {

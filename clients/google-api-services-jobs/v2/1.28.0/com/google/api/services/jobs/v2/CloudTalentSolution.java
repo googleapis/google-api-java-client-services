@@ -249,7 +249,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the company to be deleted,
+     * @param name Required.
+    The resource name of the company to be deleted,
     such as,
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
      * @return the request
@@ -277,7 +278,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the company to be deleted,
+       * @param name Required.
+    The resource name of the company to be deleted,
     such as,
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @since 1.13
@@ -348,13 +350,17 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. The resource name of the company to be deleted, such as,
+       * Required.
+       *
+       * The resource name of the company to be deleted, such as,
        * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the company to be deleted, such as,
+      /** Required.
+
+     The resource name of the company to be deleted, such as,
      "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       public java.lang.String getName() {
@@ -362,7 +368,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. The resource name of the company to be deleted, such as,
+       * Required.
+       *
+       * The resource name of the company to be deleted, such as,
        * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       public Delete setName(java.lang.String name) {
@@ -388,7 +396,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the company to retrieve,
+     * @param name Required.
+    Resource name of the company to retrieve,
     such as
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
      * @return the request
@@ -416,7 +425,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the company to retrieve,
+       * @param name Required.
+    Resource name of the company to retrieve,
     such as
      *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @since 1.13
@@ -497,21 +507,26 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. Resource name of the company to retrieve, such as
+       * Required.
+       *
+       * Resource name of the company to retrieve, such as
        * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the company to retrieve, such as
-     "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
+      /** Required.
+
+     Resource name of the company to retrieve, such as "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name of the company to retrieve, such as
+       * Required.
+       *
+       * Resource name of the company to retrieve, such as
        * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        */
       public Get setName(java.lang.String name) {
@@ -631,7 +646,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. Set to true if the companies request must have open jobs.
+       * Optional.
+       *
+       * Set to true if the companies request must have open jobs.
        *
        * Defaults to false.
        *
@@ -641,7 +658,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       @com.google.api.client.util.Key
       private java.lang.Boolean mustHaveOpenJobs;
 
-      /** Optional. Set to true if the companies request must have open jobs.
+      /** Optional.
+
+     Set to true if the companies request must have open jobs.
 
      Defaults to false.
 
@@ -653,7 +672,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. Set to true if the companies request must have open jobs.
+       * Optional.
+       *
+       * Set to true if the companies request must have open jobs.
        *
        * Defaults to false.
        *
@@ -666,39 +687,55 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. The maximum number of companies to be returned, at most 100. Default is 100 if a
-       * non-positive number is provided.
+       * Optional.
+       *
+       * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
+       * positive number is provided.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of companies to be returned, at most 100. Default is 100 if a non-
-     positive number is provided.
+      /** Optional.
+
+     The maximum number of companies to be returned, at most 100. Default is 100 if a non-positive
+     number is provided.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of companies to be returned, at most 100. Default is 100 if a
-       * non-positive number is provided.
+       * Optional.
+       *
+       * The maximum number of companies to be returned, at most 100. Default is 100 if a non-
+       * positive number is provided.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** Optional. The starting indicator from which to return results. */
+      /**
+       * Optional.
+       *
+       * The starting indicator from which to return results.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. The starting indicator from which to return results.
+      /** Optional.
+
+     The starting indicator from which to return results.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Optional. The starting indicator from which to return results. */
+      /**
+       * Optional.
+       *
+       * The starting indicator from which to return results.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -942,7 +979,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param companyName Required. The resource name of the company that owns the jobs to be listed,
+       * @param companyName Required.
+      The resource name of the company that owns the jobs to be listed,
       such as,
        *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
        * @return the request
@@ -972,7 +1010,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param companyName Required. The resource name of the company that owns the jobs to be listed,
+         * @param companyName Required.
+      The resource name of the company that owns the jobs to be listed,
       such as,
        *        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
          * @since 1.13
@@ -1053,13 +1092,17 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the company that owns the jobs to be listed, such as,
+         * Required.
+         *
+         * The resource name of the company that owns the jobs to be listed, such as,
          * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
          */
         @com.google.api.client.util.Key
         private java.lang.String companyName;
 
-        /** Required. The resource name of the company that owns the jobs to be listed, such as,
+        /** Required.
+
+       The resource name of the company that owns the jobs to be listed, such as,
        "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
          */
         public java.lang.String getCompanyName() {
@@ -1067,7 +1110,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the company that owns the jobs to be listed, such as,
+         * Required.
+         *
+         * The resource name of the company that owns the jobs to be listed, such as,
          * "companies/0000aaaa-1111-bbbb-2222-cccc3333dddd".
          */
         public List setCompanyName(java.lang.String companyName) {
@@ -1081,8 +1126,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. If set to `true`, only job ID, job requisition ID and language code will be
-         * returned.
+         * Optional.
+         *
+         * If set to `true`, only job ID, job requisition ID and language code will be returned.
          *
          * A typical use is to synchronize job repositories.
          *
@@ -1091,7 +1137,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         @com.google.api.client.util.Key
         private java.lang.Boolean idsOnly;
 
-        /** Optional. If set to `true`, only job ID, job requisition ID and language code will be returned.
+        /** Optional.
+
+       If set to `true`, only job ID, job requisition ID and language code will be returned.
 
        A typical use is to synchronize job repositories.
 
@@ -1102,8 +1150,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. If set to `true`, only job ID, job requisition ID and language code will be
-         * returned.
+         * Optional.
+         *
+         * If set to `true`, only job ID, job requisition ID and language code will be returned.
          *
          * A typical use is to synchronize job repositories.
          *
@@ -1156,15 +1205,18 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The requisition ID, also known as posting ID, assigned by the company to the
-         * job.
+         * Optional.
+         *
+         * The requisition ID, also known as posting ID, assigned by the company to the job.
          *
          * The maximum number of allowable characters is 225.
          */
         @com.google.api.client.util.Key
         private java.lang.String jobRequisitionId;
 
-        /** Optional. The requisition ID, also known as posting ID, assigned by the company to the job.
+        /** Optional.
+
+       The requisition ID, also known as posting ID, assigned by the company to the job.
 
        The maximum number of allowable characters is 225.
          */
@@ -1173,8 +1225,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The requisition ID, also known as posting ID, assigned by the company to the
-         * job.
+         * Optional.
+         *
+         * The requisition ID, also known as posting ID, assigned by the company to the job.
          *
          * The maximum number of allowable characters is 225.
          */
@@ -1184,7 +1237,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The maximum number of jobs to be returned per page of results.
+         * Optional.
+         *
+         * The maximum number of jobs to be returned per page of results.
          *
          * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
          * allowed page size is 100.
@@ -1194,7 +1249,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. The maximum number of jobs to be returned per page of results.
+        /** Optional.
+
+       The maximum number of jobs to be returned per page of results.
 
        If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed
        page size is 100.
@@ -1206,7 +1263,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The maximum number of jobs to be returned per page of results.
+         * Optional.
+         *
+         * The maximum number of jobs to be returned per page of results.
          *
          * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
          * allowed page size is 100.
@@ -1218,17 +1277,27 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
           return this;
         }
 
-        /** Optional. The starting point of a query result. */
+        /**
+         * Optional.
+         *
+         * The starting point of a query result.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. The starting point of a query result.
+        /** Optional.
+
+       The starting point of a query result.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Optional. The starting point of a query result. */
+        /**
+         * Optional.
+         *
+         * The starting point of a query result.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1474,7 +1543,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the job to be deleted, such as "jobs/11111111".
+     * @param name Required.
+    The resource name of the job to be deleted, such as "jobs/11111111".
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1502,7 +1572,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the job to be deleted, such as "jobs/11111111".
+       * @param name Required.
+    The resource name of the job to be deleted, such as "jobs/11111111".
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -1570,17 +1641,27 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the job to be deleted, such as "jobs/11111111". */
+      /**
+       * Required.
+       *
+       * The resource name of the job to be deleted, such as "jobs/11111111".
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the job to be deleted, such as "jobs/11111111".
+      /** Required.
+
+     The resource name of the job to be deleted, such as "jobs/11111111".
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The resource name of the job to be deleted, such as "jobs/11111111". */
+      /**
+       * Required.
+       *
+       * The resource name of the job to be deleted, such as "jobs/11111111".
+       */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1746,7 +1827,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the job to retrieve, such as "jobs/11111111".
+     * @param name Required.
+    The resource name of the job to retrieve, such as "jobs/11111111".
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -1772,7 +1854,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the job to retrieve, such as "jobs/11111111".
+       * @param name Required.
+    The resource name of the job to retrieve, such as "jobs/11111111".
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -1850,17 +1933,27 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the job to retrieve, such as "jobs/11111111". */
+      /**
+       * Required.
+       *
+       * The resource name of the job to retrieve, such as "jobs/11111111".
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the job to retrieve, such as "jobs/11111111".
+      /** Required.
+
+     The resource name of the job to retrieve, such as "jobs/11111111".
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The resource name of the job to retrieve, such as "jobs/11111111". */
+      /**
+       * Required.
+       *
+       * The resource name of the job to retrieve, such as "jobs/11111111".
+       */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2095,7 +2188,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. The filter string specifies the jobs to be enumerated.
+       * Required.
+       *
+       * The filter string specifies the jobs to be enumerated.
        *
        * Supported operator: =, AND
        *
@@ -2110,7 +2205,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Required. The filter string specifies the jobs to be enumerated.
+      /** Required.
+
+     The filter string specifies the jobs to be enumerated.
 
      Supported operator: =, AND
 
@@ -2127,7 +2224,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. The filter string specifies the jobs to be enumerated.
+       * Required.
+       *
+       * The filter string specifies the jobs to be enumerated.
        *
        * Supported operator: =, AND
        *
@@ -2145,8 +2244,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be
-       * returned.
+       * Optional.
+       *
+       * If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
        *
        * A typical use case is to synchronize job repositories.
        *
@@ -2155,8 +2255,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       @com.google.api.client.util.Key
       private java.lang.Boolean idsOnly;
 
-      /** Optional. If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be
-     returned.
+      /** Optional.
+
+     If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
 
      A typical use case is to synchronize job repositories.
 
@@ -2167,8 +2268,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be
-       * returned.
+       * Optional.
+       *
+       * If set to `true`, only Job.name, Job.requisition_id and Job.language_code will be returned.
        *
        * A typical use case is to synchronize job repositories.
        *
@@ -2180,7 +2282,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. The maximum number of jobs to be returned per page of results.
+       * Optional.
+       *
+       * The maximum number of jobs to be returned per page of results.
        *
        * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
        * allowed page size is 100.
@@ -2190,7 +2294,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of jobs to be returned per page of results.
+      /** Optional.
+
+     The maximum number of jobs to be returned per page of results.
 
      If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum allowed
      page size is 100.
@@ -2202,7 +2308,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. The maximum number of jobs to be returned per page of results.
+       * Optional.
+       *
+       * The maximum number of jobs to be returned per page of results.
        *
        * If ids_only is set to true, the maximum allowed page size is 1000. Otherwise, the maximum
        * allowed page size is 100.
@@ -2214,17 +2322,27 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         return this;
       }
 
-      /** Optional. The starting point of a query result. */
+      /**
+       * Optional.
+       *
+       * The starting point of a query result.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. The starting point of a query result.
+      /** Optional.
+
+     The starting point of a query result.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Optional. The starting point of a query result. */
+      /**
+       * Optional.
+       *
+       * The starting point of a query result.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -2740,25 +2858,37 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         return (Complete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Optional. If provided, restricts completion to the specified company. */
+      /**
+       * Optional.
+       *
+       * If provided, restricts completion to the specified company.
+       */
       @com.google.api.client.util.Key
       private java.lang.String companyName;
 
-      /** Optional. If provided, restricts completion to the specified company.
+      /** Optional.
+
+     If provided, restricts completion to the specified company.
        */
       public java.lang.String getCompanyName() {
         return companyName;
       }
 
-      /** Optional. If provided, restricts completion to the specified company. */
+      /**
+       * Optional.
+       *
+       * If provided, restricts completion to the specified company.
+       */
       public Complete setCompanyName(java.lang.String companyName) {
         this.companyName = companyName;
         return this;
       }
 
       /**
-       * Required. The language of the query. This is the BCP-47 language code, such as "en-US" or
-       * "sr-Latn". For more information, see [Tags for Identifying
+       * Required.
+       *
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
        * Languages](https://tools.ietf.org/html/bcp47).
        *
        * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
@@ -2772,9 +2902,10 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** Required. The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-
-     Latn". For more information, see [Tags for Identifying
-     Languages](https://tools.ietf.org/html/bcp47).
+      /** Required.
+
+     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
+     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
 
      For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
 
@@ -2789,8 +2920,10 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. The language of the query. This is the BCP-47 language code, such as "en-US" or
-       * "sr-Latn". For more information, see [Tags for Identifying
+       * Required.
+       *
+       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
+       * For more information, see [Tags for Identifying
        * Languages](https://tools.ietf.org/html/bcp47).
        *
        * For CompletionType.JOB_TITLE type, only open jobs with same language_code are returned.
@@ -2807,68 +2940,104 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. Completion result count. The maximum allowed page size is 10.
+       * Required.
+       *
+       * Completion result count. The maximum allowed page size is 10.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Required. Completion result count. The maximum allowed page size is 10.
+      /** Required.
+
+     Completion result count. The maximum allowed page size is 10.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Required. Completion result count. The maximum allowed page size is 10.
+       * Required.
+       *
+       * Completion result count. The maximum allowed page size is 10.
        */
       public Complete setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** Required. The query used to generate suggestions. */
+      /**
+       * Required.
+       *
+       * The query used to generate suggestions.
+       */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. The query used to generate suggestions.
+      /** Required.
+
+     The query used to generate suggestions.
        */
       public java.lang.String getQuery() {
         return query;
       }
 
-      /** Required. The query used to generate suggestions. */
+      /**
+       * Required.
+       *
+       * The query used to generate suggestions.
+       */
       public Complete setQuery(java.lang.String query) {
         this.query = query;
         return this;
       }
 
-      /** Optional. The scope of the completion. The defaults is CompletionScope.PUBLIC. */
+      /**
+       * Optional.
+       *
+       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
+       */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
-      /** Optional. The scope of the completion. The defaults is CompletionScope.PUBLIC.
+      /** Optional.
+
+     The scope of the completion. The defaults is CompletionScope.PUBLIC.
        */
       public java.lang.String getScope() {
         return scope;
       }
 
-      /** Optional. The scope of the completion. The defaults is CompletionScope.PUBLIC. */
+      /**
+       * Optional.
+       *
+       * The scope of the completion. The defaults is CompletionScope.PUBLIC.
+       */
       public Complete setScope(java.lang.String scope) {
         this.scope = scope;
         return this;
       }
 
-      /** Optional. The completion topic. The default is CompletionType.COMBINED. */
+      /**
+       * Optional.
+       *
+       * The completion topic. The default is CompletionType.COMBINED.
+       */
       @com.google.api.client.util.Key
       private java.lang.String type;
 
-      /** Optional. The completion topic. The default is CompletionType.COMBINED.
+      /** Optional.
+
+     The completion topic. The default is CompletionType.COMBINED.
        */
       public java.lang.String getType() {
         return type;
       }
 
-      /** Optional. The completion topic. The default is CompletionType.COMBINED. */
+      /**
+       * Optional.
+       *
+       * The completion topic. The default is CompletionType.COMBINED.
+       */
       public Complete setType(java.lang.String type) {
         this.type = type;
         return this;

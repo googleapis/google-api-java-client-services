@@ -44,14 +44,18 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableStreetAddressResolution;
 
   /**
-   * Required. The Job to be updated.
+   * Required.
+   *
+   * The Job to be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Job job;
 
   /**
-   * Optional. Options for job processing.
+   * Optional.
+   *
+   * Options for job processing.
    *
    * UpdateJobRequest.disable_street_address_resolution is ignored if this flag is set.
    * The value may be {@code null}.
@@ -104,7 +108,9 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The Job to be updated.
+   * Required.
+   *
+   * The Job to be updated.
    * @return value or {@code null} for none
    */
   public Job getJob() {
@@ -112,7 +118,9 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The Job to be updated.
+   * Required.
+   *
+   * The Job to be updated.
    * @param job job or {@code null} for none
    */
   public UpdateJobRequest setJob(Job job) {
@@ -121,7 +129,9 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Options for job processing.
+   * Optional.
+   *
+   * Options for job processing.
    *
    * UpdateJobRequest.disable_street_address_resolution is ignored if this flag is set.
    * @return value or {@code null} for none
@@ -131,7 +141,9 @@ public final class UpdateJobRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Options for job processing.
+   * Optional.
+   *
+   * Options for job processing.
    *
    * UpdateJobRequest.disable_street_address_resolution is ignored if this flag is set.
    * @param processingOptions processingOptions or {@code null} for none

@@ -43,8 +43,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   private java.lang.Boolean allowNonStreetLevelAddress;
 
   /**
-   * Optional. The departure hour to use to calculate traffic impact. Accepts an integer between 0
-   * and 23, representing the hour in the time zone of the start_location. Must not be present if
+   * Optional.
+   *
+   * The departure hour to use to calculate traffic impact. Accepts an integer between 0 and 23,
+   * representing the hour in the time zone of the start_location. Must not be present if
    * road_traffic is specified.
    * The value may be {@code null}.
    */
@@ -52,30 +54,38 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   private java.lang.Integer departureHourLocal;
 
   /**
-   * Required. The method of transportation for which to calculate the commute time.
+   * Required.
+   *
+   * The method of transportation for which to calculate the commute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * Optional. Specifies the traffic density to use when calculating commute time. Must not be
-   * present if departure_hour_local is specified.
+   * Optional.
+   *
+   * Specifies the traffic density to use when calculating commute time. Must not be present if
+   * departure_hour_local is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String roadTraffic;
 
   /**
-   * Required. The latitude and longitude of the location from which to calculate the commute time.
+   * Required.
+   *
+   * The latitude and longitude of the location from which to calculate the commute time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LatLng startLocation;
 
   /**
-   * Required. The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour).
-   * Format is `123s`.
+   * Required.
+   *
+   * The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour). Format is
+   * `123s`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,8 +115,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The departure hour to use to calculate traffic impact. Accepts an integer between 0
-   * and 23, representing the hour in the time zone of the start_location. Must not be present if
+   * Optional.
+   *
+   * The departure hour to use to calculate traffic impact. Accepts an integer between 0 and 23,
+   * representing the hour in the time zone of the start_location. Must not be present if
    * road_traffic is specified.
    * @return value or {@code null} for none
    */
@@ -115,8 +127,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The departure hour to use to calculate traffic impact. Accepts an integer between 0
-   * and 23, representing the hour in the time zone of the start_location. Must not be present if
+   * Optional.
+   *
+   * The departure hour to use to calculate traffic impact. Accepts an integer between 0 and 23,
+   * representing the hour in the time zone of the start_location. Must not be present if
    * road_traffic is specified.
    * @param departureHourLocal departureHourLocal or {@code null} for none
    */
@@ -126,7 +140,9 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The method of transportation for which to calculate the commute time.
+   * Required.
+   *
+   * The method of transportation for which to calculate the commute time.
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -134,7 +150,9 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The method of transportation for which to calculate the commute time.
+   * Required.
+   *
+   * The method of transportation for which to calculate the commute time.
    * @param method method or {@code null} for none
    */
   public CommutePreference setMethod(java.lang.String method) {
@@ -143,8 +161,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Specifies the traffic density to use when calculating commute time. Must not be
-   * present if departure_hour_local is specified.
+   * Optional.
+   *
+   * Specifies the traffic density to use when calculating commute time. Must not be present if
+   * departure_hour_local is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getRoadTraffic() {
@@ -152,8 +172,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Specifies the traffic density to use when calculating commute time. Must not be
-   * present if departure_hour_local is specified.
+   * Optional.
+   *
+   * Specifies the traffic density to use when calculating commute time. Must not be present if
+   * departure_hour_local is specified.
    * @param roadTraffic roadTraffic or {@code null} for none
    */
   public CommutePreference setRoadTraffic(java.lang.String roadTraffic) {
@@ -162,7 +184,9 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The latitude and longitude of the location from which to calculate the commute time.
+   * Required.
+   *
+   * The latitude and longitude of the location from which to calculate the commute time.
    * @return value or {@code null} for none
    */
   public LatLng getStartLocation() {
@@ -170,7 +194,9 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The latitude and longitude of the location from which to calculate the commute time.
+   * Required.
+   *
+   * The latitude and longitude of the location from which to calculate the commute time.
    * @param startLocation startLocation or {@code null} for none
    */
   public CommutePreference setStartLocation(LatLng startLocation) {
@@ -179,8 +205,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour).
-   * Format is `123s`.
+   * Required.
+   *
+   * The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour). Format is
+   * `123s`.
    * @return value or {@code null} for none
    */
   public String getTravelTime() {
@@ -188,8 +216,10 @@ public final class CommutePreference extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour).
-   * Format is `123s`.
+   * Required.
+   *
+   * The maximum travel time in seconds. The maximum allowed value is `3600s` (one hour). Format is
+   * `123s`.
    * @param travelTime travelTime or {@code null} for none
    */
   public CommutePreference setTravelTime(String travelTime) {

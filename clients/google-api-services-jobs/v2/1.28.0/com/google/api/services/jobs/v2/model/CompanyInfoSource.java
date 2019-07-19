@@ -32,36 +32,46 @@ package com.google.api.services.jobs.v2.model;
 public final class CompanyInfoSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Google's Knowledge Graph value for the employer's company.
+   * Optional.
+   *
+   * The Google's Knowledge Graph value for the employer's company.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String freebaseMid;
 
   /**
-   * Optional. The numeric identifier for the employer's Google+ business page.
+   * Optional.
+   *
+   * The numeric identifier for the employer's Google+ business page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gplusId;
 
   /**
-   * Optional. The numeric identifier for the employer's headquarters on Google Maps, namely, the
-   * Google Maps CID (cell id).
+   * Optional.
+   *
+   * The numeric identifier for the employer's headquarters on Google Maps, namely, the Google Maps
+   * CID (cell id).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mapsCid;
 
   /**
-   * Optional. A Google identifier that does not match any of the other types.
+   * Optional.
+   *
+   * A Google identifier that does not match any of the other types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String unknownTypeId;
 
   /**
-   * Optional. The Google's Knowledge Graph value for the employer's company.
+   * Optional.
+   *
+   * The Google's Knowledge Graph value for the employer's company.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreebaseMid() {
@@ -69,7 +79,9 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The Google's Knowledge Graph value for the employer's company.
+   * Optional.
+   *
+   * The Google's Knowledge Graph value for the employer's company.
    * @param freebaseMid freebaseMid or {@code null} for none
    */
   public CompanyInfoSource setFreebaseMid(java.lang.String freebaseMid) {
@@ -78,7 +90,9 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The numeric identifier for the employer's Google+ business page.
+   * Optional.
+   *
+   * The numeric identifier for the employer's Google+ business page.
    * @return value or {@code null} for none
    */
   public java.lang.String getGplusId() {
@@ -86,7 +100,9 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The numeric identifier for the employer's Google+ business page.
+   * Optional.
+   *
+   * The numeric identifier for the employer's Google+ business page.
    * @param gplusId gplusId or {@code null} for none
    */
   public CompanyInfoSource setGplusId(java.lang.String gplusId) {
@@ -95,8 +111,10 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The numeric identifier for the employer's headquarters on Google Maps, namely, the
-   * Google Maps CID (cell id).
+   * Optional.
+   *
+   * The numeric identifier for the employer's headquarters on Google Maps, namely, the Google Maps
+   * CID (cell id).
    * @return value or {@code null} for none
    */
   public java.lang.String getMapsCid() {
@@ -104,8 +122,10 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The numeric identifier for the employer's headquarters on Google Maps, namely, the
-   * Google Maps CID (cell id).
+   * Optional.
+   *
+   * The numeric identifier for the employer's headquarters on Google Maps, namely, the Google Maps
+   * CID (cell id).
    * @param mapsCid mapsCid or {@code null} for none
    */
   public CompanyInfoSource setMapsCid(java.lang.String mapsCid) {
@@ -114,7 +134,9 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A Google identifier that does not match any of the other types.
+   * Optional.
+   *
+   * A Google identifier that does not match any of the other types.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnknownTypeId() {
@@ -122,7 +144,9 @@ public final class CompanyInfoSource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A Google identifier that does not match any of the other types.
+   * Optional.
+   *
+   * A Google identifier that does not match any of the other types.
    * @param unknownTypeId unknownTypeId or {@code null} for none
    */
   public CompanyInfoSource setUnknownTypeId(java.lang.String unknownTypeId) {

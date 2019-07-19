@@ -34,22 +34,28 @@ package com.google.api.services.jobs.v2.model;
 public final class DeviceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Type of the device.
+   * Optional.
+   *
+   * Type of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceType;
 
   /**
-   * Optional. A device-specific ID. The ID must be a unique identifier that distinguishes the
-   * device from other devices.
+   * Optional.
+   *
+   * A device-specific ID. The ID must be a unique identifier that distinguishes the device from
+   * other devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Optional. Type of the device.
+   * Optional.
+   *
+   * Type of the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceType() {
@@ -57,7 +63,9 @@ public final class DeviceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Type of the device.
+   * Optional.
+   *
+   * Type of the device.
    * @param deviceType deviceType or {@code null} for none
    */
   public DeviceInfo setDeviceType(java.lang.String deviceType) {
@@ -66,8 +74,10 @@ public final class DeviceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A device-specific ID. The ID must be a unique identifier that distinguishes the
-   * device from other devices.
+   * Optional.
+   *
+   * A device-specific ID. The ID must be a unique identifier that distinguishes the device from
+   * other devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -75,8 +85,10 @@ public final class DeviceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A device-specific ID. The ID must be a unique identifier that distinguishes the
-   * device from other devices.
+   * Optional.
+   *
+   * A device-specific ID. The ID must be a unique identifier that distinguishes the device from
+   * other devices.
    * @param id id or {@code null} for none
    */
   public DeviceInfo setId(java.lang.String id) {

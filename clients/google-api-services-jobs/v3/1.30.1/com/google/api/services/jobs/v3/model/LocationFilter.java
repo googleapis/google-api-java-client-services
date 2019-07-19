@@ -33,39 +33,33 @@ package com.google.api.services.jobs.v3.model;
 public final class LocationFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * The address name, such as "Mountain View" or "Bay Area".
+   * Optional. The address name, such as "Mountain View" or "Bay Area".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String address;
 
   /**
-   * Optional.
-   *
-   * The distance_in_miles is applied when the location being searched for is identified as a city
-   * or smaller. When the location being searched for is a state or larger, this field is ignored.
+   * Optional. The distance_in_miles is applied when the location being searched for is identified
+   * as a city or smaller. When the location being searched for is a state or larger, this field is
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double distanceInMiles;
 
   /**
-   * Optional.
-   *
-   * The latitude and longitude of the geographic center from which to search. This field's ignored
-   * if `address` is provided.
+   * Optional. The latitude and longitude of the geographic center from which to search. This
+   * field's ignored if `address` is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LatLng latLng;
 
   /**
-   * Optional.
-   *
-   * CLDR region code of the country/region of the address. This is used to address ambiguity of the
-   * user-input location, for example, "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
+   * Optional. CLDR region code of the country/region of the address. This is used to address
+   * ambiguity of the user-input location, for example, "Liverpool" against "Liverpool, NY, US" or
+   * "Liverpool, UK".
    *
    * Set this field if all the jobs to search against are from a same region, or jobs are world-
    * wide, but the job seeker is from a specific region.
@@ -79,11 +73,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   private java.lang.String regionCode;
 
   /**
-   * Optional.
-   *
-   * Allows the client to return jobs without a set location, specifically, telecommuting jobs
-   * (telecommuting is considered by the service as a special location. Job.posting_region indicates
-   * if a job permits telecommuting. If this field is set to
+   * Optional. Allows the client to return jobs without a set location, specifically, telecommuting
+   * jobs (telecommuting is considered by the service as a special location. Job.posting_region
+   * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
    * telecommute job are not searched.
@@ -99,9 +91,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   private java.lang.String telecommutePreference;
 
   /**
-   * Optional.
-   *
-   * The address name, such as "Mountain View" or "Bay Area".
+   * Optional. The address name, such as "Mountain View" or "Bay Area".
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -109,9 +99,7 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * The address name, such as "Mountain View" or "Bay Area".
+   * Optional. The address name, such as "Mountain View" or "Bay Area".
    * @param address address or {@code null} for none
    */
   public LocationFilter setAddress(java.lang.String address) {
@@ -120,10 +108,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * The distance_in_miles is applied when the location being searched for is identified as a city
-   * or smaller. When the location being searched for is a state or larger, this field is ignored.
+   * Optional. The distance_in_miles is applied when the location being searched for is identified
+   * as a city or smaller. When the location being searched for is a state or larger, this field is
+   * ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDistanceInMiles() {
@@ -131,10 +118,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * The distance_in_miles is applied when the location being searched for is identified as a city
-   * or smaller. When the location being searched for is a state or larger, this field is ignored.
+   * Optional. The distance_in_miles is applied when the location being searched for is identified
+   * as a city or smaller. When the location being searched for is a state or larger, this field is
+   * ignored.
    * @param distanceInMiles distanceInMiles or {@code null} for none
    */
   public LocationFilter setDistanceInMiles(java.lang.Double distanceInMiles) {
@@ -143,10 +129,8 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * The latitude and longitude of the geographic center from which to search. This field's ignored
-   * if `address` is provided.
+   * Optional. The latitude and longitude of the geographic center from which to search. This
+   * field's ignored if `address` is provided.
    * @return value or {@code null} for none
    */
   public LatLng getLatLng() {
@@ -154,10 +138,8 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * The latitude and longitude of the geographic center from which to search. This field's ignored
-   * if `address` is provided.
+   * Optional. The latitude and longitude of the geographic center from which to search. This
+   * field's ignored if `address` is provided.
    * @param latLng latLng or {@code null} for none
    */
   public LocationFilter setLatLng(LatLng latLng) {
@@ -166,10 +148,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * CLDR region code of the country/region of the address. This is used to address ambiguity of the
-   * user-input location, for example, "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
+   * Optional. CLDR region code of the country/region of the address. This is used to address
+   * ambiguity of the user-input location, for example, "Liverpool" against "Liverpool, NY, US" or
+   * "Liverpool, UK".
    *
    * Set this field if all the jobs to search against are from a same region, or jobs are world-
    * wide, but the job seeker is from a specific region.
@@ -184,10 +165,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * CLDR region code of the country/region of the address. This is used to address ambiguity of the
-   * user-input location, for example, "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
+   * Optional. CLDR region code of the country/region of the address. This is used to address
+   * ambiguity of the user-input location, for example, "Liverpool" against "Liverpool, NY, US" or
+   * "Liverpool, UK".
    *
    * Set this field if all the jobs to search against are from a same region, or jobs are world-
    * wide, but the job seeker is from a specific region.
@@ -203,11 +183,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * Allows the client to return jobs without a set location, specifically, telecommuting jobs
-   * (telecommuting is considered by the service as a special location. Job.posting_region indicates
-   * if a job permits telecommuting. If this field is set to
+   * Optional. Allows the client to return jobs without a set location, specifically, telecommuting
+   * jobs (telecommuting is considered by the service as a special location. Job.posting_region
+   * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
    * telecommute job are not searched.
@@ -224,11 +202,9 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional.
-   *
-   * Allows the client to return jobs without a set location, specifically, telecommuting jobs
-   * (telecommuting is considered by the service as a special location. Job.posting_region indicates
-   * if a job permits telecommuting. If this field is set to
+   * Optional. Allows the client to return jobs without a set location, specifically, telecommuting
+   * jobs (telecommuting is considered by the service as a special location. Job.posting_region
+   * indicates if a job permits telecommuting. If this field is set to
    * TelecommutePreference.TELECOMMUTE_ALLOWED, telecommuting jobs are searched, and address and
    * lat_lng are ignored. If not set or set to TelecommutePreference.TELECOMMUTE_EXCLUDED,
    * telecommute job are not searched.

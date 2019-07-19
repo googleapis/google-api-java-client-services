@@ -33,9 +33,7 @@ package com.google.api.services.jobs.v3.model;
 public final class UpdateCompanyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The company resource to replace the current resource in the system.
+   * Required. The company resource to replace the current resource in the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +53,7 @@ public final class UpdateCompanyRequest extends com.google.api.client.json.Gener
   private String updateMask;
 
   /**
-   * Required.
-   *
-   * The company resource to replace the current resource in the system.
+   * Required. The company resource to replace the current resource in the system.
    * @return value or {@code null} for none
    */
   public Company getCompany() {
@@ -65,9 +61,7 @@ public final class UpdateCompanyRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required.
-   *
-   * The company resource to replace the current resource in the system.
+   * Required. The company resource to replace the current resource in the system.
    * @param company company or {@code null} for none
    */
   public UpdateCompanyRequest setCompany(Company company) {

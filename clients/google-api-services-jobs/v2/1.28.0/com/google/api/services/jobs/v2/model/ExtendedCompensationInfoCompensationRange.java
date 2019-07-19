@@ -33,21 +33,27 @@ package com.google.api.services.jobs.v2.model;
 public final class ExtendedCompensationInfoCompensationRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Maximum value.
+   * Required.
+   *
+   * Maximum value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExtendedCompensationInfoDecimal max;
 
   /**
-   * Required. Minimum value.
+   * Required.
+   *
+   * Minimum value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExtendedCompensationInfoDecimal min;
 
   /**
-   * Required. Maximum value.
+   * Required.
+   *
+   * Maximum value.
    * @return value or {@code null} for none
    */
   public ExtendedCompensationInfoDecimal getMax() {
@@ -55,7 +61,9 @@ public final class ExtendedCompensationInfoCompensationRange extends com.google.
   }
 
   /**
-   * Required. Maximum value.
+   * Required.
+   *
+   * Maximum value.
    * @param max max or {@code null} for none
    */
   public ExtendedCompensationInfoCompensationRange setMax(ExtendedCompensationInfoDecimal max) {
@@ -64,7 +72,9 @@ public final class ExtendedCompensationInfoCompensationRange extends com.google.
   }
 
   /**
-   * Required. Minimum value.
+   * Required.
+   *
+   * Minimum value.
    * @return value or {@code null} for none
    */
   public ExtendedCompensationInfoDecimal getMin() {
@@ -72,7 +82,9 @@ public final class ExtendedCompensationInfoCompensationRange extends com.google.
   }
 
   /**
-   * Required. Minimum value.
+   * Required.
+   *
+   * Minimum value.
    * @param min min or {@code null} for none
    */
   public ExtendedCompensationInfoCompensationRange setMin(ExtendedCompensationInfoDecimal min) {

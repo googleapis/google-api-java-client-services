@@ -69,9 +69,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String companyDisplayName;
 
   /**
-   * Required.
-   *
-   * The resource name of the company listing the job, such as "projects/api-test-
+   * Required. The resource name of the company listing the job, such as "projects/api-test-
    * project/companies/foo".
    * The value may be {@code null}.
    */
@@ -79,19 +77,15 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String companyName;
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompensationInfo compensationInfo;
 
   /**
-   * Optional.
-   *
-   * A map of fields to hold both filterable and non-filterable custom job attributes that are not
-   * covered by the provided structured fields.
+   * Optional. A map of fields to hold both filterable and non-filterable custom job attributes that
+   * are not covered by the provided structured fields.
    *
    * The keys of the map are strings up to 64 bytes and must match the pattern: a-zA-Z*. For
    * example, key0LikeThis or KEY_1_LIKE_THIS.
@@ -112,18 +106,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The desired education degrees for the job, such as Bachelors, Masters.
+   * Optional. The desired education degrees for the job, such as Bachelors, Masters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> degreeTypes;
 
   /**
-   * Optional.
-   *
-   * The department or functional area within the company with the open position.
+   * Optional. The department or functional area within the company with the open position.
    *
    * The maximum number of allowed characters is 255.
    * The value may be {@code null}.
@@ -139,10 +129,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private JobDerivedInfo derivedInfo;
 
   /**
-   * Required.
-   *
-   * The description of the job, which typically includes a multi-paragraph description of the
-   * company and related information. Separate fields are provided on the job object for
+   * Required. The description of the job, which typically includes a multi-paragraph description of
+   * the company and related information. Separate fields are provided on the job object for
    * responsibilities, qualifications, and other job characteristics. Use of these separate job
    * fields is recommended.
    *
@@ -156,19 +144,15 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional.
-   *
-   * The employment type(s) of a job, for example, full time or part time.
+   * Optional. The employment type(s) of a job, for example, full time or part time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> employmentTypes;
 
   /**
-   * Optional.
-   *
-   * A description of bonus, commission, and other compensation incentives associated with the job
-   * not including salary or pay.
+   * Optional. A description of bonus, commission, and other compensation incentives associated with
+   * the job not including salary or pay.
    *
    * The maximum number of allowed characters is 10,000.
    * The value may be {@code null}.
@@ -177,48 +161,38 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String incentives;
 
   /**
-   * Optional.
-   *
-   * The benefits included with the job.
+   * Optional. The benefits included with the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> jobBenefits;
 
   /**
-   * Optional.
-   *
-   * The end timestamp of the job. Typically this field is used for contracting engagements. Invalid
-   * timestamps are ignored.
+   * Optional. The end timestamp of the job. Typically this field is used for contracting
+   * engagements. Invalid timestamps are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String jobEndTime;
 
   /**
-   * Optional.
-   *
-   * The experience level associated with the job, such as "Entry Level".
+   * Optional. The experience level associated with the job, such as "Entry Level".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jobLevel;
 
   /**
-   * Optional.
-   *
-   * The start timestamp of the job in UTC time zone. Typically this field is used for contracting
-   * engagements. Invalid timestamps are ignored.
+   * Optional. The start timestamp of the job in UTC time zone. Typically this field is used for
+   * contracting engagements. Invalid timestamps are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String jobStartTime;
 
   /**
-   * Optional.
-   *
-   * The language of the posting. This field is distinct from any requirements for fluency that are
-   * associated with the job.
+   * Optional. The language of the posting. This field is distinct from any requirements for fluency
+   * that are associated with the job.
    *
    * Language codes must be in BCP-47 format, such as "en-US" or "sr-Latn". For more information,
    * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external"
@@ -288,21 +262,17 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String postingExpireTime;
 
   /**
-   * Optional.
-   *
-   * The timestamp this job posting was most recently published. The default value is the time the
-   * request arrives at the server. Invalid timestamps are ignored.
+   * Optional. The timestamp this job posting was most recently published. The default value is the
+   * time the request arrives at the server. Invalid timestamps are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String postingPublishTime;
 
   /**
-   * Optional.
-   *
-   * The job PostingRegion (for example, state, country) throughout which the job is available. If
-   * this field is set, a LocationFilter in a search query within the job region finds this job
-   * posting if an exact location match isn't specified. If this field is set to
+   * Optional. The job PostingRegion (for example, state, country) throughout which the job is
+   * available. If this field is set, a LocationFilter in a search query within the job region finds
+   * this job posting if an exact location match isn't specified. If this field is set to
    * PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the
    * same location level as this field is strongly recommended.
    * The value may be {@code null}.
@@ -318,21 +288,17 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private String postingUpdateTime;
 
   /**
-   * Optional.
-   *
-   * Options for job processing.
+   * Optional. Options for job processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProcessingOptions processingOptions;
 
   /**
-   * Optional.
-   *
-   * A promotion value of the job, as determined by the client. The value determines the sort order
-   * of the jobs returned when searching for jobs using the featured jobs search call, with higher
-   * promotional values being returned first and ties being resolved by relevance sort. Only the
-   * jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH.
+   * Optional. A promotion value of the job, as determined by the client. The value determines the
+   * sort order of the jobs returned when searching for jobs using the featured jobs search call,
+   * with higher promotional values being returned first and ties being resolved by relevance sort.
+   * Only the jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH.
    *
    * Default value is 0, and negative values are treated as 0.
    * The value may be {@code null}.
@@ -341,10 +307,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.Integer promotionValue;
 
   /**
-   * Optional.
-   *
-   * A description of the qualifications required to perform the job. The use of this field is
-   * recommended as an alternative to using the more general description field.
+   * Optional. A description of the qualifications required to perform the job. The use of this
+   * field is recommended as an alternative to using the more general description field.
    *
    * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
    * unordered list markup tags.
@@ -356,11 +320,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String qualifications;
 
   /**
-   * Required.
-   *
-   * The requisition ID, also referred to as the posting ID, assigned by the client to identify a
-   * job. This field is intended to be used by clients for client identification and tracking of
-   * postings. A job is not allowed to be created if there is another job with the same
+   * Required. The requisition ID, also referred to as the posting ID, assigned by the client to
+   * identify a job. This field is intended to be used by clients for client identification and
+   * tracking of postings. A job is not allowed to be created if there is another job with the same
    * [company_name], language_code and requisition_id.
    *
    * The maximum number of allowed characters is 255.
@@ -370,10 +332,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String requisitionId;
 
   /**
-   * Optional.
-   *
-   * A description of job responsibilities. The use of this field is recommended as an alternative
-   * to using the more general description field.
+   * Optional. A description of job responsibilities. The use of this field is recommended as an
+   * alternative to using the more general description field.
    *
    * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
    * unordered list markup tags.
@@ -385,9 +345,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String responsibilities;
 
   /**
-   * Required.
-   *
-   * The title of the job, such as "Software Engineer"
+   * Required. The title of the job, such as "Software Engineer"
    *
    * The maximum number of allowed characters is 500.
    * The value may be {@code null}.
@@ -396,9 +354,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Optional.
-   *
-   * The visibility of the job.
+   * Optional. The visibility of the job.
    *
    * Defaults to Visibility.ACCOUNT_ONLY if not specified.
    * The value may be {@code null}.
@@ -490,9 +446,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The resource name of the company listing the job, such as "projects/api-test-
+   * Required. The resource name of the company listing the job, such as "projects/api-test-
    * project/companies/foo".
    * @return value or {@code null} for none
    */
@@ -501,9 +455,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The resource name of the company listing the job, such as "projects/api-test-
+   * Required. The resource name of the company listing the job, such as "projects/api-test-
    * project/companies/foo".
    * @param companyName companyName or {@code null} for none
    */
@@ -513,9 +465,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    * @return value or {@code null} for none
    */
   public CompensationInfo getCompensationInfo() {
@@ -523,9 +473,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    * @param compensationInfo compensationInfo or {@code null} for none
    */
   public Job setCompensationInfo(CompensationInfo compensationInfo) {
@@ -534,10 +482,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A map of fields to hold both filterable and non-filterable custom job attributes that are not
-   * covered by the provided structured fields.
+   * Optional. A map of fields to hold both filterable and non-filterable custom job attributes that
+   * are not covered by the provided structured fields.
    *
    * The keys of the map are strings up to 64 bytes and must match the pattern: a-zA-Z*. For
    * example, key0LikeThis or KEY_1_LIKE_THIS.
@@ -553,10 +499,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A map of fields to hold both filterable and non-filterable custom job attributes that are not
-   * covered by the provided structured fields.
+   * Optional. A map of fields to hold both filterable and non-filterable custom job attributes that
+   * are not covered by the provided structured fields.
    *
    * The keys of the map are strings up to 64 bytes and must match the pattern: a-zA-Z*. For
    * example, key0LikeThis or KEY_1_LIKE_THIS.
@@ -573,9 +517,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The desired education degrees for the job, such as Bachelors, Masters.
+   * Optional. The desired education degrees for the job, such as Bachelors, Masters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDegreeTypes() {
@@ -583,9 +525,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The desired education degrees for the job, such as Bachelors, Masters.
+   * Optional. The desired education degrees for the job, such as Bachelors, Masters.
    * @param degreeTypes degreeTypes or {@code null} for none
    */
   public Job setDegreeTypes(java.util.List<java.lang.String> degreeTypes) {
@@ -594,9 +534,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The department or functional area within the company with the open position.
+   * Optional. The department or functional area within the company with the open position.
    *
    * The maximum number of allowed characters is 255.
    * @return value or {@code null} for none
@@ -606,9 +544,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The department or functional area within the company with the open position.
+   * Optional. The department or functional area within the company with the open position.
    *
    * The maximum number of allowed characters is 255.
    * @param department department or {@code null} for none
@@ -636,10 +572,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The description of the job, which typically includes a multi-paragraph description of the
-   * company and related information. Separate fields are provided on the job object for
+   * Required. The description of the job, which typically includes a multi-paragraph description of
+   * the company and related information. Separate fields are provided on the job object for
    * responsibilities, qualifications, and other job characteristics. Use of these separate job
    * fields is recommended.
    *
@@ -654,10 +588,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The description of the job, which typically includes a multi-paragraph description of the
-   * company and related information. Separate fields are provided on the job object for
+   * Required. The description of the job, which typically includes a multi-paragraph description of
+   * the company and related information. Separate fields are provided on the job object for
    * responsibilities, qualifications, and other job characteristics. Use of these separate job
    * fields is recommended.
    *
@@ -673,9 +605,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The employment type(s) of a job, for example, full time or part time.
+   * Optional. The employment type(s) of a job, for example, full time or part time.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEmploymentTypes() {
@@ -683,9 +613,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The employment type(s) of a job, for example, full time or part time.
+   * Optional. The employment type(s) of a job, for example, full time or part time.
    * @param employmentTypes employmentTypes or {@code null} for none
    */
   public Job setEmploymentTypes(java.util.List<java.lang.String> employmentTypes) {
@@ -694,10 +622,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A description of bonus, commission, and other compensation incentives associated with the job
-   * not including salary or pay.
+   * Optional. A description of bonus, commission, and other compensation incentives associated with
+   * the job not including salary or pay.
    *
    * The maximum number of allowed characters is 10,000.
    * @return value or {@code null} for none
@@ -707,10 +633,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A description of bonus, commission, and other compensation incentives associated with the job
-   * not including salary or pay.
+   * Optional. A description of bonus, commission, and other compensation incentives associated with
+   * the job not including salary or pay.
    *
    * The maximum number of allowed characters is 10,000.
    * @param incentives incentives or {@code null} for none
@@ -721,9 +645,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The benefits included with the job.
+   * Optional. The benefits included with the job.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getJobBenefits() {
@@ -731,9 +653,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The benefits included with the job.
+   * Optional. The benefits included with the job.
    * @param jobBenefits jobBenefits or {@code null} for none
    */
   public Job setJobBenefits(java.util.List<java.lang.String> jobBenefits) {
@@ -742,10 +662,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The end timestamp of the job. Typically this field is used for contracting engagements. Invalid
-   * timestamps are ignored.
+   * Optional. The end timestamp of the job. Typically this field is used for contracting
+   * engagements. Invalid timestamps are ignored.
    * @return value or {@code null} for none
    */
   public String getJobEndTime() {
@@ -753,10 +671,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The end timestamp of the job. Typically this field is used for contracting engagements. Invalid
-   * timestamps are ignored.
+   * Optional. The end timestamp of the job. Typically this field is used for contracting
+   * engagements. Invalid timestamps are ignored.
    * @param jobEndTime jobEndTime or {@code null} for none
    */
   public Job setJobEndTime(String jobEndTime) {
@@ -765,9 +681,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The experience level associated with the job, such as "Entry Level".
+   * Optional. The experience level associated with the job, such as "Entry Level".
    * @return value or {@code null} for none
    */
   public java.lang.String getJobLevel() {
@@ -775,9 +689,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The experience level associated with the job, such as "Entry Level".
+   * Optional. The experience level associated with the job, such as "Entry Level".
    * @param jobLevel jobLevel or {@code null} for none
    */
   public Job setJobLevel(java.lang.String jobLevel) {
@@ -786,10 +698,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The start timestamp of the job in UTC time zone. Typically this field is used for contracting
-   * engagements. Invalid timestamps are ignored.
+   * Optional. The start timestamp of the job in UTC time zone. Typically this field is used for
+   * contracting engagements. Invalid timestamps are ignored.
    * @return value or {@code null} for none
    */
   public String getJobStartTime() {
@@ -797,10 +707,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The start timestamp of the job in UTC time zone. Typically this field is used for contracting
-   * engagements. Invalid timestamps are ignored.
+   * Optional. The start timestamp of the job in UTC time zone. Typically this field is used for
+   * contracting engagements. Invalid timestamps are ignored.
    * @param jobStartTime jobStartTime or {@code null} for none
    */
   public Job setJobStartTime(String jobStartTime) {
@@ -809,10 +717,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The language of the posting. This field is distinct from any requirements for fluency that are
-   * associated with the job.
+   * Optional. The language of the posting. This field is distinct from any requirements for fluency
+   * that are associated with the job.
    *
    * Language codes must be in BCP-47 format, such as "en-US" or "sr-Latn". For more information,
    * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external"
@@ -827,10 +733,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The language of the posting. This field is distinct from any requirements for fluency that are
-   * associated with the job.
+   * Optional. The language of the posting. This field is distinct from any requirements for fluency
+   * that are associated with the job.
    *
    * Language codes must be in BCP-47 format, such as "en-US" or "sr-Latn". For more information,
    * see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47){: class="external"
@@ -967,10 +871,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The timestamp this job posting was most recently published. The default value is the time the
-   * request arrives at the server. Invalid timestamps are ignored.
+   * Optional. The timestamp this job posting was most recently published. The default value is the
+   * time the request arrives at the server. Invalid timestamps are ignored.
    * @return value or {@code null} for none
    */
   public String getPostingPublishTime() {
@@ -978,10 +880,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The timestamp this job posting was most recently published. The default value is the time the
-   * request arrives at the server. Invalid timestamps are ignored.
+   * Optional. The timestamp this job posting was most recently published. The default value is the
+   * time the request arrives at the server. Invalid timestamps are ignored.
    * @param postingPublishTime postingPublishTime or {@code null} for none
    */
   public Job setPostingPublishTime(String postingPublishTime) {
@@ -990,11 +890,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The job PostingRegion (for example, state, country) throughout which the job is available. If
-   * this field is set, a LocationFilter in a search query within the job region finds this job
-   * posting if an exact location match isn't specified. If this field is set to
+   * Optional. The job PostingRegion (for example, state, country) throughout which the job is
+   * available. If this field is set, a LocationFilter in a search query within the job region finds
+   * this job posting if an exact location match isn't specified. If this field is set to
    * PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the
    * same location level as this field is strongly recommended.
    * @return value or {@code null} for none
@@ -1004,11 +902,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The job PostingRegion (for example, state, country) throughout which the job is available. If
-   * this field is set, a LocationFilter in a search query within the job region finds this job
-   * posting if an exact location match isn't specified. If this field is set to
+   * Optional. The job PostingRegion (for example, state, country) throughout which the job is
+   * available. If this field is set, a LocationFilter in a search query within the job region finds
+   * this job posting if an exact location match isn't specified. If this field is set to
    * PostingRegion.NATION or PostingRegion.ADMINISTRATIVE_AREA, setting job Job.addresses to the
    * same location level as this field is strongly recommended.
    * @param postingRegion postingRegion or {@code null} for none
@@ -1036,9 +932,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Options for job processing.
+   * Optional. Options for job processing.
    * @return value or {@code null} for none
    */
   public ProcessingOptions getProcessingOptions() {
@@ -1046,9 +940,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * Options for job processing.
+   * Optional. Options for job processing.
    * @param processingOptions processingOptions or {@code null} for none
    */
   public Job setProcessingOptions(ProcessingOptions processingOptions) {
@@ -1057,12 +949,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A promotion value of the job, as determined by the client. The value determines the sort order
-   * of the jobs returned when searching for jobs using the featured jobs search call, with higher
-   * promotional values being returned first and ties being resolved by relevance sort. Only the
-   * jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH.
+   * Optional. A promotion value of the job, as determined by the client. The value determines the
+   * sort order of the jobs returned when searching for jobs using the featured jobs search call,
+   * with higher promotional values being returned first and ties being resolved by relevance sort.
+   * Only the jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH.
    *
    * Default value is 0, and negative values are treated as 0.
    * @return value or {@code null} for none
@@ -1072,12 +962,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A promotion value of the job, as determined by the client. The value determines the sort order
-   * of the jobs returned when searching for jobs using the featured jobs search call, with higher
-   * promotional values being returned first and ties being resolved by relevance sort. Only the
-   * jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH.
+   * Optional. A promotion value of the job, as determined by the client. The value determines the
+   * sort order of the jobs returned when searching for jobs using the featured jobs search call,
+   * with higher promotional values being returned first and ties being resolved by relevance sort.
+   * Only the jobs with a promotionValue >0 are returned in a FEATURED_JOB_SEARCH.
    *
    * Default value is 0, and negative values are treated as 0.
    * @param promotionValue promotionValue or {@code null} for none
@@ -1088,10 +976,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A description of the qualifications required to perform the job. The use of this field is
-   * recommended as an alternative to using the more general description field.
+   * Optional. A description of the qualifications required to perform the job. The use of this
+   * field is recommended as an alternative to using the more general description field.
    *
    * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
    * unordered list markup tags.
@@ -1104,10 +990,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A description of the qualifications required to perform the job. The use of this field is
-   * recommended as an alternative to using the more general description field.
+   * Optional. A description of the qualifications required to perform the job. The use of this
+   * field is recommended as an alternative to using the more general description field.
    *
    * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
    * unordered list markup tags.
@@ -1121,11 +1005,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The requisition ID, also referred to as the posting ID, assigned by the client to identify a
-   * job. This field is intended to be used by clients for client identification and tracking of
-   * postings. A job is not allowed to be created if there is another job with the same
+   * Required. The requisition ID, also referred to as the posting ID, assigned by the client to
+   * identify a job. This field is intended to be used by clients for client identification and
+   * tracking of postings. A job is not allowed to be created if there is another job with the same
    * [company_name], language_code and requisition_id.
    *
    * The maximum number of allowed characters is 255.
@@ -1136,11 +1018,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The requisition ID, also referred to as the posting ID, assigned by the client to identify a
-   * job. This field is intended to be used by clients for client identification and tracking of
-   * postings. A job is not allowed to be created if there is another job with the same
+   * Required. The requisition ID, also referred to as the posting ID, assigned by the client to
+   * identify a job. This field is intended to be used by clients for client identification and
+   * tracking of postings. A job is not allowed to be created if there is another job with the same
    * [company_name], language_code and requisition_id.
    *
    * The maximum number of allowed characters is 255.
@@ -1152,10 +1032,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A description of job responsibilities. The use of this field is recommended as an alternative
-   * to using the more general description field.
+   * Optional. A description of job responsibilities. The use of this field is recommended as an
+   * alternative to using the more general description field.
    *
    * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
    * unordered list markup tags.
@@ -1168,10 +1046,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * A description of job responsibilities. The use of this field is recommended as an alternative
-   * to using the more general description field.
+   * Optional. A description of job responsibilities. The use of this field is recommended as an
+   * alternative to using the more general description field.
    *
    * This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and
    * unordered list markup tags.
@@ -1185,9 +1061,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The title of the job, such as "Software Engineer"
+   * Required. The title of the job, such as "Software Engineer"
    *
    * The maximum number of allowed characters is 500.
    * @return value or {@code null} for none
@@ -1197,9 +1071,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * The title of the job, such as "Software Engineer"
+   * Required. The title of the job, such as "Software Engineer"
    *
    * The maximum number of allowed characters is 500.
    * @param title title or {@code null} for none
@@ -1210,9 +1082,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The visibility of the job.
+   * Optional. The visibility of the job.
    *
    * Defaults to Visibility.ACCOUNT_ONLY if not specified.
    * @return value or {@code null} for none
@@ -1222,9 +1092,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional.
-   *
-   * The visibility of the job.
+   * Optional. The visibility of the job.
    *
    * Defaults to Visibility.ACCOUNT_ONLY if not specified.
    * @param visibility visibility or {@code null} for none

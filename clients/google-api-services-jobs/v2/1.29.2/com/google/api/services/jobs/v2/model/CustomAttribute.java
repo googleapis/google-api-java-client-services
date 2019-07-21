@@ -31,10 +31,8 @@ package com.google.api.services.jobs.v2.model;
 public final class CustomAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * If the `filterable` flag is true, custom field values are searchable. If false, values are not
-   * searchable.
+   * Optional. If the `filterable` flag is true, custom field values are searchable. If false,
+   * values are not searchable.
    *
    * Default is false.
    * The value may be {@code null}.
@@ -68,10 +66,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   private StringValues stringValues;
 
   /**
-   * Optional.
-   *
-   * If the `filterable` flag is true, custom field values are searchable. If false, values are not
-   * searchable.
+   * Optional. If the `filterable` flag is true, custom field values are searchable. If false,
+   * values are not searchable.
    *
    * Default is false.
    * @return value or {@code null} for none
@@ -81,10 +77,8 @@ public final class CustomAttribute extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * If the `filterable` flag is true, custom field values are searchable. If false, values are not
-   * searchable.
+   * Optional. If the `filterable` flag is true, custom field values are searchable. If false,
+   * values are not searchable.
    *
    * Default is false.
    * @param filterable filterable or {@code null} for none

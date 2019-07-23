@@ -75,7 +75,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The dimensions requested. Requests can have a total of 7 dimensions.
+   * The dimensions requested. Requests can have a total of 9 dimensions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,7 +304,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The dimensions requested. Requests can have a total of 7 dimensions.
+   * The dimensions requested. Requests can have a total of 9 dimensions.
    * @return value or {@code null} for none
    */
   public java.util.List<Dimension> getDimensions() {
@@ -312,7 +312,7 @@ public final class ReportRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The dimensions requested. Requests can have a total of 7 dimensions.
+   * The dimensions requested. Requests can have a total of 9 dimensions.
    * @param dimensions dimensions or {@code null} for none
    */
   public ReportRequest setDimensions(java.util.List<Dimension> dimensions) {

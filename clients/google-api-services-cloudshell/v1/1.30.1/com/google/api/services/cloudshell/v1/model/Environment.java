@@ -96,6 +96,14 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. Host to which clients can connect to initiate HTTPS or WSS connections with the
+   * environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String webHost;
+
+  /**
    * Required. Full path to the Docker image used to run this environment, e.g. "gcr.io/dev-con
    * /cloud-devshell:latest".
    * @return value or {@code null} for none
@@ -244,6 +252,25 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Host to which clients can connect to initiate HTTPS or WSS connections with the
+   * environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWebHost() {
+    return webHost;
+  }
+
+  /**
+   * Output only. Host to which clients can connect to initiate HTTPS or WSS connections with the
+   * environment.
+   * @param webHost webHost or {@code null} for none
+   */
+  public Environment setWebHost(java.lang.String webHost) {
+    this.webHost = webHost;
     return this;
   }
 

@@ -31,6 +31,18 @@ package com.google.api.services.cloudasset.v1.model;
 public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy;
+
+  /**
    * Type of the asset. Example: "compute.googleapis.com/Disk".
    * The value may be {@code null}.
    */
@@ -69,6 +81,42 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Resource resource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1AccessLevel getAccessLevel() {
+    return accessLevel;
+  }
+
+  /**
+   * @param accessLevel accessLevel or {@code null} for none
+   */
+  public Asset setAccessLevel(GoogleIdentityAccesscontextmanagerV1AccessLevel accessLevel) {
+    this.accessLevel = accessLevel;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1AccessPolicy getAccessPolicy() {
+    return accessPolicy;
+  }
+
+  /**
+   * @param accessPolicy accessPolicy or {@code null} for none
+   */
+  public Asset setAccessPolicy(GoogleIdentityAccesscontextmanagerV1AccessPolicy accessPolicy) {
+    this.accessPolicy = accessPolicy;
+    return this;
+  }
 
   /**
    * Type of the asset. Example: "compute.googleapis.com/Disk".
@@ -162,6 +210,21 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setResource(Resource resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1ServicePerimeter getServicePerimeter() {
+    return servicePerimeter;
+  }
+
+  /**
+   * @param servicePerimeter servicePerimeter or {@code null} for none
+   */
+  public Asset setServicePerimeter(GoogleIdentityAccesscontextmanagerV1ServicePerimeter servicePerimeter) {
+    this.servicePerimeter = servicePerimeter;
     return this;
   }
 

@@ -88,8 +88,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    *
    * Supported sources are any of the following:
    *
-   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout *
-   * Government attack warning * Google identity
+   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout * State
+   * sponsored attack * Google identity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,8 +248,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    *
    * Supported sources are any of the following:
    *
-   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout *
-   * Government attack warning * Google identity
+   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout * State
+   * sponsored attack * Google identity
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -262,8 +262,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    *
    * Supported sources are any of the following:
    *
-   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout *
-   * Government attack warning * Google identity
+   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout * State
+   * sponsored attack * Google identity
    * @param source source or {@code null} for none
    */
   public Alert setSource(java.lang.String source) {

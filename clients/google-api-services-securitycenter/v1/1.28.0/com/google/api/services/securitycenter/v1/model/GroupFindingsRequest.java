@@ -80,8 +80,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * The following field and operator combinations are supported:
    *
    * * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category: `=`, `:`
-   * * external_uri: `=`, `:` * event_time: `>`, `<`, `>=`, `<=` * security_marks: `=`, `:` *
-   * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+   * * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "event_time = \"2019-06-10T16:07:18-07:00\""     "event_time = 1560208038000"
+   *
+   * * security_marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
    * The value may be {@code null}.
@@ -211,8 +215,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * The following field and operator combinations are supported:
    *
    * * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category: `=`, `:`
-   * * external_uri: `=`, `:` * event_time: `>`, `<`, `>=`, `<=` * security_marks: `=`, `:` *
-   * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+   * * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "event_time = \"2019-06-10T16:07:18-07:00\""     "event_time = 1560208038000"
+   *
+   * * security_marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
    * @return value or {@code null} for none
@@ -244,8 +252,12 @@ public final class GroupFindingsRequest extends com.google.api.client.json.Gener
    * The following field and operator combinations are supported:
    *
    * * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category: `=`, `:`
-   * * external_uri: `=`, `:` * event_time: `>`, `<`, `>=`, `<=` * security_marks: `=`, `:` *
-   * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+   * * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "event_time = \"2019-06-10T16:07:18-07:00\""     "event_time = 1560208038000"
+   *
+   * * security_marks: `=`, `:` * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
    * @param filter filter or {@code null} for none

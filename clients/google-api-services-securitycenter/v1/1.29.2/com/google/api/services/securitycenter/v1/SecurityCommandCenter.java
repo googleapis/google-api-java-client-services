@@ -883,9 +883,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * The following are the allowed field and operator combinations:
          *
-         * * name: `=` * update_time: `>`, `<`, `>=`, `<=` * iam_policy.policy_blob: `=`, `:` *
-         * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` * security_marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
+         * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+         *
+         * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * "update_time = \"2019-06-10T16:07:18-07:00\"" "update_time = 1560208038000"
+         *
+         * * create_time: `=`, `>`, `<`, `>=`, `<=`
+         *
+         * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * "create_time = \"2019-06-10T16:07:18-07:00\"" "create_time = 1560208038000"
+         *
+         * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+         * * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
          * security_center_properties.resource_type: `=`, `:` *
          * security_center_properties.resource_parent: `=`, `:` *
          * security_center_properties.resource_project: `=`, `:` *
@@ -918,12 +927,21 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
        The following are the allowed field and operator combinations:
 
-       * name: `=` * update_time: `>`, `<`, `>=`, `<=` * iam_policy.policy_blob: `=`, `:` *
-       resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` * security_marks: `=`, `:` *
-       security_center_properties.resource_name: `=`, `:` * security_center_properties.resource_type: `=`,
-       `:` * security_center_properties.resource_parent: `=`, `:` *
-       security_center_properties.resource_project: `=`, `:` * security_center_properties.resource_owners:
-       `=`, `:`
+       * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+
+       Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: "update_time =
+       \"2019-06-10T16:07:18-07:00\"" "update_time = 1560208038000"
+
+       * create_time: `=`, `>`, `<`, `>=`, `<=`
+
+       Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: "create_time =
+       \"2019-06-10T16:07:18-07:00\"" "create_time = 1560208038000"
+
+       * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
+       security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
+       security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
+       `=`, `:` * security_center_properties.resource_project: `=`, `:` *
+       security_center_properties.resource_owners: `=`, `:`
 
        For example, `resource_properties.size = 100` is a valid filter string.
          */
@@ -954,9 +972,18 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          *
          * The following are the allowed field and operator combinations:
          *
-         * * name: `=` * update_time: `>`, `<`, `>=`, `<=` * iam_policy.policy_blob: `=`, `:` *
-         * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` * security_marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
+         * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+         *
+         * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * "update_time = \"2019-06-10T16:07:18-07:00\"" "update_time = 1560208038000"
+         *
+         * * create_time: `=`, `>`, `<`, `>=`, `<=`
+         *
+         * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+         * "create_time = \"2019-06-10T16:07:18-07:00\"" "create_time = 1560208038000"
+         *
+         * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+         * * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
          * security_center_properties.resource_type: `=`, `:` *
          * security_center_properties.resource_parent: `=`, `:` *
          * security_center_properties.resource_project: `=`, `:` *
@@ -978,9 +1005,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * syntax are insignificant. "name desc,resource_properties.a_property" and " name     desc
          * ,   resource_properties.a_property  " are equivalent.
          *
-         * The following fields are supported: name update_time resource_properties security_marks
-         * security_center_properties.resource_name security_center_properties.resource_parent
-         * security_center_properties.resource_project security_center_properties.resource_type
+         * The following fields are supported: name update_time resource_properties
+         * security_marks.marks security_center_properties.resource_name
+         * security_center_properties.resource_parent security_center_properties.resource_project
+         * security_center_properties.resource_type
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
@@ -993,7 +1021,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        desc,resource_properties.a_property" and " name     desc  ,   resource_properties.a_property  " are
        equivalent.
 
-       The following fields are supported: name update_time resource_properties security_marks
+       The following fields are supported: name update_time resource_properties security_marks.marks
        security_center_properties.resource_name security_center_properties.resource_parent
        security_center_properties.resource_project security_center_properties.resource_type
          */
@@ -1010,9 +1038,10 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * syntax are insignificant. "name desc,resource_properties.a_property" and " name     desc
          * ,   resource_properties.a_property  " are equivalent.
          *
-         * The following fields are supported: name update_time resource_properties security_marks
-         * security_center_properties.resource_name security_center_properties.resource_parent
-         * security_center_properties.resource_project security_center_properties.resource_type
+         * The following fields are supported: name update_time resource_properties
+         * security_marks.marks security_center_properties.resource_name
+         * security_center_properties.resource_parent security_center_properties.resource_project
+         * security_center_properties.resource_type
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -3813,8 +3842,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * The following field and operator combinations are supported:
            *
            * name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:`
-           * external_uri: `=`, `:` event_time: `>`, `<`, `>=`, `<=` security_marks: `=`, `:`
-           * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+           * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=`
+           *
+           * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+           * "event_time = \"2019-06-10T16:07:18-07:00\"" "event_time = 1560208038000"
+           *
+           * security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
            *
            * For example, `source_properties.size = 100` is a valid filter string.
            */
@@ -3843,8 +3876,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          The following field and operator combinations are supported:
 
          name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:` external_uri:
-         `=`, `:` event_time: `>`, `<`, `>=`, `<=` security_marks: `=`, `:` source_properties: `=`, `:`,
-         `>`, `<`, `>=`, `<=`
+         `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=`
+
+         Usage: This should be milliseconds since epoch or an RFC3339 string. Examples: "event_time =
+         \"2019-06-10T16:07:18-07:00\"" "event_time = 1560208038000"
+
+         security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
 
          For example, `source_properties.size = 100` is a valid filter string.
            */
@@ -3875,8 +3912,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * The following field and operator combinations are supported:
            *
            * name: `=` parent: `=`, `:` resource_name: `=`, `:` state: `=`, `:` category: `=`, `:`
-           * external_uri: `=`, `:` event_time: `>`, `<`, `>=`, `<=` security_marks: `=`, `:`
-           * source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
+           * external_uri: `=`, `:` event_time: `=`, `>`, `<`, `>=`, `<=`
+           *
+           * Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
+           * "event_time = \"2019-06-10T16:07:18-07:00\"" "event_time = 1560208038000"
+           *
+           * security_marks.marks: `=`, `:` source_properties: `=`, `:`, `>`, `<`, `>=`, `<=`
            *
            * For example, `source_properties.size = 100` is a valid filter string.
            */
@@ -3895,7 +3936,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * desc  ,   source_properties.a_property  " are equivalent.
            *
            * The following fields are supported: name parent state category resource_name event_time
-           * source_properties security_marks
+           * source_properties security_marks.marks
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
@@ -3909,7 +3950,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          equivalent.
 
          The following fields are supported: name parent state category resource_name event_time
-         source_properties security_marks
+         source_properties security_marks.marks
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -3925,7 +3966,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * desc  ,   source_properties.a_property  " are equivalent.
            *
            * The following fields are supported: name parent state category resource_name event_time
-           * source_properties security_marks
+           * source_properties security_marks.marks
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;

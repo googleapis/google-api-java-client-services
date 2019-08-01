@@ -46,7 +46,8 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   /**
    * Error samples.
    *
-   * No more than 100 error log entries may be recorded for a given error code for a single task.
+   * At most 5 error log entries will be recorded for a given error code for a single transfer
+   * operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,8 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   /**
    * Error samples.
    *
-   * No more than 100 error log entries may be recorded for a given error code for a single task.
+   * At most 5 error log entries will be recorded for a given error code for a single transfer
+   * operation.
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorLogEntry> getErrorLogEntries() {
@@ -105,7 +107,8 @@ public final class ErrorSummary extends com.google.api.client.json.GenericJson {
   /**
    * Error samples.
    *
-   * No more than 100 error log entries may be recorded for a given error code for a single task.
+   * At most 5 error log entries will be recorded for a given error code for a single transfer
+   * operation.
    * @param errorLogEntries errorLogEntries or {@code null} for none
    */
   public ErrorSummary setErrorLogEntries(java.util.List<ErrorLogEntry> errorLogEntries) {

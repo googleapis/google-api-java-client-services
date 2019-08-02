@@ -69,7 +69,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only.  The configuration and content that was released.
+   * Output only. The configuration and content that was released.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.  The configuration and content that was released.
+   * Output only. The configuration and content that was released.
    * @return value or {@code null} for none
    */
   public Version getVersion() {
@@ -175,7 +175,7 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.  The configuration and content that was released.
+   * Output only. The configuration and content that was released.
    * @param version version or {@code null} for none
    */
   public Release setVersion(Version version) {

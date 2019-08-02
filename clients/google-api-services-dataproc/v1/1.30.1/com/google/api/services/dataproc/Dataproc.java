@@ -817,7 +817,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * execution of workflow by polling operations.get. The Operation will complete when entire workflow
          * is finished.The running workflow can be aborted via operations.cancel. This will cause any
          * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-         * will be WorkflowMetadata.On successful completion, Operation.response will be Empty.
+         * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
+         * Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiate".
          *
@@ -848,8 +849,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * execution of workflow by polling operations.get. The Operation will complete when entire
            * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
            * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
-           * Operation.metadata will be WorkflowMetadata.On successful completion, Operation.response will
-           * be Empty.
+           * Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
+           * completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiate".
            *
@@ -972,8 +973,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * Operation can be used to track execution of workflow by polling operations.get. The Operation
          * will complete when entire workflow is finished.The running workflow can be aborted via
          * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
-         * to be deleted.The Operation.metadata will be WorkflowMetadata.On successful completion,
-         * Operation.response will be Empty.
+         * to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On
+         * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiateInline".
          *
@@ -1005,8 +1006,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * returned Operation can be used to track execution of workflow by polling operations.get. The
            * Operation will complete when entire workflow is finished.The running workflow can be aborted
            * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
-           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata.On successful
-           * completion, Operation.response will be Empty.
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using
+           * WorkflowMetadata.On successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiateInline".
            *
@@ -6687,7 +6688,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * execution of workflow by polling operations.get. The Operation will complete when entire workflow
          * is finished.The running workflow can be aborted via operations.cancel. This will cause any
          * inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata
-         * will be WorkflowMetadata.On successful completion, Operation.response will be Empty.
+         * will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful completion,
+         * Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiate".
          *
@@ -6718,8 +6720,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * execution of workflow by polling operations.get. The Operation will complete when entire
            * workflow is finished.The running workflow can be aborted via operations.cancel. This will cause
            * any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The
-           * Operation.metadata will be WorkflowMetadata.On successful completion, Operation.response will
-           * be Empty.
+           * Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On successful
+           * completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiate".
            *
@@ -6842,8 +6844,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * Operation can be used to track execution of workflow by polling operations.get. The Operation
          * will complete when entire workflow is finished.The running workflow can be aborted via
          * operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters
-         * to be deleted.The Operation.metadata will be WorkflowMetadata.On successful completion,
-         * Operation.response will be Empty.
+         * to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using WorkflowMetadata.On
+         * successful completion, Operation.response will be Empty.
          *
          * Create a request for the method "workflowTemplates.instantiateInline".
          *
@@ -6875,8 +6877,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * returned Operation can be used to track execution of workflow by polling operations.get. The
            * Operation will complete when entire workflow is finished.The running workflow can be aborted
            * via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned
-           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata.On successful
-           * completion, Operation.response will be Empty.
+           * clusters to be deleted.The Operation.metadata will be WorkflowMetadata. Also see Using
+           * WorkflowMetadata.On successful completion, Operation.response will be Empty.
            *
            * Create a request for the method "workflowTemplates.instantiateInline".
            *

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.dataproc.v1beta2.model;
+package com.google.api.services.dataproc.model;
 
 /**
  * Specifies the cluster auto-delete schedule configuration.

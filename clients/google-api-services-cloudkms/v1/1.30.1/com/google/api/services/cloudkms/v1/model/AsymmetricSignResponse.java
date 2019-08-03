@@ -31,11 +31,38 @@ package com.google.api.services.cloudkms.v1.model;
 public final class AsymmetricSignResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
+   * intended resource was used for signing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The created signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signature;
+
+  /**
+   * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
+   * intended resource was used for signing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The resource name of the CryptoKeyVersion used for signing. Check this field to verify that the
+   * intended resource was used for signing.
+   * @param name name or {@code null} for none
+   */
+  public AsymmetricSignResponse setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
 
   /**
    * The created signature.

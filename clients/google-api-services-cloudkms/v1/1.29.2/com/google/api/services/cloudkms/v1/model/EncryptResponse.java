@@ -38,7 +38,8 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
   private java.lang.String ciphertext;
 
   /**
-   * The resource name of the CryptoKeyVersion used in encryption.
+   * The resource name of the CryptoKeyVersion used in encryption. Check this field to verify that
+   * the intended resource was used for encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,8 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The resource name of the CryptoKeyVersion used in encryption.
+   * The resource name of the CryptoKeyVersion used in encryption. Check this field to verify that
+   * the intended resource was used for encryption.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -98,7 +100,8 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The resource name of the CryptoKeyVersion used in encryption.
+   * The resource name of the CryptoKeyVersion used in encryption. Check this field to verify that
+   * the intended resource was used for encryption.
    * @param name name or {@code null} for none
    */
   public EncryptResponse setName(java.lang.String name) {

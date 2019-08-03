@@ -1131,22 +1131,24 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. Only include resources that match the filter in the response
-           * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+           * Optional. Only include resources that match the filter in the response. For more
+           * information, see [Sorting and filtering list results](https://cloud.google.com/kms/docs
+           * /sorting-and-filtering).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Only include resources that match the filter in the response
-         (https://cloud.google.com/kms/docs/sorting-and-filtering).
+          /** Optional. Only include resources that match the filter in the response. For more information, see
+         [Sorting and filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Only include resources that match the filter in the response
-           * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+           * Optional. Only include resources that match the filter in the response. For more
+           * information, see [Sorting and filtering list results](https://cloud.google.com/kms/docs
+           * /sorting-and-filtering).
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1155,14 +1157,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Specify how the results should be sorted. If not specified, the results will
-           * be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-           * filtering).
+           * be sorted in the default order.  For more information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
-         the default order (https://cloud.google.com/kms/docs/sorting-and-filtering).
+         the default order.  For more information, see [Sorting and filtering list
+         results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -1170,8 +1173,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Specify how the results should be sorted. If not specified, the results will
-           * be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-           * filtering).
+           * be sorted in the default order.  For more information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -2480,22 +2483,24 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional. Only include resources that match the filter in the response
-             * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+             * Optional. Only include resources that match the filter in the response. For more
+             * information, see [Sorting and filtering list
+             * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Only include resources that match the filter in the response
-           (https://cloud.google.com/kms/docs/sorting-and-filtering).
+            /** Optional. Only include resources that match the filter in the response. For more information, see
+           [Sorting and filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Only include resources that match the filter in the response
-             * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+             * Optional. Only include resources that match the filter in the response. For more
+             * information, see [Sorting and filtering list
+             * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -2504,14 +2509,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Optional. Specify how the results should be sorted. If not specified, the results
-             * will be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-             * filtering).
+             * will be sorted in the default order. For more information, see [Sorting and filtering
+             * list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
-           the default order (https://cloud.google.com/kms/docs/sorting-and-filtering).
+           the default order. For more information, see [Sorting and filtering list
+           results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -2519,8 +2525,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Optional. Specify how the results should be sorted. If not specified, the results
-             * will be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-             * filtering).
+             * will be sorted in the default order. For more information, see [Sorting and filtering
+             * list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -4331,22 +4337,24 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
 
               /**
-               * Optional. Only include resources that match the filter in the response
-               * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+               * Optional. Only include resources that match the filter in the response. For more
+               * information, see [Sorting and filtering list
+               * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. Only include resources that match the filter in the response
-             (https://cloud.google.com/kms/docs/sorting-and-filtering).
+              /** Optional. Only include resources that match the filter in the response. For more information, see
+             [Sorting and filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Optional. Only include resources that match the filter in the response
-               * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+               * Optional. Only include resources that match the filter in the response. For more
+               * information, see [Sorting and filtering list
+               * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -4355,14 +4363,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
               /**
                * Optional. Specify how the results should be sorted. If not specified, the results
-               * will be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-               * filtering).
+               * will be sorted in the default order. For more information, see [Sorting and
+               * filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
-             the default order (https://cloud.google.com/kms/docs/sorting-and-filtering).
+             the default order. For more information, see [Sorting and filtering list
+             results](https://cloud.google.com/kms/docs/sorting-and-filtering).
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -4370,8 +4379,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
               /**
                * Optional. Specify how the results should be sorted. If not specified, the results
-               * will be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-               * filtering).
+               * will be sorted in the default order. For more information, see [Sorting and
+               * filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -5390,22 +5399,24 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional. Only include resources that match the filter in the response
-             * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+             * Optional. Only include resources that match the filter in the response. For more
+             * information, see [Sorting and filtering list
+             * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Only include resources that match the filter in the response
-           (https://cloud.google.com/kms/docs/sorting-and-filtering).
+            /** Optional. Only include resources that match the filter in the response. For more information, see
+           [Sorting and filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Only include resources that match the filter in the response
-             * (https://cloud.google.com/kms/docs/sorting-and-filtering).
+             * Optional. Only include resources that match the filter in the response. For more
+             * information, see [Sorting and filtering list
+             * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -5414,14 +5425,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Optional. Specify how the results should be sorted. If not specified, the results
-             * will be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-             * filtering).
+             * will be sorted in the default order. For more information, see [Sorting and filtering
+             * list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
-           the default order (https://cloud.google.com/kms/docs/sorting-and-filtering).
+           the default order. For more information, see [Sorting and filtering list
+           results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -5429,8 +5441,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Optional. Specify how the results should be sorted. If not specified, the results
-             * will be sorted in the default order (https://cloud.google.com/kms/docs/sorting-and-
-             * filtering).
+             * will be sorted in the default order. For more information, see [Sorting and filtering
+             * list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;

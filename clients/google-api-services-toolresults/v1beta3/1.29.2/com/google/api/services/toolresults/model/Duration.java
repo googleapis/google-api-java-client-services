@@ -32,7 +32,7 @@ package com.google.api.services.toolresults.model;
  * duration.seconds = end.seconds - start.seconds; duration.nanos = end.nanos - start.nanos;
  *
  * if (duration.seconds  0) { duration.seconds += 1; duration.nanos -= 1000000000; } else if
- * (durations.seconds > 0 && duration.nanos < 0) { duration.seconds -= 1; duration.nanos +=
+ * (duration.seconds > 0 && duration.nanos < 0) { duration.seconds -= 1; duration.nanos +=
  * 1000000000; }
  *
  * Example 2: Compute Timestamp from Timestamp + Duration in pseudo code.

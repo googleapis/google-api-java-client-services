@@ -17,7 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * The request for ExecuteBatchDml
+ * The request for ExecuteBatchDml.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -30,8 +30,13 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A per-transaction sequence number used to identify this request. This is used in the same space
-   * as the seqno in ExecuteSqlRequest. See more details in ExecuteSqlRequest.
+   * A per-transaction sequence number used to identify this request. This field makes each request
+   * idempotent such that if the request is received multiple times, at most one will succeed.
+   *
+   * The sequence number must be monotonically increasing within the transaction. If a request
+   * arrives for the first time with an out-of-order sequence number, the transaction may be
+   * aborted. Replays of previously handled requests will yield the same response as the first
+   * execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -39,28 +44,34 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
 
   /**
    * The list of statements to execute in this batch. Statements are executed serially, such that
-   * the effects of statement i are visible to statement i+1. Each statement must be a DML
-   * statement. Execution will stop at the first failed statement; the remaining statements will not
-   * run.
+   * the effects of statement `i` are visible to statement `i+1`. Each statement must be a DML
+   * statement. Execution stops at the first failed statement; the remaining statements are not
+   * executed.
    *
-   * REQUIRES: `statements_size()` > 0.
+   * Callers must provide at least one statement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Statement> statements;
 
   /**
-   * The transaction to use. A ReadWrite transaction is required. Single-use transactions are not
-   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
-   * a new transaction.
+   * The transaction to use. Must be a read-write transaction.
+   *
+   * To protect against replays, single-use transactions are not supported. The caller must either
+   * supply an existing transaction ID or begin a new transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TransactionSelector transaction;
 
   /**
-   * A per-transaction sequence number used to identify this request. This is used in the same space
-   * as the seqno in ExecuteSqlRequest. See more details in ExecuteSqlRequest.
+   * A per-transaction sequence number used to identify this request. This field makes each request
+   * idempotent such that if the request is received multiple times, at most one will succeed.
+   *
+   * The sequence number must be monotonically increasing within the transaction. If a request
+   * arrives for the first time with an out-of-order sequence number, the transaction may be
+   * aborted. Replays of previously handled requests will yield the same response as the first
+   * execution.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSeqno() {
@@ -68,8 +79,13 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * A per-transaction sequence number used to identify this request. This is used in the same space
-   * as the seqno in ExecuteSqlRequest. See more details in ExecuteSqlRequest.
+   * A per-transaction sequence number used to identify this request. This field makes each request
+   * idempotent such that if the request is received multiple times, at most one will succeed.
+   *
+   * The sequence number must be monotonically increasing within the transaction. If a request
+   * arrives for the first time with an out-of-order sequence number, the transaction may be
+   * aborted. Replays of previously handled requests will yield the same response as the first
+   * execution.
    * @param seqno seqno or {@code null} for none
    */
   public ExecuteBatchDmlRequest setSeqno(java.lang.Long seqno) {
@@ -79,11 +95,11 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
 
   /**
    * The list of statements to execute in this batch. Statements are executed serially, such that
-   * the effects of statement i are visible to statement i+1. Each statement must be a DML
-   * statement. Execution will stop at the first failed statement; the remaining statements will not
-   * run.
+   * the effects of statement `i` are visible to statement `i+1`. Each statement must be a DML
+   * statement. Execution stops at the first failed statement; the remaining statements are not
+   * executed.
    *
-   * REQUIRES: `statements_size()` > 0.
+   * Callers must provide at least one statement.
    * @return value or {@code null} for none
    */
   public java.util.List<Statement> getStatements() {
@@ -92,11 +108,11 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
 
   /**
    * The list of statements to execute in this batch. Statements are executed serially, such that
-   * the effects of statement i are visible to statement i+1. Each statement must be a DML
-   * statement. Execution will stop at the first failed statement; the remaining statements will not
-   * run.
+   * the effects of statement `i` are visible to statement `i+1`. Each statement must be a DML
+   * statement. Execution stops at the first failed statement; the remaining statements are not
+   * executed.
    *
-   * REQUIRES: `statements_size()` > 0.
+   * Callers must provide at least one statement.
    * @param statements statements or {@code null} for none
    */
   public ExecuteBatchDmlRequest setStatements(java.util.List<Statement> statements) {
@@ -105,9 +121,10 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The transaction to use. A ReadWrite transaction is required. Single-use transactions are not
-   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
-   * a new transaction.
+   * The transaction to use. Must be a read-write transaction.
+   *
+   * To protect against replays, single-use transactions are not supported. The caller must either
+   * supply an existing transaction ID or begin a new transaction.
    * @return value or {@code null} for none
    */
   public TransactionSelector getTransaction() {
@@ -115,9 +132,10 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The transaction to use. A ReadWrite transaction is required. Single-use transactions are not
-   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
-   * a new transaction.
+   * The transaction to use. Must be a read-write transaction.
+   *
+   * To protect against replays, single-use transactions are not supported. The caller must either
+   * supply an existing transaction ID or begin a new transaction.
    * @param transaction transaction or {@code null} for none
    */
   public ExecuteBatchDmlRequest setTransaction(TransactionSelector transaction) {

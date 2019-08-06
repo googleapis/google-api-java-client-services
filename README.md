@@ -9,11 +9,10 @@ This repository contains the generated source for individual APIs that utilize
 * Java 7 (or higher)
 * Android 1.6 (or higher)
 
-
-You can find the list of available APIs [here][api-list] or you can find the published packages on
-[Maven Central][maven-search].
-
 ## Supported Google APIs
+
+You can find the list of available APIs below or you can find the published
+packages on [Maven Central][maven-search].
 
 [//]: # (API_TABLE_START)
 
@@ -196,6 +195,5 @@ Generating the API clients requires git and Python 3.6.
     $ python3 synth.py
     ```
 
-[google-api-java-client]: https://github.com/google/google-api-java-client
-[api-list]: https://developers.google.com/api-client-library/java/apis/
+[google-api-java-client]: https://github.com/googleapis/google-api-java-client
 [maven-search]: https://search.maven.org/search?q=google-api-services

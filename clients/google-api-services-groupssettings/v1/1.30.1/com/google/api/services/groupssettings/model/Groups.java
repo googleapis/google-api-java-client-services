@@ -30,473 +30,584 @@ package com.google.api.services.groupssettings.model;
 public final class Groups extends com.google.api.client.json.GenericJson {
 
   /**
-   * Are external members allowed to join the group.
+   * Identifies whether members external to your organization can join the group. Possible values
+   * are: - true: G Suite users external to your organization can become members of this group.  -
+   * false: Users not belonging to the organization are not allowed to become members of this group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String allowExternalMembers;
 
   /**
-   * Is google allowed to contact admins.
+   * Deprecated. Allows Google to contact administrator of the group. - true: Allow Google to
+   * contact managers of this group. Occasionally Google may send updates on the latest features,
+   * ask for input on new features, or ask for permission to highlight your group.  - false: Google
+   * can not contact managers of this group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String allowGoogleCommunication;
 
   /**
-   * If posting from web is allowed.
+   * Allows posting from web. Possible values are: - true: Allows any member to post to the group
+   * forum.  - false: Members only use Gmail to communicate with the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String allowWebPosting;
 
   /**
-   * If the group is archive only
+   * Allows the group to be archived only. Possible values are: - true: Group is archived and the
+   * group is inactive. New messages to this group are rejected. The older archived messages are
+   * browseable and searchable.   - If true, the whoCanPostMessage property is set to NONE_CAN_POST.
+   * - If reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.   -
+   * false: The group is active and can receive messages.   - When false, updating whoCanPostMessage
+   * to NONE_CAN_POST, results in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String archiveOnly;
 
   /**
-   * Custom footer text.
+   * Set the content of custom footer text. The maximum number of characters is 1,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customFooterText;
 
   /**
-   * Default email to which reply to any message should go.
+   * An email address used when replying to a message if the replyTo property is set to
+   * REPLY_TO_CUSTOM. This address is defined by an account administrator. - When the group's
+   * ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property holds a custom email
+   * address used when replying to a message.  - If the group's ReplyTo property is set to
+   * REPLY_TO_CUSTOM, the customReplyTo property must have a text value or an error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customReplyTo;
 
   /**
-   * If any of the settings that will be merged have custom roles which is anything other than
-   * owners, managers, or group scopes.
+   * Specifies whether the group has a custom role that's included in one of the settings being
+   * merged. This field is read-only and update/patch requests to it are ignored. Possible values
+   * are: - true  - false
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customRolesEnabledForSettingsToBeMerged;
 
   /**
-   * Default message deny notification message
+   * When a message is rejected, this is text for the rejection notification sent to the message's
+   * author. By default, this property is empty and has no value in the API's response body. The
+   * maximum notification text size is 10,000 characters. Note: Requires sendMessageDenyNotification
+   * property to be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultMessageDenyNotificationText;
 
   /**
-   * Description of the group
+   * Description of the group. This property value may be an empty string if no group description
+   * has been entered. If entered, the maximum group description is no more than 300 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Email id of the group
+   * The group's email address. This property can be updated using the Directory API. Note: Only a
+   * group owner can change a group's email address. A group manager can't do this. When you change
+   * your group's address using the Directory API or the control panel, you are changing the address
+   * your subscribers use to send email and the web address people use to access your group. People
+   * can't reach your group by visiting the old address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * If a primary Collab Inbox feature is enabled.
+   * Specifies whether a collaborative inbox will remain turned on for the group. Possible values
+   * are: - true  - false
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enableCollaborativeInbox;
 
   /**
-   * If favorite replies should be displayed above other replies.
+   * Indicates if favorite replies should be displayed above other replies. - true: Favorite replies
+   * will be displayed above other replies.  - false: Favorite replies will not be displayed above
+   * other replies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String favoriteRepliesOnTop;
 
   /**
-   * Whether to include custom footer.
+   * Whether to include custom footer. Possible values are: - true  - false
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String includeCustomFooter;
 
   /**
-   * If this groups should be included in global address list or not.
+   * Enables the group to be included in the Global Address List. For more information, see the help
+   * center. Possible values are: - true: Group is included in the Global Address List.  - false:
+   * Group is not included in the Global Address List.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String includeInGlobalAddressList;
 
   /**
-   * If the contents of the group are archived.
+   * Allows the Group contents to be archived. Possible values are: - true: Archive messages sent to
+   * the group.  - false: Do not keep an archive of messages sent to this group. If false,
+   * previously archived messages remain in the archive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String isArchived;
 
   /**
-   * The type of the resource.
+   * The type of the resource. It is always groupsSettings#groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Maximum message size allowed.
+   * Deprecated. The maximum size of a message is 25Mb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxMessageBytes;
 
   /**
-   * Can members post using the group email address.
+   * Enables members to post messages as the group. Possible values are: - true: Group member can
+   * post messages using the group's email address instead of their own email address. Message
+   * appear to originate from the group itself. Note: When true, any message moderation settings on
+   * individual users or new members do not apply to posts made on behalf of the group.  - false:
+   * Members can not post in behalf of the group's email address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String membersCanPostAsTheGroup;
 
   /**
-   * Default message display font. Possible values are: DEFAULT_FONT FIXED_WIDTH_FONT
+   * Deprecated. The default message display font always has a value of "DEFAULT_FONT".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageDisplayFont;
 
   /**
-   * Moderation level for messages. Possible values are: MODERATE_ALL_MESSAGES MODERATE_NON_MEMBERS
-   * MODERATE_NEW_MEMBERS MODERATE_NONE
+   * Moderation level of incoming messages. Possible values are: - MODERATE_ALL_MESSAGES: All
+   * messages are sent to the group owner's email address for approval. If approved, the message is
+   * sent to the group.  - MODERATE_NON_MEMBERS: All messages from non group members are sent to the
+   * group owner's email address for approval. If approved, the message is sent to the group.  -
+   * MODERATE_NEW_MEMBERS: All messages from new members are sent to the group owner's email address
+   * for approval. If approved, the message is sent to the group.  - MODERATE_NONE: No moderator
+   * approval is required. Messages are delivered directly to the group. Note: When the
+   * whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to
+   * MODERATE_NON_MEMBERS to protect the group from possible spam. When memberCanPostAsTheGroup is
+   * true, any message moderation settings on individual users or new members will not apply to
+   * posts made on behalf of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageModerationLevel;
 
   /**
-   * Name of the Group
+   * Name of the group, which has a maximum size of 75 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Primary language for the group.
+   * The primary language for group. For a group's primary language use the language tags from the G
+   * Suite languages found at G Suite Email Settings API Email Language Tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryLanguage;
 
   /**
-   * Whome should the default reply to a message go to. Possible values are: REPLY_TO_CUSTOM
-   * REPLY_TO_SENDER REPLY_TO_LIST REPLY_TO_OWNER REPLY_TO_IGNORE REPLY_TO_MANAGERS
+   * Specifies who should the default reply go to. Possible values are: - REPLY_TO_CUSTOM: For
+   * replies to messages, use the group's custom email address. When the group's ReplyTo property is
+   * set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when
+   * replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the
+   * customReplyTo property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER:
+   * The reply sent to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.
+   * - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
+   * group's managers.  - REPLY_TO_IGNORE: Group users individually decide where the message reply
+   * is sent.  - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which
+   * includes all managers and the group owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String replyTo;
 
   /**
-   * Should the member be notified if his message is denied by owner.
+   * Allows a member to be notified if the member's message to the group is denied by the group
+   * owner. Possible values are: - true: When a message is rejected, send the deny message
+   * notification to the message author. The defaultMessageDenyNotificationText property is
+   * dependent on the sendMessageDenyNotification property being true.   - false: When a message is
+   * rejected, no notification is sent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sendMessageDenyNotification;
 
   /**
-   * Is the group listed in groups directory
+   * Deprecated. This is merged into the new whoCanDiscoverGroup setting. Allows the group to be
+   * visible in the Groups Directory. Possible values are: - true: All groups in the account are
+   * listed in the Groups directory.  - false: All groups in the account are not listed in the
+   * directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String showInGroupDirectory;
 
   /**
-   * Moderation level for messages detected as spam. Possible values are: ALLOW MODERATE
-   * SILENTLY_MODERATE REJECT
+   * Specifies moderation levels for messages detected as spam. Possible values are: - ALLOW: Post
+   * the message to the group.  - MODERATE: Send the message to the moderation queue. This is the
+   * default.  - SILENTLY_MODERATE: Send the message to the moderation queue, but do not send
+   * notification to moderators.  - REJECT: Immediately reject the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String spamModerationLevel;
 
   /**
-   * Permissions to add members. Possible values are: ALL_MANAGERS_CAN_ADD ALL_OWNERS_CAN_ADD
-   * ALL_MEMBERS_CAN_ADD NONE_CAN_ADD
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to add
+   * members. Possible values are: - ALL_MEMBERS_CAN_ADD: Managers and members can directly add new
+   * members.  - ALL_MANAGERS_CAN_ADD: Only managers can directly add new members. this includes the
+   * group's owner.  - ALL_OWNERS_CAN_ADD: Only owners can directly add new members.  -
+   * NONE_CAN_ADD: No one can directly add new members.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanAdd;
 
   /**
-   * Permission to add references to a topic. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This functionality is no longer supported in the Google Groups UI. The value is
+   * always "NONE".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanAddReferences;
 
   /**
-   * Permission to approve members. Possible values are: ALL_OWNERS_CAN_APPROVE
-   * ALL_MANAGERS_CAN_APPROVE ALL_MEMBERS_CAN_APPROVE NONE_CAN_APPROVE
+   * Specifies who can approve members who ask to join groups. This permission will be deprecated
+   * once it is merged into the new whoCanModerateMembers setting. Possible values are: -
+   * ALL_MEMBERS_CAN_APPROVE  - ALL_MANAGERS_CAN_APPROVE  - ALL_OWNERS_CAN_APPROVE  -
+   * NONE_CAN_APPROVE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanApproveMembers;
 
   /**
-   * Permission to approve pending messages in the moderation queue. Possible values are: NONE
-   * OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can
+   * approve pending messages in the moderation queue. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanApproveMessages;
 
   /**
-   * Permission to assign topics in a forum to another user. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to assign
+   * topics in a forum to another user. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanAssignTopics;
 
   /**
-   * Permission for content assistants. Possible values are: Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Specifies who can moderate metadata. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanAssistContent;
 
   /**
-   * Permission to ban users. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Specifies who can deny membership to users. This permission will be deprecated once it is
+   * merged into the new whoCanModerateMembers setting. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanBanUsers;
 
   /**
-   * Permission to contact owner of the group via web UI. Possible values are: ANYONE_CAN_CONTACT
-   * ALL_IN_DOMAIN_CAN_CONTACT ALL_MEMBERS_CAN_CONTACT ALL_MANAGERS_CAN_CONTACT
+   * Permission to contact owner of the group via web UI. Possible values are: -
+   * ALL_IN_DOMAIN_CAN_CONTACT  - ALL_MANAGERS_CAN_CONTACT  - ALL_MEMBERS_CAN_CONTACT  -
+   * ANYONE_CAN_CONTACT
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanContactOwner;
 
   /**
-   * Permission to delete replies to topics. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete
+   * replies to topics. (Authors can always delete their own posts). Possible values are: -
+   * ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanDeleteAnyPost;
 
   /**
-   * Permission to delete topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete
+   * topics. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanDeleteTopics;
 
   /**
-   * Permission for who can discover the group. Possible values are: ALL_MEMBERS_CAN_DISCOVER
-   * ALL_IN_DOMAIN_CAN_DISCOVER ANYONE_CAN_DISCOVER
+   * Specifies the set of users for whom this group is discoverable. Possible values are: -
+   * ANYONE_CAN_DISCOVER  - ALL_IN_DOMAIN_CAN_DISCOVER  - ALL_MEMBERS_CAN_DISCOVER
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanDiscoverGroup;
 
   /**
-   * Permission to enter free form tags for topics in a forum. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to enter free
+   * form tags for topics in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanEnterFreeFormTags;
 
   /**
-   * Permission to hide posts by reporting them as abuse. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can hide
+   * posts by reporting them as abuse. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanHideAbuse;
 
   /**
-   * Permissions to invite members. Possible values are: ALL_MEMBERS_CAN_INVITE
-   * ALL_MANAGERS_CAN_INVITE ALL_OWNERS_CAN_INVITE NONE_CAN_INVITE
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to invite
+   * new members. Possible values are: - ALL_MEMBERS_CAN_INVITE: Managers and members can invite a
+   * new member candidate.  - ALL_MANAGERS_CAN_INVITE: Only managers can invite a new member. This
+   * includes the group's owner.  - ALL_OWNERS_CAN_INVITE: Only owners can invite a new member.  -
+   * NONE_CAN_INVITE: No one can invite a new member candidate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanInvite;
 
   /**
-   * Permissions to join the group. Possible values are: ANYONE_CAN_JOIN ALL_IN_DOMAIN_CAN_JOIN
-   * INVITED_CAN_JOIN CAN_REQUEST_TO_JOIN
+   * Permission to join group. Possible values are: - ANYONE_CAN_JOIN: Anyone in the account domain
+   * can join. This includes accounts with multiple domains.  - ALL_IN_DOMAIN_CAN_JOIN: Any Internet
+   * user who is outside your domain can access your Google Groups service and view the list of
+   * groups in your Groups directory. Warning: Group owners can add external addresses, outside of
+   * the domain to their groups. They can also allow people outside your domain to join their
+   * groups. If you later disable this option, any external addresses already added to users' groups
+   * remain in those groups.  - INVITED_CAN_JOIN: Candidates for membership can be invited to join.
+   * - CAN_REQUEST_TO_JOIN: Non members can request an invitation to join.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanJoin;
 
   /**
-   * Permission to leave the group. Possible values are: ALL_MANAGERS_CAN_LEAVE ALL_OWNERS_CAN_LEAVE
-   * ALL_MEMBERS_CAN_LEAVE NONE_CAN_LEAVE
+   * Permission to leave the group. Possible values are: - ALL_MANAGERS_CAN_LEAVE  -
+   * ALL_MEMBERS_CAN_LEAVE  - NONE_CAN_LEAVE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanLeaveGroup;
 
   /**
-   * Permission to lock topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can
+   * prevent users from posting replies to topics. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanLockTopics;
 
   /**
-   * Permission to make topics appear at the top of the topic list. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can make
+   * topics appear at the top of the topic list. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMakeTopicsSticky;
 
   /**
-   * Permission to mark a topic as a duplicate of another topic. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic
+   * as a duplicate of another topic. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMarkDuplicate;
 
   /**
-   * Permission to mark any other user's post as a favorite reply. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark any
+   * other user's post as a favorite reply. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMarkFavoriteReplyOnAnyTopic;
 
   /**
-   * Permission to mark a post for a topic they started as a favorite reply. Possible values are:
-   * NONE OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a post
+   * for a topic they started as a favorite reply. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMarkFavoriteReplyOnOwnTopic;
 
   /**
-   * Permission to mark a topic as not needing a response. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic
+   * as not needing a response. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMarkNoResponseNeeded;
 
   /**
-   * Permission for content moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Specifies who can moderate content. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanModerateContent;
 
   /**
-   * Permission for membership moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Specifies who can manage members. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanModerateMembers;
 
   /**
-   * Permission to modify members (change member roles). Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Specifies who can change
+   * group members' roles. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY
+   * - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanModifyMembers;
 
   /**
-   * Permission to change tags and categories. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to change tags
+   * and categories. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanModifyTagsAndCategories;
 
   /**
-   * Permission to move topics into the group or forum. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move
+   * topics into the group or forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMoveTopicsIn;
 
   /**
-   * Permission to move topics out of the group or forum. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move
+   * topics out of the group or forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanMoveTopicsOut;
 
   /**
-   * Permission to post announcements, a special topic type. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can post
+   * announcements, a special topic type. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanPostAnnouncements;
 
   /**
-   * Permissions to post messages to the group. Possible values are: NONE_CAN_POST
-   * ALL_MANAGERS_CAN_POST ALL_MEMBERS_CAN_POST ALL_OWNERS_CAN_POST ALL_IN_DOMAIN_CAN_POST
-   * ANYONE_CAN_POST
+   * Permissions to post messages. Possible values are: - NONE_CAN_POST: The group is disabled and
+   * archived. No one can post a message to this group.   - When archiveOnly is false, updating
+   * whoCanPostMessage to NONE_CAN_POST, results in an error.  - If archiveOnly is reverted from
+   * true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.   - ALL_MANAGERS_CAN_POST:
+   * Managers, including group owners, can post messages.  - ALL_MEMBERS_CAN_POST: Any group member
+   * can post a message.  - ALL_OWNERS_CAN_POST: Only group owners can post a message.  -
+   * ALL_IN_DOMAIN_CAN_POST: Anyone in the account can post a message.   - ANYONE_CAN_POST: Any
+   * Internet user who outside your account can access your Google Groups service and post a
+   * message. Note: When whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the
+   * messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanPostMessage;
 
   /**
-   * Permission to take topics in a forum. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to take topics
+   * in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanTakeTopics;
 
   /**
-   * Permission to unassign any topic in a forum. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unassign any
+   * topic in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanUnassignTopic;
 
   /**
-   * Permission to unmark any post from a favorite reply. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unmark any
+   * post from a favorite reply. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanUnmarkFavoriteReplyOnAnyTopic;
 
   /**
-   * Permissions to view group. Possible values are: ANYONE_CAN_VIEW ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
+   * Permissions to view group messages. Possible values are: - ANYONE_CAN_VIEW: Any Internet user
+   * can view the group's messages.   - ALL_IN_DOMAIN_CAN_VIEW: Anyone in your account can view this
+   * group's messages.  - ALL_MEMBERS_CAN_VIEW: All group members can view the group's messages.  -
+   * ALL_MANAGERS_CAN_VIEW: Any group manager can view this group's messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanViewGroup;
 
   /**
-   * Permissions to view membership. Possible values are: ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
+   * Permissions to view membership. Possible values are: - ALL_IN_DOMAIN_CAN_VIEW: Anyone in the
+   * account can view the group members list. If a group already has external members, those members
+   * can still send email to this group.   - ALL_MEMBERS_CAN_VIEW: The group members can view the
+   * group members list.  - ALL_MANAGERS_CAN_VIEW: The group managers can view group members list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String whoCanViewMembership;
 
   /**
-   * Are external members allowed to join the group.
+   * Identifies whether members external to your organization can join the group. Possible values
+   * are: - true: G Suite users external to your organization can become members of this group.  -
+   * false: Users not belonging to the organization are not allowed to become members of this group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllowExternalMembers() {
@@ -504,7 +615,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Are external members allowed to join the group.
+   * Identifies whether members external to your organization can join the group. Possible values
+   * are: - true: G Suite users external to your organization can become members of this group.  -
+   * false: Users not belonging to the organization are not allowed to become members of this group.
    * @param allowExternalMembers allowExternalMembers or {@code null} for none
    */
   public Groups setAllowExternalMembers(java.lang.String allowExternalMembers) {
@@ -513,7 +626,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Is google allowed to contact admins.
+   * Deprecated. Allows Google to contact administrator of the group. - true: Allow Google to
+   * contact managers of this group. Occasionally Google may send updates on the latest features,
+   * ask for input on new features, or ask for permission to highlight your group.  - false: Google
+   * can not contact managers of this group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllowGoogleCommunication() {
@@ -521,7 +637,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Is google allowed to contact admins.
+   * Deprecated. Allows Google to contact administrator of the group. - true: Allow Google to
+   * contact managers of this group. Occasionally Google may send updates on the latest features,
+   * ask for input on new features, or ask for permission to highlight your group.  - false: Google
+   * can not contact managers of this group.
    * @param allowGoogleCommunication allowGoogleCommunication or {@code null} for none
    */
   public Groups setAllowGoogleCommunication(java.lang.String allowGoogleCommunication) {
@@ -530,7 +649,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If posting from web is allowed.
+   * Allows posting from web. Possible values are: - true: Allows any member to post to the group
+   * forum.  - false: Members only use Gmail to communicate with the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllowWebPosting() {
@@ -538,7 +658,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If posting from web is allowed.
+   * Allows posting from web. Possible values are: - true: Allows any member to post to the group
+   * forum.  - false: Members only use Gmail to communicate with the group.
    * @param allowWebPosting allowWebPosting or {@code null} for none
    */
   public Groups setAllowWebPosting(java.lang.String allowWebPosting) {
@@ -547,7 +668,12 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the group is archive only
+   * Allows the group to be archived only. Possible values are: - true: Group is archived and the
+   * group is inactive. New messages to this group are rejected. The older archived messages are
+   * browseable and searchable.   - If true, the whoCanPostMessage property is set to NONE_CAN_POST.
+   * - If reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.   -
+   * false: The group is active and can receive messages.   - When false, updating whoCanPostMessage
+   * to NONE_CAN_POST, results in an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchiveOnly() {
@@ -555,7 +681,12 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the group is archive only
+   * Allows the group to be archived only. Possible values are: - true: Group is archived and the
+   * group is inactive. New messages to this group are rejected. The older archived messages are
+   * browseable and searchable.   - If true, the whoCanPostMessage property is set to NONE_CAN_POST.
+   * - If reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.   -
+   * false: The group is active and can receive messages.   - When false, updating whoCanPostMessage
+   * to NONE_CAN_POST, results in an error.
    * @param archiveOnly archiveOnly or {@code null} for none
    */
   public Groups setArchiveOnly(java.lang.String archiveOnly) {
@@ -564,7 +695,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom footer text.
+   * Set the content of custom footer text. The maximum number of characters is 1,000.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomFooterText() {
@@ -572,7 +703,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom footer text.
+   * Set the content of custom footer text. The maximum number of characters is 1,000.
    * @param customFooterText customFooterText or {@code null} for none
    */
   public Groups setCustomFooterText(java.lang.String customFooterText) {
@@ -581,7 +712,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default email to which reply to any message should go.
+   * An email address used when replying to a message if the replyTo property is set to
+   * REPLY_TO_CUSTOM. This address is defined by an account administrator. - When the group's
+   * ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property holds a custom email
+   * address used when replying to a message.  - If the group's ReplyTo property is set to
+   * REPLY_TO_CUSTOM, the customReplyTo property must have a text value or an error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomReplyTo() {
@@ -589,7 +724,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default email to which reply to any message should go.
+   * An email address used when replying to a message if the replyTo property is set to
+   * REPLY_TO_CUSTOM. This address is defined by an account administrator. - When the group's
+   * ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property holds a custom email
+   * address used when replying to a message.  - If the group's ReplyTo property is set to
+   * REPLY_TO_CUSTOM, the customReplyTo property must have a text value or an error is returned.
    * @param customReplyTo customReplyTo or {@code null} for none
    */
   public Groups setCustomReplyTo(java.lang.String customReplyTo) {
@@ -598,8 +737,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If any of the settings that will be merged have custom roles which is anything other than
-   * owners, managers, or group scopes.
+   * Specifies whether the group has a custom role that's included in one of the settings being
+   * merged. This field is read-only and update/patch requests to it are ignored. Possible values
+   * are: - true  - false
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomRolesEnabledForSettingsToBeMerged() {
@@ -607,8 +747,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If any of the settings that will be merged have custom roles which is anything other than
-   * owners, managers, or group scopes.
+   * Specifies whether the group has a custom role that's included in one of the settings being
+   * merged. This field is read-only and update/patch requests to it are ignored. Possible values
+   * are: - true  - false
    * @param customRolesEnabledForSettingsToBeMerged customRolesEnabledForSettingsToBeMerged or {@code null} for none
    */
   public Groups setCustomRolesEnabledForSettingsToBeMerged(java.lang.String customRolesEnabledForSettingsToBeMerged) {
@@ -617,7 +758,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default message deny notification message
+   * When a message is rejected, this is text for the rejection notification sent to the message's
+   * author. By default, this property is empty and has no value in the API's response body. The
+   * maximum notification text size is 10,000 characters. Note: Requires sendMessageDenyNotification
+   * property to be true.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultMessageDenyNotificationText() {
@@ -625,7 +769,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default message deny notification message
+   * When a message is rejected, this is text for the rejection notification sent to the message's
+   * author. By default, this property is empty and has no value in the API's response body. The
+   * maximum notification text size is 10,000 characters. Note: Requires sendMessageDenyNotification
+   * property to be true.
    * @param defaultMessageDenyNotificationText defaultMessageDenyNotificationText or {@code null} for none
    */
   public Groups setDefaultMessageDenyNotificationText(java.lang.String defaultMessageDenyNotificationText) {
@@ -634,7 +781,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the group
+   * Description of the group. This property value may be an empty string if no group description
+   * has been entered. If entered, the maximum group description is no more than 300 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -642,7 +790,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the group
+   * Description of the group. This property value may be an empty string if no group description
+   * has been entered. If entered, the maximum group description is no more than 300 characters.
    * @param description description or {@code null} for none
    */
   public Groups setDescription(java.lang.String description) {
@@ -651,7 +800,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email id of the group
+   * The group's email address. This property can be updated using the Directory API. Note: Only a
+   * group owner can change a group's email address. A group manager can't do this. When you change
+   * your group's address using the Directory API or the control panel, you are changing the address
+   * your subscribers use to send email and the web address people use to access your group. People
+   * can't reach your group by visiting the old address.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -659,7 +812,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email id of the group
+   * The group's email address. This property can be updated using the Directory API. Note: Only a
+   * group owner can change a group's email address. A group manager can't do this. When you change
+   * your group's address using the Directory API or the control panel, you are changing the address
+   * your subscribers use to send email and the web address people use to access your group. People
+   * can't reach your group by visiting the old address.
    * @param email email or {@code null} for none
    */
   public Groups setEmail(java.lang.String email) {
@@ -668,7 +825,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If a primary Collab Inbox feature is enabled.
+   * Specifies whether a collaborative inbox will remain turned on for the group. Possible values
+   * are: - true  - false
    * @return value or {@code null} for none
    */
   public java.lang.String getEnableCollaborativeInbox() {
@@ -676,7 +834,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If a primary Collab Inbox feature is enabled.
+   * Specifies whether a collaborative inbox will remain turned on for the group. Possible values
+   * are: - true  - false
    * @param enableCollaborativeInbox enableCollaborativeInbox or {@code null} for none
    */
   public Groups setEnableCollaborativeInbox(java.lang.String enableCollaborativeInbox) {
@@ -685,7 +844,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If favorite replies should be displayed above other replies.
+   * Indicates if favorite replies should be displayed above other replies. - true: Favorite replies
+   * will be displayed above other replies.  - false: Favorite replies will not be displayed above
+   * other replies.
    * @return value or {@code null} for none
    */
   public java.lang.String getFavoriteRepliesOnTop() {
@@ -693,7 +854,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If favorite replies should be displayed above other replies.
+   * Indicates if favorite replies should be displayed above other replies. - true: Favorite replies
+   * will be displayed above other replies.  - false: Favorite replies will not be displayed above
+   * other replies.
    * @param favoriteRepliesOnTop favoriteRepliesOnTop or {@code null} for none
    */
   public Groups setFavoriteRepliesOnTop(java.lang.String favoriteRepliesOnTop) {
@@ -702,7 +865,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to include custom footer.
+   * Whether to include custom footer. Possible values are: - true  - false
    * @return value or {@code null} for none
    */
   public java.lang.String getIncludeCustomFooter() {
@@ -710,7 +873,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to include custom footer.
+   * Whether to include custom footer. Possible values are: - true  - false
    * @param includeCustomFooter includeCustomFooter or {@code null} for none
    */
   public Groups setIncludeCustomFooter(java.lang.String includeCustomFooter) {
@@ -719,7 +882,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this groups should be included in global address list or not.
+   * Enables the group to be included in the Global Address List. For more information, see the help
+   * center. Possible values are: - true: Group is included in the Global Address List.  - false:
+   * Group is not included in the Global Address List.
    * @return value or {@code null} for none
    */
   public java.lang.String getIncludeInGlobalAddressList() {
@@ -727,7 +892,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If this groups should be included in global address list or not.
+   * Enables the group to be included in the Global Address List. For more information, see the help
+   * center. Possible values are: - true: Group is included in the Global Address List.  - false:
+   * Group is not included in the Global Address List.
    * @param includeInGlobalAddressList includeInGlobalAddressList or {@code null} for none
    */
   public Groups setIncludeInGlobalAddressList(java.lang.String includeInGlobalAddressList) {
@@ -736,7 +903,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the contents of the group are archived.
+   * Allows the Group contents to be archived. Possible values are: - true: Archive messages sent to
+   * the group.  - false: Do not keep an archive of messages sent to this group. If false,
+   * previously archived messages remain in the archive.
    * @return value or {@code null} for none
    */
   public java.lang.String getIsArchived() {
@@ -744,7 +913,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If the contents of the group are archived.
+   * Allows the Group contents to be archived. Possible values are: - true: Archive messages sent to
+   * the group.  - false: Do not keep an archive of messages sent to this group. If false,
+   * previously archived messages remain in the archive.
    * @param isArchived isArchived or {@code null} for none
    */
   public Groups setIsArchived(java.lang.String isArchived) {
@@ -753,7 +924,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the resource.
+   * The type of the resource. It is always groupsSettings#groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -761,7 +932,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the resource.
+   * The type of the resource. It is always groupsSettings#groups.
    * @param kind kind or {@code null} for none
    */
   public Groups setKind(java.lang.String kind) {
@@ -770,7 +941,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum message size allowed.
+   * Deprecated. The maximum size of a message is 25Mb.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxMessageBytes() {
@@ -778,7 +949,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum message size allowed.
+   * Deprecated. The maximum size of a message is 25Mb.
    * @param maxMessageBytes maxMessageBytes or {@code null} for none
    */
   public Groups setMaxMessageBytes(java.lang.Integer maxMessageBytes) {
@@ -787,7 +958,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Can members post using the group email address.
+   * Enables members to post messages as the group. Possible values are: - true: Group member can
+   * post messages using the group's email address instead of their own email address. Message
+   * appear to originate from the group itself. Note: When true, any message moderation settings on
+   * individual users or new members do not apply to posts made on behalf of the group.  - false:
+   * Members can not post in behalf of the group's email address.
    * @return value or {@code null} for none
    */
   public java.lang.String getMembersCanPostAsTheGroup() {
@@ -795,7 +970,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Can members post using the group email address.
+   * Enables members to post messages as the group. Possible values are: - true: Group member can
+   * post messages using the group's email address instead of their own email address. Message
+   * appear to originate from the group itself. Note: When true, any message moderation settings on
+   * individual users or new members do not apply to posts made on behalf of the group.  - false:
+   * Members can not post in behalf of the group's email address.
    * @param membersCanPostAsTheGroup membersCanPostAsTheGroup or {@code null} for none
    */
   public Groups setMembersCanPostAsTheGroup(java.lang.String membersCanPostAsTheGroup) {
@@ -804,7 +983,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default message display font. Possible values are: DEFAULT_FONT FIXED_WIDTH_FONT
+   * Deprecated. The default message display font always has a value of "DEFAULT_FONT".
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageDisplayFont() {
@@ -812,7 +991,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default message display font. Possible values are: DEFAULT_FONT FIXED_WIDTH_FONT
+   * Deprecated. The default message display font always has a value of "DEFAULT_FONT".
    * @param messageDisplayFont messageDisplayFont or {@code null} for none
    */
   public Groups setMessageDisplayFont(java.lang.String messageDisplayFont) {
@@ -821,8 +1000,17 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Moderation level for messages. Possible values are: MODERATE_ALL_MESSAGES MODERATE_NON_MEMBERS
-   * MODERATE_NEW_MEMBERS MODERATE_NONE
+   * Moderation level of incoming messages. Possible values are: - MODERATE_ALL_MESSAGES: All
+   * messages are sent to the group owner's email address for approval. If approved, the message is
+   * sent to the group.  - MODERATE_NON_MEMBERS: All messages from non group members are sent to the
+   * group owner's email address for approval. If approved, the message is sent to the group.  -
+   * MODERATE_NEW_MEMBERS: All messages from new members are sent to the group owner's email address
+   * for approval. If approved, the message is sent to the group.  - MODERATE_NONE: No moderator
+   * approval is required. Messages are delivered directly to the group. Note: When the
+   * whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to
+   * MODERATE_NON_MEMBERS to protect the group from possible spam. When memberCanPostAsTheGroup is
+   * true, any message moderation settings on individual users or new members will not apply to
+   * posts made on behalf of the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageModerationLevel() {
@@ -830,8 +1018,17 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Moderation level for messages. Possible values are: MODERATE_ALL_MESSAGES MODERATE_NON_MEMBERS
-   * MODERATE_NEW_MEMBERS MODERATE_NONE
+   * Moderation level of incoming messages. Possible values are: - MODERATE_ALL_MESSAGES: All
+   * messages are sent to the group owner's email address for approval. If approved, the message is
+   * sent to the group.  - MODERATE_NON_MEMBERS: All messages from non group members are sent to the
+   * group owner's email address for approval. If approved, the message is sent to the group.  -
+   * MODERATE_NEW_MEMBERS: All messages from new members are sent to the group owner's email address
+   * for approval. If approved, the message is sent to the group.  - MODERATE_NONE: No moderator
+   * approval is required. Messages are delivered directly to the group. Note: When the
+   * whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to
+   * MODERATE_NON_MEMBERS to protect the group from possible spam. When memberCanPostAsTheGroup is
+   * true, any message moderation settings on individual users or new members will not apply to
+   * posts made on behalf of the group.
    * @param messageModerationLevel messageModerationLevel or {@code null} for none
    */
   public Groups setMessageModerationLevel(java.lang.String messageModerationLevel) {
@@ -840,7 +1037,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Group
+   * Name of the group, which has a maximum size of 75 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -848,7 +1045,7 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the Group
+   * Name of the group, which has a maximum size of 75 characters.
    * @param name name or {@code null} for none
    */
   public Groups setName(java.lang.String name) {
@@ -857,7 +1054,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Primary language for the group.
+   * The primary language for group. For a group's primary language use the language tags from the G
+   * Suite languages found at G Suite Email Settings API Email Language Tags.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryLanguage() {
@@ -865,7 +1063,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Primary language for the group.
+   * The primary language for group. For a group's primary language use the language tags from the G
+   * Suite languages found at G Suite Email Settings API Email Language Tags.
    * @param primaryLanguage primaryLanguage or {@code null} for none
    */
   public Groups setPrimaryLanguage(java.lang.String primaryLanguage) {
@@ -874,8 +1073,16 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whome should the default reply to a message go to. Possible values are: REPLY_TO_CUSTOM
-   * REPLY_TO_SENDER REPLY_TO_LIST REPLY_TO_OWNER REPLY_TO_IGNORE REPLY_TO_MANAGERS
+   * Specifies who should the default reply go to. Possible values are: - REPLY_TO_CUSTOM: For
+   * replies to messages, use the group's custom email address. When the group's ReplyTo property is
+   * set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when
+   * replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the
+   * customReplyTo property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER:
+   * The reply sent to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.
+   * - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
+   * group's managers.  - REPLY_TO_IGNORE: Group users individually decide where the message reply
+   * is sent.  - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which
+   * includes all managers and the group owner.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplyTo() {
@@ -883,8 +1090,16 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whome should the default reply to a message go to. Possible values are: REPLY_TO_CUSTOM
-   * REPLY_TO_SENDER REPLY_TO_LIST REPLY_TO_OWNER REPLY_TO_IGNORE REPLY_TO_MANAGERS
+   * Specifies who should the default reply go to. Possible values are: - REPLY_TO_CUSTOM: For
+   * replies to messages, use the group's custom email address. When the group's ReplyTo property is
+   * set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when
+   * replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the
+   * customReplyTo property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER:
+   * The reply sent to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.
+   * - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
+   * group's managers.  - REPLY_TO_IGNORE: Group users individually decide where the message reply
+   * is sent.  - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which
+   * includes all managers and the group owner.
    * @param replyTo replyTo or {@code null} for none
    */
   public Groups setReplyTo(java.lang.String replyTo) {
@@ -893,7 +1108,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Should the member be notified if his message is denied by owner.
+   * Allows a member to be notified if the member's message to the group is denied by the group
+   * owner. Possible values are: - true: When a message is rejected, send the deny message
+   * notification to the message author. The defaultMessageDenyNotificationText property is
+   * dependent on the sendMessageDenyNotification property being true.   - false: When a message is
+   * rejected, no notification is sent.
    * @return value or {@code null} for none
    */
   public java.lang.String getSendMessageDenyNotification() {
@@ -901,7 +1120,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Should the member be notified if his message is denied by owner.
+   * Allows a member to be notified if the member's message to the group is denied by the group
+   * owner. Possible values are: - true: When a message is rejected, send the deny message
+   * notification to the message author. The defaultMessageDenyNotificationText property is
+   * dependent on the sendMessageDenyNotification property being true.   - false: When a message is
+   * rejected, no notification is sent.
    * @param sendMessageDenyNotification sendMessageDenyNotification or {@code null} for none
    */
   public Groups setSendMessageDenyNotification(java.lang.String sendMessageDenyNotification) {
@@ -910,7 +1133,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Is the group listed in groups directory
+   * Deprecated. This is merged into the new whoCanDiscoverGroup setting. Allows the group to be
+   * visible in the Groups Directory. Possible values are: - true: All groups in the account are
+   * listed in the Groups directory.  - false: All groups in the account are not listed in the
+   * directory.
    * @return value or {@code null} for none
    */
   public java.lang.String getShowInGroupDirectory() {
@@ -918,7 +1144,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Is the group listed in groups directory
+   * Deprecated. This is merged into the new whoCanDiscoverGroup setting. Allows the group to be
+   * visible in the Groups Directory. Possible values are: - true: All groups in the account are
+   * listed in the Groups directory.  - false: All groups in the account are not listed in the
+   * directory.
    * @param showInGroupDirectory showInGroupDirectory or {@code null} for none
    */
   public Groups setShowInGroupDirectory(java.lang.String showInGroupDirectory) {
@@ -927,8 +1156,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Moderation level for messages detected as spam. Possible values are: ALLOW MODERATE
-   * SILENTLY_MODERATE REJECT
+   * Specifies moderation levels for messages detected as spam. Possible values are: - ALLOW: Post
+   * the message to the group.  - MODERATE: Send the message to the moderation queue. This is the
+   * default.  - SILENTLY_MODERATE: Send the message to the moderation queue, but do not send
+   * notification to moderators.  - REJECT: Immediately reject the message.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpamModerationLevel() {
@@ -936,8 +1167,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Moderation level for messages detected as spam. Possible values are: ALLOW MODERATE
-   * SILENTLY_MODERATE REJECT
+   * Specifies moderation levels for messages detected as spam. Possible values are: - ALLOW: Post
+   * the message to the group.  - MODERATE: Send the message to the moderation queue. This is the
+   * default.  - SILENTLY_MODERATE: Send the message to the moderation queue, but do not send
+   * notification to moderators.  - REJECT: Immediately reject the message.
    * @param spamModerationLevel spamModerationLevel or {@code null} for none
    */
   public Groups setSpamModerationLevel(java.lang.String spamModerationLevel) {
@@ -946,8 +1179,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to add members. Possible values are: ALL_MANAGERS_CAN_ADD ALL_OWNERS_CAN_ADD
-   * ALL_MEMBERS_CAN_ADD NONE_CAN_ADD
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to add
+   * members. Possible values are: - ALL_MEMBERS_CAN_ADD: Managers and members can directly add new
+   * members.  - ALL_MANAGERS_CAN_ADD: Only managers can directly add new members. this includes the
+   * group's owner.  - ALL_OWNERS_CAN_ADD: Only owners can directly add new members.  -
+   * NONE_CAN_ADD: No one can directly add new members.
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanAdd() {
@@ -955,8 +1191,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to add members. Possible values are: ALL_MANAGERS_CAN_ADD ALL_OWNERS_CAN_ADD
-   * ALL_MEMBERS_CAN_ADD NONE_CAN_ADD
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to add
+   * members. Possible values are: - ALL_MEMBERS_CAN_ADD: Managers and members can directly add new
+   * members.  - ALL_MANAGERS_CAN_ADD: Only managers can directly add new members. this includes the
+   * group's owner.  - ALL_OWNERS_CAN_ADD: Only owners can directly add new members.  -
+   * NONE_CAN_ADD: No one can directly add new members.
    * @param whoCanAdd whoCanAdd or {@code null} for none
    */
   public Groups setWhoCanAdd(java.lang.String whoCanAdd) {
@@ -965,8 +1204,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to add references to a topic. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This functionality is no longer supported in the Google Groups UI. The value is
+   * always "NONE".
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanAddReferences() {
@@ -974,8 +1213,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to add references to a topic. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This functionality is no longer supported in the Google Groups UI. The value is
+   * always "NONE".
    * @param whoCanAddReferences whoCanAddReferences or {@code null} for none
    */
   public Groups setWhoCanAddReferences(java.lang.String whoCanAddReferences) {
@@ -984,8 +1223,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to approve members. Possible values are: ALL_OWNERS_CAN_APPROVE
-   * ALL_MANAGERS_CAN_APPROVE ALL_MEMBERS_CAN_APPROVE NONE_CAN_APPROVE
+   * Specifies who can approve members who ask to join groups. This permission will be deprecated
+   * once it is merged into the new whoCanModerateMembers setting. Possible values are: -
+   * ALL_MEMBERS_CAN_APPROVE  - ALL_MANAGERS_CAN_APPROVE  - ALL_OWNERS_CAN_APPROVE  -
+   * NONE_CAN_APPROVE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanApproveMembers() {
@@ -993,8 +1234,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to approve members. Possible values are: ALL_OWNERS_CAN_APPROVE
-   * ALL_MANAGERS_CAN_APPROVE ALL_MEMBERS_CAN_APPROVE NONE_CAN_APPROVE
+   * Specifies who can approve members who ask to join groups. This permission will be deprecated
+   * once it is merged into the new whoCanModerateMembers setting. Possible values are: -
+   * ALL_MEMBERS_CAN_APPROVE  - ALL_MANAGERS_CAN_APPROVE  - ALL_OWNERS_CAN_APPROVE  -
+   * NONE_CAN_APPROVE
    * @param whoCanApproveMembers whoCanApproveMembers or {@code null} for none
    */
   public Groups setWhoCanApproveMembers(java.lang.String whoCanApproveMembers) {
@@ -1003,8 +1246,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to approve pending messages in the moderation queue. Possible values are: NONE
-   * OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can
+   * approve pending messages in the moderation queue. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanApproveMessages() {
@@ -1012,8 +1256,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to approve pending messages in the moderation queue. Possible values are: NONE
-   * OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can
+   * approve pending messages in the moderation queue. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @param whoCanApproveMessages whoCanApproveMessages or {@code null} for none
    */
   public Groups setWhoCanApproveMessages(java.lang.String whoCanApproveMessages) {
@@ -1022,8 +1267,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to assign topics in a forum to another user. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to assign
+   * topics in a forum to another user. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanAssignTopics() {
@@ -1031,8 +1277,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to assign topics in a forum to another user. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to assign
+   * topics in a forum to another user. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanAssignTopics whoCanAssignTopics or {@code null} for none
    */
   public Groups setWhoCanAssignTopics(java.lang.String whoCanAssignTopics) {
@@ -1041,8 +1288,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for content assistants. Possible values are: Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Specifies who can moderate metadata. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanAssistContent() {
@@ -1050,8 +1297,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for content assistants. Possible values are: Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Specifies who can moderate metadata. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanAssistContent whoCanAssistContent or {@code null} for none
    */
   public Groups setWhoCanAssistContent(java.lang.String whoCanAssistContent) {
@@ -1060,7 +1307,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to ban users. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Specifies who can deny membership to users. This permission will be deprecated once it is
+   * merged into the new whoCanModerateMembers setting. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanBanUsers() {
@@ -1068,7 +1317,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to ban users. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Specifies who can deny membership to users. This permission will be deprecated once it is
+   * merged into the new whoCanModerateMembers setting. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @param whoCanBanUsers whoCanBanUsers or {@code null} for none
    */
   public Groups setWhoCanBanUsers(java.lang.String whoCanBanUsers) {
@@ -1077,8 +1328,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to contact owner of the group via web UI. Possible values are: ANYONE_CAN_CONTACT
-   * ALL_IN_DOMAIN_CAN_CONTACT ALL_MEMBERS_CAN_CONTACT ALL_MANAGERS_CAN_CONTACT
+   * Permission to contact owner of the group via web UI. Possible values are: -
+   * ALL_IN_DOMAIN_CAN_CONTACT  - ALL_MANAGERS_CAN_CONTACT  - ALL_MEMBERS_CAN_CONTACT  -
+   * ANYONE_CAN_CONTACT
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanContactOwner() {
@@ -1086,8 +1338,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to contact owner of the group via web UI. Possible values are: ANYONE_CAN_CONTACT
-   * ALL_IN_DOMAIN_CAN_CONTACT ALL_MEMBERS_CAN_CONTACT ALL_MANAGERS_CAN_CONTACT
+   * Permission to contact owner of the group via web UI. Possible values are: -
+   * ALL_IN_DOMAIN_CAN_CONTACT  - ALL_MANAGERS_CAN_CONTACT  - ALL_MEMBERS_CAN_CONTACT  -
+   * ANYONE_CAN_CONTACT
    * @param whoCanContactOwner whoCanContactOwner or {@code null} for none
    */
   public Groups setWhoCanContactOwner(java.lang.String whoCanContactOwner) {
@@ -1096,8 +1349,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to delete replies to topics. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete
+   * replies to topics. (Authors can always delete their own posts). Possible values are: -
+   * ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanDeleteAnyPost() {
@@ -1105,8 +1359,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to delete replies to topics. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete
+   * replies to topics. (Authors can always delete their own posts). Possible values are: -
+   * ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @param whoCanDeleteAnyPost whoCanDeleteAnyPost or {@code null} for none
    */
   public Groups setWhoCanDeleteAnyPost(java.lang.String whoCanDeleteAnyPost) {
@@ -1115,8 +1370,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to delete topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete
+   * topics. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanDeleteTopics() {
@@ -1124,8 +1379,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to delete topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete
+   * topics. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @param whoCanDeleteTopics whoCanDeleteTopics or {@code null} for none
    */
   public Groups setWhoCanDeleteTopics(java.lang.String whoCanDeleteTopics) {
@@ -1134,8 +1389,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for who can discover the group. Possible values are: ALL_MEMBERS_CAN_DISCOVER
-   * ALL_IN_DOMAIN_CAN_DISCOVER ANYONE_CAN_DISCOVER
+   * Specifies the set of users for whom this group is discoverable. Possible values are: -
+   * ANYONE_CAN_DISCOVER  - ALL_IN_DOMAIN_CAN_DISCOVER  - ALL_MEMBERS_CAN_DISCOVER
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanDiscoverGroup() {
@@ -1143,8 +1398,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for who can discover the group. Possible values are: ALL_MEMBERS_CAN_DISCOVER
-   * ALL_IN_DOMAIN_CAN_DISCOVER ANYONE_CAN_DISCOVER
+   * Specifies the set of users for whom this group is discoverable. Possible values are: -
+   * ANYONE_CAN_DISCOVER  - ALL_IN_DOMAIN_CAN_DISCOVER  - ALL_MEMBERS_CAN_DISCOVER
    * @param whoCanDiscoverGroup whoCanDiscoverGroup or {@code null} for none
    */
   public Groups setWhoCanDiscoverGroup(java.lang.String whoCanDiscoverGroup) {
@@ -1153,8 +1408,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to enter free form tags for topics in a forum. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to enter free
+   * form tags for topics in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanEnterFreeFormTags() {
@@ -1162,8 +1418,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to enter free form tags for topics in a forum. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to enter free
+   * form tags for topics in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanEnterFreeFormTags whoCanEnterFreeFormTags or {@code null} for none
    */
   public Groups setWhoCanEnterFreeFormTags(java.lang.String whoCanEnterFreeFormTags) {
@@ -1172,8 +1429,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to hide posts by reporting them as abuse. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can hide
+   * posts by reporting them as abuse. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanHideAbuse() {
@@ -1181,8 +1439,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to hide posts by reporting them as abuse. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can hide
+   * posts by reporting them as abuse. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanHideAbuse whoCanHideAbuse or {@code null} for none
    */
   public Groups setWhoCanHideAbuse(java.lang.String whoCanHideAbuse) {
@@ -1191,8 +1450,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to invite members. Possible values are: ALL_MEMBERS_CAN_INVITE
-   * ALL_MANAGERS_CAN_INVITE ALL_OWNERS_CAN_INVITE NONE_CAN_INVITE
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to invite
+   * new members. Possible values are: - ALL_MEMBERS_CAN_INVITE: Managers and members can invite a
+   * new member candidate.  - ALL_MANAGERS_CAN_INVITE: Only managers can invite a new member. This
+   * includes the group's owner.  - ALL_OWNERS_CAN_INVITE: Only owners can invite a new member.  -
+   * NONE_CAN_INVITE: No one can invite a new member candidate.
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanInvite() {
@@ -1200,8 +1462,11 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to invite members. Possible values are: ALL_MEMBERS_CAN_INVITE
-   * ALL_MANAGERS_CAN_INVITE ALL_OWNERS_CAN_INVITE NONE_CAN_INVITE
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to invite
+   * new members. Possible values are: - ALL_MEMBERS_CAN_INVITE: Managers and members can invite a
+   * new member candidate.  - ALL_MANAGERS_CAN_INVITE: Only managers can invite a new member. This
+   * includes the group's owner.  - ALL_OWNERS_CAN_INVITE: Only owners can invite a new member.  -
+   * NONE_CAN_INVITE: No one can invite a new member candidate.
    * @param whoCanInvite whoCanInvite or {@code null} for none
    */
   public Groups setWhoCanInvite(java.lang.String whoCanInvite) {
@@ -1210,8 +1475,14 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to join the group. Possible values are: ANYONE_CAN_JOIN ALL_IN_DOMAIN_CAN_JOIN
-   * INVITED_CAN_JOIN CAN_REQUEST_TO_JOIN
+   * Permission to join group. Possible values are: - ANYONE_CAN_JOIN: Anyone in the account domain
+   * can join. This includes accounts with multiple domains.  - ALL_IN_DOMAIN_CAN_JOIN: Any Internet
+   * user who is outside your domain can access your Google Groups service and view the list of
+   * groups in your Groups directory. Warning: Group owners can add external addresses, outside of
+   * the domain to their groups. They can also allow people outside your domain to join their
+   * groups. If you later disable this option, any external addresses already added to users' groups
+   * remain in those groups.  - INVITED_CAN_JOIN: Candidates for membership can be invited to join.
+   * - CAN_REQUEST_TO_JOIN: Non members can request an invitation to join.
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanJoin() {
@@ -1219,8 +1490,14 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to join the group. Possible values are: ANYONE_CAN_JOIN ALL_IN_DOMAIN_CAN_JOIN
-   * INVITED_CAN_JOIN CAN_REQUEST_TO_JOIN
+   * Permission to join group. Possible values are: - ANYONE_CAN_JOIN: Anyone in the account domain
+   * can join. This includes accounts with multiple domains.  - ALL_IN_DOMAIN_CAN_JOIN: Any Internet
+   * user who is outside your domain can access your Google Groups service and view the list of
+   * groups in your Groups directory. Warning: Group owners can add external addresses, outside of
+   * the domain to their groups. They can also allow people outside your domain to join their
+   * groups. If you later disable this option, any external addresses already added to users' groups
+   * remain in those groups.  - INVITED_CAN_JOIN: Candidates for membership can be invited to join.
+   * - CAN_REQUEST_TO_JOIN: Non members can request an invitation to join.
    * @param whoCanJoin whoCanJoin or {@code null} for none
    */
   public Groups setWhoCanJoin(java.lang.String whoCanJoin) {
@@ -1229,8 +1506,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to leave the group. Possible values are: ALL_MANAGERS_CAN_LEAVE ALL_OWNERS_CAN_LEAVE
-   * ALL_MEMBERS_CAN_LEAVE NONE_CAN_LEAVE
+   * Permission to leave the group. Possible values are: - ALL_MANAGERS_CAN_LEAVE  -
+   * ALL_MEMBERS_CAN_LEAVE  - NONE_CAN_LEAVE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanLeaveGroup() {
@@ -1238,8 +1515,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to leave the group. Possible values are: ALL_MANAGERS_CAN_LEAVE ALL_OWNERS_CAN_LEAVE
-   * ALL_MEMBERS_CAN_LEAVE NONE_CAN_LEAVE
+   * Permission to leave the group. Possible values are: - ALL_MANAGERS_CAN_LEAVE  -
+   * ALL_MEMBERS_CAN_LEAVE  - NONE_CAN_LEAVE
    * @param whoCanLeaveGroup whoCanLeaveGroup or {@code null} for none
    */
   public Groups setWhoCanLeaveGroup(java.lang.String whoCanLeaveGroup) {
@@ -1248,8 +1525,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to lock topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can
+   * prevent users from posting replies to topics. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanLockTopics() {
@@ -1257,8 +1535,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to lock topics. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can
+   * prevent users from posting replies to topics. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @param whoCanLockTopics whoCanLockTopics or {@code null} for none
    */
   public Groups setWhoCanLockTopics(java.lang.String whoCanLockTopics) {
@@ -1267,8 +1546,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to make topics appear at the top of the topic list. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can make
+   * topics appear at the top of the topic list. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMakeTopicsSticky() {
@@ -1276,8 +1556,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to make topics appear at the top of the topic list. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can make
+   * topics appear at the top of the topic list. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - OWNERS_ONLY  - NONE
    * @param whoCanMakeTopicsSticky whoCanMakeTopicsSticky or {@code null} for none
    */
   public Groups setWhoCanMakeTopicsSticky(java.lang.String whoCanMakeTopicsSticky) {
@@ -1286,8 +1567,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark a topic as a duplicate of another topic. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic
+   * as a duplicate of another topic. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMarkDuplicate() {
@@ -1295,8 +1577,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark a topic as a duplicate of another topic. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic
+   * as a duplicate of another topic. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanMarkDuplicate whoCanMarkDuplicate or {@code null} for none
    */
   public Groups setWhoCanMarkDuplicate(java.lang.String whoCanMarkDuplicate) {
@@ -1305,8 +1588,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark any other user's post as a favorite reply. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark any
+   * other user's post as a favorite reply. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMarkFavoriteReplyOnAnyTopic() {
@@ -1314,8 +1598,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark any other user's post as a favorite reply. Possible values are: NONE
-   * OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark any
+   * other user's post as a favorite reply. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanMarkFavoriteReplyOnAnyTopic whoCanMarkFavoriteReplyOnAnyTopic or {@code null} for none
    */
   public Groups setWhoCanMarkFavoriteReplyOnAnyTopic(java.lang.String whoCanMarkFavoriteReplyOnAnyTopic) {
@@ -1324,8 +1609,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark a post for a topic they started as a favorite reply. Possible values are:
-   * NONE OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a post
+   * for a topic they started as a favorite reply. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMarkFavoriteReplyOnOwnTopic() {
@@ -1333,8 +1619,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark a post for a topic they started as a favorite reply. Possible values are:
-   * NONE OWNERS_ONLY MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a post
+   * for a topic they started as a favorite reply. Possible values are: - ALL_MEMBERS  -
+   * OWNERS_AND_MANAGERS  - MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanMarkFavoriteReplyOnOwnTopic whoCanMarkFavoriteReplyOnOwnTopic or {@code null} for none
    */
   public Groups setWhoCanMarkFavoriteReplyOnOwnTopic(java.lang.String whoCanMarkFavoriteReplyOnOwnTopic) {
@@ -1343,8 +1630,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark a topic as not needing a response. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic
+   * as not needing a response. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMarkNoResponseNeeded() {
@@ -1352,8 +1640,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to mark a topic as not needing a response. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic
+   * as not needing a response. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanMarkNoResponseNeeded whoCanMarkNoResponseNeeded or {@code null} for none
    */
   public Groups setWhoCanMarkNoResponseNeeded(java.lang.String whoCanMarkNoResponseNeeded) {
@@ -1362,8 +1651,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for content moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Specifies who can moderate content. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanModerateContent() {
@@ -1371,8 +1660,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for content moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Specifies who can moderate content. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - OWNERS_ONLY  - NONE
    * @param whoCanModerateContent whoCanModerateContent or {@code null} for none
    */
   public Groups setWhoCanModerateContent(java.lang.String whoCanModerateContent) {
@@ -1381,8 +1670,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for membership moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Specifies who can manage members. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanModerateMembers() {
@@ -1390,8 +1679,8 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission for membership moderation. Possible values are: NONE OWNERS_ONLY OWNERS_AND_MANAGERS
-   * ALL_MEMBERS
+   * Specifies who can manage members. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanModerateMembers whoCanModerateMembers or {@code null} for none
    */
   public Groups setWhoCanModerateMembers(java.lang.String whoCanModerateMembers) {
@@ -1400,8 +1689,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to modify members (change member roles). Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Specifies who can change
+   * group members' roles. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY
+   * - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanModifyMembers() {
@@ -1409,8 +1699,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to modify members (change member roles). Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateMembers setting. Specifies who can change
+   * group members' roles. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - OWNERS_ONLY
+   * - NONE
    * @param whoCanModifyMembers whoCanModifyMembers or {@code null} for none
    */
   public Groups setWhoCanModifyMembers(java.lang.String whoCanModifyMembers) {
@@ -1419,8 +1710,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to change tags and categories. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to change tags
+   * and categories. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanModifyTagsAndCategories() {
@@ -1428,8 +1720,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to change tags and categories. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to change tags
+   * and categories. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanModifyTagsAndCategories whoCanModifyTagsAndCategories or {@code null} for none
    */
   public Groups setWhoCanModifyTagsAndCategories(java.lang.String whoCanModifyTagsAndCategories) {
@@ -1438,8 +1731,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to move topics into the group or forum. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move
+   * topics into the group or forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMoveTopicsIn() {
@@ -1447,8 +1741,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to move topics into the group or forum. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move
+   * topics into the group or forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanMoveTopicsIn whoCanMoveTopicsIn or {@code null} for none
    */
   public Groups setWhoCanMoveTopicsIn(java.lang.String whoCanMoveTopicsIn) {
@@ -1457,8 +1752,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to move topics out of the group or forum. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move
+   * topics out of the group or forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanMoveTopicsOut() {
@@ -1466,8 +1762,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to move topics out of the group or forum. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move
+   * topics out of the group or forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanMoveTopicsOut whoCanMoveTopicsOut or {@code null} for none
    */
   public Groups setWhoCanMoveTopicsOut(java.lang.String whoCanMoveTopicsOut) {
@@ -1476,8 +1773,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to post announcements, a special topic type. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can post
+   * announcements, a special topic type. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanPostAnnouncements() {
@@ -1485,8 +1783,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to post announcements, a special topic type. Possible values are: NONE OWNERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can post
+   * announcements, a special topic type. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS
+   * - OWNERS_ONLY  - NONE
    * @param whoCanPostAnnouncements whoCanPostAnnouncements or {@code null} for none
    */
   public Groups setWhoCanPostAnnouncements(java.lang.String whoCanPostAnnouncements) {
@@ -1495,9 +1794,16 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to post messages to the group. Possible values are: NONE_CAN_POST
-   * ALL_MANAGERS_CAN_POST ALL_MEMBERS_CAN_POST ALL_OWNERS_CAN_POST ALL_IN_DOMAIN_CAN_POST
-   * ANYONE_CAN_POST
+   * Permissions to post messages. Possible values are: - NONE_CAN_POST: The group is disabled and
+   * archived. No one can post a message to this group.   - When archiveOnly is false, updating
+   * whoCanPostMessage to NONE_CAN_POST, results in an error.  - If archiveOnly is reverted from
+   * true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.   - ALL_MANAGERS_CAN_POST:
+   * Managers, including group owners, can post messages.  - ALL_MEMBERS_CAN_POST: Any group member
+   * can post a message.  - ALL_OWNERS_CAN_POST: Only group owners can post a message.  -
+   * ALL_IN_DOMAIN_CAN_POST: Anyone in the account can post a message.   - ANYONE_CAN_POST: Any
+   * Internet user who outside your account can access your Google Groups service and post a
+   * message. Note: When whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the
+   * messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanPostMessage() {
@@ -1505,9 +1811,16 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to post messages to the group. Possible values are: NONE_CAN_POST
-   * ALL_MANAGERS_CAN_POST ALL_MEMBERS_CAN_POST ALL_OWNERS_CAN_POST ALL_IN_DOMAIN_CAN_POST
-   * ANYONE_CAN_POST
+   * Permissions to post messages. Possible values are: - NONE_CAN_POST: The group is disabled and
+   * archived. No one can post a message to this group.   - When archiveOnly is false, updating
+   * whoCanPostMessage to NONE_CAN_POST, results in an error.  - If archiveOnly is reverted from
+   * true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.   - ALL_MANAGERS_CAN_POST:
+   * Managers, including group owners, can post messages.  - ALL_MEMBERS_CAN_POST: Any group member
+   * can post a message.  - ALL_OWNERS_CAN_POST: Only group owners can post a message.  -
+   * ALL_IN_DOMAIN_CAN_POST: Anyone in the account can post a message.   - ANYONE_CAN_POST: Any
+   * Internet user who outside your account can access your Google Groups service and post a
+   * message. Note: When whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the
+   * messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.
    * @param whoCanPostMessage whoCanPostMessage or {@code null} for none
    */
   public Groups setWhoCanPostMessage(java.lang.String whoCanPostMessage) {
@@ -1516,8 +1829,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to take topics in a forum. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to take topics
+   * in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanTakeTopics() {
@@ -1525,8 +1839,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to take topics in a forum. Possible values are: NONE OWNERS_ONLY MANAGERS_ONLY
-   * OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to take topics
+   * in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanTakeTopics whoCanTakeTopics or {@code null} for none
    */
   public Groups setWhoCanTakeTopics(java.lang.String whoCanTakeTopics) {
@@ -1535,8 +1850,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to unassign any topic in a forum. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unassign any
+   * topic in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanUnassignTopic() {
@@ -1544,8 +1860,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to unassign any topic in a forum. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unassign any
+   * topic in a forum. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  - MANAGERS_ONLY  -
+   * OWNERS_ONLY  - NONE
    * @param whoCanUnassignTopic whoCanUnassignTopic or {@code null} for none
    */
   public Groups setWhoCanUnassignTopic(java.lang.String whoCanUnassignTopic) {
@@ -1554,8 +1871,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to unmark any post from a favorite reply. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unmark any
+   * post from a favorite reply. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanUnmarkFavoriteReplyOnAnyTopic() {
@@ -1563,8 +1881,9 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permission to unmark any post from a favorite reply. Possible values are: NONE OWNERS_ONLY
-   * MANAGERS_ONLY OWNERS_AND_MANAGERS ALL_MEMBERS
+   * Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unmark any
+   * post from a favorite reply. Possible values are: - ALL_MEMBERS  - OWNERS_AND_MANAGERS  -
+   * MANAGERS_ONLY  - OWNERS_ONLY  - NONE
    * @param whoCanUnmarkFavoriteReplyOnAnyTopic whoCanUnmarkFavoriteReplyOnAnyTopic or {@code null} for none
    */
   public Groups setWhoCanUnmarkFavoriteReplyOnAnyTopic(java.lang.String whoCanUnmarkFavoriteReplyOnAnyTopic) {
@@ -1573,8 +1892,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to view group. Possible values are: ANYONE_CAN_VIEW ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
+   * Permissions to view group messages. Possible values are: - ANYONE_CAN_VIEW: Any Internet user
+   * can view the group's messages.   - ALL_IN_DOMAIN_CAN_VIEW: Anyone in your account can view this
+   * group's messages.  - ALL_MEMBERS_CAN_VIEW: All group members can view the group's messages.  -
+   * ALL_MANAGERS_CAN_VIEW: Any group manager can view this group's messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanViewGroup() {
@@ -1582,8 +1903,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to view group. Possible values are: ANYONE_CAN_VIEW ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
+   * Permissions to view group messages. Possible values are: - ANYONE_CAN_VIEW: Any Internet user
+   * can view the group's messages.   - ALL_IN_DOMAIN_CAN_VIEW: Anyone in your account can view this
+   * group's messages.  - ALL_MEMBERS_CAN_VIEW: All group members can view the group's messages.  -
+   * ALL_MANAGERS_CAN_VIEW: Any group manager can view this group's messages.
    * @param whoCanViewGroup whoCanViewGroup or {@code null} for none
    */
   public Groups setWhoCanViewGroup(java.lang.String whoCanViewGroup) {
@@ -1592,8 +1915,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to view membership. Possible values are: ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
+   * Permissions to view membership. Possible values are: - ALL_IN_DOMAIN_CAN_VIEW: Anyone in the
+   * account can view the group members list. If a group already has external members, those members
+   * can still send email to this group.   - ALL_MEMBERS_CAN_VIEW: The group members can view the
+   * group members list.  - ALL_MANAGERS_CAN_VIEW: The group managers can view group members list.
    * @return value or {@code null} for none
    */
   public java.lang.String getWhoCanViewMembership() {
@@ -1601,8 +1926,10 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Permissions to view membership. Possible values are: ALL_IN_DOMAIN_CAN_VIEW
-   * ALL_MEMBERS_CAN_VIEW ALL_MANAGERS_CAN_VIEW ALL_OWNERS_CAN_VIEW
+   * Permissions to view membership. Possible values are: - ALL_IN_DOMAIN_CAN_VIEW: Anyone in the
+   * account can view the group members list. If a group already has external members, those members
+   * can still send email to this group.   - ALL_MEMBERS_CAN_VIEW: The group members can view the
+   * group members list.  - ALL_MANAGERS_CAN_VIEW: The group managers can view group members list.
    * @param whoCanViewMembership whoCanViewMembership or {@code null} for none
    */
   public Groups setWhoCanViewMembership(java.lang.String whoCanViewMembership) {

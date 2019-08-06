@@ -53,7 +53,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private MultiClassClassificationMetrics multiClassClassificationMetrics;
 
   /**
-   * Populated for regression models.
+   * Populated for regression models and explicit feedback type matrix factorization models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Populated for regression models.
+   * Populated for regression models and explicit feedback type matrix factorization models.
    * @return value or {@code null} for none
    */
   public RegressionMetrics getRegressionMetrics() {
@@ -119,7 +119,7 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Populated for regression models.
+   * Populated for regression models and explicit feedback type matrix factorization models.
    * @param regressionMetrics regressionMetrics or {@code null} for none
    */
   public EvaluationMetrics setRegressionMetrics(RegressionMetrics regressionMetrics) {

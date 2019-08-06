@@ -39,7 +39,6 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * The player's current profile visibility. This field is visible to both 1P and 3P APIs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +64,6 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The player's current profile visibility. This field is visible to both 1P and 3P APIs.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProfileVisible() {
@@ -73,7 +71,6 @@ public final class ProfileSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The player's current profile visibility. This field is visible to both 1P and 3P APIs.
    * @param profileVisible profileVisible or {@code null} for none
    */
   public ProfileSettings setProfileVisible(java.lang.Boolean profileVisible) {

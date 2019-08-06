@@ -42,17 +42,17 @@ public final class Statement extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, Type> paramTypes;
 
   /**
-   * The DML string can contain parameter placeholders. A parameter placeholder consists of `'@'`
-   * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
-   * and underscores.
+   * Parameter names and values that bind to placeholders in the DML string.
+   *
+   * A parameter placeholder consists of the `@` character followed by the parameter name (for
+   * example, `@firstName`). Parameter names can contain letters, numbers, and underscores.
    *
    * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:   `"WHERE id > @msg_id AND id < @msg_id + 100"`
+   * be used more than once, for example:
    *
-   * It is an error to execute an SQL statement with unbound parameters.
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
    *
-   * Parameter values are specified using `params`, which is a JSON object whose keys are parameter
-   * names, and whose values are the corresponding parameter values.
+   * It is an error to execute a SQL statement with unbound parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,17 +93,17 @@ public final class Statement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DML string can contain parameter placeholders. A parameter placeholder consists of `'@'`
-   * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
-   * and underscores.
+   * Parameter names and values that bind to placeholders in the DML string.
+   *
+   * A parameter placeholder consists of the `@` character followed by the parameter name (for
+   * example, `@firstName`). Parameter names can contain letters, numbers, and underscores.
    *
    * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:   `"WHERE id > @msg_id AND id < @msg_id + 100"`
+   * be used more than once, for example:
    *
-   * It is an error to execute an SQL statement with unbound parameters.
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
    *
-   * Parameter values are specified using `params`, which is a JSON object whose keys are parameter
-   * names, and whose values are the corresponding parameter values.
+   * It is an error to execute a SQL statement with unbound parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -111,17 +111,17 @@ public final class Statement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DML string can contain parameter placeholders. A parameter placeholder consists of `'@'`
-   * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
-   * and underscores.
+   * Parameter names and values that bind to placeholders in the DML string.
+   *
+   * A parameter placeholder consists of the `@` character followed by the parameter name (for
+   * example, `@firstName`). Parameter names can contain letters, numbers, and underscores.
    *
    * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:   `"WHERE id > @msg_id AND id < @msg_id + 100"`
+   * be used more than once, for example:
    *
-   * It is an error to execute an SQL statement with unbound parameters.
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
    *
-   * Parameter values are specified using `params`, which is a JSON object whose keys are parameter
-   * names, and whose values are the corresponding parameter values.
+   * It is an error to execute a SQL statement with unbound parameters.
    * @param params params or {@code null} for none
    */
   public Statement setParams(java.util.Map<String, java.lang.Object> params) {

@@ -42,17 +42,17 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.util.Map<String, Type> paramTypes;
 
   /**
-   * The SQL string can contain parameter placeholders. A parameter placeholder consists of `'@'`
-   * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
-   * and underscores.
+   * Parameter names and values that bind to placeholders in the SQL string.
+   *
+   * A parameter placeholder consists of the `@` character followed by the parameter name (for
+   * example, `@firstName`). Parameter names can contain letters, numbers, and underscores.
    *
    * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:   `"WHERE id > @msg_id AND id < @msg_id + 100"`
+   * be used more than once, for example:
    *
-   * It is an error to execute an SQL statement with unbound parameters.
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
    *
-   * Parameter values are specified using `params`, which is a JSON object whose keys are parameter
-   * names, and whose values are the corresponding parameter values.
+   * It is an error to execute a SQL statement with unbound parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.lang.String resumeToken;
 
   /**
-   * A per-transaction sequence number used to identify this request. This makes each request
+   * A per-transaction sequence number used to identify this request. This field makes each request
    * idempotent such that if the request is received multiple times, at most one will succeed.
    *
    * The sequence number must be monotonically increasing within the transaction. If a request
@@ -108,19 +108,16 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   private java.lang.String sql;
 
   /**
-   * The transaction to use. If none is provided, the default is a temporary read-only transaction
-   * with strong concurrency.
-   *
    * The transaction to use.
    *
    * For queries, if none is provided, the default is a temporary read-only transaction with strong
    * concurrency.
    *
-   * Standard DML statements require a ReadWrite transaction. Single-use transactions are not
-   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
-   * a new transaction.
+   * Standard DML statements require a read-write transaction. To protect against replays, single-
+   * use transactions are not supported.  The caller must either supply an existing transaction ID
+   * or begin a new transaction.
    *
-   * Partitioned DML requires an existing PartitionedDml transaction ID.
+   * Partitioned DML requires an existing Partitioned DML transaction ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,17 +151,17 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The SQL string can contain parameter placeholders. A parameter placeholder consists of `'@'`
-   * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
-   * and underscores.
+   * Parameter names and values that bind to placeholders in the SQL string.
+   *
+   * A parameter placeholder consists of the `@` character followed by the parameter name (for
+   * example, `@firstName`). Parameter names can contain letters, numbers, and underscores.
    *
    * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:   `"WHERE id > @msg_id AND id < @msg_id + 100"`
+   * be used more than once, for example:
    *
-   * It is an error to execute an SQL statement with unbound parameters.
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
    *
-   * Parameter values are specified using `params`, which is a JSON object whose keys are parameter
-   * names, and whose values are the corresponding parameter values.
+   * It is an error to execute a SQL statement with unbound parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -172,17 +169,17 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The SQL string can contain parameter placeholders. A parameter placeholder consists of `'@'`
-   * followed by the parameter name. Parameter names consist of any combination of letters, numbers,
-   * and underscores.
+   * Parameter names and values that bind to placeholders in the SQL string.
+   *
+   * A parameter placeholder consists of the `@` character followed by the parameter name (for
+   * example, `@firstName`). Parameter names can contain letters, numbers, and underscores.
    *
    * Parameters can appear anywhere that a literal value is expected.  The same parameter name can
-   * be used more than once, for example:   `"WHERE id > @msg_id AND id < @msg_id + 100"`
+   * be used more than once, for example:
    *
-   * It is an error to execute an SQL statement with unbound parameters.
+   * `"WHERE id > @msg_id AND id < @msg_id + 100"`
    *
-   * Parameter values are specified using `params`, which is a JSON object whose keys are parameter
-   * names, and whose values are the corresponding parameter values.
+   * It is an error to execute a SQL statement with unbound parameters.
    * @param params params or {@code null} for none
    */
   public ExecuteSqlRequest setParams(java.util.Map<String, java.lang.Object> params) {
@@ -320,7 +317,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A per-transaction sequence number used to identify this request. This makes each request
+   * A per-transaction sequence number used to identify this request. This field makes each request
    * idempotent such that if the request is received multiple times, at most one will succeed.
    *
    * The sequence number must be monotonically increasing within the transaction. If a request
@@ -336,7 +333,7 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A per-transaction sequence number used to identify this request. This makes each request
+   * A per-transaction sequence number used to identify this request. This field makes each request
    * idempotent such that if the request is received multiple times, at most one will succeed.
    *
    * The sequence number must be monotonically increasing within the transaction. If a request
@@ -370,19 +367,16 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The transaction to use. If none is provided, the default is a temporary read-only transaction
-   * with strong concurrency.
-   *
    * The transaction to use.
    *
    * For queries, if none is provided, the default is a temporary read-only transaction with strong
    * concurrency.
    *
-   * Standard DML statements require a ReadWrite transaction. Single-use transactions are not
-   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
-   * a new transaction.
+   * Standard DML statements require a read-write transaction. To protect against replays, single-
+   * use transactions are not supported.  The caller must either supply an existing transaction ID
+   * or begin a new transaction.
    *
-   * Partitioned DML requires an existing PartitionedDml transaction ID.
+   * Partitioned DML requires an existing Partitioned DML transaction ID.
    * @return value or {@code null} for none
    */
   public TransactionSelector getTransaction() {
@@ -390,19 +384,16 @@ public final class ExecuteSqlRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The transaction to use. If none is provided, the default is a temporary read-only transaction
-   * with strong concurrency.
-   *
    * The transaction to use.
    *
    * For queries, if none is provided, the default is a temporary read-only transaction with strong
    * concurrency.
    *
-   * Standard DML statements require a ReadWrite transaction. Single-use transactions are not
-   * supported (to avoid replay).  The caller must either supply an existing transaction ID or begin
-   * a new transaction.
+   * Standard DML statements require a read-write transaction. To protect against replays, single-
+   * use transactions are not supported.  The caller must either supply an existing transaction ID
+   * or begin a new transaction.
    *
-   * Partitioned DML requires an existing PartitionedDml transaction ID.
+   * Partitioned DML requires an existing Partitioned DML transaction ID.
    * @param transaction transaction or {@code null} for none
    */
   public ExecuteSqlRequest setTransaction(TransactionSelector transaction) {

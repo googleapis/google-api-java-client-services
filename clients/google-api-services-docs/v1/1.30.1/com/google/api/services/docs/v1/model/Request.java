@@ -135,6 +135,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private ReplaceAllTextRequest replaceAllText;
 
   /**
+   * Updates the style of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateDocumentStyleRequest updateDocumentStyle;
+
+  /**
    * Updates the paragraph style at the specified range.
    * The value may be {@code null}.
    */
@@ -421,6 +428,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setReplaceAllText(ReplaceAllTextRequest replaceAllText) {
     this.replaceAllText = replaceAllText;
+    return this;
+  }
+
+  /**
+   * Updates the style of the document.
+   * @return value or {@code null} for none
+   */
+  public UpdateDocumentStyleRequest getUpdateDocumentStyle() {
+    return updateDocumentStyle;
+  }
+
+  /**
+   * Updates the style of the document.
+   * @param updateDocumentStyle updateDocumentStyle or {@code null} for none
+   */
+  public Request setUpdateDocumentStyle(UpdateDocumentStyleRequest updateDocumentStyle) {
+    this.updateDocumentStyle = updateDocumentStyle;
     return this;
   }
 

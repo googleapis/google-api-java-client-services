@@ -124,8 +124,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private java.lang.String direction;
 
   /**
-   * The heading ID of the paragraph. If empty, then this paragraph is not a heading. This property
-   * is read-only.
+   * The heading ID of the paragraph. If empty, then this paragraph is not a heading.
+   *
+   * This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,8 +223,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   private java.lang.String spacingMode;
 
   /**
-   * A list of the tab stops for this paragraph. The list of tab stops is not inherited. This
-   * property is read-only.
+   * A list of the tab stops for this paragraph. The list of tab stops is not inherited.
+   *
+   * This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -418,8 +420,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The heading ID of the paragraph. If empty, then this paragraph is not a heading. This property
-   * is read-only.
+   * The heading ID of the paragraph. If empty, then this paragraph is not a heading.
+   *
+   * This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeadingId() {
@@ -427,8 +430,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The heading ID of the paragraph. If empty, then this paragraph is not a heading. This property
-   * is read-only.
+   * The heading ID of the paragraph. If empty, then this paragraph is not a heading.
+   *
+   * This property is read-only.
    * @param headingId headingId or {@code null} for none
    */
   public ParagraphStyle setHeadingId(java.lang.String headingId) {
@@ -650,8 +654,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of the tab stops for this paragraph. The list of tab stops is not inherited. This
-   * property is read-only.
+   * A list of the tab stops for this paragraph. The list of tab stops is not inherited.
+   *
+   * This property is read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<TabStop> getTabStops() {
@@ -659,8 +664,9 @@ public final class ParagraphStyle extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of the tab stops for this paragraph. The list of tab stops is not inherited. This
-   * property is read-only.
+   * A list of the tab stops for this paragraph. The list of tab stops is not inherited.
+   *
+   * This property is read-only.
    * @param tabStops tabStops or {@code null} for none
    */
   public ParagraphStyle setTabStops(java.util.List<TabStop> tabStops) {

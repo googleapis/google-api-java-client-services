@@ -45,6 +45,13 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sha1;
 
   /**
+   * A sha256 hash of the image that was uploaded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sha256;
+
+  /**
    * A URL that will serve a preview of the image.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setSha1(java.lang.String sha1) {
     this.sha1 = sha1;
+    return this;
+  }
+
+  /**
+   * A sha256 hash of the image that was uploaded.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSha256() {
+    return sha256;
+  }
+
+  /**
+   * A sha256 hash of the image that was uploaded.
+   * @param sha256 sha256 or {@code null} for none
+   */
+  public Image setSha256(java.lang.String sha256) {
+    this.sha256 = sha256;
     return this;
   }
 

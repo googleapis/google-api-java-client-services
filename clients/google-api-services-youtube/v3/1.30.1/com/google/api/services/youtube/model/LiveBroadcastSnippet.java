@@ -48,6 +48,12 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   private com.google.api.client.util.DateTime actualStartTime;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String broadcastType;
+
+  /**
    * The ID that YouTube uses to uniquely identify the channel that is publishing the broadcast.
    * The value may be {@code null}.
    */
@@ -156,6 +162,21 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    */
   public LiveBroadcastSnippet setActualStartTime(com.google.api.client.util.DateTime actualStartTime) {
     this.actualStartTime = actualStartTime;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBroadcastType() {
+    return broadcastType;
+  }
+
+  /**
+   * @param broadcastType broadcastType or {@code null} for none
+   */
+  public LiveBroadcastSnippet setBroadcastType(java.lang.String broadcastType) {
+    this.broadcastType = broadcastType;
     return this;
   }
 

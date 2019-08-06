@@ -38,7 +38,8 @@ public final class GoogleCloudVisionV1p2beta1AnnotateFileResponse extends com.go
   private GoogleCloudVisionV1p2beta1InputConfig inputConfig;
 
   /**
-   * Individual responses to images found within the file.
+   * Individual responses to images found within the file. This field will be empty if the `error`
+   * field is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,8 @@ public final class GoogleCloudVisionV1p2beta1AnnotateFileResponse extends com.go
   }
 
   /**
-   * Individual responses to images found within the file.
+   * Individual responses to images found within the file. This field will be empty if the `error`
+   * field is set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVisionV1p2beta1AnnotateImageResponse> getResponses() {
@@ -77,7 +79,8 @@ public final class GoogleCloudVisionV1p2beta1AnnotateFileResponse extends com.go
   }
 
   /**
-   * Individual responses to images found within the file.
+   * Individual responses to images found within the file. This field will be empty if the `error`
+   * field is set.
    * @param responses responses or {@code null} for none
    */
   public GoogleCloudVisionV1p2beta1AnnotateFileResponse setResponses(java.util.List<GoogleCloudVisionV1p2beta1AnnotateImageResponse> responses) {

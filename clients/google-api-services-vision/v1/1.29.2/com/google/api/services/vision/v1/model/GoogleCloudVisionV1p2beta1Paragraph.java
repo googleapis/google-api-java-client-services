@@ -56,7 +56,7 @@ public final class GoogleCloudVisionV1p2beta1Paragraph extends com.google.api.cl
   private GoogleCloudVisionV1p2beta1TextAnnotationTextProperty property;
 
   /**
-   * List of words in this paragraph.
+   * List of all words in this paragraph.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class GoogleCloudVisionV1p2beta1Paragraph extends com.google.api.cl
   }
 
   /**
-   * List of words in this paragraph.
+   * List of all words in this paragraph.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudVisionV1p2beta1Word> getWords() {
@@ -132,7 +132,7 @@ public final class GoogleCloudVisionV1p2beta1Paragraph extends com.google.api.cl
   }
 
   /**
-   * List of words in this paragraph.
+   * List of all words in this paragraph.
    * @param words words or {@code null} for none
    */
   public GoogleCloudVisionV1p2beta1Paragraph setWords(java.util.List<GoogleCloudVisionV1p2beta1Word> words) {

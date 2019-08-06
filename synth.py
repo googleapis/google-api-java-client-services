@@ -27,6 +27,7 @@ from lxml import etree
 import re
 import sys
 import shutil
+from typing import List
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -117,13 +118,91 @@ def all_discoveries():
 
     return discos
 
+class Service:
+    id: str = None
+    title: str = None
+    version: str = None
 
-discoveries = all_discoveries()
+    def __init__(self, discovery_path: str):
+        match = re.match(r'^([^\.]*)\.(v.*)\.json$', path.basename(discovery_path))
+        if match is not None:
+          self.id = match[1]
+          self.version = match[2]
 
+          with open(discovery_path, "r") as f:
+              data = json.load(f)
+              self.title = data["title"]
+
+def all_services():
+    services = []
+    for file in glob.glob(str(discovery / 'discoveries/*.v*.json')):
+        match = re.match(r'^([^\.]*)\.(v.*)\.json$', path.basename(file))
+        service = Service(file)
+        services.append(service)
+
+    return services
+
+def service_row(services: List[Service]) -> str:
+  services = sorted(services, key=lambda service: service.version)
+  links = [f"[{service.version}](clients/google-api-services-{service.id}/{service.version})" for service in services]
+  link = ", ".join(links)
+  name = services[0].title
+  return f"| {name} | {link} |\n"
+
+def replace_content_in_readme(content_rows: List[str]) -> None:
+    START_MARKER = "[//]: # (API_TABLE_START)"
+    END_MARKER = "[//]: # (API_TABLE_END)"
+    newlines = []
+    repl_open = False
+    with open("README.md", "r") as f:
+        for line in f:
+            if not repl_open:
+                newlines.append(line)
+
+            if line.startswith(START_MARKER):
+                repl_open = True
+                newlines = newlines + content_rows
+            elif line.startswith(END_MARKER):
+                newlines.append("\n")
+                newlines.append(line)
+                repl_open = False
+
+    with open("README.md", "w") as f:
+        for line in newlines:
+            f.write(line)
+
+def generate_service_list():
+    services = all_services()
+    services_by_name = {}
+    for service in services:
+        if service.title not in services_by_name:
+            services_by_name[service.title] = []
+
+        services_by_name[service.title].append(service)
+
+    content_rows = [
+        "\n",
+        "| API | Versions |\n",
+        "| --- | -------- |\n",
+    ]
+
+    content_rows += [service_row(services_by_name[name])
+        for name in sorted(services_by_name.keys())]
+
+    replace_content_in_readme(content_rows)
+
+def generate_services(services):
+    for service in services:
+        generate_service(service)
 
 if extra_args():
     api_name = extra_args()[0]
-    discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
-
-for disco in discoveries:
-    generate_service(disco)
+    if api_name == "README":
+        generate_service_list()
+    else:
+        discoveries = all_discoveries()
+        discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
+        generate_services(discoveries)
+else:
+    discoveries = all_discoveries()
+    generate_services(discoveries)

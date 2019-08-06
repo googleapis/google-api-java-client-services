@@ -43,9 +43,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   private Money amount;
 
   /**
-   * Output only.
-   *
-   * Annualized base compensation range. Computed as base compensation entry's
+   * Output only. Annualized base compensation range. Computed as base compensation entry's
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
    *
    * See CompensationEntry for explanation on compensation annualization.
@@ -55,9 +53,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   private CompensationRange annualizedBaseCompensationRange;
 
   /**
-   * Output only.
-   *
-   * Annualized total compensation range. Computed as all compensation entries'
+   * Output only. Annualized total compensation range. Computed as all compensation entries'
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
    *
    * See CompensationEntry for explanation on compensation annualization.
@@ -67,9 +63,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   private CompensationRange annualizedTotalCompensationRange;
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
    * ** base compensation entry ** for the job.
@@ -147,9 +141,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only.
-   *
-   * Annualized base compensation range. Computed as base compensation entry's
+   * Output only. Annualized base compensation range. Computed as base compensation entry's
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
    *
    * See CompensationEntry for explanation on compensation annualization.
@@ -160,9 +152,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only.
-   *
-   * Annualized base compensation range. Computed as base compensation entry's
+   * Output only. Annualized base compensation range. Computed as base compensation entry's
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
    *
    * See CompensationEntry for explanation on compensation annualization.
@@ -174,9 +164,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only.
-   *
-   * Annualized total compensation range. Computed as all compensation entries'
+   * Output only. Annualized total compensation range. Computed as all compensation entries'
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
    *
    * See CompensationEntry for explanation on compensation annualization.
@@ -187,9 +175,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only.
-   *
-   * Annualized total compensation range. Computed as all compensation entries'
+   * Output only. Annualized total compensation range. Computed as all compensation entries'
    * CompensationEntry.compensation times CompensationEntry.expected_units_per_year.
    *
    * See CompensationEntry for explanation on compensation annualization.
@@ -201,9 +187,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
    * ** base compensation entry ** for the job.
@@ -214,9 +198,7 @@ public final class CompensationInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as
    * ** base compensation entry ** for the job.

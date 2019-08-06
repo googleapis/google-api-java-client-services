@@ -34,19 +34,15 @@ package com.google.api.services.jobs.v2.model;
 public final class RequestMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional.
-   *
-   * The type of device used by the job seeker at the time of the call to the service.
+   * Optional. The type of device used by the job seeker at the time of the call to the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceInfo deviceInfo;
 
   /**
-   * Required.
-   *
-   * The client-defined scope or source of the service call, which typically is the domain on which
-   * the service has been implemented and is currently being run.
+   * Required. The client-defined scope or source of the service call, which typically is the domain
+   * on which the service has been implemented and is currently being run.
    *
    * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
    * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
@@ -61,11 +57,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String domain;
 
   /**
-   * Required.
-   *
-   * A unique session identification string. A session is defined as the duration of an end user's
-   * interaction with the service over a period. Obfuscate this field for privacy concerns before
-   * providing it to the API.
+   * Required. A unique session identification string. A session is defined as the duration of an
+   * end user's interaction with the service over a period. Obfuscate this field for privacy
+   * concerns before providing it to the API.
    *
    * If this field is not available for some reason, please send "UNKNOWN". Note that any
    * improvements to the service model for a particular tenant site, rely on this field being set
@@ -76,12 +70,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String sessionId;
 
   /**
-   * Required.
-   *
-   * A unique user identification string, as determined by the client. The client is responsible for
-   * ensuring client-level uniqueness of this value in order to have the strongest positive impact
-   * on search quality. Obfuscate this field for privacy concerns before providing it to the
-   * service.
+   * Required. A unique user identification string, as determined by the client. The client is
+   * responsible for ensuring client-level uniqueness of this value in order to have the strongest
+   * positive impact on search quality. Obfuscate this field for privacy concerns before providing
+   * it to the service.
    *
    * If this field is not available for some reason, please send "UNKNOWN". Note that any
    * improvements to the service model for a particular tenant site, rely on this field being set
@@ -92,9 +84,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String userId;
 
   /**
-   * Optional.
-   *
-   * The type of device used by the job seeker at the time of the call to the service.
+   * Optional. The type of device used by the job seeker at the time of the call to the service.
    * @return value or {@code null} for none
    */
   public DeviceInfo getDeviceInfo() {
@@ -102,9 +92,7 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional.
-   *
-   * The type of device used by the job seeker at the time of the call to the service.
+   * Optional. The type of device used by the job seeker at the time of the call to the service.
    * @param deviceInfo deviceInfo or {@code null} for none
    */
   public RequestMetadata setDeviceInfo(DeviceInfo deviceInfo) {
@@ -113,10 +101,8 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required.
-   *
-   * The client-defined scope or source of the service call, which typically is the domain on which
-   * the service has been implemented and is currently being run.
+   * Required. The client-defined scope or source of the service call, which typically is the domain
+   * on which the service has been implemented and is currently being run.
    *
    * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
    * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
@@ -132,10 +118,8 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required.
-   *
-   * The client-defined scope or source of the service call, which typically is the domain on which
-   * the service has been implemented and is currently being run.
+   * Required. The client-defined scope or source of the service call, which typically is the domain
+   * on which the service has been implemented and is currently being run.
    *
    * For example, if the service is being run by client Foo, Inc., on job board www.foo.com and
    * career site www.bar.com, then this field is set to "foo.com" for use on the job board, and
@@ -152,11 +136,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required.
-   *
-   * A unique session identification string. A session is defined as the duration of an end user's
-   * interaction with the service over a period. Obfuscate this field for privacy concerns before
-   * providing it to the API.
+   * Required. A unique session identification string. A session is defined as the duration of an
+   * end user's interaction with the service over a period. Obfuscate this field for privacy
+   * concerns before providing it to the API.
    *
    * If this field is not available for some reason, please send "UNKNOWN". Note that any
    * improvements to the service model for a particular tenant site, rely on this field being set
@@ -168,11 +150,9 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required.
-   *
-   * A unique session identification string. A session is defined as the duration of an end user's
-   * interaction with the service over a period. Obfuscate this field for privacy concerns before
-   * providing it to the API.
+   * Required. A unique session identification string. A session is defined as the duration of an
+   * end user's interaction with the service over a period. Obfuscate this field for privacy
+   * concerns before providing it to the API.
    *
    * If this field is not available for some reason, please send "UNKNOWN". Note that any
    * improvements to the service model for a particular tenant site, rely on this field being set
@@ -185,12 +165,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required.
-   *
-   * A unique user identification string, as determined by the client. The client is responsible for
-   * ensuring client-level uniqueness of this value in order to have the strongest positive impact
-   * on search quality. Obfuscate this field for privacy concerns before providing it to the
-   * service.
+   * Required. A unique user identification string, as determined by the client. The client is
+   * responsible for ensuring client-level uniqueness of this value in order to have the strongest
+   * positive impact on search quality. Obfuscate this field for privacy concerns before providing
+   * it to the service.
    *
    * If this field is not available for some reason, please send "UNKNOWN". Note that any
    * improvements to the service model for a particular tenant site, rely on this field being set
@@ -202,12 +180,10 @@ public final class RequestMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required.
-   *
-   * A unique user identification string, as determined by the client. The client is responsible for
-   * ensuring client-level uniqueness of this value in order to have the strongest positive impact
-   * on search quality. Obfuscate this field for privacy concerns before providing it to the
-   * service.
+   * Required. A unique user identification string, as determined by the client. The client is
+   * responsible for ensuring client-level uniqueness of this value in order to have the strongest
+   * positive impact on search quality. Obfuscate this field for privacy concerns before providing
+   * it to the service.
    *
    * If this field is not available for some reason, please send "UNKNOWN". Note that any
    * improvements to the service model for a particular tenant site, rely on this field being set

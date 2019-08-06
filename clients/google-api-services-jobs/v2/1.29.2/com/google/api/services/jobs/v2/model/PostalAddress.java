@@ -25,8 +25,8 @@ package com.google.api.services.jobs.v2.model;
  * depending on the type of process.
  *
  * Advice on address input / editing:  - Use an i18n-ready address widget such as
- * https://github.com/googlei18n/libaddressinput) - Users should not be presented with UI elements
- * for input or editing of   fields outside countries where that field is used.
+ * https://github.com/google/libaddressinput) - Users should not be presented with UI elements for
+ * input or editing of   fields outside countries where that field is used.
  *
  * For more guidance on how to use this schema, please see:
  * https://support.google.com/business/answer/6397478

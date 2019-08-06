@@ -37,6 +37,13 @@ public final class WorkerAssignedEvent extends com.google.api.client.json.Generi
   private java.lang.String instance;
 
   /**
+   * The machine type that was assigned for the worker.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
+
+  /**
    * The zone the worker is running in.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class WorkerAssignedEvent extends com.google.api.client.json.Generi
    */
   public WorkerAssignedEvent setInstance(java.lang.String instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * The machine type that was assigned for the worker.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * The machine type that was assigned for the worker.
+   * @param machineType machineType or {@code null} for none
+   */
+  public WorkerAssignedEvent setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 

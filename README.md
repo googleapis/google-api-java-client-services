@@ -16,6 +16,7 @@ You can find the list of available APIs [here][api-list] or you can find the pub
 ## Supported Google APIs
 
 [//]: # (API_TABLE_START)
+
 | API | Versions |
 | --- | -------- |
 | API Discovery Service | [v1](clients/google-api-services-discovery/v1) |
@@ -176,6 +177,7 @@ You can find the list of available APIs [here][api-list] or you can find the pub
 | YouTube Analytics API | [v2](clients/google-api-services-youtubeAnalytics/v2), [v1](clients/google-api-services-youtubeAnalytics/v1) |
 | YouTube Data API | [v3](clients/google-api-services-youtube/v3) |
 | YouTube Reporting API | [v1](clients/google-api-services-youtubereporting/v1) |
+
 [//]: # (API_TABLE_END)
 
 ## Generating the API clients

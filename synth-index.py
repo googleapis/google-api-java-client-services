@@ -1,4 +1,4 @@
-# Copyright 2018 Google LLC
+# Copyright 2019 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -78,6 +78,7 @@ def replace_content_in_readme(content_rows: List[str]) -> None:
                 repl_open = True
                 newlines = newlines + content_rows
             elif line.startswith(END_MARKER):
+                newlines.append("\n")
                 newlines.append(line)
                 repl_open = False
 
@@ -96,8 +97,9 @@ def main():
         services_by_name[service.title].append(service)
 
     content_rows = [
-      "| API | Versions |\n",
-      "| --- | -------- |\n",
+        "\n",
+        "| API | Versions |\n",
+        "| --- | -------- |\n",
     ]
 
     content_rows += [service_row(services_by_name[name])

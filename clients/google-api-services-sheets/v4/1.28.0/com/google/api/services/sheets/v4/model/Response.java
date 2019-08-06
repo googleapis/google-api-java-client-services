@@ -107,6 +107,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private DeleteDimensionGroupResponse deleteDimensionGroup;
 
   /**
+   * A reply from removing rows containing duplicate values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteDuplicatesResponse deleteDuplicates;
+
+  /**
    * A reply from duplicating a filter view.
    * The value may be {@code null}.
    */
@@ -126,6 +133,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private FindReplaceResponse findReplace;
+
+  /**
+   * A reply from trimming whitespace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrimWhitespaceResponse trimWhitespace;
 
   /**
    * A reply from updating a conditional format rule.
@@ -336,6 +350,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A reply from removing rows containing duplicate values.
+   * @return value or {@code null} for none
+   */
+  public DeleteDuplicatesResponse getDeleteDuplicates() {
+    return deleteDuplicates;
+  }
+
+  /**
+   * A reply from removing rows containing duplicate values.
+   * @param deleteDuplicates deleteDuplicates or {@code null} for none
+   */
+  public Response setDeleteDuplicates(DeleteDuplicatesResponse deleteDuplicates) {
+    this.deleteDuplicates = deleteDuplicates;
+    return this;
+  }
+
+  /**
    * A reply from duplicating a filter view.
    * @return value or {@code null} for none
    */
@@ -383,6 +414,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setFindReplace(FindReplaceResponse findReplace) {
     this.findReplace = findReplace;
+    return this;
+  }
+
+  /**
+   * A reply from trimming whitespace.
+   * @return value or {@code null} for none
+   */
+  public TrimWhitespaceResponse getTrimWhitespace() {
+    return trimWhitespace;
+  }
+
+  /**
+   * A reply from trimming whitespace.
+   * @param trimWhitespace trimWhitespace or {@code null} for none
+   */
+  public Response setTrimWhitespace(TrimWhitespaceResponse trimWhitespace) {
+    this.trimWhitespace = trimWhitespace;
     return this;
   }
 

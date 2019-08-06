@@ -284,9 +284,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the kiosk custom launcher is enabled. This replaces the home screen with a launcher
-   * that locks down the device to the apps installed via the applications setting. The apps appear
-   * on a single page in alphabetical order. It is recommended to also use status_bar_disabled to
-   * block access to device settings.
+   * that locks down the device to the apps installed via the applications setting. Apps appear on a
+   * single page in alphabetical order. The status bar is disabled when this is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -554,7 +553,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the status bar is disabled. This disables notifications, quick settings, and other
-   * screen overlays that allow escape from full-screen mode.
+   * screen overlays that allow escape from full-screen mode. DEPRECATED. To disable the status bar
+   * on a kiosk device, use InstallType KIOSK or kioskCustomLauncherEnabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1209,9 +1209,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the kiosk custom launcher is enabled. This replaces the home screen with a launcher
-   * that locks down the device to the apps installed via the applications setting. The apps appear
-   * on a single page in alphabetical order. It is recommended to also use status_bar_disabled to
-   * block access to device settings.
+   * that locks down the device to the apps installed via the applications setting. Apps appear on a
+   * single page in alphabetical order. The status bar is disabled when this is set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKioskCustomLauncherEnabled() {
@@ -1220,9 +1219,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the kiosk custom launcher is enabled. This replaces the home screen with a launcher
-   * that locks down the device to the apps installed via the applications setting. The apps appear
-   * on a single page in alphabetical order. It is recommended to also use status_bar_disabled to
-   * block access to device settings.
+   * that locks down the device to the apps installed via the applications setting. Apps appear on a
+   * single page in alphabetical order. The status bar is disabled when this is set.
    * @param kioskCustomLauncherEnabled kioskCustomLauncherEnabled or {@code null} for none
    */
   public Policy setKioskCustomLauncherEnabled(java.lang.Boolean kioskCustomLauncherEnabled) {
@@ -1812,7 +1810,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the status bar is disabled. This disables notifications, quick settings, and other
-   * screen overlays that allow escape from full-screen mode.
+   * screen overlays that allow escape from full-screen mode. DEPRECATED. To disable the status bar
+   * on a kiosk device, use InstallType KIOSK or kioskCustomLauncherEnabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStatusBarDisabled() {
@@ -1821,7 +1820,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the status bar is disabled. This disables notifications, quick settings, and other
-   * screen overlays that allow escape from full-screen mode.
+   * screen overlays that allow escape from full-screen mode. DEPRECATED. To disable the status bar
+   * on a kiosk device, use InstallType KIOSK or kioskCustomLauncherEnabled.
    * @param statusBarDisabled statusBarDisabled or {@code null} for none
    */
   public Policy setStatusBarDisabled(java.lang.Boolean statusBarDisabled) {

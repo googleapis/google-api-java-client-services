@@ -47,7 +47,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
 
   /**
    * The URI of the parent frame hosting the iframe. To prevent XSS, the iframe may not be hosted at
-   * other URIs. This URI must be https.
+   * other URIs. This URI must be https. Use whitespaces to separate multiple parent URIs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
 
   /**
    * The URI of the parent frame hosting the iframe. To prevent XSS, the iframe may not be hosted at
-   * other URIs. This URI must be https.
+   * other URIs. This URI must be https. Use whitespaces to separate multiple parent URIs.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -135,7 +135,7 @@ public final class AdministratorWebTokenSpec extends com.google.api.client.json.
 
   /**
    * The URI of the parent frame hosting the iframe. To prevent XSS, the iframe may not be hosted at
-   * other URIs. This URI must be https.
+   * other URIs. This URI must be https. Use whitespaces to separate multiple parent URIs.
    * @param parent parent or {@code null} for none
    */
   public AdministratorWebTokenSpec setParent(java.lang.String parent) {

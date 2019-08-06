@@ -29,6 +29,9 @@ public class BigqueryScopes {
   /** Insert data into Google BigQuery. */
   public static final String BIGQUERY_INSERTDATA = "https://www.googleapis.com/auth/bigquery.insertdata";
 
+  /** View your data in Google BigQuery. */
+  public static final String BIGQUERY_READONLY = "https://www.googleapis.com/auth/bigquery.readonly";
+
   /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -53,6 +56,7 @@ public class BigqueryScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(BIGQUERY);
     set.add(BIGQUERY_INSERTDATA);
+    set.add(BIGQUERY_READONLY);
     set.add(CLOUD_PLATFORM);
     set.add(CLOUD_PLATFORM_READ_ONLY);
     set.add(DEVSTORAGE_FULL_CONTROL);

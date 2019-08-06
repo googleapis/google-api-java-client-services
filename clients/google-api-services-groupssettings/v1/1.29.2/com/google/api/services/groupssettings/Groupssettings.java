@@ -150,7 +150,7 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
      * This request holds the parameters needed by the groupssettings server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param groupUniqueId The resource ID
+     * @param groupUniqueId The group's email address.
      * @return the request
      */
     public Get get(java.lang.String groupUniqueId) throws java.io.IOException {
@@ -173,7 +173,7 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param groupUniqueId The resource ID
+       * @param groupUniqueId The group's email address.
        * @since 1.13
        */
       protected Get(java.lang.String groupUniqueId) {
@@ -227,17 +227,17 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
         return (Get) super.setUserIp(userIp);
       }
 
-      /** The resource ID */
+      /** The group's email address. */
       @com.google.api.client.util.Key
       private java.lang.String groupUniqueId;
 
-      /** The resource ID
+      /** The group's email address.
        */
       public java.lang.String getGroupUniqueId() {
         return groupUniqueId;
       }
 
-      /** The resource ID */
+      /** The group's email address. */
       public Get setGroupUniqueId(java.lang.String groupUniqueId) {
         this.groupUniqueId = groupUniqueId;
         return this;
@@ -256,7 +256,7 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
      * This request holds the parameters needed by the groupssettings server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param groupUniqueId The resource ID
+     * @param groupUniqueId The group's email address.
      * @param content the {@link com.google.api.services.groupssettings.model.Groups}
      * @return the request
      */
@@ -281,7 +281,7 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param groupUniqueId The resource ID
+       * @param groupUniqueId The group's email address.
        * @param content the {@link com.google.api.services.groupssettings.model.Groups}
        * @since 1.13
        */
@@ -326,17 +326,17 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
         return (Patch) super.setUserIp(userIp);
       }
 
-      /** The resource ID */
+      /** The group's email address. */
       @com.google.api.client.util.Key
       private java.lang.String groupUniqueId;
 
-      /** The resource ID
+      /** The group's email address.
        */
       public java.lang.String getGroupUniqueId() {
         return groupUniqueId;
       }
 
-      /** The resource ID */
+      /** The group's email address. */
       public Patch setGroupUniqueId(java.lang.String groupUniqueId) {
         this.groupUniqueId = groupUniqueId;
         return this;
@@ -355,7 +355,7 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
      * This request holds the parameters needed by the groupssettings server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param groupUniqueId The resource ID
+     * @param groupUniqueId The group's email address.
      * @param content the {@link com.google.api.services.groupssettings.model.Groups}
      * @return the request
      */
@@ -380,7 +380,7 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param groupUniqueId The resource ID
+       * @param groupUniqueId The group's email address.
        * @param content the {@link com.google.api.services.groupssettings.model.Groups}
        * @since 1.13
        */
@@ -425,17 +425,17 @@ public class Groupssettings extends com.google.api.client.googleapis.services.js
         return (Update) super.setUserIp(userIp);
       }
 
-      /** The resource ID */
+      /** The group's email address. */
       @com.google.api.client.util.Key
       private java.lang.String groupUniqueId;
 
-      /** The resource ID
+      /** The group's email address.
        */
       public java.lang.String getGroupUniqueId() {
         return groupUniqueId;
       }
 
-      /** The resource ID */
+      /** The group's email address. */
       public Update setGroupUniqueId(java.lang.String groupUniqueId) {
         this.groupUniqueId = groupUniqueId;
         return this;

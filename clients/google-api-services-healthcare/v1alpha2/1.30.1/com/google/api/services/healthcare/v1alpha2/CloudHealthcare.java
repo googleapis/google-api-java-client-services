@@ -4758,8 +4758,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Imports data into the DICOM store by copying it from the specified source. For errors, the
            * Operation will be populated with error details (in the form of ImportDicomDataErrorDetails in
-           * error.details), which will hold finer-grained error information. The metadata field type is
-           * OperationMetadata.
+           * error.details), which will hold finer-grained error information. Errors are also logged to
+           * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). The metadata
+           * field type is OperationMetadata.
            *
            * Create a request for the method "dicomStores.import".
            *
@@ -4789,8 +4790,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Imports data into the DICOM store by copying it from the specified source. For errors, the
              * Operation will be populated with error details (in the form of ImportDicomDataErrorDetails in
-             * error.details), which will hold finer-grained error information. The metadata field type is
-             * OperationMetadata.
+             * error.details), which will hold finer-grained error information. Errors are also logged to
+             * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). The metadata
+             * field type is OperationMetadata.
              *
              * Create a request for the method "dicomStores.import".
              *
@@ -10268,12 +10270,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Gets the access control policy for a FHIR store or security label within a FHIR store. Returns
-           * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
-           * but does not have a policy set.
-           *
-           * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a FHIR
-           * store or `healthcare.securityLabels.getIamPolicy` for a security label
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+           * does not have a policy set.
            *
            * Create a request for the method "fhirStores.getIamPolicy".
            *
@@ -10299,12 +10297,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Gets the access control policy for a FHIR store or security label within a FHIR store. Returns
-             * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
-             * but does not have a policy set.
-             *
-             * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a
-             * FHIR store or `healthcare.securityLabels.getIamPolicy` for a security label
+             * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+             * and does not have a policy set.
              *
              * Create a request for the method "fhirStores.getIamPolicy".
              *
@@ -11001,11 +10995,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
-           * any existing policy.
-           *
-           * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a FHIR
-           * store or `healthcare.securityLabels.setIamPolicy` for a security label
+           * Sets the access control policy on the specified resource. Replaces any existing policy.
            *
            * Create a request for the method "fhirStores.setIamPolicy".
            *
@@ -11032,11 +11022,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
-             * any existing policy.
-             *
-             * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a
-             * FHIR store or `healthcare.securityLabels.setIamPolicy` for a security label
+             * Sets the access control policy on the specified resource. Replaces any existing policy.
              *
              * Create a request for the method "fhirStores.setIamPolicy".
              *
@@ -11151,10 +11137,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Returns permissions that a caller has on the specified resource.  If the resource does not exist,
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
            * this will return an empty set of permissions, not a NOT_FOUND error.
            *
-           * There is no permission required to make this API call.
+           * Note: This operation is designed to be used for building permission-aware UIs and command-line
+           * tools, not for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "fhirStores.testIamPermissions".
            *
@@ -11178,13 +11165,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             private static final String REST_PATH = "v1alpha2/{+resource}:testIamPermissions";
 
             private final java.util.regex.Pattern RESOURCE_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/.+$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Returns permissions that a caller has on the specified resource.  If the resource does not
+             * Returns permissions that a caller has on the specified resource. If the resource does not
              * exist, this will return an empty set of permissions, not a NOT_FOUND error.
              *
-             * There is no permission required to make this API call.
+             * Note: This operation is designed to be used for building permission-aware UIs and command-line
+             * tools, not for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "fhirStores.testIamPermissions".
              *
@@ -11206,7 +11194,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/.+$");
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
               }
             }
 
@@ -11287,7 +11275,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                     "Parameter resource must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/.+$");
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
               }
               this.resource = resource;
               return this;
@@ -13788,6 +13776,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
              * `Bundle` will contain pagination links.
              *
+             * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
+             * fully searchable as the server might trim its generated search index in those cases.
+             *
+             * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
+             * time a resource is created or changes and when the change is reflected in search results.
+             *
              * Create a request for the method "fhir.search".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13849,6 +13843,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * The maximum number of search results returned defaults to 100, which can be overridden by the
                * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
                * `Bundle` will contain pagination links.
+               *
+               * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
+               * fully searchable as the server might trim its generated search index in those cases.
+               *
+               * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
+               * time a resource is created or changes and when the change is reflected in search results.
                *
                * Create a request for the method "fhir.search".
                *
@@ -14268,363 +14268,6 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               @Override
               public Vread set(String parameterName, Object value) {
                 return (Vread) super.set(parameterName, value);
-              }
-            }
-
-          }
-          /**
-           * An accessor for creating requests from the SecurityLabels collection.
-           *
-           * <p>The typical use is:</p>
-           * <pre>
-           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
-           *   {@code CloudHealthcare.SecurityLabels.List request = healthcare.securityLabels().list(parameters ...)}
-           * </pre>
-           *
-           * @return the resource collection
-           */
-          public SecurityLabels securityLabels() {
-            return new SecurityLabels();
-          }
-
-          /**
-           * The "securityLabels" collection of methods.
-           */
-          public class SecurityLabels {
-
-            /**
-             * Gets the access control policy for a FHIR store or security label within a FHIR store. Returns
-             * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
-             * but does not have a policy set.
-             *
-             * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a FHIR
-             * store or `healthcare.securityLabels.getIamPolicy` for a security label
-             *
-             * Create a request for the method "securityLabels.getIamPolicy".
-             *
-             * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
-             *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-            See the operation documentation for
-             *        the appropriate value for this field.
-             * @return the request
-             */
-            public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
-              GetIamPolicy result = new GetIamPolicy(resource);
-              initialize(result);
-              return result;
-            }
-
-            public class GetIamPolicy extends CloudHealthcareRequest<com.google.api.services.healthcare.v1alpha2.model.Policy> {
-
-              private static final String REST_PATH = "v1alpha2/{+resource}:getIamPolicy";
-
-              private final java.util.regex.Pattern RESOURCE_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/securityLabels/[^/]+$");
-
-              /**
-               * Gets the access control policy for a FHIR store or security label within a FHIR store. Returns
-               * NOT_FOUND error if the resource does not exist. Returns an empty policy if the resource exists
-               * but does not have a policy set.
-               *
-               * Authorization requires the Google IAM permission `healthcare.fhirStores.getIamPolicy` for a
-               * FHIR store or `healthcare.securityLabels.getIamPolicy` for a security label
-               *
-               * Create a request for the method "securityLabels.getIamPolicy".
-               *
-               * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param resource REQUIRED: The resource for which the policy is being requested.
-            See the operation documentation for
-             *        the appropriate value for this field.
-               * @since 1.13
-               */
-              protected GetIamPolicy(java.lang.String resource) {
-                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1alpha2.model.Policy.class);
-                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                      "Parameter resource must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/securityLabels/[^/]+$");
-                }
-              }
-
-              @Override
-              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                return super.executeUsingHead();
-              }
-
-              @Override
-              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                return super.buildHttpRequestUsingHead();
-              }
-
-              @Override
-              public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
-                return (GetIamPolicy) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-                return (GetIamPolicy) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public GetIamPolicy setAlt(java.lang.String alt) {
-                return (GetIamPolicy) super.setAlt(alt);
-              }
-
-              @Override
-              public GetIamPolicy setCallback(java.lang.String callback) {
-                return (GetIamPolicy) super.setCallback(callback);
-              }
-
-              @Override
-              public GetIamPolicy setFields(java.lang.String fields) {
-                return (GetIamPolicy) super.setFields(fields);
-              }
-
-              @Override
-              public GetIamPolicy setKey(java.lang.String key) {
-                return (GetIamPolicy) super.setKey(key);
-              }
-
-              @Override
-              public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-                return (GetIamPolicy) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
-                return (GetIamPolicy) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public GetIamPolicy setUploadType(java.lang.String uploadType) {
-                return (GetIamPolicy) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
-                return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * REQUIRED: The resource for which the policy is being requested. See the operation
-               * documentation for the appropriate value for this field.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String resource;
-
-              /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-             the appropriate value for this field.
-               */
-              public java.lang.String getResource() {
-                return resource;
-              }
-
-              /**
-               * REQUIRED: The resource for which the policy is being requested. See the operation
-               * documentation for the appropriate value for this field.
-               */
-              public GetIamPolicy setResource(java.lang.String resource) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                      "Parameter resource must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/securityLabels/[^/]+$");
-                }
-                this.resource = resource;
-                return this;
-              }
-
-              /**
-               * Optional. The policy format version to be returned. Acceptable values are 0 and 1.
-               * If the value is 0, or the field is omitted, policy format version 1 will be
-               * returned.
-               */
-              @com.google.api.client.util.Key("options.requestedPolicyVersion")
-              private java.lang.Integer optionsRequestedPolicyVersion;
-
-              /** Optional. The policy format version to be returned. Acceptable values are 0 and 1. If the value is
-             0, or the field is omitted, policy format version 1 will be returned.
-               */
-              public java.lang.Integer getOptionsRequestedPolicyVersion() {
-                return optionsRequestedPolicyVersion;
-              }
-
-              /**
-               * Optional. The policy format version to be returned. Acceptable values are 0 and 1.
-               * If the value is 0, or the field is omitted, policy format version 1 will be
-               * returned.
-               */
-              public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
-                this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-                return this;
-              }
-
-              @Override
-              public GetIamPolicy set(String parameterName, Object value) {
-                return (GetIamPolicy) super.set(parameterName, value);
-              }
-            }
-            /**
-             * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
-             * any existing policy.
-             *
-             * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a FHIR
-             * store or `healthcare.securityLabels.setIamPolicy` for a security label
-             *
-             * Create a request for the method "securityLabels.setIamPolicy".
-             *
-             * This request holds the parameters needed by the healthcare server.  After setting any optional
-             * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
-             *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-            See the operation documentation for
-             *        the appropriate value for this field.
-             * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.SetIamPolicyRequest}
-             * @return the request
-             */
-            public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.healthcare.v1alpha2.model.SetIamPolicyRequest content) throws java.io.IOException {
-              SetIamPolicy result = new SetIamPolicy(resource, content);
-              initialize(result);
-              return result;
-            }
-
-            public class SetIamPolicy extends CloudHealthcareRequest<com.google.api.services.healthcare.v1alpha2.model.Policy> {
-
-              private static final String REST_PATH = "v1alpha2/{+resource}:setIamPolicy";
-
-              private final java.util.regex.Pattern RESOURCE_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/securityLabels/[^/]+$");
-
-              /**
-               * Sets the access control policy for a FHIR store or security label within a FHIR store. Replaces
-               * any existing policy.
-               *
-               * Authorization requires the Google IAM permission `healthcare.fhirStores.setIamPolicy` for a
-               * FHIR store or `healthcare.securityLabels.setIamPolicy` for a security label
-               *
-               * Create a request for the method "securityLabels.setIamPolicy".
-               *
-               * This request holds the parameters needed by the the healthcare server.  After setting any
-               * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
-               * operation. <p> {@link
-               * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-               * must be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param resource REQUIRED: The resource for which the policy is being specified.
-            See the operation documentation for
-             *        the appropriate value for this field.
-               * @param content the {@link com.google.api.services.healthcare.v1alpha2.model.SetIamPolicyRequest}
-               * @since 1.13
-               */
-              protected SetIamPolicy(java.lang.String resource, com.google.api.services.healthcare.v1alpha2.model.SetIamPolicyRequest content) {
-                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1alpha2.model.Policy.class);
-                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                      "Parameter resource must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/securityLabels/[^/]+$");
-                }
-              }
-
-              @Override
-              public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
-                return (SetIamPolicy) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-                return (SetIamPolicy) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public SetIamPolicy setAlt(java.lang.String alt) {
-                return (SetIamPolicy) super.setAlt(alt);
-              }
-
-              @Override
-              public SetIamPolicy setCallback(java.lang.String callback) {
-                return (SetIamPolicy) super.setCallback(callback);
-              }
-
-              @Override
-              public SetIamPolicy setFields(java.lang.String fields) {
-                return (SetIamPolicy) super.setFields(fields);
-              }
-
-              @Override
-              public SetIamPolicy setKey(java.lang.String key) {
-                return (SetIamPolicy) super.setKey(key);
-              }
-
-              @Override
-              public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-                return (SetIamPolicy) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
-                return (SetIamPolicy) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public SetIamPolicy setUploadType(java.lang.String uploadType) {
-                return (SetIamPolicy) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
-                return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * REQUIRED: The resource for which the policy is being specified. See the operation
-               * documentation for the appropriate value for this field.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String resource;
-
-              /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-             the appropriate value for this field.
-               */
-              public java.lang.String getResource() {
-                return resource;
-              }
-
-              /**
-               * REQUIRED: The resource for which the policy is being specified. See the operation
-               * documentation for the appropriate value for this field.
-               */
-              public SetIamPolicy setResource(java.lang.String resource) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                      "Parameter resource must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/securityLabels/[^/]+$");
-                }
-                this.resource = resource;
-                return this;
-              }
-
-              @Override
-              public SetIamPolicy set(String parameterName, Object value) {
-                return (SetIamPolicy) super.set(parameterName, value);
               }
             }
 
@@ -16491,6 +16134,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Lists all the messages in the given HL7v2 store with support for filtering.
              *
+             * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
+             * time a message is created and when it can be found through a filter.
+             *
              * Create a request for the method "messages.list".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -16514,6 +16160,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Lists all the messages in the given HL7v2 store with support for filtering.
+               *
+               * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
+               * time a message is created and when it can be found through a filter.
                *
                * Create a request for the method "messages.list".
                *
@@ -16630,7 +16279,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * *  `message_type`, from the MSH-9 segment; for example `NOT message_type = "ADT"` *
                * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
                * dataset's time_zone, from the MSH-7 segment; for example `send_date < "2017-01-02"`
-               * *  `send_time`, the timestamp of when the message was sent, using the RFC3339 time
+               * *  `send_time`, the timestamp when the message was sent, using the RFC3339 time
                * format for comparisons, from the MSH-7 segment; for example `send_time <
                * "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message
                * came from, from the MSH-4 segment; for example `send_facility = "ABC"` *
@@ -16668,17 +16317,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
              *  `message_type`, from the MSH-9 segment; for example `NOT message_type = "ADT"` *  `send_date` or
              `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
-             segment; for example `send_date < "2017-01-02"` *  `send_time`, the timestamp of when the message
-             was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment; for example
-             `send_time < "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message came
-             from, from the MSH-4 segment; for example `send_facility = "ABC"` *  `HL7RegExp(expr)`, which does
-             regular expression matching of `expr` against the message payload using re2
-             (http://code.google.com/p/re2/) syntax; for example `HL7RegExp("^.*\|.*\|EMERG")` *
-             `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given
-             value and type in the PID-2, PID-3, or PID-4 segments; for example `PatientId("123456", "MRN")` *
-             `labels.x`, a string value of the label with key `x` as set using the Message.labels map, for
-             example `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a
-             label, for example `labels."priority":*`.
+             segment; for example `send_date < "2017-01-02"` *  `send_time`, the timestamp when the message was
+             sent, using the RFC3339 time format for comparisons, from the MSH-7 segment; for example `send_time
+             < "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message came from, from
+             the MSH-4 segment; for example `send_facility = "ABC"` *  `HL7RegExp(expr)`, which does regular
+             expression matching of `expr` against the message payload using re2 (http://code.google.com/p/re2/)
+             syntax; for example `HL7RegExp("^.*\|.*\|EMERG")` *  `PatientId(value, type)`, which matches if the
+             message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4
+             segments; for example `PatientId("123456", "MRN")` *  `labels.x`, a string value of the label with
+             key `x` as set using the Message.labels map, for example `labels."priority"="high"`. The operator
+             `:*` can be used to assert the existence of a label, for example `labels."priority":*`.
 
              Limitations on conjunctions:
 
@@ -16707,7 +16355,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * *  `message_type`, from the MSH-9 segment; for example `NOT message_type = "ADT"` *
                * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
                * dataset's time_zone, from the MSH-7 segment; for example `send_date < "2017-01-02"`
-               * *  `send_time`, the timestamp of when the message was sent, using the RFC3339 time
+               * *  `send_time`, the timestamp when the message was sent, using the RFC3339 time
                * format for comparisons, from the MSH-7 segment; for example `send_time <
                * "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message
                * came from, from the MSH-4 segment; for example `send_facility = "ABC"` *

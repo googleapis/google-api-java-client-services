@@ -44,7 +44,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * internet; with or without a Google account. allAuthenticatedUsers: A special identifier that
    * represents anyone  who is authenticated with a Google account or a service account.
    * user:{emailid}: An email address that represents a specific Google  account. For example,
-   * alice@gmail.com . serviceAccount:{emailid}: An email address that represents a service
+   * alice@example.com . serviceAccount:{emailid}: An email address that represents a service
    * account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email
    * address that represents a Google group.  For example, admins@example.com. domain:{domain}: The
    * G Suite domain (primary) that represents all the  users of that domain. For example, google.com
@@ -88,7 +88,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * internet; with or without a Google account. allAuthenticatedUsers: A special identifier that
    * represents anyone  who is authenticated with a Google account or a service account.
    * user:{emailid}: An email address that represents a specific Google  account. For example,
-   * alice@gmail.com . serviceAccount:{emailid}: An email address that represents a service
+   * alice@example.com . serviceAccount:{emailid}: An email address that represents a service
    * account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email
    * address that represents a Google group.  For example, admins@example.com. domain:{domain}: The
    * G Suite domain (primary) that represents all the  users of that domain. For example, google.com
@@ -105,7 +105,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
    * internet; with or without a Google account. allAuthenticatedUsers: A special identifier that
    * represents anyone  who is authenticated with a Google account or a service account.
    * user:{emailid}: An email address that represents a specific Google  account. For example,
-   * alice@gmail.com . serviceAccount:{emailid}: An email address that represents a service
+   * alice@example.com . serviceAccount:{emailid}: An email address that represents a service
    * account. For example, my-other-app@appspot.gserviceaccount.com. group:{emailid}: An email
    * address that represents a Google group.  For example, admins@example.com. domain:{domain}: The
    * G Suite domain (primary) that represents all the  users of that domain. For example, google.com

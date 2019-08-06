@@ -31,18 +31,14 @@ package com.google.api.services.jobs.v2.model;
 public final class StringValues extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * String values.
+   * Required. String values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> values;
 
   /**
-   * Required.
-   *
-   * String values.
+   * Required. String values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -50,9 +46,7 @@ public final class StringValues extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required.
-   *
-   * String values.
+   * Required. String values.
    * @param values values or {@code null} for none
    */
   public StringValues setValues(java.util.List<java.lang.String> values) {

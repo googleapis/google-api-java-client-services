@@ -30,25 +30,24 @@ package com.google.api.services.pubsub.model;
 public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Endpoint configuration attributes.
+   * Endpoint configuration attributes that can be used to control different aspects of the message
+   * delivery.
    *
-   * Every endpoint has a set of API supported attributes that can be used to control different
-   * aspects of the message delivery.
+   * The only currently supported attribute is `x-goog-version`, which you can use to change the
+   * format of the pushed message. This attribute indicates the version of the data expected by the
+   * endpoint. This controls the shape of the pushed message (i.e., its fields and metadata).
    *
-   * The currently supported attribute is `x-goog-version`, which you can use to change the format
-   * of the pushed message. This attribute indicates the version of the data expected by the
-   * endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The
-   * endpoint version is based on the version of the Pub/Sub API.
+   * If not present during the `CreateSubscription` call, it will default to the version of the
+   * Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call, its value will
+   * not be changed. `GetSubscription` calls will always return a valid version, even if the
+   * subscription was created without this attribute.
    *
-   * If not present during the `CreateSubscription` call, it will default to the version of the API
-   * used to make such call. If not present during a `ModifyPushConfig` call, its value will not be
-   * changed. `GetSubscription` calls will always return a valid version, even if the subscription
-   * was created without this attribute.
-   *
-   * The possible values for this attribute are:
+   * The only supported values for the `x-goog-version` attribute are:
    *
    * * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. * `v1` or `v1beta2`: uses
    * the push format defined in the v1 Pub/Sub API.
+   *
+   * For example: attributes { "x-goog-version": "v1" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,25 +70,24 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String pushEndpoint;
 
   /**
-   * Endpoint configuration attributes.
+   * Endpoint configuration attributes that can be used to control different aspects of the message
+   * delivery.
    *
-   * Every endpoint has a set of API supported attributes that can be used to control different
-   * aspects of the message delivery.
+   * The only currently supported attribute is `x-goog-version`, which you can use to change the
+   * format of the pushed message. This attribute indicates the version of the data expected by the
+   * endpoint. This controls the shape of the pushed message (i.e., its fields and metadata).
    *
-   * The currently supported attribute is `x-goog-version`, which you can use to change the format
-   * of the pushed message. This attribute indicates the version of the data expected by the
-   * endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The
-   * endpoint version is based on the version of the Pub/Sub API.
+   * If not present during the `CreateSubscription` call, it will default to the version of the
+   * Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call, its value will
+   * not be changed. `GetSubscription` calls will always return a valid version, even if the
+   * subscription was created without this attribute.
    *
-   * If not present during the `CreateSubscription` call, it will default to the version of the API
-   * used to make such call. If not present during a `ModifyPushConfig` call, its value will not be
-   * changed. `GetSubscription` calls will always return a valid version, even if the subscription
-   * was created without this attribute.
-   *
-   * The possible values for this attribute are:
+   * The only supported values for the `x-goog-version` attribute are:
    *
    * * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. * `v1` or `v1beta2`: uses
    * the push format defined in the v1 Pub/Sub API.
+   *
+   * For example: attributes { "x-goog-version": "v1" }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAttributes() {
@@ -97,25 +95,24 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Endpoint configuration attributes.
+   * Endpoint configuration attributes that can be used to control different aspects of the message
+   * delivery.
    *
-   * Every endpoint has a set of API supported attributes that can be used to control different
-   * aspects of the message delivery.
+   * The only currently supported attribute is `x-goog-version`, which you can use to change the
+   * format of the pushed message. This attribute indicates the version of the data expected by the
+   * endpoint. This controls the shape of the pushed message (i.e., its fields and metadata).
    *
-   * The currently supported attribute is `x-goog-version`, which you can use to change the format
-   * of the pushed message. This attribute indicates the version of the data expected by the
-   * endpoint. This controls the shape of the pushed message (i.e., its fields and metadata). The
-   * endpoint version is based on the version of the Pub/Sub API.
+   * If not present during the `CreateSubscription` call, it will default to the version of the
+   * Pub/Sub API used to make such call. If not present in a `ModifyPushConfig` call, its value will
+   * not be changed. `GetSubscription` calls will always return a valid version, even if the
+   * subscription was created without this attribute.
    *
-   * If not present during the `CreateSubscription` call, it will default to the version of the API
-   * used to make such call. If not present during a `ModifyPushConfig` call, its value will not be
-   * changed. `GetSubscription` calls will always return a valid version, even if the subscription
-   * was created without this attribute.
-   *
-   * The possible values for this attribute are:
+   * The only supported values for the `x-goog-version` attribute are:
    *
    * * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. * `v1` or `v1beta2`: uses
    * the push format defined in the v1 Pub/Sub API.
+   *
+   * For example: attributes { "x-goog-version": "v1" }
    * @param attributes attributes or {@code null} for none
    */
   public PushConfig setAttributes(java.util.Map<String, java.lang.String> attributes) {

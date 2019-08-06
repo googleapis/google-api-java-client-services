@@ -33,58 +33,47 @@ package com.google.api.services.jobs.v2.model;
 public final class ExtendedCompensationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only.
-   *
-   * Annualized base compensation range.
+   * Output only. Annualized base compensation range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExtendedCompensationInfoCompensationRange annualizedBaseCompensationRange;
 
   /**
-   * Output only.
-   *
-   * Indicates annualized base compensation range cannot be derived, due to the job's base
-   * compensation entry cannot be annualized. See CompensationEntry for explanation on annualization
-   * and base compensation entry.
+   * Output only. Indicates annualized base compensation range cannot be derived, due to the job's
+   * base compensation entry cannot be annualized. See CompensationEntry for explanation on
+   * annualization and base compensation entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean annualizedBaseCompensationUnspecified;
 
   /**
-   * Output only.
-   *
-   * Annualized total compensation range.
+   * Output only. Annualized total compensation range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExtendedCompensationInfoCompensationRange annualizedTotalCompensationRange;
 
   /**
-   * Output only.
-   *
-   * Indicates annualized total compensation range cannot be derived, due to the job's all
-   * CompensationEntry cannot be annualized. See CompensationEntry for explanation on annualization
-   * and base compensation entry.
+   * Output only. Indicates annualized total compensation range cannot be derived, due to the job's
+   * all CompensationEntry cannot be annualized. See CompensationEntry for explanation on
+   * annualization and base compensation entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean annualizedTotalCompensationUnspecified;
 
   /**
-   * Optional.
-   *
-   * A 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency code.
+   * Optional. A 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency
+   * code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currency;
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type ExtendedCompensationInfo.CompensationType.BASE, which is
    * referred as ** base compensation entry ** for the job.
@@ -94,9 +83,7 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   private java.util.List<ExtendedCompensationInfoCompensationEntry> entries;
 
   /**
-   * Output only.
-   *
-   * Annualized base compensation range.
+   * Output only. Annualized base compensation range.
    * @return value or {@code null} for none
    */
   public ExtendedCompensationInfoCompensationRange getAnnualizedBaseCompensationRange() {
@@ -104,9 +91,7 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Annualized base compensation range.
+   * Output only. Annualized base compensation range.
    * @param annualizedBaseCompensationRange annualizedBaseCompensationRange or {@code null} for none
    */
   public ExtendedCompensationInfo setAnnualizedBaseCompensationRange(ExtendedCompensationInfoCompensationRange annualizedBaseCompensationRange) {
@@ -115,11 +100,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Indicates annualized base compensation range cannot be derived, due to the job's base
-   * compensation entry cannot be annualized. See CompensationEntry for explanation on annualization
-   * and base compensation entry.
+   * Output only. Indicates annualized base compensation range cannot be derived, due to the job's
+   * base compensation entry cannot be annualized. See CompensationEntry for explanation on
+   * annualization and base compensation entry.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnnualizedBaseCompensationUnspecified() {
@@ -127,11 +110,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Indicates annualized base compensation range cannot be derived, due to the job's base
-   * compensation entry cannot be annualized. See CompensationEntry for explanation on annualization
-   * and base compensation entry.
+   * Output only. Indicates annualized base compensation range cannot be derived, due to the job's
+   * base compensation entry cannot be annualized. See CompensationEntry for explanation on
+   * annualization and base compensation entry.
    * @param annualizedBaseCompensationUnspecified annualizedBaseCompensationUnspecified or {@code null} for none
    */
   public ExtendedCompensationInfo setAnnualizedBaseCompensationUnspecified(java.lang.Boolean annualizedBaseCompensationUnspecified) {
@@ -140,9 +121,7 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Annualized total compensation range.
+   * Output only. Annualized total compensation range.
    * @return value or {@code null} for none
    */
   public ExtendedCompensationInfoCompensationRange getAnnualizedTotalCompensationRange() {
@@ -150,9 +129,7 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Annualized total compensation range.
+   * Output only. Annualized total compensation range.
    * @param annualizedTotalCompensationRange annualizedTotalCompensationRange or {@code null} for none
    */
   public ExtendedCompensationInfo setAnnualizedTotalCompensationRange(ExtendedCompensationInfoCompensationRange annualizedTotalCompensationRange) {
@@ -161,11 +138,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Indicates annualized total compensation range cannot be derived, due to the job's all
-   * CompensationEntry cannot be annualized. See CompensationEntry for explanation on annualization
-   * and base compensation entry.
+   * Output only. Indicates annualized total compensation range cannot be derived, due to the job's
+   * all CompensationEntry cannot be annualized. See CompensationEntry for explanation on
+   * annualization and base compensation entry.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnnualizedTotalCompensationUnspecified() {
@@ -173,11 +148,9 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Output only.
-   *
-   * Indicates annualized total compensation range cannot be derived, due to the job's all
-   * CompensationEntry cannot be annualized. See CompensationEntry for explanation on annualization
-   * and base compensation entry.
+   * Output only. Indicates annualized total compensation range cannot be derived, due to the job's
+   * all CompensationEntry cannot be annualized. See CompensationEntry for explanation on
+   * annualization and base compensation entry.
    * @param annualizedTotalCompensationUnspecified annualizedTotalCompensationUnspecified or {@code null} for none
    */
   public ExtendedCompensationInfo setAnnualizedTotalCompensationUnspecified(java.lang.Boolean annualizedTotalCompensationUnspecified) {
@@ -186,9 +159,8 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Optional.
-   *
-   * A 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency code.
+   * Optional. A 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency
+   * code.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrency() {
@@ -196,9 +168,8 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Optional.
-   *
-   * A 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency code.
+   * Optional. A 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency
+   * code.
    * @param currency currency or {@code null} for none
    */
   public ExtendedCompensationInfo setCurrency(java.lang.String currency) {
@@ -207,9 +178,7 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type ExtendedCompensationInfo.CompensationType.BASE, which is
    * referred as ** base compensation entry ** for the job.
@@ -220,9 +189,7 @@ public final class ExtendedCompensationInfo extends com.google.api.client.json.G
   }
 
   /**
-   * Optional.
-   *
-   * Job compensation information.
+   * Optional. Job compensation information.
    *
    * At most one entry can be of type ExtendedCompensationInfo.CompensationType.BASE, which is
    * referred as ** base compensation entry ** for the job.

@@ -31,6 +31,15 @@ package com.google.api.services.toolresults.model;
 public final class TestCase extends com.google.api.client.json.GenericJson {
 
   /**
+   * The elapsed run time of the test case.
+   *
+   * Required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration elapsedTime;
+
+  /**
    * The end time of the test case.
    *
    * Optional.
@@ -105,6 +114,27 @@ public final class TestCase extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ToolOutputReference> toolOutputs;
+
+  /**
+   * The elapsed run time of the test case.
+   *
+   * Required.
+   * @return value or {@code null} for none
+   */
+  public Duration getElapsedTime() {
+    return elapsedTime;
+  }
+
+  /**
+   * The elapsed run time of the test case.
+   *
+   * Required.
+   * @param elapsedTime elapsedTime or {@code null} for none
+   */
+  public TestCase setElapsedTime(Duration elapsedTime) {
+    this.elapsedTime = elapsedTime;
+    return this;
+  }
 
   /**
    * The end time of the test case.

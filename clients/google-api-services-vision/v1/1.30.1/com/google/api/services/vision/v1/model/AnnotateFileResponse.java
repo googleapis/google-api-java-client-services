@@ -38,7 +38,8 @@ public final class AnnotateFileResponse extends com.google.api.client.json.Gener
   private InputConfig inputConfig;
 
   /**
-   * Individual responses to images found within the file.
+   * Individual responses to images found within the file. This field will be empty if the `error`
+   * field is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,8 @@ public final class AnnotateFileResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Individual responses to images found within the file.
+   * Individual responses to images found within the file. This field will be empty if the `error`
+   * field is set.
    * @return value or {@code null} for none
    */
   public java.util.List<AnnotateImageResponse> getResponses() {
@@ -77,7 +79,8 @@ public final class AnnotateFileResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Individual responses to images found within the file.
+   * Individual responses to images found within the file. This field will be empty if the `error`
+   * field is set.
    * @param responses responses or {@code null} for none
    */
   public AnnotateFileResponse setResponses(java.util.List<AnnotateImageResponse> responses) {

@@ -67,6 +67,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<NodeInitializationAction> initializationActions;
 
   /**
+   * Optional. Lifecycle setting for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LifecycleConfig lifecycleConfig;
+
+  /**
    * Optional. The Compute Engine config settings for the master instance in a cluster.
    * The value may be {@code null}.
    */
@@ -184,6 +191,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setInitializationActions(java.util.List<NodeInitializationAction> initializationActions) {
     this.initializationActions = initializationActions;
+    return this;
+  }
+
+  /**
+   * Optional. Lifecycle setting for the cluster.
+   * @return value or {@code null} for none
+   */
+  public LifecycleConfig getLifecycleConfig() {
+    return lifecycleConfig;
+  }
+
+  /**
+   * Optional. Lifecycle setting for the cluster.
+   * @param lifecycleConfig lifecycleConfig or {@code null} for none
+   */
+  public ClusterConfig setLifecycleConfig(LifecycleConfig lifecycleConfig) {
+    this.lifecycleConfig = lifecycleConfig;
     return this;
   }
 

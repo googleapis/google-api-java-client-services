@@ -710,6 +710,215 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       }
     }
     /**
+     * Links a FirebaseProject with an existing [Google Analytics
+     * account](http://www.google.com/analytics/).
+     *
+     * Using this call, you can either:
+     *
+     * Provision a new Google Analytics property and associate the new property with your
+     * `FirebaseProject`. Associate an existing Google Analytics property with your `FirebaseProject`.
+     *
+     * Note that when you call `AddGoogleAnalytics`:
+     *
+     * Any Firebase Apps already in your `FirebaseProject` are automatically provisioned as new data
+     * streams in the Google Analytics property. Any data streams already in the Google Analytics
+     * property are automatically associated with their corresponding Firebase Apps (only applies when
+     * an app's `packageName` or `bundleId` match those for an existing data stream).
+     *
+     * Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics
+     * documentation](https://support.google.com/analytics/answer/9303323).
+     *
+     * The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to
+     * track the provisioning process by calling GetOperation until
+     * [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the
+     * `Operation` has either succeeded or failed. If the `Operation` succeeded, its
+     * [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to an AnalyticsDetails;
+     * if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is set
+     * to a google.rpc.Status.
+     *
+     * To call `AddGoogleAnalytics`, a member must be an Owner for the existing `FirebaseProject` and
+     * have the [`Edit` permission](https://support.google.com/analytics/answer/2884495) for the Google
+     * Analytics account.
+     *
+     * If a `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics`
+     * using an `analyticsPropertyId` that's different from the currently associated property, then the
+     * call will fail. Analytics may have already been enabled in the Firebase console or by specifying
+     * `timeZone` and `regionCode` in the call to [`AddFirebase`](../../v1beta1/projects/addFirebase).
+     *
+     * Create a request for the method "projects.addGoogleAnalytics".
+     *
+     * This request holds the parameters needed by the firebase server.  After setting any optional
+     * parameters, call the {@link AddGoogleAnalytics#execute()} method to invoke the remote operation.
+     *
+     * @param parent The parent `FirebaseProject` to link to an existing Google Analytics
+    account, in the format:
+     *        projects/projectId
+     * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest}
+     * @return the request
+     */
+    public AddGoogleAnalytics addGoogleAnalytics(java.lang.String parent, com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest content) throws java.io.IOException {
+      AddGoogleAnalytics result = new AddGoogleAnalytics(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AddGoogleAnalytics extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.Operation> {
+
+      private static final String REST_PATH = "v1beta1/{+parent}:addGoogleAnalytics";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Links a FirebaseProject with an existing [Google Analytics
+       * account](http://www.google.com/analytics/).
+       *
+       * Using this call, you can either:
+       *
+       * Provision a new Google Analytics property and associate the new property with your
+       * `FirebaseProject`. Associate an existing Google Analytics property with your `FirebaseProject`.
+       *
+       * Note that when you call `AddGoogleAnalytics`:
+       *
+       * Any Firebase Apps already in your `FirebaseProject` are automatically provisioned as new data
+       * streams in the Google Analytics property. Any data streams already in the Google Analytics
+       * property are automatically associated with their corresponding Firebase Apps (only applies when
+       * an app's `packageName` or `bundleId` match those for an existing data stream).
+       *
+       * Learn more about the hierarchy and structure of Google Analytics accounts in the [Analytics
+       * documentation](https://support.google.com/analytics/answer/9303323).
+       *
+       * The result of this call is an [`Operation`](../../v1beta1/operations). Poll the `Operation` to
+       * track the provisioning process by calling GetOperation until
+       * [`done`](../../v1beta1/operations#Operation.FIELDS.done) is `true`. When `done` is `true`, the
+       * `Operation` has either succeeded or failed. If the `Operation` succeeded, its
+       * [`response`](../../v1beta1/operations#Operation.FIELDS.response) is set to an AnalyticsDetails;
+       * if the `Operation` failed, its [`error`](../../v1beta1/operations#Operation.FIELDS.error) is
+       * set to a google.rpc.Status.
+       *
+       * To call `AddGoogleAnalytics`, a member must be an Owner for the existing `FirebaseProject` and
+       * have the [`Edit` permission](https://support.google.com/analytics/answer/2884495) for the
+       * Google Analytics account.
+       *
+       * If a `FirebaseProject` already has Google Analytics enabled, and you call `AddGoogleAnalytics`
+       * using an `analyticsPropertyId` that's different from the currently associated property, then
+       * the call will fail. Analytics may have already been enabled in the Firebase console or by
+       * specifying `timeZone` and `regionCode` in the call to
+       * [`AddFirebase`](../../v1beta1/projects/addFirebase).
+       *
+       * Create a request for the method "projects.addGoogleAnalytics".
+       *
+       * This request holds the parameters needed by the the firebase server.  After setting any
+       * optional parameters, call the {@link AddGoogleAnalytics#execute()} method to invoke the remote
+       * operation. <p> {@link AddGoogleAnalytics#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param parent The parent `FirebaseProject` to link to an existing Google Analytics
+    account, in the format:
+     *        projects/projectId
+       * @param content the {@link com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest}
+       * @since 1.13
+       */
+      protected AddGoogleAnalytics(java.lang.String parent, com.google.api.services.firebase.v1beta1.model.AddGoogleAnalyticsRequest content) {
+        super(FirebaseManagement.this, "POST", REST_PATH, content, com.google.api.services.firebase.v1beta1.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public AddGoogleAnalytics set$Xgafv(java.lang.String $Xgafv) {
+        return (AddGoogleAnalytics) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AddGoogleAnalytics setAccessToken(java.lang.String accessToken) {
+        return (AddGoogleAnalytics) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AddGoogleAnalytics setAlt(java.lang.String alt) {
+        return (AddGoogleAnalytics) super.setAlt(alt);
+      }
+
+      @Override
+      public AddGoogleAnalytics setCallback(java.lang.String callback) {
+        return (AddGoogleAnalytics) super.setCallback(callback);
+      }
+
+      @Override
+      public AddGoogleAnalytics setFields(java.lang.String fields) {
+        return (AddGoogleAnalytics) super.setFields(fields);
+      }
+
+      @Override
+      public AddGoogleAnalytics setKey(java.lang.String key) {
+        return (AddGoogleAnalytics) super.setKey(key);
+      }
+
+      @Override
+      public AddGoogleAnalytics setOauthToken(java.lang.String oauthToken) {
+        return (AddGoogleAnalytics) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AddGoogleAnalytics setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AddGoogleAnalytics) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AddGoogleAnalytics setQuotaUser(java.lang.String quotaUser) {
+        return (AddGoogleAnalytics) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AddGoogleAnalytics setUploadType(java.lang.String uploadType) {
+        return (AddGoogleAnalytics) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AddGoogleAnalytics setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AddGoogleAnalytics) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The parent `FirebaseProject` to link to an existing Google Analytics account, in the
+       * format: projects/projectId
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The parent `FirebaseProject` to link to an existing Google Analytics account, in the format:
+     projects/projectId
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The parent `FirebaseProject` to link to an existing Google Analytics account, in the
+       * format: projects/projectId
+       */
+      public AddGoogleAnalytics setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public AddGoogleAnalytics set(String parameterName, Object value) {
+        return (AddGoogleAnalytics) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the FirebaseProject identified by the specified resource name.
      *
      * Create a request for the method "projects.get".
@@ -1004,6 +1213,157 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       @Override
       public GetAdminSdkConfig set(String parameterName, Object value) {
         return (GetAdminSdkConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the Google Analytics details currently associated with a FirebaseProject.
+     *
+     * If the `FirebaseProject` is not yet linked to Google Analytics, then the response to
+     * `GetAnalyticsDetails` is NOT_FOUND.
+     *
+     * Create a request for the method "projects.getAnalyticsDetails".
+     *
+     * This request holds the parameters needed by the firebase server.  After setting any optional
+     * parameters, call the {@link GetAnalyticsDetails#execute()} method to invoke the remote operation.
+     *
+     * @param name The fully qualified resource name, in the format:
+    projects/projectId/analyticsDetails
+     * @return the request
+     */
+    public GetAnalyticsDetails getAnalyticsDetails(java.lang.String name) throws java.io.IOException {
+      GetAnalyticsDetails result = new GetAnalyticsDetails(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetAnalyticsDetails extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.AnalyticsDetails> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/analyticsDetails$");
+
+      /**
+       * Gets the Google Analytics details currently associated with a FirebaseProject.
+       *
+       * If the `FirebaseProject` is not yet linked to Google Analytics, then the response to
+       * `GetAnalyticsDetails` is NOT_FOUND.
+       *
+       * Create a request for the method "projects.getAnalyticsDetails".
+       *
+       * This request holds the parameters needed by the the firebase server.  After setting any
+       * optional parameters, call the {@link GetAnalyticsDetails#execute()} method to invoke the remote
+       * operation. <p> {@link GetAnalyticsDetails#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name The fully qualified resource name, in the format:
+    projects/projectId/analyticsDetails
+       * @since 1.13
+       */
+      protected GetAnalyticsDetails(java.lang.String name) {
+        super(FirebaseManagement.this, "GET", REST_PATH, null, com.google.api.services.firebase.v1beta1.model.AnalyticsDetails.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/analyticsDetails$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetAnalyticsDetails set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAnalyticsDetails) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAnalyticsDetails setAccessToken(java.lang.String accessToken) {
+        return (GetAnalyticsDetails) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetAnalyticsDetails setAlt(java.lang.String alt) {
+        return (GetAnalyticsDetails) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAnalyticsDetails setCallback(java.lang.String callback) {
+        return (GetAnalyticsDetails) super.setCallback(callback);
+      }
+
+      @Override
+      public GetAnalyticsDetails setFields(java.lang.String fields) {
+        return (GetAnalyticsDetails) super.setFields(fields);
+      }
+
+      @Override
+      public GetAnalyticsDetails setKey(java.lang.String key) {
+        return (GetAnalyticsDetails) super.setKey(key);
+      }
+
+      @Override
+      public GetAnalyticsDetails setOauthToken(java.lang.String oauthToken) {
+        return (GetAnalyticsDetails) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetAnalyticsDetails setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetAnalyticsDetails) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetAnalyticsDetails setQuotaUser(java.lang.String quotaUser) {
+        return (GetAnalyticsDetails) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetAnalyticsDetails setUploadType(java.lang.String uploadType) {
+        return (GetAnalyticsDetails) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAnalyticsDetails setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAnalyticsDetails) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The fully qualified resource name, in the format: projects/projectId/analyticsDetails
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The fully qualified resource name, in the format: projects/projectId/analyticsDetails
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The fully qualified resource name, in the format: projects/projectId/analyticsDetails
+       */
+      public GetAnalyticsDetails setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/analyticsDetails$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetAnalyticsDetails set(String parameterName, Object value) {
+        return (GetAnalyticsDetails) super.set(parameterName, value);
       }
     }
     /**
@@ -1356,6 +1716,168 @@ public class FirebaseManagement extends com.google.api.client.googleapis.service
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Unlinks the specified `FirebaseProject` from its Google Analytics account.
+     *
+     * This call removes the association of the specified `FirebaseProject` with its current Google
+     * Analytics property. However, this call does not delete the Google Analytics resources, such as
+     * the Google Analytics property or any data streams.
+     *
+     * These resources may be re-associated later to the `FirebaseProject` by calling
+     * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same
+     * `analyticsPropertyId`.
+     *
+     * To call `RemoveAnalytics`, a member must be an Owner for the `FirebaseProject`.
+     *
+     * Create a request for the method "projects.removeAnalytics".
+     *
+     * This request holds the parameters needed by the firebase server.  After setting any optional
+     * parameters, call the {@link RemoveAnalytics#execute()} method to invoke the remote operation.
+     *
+     * @param parent The parent `FirebaseProject` to unlink from its Google Analytics account,
+    in the format:
+     *        projects/projectId
+     * @param content the {@link com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest}
+     * @return the request
+     */
+    public RemoveAnalytics removeAnalytics(java.lang.String parent, com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest content) throws java.io.IOException {
+      RemoveAnalytics result = new RemoveAnalytics(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RemoveAnalytics extends FirebaseManagementRequest<com.google.api.services.firebase.v1beta1.model.Empty> {
+
+      private static final String REST_PATH = "v1beta1/{+parent}:removeAnalytics";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Unlinks the specified `FirebaseProject` from its Google Analytics account.
+       *
+       * This call removes the association of the specified `FirebaseProject` with its current Google
+       * Analytics property. However, this call does not delete the Google Analytics resources, such as
+       * the Google Analytics property or any data streams.
+       *
+       * These resources may be re-associated later to the `FirebaseProject` by calling
+       * [`AddGoogleAnalytics`](../../v1beta1/projects/addGoogleAnalytics) and specifying the same
+       * `analyticsPropertyId`.
+       *
+       * To call `RemoveAnalytics`, a member must be an Owner for the `FirebaseProject`.
+       *
+       * Create a request for the method "projects.removeAnalytics".
+       *
+       * This request holds the parameters needed by the the firebase server.  After setting any
+       * optional parameters, call the {@link RemoveAnalytics#execute()} method to invoke the remote
+       * operation. <p> {@link RemoveAnalytics#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param parent The parent `FirebaseProject` to unlink from its Google Analytics account,
+    in the format:
+     *        projects/projectId
+       * @param content the {@link com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest}
+       * @since 1.13
+       */
+      protected RemoveAnalytics(java.lang.String parent, com.google.api.services.firebase.v1beta1.model.RemoveAnalyticsRequest content) {
+        super(FirebaseManagement.this, "POST", REST_PATH, content, com.google.api.services.firebase.v1beta1.model.Empty.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public RemoveAnalytics set$Xgafv(java.lang.String $Xgafv) {
+        return (RemoveAnalytics) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RemoveAnalytics setAccessToken(java.lang.String accessToken) {
+        return (RemoveAnalytics) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RemoveAnalytics setAlt(java.lang.String alt) {
+        return (RemoveAnalytics) super.setAlt(alt);
+      }
+
+      @Override
+      public RemoveAnalytics setCallback(java.lang.String callback) {
+        return (RemoveAnalytics) super.setCallback(callback);
+      }
+
+      @Override
+      public RemoveAnalytics setFields(java.lang.String fields) {
+        return (RemoveAnalytics) super.setFields(fields);
+      }
+
+      @Override
+      public RemoveAnalytics setKey(java.lang.String key) {
+        return (RemoveAnalytics) super.setKey(key);
+      }
+
+      @Override
+      public RemoveAnalytics setOauthToken(java.lang.String oauthToken) {
+        return (RemoveAnalytics) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RemoveAnalytics setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RemoveAnalytics) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RemoveAnalytics setQuotaUser(java.lang.String quotaUser) {
+        return (RemoveAnalytics) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RemoveAnalytics setUploadType(java.lang.String uploadType) {
+        return (RemoveAnalytics) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RemoveAnalytics setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RemoveAnalytics) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
+       * projects/projectId
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
+     projects/projectId
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The parent `FirebaseProject` to unlink from its Google Analytics account, in the format:
+       * projects/projectId
+       */
+      public RemoveAnalytics setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public RemoveAnalytics set(String parameterName, Object value) {
+        return (RemoveAnalytics) super.set(parameterName, value);
       }
     }
     /**

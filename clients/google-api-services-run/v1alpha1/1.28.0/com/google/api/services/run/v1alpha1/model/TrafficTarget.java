@@ -45,9 +45,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty.
-   *
-   * Not currently supported in Cloud Run. +optional
+   * if RevisionName is empty; it must be false when RevisionName is non-empty. +optional
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,9 +132,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty.
-   *
-   * Not currently supported in Cloud Run. +optional
+   * if RevisionName is empty; it must be false when RevisionName is non-empty. +optional
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLatestRevision() {
@@ -146,9 +142,7 @@ public final class TrafficTarget extends com.google.api.client.json.GenericJson 
   /**
    * LatestRevision may be optionally provided to indicate that the latest ready Revision of the
    * Configuration should be used for this traffic target. When provided LatestRevision must be true
-   * if RevisionName is empty; it must be false when RevisionName is non-empty.
-   *
-   * Not currently supported in Cloud Run. +optional
+   * if RevisionName is empty; it must be false when RevisionName is non-empty. +optional
    * @param latestRevision latestRevision or {@code null} for none
    */
   public TrafficTarget setLatestRevision(java.lang.Boolean latestRevision) {

@@ -178,6 +178,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private DeleteDimensionGroupRequest deleteDimensionGroup;
 
   /**
+   * Removes rows containing duplicate values in specified columns of a cell range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteDuplicatesRequest deleteDuplicates;
+
+  /**
    * Deletes an embedded object (e.g, chart, image) in a sheet.
    * The value may be {@code null}.
    */
@@ -316,6 +323,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TextToColumnsRequest textToColumns;
+
+  /**
+   * Trims cells of whitespace (such as spaces, tabs, or new lines).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrimWhitespaceRequest trimWhitespace;
 
   /**
    * Unmerges merged cells.
@@ -782,6 +796,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Removes rows containing duplicate values in specified columns of a cell range.
+   * @return value or {@code null} for none
+   */
+  public DeleteDuplicatesRequest getDeleteDuplicates() {
+    return deleteDuplicates;
+  }
+
+  /**
+   * Removes rows containing duplicate values in specified columns of a cell range.
+   * @param deleteDuplicates deleteDuplicates or {@code null} for none
+   */
+  public Request setDeleteDuplicates(DeleteDuplicatesRequest deleteDuplicates) {
+    this.deleteDuplicates = deleteDuplicates;
+    return this;
+  }
+
+  /**
    * Deletes an embedded object (e.g, chart, image) in a sheet.
    * @return value or {@code null} for none
    */
@@ -1118,6 +1149,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setTextToColumns(TextToColumnsRequest textToColumns) {
     this.textToColumns = textToColumns;
+    return this;
+  }
+
+  /**
+   * Trims cells of whitespace (such as spaces, tabs, or new lines).
+   * @return value or {@code null} for none
+   */
+  public TrimWhitespaceRequest getTrimWhitespace() {
+    return trimWhitespace;
+  }
+
+  /**
+   * Trims cells of whitespace (such as spaces, tabs, or new lines).
+   * @param trimWhitespace trimWhitespace or {@code null} for none
+   */
+  public Request setTrimWhitespace(TrimWhitespaceRequest trimWhitespace) {
+    this.trimWhitespace = trimWhitespace;
     return this;
   }
 

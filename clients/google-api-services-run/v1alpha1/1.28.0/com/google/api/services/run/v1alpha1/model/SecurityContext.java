@@ -70,8 +70,8 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * specified in SecurityContext takes precedence. +optional
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long runAsGroup;
+  @com.google.api.client.util.Key
+  private java.lang.Integer runAsGroup;
 
   /**
    * Indicates that the container must run as a non-root user. If true, the Kubelet will validate
@@ -90,8 +90,8 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long runAsUser;
+  @com.google.api.client.util.Key
+  private java.lang.Integer runAsUser;
 
   /**
    * The SELinux context to be applied to the container. If unspecified, the container runtime will
@@ -187,7 +187,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * specified in SecurityContext takes precedence. +optional
    * @return value or {@code null} for none
    */
-  public java.lang.Long getRunAsGroup() {
+  public java.lang.Integer getRunAsGroup() {
     return runAsGroup;
   }
 
@@ -197,7 +197,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * specified in SecurityContext takes precedence. +optional
    * @param runAsGroup runAsGroup or {@code null} for none
    */
-  public SecurityContext setRunAsGroup(java.lang.Long runAsGroup) {
+  public SecurityContext setRunAsGroup(java.lang.Integer runAsGroup) {
     this.runAsGroup = runAsGroup;
     return this;
   }
@@ -233,7 +233,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional
    * @return value or {@code null} for none
    */
-  public java.lang.Long getRunAsUser() {
+  public java.lang.Integer getRunAsUser() {
     return runAsUser;
   }
 
@@ -243,7 +243,7 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    * and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional
    * @param runAsUser runAsUser or {@code null} for none
    */
-  public SecurityContext setRunAsUser(java.lang.Long runAsUser) {
+  public SecurityContext setRunAsUser(java.lang.Integer runAsUser) {
     this.runAsUser = runAsUser;
     return this;
   }

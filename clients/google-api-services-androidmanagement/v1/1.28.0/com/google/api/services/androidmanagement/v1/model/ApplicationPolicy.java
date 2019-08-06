@@ -61,7 +61,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String installType;
 
   /**
-   * Whether the app is allowed to lock itself in full-screen mode.
+   * Whether the app is allowed to lock itself in full-screen mode. DEPRECATED. Use InstallType
+   * KIOSK or kioskCustomLauncherEnabled to to configure a dedicated device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +186,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether the app is allowed to lock itself in full-screen mode.
+   * Whether the app is allowed to lock itself in full-screen mode. DEPRECATED. Use InstallType
+   * KIOSK or kioskCustomLauncherEnabled to to configure a dedicated device.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLockTaskAllowed() {
@@ -193,7 +195,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether the app is allowed to lock itself in full-screen mode.
+   * Whether the app is allowed to lock itself in full-screen mode. DEPRECATED. Use InstallType
+   * KIOSK or kioskCustomLauncherEnabled to to configure a dedicated device.
    * @param lockTaskAllowed lockTaskAllowed or {@code null} for none
    */
   public ApplicationPolicy setLockTaskAllowed(java.lang.Boolean lockTaskAllowed) {

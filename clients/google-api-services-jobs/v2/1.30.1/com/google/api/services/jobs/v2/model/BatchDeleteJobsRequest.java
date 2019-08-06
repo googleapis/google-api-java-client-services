@@ -33,9 +33,7 @@ package com.google.api.services.jobs.v2.model;
 public final class BatchDeleteJobsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required.
-   *
-   * The filter string specifies the jobs to be deleted.
+   * Required. The filter string specifies the jobs to be deleted.
    *
    * Supported operator: =, AND
    *
@@ -50,9 +48,7 @@ public final class BatchDeleteJobsRequest extends com.google.api.client.json.Gen
   private java.lang.String filter;
 
   /**
-   * Required.
-   *
-   * The filter string specifies the jobs to be deleted.
+   * Required. The filter string specifies the jobs to be deleted.
    *
    * Supported operator: =, AND
    *
@@ -68,9 +64,7 @@ public final class BatchDeleteJobsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required.
-   *
-   * The filter string specifies the jobs to be deleted.
+   * Required. The filter string specifies the jobs to be deleted.
    *
    * Supported operator: =, AND
    *

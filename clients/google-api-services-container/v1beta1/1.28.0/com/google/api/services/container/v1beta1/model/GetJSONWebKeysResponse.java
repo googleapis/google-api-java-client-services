@@ -31,11 +31,35 @@ package com.google.api.services.container.v1beta1.model;
 public final class GetJSONWebKeysResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpCacheControlResponseHeader cacheHeader;
+
+  /**
    * The public component of the keys used by the cluster to sign token requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Jwk> keys;
+
+  /**
+   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * @return value or {@code null} for none
+   */
+  public HttpCacheControlResponseHeader getCacheHeader() {
+    return cacheHeader;
+  }
+
+  /**
+   * OnePlatform automatically extracts this field and uses it to set the HTTP Cache-Control header.
+   * @param cacheHeader cacheHeader or {@code null} for none
+   */
+  public GetJSONWebKeysResponse setCacheHeader(HttpCacheControlResponseHeader cacheHeader) {
+    this.cacheHeader = cacheHeader;
+    return this;
+  }
 
   /**
    * The public component of the keys used by the cluster to sign token requests.

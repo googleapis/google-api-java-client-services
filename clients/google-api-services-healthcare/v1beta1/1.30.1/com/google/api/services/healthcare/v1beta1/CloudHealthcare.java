@@ -2687,8 +2687,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Imports data into the DICOM store by copying it from the specified source. For errors, the
            * Operation will be populated with error details (in the form of ImportDicomDataErrorDetails in
-           * error.details), which will hold finer-grained error information. The metadata field type is
-           * OperationMetadata.
+           * error.details), which will hold finer-grained error information. Errors are also logged to
+           * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). The metadata
+           * field type is OperationMetadata.
            *
            * Create a request for the method "dicomStores.import".
            *
@@ -2718,8 +2719,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Imports data into the DICOM store by copying it from the specified source. For errors, the
              * Operation will be populated with error details (in the form of ImportDicomDataErrorDetails in
-             * error.details), which will hold finer-grained error information. The metadata field type is
-             * OperationMetadata.
+             * error.details), which will hold finer-grained error information. Errors are also logged to
+             * Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). The metadata
+             * field type is OperationMetadata.
              *
              * Create a request for the method "dicomStores.import".
              *
@@ -11518,6 +11520,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
              * `Bundle` will contain pagination links.
              *
+             * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
+             * fully searchable as the server might trim its generated search index in those cases.
+             *
+             * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
+             * time a resource is created or changes and when the change is reflected in search results.
+             *
              * Create a request for the method "fhir.search".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -11579,6 +11587,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * The maximum number of search results returned defaults to 100, which can be overridden by the
                * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
                * `Bundle` will contain pagination links.
+               *
+               * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
+               * fully searchable as the server might trim its generated search index in those cases.
+               *
+               * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
+               * time a resource is created or changes and when the change is reflected in search results.
                *
                * Create a request for the method "fhir.search".
                *
@@ -13864,6 +13878,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Lists all the messages in the given HL7v2 store with support for filtering.
              *
+             * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
+             * time a message is created and when it can be found through a filter.
+             *
              * Create a request for the method "messages.list".
              *
              * This request holds the parameters needed by the healthcare server.  After setting any optional
@@ -13887,6 +13904,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Lists all the messages in the given HL7v2 store with support for filtering.
+               *
+               * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
+               * time a message is created and when it can be found through a filter.
                *
                * Create a request for the method "messages.list".
                *
@@ -14003,7 +14023,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * *  `message_type`, from the MSH-9 segment; for example `NOT message_type = "ADT"` *
                * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
                * dataset's time_zone, from the MSH-7 segment; for example `send_date < "2017-01-02"`
-               * *  `send_time`, the timestamp of when the message was sent, using the RFC3339 time
+               * *  `send_time`, the timestamp when the message was sent, using the RFC3339 time
                * format for comparisons, from the MSH-7 segment; for example `send_time <
                * "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message
                * came from, from the MSH-4 segment; for example `send_facility = "ABC"` *
@@ -14038,17 +14058,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
              *  `message_type`, from the MSH-9 segment; for example `NOT message_type = "ADT"` *  `send_date` or
              `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
-             segment; for example `send_date < "2017-01-02"` *  `send_time`, the timestamp of when the message
-             was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment; for example
-             `send_time < "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message came
-             from, from the MSH-4 segment; for example `send_facility = "ABC"` *  `HL7RegExp(expr)`, which does
-             regular expression matching of `expr` against the message payload using re2
-             (http://code.google.com/p/re2/) syntax; for example `HL7RegExp("^.*\|.*\|EMERG")` *
-             `PatientId(value, type)`, which matches if the message lists a patient having an ID of the given
-             value and type in the PID-2, PID-3, or PID-4 segments; for example `PatientId("123456", "MRN")` *
-             `labels.x`, a string value of the label with key `x` as set using the Message.labels map, for
-             example `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a
-             label, for example `labels."priority":*`.
+             segment; for example `send_date < "2017-01-02"` *  `send_time`, the timestamp when the message was
+             sent, using the RFC3339 time format for comparisons, from the MSH-7 segment; for example `send_time
+             < "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message came from, from
+             the MSH-4 segment; for example `send_facility = "ABC"` *  `HL7RegExp(expr)`, which does regular
+             expression matching of `expr` against the message payload using re2 (http://code.google.com/p/re2/)
+             syntax; for example `HL7RegExp("^.*\|.*\|EMERG")` *  `PatientId(value, type)`, which matches if the
+             message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4
+             segments; for example `PatientId("123456", "MRN")` *  `labels.x`, a string value of the label with
+             key `x` as set using the Message.labels map, for example `labels."priority"="high"`. The operator
+             `:*` can be used to assert the existence of a label, for example `labels."priority":*`.
 
              Limitations on conjunctions:
 
@@ -14074,7 +14093,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * *  `message_type`, from the MSH-9 segment; for example `NOT message_type = "ADT"` *
                * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
                * dataset's time_zone, from the MSH-7 segment; for example `send_date < "2017-01-02"`
-               * *  `send_time`, the timestamp of when the message was sent, using the RFC3339 time
+               * *  `send_time`, the timestamp when the message was sent, using the RFC3339 time
                * format for comparisons, from the MSH-7 segment; for example `send_time <
                * "2017-01-02T00:00:00-05:00"` *  `send_facility`, the care center that the message
                * came from, from the MSH-4 segment; for example `send_facility = "ABC"` *

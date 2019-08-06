@@ -15,9 +15,9 @@ You can find the list of available APIs [here][api-list] or you can find the pub
 
 ## Supported Google APIs
 
-[//]: # API_TABLE_START
+[//]: # (API_TABLE_START)
 
-[//]: # API_TABLE_END
+[//]: # (API_TABLE_END)
 
 ## Generating the API clients
 

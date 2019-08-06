@@ -80,8 +80,17 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * The following field and operator combinations are supported:
    *
-   * * name: `=` * update_time: `>`, `<`, `>=`, `<=`, `=` * create_time: `>`, `<`, `>=`, `<=`, `=` *
-   * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
+   * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time = 1560208038000"
+   *
+   * * create_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
+   *
+   * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
@@ -217,8 +226,17 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * The following field and operator combinations are supported:
    *
-   * * name: `=` * update_time: `>`, `<`, `>=`, `<=`, `=` * create_time: `>`, `<`, `>=`, `<=`, `=` *
-   * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
+   * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time = 1560208038000"
+   *
+   * * create_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
+   *
+   * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *
@@ -255,8 +273,17 @@ public final class GroupAssetsRequest extends com.google.api.client.json.Generic
    *
    * The following field and operator combinations are supported:
    *
-   * * name: `=` * update_time: `>`, `<`, `>=`, `<=`, `=` * create_time: `>`, `<`, `>=`, `<=`, `=` *
-   * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
+   * * name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "update_time = \"2019-06-10T16:07:18-07:00\""     "update_time = 1560208038000"
+   *
+   * * create_time: `=`, `>`, `<`, `>=`, `<=`
+   *
+   *   Usage: This should be milliseconds since epoch or an RFC3339 string.   Examples:
+   * "create_time = \"2019-06-10T16:07:18-07:00\""     "create_time = 1560208038000"
+   *
+   * * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`, `<=` *
    * security_marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
    * security_center_properties.resource_type: `=`, `:` *
    * security_center_properties.resource_parent: `=`, `:` *

@@ -2216,12 +2216,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the toolresults server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param projectId A Project id.
-          Required.
-           * @param historyId A History id.
-          Required.
-           * @param executionId A Execution id.
-          Required.
+           * @param projectId Required. A Project id.
+           * @param historyId Required. A History id.
+           * @param executionId Required. An Execution id.
            * @param content the {@link com.google.api.services.toolresults.model.Step}
            * @return the request
            */
@@ -2254,12 +2251,9 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param projectId A Project id.
-          Required.
-             * @param historyId A History id.
-          Required.
-             * @param executionId A Execution id.
-          Required.
+             * @param projectId Required. A Project id.
+             * @param historyId Required. A History id.
+             * @param executionId Required. An Execution id.
              * @param content the {@link com.google.api.services.toolresults.model.Step}
              * @since 1.13
              */
@@ -2305,79 +2299,49 @@ public class ToolResults extends com.google.api.client.googleapis.services.json.
               return (Create) super.setUserIp(userIp);
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** Required. A Project id. */
             @com.google.api.client.util.Key
             private java.lang.String projectId;
 
-            /** A Project id.
-
-           Required.
+            /** Required. A Project id.
              */
             public java.lang.String getProjectId() {
               return projectId;
             }
 
-            /**
-             * A Project id.
-             *
-             * Required.
-             */
+            /** Required. A Project id. */
             public Create setProjectId(java.lang.String projectId) {
               this.projectId = projectId;
               return this;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** Required. A History id. */
             @com.google.api.client.util.Key
             private java.lang.String historyId;
 
-            /** A History id.
-
-           Required.
+            /** Required. A History id.
              */
             public java.lang.String getHistoryId() {
               return historyId;
             }
 
-            /**
-             * A History id.
-             *
-             * Required.
-             */
+            /** Required. A History id. */
             public Create setHistoryId(java.lang.String historyId) {
               this.historyId = historyId;
               return this;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** Required. An Execution id. */
             @com.google.api.client.util.Key
             private java.lang.String executionId;
 
-            /** A Execution id.
-
-           Required.
+            /** Required. An Execution id.
              */
             public java.lang.String getExecutionId() {
               return executionId;
             }
 
-            /**
-             * A Execution id.
-             *
-             * Required.
-             */
+            /** Required. An Execution id. */
             public Create setExecutionId(java.lang.String executionId) {
               this.executionId = executionId;
               return this;

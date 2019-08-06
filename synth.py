@@ -60,6 +60,12 @@ def write_metadata_file(name: str, version: str, metadata: dict):
     with open(metadata_file, "w") as outfile:
         json.dump(metadata, outfile, indent=2)
 
+def write_readme_file(name: str, version: str, metadata: dict):
+    readme_file = f'clients/{name}/{version}/README.md'
+    print(f"Writing README to {readme_file}")
+    with open(readme_file, "w") as outfile:
+        outfile.write("FIXME")
+
 def maven_metadata(pom_file: str):
     tree = etree.parse(pom_file)
     root = tree.getroot()
@@ -107,8 +113,15 @@ def generate_service(disco: str):
         shutil.copy(input_file, resource_dir / path.basename(disco))
 
     # write the metadata file
-    metadata = maven_metadata(str(repository / "clients" / library_name / version / TEMPLATE_VERSIONS[-1] / "pom.xml"))
+    latest_version = TEMPLATE_VERSIONS[-1]
+    metadata = maven_metadata(str(repository / "clients" / library_name / version / latest_version / "pom.xml"))
     write_metadata_file(library_name, version, metadata)
+
+    # copy the latest README to the main service location
+    shutil.copy(
+        repository / "clients" / library_name / version / latest_version / "README.md",
+        repository / "clients" / library_name / version / "README.md"
+    )
 
 def all_discoveries():
     discos = []
@@ -123,7 +136,7 @@ discoveries = all_discoveries()
 
 if extra_args():
     api_name = extra_args()[0]
-    discoveries = [discovery for discovery in discoveries if discovery.startswith(api_name)]
+    discoveries = [discovery for discovery in discoveries if discovery.startswith(f"{api_name}.")]
 
 for disco in discoveries:
     generate_service(disco)

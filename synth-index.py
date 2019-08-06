@@ -58,7 +58,7 @@ def all_services():
     return services
 
 def service_row(services: List[Service]) -> str:
-  services = sorted(services, key=lambda service: service.id)
+  services = sorted(services, key=lambda service: service.version)
   links = [f"[{service.version}](clients/google-api-services-{service.id}/{service.version})" for service in services]
   link = ", ".join(links)
   name = services[0].title

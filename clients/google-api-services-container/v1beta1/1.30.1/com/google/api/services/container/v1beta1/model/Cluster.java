@@ -415,6 +415,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String servicesIpv4Cidr;
 
   /**
+   * Shielded Nodes configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedNodes shieldedNodes;
+
+  /**
    * [Output only] The current status of this cluster.
    * The value may be {@code null}.
    */
@@ -1374,6 +1381,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setServicesIpv4Cidr(java.lang.String servicesIpv4Cidr) {
     this.servicesIpv4Cidr = servicesIpv4Cidr;
+    return this;
+  }
+
+  /**
+   * Shielded Nodes configuration.
+   * @return value or {@code null} for none
+   */
+  public ShieldedNodes getShieldedNodes() {
+    return shieldedNodes;
+  }
+
+  /**
+   * Shielded Nodes configuration.
+   * @param shieldedNodes shieldedNodes or {@code null} for none
+   */
+  public Cluster setShieldedNodes(ShieldedNodes shieldedNodes) {
+    this.shieldedNodes = shieldedNodes;
     return this;
   }
 

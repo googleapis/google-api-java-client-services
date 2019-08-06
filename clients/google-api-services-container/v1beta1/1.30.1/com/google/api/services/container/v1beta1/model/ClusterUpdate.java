@@ -185,6 +185,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ResourceUsageExportConfig desiredResourceUsageExportConfig;
 
   /**
+   * Configuration for Shielded Nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedNodes desiredShieldedNodes;
+
+  /**
    * Cluster-level Vertical Pod Autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -552,6 +559,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredResourceUsageExportConfig(ResourceUsageExportConfig desiredResourceUsageExportConfig) {
     this.desiredResourceUsageExportConfig = desiredResourceUsageExportConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for Shielded Nodes.
+   * @return value or {@code null} for none
+   */
+  public ShieldedNodes getDesiredShieldedNodes() {
+    return desiredShieldedNodes;
+  }
+
+  /**
+   * Configuration for Shielded Nodes.
+   * @param desiredShieldedNodes desiredShieldedNodes or {@code null} for none
+   */
+  public ClusterUpdate setDesiredShieldedNodes(ShieldedNodes desiredShieldedNodes) {
+    this.desiredShieldedNodes = desiredShieldedNodes;
     return this;
   }
 

@@ -59,7 +59,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   private String lastChangeTime;
 
   /**
-   * The assigned regions for the site and platform.
+   * The assigned regions for the site and platform. No longer populated, because there is no longer
+   * any semantic difference between sites in different regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +149,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The assigned regions for the site and platform.
+   * The assigned regions for the site and platform. No longer populated, because there is no longer
+   * any semantic difference between sites in different regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegion() {
@@ -156,7 +158,8 @@ public final class PlatformSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The assigned regions for the site and platform.
+   * The assigned regions for the site and platform. No longer populated, because there is no longer
+   * any semantic difference between sites in different regions.
    * @param region region or {@code null} for none
    */
   public PlatformSummary setRegion(java.util.List<java.lang.String> region) {

@@ -13,6 +13,12 @@ This repository contains the generated source for individual APIs that utilize
 You can find the list of available APIs [here][api-list] or you can find the published packages on
 [Maven Central][maven-search].
 
+## Supported Google APIs
+
+[//]: # API_TABLE_START
+
+[//]: # API_TABLE_END
+
 ## Generating the API clients
 
 Generating the API clients requires git and Python 3.6.

@@ -54,6 +54,14 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   private String idleDeleteTtl;
 
   /**
+   * Output only. The time when cluster became idle (most recent job finished) and became eligible
+   * for deletion due to idleness.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String idleStartTime;
+
+  /**
    * Optional. The time when cluster will be auto-deleted.
    * @return value or {@code null} for none
    */
@@ -107,6 +115,25 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
    */
   public LifecycleConfig setIdleDeleteTtl(String idleDeleteTtl) {
     this.idleDeleteTtl = idleDeleteTtl;
+    return this;
+  }
+
+  /**
+   * Output only. The time when cluster became idle (most recent job finished) and became eligible
+   * for deletion due to idleness.
+   * @return value or {@code null} for none
+   */
+  public String getIdleStartTime() {
+    return idleStartTime;
+  }
+
+  /**
+   * Output only. The time when cluster became idle (most recent job finished) and became eligible
+   * for deletion due to idleness.
+   * @param idleStartTime idleStartTime or {@code null} for none
+   */
+  public LifecycleConfig setIdleStartTime(String idleStartTime) {
+    this.idleStartTime = idleStartTime;
     return this;
   }
 

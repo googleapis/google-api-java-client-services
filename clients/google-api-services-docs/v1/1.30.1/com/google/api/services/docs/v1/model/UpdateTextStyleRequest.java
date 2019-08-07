@@ -51,6 +51,8 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
    *
    * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
    * updated with the matching text style.
+   *
+   * Ranges cannot be inserted inside a relative UpdateTextStyleRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,6 +111,8 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
    *
    * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
    * updated with the matching text style.
+   *
+   * Ranges cannot be inserted inside a relative UpdateTextStyleRequest.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -122,6 +126,8 @@ public final class UpdateTextStyleRequest extends com.google.api.client.json.Gen
    *
    * If the range fully contains a paragraph belonging to a list, the paragraph's bullet is also
    * updated with the matching text style.
+   *
+   * Ranges cannot be inserted inside a relative UpdateTextStyleRequest.
    * @param range range or {@code null} for none
    */
   public UpdateTextStyleRequest setRange(Range range) {

@@ -73,7 +73,11 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * Note that integer values can be provided as strings, e.g. "1199". Only strings with integer
    * values can match a range-based restriction which is to be supported soon.
    *
-   * Multiple values can be assigned to the same key. One product may have up to 100 product_labels.
+   * Multiple values can be assigned to the same key. One product may have up to 500 product_labels.
+   *
+   * Notice that the total number of distinct product_labels over all products in one ProductSet
+   * cannot exceed 1M, otherwise the product search pipeline will refuse to work for that
+   * ProductSet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +182,11 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * Note that integer values can be provided as strings, e.g. "1199". Only strings with integer
    * values can match a range-based restriction which is to be supported soon.
    *
-   * Multiple values can be assigned to the same key. One product may have up to 100 product_labels.
+   * Multiple values can be assigned to the same key. One product may have up to 500 product_labels.
+   *
+   * Notice that the total number of distinct product_labels over all products in one ProductSet
+   * cannot exceed 1M, otherwise the product search pipeline will refuse to work for that
+   * ProductSet.
    * @return value or {@code null} for none
    */
   public java.util.List<KeyValue> getProductLabels() {
@@ -192,7 +200,11 @@ public final class Product extends com.google.api.client.json.GenericJson {
    * Note that integer values can be provided as strings, e.g. "1199". Only strings with integer
    * values can match a range-based restriction which is to be supported soon.
    *
-   * Multiple values can be assigned to the same key. One product may have up to 100 product_labels.
+   * Multiple values can be assigned to the same key. One product may have up to 500 product_labels.
+   *
+   * Notice that the total number of distinct product_labels over all products in one ProductSet
+   * cannot exceed 1M, otherwise the product search pipeline will refuse to work for that
+   * ProductSet.
    * @param productLabels productLabels or {@code null} for none
    */
   public Product setProductLabels(java.util.List<KeyValue> productLabels) {

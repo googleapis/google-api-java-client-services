@@ -35,7 +35,7 @@ public final class GoogleCloudVisionV1p1beta1Symbol extends com.google.api.clien
    * as around the top-left corner as defined when the text is read in the 'natural' orientation.
    * For example:   * when the text is horizontal it might look like:      0----1      |    |      3
    * ----2   * when it's rotated 180 degrees around the top-left corner it becomes:      2----3
-   * |    |      1----0   and the vertice order will still be (0, 1, 2, 3).
+   * |    |      1----0   and the vertex order will still be (0, 1, 2, 3).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudVisionV1p1beta1Symbol extends com.google.api.clien
    * as around the top-left corner as defined when the text is read in the 'natural' orientation.
    * For example:   * when the text is horizontal it might look like:      0----1      |    |      3
    * ----2   * when it's rotated 180 degrees around the top-left corner it becomes:      2----3
-   * |    |      1----0   and the vertice order will still be (0, 1, 2, 3).
+   * |    |      1----0   and the vertex order will still be (0, 1, 2, 3).
    * @return value or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1BoundingPoly getBoundingBox() {
@@ -81,7 +81,7 @@ public final class GoogleCloudVisionV1p1beta1Symbol extends com.google.api.clien
    * as around the top-left corner as defined when the text is read in the 'natural' orientation.
    * For example:   * when the text is horizontal it might look like:      0----1      |    |      3
    * ----2   * when it's rotated 180 degrees around the top-left corner it becomes:      2----3
-   * |    |      1----0   and the vertice order will still be (0, 1, 2, 3).
+   * |    |      1----0   and the vertex order will still be (0, 1, 2, 3).
    * @param boundingBox boundingBox or {@code null} for none
    */
   public GoogleCloudVisionV1p1beta1Symbol setBoundingBox(GoogleCloudVisionV1p1beta1BoundingPoly boundingBox) {

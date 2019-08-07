@@ -82,7 +82,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
 
   /**
    * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is
-   * created, for example `projects/dlp-test-project/triggeredJobs/53234423`.
+   * created, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +217,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
 
   /**
    * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is
-   * created, for example `projects/dlp-test-project/triggeredJobs/53234423`.
+   * created, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -226,7 +226,7 @@ public final class GooglePrivacyDlpV2JobTrigger extends com.google.api.client.js
 
   /**
    * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is
-   * created, for example `projects/dlp-test-project/triggeredJobs/53234423`.
+   * created, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2JobTrigger setName(java.lang.String name) {

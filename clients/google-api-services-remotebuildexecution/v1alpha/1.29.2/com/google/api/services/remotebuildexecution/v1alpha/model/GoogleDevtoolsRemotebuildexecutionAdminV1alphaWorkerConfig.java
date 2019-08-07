@@ -31,6 +31,13 @@ package com.google.api.services.remotebuildexecution.v1alpha.model;
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The accelerator card attached to each VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig accelerator;
+
+  /**
    * Required. Size of the disk attached to the worker, in GB. See
    * https://cloud.google.com/compute/docs/disks/
    * The value may be {@code null}.
@@ -82,6 +89,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reserved;
+
+  /**
+   * The accelerator card attached to each VM.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig getAccelerator() {
+    return accelerator;
+  }
+
+  /**
+   * The accelerator card attached to each VM.
+   * @param accelerator accelerator or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setAccelerator(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig accelerator) {
+    this.accelerator = accelerator;
+    return this;
+  }
 
   /**
    * Required. Size of the disk attached to the worker, in GB. See

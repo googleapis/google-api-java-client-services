@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-remotebuildexecution</artifactId>
-  <version>v1-rev20190723-1.28.0</version>
-  <name>Remote Build Execution API v1-rev20190723-1.28.0</name>
+  <version>v1-rev20190731-1.28.0</version>
+  <name>Remote Build Execution API v1-rev20190731-1.28.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
